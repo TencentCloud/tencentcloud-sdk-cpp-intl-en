@@ -91,21 +91,21 @@ Description: To get the instance group ID of a cluster, perform [query cluster i
                     /**
                      * 获取Availability zone
                      * @return Zone Availability zone
-                     * 
+                     * @deprecated
                      */
                     std::string GetZone() const;
 
                     /**
                      * 设置Availability zone
                      * @param _zone Availability zone
-                     * 
+                     * @deprecated
                      */
                     void SetZone(const std::string& _zone);
 
                     /**
                      * 判断参数 Zone 是否已赋值
                      * @return Zone 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool ZoneHasBeenSet() const;
 

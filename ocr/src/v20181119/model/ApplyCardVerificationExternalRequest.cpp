@@ -29,7 +29,8 @@ ApplyCardVerificationExternalRequest::ApplyCardVerificationExternalRequest() :
     m_imageBase64BackHasBeenSet(false),
     m_imageUrlFrontHasBeenSet(false),
     m_imageUrlBackHasBeenSet(false),
-    m_returnHeadImageHasBeenSet(false)
+    m_returnHeadImageHasBeenSet(false),
+    m_webhookUrlHasBeenSet(false)
 {
 }
 
@@ -94,6 +95,14 @@ string ApplyCardVerificationExternalRequest::ToJsonString() const
         string key = "ReturnHeadImage";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_returnHeadImage, allocator);
+    }
+
+    if (m_webhookUrlHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "WebhookUrl";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_webhookUrl.c_str(), allocator).Move(), allocator);
     }
 
 
@@ -214,6 +223,22 @@ void ApplyCardVerificationExternalRequest::SetReturnHeadImage(const bool& _retur
 bool ApplyCardVerificationExternalRequest::ReturnHeadImageHasBeenSet() const
 {
     return m_returnHeadImageHasBeenSet;
+}
+
+string ApplyCardVerificationExternalRequest::GetWebhookUrl() const
+{
+    return m_webhookUrl;
+}
+
+void ApplyCardVerificationExternalRequest::SetWebhookUrl(const string& _webhookUrl)
+{
+    m_webhookUrl = _webhookUrl;
+    m_webhookUrlHasBeenSet = true;
+}
+
+bool ApplyCardVerificationExternalRequest::WebhookUrlHasBeenSet() const
+{
+    return m_webhookUrlHasBeenSet;
 }
 
 

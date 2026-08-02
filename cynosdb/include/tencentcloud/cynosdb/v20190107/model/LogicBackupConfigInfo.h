@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether automatic logical backup is enabled.
-                     * @return LogicBackupEnable Whether automatic logical backup is enabled.
+                     * 获取<p>Whether automatic logical backup is enabled</p>
+                     * @return LogicBackupEnable <p>Whether automatic logical backup is enabled</p>
                      * 
                      */
                     std::string GetLogicBackupEnable() const;
 
                     /**
-                     * 设置Whether automatic logical backup is enabled.
-                     * @param _logicBackupEnable Whether automatic logical backup is enabled.
+                     * 设置<p>Whether automatic logical backup is enabled</p>
+                     * @param _logicBackupEnable <p>Whether automatic logical backup is enabled</p>
                      * 
                      */
                     void SetLogicBackupEnable(const std::string& _logicBackupEnable);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool LogicBackupEnableHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the automatic logic backup start time.
-                     * @return LogicBackupTimeBeg Specifies the automatic logic backup start time.
+                     * 获取<p>Automatic logic backup start time</p>
+                     * @return LogicBackupTimeBeg <p>Automatic logic backup start time</p>
                      * 
                      */
                     uint64_t GetLogicBackupTimeBeg() const;
 
                     /**
-                     * 设置Specifies the automatic logic backup start time.
-                     * @param _logicBackupTimeBeg Specifies the automatic logic backup start time.
+                     * 设置<p>Automatic logic backup start time</p>
+                     * @param _logicBackupTimeBeg <p>Automatic logic backup start time</p>
                      * 
                      */
                     void SetLogicBackupTimeBeg(const uint64_t& _logicBackupTimeBeg);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool LogicBackupTimeBegHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the termination time of automatic logical backup.
-                     * @return LogicBackupTimeEnd Specifies the termination time of automatic logical backup.
+                     * 获取<p>Automated logic backup end time</p>
+                     * @return LogicBackupTimeEnd <p>Automated logic backup end time</p>
                      * 
                      */
                     uint64_t GetLogicBackupTimeEnd() const;
 
                     /**
-                     * 设置Specifies the termination time of automatic logical backup.
-                     * @param _logicBackupTimeEnd Specifies the termination time of automatic logical backup.
+                     * 设置<p>Automated logic backup end time</p>
+                     * @param _logicBackupTimeEnd <p>Automated logic backup end time</p>
                      * 
                      */
                     void SetLogicBackupTimeEnd(const uint64_t& _logicBackupTimeEnd);
@@ -111,19 +111,15 @@ namespace TencentCloud
                     bool LogicBackupTimeEndHasBeenSet() const;
 
                     /**
-                     * 获取Automatic logical backup retention time.
-Unit: seconds.
-                     * @return LogicReserveDuration Automatic logical backup retention time.
-Unit: seconds.
+                     * 获取<p>Automatic logical backup retention time<br>Unit: second</p>
+                     * @return LogicReserveDuration <p>Automatic logical backup retention time<br>Unit: second</p>
                      * 
                      */
                     uint64_t GetLogicReserveDuration() const;
 
                     /**
-                     * 设置Automatic logical backup retention time.
-Unit: seconds.
-                     * @param _logicReserveDuration Automatic logical backup retention time.
-Unit: seconds.
+                     * 设置<p>Automatic logical backup retention time<br>Unit: second</p>
+                     * @param _logicReserveDuration <p>Automatic logical backup retention time<br>Unit: second</p>
                      * 
                      */
                     void SetLogicReserveDuration(const uint64_t& _logicReserveDuration);
@@ -136,19 +132,15 @@ Unit: seconds.
                     bool LogicReserveDurationHasBeenSet() const;
 
                     /**
-                     * 获取Is cross-regional logical backup enabled?.
-Valid values: ON/OFF.
-                     * @return LogicCrossRegionsEnable Is cross-regional logical backup enabled?.
-Valid values: ON/OFF.
+                     * 获取<p>Whether cross-regional logical backup is enabled<br>Available values: ON/OFF</p>
+                     * @return LogicCrossRegionsEnable <p>Whether cross-regional logical backup is enabled<br>Available values: ON/OFF</p>
                      * 
                      */
                     std::string GetLogicCrossRegionsEnable() const;
 
                     /**
-                     * 设置Is cross-regional logical backup enabled?.
-Valid values: ON/OFF.
-                     * @param _logicCrossRegionsEnable Is cross-regional logical backup enabled?.
-Valid values: ON/OFF.
+                     * 设置<p>Whether cross-regional logical backup is enabled<br>Available values: ON/OFF</p>
+                     * @param _logicCrossRegionsEnable <p>Whether cross-regional logical backup is enabled<br>Available values: ON/OFF</p>
                      * 
                      */
                     void SetLogicCrossRegionsEnable(const std::string& _logicCrossRegionsEnable);
@@ -161,15 +153,19 @@ Valid values: ON/OFF.
                     bool LogicCrossRegionsEnableHasBeenSet() const;
 
                     /**
-                     * 获取Regions covered by logical backup.
-                     * @return LogicCrossRegions Regions covered by logical backup.
+                     * 获取<p>Cross-regional logic backup</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return LogicCrossRegions <p>Cross-regional logic backup</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<std::string> GetLogicCrossRegions() const;
 
                     /**
-                     * 设置Regions covered by logical backup.
-                     * @param _logicCrossRegions Regions covered by logical backup.
+                     * 设置<p>Cross-regional logic backup</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _logicCrossRegions <p>Cross-regional logic backup</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetLogicCrossRegions(const std::vector<std::string>& _logicCrossRegions);
@@ -182,15 +178,15 @@ Valid values: ON/OFF.
                     bool LogicCrossRegionsHasBeenSet() const;
 
                     /**
-                     * 获取Backup delivery relationship
-                     * @return AutoCopyVaults Backup delivery relationship
+                     * 获取<p>Backup delivery relationship</p>
+                     * @return AutoCopyVaults <p>Backup delivery relationship</p>
                      * 
                      */
                     std::vector<CreateBackupVaultItem> GetAutoCopyVaults() const;
 
                     /**
-                     * 设置Backup delivery relationship
-                     * @param _autoCopyVaults Backup delivery relationship
+                     * 设置<p>Backup delivery relationship</p>
+                     * @param _autoCopyVaults <p>Backup delivery relationship</p>
                      * 
                      */
                     void SetAutoCopyVaults(const std::vector<CreateBackupVaultItem>& _autoCopyVaults);
@@ -202,51 +198,77 @@ Valid values: ON/OFF.
                      */
                     bool AutoCopyVaultsHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Day</p><p>Unit: Cross-regional logical backup retention time</p>
+                     * @return LogicCrossRegionSaveDays <p>Day</p><p>Unit: Cross-regional logical backup retention time</p>
+                     * 
+                     */
+                    int64_t GetLogicCrossRegionSaveDays() const;
+
+                    /**
+                     * 设置<p>Day</p><p>Unit: Cross-regional logical backup retention time</p>
+                     * @param _logicCrossRegionSaveDays <p>Day</p><p>Unit: Cross-regional logical backup retention time</p>
+                     * 
+                     */
+                    void SetLogicCrossRegionSaveDays(const int64_t& _logicCrossRegionSaveDays);
+
+                    /**
+                     * 判断参数 LogicCrossRegionSaveDays 是否已赋值
+                     * @return LogicCrossRegionSaveDays 是否已赋值
+                     * 
+                     */
+                    bool LogicCrossRegionSaveDaysHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Whether automatic logical backup is enabled.
+                     * <p>Whether automatic logical backup is enabled</p>
                      */
                     std::string m_logicBackupEnable;
                     bool m_logicBackupEnableHasBeenSet;
 
                     /**
-                     * Specifies the automatic logic backup start time.
+                     * <p>Automatic logic backup start time</p>
                      */
                     uint64_t m_logicBackupTimeBeg;
                     bool m_logicBackupTimeBegHasBeenSet;
 
                     /**
-                     * Specifies the termination time of automatic logical backup.
+                     * <p>Automated logic backup end time</p>
                      */
                     uint64_t m_logicBackupTimeEnd;
                     bool m_logicBackupTimeEndHasBeenSet;
 
                     /**
-                     * Automatic logical backup retention time.
-Unit: seconds.
+                     * <p>Automatic logical backup retention time<br>Unit: second</p>
                      */
                     uint64_t m_logicReserveDuration;
                     bool m_logicReserveDurationHasBeenSet;
 
                     /**
-                     * Is cross-regional logical backup enabled?.
-Valid values: ON/OFF.
+                     * <p>Whether cross-regional logical backup is enabled<br>Available values: ON/OFF</p>
                      */
                     std::string m_logicCrossRegionsEnable;
                     bool m_logicCrossRegionsEnableHasBeenSet;
 
                     /**
-                     * Regions covered by logical backup.
+                     * <p>Cross-regional logic backup</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> m_logicCrossRegions;
                     bool m_logicCrossRegionsHasBeenSet;
 
                     /**
-                     * Backup delivery relationship
+                     * <p>Backup delivery relationship</p>
                      */
                     std::vector<CreateBackupVaultItem> m_autoCopyVaults;
                     bool m_autoCopyVaultsHasBeenSet;
+
+                    /**
+                     * <p>Day</p><p>Unit: Cross-regional logical backup retention time</p>
+                     */
+                    int64_t m_logicCrossRegionSaveDays;
+                    bool m_logicCrossRegionSaveDaysHasBeenSet;
 
                 };
             }

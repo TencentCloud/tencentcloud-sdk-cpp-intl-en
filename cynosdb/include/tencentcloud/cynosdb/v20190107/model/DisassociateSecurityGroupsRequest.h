@@ -93,7 +93,7 @@ Description: To get the instance group ID of a cluster, perform [query cluster i
 Description: Please enter the primary AZ of the cluster location correctly. If you enter a non-primary AZ of the cluster location, the call may display success but the actual execution will fail.
                      * @return Zone Availability zone.
 Description: Please enter the primary AZ of the cluster location correctly. If you enter a non-primary AZ of the cluster location, the call may display success but the actual execution will fail.
-                     * 
+                     * @deprecated
                      */
                     std::string GetZone() const;
 
@@ -102,14 +102,14 @@ Description: Please enter the primary AZ of the cluster location correctly. If y
 Description: Please enter the primary AZ of the cluster location correctly. If you enter a non-primary AZ of the cluster location, the call may display success but the actual execution will fail.
                      * @param _zone Availability zone.
 Description: Please enter the primary AZ of the cluster location correctly. If you enter a non-primary AZ of the cluster location, the call may display success but the actual execution will fail.
-                     * 
+                     * @deprecated
                      */
                     void SetZone(const std::string& _zone);
 
                     /**
                      * 判断参数 Zone 是否已赋值
                      * @return Zone 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool ZoneHasBeenSet() const;
 

@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-#ifndef TENCENTCLOUD_CYNOSDB_V20190107_MODEL_MODIFYSNAPBACKUPCROSSREGIONCONFIGRESPONSE_H_
-#define TENCENTCLOUD_CYNOSDB_V20190107_MODEL_MODIFYSNAPBACKUPCROSSREGIONCONFIGRESPONSE_H_
+#ifndef TENCENTCLOUD_CYNOSDB_V20190107_MODEL_DESCRIBEBACKUPOVERVIEWREQUEST_H_
+#define TENCENTCLOUD_CYNOSDB_V20190107_MODEL_DESCRIBEBACKUPOVERVIEWREQUEST_H_
 
 #include <string>
 #include <vector>
@@ -32,38 +32,44 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * ModifySnapBackupCrossRegionConfig response structure.
+                * DescribeBackupOverview request structure.
                 */
-                class ModifySnapBackupCrossRegionConfigResponse : public AbstractModel
+                class DescribeBackupOverviewRequest : public AbstractModel
                 {
                 public:
-                    ModifySnapBackupCrossRegionConfigResponse();
-                    ~ModifySnapBackupCrossRegionConfigResponse() = default;
-                    CoreInternalOutcome Deserialize(const std::string &payload);
+                    DescribeBackupOverviewRequest();
+                    ~DescribeBackupOverviewRequest() = default;
                     std::string ToJsonString() const;
 
 
                     /**
-                     * 获取<p>Task ID.</p>
-                     * @return TaskId <p>Task ID.</p>
+                     * 获取Cluster ID.
+                     * @return ClusterId Cluster ID.
                      * 
                      */
-                    int64_t GetTaskId() const;
+                    std::string GetClusterId() const;
 
                     /**
-                     * 判断参数 TaskId 是否已赋值
-                     * @return TaskId 是否已赋值
+                     * 设置Cluster ID.
+                     * @param _clusterId Cluster ID.
                      * 
                      */
-                    bool TaskIdHasBeenSet() const;
+                    void SetClusterId(const std::string& _clusterId);
+
+                    /**
+                     * 判断参数 ClusterId 是否已赋值
+                     * @return ClusterId 是否已赋值
+                     * 
+                     */
+                    bool ClusterIdHasBeenSet() const;
 
                 private:
 
                     /**
-                     * <p>Task ID.</p>
+                     * Cluster ID.
                      */
-                    int64_t m_taskId;
-                    bool m_taskIdHasBeenSet;
+                    std::string m_clusterId;
+                    bool m_clusterIdHasBeenSet;
 
                 };
             }
@@ -71,4 +77,4 @@ namespace TencentCloud
     }
 }
 
-#endif // !TENCENTCLOUD_CYNOSDB_V20190107_MODEL_MODIFYSNAPBACKUPCROSSREGIONCONFIGRESPONSE_H_
+#endif // !TENCENTCLOUD_CYNOSDB_V20190107_MODEL_DESCRIBEBACKUPOVERVIEWREQUEST_H_

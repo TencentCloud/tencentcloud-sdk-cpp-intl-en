@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Cluster ID
-                     * @return ClusterId Cluster ID
+                     * 获取<p>Cluster ID.</p>
+                     * @return ClusterId <p>Cluster ID.</p>
                      * 
                      */
                     std::string GetClusterId() const;
 
                     /**
-                     * 设置Cluster ID
-                     * @param _clusterId Cluster ID
+                     * 设置<p>Cluster ID.</p>
+                     * @param _clusterId <p>Cluster ID.</p>
                      * 
                      */
                     void SetClusterId(const std::string& _clusterId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool ClusterIdHasBeenSet() const;
 
                     /**
-                     * 获取Whether cross-region snapshot backup is enabled.
-                     * @return CrossRegionsEnable Whether cross-region snapshot backup is enabled.
+                     * 获取<p>Whether cross-region snapshot backup is enabled ON/OFF</p>
+                     * @return CrossRegionsEnable <p>Whether cross-region snapshot backup is enabled ON/OFF</p>
                      * 
                      */
                     std::string GetCrossRegionsEnable() const;
 
                     /**
-                     * 设置Whether cross-region snapshot backup is enabled.
-                     * @param _crossRegionsEnable Whether cross-region snapshot backup is enabled.
+                     * 设置<p>Whether cross-region snapshot backup is enabled ON/OFF</p>
+                     * @param _crossRegionsEnable <p>Whether cross-region snapshot backup is enabled ON/OFF</p>
                      * 
                      */
                     void SetCrossRegionsEnable(const std::string& _crossRegionsEnable);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool CrossRegionsEnableHasBeenSet() const;
 
                     /**
-                     * 获取Cross-Regional snapshot backup.
-                     * @return CrossRegions Cross-Regional snapshot backup.
+                     * 获取<p>Cross-regional snapshot backup</p>
+                     * @return CrossRegions <p>Cross-regional snapshot backup</p>
                      * 
                      */
                     std::vector<std::string> GetCrossRegions() const;
 
                     /**
-                     * 设置Cross-Regional snapshot backup.
-                     * @param _crossRegions Cross-Regional snapshot backup.
+                     * 设置<p>Cross-regional snapshot backup</p>
+                     * @param _crossRegions <p>Cross-regional snapshot backup</p>
                      * 
                      */
                     void SetCrossRegions(const std::vector<std::string>& _crossRegions);
@@ -105,25 +105,52 @@ namespace TencentCloud
                      */
                     bool CrossRegionsHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Cross-region backup retention period</p><p>Unit: day</p>
+                     * @return CrossRegionSaveDays <p>Cross-region backup retention period</p><p>Unit: day</p>
+                     * 
+                     */
+                    int64_t GetCrossRegionSaveDays() const;
+
+                    /**
+                     * 设置<p>Cross-region backup retention period</p><p>Unit: day</p>
+                     * @param _crossRegionSaveDays <p>Cross-region backup retention period</p><p>Unit: day</p>
+                     * 
+                     */
+                    void SetCrossRegionSaveDays(const int64_t& _crossRegionSaveDays);
+
+                    /**
+                     * 判断参数 CrossRegionSaveDays 是否已赋值
+                     * @return CrossRegionSaveDays 是否已赋值
+                     * 
+                     */
+                    bool CrossRegionSaveDaysHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Cluster ID
+                     * <p>Cluster ID.</p>
                      */
                     std::string m_clusterId;
                     bool m_clusterIdHasBeenSet;
 
                     /**
-                     * Whether cross-region snapshot backup is enabled.
+                     * <p>Whether cross-region snapshot backup is enabled ON/OFF</p>
                      */
                     std::string m_crossRegionsEnable;
                     bool m_crossRegionsEnableHasBeenSet;
 
                     /**
-                     * Cross-Regional snapshot backup.
+                     * <p>Cross-regional snapshot backup</p>
                      */
                     std::vector<std::string> m_crossRegions;
                     bool m_crossRegionsHasBeenSet;
+
+                    /**
+                     * <p>Cross-region backup retention period</p><p>Unit: day</p>
+                     */
+                    int64_t m_crossRegionSaveDays;
+                    bool m_crossRegionSaveDaysHasBeenSet;
 
                 };
             }

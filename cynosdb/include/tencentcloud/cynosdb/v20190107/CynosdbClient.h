@@ -135,6 +135,8 @@
 #include <tencentcloud/cynosdb/v20190107/model/DescribeBackupListResponse.h>
 #include <tencentcloud/cynosdb/v20190107/model/DescribeBackupListByVaultRequest.h>
 #include <tencentcloud/cynosdb/v20190107/model/DescribeBackupListByVaultResponse.h>
+#include <tencentcloud/cynosdb/v20190107/model/DescribeBackupOverviewRequest.h>
+#include <tencentcloud/cynosdb/v20190107/model/DescribeBackupOverviewResponse.h>
 #include <tencentcloud/cynosdb/v20190107/model/DescribeBinlogConfigRequest.h>
 #include <tencentcloud/cynosdb/v20190107/model/DescribeBinlogConfigResponse.h>
 #include <tencentcloud/cynosdb/v20190107/model/DescribeBinlogDownloadUrlRequest.h>
@@ -449,8 +451,12 @@
 #include <tencentcloud/cynosdb/v20190107/model/SwitchClusterZoneResponse.h>
 #include <tencentcloud/cynosdb/v20190107/model/SwitchProxyVpcRequest.h>
 #include <tencentcloud/cynosdb/v20190107/model/SwitchProxyVpcResponse.h>
+#include <tencentcloud/cynosdb/v20190107/model/TransferClusterPrepayToPostpayRequest.h>
+#include <tencentcloud/cynosdb/v20190107/model/TransferClusterPrepayToPostpayResponse.h>
 #include <tencentcloud/cynosdb/v20190107/model/TransferClusterZoneRequest.h>
 #include <tencentcloud/cynosdb/v20190107/model/TransferClusterZoneResponse.h>
+#include <tencentcloud/cynosdb/v20190107/model/TransferStoragePrepayToPostpayRequest.h>
+#include <tencentcloud/cynosdb/v20190107/model/TransferStoragePrepayToPostpayResponse.h>
 #include <tencentcloud/cynosdb/v20190107/model/UnbindClusterResourcePackagesRequest.h>
 #include <tencentcloud/cynosdb/v20190107/model/UnbindClusterResourcePackagesResponse.h>
 #include <tencentcloud/cynosdb/v20190107/model/UpgradeClusterVersionRequest.h>
@@ -643,6 +649,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeBackupListByVaultResponse> DescribeBackupListByVaultOutcome;
                 typedef std::future<DescribeBackupListByVaultOutcome> DescribeBackupListByVaultOutcomeCallable;
                 typedef std::function<void(const CynosdbClient*, const Model::DescribeBackupListByVaultRequest&, DescribeBackupListByVaultOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeBackupListByVaultAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeBackupOverviewResponse> DescribeBackupOverviewOutcome;
+                typedef std::future<DescribeBackupOverviewOutcome> DescribeBackupOverviewOutcomeCallable;
+                typedef std::function<void(const CynosdbClient*, const Model::DescribeBackupOverviewRequest&, DescribeBackupOverviewOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeBackupOverviewAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeBinlogConfigResponse> DescribeBinlogConfigOutcome;
                 typedef std::future<DescribeBinlogConfigOutcome> DescribeBinlogConfigOutcomeCallable;
                 typedef std::function<void(const CynosdbClient*, const Model::DescribeBinlogConfigRequest&, DescribeBinlogConfigOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeBinlogConfigAsyncHandler;
@@ -1114,9 +1123,15 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::SwitchProxyVpcResponse> SwitchProxyVpcOutcome;
                 typedef std::future<SwitchProxyVpcOutcome> SwitchProxyVpcOutcomeCallable;
                 typedef std::function<void(const CynosdbClient*, const Model::SwitchProxyVpcRequest&, SwitchProxyVpcOutcome, const std::shared_ptr<const AsyncCallerContext>&)> SwitchProxyVpcAsyncHandler;
+                typedef Outcome<Core::Error, Model::TransferClusterPrepayToPostpayResponse> TransferClusterPrepayToPostpayOutcome;
+                typedef std::future<TransferClusterPrepayToPostpayOutcome> TransferClusterPrepayToPostpayOutcomeCallable;
+                typedef std::function<void(const CynosdbClient*, const Model::TransferClusterPrepayToPostpayRequest&, TransferClusterPrepayToPostpayOutcome, const std::shared_ptr<const AsyncCallerContext>&)> TransferClusterPrepayToPostpayAsyncHandler;
                 typedef Outcome<Core::Error, Model::TransferClusterZoneResponse> TransferClusterZoneOutcome;
                 typedef std::future<TransferClusterZoneOutcome> TransferClusterZoneOutcomeCallable;
                 typedef std::function<void(const CynosdbClient*, const Model::TransferClusterZoneRequest&, TransferClusterZoneOutcome, const std::shared_ptr<const AsyncCallerContext>&)> TransferClusterZoneAsyncHandler;
+                typedef Outcome<Core::Error, Model::TransferStoragePrepayToPostpayResponse> TransferStoragePrepayToPostpayOutcome;
+                typedef std::future<TransferStoragePrepayToPostpayOutcome> TransferStoragePrepayToPostpayOutcomeCallable;
+                typedef std::function<void(const CynosdbClient*, const Model::TransferStoragePrepayToPostpayRequest&, TransferStoragePrepayToPostpayOutcome, const std::shared_ptr<const AsyncCallerContext>&)> TransferStoragePrepayToPostpayAsyncHandler;
                 typedef Outcome<Core::Error, Model::UnbindClusterResourcePackagesResponse> UnbindClusterResourcePackagesOutcome;
                 typedef std::future<UnbindClusterResourcePackagesOutcome> UnbindClusterResourcePackagesOutcomeCallable;
                 typedef std::function<void(const CynosdbClient*, const Model::UnbindClusterResourcePackagesRequest&, UnbindClusterResourcePackagesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UnbindClusterResourcePackagesAsyncHandler;
@@ -1638,6 +1653,15 @@ namespace TencentCloud
                 DescribeBackupListByVaultOutcome DescribeBackupListByVault(const Model::DescribeBackupListByVaultRequest &request);
                 void DescribeBackupListByVaultAsync(const Model::DescribeBackupListByVaultRequest& request, const DescribeBackupListByVaultAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeBackupListByVaultOutcomeCallable DescribeBackupListByVaultCallable(const Model::DescribeBackupListByVaultRequest& request);
+
+                /**
+                 *This API is used to query the backup usage overview.
+                 * @param req DescribeBackupOverviewRequest
+                 * @return DescribeBackupOverviewOutcome
+                 */
+                DescribeBackupOverviewOutcome DescribeBackupOverview(const Model::DescribeBackupOverviewRequest &request);
+                void DescribeBackupOverviewAsync(const Model::DescribeBackupOverviewRequest& request, const DescribeBackupOverviewAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeBackupOverviewOutcomeCallable DescribeBackupOverviewCallable(const Model::DescribeBackupOverviewRequest& request);
 
                 /**
                  *This API is used to query binlog configurations.
@@ -3053,6 +3077,15 @@ namespace TencentCloud
                 SwitchProxyVpcOutcomeCallable SwitchProxyVpcCallable(const Model::SwitchProxyVpcRequest& request);
 
                 /**
+                 *This API is used to convert a Prepaid Cluster to a postpaid cluster.
+                 * @param req TransferClusterPrepayToPostpayRequest
+                 * @return TransferClusterPrepayToPostpayOutcome
+                 */
+                TransferClusterPrepayToPostpayOutcome TransferClusterPrepayToPostpay(const Model::TransferClusterPrepayToPostpayRequest &request);
+                void TransferClusterPrepayToPostpayAsync(const Model::TransferClusterPrepayToPostpayRequest& request, const TransferClusterPrepayToPostpayAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                TransferClusterPrepayToPostpayOutcomeCallable TransferClusterPrepayToPostpayCallable(const Model::TransferClusterPrepayToPostpayRequest& request);
+
+                /**
                  *This API is used to trigger cross-AZ migration.
                  * @param req TransferClusterZoneRequest
                  * @return TransferClusterZoneOutcome
@@ -3060,6 +3093,15 @@ namespace TencentCloud
                 TransferClusterZoneOutcome TransferClusterZone(const Model::TransferClusterZoneRequest &request);
                 void TransferClusterZoneAsync(const Model::TransferClusterZoneRequest& request, const TransferClusterZoneAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 TransferClusterZoneOutcomeCallable TransferClusterZoneCallable(const Model::TransferClusterZoneRequest& request);
+
+                /**
+                 *This API is used to convert prepaid storage to postpaid storage.
+                 * @param req TransferStoragePrepayToPostpayRequest
+                 * @return TransferStoragePrepayToPostpayOutcome
+                 */
+                TransferStoragePrepayToPostpayOutcome TransferStoragePrepayToPostpay(const Model::TransferStoragePrepayToPostpayRequest &request);
+                void TransferStoragePrepayToPostpayAsync(const Model::TransferStoragePrepayToPostpayRequest& request, const TransferStoragePrepayToPostpayAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                TransferStoragePrepayToPostpayOutcomeCallable TransferStoragePrepayToPostpayCallable(const Model::TransferStoragePrepayToPostpayRequest& request);
 
                 /**
                  *This API is used to unbind resource packages from clusters.

@@ -25,6 +25,7 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/cynosdb/v20190107/model/VaultInfo.h>
+#include <tencentcloud/cynosdb/v20190107/model/BinlogRegionInfo.h>
 
 
 namespace TencentCloud
@@ -48,15 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Binlog filename
-                     * @return FileName Binlog filename
+                     * 获取<p>Binlog filename</p>
+                     * @return FileName <p>Binlog filename</p>
                      * 
                      */
                     std::string GetFileName() const;
 
                     /**
-                     * 设置Binlog filename
-                     * @param _fileName Binlog filename
+                     * 设置<p>Binlog filename</p>
+                     * @param _fileName <p>Binlog filename</p>
                      * 
                      */
                     void SetFileName(const std::string& _fileName);
@@ -69,15 +70,15 @@ namespace TencentCloud
                     bool FileNameHasBeenSet() const;
 
                     /**
-                     * 获取File size in bytes
-                     * @return FileSize File size in bytes
+                     * 获取<p>File size, measurement unit: byte</p>
+                     * @return FileSize <p>File size, measurement unit: byte</p>
                      * 
                      */
                     int64_t GetFileSize() const;
 
                     /**
-                     * 设置File size in bytes
-                     * @param _fileSize File size in bytes
+                     * 设置<p>File size, measurement unit: byte</p>
+                     * @param _fileSize <p>File size, measurement unit: byte</p>
                      * 
                      */
                     void SetFileSize(const int64_t& _fileSize);
@@ -90,15 +91,15 @@ namespace TencentCloud
                     bool FileSizeHasBeenSet() const;
 
                     /**
-                     * 获取Transaction start time
-                     * @return StartTime Transaction start time
+                     * 获取<p>Earliest transaction time</p>
+                     * @return StartTime <p>Earliest transaction time</p>
                      * 
                      */
                     std::string GetStartTime() const;
 
                     /**
-                     * 设置Transaction start time
-                     * @param _startTime Transaction start time
+                     * 设置<p>Earliest transaction time</p>
+                     * @param _startTime <p>Earliest transaction time</p>
                      * 
                      */
                     void SetStartTime(const std::string& _startTime);
@@ -111,15 +112,15 @@ namespace TencentCloud
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取Transaction end time
-                     * @return FinishTime Transaction end time
+                     * 获取<p>Latest transaction time</p>
+                     * @return FinishTime <p>Latest transaction time</p>
                      * 
                      */
                     std::string GetFinishTime() const;
 
                     /**
-                     * 设置Transaction end time
-                     * @param _finishTime Transaction end time
+                     * 设置<p>Latest transaction time</p>
+                     * @param _finishTime <p>Latest transaction time</p>
                      * 
                      */
                     void SetFinishTime(const std::string& _finishTime);
@@ -132,15 +133,15 @@ namespace TencentCloud
                     bool FinishTimeHasBeenSet() const;
 
                     /**
-                     * 获取Binlog file ID
-                     * @return BinlogId Binlog file ID
+                     * 获取<p>Binlog file ID</p>
+                     * @return BinlogId <p>Binlog file ID</p>
                      * 
                      */
                     int64_t GetBinlogId() const;
 
                     /**
-                     * 设置Binlog file ID
-                     * @param _binlogId Binlog file ID
+                     * 设置<p>Binlog file ID</p>
+                     * @param _binlogId <p>Binlog file ID</p>
                      * 
                      */
                     void SetBinlogId(const int64_t& _binlogId);
@@ -153,15 +154,15 @@ namespace TencentCloud
                     bool BinlogIdHasBeenSet() const;
 
                     /**
-                     * 获取binlog cross-region coverage
-                     * @return CrossRegions binlog cross-region coverage
+                     * 获取<p>Cross-regional binlog</p>
+                     * @return CrossRegions <p>Cross-regional binlog</p>
                      * 
                      */
                     std::vector<std::string> GetCrossRegions() const;
 
                     /**
-                     * 设置binlog cross-region coverage
-                     * @param _crossRegions binlog cross-region coverage
+                     * 设置<p>Cross-regional binlog</p>
+                     * @param _crossRegions <p>Cross-regional binlog</p>
                      * 
                      */
                     void SetCrossRegions(const std::vector<std::string>& _crossRegions);
@@ -174,15 +175,15 @@ namespace TencentCloud
                     bool CrossRegionsHasBeenSet() const;
 
                     /**
-                     * 获取Backup delivery status
-                     * @return CopyStatus Backup delivery status
+                     * 获取<p>Backup delivery status</p>
+                     * @return CopyStatus <p>Backup delivery status</p>
                      * 
                      */
                     std::string GetCopyStatus() const;
 
                     /**
-                     * 设置Backup delivery status
-                     * @param _copyStatus Backup delivery status
+                     * 设置<p>Backup delivery status</p>
+                     * @param _copyStatus <p>Backup delivery status</p>
                      * 
                      */
                     void SetCopyStatus(const std::string& _copyStatus);
@@ -195,15 +196,15 @@ namespace TencentCloud
                     bool CopyStatusHasBeenSet() const;
 
                     /**
-                     * 获取Safe info
-                     * @return VaultInfos Safe info
+                     * 获取<p>Safe information</p>
+                     * @return VaultInfos <p>Safe information</p>
                      * 
                      */
                     std::vector<VaultInfo> GetVaultInfos() const;
 
                     /**
-                     * 设置Safe info
-                     * @param _vaultInfos Safe info
+                     * 设置<p>Safe information</p>
+                     * @param _vaultInfos <p>Safe information</p>
                      * 
                      */
                     void SetVaultInfos(const std::vector<VaultInfo>& _vaultInfos);
@@ -216,15 +217,15 @@ namespace TencentCloud
                     bool VaultInfosHasBeenSet() const;
 
                     /**
-                     * 获取Encryption key
-                     * @return EncryptKeyId Encryption key
+                     * 获取<p>Encryption key</p>
+                     * @return EncryptKeyId <p>Encryption key</p>
                      * 
                      */
                     std::string GetEncryptKeyId() const;
 
                     /**
-                     * 设置Encryption key
-                     * @param _encryptKeyId Encryption key
+                     * 设置<p>Encryption key</p>
+                     * @param _encryptKeyId <p>Encryption key</p>
                      * 
                      */
                     void SetEncryptKeyId(const std::string& _encryptKeyId);
@@ -237,15 +238,15 @@ namespace TencentCloud
                     bool EncryptKeyIdHasBeenSet() const;
 
                     /**
-                     * 获取Encrypt key region
-                     * @return EncryptRegion Encrypt key region
+                     * 获取<p>Key region for encryption</p>
+                     * @return EncryptRegion <p>Key region for encryption</p>
                      * 
                      */
                     std::string GetEncryptRegion() const;
 
                     /**
-                     * 设置Encrypt key region
-                     * @param _encryptRegion Encrypt key region
+                     * 设置<p>Key region for encryption</p>
+                     * @param _encryptRegion <p>Key region for encryption</p>
                      * 
                      */
                     void SetEncryptRegion(const std::string& _encryptRegion);
@@ -257,67 +258,94 @@ namespace TencentCloud
                      */
                     bool EncryptRegionHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Geographical distribution of backups</p>
+                     * @return ExistRegions <p>Geographical distribution of backups</p>
+                     * 
+                     */
+                    std::vector<BinlogRegionInfo> GetExistRegions() const;
+
+                    /**
+                     * 设置<p>Geographical distribution of backups</p>
+                     * @param _existRegions <p>Geographical distribution of backups</p>
+                     * 
+                     */
+                    void SetExistRegions(const std::vector<BinlogRegionInfo>& _existRegions);
+
+                    /**
+                     * 判断参数 ExistRegions 是否已赋值
+                     * @return ExistRegions 是否已赋值
+                     * 
+                     */
+                    bool ExistRegionsHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Binlog filename
+                     * <p>Binlog filename</p>
                      */
                     std::string m_fileName;
                     bool m_fileNameHasBeenSet;
 
                     /**
-                     * File size in bytes
+                     * <p>File size, measurement unit: byte</p>
                      */
                     int64_t m_fileSize;
                     bool m_fileSizeHasBeenSet;
 
                     /**
-                     * Transaction start time
+                     * <p>Earliest transaction time</p>
                      */
                     std::string m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * Transaction end time
+                     * <p>Latest transaction time</p>
                      */
                     std::string m_finishTime;
                     bool m_finishTimeHasBeenSet;
 
                     /**
-                     * Binlog file ID
+                     * <p>Binlog file ID</p>
                      */
                     int64_t m_binlogId;
                     bool m_binlogIdHasBeenSet;
 
                     /**
-                     * binlog cross-region coverage
+                     * <p>Cross-regional binlog</p>
                      */
                     std::vector<std::string> m_crossRegions;
                     bool m_crossRegionsHasBeenSet;
 
                     /**
-                     * Backup delivery status
+                     * <p>Backup delivery status</p>
                      */
                     std::string m_copyStatus;
                     bool m_copyStatusHasBeenSet;
 
                     /**
-                     * Safe info
+                     * <p>Safe information</p>
                      */
                     std::vector<VaultInfo> m_vaultInfos;
                     bool m_vaultInfosHasBeenSet;
 
                     /**
-                     * Encryption key
+                     * <p>Encryption key</p>
                      */
                     std::string m_encryptKeyId;
                     bool m_encryptKeyIdHasBeenSet;
 
                     /**
-                     * Encrypt key region
+                     * <p>Key region for encryption</p>
                      */
                     std::string m_encryptRegion;
                     bool m_encryptRegionHasBeenSet;
+
+                    /**
+                     * <p>Geographical distribution of backups</p>
+                     */
+                    std::vector<BinlogRegionInfo> m_existRegions;
+                    bool m_existRegionsHasBeenSet;
 
                 };
             }

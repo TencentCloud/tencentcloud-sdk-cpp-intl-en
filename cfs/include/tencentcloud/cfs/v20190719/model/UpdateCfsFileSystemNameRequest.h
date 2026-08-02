@@ -43,15 +43,19 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取File system ID. obtain it by querying the file system interface (https://www.tencentcloud.com/document/api/582/38170?from_cn_redirect=1).
-                     * @return FileSystemId File system ID. obtain it by querying the file system interface (https://www.tencentcloud.com/document/api/582/38170?from_cn_redirect=1).
+                     * 获取File system ID. obtain it by querying the file system interface [DescribeCfsFileSystems
+](https://www.tencentcloud.com/zh/document/product/582/34514)
+                     * @return FileSystemId File system ID. obtain it by querying the file system interface [DescribeCfsFileSystems
+](https://www.tencentcloud.com/zh/document/product/582/34514)
                      * 
                      */
                     std::string GetFileSystemId() const;
 
                     /**
-                     * 设置File system ID. obtain it by querying the file system interface (https://www.tencentcloud.com/document/api/582/38170?from_cn_redirect=1).
-                     * @param _fileSystemId File system ID. obtain it by querying the file system interface (https://www.tencentcloud.com/document/api/582/38170?from_cn_redirect=1).
+                     * 设置File system ID. obtain it by querying the file system interface [DescribeCfsFileSystems
+](https://www.tencentcloud.com/zh/document/product/582/34514)
+                     * @param _fileSystemId File system ID. obtain it by querying the file system interface [DescribeCfsFileSystems
+](https://www.tencentcloud.com/zh/document/product/582/34514)
                      * 
                      */
                     void SetFileSystemId(const std::string& _fileSystemId);
@@ -87,7 +91,8 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * File system ID. obtain it by querying the file system interface (https://www.tencentcloud.com/document/api/582/38170?from_cn_redirect=1).
+                     * File system ID. obtain it by querying the file system interface [DescribeCfsFileSystems
+](https://www.tencentcloud.com/zh/document/product/582/34514)
                      */
                     std::string m_fileSystemId;
                     bool m_fileSystemIdHasBeenSet;

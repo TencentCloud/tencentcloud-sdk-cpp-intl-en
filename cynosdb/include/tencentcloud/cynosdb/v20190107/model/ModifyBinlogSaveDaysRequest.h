@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Cluster ID
-                     * @return ClusterId Cluster ID
+                     * 获取<p>Cluster ID.</p>
+                     * @return ClusterId <p>Cluster ID.</p>
                      * 
                      */
                     std::string GetClusterId() const;
 
                     /**
-                     * 设置Cluster ID
-                     * @param _clusterId Cluster ID
+                     * 设置<p>Cluster ID.</p>
+                     * @param _clusterId <p>Cluster ID.</p>
                      * 
                      */
                     void SetClusterId(const std::string& _clusterId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool ClusterIdHasBeenSet() const;
 
                     /**
-                     * 获取Binlog retention period in days
-                     * @return BinlogSaveDays Binlog retention period in days
+                     * 获取<p>Binlog retention days</p>
+                     * @return BinlogSaveDays <p>Binlog retention days</p>
                      * 
                      */
                     int64_t GetBinlogSaveDays() const;
 
                     /**
-                     * 设置Binlog retention period in days
-                     * @param _binlogSaveDays Binlog retention period in days
+                     * 设置<p>Binlog retention days</p>
+                     * @param _binlogSaveDays <p>Binlog retention days</p>
                      * 
                      */
                     void SetBinlogSaveDays(const int64_t& _binlogSaveDays);
@@ -84,19 +84,46 @@ namespace TencentCloud
                      */
                     bool BinlogSaveDaysHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Cross-region backup retention period</p><p>Unit: Day</p>
+                     * @return BinlogCrossRegionSaveDays <p>Cross-region backup retention period</p><p>Unit: Day</p>
+                     * 
+                     */
+                    int64_t GetBinlogCrossRegionSaveDays() const;
+
+                    /**
+                     * 设置<p>Cross-region backup retention period</p><p>Unit: Day</p>
+                     * @param _binlogCrossRegionSaveDays <p>Cross-region backup retention period</p><p>Unit: Day</p>
+                     * 
+                     */
+                    void SetBinlogCrossRegionSaveDays(const int64_t& _binlogCrossRegionSaveDays);
+
+                    /**
+                     * 判断参数 BinlogCrossRegionSaveDays 是否已赋值
+                     * @return BinlogCrossRegionSaveDays 是否已赋值
+                     * 
+                     */
+                    bool BinlogCrossRegionSaveDaysHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Cluster ID
+                     * <p>Cluster ID.</p>
                      */
                     std::string m_clusterId;
                     bool m_clusterIdHasBeenSet;
 
                     /**
-                     * Binlog retention period in days
+                     * <p>Binlog retention days</p>
                      */
                     int64_t m_binlogSaveDays;
                     bool m_binlogSaveDaysHasBeenSet;
+
+                    /**
+                     * <p>Cross-region backup retention period</p><p>Unit: Day</p>
+                     */
+                    int64_t m_binlogCrossRegionSaveDays;
+                    bool m_binlogCrossRegionSaveDaysHasBeenSet;
 
                 };
             }

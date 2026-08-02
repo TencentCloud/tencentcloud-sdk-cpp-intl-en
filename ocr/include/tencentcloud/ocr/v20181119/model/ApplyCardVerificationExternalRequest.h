@@ -265,6 +265,27 @@ If set to true, the image constraints are:
                      */
                     bool ReturnHeadImageHasBeenSet() const;
 
+                    /**
+                     * 获取Verification status callback URL. When set, this endpoint will be actively notified with the final verification result upon process completion. Leave blank to disable callbacks. Since callbacks are not fully reliable, a polling mechanism is advised to guarantee retrieval of the final status.
+                     * @return WebhookUrl Verification status callback URL. When set, this endpoint will be actively notified with the final verification result upon process completion. Leave blank to disable callbacks. Since callbacks are not fully reliable, a polling mechanism is advised to guarantee retrieval of the final status.
+                     * 
+                     */
+                    std::string GetWebhookUrl() const;
+
+                    /**
+                     * 设置Verification status callback URL. When set, this endpoint will be actively notified with the final verification result upon process completion. Leave blank to disable callbacks. Since callbacks are not fully reliable, a polling mechanism is advised to guarantee retrieval of the final status.
+                     * @param _webhookUrl Verification status callback URL. When set, this endpoint will be actively notified with the final verification result upon process completion. Leave blank to disable callbacks. Since callbacks are not fully reliable, a polling mechanism is advised to guarantee retrieval of the final status.
+                     * 
+                     */
+                    void SetWebhookUrl(const std::string& _webhookUrl);
+
+                    /**
+                     * 判断参数 WebhookUrl 是否已赋值
+                     * @return WebhookUrl 是否已赋值
+                     * 
+                     */
+                    bool WebhookUrlHasBeenSet() const;
+
                 private:
 
                     /**
@@ -327,6 +348,12 @@ If set to true, the image constraints are:
                      */
                     bool m_returnHeadImage;
                     bool m_returnHeadImageHasBeenSet;
+
+                    /**
+                     * Verification status callback URL. When set, this endpoint will be actively notified with the final verification result upon process completion. Leave blank to disable callbacks. Since callbacks are not fully reliable, a polling mechanism is advised to guarantee retrieval of the final status.
+                     */
+                    std::string m_webhookUrl;
+                    bool m_webhookUrlHasBeenSet;
 
                 };
             }

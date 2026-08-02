@@ -2840,6 +2840,56 @@ CynosdbClient::DescribeBackupListByVaultOutcomeCallable CynosdbClient::DescribeB
     return prom->get_future();
 }
 
+CynosdbClient::DescribeBackupOverviewOutcome CynosdbClient::DescribeBackupOverview(const DescribeBackupOverviewRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeBackupOverview");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeBackupOverviewResponse rsp = DescribeBackupOverviewResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeBackupOverviewOutcome(rsp);
+        else
+            return DescribeBackupOverviewOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeBackupOverviewOutcome(outcome.GetError());
+    }
+}
+
+void CynosdbClient::DescribeBackupOverviewAsync(const DescribeBackupOverviewRequest& request, const DescribeBackupOverviewAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeBackupOverviewRequest&;
+    using Resp = DescribeBackupOverviewResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeBackupOverview", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CynosdbClient::DescribeBackupOverviewOutcomeCallable CynosdbClient::DescribeBackupOverviewCallable(const DescribeBackupOverviewRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeBackupOverviewOutcome>>();
+    DescribeBackupOverviewAsync(
+    request,
+    [prom](
+        const CynosdbClient*,
+        const DescribeBackupOverviewRequest&,
+        DescribeBackupOverviewOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 CynosdbClient::DescribeBinlogConfigOutcome CynosdbClient::DescribeBinlogConfig(const DescribeBinlogConfigRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeBinlogConfig");
@@ -10690,6 +10740,56 @@ CynosdbClient::SwitchProxyVpcOutcomeCallable CynosdbClient::SwitchProxyVpcCallab
     return prom->get_future();
 }
 
+CynosdbClient::TransferClusterPrepayToPostpayOutcome CynosdbClient::TransferClusterPrepayToPostpay(const TransferClusterPrepayToPostpayRequest &request)
+{
+    auto outcome = MakeRequest(request, "TransferClusterPrepayToPostpay");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        TransferClusterPrepayToPostpayResponse rsp = TransferClusterPrepayToPostpayResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return TransferClusterPrepayToPostpayOutcome(rsp);
+        else
+            return TransferClusterPrepayToPostpayOutcome(o.GetError());
+    }
+    else
+    {
+        return TransferClusterPrepayToPostpayOutcome(outcome.GetError());
+    }
+}
+
+void CynosdbClient::TransferClusterPrepayToPostpayAsync(const TransferClusterPrepayToPostpayRequest& request, const TransferClusterPrepayToPostpayAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const TransferClusterPrepayToPostpayRequest&;
+    using Resp = TransferClusterPrepayToPostpayResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "TransferClusterPrepayToPostpay", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CynosdbClient::TransferClusterPrepayToPostpayOutcomeCallable CynosdbClient::TransferClusterPrepayToPostpayCallable(const TransferClusterPrepayToPostpayRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<TransferClusterPrepayToPostpayOutcome>>();
+    TransferClusterPrepayToPostpayAsync(
+    request,
+    [prom](
+        const CynosdbClient*,
+        const TransferClusterPrepayToPostpayRequest&,
+        TransferClusterPrepayToPostpayOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 CynosdbClient::TransferClusterZoneOutcome CynosdbClient::TransferClusterZone(const TransferClusterZoneRequest &request)
 {
     auto outcome = MakeRequest(request, "TransferClusterZone");
@@ -10732,6 +10832,56 @@ CynosdbClient::TransferClusterZoneOutcomeCallable CynosdbClient::TransferCluster
         const CynosdbClient*,
         const TransferClusterZoneRequest&,
         TransferClusterZoneOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CynosdbClient::TransferStoragePrepayToPostpayOutcome CynosdbClient::TransferStoragePrepayToPostpay(const TransferStoragePrepayToPostpayRequest &request)
+{
+    auto outcome = MakeRequest(request, "TransferStoragePrepayToPostpay");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        TransferStoragePrepayToPostpayResponse rsp = TransferStoragePrepayToPostpayResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return TransferStoragePrepayToPostpayOutcome(rsp);
+        else
+            return TransferStoragePrepayToPostpayOutcome(o.GetError());
+    }
+    else
+    {
+        return TransferStoragePrepayToPostpayOutcome(outcome.GetError());
+    }
+}
+
+void CynosdbClient::TransferStoragePrepayToPostpayAsync(const TransferStoragePrepayToPostpayRequest& request, const TransferStoragePrepayToPostpayAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const TransferStoragePrepayToPostpayRequest&;
+    using Resp = TransferStoragePrepayToPostpayResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "TransferStoragePrepayToPostpay", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CynosdbClient::TransferStoragePrepayToPostpayOutcomeCallable CynosdbClient::TransferStoragePrepayToPostpayCallable(const TransferStoragePrepayToPostpayRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<TransferStoragePrepayToPostpayOutcome>>();
+    TransferStoragePrepayToPostpayAsync(
+    request,
+    [prom](
+        const CynosdbClient*,
+        const TransferStoragePrepayToPostpayRequest&,
+        TransferStoragePrepayToPostpayOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {

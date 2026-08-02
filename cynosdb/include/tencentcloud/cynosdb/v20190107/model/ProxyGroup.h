@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Database proxy group ID
-                     * @return ProxyGroupId Database proxy group ID
+                     * 获取<p>Database Proxy Group ID.</p>
+                     * @return ProxyGroupId <p>Database Proxy Group ID.</p>
                      * 
                      */
                     std::string GetProxyGroupId() const;
 
                     /**
-                     * 设置Database proxy group ID
-                     * @param _proxyGroupId Database proxy group ID
+                     * 设置<p>Database Proxy Group ID.</p>
+                     * @param _proxyGroupId <p>Database Proxy Group ID.</p>
                      * 
                      */
                     void SetProxyGroupId(const std::string& _proxyGroupId);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool ProxyGroupIdHasBeenSet() const;
 
                     /**
-                     * 获取Number of nodes in the proxy group
-                     * @return ProxyNodeCount Number of nodes in the proxy group
+                     * 获取<p>Number of database proxy group nodes</p>
+                     * @return ProxyNodeCount <p>Number of database proxy group nodes</p>
                      * 
                      */
                     int64_t GetProxyNodeCount() const;
 
                     /**
-                     * 设置Number of nodes in the proxy group
-                     * @param _proxyNodeCount Number of nodes in the proxy group
+                     * 设置<p>Number of database proxy group nodes</p>
+                     * @param _proxyNodeCount <p>Number of database proxy group nodes</p>
                      * 
                      */
                     void SetProxyNodeCount(const int64_t& _proxyNodeCount);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool ProxyNodeCountHasBeenSet() const;
 
                     /**
-                     * 获取Database proxy group status
-                     * @return Status Database proxy group status
+                     * 获取<p>Database Proxy Group status</p>
+                     * @return Status <p>Database Proxy Group status</p>
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置Database proxy group status
-                     * @param _status Database proxy group status
+                     * 设置<p>Database Proxy Group status</p>
+                     * @param _status <p>Database Proxy Group status</p>
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Region
-                     * @return Region Region
+                     * 获取<p>Region.</p>
+                     * @return Region <p>Region.</p>
                      * 
                      */
                     std::string GetRegion() const;
 
                     /**
-                     * 设置Region
-                     * @param _region Region
+                     * 设置<p>Region.</p>
+                     * @param _region <p>Region.</p>
                      * 
                      */
                     void SetRegion(const std::string& _region);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool RegionHasBeenSet() const;
 
                     /**
-                     * 获取AZ
-                     * @return Zone AZ
+                     * 获取<p>AZ.</p>
+                     * @return Zone <p>AZ.</p>
                      * 
                      */
                     std::string GetZone() const;
 
                     /**
-                     * 设置AZ
-                     * @param _zone AZ
+                     * 设置<p>AZ.</p>
+                     * @param _zone <p>AZ.</p>
                      * 
                      */
                     void SetZone(const std::string& _zone);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool ZoneHasBeenSet() const;
 
                     /**
-                     * 获取Current proxy version
-                     * @return CurrentProxyVersion Current proxy version
+                     * 获取<p>Current proxy version</p>
+                     * @return CurrentProxyVersion <p>Current proxy version</p>
                      * 
                      */
                     std::string GetCurrentProxyVersion() const;
 
                     /**
-                     * 设置Current proxy version
-                     * @param _currentProxyVersion Current proxy version
+                     * 设置<p>Current proxy version</p>
+                     * @param _currentProxyVersion <p>Current proxy version</p>
                      * 
                      */
                     void SetCurrentProxyVersion(const std::string& _currentProxyVersion);
@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool CurrentProxyVersionHasBeenSet() const;
 
                     /**
-                     * 获取Cluster ID
-                     * @return ClusterId Cluster ID
+                     * 获取<p>Cluster ID.</p>
+                     * @return ClusterId <p>Cluster ID.</p>
                      * 
                      */
                     std::string GetClusterId() const;
 
                     /**
-                     * 设置Cluster ID
-                     * @param _clusterId Cluster ID
+                     * 设置<p>Cluster ID.</p>
+                     * @param _clusterId <p>Cluster ID.</p>
                      * 
                      */
                     void SetClusterId(const std::string& _clusterId);
@@ -194,15 +194,15 @@ namespace TencentCloud
                     bool ClusterIdHasBeenSet() const;
 
                     /**
-                     * 获取User AppId
-                     * @return AppId User AppId
+                     * 获取<p>User AppId</p>
+                     * @return AppId <p>User AppId</p>
                      * 
                      */
                     int64_t GetAppId() const;
 
                     /**
-                     * 设置User AppId
-                     * @param _appId User AppId
+                     * 设置<p>User AppId</p>
+                     * @param _appId <p>User AppId</p>
                      * 
                      */
                     void SetAppId(const int64_t& _appId);
@@ -215,15 +215,15 @@ namespace TencentCloud
                     bool AppIdHasBeenSet() const;
 
                     /**
-                     * 获取Specifies that a read-write node activates the database proxy.
-                     * @return OpenRw Specifies that a read-write node activates the database proxy.
+                     * 获取<p>Activate database proxy for RWNode</p>
+                     * @return OpenRw <p>Activate database proxy for RWNode</p>
                      * 
                      */
                     std::string GetOpenRw() const;
 
                     /**
-                     * 设置Specifies that a read-write node activates the database proxy.
-                     * @param _openRw Specifies that a read-write node activates the database proxy.
+                     * 设置<p>Activate database proxy for RWNode</p>
+                     * @param _openRw <p>Activate database proxy for RWNode</p>
                      * 
                      */
                     void SetOpenRw(const std::string& _openRw);
@@ -235,61 +235,115 @@ namespace TencentCloud
                      */
                     bool OpenRwHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Creation time.</p>
+                     * @return CreateTime <p>Creation time.</p>
+                     * 
+                     */
+                    std::string GetCreateTime() const;
+
+                    /**
+                     * 设置<p>Creation time.</p>
+                     * @param _createTime <p>Creation time.</p>
+                     * 
+                     */
+                    void SetCreateTime(const std::string& _createTime);
+
+                    /**
+                     * 判断参数 CreateTime 是否已赋值
+                     * @return CreateTime 是否已赋值
+                     * 
+                     */
+                    bool CreateTimeHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Update time.</p>
+                     * @return UpdateTime <p>Update time.</p>
+                     * 
+                     */
+                    std::string GetUpdateTime() const;
+
+                    /**
+                     * 设置<p>Update time.</p>
+                     * @param _updateTime <p>Update time.</p>
+                     * 
+                     */
+                    void SetUpdateTime(const std::string& _updateTime);
+
+                    /**
+                     * 判断参数 UpdateTime 是否已赋值
+                     * @return UpdateTime 是否已赋值
+                     * 
+                     */
+                    bool UpdateTimeHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Database proxy group ID
+                     * <p>Database Proxy Group ID.</p>
                      */
                     std::string m_proxyGroupId;
                     bool m_proxyGroupIdHasBeenSet;
 
                     /**
-                     * Number of nodes in the proxy group
+                     * <p>Number of database proxy group nodes</p>
                      */
                     int64_t m_proxyNodeCount;
                     bool m_proxyNodeCountHasBeenSet;
 
                     /**
-                     * Database proxy group status
+                     * <p>Database Proxy Group status</p>
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Region
+                     * <p>Region.</p>
                      */
                     std::string m_region;
                     bool m_regionHasBeenSet;
 
                     /**
-                     * AZ
+                     * <p>AZ.</p>
                      */
                     std::string m_zone;
                     bool m_zoneHasBeenSet;
 
                     /**
-                     * Current proxy version
+                     * <p>Current proxy version</p>
                      */
                     std::string m_currentProxyVersion;
                     bool m_currentProxyVersionHasBeenSet;
 
                     /**
-                     * Cluster ID
+                     * <p>Cluster ID.</p>
                      */
                     std::string m_clusterId;
                     bool m_clusterIdHasBeenSet;
 
                     /**
-                     * User AppId
+                     * <p>User AppId</p>
                      */
                     int64_t m_appId;
                     bool m_appIdHasBeenSet;
 
                     /**
-                     * Specifies that a read-write node activates the database proxy.
+                     * <p>Activate database proxy for RWNode</p>
                      */
                     std::string m_openRw;
                     bool m_openRwHasBeenSet;
+
+                    /**
+                     * <p>Creation time.</p>
+                     */
+                    std::string m_createTime;
+                    bool m_createTimeHasBeenSet;
+
+                    /**
+                     * <p>Update time.</p>
+                     */
+                    std::string m_updateTime;
+                    bool m_updateTimeHasBeenSet;
 
                 };
             }
