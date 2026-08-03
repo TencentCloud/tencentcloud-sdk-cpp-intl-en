@@ -1190,56 +1190,6 @@ CkafkaClient::DeleteTopicOutcomeCallable CkafkaClient::DeleteTopicCallable(const
     return prom->get_future();
 }
 
-CkafkaClient::DeleteTopicIpWhiteListOutcome CkafkaClient::DeleteTopicIpWhiteList(const DeleteTopicIpWhiteListRequest &request)
-{
-    auto outcome = MakeRequest(request, "DeleteTopicIpWhiteList");
-    if (outcome.IsSuccess())
-    {
-        auto r = outcome.GetResult();
-        string payload = string(r.Body(), r.BodySize());
-        DeleteTopicIpWhiteListResponse rsp = DeleteTopicIpWhiteListResponse();
-        auto o = rsp.Deserialize(payload);
-        if (o.IsSuccess())
-            return DeleteTopicIpWhiteListOutcome(rsp);
-        else
-            return DeleteTopicIpWhiteListOutcome(o.GetError());
-    }
-    else
-    {
-        return DeleteTopicIpWhiteListOutcome(outcome.GetError());
-    }
-}
-
-void CkafkaClient::DeleteTopicIpWhiteListAsync(const DeleteTopicIpWhiteListRequest& request, const DeleteTopicIpWhiteListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
-{
-    using Req = const DeleteTopicIpWhiteListRequest&;
-    using Resp = DeleteTopicIpWhiteListResponse;
-
-    DoRequestAsync<Req, Resp>(
-        "DeleteTopicIpWhiteList", request, {{{"Content-Type", "application/json"}}},
-        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
-        {
-            handler(this, req, std::move(resp), context);
-        });
-}
-
-CkafkaClient::DeleteTopicIpWhiteListOutcomeCallable CkafkaClient::DeleteTopicIpWhiteListCallable(const DeleteTopicIpWhiteListRequest &request)
-{
-    const auto prom = std::make_shared<std::promise<DeleteTopicIpWhiteListOutcome>>();
-    DeleteTopicIpWhiteListAsync(
-    request,
-    [prom](
-        const CkafkaClient*,
-        const DeleteTopicIpWhiteListRequest&,
-        DeleteTopicIpWhiteListOutcome resp,
-        const std::shared_ptr<const AsyncCallerContext>&
-    )
-    {
-        prom->set_value(resp);
-    });
-    return prom->get_future();
-}
-
 CkafkaClient::DeleteUserOutcome CkafkaClient::DeleteUser(const DeleteUserRequest &request)
 {
     auto outcome = MakeRequest(request, "DeleteUser");
@@ -1332,6 +1282,56 @@ CkafkaClient::DescribeACLOutcomeCallable CkafkaClient::DescribeACLCallable(const
         const CkafkaClient*,
         const DescribeACLRequest&,
         DescribeACLOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CkafkaClient::DescribeAccessPolicyOutcome CkafkaClient::DescribeAccessPolicy(const DescribeAccessPolicyRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeAccessPolicy");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeAccessPolicyResponse rsp = DescribeAccessPolicyResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeAccessPolicyOutcome(rsp);
+        else
+            return DescribeAccessPolicyOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeAccessPolicyOutcome(outcome.GetError());
+    }
+}
+
+void CkafkaClient::DescribeAccessPolicyAsync(const DescribeAccessPolicyRequest& request, const DescribeAccessPolicyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeAccessPolicyRequest&;
+    using Resp = DescribeAccessPolicyResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeAccessPolicy", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CkafkaClient::DescribeAccessPolicyOutcomeCallable CkafkaClient::DescribeAccessPolicyCallable(const DescribeAccessPolicyRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeAccessPolicyOutcome>>();
+    DescribeAccessPolicyAsync(
+    request,
+    [prom](
+        const CkafkaClient*,
+        const DescribeAccessPolicyRequest&,
+        DescribeAccessPolicyOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -2882,6 +2882,106 @@ CkafkaClient::InstanceScalingDownOutcomeCallable CkafkaClient::InstanceScalingDo
         const CkafkaClient*,
         const InstanceScalingDownRequest&,
         InstanceScalingDownOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CkafkaClient::IsolatedInstancePreOutcome CkafkaClient::IsolatedInstancePre(const IsolatedInstancePreRequest &request)
+{
+    auto outcome = MakeRequest(request, "IsolatedInstancePre");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        IsolatedInstancePreResponse rsp = IsolatedInstancePreResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return IsolatedInstancePreOutcome(rsp);
+        else
+            return IsolatedInstancePreOutcome(o.GetError());
+    }
+    else
+    {
+        return IsolatedInstancePreOutcome(outcome.GetError());
+    }
+}
+
+void CkafkaClient::IsolatedInstancePreAsync(const IsolatedInstancePreRequest& request, const IsolatedInstancePreAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const IsolatedInstancePreRequest&;
+    using Resp = IsolatedInstancePreResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "IsolatedInstancePre", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CkafkaClient::IsolatedInstancePreOutcomeCallable CkafkaClient::IsolatedInstancePreCallable(const IsolatedInstancePreRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<IsolatedInstancePreOutcome>>();
+    IsolatedInstancePreAsync(
+    request,
+    [prom](
+        const CkafkaClient*,
+        const IsolatedInstancePreRequest&,
+        IsolatedInstancePreOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CkafkaClient::ModifyAccessPolicyOutcome CkafkaClient::ModifyAccessPolicy(const ModifyAccessPolicyRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyAccessPolicy");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyAccessPolicyResponse rsp = ModifyAccessPolicyResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyAccessPolicyOutcome(rsp);
+        else
+            return ModifyAccessPolicyOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyAccessPolicyOutcome(outcome.GetError());
+    }
+}
+
+void CkafkaClient::ModifyAccessPolicyAsync(const ModifyAccessPolicyRequest& request, const ModifyAccessPolicyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ModifyAccessPolicyRequest&;
+    using Resp = ModifyAccessPolicyResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ModifyAccessPolicy", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CkafkaClient::ModifyAccessPolicyOutcomeCallable CkafkaClient::ModifyAccessPolicyCallable(const ModifyAccessPolicyRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ModifyAccessPolicyOutcome>>();
+    ModifyAccessPolicyAsync(
+    request,
+    [prom](
+        const CkafkaClient*,
+        const ModifyAccessPolicyRequest&,
+        ModifyAccessPolicyOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {

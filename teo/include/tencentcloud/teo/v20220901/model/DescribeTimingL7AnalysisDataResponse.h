@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Total number of query results.
-                     * @return TotalCount Total number of query results.
+                     * 获取<p>The total number of records in the query result.</p>
+                     * @return TotalCount <p>The total number of records in the query result.</p>
                      * 
                      */
                     uint64_t GetTotalCount() const;
@@ -59,10 +59,10 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取The list of L7 traffic data recorded over time.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Data The list of L7 traffic data recorded over time.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Layer-7 time series traffic data list.<br>For different queried metrics, time series data will be returned from different parameters according to the value type.<br>Currently existing value types include the following two:</p><ul>  <li><strong>Integer</strong>: Metrics with <code>Integer</code> value type will return corresponding time series data from <code>Data.N.TypeValue</code>.<br>Queried metrics <code>MetricName</code> include:    <ul>      <li><code>l7Flow_outFlux</code>: L7 EdgeOne response traffic, unit: Byte;</li>      <li><code>l7Flow_inFlux</code>: L7 client request traffic, unit: Byte;</li>      <li><code>l7Flow_flux</code>: L7 total access traffic (EdgeOne response + client requests), unit: Byte;</li>      <li><code>l7Flow_outBandwidth</code>: L7 EdgeOne response bandwidth, unit: bps;</li>      <li><code>l7Flow_inBandwidth</code>: L7 client request bandwidth, unit: bps;</li>      <li><code>l7Flow_bandwidth</code>: L7 total access bandwidth (EdgeOne response + client requests), unit: bps;</li>      <li><code>l7Flow_request</code>: L7 access request count, unit: count;</li>      <li><code>l7Flow_avgResponseTime</code>: L7 average response time, unit: ms;</li>      <li><code>l7Flow_avgFirstByteResponseTime</code>: L7 average first byte response time, unit: ms.</li>    </ul>  </li>  <li><strong>Float</strong>: Metrics with <code>Float</code> value type will return corresponding time series data from <code>Data.N.FloatTypeValue</code>.<br>Queried metrics <code>MetricName</code> include:    <ul>      <li><code>l7Flow_requestRate</code>: L7 access request rate, unit: qps.</li>    </ul>  </li></ul>
+Note: This field may return null, which indicates a failure to obtain a valid value.
+                     * @return Data <p>Layer-7 time series traffic data list.<br>For different queried metrics, time series data will be returned from different parameters according to the value type.<br>Currently existing value types include the following two:</p><ul>  <li><strong>Integer</strong>: Metrics with <code>Integer</code> value type will return corresponding time series data from <code>Data.N.TypeValue</code>.<br>Queried metrics <code>MetricName</code> include:    <ul>      <li><code>l7Flow_outFlux</code>: L7 EdgeOne response traffic, unit: Byte;</li>      <li><code>l7Flow_inFlux</code>: L7 client request traffic, unit: Byte;</li>      <li><code>l7Flow_flux</code>: L7 total access traffic (EdgeOne response + client requests), unit: Byte;</li>      <li><code>l7Flow_outBandwidth</code>: L7 EdgeOne response bandwidth, unit: bps;</li>      <li><code>l7Flow_inBandwidth</code>: L7 client request bandwidth, unit: bps;</li>      <li><code>l7Flow_bandwidth</code>: L7 total access bandwidth (EdgeOne response + client requests), unit: bps;</li>      <li><code>l7Flow_request</code>: L7 access request count, unit: count;</li>      <li><code>l7Flow_avgResponseTime</code>: L7 average response time, unit: ms;</li>      <li><code>l7Flow_avgFirstByteResponseTime</code>: L7 average first byte response time, unit: ms.</li>    </ul>  </li>  <li><strong>Float</strong>: Metrics with <code>Float</code> value type will return corresponding time series data from <code>Data.N.FloatTypeValue</code>.<br>Queried metrics <code>MetricName</code> include:    <ul>      <li><code>l7Flow_requestRate</code>: L7 access request rate, unit: qps.</li>    </ul>  </li></ul>
+Note: This field may return null, which indicates a failure to obtain a valid value.
                      * 
                      */
                     std::vector<TimingDataRecord> GetData() const;
@@ -77,14 +77,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Total number of query results.
+                     * <p>The total number of records in the query result.</p>
                      */
                     uint64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * The list of L7 traffic data recorded over time.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Layer-7 time series traffic data list.<br>For different queried metrics, time series data will be returned from different parameters according to the value type.<br>Currently existing value types include the following two:</p><ul>  <li><strong>Integer</strong>: Metrics with <code>Integer</code> value type will return corresponding time series data from <code>Data.N.TypeValue</code>.<br>Queried metrics <code>MetricName</code> include:    <ul>      <li><code>l7Flow_outFlux</code>: L7 EdgeOne response traffic, unit: Byte;</li>      <li><code>l7Flow_inFlux</code>: L7 client request traffic, unit: Byte;</li>      <li><code>l7Flow_flux</code>: L7 total access traffic (EdgeOne response + client requests), unit: Byte;</li>      <li><code>l7Flow_outBandwidth</code>: L7 EdgeOne response bandwidth, unit: bps;</li>      <li><code>l7Flow_inBandwidth</code>: L7 client request bandwidth, unit: bps;</li>      <li><code>l7Flow_bandwidth</code>: L7 total access bandwidth (EdgeOne response + client requests), unit: bps;</li>      <li><code>l7Flow_request</code>: L7 access request count, unit: count;</li>      <li><code>l7Flow_avgResponseTime</code>: L7 average response time, unit: ms;</li>      <li><code>l7Flow_avgFirstByteResponseTime</code>: L7 average first byte response time, unit: ms.</li>    </ul>  </li>  <li><strong>Float</strong>: Metrics with <code>Float</code> value type will return corresponding time series data from <code>Data.N.FloatTypeValue</code>.<br>Queried metrics <code>MetricName</code> include:    <ul>      <li><code>l7Flow_requestRate</code>: L7 access request rate, unit: qps.</li>    </ul>  </li></ul>
+Note: This field may return null, which indicates a failure to obtain a valid value.
                      */
                     std::vector<TimingDataRecord> m_data;
                     bool m_dataHasBeenSet;

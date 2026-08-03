@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Cluster ID
-                     * @return ClusterId Cluster ID
+                     * 获取<p>Cluster ID.</p>
+                     * @return ClusterId <p>Cluster ID.</p>
                      * 
                      */
                     std::string GetClusterId() const;
 
                     /**
-                     * 设置Cluster ID
-                     * @param _clusterId Cluster ID
+                     * 设置<p>Cluster ID.</p>
+                     * @param _clusterId <p>Cluster ID.</p>
                      * 
                      */
                     void SetClusterId(const std::string& _clusterId);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool ClusterIdHasBeenSet() const;
 
                     /**
-                     * 获取Accounts in array, which contains `account` and `host`.
-                     * @return Accounts Accounts in array, which contains `account` and `host`.
+                     * 获取<p>Account array, including account and host.</p>
+                     * @return Accounts <p>Account array, including account and host.</p>
                      * 
                      */
                     std::vector<InputAccount> GetAccounts() const;
 
                     /**
-                     * 设置Accounts in array, which contains `account` and `host`.
-                     * @param _accounts Accounts in array, which contains `account` and `host`.
+                     * 设置<p>Account array, including account and host.</p>
+                     * @param _accounts <p>Account array, including account and host.</p>
                      * 
                      */
                     void SetAccounts(const std::vector<InputAccount>& _accounts);
@@ -88,13 +88,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Cluster ID
+                     * <p>Cluster ID.</p>
                      */
                     std::string m_clusterId;
                     bool m_clusterIdHasBeenSet;
 
                     /**
-                     * Accounts in array, which contains `account` and `host`.
+                     * <p>Account array, including account and host.</p>
                      */
                     std::vector<InputAccount> m_accounts;
                     bool m_accountsHasBeenSet;

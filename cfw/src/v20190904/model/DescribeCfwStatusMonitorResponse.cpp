@@ -14,21 +14,21 @@
  * limitations under the License.
  */
 
-#include <tencentcloud/ckafka/v20190819/model/DeleteTopicIpWhiteListResponse.h>
+#include <tencentcloud/cfw/v20190904/model/DescribeCfwStatusMonitorResponse.h>
 #include <tencentcloud/core/utils/rapidjson/document.h>
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using TencentCloud::CoreInternalOutcome;
-using namespace TencentCloud::Ckafka::V20190819::Model;
+using namespace TencentCloud::Cfw::V20190904::Model;
 using namespace std;
 
-DeleteTopicIpWhiteListResponse::DeleteTopicIpWhiteListResponse() :
-    m_resultHasBeenSet(false)
+DescribeCfwStatusMonitorResponse::DescribeCfwStatusMonitorResponse() :
+    m_dataHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome DeleteTopicIpWhiteListResponse::Deserialize(const string &payload)
+CoreInternalOutcome DescribeCfwStatusMonitorResponse::Deserialize(const string &payload)
 {
     rapidjson::Document d;
     d.Parse(payload.c_str());
@@ -62,40 +62,32 @@ CoreInternalOutcome DeleteTopicIpWhiteListResponse::Deserialize(const string &pa
     }
 
 
-    if (rsp.HasMember("Result") && !rsp["Result"].IsNull())
+    if (rsp.HasMember("Data") && !rsp["Data"].IsNull())
     {
-        if (!rsp["Result"].IsObject())
+        if (!rsp["Data"].IsString())
         {
-            return CoreInternalOutcome(Core::Error("response `Result` is not object type").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `Data` IsString=false incorrectly").SetRequestId(requestId));
         }
-
-        CoreInternalOutcome outcome = m_result.Deserialize(rsp["Result"]);
-        if (!outcome.IsSuccess())
-        {
-            outcome.GetError().SetRequestId(requestId);
-            return outcome;
-        }
-
-        m_resultHasBeenSet = true;
+        m_data = string(rsp["Data"].GetString());
+        m_dataHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-string DeleteTopicIpWhiteListResponse::ToJsonString() const
+string DescribeCfwStatusMonitorResponse::ToJsonString() const
 {
     rapidjson::Document value;
     value.SetObject();
     rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
 
-    if (m_resultHasBeenSet)
+    if (m_dataHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "Result";
+        string key = "Data";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
-        m_result.ToJsonObject(value[key.c_str()], allocator);
+        value.AddMember(iKey, rapidjson::Value(m_data.c_str(), allocator).Move(), allocator);
     }
 
     rapidjson::Value iKey(rapidjson::kStringType);
@@ -110,14 +102,14 @@ string DeleteTopicIpWhiteListResponse::ToJsonString() const
 }
 
 
-JgwOperateResponse DeleteTopicIpWhiteListResponse::GetResult() const
+string DescribeCfwStatusMonitorResponse::GetData() const
 {
-    return m_result;
+    return m_data;
 }
 
-bool DeleteTopicIpWhiteListResponse::ResultHasBeenSet() const
+bool DescribeCfwStatusMonitorResponse::DataHasBeenSet() const
 {
-    return m_resultHasBeenSet;
+    return m_dataHasBeenSet;
 }
 
 

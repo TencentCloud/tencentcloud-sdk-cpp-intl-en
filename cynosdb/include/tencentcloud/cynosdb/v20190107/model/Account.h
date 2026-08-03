@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Database account name
-                     * @return AccountName Database account name
+                     * 获取<p>Database account name.</p>
+                     * @return AccountName <p>Database account name.</p>
                      * 
                      */
                     std::string GetAccountName() const;
 
                     /**
-                     * 设置Database account name
-                     * @param _accountName Database account name
+                     * 设置<p>Database account name.</p>
+                     * @param _accountName <p>Database account name.</p>
                      * 
                      */
                     void SetAccountName(const std::string& _accountName);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool AccountNameHasBeenSet() const;
 
                     /**
-                     * 获取Host
-                     * @return Host Host
+                     * 获取<p>host</p>
+                     * @return Host <p>host</p>
                      * 
                      */
                     std::string GetHost() const;
 
                     /**
-                     * 设置Host
-                     * @param _host Host
+                     * 设置<p>host</p>
+                     * @param _host <p>host</p>
                      * 
                      */
                     void SetHost(const std::string& _host);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool HostHasBeenSet() const;
 
                     /**
-                     * 获取Database account description
-                     * @return Description Database account description
+                     * 获取<p>Database account description.</p>
+                     * @return Description <p>Database account description.</p>
                      * 
                      */
                     std::string GetDescription() const;
 
                     /**
-                     * 设置Database account description
-                     * @param _description Database account description
+                     * 设置<p>Database account description.</p>
+                     * @param _description <p>Database account description.</p>
                      * 
                      */
                     void SetDescription(const std::string& _description);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool DescriptionHasBeenSet() const;
 
                     /**
-                     * 获取Creation time
-                     * @return CreateTime Creation time
+                     * 获取<p>Creation time.</p>
+                     * @return CreateTime <p>Creation time.</p>
                      * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
-                     * 设置Creation time
-                     * @param _createTime Creation time
+                     * 设置<p>Creation time.</p>
+                     * @param _createTime <p>Creation time.</p>
                      * 
                      */
                     void SetCreateTime(const std::string& _createTime);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Update time
-                     * @return UpdateTime Update time
+                     * 获取<p>Update time.</p>
+                     * @return UpdateTime <p>Update time.</p>
                      * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
-                     * 设置Update time
-                     * @param _updateTime Update time
+                     * 设置<p>Update time.</p>
+                     * @param _updateTime <p>Update time.</p>
                      * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool UpdateTimeHasBeenSet() const;
 
                     /**
-                     * 获取The max connections
-                     * @return MaxUserConnections The max connections
+                     * 获取<p>Maximum user connections</p>
+                     * @return MaxUserConnections <p>Maximum user connections</p>
                      * 
                      */
                     int64_t GetMaxUserConnections() const;
 
                     /**
-                     * 设置The max connections
-                     * @param _maxUserConnections The max connections
+                     * 设置<p>Maximum user connections</p>
+                     * @param _maxUserConnections <p>Maximum user connections</p>
                      * 
                      */
                     void SetMaxUserConnections(const int64_t& _maxUserConnections);
@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool MaxUserConnectionsHasBeenSet() const;
 
                     /**
-                     * 获取Whether password rotation is enabled (0: turn off; 1: turn on)
-                     * @return PasswordRotation Whether password rotation is enabled (0: turn off; 1: turn on)
+                     * 获取<p>Whether password rotation is enabled (0: turn off; 1: turn on)</p>
+                     * @return PasswordRotation <p>Whether password rotation is enabled (0: turn off; 1: turn on)</p>
                      * 
                      */
                     int64_t GetPasswordRotation() const;
 
                     /**
-                     * 设置Whether password rotation is enabled (0: turn off; 1: turn on)
-                     * @param _passwordRotation Whether password rotation is enabled (0: turn off; 1: turn on)
+                     * 设置<p>Whether password rotation is enabled (0: turn off; 1: turn on)</p>
+                     * @param _passwordRotation <p>Whether password rotation is enabled (0: turn off; 1: turn on)</p>
                      * 
                      */
                     void SetPasswordRotation(const int64_t& _passwordRotation);
@@ -196,43 +196,43 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Database account name
+                     * <p>Database account name.</p>
                      */
                     std::string m_accountName;
                     bool m_accountNameHasBeenSet;
 
                     /**
-                     * Host
+                     * <p>host</p>
                      */
                     std::string m_host;
                     bool m_hostHasBeenSet;
 
                     /**
-                     * Database account description
+                     * <p>Database account description.</p>
                      */
                     std::string m_description;
                     bool m_descriptionHasBeenSet;
 
                     /**
-                     * Creation time
+                     * <p>Creation time.</p>
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * Update time
+                     * <p>Update time.</p>
                      */
                     std::string m_updateTime;
                     bool m_updateTimeHasBeenSet;
 
                     /**
-                     * The max connections
+                     * <p>Maximum user connections</p>
                      */
                     int64_t m_maxUserConnections;
                     bool m_maxUserConnectionsHasBeenSet;
 
                     /**
-                     * Whether password rotation is enabled (0: turn off; 1: turn on)
+                     * <p>Whether password rotation is enabled (0: turn off; 1: turn on)</p>
                      */
                     int64_t m_passwordRotation;
                     bool m_passwordRotationHasBeenSet;

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#include <tencentcloud/ckafka/v20190819/model/DeleteTopicIpWhiteListRequest.h>
+#include <tencentcloud/ckafka/v20190819/model/ModifyAccessPolicyRequest.h>
 #include <tencentcloud/core/utils/rapidjson/document.h>
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
@@ -22,14 +22,14 @@
 using namespace TencentCloud::Ckafka::V20190819::Model;
 using namespace std;
 
-DeleteTopicIpWhiteListRequest::DeleteTopicIpWhiteListRequest() :
+ModifyAccessPolicyRequest::ModifyAccessPolicyRequest() :
     m_instanceIdHasBeenSet(false),
-    m_topicNameHasBeenSet(false),
-    m_ipWhiteListHasBeenSet(false)
+    m_routeIdHasBeenSet(false),
+    m_ipWhitelistHasBeenSet(false)
 {
 }
 
-string DeleteTopicIpWhiteListRequest::ToJsonString() const
+string ModifyAccessPolicyRequest::ToJsonString() const
 {
     rapidjson::Document d;
     d.SetObject();
@@ -44,24 +44,26 @@ string DeleteTopicIpWhiteListRequest::ToJsonString() const
         d.AddMember(iKey, rapidjson::Value(m_instanceId.c_str(), allocator).Move(), allocator);
     }
 
-    if (m_topicNameHasBeenSet)
+    if (m_routeIdHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "TopicName";
+        string key = "RouteId";
         iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, rapidjson::Value(m_topicName.c_str(), allocator).Move(), allocator);
+        d.AddMember(iKey, m_routeId, allocator);
     }
 
-    if (m_ipWhiteListHasBeenSet)
+    if (m_ipWhitelistHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "IpWhiteList";
+        string key = "IpWhitelist";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
 
-        for (auto itr = m_ipWhiteList.begin(); itr != m_ipWhiteList.end(); ++itr)
+        int i=0;
+        for (auto itr = m_ipWhitelist.begin(); itr != m_ipWhitelist.end(); ++itr, ++i)
         {
-            d[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
+            d[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(d[key.c_str()][i], allocator);
         }
     }
 
@@ -73,52 +75,52 @@ string DeleteTopicIpWhiteListRequest::ToJsonString() const
 }
 
 
-string DeleteTopicIpWhiteListRequest::GetInstanceId() const
+string ModifyAccessPolicyRequest::GetInstanceId() const
 {
     return m_instanceId;
 }
 
-void DeleteTopicIpWhiteListRequest::SetInstanceId(const string& _instanceId)
+void ModifyAccessPolicyRequest::SetInstanceId(const string& _instanceId)
 {
     m_instanceId = _instanceId;
     m_instanceIdHasBeenSet = true;
 }
 
-bool DeleteTopicIpWhiteListRequest::InstanceIdHasBeenSet() const
+bool ModifyAccessPolicyRequest::InstanceIdHasBeenSet() const
 {
     return m_instanceIdHasBeenSet;
 }
 
-string DeleteTopicIpWhiteListRequest::GetTopicName() const
+int64_t ModifyAccessPolicyRequest::GetRouteId() const
 {
-    return m_topicName;
+    return m_routeId;
 }
 
-void DeleteTopicIpWhiteListRequest::SetTopicName(const string& _topicName)
+void ModifyAccessPolicyRequest::SetRouteId(const int64_t& _routeId)
 {
-    m_topicName = _topicName;
-    m_topicNameHasBeenSet = true;
+    m_routeId = _routeId;
+    m_routeIdHasBeenSet = true;
 }
 
-bool DeleteTopicIpWhiteListRequest::TopicNameHasBeenSet() const
+bool ModifyAccessPolicyRequest::RouteIdHasBeenSet() const
 {
-    return m_topicNameHasBeenSet;
+    return m_routeIdHasBeenSet;
 }
 
-vector<string> DeleteTopicIpWhiteListRequest::GetIpWhiteList() const
+vector<IpWhitelistDTO> ModifyAccessPolicyRequest::GetIpWhitelist() const
 {
-    return m_ipWhiteList;
+    return m_ipWhitelist;
 }
 
-void DeleteTopicIpWhiteListRequest::SetIpWhiteList(const vector<string>& _ipWhiteList)
+void ModifyAccessPolicyRequest::SetIpWhitelist(const vector<IpWhitelistDTO>& _ipWhitelist)
 {
-    m_ipWhiteList = _ipWhiteList;
-    m_ipWhiteListHasBeenSet = true;
+    m_ipWhitelist = _ipWhitelist;
+    m_ipWhitelistHasBeenSet = true;
 }
 
-bool DeleteTopicIpWhiteListRequest::IpWhiteListHasBeenSet() const
+bool ModifyAccessPolicyRequest::IpWhitelistHasBeenSet() const
 {
-    return m_ipWhiteListHasBeenSet;
+    return m_ipWhitelistHasBeenSet;
 }
 
 

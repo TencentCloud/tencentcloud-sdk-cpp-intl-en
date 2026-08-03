@@ -656,6 +656,69 @@ namespace TencentCloud
                      */
                     bool FromSaveBackupHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Synchronization method. Available values: async, semisync, sync. Async as a default.</p>
+                     * @return SyncWay <p>Synchronization method. Available values: async, semisync, sync. Async as a default.</p>
+                     * 
+                     */
+                    std::string GetSyncWay() const;
+
+                    /**
+                     * 设置<p>Synchronization method. Available values: async, semisync, sync. Async as a default.</p>
+                     * @param _syncWay <p>Synchronization method. Available values: async, semisync, sync. Async as a default.</p>
+                     * 
+                     */
+                    void SetSyncWay(const std::string& _syncWay);
+
+                    /**
+                     * 判断参数 SyncWay 是否已赋值
+                     * @return SyncWay 是否已赋值
+                     * 
+                     */
+                    bool SyncWayHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Semi-synchronous timeout period, in milliseconds. To ensure business stability, semi-synchronous replication has a degradation logic. When the primary availability zone cluster waits for the secondary availability zone cluster to confirm a transaction, if the timeout period is exceeded, the replication method will degrade to asynchronous replication.</p><p>Value ranges from 1000 to 4294967295.</p><p>Unit: ms</p><p>Default value: 10000</p>
+                     * @return SemiSyncTimeout <p>Semi-synchronous timeout period, in milliseconds. To ensure business stability, semi-synchronous replication has a degradation logic. When the primary availability zone cluster waits for the secondary availability zone cluster to confirm a transaction, if the timeout period is exceeded, the replication method will degrade to asynchronous replication.</p><p>Value ranges from 1000 to 4294967295.</p><p>Unit: ms</p><p>Default value: 10000</p>
+                     * 
+                     */
+                    int64_t GetSemiSyncTimeout() const;
+
+                    /**
+                     * 设置<p>Semi-synchronous timeout period, in milliseconds. To ensure business stability, semi-synchronous replication has a degradation logic. When the primary availability zone cluster waits for the secondary availability zone cluster to confirm a transaction, if the timeout period is exceeded, the replication method will degrade to asynchronous replication.</p><p>Value ranges from 1000 to 4294967295.</p><p>Unit: ms</p><p>Default value: 10000</p>
+                     * @param _semiSyncTimeout <p>Semi-synchronous timeout period, in milliseconds. To ensure business stability, semi-synchronous replication has a degradation logic. When the primary availability zone cluster waits for the secondary availability zone cluster to confirm a transaction, if the timeout period is exceeded, the replication method will degrade to asynchronous replication.</p><p>Value ranges from 1000 to 4294967295.</p><p>Unit: ms</p><p>Default value: 10000</p>
+                     * 
+                     */
+                    void SetSemiSyncTimeout(const int64_t& _semiSyncTimeout);
+
+                    /**
+                     * 判断参数 SemiSyncTimeout 是否已赋值
+                     * @return SemiSyncTimeout 是否已赋值
+                     * 
+                     */
+                    bool SemiSyncTimeoutHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Standby availability zone</p>
+                     * @return SlaveZone <p>Standby availability zone</p>
+                     * 
+                     */
+                    std::string GetSlaveZone() const;
+
+                    /**
+                     * 设置<p>Standby availability zone</p>
+                     * @param _slaveZone <p>Standby availability zone</p>
+                     * 
+                     */
+                    void SetSlaveZone(const std::string& _slaveZone);
+
+                    /**
+                     * 判断参数 SlaveZone 是否已赋值
+                     * @return SlaveZone 是否已赋值
+                     * 
+                     */
+                    bool SlaveZoneHasBeenSet() const;
+
                 private:
 
                     /**
@@ -831,6 +894,24 @@ namespace TencentCloud
                      */
                     bool m_fromSaveBackup;
                     bool m_fromSaveBackupHasBeenSet;
+
+                    /**
+                     * <p>Synchronization method. Available values: async, semisync, sync. Async as a default.</p>
+                     */
+                    std::string m_syncWay;
+                    bool m_syncWayHasBeenSet;
+
+                    /**
+                     * <p>Semi-synchronous timeout period, in milliseconds. To ensure business stability, semi-synchronous replication has a degradation logic. When the primary availability zone cluster waits for the secondary availability zone cluster to confirm a transaction, if the timeout period is exceeded, the replication method will degrade to asynchronous replication.</p><p>Value ranges from 1000 to 4294967295.</p><p>Unit: ms</p><p>Default value: 10000</p>
+                     */
+                    int64_t m_semiSyncTimeout;
+                    bool m_semiSyncTimeoutHasBeenSet;
+
+                    /**
+                     * <p>Standby availability zone</p>
+                     */
+                    std::string m_slaveZone;
+                    bool m_slaveZoneHasBeenSet;
 
                 };
             }

@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Search term.
-                     * @return SearchWord Search term.
+                     * 获取<p>Search term</p><p>Performs fuzzy matching on the Name, TopicName, or TopicId field.</p>
+                     * @return SearchWord <p>Search term</p><p>Performs fuzzy matching on the Name, TopicName, or TopicId field.</p>
                      * 
                      */
                     std::string GetSearchWord() const;
 
                     /**
-                     * 设置Search term.
-                     * @param _searchWord Search term.
+                     * 设置<p>Search term</p><p>Performs fuzzy matching on the Name, TopicName, or TopicId field.</p>
+                     * @param _searchWord <p>Search term</p><p>Performs fuzzy matching on the Name, TopicName, or TopicId field.</p>
                      * 
                      */
                     void SetSearchWord(const std::string& _searchWord);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool SearchWordHasBeenSet() const;
 
                     /**
-                     * 获取Query offset, which defaults to `0`.
-                     * @return Offset Query offset, which defaults to `0`.
+                     * 获取<p>Offset position of this page, defaults to 0</p>
+                     * @return Offset <p>Offset position of this page, defaults to 0</p>
                      * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
-                     * 设置Query offset, which defaults to `0`.
-                     * @param _offset Query offset, which defaults to `0`.
+                     * 设置<p>Offset position of this page, defaults to 0</p>
+                     * @param _offset <p>Offset position of this page, defaults to 0</p>
                      * 
                      */
                     void SetOffset(const uint64_t& _offset);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Maximum number of results to be returned in this request. Default value: `50`. Maximum value: `50`.
-                     * @return Limit Maximum number of results to be returned in this request. Default value: `50`. Maximum value: `50`.
+                     * 获取<p>Maximum number of returned results this time</p><p>Value ranges from 1 to 100</p><p>Default value: 20</p>
+                     * @return Limit <p>Maximum number of returned results this time</p><p>Value ranges from 1 to 100</p><p>Default value: 20</p>
                      * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
-                     * 设置Maximum number of results to be returned in this request. Default value: `50`. Maximum value: `50`.
-                     * @param _limit Maximum number of results to be returned in this request. Default value: `50`. Maximum value: `50`.
+                     * 设置<p>Maximum number of returned results this time</p><p>Value ranges from 1 to 100</p><p>Default value: 20</p>
+                     * @param _limit <p>Maximum number of returned results this time</p><p>Value ranges from 1 to 100</p><p>Default value: 20</p>
                      * 
                      */
                     void SetLimit(const uint64_t& _limit);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Specifies whether to query the topic list from the connection.
-                     * @return QueryFromConnectResource Specifies whether to query the topic list from the connection.
+                     * 获取<p>Whether to query the topic list from the connection query</p><p>Default value: false</p>
+                     * @return QueryFromConnectResource <p>Whether to query the topic list from the connection query</p><p>Default value: false</p>
                      * 
                      */
                     bool GetQueryFromConnectResource() const;
 
                     /**
-                     * 设置Specifies whether to query the topic list from the connection.
-                     * @param _queryFromConnectResource Specifies whether to query the topic list from the connection.
+                     * 设置<p>Whether to query the topic list from the connection query</p><p>Default value: false</p>
+                     * @param _queryFromConnectResource <p>Whether to query the topic list from the connection query</p><p>Default value: false</p>
                      * 
                      */
                     void SetQueryFromConnectResource(const bool& _queryFromConnectResource);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool QueryFromConnectResourceHasBeenSet() const;
 
                     /**
-                     * 获取Connection ID.
-                     * @return ConnectResourceId Connection ID.
+                     * 获取<p>Connection ID.</p>
+                     * @return ConnectResourceId <p>Connection ID.</p>
                      * 
                      */
                     std::string GetConnectResourceId() const;
 
                     /**
-                     * 设置Connection ID.
-                     * @param _connectResourceId Connection ID.
+                     * 设置<p>Connection ID.</p>
+                     * @param _connectResourceId <p>Connection ID.</p>
                      * 
                      */
                     void SetConnectResourceId(const std::string& _connectResourceId);
@@ -148,15 +148,15 @@ namespace TencentCloud
                     bool ConnectResourceIdHasBeenSet() const;
 
                     /**
-                     * 获取topic resource expression.
-                     * @return TopicRegularExpression topic resource expression.
+                     * 获取<p>topic resource expression</p>
+                     * @return TopicRegularExpression <p>topic resource expression</p>
                      * 
                      */
                     std::string GetTopicRegularExpression() const;
 
                     /**
-                     * 设置topic resource expression.
-                     * @param _topicRegularExpression topic resource expression.
+                     * 设置<p>topic resource expression</p>
+                     * @param _topicRegularExpression <p>topic resource expression</p>
                      * 
                      */
                     void SetTopicRegularExpression(const std::string& _topicRegularExpression);
@@ -171,37 +171,37 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Search term.
+                     * <p>Search term</p><p>Performs fuzzy matching on the Name, TopicName, or TopicId field.</p>
                      */
                     std::string m_searchWord;
                     bool m_searchWordHasBeenSet;
 
                     /**
-                     * Query offset, which defaults to `0`.
+                     * <p>Offset position of this page, defaults to 0</p>
                      */
                     uint64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Maximum number of results to be returned in this request. Default value: `50`. Maximum value: `50`.
+                     * <p>Maximum number of returned results this time</p><p>Value ranges from 1 to 100</p><p>Default value: 20</p>
                      */
                     uint64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Specifies whether to query the topic list from the connection.
+                     * <p>Whether to query the topic list from the connection query</p><p>Default value: false</p>
                      */
                     bool m_queryFromConnectResource;
                     bool m_queryFromConnectResourceHasBeenSet;
 
                     /**
-                     * Connection ID.
+                     * <p>Connection ID.</p>
                      */
                     std::string m_connectResourceId;
                     bool m_connectResourceIdHasBeenSet;
 
                     /**
-                     * topic resource expression.
+                     * <p>topic resource expression</p>
                      */
                     std::string m_topicRegularExpression;
                     bool m_topicRegularExpressionHasBeenSet;

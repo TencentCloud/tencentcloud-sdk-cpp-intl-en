@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-#ifndef TENCENTCLOUD_CKAFKA_V20190819_MODEL_DELETETOPICIPWHITELISTRESPONSE_H_
-#define TENCENTCLOUD_CKAFKA_V20190819_MODEL_DELETETOPICIPWHITELISTRESPONSE_H_
+#ifndef TENCENTCLOUD_CKAFKA_V20190819_MODEL_ISOLATEDINSTANCEPRERESPONSE_H_
+#define TENCENTCLOUD_CKAFKA_V20190819_MODEL_ISOLATEDINSTANCEPRERESPONSE_H_
 
 #include <string>
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
-#include <tencentcloud/ckafka/v20190819/model/JgwOperateResponse.h>
+#include <tencentcloud/ckafka/v20190819/model/CreateInstancePreResp.h>
 
 
 namespace TencentCloud
@@ -33,23 +33,23 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * DeleteTopicIpWhiteList response structure.
+                * IsolatedInstancePre response structure.
                 */
-                class DeleteTopicIpWhiteListResponse : public AbstractModel
+                class IsolatedInstancePreResponse : public AbstractModel
                 {
                 public:
-                    DeleteTopicIpWhiteListResponse();
-                    ~DeleteTopicIpWhiteListResponse() = default;
+                    IsolatedInstancePreResponse();
+                    ~IsolatedInstancePreResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
                     std::string ToJsonString() const;
 
 
                     /**
-                     * 获取Result of deleting topic IP allowlist
-                     * @return Result Result of deleting topic IP allowlist
+                     * 获取Return result
+                     * @return Result Return result
                      * 
                      */
-                    JgwOperateResponse GetResult() const;
+                    CreateInstancePreResp GetResult() const;
 
                     /**
                      * 判断参数 Result 是否已赋值
@@ -61,9 +61,9 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Result of deleting topic IP allowlist
+                     * Return result
                      */
-                    JgwOperateResponse m_result;
+                    CreateInstancePreResp m_result;
                     bool m_resultHasBeenSet;
 
                 };
@@ -72,4 +72,4 @@ namespace TencentCloud
     }
 }
 
-#endif // !TENCENTCLOUD_CKAFKA_V20190819_MODEL_DELETETOPICIPWHITELISTRESPONSE_H_
+#endif // !TENCENTCLOUD_CKAFKA_V20190819_MODEL_ISOLATEDINSTANCEPRERESPONSE_H_

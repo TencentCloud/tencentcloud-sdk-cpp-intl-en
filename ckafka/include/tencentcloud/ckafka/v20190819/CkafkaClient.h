@@ -69,12 +69,12 @@
 #include <tencentcloud/ckafka/v20190819/model/DeleteRouteTriggerTimeResponse.h>
 #include <tencentcloud/ckafka/v20190819/model/DeleteTopicRequest.h>
 #include <tencentcloud/ckafka/v20190819/model/DeleteTopicResponse.h>
-#include <tencentcloud/ckafka/v20190819/model/DeleteTopicIpWhiteListRequest.h>
-#include <tencentcloud/ckafka/v20190819/model/DeleteTopicIpWhiteListResponse.h>
 #include <tencentcloud/ckafka/v20190819/model/DeleteUserRequest.h>
 #include <tencentcloud/ckafka/v20190819/model/DeleteUserResponse.h>
 #include <tencentcloud/ckafka/v20190819/model/DescribeACLRequest.h>
 #include <tencentcloud/ckafka/v20190819/model/DescribeACLResponse.h>
+#include <tencentcloud/ckafka/v20190819/model/DescribeAccessPolicyRequest.h>
+#include <tencentcloud/ckafka/v20190819/model/DescribeAccessPolicyResponse.h>
 #include <tencentcloud/ckafka/v20190819/model/DescribeAclRuleRequest.h>
 #include <tencentcloud/ckafka/v20190819/model/DescribeAclRuleResponse.h>
 #include <tencentcloud/ckafka/v20190819/model/DescribeCkafkaVersionRequest.h>
@@ -137,6 +137,10 @@
 #include <tencentcloud/ckafka/v20190819/model/InquireCkafkaPriceResponse.h>
 #include <tencentcloud/ckafka/v20190819/model/InstanceScalingDownRequest.h>
 #include <tencentcloud/ckafka/v20190819/model/InstanceScalingDownResponse.h>
+#include <tencentcloud/ckafka/v20190819/model/IsolatedInstancePreRequest.h>
+#include <tencentcloud/ckafka/v20190819/model/IsolatedInstancePreResponse.h>
+#include <tencentcloud/ckafka/v20190819/model/ModifyAccessPolicyRequest.h>
+#include <tencentcloud/ckafka/v20190819/model/ModifyAccessPolicyResponse.h>
 #include <tencentcloud/ckafka/v20190819/model/ModifyAclRuleRequest.h>
 #include <tencentcloud/ckafka/v20190819/model/ModifyAclRuleResponse.h>
 #include <tencentcloud/ckafka/v20190819/model/ModifyDatahubTopicRequest.h>
@@ -240,15 +244,15 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DeleteTopicResponse> DeleteTopicOutcome;
                 typedef std::future<DeleteTopicOutcome> DeleteTopicOutcomeCallable;
                 typedef std::function<void(const CkafkaClient*, const Model::DeleteTopicRequest&, DeleteTopicOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteTopicAsyncHandler;
-                typedef Outcome<Core::Error, Model::DeleteTopicIpWhiteListResponse> DeleteTopicIpWhiteListOutcome;
-                typedef std::future<DeleteTopicIpWhiteListOutcome> DeleteTopicIpWhiteListOutcomeCallable;
-                typedef std::function<void(const CkafkaClient*, const Model::DeleteTopicIpWhiteListRequest&, DeleteTopicIpWhiteListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteTopicIpWhiteListAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeleteUserResponse> DeleteUserOutcome;
                 typedef std::future<DeleteUserOutcome> DeleteUserOutcomeCallable;
                 typedef std::function<void(const CkafkaClient*, const Model::DeleteUserRequest&, DeleteUserOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteUserAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeACLResponse> DescribeACLOutcome;
                 typedef std::future<DescribeACLOutcome> DescribeACLOutcomeCallable;
                 typedef std::function<void(const CkafkaClient*, const Model::DescribeACLRequest&, DescribeACLOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeACLAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeAccessPolicyResponse> DescribeAccessPolicyOutcome;
+                typedef std::future<DescribeAccessPolicyOutcome> DescribeAccessPolicyOutcomeCallable;
+                typedef std::function<void(const CkafkaClient*, const Model::DescribeAccessPolicyRequest&, DescribeAccessPolicyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAccessPolicyAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeAclRuleResponse> DescribeAclRuleOutcome;
                 typedef std::future<DescribeAclRuleOutcome> DescribeAclRuleOutcomeCallable;
                 typedef std::function<void(const CkafkaClient*, const Model::DescribeAclRuleRequest&, DescribeAclRuleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAclRuleAsyncHandler;
@@ -342,6 +346,12 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::InstanceScalingDownResponse> InstanceScalingDownOutcome;
                 typedef std::future<InstanceScalingDownOutcome> InstanceScalingDownOutcomeCallable;
                 typedef std::function<void(const CkafkaClient*, const Model::InstanceScalingDownRequest&, InstanceScalingDownOutcome, const std::shared_ptr<const AsyncCallerContext>&)> InstanceScalingDownAsyncHandler;
+                typedef Outcome<Core::Error, Model::IsolatedInstancePreResponse> IsolatedInstancePreOutcome;
+                typedef std::future<IsolatedInstancePreOutcome> IsolatedInstancePreOutcomeCallable;
+                typedef std::function<void(const CkafkaClient*, const Model::IsolatedInstancePreRequest&, IsolatedInstancePreOutcome, const std::shared_ptr<const AsyncCallerContext>&)> IsolatedInstancePreAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyAccessPolicyResponse> ModifyAccessPolicyOutcome;
+                typedef std::future<ModifyAccessPolicyOutcome> ModifyAccessPolicyOutcomeCallable;
+                typedef std::function<void(const CkafkaClient*, const Model::ModifyAccessPolicyRequest&, ModifyAccessPolicyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyAccessPolicyAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyAclRuleResponse> ModifyAclRuleOutcome;
                 typedef std::future<ModifyAclRuleOutcome> ModifyAclRuleOutcomeCallable;
                 typedef std::function<void(const CkafkaClient*, const Model::ModifyAclRuleRequest&, ModifyAclRuleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyAclRuleAsyncHandler;
@@ -583,15 +593,6 @@ namespace TencentCloud
                 DeleteTopicOutcomeCallable DeleteTopicCallable(const Model::DeleteTopicRequest& request);
 
                 /**
-                 *This API is used to delete a topic IP allowlist.
-                 * @param req DeleteTopicIpWhiteListRequest
-                 * @return DeleteTopicIpWhiteListOutcome
-                 */
-                DeleteTopicIpWhiteListOutcome DeleteTopicIpWhiteList(const Model::DeleteTopicIpWhiteListRequest &request);
-                void DeleteTopicIpWhiteListAsync(const Model::DeleteTopicIpWhiteListRequest& request, const DeleteTopicIpWhiteListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                DeleteTopicIpWhiteListOutcomeCallable DeleteTopicIpWhiteListCallable(const Model::DeleteTopicIpWhiteListRequest& request);
-
-                /**
                  *This API is used to delete a user.
                  * @param req DeleteUserRequest
                  * @return DeleteUserOutcome
@@ -608,6 +609,15 @@ namespace TencentCloud
                 DescribeACLOutcome DescribeACL(const Model::DescribeACLRequest &request);
                 void DescribeACLAsync(const Model::DescribeACLRequest& request, const DescribeACLAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeACLOutcomeCallable DescribeACLCallable(const Model::DescribeACLRequest& request);
+
+                /**
+                 *This API is used to query the public IP allowlist of an instance.
+                 * @param req DescribeAccessPolicyRequest
+                 * @return DescribeAccessPolicyOutcome
+                 */
+                DescribeAccessPolicyOutcome DescribeAccessPolicy(const Model::DescribeAccessPolicyRequest &request);
+                void DescribeAccessPolicyAsync(const Model::DescribeAccessPolicyRequest& request, const DescribeAccessPolicyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeAccessPolicyOutcomeCallable DescribeAccessPolicyCallable(const Model::DescribeAccessPolicyRequest& request);
 
                 /**
                  *This API is used to query the ACL rule list.
@@ -888,6 +898,24 @@ This API is used to get the list of topics in a CKafka instance of a user.
                 InstanceScalingDownOutcome InstanceScalingDown(const Model::InstanceScalingDownRequest &request);
                 void InstanceScalingDownAsync(const Model::InstanceScalingDownRequest& request, const InstanceScalingDownAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 InstanceScalingDownOutcomeCallable InstanceScalingDownCallable(const Model::InstanceScalingDownRequest& request);
+
+                /**
+                 *Isolate a prepaid instance. This API is used to perform isolation on the instance. After successful execution, the instance is isolated.
+                 * @param req IsolatedInstancePreRequest
+                 * @return IsolatedInstancePreOutcome
+                 */
+                IsolatedInstancePreOutcome IsolatedInstancePre(const Model::IsolatedInstancePreRequest &request);
+                void IsolatedInstancePreAsync(const Model::IsolatedInstancePreRequest& request, const IsolatedInstancePreAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                IsolatedInstancePreOutcomeCallable IsolatedInstancePreCallable(const Model::IsolatedInstancePreRequest& request);
+
+                /**
+                 *This API is used to modify the public IP allowlist of an instance.
+                 * @param req ModifyAccessPolicyRequest
+                 * @return ModifyAccessPolicyOutcome
+                 */
+                ModifyAccessPolicyOutcome ModifyAccessPolicy(const Model::ModifyAccessPolicyRequest &request);
+                void ModifyAccessPolicyAsync(const Model::ModifyAccessPolicyRequest& request, const ModifyAccessPolicyAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyAccessPolicyOutcomeCallable ModifyAccessPolicyCallable(const Model::ModifyAccessPolicyRequest& request);
 
                 /**
                  *This API is used to modify ACL policy, currently only support whether to apply preset rules to newly-added topics.

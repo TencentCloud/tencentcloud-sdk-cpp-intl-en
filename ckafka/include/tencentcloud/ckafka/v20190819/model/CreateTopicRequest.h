@@ -233,15 +233,15 @@ namespace TencentCloud
                     bool MinInsyncReplicasHasBeenSet() const;
 
                     /**
-                     * 获取<p>Whether to allow unsynchronized replicas to be elected as leader, 0: not allowed, 1: allowed, default not allowed</p>
-                     * @return UncleanLeaderElectionEnable <p>Whether to allow unsynchronized replicas to be elected as leader, 0: not allowed, 1: allowed, default not allowed</p>
+                     * 获取<p>Whether to allow unsynchronized replicas to be elected as leader. 0: not allowed, 1: allowed. Default value is the instance dimension value.</p>
+                     * @return UncleanLeaderElectionEnable <p>Whether to allow unsynchronized replicas to be elected as leader. 0: not allowed, 1: allowed. Default value is the instance dimension value.</p>
                      * 
                      */
                     int64_t GetUncleanLeaderElectionEnable() const;
 
                     /**
-                     * 设置<p>Whether to allow unsynchronized replicas to be elected as leader, 0: not allowed, 1: allowed, default not allowed</p>
-                     * @param _uncleanLeaderElectionEnable <p>Whether to allow unsynchronized replicas to be elected as leader, 0: not allowed, 1: allowed, default not allowed</p>
+                     * 设置<p>Whether to allow unsynchronized replicas to be elected as leader. 0: not allowed, 1: allowed. Default value is the instance dimension value.</p>
+                     * @param _uncleanLeaderElectionEnable <p>Whether to allow unsynchronized replicas to be elected as leader. 0: not allowed, 1: allowed. Default value is the instance dimension value.</p>
                      * 
                      */
                     void SetUncleanLeaderElectionEnable(const int64_t& _uncleanLeaderElectionEnable);
@@ -478,7 +478,7 @@ namespace TencentCloud
                     bool m_minInsyncReplicasHasBeenSet;
 
                     /**
-                     * <p>Whether to allow unsynchronized replicas to be elected as leader, 0: not allowed, 1: allowed, default not allowed</p>
+                     * <p>Whether to allow unsynchronized replicas to be elected as leader. 0: not allowed, 1: allowed. Default value is the instance dimension value.</p>
                      */
                     int64_t m_uncleanLeaderElectionEnable;
                     bool m_uncleanLeaderElectionEnableHasBeenSet;

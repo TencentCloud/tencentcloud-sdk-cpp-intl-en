@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Name, a string of no more than 128 characters, must start with "AppId-" and can contain letters, digits, and hyphens (-).
-                     * @return Name Name, a string of no more than 128 characters, must start with "AppId-" and can contain letters, digits, and hyphens (-).
+                     * 获取<p>Name is a string of no more than 128 characters, must start with "AppId-", and the remaining part can contain letters, digits, and hyphens (-). It can be queried through the API DescribeAppInfo.</p>
+                     * @return Name <p>Name is a string of no more than 128 characters, must start with "AppId-", and the remaining part can contain letters, digits, and hyphens (-). It can be queried through the API DescribeAppInfo.</p>
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Name, a string of no more than 128 characters, must start with "AppId-" and can contain letters, digits, and hyphens (-).
-                     * @param _name Name, a string of no more than 128 characters, must start with "AppId-" and can contain letters, digits, and hyphens (-).
+                     * 设置<p>Name is a string of no more than 128 characters, must start with "AppId-", and the remaining part can contain letters, digits, and hyphens (-). It can be queried through the API DescribeAppInfo.</p>
+                     * @param _name <p>Name is a string of no more than 128 characters, must start with "AppId-", and the remaining part can contain letters, digits, and hyphens (-). It can be queried through the API DescribeAppInfo.</p>
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Number of partitions, which should be greater than 0.
-                     * @return PartitionNum Number of partitions, which should be greater than 0.
+                     * 获取<p>Number of partitions, maximum value is 500, larger than 0</p>
+                     * @return PartitionNum <p>Number of partitions, maximum value is 500, larger than 0</p>
                      * 
                      */
                     int64_t GetPartitionNum() const;
 
                     /**
-                     * 设置Number of partitions, which should be greater than 0.
-                     * @param _partitionNum Number of partitions, which should be greater than 0.
+                     * 设置<p>Number of partitions, maximum value is 500, larger than 0</p>
+                     * @param _partitionNum <p>Number of partitions, maximum value is 500, larger than 0</p>
                      * 
                      */
                     void SetPartitionNum(const int64_t& _partitionNum);
@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool PartitionNumHasBeenSet() const;
 
                     /**
-                     * 获取Message retention period in milliseconds. The current minimum value is 60,000 ms.
-                     * @return RetentionMs Message retention period in milliseconds. The current minimum value is 60,000 ms.
+                     * 获取<p>Message retention period in milliseconds. Current min value is 60000 ms.</p>
+                     * @return RetentionMs <p>Message retention period in milliseconds. Current min value is 60000 ms.</p>
                      * 
                      */
                     int64_t GetRetentionMs() const;
 
                     /**
-                     * 设置Message retention period in milliseconds. The current minimum value is 60,000 ms.
-                     * @param _retentionMs Message retention period in milliseconds. The current minimum value is 60,000 ms.
+                     * 设置<p>Message retention period in milliseconds. Current min value is 60000 ms.</p>
+                     * @param _retentionMs <p>Message retention period in milliseconds. Current min value is 60000 ms.</p>
                      * 
                      */
                     void SetRetentionMs(const int64_t& _retentionMs);
@@ -107,15 +107,15 @@ namespace TencentCloud
                     bool RetentionMsHasBeenSet() const;
 
                     /**
-                     * 获取Topic remarks, which are a string of up to 128 characters. It can contain letters, digits, and hyphens (-) and must start with a letter.
-                     * @return Note Topic remarks, which are a string of up to 128 characters. It can contain letters, digits, and hyphens (-) and must start with a letter.
+                     * 获取<p>Topic remark is a string of no more than 64 characters, which can contain letters, digits, and hyphens (-).</p>
+                     * @return Note <p>Topic remark is a string of no more than 64 characters, which can contain letters, digits, and hyphens (-).</p>
                      * 
                      */
                     std::string GetNote() const;
 
                     /**
-                     * 设置Topic remarks, which are a string of up to 128 characters. It can contain letters, digits, and hyphens (-) and must start with a letter.
-                     * @param _note Topic remarks, which are a string of up to 128 characters. It can contain letters, digits, and hyphens (-) and must start with a letter.
+                     * 设置<p>Topic remark is a string of no more than 64 characters, which can contain letters, digits, and hyphens (-).</p>
+                     * @param _note <p>Topic remark is a string of no more than 64 characters, which can contain letters, digits, and hyphens (-).</p>
                      * 
                      */
                     void SetNote(const std::string& _note);
@@ -128,15 +128,15 @@ namespace TencentCloud
                     bool NoteHasBeenSet() const;
 
                     /**
-                     * 获取Tag list
-                     * @return Tags Tag list
+                     * 获取<p>Tag list</p>
+                     * @return Tags <p>Tag list</p>
                      * 
                      */
                     std::vector<Tag> GetTags() const;
 
                     /**
-                     * 设置Tag list
-                     * @param _tags Tag list
+                     * 设置<p>Tag list</p>
+                     * @param _tags <p>Tag list</p>
                      * 
                      */
                     void SetTags(const std::vector<Tag>& _tags);
@@ -151,31 +151,31 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Name, a string of no more than 128 characters, must start with "AppId-" and can contain letters, digits, and hyphens (-).
+                     * <p>Name is a string of no more than 128 characters, must start with "AppId-", and the remaining part can contain letters, digits, and hyphens (-). It can be queried through the API DescribeAppInfo.</p>
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Number of partitions, which should be greater than 0.
+                     * <p>Number of partitions, maximum value is 500, larger than 0</p>
                      */
                     int64_t m_partitionNum;
                     bool m_partitionNumHasBeenSet;
 
                     /**
-                     * Message retention period in milliseconds. The current minimum value is 60,000 ms.
+                     * <p>Message retention period in milliseconds. Current min value is 60000 ms.</p>
                      */
                     int64_t m_retentionMs;
                     bool m_retentionMsHasBeenSet;
 
                     /**
-                     * Topic remarks, which are a string of up to 128 characters. It can contain letters, digits, and hyphens (-) and must start with a letter.
+                     * <p>Topic remark is a string of no more than 64 characters, which can contain letters, digits, and hyphens (-).</p>
                      */
                     std::string m_note;
                     bool m_noteHasBeenSet;
 
                     /**
-                     * Tag list
+                     * <p>Tag list</p>
                      */
                     std::vector<Tag> m_tags;
                     bool m_tagsHasBeenSet;

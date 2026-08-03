@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The ckafka cluster instance Id.
-                     * @return InstanceId The ckafka cluster instance Id.
+                     * 获取<p>ckafka cluster instance Id</p>
+                     * @return InstanceId <p>ckafka cluster instance Id</p>
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置The ckafka cluster instance Id.
-                     * @param _instanceId The ckafka cluster instance Id.
+                     * 设置<p>ckafka cluster instance Id</p>
+                     * @param _instanceId <p>ckafka cluster instance Id</p>
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取1. smooth configuration upgrade 2. vertical configuration upgrade.
-                     * @return Type 1. smooth configuration upgrade 2. vertical configuration upgrade.
+                     * 获取<p>Upgrade type</p><p>Enumeration value:</p><ul><li>1: Minor version migration (recommended)</li></ul>
+                     * @return Type <p>Upgrade type</p><p>Enumeration value:</p><ul><li>1: Minor version migration (recommended)</li></ul>
                      * 
                      */
                     int64_t GetType() const;
 
                     /**
-                     * 设置1. smooth configuration upgrade 2. vertical configuration upgrade.
-                     * @param _type 1. smooth configuration upgrade 2. vertical configuration upgrade.
+                     * 设置<p>Upgrade type</p><p>Enumeration value:</p><ul><li>1: Minor version migration (recommended)</li></ul>
+                     * @param _type <p>Upgrade type</p><p>Enumeration value:</p><ul><li>1: Minor version migration (recommended)</li></ul>
                      * 
                      */
                     void SetType(const int64_t& _type);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Version number
-                     * @return SourceVersion Version number
+                     * 获取<p>Version number.</p>
+                     * @return SourceVersion <p>Version number.</p>
                      * 
                      */
                     std::string GetSourceVersion() const;
 
                     /**
-                     * 设置Version number
-                     * @param _sourceVersion Version number
+                     * 设置<p>Version number.</p>
+                     * @param _sourceVersion <p>Version number.</p>
                      * 
                      */
                     void SetSourceVersion(const std::string& _sourceVersion);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool SourceVersionHasBeenSet() const;
 
                     /**
-                     * 获取Version number
-                     * @return TargetVersion Version number
+                     * 获取<p>Version number.</p>
+                     * @return TargetVersion <p>Version number.</p>
                      * 
                      */
                     std::string GetTargetVersion() const;
 
                     /**
-                     * 设置Version number
-                     * @param _targetVersion Version number
+                     * 设置<p>Version number.</p>
+                     * @param _targetVersion <p>Version number.</p>
                      * 
                      */
                     void SetTargetVersion(const std::string& _targetVersion);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool TargetVersionHasBeenSet() const;
 
                     /**
-                     * 获取Delay time.
-                     * @return DelayTimeStamp Delay time.
+                     * 获取<p>Delay time</p>
+                     * @return DelayTimeStamp <p>Delay time</p>
                      * 
                      */
                     std::string GetDelayTimeStamp() const;
 
                     /**
-                     * 设置Delay time.
-                     * @param _delayTimeStamp Delay time.
+                     * 设置<p>Delay time</p>
+                     * @param _delayTimeStamp <p>Delay time</p>
                      * 
                      */
                     void SetDelayTimeStamp(const std::string& _delayTimeStamp);
@@ -150,31 +150,31 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The ckafka cluster instance Id.
+                     * <p>ckafka cluster instance Id</p>
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * 1. smooth configuration upgrade 2. vertical configuration upgrade.
+                     * <p>Upgrade type</p><p>Enumeration value:</p><ul><li>1: Minor version migration (recommended)</li></ul>
                      */
                     int64_t m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Version number
+                     * <p>Version number.</p>
                      */
                     std::string m_sourceVersion;
                     bool m_sourceVersionHasBeenSet;
 
                     /**
-                     * Version number
+                     * <p>Version number.</p>
                      */
                     std::string m_targetVersion;
                     bool m_targetVersionHasBeenSet;
 
                     /**
-                     * Delay time.
+                     * <p>Delay time</p>
                      */
                     std::string m_delayTimeStamp;
                     bool m_delayTimeStampHasBeenSet;

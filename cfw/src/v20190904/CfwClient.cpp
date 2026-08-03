@@ -90,6 +90,56 @@ CfwClient::AddAcRuleOutcomeCallable CfwClient::AddAcRuleCallable(const AddAcRule
     return prom->get_future();
 }
 
+CfwClient::AddAclRuleOutcome CfwClient::AddAclRule(const AddAclRuleRequest &request)
+{
+    auto outcome = MakeRequest(request, "AddAclRule");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        AddAclRuleResponse rsp = AddAclRuleResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return AddAclRuleOutcome(rsp);
+        else
+            return AddAclRuleOutcome(o.GetError());
+    }
+    else
+    {
+        return AddAclRuleOutcome(outcome.GetError());
+    }
+}
+
+void CfwClient::AddAclRuleAsync(const AddAclRuleRequest& request, const AddAclRuleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const AddAclRuleRequest&;
+    using Resp = AddAclRuleResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "AddAclRule", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CfwClient::AddAclRuleOutcomeCallable CfwClient::AddAclRuleCallable(const AddAclRuleRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<AddAclRuleOutcome>>();
+    AddAclRuleAsync(
+    request,
+    [prom](
+        const CfwClient*,
+        const AddAclRuleRequest&,
+        AddAclRuleOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 CfwClient::AddEnterpriseSecurityGroupRulesOutcome CfwClient::AddEnterpriseSecurityGroupRules(const AddEnterpriseSecurityGroupRulesRequest &request)
 {
     auto outcome = MakeRequest(request, "AddEnterpriseSecurityGroupRules");
@@ -882,6 +932,106 @@ CfwClient::DescribeBlockStaticListOutcomeCallable CfwClient::DescribeBlockStatic
         const CfwClient*,
         const DescribeBlockStaticListRequest&,
         DescribeBlockStaticListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CfwClient::DescribeCfwLogsOutcome CfwClient::DescribeCfwLogs(const DescribeCfwLogsRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeCfwLogs");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeCfwLogsResponse rsp = DescribeCfwLogsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeCfwLogsOutcome(rsp);
+        else
+            return DescribeCfwLogsOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeCfwLogsOutcome(outcome.GetError());
+    }
+}
+
+void CfwClient::DescribeCfwLogsAsync(const DescribeCfwLogsRequest& request, const DescribeCfwLogsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeCfwLogsRequest&;
+    using Resp = DescribeCfwLogsResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeCfwLogs", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CfwClient::DescribeCfwLogsOutcomeCallable CfwClient::DescribeCfwLogsCallable(const DescribeCfwLogsRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeCfwLogsOutcome>>();
+    DescribeCfwLogsAsync(
+    request,
+    [prom](
+        const CfwClient*,
+        const DescribeCfwLogsRequest&,
+        DescribeCfwLogsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CfwClient::DescribeCfwStatusMonitorOutcome CfwClient::DescribeCfwStatusMonitor(const DescribeCfwStatusMonitorRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeCfwStatusMonitor");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeCfwStatusMonitorResponse rsp = DescribeCfwStatusMonitorResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeCfwStatusMonitorOutcome(rsp);
+        else
+            return DescribeCfwStatusMonitorOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeCfwStatusMonitorOutcome(outcome.GetError());
+    }
+}
+
+void CfwClient::DescribeCfwStatusMonitorAsync(const DescribeCfwStatusMonitorRequest& request, const DescribeCfwStatusMonitorAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeCfwStatusMonitorRequest&;
+    using Resp = DescribeCfwStatusMonitorResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeCfwStatusMonitor", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CfwClient::DescribeCfwStatusMonitorOutcomeCallable CfwClient::DescribeCfwStatusMonitorCallable(const DescribeCfwStatusMonitorRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeCfwStatusMonitorOutcome>>();
+    DescribeCfwStatusMonitorAsync(
+    request,
+    [prom](
+        const CfwClient*,
+        const DescribeCfwStatusMonitorRequest&,
+        DescribeCfwStatusMonitorOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {

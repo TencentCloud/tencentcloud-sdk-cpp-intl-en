@@ -154,15 +154,15 @@ namespace TencentCloud
                     bool VipListHasBeenSet() const;
 
                     /**
-                     * 获取<P>Specifies the instance status. valid values: 0 (creating), 1 (running), 2 (deleting), 3 (deleted), 5 (isolated), 7 (upgrading), -1 (creation failed).</p>.
-                     * @return Status <P>Specifies the instance status. valid values: 0 (creating), 1 (running), 2 (deleting), 3 (deleted), 5 (isolated), 7 (upgrading), -1 (creation failed).</p>.
+                     * 获取<p>Instance status. 0: Creating, 1: Running, 2: Deleting, 3: Deleted, 5: Isolated, 7: Upgrading, -1: Creation failed</p>
+                     * @return Status <p>Instance status. 0: Creating, 1: Running, 2: Deleting, 3: Deleted, 5: Isolated, 7: Upgrading, -1: Creation failed</p>
                      * 
                      */
                     int64_t GetStatus() const;
 
                     /**
-                     * 设置<P>Specifies the instance status. valid values: 0 (creating), 1 (running), 2 (deleting), 3 (deleted), 5 (isolated), 7 (upgrading), -1 (creation failed).</p>.
-                     * @param _status <P>Specifies the instance status. valid values: 0 (creating), 1 (running), 2 (deleting), 3 (deleted), 5 (isolated), 7 (upgrading), -1 (creation failed).</p>.
+                     * 设置<p>Instance status. 0: Creating, 1: Running, 2: Deleting, 3: Deleted, 5: Isolated, 7: Upgrading, -1: Creation failed</p>
+                     * @param _status <p>Instance status. 0: Creating, 1: Running, 2: Deleting, 3: Deleted, 5: Isolated, 7: Upgrading, -1: Creation failed</p>
                      * 
                      */
                     void SetStatus(const int64_t& _status);
@@ -721,15 +721,15 @@ namespace TencentCloud
                     bool FeaturesHasBeenSet() const;
 
                     /**
-                     * 获取<p>Message retention size at the instance level</p>Measurement unit: byte<br>Default value: -1<br><p>Message retention size at the instance level</p>
-                     * @return RetentionBytes <p>Message retention size at the instance level</p>Measurement unit: byte<br>Default value: -1<br><p>Message retention size at the instance level</p>
+                     * 获取<p>Message retention size at the instance level</p><p>Measurement unit: byte</p><p>Default value: -1</p><p>Message retention size at the instance level</p>
+                     * @return RetentionBytes <p>Message retention size at the instance level</p><p>Measurement unit: byte</p><p>Default value: -1</p><p>Message retention size at the instance level</p>
                      * 
                      */
                     int64_t GetRetentionBytes() const;
 
                     /**
-                     * 设置<p>Message retention size at the instance level</p>Measurement unit: byte<br>Default value: -1<br><p>Message retention size at the instance level</p>
-                     * @param _retentionBytes <p>Message retention size at the instance level</p>Measurement unit: byte<br>Default value: -1<br><p>Message retention size at the instance level</p>
+                     * 设置<p>Message retention size at the instance level</p><p>Measurement unit: byte</p><p>Default value: -1</p><p>Message retention size at the instance level</p>
+                     * @param _retentionBytes <p>Message retention size at the instance level</p><p>Measurement unit: byte</p><p>Default value: -1</p><p>Message retention size at the instance level</p>
                      * 
                      */
                     void SetRetentionBytes(const int64_t& _retentionBytes);
@@ -774,7 +774,7 @@ namespace TencentCloud
                     bool m_vipListHasBeenSet;
 
                     /**
-                     * <P>Specifies the instance status. valid values: 0 (creating), 1 (running), 2 (deleting), 3 (deleted), 5 (isolated), 7 (upgrading), -1 (creation failed).</p>.
+                     * <p>Instance status. 0: Creating, 1: Running, 2: Deleting, 3: Deleted, 5: Isolated, 7: Upgrading, -1: Creation failed</p>
                      */
                     int64_t m_status;
                     bool m_statusHasBeenSet;
@@ -936,7 +936,7 @@ namespace TencentCloud
                     bool m_featuresHasBeenSet;
 
                     /**
-                     * <p>Message retention size at the instance level</p>Measurement unit: byte<br>Default value: -1<br><p>Message retention size at the instance level</p>
+                     * <p>Message retention size at the instance level</p><p>Measurement unit: byte</p><p>Default value: -1</p><p>Message retention size at the instance level</p>
                      */
                     int64_t m_retentionBytes;
                     bool m_retentionBytesHasBeenSet;

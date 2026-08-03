@@ -170,15 +170,15 @@ namespace TencentCloud
                     bool ClusterIdHasBeenSet() const;
 
                     /**
-                     * 获取<P>Instance version. currently supports "2.4.1", "2.4.2", "2.8.1", "3.2.3". default value is "2.4.1". "2.4.1" and "2.4.2" belong to the same version, any one can be passed.</p>.
-                     * @return KafkaVersion <P>Instance version. currently supports "2.4.1", "2.4.2", "2.8.1", "3.2.3". default value is "2.4.1". "2.4.1" and "2.4.2" belong to the same version, any one can be passed.</p>.
+                     * 获取<p>Instance version. Currently supports "2.4.1", "2.4.2", "2.8.1", "3.2.3". Default value is "2.4.1". "2.4.1" and "2.4.2" belong to the same version. You can pass any one of them.</p>
+                     * @return KafkaVersion <p>Instance version. Currently supports "2.4.1", "2.4.2", "2.8.1", "3.2.3". Default value is "2.4.1". "2.4.1" and "2.4.2" belong to the same version. You can pass any one of them.</p>
                      * 
                      */
                     std::string GetKafkaVersion() const;
 
                     /**
-                     * 设置<P>Instance version. currently supports "2.4.1", "2.4.2", "2.8.1", "3.2.3". default value is "2.4.1". "2.4.1" and "2.4.2" belong to the same version, any one can be passed.</p>.
-                     * @param _kafkaVersion <P>Instance version. currently supports "2.4.1", "2.4.2", "2.8.1", "3.2.3". default value is "2.4.1". "2.4.1" and "2.4.2" belong to the same version, any one can be passed.</p>.
+                     * 设置<p>Instance version. Currently supports "2.4.1", "2.4.2", "2.8.1", "3.2.3". Default value is "2.4.1". "2.4.1" and "2.4.2" belong to the same version. You can pass any one of them.</p>
+                     * @param _kafkaVersion <p>Instance version. Currently supports "2.4.1", "2.4.2", "2.8.1", "3.2.3". Default value is "2.4.1". "2.4.1" and "2.4.2" belong to the same version. You can pass any one of them.</p>
                      * 
                      */
                     void SetKafkaVersion(const std::string& _kafkaVersion);
@@ -191,15 +191,15 @@ namespace TencentCloud
                     bool KafkaVersionHasBeenSet() const;
 
                     /**
-                     * 获取<P>Instance type. "standard": standard version, "profession": professional version. (standard version is only supported on the international site. chinese site currently supports professional version)</p>.
-                     * @return SpecificationsType <P>Instance type. "standard": standard version, "profession": professional version. (standard version is only supported on the international site. chinese site currently supports professional version)</p>.
+                     * 获取<p>Instance type. "standard": standard version, "profession": professional version. (The standard version is only supported on the international site. The domestic site currently supports the professional version.)</p>
+                     * @return SpecificationsType <p>Instance type. "standard": standard version, "profession": professional version. (The standard version is only supported on the international site. The domestic site currently supports the professional version.)</p>
                      * 
                      */
                     std::string GetSpecificationsType() const;
 
                     /**
-                     * 设置<P>Instance type. "standard": standard version, "profession": professional version. (standard version is only supported on the international site. chinese site currently supports professional version)</p>.
-                     * @param _specificationsType <P>Instance type. "standard": standard version, "profession": professional version. (standard version is only supported on the international site. chinese site currently supports professional version)</p>.
+                     * 设置<p>Instance type. "standard": standard version, "profession": professional version. (The standard version is only supported on the international site. The domestic site currently supports the professional version.)</p>
+                     * @param _specificationsType <p>Instance type. "standard": standard version, "profession": professional version. (The standard version is only supported on the international site. The domestic site currently supports the professional version.)</p>
                      * 
                      */
                     void SetSpecificationsType(const std::string& _specificationsType);
@@ -212,15 +212,15 @@ namespace TencentCloud
                     bool SpecificationsTypeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Specifies the instance disk type for pro edition. standard edition instances do not require this field. valid values: "CLOUD_SSD" (SSD CLOUD disk), "CLOUD_BASIC" (high-performance CLOUD block storage). default value: "CLOUD_BASIC".</p>.
-                     * @return DiskType <p>Specifies the instance disk type for pro edition. standard edition instances do not require this field. valid values: "CLOUD_SSD" (SSD CLOUD disk), "CLOUD_BASIC" (high-performance CLOUD block storage). default value: "CLOUD_BASIC".</p>.
+                     * 获取<p>Instance disk type for Pro Edition. You do not need to fill it in for standard edition instance. "CLOUD_SSD": SSD CLOUD disk; "CLOUD_BASIC": high-performance CLOUD block storage. Default value is "CLOUD_BASIC" if not specified.</p>
+                     * @return DiskType <p>Instance disk type for Pro Edition. You do not need to fill it in for standard edition instance. "CLOUD_SSD": SSD CLOUD disk; "CLOUD_BASIC": high-performance CLOUD block storage. Default value is "CLOUD_BASIC" if not specified.</p>
                      * 
                      */
                     std::string GetDiskType() const;
 
                     /**
-                     * 设置<p>Specifies the instance disk type for pro edition. standard edition instances do not require this field. valid values: "CLOUD_SSD" (SSD CLOUD disk), "CLOUD_BASIC" (high-performance CLOUD block storage). default value: "CLOUD_BASIC".</p>.
-                     * @param _diskType <p>Specifies the instance disk type for pro edition. standard edition instances do not require this field. valid values: "CLOUD_SSD" (SSD CLOUD disk), "CLOUD_BASIC" (high-performance CLOUD block storage). default value: "CLOUD_BASIC".</p>.
+                     * 设置<p>Instance disk type for Pro Edition. You do not need to fill it in for standard edition instance. "CLOUD_SSD": SSD CLOUD disk; "CLOUD_BASIC": high-performance CLOUD block storage. Default value is "CLOUD_BASIC" if not specified.</p>
+                     * @param _diskType <p>Instance disk type for Pro Edition. You do not need to fill it in for standard edition instance. "CLOUD_SSD": SSD CLOUD disk; "CLOUD_BASIC": high-performance CLOUD block storage. Default value is "CLOUD_BASIC" if not specified.</p>
                      * 
                      */
                     void SetDiskType(const std::string& _diskType);
@@ -401,15 +401,15 @@ namespace TencentCloud
                     bool InstanceNumHasBeenSet() const;
 
                     /**
-                     * 获取<p>Public bandwidth size in Mbps. the free 3 Mbps bandwidth is not included by default. for example, if the total required public network bandwidth is 3 Mbps, input 0 here; if the total required public network bandwidth is 6 Mbps, input 3 here. ensure the input parameter is a multiple of 3.</p>.
-                     * @return PublicNetworkMonthly <p>Public bandwidth size in Mbps. the free 3 Mbps bandwidth is not included by default. for example, if the total required public network bandwidth is 3 Mbps, input 0 here; if the total required public network bandwidth is 6 Mbps, input 3 here. ensure the input parameter is a multiple of 3.</p>.
+                     * 获取<p>Public bandwidth size, measurement unit Mbps.</p><p>Unit: Mbps</p>
+                     * @return PublicNetworkMonthly <p>Public bandwidth size, measurement unit Mbps.</p><p>Unit: Mbps</p>
                      * 
                      */
                     int64_t GetPublicNetworkMonthly() const;
 
                     /**
-                     * 设置<p>Public bandwidth size in Mbps. the free 3 Mbps bandwidth is not included by default. for example, if the total required public network bandwidth is 3 Mbps, input 0 here; if the total required public network bandwidth is 6 Mbps, input 3 here. ensure the input parameter is a multiple of 3.</p>.
-                     * @param _publicNetworkMonthly <p>Public bandwidth size in Mbps. the free 3 Mbps bandwidth is not included by default. for example, if the total required public network bandwidth is 3 Mbps, input 0 here; if the total required public network bandwidth is 6 Mbps, input 3 here. ensure the input parameter is a multiple of 3.</p>.
+                     * 设置<p>Public bandwidth size, measurement unit Mbps.</p><p>Unit: Mbps</p>
+                     * @param _publicNetworkMonthly <p>Public bandwidth size, measurement unit Mbps.</p><p>Unit: Mbps</p>
                      * 
                      */
                     void SetPublicNetworkMonthly(const int64_t& _publicNetworkMonthly);
@@ -484,6 +484,27 @@ namespace TencentCloud
                      */
                     bool CustomSSLCertIdHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Elastic storage switch</p><p>Enumeration value:</p><ul><li>0: Turn off</li><li>1: Turn on</li></ul><p>Default value: 0</p>
+                     * @return StoreQuantityType <p>Elastic storage switch</p><p>Enumeration value:</p><ul><li>0: Turn off</li><li>1: Turn on</li></ul><p>Default value: 0</p>
+                     * 
+                     */
+                    int64_t GetStoreQuantityType() const;
+
+                    /**
+                     * 设置<p>Elastic storage switch</p><p>Enumeration value:</p><ul><li>0: Turn off</li><li>1: Turn on</li></ul><p>Default value: 0</p>
+                     * @param _storeQuantityType <p>Elastic storage switch</p><p>Enumeration value:</p><ul><li>0: Turn off</li><li>1: Turn on</li></ul><p>Default value: 0</p>
+                     * 
+                     */
+                    void SetStoreQuantityType(const int64_t& _storeQuantityType);
+
+                    /**
+                     * 判断参数 StoreQuantityType 是否已赋值
+                     * @return StoreQuantityType 是否已赋值
+                     * 
+                     */
+                    bool StoreQuantityTypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -523,19 +544,19 @@ namespace TencentCloud
                     bool m_clusterIdHasBeenSet;
 
                     /**
-                     * <P>Instance version. currently supports "2.4.1", "2.4.2", "2.8.1", "3.2.3". default value is "2.4.1". "2.4.1" and "2.4.2" belong to the same version, any one can be passed.</p>.
+                     * <p>Instance version. Currently supports "2.4.1", "2.4.2", "2.8.1", "3.2.3". Default value is "2.4.1". "2.4.1" and "2.4.2" belong to the same version. You can pass any one of them.</p>
                      */
                     std::string m_kafkaVersion;
                     bool m_kafkaVersionHasBeenSet;
 
                     /**
-                     * <P>Instance type. "standard": standard version, "profession": professional version. (standard version is only supported on the international site. chinese site currently supports professional version)</p>.
+                     * <p>Instance type. "standard": standard version, "profession": professional version. (The standard version is only supported on the international site. The domestic site currently supports the professional version.)</p>
                      */
                     std::string m_specificationsType;
                     bool m_specificationsTypeHasBeenSet;
 
                     /**
-                     * <p>Specifies the instance disk type for pro edition. standard edition instances do not require this field. valid values: "CLOUD_SSD" (SSD CLOUD disk), "CLOUD_BASIC" (high-performance CLOUD block storage). default value: "CLOUD_BASIC".</p>.
+                     * <p>Instance disk type for Pro Edition. You do not need to fill it in for standard edition instance. "CLOUD_SSD": SSD CLOUD disk; "CLOUD_BASIC": high-performance CLOUD block storage. Default value is "CLOUD_BASIC" if not specified.</p>
                      */
                     std::string m_diskType;
                     bool m_diskTypeHasBeenSet;
@@ -589,7 +610,7 @@ namespace TencentCloud
                     bool m_instanceNumHasBeenSet;
 
                     /**
-                     * <p>Public bandwidth size in Mbps. the free 3 Mbps bandwidth is not included by default. for example, if the total required public network bandwidth is 3 Mbps, input 0 here; if the total required public network bandwidth is 6 Mbps, input 3 here. ensure the input parameter is a multiple of 3.</p>.
+                     * <p>Public bandwidth size, measurement unit Mbps.</p><p>Unit: Mbps</p>
                      */
                     int64_t m_publicNetworkMonthly;
                     bool m_publicNetworkMonthlyHasBeenSet;
@@ -611,6 +632,12 @@ namespace TencentCloud
                      */
                     std::string m_customSSLCertId;
                     bool m_customSSLCertIdHasBeenSet;
+
+                    /**
+                     * <p>Elastic storage switch</p><p>Enumeration value:</p><ul><li>0: Turn off</li><li>1: Turn on</li></ul><p>Default value: 0</p>
+                     */
+                    int64_t m_storeQuantityType;
+                    bool m_storeQuantityTypeHasBeenSet;
 
                 };
             }

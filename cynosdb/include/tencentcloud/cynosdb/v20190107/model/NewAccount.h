@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Account name, which can contain 1-16 letters, digits, and underscores. It must begin with a letter and end with a letter or digit.
-                     * @return AccountName Account name, which can contain 1-16 letters, digits, and underscores. It must begin with a letter and end with a letter or digit.
+                     * 获取<p>Account name, containing letters, digits, and underscores, starting with a letter, ending with a letter or digit, length 1-30</p>
+                     * @return AccountName <p>Account name, containing letters, digits, and underscores, starting with a letter, ending with a letter or digit, length 1-30</p>
                      * 
                      */
                     std::string GetAccountName() const;
 
                     /**
-                     * 设置Account name, which can contain 1-16 letters, digits, and underscores. It must begin with a letter and end with a letter or digit.
-                     * @param _accountName Account name, which can contain 1-16 letters, digits, and underscores. It must begin with a letter and end with a letter or digit.
+                     * 设置<p>Account name, containing letters, digits, and underscores, starting with a letter, ending with a letter or digit, length 1-30</p>
+                     * @param _accountName <p>Account name, containing letters, digits, and underscores, starting with a letter, ending with a letter or digit, length 1-30</p>
                      * 
                      */
                     void SetAccountName(const std::string& _accountName);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool AccountNameHasBeenSet() const;
 
                     /**
-                     * 获取Host
-                     * @return Host Host
+                     * 获取<p>host (% or ipv4 address)</p>
+                     * @return Host <p>host (% or ipv4 address)</p>
                      * 
                      */
                     std::string GetHost() const;
 
                     /**
-                     * 设置Host
-                     * @param _host Host
+                     * 设置<p>host (% or ipv4 address)</p>
+                     * @param _host <p>host (% or ipv4 address)</p>
                      * 
                      */
                     void SetHost(const std::string& _host);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool HostHasBeenSet() const;
 
                     /**
-                     * 获取Password, which can contain 8-64 characters.
-                     * @return AccountPassword Password, which can contain 8-64 characters.
+                     * 获取<p>Password. The length range is 8 to 64 characters.</p>
+                     * @return AccountPassword <p>Password. The length range is 8 to 64 characters.</p>
                      * 
                      */
                     std::string GetAccountPassword() const;
 
                     /**
-                     * 设置Password, which can contain 8-64 characters.
-                     * @param _accountPassword Password, which can contain 8-64 characters.
+                     * 设置<p>Password. The length range is 8 to 64 characters.</p>
+                     * @param _accountPassword <p>Password. The length range is 8 to 64 characters.</p>
                      * 
                      */
                     void SetAccountPassword(const std::string& _accountPassword);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool AccountPasswordHasBeenSet() const;
 
                     /**
-                     * 获取Whether password rotation is enabled (0: turn off; 1: turn on)
-                     * @return PasswordRotation Whether password rotation is enabled (0: turn off; 1: turn on)
+                     * 获取<p>Whether password rotation is enabled (0: turn off; 1: turn on)</p>
+                     * @return PasswordRotation <p>Whether password rotation is enabled (0: turn off; 1: turn on)</p>
                      * 
                      */
                     int64_t GetPasswordRotation() const;
 
                     /**
-                     * 设置Whether password rotation is enabled (0: turn off; 1: turn on)
-                     * @param _passwordRotation Whether password rotation is enabled (0: turn off; 1: turn on)
+                     * 设置<p>Whether password rotation is enabled (0: turn off; 1: turn on)</p>
+                     * @param _passwordRotation <p>Whether password rotation is enabled (0: turn off; 1: turn on)</p>
                      * 
                      */
                     void SetPasswordRotation(const int64_t& _passwordRotation);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool PasswordRotationHasBeenSet() const;
 
                     /**
-                     * 获取Description
-                     * @return Description Description
+                     * 获取<p>Description.</p>
+                     * @return Description <p>Description.</p>
                      * 
                      */
                     std::string GetDescription() const;
 
                     /**
-                     * 设置Description
-                     * @param _description Description
+                     * 设置<p>Description.</p>
+                     * @param _description <p>Description.</p>
                      * 
                      */
                     void SetDescription(const std::string& _description);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool DescriptionHasBeenSet() const;
 
                     /**
-                     * 获取Maximum number of user connections, which cannot be above 10,240.
-                     * @return MaxUserConnections Maximum number of user connections, which cannot be above 10,240.
+                     * 获取<p>Maximum user connections cannot be greater than 10240</p>
+                     * @return MaxUserConnections <p>Maximum user connections cannot be greater than 10240</p>
                      * 
                      */
                     int64_t GetMaxUserConnections() const;
 
                     /**
-                     * 设置Maximum number of user connections, which cannot be above 10,240.
-                     * @param _maxUserConnections Maximum number of user connections, which cannot be above 10,240.
+                     * 设置<p>Maximum user connections cannot be greater than 10240</p>
+                     * @param _maxUserConnections <p>Maximum user connections cannot be greater than 10240</p>
                      * 
                      */
                     void SetMaxUserConnections(const int64_t& _maxUserConnections);
@@ -175,37 +175,37 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Account name, which can contain 1-16 letters, digits, and underscores. It must begin with a letter and end with a letter or digit.
+                     * <p>Account name, containing letters, digits, and underscores, starting with a letter, ending with a letter or digit, length 1-30</p>
                      */
                     std::string m_accountName;
                     bool m_accountNameHasBeenSet;
 
                     /**
-                     * Host
+                     * <p>host (% or ipv4 address)</p>
                      */
                     std::string m_host;
                     bool m_hostHasBeenSet;
 
                     /**
-                     * Password, which can contain 8-64 characters.
+                     * <p>Password. The length range is 8 to 64 characters.</p>
                      */
                     std::string m_accountPassword;
                     bool m_accountPasswordHasBeenSet;
 
                     /**
-                     * Whether password rotation is enabled (0: turn off; 1: turn on)
+                     * <p>Whether password rotation is enabled (0: turn off; 1: turn on)</p>
                      */
                     int64_t m_passwordRotation;
                     bool m_passwordRotationHasBeenSet;
 
                     /**
-                     * Description
+                     * <p>Description.</p>
                      */
                     std::string m_description;
                     bool m_descriptionHasBeenSet;
 
                     /**
-                     * Maximum number of user connections, which cannot be above 10,240.
+                     * <p>Maximum user connections cannot be greater than 10240</p>
                      */
                     int64_t m_maxUserConnections;
                     bool m_maxUserConnectionsHasBeenSet;

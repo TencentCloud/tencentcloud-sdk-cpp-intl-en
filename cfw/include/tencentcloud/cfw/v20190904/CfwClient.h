@@ -25,6 +25,8 @@
 #include <tencentcloud/core/AsyncCallerContext.h>
 #include <tencentcloud/cfw/v20190904/model/AddAcRuleRequest.h>
 #include <tencentcloud/cfw/v20190904/model/AddAcRuleResponse.h>
+#include <tencentcloud/cfw/v20190904/model/AddAclRuleRequest.h>
+#include <tencentcloud/cfw/v20190904/model/AddAclRuleResponse.h>
 #include <tencentcloud/cfw/v20190904/model/AddEnterpriseSecurityGroupRulesRequest.h>
 #include <tencentcloud/cfw/v20190904/model/AddEnterpriseSecurityGroupRulesResponse.h>
 #include <tencentcloud/cfw/v20190904/model/AddNatAcRuleRequest.h>
@@ -57,6 +59,10 @@
 #include <tencentcloud/cfw/v20190904/model/DescribeBlockIgnoreListResponse.h>
 #include <tencentcloud/cfw/v20190904/model/DescribeBlockStaticListRequest.h>
 #include <tencentcloud/cfw/v20190904/model/DescribeBlockStaticListResponse.h>
+#include <tencentcloud/cfw/v20190904/model/DescribeCfwLogsRequest.h>
+#include <tencentcloud/cfw/v20190904/model/DescribeCfwLogsResponse.h>
+#include <tencentcloud/cfw/v20190904/model/DescribeCfwStatusMonitorRequest.h>
+#include <tencentcloud/cfw/v20190904/model/DescribeCfwStatusMonitorResponse.h>
 #include <tencentcloud/cfw/v20190904/model/DescribeDefenseSwitchRequest.h>
 #include <tencentcloud/cfw/v20190904/model/DescribeDefenseSwitchResponse.h>
 #include <tencentcloud/cfw/v20190904/model/DescribeEnterpriseSecurityGroupRuleRequest.h>
@@ -172,6 +178,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::AddAcRuleResponse> AddAcRuleOutcome;
                 typedef std::future<AddAcRuleOutcome> AddAcRuleOutcomeCallable;
                 typedef std::function<void(const CfwClient*, const Model::AddAcRuleRequest&, AddAcRuleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AddAcRuleAsyncHandler;
+                typedef Outcome<Core::Error, Model::AddAclRuleResponse> AddAclRuleOutcome;
+                typedef std::future<AddAclRuleOutcome> AddAclRuleOutcomeCallable;
+                typedef std::function<void(const CfwClient*, const Model::AddAclRuleRequest&, AddAclRuleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AddAclRuleAsyncHandler;
                 typedef Outcome<Core::Error, Model::AddEnterpriseSecurityGroupRulesResponse> AddEnterpriseSecurityGroupRulesOutcome;
                 typedef std::future<AddEnterpriseSecurityGroupRulesOutcome> AddEnterpriseSecurityGroupRulesOutcomeCallable;
                 typedef std::function<void(const CfwClient*, const Model::AddEnterpriseSecurityGroupRulesRequest&, AddEnterpriseSecurityGroupRulesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AddEnterpriseSecurityGroupRulesAsyncHandler;
@@ -220,6 +229,12 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeBlockStaticListResponse> DescribeBlockStaticListOutcome;
                 typedef std::future<DescribeBlockStaticListOutcome> DescribeBlockStaticListOutcomeCallable;
                 typedef std::function<void(const CfwClient*, const Model::DescribeBlockStaticListRequest&, DescribeBlockStaticListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeBlockStaticListAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeCfwLogsResponse> DescribeCfwLogsOutcome;
+                typedef std::future<DescribeCfwLogsOutcome> DescribeCfwLogsOutcomeCallable;
+                typedef std::function<void(const CfwClient*, const Model::DescribeCfwLogsRequest&, DescribeCfwLogsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCfwLogsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeCfwStatusMonitorResponse> DescribeCfwStatusMonitorOutcome;
+                typedef std::future<DescribeCfwStatusMonitorOutcome> DescribeCfwStatusMonitorOutcomeCallable;
+                typedef std::function<void(const CfwClient*, const Model::DescribeCfwStatusMonitorRequest&, DescribeCfwStatusMonitorOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeCfwStatusMonitorAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeDefenseSwitchResponse> DescribeDefenseSwitchOutcome;
                 typedef std::future<DescribeDefenseSwitchOutcome> DescribeDefenseSwitchOutcomeCallable;
                 typedef std::function<void(const CfwClient*, const Model::DescribeDefenseSwitchRequest&, DescribeDefenseSwitchOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDefenseSwitchAsyncHandler;
@@ -380,6 +395,15 @@ namespace TencentCloud
                 AddAcRuleOutcomeCallable AddAcRuleCallable(const Model::AddAcRuleRequest& request);
 
                 /**
+                 *Add one or more Internet Boundary Access Control Rules.
+                 * @param req AddAclRuleRequest
+                 * @return AddAclRuleOutcome
+                 */
+                AddAclRuleOutcome AddAclRule(const Model::AddAclRuleRequest &request);
+                void AddAclRuleAsync(const Model::AddAclRuleRequest& request, const AddAclRuleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                AddAclRuleOutcomeCallable AddAclRuleCallable(const Model::AddAclRuleRequest& request);
+
+                /**
                  *This API is used to create enterprise security group rules (new).
                  * @param req AddEnterpriseSecurityGroupRulesRequest
                  * @return AddEnterpriseSecurityGroupRulesOutcome
@@ -523,6 +547,24 @@ namespace TencentCloud
                 DescribeBlockStaticListOutcome DescribeBlockStaticList(const Model::DescribeBlockStaticListRequest &request);
                 void DescribeBlockStaticListAsync(const Model::DescribeBlockStaticListRequest& request, const DescribeBlockStaticListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeBlockStaticListOutcomeCallable DescribeBlockStaticListCallable(const Model::DescribeBlockStaticListRequest& request);
+
+                /**
+                 *This API is used to query the firewall log of the current tenant. Only use HasMore/NextToken in Response.Data to paginate.
+                 * @param req DescribeCfwLogsRequest
+                 * @return DescribeCfwLogsOutcome
+                 */
+                DescribeCfwLogsOutcome DescribeCfwLogs(const Model::DescribeCfwLogsRequest &request);
+                void DescribeCfwLogsAsync(const Model::DescribeCfwLogsRequest& request, const DescribeCfwLogsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeCfwLogsOutcomeCallable DescribeCfwLogsCallable(const Model::DescribeCfwLogsRequest& request);
+
+                /**
+                 *Query status monitoring scenario. Op=describe_scene is used to detect available scenarios, metrics, perspectives, and secondary dropdown available_options. Op=fetch_scene is used to pull specific scenario snapshots, with results in the JSON string of Response.Data.
+                 * @param req DescribeCfwStatusMonitorRequest
+                 * @return DescribeCfwStatusMonitorOutcome
+                 */
+                DescribeCfwStatusMonitorOutcome DescribeCfwStatusMonitor(const Model::DescribeCfwStatusMonitorRequest &request);
+                void DescribeCfwStatusMonitorAsync(const Model::DescribeCfwStatusMonitorRequest& request, const DescribeCfwStatusMonitorAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeCfwStatusMonitorOutcomeCallable DescribeCfwStatusMonitorCallable(const Model::DescribeCfwStatusMonitorRequest& request);
 
                 /**
                  *This API is used to query the list of firewall toggles with Intrusion Defense enabled.

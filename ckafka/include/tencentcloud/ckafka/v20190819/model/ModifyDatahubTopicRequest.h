@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Elastic topic name.
-                     * @return Name Elastic topic name.
+                     * 获取<p>Elastic topic name</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/86863?from_cn_redirect=1">DescribeDatahubTopics</a></p>
+                     * @return Name <p>Elastic topic name</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/86863?from_cn_redirect=1">DescribeDatahubTopics</a></p>
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Elastic topic name.
-                     * @param _name Elastic topic name.
+                     * 设置<p>Elastic topic name</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/86863?from_cn_redirect=1">DescribeDatahubTopics</a></p>
+                     * @param _name <p>Elastic topic name</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/86863?from_cn_redirect=1">DescribeDatahubTopics</a></p>
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Message retention period in ms. The current minimum value is 60,000 ms.
-                     * @return RetentionMs Message retention period in ms. The current minimum value is 60,000 ms.
+                     * 获取<p>Message retention period in milliseconds. Current min value is 60000 ms.</p>
+                     * @return RetentionMs <p>Message retention period in milliseconds. Current min value is 60000 ms.</p>
                      * 
                      */
                     int64_t GetRetentionMs() const;
 
                     /**
-                     * 设置Message retention period in ms. The current minimum value is 60,000 ms.
-                     * @param _retentionMs Message retention period in ms. The current minimum value is 60,000 ms.
+                     * 设置<p>Message retention period in milliseconds. Current min value is 60000 ms.</p>
+                     * @param _retentionMs <p>Message retention period in milliseconds. Current min value is 60000 ms.</p>
                      * 
                      */
                     void SetRetentionMs(const int64_t& _retentionMs);
@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool RetentionMsHasBeenSet() const;
 
                     /**
-                     * 获取Topic remarks, which are a string of up to 64 characters. It can contain letters, digits, and hyphens (-) and must start with a letter.
-                     * @return Note Topic remarks, which are a string of up to 64 characters. It can contain letters, digits, and hyphens (-) and must start with a letter.
+                     * 获取<p>Topic remark</p><p>Input parameter limit: no more than 64 characters</p>
+                     * @return Note <p>Topic remark</p><p>Input parameter limit: no more than 64 characters</p>
                      * 
                      */
                     std::string GetNote() const;
 
                     /**
-                     * 设置Topic remarks, which are a string of up to 64 characters. It can contain letters, digits, and hyphens (-) and must start with a letter.
-                     * @param _note Topic remarks, which are a string of up to 64 characters. It can contain letters, digits, and hyphens (-) and must start with a letter.
+                     * 设置<p>Topic remark</p><p>Input parameter limit: no more than 64 characters</p>
+                     * @param _note <p>Topic remark</p><p>Input parameter limit: no more than 64 characters</p>
                      * 
                      */
                     void SetNote(const std::string& _note);
@@ -107,15 +107,15 @@ namespace TencentCloud
                     bool NoteHasBeenSet() const;
 
                     /**
-                     * 获取Tag list
-                     * @return Tags Tag list
+                     * 获取<p>Tag list</p>
+                     * @return Tags <p>Tag list</p>
                      * 
                      */
                     std::vector<Tag> GetTags() const;
 
                     /**
-                     * 设置Tag list
-                     * @param _tags Tag list
+                     * 设置<p>Tag list</p>
+                     * @param _tags <p>Tag list</p>
                      * 
                      */
                     void SetTags(const std::vector<Tag>& _tags);
@@ -130,25 +130,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Elastic topic name.
+                     * <p>Elastic topic name</p><p>For reference: <a href="https://www.tencentcloud.com/document/api/597/86863?from_cn_redirect=1">DescribeDatahubTopics</a></p>
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Message retention period in ms. The current minimum value is 60,000 ms.
+                     * <p>Message retention period in milliseconds. Current min value is 60000 ms.</p>
                      */
                     int64_t m_retentionMs;
                     bool m_retentionMsHasBeenSet;
 
                     /**
-                     * Topic remarks, which are a string of up to 64 characters. It can contain letters, digits, and hyphens (-) and must start with a letter.
+                     * <p>Topic remark</p><p>Input parameter limit: no more than 64 characters</p>
                      */
                     std::string m_note;
                     bool m_noteHasBeenSet;
 
                     /**
-                     * Tag list
+                     * <p>Tag list</p>
                      */
                     std::vector<Tag> m_tags;
                     bool m_tagsHasBeenSet;

@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Returned code. 0: normal, other values: error
-                     * @return ReturnCode Returned code. 0: normal, other values: error
+                     * 获取<p>Returned code. 0 as normal, non-0 as error.</p>
+                     * @return ReturnCode <p>Returned code. 0 as normal, non-0 as error.</p>
                      * 
                      */
                     std::string GetReturnCode() const;
 
                     /**
-                     * 设置Returned code. 0: normal, other values: error
-                     * @param _returnCode Returned code. 0: normal, other values: error
+                     * 设置<p>Returned code. 0 as normal, non-0 as error.</p>
+                     * @param _returnCode <p>Returned code. 0 as normal, non-0 as error.</p>
                      * 
                      */
                     void SetReturnCode(const std::string& _returnCode);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool ReturnCodeHasBeenSet() const;
 
                     /**
-                     * 获取Success message
-                     * @return ReturnMessage Success message
+                     * 获取<p>Success message</p>
+                     * @return ReturnMessage <p>Success message</p>
                      * 
                      */
                     std::string GetReturnMessage() const;
 
                     /**
-                     * 设置Success message
-                     * @param _returnMessage Success message
+                     * 设置<p>Success message</p>
+                     * @param _returnMessage <p>Success message</p>
                      * 
                      */
                     void SetReturnMessage(const std::string& _returnMessage);
@@ -90,19 +90,19 @@ namespace TencentCloud
                     bool ReturnMessageHasBeenSet() const;
 
                     /**
-                     * 获取Data returned by an operation, which may contain `flowId`, etc.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Data Data returned by an operation, which may contain `flowId`, etc.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>The Data returned by the operation may include flowId.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return Data <p>The Data returned by the operation may include flowId.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     OperateResponseData GetData() const;
 
                     /**
-                     * 设置Data returned by an operation, which may contain `flowId`, etc.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _data Data returned by an operation, which may contain `flowId`, etc.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>The Data returned by the operation may include flowId.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _data <p>The Data returned by the operation may include flowId.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetData(const OperateResponseData& _data);
@@ -117,20 +117,20 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Returned code. 0: normal, other values: error
+                     * <p>Returned code. 0 as normal, non-0 as error.</p>
                      */
                     std::string m_returnCode;
                     bool m_returnCodeHasBeenSet;
 
                     /**
-                     * Success message
+                     * <p>Success message</p>
                      */
                     std::string m_returnMessage;
                     bool m_returnMessageHasBeenSet;
 
                     /**
-                     * Data returned by an operation, which may contain `flowId`, etc.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * <p>The Data returned by the operation may include flowId.</p>
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     OperateResponseData m_data;
                     bool m_dataHasBeenSet;

@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool ZoneIdHasBeenSet() const;
 
                     /**
-                     * 获取<P>Specifies the prepaid purchase duration, such as "1m" (exactly one month). value ranges from 1m to 36m.</p>.
-                     * @return Period <P>Specifies the prepaid purchase duration, such as "1m" (exactly one month). value ranges from 1m to 36m.</p>.
+                     * 获取<p>Prepaid purchase duration, for example "1m", exactly one month, value ranges from 1m to 36m.</p>
+                     * @return Period <p>Prepaid purchase duration, for example "1m", exactly one month, value ranges from 1m to 36m.</p>
                      * 
                      */
                     std::string GetPeriod() const;
 
                     /**
-                     * 设置<P>Specifies the prepaid purchase duration, such as "1m" (exactly one month). value ranges from 1m to 36m.</p>.
-                     * @param _period <P>Specifies the prepaid purchase duration, such as "1m" (exactly one month). value ranges from 1m to 36m.</p>.
+                     * 设置<p>Prepaid purchase duration, for example "1m", exactly one month, value ranges from 1m to 36m.</p>
+                     * @param _period <p>Prepaid purchase duration, for example "1m", exactly one month, value ranges from 1m to 36m.</p>
                      * 
                      */
                     void SetPeriod(const std::string& _period);
@@ -254,15 +254,15 @@ namespace TencentCloud
                     bool KafkaVersionHasBeenSet() const;
 
                     /**
-                     * 获取<P>Instance type. specifies "standard" for standard edition instance (default), "profession" for professional edition instance, "premium" for advanced edition instance.</p>.
-                     * @return SpecificationsType <P>Instance type. specifies "standard" for standard edition instance (default), "profession" for professional edition instance, "premium" for advanced edition instance.</p>.
+                     * 获取<p>Instance type: Fill in "standard" for [standard edition instance] (default), "profession" for [professional edition instance], and "premium" for [Advanced Edition Instance].</p>
+                     * @return SpecificationsType <p>Instance type: Fill in "standard" for [standard edition instance] (default), "profession" for [professional edition instance], and "premium" for [Advanced Edition Instance].</p>
                      * 
                      */
                     std::string GetSpecificationsType() const;
 
                     /**
-                     * 设置<P>Instance type. specifies "standard" for standard edition instance (default), "profession" for professional edition instance, "premium" for advanced edition instance.</p>.
-                     * @param _specificationsType <P>Instance type. specifies "standard" for standard edition instance (default), "profession" for professional edition instance, "premium" for advanced edition instance.</p>.
+                     * 设置<p>Instance type: Fill in "standard" for [standard edition instance] (default), "profession" for [professional edition instance], and "premium" for [Advanced Edition Instance].</p>
+                     * @param _specificationsType <p>Instance type: Fill in "standard" for [standard edition instance] (default), "profession" for [professional edition instance], and "premium" for [Advanced Edition Instance].</p>
                      * 
                      */
                     void SetSpecificationsType(const std::string& _specificationsType);
@@ -359,15 +359,15 @@ namespace TencentCloud
                     bool TagsHasBeenSet() const;
 
                     /**
-                     * 获取<p>Specifies the instance disk type for pro edition/advanced edition. standard edition instances do not require this field. valid values: "CLOUD_SSD" (SSD CLOUD disk), "CLOUD_BASIC" (high-performance CLOUD block storage). default value: "CLOUD_BASIC".</p>.
-                     * @return DiskType <p>Specifies the instance disk type for pro edition/advanced edition. standard edition instances do not require this field. valid values: "CLOUD_SSD" (SSD CLOUD disk), "CLOUD_BASIC" (high-performance CLOUD block storage). default value: "CLOUD_BASIC".</p>.
+                     * 获取<p>Instance disk type for Pro Edition/Advanced Edition instances. You do not need to fill it in for Standard Edition instances. "CLOUD_SSD": SSD CLOUD disk; "CLOUD_BASIC": high-performance CLOUD block storage. Defaults to "CLOUD_BASIC" if not specified.</p>
+                     * @return DiskType <p>Instance disk type for Pro Edition/Advanced Edition instances. You do not need to fill it in for Standard Edition instances. "CLOUD_SSD": SSD CLOUD disk; "CLOUD_BASIC": high-performance CLOUD block storage. Defaults to "CLOUD_BASIC" if not specified.</p>
                      * 
                      */
                     std::string GetDiskType() const;
 
                     /**
-                     * 设置<p>Specifies the instance disk type for pro edition/advanced edition. standard edition instances do not require this field. valid values: "CLOUD_SSD" (SSD CLOUD disk), "CLOUD_BASIC" (high-performance CLOUD block storage). default value: "CLOUD_BASIC".</p>.
-                     * @param _diskType <p>Specifies the instance disk type for pro edition/advanced edition. standard edition instances do not require this field. valid values: "CLOUD_SSD" (SSD CLOUD disk), "CLOUD_BASIC" (high-performance CLOUD block storage). default value: "CLOUD_BASIC".</p>.
+                     * 设置<p>Instance disk type for Pro Edition/Advanced Edition instances. You do not need to fill it in for Standard Edition instances. "CLOUD_SSD": SSD CLOUD disk; "CLOUD_BASIC": high-performance CLOUD block storage. Defaults to "CLOUD_BASIC" if not specified.</p>
+                     * @param _diskType <p>Instance disk type for Pro Edition/Advanced Edition instances. You do not need to fill it in for Standard Edition instances. "CLOUD_SSD": SSD CLOUD disk; "CLOUD_BASIC": high-performance CLOUD block storage. Defaults to "CLOUD_BASIC" if not specified.</p>
                      * 
                      */
                     void SetDiskType(const std::string& _diskType);
@@ -526,6 +526,27 @@ namespace TencentCloud
                      */
                     bool CustomSSLCertIdHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Elastic storage switch</p><p>Enumeration value:</p><ul><li>0: Turn off</li><li>1: Turn on</li></ul><p>Default value: 0</p>
+                     * @return StoreQuantityType <p>Elastic storage switch</p><p>Enumeration value:</p><ul><li>0: Turn off</li><li>1: Turn on</li></ul><p>Default value: 0</p>
+                     * 
+                     */
+                    int64_t GetStoreQuantityType() const;
+
+                    /**
+                     * 设置<p>Elastic storage switch</p><p>Enumeration value:</p><ul><li>0: Turn off</li><li>1: Turn on</li></ul><p>Default value: 0</p>
+                     * @param _storeQuantityType <p>Elastic storage switch</p><p>Enumeration value:</p><ul><li>0: Turn off</li><li>1: Turn on</li></ul><p>Default value: 0</p>
+                     * 
+                     */
+                    void SetStoreQuantityType(const int64_t& _storeQuantityType);
+
+                    /**
+                     * 判断参数 StoreQuantityType 是否已赋值
+                     * @return StoreQuantityType 是否已赋值
+                     * 
+                     */
+                    bool StoreQuantityTypeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -541,7 +562,7 @@ namespace TencentCloud
                     bool m_zoneIdHasBeenSet;
 
                     /**
-                     * <P>Specifies the prepaid purchase duration, such as "1m" (exactly one month). value ranges from 1m to 36m.</p>.
+                     * <p>Prepaid purchase duration, for example "1m", exactly one month, value ranges from 1m to 36m.</p>
                      */
                     std::string m_period;
                     bool m_periodHasBeenSet;
@@ -589,7 +610,7 @@ namespace TencentCloud
                     bool m_kafkaVersionHasBeenSet;
 
                     /**
-                     * <P>Instance type. specifies "standard" for standard edition instance (default), "profession" for professional edition instance, "premium" for advanced edition instance.</p>.
+                     * <p>Instance type: Fill in "standard" for [standard edition instance] (default), "profession" for [professional edition instance], and "premium" for [Advanced Edition Instance].</p>
                      */
                     std::string m_specificationsType;
                     bool m_specificationsTypeHasBeenSet;
@@ -619,7 +640,7 @@ namespace TencentCloud
                     bool m_tagsHasBeenSet;
 
                     /**
-                     * <p>Specifies the instance disk type for pro edition/advanced edition. standard edition instances do not require this field. valid values: "CLOUD_SSD" (SSD CLOUD disk), "CLOUD_BASIC" (high-performance CLOUD block storage). default value: "CLOUD_BASIC".</p>.
+                     * <p>Instance disk type for Pro Edition/Advanced Edition instances. You do not need to fill it in for Standard Edition instances. "CLOUD_SSD": SSD CLOUD disk; "CLOUD_BASIC": high-performance CLOUD block storage. Defaults to "CLOUD_BASIC" if not specified.</p>
                      */
                     std::string m_diskType;
                     bool m_diskTypeHasBeenSet;
@@ -665,6 +686,12 @@ namespace TencentCloud
                      */
                     std::string m_customSSLCertId;
                     bool m_customSSLCertIdHasBeenSet;
+
+                    /**
+                     * <p>Elastic storage switch</p><p>Enumeration value:</p><ul><li>0: Turn off</li><li>1: Turn on</li></ul><p>Default value: 0</p>
+                     */
+                    int64_t m_storeQuantityType;
+                    bool m_storeQuantityTypeHasBeenSet;
 
                 };
             }

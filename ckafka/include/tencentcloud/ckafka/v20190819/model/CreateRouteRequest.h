@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/ckafka/v20190819/model/IpWhitelistDTO.h>
 
 
 namespace TencentCloud
@@ -127,15 +128,15 @@ namespace TencentCloud
                     bool SubnetIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>Access type: 0-plaintext; 1-sasl_plaintext; 3-sasl_ssl; 4-sasl_scram_sha_256; 5-sasl_scram_sha_512. defaults to 0. when vipType=3, supports 0,1,3,4,5. when vipType=7, supports 0,1,3. when vipType=1, supports 1,3.</p>.
-                     * @return AccessType <p>Access type: 0-plaintext; 1-sasl_plaintext; 3-sasl_ssl; 4-sasl_scram_sha_256; 5-sasl_scram_sha_512. defaults to 0. when vipType=3, supports 0,1,3,4,5. when vipType=7, supports 0,1,3. when vipType=1, supports 1,3.</p>.
+                     * 获取<p>Access type: 0-plaintext; 1-sasl_plaintext; 3-sasl_ssl; 4-sasl_scram_sha_256; 5-sasl_scram_sha_512. Default is 0.<br>vipType=3, supports 0,1,3,4,5<br>vipType=7, supports 0,1,3<br>vipType=1, supports 1,3</p>
+                     * @return AccessType <p>Access type: 0-plaintext; 1-sasl_plaintext; 3-sasl_ssl; 4-sasl_scram_sha_256; 5-sasl_scram_sha_512. Default is 0.<br>vipType=3, supports 0,1,3,4,5<br>vipType=7, supports 0,1,3<br>vipType=1, supports 1,3</p>
                      * 
                      */
                     int64_t GetAccessType() const;
 
                     /**
-                     * 设置<p>Access type: 0-plaintext; 1-sasl_plaintext; 3-sasl_ssl; 4-sasl_scram_sha_256; 5-sasl_scram_sha_512. defaults to 0. when vipType=3, supports 0,1,3,4,5. when vipType=7, supports 0,1,3. when vipType=1, supports 1,3.</p>.
-                     * @param _accessType <p>Access type: 0-plaintext; 1-sasl_plaintext; 3-sasl_ssl; 4-sasl_scram_sha_256; 5-sasl_scram_sha_512. defaults to 0. when vipType=3, supports 0,1,3,4,5. when vipType=7, supports 0,1,3. when vipType=1, supports 1,3.</p>.
+                     * 设置<p>Access type: 0-plaintext; 1-sasl_plaintext; 3-sasl_ssl; 4-sasl_scram_sha_256; 5-sasl_scram_sha_512. Default is 0.<br>vipType=3, supports 0,1,3,4,5<br>vipType=7, supports 0,1,3<br>vipType=1, supports 1,3</p>
+                     * @param _accessType <p>Access type: 0-plaintext; 1-sasl_plaintext; 3-sasl_ssl; 4-sasl_scram_sha_256; 5-sasl_scram_sha_512. Default is 0.<br>vipType=3, supports 0,1,3,4,5<br>vipType=7, supports 0,1,3<br>vipType=1, supports 1,3</p>
                      * 
                      */
                     void SetAccessType(const int64_t& _accessType);
@@ -273,6 +274,27 @@ namespace TencentCloud
                      */
                     bool SecurityGroupIdsHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Preset configuration of public network route IP allowlist</p><p>Input parameter limit: vipType=1</p>
+                     * @return IpWhitelist <p>Preset configuration of public network route IP allowlist</p><p>Input parameter limit: vipType=1</p>
+                     * 
+                     */
+                    std::vector<IpWhitelistDTO> GetIpWhitelist() const;
+
+                    /**
+                     * 设置<p>Preset configuration of public network route IP allowlist</p><p>Input parameter limit: vipType=1</p>
+                     * @param _ipWhitelist <p>Preset configuration of public network route IP allowlist</p><p>Input parameter limit: vipType=1</p>
+                     * 
+                     */
+                    void SetIpWhitelist(const std::vector<IpWhitelistDTO>& _ipWhitelist);
+
+                    /**
+                     * 判断参数 IpWhitelist 是否已赋值
+                     * @return IpWhitelist 是否已赋值
+                     * 
+                     */
+                    bool IpWhitelistHasBeenSet() const;
+
                 private:
 
                     /**
@@ -300,7 +322,7 @@ namespace TencentCloud
                     bool m_subnetIdHasBeenSet;
 
                     /**
-                     * <p>Access type: 0-plaintext; 1-sasl_plaintext; 3-sasl_ssl; 4-sasl_scram_sha_256; 5-sasl_scram_sha_512. defaults to 0. when vipType=3, supports 0,1,3,4,5. when vipType=7, supports 0,1,3. when vipType=1, supports 1,3.</p>.
+                     * <p>Access type: 0-plaintext; 1-sasl_plaintext; 3-sasl_ssl; 4-sasl_scram_sha_256; 5-sasl_scram_sha_512. Default is 0.<br>vipType=3, supports 0,1,3,4,5<br>vipType=7, supports 0,1,3<br>vipType=1, supports 1,3</p>
                      */
                     int64_t m_accessType;
                     bool m_accessTypeHasBeenSet;
@@ -340,6 +362,12 @@ namespace TencentCloud
                      */
                     std::vector<std::string> m_securityGroupIds;
                     bool m_securityGroupIdsHasBeenSet;
+
+                    /**
+                     * <p>Preset configuration of public network route IP allowlist</p><p>Input parameter limit: vipType=1</p>
+                     */
+                    std::vector<IpWhitelistDTO> m_ipWhitelist;
+                    bool m_ipWhitelistHasBeenSet;
 
                 };
             }

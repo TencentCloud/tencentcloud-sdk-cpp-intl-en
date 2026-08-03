@@ -157,15 +157,15 @@ namespace TencentCloud
                     bool VportHasBeenSet() const;
 
                     /**
-                     * 获取<P>Specifies the instance status. valid values: 0 (creating), 1 (running), 2 (deleting), 3 (deleted), 5 (isolated), 7 (upgrading), -1 (creation failed).</p>.
-                     * @return Status <P>Specifies the instance status. valid values: 0 (creating), 1 (running), 2 (deleting), 3 (deleted), 5 (isolated), 7 (upgrading), -1 (creation failed).</p>.
+                     * 获取<p>Instance status. 0: Creating, 1: Running, 2: Deleting, 3: Deleted, 5: Isolated, 7: Upgrading, -1: Creation failed</p>
+                     * @return Status <p>Instance status. 0: Creating, 1: Running, 2: Deleting, 3: Deleted, 5: Isolated, 7: Upgrading, -1: Creation failed</p>
                      * 
                      */
                     int64_t GetStatus() const;
 
                     /**
-                     * 设置<P>Specifies the instance status. valid values: 0 (creating), 1 (running), 2 (deleting), 3 (deleted), 5 (isolated), 7 (upgrading), -1 (creation failed).</p>.
-                     * @param _status <P>Specifies the instance status. valid values: 0 (creating), 1 (running), 2 (deleting), 3 (deleted), 5 (isolated), 7 (upgrading), -1 (creation failed).</p>.
+                     * 设置<p>Instance status. 0: Creating, 1: Running, 2: Deleting, 3: Deleted, 5: Isolated, 7: Upgrading, -1: Creation failed</p>
+                     * @param _status <p>Instance status. 0: Creating, 1: Running, 2: Deleting, 3: Deleted, 5: Isolated, 7: Upgrading, -1: Creation failed</p>
                      * 
                      */
                     void SetStatus(const int64_t& _status);
@@ -598,15 +598,15 @@ namespace TencentCloud
                     bool CvmHasBeenSet() const;
 
                     /**
-                     * 获取<p>Instance type. enumerates the list: profession: pro edition; standards2: standard version; premium: advanced edition; serverless: serverless edition.</p>.
-                     * @return InstanceType <p>Instance type. enumerates the list: profession: pro edition; standards2: standard version; premium: advanced edition; serverless: serverless edition.</p>.
+                     * 获取<p>Instance type</p><p>Enumeration value:</p><ul><li>profession: Pro Edition</li><li>premium: Advanced Edition</li><li>serverless: Serverless Edition</li><li>other: Standard Version (for example: standards2/standard, this version is not available for sale)</li></ul>
+                     * @return InstanceType <p>Instance type</p><p>Enumeration value:</p><ul><li>profession: Pro Edition</li><li>premium: Advanced Edition</li><li>serverless: Serverless Edition</li><li>other: Standard Version (for example: standards2/standard, this version is not available for sale)</li></ul>
                      * 
                      */
                     std::string GetInstanceType() const;
 
                     /**
-                     * 设置<p>Instance type. enumerates the list: profession: pro edition; standards2: standard version; premium: advanced edition; serverless: serverless edition.</p>.
-                     * @param _instanceType <p>Instance type. enumerates the list: profession: pro edition; standards2: standard version; premium: advanced edition; serverless: serverless edition.</p>.
+                     * 设置<p>Instance type</p><p>Enumeration value:</p><ul><li>profession: Pro Edition</li><li>premium: Advanced Edition</li><li>serverless: Serverless Edition</li><li>other: Standard Version (for example: standards2/standard, this version is not available for sale)</li></ul>
+                     * @param _instanceType <p>Instance type</p><p>Enumeration value:</p><ul><li>profession: Pro Edition</li><li>premium: Advanced Edition</li><li>serverless: Serverless Edition</li><li>other: Standard Version (for example: standards2/standard, this version is not available for sale)</li></ul>
                      * 
                      */
                     void SetInstanceType(const std::string& _instanceType);
@@ -850,15 +850,15 @@ namespace TencentCloud
                     bool InstanceChargeTypeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Specifies whether to enable the elastic bandwidth allowlist. valid values: 1 (enabled), 0 (disabled).</p>.
-                     * @return ElasticBandwidthSwitch <p>Specifies whether to enable the elastic bandwidth allowlist. valid values: 1 (enabled), 0 (disabled).</p>.
+                     * 获取<p>Whether to enable elastic bandwidth allowlist<br>1: Elastic bandwidth allowlist is enabled;<br>0: Elastic bandwidth allowlist is not enabled;</p>
+                     * @return ElasticBandwidthSwitch <p>Whether to enable elastic bandwidth allowlist<br>1: Elastic bandwidth allowlist is enabled;<br>0: Elastic bandwidth allowlist is not enabled;</p>
                      * 
                      */
                     int64_t GetElasticBandwidthSwitch() const;
 
                     /**
-                     * 设置<p>Specifies whether to enable the elastic bandwidth allowlist. valid values: 1 (enabled), 0 (disabled).</p>.
-                     * @param _elasticBandwidthSwitch <p>Specifies whether to enable the elastic bandwidth allowlist. valid values: 1 (enabled), 0 (disabled).</p>.
+                     * 设置<p>Whether to enable elastic bandwidth allowlist<br>1: Elastic bandwidth allowlist is enabled;<br>0: Elastic bandwidth allowlist is not enabled;</p>
+                     * @param _elasticBandwidthSwitch <p>Whether to enable elastic bandwidth allowlist<br>1: Elastic bandwidth allowlist is enabled;<br>0: Elastic bandwidth allowlist is not enabled;</p>
                      * 
                      */
                     void SetElasticBandwidthSwitch(const int64_t& _elasticBandwidthSwitch);
@@ -871,15 +871,15 @@ namespace TencentCloud
                     bool ElasticBandwidthSwitchHasBeenSet() const;
 
                     /**
-                     * 获取<P>Specifies the elastic bandwidth activation status. 1: elastic bandwidth is disabled; 16: enabling elastic bandwidth; 32: elastic bandwidth enabled successfully; 33: disabling elastic bandwidth; 34: elastic bandwidth disabled successfully; 64: failed to enable elastic bandwidth; 65: failed to disable elastic bandwidth.</p>.
-                     * @return ElasticBandwidthOpenStatus <P>Specifies the elastic bandwidth activation status. 1: elastic bandwidth is disabled; 16: enabling elastic bandwidth; 32: elastic bandwidth enabled successfully; 33: disabling elastic bandwidth; 34: elastic bandwidth disabled successfully; 64: failed to enable elastic bandwidth; 65: failed to disable elastic bandwidth.</p>.
+                     * 获取<p>Elastic bandwidth activation status<br>1: Elastic bandwidth not enabled;<br>16: Enabling elastic bandwidth;<br>32: Elastic bandwidth enabled successfully;<br>33: Disabling elastic bandwidth;<br>34: Elastic bandwidth disabled successfully;<br>64: Failed to enable elastic bandwidth;<br>65: Failed to disable elastic bandwidth;</p>
+                     * @return ElasticBandwidthOpenStatus <p>Elastic bandwidth activation status<br>1: Elastic bandwidth not enabled;<br>16: Enabling elastic bandwidth;<br>32: Elastic bandwidth enabled successfully;<br>33: Disabling elastic bandwidth;<br>34: Elastic bandwidth disabled successfully;<br>64: Failed to enable elastic bandwidth;<br>65: Failed to disable elastic bandwidth;</p>
                      * 
                      */
                     int64_t GetElasticBandwidthOpenStatus() const;
 
                     /**
-                     * 设置<P>Specifies the elastic bandwidth activation status. 1: elastic bandwidth is disabled; 16: enabling elastic bandwidth; 32: elastic bandwidth enabled successfully; 33: disabling elastic bandwidth; 34: elastic bandwidth disabled successfully; 64: failed to enable elastic bandwidth; 65: failed to disable elastic bandwidth.</p>.
-                     * @param _elasticBandwidthOpenStatus <P>Specifies the elastic bandwidth activation status. 1: elastic bandwidth is disabled; 16: enabling elastic bandwidth; 32: elastic bandwidth enabled successfully; 33: disabling elastic bandwidth; 34: elastic bandwidth disabled successfully; 64: failed to enable elastic bandwidth; 65: failed to disable elastic bandwidth.</p>.
+                     * 设置<p>Elastic bandwidth activation status<br>1: Elastic bandwidth not enabled;<br>16: Enabling elastic bandwidth;<br>32: Elastic bandwidth enabled successfully;<br>33: Disabling elastic bandwidth;<br>34: Elastic bandwidth disabled successfully;<br>64: Failed to enable elastic bandwidth;<br>65: Failed to disable elastic bandwidth;</p>
+                     * @param _elasticBandwidthOpenStatus <p>Elastic bandwidth activation status<br>1: Elastic bandwidth not enabled;<br>16: Enabling elastic bandwidth;<br>32: Elastic bandwidth enabled successfully;<br>33: Disabling elastic bandwidth;<br>34: Elastic bandwidth disabled successfully;<br>64: Failed to enable elastic bandwidth;<br>65: Failed to disable elastic bandwidth;</p>
                      * 
                      */
                     void SetElasticBandwidthOpenStatus(const int64_t& _elasticBandwidthOpenStatus);
@@ -892,15 +892,15 @@ namespace TencentCloud
                     bool ElasticBandwidthOpenStatusHasBeenSet() const;
 
                     /**
-                     * 获取<p>ClusterType<br />CLOUD_IDC IDC cluster<br />CLOUD_CVM_SHARE CVM shared cluster<br />CLOUD_CVM_YUNTI YUNTI CVM cluster<br />CLOUD_CVM CVM cluster<br />CLOUD_CDC CDC cluster<br />CLOUD_EKS_TSE EKS cluster</p>.
-                     * @return ClusterType <p>ClusterType<br />CLOUD_IDC IDC cluster<br />CLOUD_CVM_SHARE CVM shared cluster<br />CLOUD_CVM_YUNTI YUNTI CVM cluster<br />CLOUD_CVM CVM cluster<br />CLOUD_CDC CDC cluster<br />CLOUD_EKS_TSE EKS cluster</p>.
+                     * 获取<p>Cluster type<br>CLOUD_IDC IDC cluster<br>CLOUD_CVM_SHARE CVM shared cluster<br>CLOUD_CVM_YUNTI YunTi CVM cluster<br>CLOUD_CVM CVM cluster<br>CLOUD_CDC cdc cluster<br>CLOUD_EKS_TSE EKS cluster</p>
+                     * @return ClusterType <p>Cluster type<br>CLOUD_IDC IDC cluster<br>CLOUD_CVM_SHARE CVM shared cluster<br>CLOUD_CVM_YUNTI YunTi CVM cluster<br>CLOUD_CVM CVM cluster<br>CLOUD_CDC cdc cluster<br>CLOUD_EKS_TSE EKS cluster</p>
                      * 
                      */
                     std::string GetClusterType() const;
 
                     /**
-                     * 设置<p>ClusterType<br />CLOUD_IDC IDC cluster<br />CLOUD_CVM_SHARE CVM shared cluster<br />CLOUD_CVM_YUNTI YUNTI CVM cluster<br />CLOUD_CVM CVM cluster<br />CLOUD_CDC CDC cluster<br />CLOUD_EKS_TSE EKS cluster</p>.
-                     * @param _clusterType <p>ClusterType<br />CLOUD_IDC IDC cluster<br />CLOUD_CVM_SHARE CVM shared cluster<br />CLOUD_CVM_YUNTI YUNTI CVM cluster<br />CLOUD_CVM CVM cluster<br />CLOUD_CDC CDC cluster<br />CLOUD_EKS_TSE EKS cluster</p>.
+                     * 设置<p>Cluster type<br>CLOUD_IDC IDC cluster<br>CLOUD_CVM_SHARE CVM shared cluster<br>CLOUD_CVM_YUNTI YunTi CVM cluster<br>CLOUD_CVM CVM cluster<br>CLOUD_CDC cdc cluster<br>CLOUD_EKS_TSE EKS cluster</p>
+                     * @param _clusterType <p>Cluster type<br>CLOUD_IDC IDC cluster<br>CLOUD_CVM_SHARE CVM shared cluster<br>CLOUD_CVM_YUNTI YunTi CVM cluster<br>CLOUD_CVM CVM cluster<br>CLOUD_CDC cdc cluster<br>CLOUD_EKS_TSE EKS cluster</p>
                      * 
                      */
                     void SetClusterType(const std::string& _clusterType);
@@ -1018,15 +1018,15 @@ namespace TencentCloud
                     bool DeleteProtectionEnableHasBeenSet() const;
 
                     /**
-                     * 获取<p>Message retention size at the instance level</p>Measurement unit: bytes<br>Default value: -1
-                     * @return RetentionBytes <p>Message retention size at the instance level</p>Measurement unit: bytes<br>Default value: -1
+                     * 获取<p>Message retention size at the instance level</p><p>Measurement unit: bytes</p><p>Default value: -1</p>
+                     * @return RetentionBytes <p>Message retention size at the instance level</p><p>Measurement unit: bytes</p><p>Default value: -1</p>
                      * 
                      */
                     int64_t GetRetentionBytes() const;
 
                     /**
-                     * 设置<p>Message retention size at the instance level</p>Measurement unit: bytes<br>Default value: -1
-                     * @param _retentionBytes <p>Message retention size at the instance level</p>Measurement unit: bytes<br>Default value: -1
+                     * 设置<p>Message retention size at the instance level</p><p>Measurement unit: bytes</p><p>Default value: -1</p>
+                     * @param _retentionBytes <p>Message retention size at the instance level</p><p>Measurement unit: bytes</p><p>Default value: -1</p>
                      * 
                      */
                     void SetRetentionBytes(const int64_t& _retentionBytes);
@@ -1039,15 +1039,15 @@ namespace TencentCloud
                     bool RetentionBytesHasBeenSet() const;
 
                     /**
-                     * 获取<p>The maximum idle time of a transaction ID. Uncommitted transactions that time out will be marked with expiration.</p>Unit: ms
-                     * @return TransactionalIdExpirationMs <p>The maximum idle time of a transaction ID. Uncommitted transactions that time out will be marked with expiration.</p>Unit: ms
+                     * 获取<p>Maximum idle time of transaction ID. Uncommitted transactions that time out will be marked with expiration.</p><p>Unit: ms</p>
+                     * @return TransactionalIdExpirationMs <p>Maximum idle time of transaction ID. Uncommitted transactions that time out will be marked with expiration.</p><p>Unit: ms</p>
                      * 
                      */
                     int64_t GetTransactionalIdExpirationMs() const;
 
                     /**
-                     * 设置<p>The maximum idle time of a transaction ID. Uncommitted transactions that time out will be marked with expiration.</p>Unit: ms
-                     * @param _transactionalIdExpirationMs <p>The maximum idle time of a transaction ID. Uncommitted transactions that time out will be marked with expiration.</p>Unit: ms
+                     * 设置<p>Maximum idle time of transaction ID. Uncommitted transactions that time out will be marked with expiration.</p><p>Unit: ms</p>
+                     * @param _transactionalIdExpirationMs <p>Maximum idle time of transaction ID. Uncommitted transactions that time out will be marked with expiration.</p><p>Unit: ms</p>
                      * 
                      */
                     void SetTransactionalIdExpirationMs(const int64_t& _transactionalIdExpirationMs);
@@ -1092,7 +1092,7 @@ namespace TencentCloud
                     bool m_vportHasBeenSet;
 
                     /**
-                     * <P>Specifies the instance status. valid values: 0 (creating), 1 (running), 2 (deleting), 3 (deleted), 5 (isolated), 7 (upgrading), -1 (creation failed).</p>.
+                     * <p>Instance status. 0: Creating, 1: Running, 2: Deleting, 3: Deleted, 5: Isolated, 7: Upgrading, -1: Creation failed</p>
                      */
                     int64_t m_status;
                     bool m_statusHasBeenSet;
@@ -1218,7 +1218,7 @@ namespace TencentCloud
                     bool m_cvmHasBeenSet;
 
                     /**
-                     * <p>Instance type. enumerates the list: profession: pro edition; standards2: standard version; premium: advanced edition; serverless: serverless edition.</p>.
+                     * <p>Instance type</p><p>Enumeration value:</p><ul><li>profession: Pro Edition</li><li>premium: Advanced Edition</li><li>serverless: Serverless Edition</li><li>other: Standard Version (for example: standards2/standard, this version is not available for sale)</li></ul>
                      */
                     std::string m_instanceType;
                     bool m_instanceTypeHasBeenSet;
@@ -1290,19 +1290,19 @@ namespace TencentCloud
                     bool m_instanceChargeTypeHasBeenSet;
 
                     /**
-                     * <p>Specifies whether to enable the elastic bandwidth allowlist. valid values: 1 (enabled), 0 (disabled).</p>.
+                     * <p>Whether to enable elastic bandwidth allowlist<br>1: Elastic bandwidth allowlist is enabled;<br>0: Elastic bandwidth allowlist is not enabled;</p>
                      */
                     int64_t m_elasticBandwidthSwitch;
                     bool m_elasticBandwidthSwitchHasBeenSet;
 
                     /**
-                     * <P>Specifies the elastic bandwidth activation status. 1: elastic bandwidth is disabled; 16: enabling elastic bandwidth; 32: elastic bandwidth enabled successfully; 33: disabling elastic bandwidth; 34: elastic bandwidth disabled successfully; 64: failed to enable elastic bandwidth; 65: failed to disable elastic bandwidth.</p>.
+                     * <p>Elastic bandwidth activation status<br>1: Elastic bandwidth not enabled;<br>16: Enabling elastic bandwidth;<br>32: Elastic bandwidth enabled successfully;<br>33: Disabling elastic bandwidth;<br>34: Elastic bandwidth disabled successfully;<br>64: Failed to enable elastic bandwidth;<br>65: Failed to disable elastic bandwidth;</p>
                      */
                     int64_t m_elasticBandwidthOpenStatus;
                     bool m_elasticBandwidthOpenStatusHasBeenSet;
 
                     /**
-                     * <p>ClusterType<br />CLOUD_IDC IDC cluster<br />CLOUD_CVM_SHARE CVM shared cluster<br />CLOUD_CVM_YUNTI YUNTI CVM cluster<br />CLOUD_CVM CVM cluster<br />CLOUD_CDC CDC cluster<br />CLOUD_EKS_TSE EKS cluster</p>.
+                     * <p>Cluster type<br>CLOUD_IDC IDC cluster<br>CLOUD_CVM_SHARE CVM shared cluster<br>CLOUD_CVM_YUNTI YunTi CVM cluster<br>CLOUD_CVM CVM cluster<br>CLOUD_CDC cdc cluster<br>CLOUD_EKS_TSE EKS cluster</p>
                      */
                     std::string m_clusterType;
                     bool m_clusterTypeHasBeenSet;
@@ -1338,13 +1338,13 @@ namespace TencentCloud
                     bool m_deleteProtectionEnableHasBeenSet;
 
                     /**
-                     * <p>Message retention size at the instance level</p>Measurement unit: bytes<br>Default value: -1
+                     * <p>Message retention size at the instance level</p><p>Measurement unit: bytes</p><p>Default value: -1</p>
                      */
                     int64_t m_retentionBytes;
                     bool m_retentionBytesHasBeenSet;
 
                     /**
-                     * <p>The maximum idle time of a transaction ID. Uncommitted transactions that time out will be marked with expiration.</p>Unit: ms
+                     * <p>Maximum idle time of transaction ID. Uncommitted transactions that time out will be marked with expiration.</p><p>Unit: ms</p>
                      */
                     int64_t m_transactionalIdExpirationMs;
                     bool m_transactionalIdExpirationMsHasBeenSet;
