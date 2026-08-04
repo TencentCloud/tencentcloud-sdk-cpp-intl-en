@@ -233,8 +233,12 @@ namespace TencentCloud
                     bool VideoInfosHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ReplayUrl 
+                     * 获取Playback URL, must be used with a signaling player. This field is only applicable to video generation mode
+Note: This field may return null, indicating that no valid value can be retrieved.
+Example value: http://replayurl
+                     * @return ReplayUrl Playback URL, must be used with a signaling player. This field is only applicable to video generation mode
+Note: This field may return null, indicating that no valid value can be retrieved.
+Example value: http://replayurl
                      * 
                      */
                     std::string GetReplayUrl() const;
@@ -346,7 +350,9 @@ Note: This parameter may return null, indicating that no valid values can be obt
                     bool m_videoInfosHasBeenSet;
 
                     /**
-                     * 
+                     * Playback URL, must be used with a signaling player. This field is only applicable to video generation mode
+Note: This field may return null, indicating that no valid value can be retrieved.
+Example value: http://replayurl
                      */
                     std::string m_replayUrl;
                     bool m_replayUrlHasBeenSet;

@@ -3340,6 +3340,56 @@ CfwClient::RemoveNatAcRuleOutcomeCallable CfwClient::RemoveNatAcRuleCallable(con
     return prom->get_future();
 }
 
+CfwClient::SearchLogOutcome CfwClient::SearchLog(const SearchLogRequest &request)
+{
+    auto outcome = MakeRequest(request, "SearchLog");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        SearchLogResponse rsp = SearchLogResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return SearchLogOutcome(rsp);
+        else
+            return SearchLogOutcome(o.GetError());
+    }
+    else
+    {
+        return SearchLogOutcome(outcome.GetError());
+    }
+}
+
+void CfwClient::SearchLogAsync(const SearchLogRequest& request, const SearchLogAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const SearchLogRequest&;
+    using Resp = SearchLogResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "SearchLog", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CfwClient::SearchLogOutcomeCallable CfwClient::SearchLogCallable(const SearchLogRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<SearchLogOutcome>>();
+    SearchLogAsync(
+    request,
+    [prom](
+        const CfwClient*,
+        const SearchLogRequest&,
+        SearchLogOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 CfwClient::SetNatFwDnatRuleOutcome CfwClient::SetNatFwDnatRule(const SetNatFwDnatRuleRequest &request)
 {
     auto outcome = MakeRequest(request, "SetNatFwDnatRule");

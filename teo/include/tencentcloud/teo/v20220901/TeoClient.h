@@ -65,6 +65,10 @@
 #include <tencentcloud/teo/v20220901/model/CreateFunctionReplicaResponse.h>
 #include <tencentcloud/teo/v20220901/model/CreateFunctionRuleRequest.h>
 #include <tencentcloud/teo/v20220901/model/CreateFunctionRuleResponse.h>
+#include <tencentcloud/teo/v20220901/model/CreateInferenceAPITokenRequest.h>
+#include <tencentcloud/teo/v20220901/model/CreateInferenceAPITokenResponse.h>
+#include <tencentcloud/teo/v20220901/model/CreateInferenceServiceRequest.h>
+#include <tencentcloud/teo/v20220901/model/CreateInferenceServiceResponse.h>
 #include <tencentcloud/teo/v20220901/model/CreateJustInTimeTranscodeTemplateRequest.h>
 #include <tencentcloud/teo/v20220901/model/CreateJustInTimeTranscodeTemplateResponse.h>
 #include <tencentcloud/teo/v20220901/model/CreateL4ProxyRequest.h>
@@ -133,6 +137,8 @@
 #include <tencentcloud/teo/v20220901/model/DeleteFunctionReplicaResponse.h>
 #include <tencentcloud/teo/v20220901/model/DeleteFunctionRulesRequest.h>
 #include <tencentcloud/teo/v20220901/model/DeleteFunctionRulesResponse.h>
+#include <tencentcloud/teo/v20220901/model/DeleteInferenceAPITokenRequest.h>
+#include <tencentcloud/teo/v20220901/model/DeleteInferenceAPITokenResponse.h>
 #include <tencentcloud/teo/v20220901/model/DeleteJustInTimeTranscodeTemplatesRequest.h>
 #include <tencentcloud/teo/v20220901/model/DeleteJustInTimeTranscodeTemplatesResponse.h>
 #include <tencentcloud/teo/v20220901/model/DeleteL4ProxyRequest.h>
@@ -225,6 +231,18 @@
 #include <tencentcloud/teo/v20220901/model/DescribeIPRegionResponse.h>
 #include <tencentcloud/teo/v20220901/model/DescribeIdentificationsRequest.h>
 #include <tencentcloud/teo/v20220901/model/DescribeIdentificationsResponse.h>
+#include <tencentcloud/teo/v20220901/model/DescribeInferenceAPITokensRequest.h>
+#include <tencentcloud/teo/v20220901/model/DescribeInferenceAPITokensResponse.h>
+#include <tencentcloud/teo/v20220901/model/DescribeInferenceHardwareSpecificationsRequest.h>
+#include <tencentcloud/teo/v20220901/model/DescribeInferenceHardwareSpecificationsResponse.h>
+#include <tencentcloud/teo/v20220901/model/DescribeInferenceServiceDeploymentLogsRequest.h>
+#include <tencentcloud/teo/v20220901/model/DescribeInferenceServiceDeploymentLogsResponse.h>
+#include <tencentcloud/teo/v20220901/model/DescribeInferenceServiceDeploymentRecordsRequest.h>
+#include <tencentcloud/teo/v20220901/model/DescribeInferenceServiceDeploymentRecordsResponse.h>
+#include <tencentcloud/teo/v20220901/model/DescribeInferenceServiceMonitorDataRequest.h>
+#include <tencentcloud/teo/v20220901/model/DescribeInferenceServiceMonitorDataResponse.h>
+#include <tencentcloud/teo/v20220901/model/DescribeInferenceServicesRequest.h>
+#include <tencentcloud/teo/v20220901/model/DescribeInferenceServicesResponse.h>
 #include <tencentcloud/teo/v20220901/model/DescribeJustInTimeTranscodeTemplatesRequest.h>
 #include <tencentcloud/teo/v20220901/model/DescribeJustInTimeTranscodeTemplatesResponse.h>
 #include <tencentcloud/teo/v20220901/model/DescribeL4ProxyRequest.h>
@@ -383,6 +401,8 @@
 #include <tencentcloud/teo/v20220901/model/ModifyFunctionRulePriorityResponse.h>
 #include <tencentcloud/teo/v20220901/model/ModifyHostsCertificateRequest.h>
 #include <tencentcloud/teo/v20220901/model/ModifyHostsCertificateResponse.h>
+#include <tencentcloud/teo/v20220901/model/ModifyInferenceServiceRequest.h>
+#include <tencentcloud/teo/v20220901/model/ModifyInferenceServiceResponse.h>
 #include <tencentcloud/teo/v20220901/model/ModifyL4ProxyRequest.h>
 #include <tencentcloud/teo/v20220901/model/ModifyL4ProxyResponse.h>
 #include <tencentcloud/teo/v20220901/model/ModifyL4ProxyRulesRequest.h>
@@ -443,6 +463,8 @@
 #include <tencentcloud/teo/v20220901/model/ModifyZoneStatusResponse.h>
 #include <tencentcloud/teo/v20220901/model/ModifyZoneWorkModeRequest.h>
 #include <tencentcloud/teo/v20220901/model/ModifyZoneWorkModeResponse.h>
+#include <tencentcloud/teo/v20220901/model/OperateInferenceServiceRequest.h>
+#include <tencentcloud/teo/v20220901/model/OperateInferenceServiceResponse.h>
 #include <tencentcloud/teo/v20220901/model/RefreshMultiPathGatewaySecretKeyRequest.h>
 #include <tencentcloud/teo/v20220901/model/RefreshMultiPathGatewaySecretKeyResponse.h>
 #include <tencentcloud/teo/v20220901/model/RenewPlanRequest.h>
@@ -528,6 +550,12 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateFunctionRuleResponse> CreateFunctionRuleOutcome;
                 typedef std::future<CreateFunctionRuleOutcome> CreateFunctionRuleOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::CreateFunctionRuleRequest&, CreateFunctionRuleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateFunctionRuleAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateInferenceAPITokenResponse> CreateInferenceAPITokenOutcome;
+                typedef std::future<CreateInferenceAPITokenOutcome> CreateInferenceAPITokenOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::CreateInferenceAPITokenRequest&, CreateInferenceAPITokenOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateInferenceAPITokenAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateInferenceServiceResponse> CreateInferenceServiceOutcome;
+                typedef std::future<CreateInferenceServiceOutcome> CreateInferenceServiceOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::CreateInferenceServiceRequest&, CreateInferenceServiceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateInferenceServiceAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateJustInTimeTranscodeTemplateResponse> CreateJustInTimeTranscodeTemplateOutcome;
                 typedef std::future<CreateJustInTimeTranscodeTemplateOutcome> CreateJustInTimeTranscodeTemplateOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::CreateJustInTimeTranscodeTemplateRequest&, CreateJustInTimeTranscodeTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateJustInTimeTranscodeTemplateAsyncHandler;
@@ -630,6 +658,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DeleteFunctionRulesResponse> DeleteFunctionRulesOutcome;
                 typedef std::future<DeleteFunctionRulesOutcome> DeleteFunctionRulesOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::DeleteFunctionRulesRequest&, DeleteFunctionRulesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteFunctionRulesAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteInferenceAPITokenResponse> DeleteInferenceAPITokenOutcome;
+                typedef std::future<DeleteInferenceAPITokenOutcome> DeleteInferenceAPITokenOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::DeleteInferenceAPITokenRequest&, DeleteInferenceAPITokenOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteInferenceAPITokenAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeleteJustInTimeTranscodeTemplatesResponse> DeleteJustInTimeTranscodeTemplatesOutcome;
                 typedef std::future<DeleteJustInTimeTranscodeTemplatesOutcome> DeleteJustInTimeTranscodeTemplatesOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::DeleteJustInTimeTranscodeTemplatesRequest&, DeleteJustInTimeTranscodeTemplatesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteJustInTimeTranscodeTemplatesAsyncHandler;
@@ -768,6 +799,24 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeIdentificationsResponse> DescribeIdentificationsOutcome;
                 typedef std::future<DescribeIdentificationsOutcome> DescribeIdentificationsOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::DescribeIdentificationsRequest&, DescribeIdentificationsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeIdentificationsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeInferenceAPITokensResponse> DescribeInferenceAPITokensOutcome;
+                typedef std::future<DescribeInferenceAPITokensOutcome> DescribeInferenceAPITokensOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::DescribeInferenceAPITokensRequest&, DescribeInferenceAPITokensOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeInferenceAPITokensAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeInferenceHardwareSpecificationsResponse> DescribeInferenceHardwareSpecificationsOutcome;
+                typedef std::future<DescribeInferenceHardwareSpecificationsOutcome> DescribeInferenceHardwareSpecificationsOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::DescribeInferenceHardwareSpecificationsRequest&, DescribeInferenceHardwareSpecificationsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeInferenceHardwareSpecificationsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeInferenceServiceDeploymentLogsResponse> DescribeInferenceServiceDeploymentLogsOutcome;
+                typedef std::future<DescribeInferenceServiceDeploymentLogsOutcome> DescribeInferenceServiceDeploymentLogsOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::DescribeInferenceServiceDeploymentLogsRequest&, DescribeInferenceServiceDeploymentLogsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeInferenceServiceDeploymentLogsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeInferenceServiceDeploymentRecordsResponse> DescribeInferenceServiceDeploymentRecordsOutcome;
+                typedef std::future<DescribeInferenceServiceDeploymentRecordsOutcome> DescribeInferenceServiceDeploymentRecordsOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::DescribeInferenceServiceDeploymentRecordsRequest&, DescribeInferenceServiceDeploymentRecordsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeInferenceServiceDeploymentRecordsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeInferenceServiceMonitorDataResponse> DescribeInferenceServiceMonitorDataOutcome;
+                typedef std::future<DescribeInferenceServiceMonitorDataOutcome> DescribeInferenceServiceMonitorDataOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::DescribeInferenceServiceMonitorDataRequest&, DescribeInferenceServiceMonitorDataOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeInferenceServiceMonitorDataAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeInferenceServicesResponse> DescribeInferenceServicesOutcome;
+                typedef std::future<DescribeInferenceServicesOutcome> DescribeInferenceServicesOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::DescribeInferenceServicesRequest&, DescribeInferenceServicesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeInferenceServicesAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeJustInTimeTranscodeTemplatesResponse> DescribeJustInTimeTranscodeTemplatesOutcome;
                 typedef std::future<DescribeJustInTimeTranscodeTemplatesOutcome> DescribeJustInTimeTranscodeTemplatesOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::DescribeJustInTimeTranscodeTemplatesRequest&, DescribeJustInTimeTranscodeTemplatesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeJustInTimeTranscodeTemplatesAsyncHandler;
@@ -1005,6 +1054,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyHostsCertificateResponse> ModifyHostsCertificateOutcome;
                 typedef std::future<ModifyHostsCertificateOutcome> ModifyHostsCertificateOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::ModifyHostsCertificateRequest&, ModifyHostsCertificateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyHostsCertificateAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyInferenceServiceResponse> ModifyInferenceServiceOutcome;
+                typedef std::future<ModifyInferenceServiceOutcome> ModifyInferenceServiceOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::ModifyInferenceServiceRequest&, ModifyInferenceServiceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyInferenceServiceAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyL4ProxyResponse> ModifyL4ProxyOutcome;
                 typedef std::future<ModifyL4ProxyOutcome> ModifyL4ProxyOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::ModifyL4ProxyRequest&, ModifyL4ProxyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyL4ProxyAsyncHandler;
@@ -1095,6 +1147,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyZoneWorkModeResponse> ModifyZoneWorkModeOutcome;
                 typedef std::future<ModifyZoneWorkModeOutcome> ModifyZoneWorkModeOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::ModifyZoneWorkModeRequest&, ModifyZoneWorkModeOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyZoneWorkModeAsyncHandler;
+                typedef Outcome<Core::Error, Model::OperateInferenceServiceResponse> OperateInferenceServiceOutcome;
+                typedef std::future<OperateInferenceServiceOutcome> OperateInferenceServiceOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::OperateInferenceServiceRequest&, OperateInferenceServiceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> OperateInferenceServiceAsyncHandler;
                 typedef Outcome<Core::Error, Model::RefreshMultiPathGatewaySecretKeyResponse> RefreshMultiPathGatewaySecretKeyOutcome;
                 typedef std::future<RefreshMultiPathGatewaySecretKeyOutcome> RefreshMultiPathGatewaySecretKeyOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::RefreshMultiPathGatewaySecretKeyRequest&, RefreshMultiPathGatewaySecretKeyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> RefreshMultiPathGatewaySecretKeyAsyncHandler;
@@ -1313,6 +1368,24 @@ The feature is only supported by the enterprise plan and is currently in closed 
                 CreateFunctionRuleOutcome CreateFunctionRule(const Model::CreateFunctionRuleRequest &request);
                 void CreateFunctionRuleAsync(const Model::CreateFunctionRuleRequest& request, const CreateFunctionRuleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreateFunctionRuleOutcomeCallable CreateFunctionRuleCallable(const Model::CreateFunctionRuleRequest& request);
+
+                /**
+                 *Create an inference API Token for authenticating access to the inference service. The Token content is returned only once when creating. Each site can create up to 100 tokens.
+                 * @param req CreateInferenceAPITokenRequest
+                 * @return CreateInferenceAPITokenOutcome
+                 */
+                CreateInferenceAPITokenOutcome CreateInferenceAPIToken(const Model::CreateInferenceAPITokenRequest &request);
+                void CreateInferenceAPITokenAsync(const Model::CreateInferenceAPITokenRequest& request, const CreateInferenceAPITokenAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateInferenceAPITokenOutcomeCallable CreateInferenceAPITokenCallable(const Model::CreateInferenceAPITokenRequest& request);
+
+                /**
+                 *This API is used to create an inference service. It allows setting the service name, listening port, container image configuration, and resource configuration. Once created successfully, an inference access address is provided.
+                 * @param req CreateInferenceServiceRequest
+                 * @return CreateInferenceServiceOutcome
+                 */
+                CreateInferenceServiceOutcome CreateInferenceService(const Model::CreateInferenceServiceRequest &request);
+                void CreateInferenceServiceAsync(const Model::CreateInferenceServiceRequest& request, const CreateInferenceServiceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateInferenceServiceOutcomeCallable CreateInferenceServiceCallable(const Model::CreateInferenceServiceRequest& request);
 
                 /**
                  *JIT transcoding already provides preset transcoding templates to meet most needs. If there are personalized transcoding requirements, you can create custom transcoding templates through this API, with up to 100 custom transcoding templates allowed.
@@ -1634,6 +1707,15 @@ The feature is only supported by the enterprise plan and is currently in closed 
                 DeleteFunctionRulesOutcome DeleteFunctionRules(const Model::DeleteFunctionRulesRequest &request);
                 void DeleteFunctionRulesAsync(const Model::DeleteFunctionRulesRequest& request, const DeleteFunctionRulesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DeleteFunctionRulesOutcomeCallable DeleteFunctionRulesCallable(const Model::DeleteFunctionRulesRequest& request);
+
+                /**
+                 *This API is used to delete an inference API Token. Once deleted, the Token will expire immediately, and requests for accessing the inference service using it will no longer be accessible.
+                 * @param req DeleteInferenceAPITokenRequest
+                 * @return DeleteInferenceAPITokenOutcome
+                 */
+                DeleteInferenceAPITokenOutcome DeleteInferenceAPIToken(const Model::DeleteInferenceAPITokenRequest &request);
+                void DeleteInferenceAPITokenAsync(const Model::DeleteInferenceAPITokenRequest& request, const DeleteInferenceAPITokenAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteInferenceAPITokenOutcomeCallable DeleteInferenceAPITokenCallable(const Model::DeleteInferenceAPITokenRequest& request);
 
                 /**
                  *This API is used to delete the appropriate just in time transcoding template based on the unique template identifier under the site ID.
@@ -2049,6 +2131,60 @@ The feature is only supported in the enterprise plan and is currently in closed 
                 DescribeIdentificationsOutcome DescribeIdentifications(const Model::DescribeIdentificationsRequest &request);
                 void DescribeIdentificationsAsync(const Model::DescribeIdentificationsRequest& request, const DescribeIdentificationsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeIdentificationsOutcomeCallable DescribeIdentificationsCallable(const Model::DescribeIdentificationsRequest& request);
+
+                /**
+                 *This API is used to query the list of reasoning API Tokens, return the ID, name, content, and creation time of the Tokens, and support paging query.
+                 * @param req DescribeInferenceAPITokensRequest
+                 * @return DescribeInferenceAPITokensOutcome
+                 */
+                DescribeInferenceAPITokensOutcome DescribeInferenceAPITokens(const Model::DescribeInferenceAPITokensRequest &request);
+                void DescribeInferenceAPITokensAsync(const Model::DescribeInferenceAPITokensRequest& request, const DescribeInferenceAPITokensAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeInferenceAPITokensOutcomeCallable DescribeInferenceAPITokensCallable(const Model::DescribeInferenceAPITokensRequest& request);
+
+                /**
+                 *This API is used to query the reasoning hardware specification list, returning configurations such as CPU, memory, GPU, and memory for each specification. You can select the required specification during service creation.
+                 * @param req DescribeInferenceHardwareSpecificationsRequest
+                 * @return DescribeInferenceHardwareSpecificationsOutcome
+                 */
+                DescribeInferenceHardwareSpecificationsOutcome DescribeInferenceHardwareSpecifications(const Model::DescribeInferenceHardwareSpecificationsRequest &request);
+                void DescribeInferenceHardwareSpecificationsAsync(const Model::DescribeInferenceHardwareSpecificationsRequest& request, const DescribeInferenceHardwareSpecificationsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeInferenceHardwareSpecificationsOutcomeCallable DescribeInferenceHardwareSpecificationsCallable(const Model::DescribeInferenceHardwareSpecificationsRequest& request);
+
+                /**
+                 *This API is used to query the logs of a designated deployment of an inference service, return log content and generation time, and support time-based range search, pagination, and sorting.
+                 * @param req DescribeInferenceServiceDeploymentLogsRequest
+                 * @return DescribeInferenceServiceDeploymentLogsOutcome
+                 */
+                DescribeInferenceServiceDeploymentLogsOutcome DescribeInferenceServiceDeploymentLogs(const Model::DescribeInferenceServiceDeploymentLogsRequest &request);
+                void DescribeInferenceServiceDeploymentLogsAsync(const Model::DescribeInferenceServiceDeploymentLogsRequest& request, const DescribeInferenceServiceDeploymentLogsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeInferenceServiceDeploymentLogsOutcomeCallable DescribeInferenceServiceDeploymentLogsCallable(const Model::DescribeInferenceServiceDeploymentLogsRequest& request);
+
+                /**
+                 *This API is used to query the deployment history list of inference services, returning the operation type, status, duration, configuration snapshot, and whether it is the currently effective configuration for each deployment, with support for pagination and sorting.
+                 * @param req DescribeInferenceServiceDeploymentRecordsRequest
+                 * @return DescribeInferenceServiceDeploymentRecordsOutcome
+                 */
+                DescribeInferenceServiceDeploymentRecordsOutcome DescribeInferenceServiceDeploymentRecords(const Model::DescribeInferenceServiceDeploymentRecordsRequest &request);
+                void DescribeInferenceServiceDeploymentRecordsAsync(const Model::DescribeInferenceServiceDeploymentRecordsRequest& request, const DescribeInferenceServiceDeploymentRecordsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeInferenceServiceDeploymentRecordsOutcomeCallable DescribeInferenceServiceDeploymentRecordsCallable(const Model::DescribeInferenceServiceDeploymentRecordsRequest& request);
+
+                /**
+                 *This API is used to query service monitoring data for reasoning, supporting indicators such as CPU, memory, GPU, video memory utilization, and instance count. You can specify the time range and aggregation granularity, and query data for up to the most recent 30 days.
+                 * @param req DescribeInferenceServiceMonitorDataRequest
+                 * @return DescribeInferenceServiceMonitorDataOutcome
+                 */
+                DescribeInferenceServiceMonitorDataOutcome DescribeInferenceServiceMonitorData(const Model::DescribeInferenceServiceMonitorDataRequest &request);
+                void DescribeInferenceServiceMonitorDataAsync(const Model::DescribeInferenceServiceMonitorDataRequest& request, const DescribeInferenceServiceMonitorDataAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeInferenceServiceMonitorDataOutcomeCallable DescribeInferenceServiceMonitorDataCallable(const Model::DescribeInferenceServiceMonitorDataRequest& request);
+
+                /**
+                 *This API is used to query the service list for reasoning, supporting filtering by service name, service ID, and status. It returns information such as service configuration, running state, number of instances, and reasoning access address.
+                 * @param req DescribeInferenceServicesRequest
+                 * @return DescribeInferenceServicesOutcome
+                 */
+                DescribeInferenceServicesOutcome DescribeInferenceServices(const Model::DescribeInferenceServicesRequest &request);
+                void DescribeInferenceServicesAsync(const Model::DescribeInferenceServicesRequest& request, const DescribeInferenceServicesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeInferenceServicesOutcomeCallable DescribeInferenceServicesCallable(const Model::DescribeInferenceServicesRequest& request);
 
                 /**
                  *This API is used to search the transcoding template detail list according to the name, template type, or unique identifier of the just-in-time transcoding template. The returned results include all eligible custom templates and preset templates.
@@ -2793,6 +2929,15 @@ To use an external certificate, upload the certificate to [SSL Certificates Cons
                 ModifyHostsCertificateOutcomeCallable ModifyHostsCertificateCallable(const Model::ModifyHostsCertificateRequest& request);
 
                 /**
+                 *This API is used to modify the inference service, supporting updates to the listening port, request path, container image, resource configuration, and description. Only the passed parameters are modified, while others remain unchanged.
+                 * @param req ModifyInferenceServiceRequest
+                 * @return ModifyInferenceServiceOutcome
+                 */
+                ModifyInferenceServiceOutcome ModifyInferenceService(const Model::ModifyInferenceServiceRequest &request);
+                void ModifyInferenceServiceAsync(const Model::ModifyInferenceServiceRequest& request, const ModifyInferenceServiceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyInferenceServiceOutcomeCallable ModifyInferenceServiceCallable(const Model::ModifyInferenceServiceRequest& request);
+
+                /**
                  *This API is used to modify the configuration of a Layer 4 proxy instance.
                  * @param req ModifyL4ProxyRequest
                  * @return ModifyL4ProxyOutcome
@@ -3063,6 +3208,15 @@ This API is used to create, modify and delete preheating origin speed limit rest
                 ModifyZoneWorkModeOutcome ModifyZoneWorkMode(const Model::ModifyZoneWorkModeRequest &request);
                 void ModifyZoneWorkModeAsync(const Model::ModifyZoneWorkModeRequest& request, const ModifyZoneWorkModeAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ModifyZoneWorkModeOutcomeCallable ModifyZoneWorkModeCallable(const Model::ModifyZoneWorkModeRequest& request);
+
+                /**
+                 *This API is used to operate an inference service, support stopping, starting up, and deleting the inference service. Once deleted, resources cannot be recovered.
+                 * @param req OperateInferenceServiceRequest
+                 * @return OperateInferenceServiceOutcome
+                 */
+                OperateInferenceServiceOutcome OperateInferenceService(const Model::OperateInferenceServiceRequest &request);
+                void OperateInferenceServiceAsync(const Model::OperateInferenceServiceRequest& request, const OperateInferenceServiceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                OperateInferenceServiceOutcomeCallable OperateInferenceServiceCallable(const Model::OperateInferenceServiceRequest& request);
 
                 /**
                  *This API is used to refresh keys for multi-channel security acceleration gateways. Customers access multi-channel security acceleration gateways based on integration key signatures. Each site has only one access key, which applies to all gateways under that site. After refreshing the key, the original key becomes invalid.

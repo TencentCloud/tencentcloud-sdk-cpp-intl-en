@@ -155,6 +155,8 @@
 #include <tencentcloud/cfw/v20190904/model/RemoveEnterpriseSecurityGroupRuleResponse.h>
 #include <tencentcloud/cfw/v20190904/model/RemoveNatAcRuleRequest.h>
 #include <tencentcloud/cfw/v20190904/model/RemoveNatAcRuleResponse.h>
+#include <tencentcloud/cfw/v20190904/model/SearchLogRequest.h>
+#include <tencentcloud/cfw/v20190904/model/SearchLogResponse.h>
 #include <tencentcloud/cfw/v20190904/model/SetNatFwDnatRuleRequest.h>
 #include <tencentcloud/cfw/v20190904/model/SetNatFwDnatRuleResponse.h>
 #include <tencentcloud/cfw/v20190904/model/SetNatFwEipRequest.h>
@@ -373,6 +375,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::RemoveNatAcRuleResponse> RemoveNatAcRuleOutcome;
                 typedef std::future<RemoveNatAcRuleOutcome> RemoveNatAcRuleOutcomeCallable;
                 typedef std::function<void(const CfwClient*, const Model::RemoveNatAcRuleRequest&, RemoveNatAcRuleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> RemoveNatAcRuleAsyncHandler;
+                typedef Outcome<Core::Error, Model::SearchLogResponse> SearchLogOutcome;
+                typedef std::future<SearchLogOutcome> SearchLogOutcomeCallable;
+                typedef std::function<void(const CfwClient*, const Model::SearchLogRequest&, SearchLogOutcome, const std::shared_ptr<const AsyncCallerContext>&)> SearchLogAsyncHandler;
                 typedef Outcome<Core::Error, Model::SetNatFwDnatRuleResponse> SetNatFwDnatRuleOutcome;
                 typedef std::future<SetNatFwDnatRuleOutcome> SetNatFwDnatRuleOutcomeCallable;
                 typedef std::function<void(const CfwClient*, const Model::SetNatFwDnatRuleRequest&, SetNatFwDnatRuleOutcome, const std::shared_ptr<const AsyncCallerContext>&)> SetNatFwDnatRuleAsyncHandler;
@@ -988,6 +993,18 @@ Modify events related with the IPs/domains in the blocked/allowed list
                 RemoveNatAcRuleOutcome RemoveNatAcRule(const Model::RemoveNatAcRuleRequest &request);
                 void RemoveNatAcRuleAsync(const Model::RemoveNatAcRuleRequest& request, const RemoveNatAcRuleAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 RemoveNatAcRuleOutcomeCallable RemoveNatAcRuleCallable(const Model::RemoveNatAcRuleRequest& request);
+
+                /**
+                 *This API is used to retrieve and analyze logs. Please note the following matters when using this API.
+1. Besides being subject to the default API request rate limit, for a single log topic, the number of concurrent queries must not exceed 15.
+2. For search syntax, it's recommended to use the dedicated CQL syntax rule for log service. Please use the SyntaxRule parameter and set its value to 1. The console uses this syntax rule by default.
+3. The API's return data packet maximum is 49MB. It is recommended to enable gzip compression (HTTP Request Header Accept-Encoding: gzip).
+                 * @param req SearchLogRequest
+                 * @return SearchLogOutcome
+                 */
+                SearchLogOutcome SearchLog(const Model::SearchLogRequest &request);
+                void SearchLogAsync(const Model::SearchLogRequest& request, const SearchLogAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                SearchLogOutcomeCallable SearchLogCallable(const Model::SearchLogRequest& request);
 
                 /**
                  *This API is used to configure firewall DNAT rules.

@@ -634,6 +634,27 @@ namespace TencentCloud
                      */
                     bool AccountNameHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Creator UIN</p>
+                     * @return CreatorUinString <p>Creator UIN</p>
+                     * 
+                     */
+                    std::string GetCreatorUinString() const;
+
+                    /**
+                     * 设置<p>Creator UIN</p>
+                     * @param _creatorUinString <p>Creator UIN</p>
+                     * 
+                     */
+                    void SetCreatorUinString(const std::string& _creatorUinString);
+
+                    /**
+                     * 判断参数 CreatorUinString 是否已赋值
+                     * @return CreatorUinString 是否已赋值
+                     * 
+                     */
+                    bool CreatorUinStringHasBeenSet() const;
+
                 private:
 
                     /**
@@ -803,6 +824,12 @@ namespace TencentCloud
                      */
                     std::string m_accountName;
                     bool m_accountNameHasBeenSet;
+
+                    /**
+                     * <p>Creator UIN</p>
+                     */
+                    std::string m_creatorUinString;
+                    bool m_creatorUinStringHasBeenSet;
 
                 };
             }

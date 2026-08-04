@@ -1,0 +1,85 @@
+/*
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+#ifndef TENCENTCLOUD_CFW_V20190904_MODEL_LOGITEMS_H_
+#define TENCENTCLOUD_CFW_V20190904_MODEL_LOGITEMS_H_
+
+#include <string>
+#include <vector>
+#include <map>
+#include <tencentcloud/core/utils/rapidjson/document.h>
+#include <tencentcloud/core/utils/rapidjson/writer.h>
+#include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
+#include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/cfw/v20190904/model/LogItem.h>
+
+
+namespace TencentCloud
+{
+    namespace Cfw
+    {
+        namespace V20190904
+        {
+            namespace Model
+            {
+                /**
+                * LogItem array
+                */
+                class LogItems : public AbstractModel
+                {
+                public:
+                    LogItems();
+                    ~LogItems() = default;
+                    void ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const;
+                    CoreInternalOutcome Deserialize(const rapidjson::Value &value);
+
+
+                    /**
+                     * 获取Key-Value Data Pair returned from analysis results
+                     * @return Data Key-Value Data Pair returned from analysis results
+                     * 
+                     */
+                    std::vector<LogItem> GetData() const;
+
+                    /**
+                     * 设置Key-Value Data Pair returned from analysis results
+                     * @param _data Key-Value Data Pair returned from analysis results
+                     * 
+                     */
+                    void SetData(const std::vector<LogItem>& _data);
+
+                    /**
+                     * 判断参数 Data 是否已赋值
+                     * @return Data 是否已赋值
+                     * 
+                     */
+                    bool DataHasBeenSet() const;
+
+                private:
+
+                    /**
+                     * Key-Value Data Pair returned from analysis results
+                     */
+                    std::vector<LogItem> m_data;
+                    bool m_dataHasBeenSet;
+
+                };
+            }
+        }
+    }
+}
+
+#endif // !TENCENTCLOUD_CFW_V20190904_MODEL_LOGITEMS_H_
