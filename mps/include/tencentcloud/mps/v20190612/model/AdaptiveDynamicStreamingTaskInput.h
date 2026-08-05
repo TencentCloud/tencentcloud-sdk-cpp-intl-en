@@ -31,6 +31,7 @@
 #include <tencentcloud/mps/v20190612/model/DrmInfo.h>
 #include <tencentcloud/mps/v20190612/model/SubtitleTemplate.h>
 #include <tencentcloud/mps/v20190612/model/AddOnAudio.h>
+#include <tencentcloud/mps/v20190612/model/AdaptiveStreamTemplate.h>
 
 
 namespace TencentCloud
@@ -371,6 +372,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool AddOnAudiosHasBeenSet() const;
 
+                    /**
+                     * 获取<p>When not empty, directly replace the StreamInfos field of the template. The field format is the same as the StreamInfos when creating an adaptive template.</p>
+                     * @return StdExtStreamInfos <p>When not empty, directly replace the StreamInfos field of the template. The field format is the same as the StreamInfos when creating an adaptive template.</p>
+                     * 
+                     */
+                    std::vector<AdaptiveStreamTemplate> GetStdExtStreamInfos() const;
+
+                    /**
+                     * 设置<p>When not empty, directly replace the StreamInfos field of the template. The field format is the same as the StreamInfos when creating an adaptive template.</p>
+                     * @param _stdExtStreamInfos <p>When not empty, directly replace the StreamInfos field of the template. The field format is the same as the StreamInfos when creating an adaptive template.</p>
+                     * 
+                     */
+                    void SetStdExtStreamInfos(const std::vector<AdaptiveStreamTemplate>& _stdExtStreamInfos);
+
+                    /**
+                     * 判断参数 StdExtStreamInfos 是否已赋值
+                     * @return StdExtStreamInfos 是否已赋值
+                     * 
+                     */
+                    bool StdExtStreamInfosHasBeenSet() const;
+
                 private:
 
                     /**
@@ -462,6 +484,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::vector<AddOnAudio> m_addOnAudios;
                     bool m_addOnAudiosHasBeenSet;
+
+                    /**
+                     * <p>When not empty, directly replace the StreamInfos field of the template. The field format is the same as the StreamInfos when creating an adaptive template.</p>
+                     */
+                    std::vector<AdaptiveStreamTemplate> m_stdExtStreamInfos;
+                    bool m_stdExtStreamInfosHasBeenSet;
 
                 };
             }

@@ -23,7 +23,8 @@ using namespace std;
 ImageProcessTaskOutput::ImageProcessTaskOutput() :
     m_pathHasBeenSet(false),
     m_outputStorageHasBeenSet(false),
-    m_contentHasBeenSet(false)
+    m_contentHasBeenSet(false),
+    m_fileIdHasBeenSet(false)
 {
 }
 
@@ -69,6 +70,16 @@ CoreInternalOutcome ImageProcessTaskOutput::Deserialize(const rapidjson::Value &
         m_contentHasBeenSet = true;
     }
 
+    if (value.HasMember("FileId") && !value["FileId"].IsNull())
+    {
+        if (!value["FileId"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `ImageProcessTaskOutput.FileId` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_fileId = string(value["FileId"].GetString());
+        m_fileIdHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -99,6 +110,14 @@ void ImageProcessTaskOutput::ToJsonObject(rapidjson::Value &value, rapidjson::Do
         string key = "Content";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(m_content.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_fileIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "FileId";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_fileId.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -150,5 +169,21 @@ void ImageProcessTaskOutput::SetContent(const string& _content)
 bool ImageProcessTaskOutput::ContentHasBeenSet() const
 {
     return m_contentHasBeenSet;
+}
+
+string ImageProcessTaskOutput::GetFileId() const
+{
+    return m_fileId;
+}
+
+void ImageProcessTaskOutput::SetFileId(const string& _fileId)
+{
+    m_fileId = _fileId;
+    m_fileIdHasBeenSet = true;
+}
+
+bool ImageProcessTaskOutput::FileIdHasBeenSet() const
+{
+    return m_fileIdHasBeenSet;
 }
 

@@ -207,6 +207,111 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool VoiceClonedMarkFileHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Result path of a video for removal only</p>
+                     * @return ErasedVideoPath <p>Result path of a video for removal only</p>
+                     * 
+                     */
+                    std::string GetErasedVideoPath() const;
+
+                    /**
+                     * 设置<p>Result path of a video for removal only</p>
+                     * @param _erasedVideoPath <p>Result path of a video for removal only</p>
+                     * 
+                     */
+                    void SetErasedVideoPath(const std::string& _erasedVideoPath);
+
+                    /**
+                     * 判断参数 ErasedVideoPath 是否已赋值
+                     * @return ErasedVideoPath 是否已赋值
+                     * 
+                     */
+                    bool ErasedVideoPathHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Voice cloning editing information</p><p>Editing information for secondary modifications of voice cloning</p>
+                     * @return DubbingEditInfoUrl <p>Voice cloning editing information</p><p>Editing information for secondary modifications of voice cloning</p>
+                     * 
+                     */
+                    std::string GetDubbingEditInfoUrl() const;
+
+                    /**
+                     * 设置<p>Voice cloning editing information</p><p>Editing information for secondary modifications of voice cloning</p>
+                     * @param _dubbingEditInfoUrl <p>Voice cloning editing information</p><p>Editing information for secondary modifications of voice cloning</p>
+                     * 
+                     */
+                    void SetDubbingEditInfoUrl(const std::string& _dubbingEditInfoUrl);
+
+                    /**
+                     * 判断参数 DubbingEditInfoUrl 是否已赋值
+                     * @return DubbingEditInfoUrl 是否已赋值
+                     * 
+                     */
+                    bool DubbingEditInfoUrlHasBeenSet() const;
+
+                    /**
+                     * 获取<p>FileId of a file after removal.</p>
+                     * @return FileId <p>FileId of a file after removal.</p>
+                     * 
+                     */
+                    std::string GetFileId() const;
+
+                    /**
+                     * 设置<p>FileId of a file after removal.</p>
+                     * @param _fileId <p>FileId of a file after removal.</p>
+                     * 
+                     */
+                    void SetFileId(const std::string& _fileId);
+
+                    /**
+                     * 判断参数 FileId 是否已赋值
+                     * @return FileId 是否已赋值
+                     * 
+                     */
+                    bool FileIdHasBeenSet() const;
+
+                    /**
+                     * 获取<p>FileId of the subtitle file extracted from video.</p>
+                     * @return OriginSubtitleFileId <p>FileId of the subtitle file extracted from video.</p>
+                     * 
+                     */
+                    std::string GetOriginSubtitleFileId() const;
+
+                    /**
+                     * 设置<p>FileId of the subtitle file extracted from video.</p>
+                     * @param _originSubtitleFileId <p>FileId of the subtitle file extracted from video.</p>
+                     * 
+                     */
+                    void SetOriginSubtitleFileId(const std::string& _originSubtitleFileId);
+
+                    /**
+                     * 判断参数 OriginSubtitleFileId 是否已赋值
+                     * @return OriginSubtitleFileId 是否已赋值
+                     * 
+                     */
+                    bool OriginSubtitleFileIdHasBeenSet() const;
+
+                    /**
+                     * 获取<p>FileId of a subtitle translation file extracted from a video.</p>
+                     * @return TranslateSubtitleFileId <p>FileId of a subtitle translation file extracted from a video.</p>
+                     * 
+                     */
+                    std::string GetTranslateSubtitleFileId() const;
+
+                    /**
+                     * 设置<p>FileId of a subtitle translation file extracted from a video.</p>
+                     * @param _translateSubtitleFileId <p>FileId of a subtitle translation file extracted from a video.</p>
+                     * 
+                     */
+                    void SetTranslateSubtitleFileId(const std::string& _translateSubtitleFileId);
+
+                    /**
+                     * 判断参数 TranslateSubtitleFileId 是否已赋值
+                     * @return TranslateSubtitleFileId 是否已赋值
+                     * 
+                     */
+                    bool TranslateSubtitleFileIdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -253,6 +358,36 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_voiceClonedMarkFile;
                     bool m_voiceClonedMarkFileHasBeenSet;
+
+                    /**
+                     * <p>Result path of a video for removal only</p>
+                     */
+                    std::string m_erasedVideoPath;
+                    bool m_erasedVideoPathHasBeenSet;
+
+                    /**
+                     * <p>Voice cloning editing information</p><p>Editing information for secondary modifications of voice cloning</p>
+                     */
+                    std::string m_dubbingEditInfoUrl;
+                    bool m_dubbingEditInfoUrlHasBeenSet;
+
+                    /**
+                     * <p>FileId of a file after removal.</p>
+                     */
+                    std::string m_fileId;
+                    bool m_fileIdHasBeenSet;
+
+                    /**
+                     * <p>FileId of the subtitle file extracted from video.</p>
+                     */
+                    std::string m_originSubtitleFileId;
+                    bool m_originSubtitleFileIdHasBeenSet;
+
+                    /**
+                     * <p>FileId of a subtitle translation file extracted from a video.</p>
+                     */
+                    std::string m_translateSubtitleFileId;
+                    bool m_translateSubtitleFileIdHasBeenSet;
 
                 };
             }

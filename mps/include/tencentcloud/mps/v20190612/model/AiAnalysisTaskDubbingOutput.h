@@ -131,6 +131,69 @@ namespace TencentCloud
                      */
                     bool OutputStorageHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Additional results, currently including subtitle file result URLs</p>
+                     * @return ExtraOutput <p>Additional results, currently including subtitle file result URLs</p>
+                     * 
+                     */
+                    std::string GetExtraOutput() const;
+
+                    /**
+                     * 设置<p>Additional results, currently including subtitle file result URLs</p>
+                     * @param _extraOutput <p>Additional results, currently including subtitle file result URLs</p>
+                     * 
+                     */
+                    void SetExtraOutput(const std::string& _extraOutput);
+
+                    /**
+                     * 判断参数 ExtraOutput 是否已赋值
+                     * @return ExtraOutput 是否已赋值
+                     * 
+                     */
+                    bool ExtraOutputHasBeenSet() const;
+
+                    /**
+                     * 获取<p>FileId of the dubbed video.</p>
+                     * @return VideoFileId <p>FileId of the dubbed video.</p>
+                     * 
+                     */
+                    std::string GetVideoFileId() const;
+
+                    /**
+                     * 设置<p>FileId of the dubbed video.</p>
+                     * @param _videoFileId <p>FileId of the dubbed video.</p>
+                     * 
+                     */
+                    void SetVideoFileId(const std::string& _videoFileId);
+
+                    /**
+                     * 判断参数 VideoFileId 是否已赋值
+                     * @return VideoFileId 是否已赋值
+                     * 
+                     */
+                    bool VideoFileIdHasBeenSet() const;
+
+                    /**
+                     * 获取<p>FileId of the tag file.</p>
+                     * @return SpeakerFileId <p>FileId of the tag file.</p>
+                     * 
+                     */
+                    std::string GetSpeakerFileId() const;
+
+                    /**
+                     * 设置<p>FileId of the tag file.</p>
+                     * @param _speakerFileId <p>FileId of the tag file.</p>
+                     * 
+                     */
+                    void SetSpeakerFileId(const std::string& _speakerFileId);
+
+                    /**
+                     * 判断参数 SpeakerFileId 是否已赋值
+                     * @return SpeakerFileId 是否已赋值
+                     * 
+                     */
+                    bool SpeakerFileIdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -156,6 +219,24 @@ namespace TencentCloud
                      */
                     TaskOutputStorage m_outputStorage;
                     bool m_outputStorageHasBeenSet;
+
+                    /**
+                     * <p>Additional results, currently including subtitle file result URLs</p>
+                     */
+                    std::string m_extraOutput;
+                    bool m_extraOutputHasBeenSet;
+
+                    /**
+                     * <p>FileId of the dubbed video.</p>
+                     */
+                    std::string m_videoFileId;
+                    bool m_videoFileIdHasBeenSet;
+
+                    /**
+                     * <p>FileId of the tag file.</p>
+                     */
+                    std::string m_speakerFileId;
+                    bool m_speakerFileIdHasBeenSet;
 
                 };
             }

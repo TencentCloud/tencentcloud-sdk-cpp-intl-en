@@ -23,6 +23,7 @@
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/mps/v20190612/model/AigcVideoReferenceImageInfo.h>
 #include <tencentcloud/mps/v20190612/model/AigcVideoReferenceVideoInfo.h>
+#include <tencentcloud/mps/v20190612/model/AigcVideoReferenceAudioInfo.h>
 #include <tencentcloud/mps/v20190612/model/AigcVideoExtraParam.h>
 #include <tencentcloud/mps/v20190612/model/AigcStoreCosParam.h>
 
@@ -257,6 +258,27 @@ namespace TencentCloud
                     bool VideoInfosHasBeenSet() const;
 
                     /**
+                     * 获取<p>Some models support reference audio input via URL.</p>
+                     * @return AudioInfos <p>Some models support reference audio input via URL.</p>
+                     * 
+                     */
+                    std::vector<AigcVideoReferenceAudioInfo> GetAudioInfos() const;
+
+                    /**
+                     * 设置<p>Some models support reference audio input via URL.</p>
+                     * @param _audioInfos <p>Some models support reference audio input via URL.</p>
+                     * 
+                     */
+                    void SetAudioInfos(const std::vector<AigcVideoReferenceAudioInfo>& _audioInfos);
+
+                    /**
+                     * 判断参数 AudioInfos 是否已赋值
+                     * @return AudioInfos 是否已赋值
+                     * 
+                     */
+                    bool AudioInfosHasBeenSet() const;
+
+                    /**
                      * 获取<p>Duration of the generated video.<br>Note:</p><ol><li>Kling: default value: 5 seconds.<ul><li>O1 supports 3 to 10 seconds.</li><li>3.0-Omni supports 3 to 15 seconds, or 3 to 10 seconds when a video reference is used.</li><li>3.0 supports 3 to 15 seconds.</li><li>Other versions support 5 and 10 seconds.</li></ul></li><li>The std mode of Hailuo supports 6 and 10 seconds, and other modes support 6 seconds. Default value: 6 seconds.</li><li>Vidu: default value: 5 seconds.<ul><li>q3-pro, q3-turbo, q3, and q3-mix support 3 to 16 seconds.</li><li>q2-pro, q2-turbo, and q2 support 1 to 10 seconds.</li></ul></li><li>PixVerse: default value: 5 seconds.<ul><li>v5.6 supports 5, 8, and 10 seconds.</li><li>v6 and c1 support 1 to 15 seconds.</li></ul></li><li>H2 supports 3 to 15 seconds. Default value: 5 seconds.</li></ol>
                      * @return Duration <p>Duration of the generated video.<br>Note:</p><ol><li>Kling: default value: 5 seconds.<ul><li>O1 supports 3 to 10 seconds.</li><li>3.0-Omni supports 3 to 15 seconds, or 3 to 10 seconds when a video reference is used.</li><li>3.0 supports 3 to 15 seconds.</li><li>Other versions support 5 and 10 seconds.</li></ul></li><li>The std mode of Hailuo supports 6 and 10 seconds, and other modes support 6 seconds. Default value: 6 seconds.</li><li>Vidu: default value: 5 seconds.<ul><li>q3-pro, q3-turbo, q3, and q3-mix support 3 to 16 seconds.</li><li>q2-pro, q2-turbo, and q2 support 1 to 10 seconds.</li></ul></li><li>PixVerse: default value: 5 seconds.<ul><li>v5.6 supports 5, 8, and 10 seconds.</li><li>v6 and c1 support 1 to 15 seconds.</li></ul></li><li>H2 supports 3 to 15 seconds. Default value: 5 seconds.</li></ol>
                      * 
@@ -422,6 +444,12 @@ namespace TencentCloud
                      */
                     std::vector<AigcVideoReferenceVideoInfo> m_videoInfos;
                     bool m_videoInfosHasBeenSet;
+
+                    /**
+                     * <p>Some models support reference audio input via URL.</p>
+                     */
+                    std::vector<AigcVideoReferenceAudioInfo> m_audioInfos;
+                    bool m_audioInfosHasBeenSet;
 
                     /**
                      * <p>Duration of the generated video.<br>Note:</p><ol><li>Kling: default value: 5 seconds.<ul><li>O1 supports 3 to 10 seconds.</li><li>3.0-Omni supports 3 to 15 seconds, or 3 to 10 seconds when a video reference is used.</li><li>3.0 supports 3 to 15 seconds.</li><li>Other versions support 5 and 10 seconds.</li></ul></li><li>The std mode of Hailuo supports 6 and 10 seconds, and other modes support 6 seconds. Default value: 6 seconds.</li><li>Vidu: default value: 5 seconds.<ul><li>q3-pro, q3-turbo, q3, and q3-mix support 3 to 16 seconds.</li><li>q2-pro, q2-turbo, and q2 support 1 to 10 seconds.</li></ul></li><li>PixVerse: default value: 5 seconds.<ul><li>v5.6 supports 5, 8, and 10 seconds.</li><li>v6 and c1 support 1 to 15 seconds.</li></ul></li><li>H2 supports 3 to 15 seconds. Default value: 5 seconds.</li></ol>

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * VOD Pro object information for MPS.
+                * Media processing VOD object information.
                 */
                 class VODInputInfo : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Specifies the Bucket ID where the input file resides.
-                     * @return Bucket Specifies the Bucket ID where the input file resides.
+                     * 获取<p><em>Bucket ID</em> where the media processing object file resides</p>
+                     * @return Bucket <p><em>Bucket ID</em> where the media processing object file resides</p>
                      * 
                      */
                     std::string GetBucket() const;
 
                     /**
-                     * 设置Specifies the Bucket ID where the input file resides.
-                     * @param _bucket Specifies the Bucket ID where the input file resides.
+                     * 设置<p><em>Bucket ID</em> where the media processing object file resides</p>
+                     * @param _bucket <p><em>Bucket ID</em> where the media processing object file resides</p>
                      * 
                      */
                     void SetBucket(const std::string& _bucket);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool BucketHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the region where the input file's Bucket resides.
-                     * @return Region Specifies the region where the input file's Bucket resides.
+                     * 获取<p>Region of the Bucket where the media processing object file resides</p>
+                     * @return Region <p>Region of the Bucket where the media processing object file resides</p>
                      * 
                      */
                     std::string GetRegion() const;
 
                     /**
-                     * 设置Specifies the region where the input file's Bucket resides.
-                     * @param _region Specifies the region where the input file's Bucket resides.
+                     * 设置<p>Region of the Bucket where the media processing object file resides</p>
+                     * @param _region <p>Region of the Bucket where the media processing object file resides</p>
                      * 
                      */
                     void SetRegion(const std::string& _region);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool RegionHasBeenSet() const;
 
                     /**
-                     * 获取Path of the input file.
-                     * @return Object Path of the input file.
+                     * 获取<p>Input path of the media processing object file</p>
+                     * @return Object <p>Input path of the media processing object file</p>
                      * 
                      */
                     std::string GetObject() const;
 
                     /**
-                     * 设置Path of the input file.
-                     * @param _object Path of the input file.
+                     * 设置<p>Input path of the media processing object file</p>
+                     * @param _object <p>Input path of the media processing object file</p>
                      * 
                      */
                     void SetObject(const std::string& _object);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool ObjectHasBeenSet() const;
 
                     /**
-                     * 获取VOD Pro application Id.
-                     * @return SubAppId VOD Pro application Id.
+                     * 获取<p>VOD application ID.</p>
+                     * @return SubAppId <p>VOD application ID.</p>
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置VOD Pro application Id.
-                     * @param _subAppId VOD Pro application Id.
+                     * 设置<p>VOD application ID.</p>
+                     * @param _subAppId <p>VOD application ID.</p>
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -130,31 +130,85 @@ namespace TencentCloud
                      */
                     bool SubAppIdHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Whether to use VOD Standard Edition.<br>Attention: If left empty, VOD Pro Edition is used.</p><p>Enumeration values: </p><ul><li>Use VOD Pro Edition</li><li>Use VOD Standard Edition, allowing tasks to be initiated with FileId</li></ul><p>Default value: 0</p>
+                     * @return VodBasic <p>Whether to use VOD Standard Edition.<br>Attention: If left empty, VOD Pro Edition is used.</p><p>Enumeration values: </p><ul><li>Use VOD Pro Edition</li><li>Use VOD Standard Edition, allowing tasks to be initiated with FileId</li></ul><p>Default value: 0</p>
+                     * 
+                     */
+                    int64_t GetVodBasic() const;
+
+                    /**
+                     * 设置<p>Whether to use VOD Standard Edition.<br>Attention: If left empty, VOD Pro Edition is used.</p><p>Enumeration values: </p><ul><li>Use VOD Pro Edition</li><li>Use VOD Standard Edition, allowing tasks to be initiated with FileId</li></ul><p>Default value: 0</p>
+                     * @param _vodBasic <p>Whether to use VOD Standard Edition.<br>Attention: If left empty, VOD Pro Edition is used.</p><p>Enumeration values: </p><ul><li>Use VOD Pro Edition</li><li>Use VOD Standard Edition, allowing tasks to be initiated with FileId</li></ul><p>Default value: 0</p>
+                     * 
+                     */
+                    void SetVodBasic(const int64_t& _vodBasic);
+
+                    /**
+                     * 判断参数 VodBasic 是否已赋值
+                     * @return VodBasic 是否已赋值
+                     * 
+                     */
+                    bool VodBasicHasBeenSet() const;
+
+                    /**
+                     * 获取<p>VOD Standard Edition FileId</p>
+                     * @return FileId <p>VOD Standard Edition FileId</p>
+                     * 
+                     */
+                    std::string GetFileId() const;
+
+                    /**
+                     * 设置<p>VOD Standard Edition FileId</p>
+                     * @param _fileId <p>VOD Standard Edition FileId</p>
+                     * 
+                     */
+                    void SetFileId(const std::string& _fileId);
+
+                    /**
+                     * 判断参数 FileId 是否已赋值
+                     * @return FileId 是否已赋值
+                     * 
+                     */
+                    bool FileIdHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Specifies the Bucket ID where the input file resides.
+                     * <p><em>Bucket ID</em> where the media processing object file resides</p>
                      */
                     std::string m_bucket;
                     bool m_bucketHasBeenSet;
 
                     /**
-                     * Specifies the region where the input file's Bucket resides.
+                     * <p>Region of the Bucket where the media processing object file resides</p>
                      */
                     std::string m_region;
                     bool m_regionHasBeenSet;
 
                     /**
-                     * Path of the input file.
+                     * <p>Input path of the media processing object file</p>
                      */
                     std::string m_object;
                     bool m_objectHasBeenSet;
 
                     /**
-                     * VOD Pro application Id.
+                     * <p>VOD application ID.</p>
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
+
+                    /**
+                     * <p>Whether to use VOD Standard Edition.<br>Attention: If left empty, VOD Pro Edition is used.</p><p>Enumeration values: </p><ul><li>Use VOD Pro Edition</li><li>Use VOD Standard Edition, allowing tasks to be initiated with FileId</li></ul><p>Default value: 0</p>
+                     */
+                    int64_t m_vodBasic;
+                    bool m_vodBasicHasBeenSet;
+
+                    /**
+                     * <p>VOD Standard Edition FileId</p>
+                     */
+                    std::string m_fileId;
+                    bool m_fileIdHasBeenSet;
 
                 };
             }

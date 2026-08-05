@@ -73,6 +73,20 @@ namespace TencentCloud
                     bool MsgHasBeenSet() const;
 
                     /**
+                     * 获取<p>Total number of voices that meet the search criteria</p>
+                     * @return TotalCount <p>Total number of voices that meet the search criteria</p>
+                     * 
+                     */
+                    int64_t GetTotalCount() const;
+
+                    /**
+                     * 判断参数 TotalCount 是否已赋值
+                     * @return TotalCount 是否已赋值
+                     * 
+                     */
+                    bool TotalCountHasBeenSet() const;
+
+                    /**
                      * 获取<p>Available voice list.</p>
 Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Voices <p>Available voice list.</p>
@@ -101,6 +115,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_msg;
                     bool m_msgHasBeenSet;
+
+                    /**
+                     * <p>Total number of voices that meet the search criteria</p>
+                     */
+                    int64_t m_totalCount;
+                    bool m_totalCountHasBeenSet;
 
                     /**
                      * <p>Available voice list.</p>

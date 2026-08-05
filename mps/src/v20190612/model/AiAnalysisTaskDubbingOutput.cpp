@@ -24,7 +24,10 @@ AiAnalysisTaskDubbingOutput::AiAnalysisTaskDubbingOutput() :
     m_videoPathHasBeenSet(false),
     m_speakerPathHasBeenSet(false),
     m_voiceIdHasBeenSet(false),
-    m_outputStorageHasBeenSet(false)
+    m_outputStorageHasBeenSet(false),
+    m_extraOutputHasBeenSet(false),
+    m_videoFileIdHasBeenSet(false),
+    m_speakerFileIdHasBeenSet(false)
 {
 }
 
@@ -80,6 +83,36 @@ CoreInternalOutcome AiAnalysisTaskDubbingOutput::Deserialize(const rapidjson::Va
         m_outputStorageHasBeenSet = true;
     }
 
+    if (value.HasMember("ExtraOutput") && !value["ExtraOutput"].IsNull())
+    {
+        if (!value["ExtraOutput"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `AiAnalysisTaskDubbingOutput.ExtraOutput` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_extraOutput = string(value["ExtraOutput"].GetString());
+        m_extraOutputHasBeenSet = true;
+    }
+
+    if (value.HasMember("VideoFileId") && !value["VideoFileId"].IsNull())
+    {
+        if (!value["VideoFileId"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `AiAnalysisTaskDubbingOutput.VideoFileId` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_videoFileId = string(value["VideoFileId"].GetString());
+        m_videoFileIdHasBeenSet = true;
+    }
+
+    if (value.HasMember("SpeakerFileId") && !value["SpeakerFileId"].IsNull())
+    {
+        if (!value["SpeakerFileId"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `AiAnalysisTaskDubbingOutput.SpeakerFileId` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_speakerFileId = string(value["SpeakerFileId"].GetString());
+        m_speakerFileIdHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -118,6 +151,30 @@ void AiAnalysisTaskDubbingOutput::ToJsonObject(rapidjson::Value &value, rapidjso
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
         m_outputStorage.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_extraOutputHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ExtraOutput";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_extraOutput.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_videoFileIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "VideoFileId";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_videoFileId.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_speakerFileIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SpeakerFileId";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_speakerFileId.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -185,5 +242,53 @@ void AiAnalysisTaskDubbingOutput::SetOutputStorage(const TaskOutputStorage& _out
 bool AiAnalysisTaskDubbingOutput::OutputStorageHasBeenSet() const
 {
     return m_outputStorageHasBeenSet;
+}
+
+string AiAnalysisTaskDubbingOutput::GetExtraOutput() const
+{
+    return m_extraOutput;
+}
+
+void AiAnalysisTaskDubbingOutput::SetExtraOutput(const string& _extraOutput)
+{
+    m_extraOutput = _extraOutput;
+    m_extraOutputHasBeenSet = true;
+}
+
+bool AiAnalysisTaskDubbingOutput::ExtraOutputHasBeenSet() const
+{
+    return m_extraOutputHasBeenSet;
+}
+
+string AiAnalysisTaskDubbingOutput::GetVideoFileId() const
+{
+    return m_videoFileId;
+}
+
+void AiAnalysisTaskDubbingOutput::SetVideoFileId(const string& _videoFileId)
+{
+    m_videoFileId = _videoFileId;
+    m_videoFileIdHasBeenSet = true;
+}
+
+bool AiAnalysisTaskDubbingOutput::VideoFileIdHasBeenSet() const
+{
+    return m_videoFileIdHasBeenSet;
+}
+
+string AiAnalysisTaskDubbingOutput::GetSpeakerFileId() const
+{
+    return m_speakerFileId;
+}
+
+void AiAnalysisTaskDubbingOutput::SetSpeakerFileId(const string& _speakerFileId)
+{
+    m_speakerFileId = _speakerFileId;
+    m_speakerFileIdHasBeenSet = true;
+}
+
+bool AiAnalysisTaskDubbingOutput::SpeakerFileIdHasBeenSet() const
+{
+    return m_speakerFileIdHasBeenSet;
 }
 

@@ -151,6 +151,27 @@ namespace TencentCloud
                      */
                     bool SubtitleEmbedPathHasBeenSet() const;
 
+                    /**
+                     * 获取<p>FileId of the subtitle file.</p>
+                     * @return SubtitleFileId <p>FileId of the subtitle file.</p>
+                     * 
+                     */
+                    std::string GetSubtitleFileId() const;
+
+                    /**
+                     * 设置<p>FileId of the subtitle file.</p>
+                     * @param _subtitleFileId <p>FileId of the subtitle file.</p>
+                     * 
+                     */
+                    void SetSubtitleFileId(const std::string& _subtitleFileId);
+
+                    /**
+                     * 判断参数 SubtitleFileId 是否已赋值
+                     * @return SubtitleFileId 是否已赋值
+                     * 
+                     */
+                    bool SubtitleFileIdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -182,6 +203,12 @@ namespace TencentCloud
                      */
                     std::string m_subtitleEmbedPath;
                     bool m_subtitleEmbedPathHasBeenSet;
+
+                    /**
+                     * <p>FileId of the subtitle file.</p>
+                     */
+                    std::string m_subtitleFileId;
+                    bool m_subtitleFileIdHasBeenSet;
 
                 };
             }
