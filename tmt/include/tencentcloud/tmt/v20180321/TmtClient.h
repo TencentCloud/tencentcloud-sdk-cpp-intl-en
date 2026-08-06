@@ -23,8 +23,8 @@
 #include <tencentcloud/core/Credential.h>
 #include <tencentcloud/core/profile/ClientProfile.h>
 #include <tencentcloud/core/AsyncCallerContext.h>
-#include <tencentcloud/tmt/v20180321/model/TextTranslateRequest.h>
-#include <tencentcloud/tmt/v20180321/model/TextTranslateResponse.h>
+#include <tencentcloud/tmt/v20180321/model/ImageTranslateLLMRequest.h>
+#include <tencentcloud/tmt/v20180321/model/ImageTranslateLLMResponse.h>
 
 
 namespace TencentCloud
@@ -39,21 +39,25 @@ namespace TencentCloud
                 TmtClient(const Credential &credential, const std::string &region);
                 TmtClient(const Credential &credential, const std::string &region, const ClientProfile &profile);
 
-                typedef Outcome<Core::Error, Model::TextTranslateResponse> TextTranslateOutcome;
-                typedef std::future<TextTranslateOutcome> TextTranslateOutcomeCallable;
-                typedef std::function<void(const TmtClient*, const Model::TextTranslateRequest&, TextTranslateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> TextTranslateAsyncHandler;
+                typedef Outcome<Core::Error, Model::ImageTranslateLLMResponse> ImageTranslateLLMOutcome;
+                typedef std::future<ImageTranslateLLMOutcome> ImageTranslateLLMOutcomeCallable;
+                typedef std::function<void(const TmtClient*, const Model::ImageTranslateLLMRequest&, ImageTranslateLLMOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ImageTranslateLLMAsyncHandler;
 
 
 
                 /**
-                 *This API is used to translate text in multiple language pairs, such as Chinese-English.<br />
-Note: We recommend that you simplify your development with the SDK integration mode. For how to use the SDK, see Section 5 "Developer Resources".
-                 * @param req TextTranslateRequest
-                 * @return TextTranslateOutcome
+                 *This API is used to provide translation service for images in 18 languages. It can automatically recognize text content in images and translate it into the target language. The recognized text is translated line by line, and a version that supports paragraph translation will be offered subsequently.
+
+-Input image format: png, jpg, jpeg and other common image formats. gif animation is not supported.
+-Output image format: jpg.
+
+Notification: For general developers, we recommend prioritizing SDK integration to simplify development. For SDK usage introduction, directly view the 5. Developer Resources part.
+                 * @param req ImageTranslateLLMRequest
+                 * @return ImageTranslateLLMOutcome
                  */
-                TextTranslateOutcome TextTranslate(const Model::TextTranslateRequest &request);
-                void TextTranslateAsync(const Model::TextTranslateRequest& request, const TextTranslateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                TextTranslateOutcomeCallable TextTranslateCallable(const Model::TextTranslateRequest& request);
+                ImageTranslateLLMOutcome ImageTranslateLLM(const Model::ImageTranslateLLMRequest &request);
+                void ImageTranslateLLMAsync(const Model::ImageTranslateLLMRequest& request, const ImageTranslateLLMAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ImageTranslateLLMOutcomeCallable ImageTranslateLLMCallable(const Model::ImageTranslateLLMRequest& request);
 
             };
         }

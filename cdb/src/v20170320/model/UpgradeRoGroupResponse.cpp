@@ -14,23 +14,21 @@
  * limitations under the License.
  */
 
-#include <tencentcloud/tmt/v20180321/model/TextTranslateResponse.h>
+#include <tencentcloud/cdb/v20170320/model/UpgradeRoGroupResponse.h>
 #include <tencentcloud/core/utils/rapidjson/document.h>
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using TencentCloud::CoreInternalOutcome;
-using namespace TencentCloud::Tmt::V20180321::Model;
+using namespace TencentCloud::Cdb::V20170320::Model;
 using namespace std;
 
-TextTranslateResponse::TextTranslateResponse() :
-    m_targetTextHasBeenSet(false),
-    m_sourceHasBeenSet(false),
-    m_targetHasBeenSet(false)
+UpgradeRoGroupResponse::UpgradeRoGroupResponse() :
+    m_asyncRequestIdHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome TextTranslateResponse::Deserialize(const string &payload)
+CoreInternalOutcome UpgradeRoGroupResponse::Deserialize(const string &payload)
 {
     rapidjson::Document d;
     d.Parse(payload.c_str());
@@ -64,68 +62,32 @@ CoreInternalOutcome TextTranslateResponse::Deserialize(const string &payload)
     }
 
 
-    if (rsp.HasMember("TargetText") && !rsp["TargetText"].IsNull())
+    if (rsp.HasMember("AsyncRequestId") && !rsp["AsyncRequestId"].IsNull())
     {
-        if (!rsp["TargetText"].IsString())
+        if (!rsp["AsyncRequestId"].IsString())
         {
-            return CoreInternalOutcome(Core::Error("response `TargetText` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `AsyncRequestId` IsString=false incorrectly").SetRequestId(requestId));
         }
-        m_targetText = string(rsp["TargetText"].GetString());
-        m_targetTextHasBeenSet = true;
-    }
-
-    if (rsp.HasMember("Source") && !rsp["Source"].IsNull())
-    {
-        if (!rsp["Source"].IsString())
-        {
-            return CoreInternalOutcome(Core::Error("response `Source` IsString=false incorrectly").SetRequestId(requestId));
-        }
-        m_source = string(rsp["Source"].GetString());
-        m_sourceHasBeenSet = true;
-    }
-
-    if (rsp.HasMember("Target") && !rsp["Target"].IsNull())
-    {
-        if (!rsp["Target"].IsString())
-        {
-            return CoreInternalOutcome(Core::Error("response `Target` IsString=false incorrectly").SetRequestId(requestId));
-        }
-        m_target = string(rsp["Target"].GetString());
-        m_targetHasBeenSet = true;
+        m_asyncRequestId = string(rsp["AsyncRequestId"].GetString());
+        m_asyncRequestIdHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-string TextTranslateResponse::ToJsonString() const
+string UpgradeRoGroupResponse::ToJsonString() const
 {
     rapidjson::Document value;
     value.SetObject();
     rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
 
-    if (m_targetTextHasBeenSet)
+    if (m_asyncRequestIdHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "TargetText";
+        string key = "AsyncRequestId";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, rapidjson::Value(m_targetText.c_str(), allocator).Move(), allocator);
-    }
-
-    if (m_sourceHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "Source";
-        iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, rapidjson::Value(m_source.c_str(), allocator).Move(), allocator);
-    }
-
-    if (m_targetHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "Target";
-        iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, rapidjson::Value(m_target.c_str(), allocator).Move(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_asyncRequestId.c_str(), allocator).Move(), allocator);
     }
 
     rapidjson::Value iKey(rapidjson::kStringType);
@@ -140,34 +102,14 @@ string TextTranslateResponse::ToJsonString() const
 }
 
 
-string TextTranslateResponse::GetTargetText() const
+string UpgradeRoGroupResponse::GetAsyncRequestId() const
 {
-    return m_targetText;
+    return m_asyncRequestId;
 }
 
-bool TextTranslateResponse::TargetTextHasBeenSet() const
+bool UpgradeRoGroupResponse::AsyncRequestIdHasBeenSet() const
 {
-    return m_targetTextHasBeenSet;
-}
-
-string TextTranslateResponse::GetSource() const
-{
-    return m_source;
-}
-
-bool TextTranslateResponse::SourceHasBeenSet() const
-{
-    return m_sourceHasBeenSet;
-}
-
-string TextTranslateResponse::GetTarget() const
-{
-    return m_target;
-}
-
-bool TextTranslateResponse::TargetHasBeenSet() const
-{
-    return m_targetHasBeenSet;
+    return m_asyncRequestIdHasBeenSet;
 }
 
 

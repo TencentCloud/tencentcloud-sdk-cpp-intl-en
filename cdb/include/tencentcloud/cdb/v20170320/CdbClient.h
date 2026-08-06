@@ -351,6 +351,8 @@
 #include <tencentcloud/cdb/v20170320/model/UpgradeDBInstanceResponse.h>
 #include <tencentcloud/cdb/v20170320/model/UpgradeDBInstanceEngineVersionRequest.h>
 #include <tencentcloud/cdb/v20170320/model/UpgradeDBInstanceEngineVersionResponse.h>
+#include <tencentcloud/cdb/v20170320/model/UpgradeRoGroupRequest.h>
+#include <tencentcloud/cdb/v20170320/model/UpgradeRoGroupResponse.h>
 
 
 namespace TencentCloud
@@ -857,6 +859,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::UpgradeDBInstanceEngineVersionResponse> UpgradeDBInstanceEngineVersionOutcome;
                 typedef std::future<UpgradeDBInstanceEngineVersionOutcome> UpgradeDBInstanceEngineVersionOutcomeCallable;
                 typedef std::function<void(const CdbClient*, const Model::UpgradeDBInstanceEngineVersionRequest&, UpgradeDBInstanceEngineVersionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpgradeDBInstanceEngineVersionAsyncHandler;
+                typedef Outcome<Core::Error, Model::UpgradeRoGroupResponse> UpgradeRoGroupOutcome;
+                typedef std::future<UpgradeRoGroupOutcome> UpgradeRoGroupOutcomeCallable;
+                typedef std::function<void(const CdbClient*, const Model::UpgradeRoGroupRequest&, UpgradeRoGroupOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpgradeRoGroupAsyncHandler;
 
 
 
@@ -2390,6 +2395,15 @@ Description: Only incomplete import jobs support termination, and the executed S
                 UpgradeDBInstanceEngineVersionOutcome UpgradeDBInstanceEngineVersion(const Model::UpgradeDBInstanceEngineVersionRequest &request);
                 void UpgradeDBInstanceEngineVersionAsync(const Model::UpgradeDBInstanceEngineVersionRequest& request, const UpgradeDBInstanceEngineVersionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 UpgradeDBInstanceEngineVersionOutcomeCallable UpgradeDBInstanceEngineVersionCallable(const Model::UpgradeDBInstanceEngineVersionRequest& request);
+
+                /**
+                 *This API is used to upgrade a read-only group to a pure network forwarding mode.
+                 * @param req UpgradeRoGroupRequest
+                 * @return UpgradeRoGroupOutcome
+                 */
+                UpgradeRoGroupOutcome UpgradeRoGroup(const Model::UpgradeRoGroupRequest &request);
+                void UpgradeRoGroupAsync(const Model::UpgradeRoGroupRequest& request, const UpgradeRoGroupAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                UpgradeRoGroupOutcomeCallable UpgradeRoGroupCallable(const Model::UpgradeRoGroupRequest& request);
 
             };
         }

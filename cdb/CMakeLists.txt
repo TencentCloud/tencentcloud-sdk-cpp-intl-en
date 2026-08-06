@@ -126,6 +126,7 @@ set(cdb_public_header_model
   include/tencentcloud/cdb/v20170320/model/StopDBImportJobRequest.h
   include/tencentcloud/cdb/v20170320/model/ModifyRemoteBackupConfigResponse.h
   include/tencentcloud/cdb/v20170320/model/DescribeDBInstanceInfoResponse.h
+  include/tencentcloud/cdb/v20170320/model/UpgradeRoGroupResponse.h
   include/tencentcloud/cdb/v20170320/model/AssociateSecurityGroupsRequest.h
   include/tencentcloud/cdb/v20170320/model/DescribeInstanceUpgradeCheckJobRequest.h
   include/tencentcloud/cdb/v20170320/model/DescribeDBFeaturesResponse.h
@@ -226,6 +227,7 @@ set(cdb_public_header_model
   include/tencentcloud/cdb/v20170320/model/DeleteRotationPasswordResponse.h
   include/tencentcloud/cdb/v20170320/model/DescribeAccountsResponse.h
   include/tencentcloud/cdb/v20170320/model/RollbackTimeRange.h
+  include/tencentcloud/cdb/v20170320/model/UpgradeRoGroupRequest.h
   include/tencentcloud/cdb/v20170320/model/ModifyProtectModeRequest.h
   include/tencentcloud/cdb/v20170320/model/DescribeAuditRuleTemplateModifyHistoryResponse.h
   include/tencentcloud/cdb/v20170320/model/DescribeAuditLogFilesRequest.h
@@ -573,6 +575,7 @@ set(cdb_src
   src/v20170320/model/StopDBImportJobRequest.cpp
   src/v20170320/model/ModifyRemoteBackupConfigResponse.cpp
   src/v20170320/model/DescribeDBInstanceInfoResponse.cpp
+  src/v20170320/model/UpgradeRoGroupResponse.cpp
   src/v20170320/model/AssociateSecurityGroupsRequest.cpp
   src/v20170320/model/DescribeInstanceUpgradeCheckJobRequest.cpp
   src/v20170320/model/DescribeDBFeaturesResponse.cpp
@@ -673,6 +676,7 @@ set(cdb_src
   src/v20170320/model/DeleteRotationPasswordResponse.cpp
   src/v20170320/model/DescribeAccountsResponse.cpp
   src/v20170320/model/RollbackTimeRange.cpp
+  src/v20170320/model/UpgradeRoGroupRequest.cpp
   src/v20170320/model/ModifyProtectModeRequest.cpp
   src/v20170320/model/DescribeAuditRuleTemplateModifyHistoryResponse.cpp
   src/v20170320/model/DescribeAuditLogFilesRequest.cpp

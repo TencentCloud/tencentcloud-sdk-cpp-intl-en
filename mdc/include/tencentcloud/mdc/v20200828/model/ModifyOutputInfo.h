@@ -27,6 +27,9 @@
 #include <tencentcloud/mdc/v20200828/model/CreateOutputSrtSettings.h>
 #include <tencentcloud/mdc/v20200828/model/CreateOutputInfoRTPSettings.h>
 #include <tencentcloud/mdc/v20200828/model/CreateOutputRTMPSettings.h>
+#include <tencentcloud/mdc/v20200828/model/CreateOutputRistSettings.h>
+#include <tencentcloud/mdc/v20200828/model/PidSelector.h>
+#include <tencentcloud/mdc/v20200828/model/StreamSelector.h>
 
 
 namespace TencentCloud
@@ -132,6 +135,48 @@ namespace TencentCloud
                      * 
                      */
                     bool ProtocolHasBeenSet() const;
+
+                    /**
+                     * 获取Output Type: Internet/Tencent CSS/StreamLive
+                     * @return OutputType Output Type: Internet/Tencent CSS/StreamLive
+                     * 
+                     */
+                    std::string GetOutputType() const;
+
+                    /**
+                     * 设置Output Type: Internet/Tencent CSS/StreamLive
+                     * @param _outputType Output Type: Internet/Tencent CSS/StreamLive
+                     * 
+                     */
+                    void SetOutputType(const std::string& _outputType);
+
+                    /**
+                     * 判断参数 OutputType 是否已赋值
+                     * @return OutputType 是否已赋值
+                     * 
+                     */
+                    bool OutputTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Output module types include Pinpoint (single-point output, supporting up to four concurrent outputs) and MultiMesh (multi-output, supporting concurrent outputs exceeding four, currently capable of reaching 200 channels). The default type is Pinpoint output. For a single Flow, only one MultiMesh output can be assigned per region.
+                     * @return OutputKind Output module types include Pinpoint (single-point output, supporting up to four concurrent outputs) and MultiMesh (multi-output, supporting concurrent outputs exceeding four, currently capable of reaching 200 channels). The default type is Pinpoint output. For a single Flow, only one MultiMesh output can be assigned per region.
+                     * 
+                     */
+                    std::string GetOutputKind() const;
+
+                    /**
+                     * 设置Output module types include Pinpoint (single-point output, supporting up to four concurrent outputs) and MultiMesh (multi-output, supporting concurrent outputs exceeding four, currently capable of reaching 200 channels). The default type is Pinpoint output. For a single Flow, only one MultiMesh output can be assigned per region.
+                     * @param _outputKind Output module types include Pinpoint (single-point output, supporting up to four concurrent outputs) and MultiMesh (multi-output, supporting concurrent outputs exceeding four, currently capable of reaching 200 channels). The default type is Pinpoint output. For a single Flow, only one MultiMesh output can be assigned per region.
+                     * 
+                     */
+                    void SetOutputKind(const std::string& _outputKind);
+
+                    /**
+                     * 判断参数 OutputKind 是否已赋值
+                     * @return OutputKind 是否已赋值
+                     * 
+                     */
+                    bool OutputKindHasBeenSet() const;
 
                     /**
                      * 获取The SRT relay configuration.
@@ -259,6 +304,90 @@ namespace TencentCloud
                      */
                     bool SecurityGroupIdsHasBeenSet() const;
 
+                    /**
+                     * 获取Availability Zone
+                     * @return Zones Availability Zone
+                     * 
+                     */
+                    std::vector<std::string> GetZones() const;
+
+                    /**
+                     * 设置Availability Zone
+                     * @param _zones Availability Zone
+                     * 
+                     */
+                    void SetZones(const std::vector<std::string>& _zones);
+
+                    /**
+                     * 判断参数 Zones 是否已赋值
+                     * @return Zones 是否已赋值
+                     * 
+                     */
+                    bool ZonesHasBeenSet() const;
+
+                    /**
+                     * 获取Transfer the configuration of RIST.
+                     * @return RISTSettings Transfer the configuration of RIST.
+                     * 
+                     */
+                    CreateOutputRistSettings GetRISTSettings() const;
+
+                    /**
+                     * 设置Transfer the configuration of RIST.
+                     * @param _rISTSettings Transfer the configuration of RIST.
+                     * 
+                     */
+                    void SetRISTSettings(const CreateOutputRistSettings& _rISTSettings);
+
+                    /**
+                     * 判断参数 RISTSettings 是否已赋值
+                     * @return RISTSettings 是否已赋值
+                     * 
+                     */
+                    bool RISTSettingsHasBeenSet() const;
+
+                    /**
+                     * 获取For streams containing multiple audio/video tracks, you can specify the tracks that need to be used
+                     * @return PidSelector For streams containing multiple audio/video tracks, you can specify the tracks that need to be used
+                     * @deprecated
+                     */
+                    PidSelector GetPidSelector() const;
+
+                    /**
+                     * 设置For streams containing multiple audio/video tracks, you can specify the tracks that need to be used
+                     * @param _pidSelector For streams containing multiple audio/video tracks, you can specify the tracks that need to be used
+                     * @deprecated
+                     */
+                    void SetPidSelector(const PidSelector& _pidSelector);
+
+                    /**
+                     * 判断参数 PidSelector 是否已赋值
+                     * @return PidSelector 是否已赋值
+                     * @deprecated
+                     */
+                    bool PidSelectorHasBeenSet() const;
+
+                    /**
+                     * 获取For streams containing multiple audio/video tracks, you can specify the tracks that need to be used
+                     * @return StreamSelector For streams containing multiple audio/video tracks, you can specify the tracks that need to be used
+                     * 
+                     */
+                    StreamSelector GetStreamSelector() const;
+
+                    /**
+                     * 设置For streams containing multiple audio/video tracks, you can specify the tracks that need to be used
+                     * @param _streamSelector For streams containing multiple audio/video tracks, you can specify the tracks that need to be used
+                     * 
+                     */
+                    void SetStreamSelector(const StreamSelector& _streamSelector);
+
+                    /**
+                     * 判断参数 StreamSelector 是否已赋值
+                     * @return StreamSelector 是否已赋值
+                     * 
+                     */
+                    bool StreamSelectorHasBeenSet() const;
+
                 private:
 
                     /**
@@ -284,6 +413,18 @@ namespace TencentCloud
                      */
                     std::string m_protocol;
                     bool m_protocolHasBeenSet;
+
+                    /**
+                     * Output Type: Internet/Tencent CSS/StreamLive
+                     */
+                    std::string m_outputType;
+                    bool m_outputTypeHasBeenSet;
+
+                    /**
+                     * Output module types include Pinpoint (single-point output, supporting up to four concurrent outputs) and MultiMesh (multi-output, supporting concurrent outputs exceeding four, currently capable of reaching 200 channels). The default type is Pinpoint output. For a single Flow, only one MultiMesh output can be assigned per region.
+                     */
+                    std::string m_outputKind;
+                    bool m_outputKindHasBeenSet;
 
                     /**
                      * The SRT relay configuration.
@@ -320,6 +461,30 @@ namespace TencentCloud
                      */
                     std::vector<std::string> m_securityGroupIds;
                     bool m_securityGroupIdsHasBeenSet;
+
+                    /**
+                     * Availability Zone
+                     */
+                    std::vector<std::string> m_zones;
+                    bool m_zonesHasBeenSet;
+
+                    /**
+                     * Transfer the configuration of RIST.
+                     */
+                    CreateOutputRistSettings m_rISTSettings;
+                    bool m_rISTSettingsHasBeenSet;
+
+                    /**
+                     * For streams containing multiple audio/video tracks, you can specify the tracks that need to be used
+                     */
+                    PidSelector m_pidSelector;
+                    bool m_pidSelectorHasBeenSet;
+
+                    /**
+                     * For streams containing multiple audio/video tracks, you can specify the tracks that need to be used
+                     */
+                    StreamSelector m_streamSelector;
+                    bool m_streamSelectorHasBeenSet;
 
                 };
             }

@@ -40,48 +40,48 @@ TmtClient::TmtClient(const Credential &credential, const string &region, const C
 }
 
 
-TmtClient::TextTranslateOutcome TmtClient::TextTranslate(const TextTranslateRequest &request)
+TmtClient::ImageTranslateLLMOutcome TmtClient::ImageTranslateLLM(const ImageTranslateLLMRequest &request)
 {
-    auto outcome = MakeRequest(request, "TextTranslate");
+    auto outcome = MakeRequest(request, "ImageTranslateLLM");
     if (outcome.IsSuccess())
     {
         auto r = outcome.GetResult();
         string payload = string(r.Body(), r.BodySize());
-        TextTranslateResponse rsp = TextTranslateResponse();
+        ImageTranslateLLMResponse rsp = ImageTranslateLLMResponse();
         auto o = rsp.Deserialize(payload);
         if (o.IsSuccess())
-            return TextTranslateOutcome(rsp);
+            return ImageTranslateLLMOutcome(rsp);
         else
-            return TextTranslateOutcome(o.GetError());
+            return ImageTranslateLLMOutcome(o.GetError());
     }
     else
     {
-        return TextTranslateOutcome(outcome.GetError());
+        return ImageTranslateLLMOutcome(outcome.GetError());
     }
 }
 
-void TmtClient::TextTranslateAsync(const TextTranslateRequest& request, const TextTranslateAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+void TmtClient::ImageTranslateLLMAsync(const ImageTranslateLLMRequest& request, const ImageTranslateLLMAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
 {
-    using Req = const TextTranslateRequest&;
-    using Resp = TextTranslateResponse;
+    using Req = const ImageTranslateLLMRequest&;
+    using Resp = ImageTranslateLLMResponse;
 
     DoRequestAsync<Req, Resp>(
-        "TextTranslate", request, {{{"Content-Type", "application/json"}}},
+        "ImageTranslateLLM", request, {{{"Content-Type", "application/json"}}},
         [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
         {
             handler(this, req, std::move(resp), context);
         });
 }
 
-TmtClient::TextTranslateOutcomeCallable TmtClient::TextTranslateCallable(const TextTranslateRequest &request)
+TmtClient::ImageTranslateLLMOutcomeCallable TmtClient::ImageTranslateLLMCallable(const ImageTranslateLLMRequest &request)
 {
-    const auto prom = std::make_shared<std::promise<TextTranslateOutcome>>();
-    TextTranslateAsync(
+    const auto prom = std::make_shared<std::promise<ImageTranslateLLMOutcome>>();
+    ImageTranslateLLMAsync(
     request,
     [prom](
         const TmtClient*,
-        const TextTranslateRequest&,
-        TextTranslateOutcome resp,
+        const ImageTranslateLLMRequest&,
+        ImageTranslateLLMOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {

@@ -25,6 +25,7 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/dts/v20211206/model/Database.h>
+#include <tencentcloud/dts/v20211206/model/OnlineDDL.h>
 
 
 namespace TencentCloud
@@ -114,6 +115,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool AdvancedObjectsHasBeenSet() const;
 
+                    /**
+                     * 获取A redundant field that specifies the online DDL type
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return OnlineDDL A redundant field that specifies the online DDL type
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    OnlineDDL GetOnlineDDL() const;
+
+                    /**
+                     * 设置A redundant field that specifies the online DDL type
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _onlineDDL A redundant field that specifies the online DDL type
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetOnlineDDL(const OnlineDDL& _onlineDDL);
+
+                    /**
+                     * 判断参数 OnlineDDL 是否已赋值
+                     * @return OnlineDDL 是否已赋值
+                     * 
+                     */
+                    bool OnlineDDLHasBeenSet() const;
+
                 private:
 
                     /**
@@ -134,6 +160,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::vector<std::string> m_advancedObjects;
                     bool m_advancedObjectsHasBeenSet;
+
+                    /**
+                     * A redundant field that specifies the online DDL type
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    OnlineDDL m_onlineDDL;
+                    bool m_onlineDDLHasBeenSet;
 
                 };
             }

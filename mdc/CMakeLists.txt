@@ -39,6 +39,7 @@ set(mdc_public_header_model
   include/tencentcloud/mdc/v20200828/model/DescribeOutputRTMPPullSettings.h
   include/tencentcloud/mdc/v20200828/model/DescribeStreamLinkFlowSRTStatisticsResponse.h
   include/tencentcloud/mdc/v20200828/model/ModifyOutputInfo.h
+  include/tencentcloud/mdc/v20200828/model/TrackSelector.h
   include/tencentcloud/mdc/v20200828/model/CreateInputRTPSettings.h
   include/tencentcloud/mdc/v20200828/model/CreateStreamLinkOutputInfoResponse.h
   include/tencentcloud/mdc/v20200828/model/RTPAddressDestination.h
@@ -76,6 +77,7 @@ set(mdc_public_header_model
   include/tencentcloud/mdc/v20200828/model/FlowAudio.h
   include/tencentcloud/mdc/v20200828/model/FlowMediaVideo.h
   include/tencentcloud/mdc/v20200828/model/DescribeOutputHLSPullServerUrl.h
+  include/tencentcloud/mdc/v20200828/model/StreamSelector.h
   include/tencentcloud/mdc/v20200828/model/DescribeStreamLinkFlowSRTStatisticsRequest.h
   include/tencentcloud/mdc/v20200828/model/DescribeStreamLinkFlowRequest.h
   include/tencentcloud/mdc/v20200828/model/DescribeOutputHLSPullSettings.h
@@ -105,6 +107,7 @@ set(mdc_public_header_model
   include/tencentcloud/mdc/v20200828/model/StopStreamLinkFlowRequest.h
   include/tencentcloud/mdc/v20200828/model/CreateInput.h
   include/tencentcloud/mdc/v20200828/model/CreateOutputRTMPSettings.h
+  include/tencentcloud/mdc/v20200828/model/PidSelector.h
   include/tencentcloud/mdc/v20200828/model/HLSPullSourceAddress.h
   include/tencentcloud/mdc/v20200828/model/CreateOutputRtmpSettingsDestinations.h
   include/tencentcloud/mdc/v20200828/model/FlowLogInfo.h
@@ -119,6 +122,7 @@ set(mdc_public_header_model
   include/tencentcloud/mdc/v20200828/model/CreateInputSRTSettings.h
   include/tencentcloud/mdc/v20200828/model/RTMPPullSourceAddress.h
   include/tencentcloud/mdc/v20200828/model/StreamLinkRegionInfo.h
+  include/tencentcloud/mdc/v20200828/model/CreateOutputRistSettings.h
   )
 
 set(mdc_src
@@ -143,6 +147,7 @@ set(mdc_src
   src/v20200828/model/DescribeOutputRTMPPullSettings.cpp
   src/v20200828/model/DescribeStreamLinkFlowSRTStatisticsResponse.cpp
   src/v20200828/model/ModifyOutputInfo.cpp
+  src/v20200828/model/TrackSelector.cpp
   src/v20200828/model/CreateInputRTPSettings.cpp
   src/v20200828/model/CreateStreamLinkOutputInfoResponse.cpp
   src/v20200828/model/RTPAddressDestination.cpp
@@ -180,6 +185,7 @@ set(mdc_src
   src/v20200828/model/FlowAudio.cpp
   src/v20200828/model/FlowMediaVideo.cpp
   src/v20200828/model/DescribeOutputHLSPullServerUrl.cpp
+  src/v20200828/model/StreamSelector.cpp
   src/v20200828/model/DescribeStreamLinkFlowSRTStatisticsRequest.cpp
   src/v20200828/model/DescribeStreamLinkFlowRequest.cpp
   src/v20200828/model/DescribeOutputHLSPullSettings.cpp
@@ -209,6 +215,7 @@ set(mdc_src
   src/v20200828/model/StopStreamLinkFlowRequest.cpp
   src/v20200828/model/CreateInput.cpp
   src/v20200828/model/CreateOutputRTMPSettings.cpp
+  src/v20200828/model/PidSelector.cpp
   src/v20200828/model/HLSPullSourceAddress.cpp
   src/v20200828/model/CreateOutputRtmpSettingsDestinations.cpp
   src/v20200828/model/FlowLogInfo.cpp
@@ -223,6 +230,7 @@ set(mdc_src
   src/v20200828/model/CreateInputSRTSettings.cpp
   src/v20200828/model/RTMPPullSourceAddress.cpp
   src/v20200828/model/StreamLinkRegionInfo.cpp
+  src/v20200828/model/CreateOutputRistSettings.cpp
   )
 
 set(mdc_include
