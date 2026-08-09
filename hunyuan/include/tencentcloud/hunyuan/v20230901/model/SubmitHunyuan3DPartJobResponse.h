@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Task id (valid period: 24 hours)
-                     * @return JobId Task id (valid period: 24 hours)
+                     * 获取<p>Task id (valid period: 24 hours).</p>
+                     * @return JobId <p>Task id (valid period: 24 hours).</p>
                      * 
                      */
                     std::string GetJobId() const;
@@ -60,7 +60,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Task id (valid period: 24 hours)
+                     * <p>Task id (valid period: 24 hours).</p>
                      */
                     std::string m_jobId;
                     bool m_jobIdHasBeenSet;

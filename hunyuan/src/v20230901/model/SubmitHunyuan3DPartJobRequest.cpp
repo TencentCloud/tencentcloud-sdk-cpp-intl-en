@@ -25,7 +25,8 @@ using namespace std;
 SubmitHunyuan3DPartJobRequest::SubmitHunyuan3DPartJobRequest() :
     m_fileHasBeenSet(false),
     m_partSegmentationInfoHasBeenSet(false),
-    m_enableStagedGenerationHasBeenSet(false)
+    m_enableStagedGenerationHasBeenSet(false),
+    m_enablePostProcessHasBeenSet(false)
 {
 }
 
@@ -59,6 +60,14 @@ string SubmitHunyuan3DPartJobRequest::ToJsonString() const
         string key = "EnableStagedGeneration";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_enableStagedGeneration, allocator);
+    }
+
+    if (m_enablePostProcessHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "EnablePostProcess";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_enablePostProcess, allocator);
     }
 
 
@@ -115,6 +124,22 @@ void SubmitHunyuan3DPartJobRequest::SetEnableStagedGeneration(const bool& _enabl
 bool SubmitHunyuan3DPartJobRequest::EnableStagedGenerationHasBeenSet() const
 {
     return m_enableStagedGenerationHasBeenSet;
+}
+
+bool SubmitHunyuan3DPartJobRequest::GetEnablePostProcess() const
+{
+    return m_enablePostProcess;
+}
+
+void SubmitHunyuan3DPartJobRequest::SetEnablePostProcess(const bool& _enablePostProcess)
+{
+    m_enablePostProcess = _enablePostProcess;
+    m_enablePostProcessHasBeenSet = true;
+}
+
+bool SubmitHunyuan3DPartJobRequest::EnablePostProcessHasBeenSet() const
+{
+    return m_enablePostProcessHasBeenSet;
 }
 
 
