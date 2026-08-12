@@ -14,23 +14,22 @@
  * limitations under the License.
  */
 
-#include <tencentcloud/iai/v20200303/model/DetectLiveFaceResponse.h>
+#include <tencentcloud/csip/v20221121/model/DescribeVulFixTaskListResponse.h>
 #include <tencentcloud/core/utils/rapidjson/document.h>
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using TencentCloud::CoreInternalOutcome;
-using namespace TencentCloud::Iai::V20200303::Model;
+using namespace TencentCloud::Csip::V20221121::Model;
 using namespace std;
 
-DetectLiveFaceResponse::DetectLiveFaceResponse() :
-    m_scoreHasBeenSet(false),
-    m_faceModelVersionHasBeenSet(false),
-    m_isLivenessHasBeenSet(false)
+DescribeVulFixTaskListResponse::DescribeVulFixTaskListResponse() :
+    m_dataHasBeenSet(false),
+    m_totalCountHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome DetectLiveFaceResponse::Deserialize(const string &payload)
+CoreInternalOutcome DescribeVulFixTaskListResponse::Deserialize(const string &payload)
 {
     rapidjson::Document d;
     d.Parse(payload.c_str());
@@ -64,68 +63,67 @@ CoreInternalOutcome DetectLiveFaceResponse::Deserialize(const string &payload)
     }
 
 
-    if (rsp.HasMember("Score") && !rsp["Score"].IsNull())
+    if (rsp.HasMember("Data") && !rsp["Data"].IsNull())
     {
-        if (!rsp["Score"].IsLosslessDouble())
+        if (!rsp["Data"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `Data` is not array type"));
+
+        const rapidjson::Value &tmpValue = rsp["Data"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
         {
-            return CoreInternalOutcome(Core::Error("response `Score` IsLosslessDouble=false incorrectly").SetRequestId(requestId));
+            VulFixTaskItem item;
+            CoreInternalOutcome outcome = item.Deserialize(*itr);
+            if (!outcome.IsSuccess())
+            {
+                outcome.GetError().SetRequestId(requestId);
+                return outcome;
+            }
+            m_data.push_back(item);
         }
-        m_score = rsp["Score"].GetDouble();
-        m_scoreHasBeenSet = true;
+        m_dataHasBeenSet = true;
     }
 
-    if (rsp.HasMember("FaceModelVersion") && !rsp["FaceModelVersion"].IsNull())
+    if (rsp.HasMember("TotalCount") && !rsp["TotalCount"].IsNull())
     {
-        if (!rsp["FaceModelVersion"].IsString())
+        if (!rsp["TotalCount"].IsInt64())
         {
-            return CoreInternalOutcome(Core::Error("response `FaceModelVersion` IsString=false incorrectly").SetRequestId(requestId));
+            return CoreInternalOutcome(Core::Error("response `TotalCount` IsInt64=false incorrectly").SetRequestId(requestId));
         }
-        m_faceModelVersion = string(rsp["FaceModelVersion"].GetString());
-        m_faceModelVersionHasBeenSet = true;
-    }
-
-    if (rsp.HasMember("IsLiveness") && !rsp["IsLiveness"].IsNull())
-    {
-        if (!rsp["IsLiveness"].IsBool())
-        {
-            return CoreInternalOutcome(Core::Error("response `IsLiveness` IsBool=false incorrectly").SetRequestId(requestId));
-        }
-        m_isLiveness = rsp["IsLiveness"].GetBool();
-        m_isLivenessHasBeenSet = true;
+        m_totalCount = rsp["TotalCount"].GetInt64();
+        m_totalCountHasBeenSet = true;
     }
 
 
     return CoreInternalOutcome(true);
 }
 
-string DetectLiveFaceResponse::ToJsonString() const
+string DescribeVulFixTaskListResponse::ToJsonString() const
 {
     rapidjson::Document value;
     value.SetObject();
     rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
 
-    if (m_scoreHasBeenSet)
+    if (m_dataHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "Score";
+        string key = "Data";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, m_score, allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_data.begin(); itr != m_data.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
     }
 
-    if (m_faceModelVersionHasBeenSet)
+    if (m_totalCountHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "FaceModelVersion";
+        string key = "TotalCount";
         iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, rapidjson::Value(m_faceModelVersion.c_str(), allocator).Move(), allocator);
-    }
-
-    if (m_isLivenessHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "IsLiveness";
-        iKey.SetString(key.c_str(), allocator);
-        value.AddMember(iKey, m_isLiveness, allocator);
+        value.AddMember(iKey, m_totalCount, allocator);
     }
 
     rapidjson::Value iKey(rapidjson::kStringType);
@@ -140,34 +138,24 @@ string DetectLiveFaceResponse::ToJsonString() const
 }
 
 
-double DetectLiveFaceResponse::GetScore() const
+vector<VulFixTaskItem> DescribeVulFixTaskListResponse::GetData() const
 {
-    return m_score;
+    return m_data;
 }
 
-bool DetectLiveFaceResponse::ScoreHasBeenSet() const
+bool DescribeVulFixTaskListResponse::DataHasBeenSet() const
 {
-    return m_scoreHasBeenSet;
+    return m_dataHasBeenSet;
 }
 
-string DetectLiveFaceResponse::GetFaceModelVersion() const
+int64_t DescribeVulFixTaskListResponse::GetTotalCount() const
 {
-    return m_faceModelVersion;
+    return m_totalCount;
 }
 
-bool DetectLiveFaceResponse::FaceModelVersionHasBeenSet() const
+bool DescribeVulFixTaskListResponse::TotalCountHasBeenSet() const
 {
-    return m_faceModelVersionHasBeenSet;
-}
-
-bool DetectLiveFaceResponse::GetIsLiveness() const
-{
-    return m_isLiveness;
-}
-
-bool DetectLiveFaceResponse::IsLivenessHasBeenSet() const
-{
-    return m_isLivenessHasBeenSet;
+    return m_totalCountHasBeenSet;
 }
 
 

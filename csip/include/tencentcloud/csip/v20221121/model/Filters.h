@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Filter conditions. Multiple Values under the same Name are in an OR relationship, and different Names are in an AND relationship.
+                * Filtering Conditions. Multiple Values under the same Name are OR; different Names are AND. Supported Names: Status (execution result, Values: SUCCESS/FAILED/USER_CANCELED/CHECKING).
                 */
                 class Filters : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Filter condition name.
-                     * @return Name Filter condition name.
+                     * 获取Filter criterion name. Parameter: Status (Execution result, Values: SUCCESS/FAILED/USER_CANCELED/CHECKING).
+                     * @return Name Filter criterion name. Parameter: Status (Execution result, Values: SUCCESS/FAILED/USER_CANCELED/CHECKING).
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Filter condition name.
-                     * @param _name Filter condition name.
+                     * 设置Filter criterion name. Parameter: Status (Execution result, Values: SUCCESS/FAILED/USER_CANCELED/CHECKING).
+                     * @param _name Filter criterion name. Parameter: Status (Execution result, Values: SUCCESS/FAILED/USER_CANCELED/CHECKING).
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool ValuesHasBeenSet() const;
 
                     /**
-                     * 获取Exact match: 1 - exact match; default - fuzzy match
-                     * @return ExactMatch Exact match: 1 - exact match; default - fuzzy match
+                     * 获取Exact match: 1 - exact match; default - fuzzy matching
+                     * @return ExactMatch Exact match: 1 - exact match; default - fuzzy matching
                      * 
                      */
                     std::string GetExactMatch() const;
 
                     /**
-                     * 设置Exact match: 1 - exact match; default - fuzzy match
-                     * @param _exactMatch Exact match: 1 - exact match; default - fuzzy match
+                     * 设置Exact match: 1 - exact match; default - fuzzy matching
+                     * @param _exactMatch Exact match: 1 - exact match; default - fuzzy matching
                      * 
                      */
                     void SetExactMatch(const std::string& _exactMatch);
@@ -112,7 +112,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Filter condition name.
+                     * Filter criterion name. Parameter: Status (Execution result, Values: SUCCESS/FAILED/USER_CANCELED/CHECKING).
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
@@ -124,7 +124,7 @@ namespace TencentCloud
                     bool m_valuesHasBeenSet;
 
                     /**
-                     * Exact match: 1 - exact match; default - fuzzy match
+                     * Exact match: 1 - exact match; default - fuzzy matching
                      */
                     std::string m_exactMatch;
                     bool m_exactMatchHasBeenSet;

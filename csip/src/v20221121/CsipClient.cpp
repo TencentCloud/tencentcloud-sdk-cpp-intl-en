@@ -90,6 +90,56 @@ CsipClient::AddNewBindRoleUserOutcomeCallable CsipClient::AddNewBindRoleUserCall
     return prom->get_future();
 }
 
+CsipClient::AddVulWhitelistOutcome CsipClient::AddVulWhitelist(const AddVulWhitelistRequest &request)
+{
+    auto outcome = MakeRequest(request, "AddVulWhitelist");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        AddVulWhitelistResponse rsp = AddVulWhitelistResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return AddVulWhitelistOutcome(rsp);
+        else
+            return AddVulWhitelistOutcome(o.GetError());
+    }
+    else
+    {
+        return AddVulWhitelistOutcome(outcome.GetError());
+    }
+}
+
+void CsipClient::AddVulWhitelistAsync(const AddVulWhitelistRequest& request, const AddVulWhitelistAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const AddVulWhitelistRequest&;
+    using Resp = AddVulWhitelistResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "AddVulWhitelist", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CsipClient::AddVulWhitelistOutcomeCallable CsipClient::AddVulWhitelistCallable(const AddVulWhitelistRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<AddVulWhitelistOutcome>>();
+    AddVulWhitelistAsync(
+    request,
+    [prom](
+        const CsipClient*,
+        const AddVulWhitelistRequest&,
+        AddVulWhitelistOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 CsipClient::CreateAccessKeyCheckTaskOutcome CsipClient::CreateAccessKeyCheckTask(const CreateAccessKeyCheckTaskRequest &request)
 {
     auto outcome = MakeRequest(request, "CreateAccessKeyCheckTask");
@@ -232,6 +282,56 @@ CsipClient::CreateDomainAndIpOutcomeCallable CsipClient::CreateDomainAndIpCallab
         const CsipClient*,
         const CreateDomainAndIpRequest&,
         CreateDomainAndIpOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CsipClient::CreateHostVulExportJobOutcome CsipClient::CreateHostVulExportJob(const CreateHostVulExportJobRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateHostVulExportJob");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateHostVulExportJobResponse rsp = CreateHostVulExportJobResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateHostVulExportJobOutcome(rsp);
+        else
+            return CreateHostVulExportJobOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateHostVulExportJobOutcome(outcome.GetError());
+    }
+}
+
+void CsipClient::CreateHostVulExportJobAsync(const CreateHostVulExportJobRequest& request, const CreateHostVulExportJobAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const CreateHostVulExportJobRequest&;
+    using Resp = CreateHostVulExportJobResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "CreateHostVulExportJob", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CsipClient::CreateHostVulExportJobOutcomeCallable CsipClient::CreateHostVulExportJobCallable(const CreateHostVulExportJobRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<CreateHostVulExportJobOutcome>>();
+    CreateHostVulExportJobAsync(
+    request,
+    [prom](
+        const CsipClient*,
+        const CreateHostVulExportJobRequest&,
+        CreateHostVulExportJobOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -490,6 +590,256 @@ CsipClient::CreateSkillScanOutcomeCallable CsipClient::CreateSkillScanCallable(c
     return prom->get_future();
 }
 
+CsipClient::CreateVulFixRetryTaskOutcome CsipClient::CreateVulFixRetryTask(const CreateVulFixRetryTaskRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateVulFixRetryTask");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateVulFixRetryTaskResponse rsp = CreateVulFixRetryTaskResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateVulFixRetryTaskOutcome(rsp);
+        else
+            return CreateVulFixRetryTaskOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateVulFixRetryTaskOutcome(outcome.GetError());
+    }
+}
+
+void CsipClient::CreateVulFixRetryTaskAsync(const CreateVulFixRetryTaskRequest& request, const CreateVulFixRetryTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const CreateVulFixRetryTaskRequest&;
+    using Resp = CreateVulFixRetryTaskResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "CreateVulFixRetryTask", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CsipClient::CreateVulFixRetryTaskOutcomeCallable CsipClient::CreateVulFixRetryTaskCallable(const CreateVulFixRetryTaskRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<CreateVulFixRetryTaskOutcome>>();
+    CreateVulFixRetryTaskAsync(
+    request,
+    [prom](
+        const CsipClient*,
+        const CreateVulFixRetryTaskRequest&,
+        CreateVulFixRetryTaskOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CsipClient::CreateVulFixTaskOutcome CsipClient::CreateVulFixTask(const CreateVulFixTaskRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateVulFixTask");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateVulFixTaskResponse rsp = CreateVulFixTaskResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateVulFixTaskOutcome(rsp);
+        else
+            return CreateVulFixTaskOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateVulFixTaskOutcome(outcome.GetError());
+    }
+}
+
+void CsipClient::CreateVulFixTaskAsync(const CreateVulFixTaskRequest& request, const CreateVulFixTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const CreateVulFixTaskRequest&;
+    using Resp = CreateVulFixTaskResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "CreateVulFixTask", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CsipClient::CreateVulFixTaskOutcomeCallable CsipClient::CreateVulFixTaskCallable(const CreateVulFixTaskRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<CreateVulFixTaskOutcome>>();
+    CreateVulFixTaskAsync(
+    request,
+    [prom](
+        const CsipClient*,
+        const CreateVulFixTaskRequest&,
+        CreateVulFixTaskOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CsipClient::CreateVulFixedExportJobOutcome CsipClient::CreateVulFixedExportJob(const CreateVulFixedExportJobRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateVulFixedExportJob");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateVulFixedExportJobResponse rsp = CreateVulFixedExportJobResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateVulFixedExportJobOutcome(rsp);
+        else
+            return CreateVulFixedExportJobOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateVulFixedExportJobOutcome(outcome.GetError());
+    }
+}
+
+void CsipClient::CreateVulFixedExportJobAsync(const CreateVulFixedExportJobRequest& request, const CreateVulFixedExportJobAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const CreateVulFixedExportJobRequest&;
+    using Resp = CreateVulFixedExportJobResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "CreateVulFixedExportJob", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CsipClient::CreateVulFixedExportJobOutcomeCallable CsipClient::CreateVulFixedExportJobCallable(const CreateVulFixedExportJobRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<CreateVulFixedExportJobOutcome>>();
+    CreateVulFixedExportJobAsync(
+    request,
+    [prom](
+        const CsipClient*,
+        const CreateVulFixedExportJobRequest&,
+        CreateVulFixedExportJobOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CsipClient::CreateVulReScanOutcome CsipClient::CreateVulReScan(const CreateVulReScanRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateVulReScan");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateVulReScanResponse rsp = CreateVulReScanResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateVulReScanOutcome(rsp);
+        else
+            return CreateVulReScanOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateVulReScanOutcome(outcome.GetError());
+    }
+}
+
+void CsipClient::CreateVulReScanAsync(const CreateVulReScanRequest& request, const CreateVulReScanAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const CreateVulReScanRequest&;
+    using Resp = CreateVulReScanResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "CreateVulReScan", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CsipClient::CreateVulReScanOutcomeCallable CsipClient::CreateVulReScanCallable(const CreateVulReScanRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<CreateVulReScanOutcome>>();
+    CreateVulReScanAsync(
+    request,
+    [prom](
+        const CsipClient*,
+        const CreateVulReScanRequest&,
+        CreateVulReScanOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CsipClient::CreateVulScanManualOutcome CsipClient::CreateVulScanManual(const CreateVulScanManualRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateVulScanManual");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateVulScanManualResponse rsp = CreateVulScanManualResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateVulScanManualOutcome(rsp);
+        else
+            return CreateVulScanManualOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateVulScanManualOutcome(outcome.GetError());
+    }
+}
+
+void CsipClient::CreateVulScanManualAsync(const CreateVulScanManualRequest& request, const CreateVulScanManualAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const CreateVulScanManualRequest&;
+    using Resp = CreateVulScanManualResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "CreateVulScanManual", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CsipClient::CreateVulScanManualOutcomeCallable CsipClient::CreateVulScanManualCallable(const CreateVulScanManualRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<CreateVulScanManualOutcome>>();
+    CreateVulScanManualAsync(
+    request,
+    [prom](
+        const CsipClient*,
+        const CreateVulScanManualRequest&,
+        CreateVulScanManualOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 CsipClient::DeleteDomainAndIpOutcome CsipClient::DeleteDomainAndIp(const DeleteDomainAndIpRequest &request)
 {
     auto outcome = MakeRequest(request, "DeleteDomainAndIp");
@@ -682,6 +1032,56 @@ CsipClient::DeleteRiskScanTaskOutcomeCallable CsipClient::DeleteRiskScanTaskCall
         const CsipClient*,
         const DeleteRiskScanTaskRequest&,
         DeleteRiskScanTaskOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CsipClient::DeleteVulWhitelistOutcome CsipClient::DeleteVulWhitelist(const DeleteVulWhitelistRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteVulWhitelist");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteVulWhitelistResponse rsp = DeleteVulWhitelistResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteVulWhitelistOutcome(rsp);
+        else
+            return DeleteVulWhitelistOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteVulWhitelistOutcome(outcome.GetError());
+    }
+}
+
+void CsipClient::DeleteVulWhitelistAsync(const DeleteVulWhitelistRequest& request, const DeleteVulWhitelistAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DeleteVulWhitelistRequest&;
+    using Resp = DeleteVulWhitelistResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DeleteVulWhitelist", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CsipClient::DeleteVulWhitelistOutcomeCallable CsipClient::DeleteVulWhitelistCallable(const DeleteVulWhitelistRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DeleteVulWhitelistOutcome>>();
+    DeleteVulWhitelistAsync(
+    request,
+    [prom](
+        const CsipClient*,
+        const DeleteVulWhitelistRequest&,
+        DeleteVulWhitelistOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -2232,6 +2632,156 @@ CsipClient::DescribeHighBaseLineRiskListOutcomeCallable CsipClient::DescribeHigh
         const CsipClient*,
         const DescribeHighBaseLineRiskListRequest&,
         DescribeHighBaseLineRiskListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CsipClient::DescribeHostVulItemVPRInfoOutcome CsipClient::DescribeHostVulItemVPRInfo(const DescribeHostVulItemVPRInfoRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeHostVulItemVPRInfo");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeHostVulItemVPRInfoResponse rsp = DescribeHostVulItemVPRInfoResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeHostVulItemVPRInfoOutcome(rsp);
+        else
+            return DescribeHostVulItemVPRInfoOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeHostVulItemVPRInfoOutcome(outcome.GetError());
+    }
+}
+
+void CsipClient::DescribeHostVulItemVPRInfoAsync(const DescribeHostVulItemVPRInfoRequest& request, const DescribeHostVulItemVPRInfoAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeHostVulItemVPRInfoRequest&;
+    using Resp = DescribeHostVulItemVPRInfoResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeHostVulItemVPRInfo", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CsipClient::DescribeHostVulItemVPRInfoOutcomeCallable CsipClient::DescribeHostVulItemVPRInfoCallable(const DescribeHostVulItemVPRInfoRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeHostVulItemVPRInfoOutcome>>();
+    DescribeHostVulItemVPRInfoAsync(
+    request,
+    [prom](
+        const CsipClient*,
+        const DescribeHostVulItemVPRInfoRequest&,
+        DescribeHostVulItemVPRInfoOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CsipClient::DescribeHostVulOverviewOutcome CsipClient::DescribeHostVulOverview(const DescribeHostVulOverviewRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeHostVulOverview");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeHostVulOverviewResponse rsp = DescribeHostVulOverviewResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeHostVulOverviewOutcome(rsp);
+        else
+            return DescribeHostVulOverviewOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeHostVulOverviewOutcome(outcome.GetError());
+    }
+}
+
+void CsipClient::DescribeHostVulOverviewAsync(const DescribeHostVulOverviewRequest& request, const DescribeHostVulOverviewAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeHostVulOverviewRequest&;
+    using Resp = DescribeHostVulOverviewResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeHostVulOverview", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CsipClient::DescribeHostVulOverviewOutcomeCallable CsipClient::DescribeHostVulOverviewCallable(const DescribeHostVulOverviewRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeHostVulOverviewOutcome>>();
+    DescribeHostVulOverviewAsync(
+    request,
+    [prom](
+        const CsipClient*,
+        const DescribeHostVulOverviewRequest&,
+        DescribeHostVulOverviewOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CsipClient::DescribeHostVulRiskListOutcome CsipClient::DescribeHostVulRiskList(const DescribeHostVulRiskListRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeHostVulRiskList");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeHostVulRiskListResponse rsp = DescribeHostVulRiskListResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeHostVulRiskListOutcome(rsp);
+        else
+            return DescribeHostVulRiskListOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeHostVulRiskListOutcome(outcome.GetError());
+    }
+}
+
+void CsipClient::DescribeHostVulRiskListAsync(const DescribeHostVulRiskListRequest& request, const DescribeHostVulRiskListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeHostVulRiskListRequest&;
+    using Resp = DescribeHostVulRiskListResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeHostVulRiskList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CsipClient::DescribeHostVulRiskListOutcomeCallable CsipClient::DescribeHostVulRiskListCallable(const DescribeHostVulRiskListRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeHostVulRiskListOutcome>>();
+    DescribeHostVulRiskListAsync(
+    request,
+    [prom](
+        const CsipClient*,
+        const DescribeHostVulRiskListRequest&,
+        DescribeHostVulRiskListOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -4440,6 +4990,506 @@ CsipClient::DescribeVpcAssetsOutcomeCallable CsipClient::DescribeVpcAssetsCallab
     return prom->get_future();
 }
 
+CsipClient::DescribeVulComponentRelateHostOutcome CsipClient::DescribeVulComponentRelateHost(const DescribeVulComponentRelateHostRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeVulComponentRelateHost");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeVulComponentRelateHostResponse rsp = DescribeVulComponentRelateHostResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeVulComponentRelateHostOutcome(rsp);
+        else
+            return DescribeVulComponentRelateHostOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeVulComponentRelateHostOutcome(outcome.GetError());
+    }
+}
+
+void CsipClient::DescribeVulComponentRelateHostAsync(const DescribeVulComponentRelateHostRequest& request, const DescribeVulComponentRelateHostAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeVulComponentRelateHostRequest&;
+    using Resp = DescribeVulComponentRelateHostResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeVulComponentRelateHost", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CsipClient::DescribeVulComponentRelateHostOutcomeCallable CsipClient::DescribeVulComponentRelateHostCallable(const DescribeVulComponentRelateHostRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeVulComponentRelateHostOutcome>>();
+    DescribeVulComponentRelateHostAsync(
+    request,
+    [prom](
+        const CsipClient*,
+        const DescribeVulComponentRelateHostRequest&,
+        DescribeVulComponentRelateHostOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CsipClient::DescribeVulFixTaskDetailOutcome CsipClient::DescribeVulFixTaskDetail(const DescribeVulFixTaskDetailRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeVulFixTaskDetail");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeVulFixTaskDetailResponse rsp = DescribeVulFixTaskDetailResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeVulFixTaskDetailOutcome(rsp);
+        else
+            return DescribeVulFixTaskDetailOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeVulFixTaskDetailOutcome(outcome.GetError());
+    }
+}
+
+void CsipClient::DescribeVulFixTaskDetailAsync(const DescribeVulFixTaskDetailRequest& request, const DescribeVulFixTaskDetailAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeVulFixTaskDetailRequest&;
+    using Resp = DescribeVulFixTaskDetailResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeVulFixTaskDetail", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CsipClient::DescribeVulFixTaskDetailOutcomeCallable CsipClient::DescribeVulFixTaskDetailCallable(const DescribeVulFixTaskDetailRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeVulFixTaskDetailOutcome>>();
+    DescribeVulFixTaskDetailAsync(
+    request,
+    [prom](
+        const CsipClient*,
+        const DescribeVulFixTaskDetailRequest&,
+        DescribeVulFixTaskDetailOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CsipClient::DescribeVulFixTaskListOutcome CsipClient::DescribeVulFixTaskList(const DescribeVulFixTaskListRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeVulFixTaskList");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeVulFixTaskListResponse rsp = DescribeVulFixTaskListResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeVulFixTaskListOutcome(rsp);
+        else
+            return DescribeVulFixTaskListOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeVulFixTaskListOutcome(outcome.GetError());
+    }
+}
+
+void CsipClient::DescribeVulFixTaskListAsync(const DescribeVulFixTaskListRequest& request, const DescribeVulFixTaskListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeVulFixTaskListRequest&;
+    using Resp = DescribeVulFixTaskListResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeVulFixTaskList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CsipClient::DescribeVulFixTaskListOutcomeCallable CsipClient::DescribeVulFixTaskListCallable(const DescribeVulFixTaskListRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeVulFixTaskListOutcome>>();
+    DescribeVulFixTaskListAsync(
+    request,
+    [prom](
+        const CsipClient*,
+        const DescribeVulFixTaskListRequest&,
+        DescribeVulFixTaskListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CsipClient::DescribeVulFixableMachineListOutcome CsipClient::DescribeVulFixableMachineList(const DescribeVulFixableMachineListRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeVulFixableMachineList");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeVulFixableMachineListResponse rsp = DescribeVulFixableMachineListResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeVulFixableMachineListOutcome(rsp);
+        else
+            return DescribeVulFixableMachineListOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeVulFixableMachineListOutcome(outcome.GetError());
+    }
+}
+
+void CsipClient::DescribeVulFixableMachineListAsync(const DescribeVulFixableMachineListRequest& request, const DescribeVulFixableMachineListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeVulFixableMachineListRequest&;
+    using Resp = DescribeVulFixableMachineListResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeVulFixableMachineList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CsipClient::DescribeVulFixableMachineListOutcomeCallable CsipClient::DescribeVulFixableMachineListCallable(const DescribeVulFixableMachineListRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeVulFixableMachineListOutcome>>();
+    DescribeVulFixableMachineListAsync(
+    request,
+    [prom](
+        const CsipClient*,
+        const DescribeVulFixableMachineListRequest&,
+        DescribeVulFixableMachineListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CsipClient::DescribeVulFixedHostDetailOutcome CsipClient::DescribeVulFixedHostDetail(const DescribeVulFixedHostDetailRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeVulFixedHostDetail");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeVulFixedHostDetailResponse rsp = DescribeVulFixedHostDetailResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeVulFixedHostDetailOutcome(rsp);
+        else
+            return DescribeVulFixedHostDetailOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeVulFixedHostDetailOutcome(outcome.GetError());
+    }
+}
+
+void CsipClient::DescribeVulFixedHostDetailAsync(const DescribeVulFixedHostDetailRequest& request, const DescribeVulFixedHostDetailAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeVulFixedHostDetailRequest&;
+    using Resp = DescribeVulFixedHostDetailResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeVulFixedHostDetail", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CsipClient::DescribeVulFixedHostDetailOutcomeCallable CsipClient::DescribeVulFixedHostDetailCallable(const DescribeVulFixedHostDetailRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeVulFixedHostDetailOutcome>>();
+    DescribeVulFixedHostDetailAsync(
+    request,
+    [prom](
+        const CsipClient*,
+        const DescribeVulFixedHostDetailRequest&,
+        DescribeVulFixedHostDetailOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CsipClient::DescribeVulFixedListOutcome CsipClient::DescribeVulFixedList(const DescribeVulFixedListRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeVulFixedList");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeVulFixedListResponse rsp = DescribeVulFixedListResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeVulFixedListOutcome(rsp);
+        else
+            return DescribeVulFixedListOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeVulFixedListOutcome(outcome.GetError());
+    }
+}
+
+void CsipClient::DescribeVulFixedListAsync(const DescribeVulFixedListRequest& request, const DescribeVulFixedListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeVulFixedListRequest&;
+    using Resp = DescribeVulFixedListResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeVulFixedList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CsipClient::DescribeVulFixedListOutcomeCallable CsipClient::DescribeVulFixedListCallable(const DescribeVulFixedListRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeVulFixedListOutcome>>();
+    DescribeVulFixedListAsync(
+    request,
+    [prom](
+        const CsipClient*,
+        const DescribeVulFixedListRequest&,
+        DescribeVulFixedListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CsipClient::DescribeVulHostRelateComponentOutcome CsipClient::DescribeVulHostRelateComponent(const DescribeVulHostRelateComponentRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeVulHostRelateComponent");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeVulHostRelateComponentResponse rsp = DescribeVulHostRelateComponentResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeVulHostRelateComponentOutcome(rsp);
+        else
+            return DescribeVulHostRelateComponentOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeVulHostRelateComponentOutcome(outcome.GetError());
+    }
+}
+
+void CsipClient::DescribeVulHostRelateComponentAsync(const DescribeVulHostRelateComponentRequest& request, const DescribeVulHostRelateComponentAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeVulHostRelateComponentRequest&;
+    using Resp = DescribeVulHostRelateComponentResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeVulHostRelateComponent", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CsipClient::DescribeVulHostRelateComponentOutcomeCallable CsipClient::DescribeVulHostRelateComponentCallable(const DescribeVulHostRelateComponentRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeVulHostRelateComponentOutcome>>();
+    DescribeVulHostRelateComponentAsync(
+    request,
+    [prom](
+        const CsipClient*,
+        const DescribeVulHostRelateComponentRequest&,
+        DescribeVulHostRelateComponentOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CsipClient::DescribeVulIgnoreRuleListOutcome CsipClient::DescribeVulIgnoreRuleList(const DescribeVulIgnoreRuleListRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeVulIgnoreRuleList");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeVulIgnoreRuleListResponse rsp = DescribeVulIgnoreRuleListResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeVulIgnoreRuleListOutcome(rsp);
+        else
+            return DescribeVulIgnoreRuleListOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeVulIgnoreRuleListOutcome(outcome.GetError());
+    }
+}
+
+void CsipClient::DescribeVulIgnoreRuleListAsync(const DescribeVulIgnoreRuleListRequest& request, const DescribeVulIgnoreRuleListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeVulIgnoreRuleListRequest&;
+    using Resp = DescribeVulIgnoreRuleListResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeVulIgnoreRuleList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CsipClient::DescribeVulIgnoreRuleListOutcomeCallable CsipClient::DescribeVulIgnoreRuleListCallable(const DescribeVulIgnoreRuleListRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeVulIgnoreRuleListOutcome>>();
+    DescribeVulIgnoreRuleListAsync(
+    request,
+    [prom](
+        const CsipClient*,
+        const DescribeVulIgnoreRuleListRequest&,
+        DescribeVulIgnoreRuleListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CsipClient::DescribeVulItemListOutcome CsipClient::DescribeVulItemList(const DescribeVulItemListRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeVulItemList");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeVulItemListResponse rsp = DescribeVulItemListResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeVulItemListOutcome(rsp);
+        else
+            return DescribeVulItemListOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeVulItemListOutcome(outcome.GetError());
+    }
+}
+
+void CsipClient::DescribeVulItemListAsync(const DescribeVulItemListRequest& request, const DescribeVulItemListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeVulItemListRequest&;
+    using Resp = DescribeVulItemListResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeVulItemList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CsipClient::DescribeVulItemListOutcomeCallable CsipClient::DescribeVulItemListCallable(const DescribeVulItemListRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeVulItemListOutcome>>();
+    DescribeVulItemListAsync(
+    request,
+    [prom](
+        const CsipClient*,
+        const DescribeVulItemListRequest&,
+        DescribeVulItemListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CsipClient::DescribeVulLabelListOutcome CsipClient::DescribeVulLabelList(const DescribeVulLabelListRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeVulLabelList");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeVulLabelListResponse rsp = DescribeVulLabelListResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeVulLabelListOutcome(rsp);
+        else
+            return DescribeVulLabelListOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeVulLabelListOutcome(outcome.GetError());
+    }
+}
+
+void CsipClient::DescribeVulLabelListAsync(const DescribeVulLabelListRequest& request, const DescribeVulLabelListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeVulLabelListRequest&;
+    using Resp = DescribeVulLabelListResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeVulLabelList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CsipClient::DescribeVulLabelListOutcomeCallable CsipClient::DescribeVulLabelListCallable(const DescribeVulLabelListRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeVulLabelListOutcome>>();
+    DescribeVulLabelListAsync(
+    request,
+    [prom](
+        const CsipClient*,
+        const DescribeVulLabelListRequest&,
+        DescribeVulLabelListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 CsipClient::DescribeVulRiskListOutcome CsipClient::DescribeVulRiskList(const DescribeVulRiskListRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeVulRiskList");
@@ -4482,6 +5532,256 @@ CsipClient::DescribeVulRiskListOutcomeCallable CsipClient::DescribeVulRiskListCa
         const CsipClient*,
         const DescribeVulRiskListRequest&,
         DescribeVulRiskListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CsipClient::DescribeVulRiskRelateComponentOutcome CsipClient::DescribeVulRiskRelateComponent(const DescribeVulRiskRelateComponentRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeVulRiskRelateComponent");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeVulRiskRelateComponentResponse rsp = DescribeVulRiskRelateComponentResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeVulRiskRelateComponentOutcome(rsp);
+        else
+            return DescribeVulRiskRelateComponentOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeVulRiskRelateComponentOutcome(outcome.GetError());
+    }
+}
+
+void CsipClient::DescribeVulRiskRelateComponentAsync(const DescribeVulRiskRelateComponentRequest& request, const DescribeVulRiskRelateComponentAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeVulRiskRelateComponentRequest&;
+    using Resp = DescribeVulRiskRelateComponentResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeVulRiskRelateComponent", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CsipClient::DescribeVulRiskRelateComponentOutcomeCallable CsipClient::DescribeVulRiskRelateComponentCallable(const DescribeVulRiskRelateComponentRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeVulRiskRelateComponentOutcome>>();
+    DescribeVulRiskRelateComponentAsync(
+    request,
+    [prom](
+        const CsipClient*,
+        const DescribeVulRiskRelateComponentRequest&,
+        DescribeVulRiskRelateComponentOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CsipClient::DescribeVulRiskRelateHostOutcome CsipClient::DescribeVulRiskRelateHost(const DescribeVulRiskRelateHostRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeVulRiskRelateHost");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeVulRiskRelateHostResponse rsp = DescribeVulRiskRelateHostResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeVulRiskRelateHostOutcome(rsp);
+        else
+            return DescribeVulRiskRelateHostOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeVulRiskRelateHostOutcome(outcome.GetError());
+    }
+}
+
+void CsipClient::DescribeVulRiskRelateHostAsync(const DescribeVulRiskRelateHostRequest& request, const DescribeVulRiskRelateHostAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeVulRiskRelateHostRequest&;
+    using Resp = DescribeVulRiskRelateHostResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeVulRiskRelateHost", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CsipClient::DescribeVulRiskRelateHostOutcomeCallable CsipClient::DescribeVulRiskRelateHostCallable(const DescribeVulRiskRelateHostRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeVulRiskRelateHostOutcome>>();
+    DescribeVulRiskRelateHostAsync(
+    request,
+    [prom](
+        const CsipClient*,
+        const DescribeVulRiskRelateHostRequest&,
+        DescribeVulRiskRelateHostOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CsipClient::DescribeVulScanPeriodicOutcome CsipClient::DescribeVulScanPeriodic(const DescribeVulScanPeriodicRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeVulScanPeriodic");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeVulScanPeriodicResponse rsp = DescribeVulScanPeriodicResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeVulScanPeriodicOutcome(rsp);
+        else
+            return DescribeVulScanPeriodicOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeVulScanPeriodicOutcome(outcome.GetError());
+    }
+}
+
+void CsipClient::DescribeVulScanPeriodicAsync(const DescribeVulScanPeriodicRequest& request, const DescribeVulScanPeriodicAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeVulScanPeriodicRequest&;
+    using Resp = DescribeVulScanPeriodicResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeVulScanPeriodic", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CsipClient::DescribeVulScanPeriodicOutcomeCallable CsipClient::DescribeVulScanPeriodicCallable(const DescribeVulScanPeriodicRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeVulScanPeriodicOutcome>>();
+    DescribeVulScanPeriodicAsync(
+    request,
+    [prom](
+        const CsipClient*,
+        const DescribeVulScanPeriodicRequest&,
+        DescribeVulScanPeriodicOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CsipClient::DescribeVulScanTaskDetailOutcome CsipClient::DescribeVulScanTaskDetail(const DescribeVulScanTaskDetailRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeVulScanTaskDetail");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeVulScanTaskDetailResponse rsp = DescribeVulScanTaskDetailResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeVulScanTaskDetailOutcome(rsp);
+        else
+            return DescribeVulScanTaskDetailOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeVulScanTaskDetailOutcome(outcome.GetError());
+    }
+}
+
+void CsipClient::DescribeVulScanTaskDetailAsync(const DescribeVulScanTaskDetailRequest& request, const DescribeVulScanTaskDetailAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeVulScanTaskDetailRequest&;
+    using Resp = DescribeVulScanTaskDetailResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeVulScanTaskDetail", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CsipClient::DescribeVulScanTaskDetailOutcomeCallable CsipClient::DescribeVulScanTaskDetailCallable(const DescribeVulScanTaskDetailRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeVulScanTaskDetailOutcome>>();
+    DescribeVulScanTaskDetailAsync(
+    request,
+    [prom](
+        const CsipClient*,
+        const DescribeVulScanTaskDetailRequest&,
+        DescribeVulScanTaskDetailOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CsipClient::DescribeVulScanTaskListOutcome CsipClient::DescribeVulScanTaskList(const DescribeVulScanTaskListRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeVulScanTaskList");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeVulScanTaskListResponse rsp = DescribeVulScanTaskListResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeVulScanTaskListOutcome(rsp);
+        else
+            return DescribeVulScanTaskListOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeVulScanTaskListOutcome(outcome.GetError());
+    }
+}
+
+void CsipClient::DescribeVulScanTaskListAsync(const DescribeVulScanTaskListRequest& request, const DescribeVulScanTaskListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeVulScanTaskListRequest&;
+    using Resp = DescribeVulScanTaskListResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeVulScanTaskList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CsipClient::DescribeVulScanTaskListOutcomeCallable CsipClient::DescribeVulScanTaskListCallable(const DescribeVulScanTaskListRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeVulScanTaskListOutcome>>();
+    DescribeVulScanTaskListAsync(
+    request,
+    [prom](
+        const CsipClient*,
+        const DescribeVulScanTaskListRequest&,
+        DescribeVulScanTaskListOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -4782,6 +6082,156 @@ CsipClient::ModifyUebaRuleSwitchOutcomeCallable CsipClient::ModifyUebaRuleSwitch
         const CsipClient*,
         const ModifyUebaRuleSwitchRequest&,
         ModifyUebaRuleSwitchOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CsipClient::ModifyVulScanPeriodicOutcome CsipClient::ModifyVulScanPeriodic(const ModifyVulScanPeriodicRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyVulScanPeriodic");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyVulScanPeriodicResponse rsp = ModifyVulScanPeriodicResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyVulScanPeriodicOutcome(rsp);
+        else
+            return ModifyVulScanPeriodicOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyVulScanPeriodicOutcome(outcome.GetError());
+    }
+}
+
+void CsipClient::ModifyVulScanPeriodicAsync(const ModifyVulScanPeriodicRequest& request, const ModifyVulScanPeriodicAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ModifyVulScanPeriodicRequest&;
+    using Resp = ModifyVulScanPeriodicResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ModifyVulScanPeriodic", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CsipClient::ModifyVulScanPeriodicOutcomeCallable CsipClient::ModifyVulScanPeriodicCallable(const ModifyVulScanPeriodicRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ModifyVulScanPeriodicOutcome>>();
+    ModifyVulScanPeriodicAsync(
+    request,
+    [prom](
+        const CsipClient*,
+        const ModifyVulScanPeriodicRequest&,
+        ModifyVulScanPeriodicOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CsipClient::ModifyVulWhitelistConfigOutcome CsipClient::ModifyVulWhitelistConfig(const ModifyVulWhitelistConfigRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyVulWhitelistConfig");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyVulWhitelistConfigResponse rsp = ModifyVulWhitelistConfigResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyVulWhitelistConfigOutcome(rsp);
+        else
+            return ModifyVulWhitelistConfigOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyVulWhitelistConfigOutcome(outcome.GetError());
+    }
+}
+
+void CsipClient::ModifyVulWhitelistConfigAsync(const ModifyVulWhitelistConfigRequest& request, const ModifyVulWhitelistConfigAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ModifyVulWhitelistConfigRequest&;
+    using Resp = ModifyVulWhitelistConfigResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ModifyVulWhitelistConfig", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CsipClient::ModifyVulWhitelistConfigOutcomeCallable CsipClient::ModifyVulWhitelistConfigCallable(const ModifyVulWhitelistConfigRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ModifyVulWhitelistConfigOutcome>>();
+    ModifyVulWhitelistConfigAsync(
+    request,
+    [prom](
+        const CsipClient*,
+        const ModifyVulWhitelistConfigRequest&,
+        ModifyVulWhitelistConfigOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+CsipClient::ModifyVulWhitelistSwitchOutcome CsipClient::ModifyVulWhitelistSwitch(const ModifyVulWhitelistSwitchRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyVulWhitelistSwitch");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyVulWhitelistSwitchResponse rsp = ModifyVulWhitelistSwitchResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyVulWhitelistSwitchOutcome(rsp);
+        else
+            return ModifyVulWhitelistSwitchOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyVulWhitelistSwitchOutcome(outcome.GetError());
+    }
+}
+
+void CsipClient::ModifyVulWhitelistSwitchAsync(const ModifyVulWhitelistSwitchRequest& request, const ModifyVulWhitelistSwitchAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ModifyVulWhitelistSwitchRequest&;
+    using Resp = ModifyVulWhitelistSwitchResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ModifyVulWhitelistSwitch", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+CsipClient::ModifyVulWhitelistSwitchOutcomeCallable CsipClient::ModifyVulWhitelistSwitchCallable(const ModifyVulWhitelistSwitchRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ModifyVulWhitelistSwitchOutcome>>();
+    ModifyVulWhitelistSwitchAsync(
+    request,
+    [prom](
+        const CsipClient*,
+        const ModifyVulWhitelistSwitchRequest&,
+        ModifyVulWhitelistSwitchOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {

@@ -49,8 +49,6 @@
 #include <tencentcloud/iai/v20200303/model/DetectFaceAttributesResponse.h>
 #include <tencentcloud/iai/v20200303/model/DetectFaceSimilarityRequest.h>
 #include <tencentcloud/iai/v20200303/model/DetectFaceSimilarityResponse.h>
-#include <tencentcloud/iai/v20200303/model/DetectLiveFaceRequest.h>
-#include <tencentcloud/iai/v20200303/model/DetectLiveFaceResponse.h>
 #include <tencentcloud/iai/v20200303/model/DetectLiveFaceAccurateRequest.h>
 #include <tencentcloud/iai/v20200303/model/DetectLiveFaceAccurateResponse.h>
 #include <tencentcloud/iai/v20200303/model/GetGroupInfoRequest.h>
@@ -134,9 +132,6 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DetectFaceSimilarityResponse> DetectFaceSimilarityOutcome;
                 typedef std::future<DetectFaceSimilarityOutcome> DetectFaceSimilarityOutcomeCallable;
                 typedef std::function<void(const IaiClient*, const Model::DetectFaceSimilarityRequest&, DetectFaceSimilarityOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DetectFaceSimilarityAsyncHandler;
-                typedef Outcome<Core::Error, Model::DetectLiveFaceResponse> DetectLiveFaceOutcome;
-                typedef std::future<DetectLiveFaceOutcome> DetectLiveFaceOutcomeCallable;
-                typedef std::function<void(const IaiClient*, const Model::DetectLiveFaceRequest&, DetectLiveFaceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DetectLiveFaceAsyncHandler;
                 typedef Outcome<Core::Error, Model::DetectLiveFaceAccurateResponse> DetectLiveFaceAccurateOutcome;
                 typedef std::future<DetectLiveFaceAccurateOutcome> DetectLiveFaceAccurateOutcomeCallable;
                 typedef std::function<void(const IaiClient*, const Model::DetectLiveFaceAccurateRequest&, DetectLiveFaceAccurateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DetectLiveFaceAccurateAsyncHandler;
@@ -347,34 +342,18 @@ Use this API for corresponding face detection and attribute analysis.
                 DetectFaceAttributesOutcomeCallable DetectFaceAttributesCallable(const Model::DetectFaceAttributesRequest& request);
 
                 /**
-                 *Compare the faces in the two pictures for similarity and return the face similarity score. If you need to determine "whether this person is someone", that is, to verify whether the person in a picture is someone with a known identity, such as a common face login scenario, it is recommended to use [VerifyFace](`https://www.tencentcloud.com/zh/document/product/1059/36972`) or [VerifyPerson](`https://www.tencentcloud.com/zh/document/product/1059/36971`) inferface. 
-Please use the V3 version for the signature method in the public parameters, that is, configure the SignatureMethod parameter to TC3-HMAC-SHA256
+                 *This API is used to perform similarity comparison between human faces in two images and return the facial similarity score.
+
+If you need to judge whether a person is a specific individual, that is, to verify whether a person in an image is a known identity, for example in common log in scenarios such as face verification, we recommend using the face verification (https://www.tencentcloud.com/document/product/867/44983?from_cn_redirect=1) or person verification (https://www.tencentcloud.com/document/product/867/44982?from_cn_redirect=1) api.
+
+>     
+- Please use the V3 version for the signature method in the public parameters. In other words, set the SignatureMethod parameter to TC3-HMAC-SHA256.
                  * @param req DetectFaceSimilarityRequest
                  * @return DetectFaceSimilarityOutcome
                  */
                 DetectFaceSimilarityOutcome DetectFaceSimilarity(const Model::DetectFaceSimilarityRequest &request);
                 void DetectFaceSimilarityAsync(const Model::DetectFaceSimilarityRequest& request, const DetectFaceSimilarityAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DetectFaceSimilarityOutcomeCallable DetectFaceSimilarityCallable(const Model::DetectFaceSimilarityRequest& request);
-
-                /**
-                 *This API is used to detect the liveness of a face in a static image uploaded by a user. Compared with dynamic liveness detection, static liveness detection does not require moving lips, shaking head, or blinking for recognition.
-
-Image-based liveness detection is suitable for scenarios where the image is a selfie or the requirement for attack defense is not high. If you have a higher security requirement for liveness detection, please use [FaceID](https://intl.cloud.tencent.com/product/faceid?from_cn_redirect=1).
-
->     
-- The aspect ratio of the image should be close to 3:4 (width:height); otherwise, the score returned for the image will be meaningless. This API is suitable for selfie scenarios, and the score returned in other scenarios will be meaningless.
-
->
-- During the process, please directly face the camera and keep a suitable distance to completely display your face in the recognition frame. During the recognition, keep your device still and fully show your face. You are advised to perform the detection in an environment with appropriate light and without filters.
-
->     
-- Please use the signature algorithm v3 to calculate the signature in the common parameters, that is, set the parameter `SignatureMethod` to `TC3-HMAC-SHA256`.
-                 * @param req DetectLiveFaceRequest
-                 * @return DetectLiveFaceOutcome
-                 */
-                DetectLiveFaceOutcome DetectLiveFace(const Model::DetectLiveFaceRequest &request);
-                void DetectLiveFaceAsync(const Model::DetectLiveFaceRequest& request, const DetectLiveFaceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                DetectLiveFaceOutcomeCallable DetectLiveFaceCallable(const Model::DetectLiveFaceRequest& request);
 
                 /**
                  *This API is used to detect the liveness of faces in images uploaded by users and determine whether these images are photographed.

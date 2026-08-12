@@ -25,12 +25,16 @@
 #include <tencentcloud/core/AsyncCallerContext.h>
 #include <tencentcloud/csip/v20221121/model/AddNewBindRoleUserRequest.h>
 #include <tencentcloud/csip/v20221121/model/AddNewBindRoleUserResponse.h>
+#include <tencentcloud/csip/v20221121/model/AddVulWhitelistRequest.h>
+#include <tencentcloud/csip/v20221121/model/AddVulWhitelistResponse.h>
 #include <tencentcloud/csip/v20221121/model/CreateAccessKeyCheckTaskRequest.h>
 #include <tencentcloud/csip/v20221121/model/CreateAccessKeyCheckTaskResponse.h>
 #include <tencentcloud/csip/v20221121/model/CreateAccessKeySyncTaskRequest.h>
 #include <tencentcloud/csip/v20221121/model/CreateAccessKeySyncTaskResponse.h>
 #include <tencentcloud/csip/v20221121/model/CreateDomainAndIpRequest.h>
 #include <tencentcloud/csip/v20221121/model/CreateDomainAndIpResponse.h>
+#include <tencentcloud/csip/v20221121/model/CreateHostVulExportJobRequest.h>
+#include <tencentcloud/csip/v20221121/model/CreateHostVulExportJobResponse.h>
 #include <tencentcloud/csip/v20221121/model/CreateIaCAccessTokenRequest.h>
 #include <tencentcloud/csip/v20221121/model/CreateIaCAccessTokenResponse.h>
 #include <tencentcloud/csip/v20221121/model/CreateIaCFileExportJobRequest.h>
@@ -41,6 +45,16 @@
 #include <tencentcloud/csip/v20221121/model/CreateRiskCenterScanTaskResponse.h>
 #include <tencentcloud/csip/v20221121/model/CreateSkillScanRequest.h>
 #include <tencentcloud/csip/v20221121/model/CreateSkillScanResponse.h>
+#include <tencentcloud/csip/v20221121/model/CreateVulFixRetryTaskRequest.h>
+#include <tencentcloud/csip/v20221121/model/CreateVulFixRetryTaskResponse.h>
+#include <tencentcloud/csip/v20221121/model/CreateVulFixTaskRequest.h>
+#include <tencentcloud/csip/v20221121/model/CreateVulFixTaskResponse.h>
+#include <tencentcloud/csip/v20221121/model/CreateVulFixedExportJobRequest.h>
+#include <tencentcloud/csip/v20221121/model/CreateVulFixedExportJobResponse.h>
+#include <tencentcloud/csip/v20221121/model/CreateVulReScanRequest.h>
+#include <tencentcloud/csip/v20221121/model/CreateVulReScanResponse.h>
+#include <tencentcloud/csip/v20221121/model/CreateVulScanManualRequest.h>
+#include <tencentcloud/csip/v20221121/model/CreateVulScanManualResponse.h>
 #include <tencentcloud/csip/v20221121/model/DeleteDomainAndIpRequest.h>
 #include <tencentcloud/csip/v20221121/model/DeleteDomainAndIpResponse.h>
 #include <tencentcloud/csip/v20221121/model/DeleteIaCAccessTokenRequest.h>
@@ -49,6 +63,8 @@
 #include <tencentcloud/csip/v20221121/model/DeleteIaCFileResponse.h>
 #include <tencentcloud/csip/v20221121/model/DeleteRiskScanTaskRequest.h>
 #include <tencentcloud/csip/v20221121/model/DeleteRiskScanTaskResponse.h>
+#include <tencentcloud/csip/v20221121/model/DeleteVulWhitelistRequest.h>
+#include <tencentcloud/csip/v20221121/model/DeleteVulWhitelistResponse.h>
 #include <tencentcloud/csip/v20221121/model/DescribeAIAgentAssetListRequest.h>
 #include <tencentcloud/csip/v20221121/model/DescribeAIAgentAssetListResponse.h>
 #include <tencentcloud/csip/v20221121/model/DescribeAKAnalysisDetailRequest.h>
@@ -111,6 +127,12 @@
 #include <tencentcloud/csip/v20221121/model/DescribeGatewayAssetsResponse.h>
 #include <tencentcloud/csip/v20221121/model/DescribeHighBaseLineRiskListRequest.h>
 #include <tencentcloud/csip/v20221121/model/DescribeHighBaseLineRiskListResponse.h>
+#include <tencentcloud/csip/v20221121/model/DescribeHostVulItemVPRInfoRequest.h>
+#include <tencentcloud/csip/v20221121/model/DescribeHostVulItemVPRInfoResponse.h>
+#include <tencentcloud/csip/v20221121/model/DescribeHostVulOverviewRequest.h>
+#include <tencentcloud/csip/v20221121/model/DescribeHostVulOverviewResponse.h>
+#include <tencentcloud/csip/v20221121/model/DescribeHostVulRiskListRequest.h>
+#include <tencentcloud/csip/v20221121/model/DescribeHostVulRiskListResponse.h>
 #include <tencentcloud/csip/v20221121/model/DescribeIaCFileListRequest.h>
 #include <tencentcloud/csip/v20221121/model/DescribeIaCFileListResponse.h>
 #include <tencentcloud/csip/v20221121/model/DescribeIaCFileOverviewRequest.h>
@@ -199,8 +221,38 @@
 #include <tencentcloud/csip/v20221121/model/DescribeVULRiskDetailResponse.h>
 #include <tencentcloud/csip/v20221121/model/DescribeVpcAssetsRequest.h>
 #include <tencentcloud/csip/v20221121/model/DescribeVpcAssetsResponse.h>
+#include <tencentcloud/csip/v20221121/model/DescribeVulComponentRelateHostRequest.h>
+#include <tencentcloud/csip/v20221121/model/DescribeVulComponentRelateHostResponse.h>
+#include <tencentcloud/csip/v20221121/model/DescribeVulFixTaskDetailRequest.h>
+#include <tencentcloud/csip/v20221121/model/DescribeVulFixTaskDetailResponse.h>
+#include <tencentcloud/csip/v20221121/model/DescribeVulFixTaskListRequest.h>
+#include <tencentcloud/csip/v20221121/model/DescribeVulFixTaskListResponse.h>
+#include <tencentcloud/csip/v20221121/model/DescribeVulFixableMachineListRequest.h>
+#include <tencentcloud/csip/v20221121/model/DescribeVulFixableMachineListResponse.h>
+#include <tencentcloud/csip/v20221121/model/DescribeVulFixedHostDetailRequest.h>
+#include <tencentcloud/csip/v20221121/model/DescribeVulFixedHostDetailResponse.h>
+#include <tencentcloud/csip/v20221121/model/DescribeVulFixedListRequest.h>
+#include <tencentcloud/csip/v20221121/model/DescribeVulFixedListResponse.h>
+#include <tencentcloud/csip/v20221121/model/DescribeVulHostRelateComponentRequest.h>
+#include <tencentcloud/csip/v20221121/model/DescribeVulHostRelateComponentResponse.h>
+#include <tencentcloud/csip/v20221121/model/DescribeVulIgnoreRuleListRequest.h>
+#include <tencentcloud/csip/v20221121/model/DescribeVulIgnoreRuleListResponse.h>
+#include <tencentcloud/csip/v20221121/model/DescribeVulItemListRequest.h>
+#include <tencentcloud/csip/v20221121/model/DescribeVulItemListResponse.h>
+#include <tencentcloud/csip/v20221121/model/DescribeVulLabelListRequest.h>
+#include <tencentcloud/csip/v20221121/model/DescribeVulLabelListResponse.h>
 #include <tencentcloud/csip/v20221121/model/DescribeVulRiskListRequest.h>
 #include <tencentcloud/csip/v20221121/model/DescribeVulRiskListResponse.h>
+#include <tencentcloud/csip/v20221121/model/DescribeVulRiskRelateComponentRequest.h>
+#include <tencentcloud/csip/v20221121/model/DescribeVulRiskRelateComponentResponse.h>
+#include <tencentcloud/csip/v20221121/model/DescribeVulRiskRelateHostRequest.h>
+#include <tencentcloud/csip/v20221121/model/DescribeVulRiskRelateHostResponse.h>
+#include <tencentcloud/csip/v20221121/model/DescribeVulScanPeriodicRequest.h>
+#include <tencentcloud/csip/v20221121/model/DescribeVulScanPeriodicResponse.h>
+#include <tencentcloud/csip/v20221121/model/DescribeVulScanTaskDetailRequest.h>
+#include <tencentcloud/csip/v20221121/model/DescribeVulScanTaskDetailResponse.h>
+#include <tencentcloud/csip/v20221121/model/DescribeVulScanTaskListRequest.h>
+#include <tencentcloud/csip/v20221121/model/DescribeVulScanTaskListResponse.h>
 #include <tencentcloud/csip/v20221121/model/DescribeVulViewVulRiskListRequest.h>
 #include <tencentcloud/csip/v20221121/model/DescribeVulViewVulRiskListResponse.h>
 #include <tencentcloud/csip/v20221121/model/ModifyIaCTokenPeriodRequest.h>
@@ -213,6 +265,12 @@
 #include <tencentcloud/csip/v20221121/model/ModifyRiskCenterScanTaskResponse.h>
 #include <tencentcloud/csip/v20221121/model/ModifyUebaRuleSwitchRequest.h>
 #include <tencentcloud/csip/v20221121/model/ModifyUebaRuleSwitchResponse.h>
+#include <tencentcloud/csip/v20221121/model/ModifyVulScanPeriodicRequest.h>
+#include <tencentcloud/csip/v20221121/model/ModifyVulScanPeriodicResponse.h>
+#include <tencentcloud/csip/v20221121/model/ModifyVulWhitelistConfigRequest.h>
+#include <tencentcloud/csip/v20221121/model/ModifyVulWhitelistConfigResponse.h>
+#include <tencentcloud/csip/v20221121/model/ModifyVulWhitelistSwitchRequest.h>
+#include <tencentcloud/csip/v20221121/model/ModifyVulWhitelistSwitchResponse.h>
 #include <tencentcloud/csip/v20221121/model/StopRiskCenterTaskRequest.h>
 #include <tencentcloud/csip/v20221121/model/StopRiskCenterTaskResponse.h>
 #include <tencentcloud/csip/v20221121/model/UpdateAccessKeyAlarmStatusRequest.h>
@@ -238,6 +296,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::AddNewBindRoleUserResponse> AddNewBindRoleUserOutcome;
                 typedef std::future<AddNewBindRoleUserOutcome> AddNewBindRoleUserOutcomeCallable;
                 typedef std::function<void(const CsipClient*, const Model::AddNewBindRoleUserRequest&, AddNewBindRoleUserOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AddNewBindRoleUserAsyncHandler;
+                typedef Outcome<Core::Error, Model::AddVulWhitelistResponse> AddVulWhitelistOutcome;
+                typedef std::future<AddVulWhitelistOutcome> AddVulWhitelistOutcomeCallable;
+                typedef std::function<void(const CsipClient*, const Model::AddVulWhitelistRequest&, AddVulWhitelistOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AddVulWhitelistAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateAccessKeyCheckTaskResponse> CreateAccessKeyCheckTaskOutcome;
                 typedef std::future<CreateAccessKeyCheckTaskOutcome> CreateAccessKeyCheckTaskOutcomeCallable;
                 typedef std::function<void(const CsipClient*, const Model::CreateAccessKeyCheckTaskRequest&, CreateAccessKeyCheckTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateAccessKeyCheckTaskAsyncHandler;
@@ -247,6 +308,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateDomainAndIpResponse> CreateDomainAndIpOutcome;
                 typedef std::future<CreateDomainAndIpOutcome> CreateDomainAndIpOutcomeCallable;
                 typedef std::function<void(const CsipClient*, const Model::CreateDomainAndIpRequest&, CreateDomainAndIpOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateDomainAndIpAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateHostVulExportJobResponse> CreateHostVulExportJobOutcome;
+                typedef std::future<CreateHostVulExportJobOutcome> CreateHostVulExportJobOutcomeCallable;
+                typedef std::function<void(const CsipClient*, const Model::CreateHostVulExportJobRequest&, CreateHostVulExportJobOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateHostVulExportJobAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateIaCAccessTokenResponse> CreateIaCAccessTokenOutcome;
                 typedef std::future<CreateIaCAccessTokenOutcome> CreateIaCAccessTokenOutcomeCallable;
                 typedef std::function<void(const CsipClient*, const Model::CreateIaCAccessTokenRequest&, CreateIaCAccessTokenOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateIaCAccessTokenAsyncHandler;
@@ -262,6 +326,21 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateSkillScanResponse> CreateSkillScanOutcome;
                 typedef std::future<CreateSkillScanOutcome> CreateSkillScanOutcomeCallable;
                 typedef std::function<void(const CsipClient*, const Model::CreateSkillScanRequest&, CreateSkillScanOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateSkillScanAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateVulFixRetryTaskResponse> CreateVulFixRetryTaskOutcome;
+                typedef std::future<CreateVulFixRetryTaskOutcome> CreateVulFixRetryTaskOutcomeCallable;
+                typedef std::function<void(const CsipClient*, const Model::CreateVulFixRetryTaskRequest&, CreateVulFixRetryTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateVulFixRetryTaskAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateVulFixTaskResponse> CreateVulFixTaskOutcome;
+                typedef std::future<CreateVulFixTaskOutcome> CreateVulFixTaskOutcomeCallable;
+                typedef std::function<void(const CsipClient*, const Model::CreateVulFixTaskRequest&, CreateVulFixTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateVulFixTaskAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateVulFixedExportJobResponse> CreateVulFixedExportJobOutcome;
+                typedef std::future<CreateVulFixedExportJobOutcome> CreateVulFixedExportJobOutcomeCallable;
+                typedef std::function<void(const CsipClient*, const Model::CreateVulFixedExportJobRequest&, CreateVulFixedExportJobOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateVulFixedExportJobAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateVulReScanResponse> CreateVulReScanOutcome;
+                typedef std::future<CreateVulReScanOutcome> CreateVulReScanOutcomeCallable;
+                typedef std::function<void(const CsipClient*, const Model::CreateVulReScanRequest&, CreateVulReScanOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateVulReScanAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateVulScanManualResponse> CreateVulScanManualOutcome;
+                typedef std::future<CreateVulScanManualOutcome> CreateVulScanManualOutcomeCallable;
+                typedef std::function<void(const CsipClient*, const Model::CreateVulScanManualRequest&, CreateVulScanManualOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateVulScanManualAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeleteDomainAndIpResponse> DeleteDomainAndIpOutcome;
                 typedef std::future<DeleteDomainAndIpOutcome> DeleteDomainAndIpOutcomeCallable;
                 typedef std::function<void(const CsipClient*, const Model::DeleteDomainAndIpRequest&, DeleteDomainAndIpOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteDomainAndIpAsyncHandler;
@@ -274,6 +353,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DeleteRiskScanTaskResponse> DeleteRiskScanTaskOutcome;
                 typedef std::future<DeleteRiskScanTaskOutcome> DeleteRiskScanTaskOutcomeCallable;
                 typedef std::function<void(const CsipClient*, const Model::DeleteRiskScanTaskRequest&, DeleteRiskScanTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteRiskScanTaskAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteVulWhitelistResponse> DeleteVulWhitelistOutcome;
+                typedef std::future<DeleteVulWhitelistOutcome> DeleteVulWhitelistOutcomeCallable;
+                typedef std::function<void(const CsipClient*, const Model::DeleteVulWhitelistRequest&, DeleteVulWhitelistOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteVulWhitelistAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeAIAgentAssetListResponse> DescribeAIAgentAssetListOutcome;
                 typedef std::future<DescribeAIAgentAssetListOutcome> DescribeAIAgentAssetListOutcomeCallable;
                 typedef std::function<void(const CsipClient*, const Model::DescribeAIAgentAssetListRequest&, DescribeAIAgentAssetListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAIAgentAssetListAsyncHandler;
@@ -367,6 +449,15 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeHighBaseLineRiskListResponse> DescribeHighBaseLineRiskListOutcome;
                 typedef std::future<DescribeHighBaseLineRiskListOutcome> DescribeHighBaseLineRiskListOutcomeCallable;
                 typedef std::function<void(const CsipClient*, const Model::DescribeHighBaseLineRiskListRequest&, DescribeHighBaseLineRiskListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeHighBaseLineRiskListAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeHostVulItemVPRInfoResponse> DescribeHostVulItemVPRInfoOutcome;
+                typedef std::future<DescribeHostVulItemVPRInfoOutcome> DescribeHostVulItemVPRInfoOutcomeCallable;
+                typedef std::function<void(const CsipClient*, const Model::DescribeHostVulItemVPRInfoRequest&, DescribeHostVulItemVPRInfoOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeHostVulItemVPRInfoAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeHostVulOverviewResponse> DescribeHostVulOverviewOutcome;
+                typedef std::future<DescribeHostVulOverviewOutcome> DescribeHostVulOverviewOutcomeCallable;
+                typedef std::function<void(const CsipClient*, const Model::DescribeHostVulOverviewRequest&, DescribeHostVulOverviewOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeHostVulOverviewAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeHostVulRiskListResponse> DescribeHostVulRiskListOutcome;
+                typedef std::future<DescribeHostVulRiskListOutcome> DescribeHostVulRiskListOutcomeCallable;
+                typedef std::function<void(const CsipClient*, const Model::DescribeHostVulRiskListRequest&, DescribeHostVulRiskListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeHostVulRiskListAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeIaCFileListResponse> DescribeIaCFileListOutcome;
                 typedef std::future<DescribeIaCFileListOutcome> DescribeIaCFileListOutcomeCallable;
                 typedef std::function<void(const CsipClient*, const Model::DescribeIaCFileListRequest&, DescribeIaCFileListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeIaCFileListAsyncHandler;
@@ -499,9 +590,54 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeVpcAssetsResponse> DescribeVpcAssetsOutcome;
                 typedef std::future<DescribeVpcAssetsOutcome> DescribeVpcAssetsOutcomeCallable;
                 typedef std::function<void(const CsipClient*, const Model::DescribeVpcAssetsRequest&, DescribeVpcAssetsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeVpcAssetsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeVulComponentRelateHostResponse> DescribeVulComponentRelateHostOutcome;
+                typedef std::future<DescribeVulComponentRelateHostOutcome> DescribeVulComponentRelateHostOutcomeCallable;
+                typedef std::function<void(const CsipClient*, const Model::DescribeVulComponentRelateHostRequest&, DescribeVulComponentRelateHostOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeVulComponentRelateHostAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeVulFixTaskDetailResponse> DescribeVulFixTaskDetailOutcome;
+                typedef std::future<DescribeVulFixTaskDetailOutcome> DescribeVulFixTaskDetailOutcomeCallable;
+                typedef std::function<void(const CsipClient*, const Model::DescribeVulFixTaskDetailRequest&, DescribeVulFixTaskDetailOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeVulFixTaskDetailAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeVulFixTaskListResponse> DescribeVulFixTaskListOutcome;
+                typedef std::future<DescribeVulFixTaskListOutcome> DescribeVulFixTaskListOutcomeCallable;
+                typedef std::function<void(const CsipClient*, const Model::DescribeVulFixTaskListRequest&, DescribeVulFixTaskListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeVulFixTaskListAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeVulFixableMachineListResponse> DescribeVulFixableMachineListOutcome;
+                typedef std::future<DescribeVulFixableMachineListOutcome> DescribeVulFixableMachineListOutcomeCallable;
+                typedef std::function<void(const CsipClient*, const Model::DescribeVulFixableMachineListRequest&, DescribeVulFixableMachineListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeVulFixableMachineListAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeVulFixedHostDetailResponse> DescribeVulFixedHostDetailOutcome;
+                typedef std::future<DescribeVulFixedHostDetailOutcome> DescribeVulFixedHostDetailOutcomeCallable;
+                typedef std::function<void(const CsipClient*, const Model::DescribeVulFixedHostDetailRequest&, DescribeVulFixedHostDetailOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeVulFixedHostDetailAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeVulFixedListResponse> DescribeVulFixedListOutcome;
+                typedef std::future<DescribeVulFixedListOutcome> DescribeVulFixedListOutcomeCallable;
+                typedef std::function<void(const CsipClient*, const Model::DescribeVulFixedListRequest&, DescribeVulFixedListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeVulFixedListAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeVulHostRelateComponentResponse> DescribeVulHostRelateComponentOutcome;
+                typedef std::future<DescribeVulHostRelateComponentOutcome> DescribeVulHostRelateComponentOutcomeCallable;
+                typedef std::function<void(const CsipClient*, const Model::DescribeVulHostRelateComponentRequest&, DescribeVulHostRelateComponentOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeVulHostRelateComponentAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeVulIgnoreRuleListResponse> DescribeVulIgnoreRuleListOutcome;
+                typedef std::future<DescribeVulIgnoreRuleListOutcome> DescribeVulIgnoreRuleListOutcomeCallable;
+                typedef std::function<void(const CsipClient*, const Model::DescribeVulIgnoreRuleListRequest&, DescribeVulIgnoreRuleListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeVulIgnoreRuleListAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeVulItemListResponse> DescribeVulItemListOutcome;
+                typedef std::future<DescribeVulItemListOutcome> DescribeVulItemListOutcomeCallable;
+                typedef std::function<void(const CsipClient*, const Model::DescribeVulItemListRequest&, DescribeVulItemListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeVulItemListAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeVulLabelListResponse> DescribeVulLabelListOutcome;
+                typedef std::future<DescribeVulLabelListOutcome> DescribeVulLabelListOutcomeCallable;
+                typedef std::function<void(const CsipClient*, const Model::DescribeVulLabelListRequest&, DescribeVulLabelListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeVulLabelListAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeVulRiskListResponse> DescribeVulRiskListOutcome;
                 typedef std::future<DescribeVulRiskListOutcome> DescribeVulRiskListOutcomeCallable;
                 typedef std::function<void(const CsipClient*, const Model::DescribeVulRiskListRequest&, DescribeVulRiskListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeVulRiskListAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeVulRiskRelateComponentResponse> DescribeVulRiskRelateComponentOutcome;
+                typedef std::future<DescribeVulRiskRelateComponentOutcome> DescribeVulRiskRelateComponentOutcomeCallable;
+                typedef std::function<void(const CsipClient*, const Model::DescribeVulRiskRelateComponentRequest&, DescribeVulRiskRelateComponentOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeVulRiskRelateComponentAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeVulRiskRelateHostResponse> DescribeVulRiskRelateHostOutcome;
+                typedef std::future<DescribeVulRiskRelateHostOutcome> DescribeVulRiskRelateHostOutcomeCallable;
+                typedef std::function<void(const CsipClient*, const Model::DescribeVulRiskRelateHostRequest&, DescribeVulRiskRelateHostOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeVulRiskRelateHostAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeVulScanPeriodicResponse> DescribeVulScanPeriodicOutcome;
+                typedef std::future<DescribeVulScanPeriodicOutcome> DescribeVulScanPeriodicOutcomeCallable;
+                typedef std::function<void(const CsipClient*, const Model::DescribeVulScanPeriodicRequest&, DescribeVulScanPeriodicOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeVulScanPeriodicAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeVulScanTaskDetailResponse> DescribeVulScanTaskDetailOutcome;
+                typedef std::future<DescribeVulScanTaskDetailOutcome> DescribeVulScanTaskDetailOutcomeCallable;
+                typedef std::function<void(const CsipClient*, const Model::DescribeVulScanTaskDetailRequest&, DescribeVulScanTaskDetailOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeVulScanTaskDetailAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeVulScanTaskListResponse> DescribeVulScanTaskListOutcome;
+                typedef std::future<DescribeVulScanTaskListOutcome> DescribeVulScanTaskListOutcomeCallable;
+                typedef std::function<void(const CsipClient*, const Model::DescribeVulScanTaskListRequest&, DescribeVulScanTaskListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeVulScanTaskListAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeVulViewVulRiskListResponse> DescribeVulViewVulRiskListOutcome;
                 typedef std::future<DescribeVulViewVulRiskListOutcome> DescribeVulViewVulRiskListOutcomeCallable;
                 typedef std::function<void(const CsipClient*, const Model::DescribeVulViewVulRiskListRequest&, DescribeVulViewVulRiskListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeVulViewVulRiskListAsyncHandler;
@@ -520,6 +656,15 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyUebaRuleSwitchResponse> ModifyUebaRuleSwitchOutcome;
                 typedef std::future<ModifyUebaRuleSwitchOutcome> ModifyUebaRuleSwitchOutcomeCallable;
                 typedef std::function<void(const CsipClient*, const Model::ModifyUebaRuleSwitchRequest&, ModifyUebaRuleSwitchOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyUebaRuleSwitchAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyVulScanPeriodicResponse> ModifyVulScanPeriodicOutcome;
+                typedef std::future<ModifyVulScanPeriodicOutcome> ModifyVulScanPeriodicOutcomeCallable;
+                typedef std::function<void(const CsipClient*, const Model::ModifyVulScanPeriodicRequest&, ModifyVulScanPeriodicOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyVulScanPeriodicAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyVulWhitelistConfigResponse> ModifyVulWhitelistConfigOutcome;
+                typedef std::future<ModifyVulWhitelistConfigOutcome> ModifyVulWhitelistConfigOutcomeCallable;
+                typedef std::function<void(const CsipClient*, const Model::ModifyVulWhitelistConfigRequest&, ModifyVulWhitelistConfigOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyVulWhitelistConfigAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyVulWhitelistSwitchResponse> ModifyVulWhitelistSwitchOutcome;
+                typedef std::future<ModifyVulWhitelistSwitchOutcome> ModifyVulWhitelistSwitchOutcomeCallable;
+                typedef std::function<void(const CsipClient*, const Model::ModifyVulWhitelistSwitchRequest&, ModifyVulWhitelistSwitchOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyVulWhitelistSwitchAsyncHandler;
                 typedef Outcome<Core::Error, Model::StopRiskCenterTaskResponse> StopRiskCenterTaskOutcome;
                 typedef std::future<StopRiskCenterTaskOutcome> StopRiskCenterTaskOutcomeCallable;
                 typedef std::function<void(const CsipClient*, const Model::StopRiskCenterTaskRequest&, StopRiskCenterTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> StopRiskCenterTaskAsyncHandler;
@@ -543,6 +688,15 @@ namespace TencentCloud
                 AddNewBindRoleUserOutcome AddNewBindRoleUser(const Model::AddNewBindRoleUserRequest &request);
                 void AddNewBindRoleUserAsync(const Model::AddNewBindRoleUserRequest& request, const AddNewBindRoleUserAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 AddNewBindRoleUserOutcomeCallable AddNewBindRoleUserCallable(const Model::AddNewBindRoleUserRequest& request);
+
+                /**
+                 *Add a vulnerability allowlist
+                 * @param req AddVulWhitelistRequest
+                 * @return AddVulWhitelistOutcome
+                 */
+                AddVulWhitelistOutcome AddVulWhitelist(const Model::AddVulWhitelistRequest &request);
+                void AddVulWhitelistAsync(const Model::AddVulWhitelistRequest& request, const AddVulWhitelistAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                AddVulWhitelistOutcomeCallable AddVulWhitelistCallable(const Model::AddVulWhitelistRequest& request);
 
                 /**
                  *Detect AK async task.
@@ -570,6 +724,15 @@ namespace TencentCloud
                 CreateDomainAndIpOutcome CreateDomainAndIp(const Model::CreateDomainAndIpRequest &request);
                 void CreateDomainAndIpAsync(const Model::CreateDomainAndIpRequest& request, const CreateDomainAndIpAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreateDomainAndIpOutcomeCallable CreateDomainAndIpCallable(const Model::CreateDomainAndIpRequest& request);
+
+                /**
+                 *This API is used to create a host vulnerability table export task.
+                 * @param req CreateHostVulExportJobRequest
+                 * @return CreateHostVulExportJobOutcome
+                 */
+                CreateHostVulExportJobOutcome CreateHostVulExportJob(const Model::CreateHostVulExportJobRequest &request);
+                void CreateHostVulExportJobAsync(const Model::CreateHostVulExportJobRequest& request, const CreateHostVulExportJobAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateHostVulExportJobOutcomeCallable CreateHostVulExportJobCallable(const Model::CreateHostVulExportJobRequest& request);
 
                 /**
                  *Create an IaC detection integration Token
@@ -617,6 +780,51 @@ namespace TencentCloud
                 CreateSkillScanOutcomeCallable CreateSkillScanCallable(const Model::CreateSkillScanRequest& request);
 
                 /**
+                 *Retry the vulnerability repair task that failed to fix, and redispatch the repair instruction only for the hosts of the original task that failed to fix. Retry is allowed only when the task status is partially or totally failed to fix.
+                 * @param req CreateVulFixRetryTaskRequest
+                 * @return CreateVulFixRetryTaskOutcome
+                 */
+                CreateVulFixRetryTaskOutcome CreateVulFixRetryTask(const Model::CreateVulFixRetryTaskRequest &request);
+                void CreateVulFixRetryTaskAsync(const Model::CreateVulFixRetryTaskRequest& request, const CreateVulFixRetryTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateVulFixRetryTaskOutcomeCallable CreateVulFixRetryTaskCallable(const Model::CreateVulFixRetryTaskRequest& request);
+
+                /**
+                 *Users manually submit vulnerability repair tasks, specify the vulnerabilities and target hosts that need to be repaired, and the system creates fixing tasks and dispatches execution. It supports options such as specifying the repair timeout period and whether to create a snapshot. The FixItems array is used to precisely control which hosts each vulnerability or KB patch repairs.
+                 * @param req CreateVulFixTaskRequest
+                 * @return CreateVulFixTaskOutcome
+                 */
+                CreateVulFixTaskOutcome CreateVulFixTask(const Model::CreateVulFixTaskRequest &request);
+                void CreateVulFixTaskAsync(const Model::CreateVulFixTaskRequest& request, const CreateVulFixTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateVulFixTaskOutcomeCallable CreateVulFixTaskCallable(const Model::CreateVulFixTaskRequest& request);
+
+                /**
+                 *Create an export task for the list of fixed vulnerabilities. It supports the same filter criteria as DescribeVulFixedList. The export is implemented via an asynchronous task. After a JobID is returned, the frontend polls to query the export task status. The export fields include vulnerability ID, vulnerability name, vulnerability level, VPR rating, vulnerability type, CVE ID, host name, instance ID, associated component & path, and repair time.
+                 * @param req CreateVulFixedExportJobRequest
+                 * @return CreateVulFixedExportJobOutcome
+                 */
+                CreateVulFixedExportJobOutcome CreateVulFixedExportJob(const Model::CreateVulFixedExportJobRequest &request);
+                void CreateVulFixedExportJobAsync(const Model::CreateVulFixedExportJobRequest& request, const CreateVulFixedExportJobAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateVulFixedExportJobOutcomeCallable CreateVulFixedExportJobCallable(const Model::CreateVulFixedExportJobRequest& request);
+
+                /**
+                 *This API is used to create a vulnerability rescan
+                 * @param req CreateVulReScanRequest
+                 * @return CreateVulReScanOutcome
+                 */
+                CreateVulReScanOutcome CreateVulReScan(const Model::CreateVulReScanRequest &request);
+                void CreateVulReScanAsync(const Model::CreateVulReScanRequest& request, const CreateVulReScanAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateVulReScanOutcomeCallable CreateVulReScanCallable(const Model::CreateVulReScanRequest& request);
+
+                /**
+                 *This API is used to create a vulnerability scanning (one-click scan).
+                 * @param req CreateVulScanManualRequest
+                 * @return CreateVulScanManualOutcome
+                 */
+                CreateVulScanManualOutcome CreateVulScanManual(const Model::CreateVulScanManualRequest &request);
+                void CreateVulScanManualAsync(const Model::CreateVulScanManualRequest& request, const CreateVulScanManualAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateVulScanManualOutcomeCallable CreateVulScanManualCallable(const Model::CreateVulScanManualRequest& request);
+
+                /**
                  *This API is used to delete assets.
                  * @param req DeleteDomainAndIpRequest
                  * @return DeleteDomainAndIpOutcome
@@ -651,6 +859,15 @@ namespace TencentCloud
                 DeleteRiskScanTaskOutcome DeleteRiskScanTask(const Model::DeleteRiskScanTaskRequest &request);
                 void DeleteRiskScanTaskAsync(const Model::DeleteRiskScanTaskRequest& request, const DeleteRiskScanTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DeleteRiskScanTaskOutcomeCallable DeleteRiskScanTaskCallable(const Model::DeleteRiskScanTaskRequest& request);
+
+                /**
+                 *This API is used to delete a vulnerability allowlist.
+                 * @param req DeleteVulWhitelistRequest
+                 * @return DeleteVulWhitelistOutcome
+                 */
+                DeleteVulWhitelistOutcome DeleteVulWhitelist(const Model::DeleteVulWhitelistRequest &request);
+                void DeleteVulWhitelistAsync(const Model::DeleteVulWhitelistRequest& request, const DeleteVulWhitelistAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteVulWhitelistOutcomeCallable DeleteVulWhitelistCallable(const Model::DeleteVulWhitelistRequest& request);
 
                 /**
                  *Retrieve the AI agent asset list
@@ -930,6 +1147,33 @@ namespace TencentCloud
                 DescribeHighBaseLineRiskListOutcome DescribeHighBaseLineRiskList(const Model::DescribeHighBaseLineRiskListRequest &request);
                 void DescribeHighBaseLineRiskListAsync(const Model::DescribeHighBaseLineRiskListRequest& request, const DescribeHighBaseLineRiskListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeHighBaseLineRiskListOutcomeCallable DescribeHighBaseLineRiskListCallable(const Model::DescribeHighBaseLineRiskListRequest& request);
+
+                /**
+                 *This API is used to obtain host vulnerability VPR information.
+                 * @param req DescribeHostVulItemVPRInfoRequest
+                 * @return DescribeHostVulItemVPRInfoOutcome
+                 */
+                DescribeHostVulItemVPRInfoOutcome DescribeHostVulItemVPRInfo(const Model::DescribeHostVulItemVPRInfoRequest &request);
+                void DescribeHostVulItemVPRInfoAsync(const Model::DescribeHostVulItemVPRInfoRequest& request, const DescribeHostVulItemVPRInfoAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeHostVulItemVPRInfoOutcomeCallable DescribeHostVulItemVPRInfoCallable(const Model::DescribeHostVulItemVPRInfoRequest& request);
+
+                /**
+                 *This API is used to obtain the host vulnerability overview.
+                 * @param req DescribeHostVulOverviewRequest
+                 * @return DescribeHostVulOverviewOutcome
+                 */
+                DescribeHostVulOverviewOutcome DescribeHostVulOverview(const Model::DescribeHostVulOverviewRequest &request);
+                void DescribeHostVulOverviewAsync(const Model::DescribeHostVulOverviewRequest& request, const DescribeHostVulOverviewAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeHostVulOverviewOutcomeCallable DescribeHostVulOverviewCallable(const Model::DescribeHostVulOverviewRequest& request);
+
+                /**
+                 *This API is used to retrieve the host vulnerability risk list.
+                 * @param req DescribeHostVulRiskListRequest
+                 * @return DescribeHostVulRiskListOutcome
+                 */
+                DescribeHostVulRiskListOutcome DescribeHostVulRiskList(const Model::DescribeHostVulRiskListRequest &request);
+                void DescribeHostVulRiskListAsync(const Model::DescribeHostVulRiskListRequest& request, const DescribeHostVulRiskListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeHostVulRiskListOutcomeCallable DescribeHostVulRiskListCallable(const Model::DescribeHostVulRiskListRequest& request);
 
                 /**
                  *Retrieve the IaC detection file list
@@ -1328,6 +1572,96 @@ namespace TencentCloud
                 DescribeVpcAssetsOutcomeCallable DescribeVpcAssetsCallable(const Model::DescribeVpcAssetsRequest& request);
 
                 /**
+                 *This API is used to query the associated server of a vulnerable component.
+                 * @param req DescribeVulComponentRelateHostRequest
+                 * @return DescribeVulComponentRelateHostOutcome
+                 */
+                DescribeVulComponentRelateHostOutcome DescribeVulComponentRelateHost(const Model::DescribeVulComponentRelateHostRequest &request);
+                void DescribeVulComponentRelateHostAsync(const Model::DescribeVulComponentRelateHostRequest& request, const DescribeVulComponentRelateHostAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeVulComponentRelateHostOutcomeCallable DescribeVulComponentRelateHostCallable(const Model::DescribeVulComponentRelateHostRequest& request);
+
+                /**
+                 *This API is used to query the details of a specified vulnerability repair task, including detailed data such as remediation status and snapshot status for each host, and supports pagination and filtering.
+                 * @param req DescribeVulFixTaskDetailRequest
+                 * @return DescribeVulFixTaskDetailOutcome
+                 */
+                DescribeVulFixTaskDetailOutcome DescribeVulFixTaskDetail(const Model::DescribeVulFixTaskDetailRequest &request);
+                void DescribeVulFixTaskDetailAsync(const Model::DescribeVulFixTaskDetailRequest& request, const DescribeVulFixTaskDetailAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeVulFixTaskDetailOutcomeCallable DescribeVulFixTaskDetailCallable(const Model::DescribeVulFixTaskDetailRequest& request);
+
+                /**
+                 *This API is used to query the vulnerability repair task record list with paging, support by conditional filtering such as remediation status and time range, and show summary information for each repair task.
+                 * @param req DescribeVulFixTaskListRequest
+                 * @return DescribeVulFixTaskListOutcome
+                 */
+                DescribeVulFixTaskListOutcome DescribeVulFixTaskList(const Model::DescribeVulFixTaskListRequest &request);
+                void DescribeVulFixTaskListAsync(const Model::DescribeVulFixTaskListRequest& request, const DescribeVulFixTaskListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeVulFixTaskListOutcomeCallable DescribeVulFixTaskListCallable(const Model::DescribeVulFixTaskListRequest& request);
+
+                /**
+                 *This API is used to query the host list where specified vulnerabilities can be repaired. Before a user submits a repair task, it is necessary to query which hosts support automatic fix, providing data support for users to select repair targets.
+                 * @param req DescribeVulFixableMachineListRequest
+                 * @return DescribeVulFixableMachineListOutcome
+                 */
+                DescribeVulFixableMachineListOutcome DescribeVulFixableMachineList(const Model::DescribeVulFixableMachineListRequest &request);
+                void DescribeVulFixableMachineListAsync(const Model::DescribeVulFixableMachineListRequest& request, const DescribeVulFixableMachineListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeVulFixableMachineListOutcomeCallable DescribeVulFixableMachineListCallable(const Model::DescribeVulFixableMachineListRequest& request);
+
+                /**
+                 *This API is used to query the repair details of a certain fixed vulnerability on a specified host, including basic information about the vulnerability, repair host information, and a detailed list of associated components and paths (component name, version number hit, associated path, repair command).
+                 * @param req DescribeVulFixedHostDetailRequest
+                 * @return DescribeVulFixedHostDetailOutcome
+                 */
+                DescribeVulFixedHostDetailOutcome DescribeVulFixedHostDetail(const Model::DescribeVulFixedHostDetailRequest &request);
+                void DescribeVulFixedHostDetailAsync(const Model::DescribeVulFixedHostDetailRequest& request, const DescribeVulFixedHostDetailAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeVulFixedHostDetailOutcomeCallable DescribeVulFixedHostDetailCallable(const Model::DescribeVulFixedHostDetailRequest& request);
+
+                /**
+                 *This API is used to query the list of repaired vulnerabilities, show vulnerability information with successful fixes and statistics on repair conditions, helping users understand the repair results.
+                 * @param req DescribeVulFixedListRequest
+                 * @return DescribeVulFixedListOutcome
+                 */
+                DescribeVulFixedListOutcome DescribeVulFixedList(const Model::DescribeVulFixedListRequest &request);
+                void DescribeVulFixedListAsync(const Model::DescribeVulFixedListRequest& request, const DescribeVulFixedListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeVulFixedListOutcomeCallable DescribeVulFixedListCallable(const Model::DescribeVulFixedListRequest& request);
+
+                /**
+                 *This API is used to query host-associated vulnerability components.
+                 * @param req DescribeVulHostRelateComponentRequest
+                 * @return DescribeVulHostRelateComponentOutcome
+                 */
+                DescribeVulHostRelateComponentOutcome DescribeVulHostRelateComponent(const Model::DescribeVulHostRelateComponentRequest &request);
+                void DescribeVulHostRelateComponentAsync(const Model::DescribeVulHostRelateComponentRequest& request, const DescribeVulHostRelateComponentAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeVulHostRelateComponentOutcomeCallable DescribeVulHostRelateComponentCallable(const Model::DescribeVulHostRelateComponentRequest& request);
+
+                /**
+                 *This API is used to retrieve the vulnerability ignore list.
+                 * @param req DescribeVulIgnoreRuleListRequest
+                 * @return DescribeVulIgnoreRuleListOutcome
+                 */
+                DescribeVulIgnoreRuleListOutcome DescribeVulIgnoreRuleList(const Model::DescribeVulIgnoreRuleListRequest &request);
+                void DescribeVulIgnoreRuleListAsync(const Model::DescribeVulIgnoreRuleListRequest& request, const DescribeVulIgnoreRuleListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeVulIgnoreRuleListOutcomeCallable DescribeVulIgnoreRuleListCallable(const Model::DescribeVulIgnoreRuleListRequest& request);
+
+                /**
+                 *This API is used to obtain vulnerability list
+                 * @param req DescribeVulItemListRequest
+                 * @return DescribeVulItemListOutcome
+                 */
+                DescribeVulItemListOutcome DescribeVulItemList(const Model::DescribeVulItemListRequest &request);
+                void DescribeVulItemListAsync(const Model::DescribeVulItemListRequest& request, const DescribeVulItemListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeVulItemListOutcomeCallable DescribeVulItemListCallable(const Model::DescribeVulItemListRequest& request);
+
+                /**
+                 *Obtains the vulnerability tag list
+                 * @param req DescribeVulLabelListRequest
+                 * @return DescribeVulLabelListOutcome
+                 */
+                DescribeVulLabelListOutcome DescribeVulLabelList(const Model::DescribeVulLabelListRequest &request);
+                void DescribeVulLabelListAsync(const Model::DescribeVulLabelListRequest& request, const DescribeVulLabelListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeVulLabelListOutcomeCallable DescribeVulLabelListCallable(const Model::DescribeVulLabelListRequest& request);
+
+                /**
                  *Query the list of vulnerabilities of host nodes under the exposed path in cloud boundary analysis.
                  * @param req DescribeVulRiskListRequest
                  * @return DescribeVulRiskListOutcome
@@ -1335,6 +1669,51 @@ namespace TencentCloud
                 DescribeVulRiskListOutcome DescribeVulRiskList(const Model::DescribeVulRiskListRequest &request);
                 void DescribeVulRiskListAsync(const Model::DescribeVulRiskListRequest& request, const DescribeVulRiskListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeVulRiskListOutcomeCallable DescribeVulRiskListCallable(const Model::DescribeVulRiskListRequest& request);
+
+                /**
+                 *Retrieve the associated component of a vulnerability
+                 * @param req DescribeVulRiskRelateComponentRequest
+                 * @return DescribeVulRiskRelateComponentOutcome
+                 */
+                DescribeVulRiskRelateComponentOutcome DescribeVulRiskRelateComponent(const Model::DescribeVulRiskRelateComponentRequest &request);
+                void DescribeVulRiskRelateComponentAsync(const Model::DescribeVulRiskRelateComponentRequest& request, const DescribeVulRiskRelateComponentAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeVulRiskRelateComponentOutcomeCallable DescribeVulRiskRelateComponentCallable(const Model::DescribeVulRiskRelateComponentRequest& request);
+
+                /**
+                 *Search for hosts associated with vulnerabilities or KBs
+                 * @param req DescribeVulRiskRelateHostRequest
+                 * @return DescribeVulRiskRelateHostOutcome
+                 */
+                DescribeVulRiskRelateHostOutcome DescribeVulRiskRelateHost(const Model::DescribeVulRiskRelateHostRequest &request);
+                void DescribeVulRiskRelateHostAsync(const Model::DescribeVulRiskRelateHostRequest& request, const DescribeVulRiskRelateHostAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeVulRiskRelateHostOutcomeCallable DescribeVulRiskRelateHostCallable(const Model::DescribeVulRiskRelateHostRequest& request);
+
+                /**
+                 *This API is used to obtain vulnerability scanning (period scanning).
+                 * @param req DescribeVulScanPeriodicRequest
+                 * @return DescribeVulScanPeriodicOutcome
+                 */
+                DescribeVulScanPeriodicOutcome DescribeVulScanPeriodic(const Model::DescribeVulScanPeriodicRequest &request);
+                void DescribeVulScanPeriodicAsync(const Model::DescribeVulScanPeriodicRequest& request, const DescribeVulScanPeriodicAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeVulScanPeriodicOutcomeCallable DescribeVulScanPeriodicCallable(const Model::DescribeVulScanPeriodicRequest& request);
+
+                /**
+                 *This API is used to retrieve vulnerability scanning task detail
+                 * @param req DescribeVulScanTaskDetailRequest
+                 * @return DescribeVulScanTaskDetailOutcome
+                 */
+                DescribeVulScanTaskDetailOutcome DescribeVulScanTaskDetail(const Model::DescribeVulScanTaskDetailRequest &request);
+                void DescribeVulScanTaskDetailAsync(const Model::DescribeVulScanTaskDetailRequest& request, const DescribeVulScanTaskDetailAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeVulScanTaskDetailOutcomeCallable DescribeVulScanTaskDetailCallable(const Model::DescribeVulScanTaskDetailRequest& request);
+
+                /**
+                 *This API is used to search vulnerability scanning task history
+                 * @param req DescribeVulScanTaskListRequest
+                 * @return DescribeVulScanTaskListOutcome
+                 */
+                DescribeVulScanTaskListOutcome DescribeVulScanTaskList(const Model::DescribeVulScanTaskListRequest &request);
+                void DescribeVulScanTaskListAsync(const Model::DescribeVulScanTaskListRequest& request, const DescribeVulScanTaskListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeVulScanTaskListOutcomeCallable DescribeVulScanTaskListCallable(const Model::DescribeVulScanTaskListRequest& request);
 
                 /**
                  *Obtain Vulnerability Risk List from Vulnerability's Perspective
@@ -1389,6 +1768,33 @@ namespace TencentCloud
                 ModifyUebaRuleSwitchOutcome ModifyUebaRuleSwitch(const Model::ModifyUebaRuleSwitchRequest &request);
                 void ModifyUebaRuleSwitchAsync(const Model::ModifyUebaRuleSwitchRequest& request, const ModifyUebaRuleSwitchAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ModifyUebaRuleSwitchOutcomeCallable ModifyUebaRuleSwitchCallable(const Model::ModifyUebaRuleSwitchRequest& request);
+
+                /**
+                 *This API is used to modify vulnerability scanning (period scanning).
+                 * @param req ModifyVulScanPeriodicRequest
+                 * @return ModifyVulScanPeriodicOutcome
+                 */
+                ModifyVulScanPeriodicOutcome ModifyVulScanPeriodic(const Model::ModifyVulScanPeriodicRequest &request);
+                void ModifyVulScanPeriodicAsync(const Model::ModifyVulScanPeriodicRequest& request, const ModifyVulScanPeriodicAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyVulScanPeriodicOutcomeCallable ModifyVulScanPeriodicCallable(const Model::ModifyVulScanPeriodicRequest& request);
+
+                /**
+                 *This API is used to modify the vulnerability allowlist configuration.
+                 * @param req ModifyVulWhitelistConfigRequest
+                 * @return ModifyVulWhitelistConfigOutcome
+                 */
+                ModifyVulWhitelistConfigOutcome ModifyVulWhitelistConfig(const Model::ModifyVulWhitelistConfigRequest &request);
+                void ModifyVulWhitelistConfigAsync(const Model::ModifyVulWhitelistConfigRequest& request, const ModifyVulWhitelistConfigAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyVulWhitelistConfigOutcomeCallable ModifyVulWhitelistConfigCallable(const Model::ModifyVulWhitelistConfigRequest& request);
+
+                /**
+                 *This API is used to modify the vulnerability allowlist switch.
+                 * @param req ModifyVulWhitelistSwitchRequest
+                 * @return ModifyVulWhitelistSwitchOutcome
+                 */
+                ModifyVulWhitelistSwitchOutcome ModifyVulWhitelistSwitch(const Model::ModifyVulWhitelistSwitchRequest &request);
+                void ModifyVulWhitelistSwitchAsync(const Model::ModifyVulWhitelistSwitchRequest& request, const ModifyVulWhitelistSwitchAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyVulWhitelistSwitchOutcomeCallable ModifyVulWhitelistSwitchCallable(const Model::ModifyVulWhitelistSwitchRequest& request);
 
                 /**
                  *This API is used to stop a scan task. 

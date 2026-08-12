@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Tags
+                * Native tag key-value pair on the cloud.
                 */
                 class Tag : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Tag name.
-                     * @return Name Tag name.
+                     * 获取Tag key.
+                     * @return Name Tag key.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Tag name.
-                     * @param _name Tag name.
+                     * 设置Tag key.
+                     * @param _name Tag key.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Tag value
-                     * @return Value Tag value
+                     * 获取Tag value.
+                     * @return Value Tag value.
                      * 
                      */
                     std::string GetValue() const;
 
                     /**
-                     * 设置Tag value
-                     * @param _value Tag value
+                     * 设置Tag value.
+                     * @param _value Tag value.
                      * 
                      */
                     void SetValue(const std::string& _value);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Tag name.
+                     * Tag key.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Tag value
+                     * Tag value.
                      */
                     std::string m_value;
                     bool m_valueHasBeenSet;
