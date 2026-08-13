@@ -48,19 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Sparse backup switch: ON/OFF</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SparseBackupSwitch <p>Sparse backup switch: ON/OFF</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Backup switch: ON/OFF</p>
+                     * @return SparseBackupSwitch <p>Backup switch: ON/OFF</p>
                      * 
                      */
                     std::string GetSparseBackupSwitch() const;
 
                     /**
-                     * 设置<p>Sparse backup switch: ON/OFF</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _sparseBackupSwitch <p>Sparse backup switch: ON/OFF</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Backup switch: ON/OFF</p>
+                     * @param _sparseBackupSwitch <p>Backup switch: ON/OFF</p>
                      * 
                      */
                     void SetSparseBackupSwitch(const std::string& _sparseBackupSwitch);
@@ -74,18 +70,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取<p>Sparse backup policy list (1-3)</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return SparseBackupConfigInfos <p>Sparse backup policy list (1-3)</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<SparseBackupConfigInfo> GetSparseBackupConfigInfos() const;
 
                     /**
                      * 设置<p>Sparse backup policy list (1-3)</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _sparseBackupConfigInfos <p>Sparse backup policy list (1-3)</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetSparseBackupConfigInfos(const std::vector<SparseBackupConfigInfo>& _sparseBackupConfigInfos);
@@ -100,15 +92,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * <p>Sparse backup switch: ON/OFF</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Backup switch: ON/OFF</p>
                      */
                     std::string m_sparseBackupSwitch;
                     bool m_sparseBackupSwitchHasBeenSet;
 
                     /**
                      * <p>Sparse backup policy list (1-3)</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<SparseBackupConfigInfo> m_sparseBackupConfigInfos;
                     bool m_sparseBackupConfigInfosHasBeenSet;

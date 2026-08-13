@@ -45,9 +45,7 @@ namespace TencentCloud
 
                     /**
                      * 获取Large order number.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return BigDealIds Large order number.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<std::string> GetBigDealIds() const;
@@ -61,9 +59,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Freeze transaction. One frozen flow is activated at a time.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TranId Freeze transaction. One frozen flow is activated at a time.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetTranId() const;
@@ -77,9 +73,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Post-paid order number.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return DealNames Post-paid order number.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<std::string> GetDealNames() const;
@@ -93,9 +87,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Delivery resource id list.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ResourceIds Delivery resource id list.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<std::string> GetResourceIds() const;
@@ -111,28 +103,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Large order number.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> m_bigDealIds;
                     bool m_bigDealIdsHasBeenSet;
 
                     /**
                      * Freeze transaction. One frozen flow is activated at a time.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_tranId;
                     bool m_tranIdHasBeenSet;
 
                     /**
                      * Post-paid order number.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> m_dealNames;
                     bool m_dealNamesHasBeenSet;
 
                     /**
                      * Delivery resource id list.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> m_resourceIds;
                     bool m_resourceIdsHasBeenSet;

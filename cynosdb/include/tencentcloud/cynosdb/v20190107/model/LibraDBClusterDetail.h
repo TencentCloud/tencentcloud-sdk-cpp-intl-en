@@ -661,18 +661,14 @@ namespace TencentCloud
 
                     /**
                      * 获取<p>Grayscale information for version upgrade</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return AnalysisUpgradeVersionInfo <p>Grayscale information for version upgrade</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     UpgradeAnalysisInstanceVersionInfo GetAnalysisUpgradeVersionInfo() const;
 
                     /**
                      * 设置<p>Grayscale information for version upgrade</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _analysisUpgradeVersionInfo <p>Grayscale information for version upgrade</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetAnalysisUpgradeVersionInfo(const UpgradeAnalysisInstanceVersionInfo& _analysisUpgradeVersionInfo);
@@ -862,7 +858,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * <p>Grayscale information for version upgrade</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     UpgradeAnalysisInstanceVersionInfo m_analysisUpgradeVersionInfo;
                     bool m_analysisUpgradeVersionInfoHasBeenSet;

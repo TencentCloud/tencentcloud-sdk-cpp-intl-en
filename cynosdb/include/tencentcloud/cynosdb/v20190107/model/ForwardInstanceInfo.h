@@ -48,18 +48,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Forward the instance id
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return InstanceId Forward the instance id
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
                      * 设置Forward the instance id
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _instanceId Forward the instance id
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -72,19 +68,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Forward instance region
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Region Forward instance region
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Forward the instance region
+                     * @return Region Forward the instance region
                      * 
                      */
                     std::string GetRegion() const;
 
                     /**
-                     * 设置Forward instance region
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _region Forward instance region
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Forward the instance region
+                     * @param _region Forward the instance region
                      * 
                      */
                     void SetRegion(const std::string& _region);
@@ -100,14 +92,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Forward the instance id
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Forward instance region
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Forward the instance region
                      */
                     std::string m_region;
                     bool m_regionHasBeenSet;

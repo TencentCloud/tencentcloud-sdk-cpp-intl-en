@@ -46,9 +46,7 @@ namespace TencentCloud
 
                     /**
                      * 获取Overall verification status
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Status Overall verification status
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetStatus() const;
@@ -62,9 +60,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Check item
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return CheckItem Check item
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<CheckItem> GetCheckItem() const;
@@ -80,14 +76,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Overall verification status
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
                      * Check item
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<CheckItem> m_checkItem;
                     bool m_checkItemHasBeenSet;

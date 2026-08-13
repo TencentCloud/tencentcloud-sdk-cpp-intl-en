@@ -48,18 +48,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Data table name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TableName Data table name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetTableName() const;
 
                     /**
                      * 设置Data table name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _tableName Data table name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetTableName(const std::string& _tableName);
@@ -75,7 +71,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Data table name
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_tableName;
                     bool m_tableNameHasBeenSet;

@@ -74,10 +74,8 @@ namespace TencentCloud
                     bool ProxyGroupInfosHasBeenSet() const;
 
                     /**
-                     * 获取<p>database proxy node</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ProxyNodeInfos <p>database proxy node</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Database proxy node</p>
+                     * @return ProxyNodeInfos <p>Database proxy node</p>
                      * 
                      */
                     std::vector<ProxyNodeInfo> GetProxyNodeInfos() const;
@@ -118,8 +116,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_proxyGroupInfosHasBeenSet;
 
                     /**
-                     * <p>database proxy node</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Database proxy node</p>
                      */
                     std::vector<ProxyNodeInfo> m_proxyNodeInfos;
                     bool m_proxyNodeInfosHasBeenSet;

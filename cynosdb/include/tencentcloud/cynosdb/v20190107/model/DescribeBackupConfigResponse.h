@@ -145,10 +145,8 @@ namespace TencentCloud
                     bool LogicBackupConfigHasBeenSet() const;
 
                     /**
-                     * 获取<p>Second-level snapshot backup configuration information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SnapshotSecondaryBackupConfig <p>Second-level snapshot backup configuration information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Secondary snapshot backup configuration information</p>
+                     * @return SnapshotSecondaryBackupConfig <p>Secondary snapshot backup configuration information</p>
                      * 
                      */
                     BackupConfigInfo GetSnapshotSecondaryBackupConfig() const;
@@ -219,8 +217,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_logicBackupConfigHasBeenSet;
 
                     /**
-                     * <p>Second-level snapshot backup configuration information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Secondary snapshot backup configuration information</p>
                      */
                     BackupConfigInfo m_snapshotSecondaryBackupConfig;
                     bool m_snapshotSecondaryBackupConfigHasBeenSet;

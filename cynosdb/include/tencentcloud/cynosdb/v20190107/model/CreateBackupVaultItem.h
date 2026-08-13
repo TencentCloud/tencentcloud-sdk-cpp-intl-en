@@ -48,18 +48,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Safe id
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return VaultId Safe id
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetVaultId() const;
 
                     /**
                      * 设置Safe id
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _vaultId Safe id
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetVaultId(const std::string& _vaultId);
@@ -73,18 +69,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Safe region
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return VaultRegion Safe region
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetVaultRegion() const;
 
                     /**
                      * 设置Safe region
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _vaultRegion Safe region
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetVaultRegion(const std::string& _vaultRegion);
@@ -100,14 +92,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Safe id
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_vaultId;
                     bool m_vaultIdHasBeenSet;
 
                     /**
                      * Safe region
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_vaultRegion;
                     bool m_vaultRegionHasBeenSet;

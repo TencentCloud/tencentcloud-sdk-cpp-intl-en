@@ -45,9 +45,7 @@ namespace TencentCloud
 
                     /**
                      * 获取Asynchronous task ID.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return FlowId Asynchronous task ID.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetFlowId() const;
@@ -63,7 +61,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Asynchronous task ID.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_flowId;
                     bool m_flowIdHasBeenSet;

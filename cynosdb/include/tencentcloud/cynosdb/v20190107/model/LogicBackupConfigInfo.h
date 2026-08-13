@@ -153,19 +153,15 @@ namespace TencentCloud
                     bool LogicCrossRegionsEnableHasBeenSet() const;
 
                     /**
-                     * 获取<p>Cross-regional logic backup</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return LogicCrossRegions <p>Cross-regional logic backup</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Cross-regional logical backup</p>
+                     * @return LogicCrossRegions <p>Cross-regional logical backup</p>
                      * 
                      */
                     std::vector<std::string> GetLogicCrossRegions() const;
 
                     /**
-                     * 设置<p>Cross-regional logic backup</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _logicCrossRegions <p>Cross-regional logic backup</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Cross-regional logical backup</p>
+                     * @param _logicCrossRegions <p>Cross-regional logical backup</p>
                      * 
                      */
                     void SetLogicCrossRegions(const std::vector<std::string>& _logicCrossRegions);
@@ -252,8 +248,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_logicCrossRegionsEnableHasBeenSet;
 
                     /**
-                     * <p>Cross-regional logic backup</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Cross-regional logical backup</p>
                      */
                     std::vector<std::string> m_logicCrossRegions;
                     bool m_logicCrossRegionsHasBeenSet;

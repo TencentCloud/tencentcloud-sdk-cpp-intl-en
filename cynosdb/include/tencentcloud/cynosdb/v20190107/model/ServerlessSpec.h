@@ -174,19 +174,15 @@ namespace TencentCloud
                     bool StockCountHasBeenSet() const;
 
                     /**
-                     * 获取<p>Availability zone inventory information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ZoneStockInfos <p>Availability zone inventory information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>AZ inventory information</p>
+                     * @return ZoneStockInfos <p>AZ inventory information</p>
                      * 
                      */
                     std::vector<ServerlessZoneStockInfo> GetZoneStockInfos() const;
 
                     /**
-                     * 设置<p>Availability zone inventory information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _zoneStockInfos <p>Availability zone inventory information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>AZ inventory information</p>
+                     * @param _zoneStockInfos <p>AZ inventory information</p>
                      * 
                      */
                     void SetZoneStockInfos(const std::vector<ServerlessZoneStockInfo>& _zoneStockInfos);
@@ -237,8 +233,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_stockCountHasBeenSet;
 
                     /**
-                     * <p>Availability zone inventory information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>AZ inventory information</p>
                      */
                     std::vector<ServerlessZoneStockInfo> m_zoneStockInfos;
                     bool m_zoneStockInfosHasBeenSet;

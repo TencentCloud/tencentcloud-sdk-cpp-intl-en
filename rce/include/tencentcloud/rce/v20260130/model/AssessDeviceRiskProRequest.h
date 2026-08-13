@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool DeviceTokenHasBeenSet() const;
 
                     /**
-                     * 获取<p>User client IP address(IPv4 or IPv6)</p>
-                     * @return UserIp <p>User client IP address(IPv4 or IPv6)</p>
+                     * 获取<p>User client IP address (IPv4 or IPv6)</p>
+                     * @return UserIp <p>User client IP address (IPv4 or IPv6)</p>
                      * 
                      */
                     std::string GetUserIp() const;
 
                     /**
-                     * 设置<p>User client IP address(IPv4 or IPv6)</p>
-                     * @param _userIp <p>User client IP address(IPv4 or IPv6)</p>
+                     * 设置<p>User client IP address (IPv4 or IPv6)</p>
+                     * @param _userIp <p>User client IP address (IPv4 or IPv6)</p>
                      * 
                      */
                     void SetUserIp(const std::string& _userIp);
@@ -93,7 +93,7 @@ namespace TencentCloud
                     bool m_deviceTokenHasBeenSet;
 
                     /**
-                     * <p>User client IP address(IPv4 or IPv6)</p>
+                     * <p>User client IP address (IPv4 or IPv6)</p>
                      */
                     std::string m_userIp;
                     bool m_userIpHasBeenSet;

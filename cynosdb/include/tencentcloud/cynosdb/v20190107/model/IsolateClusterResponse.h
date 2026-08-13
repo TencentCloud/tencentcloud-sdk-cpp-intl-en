@@ -58,10 +58,8 @@ namespace TencentCloud
                     bool FlowIdHasBeenSet() const;
 
                     /**
-                     * 获取Refund order number (returned for prepaid resources. if necessary, synchronize the order status by using the billing product's DescribeDealsByCond to synchronize the order status).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DealNames Refund order number (returned for prepaid resources. if necessary, synchronize the order status by using the billing product's DescribeDealsByCond to synchronize the order status).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Refund order number (returned for prepaid resources. If you need to synchronize the order status, please use the billing product's DescribeDealsByCond to synchronize the order status.)
+                     * @return DealNames Refund order number (returned for prepaid resources. If you need to synchronize the order status, please use the billing product's DescribeDealsByCond to synchronize the order status.)
                      * 
                      */
                     std::vector<std::string> GetDealNames() const;
@@ -82,8 +80,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_flowIdHasBeenSet;
 
                     /**
-                     * Refund order number (returned for prepaid resources. if necessary, synchronize the order status by using the billing product's DescribeDealsByCond to synchronize the order status).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Refund order number (returned for prepaid resources. If you need to synchronize the order status, please use the billing product's DescribeDealsByCond to synchronize the order status.)
                      */
                     std::vector<std::string> m_dealNames;
                     bool m_dealNamesHasBeenSet;

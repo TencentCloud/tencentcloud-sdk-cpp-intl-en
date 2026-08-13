@@ -49,18 +49,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Database table information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return DatabaseTables Database table information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     MigrateObject GetDatabaseTables() const;
 
                     /**
                      * 设置Database table information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _databaseTables Database table information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetDatabaseTables(const MigrateObject& _databaseTables);
@@ -76,7 +72,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Database table information
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     MigrateObject m_databaseTables;
                     bool m_databaseTablesHasBeenSet;

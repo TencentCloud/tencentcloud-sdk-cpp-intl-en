@@ -49,18 +49,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Database name.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return DbName Database name.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetDbName() const;
 
                     /**
                      * 设置Database name.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _dbName Database name.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetDbName(const std::string& _dbName);
@@ -74,18 +70,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Data table migration mode
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return MigrateTableMode Data table migration mode
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetMigrateTableMode() const;
 
                     /**
                      * 设置Data table migration mode
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _migrateTableMode Data table migration mode
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetMigrateTableMode(const std::string& _migrateTableMode);
@@ -99,18 +91,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Data table information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Tables Data table information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<MigrateTableItem> GetTables() const;
 
                     /**
                      * 设置Data table information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _tables Data table information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetTables(const std::vector<MigrateTableItem>& _tables);
@@ -126,21 +114,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Database name.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_dbName;
                     bool m_dbNameHasBeenSet;
 
                     /**
                      * Data table migration mode
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_migrateTableMode;
                     bool m_migrateTableModeHasBeenSet;
 
                     /**
                      * Data table information
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<MigrateTableItem> m_tables;
                     bool m_tablesHasBeenSet;

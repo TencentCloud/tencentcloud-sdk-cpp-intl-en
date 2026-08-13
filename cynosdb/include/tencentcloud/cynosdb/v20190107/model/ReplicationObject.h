@@ -49,18 +49,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Source instance type
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return SrcInstanceType Source instance type
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetSrcInstanceType() const;
 
                     /**
                      * 设置Source instance type
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _srcInstanceType Source instance type
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetSrcInstanceType(const std::string& _srcInstanceType);
@@ -73,19 +69,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool SrcInstanceTypeHasBeenSet() const;
 
                     /**
-                     * 获取Source Cluster Id
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SrcClusterId Source Cluster Id
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Source cluster Id
+                     * @return SrcClusterId Source cluster Id
                      * 
                      */
                     std::string GetSrcClusterId() const;
 
                     /**
-                     * 设置Source Cluster Id
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _srcClusterId Source Cluster Id
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Source cluster Id
+                     * @param _srcClusterId Source cluster Id
                      * 
                      */
                     void SetSrcClusterId(const std::string& _srcClusterId);
@@ -99,18 +91,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Source instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return SrcInstanceId Source instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetSrcInstanceId() const;
 
                     /**
                      * 设置Source instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _srcInstanceId Source instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetSrcInstanceId(const std::string& _srcInstanceId);
@@ -124,18 +112,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Copy task ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ReplicationJobId Copy task ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetReplicationJobId() const;
 
                     /**
                      * 设置Copy task ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _replicationJobId Copy task ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetReplicationJobId(const std::string& _replicationJobId);
@@ -148,19 +132,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ReplicationJobIdHasBeenSet() const;
 
                     /**
-                     * 获取sync object details
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return MigrateObjects sync object details
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Synchronization object details
+                     * @return MigrateObjects Synchronization object details
                      * 
                      */
                     MigrateOpt GetMigrateObjects() const;
 
                     /**
-                     * 设置sync object details
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _migrateObjects sync object details
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Synchronization object details
+                     * @param _migrateObjects Synchronization object details
                      * 
                      */
                     void SetMigrateObjects(const MigrateOpt& _migrateObjects);
@@ -176,35 +156,30 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Source instance type
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_srcInstanceType;
                     bool m_srcInstanceTypeHasBeenSet;
 
                     /**
-                     * Source Cluster Id
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Source cluster Id
                      */
                     std::string m_srcClusterId;
                     bool m_srcClusterIdHasBeenSet;
 
                     /**
                      * Source instance ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_srcInstanceId;
                     bool m_srcInstanceIdHasBeenSet;
 
                     /**
                      * Copy task ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_replicationJobId;
                     bool m_replicationJobIdHasBeenSet;
 
                     /**
-                     * sync object details
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Synchronization object details
                      */
                     MigrateOpt m_migrateObjects;
                     bool m_migrateObjectsHasBeenSet;

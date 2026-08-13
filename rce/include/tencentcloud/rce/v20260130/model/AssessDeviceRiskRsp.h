@@ -26,6 +26,7 @@
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/rce/v20260130/model/DataScore.h>
 #include <tencentcloud/rce/v20260130/model/Device.h>
+#include <tencentcloud/rce/v20260130/model/Environment.h>
 
 
 namespace TencentCloud
@@ -90,6 +91,27 @@ namespace TencentCloud
                      */
                     bool DeviceHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Basic IP environment information</p>
+                     * @return Environment <p>Basic IP environment information</p>
+                     * 
+                     */
+                    Environment GetEnvironment() const;
+
+                    /**
+                     * 设置<p>Basic IP environment information</p>
+                     * @param _environment <p>Basic IP environment information</p>
+                     * 
+                     */
+                    void SetEnvironment(const Environment& _environment);
+
+                    /**
+                     * 判断参数 Environment 是否已赋值
+                     * @return Environment 是否已赋值
+                     * 
+                     */
+                    bool EnvironmentHasBeenSet() const;
+
                 private:
 
                     /**
@@ -103,6 +125,12 @@ namespace TencentCloud
                      */
                     Device m_device;
                     bool m_deviceHasBeenSet;
+
+                    /**
+                     * <p>Basic IP environment information</p>
+                     */
+                    Environment m_environment;
+                    bool m_environmentHasBeenSet;
 
                 };
             }

@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取List of detailed information about the audit instance.
-                     * @return Items List of detailed information about the audit instance.
+                     * 获取Audit the instance detail list.
+                     * @return Items Audit the instance detail list.
                      * 
                      */
                     std::vector<InstanceAuditStatus> GetItems() const;
@@ -81,7 +81,7 @@ namespace TencentCloud
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * List of detailed information about the audit instance.
+                     * Audit the instance detail list.
                      */
                     std::vector<InstanceAuditStatus> m_items;
                     bool m_itemsHasBeenSet;

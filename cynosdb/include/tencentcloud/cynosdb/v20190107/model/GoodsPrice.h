@@ -49,19 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Specifies the instance price.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return InstancePrice Specifies the instance price.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Instance price
+                     * @return InstancePrice Instance price
                      * 
                      */
                     TradePrice GetInstancePrice() const;
 
                     /**
-                     * 设置Specifies the instance price.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _instancePrice Specifies the instance price.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Instance price
+                     * @param _instancePrice Instance price
                      * 
                      */
                     void SetInstancePrice(const TradePrice& _instancePrice);
@@ -74,19 +70,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool InstancePriceHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the storage price.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return StoragePrice Specifies the storage price.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Storage price
+                     * @return StoragePrice Storage price
                      * 
                      */
                     TradePrice GetStoragePrice() const;
 
                     /**
-                     * 设置Specifies the storage price.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _storagePrice Specifies the storage price.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Storage price
+                     * @param _storagePrice Storage price
                      * 
                      */
                     void SetStoragePrice(const TradePrice& _storagePrice);
@@ -99,19 +91,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool StoragePriceHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the product specification.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return GoodsSpec Specifies the product specification.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Product specification
+                     * @return GoodsSpec Product specification
                      * 
                      */
                     GoodsSpec GetGoodsSpec() const;
 
                     /**
-                     * 设置Specifies the product specification.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _goodsSpec Specifies the product specification.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Product specification
+                     * @param _goodsSpec Product specification
                      * 
                      */
                     void SetGoodsSpec(const GoodsSpec& _goodsSpec);
@@ -126,22 +114,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Specifies the instance price.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Instance price
                      */
                     TradePrice m_instancePrice;
                     bool m_instancePriceHasBeenSet;
 
                     /**
-                     * Specifies the storage price.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Storage price
                      */
                     TradePrice m_storagePrice;
                     bool m_storagePriceHasBeenSet;
 
                     /**
-                     * Specifies the product specification.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Product specification
                      */
                     GoodsSpec m_goodsSpec;
                     bool m_goodsSpecHasBeenSet;

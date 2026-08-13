@@ -48,10 +48,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>root account</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Uin <p>root account</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Root account</p>
+                     * @return Uin <p>Root account</p>
                      * 
                      */
                     std::string GetUin() const;
@@ -65,9 +63,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取<p>Account unique ID</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return AppId <p>Account unique ID</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetAppId() const;
@@ -81,9 +77,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取<p>Cluster ID.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ClusterId <p>Cluster ID.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetClusterId() const;
@@ -97,9 +91,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取<p>Cluster name.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ClusterName <p>Cluster name.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetClusterName() const;
@@ -113,9 +105,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取<p>Instance ID.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return InstanceId <p>Instance ID.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetInstanceId() const;
@@ -129,9 +119,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取<p>Instance name.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return InstanceName <p>Instance name.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetInstanceName() const;
@@ -144,10 +132,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool InstanceNameHasBeenSet() const;
 
                     /**
-                     * 获取<p>Project ID.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ProjectId <p>Project ID.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Project ID</p>
+                     * @return ProjectId <p>Project ID</p>
                      * 
                      */
                     int64_t GetProjectId() const;
@@ -160,10 +146,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ProjectIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>Region</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Region <p>Region</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Region.</p>
+                     * @return Region <p>Region.</p>
                      * 
                      */
                     std::string GetRegion() const;
@@ -177,9 +161,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取<p>AZ.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Zone <p>AZ.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetZone() const;
@@ -192,10 +174,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ZoneHasBeenSet() const;
 
                     /**
-                     * 获取<p>Instance status.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Status <p>Instance status.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Instance status</p>
+                     * @return Status <p>Instance status</p>
                      * 
                      */
                     std::string GetStatus() const;
@@ -209,9 +189,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取<p>Status description</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return StatusDesc <p>Status description</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetStatusDesc() const;
@@ -225,9 +203,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取<p>Libra analysis engine version</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return LibraDBVersion <p>Libra analysis engine version</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetLibraDBVersion() const;
@@ -240,10 +216,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool LibraDBVersionHasBeenSet() const;
 
                     /**
-                     * 获取<p>cpu cores</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Cpu <p>cpu cores</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>cpu cores.</p>
+                     * @return Cpu <p>cpu cores.</p>
                      * 
                      */
                     int64_t GetCpu() const;
@@ -256,10 +230,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CpuHasBeenSet() const;
 
                     /**
-                     * 获取<p>Memory size</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Memory <p>Memory size</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Memory size.</p>
+                     * @return Memory <p>Memory size.</p>
                      * 
                      */
                     int64_t GetMemory() const;
@@ -273,9 +245,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取<p>Storage size</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Storage <p>Storage size</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetStorage() const;
@@ -289,9 +259,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取<p>Storage type</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return StorageType <p>Storage type</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetStorageType() const;
@@ -304,10 +272,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool StorageTypeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Instance type</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return InstanceType <p>Instance type</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Instance type.</p>
+                     * @return InstanceType <p>Instance type.</p>
                      * 
                      */
                     std::string GetInstanceType() const;
@@ -321,9 +287,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取<p>Instance role</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return InstanceRole <p>Instance role</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetInstanceRole() const;
@@ -337,9 +301,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取<p>Update time.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return UpdateTime <p>Update time.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetUpdateTime() const;
@@ -353,9 +315,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取<p>Creation time.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return CreateTime <p>Creation time.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetCreateTime() const;
@@ -369,9 +329,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取<p>Selling mode</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return PayMode <p>Selling mode</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetPayMode() const;
@@ -385,9 +343,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取<p>Start time</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return PeriodStartTime <p>Start time</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetPeriodStartTime() const;
@@ -400,10 +356,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool PeriodStartTimeHasBeenSet() const;
 
                     /**
-                     * 获取<p>End time of sale</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return PeriodEndTime <p>End time of sale</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Termination time</p>
+                     * @return PeriodEndTime <p>Termination time</p>
                      * 
                      */
                     std::string GetPeriodEndTime() const;
@@ -417,9 +371,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取<p>Renewal flag</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return RenewFlag <p>Renewal flag</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetRenewFlag() const;
@@ -433,9 +385,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取<p>Network type</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return NetType <p>Network type</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetNetType() const;
@@ -449,9 +399,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取<p>VPC ID</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return VpcId <p>VPC ID</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetVpcId() const;
@@ -465,9 +413,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取<p>Subnet ID.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return SubnetId <p>Subnet ID.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetSubnetId() const;
@@ -481,9 +427,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取<p>Virtual IP</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Vip <p>Virtual IP</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetVip() const;
@@ -497,9 +441,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取<p>Port</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Vport <p>Port</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetVport() const;
@@ -512,10 +454,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool VportHasBeenSet() const;
 
                     /**
-                     * 获取<p>Instance network information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return InstanceNetInfo <p>Instance network information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Instance network info</p>
+                     * @return InstanceNetInfo <p>Instance network info</p>
                      * 
                      */
                     InstanceNetInfo GetInstanceNetInfo() const;
@@ -529,9 +469,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取<p>Instance tag information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ResourceTags <p>Instance tag information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<Tag> GetResourceTags() const;
@@ -572,10 +510,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool NodeCountHasBeenSet() const;
 
                     /**
-                     * 获取<p>Analyze the information after instance upgrade version</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return AnalysisUpgradeVersionInfo <p>Analyze the information after instance upgrade version</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Analyze the information after the instance upgrade version</p>
+                     * @return AnalysisUpgradeVersionInfo <p>Analyze the information after the instance upgrade version</p>
                      * 
                      */
                     UpgradeAnalysisInstanceVersionInfo GetAnalysisUpgradeVersionInfo() const;
@@ -590,218 +526,187 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * <p>root account</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Root account</p>
                      */
                     std::string m_uin;
                     bool m_uinHasBeenSet;
 
                     /**
                      * <p>Account unique ID</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_appId;
                     bool m_appIdHasBeenSet;
 
                     /**
                      * <p>Cluster ID.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_clusterId;
                     bool m_clusterIdHasBeenSet;
 
                     /**
                      * <p>Cluster name.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_clusterName;
                     bool m_clusterNameHasBeenSet;
 
                     /**
                      * <p>Instance ID.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
                      * <p>Instance name.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_instanceName;
                     bool m_instanceNameHasBeenSet;
 
                     /**
-                     * <p>Project ID.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Project ID</p>
                      */
                     int64_t m_projectId;
                     bool m_projectIdHasBeenSet;
 
                     /**
-                     * <p>Region</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Region.</p>
                      */
                     std::string m_region;
                     bool m_regionHasBeenSet;
 
                     /**
                      * <p>AZ.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_zone;
                     bool m_zoneHasBeenSet;
 
                     /**
-                     * <p>Instance status.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Instance status</p>
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
                      * <p>Status description</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_statusDesc;
                     bool m_statusDescHasBeenSet;
 
                     /**
                      * <p>Libra analysis engine version</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_libraDBVersion;
                     bool m_libraDBVersionHasBeenSet;
 
                     /**
-                     * <p>cpu cores</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>cpu cores.</p>
                      */
                     int64_t m_cpu;
                     bool m_cpuHasBeenSet;
 
                     /**
-                     * <p>Memory size</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Memory size.</p>
                      */
                     int64_t m_memory;
                     bool m_memoryHasBeenSet;
 
                     /**
                      * <p>Storage size</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_storage;
                     bool m_storageHasBeenSet;
 
                     /**
                      * <p>Storage type</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_storageType;
                     bool m_storageTypeHasBeenSet;
 
                     /**
-                     * <p>Instance type</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Instance type.</p>
                      */
                     std::string m_instanceType;
                     bool m_instanceTypeHasBeenSet;
 
                     /**
                      * <p>Instance role</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_instanceRole;
                     bool m_instanceRoleHasBeenSet;
 
                     /**
                      * <p>Update time.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_updateTime;
                     bool m_updateTimeHasBeenSet;
 
                     /**
                      * <p>Creation time.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
                      * <p>Selling mode</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_payMode;
                     bool m_payModeHasBeenSet;
 
                     /**
                      * <p>Start time</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_periodStartTime;
                     bool m_periodStartTimeHasBeenSet;
 
                     /**
-                     * <p>End time of sale</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Termination time</p>
                      */
                     std::string m_periodEndTime;
                     bool m_periodEndTimeHasBeenSet;
 
                     /**
                      * <p>Renewal flag</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_renewFlag;
                     bool m_renewFlagHasBeenSet;
 
                     /**
                      * <p>Network type</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_netType;
                     bool m_netTypeHasBeenSet;
 
                     /**
                      * <p>VPC ID</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_vpcId;
                     bool m_vpcIdHasBeenSet;
 
                     /**
                      * <p>Subnet ID.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_subnetId;
                     bool m_subnetIdHasBeenSet;
 
                     /**
                      * <p>Virtual IP</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_vip;
                     bool m_vipHasBeenSet;
 
                     /**
                      * <p>Port</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_vport;
                     bool m_vportHasBeenSet;
 
                     /**
-                     * <p>Instance network information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Instance network info</p>
                      */
                     InstanceNetInfo m_instanceNetInfo;
                     bool m_instanceNetInfoHasBeenSet;
 
                     /**
                      * <p>Instance tag information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<Tag> m_resourceTags;
                     bool m_resourceTagsHasBeenSet;
@@ -819,8 +724,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_nodeCountHasBeenSet;
 
                     /**
-                     * <p>Analyze the information after instance upgrade version</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Analyze the information after the instance upgrade version</p>
                      */
                     UpgradeAnalysisInstanceVersionInfo m_analysisUpgradeVersionInfo;
                     bool m_analysisUpgradeVersionInfoHasBeenSet;

@@ -256,6 +256,48 @@ namespace TencentCloud
                      */
                     bool SdkBuildVersionHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Signature verification token. Please contact us to enable signature verification</p>
+                     * @return SignToken <p>Signature verification token. Please contact us to enable signature verification</p>
+                     * 
+                     */
+                    std::string GetSignToken() const;
+
+                    /**
+                     * 设置<p>Signature verification token. Please contact us to enable signature verification</p>
+                     * @param _signToken <p>Signature verification token. Please contact us to enable signature verification</p>
+                     * 
+                     */
+                    void SetSignToken(const std::string& _signToken);
+
+                    /**
+                     * 判断参数 SignToken 是否已赋值
+                     * @return SignToken 是否已赋值
+                     * 
+                     */
+                    bool SignTokenHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Token generation timestamp, in milliseconds</p>
+                     * @return TokenTime <p>Token generation timestamp, in milliseconds</p>
+                     * 
+                     */
+                    std::string GetTokenTime() const;
+
+                    /**
+                     * 设置<p>Token generation timestamp, in milliseconds</p>
+                     * @param _tokenTime <p>Token generation timestamp, in milliseconds</p>
+                     * 
+                     */
+                    void SetTokenTime(const std::string& _tokenTime);
+
+                    /**
+                     * 判断参数 TokenTime 是否已赋值
+                     * @return TokenTime 是否已赋值
+                     * 
+                     */
+                    bool TokenTimeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -317,6 +359,18 @@ namespace TencentCloud
                      */
                     std::string m_sdkBuildVersion;
                     bool m_sdkBuildVersionHasBeenSet;
+
+                    /**
+                     * <p>Signature verification token. Please contact us to enable signature verification</p>
+                     */
+                    std::string m_signToken;
+                    bool m_signTokenHasBeenSet;
+
+                    /**
+                     * <p>Token generation timestamp, in milliseconds</p>
+                     */
+                    std::string m_tokenTime;
+                    bool m_tokenTimeHasBeenSet;
 
                 };
             }

@@ -67,6 +67,27 @@ namespace TencentCloud
                      */
                     bool DecisionResultHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Decision action when a strategy is matched. Configurable in the console.</p>
+                     * @return Disposition <p>Decision action when a strategy is matched. Configurable in the console.</p>
+                     * 
+                     */
+                    std::string GetDisposition() const;
+
+                    /**
+                     * 设置<p>Decision action when a strategy is matched. Configurable in the console.</p>
+                     * @param _disposition <p>Decision action when a strategy is matched. Configurable in the console.</p>
+                     * 
+                     */
+                    void SetDisposition(const std::string& _disposition);
+
+                    /**
+                     * 判断参数 Disposition 是否已赋值
+                     * @return Disposition 是否已赋值
+                     * 
+                     */
+                    bool DispositionHasBeenSet() const;
+
                 private:
 
                     /**
@@ -74,6 +95,12 @@ namespace TencentCloud
                      */
                     std::string m_decisionResult;
                     bool m_decisionResultHasBeenSet;
+
+                    /**
+                     * <p>Decision action when a strategy is matched. Configurable in the console.</p>
+                     */
+                    std::string m_disposition;
+                    bool m_dispositionHasBeenSet;
 
                 };
             }

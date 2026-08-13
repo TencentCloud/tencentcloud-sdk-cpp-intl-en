@@ -117,15 +117,15 @@ namespace TencentCloud
                     bool RegionHasBeenSet() const;
 
                     /**
-                     * 获取<p>AZ.</p>
-                     * @return Zone <p>AZ.</p>
+                     * 获取<p>Primary availability zone of the cluster</p>
+                     * @return Zone <p>Primary availability zone of the cluster</p>
                      * 
                      */
                     std::string GetZone() const;
 
                     /**
-                     * 设置<p>AZ.</p>
-                     * @param _zone <p>AZ.</p>
+                     * 设置<p>Primary availability zone of the cluster</p>
+                     * @param _zone <p>Primary availability zone of the cluster</p>
                      * 
                      */
                     void SetZone(const std::string& _zone);
@@ -747,15 +747,15 @@ namespace TencentCloud
                     bool TasksHasBeenSet() const;
 
                     /**
-                     * 获取<p>Primary AZ</p>
-                     * @return MasterZone <p>Primary AZ</p>
+                     * 获取<p>Current instance located availability zone for read-write</p>
+                     * @return MasterZone <p>Current instance located availability zone for read-write</p>
                      * 
                      */
                     std::string GetMasterZone() const;
 
                     /**
-                     * 设置<p>Primary AZ</p>
-                     * @param _masterZone <p>Primary AZ</p>
+                     * 设置<p>Current instance located availability zone for read-write</p>
+                     * @param _masterZone <p>Current instance located availability zone for read-write</p>
                      * 
                      */
                     void SetMasterZone(const std::string& _masterZone);
@@ -1271,6 +1271,27 @@ namespace TencentCloud
                      */
                     bool IsOpenTDEHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Current instance availability zone</p>
+                     * @return RealZone <p>Current instance availability zone</p>
+                     * 
+                     */
+                    std::string GetRealZone() const;
+
+                    /**
+                     * 设置<p>Current instance availability zone</p>
+                     * @param _realZone <p>Current instance availability zone</p>
+                     * 
+                     */
+                    void SetRealZone(const std::string& _realZone);
+
+                    /**
+                     * 判断参数 RealZone 是否已赋值
+                     * @return RealZone 是否已赋值
+                     * 
+                     */
+                    bool RealZoneHasBeenSet() const;
+
                 private:
 
                     /**
@@ -1292,7 +1313,7 @@ namespace TencentCloud
                     bool m_regionHasBeenSet;
 
                     /**
-                     * <p>AZ.</p>
+                     * <p>Primary availability zone of the cluster</p>
                      */
                     std::string m_zone;
                     bool m_zoneHasBeenSet;
@@ -1472,7 +1493,7 @@ namespace TencentCloud
                     bool m_tasksHasBeenSet;
 
                     /**
-                     * <p>Primary AZ</p>
+                     * <p>Current instance located availability zone for read-write</p>
                      */
                     std::string m_masterZone;
                     bool m_masterZoneHasBeenSet;
@@ -1620,6 +1641,12 @@ namespace TencentCloud
                      */
                     bool m_isOpenTDE;
                     bool m_isOpenTDEHasBeenSet;
+
+                    /**
+                     * <p>Current instance availability zone</p>
+                     */
+                    std::string m_realZone;
+                    bool m_realZoneHasBeenSet;
 
                 };
             }

@@ -154,18 +154,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Parameter template details
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ParamInfoSet Parameter template details
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<TemplateParamInfo> GetParamInfoSet() const;
 
                     /**
                      * 设置Parameter template details
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _paramInfoSet Parameter template details
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetParamInfoSet(const std::vector<TemplateParamInfo>& _paramInfoSet);
@@ -211,7 +207,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Parameter template details
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<TemplateParamInfo> m_paramInfoSet;
                     bool m_paramInfoSetHasBeenSet;

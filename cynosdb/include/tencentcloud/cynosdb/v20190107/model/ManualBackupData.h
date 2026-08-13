@@ -111,19 +111,15 @@ namespace TencentCloud
                     bool SnapshotTimeHasBeenSet() const;
 
                     /**
-                     * 获取Detailed information of cross-region backup items.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return CrossRegionBackupInfos Detailed information of cross-region backup items.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Detailed information of cross-region backup items
+                     * @return CrossRegionBackupInfos Detailed information of cross-region backup items
                      * 
                      */
                     std::vector<CrossRegionBackupItem> GetCrossRegionBackupInfos() const;
 
                     /**
-                     * 设置Detailed information of cross-region backup items.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _crossRegionBackupInfos Detailed information of cross-region backup items.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Detailed information of cross-region backup items
+                     * @param _crossRegionBackupInfos Detailed information of cross-region backup items
                      * 
                      */
                     void SetCrossRegionBackupInfos(const std::vector<CrossRegionBackupItem>& _crossRegionBackupInfos);
@@ -156,8 +152,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_snapshotTimeHasBeenSet;
 
                     /**
-                     * Detailed information of cross-region backup items.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Detailed information of cross-region backup items
                      */
                     std::vector<CrossRegionBackupItem> m_crossRegionBackupInfos;
                     bool m_crossRegionBackupInfosHasBeenSet;

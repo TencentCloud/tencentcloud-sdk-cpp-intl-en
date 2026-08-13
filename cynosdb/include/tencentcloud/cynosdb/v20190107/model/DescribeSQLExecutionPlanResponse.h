@@ -45,10 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Execution plan details</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return PlanDetail <p>Execution plan details</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Plan details</p>
+                     * @return PlanDetail <p>Plan details</p>
                      * 
                      */
                     ExecutionPlanDetail GetPlanDetail() const;
@@ -63,8 +61,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * <p>Execution plan details</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Plan details</p>
                      */
                     ExecutionPlanDetail m_planDetail;
                     bool m_planDetailHasBeenSet;

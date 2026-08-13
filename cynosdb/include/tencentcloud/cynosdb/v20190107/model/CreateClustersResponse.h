@@ -100,10 +100,8 @@ namespace TencentCloud
                     bool ClusterIdsHasBeenSet() const;
 
                     /**
-                     * 获取<p>Large Order ID</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return BigDealIds <p>Large Order ID</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Large order number</p>
+                     * @return BigDealIds <p>Large order number</p>
                      * 
                      */
                     std::vector<std::string> GetBigDealIds() const;
@@ -142,8 +140,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_clusterIdsHasBeenSet;
 
                     /**
-                     * <p>Large Order ID</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Large order number</p>
                      */
                     std::vector<std::string> m_bigDealIds;
                     bool m_bigDealIdsHasBeenSet;

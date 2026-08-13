@@ -260,15 +260,15 @@ namespace TencentCloud
                     bool SnapShotIdHasBeenSet() const;
 
                     /**
-                     * 获取Rollback database.
-                     * @return RollbackDatabases Rollback database.
+                     * 获取Rollback database
+                     * @return RollbackDatabases Rollback database
                      * 
                      */
                     std::vector<RollbackDatabase> GetRollbackDatabases() const;
 
                     /**
-                     * 设置Rollback database.
-                     * @param _rollbackDatabases Rollback database.
+                     * 设置Rollback database
+                     * @param _rollbackDatabases Rollback database
                      * 
                      */
                     void SetRollbackDatabases(const std::vector<RollbackDatabase>& _rollbackDatabases);
@@ -281,15 +281,15 @@ namespace TencentCloud
                     bool RollbackDatabasesHasBeenSet() const;
 
                     /**
-                     * 获取Rollback data table.
-                     * @return RollbackTables Rollback data table.
+                     * 获取Rollback data table
+                     * @return RollbackTables Rollback data table
                      * 
                      */
                     std::vector<RollbackTable> GetRollbackTables() const;
 
                     /**
-                     * 设置Rollback data table.
-                     * @param _rollbackTables Rollback data table.
+                     * 设置Rollback data table
+                     * @param _rollbackTables Rollback data table
                      * 
                      */
                     void SetRollbackTables(const std::vector<RollbackTable>& _rollbackTables);
@@ -406,13 +406,13 @@ namespace TencentCloud
                     bool m_snapShotIdHasBeenSet;
 
                     /**
-                     * Rollback database.
+                     * Rollback database
                      */
                     std::vector<RollbackDatabase> m_rollbackDatabases;
                     bool m_rollbackDatabasesHasBeenSet;
 
                     /**
-                     * Rollback data table.
+                     * Rollback data table
                      */
                     std::vector<RollbackTable> m_rollbackTables;
                     bool m_rollbackTablesHasBeenSet;

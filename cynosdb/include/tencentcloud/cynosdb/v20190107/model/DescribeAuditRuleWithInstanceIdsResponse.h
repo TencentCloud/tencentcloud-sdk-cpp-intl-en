@@ -59,10 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取Audit rule information of the instance
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Items Audit rule information of the instance
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Instance audit rule information.
+                     * @return Items Instance audit rule information.
                      * 
                      */
                     std::vector<InstanceAuditRule> GetItems() const;
@@ -83,8 +81,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * Audit rule information of the instance
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Instance audit rule information.
                      */
                     std::vector<InstanceAuditRule> m_items;
                     bool m_itemsHasBeenSet;

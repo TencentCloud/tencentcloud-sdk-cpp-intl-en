@@ -115,18 +115,14 @@ namespace TencentCloud
 
                     /**
                      * 获取<p>Basic IP environment information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Environment <p>Basic IP environment information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     Environment GetEnvironment() const;
 
                     /**
                      * 设置<p>Basic IP environment information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _environment <p>Basic IP environment information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetEnvironment(const Environment& _environment);
@@ -160,7 +156,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * <p>Basic IP environment information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     Environment m_environment;
                     bool m_environmentHasBeenSet;

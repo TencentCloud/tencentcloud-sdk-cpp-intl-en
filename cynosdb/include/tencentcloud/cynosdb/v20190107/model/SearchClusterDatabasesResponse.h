@@ -44,10 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Database List
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Databases Database List
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Database list.
+                     * @return Databases Database list.
                      * 
                      */
                     std::vector<std::string> GetDatabases() const;
@@ -62,8 +60,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Database List
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Database list.
                      */
                     std::vector<std::string> m_databases;
                     bool m_databasesHasBeenSet;

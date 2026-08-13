@@ -44,10 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Freeze transaction. One frozen flow is activated at a time.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TranId <p>Freeze transaction. One frozen flow is activated at a time.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Freeze transaction, one frozen flow is activated at a time</p>
+                     * @return TranId <p>Freeze transaction, one frozen flow is activated at a time</p>
                      * 
                      */
                     std::string GetTranId() const;
@@ -60,10 +58,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TranIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>Post-paid order number</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DealNames <p>Post-paid order number</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Post-paid Order Number</p>
+                     * @return DealNames <p>Post-paid Order Number</p>
                      * 
                      */
                     std::vector<std::string> GetDealNames() const;
@@ -76,10 +72,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DealNamesHasBeenSet() const;
 
                     /**
-                     * 获取<p>Delivery resource id list.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ResourceIds <p>Delivery resource id list.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Delivery resource id list</p>
+                     * @return ResourceIds <p>Delivery resource id list</p>
                      * 
                      */
                     std::vector<std::string> GetResourceIds() const;
@@ -93,9 +87,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取<p>Large order number</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return BigDealIds <p>Large order number</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<std::string> GetBigDealIds() const;
@@ -110,29 +102,25 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * <p>Freeze transaction. One frozen flow is activated at a time.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Freeze transaction, one frozen flow is activated at a time</p>
                      */
                     std::string m_tranId;
                     bool m_tranIdHasBeenSet;
 
                     /**
-                     * <p>Post-paid order number</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Post-paid Order Number</p>
                      */
                     std::vector<std::string> m_dealNames;
                     bool m_dealNamesHasBeenSet;
 
                     /**
-                     * <p>Delivery resource id list.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Delivery resource id list</p>
                      */
                     std::vector<std::string> m_resourceIds;
                     bool m_resourceIdsHasBeenSet;
 
                     /**
                      * <p>Large order number</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> m_bigDealIds;
                     bool m_bigDealIdsHasBeenSet;

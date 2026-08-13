@@ -111,19 +111,15 @@ namespace TencentCloud
                     bool BackupTimeEndHasBeenSet() const;
 
                     /**
-                     * 获取<p>This parameter currently does not support modification and is not required. Backup frequency is an array of length 7, corresponding to the backup method from Sunday to Saturday, full-full backup, increment-incremental backup.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return BackupWeekDays <p>This parameter currently does not support modification and is not required. Backup frequency is an array of length 7, corresponding to the backup method from Sunday to Saturday, full-full backup, increment-incremental backup.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Currently this parameter cannot be modified and no need to specify. Backup frequency is an array of length 7, corresponding to the backup method from Sunday to Saturday, full-full backup, increment-incremental backup.</p>
+                     * @return BackupWeekDays <p>Currently this parameter cannot be modified and no need to specify. Backup frequency is an array of length 7, corresponding to the backup method from Sunday to Saturday, full-full backup, increment-incremental backup.</p>
                      * 
                      */
                     std::vector<std::string> GetBackupWeekDays() const;
 
                     /**
-                     * 设置<p>This parameter currently does not support modification and is not required. Backup frequency is an array of length 7, corresponding to the backup method from Sunday to Saturday, full-full backup, increment-incremental backup.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _backupWeekDays <p>This parameter currently does not support modification and is not required. Backup frequency is an array of length 7, corresponding to the backup method from Sunday to Saturday, full-full backup, increment-incremental backup.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Currently this parameter cannot be modified and no need to specify. Backup frequency is an array of length 7, corresponding to the backup method from Sunday to Saturday, full-full backup, increment-incremental backup.</p>
+                     * @param _backupWeekDays <p>Currently this parameter cannot be modified and no need to specify. Backup frequency is an array of length 7, corresponding to the backup method from Sunday to Saturday, full-full backup, increment-incremental backup.</p>
                      * 
                      */
                     void SetBackupWeekDays(const std::vector<std::string>& _backupWeekDays);
@@ -200,18 +196,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取<p>Cross-regional backup region</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return CrossRegions <p>Cross-regional backup region</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<std::string> GetCrossRegions() const;
 
                     /**
                      * 设置<p>Cross-regional backup region</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _crossRegions <p>Cross-regional backup region</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetCrossRegions(const std::vector<std::string>& _crossRegions);
@@ -307,8 +299,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_backupTimeEndHasBeenSet;
 
                     /**
-                     * <p>This parameter currently does not support modification and is not required. Backup frequency is an array of length 7, corresponding to the backup method from Sunday to Saturday, full-full backup, increment-incremental backup.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Currently this parameter cannot be modified and no need to specify. Backup frequency is an array of length 7, corresponding to the backup method from Sunday to Saturday, full-full backup, increment-incremental backup.</p>
                      */
                     std::vector<std::string> m_backupWeekDays;
                     bool m_backupWeekDaysHasBeenSet;
@@ -333,7 +324,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * <p>Cross-regional backup region</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> m_crossRegions;
                     bool m_crossRegionsHasBeenSet;

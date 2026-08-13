@@ -48,18 +48,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Number of products
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return GoodsNum Number of products
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetGoodsNum() const;
 
                     /**
                      * 设置Number of products
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _goodsNum Number of products
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetGoodsNum(const int64_t& _goodsNum);
@@ -72,19 +68,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool GoodsNumHasBeenSet() const;
 
                     /**
-                     * 获取Number of CPU cores. required for PREPAID and POSTPAID instance types.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Cpu Number of CPU cores. required for PREPAID and POSTPAID instance types.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Number of CPU cores. Required for PREPAID and POSTPAID instance types.
+                     * @return Cpu Number of CPU cores. Required for PREPAID and POSTPAID instance types.
                      * 
                      */
                     int64_t GetCpu() const;
 
                     /**
-                     * 设置Number of CPU cores. required for PREPAID and POSTPAID instance types.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _cpu Number of CPU cores. required for PREPAID and POSTPAID instance types.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Number of CPU cores. Required for PREPAID and POSTPAID instance types.
+                     * @param _cpu Number of CPU cores. Required for PREPAID and POSTPAID instance types.
                      * 
                      */
                     void SetCpu(const int64_t& _cpu);
@@ -97,19 +89,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CpuHasBeenSet() const;
 
                     /**
-                     * 获取Memory size in gb. required for PREPAID and POSTPAID instance types.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Memory Memory size in gb. required for PREPAID and POSTPAID instance types.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Memory size, unit G, required for PREPAID and POSTPAID instance types
+                     * @return Memory Memory size, unit G, required for PREPAID and POSTPAID instance types
                      * 
                      */
                     int64_t GetMemory() const;
 
                     /**
-                     * 设置Memory size in gb. required for PREPAID and POSTPAID instance types.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _memory Memory size in gb. required for PREPAID and POSTPAID instance types.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Memory size, unit G, required for PREPAID and POSTPAID instance types
+                     * @param _memory Memory size, unit G, required for PREPAID and POSTPAID instance types
                      * 
                      */
                     void SetMemory(const int64_t& _memory);
@@ -122,19 +110,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool MemoryHasBeenSet() const;
 
                     /**
-                     * 获取Ccu size. required for serverless type.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Ccu Ccu size. required for serverless type.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Ccu size, required for serverless type
+                     * @return Ccu Ccu size, required for serverless type
                      * 
                      */
                     double GetCcu() const;
 
                     /**
-                     * 设置Ccu size. required for serverless type.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _ccu Ccu size. required for serverless type.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Ccu size, required for serverless type
+                     * @param _ccu Ccu size, required for serverless type
                      * 
                      */
                     void SetCcu(const double& _ccu);
@@ -147,19 +131,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CcuHasBeenSet() const;
 
                     /**
-                     * 获取Storage size. required for PREPAID storage type.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return StorageLimit Storage size. required for PREPAID storage type.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Storage size, required for PREPAID storage type
+                     * @return StorageLimit Storage size, required for PREPAID storage type
                      * 
                      */
                     int64_t GetStorageLimit() const;
 
                     /**
-                     * 设置Storage size. required for PREPAID storage type.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _storageLimit Storage size. required for PREPAID storage type.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Storage size, required for PREPAID storage type
+                     * @param _storageLimit Storage size, required for PREPAID storage type
                      * 
                      */
                     void SetStorageLimit(const int64_t& _storageLimit);
@@ -172,19 +152,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool StorageLimitHasBeenSet() const;
 
                     /**
-                     * 获取Purchase duration.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TimeSpan Purchase duration.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Purchase period
+                     * @return TimeSpan Purchase period
                      * 
                      */
                     int64_t GetTimeSpan() const;
 
                     /**
-                     * 设置Purchase duration.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _timeSpan Purchase duration.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Purchase period
+                     * @param _timeSpan Purchase period
                      * 
                      */
                     void SetTimeSpan(const int64_t& _timeSpan);
@@ -198,18 +174,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Duration unit.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TimeUnit Duration unit.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetTimeUnit() const;
 
                     /**
                      * 设置Duration unit.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _timeUnit Duration unit.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetTimeUnit(const std::string& _timeUnit);
@@ -254,49 +226,42 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Number of products
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_goodsNum;
                     bool m_goodsNumHasBeenSet;
 
                     /**
-                     * Number of CPU cores. required for PREPAID and POSTPAID instance types.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Number of CPU cores. Required for PREPAID and POSTPAID instance types.
                      */
                     int64_t m_cpu;
                     bool m_cpuHasBeenSet;
 
                     /**
-                     * Memory size in gb. required for PREPAID and POSTPAID instance types.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Memory size, unit G, required for PREPAID and POSTPAID instance types
                      */
                     int64_t m_memory;
                     bool m_memoryHasBeenSet;
 
                     /**
-                     * Ccu size. required for serverless type.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Ccu size, required for serverless type
                      */
                     double m_ccu;
                     bool m_ccuHasBeenSet;
 
                     /**
-                     * Storage size. required for PREPAID storage type.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Storage size, required for PREPAID storage type
                      */
                     int64_t m_storageLimit;
                     bool m_storageLimitHasBeenSet;
 
                     /**
-                     * Purchase duration.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Purchase period
                      */
                     int64_t m_timeSpan;
                     bool m_timeSpanHasBeenSet;
 
                     /**
                      * Duration unit.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_timeUnit;
                     bool m_timeUnitHasBeenSet;

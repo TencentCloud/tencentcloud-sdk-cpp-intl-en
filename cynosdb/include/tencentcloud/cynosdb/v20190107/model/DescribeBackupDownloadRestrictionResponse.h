@@ -45,10 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Cluster backup download limit.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return BackupLimitClusterRestrictions Cluster backup download limit.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Backup download limit for clusters
+                     * @return BackupLimitClusterRestrictions Backup download limit for clusters
                      * 
                      */
                     std::vector<BackupLimitClusterRestriction> GetBackupLimitClusterRestrictions() const;
@@ -63,8 +61,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Cluster backup download limit.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Backup download limit for clusters
                      */
                     std::vector<BackupLimitClusterRestriction> m_backupLimitClusterRestrictions;
                     bool m_backupLimitClusterRestrictionsHasBeenSet;

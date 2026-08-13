@@ -220,15 +220,15 @@ namespace TencentCloud
                     bool RegionHasBeenSet() const;
 
                     /**
-                     * 获取<p>AZ.</p>
-                     * @return Zone <p>AZ.</p>
+                     * 获取<p>Primary availability zone of the cluster</p>
+                     * @return Zone <p>Primary availability zone of the cluster</p>
                      * 
                      */
                     std::string GetZone() const;
 
                     /**
-                     * 设置<p>AZ.</p>
-                     * @param _zone <p>AZ.</p>
+                     * 设置<p>Primary availability zone of the cluster</p>
+                     * @param _zone <p>Primary availability zone of the cluster</p>
                      * 
                      */
                     void SetZone(const std::string& _zone);
@@ -1040,18 +1040,14 @@ namespace TencentCloud
 
                     /**
                      * 获取<p>Resource tag</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ResourceTags <p>Resource tag</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<Tag> GetResourceTags() const;
 
                     /**
                      * 设置<p>Resource tag</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _resourceTags <p>Resource tag</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetResourceTags(const std::vector<Tag>& _resourceTags);
@@ -1064,15 +1060,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ResourceTagsHasBeenSet() const;
 
                     /**
-                     * 获取<p>Primary AZ</p>
-                     * @return MasterZone <p>Primary AZ</p>
+                     * 获取<p>Current instance availability zone for read-write</p>
+                     * @return MasterZone <p>Current instance availability zone for read-write</p>
                      * 
                      */
                     std::string GetMasterZone() const;
 
                     /**
-                     * 设置<p>Primary AZ</p>
-                     * @param _masterZone <p>Primary AZ</p>
+                     * 设置<p>Current instance availability zone for read-write</p>
+                     * @param _masterZone <p>Current instance availability zone for read-write</p>
                      * 
                      */
                     void SetMasterZone(const std::string& _masterZone);
@@ -1086,18 +1082,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取<p>Standby availability zone</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return SlaveZones <p>Standby availability zone</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<std::string> GetSlaveZones() const;
 
                     /**
                      * 设置<p>Standby availability zone</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _slaveZones <p>Standby availability zone</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetSlaveZones(const std::vector<std::string>& _slaveZones);
@@ -1131,19 +1123,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool InstanceNetInfoHasBeenSet() const;
 
                     /**
-                     * 获取<p>Instance bind resource package info (only return compute resource package, packageType=CCU)</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ResourcePackages <p>Instance bind resource package info (only return compute resource package, packageType=CCU)</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Instance binding resource package information (only return compute resource package here, for example, packageType=CCU)</p>
+                     * @return ResourcePackages <p>Instance binding resource package information (only return compute resource package here, for example, packageType=CCU)</p>
                      * 
                      */
                     std::vector<ResourcePackage> GetResourcePackages() const;
 
                     /**
-                     * 设置<p>Instance bind resource package info (only return compute resource package, packageType=CCU)</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _resourcePackages <p>Instance bind resource package info (only return compute resource package, packageType=CCU)</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Instance binding resource package information (only return compute resource package here, for example, packageType=CCU)</p>
+                     * @param _resourcePackages <p>Instance binding resource package information (only return compute resource package here, for example, packageType=CCU)</p>
                      * 
                      */
                     void SetResourcePackages(const std::vector<ResourcePackage>& _resourcePackages);
@@ -1302,6 +1290,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool GdnIdHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Current instance availability zone</p>
+                     * @return RealZone <p>Current instance availability zone</p>
+                     * 
+                     */
+                    std::string GetRealZone() const;
+
+                    /**
+                     * 设置<p>Current instance availability zone</p>
+                     * @param _realZone <p>Current instance availability zone</p>
+                     * 
+                     */
+                    void SetRealZone(const std::string& _realZone);
+
+                    /**
+                     * 判断参数 RealZone 是否已赋值
+                     * @return RealZone 是否已赋值
+                     * 
+                     */
+                    bool RealZoneHasBeenSet() const;
+
                 private:
 
                     /**
@@ -1353,7 +1362,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_regionHasBeenSet;
 
                     /**
-                     * <p>AZ.</p>
+                     * <p>Primary availability zone of the cluster</p>
                      */
                     std::string m_zone;
                     bool m_zoneHasBeenSet;
@@ -1588,20 +1597,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * <p>Resource tag</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<Tag> m_resourceTags;
                     bool m_resourceTagsHasBeenSet;
 
                     /**
-                     * <p>Primary AZ</p>
+                     * <p>Current instance availability zone for read-write</p>
                      */
                     std::string m_masterZone;
                     bool m_masterZoneHasBeenSet;
 
                     /**
                      * <p>Standby availability zone</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> m_slaveZones;
                     bool m_slaveZonesHasBeenSet;
@@ -1613,8 +1620,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_instanceNetInfoHasBeenSet;
 
                     /**
-                     * <p>Instance bind resource package info (only return compute resource package, packageType=CCU)</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Instance binding resource package information (only return compute resource package here, for example, packageType=CCU)</p>
                      */
                     std::vector<ResourcePackage> m_resourcePackages;
                     bool m_resourcePackagesHasBeenSet;
@@ -1660,6 +1666,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::string m_gdnId;
                     bool m_gdnIdHasBeenSet;
+
+                    /**
+                     * <p>Current instance availability zone</p>
+                     */
+                    std::string m_realZone;
+                    bool m_realZoneHasBeenSet;
 
                 };
             }

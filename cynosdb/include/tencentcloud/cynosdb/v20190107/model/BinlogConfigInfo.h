@@ -90,19 +90,15 @@ namespace TencentCloud
                     bool BinlogCrossRegionsEnableHasBeenSet() const;
 
                     /**
-                     * 获取<p>binlog cross-region</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return BinlogCrossRegions <p>binlog cross-region</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Cross-region binlog</p>
+                     * @return BinlogCrossRegions <p>Cross-region binlog</p>
                      * 
                      */
                     std::vector<std::string> GetBinlogCrossRegions() const;
 
                     /**
-                     * 设置<p>binlog cross-region</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _binlogCrossRegions <p>binlog cross-region</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Cross-region binlog</p>
+                     * @param _binlogCrossRegions <p>Cross-region binlog</p>
                      * 
                      */
                     void SetBinlogCrossRegions(const std::vector<std::string>& _binlogCrossRegions);
@@ -171,8 +167,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_binlogCrossRegionsEnableHasBeenSet;
 
                     /**
-                     * <p>binlog cross-region</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Cross-region binlog</p>
                      */
                     std::vector<std::string> m_binlogCrossRegions;
                     bool m_binlogCrossRegionsHasBeenSet;

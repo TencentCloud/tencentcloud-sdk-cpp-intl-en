@@ -89,6 +89,27 @@ namespace TencentCloud
                      */
                     bool RiskLabelsHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Comprehensive risk score.</p><p>Value ranges from 1 to 1000.</p><p>The larger the value, the larger the risk.</p>
+                     * @return RiskScore <p>Comprehensive risk score.</p><p>Value ranges from 1 to 1000.</p><p>The larger the value, the larger the risk.</p>
+                     * 
+                     */
+                    int64_t GetRiskScore() const;
+
+                    /**
+                     * 设置<p>Comprehensive risk score.</p><p>Value ranges from 1 to 1000.</p><p>The larger the value, the larger the risk.</p>
+                     * @param _riskScore <p>Comprehensive risk score.</p><p>Value ranges from 1 to 1000.</p><p>The larger the value, the larger the risk.</p>
+                     * 
+                     */
+                    void SetRiskScore(const int64_t& _riskScore);
+
+                    /**
+                     * 判断参数 RiskScore 是否已赋值
+                     * @return RiskScore 是否已赋值
+                     * 
+                     */
+                    bool RiskScoreHasBeenSet() const;
+
                 private:
 
                     /**
@@ -102,6 +123,12 @@ namespace TencentCloud
                      */
                     std::vector<RiskLabel> m_riskLabels;
                     bool m_riskLabelsHasBeenSet;
+
+                    /**
+                     * <p>Comprehensive risk score.</p><p>Value ranges from 1 to 1000.</p><p>The larger the value, the larger the risk.</p>
+                     */
+                    int64_t m_riskScore;
+                    bool m_riskScoreHasBeenSet;
 
                 };
             }

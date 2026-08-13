@@ -95,19 +95,15 @@ namespace TencentCloud
                     bool ProxyGroupRwInfoHasBeenSet() const;
 
                     /**
-                     * 获取Node information of the database proxy
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ProxyNodes Node information of the database proxy
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Database proxy node info
+                     * @return ProxyNodes Database proxy node info
                      * 
                      */
                     std::vector<ProxyNodeInfo> GetProxyNodes() const;
 
                     /**
-                     * 设置Node information of the database proxy
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _proxyNodes Node information of the database proxy
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Database proxy node info
+                     * @param _proxyNodes Database proxy node info
                      * 
                      */
                     void SetProxyNodes(const std::vector<ProxyNodeInfo>& _proxyNodes);
@@ -141,19 +137,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ConnectionPoolHasBeenSet() const;
 
                     /**
-                     * 获取Network information for database proxy
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return NetAddrInfos Network information for database proxy
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Database proxy network info
+                     * @return NetAddrInfos Database proxy network info
                      * 
                      */
                     std::vector<NetAddr> GetNetAddrInfos() const;
 
                     /**
-                     * 设置Network information for database proxy
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _netAddrInfos Network information for database proxy
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Database proxy network info
+                     * @param _netAddrInfos Database proxy network info
                      * 
                      */
                     void SetNetAddrInfos(const std::vector<NetAddr>& _netAddrInfos);
@@ -201,8 +193,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_proxyGroupRwInfoHasBeenSet;
 
                     /**
-                     * Node information of the database proxy
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Database proxy node info
                      */
                     std::vector<ProxyNodeInfo> m_proxyNodes;
                     bool m_proxyNodesHasBeenSet;
@@ -214,8 +205,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_connectionPoolHasBeenSet;
 
                     /**
-                     * Network information for database proxy
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Database proxy network info
                      */
                     std::vector<NetAddr> m_netAddrInfos;
                     bool m_netAddrInfosHasBeenSet;

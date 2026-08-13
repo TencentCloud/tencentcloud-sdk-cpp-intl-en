@@ -49,18 +49,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Database migration mode
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return MigrateDBMode Database migration mode
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetMigrateDBMode() const;
 
                     /**
                      * 设置Database migration mode
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _migrateDBMode Database migration mode
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetMigrateDBMode(const std::string& _migrateDBMode);
@@ -74,18 +70,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Database information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Databases Database information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<MigrateDBItem> GetDatabases() const;
 
                     /**
                      * 设置Database information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _databases Database information
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetDatabases(const std::vector<MigrateDBItem>& _databases);
@@ -101,14 +93,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Database migration mode
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_migrateDBMode;
                     bool m_migrateDBModeHasBeenSet;
 
                     /**
                      * Database information
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<MigrateDBItem> m_databases;
                     bool m_databasesHasBeenSet;

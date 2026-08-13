@@ -48,18 +48,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Check item name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Item Check item name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetItem() const;
 
                     /**
                      * 设置Check item name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _item Check item name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetItem(const std::string& _item);
@@ -73,18 +69,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Verification result of this item
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Result Verification result of this item
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetResult() const;
 
                     /**
                      * 设置Verification result of this item
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _result Verification result of this item
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetResult(const std::string& _result);
@@ -97,19 +89,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ResultHasBeenSet() const;
 
                     /**
-                     * 获取Detailed explanation of validation failure and modification suggestions
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return CurrentValue Detailed explanation of validation failure and modification suggestions
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Details of validation failed and modification suggestions
+                     * @return CurrentValue Details of validation failed and modification suggestions
                      * 
                      */
                     std::string GetCurrentValue() const;
 
                     /**
-                     * 设置Detailed explanation of validation failure and modification suggestions
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _currentValue Detailed explanation of validation failure and modification suggestions
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Details of validation failed and modification suggestions
+                     * @param _currentValue Details of validation failed and modification suggestions
                      * 
                      */
                     void SetCurrentValue(const std::string& _currentValue);
@@ -122,19 +110,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CurrentValueHasBeenSet() const;
 
                     /**
-                     * 获取Details of validation failure and modification suggestions
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ExpectedValue Details of validation failure and modification suggestions
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Detailed explanation of validation failure and modification suggestions
+                     * @return ExpectedValue Detailed explanation of validation failure and modification suggestions
                      * 
                      */
                     std::string GetExpectedValue() const;
 
                     /**
-                     * 设置Details of validation failure and modification suggestions
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _expectedValue Details of validation failure and modification suggestions
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Detailed explanation of validation failure and modification suggestions
+                     * @param _expectedValue Detailed explanation of validation failure and modification suggestions
                      * 
                      */
                     void SetExpectedValue(const std::string& _expectedValue);
@@ -150,28 +134,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Check item name
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_item;
                     bool m_itemHasBeenSet;
 
                     /**
                      * Verification result of this item
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_result;
                     bool m_resultHasBeenSet;
 
                     /**
-                     * Detailed explanation of validation failure and modification suggestions
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Details of validation failed and modification suggestions
                      */
                     std::string m_currentValue;
                     bool m_currentValueHasBeenSet;
 
                     /**
-                     * Details of validation failure and modification suggestions
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Detailed explanation of validation failure and modification suggestions
                      */
                     std::string m_expectedValue;
                     bool m_expectedValueHasBeenSet;

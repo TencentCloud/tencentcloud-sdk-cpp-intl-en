@@ -87,15 +87,15 @@ namespace TencentCloud
                     bool CpuHasBeenSet() const;
 
                     /**
-                     * 获取Memory in GB
-                     * @return Memory Memory in GB
+                     * 获取<p>Memory in GB</p>
+                     * @return Memory <p>Memory in GB</p>
                      * 
                      */
                     int64_t GetMemory() const;
 
                     /**
-                     * 设置Memory in GB
-                     * @param _memory Memory in GB
+                     * 设置<p>Memory in GB</p>
+                     * @param _memory <p>Memory in GB</p>
                      * 
                      */
                     void SetMemory(const int64_t& _memory);
@@ -108,15 +108,15 @@ namespace TencentCloud
                     bool MemoryHasBeenSet() const;
 
                     /**
-                     * 获取Number of added read-only instances. Value range: (0,16].
-                     * @return ReadOnlyCount Number of added read-only instances. Value range: (0,16].
+                     * 获取<p>Number of newly-added read-only instances, value range (0,15]</p>
+                     * @return ReadOnlyCount <p>Number of newly-added read-only instances, value range (0,15]</p>
                      * 
                      */
                     int64_t GetReadOnlyCount() const;
 
                     /**
-                     * 设置Number of added read-only instances. Value range: (0,16].
-                     * @param _readOnlyCount Number of added read-only instances. Value range: (0,16].
+                     * 设置<p>Number of newly-added read-only instances, value range (0,15]</p>
+                     * @param _readOnlyCount <p>Number of newly-added read-only instances, value range (0,15]</p>
                      * 
                      */
                     void SetReadOnlyCount(const int64_t& _readOnlyCount);
@@ -213,15 +213,15 @@ namespace TencentCloud
                     bool SubnetIdHasBeenSet() const;
 
                     /**
-                     * 获取The port used when adding an RO group. Value range: [0,65535).
-                     * @return Port The port used when adding an RO group. Value range: [0,65535).
+                     * 获取<p>Port used when adding new RO groups, value range [0,65535)</p>
+                     * @return Port <p>Port used when adding new RO groups, value range [0,65535)</p>
                      * 
                      */
                     int64_t GetPort() const;
 
                     /**
-                     * 设置The port used when adding an RO group. Value range: [0,65535).
-                     * @param _port The port used when adding an RO group. Value range: [0,65535).
+                     * 设置<p>Port used when adding new RO groups, value range [0,65535)</p>
+                     * @param _port <p>Port used when adding new RO groups, value range [0,65535)</p>
                      * 
                      */
                     void SetPort(const int64_t& _port);
@@ -234,15 +234,15 @@ namespace TencentCloud
                     bool PortHasBeenSet() const;
 
                     /**
-                     * 获取Instance name. String length range: [0,64).
-                     * @return InstanceName Instance name. String length range: [0,64).
+                     * 获取<p>Instance name, string length range [0,64), value range uppercase and lowercase letters, digits 0-9, '_', '-', '.'</p>
+                     * @return InstanceName <p>Instance name, string length range [0,64), value range uppercase and lowercase letters, digits 0-9, '_', '-', '.'</p>
                      * 
                      */
                     std::string GetInstanceName() const;
 
                     /**
-                     * 设置Instance name. String length range: [0,64).
-                     * @param _instanceName Instance name. String length range: [0,64).
+                     * 设置<p>Instance name, string length range [0,64), value range uppercase and lowercase letters, digits 0-9, '_', '-', '.'</p>
+                     * @param _instanceName <p>Instance name, string length range [0,64), value range uppercase and lowercase letters, digits 0-9, '_', '-', '.'</p>
                      * 
                      */
                     void SetInstanceName(const std::string& _instanceName);
@@ -437,13 +437,13 @@ namespace TencentCloud
                     bool m_cpuHasBeenSet;
 
                     /**
-                     * Memory in GB
+                     * <p>Memory in GB</p>
                      */
                     int64_t m_memory;
                     bool m_memoryHasBeenSet;
 
                     /**
-                     * Number of added read-only instances. Value range: (0,16].
+                     * <p>Number of newly-added read-only instances, value range (0,15]</p>
                      */
                     int64_t m_readOnlyCount;
                     bool m_readOnlyCountHasBeenSet;
@@ -473,13 +473,13 @@ namespace TencentCloud
                     bool m_subnetIdHasBeenSet;
 
                     /**
-                     * The port used when adding an RO group. Value range: [0,65535).
+                     * <p>Port used when adding new RO groups, value range [0,65535)</p>
                      */
                     int64_t m_port;
                     bool m_portHasBeenSet;
 
                     /**
-                     * Instance name. String length range: [0,64).
+                     * <p>Instance name, string length range [0,64), value range uppercase and lowercase letters, digits 0-9, '_', '-', '.'</p>
                      */
                     std::string m_instanceName;
                     bool m_instanceNameHasBeenSet;

@@ -49,18 +49,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Number of CPU cores
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Cpu Number of CPU cores
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetCpu() const;
 
                     /**
                      * 设置Number of CPU cores
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _cpu Number of CPU cores
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetCpu(const int64_t& _cpu);
@@ -74,18 +70,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Memory size.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Memory Memory size.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetMemory() const;
 
                     /**
                      * 设置Memory size.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _memory Memory size.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetMemory(const int64_t& _memory);
@@ -99,18 +91,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Minimum storage size
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return MinStorageSize Minimum storage size
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetMinStorageSize() const;
 
                     /**
                      * 设置Minimum storage size
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _minStorageSize Minimum storage size
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetMinStorageSize(const int64_t& _minStorageSize);
@@ -124,18 +112,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Maximum storage size
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return MaxStorageSize Maximum storage size
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetMaxStorageSize() const;
 
                     /**
                      * 设置Maximum storage size
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _maxStorageSize Maximum storage size
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetMaxStorageSize(const int64_t& _maxStorageSize);
@@ -149,18 +133,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Whether there is inventory
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return HasStock Whether there is inventory
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     bool GetHasStock() const;
 
                     /**
                      * 设置Whether there is inventory
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _hasStock Whether there is inventory
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetHasStock(const bool& _hasStock);
@@ -174,18 +154,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Instance type
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return InstanceType Instance type
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetInstanceType() const;
 
                     /**
                      * 设置Instance type
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _instanceType Instance type
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetInstanceType(const std::string& _instanceType);
@@ -199,18 +175,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Storage type
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return StorageType Storage type
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetStorageType() const;
 
                     /**
                      * 设置Storage type
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _storageType Storage type
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetStorageType(const std::string& _storageType);
@@ -223,19 +195,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool StorageTypeHasBeenSet() const;
 
                     /**
-                     * 获取minimum replica count
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return MinReplicaNum minimum replica count
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Minimum replica count
+                     * @return MinReplicaNum Minimum replica count
                      * 
                      */
                     uint64_t GetMinReplicaNum() const;
 
                     /**
-                     * 设置minimum replica count
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _minReplicaNum minimum replica count
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Minimum replica count
+                     * @param _minReplicaNum Minimum replica count
                      * 
                      */
                     void SetMinReplicaNum(const uint64_t& _minReplicaNum);
@@ -249,18 +217,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Maximum number of replicas
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return MaxReplicaNum Maximum number of replicas
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     uint64_t GetMaxReplicaNum() const;
 
                     /**
                      * 设置Maximum number of replicas
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _maxReplicaNum Maximum number of replicas
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetMaxReplicaNum(const uint64_t& _maxReplicaNum);
@@ -274,18 +238,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Availability zone inventory information list
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ZoneStockInfos Availability zone inventory information list
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<ZoneStockInfo4Libra> GetZoneStockInfos() const;
 
                     /**
                      * 设置Availability zone inventory information list
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _zoneStockInfos Availability zone inventory information list
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetZoneStockInfos(const std::vector<ZoneStockInfo4Libra>& _zoneStockInfos);
@@ -301,70 +261,60 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Number of CPU cores
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_cpu;
                     bool m_cpuHasBeenSet;
 
                     /**
                      * Memory size.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_memory;
                     bool m_memoryHasBeenSet;
 
                     /**
                      * Minimum storage size
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_minStorageSize;
                     bool m_minStorageSizeHasBeenSet;
 
                     /**
                      * Maximum storage size
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_maxStorageSize;
                     bool m_maxStorageSizeHasBeenSet;
 
                     /**
                      * Whether there is inventory
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     bool m_hasStock;
                     bool m_hasStockHasBeenSet;
 
                     /**
                      * Instance type
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_instanceType;
                     bool m_instanceTypeHasBeenSet;
 
                     /**
                      * Storage type
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_storageType;
                     bool m_storageTypeHasBeenSet;
 
                     /**
-                     * minimum replica count
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Minimum replica count
                      */
                     uint64_t m_minReplicaNum;
                     bool m_minReplicaNumHasBeenSet;
 
                     /**
                      * Maximum number of replicas
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     uint64_t m_maxReplicaNum;
                     bool m_maxReplicaNumHasBeenSet;
 
                     /**
                      * Availability zone inventory information list
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<ZoneStockInfo4Libra> m_zoneStockInfos;
                     bool m_zoneStockInfosHasBeenSet;

@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool OldMasterZoneHasBeenSet() const;
 
                     /**
-                     * 获取Old slave availability zone.
-                     * @return OldSlaveZone Old slave availability zone.
+                     * 获取Secondary availability zone
+                     * @return OldSlaveZone Secondary availability zone
                      * 
                      */
                     std::vector<std::string> GetOldSlaveZone() const;
 
                     /**
-                     * 设置Old slave availability zone.
-                     * @param _oldSlaveZone Old slave availability zone.
+                     * 设置Secondary availability zone
+                     * @param _oldSlaveZone Secondary availability zone
                      * 
                      */
                     void SetOldSlaveZone(const std::vector<std::string>& _oldSlaveZone);
@@ -111,15 +111,15 @@ namespace TencentCloud
                     bool NewMasterZoneHasBeenSet() const;
 
                     /**
-                     * 获取New slave availability zone.
-                     * @return NewSlaveZone New slave availability zone.
+                     * 获取Secondary AZ
+                     * @return NewSlaveZone Secondary AZ
                      * 
                      */
                     std::vector<std::string> GetNewSlaveZone() const;
 
                     /**
-                     * 设置New slave availability zone.
-                     * @param _newSlaveZone New slave availability zone.
+                     * 设置Secondary AZ
+                     * @param _newSlaveZone Secondary AZ
                      * 
                      */
                     void SetNewSlaveZone(const std::vector<std::string>& _newSlaveZone);
@@ -182,7 +182,7 @@ namespace TencentCloud
                     bool m_oldMasterZoneHasBeenSet;
 
                     /**
-                     * Old slave availability zone.
+                     * Secondary availability zone
                      */
                     std::vector<std::string> m_oldSlaveZone;
                     bool m_oldSlaveZoneHasBeenSet;
@@ -194,7 +194,7 @@ namespace TencentCloud
                     bool m_newMasterZoneHasBeenSet;
 
                     /**
-                     * New slave availability zone.
+                     * Secondary AZ
                      */
                     std::vector<std::string> m_newSlaveZone;
                     bool m_newSlaveZoneHasBeenSet;

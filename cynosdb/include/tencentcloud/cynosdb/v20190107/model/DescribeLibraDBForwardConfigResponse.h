@@ -60,9 +60,7 @@ namespace TencentCloud
 
                     /**
                      * 获取Forwarding list
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ForwardList Forwarding list
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<ForwardInstanceInfo> GetForwardList() const;
@@ -84,7 +82,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Forwarding list
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<ForwardInstanceInfo> m_forwardList;
                     bool m_forwardListHasBeenSet;

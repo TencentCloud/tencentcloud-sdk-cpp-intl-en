@@ -47,9 +47,7 @@ namespace TencentCloud
 
                     /**
                      * 获取Permission statement
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return PrivilegeStatements Permission statement
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<std::string> GetPrivilegeStatements() const;
@@ -63,9 +61,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Global permission
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return GlobalPrivileges Global permission
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<std::string> GetGlobalPrivileges() const;
@@ -79,9 +75,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Database permission
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return DatabasePrivileges Database permission
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<DatabasePrivileges> GetDatabasePrivileges() const;
@@ -95,9 +89,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Table permission
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TablePrivileges Table permission
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<TablePrivileges> GetTablePrivileges() const;
@@ -113,28 +105,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Permission statement
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> m_privilegeStatements;
                     bool m_privilegeStatementsHasBeenSet;
 
                     /**
                      * Global permission
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> m_globalPrivileges;
                     bool m_globalPrivilegesHasBeenSet;
 
                     /**
                      * Database permission
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<DatabasePrivileges> m_databasePrivileges;
                     bool m_databasePrivilegesHasBeenSet;
 
                     /**
                      * Table permission
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<TablePrivileges> m_tablePrivileges;
                     bool m_tablePrivilegesHasBeenSet;

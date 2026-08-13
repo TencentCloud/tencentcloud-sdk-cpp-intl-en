@@ -101,9 +101,7 @@ namespace TencentCloud
 
                     /**
                      * 获取<p>Large order number</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return BigDealIds <p>Large order number</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<std::string> GetBigDealIds() const;
@@ -143,7 +141,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * <p>Large order number</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> m_bigDealIds;
                     bool m_bigDealIdsHasBeenSet;

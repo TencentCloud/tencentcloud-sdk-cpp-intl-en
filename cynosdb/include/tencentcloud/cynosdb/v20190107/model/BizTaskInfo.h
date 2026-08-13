@@ -587,18 +587,14 @@ namespace TencentCloud
 
                     /**
                      * 获取<p>Modify parameter task information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ModifyParamsData <p>Modify parameter task information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @deprecated
                      */
                     std::vector<ModifyParamsData> GetModifyParamsData() const;
 
                     /**
                      * 设置<p>Modify parameter task information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _modifyParamsData <p>Modify parameter task information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @deprecated
                      */
                     void SetModifyParamsData(const std::vector<ModifyParamsData>& _modifyParamsData);
@@ -675,18 +671,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取<p>Manual backup task information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ManualBackupData <p>Manual backup task information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     ManualBackupData GetManualBackupData() const;
 
                     /**
                      * 设置<p>Manual backup task information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _manualBackupData <p>Manual backup task information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetManualBackupData(const ManualBackupData& _manualBackupData);
@@ -742,18 +734,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取<p>Convert cluster logs</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return SwitchClusterLogBin <p>Convert cluster logs</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     SwitchClusterLogBin GetSwitchClusterLogBin() const;
 
                     /**
                      * 设置<p>Convert cluster logs</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _switchClusterLogBin <p>Convert cluster logs</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetSwitchClusterLogBin(const SwitchClusterLogBin& _switchClusterLogBin);
@@ -767,18 +755,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取<p>Modify instance parameter data</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ModifyInstanceParamsData <p>Modify instance parameter data</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     BizTaskModifyParamsData GetModifyInstanceParamsData() const;
 
                     /**
                      * 设置<p>Modify instance parameter data</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _modifyInstanceParamsData <p>Modify instance parameter data</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetModifyInstanceParamsData(const BizTaskModifyParamsData& _modifyInstanceParamsData);
@@ -1091,7 +1075,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * <p>Modify parameter task information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<ModifyParamsData> m_modifyParamsData;
                     bool m_modifyParamsDataHasBeenSet;
@@ -1116,7 +1099,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * <p>Manual backup task information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     ManualBackupData m_manualBackupData;
                     bool m_manualBackupDataHasBeenSet;
@@ -1135,14 +1117,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * <p>Convert cluster logs</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     SwitchClusterLogBin m_switchClusterLogBin;
                     bool m_switchClusterLogBinHasBeenSet;
 
                     /**
                      * <p>Modify instance parameter data</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     BizTaskModifyParamsData m_modifyInstanceParamsData;
                     bool m_modifyInstanceParamsDataHasBeenSet;

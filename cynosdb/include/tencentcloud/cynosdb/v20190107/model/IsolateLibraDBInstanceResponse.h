@@ -44,10 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取task flow id
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return FlowId task flow id
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Task flow id
+                     * @return FlowId Task flow id
                      * 
                      */
                     int64_t GetFlowId() const;
@@ -61,9 +59,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Order ID list
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return DealNames Order ID list
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<std::string> GetDealNames() const;
@@ -78,15 +74,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * task flow id
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Task flow id
                      */
                     int64_t m_flowId;
                     bool m_flowIdHasBeenSet;
 
                     /**
                      * Order ID list
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> m_dealNames;
                     bool m_dealNamesHasBeenSet;

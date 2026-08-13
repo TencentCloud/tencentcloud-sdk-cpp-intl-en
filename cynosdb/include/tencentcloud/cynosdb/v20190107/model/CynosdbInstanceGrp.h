@@ -366,18 +366,14 @@ namespace TencentCloud
 
                     /**
                      * 获取VPC ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return UniqVpcId VPC ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetUniqVpcId() const;
 
                     /**
                      * 设置VPC ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _uniqVpcId VPC ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetUniqVpcId(const std::string& _uniqVpcId);
@@ -390,19 +386,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool UniqVpcIdHasBeenSet() const;
 
                     /**
-                     * 获取Subnet ID
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return UniqSubnetId Subnet ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Subnet ID.
+                     * @return UniqSubnetId Subnet ID.
                      * 
                      */
                     std::string GetUniqSubnetId() const;
 
                     /**
-                     * 设置Subnet ID
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _uniqSubnetId Subnet ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Subnet ID.
+                     * @param _uniqSubnetId Subnet ID.
                      * 
                      */
                     void SetUniqSubnetId(const std::string& _uniqSubnetId);
@@ -415,19 +407,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool UniqSubnetIdHasBeenSet() const;
 
                     /**
-                     * 获取Information of the old IP
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return OldAddrInfo Information of the old IP
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Recycling IP information
+                     * @return OldAddrInfo Recycling IP information
                      * 
                      */
                     OldAddrInfo GetOldAddrInfo() const;
 
                     /**
-                     * 设置Information of the old IP
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _oldAddrInfo Information of the old IP
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Recycling IP information
+                     * @param _oldAddrInfo Recycling IP information
                      * 
                      */
                     void SetOldAddrInfo(const OldAddrInfo& _oldAddrInfo);
@@ -596,21 +584,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * VPC ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_uniqVpcId;
                     bool m_uniqVpcIdHasBeenSet;
 
                     /**
-                     * Subnet ID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Subnet ID.
                      */
                     std::string m_uniqSubnetId;
                     bool m_uniqSubnetIdHasBeenSet;
 
                     /**
-                     * Information of the old IP
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Recycling IP information
                      */
                     OldAddrInfo m_oldAddrInfo;
                     bool m_oldAddrInfoHasBeenSet;

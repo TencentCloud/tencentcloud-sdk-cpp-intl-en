@@ -45,10 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance specifications list in this region
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return InstanceSpecSet Instance specifications list in this region
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Instance specifications list for this region
+                     * @return InstanceSpecSet Instance specifications list for this region
                      * 
                      */
                     std::vector<RegionInstanceSpecInfo> GetInstanceSpecSet() const;
@@ -63,8 +61,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Instance specifications list in this region
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Instance specifications list for this region
                      */
                     std::vector<RegionInstanceSpecInfo> m_instanceSpecSet;
                     bool m_instanceSpecSetHasBeenSet;

@@ -111,19 +111,15 @@ namespace TencentCloud
                     bool IpComparisonSymbolHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the vpc setting for download restrictions.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return LimitVpcs Specifies the vpc setting for download restrictions.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Limit download vpc settings
+                     * @return LimitVpcs Limit download vpc settings
                      * 
                      */
                     std::vector<BackupLimitVpcItem> GetLimitVpcs() const;
 
                     /**
-                     * 设置Specifies the vpc setting for download restrictions.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _limitVpcs Specifies the vpc setting for download restrictions.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Limit download vpc settings
+                     * @param _limitVpcs Limit download vpc settings
                      * 
                      */
                     void SetLimitVpcs(const std::vector<BackupLimitVpcItem>& _limitVpcs);
@@ -136,19 +132,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool LimitVpcsHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the ip settings for limiting downloads.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return LimitIps Specifies the ip settings for limiting downloads.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Limit download ip settings
+                     * @return LimitIps Limit download ip settings
                      * 
                      */
                     std::vector<std::string> GetLimitIps() const;
 
                     /**
-                     * 设置Specifies the ip settings for limiting downloads.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _limitIps Specifies the ip settings for limiting downloads.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Limit download ip settings
+                     * @param _limitIps Limit download ip settings
                      * 
                      */
                     void SetLimitIps(const std::vector<std::string>& _limitIps);
@@ -181,15 +173,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_ipComparisonSymbolHasBeenSet;
 
                     /**
-                     * Specifies the vpc setting for download restrictions.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Limit download vpc settings
                      */
                     std::vector<BackupLimitVpcItem> m_limitVpcs;
                     bool m_limitVpcsHasBeenSet;
 
                     /**
-                     * Specifies the ip settings for limiting downloads.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Limit download ip settings
                      */
                     std::vector<std::string> m_limitIps;
                     bool m_limitIpsHasBeenSet;

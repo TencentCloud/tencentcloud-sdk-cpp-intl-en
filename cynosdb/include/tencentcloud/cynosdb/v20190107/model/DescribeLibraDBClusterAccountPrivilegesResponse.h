@@ -45,9 +45,7 @@ namespace TencentCloud
 
                     /**
                      * 获取Permission list
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Privileges Permission list
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<std::string> GetPrivileges() const;
@@ -63,7 +61,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Permission list
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> m_privileges;
                     bool m_privilegesHasBeenSet;

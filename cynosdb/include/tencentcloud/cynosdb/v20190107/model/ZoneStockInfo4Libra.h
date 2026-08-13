@@ -48,18 +48,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Availability zone
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Zone Availability zone
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetZone() const;
 
                     /**
                      * 设置Availability zone
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _zone Availability zone
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetZone(const std::string& _zone);
@@ -72,19 +68,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ZoneHasBeenSet() const;
 
                     /**
-                     * 获取whether there is inventory
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return HasStock whether there is inventory
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Whether there is inventory
+                     * @return HasStock Whether there is inventory
                      * 
                      */
                     bool GetHasStock() const;
 
                     /**
-                     * 设置whether there is inventory
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _hasStock whether there is inventory
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Whether there is inventory
+                     * @param _hasStock Whether there is inventory
                      * 
                      */
                     void SetHasStock(const bool& _hasStock);
@@ -100,14 +92,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Availability zone
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_zone;
                     bool m_zoneHasBeenSet;
 
                     /**
-                     * whether there is inventory
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Whether there is inventory
                      */
                     bool m_hasStock;
                     bool m_hasStockHasBeenSet;
