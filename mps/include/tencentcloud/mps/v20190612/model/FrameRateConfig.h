@@ -80,27 +80,23 @@ Default value: ON.
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取The frame rate (Hz). Value range: [0, 100].
+                     * 获取Frame rate. Value ranges from 0 to 100. Measurement unit: Hz.
 Default value: 0.
-Note: For transcoding, this parameter will overwrite `Fps` of `VideoTemplate`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Fps The frame rate (Hz). Value range: [0, 100].
+Note: For transcode, this parameter overrides the internal Fps in VideoTemplate.
+                     * @return Fps Frame rate. Value ranges from 0 to 100. Measurement unit: Hz.
 Default value: 0.
-Note: For transcoding, this parameter will overwrite `Fps` of `VideoTemplate`.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: For transcode, this parameter overrides the internal Fps in VideoTemplate.
                      * 
                      */
                     uint64_t GetFps() const;
 
                     /**
-                     * 设置The frame rate (Hz). Value range: [0, 100].
+                     * 设置Frame rate. Value ranges from 0 to 100. Measurement unit: Hz.
 Default value: 0.
-Note: For transcoding, this parameter will overwrite `Fps` of `VideoTemplate`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _fps The frame rate (Hz). Value range: [0, 100].
+Note: For transcode, this parameter overrides the internal Fps in VideoTemplate.
+                     * @param _fps Frame rate. Value ranges from 0 to 100. Measurement unit: Hz.
 Default value: 0.
-Note: For transcoding, this parameter will overwrite `Fps` of `VideoTemplate`.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: For transcode, this parameter overrides the internal Fps in VideoTemplate.
                      * 
                      */
                     void SetFps(const uint64_t& _fps);
@@ -124,10 +120,9 @@ Default value: ON.
                     bool m_switchHasBeenSet;
 
                     /**
-                     * The frame rate (Hz). Value range: [0, 100].
+                     * Frame rate. Value ranges from 0 to 100. Measurement unit: Hz.
 Default value: 0.
-Note: For transcoding, this parameter will overwrite `Fps` of `VideoTemplate`.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: For transcode, this parameter overrides the internal Fps in VideoTemplate.
                      */
                     uint64_t m_fps;
                     bool m_fpsHasBeenSet;

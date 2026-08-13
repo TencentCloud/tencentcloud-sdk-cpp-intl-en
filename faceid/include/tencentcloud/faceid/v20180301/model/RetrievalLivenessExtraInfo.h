@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Hit template type. Among them, Common - public library; Auto - Auto Clustering Library; Owner - custom template.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return HitGroup <p>Hit template type. Among them, Common - public library; Auto - Auto Clustering Library; Owner - custom template.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Hit template type, among them Common-public library; Auto-Auto Clustering Library; Owner-custom template library</p>
+                     * @return HitGroup <p>Hit template type, among them Common-public library; Auto-Auto Clustering Library; Owner-custom template library</p>
                      * 
                      */
                     std::string GetHitGroup() const;
 
                     /**
-                     * 设置<p>Hit template type. Among them, Common - public library; Auto - Auto Clustering Library; Owner - custom template.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _hitGroup <p>Hit template type. Among them, Common - public library; Auto - Auto Clustering Library; Owner - custom template.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Hit template type, among them Common-public library; Auto-Auto Clustering Library; Owner-custom template library</p>
+                     * @param _hitGroup <p>Hit template type, among them Common-public library; Auto-Auto Clustering Library; Owner-custom template library</p>
                      * 
                      */
                     void SetHitGroup(const std::string& _hitGroup);
@@ -72,19 +68,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool HitGroupHasBeenSet() const;
 
                     /**
-                     * 获取<p>The similarity between the request image and the hit attack template ranges from [0,2]. The smaller the value, the higher the probability of hitting the attack template. The default threshold is 0.6. When SimilarityScore≥0.6, it is judged as normal. SimilarityScore&lt;0.6 is judged as an attack.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SimilarityScore <p>The similarity between the request image and the hit attack template ranges from [0,2]. The smaller the value, the higher the probability of hitting the attack template. The default threshold is 0.6. When SimilarityScore≥0.6, it is judged as normal. SimilarityScore&lt;0.6 is judged as an attack.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Similarity between the request image and the attack template hit. The similarity value ranges from 0 to 2. The smaller the value, the higher the probability of hitting the attack template. The default threshold is 0.6. When the SimilarityScore is ≥0.6, the judgment is as normal. When the SimilarityScore is <0.6, the judgment is an attack.</p>
+                     * @return SimilarityScore <p>Similarity between the request image and the attack template hit. The similarity value ranges from 0 to 2. The smaller the value, the higher the probability of hitting the attack template. The default threshold is 0.6. When the SimilarityScore is ≥0.6, the judgment is as normal. When the SimilarityScore is <0.6, the judgment is an attack.</p>
                      * 
                      */
                     double GetSimilarityScore() const;
 
                     /**
-                     * 设置<p>The similarity between the request image and the hit attack template ranges from [0,2]. The smaller the value, the higher the probability of hitting the attack template. The default threshold is 0.6. When SimilarityScore≥0.6, it is judged as normal. SimilarityScore&lt;0.6 is judged as an attack.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _similarityScore <p>The similarity between the request image and the hit attack template ranges from [0,2]. The smaller the value, the higher the probability of hitting the attack template. The default threshold is 0.6. When SimilarityScore≥0.6, it is judged as normal. SimilarityScore&lt;0.6 is judged as an attack.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Similarity between the request image and the attack template hit. The similarity value ranges from 0 to 2. The smaller the value, the higher the probability of hitting the attack template. The default threshold is 0.6. When the SimilarityScore is ≥0.6, the judgment is as normal. When the SimilarityScore is <0.6, the judgment is an attack.</p>
+                     * @param _similarityScore <p>Similarity between the request image and the attack template hit. The similarity value ranges from 0 to 2. The smaller the value, the higher the probability of hitting the attack template. The default threshold is 0.6. When the SimilarityScore is ≥0.6, the judgment is as normal. When the SimilarityScore is <0.6, the judgment is an attack.</p>
                      * 
                      */
                     void SetSimilarityScore(const double& _similarityScore);
@@ -98,18 +90,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取<p>Template id of the cache hit</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return HitTemplate <p>Template id of the cache hit</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetHitTemplate() const;
 
                     /**
                      * 设置<p>Template id of the cache hit</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _hitTemplate <p>Template id of the cache hit</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetHitTemplate(const std::string& _hitTemplate);
@@ -124,22 +112,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * <p>Hit template type. Among them, Common - public library; Auto - Auto Clustering Library; Owner - custom template.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Hit template type, among them Common-public library; Auto-Auto Clustering Library; Owner-custom template library</p>
                      */
                     std::string m_hitGroup;
                     bool m_hitGroupHasBeenSet;
 
                     /**
-                     * <p>The similarity between the request image and the hit attack template ranges from [0,2]. The smaller the value, the higher the probability of hitting the attack template. The default threshold is 0.6. When SimilarityScore≥0.6, it is judged as normal. SimilarityScore&lt;0.6 is judged as an attack.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Similarity between the request image and the attack template hit. The similarity value ranges from 0 to 2. The smaller the value, the higher the probability of hitting the attack template. The default threshold is 0.6. When the SimilarityScore is ≥0.6, the judgment is as normal. When the SimilarityScore is <0.6, the judgment is an attack.</p>
                      */
                     double m_similarityScore;
                     bool m_similarityScoreHasBeenSet;
 
                     /**
                      * <p>Template id of the cache hit</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_hitTemplate;
                     bool m_hitTemplateHasBeenSet;

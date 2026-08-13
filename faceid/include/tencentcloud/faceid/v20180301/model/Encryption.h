@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>When using the encryption service, fill in the field to be encrypted. One or more encrypted fields can be auto-filled in this API.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return EncryptList <p>When using the encryption service, fill in the field to be encrypted. One or more encrypted fields can be auto-filled in this API.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>When using the encryption service, fill in the field to be encrypted. This API can auto-fill one or more encrypted fields.</p>
+                     * @return EncryptList <p>When using the encryption service, fill in the field to be encrypted. This API can auto-fill one or more encrypted fields.</p>
                      * 
                      */
                     std::vector<std::string> GetEncryptList() const;
 
                     /**
-                     * 设置<p>When using the encryption service, fill in the field to be encrypted. One or more encrypted fields can be auto-filled in this API.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _encryptList <p>When using the encryption service, fill in the field to be encrypted. One or more encrypted fields can be auto-filled in this API.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>When using the encryption service, fill in the field to be encrypted. This API can auto-fill one or more encrypted fields.</p>
+                     * @param _encryptList <p>When using the encryption service, fill in the field to be encrypted. This API can auto-fill one or more encrypted fields.</p>
                      * 
                      */
                     void SetEncryptList(const std::vector<std::string>& _encryptList);
@@ -72,19 +68,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool EncryptListHasBeenSet() const;
 
                     /**
-                     * 获取<p>Encrypted symmetric key. See the <a href="https://www.tencentcloud.com/document/product/1007/47180?from_cn_redirect=1">data encryption</a> document for key generation and use.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return CiphertextBlob <p>Encrypted symmetric key. See the <a href="https://www.tencentcloud.com/document/product/1007/47180?from_cn_redirect=1">data encryption</a> document for key generation and use.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Encrypted symmetric key. For key generation and use, see the <a href="https://www.tencentcloud.com/document/product/1007/47180?from_cn_redirect=1">data encryption</a> document.</p>
+                     * @return CiphertextBlob <p>Encrypted symmetric key. For key generation and use, see the <a href="https://www.tencentcloud.com/document/product/1007/47180?from_cn_redirect=1">data encryption</a> document.</p>
                      * 
                      */
                     std::string GetCiphertextBlob() const;
 
                     /**
-                     * 设置<p>Encrypted symmetric key. See the <a href="https://www.tencentcloud.com/document/product/1007/47180?from_cn_redirect=1">data encryption</a> document for key generation and use.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _ciphertextBlob <p>Encrypted symmetric key. See the <a href="https://www.tencentcloud.com/document/product/1007/47180?from_cn_redirect=1">data encryption</a> document for key generation and use.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Encrypted symmetric key. For key generation and use, see the <a href="https://www.tencentcloud.com/document/product/1007/47180?from_cn_redirect=1">data encryption</a> document.</p>
+                     * @param _ciphertextBlob <p>Encrypted symmetric key. For key generation and use, see the <a href="https://www.tencentcloud.com/document/product/1007/47180?from_cn_redirect=1">data encryption</a> document.</p>
                      * 
                      */
                     void SetCiphertextBlob(const std::string& _ciphertextBlob);
@@ -97,19 +89,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CiphertextBlobHasBeenSet() const;
 
                     /**
-                     * 获取<p>Users with encryption requirements import the initial vector for CBC encryption (custom string with a length of 16 characters).</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Iv <p>Users with encryption requirements import the initial vector for CBC encryption (custom string with a length of 16 characters).</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Users with encryption requirements import the initial vector for CBC encryption (custom string, length 16 characters).</p>
+                     * @return Iv <p>Users with encryption requirements import the initial vector for CBC encryption (custom string, length 16 characters).</p>
                      * 
                      */
                     std::string GetIv() const;
 
                     /**
-                     * 设置<p>Users with encryption requirements import the initial vector for CBC encryption (custom string with a length of 16 characters).</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _iv <p>Users with encryption requirements import the initial vector for CBC encryption (custom string with a length of 16 characters).</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Users with encryption requirements import the initial vector for CBC encryption (custom string, length 16 characters).</p>
+                     * @param _iv <p>Users with encryption requirements import the initial vector for CBC encryption (custom string, length 16 characters).</p>
                      * 
                      */
                     void SetIv(const std::string& _iv);
@@ -122,19 +110,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool IvHasBeenSet() const;
 
                     /**
-                     * 获取<p>Encryption algorithm (supports 'AES-256-CBC', 'SM4-GCM'). Defaults to 'AES-256-CBC' if not specified.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Algorithm <p>Encryption algorithm (supports 'AES-256-CBC', 'SM4-GCM'). Defaults to 'AES-256-CBC' if not specified.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Encryption algorithm (supports 'AES-256-CBC', 'SM4-GCM'), defaults to 'AES-256-CBC' if not passed.</p>
+                     * @return Algorithm <p>Encryption algorithm (supports 'AES-256-CBC', 'SM4-GCM'), defaults to 'AES-256-CBC' if not passed.</p>
                      * 
                      */
                     std::string GetAlgorithm() const;
 
                     /**
-                     * 设置<p>Encryption algorithm (supports 'AES-256-CBC', 'SM4-GCM'). Defaults to 'AES-256-CBC' if not specified.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _algorithm <p>Encryption algorithm (supports 'AES-256-CBC', 'SM4-GCM'). Defaults to 'AES-256-CBC' if not specified.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Encryption algorithm (supports 'AES-256-CBC', 'SM4-GCM'), defaults to 'AES-256-CBC' if not passed.</p>
+                     * @param _algorithm <p>Encryption algorithm (supports 'AES-256-CBC', 'SM4-GCM'), defaults to 'AES-256-CBC' if not passed.</p>
                      * 
                      */
                     void SetAlgorithm(const std::string& _algorithm);
@@ -148,18 +132,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取<p>Message digest generated by the SM4-GCM algorithm (used when verifying message integrity)</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TagList <p>Message digest generated by the SM4-GCM algorithm (used when verifying message integrity)</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<std::string> GetTagList() const;
 
                     /**
                      * 设置<p>Message digest generated by the SM4-GCM algorithm (used when verifying message integrity)</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _tagList <p>Message digest generated by the SM4-GCM algorithm (used when verifying message integrity)</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetTagList(const std::vector<std::string>& _tagList);
@@ -174,36 +154,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * <p>When using the encryption service, fill in the field to be encrypted. One or more encrypted fields can be auto-filled in this API.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>When using the encryption service, fill in the field to be encrypted. This API can auto-fill one or more encrypted fields.</p>
                      */
                     std::vector<std::string> m_encryptList;
                     bool m_encryptListHasBeenSet;
 
                     /**
-                     * <p>Encrypted symmetric key. See the <a href="https://www.tencentcloud.com/document/product/1007/47180?from_cn_redirect=1">data encryption</a> document for key generation and use.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Encrypted symmetric key. For key generation and use, see the <a href="https://www.tencentcloud.com/document/product/1007/47180?from_cn_redirect=1">data encryption</a> document.</p>
                      */
                     std::string m_ciphertextBlob;
                     bool m_ciphertextBlobHasBeenSet;
 
                     /**
-                     * <p>Users with encryption requirements import the initial vector for CBC encryption (custom string with a length of 16 characters).</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Users with encryption requirements import the initial vector for CBC encryption (custom string, length 16 characters).</p>
                      */
                     std::string m_iv;
                     bool m_ivHasBeenSet;
 
                     /**
-                     * <p>Encryption algorithm (supports 'AES-256-CBC', 'SM4-GCM'). Defaults to 'AES-256-CBC' if not specified.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Encryption algorithm (supports 'AES-256-CBC', 'SM4-GCM'), defaults to 'AES-256-CBC' if not passed.</p>
                      */
                     std::string m_algorithm;
                     bool m_algorithmHasBeenSet;
 
                     /**
                      * <p>Message digest generated by the SM4-GCM algorithm (used when verifying message integrity)</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> m_tagList;
                     bool m_tagListHasBeenSet;

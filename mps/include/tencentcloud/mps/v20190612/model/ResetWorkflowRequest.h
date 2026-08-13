@@ -71,15 +71,15 @@ namespace TencentCloud
                     bool WorkflowIdHasBeenSet() const;
 
                     /**
-                     * 获取Workflow name of up to 128 characters, which must be unique for the same user.
-                     * @return WorkflowName Workflow name of up to 128 characters, which must be unique for the same user.
+                     * 获取Workflow name, up to 128 characters. The name is unique for the same user.
+                     * @return WorkflowName Workflow name, up to 128 characters. The name is unique for the same user.
                      * 
                      */
                     std::string GetWorkflowName() const;
 
                     /**
-                     * 设置Workflow name of up to 128 characters, which must be unique for the same user.
-                     * @param _workflowName Workflow name of up to 128 characters, which must be unique for the same user.
+                     * 设置Workflow name, up to 128 characters. The name is unique for the same user.
+                     * @param _workflowName Workflow name, up to 128 characters. The name is unique for the same user.
                      * 
                      */
                     void SetWorkflowName(const std::string& _workflowName);
@@ -92,15 +92,15 @@ namespace TencentCloud
                     bool WorkflowNameHasBeenSet() const;
 
                     /**
-                     * 获取Triggering rule bound to a workflow. If an uploaded video hits the rule for the object, the workflow will be triggered.
-                     * @return Trigger Triggering rule bound to a workflow. If an uploaded video hits the rule for the object, the workflow will be triggered.
+                     * 获取The trigger rule bound to the workflow triggers the workflow when an uploaded video hits the rule for the object.
+                     * @return Trigger The trigger rule bound to the workflow triggers the workflow when an uploaded video hits the rule for the object.
                      * 
                      */
                     WorkflowTrigger GetTrigger() const;
 
                     /**
-                     * 设置Triggering rule bound to a workflow. If an uploaded video hits the rule for the object, the workflow will be triggered.
-                     * @param _trigger Triggering rule bound to a workflow. If an uploaded video hits the rule for the object, the workflow will be triggered.
+                     * 设置The trigger rule bound to the workflow triggers the workflow when an uploaded video hits the rule for the object.
+                     * @param _trigger The trigger rule bound to the workflow triggers the workflow when an uploaded video hits the rule for the object.
                      * 
                      */
                     void SetTrigger(const WorkflowTrigger& _trigger);
@@ -113,15 +113,15 @@ namespace TencentCloud
                     bool TriggerHasBeenSet() const;
 
                     /**
-                     * 获取Output configuration of a video processing output file. If this parameter is left empty, the storage location in `Trigger` will be inherited.
-                     * @return OutputStorage Output configuration of a video processing output file. If this parameter is left empty, the storage location in `Trigger` will be inherited.
+                     * 获取Video processing output configuration. If left blank, it inherits the storage location from Trigger.
+                     * @return OutputStorage Video processing output configuration. If left blank, it inherits the storage location from Trigger.
                      * 
                      */
                     TaskOutputStorage GetOutputStorage() const;
 
                     /**
-                     * 设置Output configuration of a video processing output file. If this parameter is left empty, the storage location in `Trigger` will be inherited.
-                     * @param _outputStorage Output configuration of a video processing output file. If this parameter is left empty, the storage location in `Trigger` will be inherited.
+                     * 设置Video processing output configuration. If left blank, it inherits the storage location from Trigger.
+                     * @param _outputStorage Video processing output configuration. If left blank, it inherits the storage location from Trigger.
                      * 
                      */
                     void SetOutputStorage(const TaskOutputStorage& _outputStorage);
@@ -159,15 +159,15 @@ If left empty, it is the same as the directory of the trigger file, that is, `{i
                     bool OutputDirHasBeenSet() const;
 
                     /**
-                     * 获取Parameter of a video processing task.
-                     * @return MediaProcessTask Parameter of a video processing task.
+                     * 获取Parameters for the video processing task.
+                     * @return MediaProcessTask Parameters for the video processing task.
                      * 
                      */
                     MediaProcessTaskInput GetMediaProcessTask() const;
 
                     /**
-                     * 设置Parameter of a video processing task.
-                     * @param _mediaProcessTask Parameter of a video processing task.
+                     * 设置Parameters for the video processing task.
+                     * @param _mediaProcessTask Parameters for the video processing task.
                      * 
                      */
                     void SetMediaProcessTask(const MediaProcessTaskInput& _mediaProcessTask);
@@ -180,15 +180,15 @@ If left empty, it is the same as the directory of the trigger file, that is, `{i
                     bool MediaProcessTaskHasBeenSet() const;
 
                     /**
-                     * 获取Type parameter of a video content audit task.
-                     * @return AiContentReviewTask Type parameter of a video content audit task.
+                     * 获取Parameters for the video content review task.
+                     * @return AiContentReviewTask Parameters for the video content review task.
                      * 
                      */
                     AiContentReviewTaskInput GetAiContentReviewTask() const;
 
                     /**
-                     * 设置Type parameter of a video content audit task.
-                     * @param _aiContentReviewTask Type parameter of a video content audit task.
+                     * 设置Parameters for the video content review task.
+                     * @param _aiContentReviewTask Parameters for the video content review task.
                      * 
                      */
                     void SetAiContentReviewTask(const AiContentReviewTaskInput& _aiContentReviewTask);
@@ -201,15 +201,15 @@ If left empty, it is the same as the directory of the trigger file, that is, `{i
                     bool AiContentReviewTaskHasBeenSet() const;
 
                     /**
-                     * 获取Video content analysis task parameter.
-                     * @return AiAnalysisTask Video content analysis task parameter.
+                     * 获取Parameters for the video content analysis task.
+                     * @return AiAnalysisTask Parameters for the video content analysis task.
                      * 
                      */
                     AiAnalysisTaskInput GetAiAnalysisTask() const;
 
                     /**
-                     * 设置Video content analysis task parameter.
-                     * @param _aiAnalysisTask Video content analysis task parameter.
+                     * 设置Parameters for the video content analysis task.
+                     * @param _aiAnalysisTask Parameters for the video content analysis task.
                      * 
                      */
                     void SetAiAnalysisTask(const AiAnalysisTaskInput& _aiAnalysisTask);
@@ -222,15 +222,15 @@ If left empty, it is the same as the directory of the trigger file, that is, `{i
                     bool AiAnalysisTaskHasBeenSet() const;
 
                     /**
-                     * 获取Type parameter of a video content recognition task.
-                     * @return AiRecognitionTask Type parameter of a video content recognition task.
+                     * 获取Parameters for the video content recognition task.
+                     * @return AiRecognitionTask Parameters for the video content recognition task.
                      * 
                      */
                     AiRecognitionTaskInput GetAiRecognitionTask() const;
 
                     /**
-                     * 设置Type parameter of a video content recognition task.
-                     * @param _aiRecognitionTask Type parameter of a video content recognition task.
+                     * 设置Parameters for the video content recognition task.
+                     * @param _aiRecognitionTask Parameters for the video content recognition task.
                      * 
                      */
                     void SetAiRecognitionTask(const AiRecognitionTaskInput& _aiRecognitionTask);
@@ -243,15 +243,15 @@ If left empty, it is the same as the directory of the trigger file, that is, `{i
                     bool AiRecognitionTaskHasBeenSet() const;
 
                     /**
-                     * 获取Workflow priority. The higher the value, the higher the priority. Value range: [-10, 10]. If this parameter is left empty, 0 will be used.
-                     * @return TaskPriority Workflow priority. The higher the value, the higher the priority. Value range: [-10, 10]. If this parameter is left empty, 0 will be used.
+                     * 获取Priority of the workflow. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.
+                     * @return TaskPriority Priority of the workflow. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.
                      * 
                      */
                     int64_t GetTaskPriority() const;
 
                     /**
-                     * 设置Workflow priority. The higher the value, the higher the priority. Value range: [-10, 10]. If this parameter is left empty, 0 will be used.
-                     * @param _taskPriority Workflow priority. The higher the value, the higher the priority. Value range: [-10, 10]. If this parameter is left empty, 0 will be used.
+                     * 设置Priority of the workflow. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.
+                     * @param _taskPriority Priority of the workflow. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.
                      * 
                      */
                     void SetTaskPriority(const int64_t& _taskPriority);
@@ -264,15 +264,15 @@ If left empty, it is the same as the directory of the trigger file, that is, `{i
                     bool TaskPriorityHasBeenSet() const;
 
                     /**
-                     * 获取Event notification information of a task. If this parameter is left empty, no event notifications will be obtained.
-                     * @return TaskNotifyConfig Event notification information of a task. If this parameter is left empty, no event notifications will be obtained.
+                     * 获取Event notification information of the task. If it is left unspecified, it indicates that no event notification is obtained.
+                     * @return TaskNotifyConfig Event notification information of the task. If it is left unspecified, it indicates that no event notification is obtained.
                      * 
                      */
                     TaskNotifyConfig GetTaskNotifyConfig() const;
 
                     /**
-                     * 设置Event notification information of a task. If this parameter is left empty, no event notifications will be obtained.
-                     * @param _taskNotifyConfig Event notification information of a task. If this parameter is left empty, no event notifications will be obtained.
+                     * 设置Event notification information of the task. If it is left unspecified, it indicates that no event notification is obtained.
+                     * @param _taskNotifyConfig Event notification information of the task. If it is left unspecified, it indicates that no event notification is obtained.
                      * 
                      */
                     void SetTaskNotifyConfig(const TaskNotifyConfig& _taskNotifyConfig);
@@ -293,19 +293,19 @@ If left empty, it is the same as the directory of the trigger file, that is, `{i
                     bool m_workflowIdHasBeenSet;
 
                     /**
-                     * Workflow name of up to 128 characters, which must be unique for the same user.
+                     * Workflow name, up to 128 characters. The name is unique for the same user.
                      */
                     std::string m_workflowName;
                     bool m_workflowNameHasBeenSet;
 
                     /**
-                     * Triggering rule bound to a workflow. If an uploaded video hits the rule for the object, the workflow will be triggered.
+                     * The trigger rule bound to the workflow triggers the workflow when an uploaded video hits the rule for the object.
                      */
                     WorkflowTrigger m_trigger;
                     bool m_triggerHasBeenSet;
 
                     /**
-                     * Output configuration of a video processing output file. If this parameter is left empty, the storage location in `Trigger` will be inherited.
+                     * Video processing output configuration. If left blank, it inherits the storage location from Trigger.
                      */
                     TaskOutputStorage m_outputStorage;
                     bool m_outputStorageHasBeenSet;
@@ -318,37 +318,37 @@ If left empty, it is the same as the directory of the trigger file, that is, `{i
                     bool m_outputDirHasBeenSet;
 
                     /**
-                     * Parameter of a video processing task.
+                     * Parameters for the video processing task.
                      */
                     MediaProcessTaskInput m_mediaProcessTask;
                     bool m_mediaProcessTaskHasBeenSet;
 
                     /**
-                     * Type parameter of a video content audit task.
+                     * Parameters for the video content review task.
                      */
                     AiContentReviewTaskInput m_aiContentReviewTask;
                     bool m_aiContentReviewTaskHasBeenSet;
 
                     /**
-                     * Video content analysis task parameter.
+                     * Parameters for the video content analysis task.
                      */
                     AiAnalysisTaskInput m_aiAnalysisTask;
                     bool m_aiAnalysisTaskHasBeenSet;
 
                     /**
-                     * Type parameter of a video content recognition task.
+                     * Parameters for the video content recognition task.
                      */
                     AiRecognitionTaskInput m_aiRecognitionTask;
                     bool m_aiRecognitionTaskHasBeenSet;
 
                     /**
-                     * Workflow priority. The higher the value, the higher the priority. Value range: [-10, 10]. If this parameter is left empty, 0 will be used.
+                     * Priority of the workflow. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.
                      */
                     int64_t m_taskPriority;
                     bool m_taskPriorityHasBeenSet;
 
                     /**
-                     * Event notification information of a task. If this parameter is left empty, no event notifications will be obtained.
+                     * Event notification information of the task. If it is left unspecified, it indicates that no event notification is obtained.
                      */
                     TaskNotifyConfig m_taskNotifyConfig;
                     bool m_taskNotifyConfigHasBeenSet;

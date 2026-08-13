@@ -87,15 +87,15 @@ namespace TencentCloud
                     bool MP4ConfigureHasBeenSet() const;
 
                     /**
-                     * 获取Recording template name. Length limit: 64 characters.
-                     * @return Name Recording template name. Length limit: 64 characters.
+                     * 获取Recording template name. The length cannot exceed 64 characters.
+                     * @return Name Recording template name. The length cannot exceed 64 characters.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Recording template name. Length limit: 64 characters.
-                     * @param _name Recording template name. Length limit: 64 characters.
+                     * 设置Recording template name. The length cannot exceed 64 characters.
+                     * @param _name Recording template name. The length cannot exceed 64 characters.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -129,39 +129,15 @@ namespace TencentCloud
                     bool CommentHasBeenSet() const;
 
                     /**
-                     * 获取Recording type. Valid values: 
-
-- video: audio and video recording; 
-- audio: audio recording; 
-- auto: automatic detection;
-
-If it is left blank, "video" will be used as the default value.
-                     * @return RecordType Recording type. Valid values: 
-
-- video: audio and video recording; 
-- audio: audio recording; 
-- auto: automatic detection;
-
-If it is left blank, "video" will be used as the default value.
+                     * 获取Recording type. Valid values: video: audio and video recording; audio: audio recording; auto: automatic detection. If it is left blank, the default value video is used.
+                     * @return RecordType Recording type. Valid values: video: audio and video recording; audio: audio recording; auto: automatic detection. If it is left blank, the default value video is used.
                      * 
                      */
                     std::string GetRecordType() const;
 
                     /**
-                     * 设置Recording type. Valid values: 
-
-- video: audio and video recording; 
-- audio: audio recording; 
-- auto: automatic detection;
-
-If it is left blank, "video" will be used as the default value.
-                     * @param _recordType Recording type. Valid values: 
-
-- video: audio and video recording; 
-- audio: audio recording; 
-- auto: automatic detection;
-
-If it is left blank, "video" will be used as the default value.
+                     * 设置Recording type. Valid values: video: audio and video recording; audio: audio recording; auto: automatic detection. If it is left blank, the default value video is used.
+                     * @param _recordType Recording type. Valid values: video: audio and video recording; audio: audio recording; auto: automatic detection. If it is left blank, the default value video is used.
                      * 
                      */
                     void SetRecordType(const std::string& _recordType);
@@ -188,7 +164,7 @@ If it is left blank, "video" will be used as the default value.
                     bool m_mP4ConfigureHasBeenSet;
 
                     /**
-                     * Recording template name. Length limit: 64 characters.
+                     * Recording template name. The length cannot exceed 64 characters.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
@@ -200,13 +176,7 @@ If it is left blank, "video" will be used as the default value.
                     bool m_commentHasBeenSet;
 
                     /**
-                     * Recording type. Valid values: 
-
-- video: audio and video recording; 
-- audio: audio recording; 
-- auto: automatic detection;
-
-If it is left blank, "video" will be used as the default value.
+                     * Recording type. Valid values: video: audio and video recording; audio: audio recording; auto: automatic detection. If it is left blank, the default value video is used.
                      */
                     std::string m_recordType;
                     bool m_recordTypeHasBeenSet;

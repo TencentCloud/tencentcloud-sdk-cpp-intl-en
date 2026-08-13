@@ -133,18 +133,14 @@ namespace TencentCloud
 
                     /**
                      * 获取<p>Audio track merging information.<br>Note: This field only takes effect for adaptive transcoding.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TrackChannelInfo <p>Audio track merging information.<br>Note: This field only takes effect for adaptive transcoding.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     AudioTrackChannelInfo GetTrackChannelInfo() const;
 
                     /**
                      * 设置<p>Audio track merging information.<br>Note: This field only takes effect for adaptive transcoding.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _trackChannelInfo <p>Audio track merging information.<br>Note: This field only takes effect for adaptive transcoding.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetTrackChannelInfo(const AudioTrackChannelInfo& _trackChannelInfo);
@@ -247,7 +243,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * <p>Audio track merging information.<br>Note: This field only takes effect for adaptive transcoding.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     AudioTrackChannelInfo m_trackChannelInfo;
                     bool m_trackChannelInfoHasBeenSet;

@@ -48,19 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The opening segments.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return HeadSet The opening segments.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Opening scene list.
+                     * @return HeadSet Opening scene list.
                      * 
                      */
                     std::vector<MediaInputInfo> GetHeadSet() const;
 
                     /**
-                     * 设置The opening segments.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _headSet The opening segments.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Opening scene list.
+                     * @param _headSet Opening scene list.
                      * 
                      */
                     void SetHeadSet(const std::vector<MediaInputInfo>& _headSet);
@@ -73,19 +69,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool HeadSetHasBeenSet() const;
 
                     /**
-                     * 获取The closing segments.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TailSet The closing segments.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Ending list.
+                     * @return TailSet Ending list.
                      * 
                      */
                     std::vector<MediaInputInfo> GetTailSet() const;
 
                     /**
-                     * 设置The closing segments.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _tailSet The closing segments.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Ending list.
+                     * @param _tailSet Ending list.
                      * 
                      */
                     void SetTailSet(const std::vector<MediaInputInfo>& _tailSet);
@@ -100,15 +92,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * The opening segments.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Opening scene list.
                      */
                     std::vector<MediaInputInfo> m_headSet;
                     bool m_headSetHasBeenSet;
 
                     /**
-                     * The closing segments.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Ending list.
                      */
                     std::vector<MediaInputInfo> m_tailSet;
                     bool m_tailSetHasBeenSet;

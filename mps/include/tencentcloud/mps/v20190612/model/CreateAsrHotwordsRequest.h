@@ -106,10 +106,10 @@ namespace TencentCloud
                     bool ContentHasBeenSet() const;
 
                     /**
-                     * 获取Base64-encoded content of the hotword file. This field is required if Type is set to 1.
+                     * 获取base64 content of the hot word library file, Type 1 required
 
 
-                     * @return FileContent Base64-encoded content of the hotword file. This field is required if Type is set to 1.
+                     * @return FileContent base64 content of the hot word library file, Type 1 required
 
 
                      * 
@@ -117,10 +117,10 @@ namespace TencentCloud
                     std::string GetFileContent() const;
 
                     /**
-                     * 设置Base64-encoded content of the hotword file. This field is required if Type is set to 1.
+                     * 设置base64 content of the hot word library file, Type 1 required
 
 
-                     * @param _fileContent Base64-encoded content of the hotword file. This field is required if Type is set to 1.
+                     * @param _fileContent base64 content of the hot word library file, Type 1 required
 
 
                      * 
@@ -176,7 +176,7 @@ namespace TencentCloud
                     bool m_contentHasBeenSet;
 
                     /**
-                     * Base64-encoded content of the hotword file. This field is required if Type is set to 1.
+                     * base64 content of the hot word library file, Type 1 required
 
 
                      */

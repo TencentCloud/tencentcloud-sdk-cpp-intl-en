@@ -196,18 +196,14 @@ namespace TencentCloud
 
                     /**
                      * 获取<p>AWS SQS callback. This is required if NotifyType is AWS-SQS.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return AwsSQS <p>AWS SQS callback. This is required if NotifyType is AWS-SQS.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     AwsSQS GetAwsSQS() const;
 
                     /**
                      * 设置<p>AWS SQS callback. This is required if NotifyType is AWS-SQS.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _awsSQS <p>AWS SQS callback. This is required if NotifyType is AWS-SQS.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetAwsSQS(const AwsSQS& _awsSQS);
@@ -286,7 +282,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * <p>AWS SQS callback. This is required if NotifyType is AWS-SQS.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     AwsSQS m_awsSQS;
                     bool m_awsSQSHasBeenSet;

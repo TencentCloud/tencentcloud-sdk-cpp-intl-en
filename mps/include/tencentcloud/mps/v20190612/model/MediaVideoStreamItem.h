@@ -172,19 +172,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool FpsHasBeenSet() const;
 
                     /**
-                     * 获取Color primaries
-Note: this field may return `null`, indicating that no valid value was found.
-                     * @return ColorPrimaries Color primaries
-Note: this field may return `null`, indicating that no valid value was found.
+                     * 获取Colorspace.
+                     * @return ColorPrimaries Colorspace.
                      * 
                      */
                     std::string GetColorPrimaries() const;
 
                     /**
-                     * 设置Color primaries
-Note: this field may return `null`, indicating that no valid value was found.
-                     * @param _colorPrimaries Color primaries
-Note: this field may return `null`, indicating that no valid value was found.
+                     * 设置Colorspace.
+                     * @param _colorPrimaries Colorspace.
                      * 
                      */
                     void SetColorPrimaries(const std::string& _colorPrimaries);
@@ -197,19 +193,15 @@ Note: this field may return `null`, indicating that no valid value was found.
                     bool ColorPrimariesHasBeenSet() const;
 
                     /**
-                     * 获取Color space
-Note: this field may return `null`, indicating that no valid value was found.
-                     * @return ColorSpace Color space
-Note: this field may return `null`, indicating that no valid value was found.
+                     * 获取Colorspace.
+                     * @return ColorSpace Colorspace.
                      * 
                      */
                     std::string GetColorSpace() const;
 
                     /**
-                     * 设置Color space
-Note: this field may return `null`, indicating that no valid value was found.
-                     * @param _colorSpace Color space
-Note: this field may return `null`, indicating that no valid value was found.
+                     * 设置Colorspace.
+                     * @param _colorSpace Colorspace.
                      * 
                      */
                     void SetColorSpace(const std::string& _colorSpace);
@@ -222,19 +214,15 @@ Note: this field may return `null`, indicating that no valid value was found.
                     bool ColorSpaceHasBeenSet() const;
 
                     /**
-                     * 获取Color transfer
-Note: this field may return `null`, indicating that no valid value was found.
-                     * @return ColorTransfer Color transfer
-Note: this field may return `null`, indicating that no valid value was found.
+                     * 获取Colorspace.
+                     * @return ColorTransfer Colorspace.
                      * 
                      */
                     std::string GetColorTransfer() const;
 
                     /**
-                     * 设置Color transfer
-Note: this field may return `null`, indicating that no valid value was found.
-                     * @param _colorTransfer Color transfer
-Note: this field may return `null`, indicating that no valid value was found.
+                     * 设置Colorspace.
+                     * @param _colorTransfer Colorspace.
                      * 
                      */
                     void SetColorTransfer(const std::string& _colorTransfer);
@@ -247,19 +235,15 @@ Note: this field may return `null`, indicating that no valid value was found.
                     bool ColorTransferHasBeenSet() const;
 
                     /**
-                     * 获取HDR type
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @return HdrType HDR type
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 获取HDR type.
+                     * @return HdrType HDR type.
                      * 
                      */
                     std::string GetHdrType() const;
 
                     /**
-                     * 设置HDR type
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @param _hdrType HDR type
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 设置HDR type.
+                     * @param _hdrType HDR type.
                      * 
                      */
                     void SetHdrType(const std::string& _hdrType);
@@ -272,15 +256,15 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool HdrTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Codecs 
+                     * 获取Video Codecs.
+                     * @return Codecs Video Codecs.
                      * 
                      */
                     std::string GetCodecs() const;
 
                     /**
-                     * 设置
-                     * @param _codecs 
+                     * 设置Video Codecs.
+                     * @param _codecs Video Codecs.
                      * 
                      */
                     void SetCodecs(const std::string& _codecs);
@@ -293,19 +277,15 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool CodecsHasBeenSet() const;
 
                     /**
-                     * 获取Numerator of the frame rate.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return FpsNumerator Numerator of the frame rate.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Numerator of the frame rate
+                     * @return FpsNumerator Numerator of the frame rate
                      * 
                      */
                     int64_t GetFpsNumerator() const;
 
                     /**
-                     * 设置Numerator of the frame rate.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _fpsNumerator Numerator of the frame rate.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Numerator of the frame rate
+                     * @param _fpsNumerator Numerator of the frame rate
                      * 
                      */
                     void SetFpsNumerator(const int64_t& _fpsNumerator);
@@ -318,19 +298,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool FpsNumeratorHasBeenSet() const;
 
                     /**
-                     * 获取Denominator of the frame rate.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return FpsDenominator Denominator of the frame rate.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Denominator of the frame rate
+                     * @return FpsDenominator Denominator of the frame rate
                      * 
                      */
                     int64_t GetFpsDenominator() const;
 
                     /**
-                     * 设置Denominator of the frame rate.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _fpsDenominator Denominator of the frame rate.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Denominator of the frame rate
+                     * @param _fpsDenominator Denominator of the frame rate
                      * 
                      */
                     void SetFpsDenominator(const int64_t& _fpsDenominator);
@@ -380,49 +356,43 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_fpsHasBeenSet;
 
                     /**
-                     * Color primaries
-Note: this field may return `null`, indicating that no valid value was found.
+                     * Colorspace.
                      */
                     std::string m_colorPrimaries;
                     bool m_colorPrimariesHasBeenSet;
 
                     /**
-                     * Color space
-Note: this field may return `null`, indicating that no valid value was found.
+                     * Colorspace.
                      */
                     std::string m_colorSpace;
                     bool m_colorSpaceHasBeenSet;
 
                     /**
-                     * Color transfer
-Note: this field may return `null`, indicating that no valid value was found.
+                     * Colorspace.
                      */
                     std::string m_colorTransfer;
                     bool m_colorTransferHasBeenSet;
 
                     /**
-                     * HDR type
-Note: This field may return `null`, indicating that no valid value was found.
+                     * HDR type.
                      */
                     std::string m_hdrType;
                     bool m_hdrTypeHasBeenSet;
 
                     /**
-                     * 
+                     * Video Codecs.
                      */
                     std::string m_codecs;
                     bool m_codecsHasBeenSet;
 
                     /**
-                     * Numerator of the frame rate.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Numerator of the frame rate
                      */
                     int64_t m_fpsNumerator;
                     bool m_fpsNumeratorHasBeenSet;
 
                     /**
-                     * Denominator of the frame rate.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Denominator of the frame rate
                      */
                     int64_t m_fpsDenominator;
                     bool m_fpsDenominatorHasBeenSet;

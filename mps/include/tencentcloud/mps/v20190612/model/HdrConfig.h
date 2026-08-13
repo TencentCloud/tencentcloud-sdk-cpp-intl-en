@@ -80,39 +80,35 @@ Default value: ON.
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取Type. Valid values:
+                     * 获取Type, available values:
 <li>HDR10</li>
 <li>HLG</li>
-Default value: HDR10.
+Default Value: HDR10.
 Note: The video encoding method should be h264 or h265.
 Note: The video encoding bit depth is 10.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Type Type. Valid values:
+                     * @return Type Type, available values:
 <li>HDR10</li>
 <li>HLG</li>
-Default value: HDR10.
+Default Value: HDR10.
 Note: The video encoding method should be h264 or h265.
 Note: The video encoding bit depth is 10.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Type. Valid values:
+                     * 设置Type, available values:
 <li>HDR10</li>
 <li>HLG</li>
-Default value: HDR10.
+Default Value: HDR10.
 Note: The video encoding method should be h264 or h265.
 Note: The video encoding bit depth is 10.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _type Type. Valid values:
+                     * @param _type Type, available values:
 <li>HDR10</li>
 <li>HLG</li>
-Default value: HDR10.
+Default Value: HDR10.
 Note: The video encoding method should be h264 or h265.
 Note: The video encoding bit depth is 10.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -136,13 +132,12 @@ Default value: ON.
                     bool m_switchHasBeenSet;
 
                     /**
-                     * Type. Valid values:
+                     * Type, available values:
 <li>HDR10</li>
 <li>HLG</li>
-Default value: HDR10.
+Default Value: HDR10.
 Note: The video encoding method should be h264 or h265.
 Note: The video encoding bit depth is 10.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;

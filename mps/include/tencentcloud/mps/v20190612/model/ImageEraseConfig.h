@@ -49,18 +49,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Icon erasing configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
                      * @return ImageEraseLogo Icon erasing configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     ImageEraseLogoConfig GetImageEraseLogo() const;
 
                     /**
                      * 设置Icon erasing configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
                      * @param _imageEraseLogo Icon erasing configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     void SetImageEraseLogo(const ImageEraseLogoConfig& _imageEraseLogo);
@@ -76,7 +72,6 @@ Note: This field may return null, indicating that no valid value can be obtained
 
                     /**
                      * Icon erasing configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     ImageEraseLogoConfig m_imageEraseLogo;
                     bool m_imageEraseLogoHasBeenSet;

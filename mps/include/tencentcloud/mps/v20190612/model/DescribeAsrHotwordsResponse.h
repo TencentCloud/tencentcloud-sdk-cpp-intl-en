@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool HotwordsIdHasBeenSet() const;
 
                     /**
-                     * 获取Current hotword lexicon id status. a value of 0 indicates that no template is bound to this hotword lexicon at the query moment and it can be deleted.
-                     * @return Status Current hotword lexicon id status. a value of 0 indicates that no template is bound to this hotword lexicon at the query moment and it can be deleted.
+                     * 获取Current hot lexicon id status. A value of 0 indicates that no template is bound to this hot lexicon at the query moment, and it can be deleted.
+                     * @return Status Current hot lexicon id status. A value of 0 indicates that no template is bound to this hot lexicon at the query moment, and it can be deleted.
                      * 
                      */
                     uint64_t GetStatus() const;
@@ -73,8 +73,8 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Name of the hot lexicon.
-                     * @return Name Name of the hot lexicon.
+                     * 获取Hotword lexicon name
+                     * @return Name Hotword lexicon name
                      * 
                      */
                     std::string GetName() const;
@@ -87,12 +87,12 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the value is 0 for a temporary hotword lexicon and returns the string provided during creation.
-Specifies the value is 1 for a file-based hotword lexicon, and returns the content of the file uploaded during creation.
+                     * 获取The value is 0 for a temporary hotword lexicon, and the string provided during creation is returned.
+The value is 1 for a file-based hotword lexicon, and the content of the file uploaded during creation is returned.
 
 
-                     * @return Type Specifies the value is 0 for a temporary hotword lexicon and returns the string provided during creation.
-Specifies the value is 1 for a file-based hotword lexicon, and returns the content of the file uploaded during creation.
+                     * @return Type The value is 0 for a temporary hotword lexicon, and the string provided during creation is returned.
+The value is 1 for a file-based hotword lexicon, and the content of the file uploaded during creation is returned.
 
 
                      * 
@@ -137,10 +137,10 @@ Specifies the value is 1 for a file-based hotword lexicon, and returns the conte
                     /**
                      * 获取Hotword text, which depends on the value of Type.
 If the value of Type is 0, the hotword string is returned.
-If the value of Type is 1, the base64-encoded content of the hotword file is returned.
+If the value of Type is 1, the base64-encoded content of the hotword lexicon file is returned.
                      * @return Content Hotword text, which depends on the value of Type.
 If the value of Type is 0, the hotword string is returned.
-If the value of Type is 1, the base64-encoded content of the hotword file is returned.
+If the value of Type is 1, the base64-encoded content of the hotword lexicon file is returned.
                      * 
                      */
                     std::string GetContent() const;
@@ -153,8 +153,8 @@ If the value of Type is 1, the base64-encoded content of the hotword file is ret
                     bool ContentHasBeenSet() const;
 
                     /**
-                     * 获取Number of words contained in the hotword lexicon.
-                     * @return WordCount Number of words contained in the hotword lexicon.
+                     * 获取Number of words contained in the current hotword lexicon.
+                     * @return WordCount Number of words contained in the current hotword lexicon.
                      * 
                      */
                     uint64_t GetWordCount() const;
@@ -167,8 +167,8 @@ If the value of Type is 1, the base64-encoded content of the hotword file is ret
                     bool WordCountHasBeenSet() const;
 
                     /**
-                     * 获取Paging offset. Default value: 0.
-                     * @return Offset Paging offset. Default value: 0.
+                     * 获取Pagination offset. Default value: 0.
+                     * @return Offset Pagination offset. Default value: 0.
                      * 
                      */
                     uint64_t GetOffset() const;
@@ -195,8 +195,8 @@ If the value of Type is 1, the base64-encoded content of the hotword file is ret
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Hot word lexicon createtime in ISOUTC format "2006-01-02T15:04:05Z".
-                     * @return CreateTime Hot word lexicon createtime in ISOUTC format "2006-01-02T15:04:05Z".
+                     * 获取Creation time of the hot lexicon in ISOUTC format "2006-01-02T15:04:05Z"
+                     * @return CreateTime Creation time of the hot lexicon in ISOUTC format "2006-01-02T15:04:05Z"
                      * 
                      */
                     std::string GetCreateTime() const;
@@ -209,8 +209,8 @@ If the value of Type is 1, the base64-encoded content of the hotword file is ret
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Hot lexicon last modified in ISOUTC format "2006-01-02T15:04:05Z".
-                     * @return UpdateTime Hot lexicon last modified in ISOUTC format "2006-01-02T15:04:05Z".
+                     * 获取Hot lexicon last modified ISOUTC format "2006-01-02T15:04:05Z"
+                     * @return UpdateTime Hot lexicon last modified ISOUTC format "2006-01-02T15:04:05Z"
                      * 
                      */
                     std::string GetUpdateTime() const;
@@ -231,20 +231,20 @@ If the value of Type is 1, the base64-encoded content of the hotword file is ret
                     bool m_hotwordsIdHasBeenSet;
 
                     /**
-                     * Current hotword lexicon id status. a value of 0 indicates that no template is bound to this hotword lexicon at the query moment and it can be deleted.
+                     * Current hot lexicon id status. A value of 0 indicates that no template is bound to this hot lexicon at the query moment, and it can be deleted.
                      */
                     uint64_t m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Name of the hot lexicon.
+                     * Hotword lexicon name
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Specifies the value is 0 for a temporary hotword lexicon and returns the string provided during creation.
-Specifies the value is 1 for a file-based hotword lexicon, and returns the content of the file uploaded during creation.
+                     * The value is 0 for a temporary hotword lexicon, and the string provided during creation is returned.
+The value is 1 for a file-based hotword lexicon, and the content of the file uploaded during creation is returned.
 
 
                      */
@@ -266,19 +266,19 @@ Specifies the value is 1 for a file-based hotword lexicon, and returns the conte
                     /**
                      * Hotword text, which depends on the value of Type.
 If the value of Type is 0, the hotword string is returned.
-If the value of Type is 1, the base64-encoded content of the hotword file is returned.
+If the value of Type is 1, the base64-encoded content of the hotword lexicon file is returned.
                      */
                     std::string m_content;
                     bool m_contentHasBeenSet;
 
                     /**
-                     * Number of words contained in the hotword lexicon.
+                     * Number of words contained in the current hotword lexicon.
                      */
                     uint64_t m_wordCount;
                     bool m_wordCountHasBeenSet;
 
                     /**
-                     * Paging offset. Default value: 0.
+                     * Pagination offset. Default value: 0.
                      */
                     uint64_t m_offset;
                     bool m_offsetHasBeenSet;
@@ -290,13 +290,13 @@ If the value of Type is 1, the base64-encoded content of the hotword file is ret
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Hot word lexicon createtime in ISOUTC format "2006-01-02T15:04:05Z".
+                     * Creation time of the hot lexicon in ISOUTC format "2006-01-02T15:04:05Z"
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * Hot lexicon last modified in ISOUTC format "2006-01-02T15:04:05Z".
+                     * Hot lexicon last modified ISOUTC format "2006-01-02T15:04:05Z"
                      */
                     std::string m_updateTime;
                     bool m_updateTimeHasBeenSet;

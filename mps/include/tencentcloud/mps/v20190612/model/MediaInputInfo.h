@@ -109,19 +109,15 @@ namespace TencentCloud
                     bool CosInputInfoHasBeenSet() const;
 
                     /**
-                     * 获取The URL of the object to process. This parameter is valid and required when `Type` is `URL`.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return UrlInputInfo The URL of the object to process. This parameter is valid and required when `Type` is `URL`.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取Valid when Type is URL. This item is required and indicates the media processing URL object information.
+                     * @return UrlInputInfo Valid when Type is URL. This item is required and indicates the media processing URL object information.
                      * 
                      */
                     UrlInputInfo GetUrlInputInfo() const;
 
                     /**
-                     * 设置The URL of the object to process. This parameter is valid and required when `Type` is `URL`.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _urlInputInfo The URL of the object to process. This parameter is valid and required when `Type` is `URL`.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置Valid when Type is URL. This item is required and indicates the media processing URL object information.
+                     * @param _urlInputInfo Valid when Type is URL. This item is required and indicates the media processing URL object information.
                      * 
                      */
                     void SetUrlInputInfo(const UrlInputInfo& _urlInputInfo);
@@ -134,19 +130,15 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool UrlInputInfoHasBeenSet() const;
 
                     /**
-                     * 获取The information of the AWS S3 object processed. This parameter is required if `Type` is `AWS-S3`.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return S3InputInfo The information of the AWS S3 object processed. This parameter is required if `Type` is `AWS-S3`.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取Valid when Type is AWS-S3. This item is required and represents the AWS S3 object information for media processing.
+                     * @return S3InputInfo Valid when Type is AWS-S3. This item is required and represents the AWS S3 object information for media processing.
                      * 
                      */
                     S3InputInfo GetS3InputInfo() const;
 
                     /**
-                     * 设置The information of the AWS S3 object processed. This parameter is required if `Type` is `AWS-S3`.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _s3InputInfo The information of the AWS S3 object processed. This parameter is required if `Type` is `AWS-S3`.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置Valid when Type is AWS-S3. This item is required and represents the AWS S3 object information for media processing.
+                     * @param _s3InputInfo Valid when Type is AWS-S3. This item is required and represents the AWS S3 object information for media processing.
                      * 
                      */
                     void SetS3InputInfo(const S3InputInfo& _s3InputInfo);
@@ -159,19 +151,15 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool S3InputInfoHasBeenSet() const;
 
                     /**
-                     * 获取The information of the VOD Pro object processed. This parameter is required if `Type` is `VOD`.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return VODInputInfo The information of the VOD Pro object processed. This parameter is required if `Type` is `VOD`.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取Valid at that time when Type is VOD. This item is required and represents the Media Processing Service (MPS) video-on-demand (VOD) pro edition object information.
+                     * @return VODInputInfo Valid at that time when Type is VOD. This item is required and represents the Media Processing Service (MPS) video-on-demand (VOD) pro edition object information.
                      * 
                      */
                     VODInputInfo GetVODInputInfo() const;
 
                     /**
-                     * 设置The information of the VOD Pro object processed. This parameter is required if `Type` is `VOD`.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _vODInputInfo The information of the VOD Pro object processed. This parameter is required if `Type` is `VOD`.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置Valid at that time when Type is VOD. This item is required and represents the Media Processing Service (MPS) video-on-demand (VOD) pro edition object information.
+                     * @param _vODInputInfo Valid at that time when Type is VOD. This item is required and represents the Media Processing Service (MPS) video-on-demand (VOD) pro edition object information.
                      * 
                      */
                     void SetVODInputInfo(const VODInputInfo& _vODInputInfo);
@@ -202,22 +190,19 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool m_cosInputInfoHasBeenSet;
 
                     /**
-                     * The URL of the object to process. This parameter is valid and required when `Type` is `URL`.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * Valid when Type is URL. This item is required and indicates the media processing URL object information.
                      */
                     UrlInputInfo m_urlInputInfo;
                     bool m_urlInputInfoHasBeenSet;
 
                     /**
-                     * The information of the AWS S3 object processed. This parameter is required if `Type` is `AWS-S3`.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * Valid when Type is AWS-S3. This item is required and represents the AWS S3 object information for media processing.
                      */
                     S3InputInfo m_s3InputInfo;
                     bool m_s3InputInfoHasBeenSet;
 
                     /**
-                     * The information of the VOD Pro object processed. This parameter is required if `Type` is `VOD`.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * Valid at that time when Type is VOD. This item is required and represents the Media Processing Service (MPS) video-on-demand (VOD) pro edition object information.
                      */
                     VODInputInfo m_vODInputInfo;
                     bool m_vODInputInfoHasBeenSet;

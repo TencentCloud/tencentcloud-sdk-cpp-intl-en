@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The AWS S3 bucket.
-                     * @return S3Bucket The AWS S3 bucket.
+                     * 获取S3 bucket.
+                     * @return S3Bucket S3 bucket.
                      * 
                      */
                     std::string GetS3Bucket() const;
 
                     /**
-                     * 设置The AWS S3 bucket.
-                     * @param _s3Bucket The AWS S3 bucket.
+                     * 设置S3 bucket.
+                     * @param _s3Bucket S3 bucket.
                      * 
                      */
                     void SetS3Bucket(const std::string& _s3Bucket);
@@ -68,15 +68,27 @@ namespace TencentCloud
                     bool S3BucketHasBeenSet() const;
 
                     /**
-                     * 获取The region of the AWS S3 bucket.
-                     * @return S3Region The region of the AWS S3 bucket.
+                     * 获取Region of the S3 bucket. Currently supports:  
+us-east-1  
+eu-west-3
+
+                     * @return S3Region Region of the S3 bucket. Currently supports:  
+us-east-1  
+eu-west-3
+
                      * 
                      */
                     std::string GetS3Region() const;
 
                     /**
-                     * 设置The region of the AWS S3 bucket.
-                     * @param _s3Region The region of the AWS S3 bucket.
+                     * 设置Region of the S3 bucket. Currently supports:  
+us-east-1  
+eu-west-3
+
+                     * @param _s3Region Region of the S3 bucket. Currently supports:  
+us-east-1  
+eu-west-3
+
                      * 
                      */
                     void SetS3Region(const std::string& _s3Region);
@@ -89,15 +101,15 @@ namespace TencentCloud
                     bool S3RegionHasBeenSet() const;
 
                     /**
-                     * 获取The path of the AWS S3 object.
-                     * @return S3Object The path of the AWS S3 object.
+                     * 获取Resource path of the media in the S3 bucket.
+                     * @return S3Object Resource path of the media in the S3 bucket.
                      * 
                      */
                     std::string GetS3Object() const;
 
                     /**
-                     * 设置The path of the AWS S3 object.
-                     * @param _s3Object The path of the AWS S3 object.
+                     * 设置Resource path of the media in the S3 bucket.
+                     * @param _s3Object Resource path of the media in the S3 bucket.
                      * 
                      */
                     void SetS3Object(const std::string& _s3Object);
@@ -110,15 +122,15 @@ namespace TencentCloud
                     bool S3ObjectHasBeenSet() const;
 
                     /**
-                     * 获取The key ID required to access the AWS S3 object.
-                     * @return S3SecretId The key ID required to access the AWS S3 object.
+                     * 获取AWS private network access media resource secret key id.
+                     * @return S3SecretId AWS private network access media resource secret key id.
                      * 
                      */
                     std::string GetS3SecretId() const;
 
                     /**
-                     * 设置The key ID required to access the AWS S3 object.
-                     * @param _s3SecretId The key ID required to access the AWS S3 object.
+                     * 设置AWS private network access media resource secret key id.
+                     * @param _s3SecretId AWS private network access media resource secret key id.
                      * 
                      */
                     void SetS3SecretId(const std::string& _s3SecretId);
@@ -131,15 +143,15 @@ namespace TencentCloud
                     bool S3SecretIdHasBeenSet() const;
 
                     /**
-                     * 获取The key required to access the AWS S3 object.
-                     * @return S3SecretKey The key required to access the AWS S3 object.
+                     * 获取AWS private network access media content key.
+                     * @return S3SecretKey AWS private network access media content key.
                      * 
                      */
                     std::string GetS3SecretKey() const;
 
                     /**
-                     * 设置The key required to access the AWS S3 object.
-                     * @param _s3SecretKey The key required to access the AWS S3 object.
+                     * 设置AWS private network access media content key.
+                     * @param _s3SecretKey AWS private network access media content key.
                      * 
                      */
                     void SetS3SecretKey(const std::string& _s3SecretKey);
@@ -154,31 +166,34 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The AWS S3 bucket.
+                     * S3 bucket.
                      */
                     std::string m_s3Bucket;
                     bool m_s3BucketHasBeenSet;
 
                     /**
-                     * The region of the AWS S3 bucket.
+                     * Region of the S3 bucket. Currently supports:  
+us-east-1  
+eu-west-3
+
                      */
                     std::string m_s3Region;
                     bool m_s3RegionHasBeenSet;
 
                     /**
-                     * The path of the AWS S3 object.
+                     * Resource path of the media in the S3 bucket.
                      */
                     std::string m_s3Object;
                     bool m_s3ObjectHasBeenSet;
 
                     /**
-                     * The key ID required to access the AWS S3 object.
+                     * AWS private network access media resource secret key id.
                      */
                     std::string m_s3SecretId;
                     bool m_s3SecretIdHasBeenSet;
 
                     /**
-                     * The key required to access the AWS S3 object.
+                     * AWS private network access media content key.
                      */
                     std::string m_s3SecretKey;
                     bool m_s3SecretKeyHasBeenSet;

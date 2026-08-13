@@ -80,19 +80,15 @@ Default value: ON.
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取Frame rate numerator. Value range: non-negative number, which should be less than 120 when divided by the denominator, and in the unit of Hz. The default value is 0. Note: For transcoding, this parameter will overwrite the Fps in the VideoTemplate.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return FpsNum Frame rate numerator. Value range: non-negative number, which should be less than 120 when divided by the denominator, and in the unit of Hz. The default value is 0. Note: For transcoding, this parameter will overwrite the Fps in the VideoTemplate.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Frame rate numerator. Value range: non-negative number, less than 120 when divided by the denominator, in Hz. Default value is 0. Note: For transcoding, this parameter overrides the Fps in the VideoTemplate.
+                     * @return FpsNum Frame rate numerator. Value range: non-negative number, less than 120 when divided by the denominator, in Hz. Default value is 0. Note: For transcoding, this parameter overrides the Fps in the VideoTemplate.
                      * 
                      */
                     int64_t GetFpsNum() const;
 
                     /**
-                     * 设置Frame rate numerator. Value range: non-negative number, which should be less than 120 when divided by the denominator, and in the unit of Hz. The default value is 0. Note: For transcoding, this parameter will overwrite the Fps in the VideoTemplate.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _fpsNum Frame rate numerator. Value range: non-negative number, which should be less than 120 when divided by the denominator, and in the unit of Hz. The default value is 0. Note: For transcoding, this parameter will overwrite the Fps in the VideoTemplate.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Frame rate numerator. Value range: non-negative number, less than 120 when divided by the denominator, in Hz. Default value is 0. Note: For transcoding, this parameter overrides the Fps in the VideoTemplate.
+                     * @param _fpsNum Frame rate numerator. Value range: non-negative number, less than 120 when divided by the denominator, in Hz. Default value is 0. Note: For transcoding, this parameter overrides the Fps in the VideoTemplate.
                      * 
                      */
                     void SetFpsNum(const int64_t& _fpsNum);
@@ -105,19 +101,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool FpsNumHasBeenSet() const;
 
                     /**
-                     * 获取Frame rate denominator.Value range: numbers equal to or greater than 1. The default value is 1. Note: For transcoding, this parameter will overwrite the FpsDenominator in the VideoTemplate.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return FpsDen Frame rate denominator.Value range: numbers equal to or greater than 1. The default value is 1. Note: For transcoding, this parameter will overwrite the FpsDenominator in the VideoTemplate.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Frame rate denominator. Value range: numbers equal to or greater than 1. The default value is 1. Note: For transcoding, this parameter will override the FpsDenominator in the VideoTemplate.
+                     * @return FpsDen Frame rate denominator. Value range: numbers equal to or greater than 1. The default value is 1. Note: For transcoding, this parameter will override the FpsDenominator in the VideoTemplate.
                      * 
                      */
                     int64_t GetFpsDen() const;
 
                     /**
-                     * 设置Frame rate denominator.Value range: numbers equal to or greater than 1. The default value is 1. Note: For transcoding, this parameter will overwrite the FpsDenominator in the VideoTemplate.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _fpsDen Frame rate denominator.Value range: numbers equal to or greater than 1. The default value is 1. Note: For transcoding, this parameter will overwrite the FpsDenominator in the VideoTemplate.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Frame rate denominator. Value range: numbers equal to or greater than 1. The default value is 1. Note: For transcoding, this parameter will override the FpsDenominator in the VideoTemplate.
+                     * @param _fpsDen Frame rate denominator. Value range: numbers equal to or greater than 1. The default value is 1. Note: For transcoding, this parameter will override the FpsDenominator in the VideoTemplate.
                      * 
                      */
                     void SetFpsDen(const int64_t& _fpsDen);
@@ -141,15 +133,13 @@ Default value: ON.
                     bool m_switchHasBeenSet;
 
                     /**
-                     * Frame rate numerator. Value range: non-negative number, which should be less than 120 when divided by the denominator, and in the unit of Hz. The default value is 0. Note: For transcoding, this parameter will overwrite the Fps in the VideoTemplate.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Frame rate numerator. Value range: non-negative number, less than 120 when divided by the denominator, in Hz. Default value is 0. Note: For transcoding, this parameter overrides the Fps in the VideoTemplate.
                      */
                     int64_t m_fpsNum;
                     bool m_fpsNumHasBeenSet;
 
                     /**
-                     * Frame rate denominator.Value range: numbers equal to or greater than 1. The default value is 1. Note: For transcoding, this parameter will overwrite the FpsDenominator in the VideoTemplate.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Frame rate denominator. Value range: numbers equal to or greater than 1. The default value is 1. Note: For transcoding, this parameter will override the FpsDenominator in the VideoTemplate.
                      */
                     int64_t m_fpsDen;
                     bool m_fpsDenHasBeenSet;

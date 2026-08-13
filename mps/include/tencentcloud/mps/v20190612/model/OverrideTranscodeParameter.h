@@ -174,19 +174,15 @@ namespace TencentCloud
                     bool AudioTemplateHasBeenSet() const;
 
                     /**
-                     * 获取The TSC transcoding parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TEHDConfig The TSC transcoding parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Top Speed Codec transcoding parameter.
+                     * @return TEHDConfig Top Speed Codec transcoding parameter.
                      * 
                      */
                     TEHDConfigForUpdate GetTEHDConfig() const;
 
                     /**
-                     * 设置The TSC transcoding parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _tEHDConfig The TSC transcoding parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Top Speed Codec transcoding parameter.
+                     * @param _tEHDConfig Top Speed Codec transcoding parameter.
                      * 
                      */
                     void SetTEHDConfig(const TEHDConfigForUpdate& _tEHDConfig);
@@ -319,8 +315,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_audioTemplateHasBeenSet;
 
                     /**
-                     * The TSC transcoding parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Top Speed Codec transcoding parameter.
                      */
                     TEHDConfigForUpdate m_tEHDConfig;
                     bool m_tEHDConfigHasBeenSet;

@@ -80,31 +80,27 @@ Default value: ON.
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取The strength. Valid values:
-<li>lq: For low-resolution videos with obvious noise</li>
-<li>hq: For high-resolution videos</li>
+                     * 获取Type, available values:
+<li>lq: Super-resolution for low-resolution videos with considerable noise;</li>
+<li>hq: Targeting high-resolution video super-resolution.</li>
 Default value: lq.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Type The strength. Valid values:
-<li>lq: For low-resolution videos with obvious noise</li>
-<li>hq: For high-resolution videos</li>
+                     * @return Type Type, available values:
+<li>lq: Super-resolution for low-resolution videos with considerable noise;</li>
+<li>hq: Targeting high-resolution video super-resolution.</li>
 Default value: lq.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置The strength. Valid values:
-<li>lq: For low-resolution videos with obvious noise</li>
-<li>hq: For high-resolution videos</li>
+                     * 设置Type, available values:
+<li>lq: Super-resolution for low-resolution videos with considerable noise;</li>
+<li>hq: Targeting high-resolution video super-resolution.</li>
 Default value: lq.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _type The strength. Valid values:
-<li>lq: For low-resolution videos with obvious noise</li>
-<li>hq: For high-resolution videos</li>
+                     * @param _type Type, available values:
+<li>lq: Super-resolution for low-resolution videos with considerable noise;</li>
+<li>hq: Targeting high-resolution video super-resolution.</li>
 Default value: lq.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -117,27 +113,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取The ratio of the target resolution to the original resolution. Valid values:
-<li>2</li>
+                     * 获取Super-resolution multiple, optional value:
+<li>2: Currently only support 2x super resolution.</li>
 Default value: 2.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Size The ratio of the target resolution to the original resolution. Valid values:
-<li>2</li>
+                     * @return Size Super-resolution multiple, optional value:
+<li>2: Currently only support 2x super resolution.</li>
 Default value: 2.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetSize() const;
 
                     /**
-                     * 设置The ratio of the target resolution to the original resolution. Valid values:
-<li>2</li>
+                     * 设置Super-resolution multiple, optional value:
+<li>2: Currently only support 2x super resolution.</li>
 Default value: 2.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _size The ratio of the target resolution to the original resolution. Valid values:
-<li>2</li>
+                     * @param _size Super-resolution multiple, optional value:
+<li>2: Currently only support 2x super resolution.</li>
 Default value: 2.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetSize(const int64_t& _size);
@@ -161,20 +153,18 @@ Default value: ON.
                     bool m_switchHasBeenSet;
 
                     /**
-                     * The strength. Valid values:
-<li>lq: For low-resolution videos with obvious noise</li>
-<li>hq: For high-resolution videos</li>
+                     * Type, available values:
+<li>lq: Super-resolution for low-resolution videos with considerable noise;</li>
+<li>hq: Targeting high-resolution video super-resolution.</li>
 Default value: lq.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * The ratio of the target resolution to the original resolution. Valid values:
-<li>2</li>
+                     * Super-resolution multiple, optional value:
+<li>2: Currently only support 2x super resolution.</li>
 Default value: 2.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_size;
                     bool m_sizeHasBeenSet;

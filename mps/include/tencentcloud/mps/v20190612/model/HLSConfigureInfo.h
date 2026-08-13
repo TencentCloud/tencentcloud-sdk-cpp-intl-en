@@ -47,27 +47,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Duration of a single TS file in seconds. Value range: 5-30 seconds.
+                     * 获取Duration of TS file, unit: second, value ranges from 5 to 30 seconds.
 
-If this parameter is left empty, 30 seconds will be used by default.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return ItemDuration Duration of a single TS file in seconds. Value range: 5-30 seconds.
+Leave it blank and it defaults to 30 seconds.
+                     * @return ItemDuration Duration of TS file, unit: second, value ranges from 5 to 30 seconds.
 
-If this parameter is left empty, 30 seconds will be used by default.
-Note: This field may return null, indicating that no valid value can be obtained.
+Leave it blank and it defaults to 30 seconds.
                      * 
                      */
                     int64_t GetItemDuration() const;
 
                     /**
-                     * 设置Duration of a single TS file in seconds. Value range: 5-30 seconds.
+                     * 设置Duration of TS file, unit: second, value ranges from 5 to 30 seconds.
 
-If this parameter is left empty, 30 seconds will be used by default.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _itemDuration Duration of a single TS file in seconds. Value range: 5-30 seconds.
+Leave it blank and it defaults to 30 seconds.
+                     * @param _itemDuration Duration of TS file, unit: second, value ranges from 5 to 30 seconds.
 
-If this parameter is left empty, 30 seconds will be used by default.
-Note: This field may return null, indicating that no valid value can be obtained.
+Leave it blank and it defaults to 30 seconds.
                      * 
                      */
                     void SetItemDuration(const int64_t& _itemDuration);
@@ -80,27 +76,23 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool ItemDurationHasBeenSet() const;
 
                     /**
-                     * 获取Recording cycle in seconds. Value range: 10 minutes to 12 hours.
+                     * 获取Recording period, unit: second, value ranges from 10 minutes to 12 hr.
 
-If this parameter is left empty, 10 minutes (3600 seconds) will be used by default.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return Interval Recording cycle in seconds. Value range: 10 minutes to 12 hours.
+Leave it blank defaults to 10 minutes (3600 seconds).
+                     * @return Interval Recording period, unit: second, value ranges from 10 minutes to 12 hr.
 
-If this parameter is left empty, 10 minutes (3600 seconds) will be used by default.
-Note: This field may return null, indicating that no valid value can be obtained.
+Leave it blank defaults to 10 minutes (3600 seconds).
                      * 
                      */
                     int64_t GetInterval() const;
 
                     /**
-                     * 设置Recording cycle in seconds. Value range: 10 minutes to 12 hours.
+                     * 设置Recording period, unit: second, value ranges from 10 minutes to 12 hr.
 
-If this parameter is left empty, 10 minutes (3600 seconds) will be used by default.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _interval Recording cycle in seconds. Value range: 10 minutes to 12 hours.
+Leave it blank defaults to 10 minutes (3600 seconds).
+                     * @param _interval Recording period, unit: second, value ranges from 10 minutes to 12 hr.
 
-If this parameter is left empty, 10 minutes (3600 seconds) will be used by default.
-Note: This field may return null, indicating that no valid value can be obtained.
+Leave it blank defaults to 10 minutes (3600 seconds).
                      * 
                      */
                     void SetInterval(const int64_t& _interval);
@@ -113,23 +105,19 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool IntervalHasBeenSet() const;
 
                     /**
-                     * 获取Resume recording waiting time, unit: seconds. Value range: 60-1800 seconds.
-If this parameter is left empty, 0 (resume recording not enabled) will be used by default.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return ContinueTimeout Resume recording waiting time, unit: seconds. Value range: 60-1800 seconds.
-If this parameter is left empty, 0 (resume recording not enabled) will be used by default.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取Continuation waiting time, unit: second. Value range: 60 seconds to 1800 seconds.
+Leave blank defaults to 0 (recording continuation disabled).
+                     * @return ContinueTimeout Continuation waiting time, unit: second. Value range: 60 seconds to 1800 seconds.
+Leave blank defaults to 0 (recording continuation disabled).
                      * 
                      */
                     int64_t GetContinueTimeout() const;
 
                     /**
-                     * 设置Resume recording waiting time, unit: seconds. Value range: 60-1800 seconds.
-If this parameter is left empty, 0 (resume recording not enabled) will be used by default.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _continueTimeout Resume recording waiting time, unit: seconds. Value range: 60-1800 seconds.
-If this parameter is left empty, 0 (resume recording not enabled) will be used by default.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置Continuation waiting time, unit: second. Value range: 60 seconds to 1800 seconds.
+Leave blank defaults to 0 (recording continuation disabled).
+                     * @param _continueTimeout Continuation waiting time, unit: second. Value range: 60 seconds to 1800 seconds.
+Leave blank defaults to 0 (recording continuation disabled).
                      * 
                      */
                     void SetContinueTimeout(const int64_t& _continueTimeout);
@@ -144,27 +132,24 @@ Note: This field may return null, indicating that no valid value can be obtained
                 private:
 
                     /**
-                     * Duration of a single TS file in seconds. Value range: 5-30 seconds.
+                     * Duration of TS file, unit: second, value ranges from 5 to 30 seconds.
 
-If this parameter is left empty, 30 seconds will be used by default.
-Note: This field may return null, indicating that no valid value can be obtained.
+Leave it blank and it defaults to 30 seconds.
                      */
                     int64_t m_itemDuration;
                     bool m_itemDurationHasBeenSet;
 
                     /**
-                     * Recording cycle in seconds. Value range: 10 minutes to 12 hours.
+                     * Recording period, unit: second, value ranges from 10 minutes to 12 hr.
 
-If this parameter is left empty, 10 minutes (3600 seconds) will be used by default.
-Note: This field may return null, indicating that no valid value can be obtained.
+Leave it blank defaults to 10 minutes (3600 seconds).
                      */
                     int64_t m_interval;
                     bool m_intervalHasBeenSet;
 
                     /**
-                     * Resume recording waiting time, unit: seconds. Value range: 60-1800 seconds.
-If this parameter is left empty, 0 (resume recording not enabled) will be used by default.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * Continuation waiting time, unit: second. Value range: 60 seconds to 1800 seconds.
+Leave blank defaults to 0 (recording continuation disabled).
                      */
                     int64_t m_continueTimeout;
                     bool m_continueTimeoutHasBeenSet;

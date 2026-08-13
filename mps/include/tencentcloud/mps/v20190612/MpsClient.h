@@ -27,6 +27,8 @@
 #include <tencentcloud/mps/v20190612/model/BatchProcessMediaResponse.h>
 #include <tencentcloud/mps/v20190612/model/CloneViralRequest.h>
 #include <tencentcloud/mps/v20190612/model/CloneViralResponse.h>
+#include <tencentcloud/mps/v20190612/model/CloneVoiceRequest.h>
+#include <tencentcloud/mps/v20190612/model/CloneVoiceResponse.h>
 #include <tencentcloud/mps/v20190612/model/CreateAIAnalysisTemplateRequest.h>
 #include <tencentcloud/mps/v20190612/model/CreateAIAnalysisTemplateResponse.h>
 #include <tencentcloud/mps/v20190612/model/CreateAIRecognitionTemplateRequest.h>
@@ -35,6 +37,8 @@
 #include <tencentcloud/mps/v20190612/model/CreateAdaptiveDynamicStreamingTemplateResponse.h>
 #include <tencentcloud/mps/v20190612/model/CreateAiDramaTaskRequest.h>
 #include <tencentcloud/mps/v20190612/model/CreateAiDramaTaskResponse.h>
+#include <tencentcloud/mps/v20190612/model/CreateAiFissionTaskRequest.h>
+#include <tencentcloud/mps/v20190612/model/CreateAiFissionTaskResponse.h>
 #include <tencentcloud/mps/v20190612/model/CreateAigcAudioTaskRequest.h>
 #include <tencentcloud/mps/v20190612/model/CreateAigcAudioTaskResponse.h>
 #include <tencentcloud/mps/v20190612/model/CreateAigcImageTaskRequest.h>
@@ -143,6 +147,8 @@
 #include <tencentcloud/mps/v20190612/model/DescribeAigcAudioTaskResponse.h>
 #include <tencentcloud/mps/v20190612/model/DescribeAigcImageTaskRequest.h>
 #include <tencentcloud/mps/v20190612/model/DescribeAigcImageTaskResponse.h>
+#include <tencentcloud/mps/v20190612/model/DescribeAigcTaskListRequest.h>
+#include <tencentcloud/mps/v20190612/model/DescribeAigcTaskListResponse.h>
 #include <tencentcloud/mps/v20190612/model/DescribeAigcTaskStatusRequest.h>
 #include <tencentcloud/mps/v20190612/model/DescribeAigcTaskStatusResponse.h>
 #include <tencentcloud/mps/v20190612/model/DescribeAigcVideoTaskRequest.h>
@@ -295,6 +301,8 @@
 #include <tencentcloud/mps/v20190612/model/ResetWorkflowResponse.h>
 #include <tencentcloud/mps/v20190612/model/SyncDubbingRequest.h>
 #include <tencentcloud/mps/v20190612/model/SyncDubbingResponse.h>
+#include <tencentcloud/mps/v20190612/model/TextToSpeechRequest.h>
+#include <tencentcloud/mps/v20190612/model/TextToSpeechResponse.h>
 #include <tencentcloud/mps/v20190612/model/TextToSpeechAsyncRequest.h>
 #include <tencentcloud/mps/v20190612/model/TextToSpeechAsyncResponse.h>
 #include <tencentcloud/mps/v20190612/model/TextTranslationRequest.h>
@@ -323,6 +331,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CloneViralResponse> CloneViralOutcome;
                 typedef std::future<CloneViralOutcome> CloneViralOutcomeCallable;
                 typedef std::function<void(const MpsClient*, const Model::CloneViralRequest&, CloneViralOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CloneViralAsyncHandler;
+                typedef Outcome<Core::Error, Model::CloneVoiceResponse> CloneVoiceOutcome;
+                typedef std::future<CloneVoiceOutcome> CloneVoiceOutcomeCallable;
+                typedef std::function<void(const MpsClient*, const Model::CloneVoiceRequest&, CloneVoiceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CloneVoiceAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateAIAnalysisTemplateResponse> CreateAIAnalysisTemplateOutcome;
                 typedef std::future<CreateAIAnalysisTemplateOutcome> CreateAIAnalysisTemplateOutcomeCallable;
                 typedef std::function<void(const MpsClient*, const Model::CreateAIAnalysisTemplateRequest&, CreateAIAnalysisTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateAIAnalysisTemplateAsyncHandler;
@@ -335,6 +346,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateAiDramaTaskResponse> CreateAiDramaTaskOutcome;
                 typedef std::future<CreateAiDramaTaskOutcome> CreateAiDramaTaskOutcomeCallable;
                 typedef std::function<void(const MpsClient*, const Model::CreateAiDramaTaskRequest&, CreateAiDramaTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateAiDramaTaskAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateAiFissionTaskResponse> CreateAiFissionTaskOutcome;
+                typedef std::future<CreateAiFissionTaskOutcome> CreateAiFissionTaskOutcomeCallable;
+                typedef std::function<void(const MpsClient*, const Model::CreateAiFissionTaskRequest&, CreateAiFissionTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateAiFissionTaskAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateAigcAudioTaskResponse> CreateAigcAudioTaskOutcome;
                 typedef std::future<CreateAigcAudioTaskOutcome> CreateAigcAudioTaskOutcomeCallable;
                 typedef std::function<void(const MpsClient*, const Model::CreateAigcAudioTaskRequest&, CreateAigcAudioTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateAigcAudioTaskAsyncHandler;
@@ -497,6 +511,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeAigcImageTaskResponse> DescribeAigcImageTaskOutcome;
                 typedef std::future<DescribeAigcImageTaskOutcome> DescribeAigcImageTaskOutcomeCallable;
                 typedef std::function<void(const MpsClient*, const Model::DescribeAigcImageTaskRequest&, DescribeAigcImageTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAigcImageTaskAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeAigcTaskListResponse> DescribeAigcTaskListOutcome;
+                typedef std::future<DescribeAigcTaskListOutcome> DescribeAigcTaskListOutcomeCallable;
+                typedef std::function<void(const MpsClient*, const Model::DescribeAigcTaskListRequest&, DescribeAigcTaskListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAigcTaskListAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeAigcTaskStatusResponse> DescribeAigcTaskStatusOutcome;
                 typedef std::future<DescribeAigcTaskStatusOutcome> DescribeAigcTaskStatusOutcomeCallable;
                 typedef std::function<void(const MpsClient*, const Model::DescribeAigcTaskStatusRequest&, DescribeAigcTaskStatusOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeAigcTaskStatusAsyncHandler;
@@ -725,6 +742,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::SyncDubbingResponse> SyncDubbingOutcome;
                 typedef std::future<SyncDubbingOutcome> SyncDubbingOutcomeCallable;
                 typedef std::function<void(const MpsClient*, const Model::SyncDubbingRequest&, SyncDubbingOutcome, const std::shared_ptr<const AsyncCallerContext>&)> SyncDubbingAsyncHandler;
+                typedef Outcome<Core::Error, Model::TextToSpeechResponse> TextToSpeechOutcome;
+                typedef std::future<TextToSpeechOutcome> TextToSpeechOutcomeCallable;
+                typedef std::function<void(const MpsClient*, const Model::TextToSpeechRequest&, TextToSpeechOutcome, const std::shared_ptr<const AsyncCallerContext>&)> TextToSpeechAsyncHandler;
                 typedef Outcome<Core::Error, Model::TextToSpeechAsyncResponse> TextToSpeechAsyncOutcome;
                 typedef std::future<TextToSpeechAsyncOutcome> TextToSpeechAsyncOutcomeCallable;
                 typedef std::function<void(const MpsClient*, const Model::TextToSpeechAsyncRequest&, TextToSpeechAsyncOutcome, const std::shared_ptr<const AsyncCallerContext>&)> TextToSpeechAsyncAsyncHandler;
@@ -758,6 +778,15 @@ Smart subtitle (full speech, speech hotword, and speech translation).
                 CloneViralOutcome CloneViral(const Model::CloneViralRequest &request);
                 void CloneViralAsync(const Model::CloneViralRequest& request, const CloneViralAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CloneViralOutcomeCallable CloneViralCallable(const Model::CloneViralRequest& request);
+
+                /**
+                 *This API is used to clone a voice type from a reference audio.
+                 * @param req CloneVoiceRequest
+                 * @return CloneVoiceOutcome
+                 */
+                CloneVoiceOutcome CloneVoice(const Model::CloneVoiceRequest &request);
+                void CloneVoiceAsync(const Model::CloneVoiceRequest& request, const CloneVoiceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CloneVoiceOutcomeCallable CloneVoiceCallable(const Model::CloneVoiceRequest& request);
 
                 /**
                  *This API is used to create a custom content analysis template. Up to 50 templates can be created.
@@ -794,6 +823,15 @@ Smart subtitle (full speech, speech hotword, and speech translation).
                 CreateAiDramaTaskOutcome CreateAiDramaTask(const Model::CreateAiDramaTaskRequest &request);
                 void CreateAiDramaTaskAsync(const Model::CreateAiDramaTaskRequest& request, const CreateAiDramaTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreateAiDramaTaskOutcomeCallable CreateAiDramaTaskCallable(const Model::CreateAiDramaTaskRequest& request);
+
+                /**
+                 *Create an ai video fission task
+                 * @param req CreateAiFissionTaskRequest
+                 * @return CreateAiFissionTaskOutcome
+                 */
+                CreateAiFissionTaskOutcome CreateAiFissionTask(const Model::CreateAiFissionTaskRequest &request);
+                void CreateAiFissionTaskAsync(const Model::CreateAiFissionTaskRequest& request, const CreateAiFissionTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateAiFissionTaskOutcomeCallable CreateAiFissionTaskCallable(const Model::CreateAiFissionTaskRequest& request);
 
                 /**
                  *This API is used to create AI audio generation tasks.
@@ -1077,7 +1115,7 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
                 DeleteAdaptiveDynamicStreamingTemplateOutcomeCallable DeleteAdaptiveDynamicStreamingTemplateCallable(const Model::DeleteAdaptiveDynamicStreamingTemplateRequest& request);
 
                 /**
-                 *This API is used to delete a custom animated image generating template.
+                 *This API is used to delete custom animated image generating templates.
                  * @param req DeleteAnimatedGraphicsTemplateRequest
                  * @return DeleteAnimatedGraphicsTemplateOutcome
                  */
@@ -1104,7 +1142,7 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
                 DeleteBlindWatermarkTemplateOutcomeCallable DeleteBlindWatermarkTemplateCallable(const Model::DeleteBlindWatermarkTemplateRequest& request);
 
                 /**
-                 *This API is used to delete a custom content moderation template.
+                 *This API is used to delete a user-defined content moderation template.
                  * @param req DeleteContentReviewTemplateRequest
                  * @return DeleteContentReviewTemplateOutcome
                  */
@@ -1113,7 +1151,7 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
                 DeleteContentReviewTemplateOutcomeCallable DeleteContentReviewTemplateCallable(const Model::DeleteContentReviewTemplateRequest& request);
 
                 /**
-                 *This API is used to delete an image sprite generating template.
+                 *This API is used to delete a sprite sheet template.
                  * @param req DeleteImageSpriteTemplateRequest
                  * @return DeleteImageSpriteTemplateOutcome
                  */
@@ -1167,7 +1205,7 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
                 DeleteQualityControlTemplateOutcomeCallable DeleteQualityControlTemplateCallable(const Model::DeleteQualityControlTemplateRequest& request);
 
                 /**
-                 *This API is used to delete a custom sampled screencapturing template.
+                 *This API is used to delete a user-customized sampled screenshot template.
                  * @param req DeleteSampleSnapshotTemplateRequest
                  * @return DeleteSampleSnapshotTemplateOutcome
                  */
@@ -1176,7 +1214,7 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
                 DeleteSampleSnapshotTemplateOutcomeCallable DeleteSampleSnapshotTemplateCallable(const Model::DeleteSampleSnapshotTemplateRequest& request);
 
                 /**
-                 *This API is used to delete a scheme.
+                 *Delete orchestration
                  * @param req DeleteScheduleRequest
                  * @return DeleteScheduleOutcome
                  */
@@ -1203,7 +1241,7 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
                 DeleteSmartSubtitleTemplateOutcomeCallable DeleteSmartSubtitleTemplateCallable(const Model::DeleteSmartSubtitleTemplateRequest& request);
 
                 /**
-                 *This API is used to delete a custom time point screencapturing template.
+                 *This API is used to delete a user-customized specified time point screenshot template.
                  * @param req DeleteSnapshotByTimeOffsetTemplateRequest
                  * @return DeleteSnapshotByTimeOffsetTemplateOutcome
                  */
@@ -1239,7 +1277,7 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
                 DeleteVoiceOutcomeCallable DeleteVoiceCallable(const Model::DeleteVoiceRequest& request);
 
                 /**
-                 *This API is used to delete a custom watermarking template.
+                 *This API is used to delete a user-customized watermark template.
                  * @param req DeleteWatermarkTemplateRequest
                  * @return DeleteWatermarkTemplateOutcome
                  */
@@ -1257,7 +1295,7 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
                 DeleteWordSamplesOutcomeCallable DeleteWordSamplesCallable(const Model::DeleteWordSamplesRequest& request);
 
                 /**
-                 *This API is used to delete a workflow. An enabled workflow must be disabled before it can be deleted.
+                 *Delete workflow. For enabled workflows, they must be disabled before they can be deleted.
                  * @param req DeleteWorkflowRequest
                  * @return DeleteWorkflowOutcome
                  */
@@ -1309,6 +1347,15 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
                 DescribeAigcImageTaskOutcome DescribeAigcImageTask(const Model::DescribeAigcImageTaskRequest &request);
                 void DescribeAigcImageTaskAsync(const Model::DescribeAigcImageTaskRequest& request, const DescribeAigcImageTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeAigcImageTaskOutcomeCallable DescribeAigcImageTaskCallable(const Model::DescribeAigcImageTaskRequest& request);
+
+                /**
+                 *Query AIGC task list details
+                 * @param req DescribeAigcTaskListRequest
+                 * @return DescribeAigcTaskListOutcome
+                 */
+                DescribeAigcTaskListOutcome DescribeAigcTaskList(const Model::DescribeAigcTaskListRequest &request);
+                void DescribeAigcTaskListAsync(const Model::DescribeAigcTaskListRequest& request, const DescribeAigcTaskListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeAigcTaskListOutcomeCallable DescribeAigcTaskListCallable(const Model::DescribeAigcTaskListRequest& request);
 
                 /**
                  *Queries AIGC scenario task APIs
@@ -1437,7 +1484,7 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
                 DescribeLiveRecordTemplatesOutcomeCallable DescribeLiveRecordTemplatesCallable(const Model::DescribeLiveRecordTemplatesRequest& request);
 
                 /**
-                 *This API is used to get the metadata of media, such as video image width/height, codec, length, and frame rate.
+                 *This API is used to obtain media meta information, including video image width, height, encoding format, duration, and frame rate.
                  * @param req DescribeMediaMetaDataRequest
                  * @return DescribeMediaMetaDataOutcome
                  */
@@ -1648,7 +1695,7 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
                 DetectVideoWatermarkOutcomeCallable DetectVideoWatermarkCallable(const Model::DetectVideoWatermarkRequest& request);
 
                 /**
-                 *This API is used to disable a scheme.
+                 *Disable automated trigger orchestration tasks.
                  * @param req DisableScheduleRequest
                  * @return DisableScheduleOutcome
                  */
@@ -1696,7 +1743,7 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
                 EmbeddingDataOutcomeCallable EmbeddingDataCallable(const Model::EmbeddingDataRequest& request);
 
                 /**
-                 *This API is used to enable a scheme.
+                 *Enable automated trigger orchestration tasks.
                  * @param req EnableScheduleRequest
                  * @return EnableScheduleOutcome
                  */
@@ -1705,7 +1752,7 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
                 EnableScheduleOutcomeCallable EnableScheduleCallable(const Model::EnableScheduleRequest& request);
 
                 /**
-                 *This API is used to enable a workflow.
+                 *Enables a workflow.
                  * @param req EnableWorkflowRequest
                  * @return EnableWorkflowOutcome
                  */
@@ -1714,7 +1761,7 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
                 EnableWorkflowOutcomeCallable EnableWorkflowCallable(const Model::EnableWorkflowRequest& request);
 
                 /**
-                 *This API is reserved for special circumstances. Do not use it unless you are directed to use it by technical support.
+                 *This interface is only used for custom development in special scenarios. Unless a Media Processing Service customer service representative proactively informs you that you need to use this interface, do not call it in other cases.
                  * @param req ExecuteFunctionRequest
                  * @return ExecuteFunctionOutcome
                  */
@@ -1815,7 +1862,7 @@ Note: templates with an ID below 10000 are preset and cannot be modified.
                 ModifyImageSpriteTemplateOutcomeCallable ModifyImageSpriteTemplateCallable(const Model::ModifyImageSpriteTemplateRequest& request);
 
                 /**
-                 *This API is used to modify a live recording template.
+                 *This example shows you how to modify a live streaming recording template.
                  * @param req ModifyLiveRecordTemplateRequest
                  * @return ModifyLiveRecordTemplateOutcome
                  */
@@ -2021,7 +2068,7 @@ Live stream processing event notification supports HTTP callback and also suppor
                 RecognizeAudioOutcomeCallable RecognizeAudioCallable(const Model::RecognizeAudioRequest& request);
 
                 /**
-                 *This API is used to reset an existing workflow that is disabled.
+                 *This API is used to reset a workflow that already exists and is in disable status.
                  * @param req ResetWorkflowRequest
                  * @return ResetWorkflowOutcome
                  */
@@ -2037,6 +2084,15 @@ Live stream processing event notification supports HTTP callback and also suppor
                 SyncDubbingOutcome SyncDubbing(const Model::SyncDubbingRequest &request);
                 void SyncDubbingAsync(const Model::SyncDubbingRequest& request, const SyncDubbingAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 SyncDubbingOutcomeCallable SyncDubbingCallable(const Model::SyncDubbingRequest& request);
+
+                /**
+                 *This API is used to generate speech synchronously based on input text and specified voice tone.
+                 * @param req TextToSpeechRequest
+                 * @return TextToSpeechOutcome
+                 */
+                TextToSpeechOutcome TextToSpeech(const Model::TextToSpeechRequest &request);
+                void TextToSpeechAsync(const Model::TextToSpeechRequest& request, const TextToSpeechAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                TextToSpeechOutcomeCallable TextToSpeechCallable(const Model::TextToSpeechRequest& request);
 
                 /**
                  *This API is used to convert text to speech asynchronously and supports long text to speech.

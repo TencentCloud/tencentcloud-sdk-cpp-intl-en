@@ -80,31 +80,27 @@ Default value: `ON`.
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取The scenario. Valid values:
-<li>`normal`: Separate voice and background audio.</li>
-<li>`music`: Separate vocals and instrumentals.</li>
-Default value: `normal`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Type The scenario. Valid values:
-<li>`normal`: Separate voice and background audio.</li>
-<li>`music`: Separate vocals and instrumentals.</li>
-Default value: `normal`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Scenario type. Valid values:
+<li>normal: Voice background audio scenario</li>
+<li>music: Singing accompaniment scenario</li>
+Default value: normal.
+                     * @return Type Scenario type. Valid values:
+<li>normal: Voice background audio scenario</li>
+<li>music: Singing accompaniment scenario</li>
+Default value: normal.
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置The scenario. Valid values:
-<li>`normal`: Separate voice and background audio.</li>
-<li>`music`: Separate vocals and instrumentals.</li>
-Default value: `normal`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _type The scenario. Valid values:
-<li>`normal`: Separate voice and background audio.</li>
-<li>`music`: Separate vocals and instrumentals.</li>
-Default value: `normal`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Scenario type. Valid values:
+<li>normal: Voice background audio scenario</li>
+<li>music: Singing accompaniment scenario</li>
+Default value: normal.
+                     * @param _type Scenario type. Valid values:
+<li>normal: Voice background audio scenario</li>
+<li>music: Singing accompaniment scenario</li>
+Default value: normal.
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -117,31 +113,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取The output audio track. Valid values:
-<li>`vocal`: Voice.</li>
-<li>`background`: Output background audio if the scenario is `normal`, and output instrumentals if the scenario is `music`.</li>
-Default value: `vocal`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Track The output audio track. Valid values:
-<li>`vocal`: Voice.</li>
-<li>`background`: Output background audio if the scenario is `normal`, and output instrumentals if the scenario is `music`.</li>
-Default value: `vocal`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Output audio track. Available values:
+<li>vocal: output voice.</li>
+<li>Background: Output background audio when the application scenario is normal, and output accompaniment when the application scenario is music.</li>
+Default value: vocal.
+                     * @return Track Output audio track. Available values:
+<li>vocal: output voice.</li>
+<li>Background: Output background audio when the application scenario is normal, and output accompaniment when the application scenario is music.</li>
+Default value: vocal.
                      * 
                      */
                     std::string GetTrack() const;
 
                     /**
-                     * 设置The output audio track. Valid values:
-<li>`vocal`: Voice.</li>
-<li>`background`: Output background audio if the scenario is `normal`, and output instrumentals if the scenario is `music`.</li>
-Default value: `vocal`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _track The output audio track. Valid values:
-<li>`vocal`: Voice.</li>
-<li>`background`: Output background audio if the scenario is `normal`, and output instrumentals if the scenario is `music`.</li>
-Default value: `vocal`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Output audio track. Available values:
+<li>vocal: output voice.</li>
+<li>Background: Output background audio when the application scenario is normal, and output accompaniment when the application scenario is music.</li>
+Default value: vocal.
+                     * @param _track Output audio track. Available values:
+<li>vocal: output voice.</li>
+<li>Background: Output background audio when the application scenario is normal, and output accompaniment when the application scenario is music.</li>
+Default value: vocal.
                      * 
                      */
                     void SetTrack(const std::string& _track);
@@ -165,21 +157,19 @@ Default value: `ON`.
                     bool m_switchHasBeenSet;
 
                     /**
-                     * The scenario. Valid values:
-<li>`normal`: Separate voice and background audio.</li>
-<li>`music`: Separate vocals and instrumentals.</li>
-Default value: `normal`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Scenario type. Valid values:
+<li>normal: Voice background audio scenario</li>
+<li>music: Singing accompaniment scenario</li>
+Default value: normal.
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * The output audio track. Valid values:
-<li>`vocal`: Voice.</li>
-<li>`background`: Output background audio if the scenario is `normal`, and output instrumentals if the scenario is `music`.</li>
-Default value: `vocal`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Output audio track. Available values:
+<li>vocal: output voice.</li>
+<li>Background: Output background audio when the application scenario is normal, and output accompaniment when the application scenario is music.</li>
+Default value: vocal.
                      */
                     std::string m_track;
                     bool m_trackHasBeenSet;

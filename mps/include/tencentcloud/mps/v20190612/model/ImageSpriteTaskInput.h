@@ -71,18 +71,14 @@ namespace TencentCloud
 
                     /**
                      * 获取<p>Target storage for the file after the sprite screenshot is taken. If this is not specified, it inherits the value from the upper-level OutputStorage.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return OutputStorage <p>Target storage for the file after the sprite screenshot is taken. If this is not specified, it inherits the value from the upper-level OutputStorage.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     TaskOutputStorage GetOutputStorage() const;
 
                     /**
                      * 设置<p>Target storage for the file after the sprite screenshot is taken. If this is not specified, it inherits the value from the upper-level OutputStorage.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _outputStorage <p>Target storage for the file after the sprite screenshot is taken. If this is not specified, it inherits the value from the upper-level OutputStorage.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetOutputStorage(const TaskOutputStorage& _outputStorage);
@@ -138,18 +134,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取<p>Rule of the <code>{number}</code> variable in the output path after the sprite screenshot is taken.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ObjectNumberFormat <p>Rule of the <code>{number}</code> variable in the output path after the sprite screenshot is taken.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     NumberFormat GetObjectNumberFormat() const;
 
                     /**
                      * 设置<p>Rule of the <code>{number}</code> variable in the output path after the sprite screenshot is taken.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _objectNumberFormat <p>Rule of the <code>{number}</code> variable in the output path after the sprite screenshot is taken.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetObjectNumberFormat(const NumberFormat& _objectNumberFormat);
@@ -192,7 +184,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * <p>Target storage for the file after the sprite screenshot is taken. If this is not specified, it inherits the value from the upper-level OutputStorage.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     TaskOutputStorage m_outputStorage;
                     bool m_outputStorageHasBeenSet;
@@ -211,7 +202,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * <p>Rule of the <code>{number}</code> variable in the output path after the sprite screenshot is taken.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     NumberFormat m_objectNumberFormat;
                     bool m_objectNumberFormatHasBeenSet;

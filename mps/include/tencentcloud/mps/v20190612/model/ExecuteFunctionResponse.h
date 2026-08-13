@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Packed string, which will vary according to the custom API.
-                     * @return Result Packed string, which will vary according to the custom API.
+                     * 获取String after packaging, coordinate with the backend.
+                     * @return Result String after packaging, coordinate with the backend.
                      * 
                      */
                     std::string GetResult() const;
@@ -60,7 +60,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Packed string, which will vary according to the custom API.
+                     * String after packaging, coordinate with the backend.
                      */
                     std::string m_result;
                     bool m_resultHasBeenSet;

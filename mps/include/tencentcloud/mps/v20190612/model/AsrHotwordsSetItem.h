@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Hotword ID.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return Id Hotword ID.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取Serial number of the hot word
+                     * @return Id Serial number of the hot word
                      * 
                      */
                     uint64_t GetId() const;
 
                     /**
-                     * 设置Hotword ID.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _id Hotword ID.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置Serial number of the hot word
+                     * @param _id Serial number of the hot word
                      * 
                      */
                     void SetId(const uint64_t& _id);
@@ -72,19 +68,15 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool IdHasBeenSet() const;
 
                     /**
-                     * 获取Hotword text.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return Text Hotword text.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取Hotword text
+                     * @return Text Hotword text
                      * 
                      */
                     std::string GetText() const;
 
                     /**
-                     * 设置Hotword text.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _text Hotword text.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置Hotword text
+                     * @param _text Hotword text
                      * 
                      */
                     void SetText(const std::string& _text);
@@ -97,19 +89,15 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool TextHasBeenSet() const;
 
                     /**
-                     * 获取Hotword weight. The value can be 11 or 100 or be in the range of 1 to 10.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return Weight Hotword weight. The value can be 11 or 100 or be in the range of 1 to 10.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取Hotword weight. The value can be 11 or 100 or be in the range of 1 to -10.
+                     * @return Weight Hotword weight. The value can be 11 or 100 or be in the range of 1 to -10.
                      * 
                      */
                     int64_t GetWeight() const;
 
                     /**
-                     * 设置Hotword weight. The value can be 11 or 100 or be in the range of 1 to 10.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _weight Hotword weight. The value can be 11 or 100 or be in the range of 1 to 10.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置Hotword weight. The value can be 11 or 100 or be in the range of 1 to -10.
+                     * @param _weight Hotword weight. The value can be 11 or 100 or be in the range of 1 to -10.
                      * 
                      */
                     void SetWeight(const int64_t& _weight);
@@ -124,22 +112,19 @@ Note: This field may return null, indicating that no valid value can be obtained
                 private:
 
                     /**
-                     * Hotword ID.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * Serial number of the hot word
                      */
                     uint64_t m_id;
                     bool m_idHasBeenSet;
 
                     /**
-                     * Hotword text.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * Hotword text
                      */
                     std::string m_text;
                     bool m_textHasBeenSet;
 
                     /**
-                     * Hotword weight. The value can be 11 or 100 or be in the range of 1 to 10.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * Hotword weight. The value can be 11 or 100 or be in the range of 1 to -10.
                      */
                     int64_t m_weight;
                     bool m_weightHasBeenSet;

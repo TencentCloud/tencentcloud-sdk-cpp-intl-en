@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Name of called backend API.
-                     * @return FunctionName Name of called backend API.
+                     * 获取Backend interface name invoked.
+                     * @return FunctionName Backend interface name invoked.
                      * 
                      */
                     std::string GetFunctionName() const;
 
                     /**
-                     * 设置Name of called backend API.
-                     * @param _functionName Name of called backend API.
+                     * 设置Backend interface name invoked.
+                     * @param _functionName Backend interface name invoked.
                      * 
                      */
                     void SetFunctionName(const std::string& _functionName);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool FunctionNameHasBeenSet() const;
 
                     /**
-                     * 获取API parameter. Parameter format will depend on the actual function definition.
-                     * @return FunctionArg API parameter. Parameter format will depend on the actual function definition.
+                     * 获取API parameter, coordinate with the backend for the specific parameter format when calling.
+                     * @return FunctionArg API parameter, coordinate with the backend for the specific parameter format when calling.
                      * 
                      */
                     std::string GetFunctionArg() const;
 
                     /**
-                     * 设置API parameter. Parameter format will depend on the actual function definition.
-                     * @param _functionArg API parameter. Parameter format will depend on the actual function definition.
+                     * 设置API parameter, coordinate with the backend for the specific parameter format when calling.
+                     * @param _functionArg API parameter, coordinate with the backend for the specific parameter format when calling.
                      * 
                      */
                     void SetFunctionArg(const std::string& _functionArg);
@@ -87,13 +87,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Name of called backend API.
+                     * Backend interface name invoked.
                      */
                     std::string m_functionName;
                     bool m_functionNameHasBeenSet;
 
                     /**
-                     * API parameter. Parameter format will depend on the actual function definition.
+                     * API parameter, coordinate with the backend for the specific parameter format when calling.
                      */
                     std::string m_functionArg;
                     bool m_functionArgHasBeenSet;

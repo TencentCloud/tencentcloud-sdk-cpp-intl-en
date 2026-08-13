@@ -51,12 +51,10 @@ namespace TencentCloud
 <li>logo: icon.</li>
 <li>Text: text.</li>
 Default value: logo.
-Note: This field may return null, indicating that no valid value can be obtained.
                      * @return Type Type of the box selection area in the image. Valid values:
 <li>logo: icon.</li>
 <li>Text: text.</li>
 Default value: logo.
-Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     std::string GetType() const;
@@ -66,12 +64,10 @@ Note: This field may return null, indicating that no valid value can be obtained
 <li>logo: icon.</li>
 <li>Text: text.</li>
 Default value: logo.
-Note: This field may return null, indicating that no valid value can be obtained.
                      * @param _type Type of the box selection area in the image. Valid values:
 <li>logo: icon.</li>
 <li>Text: text.</li>
 Default value: logo.
-Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -85,22 +81,18 @@ Note: This field may return null, indicating that no valid value can be obtained
 
                     /**
                      * 获取Coordinates (pixel-level) of the box selection area in the image, in the format of [x1, y1, x2, y2]. It indicates the coordinates of the top left corner and the bottom right corner. Note: The maximum value of this field is 4096.
-For example, [101, 85, 111, 95].
-Note: This field may return null, indicating that no valid values can be obtained.
+For example, [101, 85, 111, —].
                      * @return AreaCoordSet Coordinates (pixel-level) of the box selection area in the image, in the format of [x1, y1, x2, y2]. It indicates the coordinates of the top left corner and the bottom right corner. Note: The maximum value of this field is 4096.
-For example, [101, 85, 111, 95].
-Note: This field may return null, indicating that no valid values can be obtained.
+For example, [101, 85, 111, —].
                      * 
                      */
                     std::vector<int64_t> GetAreaCoordSet() const;
 
                     /**
                      * 设置Coordinates (pixel-level) of the box selection area in the image, in the format of [x1, y1, x2, y2]. It indicates the coordinates of the top left corner and the bottom right corner. Note: The maximum value of this field is 4096.
-For example, [101, 85, 111, 95].
-Note: This field may return null, indicating that no valid values can be obtained.
+For example, [101, 85, 111, —].
                      * @param _areaCoordSet Coordinates (pixel-level) of the box selection area in the image, in the format of [x1, y1, x2, y2]. It indicates the coordinates of the top left corner and the bottom right corner. Note: The maximum value of this field is 4096.
-For example, [101, 85, 111, 95].
-Note: This field may return null, indicating that no valid values can be obtained.
+For example, [101, 85, 111, —].
                      * 
                      */
                     void SetAreaCoordSet(const std::vector<int64_t>& _areaCoordSet);
@@ -113,27 +105,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool AreaCoordSetHasBeenSet() const;
 
                     /**
-                     * 获取Coordinates of the box selection area in the image, in the format of [x1, y1, x2, y2]. It indicates the coordinates of the top left corner and the bottom right corner. This field takes effect when AreaCoordSet is not specified. When it indicates the pixel, the maximum value of this field is 4096.
+                     * 获取Coordinates of the box selection area in the image, in the format of [x1, y1, x2, y2]. It indicates the coordinates of the top left corner and the bottom right corner. This parameter is valid only when AreaCoordSet is not specified. When it indicates the pixel, the maximum value of this field is 4096.
 - [0.1, 0.1, 0.3, 0.3]: indicates the ratio (values are less than 1).
 - [50, 50, 350, 280]: indicates the pixel (values are greater than or equal to 1).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return BoundingBox Coordinates of the box selection area in the image, in the format of [x1, y1, x2, y2]. It indicates the coordinates of the top left corner and the bottom right corner. This field takes effect when AreaCoordSet is not specified. When it indicates the pixel, the maximum value of this field is 4096.
+                     * @return BoundingBox Coordinates of the box selection area in the image, in the format of [x1, y1, x2, y2]. It indicates the coordinates of the top left corner and the bottom right corner. This parameter is valid only when AreaCoordSet is not specified. When it indicates the pixel, the maximum value of this field is 4096.
 - [0.1, 0.1, 0.3, 0.3]: indicates the ratio (values are less than 1).
 - [50, 50, 350, 280]: indicates the pixel (values are greater than or equal to 1).
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<double> GetBoundingBox() const;
 
                     /**
-                     * 设置Coordinates of the box selection area in the image, in the format of [x1, y1, x2, y2]. It indicates the coordinates of the top left corner and the bottom right corner. This field takes effect when AreaCoordSet is not specified. When it indicates the pixel, the maximum value of this field is 4096.
+                     * 设置Coordinates of the box selection area in the image, in the format of [x1, y1, x2, y2]. It indicates the coordinates of the top left corner and the bottom right corner. This parameter is valid only when AreaCoordSet is not specified. When it indicates the pixel, the maximum value of this field is 4096.
 - [0.1, 0.1, 0.3, 0.3]: indicates the ratio (values are less than 1).
 - [50, 50, 350, 280]: indicates the pixel (values are greater than or equal to 1).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _boundingBox Coordinates of the box selection area in the image, in the format of [x1, y1, x2, y2]. It indicates the coordinates of the top left corner and the bottom right corner. This field takes effect when AreaCoordSet is not specified. When it indicates the pixel, the maximum value of this field is 4096.
+                     * @param _boundingBox Coordinates of the box selection area in the image, in the format of [x1, y1, x2, y2]. It indicates the coordinates of the top left corner and the bottom right corner. This parameter is valid only when AreaCoordSet is not specified. When it indicates the pixel, the maximum value of this field is 4096.
 - [0.1, 0.1, 0.3, 0.3]: indicates the ratio (values are less than 1).
 - [50, 50, 350, 280]: indicates the pixel (values are greater than or equal to 1).
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetBoundingBox(const std::vector<double>& _boundingBox);
@@ -173,24 +161,21 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>logo: icon.</li>
 <li>Text: text.</li>
 Default value: logo.
-Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
                      * Coordinates (pixel-level) of the box selection area in the image, in the format of [x1, y1, x2, y2]. It indicates the coordinates of the top left corner and the bottom right corner. Note: The maximum value of this field is 4096.
-For example, [101, 85, 111, 95].
-Note: This field may return null, indicating that no valid values can be obtained.
+For example, [101, 85, 111, —].
                      */
                     std::vector<int64_t> m_areaCoordSet;
                     bool m_areaCoordSetHasBeenSet;
 
                     /**
-                     * Coordinates of the box selection area in the image, in the format of [x1, y1, x2, y2]. It indicates the coordinates of the top left corner and the bottom right corner. This field takes effect when AreaCoordSet is not specified. When it indicates the pixel, the maximum value of this field is 4096.
+                     * Coordinates of the box selection area in the image, in the format of [x1, y1, x2, y2]. It indicates the coordinates of the top left corner and the bottom right corner. This parameter is valid only when AreaCoordSet is not specified. When it indicates the pixel, the maximum value of this field is 4096.
 - [0.1, 0.1, 0.3, 0.3]: indicates the ratio (values are less than 1).
 - [50, 50, 350, 280]: indicates the pixel (values are greater than or equal to 1).
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<double> m_boundingBox;
                     bool m_boundingBoxHasBeenSet;

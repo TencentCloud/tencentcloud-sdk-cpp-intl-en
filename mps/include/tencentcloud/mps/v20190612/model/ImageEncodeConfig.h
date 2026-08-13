@@ -48,18 +48,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Image format. Valid values: JPEG, PNG, BMP, and WebP. If it is not specified, the original image format is used. Animations are not supported.
-Note: This field may return null, indicating that no valid value can be obtained.
                      * @return Format Image format. Valid values: JPEG, PNG, BMP, and WebP. If it is not specified, the original image format is used. Animations are not supported.
-Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     std::string GetFormat() const;
 
                     /**
                      * 设置Image format. Valid values: JPEG, PNG, BMP, and WebP. If it is not specified, the original image format is used. Animations are not supported.
-Note: This field may return null, indicating that no valid value can be obtained.
                      * @param _format Image format. Valid values: JPEG, PNG, BMP, and WebP. If it is not specified, the original image format is used. Animations are not supported.
-Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     void SetFormat(const std::string& _format);
@@ -73,18 +69,14 @@ Note: This field may return null, indicating that no valid value can be obtained
 
                     /**
                      * 获取Relative image quality. Valid range: 1 - 100. The value is based on the original image quality, and the default is the original image quality.
-Note: This field may return null, indicating that no valid value can be obtained.
                      * @return Quality Relative image quality. Valid range: 1 - 100. The value is based on the original image quality, and the default is the original image quality.
-Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     int64_t GetQuality() const;
 
                     /**
                      * 设置Relative image quality. Valid range: 1 - 100. The value is based on the original image quality, and the default is the original image quality.
-Note: This field may return null, indicating that no valid value can be obtained.
                      * @param _quality Relative image quality. Valid range: 1 - 100. The value is based on the original image quality, and the default is the original image quality.
-Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     void SetQuality(const int64_t& _quality);
@@ -100,14 +92,12 @@ Note: This field may return null, indicating that no valid value can be obtained
 
                     /**
                      * Image format. Valid values: JPEG, PNG, BMP, and WebP. If it is not specified, the original image format is used. Animations are not supported.
-Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     std::string m_format;
                     bool m_formatHasBeenSet;
 
                     /**
                      * Relative image quality. Valid range: 1 - 100. The value is based on the original image quality, and the default is the original image quality.
-Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     int64_t m_quality;
                     bool m_qualityHasBeenSet;

@@ -47,31 +47,27 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The TSC type. Valid values:
-<li>`TEHD-100`: TSC-100 (video TSC). </li>
-<li>`TEHD-200`: TSC-200 (audio TSC). </li>
-If this parameter is left blank, no modification will be made.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Type The TSC type. Valid values:
-<li>`TEHD-100`: TSC-100 (video TSC). </li>
-<li>`TEHD-200`: TSC-200 (audio TSC). </li>
-If this parameter is left blank, no modification will be made.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Top Speed Codec type. Available values:
+<li>TEHD-100: Top Speed Codec-100 (video top speed codec).</li>
+<li>TEHD-200: Top Speed Codec-200 (TSC audio).</li>
+Leave it blank to keep it unchanged.
+                     * @return Type Top Speed Codec type. Available values:
+<li>TEHD-100: Top Speed Codec-100 (video top speed codec).</li>
+<li>TEHD-200: Top Speed Codec-200 (TSC audio).</li>
+Leave it blank to keep it unchanged.
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置The TSC type. Valid values:
-<li>`TEHD-100`: TSC-100 (video TSC). </li>
-<li>`TEHD-200`: TSC-200 (audio TSC). </li>
-If this parameter is left blank, no modification will be made.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _type The TSC type. Valid values:
-<li>`TEHD-100`: TSC-100 (video TSC). </li>
-<li>`TEHD-200`: TSC-200 (audio TSC). </li>
-If this parameter is left blank, no modification will be made.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Top Speed Codec type. Available values:
+<li>TEHD-100: Top Speed Codec-100 (video top speed codec).</li>
+<li>TEHD-200: Top Speed Codec-200 (TSC audio).</li>
+Leave it blank to keep it unchanged.
+                     * @param _type Top Speed Codec type. Available values:
+<li>TEHD-100: Top Speed Codec-100 (video top speed codec).</li>
+<li>TEHD-200: Top Speed Codec-200 (TSC audio).</li>
+Leave it blank to keep it unchanged.
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -84,19 +80,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取The maximum video bitrate. If this parameter is not specified, no modifications will be made.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return MaxVideoBitrate The maximum video bitrate. If this parameter is not specified, no modifications will be made.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Upper limit of video bitrate. Leave blank to keep unchanged.
+                     * @return MaxVideoBitrate Upper limit of video bitrate. Leave blank to keep unchanged.
                      * 
                      */
                     int64_t GetMaxVideoBitrate() const;
 
                     /**
-                     * 设置The maximum video bitrate. If this parameter is not specified, no modifications will be made.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _maxVideoBitrate The maximum video bitrate. If this parameter is not specified, no modifications will be made.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Upper limit of video bitrate. Leave blank to keep unchanged.
+                     * @param _maxVideoBitrate Upper limit of video bitrate. Leave blank to keep unchanged.
                      * 
                      */
                     void SetMaxVideoBitrate(const int64_t& _maxVideoBitrate);
@@ -111,18 +103,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * The TSC type. Valid values:
-<li>`TEHD-100`: TSC-100 (video TSC). </li>
-<li>`TEHD-200`: TSC-200 (audio TSC). </li>
-If this parameter is left blank, no modification will be made.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Top Speed Codec type. Available values:
+<li>TEHD-100: Top Speed Codec-100 (video top speed codec).</li>
+<li>TEHD-200: Top Speed Codec-200 (TSC audio).</li>
+Leave it blank to keep it unchanged.
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * The maximum video bitrate. If this parameter is not specified, no modifications will be made.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Upper limit of video bitrate. Leave blank to keep unchanged.
                      */
                     int64_t m_maxVideoBitrate;
                     bool m_maxVideoBitrateHasBeenSet;

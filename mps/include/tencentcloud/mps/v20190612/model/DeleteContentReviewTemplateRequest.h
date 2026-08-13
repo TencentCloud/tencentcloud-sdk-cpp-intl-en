@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The unique ID of the content moderation template.
-                     * @return Definition The unique ID of the content moderation template.
+                     * 获取Unique identifier of a content review template.
+                     * @return Definition Unique identifier of a content review template.
                      * 
                      */
                     int64_t GetDefinition() const;
 
                     /**
-                     * 设置The unique ID of the content moderation template.
-                     * @param _definition The unique ID of the content moderation template.
+                     * 设置Unique identifier of a content review template.
+                     * @param _definition Unique identifier of a content review template.
                      * 
                      */
                     void SetDefinition(const int64_t& _definition);
@@ -66,7 +66,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The unique ID of the content moderation template.
+                     * Unique identifier of a content review template.
                      */
                     int64_t m_definition;
                     bool m_definitionHasBeenSet;

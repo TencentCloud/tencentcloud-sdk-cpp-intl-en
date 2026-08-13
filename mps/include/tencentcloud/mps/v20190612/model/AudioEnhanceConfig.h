@@ -51,19 +51,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The audio noise reduction configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Denoise The audio noise reduction configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Audio noise reduction configuration.
+                     * @return Denoise Audio noise reduction configuration.
                      * 
                      */
                     AudioDenoiseConfig GetDenoise() const;
 
                     /**
-                     * 设置The audio noise reduction configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _denoise The audio noise reduction configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Audio noise reduction configuration.
+                     * @param _denoise Audio noise reduction configuration.
                      * 
                      */
                     void SetDenoise(const AudioDenoiseConfig& _denoise);
@@ -76,19 +72,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DenoiseHasBeenSet() const;
 
                     /**
-                     * 获取The audio separation configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Separate The audio separation configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Audio separation configuration.
+                     * @return Separate Audio separation configuration.
                      * 
                      */
                     AudioSeparateConfig GetSeparate() const;
 
                     /**
-                     * 设置The audio separation configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _separate The audio separation configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Audio separation configuration.
+                     * @param _separate Audio separation configuration.
                      * 
                      */
                     void SetSeparate(const AudioSeparateConfig& _separate);
@@ -101,19 +93,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool SeparateHasBeenSet() const;
 
                     /**
-                     * 获取The volume equalization configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return VolumeBalance The volume equalization configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Volume equalization configuration.
+                     * @return VolumeBalance Volume equalization configuration.
                      * 
                      */
                     VolumeBalanceConfig GetVolumeBalance() const;
 
                     /**
-                     * 设置The volume equalization configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _volumeBalance The volume equalization configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Volume equalization configuration.
+                     * @param _volumeBalance Volume equalization configuration.
                      * 
                      */
                     void SetVolumeBalance(const VolumeBalanceConfig& _volumeBalance);
@@ -126,19 +114,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool VolumeBalanceHasBeenSet() const;
 
                     /**
-                     * 获取The audio improvement configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Beautify The audio improvement configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Audio beautification configuration.
+                     * @return Beautify Audio beautification configuration.
                      * 
                      */
                     AudioBeautifyConfig GetBeautify() const;
 
                     /**
-                     * 设置The audio improvement configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _beautify The audio improvement configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Audio beautification configuration.
+                     * @param _beautify Audio beautification configuration.
                      * 
                      */
                     void SetBeautify(const AudioBeautifyConfig& _beautify);
@@ -153,29 +137,25 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * The audio noise reduction configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Audio noise reduction configuration.
                      */
                     AudioDenoiseConfig m_denoise;
                     bool m_denoiseHasBeenSet;
 
                     /**
-                     * The audio separation configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Audio separation configuration.
                      */
                     AudioSeparateConfig m_separate;
                     bool m_separateHasBeenSet;
 
                     /**
-                     * The volume equalization configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Volume equalization configuration.
                      */
                     VolumeBalanceConfig m_volumeBalance;
                     bool m_volumeBalanceHasBeenSet;
 
                     /**
-                     * The audio improvement configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Audio beautification configuration.
                      */
                     AudioBeautifyConfig m_beautify;
                     bool m_beautifyHasBeenSet;

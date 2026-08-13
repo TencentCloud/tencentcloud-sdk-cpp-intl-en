@@ -223,19 +223,15 @@ Default value: 0.
                     bool StdExtInfoHasBeenSet() const;
 
                     /**
-                     * 获取Audio/Video enhancement configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return EnhanceConfig Audio/Video enhancement configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取Audio/Video enhancement configuration
+                     * @return EnhanceConfig Audio/Video enhancement configuration
                      * 
                      */
                     EnhanceConfig GetEnhanceConfig() const;
 
                     /**
-                     * 设置Audio/Video enhancement configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _enhanceConfig Audio/Video enhancement configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置Audio/Video enhancement configuration
+                     * @param _enhanceConfig Audio/Video enhancement configuration
                      * 
                      */
                     void SetEnhanceConfig(const EnhanceConfig& _enhanceConfig);
@@ -248,19 +244,15 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool EnhanceConfigHasBeenSet() const;
 
                     /**
-                     * 获取Subtitle parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SubtitleTemplate Subtitle parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Subtitle parameter
+                     * @return SubtitleTemplate Subtitle parameter
                      * 
                      */
                     SubtitleTemplate GetSubtitleTemplate() const;
 
                     /**
-                     * 设置Subtitle parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _subtitleTemplate Subtitle parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Subtitle parameter
+                     * @param _subtitleTemplate Subtitle parameter
                      * 
                      */
                     void SetSubtitleTemplate(const SubtitleTemplate& _subtitleTemplate);
@@ -323,15 +315,13 @@ Default value: 0.
                     bool m_stdExtInfoHasBeenSet;
 
                     /**
-                     * Audio/Video enhancement configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * Audio/Video enhancement configuration
                      */
                     EnhanceConfig m_enhanceConfig;
                     bool m_enhanceConfigHasBeenSet;
 
                     /**
-                     * Subtitle parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Subtitle parameter
                      */
                     SubtitleTemplate m_subtitleTemplate;
                     bool m_subtitleTemplateHasBeenSet;

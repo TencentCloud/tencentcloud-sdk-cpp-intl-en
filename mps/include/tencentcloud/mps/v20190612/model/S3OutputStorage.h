@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The AWS S3 bucket.
-                     * @return S3Bucket The AWS S3 bucket.
+                     * 获取S3 bucket.
+                     * @return S3Bucket S3 bucket.
                      * 
                      */
                     std::string GetS3Bucket() const;
 
                     /**
-                     * 设置The AWS S3 bucket.
-                     * @param _s3Bucket The AWS S3 bucket.
+                     * 设置S3 bucket.
+                     * @param _s3Bucket S3 bucket.
                      * 
                      */
                     void SetS3Bucket(const std::string& _s3Bucket);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool S3BucketHasBeenSet() const;
 
                     /**
-                     * 获取The region of the AWS S3 bucket.
-                     * @return S3Region The region of the AWS S3 bucket.
+                     * 获取Region of the S3 bucket.
+                     * @return S3Region Region of the S3 bucket.
                      * 
                      */
                     std::string GetS3Region() const;
 
                     /**
-                     * 设置The region of the AWS S3 bucket.
-                     * @param _s3Region The region of the AWS S3 bucket.
+                     * 设置Region of the S3 bucket.
+                     * @param _s3Region Region of the S3 bucket.
                      * 
                      */
                     void SetS3Region(const std::string& _s3Region);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool S3RegionHasBeenSet() const;
 
                     /**
-                     * 获取The key ID required to upload files to the AWS S3 object.
-                     * @return S3SecretId The key ID required to upload files to the AWS S3 object.
+                     * 获取Secret key id for uploading media content to the AWS private network.
+                     * @return S3SecretId Secret key id for uploading media content to the AWS private network.
                      * 
                      */
                     std::string GetS3SecretId() const;
 
                     /**
-                     * 设置The key ID required to upload files to the AWS S3 object.
-                     * @param _s3SecretId The key ID required to upload files to the AWS S3 object.
+                     * 设置Secret key id for uploading media content to the AWS private network.
+                     * @param _s3SecretId Secret key id for uploading media content to the AWS private network.
                      * 
                      */
                     void SetS3SecretId(const std::string& _s3SecretId);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool S3SecretIdHasBeenSet() const;
 
                     /**
-                     * 获取The key required to upload files to the AWS S3 object.
-                     * @return S3SecretKey The key required to upload files to the AWS S3 object.
+                     * 获取Upload the secret key for media content on the AWS private network.
+                     * @return S3SecretKey Upload the secret key for media content on the AWS private network.
                      * 
                      */
                     std::string GetS3SecretKey() const;
 
                     /**
-                     * 设置The key required to upload files to the AWS S3 object.
-                     * @param _s3SecretKey The key required to upload files to the AWS S3 object.
+                     * 设置Upload the secret key for media content on the AWS private network.
+                     * @param _s3SecretKey Upload the secret key for media content on the AWS private network.
                      * 
                      */
                     void SetS3SecretKey(const std::string& _s3SecretKey);
@@ -133,25 +133,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The AWS S3 bucket.
+                     * S3 bucket.
                      */
                     std::string m_s3Bucket;
                     bool m_s3BucketHasBeenSet;
 
                     /**
-                     * The region of the AWS S3 bucket.
+                     * Region of the S3 bucket.
                      */
                     std::string m_s3Region;
                     bool m_s3RegionHasBeenSet;
 
                     /**
-                     * The key ID required to upload files to the AWS S3 object.
+                     * Secret key id for uploading media content to the AWS private network.
                      */
                     std::string m_s3SecretId;
                     bool m_s3SecretIdHasBeenSet;
 
                     /**
-                     * The key required to upload files to the AWS S3 object.
+                     * Upload the secret key for media content on the AWS private network.
                      */
                     std::string m_s3SecretKey;
                     bool m_s3SecretKeyHasBeenSet;

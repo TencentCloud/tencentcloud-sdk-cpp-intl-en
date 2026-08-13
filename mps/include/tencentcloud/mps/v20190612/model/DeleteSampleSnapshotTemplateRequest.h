@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Unique ID of a sampled screencapturing template.
-                     * @return Definition Unique ID of a sampled screencapturing template.
+                     * 获取Unique identifier of the sampled screenshot template.
+                     * @return Definition Unique identifier of the sampled screenshot template.
                      * 
                      */
                     uint64_t GetDefinition() const;
 
                     /**
-                     * 设置Unique ID of a sampled screencapturing template.
-                     * @param _definition Unique ID of a sampled screencapturing template.
+                     * 设置Unique identifier of the sampled screenshot template.
+                     * @param _definition Unique identifier of the sampled screenshot template.
                      * 
                      */
                     void SetDefinition(const uint64_t& _definition);
@@ -66,7 +66,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Unique ID of a sampled screencapturing template.
+                     * Unique identifier of the sampled screenshot template.
                      */
                     uint64_t m_definition;
                     bool m_definitionHasBeenSet;

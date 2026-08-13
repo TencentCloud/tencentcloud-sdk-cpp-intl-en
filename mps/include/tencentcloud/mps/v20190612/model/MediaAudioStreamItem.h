@@ -122,19 +122,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CodecHasBeenSet() const;
 
                     /**
-                     * 获取Number of sound channels, e.g., 2
-Note: this field may return `null`, indicating that no valid value was found.
-                     * @return Channel Number of sound channels, e.g., 2
-Note: this field may return `null`, indicating that no valid value was found.
+                     * 获取Number of audio channels, for example 2.
+                     * @return Channel Number of audio channels, for example 2.
                      * 
                      */
                     int64_t GetChannel() const;
 
                     /**
-                     * 设置Number of sound channels, e.g., 2
-Note: this field may return `null`, indicating that no valid value was found.
-                     * @param _channel Number of sound channels, e.g., 2
-Note: this field may return `null`, indicating that no valid value was found.
+                     * 设置Number of audio channels, for example 2.
+                     * @param _channel Number of audio channels, for example 2.
                      * 
                      */
                     void SetChannel(const int64_t& _channel);
@@ -145,6 +141,48 @@ Note: this field may return `null`, indicating that no valid value was found.
                      * 
                      */
                     bool ChannelHasBeenSet() const;
+
+                    /**
+                     * 获取Audio Codecs.
+                     * @return Codecs Audio Codecs.
+                     * 
+                     */
+                    std::string GetCodecs() const;
+
+                    /**
+                     * 设置Audio Codecs.
+                     * @param _codecs Audio Codecs.
+                     * 
+                     */
+                    void SetCodecs(const std::string& _codecs);
+
+                    /**
+                     * 判断参数 Codecs 是否已赋值
+                     * @return Codecs 是否已赋值
+                     * 
+                     */
+                    bool CodecsHasBeenSet() const;
+
+                    /**
+                     * 获取Audio loudness.
+                     * @return Loudness Audio loudness.
+                     * 
+                     */
+                    double GetLoudness() const;
+
+                    /**
+                     * 设置Audio loudness.
+                     * @param _loudness Audio loudness.
+                     * 
+                     */
+                    void SetLoudness(const double& _loudness);
+
+                    /**
+                     * 判断参数 Loudness 是否已赋值
+                     * @return Loudness 是否已赋值
+                     * 
+                     */
+                    bool LoudnessHasBeenSet() const;
 
                 private:
 
@@ -170,11 +208,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_codecHasBeenSet;
 
                     /**
-                     * Number of sound channels, e.g., 2
-Note: this field may return `null`, indicating that no valid value was found.
+                     * Number of audio channels, for example 2.
                      */
                     int64_t m_channel;
                     bool m_channelHasBeenSet;
+
+                    /**
+                     * Audio Codecs.
+                     */
+                    std::string m_codecs;
+                    bool m_codecsHasBeenSet;
+
+                    /**
+                     * Audio loudness.
+                     */
+                    double m_loudness;
+                    bool m_loudnessHasBeenSet;
 
                 };
             }

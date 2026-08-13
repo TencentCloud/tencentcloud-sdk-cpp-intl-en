@@ -134,19 +134,15 @@ namespace TencentCloud
                     bool WatermarkSetHasBeenSet() const;
 
                     /**
-                     * 获取<p>Target storage for the file after the time point screenshot is taken. If this is not specified, it inherits the value from the upper-level OutputStorage.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return OutputStorage <p>Target storage for the file after the time point screenshot is taken. If this is not specified, it inherits the value from the upper-level OutputStorage.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Target storage for the file after time point screenshot taking. If not specified, it inherits the upper-level OutputStorage value.</p>
+                     * @return OutputStorage <p>Target storage for the file after time point screenshot taking. If not specified, it inherits the upper-level OutputStorage value.</p>
                      * 
                      */
                     TaskOutputStorage GetOutputStorage() const;
 
                     /**
-                     * 设置<p>Target storage for the file after the time point screenshot is taken. If this is not specified, it inherits the value from the upper-level OutputStorage.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _outputStorage <p>Target storage for the file after the time point screenshot is taken. If this is not specified, it inherits the value from the upper-level OutputStorage.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Target storage for the file after time point screenshot taking. If not specified, it inherits the upper-level OutputStorage value.</p>
+                     * @param _outputStorage <p>Target storage for the file after time point screenshot taking. If not specified, it inherits the upper-level OutputStorage value.</p>
                      * 
                      */
                     void SetOutputStorage(const TaskOutputStorage& _outputStorage);
@@ -180,19 +176,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool OutputObjectPathHasBeenSet() const;
 
                     /**
-                     * 获取<p>Rule of the <code>{number}</code> variable in the output path after the time point screenshot is taken.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ObjectNumberFormat <p>Rule of the <code>{number}</code> variable in the output path after the time point screenshot is taken.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Rule of the <code>{number}</code> variable in the output path after time point screenshot taking.</p>
+                     * @return ObjectNumberFormat <p>Rule of the <code>{number}</code> variable in the output path after time point screenshot taking.</p>
                      * 
                      */
                     NumberFormat GetObjectNumberFormat() const;
 
                     /**
-                     * 设置<p>Rule of the <code>{number}</code> variable in the output path after the time point screenshot is taken.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _objectNumberFormat <p>Rule of the <code>{number}</code> variable in the output path after the time point screenshot is taken.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Rule of the <code>{number}</code> variable in the output path after time point screenshot taking.</p>
+                     * @param _objectNumberFormat <p>Rule of the <code>{number}</code> variable in the output path after time point screenshot taking.</p>
                      * 
                      */
                     void SetObjectNumberFormat(const NumberFormat& _objectNumberFormat);
@@ -252,8 +244,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_watermarkSetHasBeenSet;
 
                     /**
-                     * <p>Target storage for the file after the time point screenshot is taken. If this is not specified, it inherits the value from the upper-level OutputStorage.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Target storage for the file after time point screenshot taking. If not specified, it inherits the upper-level OutputStorage value.</p>
                      */
                     TaskOutputStorage m_outputStorage;
                     bool m_outputStorageHasBeenSet;
@@ -265,8 +256,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_outputObjectPathHasBeenSet;
 
                     /**
-                     * <p>Rule of the <code>{number}</code> variable in the output path after the time point screenshot is taken.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Rule of the <code>{number}</code> variable in the output path after time point screenshot taking.</p>
                      */
                     NumberFormat m_objectNumberFormat;
                     bool m_objectNumberFormatHasBeenSet;

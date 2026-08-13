@@ -83,19 +83,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取The location to save the output object in COS. This parameter is valid and required when `Type` is COS.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return CosOutputStorage The location to save the output object in COS. This parameter is valid and required when `Type` is COS.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取Valid when Type is COS. This item is required and indicates the Media Processing Service COS output location.
+                     * @return CosOutputStorage Valid when Type is COS. This item is required and indicates the Media Processing Service COS output location.
                      * 
                      */
                     CosOutputStorage GetCosOutputStorage() const;
 
                     /**
-                     * 设置The location to save the output object in COS. This parameter is valid and required when `Type` is COS.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _cosOutputStorage The location to save the output object in COS. This parameter is valid and required when `Type` is COS.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置Valid when Type is COS. This item is required and indicates the Media Processing Service COS output location.
+                     * @param _cosOutputStorage Valid when Type is COS. This item is required and indicates the Media Processing Service COS output location.
                      * 
                      */
                     void SetCosOutputStorage(const CosOutputStorage& _cosOutputStorage);
@@ -108,19 +104,15 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool CosOutputStorageHasBeenSet() const;
 
                     /**
-                     * 获取The AWS S3 bucket to save the output file. This parameter is required if `Type` is `AWS-S3`.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return S3OutputStorage The AWS S3 bucket to save the output file. This parameter is required if `Type` is `AWS-S3`.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取Valid when Type is AWS-S3. This item is required and indicates the AWS S3 output location for media processing.
+                     * @return S3OutputStorage Valid when Type is AWS-S3. This item is required and indicates the AWS S3 output location for media processing.
                      * 
                      */
                     S3OutputStorage GetS3OutputStorage() const;
 
                     /**
-                     * 设置The AWS S3 bucket to save the output file. This parameter is required if `Type` is `AWS-S3`.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _s3OutputStorage The AWS S3 bucket to save the output file. This parameter is required if `Type` is `AWS-S3`.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置Valid when Type is AWS-S3. This item is required and indicates the AWS S3 output location for media processing.
+                     * @param _s3OutputStorage Valid when Type is AWS-S3. This item is required and indicates the AWS S3 output location for media processing.
                      * 
                      */
                     void SetS3OutputStorage(const S3OutputStorage& _s3OutputStorage);
@@ -133,19 +125,15 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool S3OutputStorageHasBeenSet() const;
 
                     /**
-                     * 获取The VOD Pro application and bucket to save the output file. This parameter is required if `Type` is `VOD`.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return VODOutputStorage The VOD Pro application and bucket to save the output file. This parameter is required if `Type` is `VOD`.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取Valid at that time when Type is VOD. This item is required and represents the Media Processing Service (MPS) video-on-demand (VOD) pro edition output location.
+                     * @return VODOutputStorage Valid at that time when Type is VOD. This item is required and represents the Media Processing Service (MPS) video-on-demand (VOD) pro edition output location.
                      * 
                      */
                     VODOutputStorage GetVODOutputStorage() const;
 
                     /**
-                     * 设置The VOD Pro application and bucket to save the output file. This parameter is required if `Type` is `VOD`.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _vODOutputStorage The VOD Pro application and bucket to save the output file. This parameter is required if `Type` is `VOD`.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置Valid at that time when Type is VOD. This item is required and represents the Media Processing Service (MPS) video-on-demand (VOD) pro edition output location.
+                     * @param _vODOutputStorage Valid at that time when Type is VOD. This item is required and represents the Media Processing Service (MPS) video-on-demand (VOD) pro edition output location.
                      * 
                      */
                     void SetVODOutputStorage(const VODOutputStorage& _vODOutputStorage);
@@ -169,22 +157,19 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool m_typeHasBeenSet;
 
                     /**
-                     * The location to save the output object in COS. This parameter is valid and required when `Type` is COS.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * Valid when Type is COS. This item is required and indicates the Media Processing Service COS output location.
                      */
                     CosOutputStorage m_cosOutputStorage;
                     bool m_cosOutputStorageHasBeenSet;
 
                     /**
-                     * The AWS S3 bucket to save the output file. This parameter is required if `Type` is `AWS-S3`.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * Valid when Type is AWS-S3. This item is required and indicates the AWS S3 output location for media processing.
                      */
                     S3OutputStorage m_s3OutputStorage;
                     bool m_s3OutputStorageHasBeenSet;
 
                     /**
-                     * The VOD Pro application and bucket to save the output file. This parameter is required if `Type` is `VOD`.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * Valid at that time when Type is VOD. This item is required and represents the Media Processing Service (MPS) video-on-demand (VOD) pro edition output location.
                      */
                     VODOutputStorage m_vODOutputStorage;
                     bool m_vODOutputStorageHasBeenSet;

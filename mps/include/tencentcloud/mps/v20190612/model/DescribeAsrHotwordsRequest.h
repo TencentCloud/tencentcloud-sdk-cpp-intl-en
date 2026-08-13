@@ -93,22 +93,18 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Paging offset. Default value: 0.
+                     * 获取Pagination offset. Default value: 0.
 
-
-                     * @return Offset Paging offset. Default value: 0.
-
+                     * @return Offset Pagination offset. Default value: 0.
 
                      * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
-                     * 设置Paging offset. Default value: 0.
+                     * 设置Pagination offset. Default value: 0.
 
-
-                     * @param _offset Paging offset. Default value: 0.
-
+                     * @param _offset Pagination offset. Default value: 0.
 
                      * 
                      */
@@ -145,14 +141,14 @@ namespace TencentCloud
                     /**
                      * 获取Hotword sorting field. Valid values:
 
- - Default: Sort by the hotword upload sequence.
- - Weight: Sort by the weight.
- - Lexical: Sort by the first letter of hotwords.
+- Default: Sort by the order in the default file.
+- Weight: Sort by the weight.
+- Lexical: Sort by the first letter of hotwords.
                      * @return OrderBy Hotword sorting field. Valid values:
 
- - Default: Sort by the hotword upload sequence.
- - Weight: Sort by the weight.
- - Lexical: Sort by the first letter of hotwords.
+- Default: Sort by the order in the default file.
+- Weight: Sort by the weight.
+- Lexical: Sort by the first letter of hotwords.
                      * 
                      */
                     std::string GetOrderBy() const;
@@ -160,14 +156,14 @@ namespace TencentCloud
                     /**
                      * 设置Hotword sorting field. Valid values:
 
- - Default: Sort by the hotword upload sequence.
- - Weight: Sort by the weight.
- - Lexical: Sort by the first letter of hotwords.
+- Default: Sort by the order in the default file.
+- Weight: Sort by the weight.
+- Lexical: Sort by the first letter of hotwords.
                      * @param _orderBy Hotword sorting field. Valid values:
 
- - Default: Sort by the hotword upload sequence.
- - Weight: Sort by the weight.
- - Lexical: Sort by the first letter of hotwords.
+- Default: Sort by the order in the default file.
+- Weight: Sort by the weight.
+- Lexical: Sort by the first letter of hotwords.
                      * 
                      */
                     void SetOrderBy(const std::string& _orderBy);
@@ -217,8 +213,7 @@ namespace TencentCloud
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Paging offset. Default value: 0.
-
+                     * Pagination offset. Default value: 0.
 
                      */
                     uint64_t m_offset;
@@ -233,9 +228,9 @@ namespace TencentCloud
                     /**
                      * Hotword sorting field. Valid values:
 
- - Default: Sort by the hotword upload sequence.
- - Weight: Sort by the weight.
- - Lexical: Sort by the first letter of hotwords.
+- Default: Sort by the order in the default file.
+- Weight: Sort by the weight.
+- Lexical: Sort by the first letter of hotwords.
                      */
                     std::string m_orderBy;
                     bool m_orderByHasBeenSet;

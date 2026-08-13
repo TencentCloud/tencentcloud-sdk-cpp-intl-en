@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool DefinitionsHasBeenSet() const;
 
                     /**
-                     * 获取Pagination offset. The default value is 0.
-                     * @return Offset Pagination offset. The default value is 0.
+                     * 获取Pagination offset. Default value: 0.
+                     * @return Offset Pagination offset. Default value: 0.
                      * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
-                     * 设置Pagination offset. The default value is 0.
-                     * @param _offset Pagination offset. The default value is 0.
+                     * 设置Pagination offset. Default value: 0.
+                     * @param _offset Pagination offset. Default value: 0.
                      * 
                      */
                     void SetOffset(const uint64_t& _offset);
@@ -148,22 +148,22 @@ namespace TencentCloud
                     bool OrderTypeHasBeenSet() const;
 
                     /**
-                     * 获取Sorting field. Valid values:
-Definition: unique identifier of the template.
+                     * 获取Sorting field. Valid values:  
+Definition: Template Unique Identifier 
 Default value: creation time.
-                     * @return OrderBy Sorting field. Valid values:
-Definition: unique identifier of the template.
+                     * @return OrderBy Sorting field. Valid values:  
+Definition: Template Unique Identifier 
 Default value: creation time.
                      * 
                      */
                     std::string GetOrderBy() const;
 
                     /**
-                     * 设置Sorting field. Valid values:
-Definition: unique identifier of the template.
+                     * 设置Sorting field. Valid values:  
+Definition: Template Unique Identifier 
 Default value: creation time.
-                     * @param _orderBy Sorting field. Valid values:
-Definition: unique identifier of the template.
+                     * @param _orderBy Sorting field. Valid values:  
+Definition: Template Unique Identifier 
 Default value: creation time.
                      * 
                      */
@@ -206,7 +206,7 @@ Default value: creation time.
                     bool m_definitionsHasBeenSet;
 
                     /**
-                     * Pagination offset. The default value is 0.
+                     * Pagination offset. Default value: 0.
                      */
                     uint64_t m_offset;
                     bool m_offsetHasBeenSet;
@@ -230,8 +230,8 @@ Default value: creation time.
                     bool m_orderTypeHasBeenSet;
 
                     /**
-                     * Sorting field. Valid values:
-Definition: unique identifier of the template.
+                     * Sorting field. Valid values:  
+Definition: Template Unique Identifier 
 Default value: creation time.
                      */
                     std::string m_orderBy;

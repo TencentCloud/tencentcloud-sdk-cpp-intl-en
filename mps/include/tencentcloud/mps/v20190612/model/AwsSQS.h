@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The region of the SQS queue.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SQSRegion The region of the SQS queue.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取SQS queue area.
+                     * @return SQSRegion SQS queue area.
                      * 
                      */
                     std::string GetSQSRegion() const;
 
                     /**
-                     * 设置The region of the SQS queue.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _sQSRegion The region of the SQS queue.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置SQS queue area.
+                     * @param _sQSRegion SQS queue area.
                      * 
                      */
                     void SetSQSRegion(const std::string& _sQSRegion);
@@ -72,19 +68,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool SQSRegionHasBeenSet() const;
 
                     /**
-                     * 获取The name of the SQS queue.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SQSQueueName The name of the SQS queue.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取SQS queue name.
+                     * @return SQSQueueName SQS queue name.
                      * 
                      */
                     std::string GetSQSQueueName() const;
 
                     /**
-                     * 设置The name of the SQS queue.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _sQSQueueName The name of the SQS queue.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置SQS queue name.
+                     * @param _sQSQueueName SQS queue name.
                      * 
                      */
                     void SetSQSQueueName(const std::string& _sQSQueueName);
@@ -97,19 +89,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool SQSQueueNameHasBeenSet() const;
 
                     /**
-                     * 获取The key ID required to read from/write to the SQS queue.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return S3SecretId The key ID required to read from/write to the SQS queue.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Secret id for read-write SQS.
+                     * @return S3SecretId Secret id for read-write SQS.
                      * 
                      */
                     std::string GetS3SecretId() const;
 
                     /**
-                     * 设置The key ID required to read from/write to the SQS queue.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _s3SecretId The key ID required to read from/write to the SQS queue.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Secret id for read-write SQS.
+                     * @param _s3SecretId Secret id for read-write SQS.
                      * 
                      */
                     void SetS3SecretId(const std::string& _s3SecretId);
@@ -122,19 +110,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool S3SecretIdHasBeenSet() const;
 
                     /**
-                     * 获取The key required to read from/write to the SQS queue.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return S3SecretKey The key required to read from/write to the SQS queue.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Read-write SQS secret key.
+                     * @return S3SecretKey Read-write SQS secret key.
                      * 
                      */
                     std::string GetS3SecretKey() const;
 
                     /**
-                     * 设置The key required to read from/write to the SQS queue.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _s3SecretKey The key required to read from/write to the SQS queue.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Read-write SQS secret key.
+                     * @param _s3SecretKey Read-write SQS secret key.
                      * 
                      */
                     void SetS3SecretKey(const std::string& _s3SecretKey);
@@ -149,29 +133,25 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * The region of the SQS queue.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * SQS queue area.
                      */
                     std::string m_sQSRegion;
                     bool m_sQSRegionHasBeenSet;
 
                     /**
-                     * The name of the SQS queue.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * SQS queue name.
                      */
                     std::string m_sQSQueueName;
                     bool m_sQSQueueNameHasBeenSet;
 
                     /**
-                     * The key ID required to read from/write to the SQS queue.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Secret id for read-write SQS.
                      */
                     std::string m_s3SecretId;
                     bool m_s3SecretIdHasBeenSet;
 
                     /**
-                     * The key required to read from/write to the SQS queue.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Read-write SQS secret key.
                      */
                     std::string m_s3SecretKey;
                     bool m_s3SecretKeyHasBeenSet;

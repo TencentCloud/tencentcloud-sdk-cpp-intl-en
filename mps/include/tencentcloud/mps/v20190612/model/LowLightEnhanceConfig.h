@@ -80,27 +80,23 @@ Default value: ON.
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取The strength. Valid values:
+                     * 获取Type. Valid values:
 <li>normal</li>
 Default value: normal.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Type The strength. Valid values:
+                     * @return Type Type. Valid values:
 <li>normal</li>
 Default value: normal.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置The strength. Valid values:
+                     * 设置Type. Valid values:
 <li>normal</li>
 Default value: normal.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _type The strength. Valid values:
+                     * @param _type Type. Valid values:
 <li>normal</li>
 Default value: normal.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -124,10 +120,9 @@ Default value: ON.
                     bool m_switchHasBeenSet;
 
                     /**
-                     * The strength. Valid values:
+                     * Type. Valid values:
 <li>normal</li>
 Default value: normal.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;

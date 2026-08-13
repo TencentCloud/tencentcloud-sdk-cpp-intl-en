@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Unique ID of a watermarking template.
-                     * @return Definition Unique ID of a watermarking template.
+                     * 获取Unique identifier of the watermark template.
+                     * @return Definition Unique identifier of the watermark template.
                      * 
                      */
                     int64_t GetDefinition() const;
 
                     /**
-                     * 设置Unique ID of a watermarking template.
-                     * @param _definition Unique ID of a watermarking template.
+                     * 设置Unique identifier of the watermark template.
+                     * @param _definition Unique identifier of the watermark template.
                      * 
                      */
                     void SetDefinition(const int64_t& _definition);
@@ -66,7 +66,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Unique ID of a watermarking template.
+                     * Unique identifier of the watermark template.
                      */
                     int64_t m_definition;
                     bool m_definitionHasBeenSet;

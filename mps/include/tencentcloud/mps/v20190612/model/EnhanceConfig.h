@@ -50,18 +50,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Video enhancement configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return VideoEnhance Video enhancement configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     VideoEnhanceConfig GetVideoEnhance() const;
 
                     /**
                      * 设置Video enhancement configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _videoEnhance Video enhancement configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetVideoEnhance(const VideoEnhanceConfig& _videoEnhance);
@@ -74,19 +70,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool VideoEnhanceHasBeenSet() const;
 
                     /**
-                     * 获取The audio enhancement configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return AudioEnhance The audio enhancement configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Audio enhancement configuration.
+                     * @return AudioEnhance Audio enhancement configuration.
                      * 
                      */
                     AudioEnhanceConfig GetAudioEnhance() const;
 
                     /**
-                     * 设置The audio enhancement configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _audioEnhance The audio enhancement configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Audio enhancement configuration.
+                     * @param _audioEnhance Audio enhancement configuration.
                      * 
                      */
                     void SetAudioEnhance(const AudioEnhanceConfig& _audioEnhance);
@@ -102,14 +94,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Video enhancement configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     VideoEnhanceConfig m_videoEnhance;
                     bool m_videoEnhanceHasBeenSet;
 
                     /**
-                     * The audio enhancement configuration.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Audio enhancement configuration.
                      */
                     AudioEnhanceConfig m_audioEnhance;
                     bool m_audioEnhanceHasBeenSet;

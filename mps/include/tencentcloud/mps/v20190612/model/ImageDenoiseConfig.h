@@ -80,31 +80,27 @@ Default value: ON.
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取Type, with valid values including:
+                     * 获取Type, available values:
 <li>weak</li>
 <li>strong</li>
 Default value: weak.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return Type Type, with valid values including:
+                     * @return Type Type, available values:
 <li>weak</li>
 <li>strong</li>
 Default value: weak.
-Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Type, with valid values including:
+                     * 设置Type, available values:
 <li>weak</li>
 <li>strong</li>
 Default value: weak.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _type Type, with valid values including:
+                     * @param _type Type, available values:
 <li>weak</li>
 <li>strong</li>
 Default value: weak.
-Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -128,11 +124,10 @@ Default value: ON.
                     bool m_switchHasBeenSet;
 
                     /**
-                     * Type, with valid values including:
+                     * Type, available values:
 <li>weak</li>
 <li>strong</li>
 Default value: weak.
-Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;

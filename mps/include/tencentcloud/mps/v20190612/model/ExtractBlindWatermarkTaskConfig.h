@@ -47,23 +47,19 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Valid when the watermark type is blind-abseq. specifies the segment duration of the input video. unit: ms.
-Segment duration is 5 seconds by default if left empty.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return SegmentDuration Valid when the watermark type is blind-abseq. specifies the segment duration of the input video. unit: ms.
-Segment duration is 5 seconds by default if left empty.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取Valid when the digital watermark type is blind-abseq, used to specify the segment duration of the input video. Unit: ms.
+If left empty, the default segment duration is 5 seconds.
+                     * @return SegmentDuration Valid when the digital watermark type is blind-abseq, used to specify the segment duration of the input video. Unit: ms.
+If left empty, the default segment duration is 5 seconds.
                      * 
                      */
                     int64_t GetSegmentDuration() const;
 
                     /**
-                     * 设置Valid when the watermark type is blind-abseq. specifies the segment duration of the input video. unit: ms.
-Segment duration is 5 seconds by default if left empty.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _segmentDuration Valid when the watermark type is blind-abseq. specifies the segment duration of the input video. unit: ms.
-Segment duration is 5 seconds by default if left empty.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置Valid when the digital watermark type is blind-abseq, used to specify the segment duration of the input video. Unit: ms.
+If left empty, the default segment duration is 5 seconds.
+                     * @param _segmentDuration Valid when the digital watermark type is blind-abseq, used to specify the segment duration of the input video. Unit: ms.
+If left empty, the default segment duration is 5 seconds.
                      * 
                      */
                     void SetSegmentDuration(const int64_t& _segmentDuration);
@@ -78,9 +74,8 @@ Note: This field may return null, indicating that no valid value can be obtained
                 private:
 
                     /**
-                     * Valid when the watermark type is blind-abseq. specifies the segment duration of the input video. unit: ms.
-Segment duration is 5 seconds by default if left empty.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * Valid when the digital watermark type is blind-abseq, used to specify the segment duration of the input video. Unit: ms.
+If left empty, the default segment duration is 5 seconds.
                      */
                     int64_t m_segmentDuration;
                     bool m_segmentDurationHasBeenSet;

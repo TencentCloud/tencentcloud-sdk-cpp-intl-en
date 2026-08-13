@@ -98,18 +98,14 @@ namespace TencentCloud
 
                     /**
                      * 获取<p>Digital watermark parameter.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return BlindWatermark <p>Digital watermark parameter.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     BlindWatermarkInput GetBlindWatermark() const;
 
                     /**
                      * 设置<p>Digital watermark parameter.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _blindWatermark <p>Digital watermark parameter.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetBlindWatermark(const BlindWatermarkInput& _blindWatermark);
@@ -122,19 +118,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool BlindWatermarkHasBeenSet() const;
 
                     /**
-                     * 获取<p>Target storage for files after adaptive bitrate streaming. If this is not specified, the upper-level OutputStorage value is used.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return OutputStorage <p>Target storage for files after adaptive bitrate streaming. If this is not specified, the upper-level OutputStorage value is used.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Target storage for files after adaptive bitrate streaming. If left blank, it inherits the upper-level OutputStorage value.</p>
+                     * @return OutputStorage <p>Target storage for files after adaptive bitrate streaming. If left blank, it inherits the upper-level OutputStorage value.</p>
                      * 
                      */
                     TaskOutputStorage GetOutputStorage() const;
 
                     /**
-                     * 设置<p>Target storage for files after adaptive bitrate streaming. If this is not specified, the upper-level OutputStorage value is used.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _outputStorage <p>Target storage for files after adaptive bitrate streaming. If this is not specified, the upper-level OutputStorage value is used.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Target storage for files after adaptive bitrate streaming. If left blank, it inherits the upper-level OutputStorage value.</p>
+                     * @param _outputStorage <p>Target storage for files after adaptive bitrate streaming. If left blank, it inherits the upper-level OutputStorage value.</p>
                      * 
                      */
                     void SetOutputStorage(const TaskOutputStorage& _outputStorage);
@@ -211,18 +203,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取<p>External subtitle feature. Specifies the subtitle file to be inserted.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return AddOnSubtitles <p>External subtitle feature. Specifies the subtitle file to be inserted.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<AddOnSubtitle> GetAddOnSubtitles() const;
 
                     /**
                      * 设置<p>External subtitle feature. Specifies the subtitle file to be inserted.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _addOnSubtitles <p>External subtitle feature. Specifies the subtitle file to be inserted.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetAddOnSubtitles(const std::vector<AddOnSubtitle>& _addOnSubtitles);
@@ -235,19 +223,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool AddOnSubtitlesHasBeenSet() const;
 
                     /**
-                     * 获取<p>DRM information.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DrmInfo <p>DRM information.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Drm information.</p>
+                     * @return DrmInfo <p>Drm information.</p>
                      * 
                      */
                     DrmInfo GetDrmInfo() const;
 
                     /**
-                     * 设置<p>DRM information.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _drmInfo <p>DRM information.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Drm information.</p>
+                     * @param _drmInfo <p>Drm information.</p>
                      * 
                      */
                     void SetDrmInfo(const DrmInfo& _drmInfo);
@@ -282,18 +266,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取<p>Hard subtitle (burned-in subtitle) feature. Specifies the subtitle source, font size, location, and other subtitle parameters.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return SubtitleTemplate <p>Hard subtitle (burned-in subtitle) feature. Specifies the subtitle source, font size, location, and other subtitle parameters.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     SubtitleTemplate GetSubtitleTemplate() const;
 
                     /**
                      * 设置<p>Hard subtitle (burned-in subtitle) feature. Specifies the subtitle source, font size, location, and other subtitle parameters.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _subtitleTemplate <p>Hard subtitle (burned-in subtitle) feature. Specifies the subtitle source, font size, location, and other subtitle parameters.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetSubtitleTemplate(const SubtitleTemplate& _subtitleTemplate);
@@ -327,19 +307,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool StdExtInfoHasBeenSet() const;
 
                     /**
-                     * 获取<p>Specifies frames at specified PTS times as keyframes and splits segments. Unit: milliseconds (relative deviation of up to 1 ms is allowed). When both GOP and segment duration are specified, they function together. Note that you need to enable RawPts, keep the frame rate as that of the source, and ensure the specified PTS time corresponds to a frame in the source.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return KeyPTSList <p>Specifies frames at specified PTS times as keyframes and splits segments. Unit: milliseconds (relative deviation of up to 1 ms is allowed). When both GOP and segment duration are specified, they function together. Note that you need to enable RawPts, keep the frame rate as that of the source, and ensure the specified PTS time corresponds to a frame in the source.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Set the frame at the specified pts time as a key frame and segment it. Unit: milliseconds (relative deviation <=1ms is allowed). When both gop and segment duration are specified simultaneously, they function together. Note that RawPts must be enabled, keep the frame rate following the source, and ensure the passed-in pts time corresponds to a frame in the source.</p>
+                     * @return KeyPTSList <p>Set the frame at the specified pts time as a key frame and segment it. Unit: milliseconds (relative deviation <=1ms is allowed). When both gop and segment duration are specified simultaneously, they function together. Note that RawPts must be enabled, keep the frame rate following the source, and ensure the passed-in pts time corresponds to a frame in the source.</p>
                      * 
                      */
                     std::vector<int64_t> GetKeyPTSList() const;
 
                     /**
-                     * 设置<p>Specifies frames at specified PTS times as keyframes and splits segments. Unit: milliseconds (relative deviation of up to 1 ms is allowed). When both GOP and segment duration are specified, they function together. Note that you need to enable RawPts, keep the frame rate as that of the source, and ensure the specified PTS time corresponds to a frame in the source.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _keyPTSList <p>Specifies frames at specified PTS times as keyframes and splits segments. Unit: milliseconds (relative deviation of up to 1 ms is allowed). When both GOP and segment duration are specified, they function together. Note that you need to enable RawPts, keep the frame rate as that of the source, and ensure the specified PTS time corresponds to a frame in the source.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Set the frame at the specified pts time as a key frame and segment it. Unit: milliseconds (relative deviation <=1ms is allowed). When both gop and segment duration are specified simultaneously, they function together. Note that RawPts must be enabled, keep the frame rate following the source, and ensure the passed-in pts time corresponds to a frame in the source.</p>
+                     * @param _keyPTSList <p>Set the frame at the specified pts time as a key frame and segment it. Unit: milliseconds (relative deviation <=1ms is allowed). When both gop and segment duration are specified simultaneously, they function together. Note that RawPts must be enabled, keep the frame rate following the source, and ensure the passed-in pts time corresponds to a frame in the source.</p>
                      * 
                      */
                     void SetKeyPTSList(const std::vector<int64_t>& _keyPTSList);
@@ -409,14 +385,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * <p>Digital watermark parameter.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     BlindWatermarkInput m_blindWatermark;
                     bool m_blindWatermarkHasBeenSet;
 
                     /**
-                     * <p>Target storage for files after adaptive bitrate streaming. If this is not specified, the upper-level OutputStorage value is used.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Target storage for files after adaptive bitrate streaming. If left blank, it inherits the upper-level OutputStorage value.</p>
                      */
                     TaskOutputStorage m_outputStorage;
                     bool m_outputStorageHasBeenSet;
@@ -441,14 +415,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * <p>External subtitle feature. Specifies the subtitle file to be inserted.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<AddOnSubtitle> m_addOnSubtitles;
                     bool m_addOnSubtitlesHasBeenSet;
 
                     /**
-                     * <p>DRM information.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Drm information.</p>
                      */
                     DrmInfo m_drmInfo;
                     bool m_drmInfoHasBeenSet;
@@ -461,7 +433,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * <p>Hard subtitle (burned-in subtitle) feature. Specifies the subtitle source, font size, location, and other subtitle parameters.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     SubtitleTemplate m_subtitleTemplate;
                     bool m_subtitleTemplateHasBeenSet;
@@ -473,8 +444,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_stdExtInfoHasBeenSet;
 
                     /**
-                     * <p>Specifies frames at specified PTS times as keyframes and splits segments. Unit: milliseconds (relative deviation of up to 1 ms is allowed). When both GOP and segment duration are specified, they function together. Note that you need to enable RawPts, keep the frame rate as that of the source, and ensure the specified PTS time corresponds to a frame in the source.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Set the frame at the specified pts time as a key frame and segment it. Unit: milliseconds (relative deviation <=1ms is allowed). When both gop and segment duration are specified simultaneously, they function together. Note that RawPts must be enabled, keep the frame rate following the source, and ensure the passed-in pts time corresponds to a frame in the source.</p>
                      */
                     std::vector<int64_t> m_keyPTSList;
                     bool m_keyPTSListHasBeenSet;

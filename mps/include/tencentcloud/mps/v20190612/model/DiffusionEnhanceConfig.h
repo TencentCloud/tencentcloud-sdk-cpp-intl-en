@@ -80,35 +80,35 @@ Default value: OFF.
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取Strength type. Valid values:
+                     * 获取Strength type, available values:
+
 weak
 normal
 strong
 Default value: normal.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Type Strength type. Valid values:
+                     * @return Type Strength type, available values:
+
 weak
 normal
 strong
 Default value: normal.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Strength type. Valid values:
+                     * 设置Strength type, available values:
+
 weak
 normal
 strong
 Default value: normal.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _type Strength type. Valid values:
+                     * @param _type Strength type, available values:
+
 weak
 normal
 strong
 Default value: normal.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -132,12 +132,12 @@ Default value: OFF.
                     bool m_switchHasBeenSet;
 
                     /**
-                     * Strength type. Valid values:
+                     * Strength type, available values:
+
 weak
 normal
 strong
 Default value: normal.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;

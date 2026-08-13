@@ -101,27 +101,23 @@ This parameter is used in high customization scenarios. it is recommended that y
                     bool RawParameterHasBeenSet() const;
 
                     /**
-                     * 获取Video transcoding custom parameter, which is valid when `Definition` is not 0.
-When any parameters in this structure are entered, they will be used to override corresponding parameters in templates.
-This parameter is used in highly customized scenarios. We recommend you only use `Definition` to specify the transcoding parameter.
-Note: this field may return `null`, indicating that no valid value was found.
-                     * @return OverrideParameter Video transcoding custom parameter, which is valid when `Definition` is not 0.
-When any parameters in this structure are entered, they will be used to override corresponding parameters in templates.
-This parameter is used in highly customized scenarios. We recommend you only use `Definition` to specify the transcoding parameter.
-Note: this field may return `null`, indicating that no valid value was found.
+                     * 获取Custom video transcoding parameter. It takes effect when Definition is not set to 0.
+When you fill in some transcoding parameters in this structure, the filled parameters will be used to override the parameters in the transcoding template.
+This parameter is used in high customization scenarios. It is recommended that you use only Definition to specify transcoding parameters.
+                     * @return OverrideParameter Custom video transcoding parameter. It takes effect when Definition is not set to 0.
+When you fill in some transcoding parameters in this structure, the filled parameters will be used to override the parameters in the transcoding template.
+This parameter is used in high customization scenarios. It is recommended that you use only Definition to specify transcoding parameters.
                      * 
                      */
                     OverrideTranscodeParameter GetOverrideParameter() const;
 
                     /**
-                     * 设置Video transcoding custom parameter, which is valid when `Definition` is not 0.
-When any parameters in this structure are entered, they will be used to override corresponding parameters in templates.
-This parameter is used in highly customized scenarios. We recommend you only use `Definition` to specify the transcoding parameter.
-Note: this field may return `null`, indicating that no valid value was found.
-                     * @param _overrideParameter Video transcoding custom parameter, which is valid when `Definition` is not 0.
-When any parameters in this structure are entered, they will be used to override corresponding parameters in templates.
-This parameter is used in highly customized scenarios. We recommend you only use `Definition` to specify the transcoding parameter.
-Note: this field may return `null`, indicating that no valid value was found.
+                     * 设置Custom video transcoding parameter. It takes effect when Definition is not set to 0.
+When you fill in some transcoding parameters in this structure, the filled parameters will be used to override the parameters in the transcoding template.
+This parameter is used in high customization scenarios. It is recommended that you use only Definition to specify transcoding parameters.
+                     * @param _overrideParameter Custom video transcoding parameter. It takes effect when Definition is not set to 0.
+When you fill in some transcoding parameters in this structure, the filled parameters will be used to override the parameters in the transcoding template.
+This parameter is used in high customization scenarios. It is recommended that you use only Definition to specify transcoding parameters.
                      * 
                      */
                     void SetOverrideParameter(const OverrideTranscodeParameter& _overrideParameter);
@@ -155,19 +151,15 @@ Note: this field may return `null`, indicating that no valid value was found.
                     bool WatermarkSetHasBeenSet() const;
 
                     /**
-                     * 获取Digital watermark parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return BlindWatermark Digital watermark parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Digital watermark parameters.
+                     * @return BlindWatermark Digital watermark parameters.
                      * 
                      */
                     BlindWatermarkInput GetBlindWatermark() const;
 
                     /**
-                     * 设置Digital watermark parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _blindWatermark Digital watermark parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Digital watermark parameters.
+                     * @param _blindWatermark Digital watermark parameters.
                      * 
                      */
                     void SetBlindWatermark(const BlindWatermarkInput& _blindWatermark);
@@ -267,19 +259,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool EndTimeOffsetHasBeenSet() const;
 
                     /**
-                     * 获取Target bucket of an output file. If this parameter is left empty, the `OutputStorage` value of the upper folder will be inherited.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return OutputStorage Target bucket of an output file. If this parameter is left empty, the `OutputStorage` value of the upper folder will be inherited.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Target storage for the transcoded file. If left blank, it inherits the upper-level OutputStorage value.
+                     * @return OutputStorage Target storage for the transcoded file. If left blank, it inherits the upper-level OutputStorage value.
                      * 
                      */
                     TaskOutputStorage GetOutputStorage() const;
 
                     /**
-                     * 设置Target bucket of an output file. If this parameter is left empty, the `OutputStorage` value of the upper folder will be inherited.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _outputStorage Target bucket of an output file. If this parameter is left empty, the `OutputStorage` value of the upper folder will be inherited.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Target storage for the transcoded file. If left blank, it inherits the upper-level OutputStorage value.
+                     * @param _outputStorage Target storage for the transcoded file. If left blank, it inherits the upper-level OutputStorage value.
                      * 
                      */
                     void SetOutputStorage(const TaskOutputStorage& _outputStorage);
@@ -359,18 +347,14 @@ If left empty, a relative path is used by default: `{inputName}_transcode_{defin
 
                     /**
                      * 获取Rule of the `{number}` variable in the output path after transcoding.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ObjectNumberFormat Rule of the `{number}` variable in the output path after transcoding.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     NumberFormat GetObjectNumberFormat() const;
 
                     /**
                      * 设置Rule of the `{number}` variable in the output path after transcoding.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _objectNumberFormat Rule of the `{number}` variable in the output path after transcoding.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetObjectNumberFormat(const NumberFormat& _objectNumberFormat);
@@ -383,19 +367,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ObjectNumberFormatHasBeenSet() const;
 
                     /**
-                     * 获取Opening and closing credits parameters
-Note: this field may return `null`, indicating that no valid value was found.
-                     * @return HeadTailParameter Opening and closing credits parameters
-Note: this field may return `null`, indicating that no valid value was found.
+                     * 获取Video opening/closing credits parameter.
+                     * @return HeadTailParameter Video opening/closing credits parameter.
                      * 
                      */
                     HeadTailParameter GetHeadTailParameter() const;
 
                     /**
-                     * 设置Opening and closing credits parameters
-Note: this field may return `null`, indicating that no valid value was found.
-                     * @param _headTailParameter Opening and closing credits parameters
-Note: this field may return `null`, indicating that no valid value was found.
+                     * 设置Video opening/closing credits parameter.
+                     * @param _headTailParameter Video opening/closing credits parameter.
                      * 
                      */
                     void SetHeadTailParameter(const HeadTailParameter& _headTailParameter);
@@ -423,10 +403,9 @@ This parameter is used in high customization scenarios. it is recommended that y
                     bool m_rawParameterHasBeenSet;
 
                     /**
-                     * Video transcoding custom parameter, which is valid when `Definition` is not 0.
-When any parameters in this structure are entered, they will be used to override corresponding parameters in templates.
-This parameter is used in highly customized scenarios. We recommend you only use `Definition` to specify the transcoding parameter.
-Note: this field may return `null`, indicating that no valid value was found.
+                     * Custom video transcoding parameter. It takes effect when Definition is not set to 0.
+When you fill in some transcoding parameters in this structure, the filled parameters will be used to override the parameters in the transcoding template.
+This parameter is used in high customization scenarios. It is recommended that you use only Definition to specify transcoding parameters.
                      */
                     OverrideTranscodeParameter m_overrideParameter;
                     bool m_overrideParameterHasBeenSet;
@@ -438,8 +417,7 @@ Note: this field may return `null`, indicating that no valid value was found.
                     bool m_watermarkSetHasBeenSet;
 
                     /**
-                     * Digital watermark parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Digital watermark parameters.
                      */
                     BlindWatermarkInput m_blindWatermark;
                     bool m_blindWatermarkHasBeenSet;
@@ -469,8 +447,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_endTimeOffsetHasBeenSet;
 
                     /**
-                     * Target bucket of an output file. If this parameter is left empty, the `OutputStorage` value of the upper folder will be inherited.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Target storage for the transcoded file. If left blank, it inherits the upper-level OutputStorage value.
                      */
                     TaskOutputStorage m_outputStorage;
                     bool m_outputStorageHasBeenSet;
@@ -495,14 +472,12 @@ If left empty, a relative path is used by default: `{inputName}_transcode_{defin
 
                     /**
                      * Rule of the `{number}` variable in the output path after transcoding.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     NumberFormat m_objectNumberFormat;
                     bool m_objectNumberFormatHasBeenSet;
 
                     /**
-                     * Opening and closing credits parameters
-Note: this field may return `null`, indicating that no valid value was found.
+                     * Video opening/closing credits parameter.
                      */
                     HeadTailParameter m_headTailParameter;
                     bool m_headTailParameterHasBeenSet;

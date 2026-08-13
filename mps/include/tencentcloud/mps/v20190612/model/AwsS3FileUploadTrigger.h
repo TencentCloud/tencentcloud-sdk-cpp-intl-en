@@ -132,19 +132,15 @@ namespace TencentCloud
                     bool FormatsHasBeenSet() const;
 
                     /**
-                     * 获取The key ID of the AWS S3 bucket.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return S3SecretId The key ID of the AWS S3 bucket.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Secret key ID of the bound AWS S3 bucket.
+                     * @return S3SecretId Secret key ID of the bound AWS S3 bucket.
                      * 
                      */
                     std::string GetS3SecretId() const;
 
                     /**
-                     * 设置The key ID of the AWS S3 bucket.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _s3SecretId The key ID of the AWS S3 bucket.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Secret key ID of the bound AWS S3 bucket.
+                     * @param _s3SecretId Secret key ID of the bound AWS S3 bucket.
                      * 
                      */
                     void SetS3SecretId(const std::string& _s3SecretId);
@@ -157,19 +153,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool S3SecretIdHasBeenSet() const;
 
                     /**
-                     * 获取The key of the AWS S3 bucket.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return S3SecretKey The key of the AWS S3 bucket.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Secret Key of the bound AWS S3 bucket.
+                     * @return S3SecretKey Secret Key of the bound AWS S3 bucket.
                      * 
                      */
                     std::string GetS3SecretKey() const;
 
                     /**
-                     * 设置The key of the AWS S3 bucket.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _s3SecretKey The key of the AWS S3 bucket.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Secret Key of the bound AWS S3 bucket.
+                     * @param _s3SecretKey Secret Key of the bound AWS S3 bucket.
                      * 
                      */
                     void SetS3SecretKey(const std::string& _s3SecretKey);
@@ -182,23 +174,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool S3SecretKeyHasBeenSet() const;
 
                     /**
-                     * 获取The SQS queue of the AWS S3 bucket.
-Note: The queue must be in the same region as the bucket.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return AwsSQS The SQS queue of the AWS S3 bucket.
-Note: The queue must be in the same region as the bucket.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取SQS event queue bound to the AWS S3 bucket.
+Note: The queue and bucket need to be in the same region.
+                     * @return AwsSQS SQS event queue bound to the AWS S3 bucket.
+Note: The queue and bucket need to be in the same region.
                      * 
                      */
                     AwsSQS GetAwsSQS() const;
 
                     /**
-                     * 设置The SQS queue of the AWS S3 bucket.
-Note: The queue must be in the same region as the bucket.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _awsSQS The SQS queue of the AWS S3 bucket.
-Note: The queue must be in the same region as the bucket.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置SQS event queue bound to the AWS S3 bucket.
+Note: The queue and bucket need to be in the same region.
+                     * @param _awsSQS SQS event queue bound to the AWS S3 bucket.
+Note: The queue and bucket need to be in the same region.
                      * 
                      */
                     void SetAwsSQS(const AwsSQS& _awsSQS);
@@ -237,23 +225,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_formatsHasBeenSet;
 
                     /**
-                     * The key ID of the AWS S3 bucket.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Secret key ID of the bound AWS S3 bucket.
                      */
                     std::string m_s3SecretId;
                     bool m_s3SecretIdHasBeenSet;
 
                     /**
-                     * The key of the AWS S3 bucket.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Secret Key of the bound AWS S3 bucket.
                      */
                     std::string m_s3SecretKey;
                     bool m_s3SecretKeyHasBeenSet;
 
                     /**
-                     * The SQS queue of the AWS S3 bucket.
-Note: The queue must be in the same region as the bucket.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * SQS event queue bound to the AWS S3 bucket.
+Note: The queue and bucket need to be in the same region.
                      */
                     AwsSQS m_awsSQS;
                     bool m_awsSQSHasBeenSet;

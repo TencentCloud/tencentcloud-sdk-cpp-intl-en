@@ -44,14 +44,12 @@ namespace TencentCloud
 
                     /**
                      * 获取Hotword lexicon ID. 
- 
-Either Name or Content should be specified if the hotword lexicon is a temporary hotword lexicon.
-Either Name, FileContent, or FileName should be specified if the hotword lexicon is a file-based hotword lexicon.
+Either Name or Content should be specified if the hotword lexicon is a temporary hotword lexicon. 
+Either Name, FileContent, or FileName should be specified if the hotword vocabulary is a file-based hotword lexicon. 
 
                      * @return HotwordsId Hotword lexicon ID. 
- 
-Either Name or Content should be specified if the hotword lexicon is a temporary hotword lexicon.
-Either Name, FileContent, or FileName should be specified if the hotword lexicon is a file-based hotword lexicon.
+Either Name or Content should be specified if the hotword lexicon is a temporary hotword lexicon. 
+Either Name, FileContent, or FileName should be specified if the hotword vocabulary is a file-based hotword lexicon. 
 
                      * 
                      */
@@ -59,14 +57,12 @@ Either Name, FileContent, or FileName should be specified if the hotword lexicon
 
                     /**
                      * 设置Hotword lexicon ID. 
- 
-Either Name or Content should be specified if the hotword lexicon is a temporary hotword lexicon.
-Either Name, FileContent, or FileName should be specified if the hotword lexicon is a file-based hotword lexicon.
+Either Name or Content should be specified if the hotword lexicon is a temporary hotword lexicon. 
+Either Name, FileContent, or FileName should be specified if the hotword vocabulary is a file-based hotword lexicon. 
 
                      * @param _hotwordsId Hotword lexicon ID. 
- 
-Either Name or Content should be specified if the hotword lexicon is a temporary hotword lexicon.
-Either Name, FileContent, or FileName should be specified if the hotword lexicon is a file-based hotword lexicon.
+Either Name or Content should be specified if the hotword lexicon is a temporary hotword lexicon. 
+Either Name, FileContent, or FileName should be specified if the hotword vocabulary is a file-based hotword lexicon. 
 
                      * 
                      */
@@ -122,11 +118,11 @@ Either Name, FileContent, or FileName should be specified if the hotword lexicon
                     bool ContentHasBeenSet() const;
 
                     /**
-                     * 获取Base64-encoded content of the hotword file. This field is required if Type is set to 1.
+                     * 获取base64 content of the hot word library file, Type 1 required
 
 
 
-                     * @return FileContent Base64-encoded content of the hotword file. This field is required if Type is set to 1.
+                     * @return FileContent base64 content of the hot word library file, Type 1 required
 
 
 
@@ -135,11 +131,11 @@ Either Name, FileContent, or FileName should be specified if the hotword lexicon
                     std::string GetFileContent() const;
 
                     /**
-                     * 设置Base64-encoded content of the hotword file. This field is required if Type is set to 1.
+                     * 设置base64 content of the hot word library file, Type 1 required
 
 
 
-                     * @param _fileContent Base64-encoded content of the hotword file. This field is required if Type is set to 1.
+                     * @param _fileContent base64 content of the hot word library file, Type 1 required
 
 
 
@@ -179,9 +175,8 @@ Either Name, FileContent, or FileName should be specified if the hotword lexicon
 
                     /**
                      * Hotword lexicon ID. 
- 
-Either Name or Content should be specified if the hotword lexicon is a temporary hotword lexicon.
-Either Name, FileContent, or FileName should be specified if the hotword lexicon is a file-based hotword lexicon.
+Either Name or Content should be specified if the hotword lexicon is a temporary hotword lexicon. 
+Either Name, FileContent, or FileName should be specified if the hotword vocabulary is a file-based hotword lexicon. 
 
                      */
                     std::string m_hotwordsId;
@@ -200,7 +195,7 @@ Either Name, FileContent, or FileName should be specified if the hotword lexicon
                     bool m_contentHasBeenSet;
 
                     /**
-                     * Base64-encoded content of the hotword file. This field is required if Type is set to 1.
+                     * base64 content of the hot word library file, Type 1 required
 
 
 

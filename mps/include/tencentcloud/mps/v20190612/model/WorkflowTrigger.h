@@ -86,19 +86,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取This parameter is required and valid when `Type` is `CosFileUpload`, indicating the COS trigger rule.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return CosFileUploadTrigger This parameter is required and valid when `Type` is `CosFileUpload`, indicating the COS trigger rule.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Required and valid when Type is CosFileUpload. This is a COS trigger rule.
+                     * @return CosFileUploadTrigger Required and valid when Type is CosFileUpload. This is a COS trigger rule.
                      * 
                      */
                     CosFileUploadTrigger GetCosFileUploadTrigger() const;
 
                     /**
-                     * 设置This parameter is required and valid when `Type` is `CosFileUpload`, indicating the COS trigger rule.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _cosFileUploadTrigger This parameter is required and valid when `Type` is `CosFileUpload`, indicating the COS trigger rule.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Required and valid when Type is CosFileUpload. This is a COS trigger rule.
+                     * @param _cosFileUploadTrigger Required and valid when Type is CosFileUpload. This is a COS trigger rule.
                      * 
                      */
                     void SetCosFileUploadTrigger(const CosFileUploadTrigger& _cosFileUploadTrigger);
@@ -111,27 +107,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CosFileUploadTriggerHasBeenSet() const;
 
                     /**
-                     * 获取The AWS S3 trigger. This parameter is valid and required if `Type` is `AwsS3FileUpload`.
+                     * 获取Required and valid when Type is AwsS3FileUpload. This is the AWS S3 trigger rule.
 
-Note: Currently, the key for the AWS S3 bucket, the trigger SQS queue, and the callback SQS queue must be the same.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return AwsS3FileUploadTrigger The AWS S3 trigger. This parameter is valid and required if `Type` is `AwsS3FileUpload`.
+Note: Currently, the keys for AWS S3, the corresponding trigger queue SQS, and the callback queue SQS should be the same.
+                     * @return AwsS3FileUploadTrigger Required and valid when Type is AwsS3FileUpload. This is the AWS S3 trigger rule.
 
-Note: Currently, the key for the AWS S3 bucket, the trigger SQS queue, and the callback SQS queue must be the same.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: Currently, the keys for AWS S3, the corresponding trigger queue SQS, and the callback queue SQS should be the same.
                      * 
                      */
                     AwsS3FileUploadTrigger GetAwsS3FileUploadTrigger() const;
 
                     /**
-                     * 设置The AWS S3 trigger. This parameter is valid and required if `Type` is `AwsS3FileUpload`.
+                     * 设置Required and valid when Type is AwsS3FileUpload. This is the AWS S3 trigger rule.
 
-Note: Currently, the key for the AWS S3 bucket, the trigger SQS queue, and the callback SQS queue must be the same.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _awsS3FileUploadTrigger The AWS S3 trigger. This parameter is valid and required if `Type` is `AwsS3FileUpload`.
+Note: Currently, the keys for AWS S3, the corresponding trigger queue SQS, and the callback queue SQS should be the same.
+                     * @param _awsS3FileUploadTrigger Required and valid when Type is AwsS3FileUpload. This is the AWS S3 trigger rule.
 
-Note: Currently, the key for the AWS S3 bucket, the trigger SQS queue, and the callback SQS queue must be the same.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: Currently, the keys for AWS S3, the corresponding trigger queue SQS, and the callback queue SQS should be the same.
                      * 
                      */
                     void SetAwsS3FileUploadTrigger(const AwsS3FileUploadTrigger& _awsS3FileUploadTrigger);
@@ -156,17 +148,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_typeHasBeenSet;
 
                     /**
-                     * This parameter is required and valid when `Type` is `CosFileUpload`, indicating the COS trigger rule.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Required and valid when Type is CosFileUpload. This is a COS trigger rule.
                      */
                     CosFileUploadTrigger m_cosFileUploadTrigger;
                     bool m_cosFileUploadTriggerHasBeenSet;
 
                     /**
-                     * The AWS S3 trigger. This parameter is valid and required if `Type` is `AwsS3FileUpload`.
+                     * Required and valid when Type is AwsS3FileUpload. This is the AWS S3 trigger rule.
 
-Note: Currently, the key for the AWS S3 bucket, the trigger SQS queue, and the callback SQS queue must be the same.
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: Currently, the keys for AWS S3, the corresponding trigger queue SQS, and the callback queue SQS should be the same.
                      */
                     AwsS3FileUploadTrigger m_awsS3FileUploadTrigger;
                     bool m_awsS3FileUploadTriggerHasBeenSet;

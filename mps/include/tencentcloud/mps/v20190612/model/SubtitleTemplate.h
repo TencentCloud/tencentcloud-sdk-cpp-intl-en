@@ -48,19 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The URL of the subtitles to add to the video.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Path The URL of the subtitles to add to the video.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Subtitle file URL to be suppressed in the video.
+                     * @return Path Subtitle file URL to be suppressed in the video.
                      * 
                      */
                     std::string GetPath() const;
 
                     /**
-                     * 设置The URL of the subtitles to add to the video.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _path The URL of the subtitles to add to the video.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Subtitle file URL to be suppressed in the video.
+                     * @param _path Subtitle file URL to be suppressed in the video.
                      * 
                      */
                     void SetPath(const std::string& _path);
@@ -73,35 +69,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool PathHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the subtitle track for embedding subtitles into the video. the Streamindex parameter takes value starting from 0, where 0 indicates usage of the first subtitle track in the source video. if Path is specified, use Path preferentially. either Path or Streamindex should be specified.
+                     * 获取Specifies the subtitle track for embedding subtitles into the video. The Streamindex value starts from 0, where 0 indicates usage of the first subtitle track in the source video. If Path is specified, use Path preferentially. Specify at least one of Path or Streamindex.
 
--Note: StreamIndex must match the subtitle track index in the source file. for example, if the subtitle track in the source file is stream#0:3, StreamIndex should be 3. otherwise, task processing failed.
-
-
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return StreamIndex Specifies the subtitle track for embedding subtitles into the video. the Streamindex parameter takes value starting from 0, where 0 indicates usage of the first subtitle track in the source video. if Path is specified, use Path preferentially. either Path or Streamindex should be specified.
-
--Note: StreamIndex must match the subtitle track index in the source file. for example, if the subtitle track in the source file is stream#0:3, StreamIndex should be 3. otherwise, task processing failed.
+-Note: StreamIndex must be consistent with the subtitle track index in the source file. For example, if the subtitle track in the source file is stream#0:3, StreamIndex should be 3. Otherwise, task processing may fail.
 
 
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return StreamIndex Specifies the subtitle track for embedding subtitles into the video. The Streamindex value starts from 0, where 0 indicates usage of the first subtitle track in the source video. If Path is specified, use Path preferentially. Specify at least one of Path or Streamindex.
+
+-Note: StreamIndex must be consistent with the subtitle track index in the source file. For example, if the subtitle track in the source file is stream#0:3, StreamIndex should be 3. Otherwise, task processing may fail.
+
+
                      * 
                      */
                     int64_t GetStreamIndex() const;
 
                     /**
-                     * 设置Specifies the subtitle track for embedding subtitles into the video. the Streamindex parameter takes value starting from 0, where 0 indicates usage of the first subtitle track in the source video. if Path is specified, use Path preferentially. either Path or Streamindex should be specified.
+                     * 设置Specifies the subtitle track for embedding subtitles into the video. The Streamindex value starts from 0, where 0 indicates usage of the first subtitle track in the source video. If Path is specified, use Path preferentially. Specify at least one of Path or Streamindex.
 
--Note: StreamIndex must match the subtitle track index in the source file. for example, if the subtitle track in the source file is stream#0:3, StreamIndex should be 3. otherwise, task processing failed.
-
-
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _streamIndex Specifies the subtitle track for embedding subtitles into the video. the Streamindex parameter takes value starting from 0, where 0 indicates usage of the first subtitle track in the source video. if Path is specified, use Path preferentially. either Path or Streamindex should be specified.
-
--Note: StreamIndex must match the subtitle track index in the source file. for example, if the subtitle track in the source file is stream#0:3, StreamIndex should be 3. otherwise, task processing failed.
+-Note: StreamIndex must be consistent with the subtitle track index in the source file. For example, if the subtitle track in the source file is stream#0:3, StreamIndex should be 3. Otherwise, task processing may fail.
 
 
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _streamIndex Specifies the subtitle track for embedding subtitles into the video. The Streamindex value starts from 0, where 0 indicates usage of the first subtitle track in the source video. If Path is specified, use Path preferentially. Specify at least one of Path or Streamindex.
+
+-Note: StreamIndex must be consistent with the subtitle track index in the source file. For example, if the subtitle track in the source file is stream#0:3, StreamIndex should be 3. Otherwise, task processing may fail.
+
+
                      * 
                      */
                     void SetStreamIndex(const int64_t& _streamIndex);
@@ -114,19 +106,15 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool StreamIndexHasBeenSet() const;
 
                     /**
-                     * 获取Input information on the subtitle file to be embedded into the video. Currently, only subtitle files stored in COS are supported.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SubtitleFileInput Input information on the subtitle file to be embedded into the video. Currently, only subtitle files stored in COS are supported.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Input information on the subtitle file to be embedded in the video. Currently, only subtitle files stored in COS are supported.
+                     * @return SubtitleFileInput Input information on the subtitle file to be embedded in the video. Currently, only subtitle files stored in COS are supported.
                      * 
                      */
                     MediaInputInfo GetSubtitleFileInput() const;
 
                     /**
-                     * 设置Input information on the subtitle file to be embedded into the video. Currently, only subtitle files stored in COS are supported.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _subtitleFileInput Input information on the subtitle file to be embedded into the video. Currently, only subtitle files stored in COS are supported.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Input information on the subtitle file to be embedded in the video. Currently, only subtitle files stored in COS are supported.
+                     * @param _subtitleFileInput Input information on the subtitle file to be embedded in the video. Currently, only subtitle files stored in COS are supported.
                      * 
                      */
                     void SetSubtitleFileInput(const MediaInputInfo& _subtitleFileInput);
@@ -166,7 +154,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     /**
                      * 获取Font type. Valid values:
 <li>hei.ttf: SimHei</li>
-<li>song.ttf: SimSun.</li>
+<li>song.ttf: Song Typeface.</li>
 <li>kai.ttf (recommend) or simkai.ttf: KaiTi.</li>
 <li>msyh.ttf: Microsoft YaHei.</li>
 <li>msyhbd.ttf: Microsoft YaHei Bold.</li>
@@ -202,10 +190,9 @@ Default value: hei.ttf.
 <li>kai.ttf is recommended for SimKai.</li>
 <li>FontFileInput takes precedence when specified.</li>
 
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return FontType Font type. Valid values:
 <li>hei.ttf: SimHei</li>
-<li>song.ttf: SimSun.</li>
+<li>song.ttf: Song Typeface.</li>
 <li>kai.ttf (recommend) or simkai.ttf: KaiTi.</li>
 <li>msyh.ttf: Microsoft YaHei.</li>
 <li>msyhbd.ttf: Microsoft YaHei Bold.</li>
@@ -241,7 +228,6 @@ Default value: hei.ttf.
 <li>kai.ttf is recommended for SimKai.</li>
 <li>FontFileInput takes precedence when specified.</li>
 
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetFontType() const;
@@ -249,7 +235,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     /**
                      * 设置Font type. Valid values:
 <li>hei.ttf: SimHei</li>
-<li>song.ttf: SimSun.</li>
+<li>song.ttf: Song Typeface.</li>
 <li>kai.ttf (recommend) or simkai.ttf: KaiTi.</li>
 <li>msyh.ttf: Microsoft YaHei.</li>
 <li>msyhbd.ttf: Microsoft YaHei Bold.</li>
@@ -285,10 +271,9 @@ Default value: hei.ttf.
 <li>kai.ttf is recommended for SimKai.</li>
 <li>FontFileInput takes precedence when specified.</li>
 
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _fontType Font type. Valid values:
 <li>hei.ttf: SimHei</li>
-<li>song.ttf: SimSun.</li>
+<li>song.ttf: Song Typeface.</li>
 <li>kai.ttf (recommend) or simkai.ttf: KaiTi.</li>
 <li>msyh.ttf: Microsoft YaHei.</li>
 <li>msyhbd.ttf: Microsoft YaHei Bold.</li>
@@ -324,7 +309,6 @@ Default value: hei.ttf.
 <li>kai.ttf is recommended for SimKai.</li>
 <li>FontFileInput takes precedence when specified.</li>
 
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetFontType(const std::string& _fontType);
@@ -337,43 +321,39 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool FontTypeHasBeenSet() const;
 
                     /**
-                     * 获取Font size. If not specified, the font size of the subtitle file applies. Pixel and percentage formats are supported:
+                     * 获取Font size. If not specified, the font size of the subtitle file applies. Pixel and percentage formats are supported.
 
-- Pixel: Npx. Value range of N: (0,4096].
+-.
 - Percentage: N%. Value range of N: (0,100]. For example, 10% means the subtitle font size is 10% of the source video height.
 
 The default size is 5% of the source video height if this parameter is not specified or the font size is not configured in the subtitle file.
 
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return FontSize Font size. If not specified, the font size of the subtitle file applies. Pixel and percentage formats are supported:
+                     * @return FontSize Font size. If not specified, the font size of the subtitle file applies. Pixel and percentage formats are supported.
 
-- Pixel: Npx. Value range of N: (0,4096].
+-.
 - Percentage: N%. Value range of N: (0,100]. For example, 10% means the subtitle font size is 10% of the source video height.
 
 The default size is 5% of the source video height if this parameter is not specified or the font size is not configured in the subtitle file.
 
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetFontSize() const;
 
                     /**
-                     * 设置Font size. If not specified, the font size of the subtitle file applies. Pixel and percentage formats are supported:
+                     * 设置Font size. If not specified, the font size of the subtitle file applies. Pixel and percentage formats are supported.
 
-- Pixel: Npx. Value range of N: (0,4096].
+-.
 - Percentage: N%. Value range of N: (0,100]. For example, 10% means the subtitle font size is 10% of the source video height.
 
 The default size is 5% of the source video height if this parameter is not specified or the font size is not configured in the subtitle file.
 
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _fontSize Font size. If not specified, the font size of the subtitle file applies. Pixel and percentage formats are supported:
+                     * @param _fontSize Font size. If not specified, the font size of the subtitle file applies. Pixel and percentage formats are supported.
 
-- Pixel: Npx. Value range of N: (0,4096].
+-.
 - Percentage: N%. Value range of N: (0,100]. For example, 10% means the subtitle font size is 10% of the source video height.
 
 The default size is 5% of the source video height if this parameter is not specified or the font size is not configured in the subtitle file.
 
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetFontSize(const std::string& _fontSize);
@@ -387,18 +367,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Font color. Format: 0xRRGGBB. Default value: 0xFFFFFF (white).
-Note: This field may return null, indicating that no valid value can be obtained.
                      * @return FontColor Font color. Format: 0xRRGGBB. Default value: 0xFFFFFF (white).
-Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     std::string GetFontColor() const;
 
                     /**
                      * 设置Font color. Format: 0xRRGGBB. Default value: 0xFFFFFF (white).
-Note: This field may return null, indicating that no valid value can be obtained.
                      * @param _fontColor Font color. Format: 0xRRGGBB. Default value: 0xFFFFFF (white).
-Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     void SetFontColor(const std::string& _fontColor);
@@ -411,31 +387,27 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool FontColorHasBeenSet() const;
 
                     /**
-                     * 获取The text transparency. Value range: 0-1.
-<li>`0`: Fully transparent.</li>
-<li>`1`: Fully opaque.</li>
+                     * 获取Text opacity, value ranges from 0 to 1.
+<li>0: completely transparent.</li>
+<li>1: completely opaque.</li>
 Default value: 1.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return FontAlpha The text transparency. Value range: 0-1.
-<li>`0`: Fully transparent.</li>
-<li>`1`: Fully opaque.</li>
+                     * @return FontAlpha Text opacity, value ranges from 0 to 1.
+<li>0: completely transparent.</li>
+<li>1: completely opaque.</li>
 Default value: 1.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     double GetFontAlpha() const;
 
                     /**
-                     * 设置The text transparency. Value range: 0-1.
-<li>`0`: Fully transparent.</li>
-<li>`1`: Fully opaque.</li>
+                     * 设置Text opacity, value ranges from 0 to 1.
+<li>0: completely transparent.</li>
+<li>1: completely opaque.</li>
 Default value: 1.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _fontAlpha The text transparency. Value range: 0-1.
-<li>`0`: Fully transparent.</li>
-<li>`1`: Fully opaque.</li>
+                     * @param _fontAlpha Text opacity, value ranges from 0 to 1.
+<li>0: completely transparent.</li>
+<li>1: completely opaque.</li>
 Default value: 1.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetFontAlpha(const double& _fontAlpha);
@@ -448,51 +420,47 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool FontAlphaHasBeenSet() const;
 
                     /**
-                     * 获取Subtitle position on the Y-axis. If this parameter is specified, the built-in coordinates in the subtitle file will be ignored. The pixel and percentage formats are supported.
+                     * 获取Subtitle y-axis coordinate position. Specify this parameter to ignore the built-in coordinates of the subtitle file. Support pixel and percentage format.
 
- - Pixel: Npx. Value range of N: [0,4096].
- - Percentage: N%. Value range of N: [0,100]. For example, 10% indicates that the subtitle position on the Y-axis is 10% of the video height.
-
-By default, the position is 4% of the source video height.
-Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the subtitle reference position is at the bottom of the central axis of the subtitles, as shown in the figure below.
-![image](https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png)
-
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return YPos Subtitle position on the Y-axis. If this parameter is specified, the built-in coordinates in the subtitle file will be ignored. The pixel and percentage formats are supported.
-
- - Pixel: Npx. Value range of N: [0,4096].
- - Percentage: N%. Value range of N: [0,100]. For example, 10% indicates that the subtitle position on the Y-axis is 10% of the video height.
+-.
+-Percentage: N%, N range: [0,100]; for example, 10% means subtitle y-coordinate = 10% * source video height.
 
 By default, the position is 4% of the source video height.
-Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the subtitle reference position is at the bottom of the central axis of the subtitles, as shown in the figure below.
+Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the subtitle reference position is at the bottom of the central axis of the subtitles, see the following diagram.
 ![image](https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png)
 
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return YPos Subtitle y-axis coordinate position. Specify this parameter to ignore the built-in coordinates of the subtitle file. Support pixel and percentage format.
+
+-.
+-Percentage: N%, N range: [0,100]; for example, 10% means subtitle y-coordinate = 10% * source video height.
+
+By default, the position is 4% of the source video height.
+Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the subtitle reference position is at the bottom of the central axis of the subtitles, see the following diagram.
+![image](https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png)
+
                      * 
                      */
                     std::string GetYPos() const;
 
                     /**
-                     * 设置Subtitle position on the Y-axis. If this parameter is specified, the built-in coordinates in the subtitle file will be ignored. The pixel and percentage formats are supported.
+                     * 设置Subtitle y-axis coordinate position. Specify this parameter to ignore the built-in coordinates of the subtitle file. Support pixel and percentage format.
 
- - Pixel: Npx. Value range of N: [0,4096].
- - Percentage: N%. Value range of N: [0,100]. For example, 10% indicates that the subtitle position on the Y-axis is 10% of the video height.
-
-By default, the position is 4% of the source video height.
-Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the subtitle reference position is at the bottom of the central axis of the subtitles, as shown in the figure below.
-![image](https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png)
-
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _yPos Subtitle position on the Y-axis. If this parameter is specified, the built-in coordinates in the subtitle file will be ignored. The pixel and percentage formats are supported.
-
- - Pixel: Npx. Value range of N: [0,4096].
- - Percentage: N%. Value range of N: [0,100]. For example, 10% indicates that the subtitle position on the Y-axis is 10% of the video height.
+-.
+-Percentage: N%, N range: [0,100]; for example, 10% means subtitle y-coordinate = 10% * source video height.
 
 By default, the position is 4% of the source video height.
-Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the subtitle reference position is at the bottom of the central axis of the subtitles, as shown in the figure below.
+Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the subtitle reference position is at the bottom of the central axis of the subtitles, see the following diagram.
 ![image](https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png)
 
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _yPos Subtitle y-axis coordinate position. Specify this parameter to ignore the built-in coordinates of the subtitle file. Support pixel and percentage format.
+
+-.
+-Percentage: N%, N range: [0,100]; for example, 10% means subtitle y-coordinate = 10% * source video height.
+
+By default, the position is 4% of the source video height.
+Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the subtitle reference position is at the bottom of the central axis of the subtitles, see the following diagram.
+![image](https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png)
+
                      * 
                      */
                     void SetYPos(const std::string& _yPos);
@@ -505,51 +473,47 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool YPosHasBeenSet() const;
 
                     /**
-                     * 获取Subtitle background position on the Y-axis. Pixel and percentage formats are supported.
+                     * 获取y-axis coordinate position of the subtitle background base plate; Support pixel and percentage format:
 
- - Pixel: Npx. Value range of N: [0,4096].
- - Percentage: N%. Value range of N: [0,100]. For example, 10% indicates that the subtitle background position on the Y-axis is 10% of the video height.
-
-If this parameter is not specified, the subtitle background is disabled.
-Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the reference position of the subtitle background is at the bottom of the central axis of the source video, as shown in the figure below.
-![image](https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png)
-
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return BoardY Subtitle background position on the Y-axis. Pixel and percentage formats are supported.
-
- - Pixel: Npx. Value range of N: [0,4096].
- - Percentage: N%. Value range of N: [0,100]. For example, 10% indicates that the subtitle background position on the Y-axis is 10% of the video height.
+-.
+-Percentage: N%, N range: [0,100]; for example, 10% means the y-coordinate of the subtitle background base plate = 10% * video height.
 
 If this parameter is not specified, the subtitle background is disabled.
-Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the reference position of the subtitle background is at the bottom of the central axis of the source video, as shown in the figure below.
+Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the reference point of the subtitle background base plate is at the bottom of its central axis. Refer to the figure below.
 ![image](https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png)
 
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * @return BoardY y-axis coordinate position of the subtitle background base plate; Support pixel and percentage format:
+
+-.
+-Percentage: N%, N range: [0,100]; for example, 10% means the y-coordinate of the subtitle background base plate = 10% * video height.
+
+If this parameter is not specified, the subtitle background is disabled.
+Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the reference point of the subtitle background base plate is at the bottom of its central axis. Refer to the figure below.
+![image](https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png)
+
                      * 
                      */
                     std::string GetBoardY() const;
 
                     /**
-                     * 设置Subtitle background position on the Y-axis. Pixel and percentage formats are supported.
+                     * 设置y-axis coordinate position of the subtitle background base plate; Support pixel and percentage format:
 
- - Pixel: Npx. Value range of N: [0,4096].
- - Percentage: N%. Value range of N: [0,100]. For example, 10% indicates that the subtitle background position on the Y-axis is 10% of the video height.
-
-If this parameter is not specified, the subtitle background is disabled.
-Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the reference position of the subtitle background is at the bottom of the central axis of the source video, as shown in the figure below.
-![image](https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png)
-
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _boardY Subtitle background position on the Y-axis. Pixel and percentage formats are supported.
-
- - Pixel: Npx. Value range of N: [0,4096].
- - Percentage: N%. Value range of N: [0,100]. For example, 10% indicates that the subtitle background position on the Y-axis is 10% of the video height.
+-.
+-Percentage: N%, N range: [0,100]; for example, 10% means the y-coordinate of the subtitle background base plate = 10% * video height.
 
 If this parameter is not specified, the subtitle background is disabled.
-Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the reference position of the subtitle background is at the bottom of the central axis of the source video, as shown in the figure below.
+Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the reference point of the subtitle background base plate is at the bottom of its central axis. Refer to the figure below.
 ![image](https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png)
 
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * @param _boardY y-axis coordinate position of the subtitle background base plate; Support pixel and percentage format:
+
+-.
+-Percentage: N%, N range: [0,100]; for example, 10% means the y-coordinate of the subtitle background base plate = 10% * video height.
+
+If this parameter is not specified, the subtitle background is disabled.
+Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the reference point of the subtitle background base plate is at the bottom of its central axis. Refer to the figure below.
+![image](https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png)
+
                      * 
                      */
                     void SetBoardY(const std::string& _boardY);
@@ -567,13 +531,11 @@ Note: This field may return null, indicating that no valid value can be obtained
 - Value range for percentages: [0, 100].
 If background is enabled and this parameter is not specified, the default width is 90% of the source video width.
 
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return BoardWidth Background width. The value should be a positive integer.
 - Value range for pixels: [0,4096].
 - Value range for percentages: [0, 100].
 If background is enabled and this parameter is not specified, the default width is 90% of the source video width.
 
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetBoardWidth() const;
@@ -584,13 +546,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
 - Value range for percentages: [0, 100].
 If background is enabled and this parameter is not specified, the default width is 90% of the source video width.
 
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _boardWidth Background width. The value should be a positive integer.
 - Value range for pixels: [0,4096].
 - Value range for percentages: [0, 100].
 If background is enabled and this parameter is not specified, the default width is 90% of the source video width.
 
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetBoardWidth(const int64_t& _boardWidth);
@@ -608,13 +568,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
 - Value range for percentages: [0, 100].
 If background is enabled and this parameter is not specified, the default height is 15% of the source video height.
 
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return BoardHeight Background height. The value should be a positive integer.
 - Value range for pixels: [0,4096].
 - Value range for percentages: [0, 100].
 If background is enabled and this parameter is not specified, the default height is 15% of the source video height.
 
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetBoardHeight() const;
@@ -625,13 +583,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
 - Value range for percentages: [0, 100].
 If background is enabled and this parameter is not specified, the default height is 15% of the source video height.
 
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _boardHeight Background height. The value should be a positive integer.
 - Value range for pixels: [0,4096].
 - Value range for percentages: [0, 100].
 If background is enabled and this parameter is not specified, the default height is 15% of the source video height.
 
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetBoardHeight(const int64_t& _boardHeight);
@@ -646,10 +602,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     /**
                      * 获取Board color. Format: 0xRRGGBB.
 Default value: 0x000000 (black).
-Note: This field may return null, indicating that no valid value can be obtained.
                      * @return BoardColor Board color. Format: 0xRRGGBB.
 Default value: 0x000000 (black).
-Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     std::string GetBoardColor() const;
@@ -657,10 +611,8 @@ Note: This field may return null, indicating that no valid value can be obtained
                     /**
                      * 设置Board color. Format: 0xRRGGBB.
 Default value: 0x000000 (black).
-Note: This field may return null, indicating that no valid value can be obtained.
                      * @param _boardColor Board color. Format: 0xRRGGBB.
 Default value: 0x000000 (black).
-Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     void SetBoardColor(const std::string& _boardColor);
@@ -677,12 +629,10 @@ Note: This field may return null, indicating that no valid value can be obtained
 <li>0: completely transparent.</li>
 <li>1: completely opaque.</li>
 Default value: 0.8.
-Note: This field may return null, indicating that no valid value can be obtained.
                      * @return BoardAlpha Subtitle background transparency. Value range: [0, 1].
 <li>0: completely transparent.</li>
 <li>1: completely opaque.</li>
 Default value: 0.8.
-Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     double GetBoardAlpha() const;
@@ -692,12 +642,10 @@ Note: This field may return null, indicating that no valid value can be obtained
 <li>0: completely transparent.</li>
 <li>1: completely opaque.</li>
 Default value: 0.8.
-Note: This field may return null, indicating that no valid value can be obtained.
                      * @param _boardAlpha Subtitle background transparency. Value range: [0, 1].
 <li>0: completely transparent.</li>
 <li>1: completely opaque.</li>
 Default value: 0.8.
-Note: This field may return null, indicating that no valid value can be obtained.
                      * 
                      */
                     void SetBoardAlpha(const double& _boardAlpha);
@@ -1069,26 +1017,23 @@ If this is not specified, no shadow is applied by default.
                 private:
 
                     /**
-                     * The URL of the subtitles to add to the video.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Subtitle file URL to be suppressed in the video.
                      */
                     std::string m_path;
                     bool m_pathHasBeenSet;
 
                     /**
-                     * Specifies the subtitle track for embedding subtitles into the video. the Streamindex parameter takes value starting from 0, where 0 indicates usage of the first subtitle track in the source video. if Path is specified, use Path preferentially. either Path or Streamindex should be specified.
+                     * Specifies the subtitle track for embedding subtitles into the video. The Streamindex value starts from 0, where 0 indicates usage of the first subtitle track in the source video. If Path is specified, use Path preferentially. Specify at least one of Path or Streamindex.
 
--Note: StreamIndex must match the subtitle track index in the source file. for example, if the subtitle track in the source file is stream#0:3, StreamIndex should be 3. otherwise, task processing failed.
+-Note: StreamIndex must be consistent with the subtitle track index in the source file. For example, if the subtitle track in the source file is stream#0:3, StreamIndex should be 3. Otherwise, task processing may fail.
 
 
-Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     int64_t m_streamIndex;
                     bool m_streamIndexHasBeenSet;
 
                     /**
-                     * Input information on the subtitle file to be embedded into the video. Currently, only subtitle files stored in COS are supported.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Input information on the subtitle file to be embedded in the video. Currently, only subtitle files stored in COS are supported.
                      */
                     MediaInputInfo m_subtitleFileInput;
                     bool m_subtitleFileInputHasBeenSet;
@@ -1103,7 +1048,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     /**
                      * Font type. Valid values:
 <li>hei.ttf: SimHei</li>
-<li>song.ttf: SimSun.</li>
+<li>song.ttf: Song Typeface.</li>
 <li>kai.ttf (recommend) or simkai.ttf: KaiTi.</li>
 <li>msyh.ttf: Microsoft YaHei.</li>
 <li>msyhbd.ttf: Microsoft YaHei Bold.</li>
@@ -1139,67 +1084,61 @@ Default value: hei.ttf.
 <li>kai.ttf is recommended for SimKai.</li>
 <li>FontFileInput takes precedence when specified.</li>
 
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_fontType;
                     bool m_fontTypeHasBeenSet;
 
                     /**
-                     * Font size. If not specified, the font size of the subtitle file applies. Pixel and percentage formats are supported:
+                     * Font size. If not specified, the font size of the subtitle file applies. Pixel and percentage formats are supported.
 
-- Pixel: Npx. Value range of N: (0,4096].
+-.
 - Percentage: N%. Value range of N: (0,100]. For example, 10% means the subtitle font size is 10% of the source video height.
 
 The default size is 5% of the source video height if this parameter is not specified or the font size is not configured in the subtitle file.
 
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_fontSize;
                     bool m_fontSizeHasBeenSet;
 
                     /**
                      * Font color. Format: 0xRRGGBB. Default value: 0xFFFFFF (white).
-Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     std::string m_fontColor;
                     bool m_fontColorHasBeenSet;
 
                     /**
-                     * The text transparency. Value range: 0-1.
-<li>`0`: Fully transparent.</li>
-<li>`1`: Fully opaque.</li>
+                     * Text opacity, value ranges from 0 to 1.
+<li>0: completely transparent.</li>
+<li>1: completely opaque.</li>
 Default value: 1.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     double m_fontAlpha;
                     bool m_fontAlphaHasBeenSet;
 
                     /**
-                     * Subtitle position on the Y-axis. If this parameter is specified, the built-in coordinates in the subtitle file will be ignored. The pixel and percentage formats are supported.
+                     * Subtitle y-axis coordinate position. Specify this parameter to ignore the built-in coordinates of the subtitle file. Support pixel and percentage format.
 
- - Pixel: Npx. Value range of N: [0,4096].
- - Percentage: N%. Value range of N: [0,100]. For example, 10% indicates that the subtitle position on the Y-axis is 10% of the video height.
+-.
+-Percentage: N%, N range: [0,100]; for example, 10% means subtitle y-coordinate = 10% * source video height.
 
 By default, the position is 4% of the source video height.
-Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the subtitle reference position is at the bottom of the central axis of the subtitles, as shown in the figure below.
+Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the subtitle reference position is at the bottom of the central axis of the subtitles, see the following diagram.
 ![image](https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png)
 
-Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     std::string m_yPos;
                     bool m_yPosHasBeenSet;
 
                     /**
-                     * Subtitle background position on the Y-axis. Pixel and percentage formats are supported.
+                     * y-axis coordinate position of the subtitle background base plate; Support pixel and percentage format:
 
- - Pixel: Npx. Value range of N: [0,4096].
- - Percentage: N%. Value range of N: [0,100]. For example, 10% indicates that the subtitle background position on the Y-axis is 10% of the video height.
+-.
+-Percentage: N%, N range: [0,100]; for example, 10% means the y-coordinate of the subtitle background base plate = 10% * video height.
 
 If this parameter is not specified, the subtitle background is disabled.
-Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the reference position of the subtitle background is at the bottom of the central axis of the source video, as shown in the figure below.
+Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the reference point of the subtitle background base plate is at the bottom of its central axis. Refer to the figure below.
 ![image](https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png)
 
-Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     std::string m_boardY;
                     bool m_boardYHasBeenSet;
@@ -1210,7 +1149,6 @@ Note: This field may return null, indicating that no valid value can be obtained
 - Value range for percentages: [0, 100].
 If background is enabled and this parameter is not specified, the default width is 90% of the source video width.
 
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_boardWidth;
                     bool m_boardWidthHasBeenSet;
@@ -1221,7 +1159,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 - Value range for percentages: [0, 100].
 If background is enabled and this parameter is not specified, the default height is 15% of the source video height.
 
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_boardHeight;
                     bool m_boardHeightHasBeenSet;
@@ -1229,7 +1166,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     /**
                      * Board color. Format: 0xRRGGBB.
 Default value: 0x000000 (black).
-Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     std::string m_boardColor;
                     bool m_boardColorHasBeenSet;
@@ -1239,7 +1175,6 @@ Note: This field may return null, indicating that no valid value can be obtained
 <li>0: completely transparent.</li>
 <li>1: completely opaque.</li>
 Default value: 0.8.
-Note: This field may return null, indicating that no valid value can be obtained.
                      */
                     double m_boardAlpha;
                     bool m_boardAlphaHasBeenSet;

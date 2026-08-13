@@ -80,19 +80,31 @@ Default value: ON.
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取Type. Valid values:<li>standard: standard super-resolution.</li><li>super: super advanced super-resolution.</li><li>ultra: ultra advanced super-resolution.</li>Default value: standard.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Type Type. Valid values:<li>standard: standard super-resolution.</li><li>super: super advanced super-resolution.</li><li>ultra: ultra advanced super-resolution.</li>Default value: standard.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Type, available values:
+<li>standard: Common super-resolution</li>
+<li>super: Advanced super-resolution.
+<li>ultra: Advanced super-resolution ultra edition.</li>
+Default value: standard.
+                     * @return Type Type, available values:
+<li>standard: Common super-resolution</li>
+<li>super: Advanced super-resolution.
+<li>ultra: Advanced super-resolution ultra edition.</li>
+Default value: standard.
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Type. Valid values:<li>standard: standard super-resolution.</li><li>super: super advanced super-resolution.</li><li>ultra: ultra advanced super-resolution.</li>Default value: standard.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _type Type. Valid values:<li>standard: standard super-resolution.</li><li>super: super advanced super-resolution.</li><li>ultra: ultra advanced super-resolution.</li>Default value: standard.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Type, available values:
+<li>standard: Common super-resolution</li>
+<li>super: Advanced super-resolution.
+<li>ultra: Advanced super-resolution ultra edition.</li>
+Default value: standard.
+                     * @param _type Type, available values:
+<li>standard: Common super-resolution</li>
+<li>super: Advanced super-resolution.
+<li>ultra: Advanced super-resolution ultra edition.</li>
+Default value: standard.
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -106,30 +118,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Image output mode. The default value is percent.
-<li>aspect: obtain a larger rectangle with specified width and height through super-resolution.</li>
+<li>aspect: Obtain a larger rectangle with specified width and height through super-resolution.</li>
 <li>fixed: obtain images of fixed width and height through super-resolution, with forced scaling supported.</li>
-<li>percent: magnification factor of super-resolution, which can be a decimal.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+<li>percent: Super-resolution magnification factor, which can be a decimal.</li>
                      * @return Mode Image output mode. The default value is percent.
-<li>aspect: obtain a larger rectangle with specified width and height through super-resolution.</li>
+<li>aspect: Obtain a larger rectangle with specified width and height through super-resolution.</li>
 <li>fixed: obtain images of fixed width and height through super-resolution, with forced scaling supported.</li>
-<li>percent: magnification factor of super-resolution, which can be a decimal.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+<li>percent: Super-resolution magnification factor, which can be a decimal.</li>
                      * 
                      */
                     std::string GetMode() const;
 
                     /**
                      * 设置Image output mode. The default value is percent.
-<li>aspect: obtain a larger rectangle with specified width and height through super-resolution.</li>
+<li>aspect: Obtain a larger rectangle with specified width and height through super-resolution.</li>
 <li>fixed: obtain images of fixed width and height through super-resolution, with forced scaling supported.</li>
-<li>percent: magnification factor of super-resolution, which can be a decimal.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+<li>percent: Super-resolution magnification factor, which can be a decimal.</li>
                      * @param _mode Image output mode. The default value is percent.
-<li>aspect: obtain a larger rectangle with specified width and height through super-resolution.</li>
+<li>aspect: Obtain a larger rectangle with specified width and height through super-resolution.</li>
 <li>fixed: obtain images of fixed width and height through super-resolution, with forced scaling supported.</li>
-<li>percent: magnification factor of super-resolution, which can be a decimal.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+<li>percent: Super-resolution magnification factor, which can be a decimal.</li>
                      * 
                      */
                     void SetMode(const std::string& _mode);
@@ -142,15 +150,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ModeHasBeenSet() const;
 
                     /**
-                     * 获取Scale factor of super-resolution, which can be a decimal.Note: This is used when Mode is percent.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Percent Scale factor of super-resolution, which can be a decimal.Note: This is used when Mode is percent.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Super-resolution multiplication rate, can be a decimal.
+Note: Used when Mode equals percent.
+                     * @return Percent Super-resolution multiplication rate, can be a decimal.
+Note: Used when Mode equals percent.
                      * 
                      */
                     double GetPercent() const;
 
                     /**
-                     * 设置Scale factor of super-resolution, which can be a decimal.Note: This is used when Mode is percent.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _percent Scale factor of super-resolution, which can be a decimal.Note: This is used when Mode is percent.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Super-resolution multiplication rate, can be a decimal.
+Note: Used when Mode equals percent.
+                     * @param _percent Super-resolution multiplication rate, can be a decimal.
+Note: Used when Mode equals percent.
                      * 
                      */
                     void SetPercent(const double& _percent);
@@ -163,15 +175,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool PercentHasBeenSet() const;
 
                     /**
-                     * 获取Width of the target image. The value cannot exceed 4096.Note: When Mode is aspect or fixed, this configuration takes priority.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Width Width of the target image. The value cannot exceed 4096.Note: When Mode is aspect or fixed, this configuration takes priority.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Image width must not exceed 4096.
+Note: When Mode equals aspect or fixed, preferentially use this configuration.
+                     * @return Width Image width must not exceed 4096.
+Note: When Mode equals aspect or fixed, preferentially use this configuration.
                      * 
                      */
                     int64_t GetWidth() const;
 
                     /**
-                     * 设置Width of the target image. The value cannot exceed 4096.Note: When Mode is aspect or fixed, this configuration takes priority.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _width Width of the target image. The value cannot exceed 4096.Note: When Mode is aspect or fixed, this configuration takes priority.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Image width must not exceed 4096.
+Note: When Mode equals aspect or fixed, preferentially use this configuration.
+                     * @param _width Image width must not exceed 4096.
+Note: When Mode equals aspect or fixed, preferentially use this configuration.
                      * 
                      */
                     void SetWidth(const int64_t& _width);
@@ -184,15 +200,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool WidthHasBeenSet() const;
 
                     /**
-                     * 获取Height of the target image. The value cannot exceed 4096.Note: When Mode is aspect or fixed, this configuration takes priority.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Height Height of the target image. The value cannot exceed 4096.Note: When Mode is aspect or fixed, this configuration takes priority.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Target image height must not exceed 4096.
+Note: When Mode equals aspect or fixed, preferentially use this configuration.
+                     * @return Height Target image height must not exceed 4096.
+Note: When Mode equals aspect or fixed, preferentially use this configuration.
                      * 
                      */
                     int64_t GetHeight() const;
 
                     /**
-                     * 设置Height of the target image. The value cannot exceed 4096.Note: When Mode is aspect or fixed, this configuration takes priority.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _height Height of the target image. The value cannot exceed 4096.Note: When Mode is aspect or fixed, this configuration takes priority.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Target image height must not exceed 4096.
+Note: When Mode equals aspect or fixed, preferentially use this configuration.
+                     * @param _height Target image height must not exceed 4096.
+Note: When Mode equals aspect or fixed, preferentially use this configuration.
                      * 
                      */
                     void SetHeight(const int64_t& _height);
@@ -205,15 +225,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool HeightHasBeenSet() const;
 
                     /**
-                     * 获取Long side length of the target image. The value cannot exceed 4096.Note: This configuration is used when Mode is aspect or fixed and the Width and Height fields are not specified.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return LongSide Long side length of the target image. The value cannot exceed 4096.Note: This configuration is used when Mode is aspect or fixed and the Width and Height fields are not specified.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取The long side length of the target image must not exceed 4096.
+Note: This configuration is used when Mode equals aspect or fixed and the Width and Height fields are unconfigured.
+                     * @return LongSide The long side length of the target image must not exceed 4096.
+Note: This configuration is used when Mode equals aspect or fixed and the Width and Height fields are unconfigured.
                      * 
                      */
                     int64_t GetLongSide() const;
 
                     /**
-                     * 设置Long side length of the target image. The value cannot exceed 4096.Note: This configuration is used when Mode is aspect or fixed and the Width and Height fields are not specified.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _longSide Long side length of the target image. The value cannot exceed 4096.Note: This configuration is used when Mode is aspect or fixed and the Width and Height fields are not specified.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置The long side length of the target image must not exceed 4096.
+Note: This configuration is used when Mode equals aspect or fixed and the Width and Height fields are unconfigured.
+                     * @param _longSide The long side length of the target image must not exceed 4096.
+Note: This configuration is used when Mode equals aspect or fixed and the Width and Height fields are unconfigured.
                      * 
                      */
                     void SetLongSide(const int64_t& _longSide);
@@ -226,15 +250,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool LongSideHasBeenSet() const;
 
                     /**
-                     * 获取Short side length of the target image. The value cannot exceed 4096.Note: This configuration is used when Mode is aspect or fixed and the Width and Height fields are not specified.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ShortSide Short side length of the target image. The value cannot exceed 4096.Note: This configuration is used when Mode is aspect or fixed and the Width and Height fields are not specified.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取The short side length of the target image must not exceed 4096.
+Note: This configuration is used when Mode equals aspect or fixed and the Width and Height fields are unconfigured.
+                     * @return ShortSide The short side length of the target image must not exceed 4096.
+Note: This configuration is used when Mode equals aspect or fixed and the Width and Height fields are unconfigured.
                      * 
                      */
                     int64_t GetShortSide() const;
 
                     /**
-                     * 设置Short side length of the target image. The value cannot exceed 4096.Note: This configuration is used when Mode is aspect or fixed and the Width and Height fields are not specified.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _shortSide Short side length of the target image. The value cannot exceed 4096.Note: This configuration is used when Mode is aspect or fixed and the Width and Height fields are not specified.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置The short side length of the target image must not exceed 4096.
+Note: This configuration is used when Mode equals aspect or fixed and the Width and Height fields are unconfigured.
+                     * @param _shortSide The short side length of the target image must not exceed 4096.
+Note: This configuration is used when Mode equals aspect or fixed and the Width and Height fields are unconfigured.
                      * 
                      */
                     void SetShortSide(const int64_t& _shortSide);
@@ -258,48 +286,55 @@ Default value: ON.
                     bool m_switchHasBeenSet;
 
                     /**
-                     * Type. Valid values:<li>standard: standard super-resolution.</li><li>super: super advanced super-resolution.</li><li>ultra: ultra advanced super-resolution.</li>Default value: standard.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Type, available values:
+<li>standard: Common super-resolution</li>
+<li>super: Advanced super-resolution.
+<li>ultra: Advanced super-resolution ultra edition.</li>
+Default value: standard.
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
                      * Image output mode. The default value is percent.
-<li>aspect: obtain a larger rectangle with specified width and height through super-resolution.</li>
+<li>aspect: Obtain a larger rectangle with specified width and height through super-resolution.</li>
 <li>fixed: obtain images of fixed width and height through super-resolution, with forced scaling supported.</li>
-<li>percent: magnification factor of super-resolution, which can be a decimal.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+<li>percent: Super-resolution magnification factor, which can be a decimal.</li>
                      */
                     std::string m_mode;
                     bool m_modeHasBeenSet;
 
                     /**
-                     * Scale factor of super-resolution, which can be a decimal.Note: This is used when Mode is percent.Note: This field may return null, indicating that no valid values can be obtained.
+                     * Super-resolution multiplication rate, can be a decimal.
+Note: Used when Mode equals percent.
                      */
                     double m_percent;
                     bool m_percentHasBeenSet;
 
                     /**
-                     * Width of the target image. The value cannot exceed 4096.Note: When Mode is aspect or fixed, this configuration takes priority.Note: This field may return null, indicating that no valid values can be obtained.
+                     * Image width must not exceed 4096.
+Note: When Mode equals aspect or fixed, preferentially use this configuration.
                      */
                     int64_t m_width;
                     bool m_widthHasBeenSet;
 
                     /**
-                     * Height of the target image. The value cannot exceed 4096.Note: When Mode is aspect or fixed, this configuration takes priority.Note: This field may return null, indicating that no valid values can be obtained.
+                     * Target image height must not exceed 4096.
+Note: When Mode equals aspect or fixed, preferentially use this configuration.
                      */
                     int64_t m_height;
                     bool m_heightHasBeenSet;
 
                     /**
-                     * Long side length of the target image. The value cannot exceed 4096.Note: This configuration is used when Mode is aspect or fixed and the Width and Height fields are not specified.Note: This field may return null, indicating that no valid values can be obtained.
+                     * The long side length of the target image must not exceed 4096.
+Note: This configuration is used when Mode equals aspect or fixed and the Width and Height fields are unconfigured.
                      */
                     int64_t m_longSide;
                     bool m_longSideHasBeenSet;
 
                     /**
-                     * Short side length of the target image. The value cannot exceed 4096.Note: This configuration is used when Mode is aspect or fixed and the Width and Height fields are not specified.Note: This field may return null, indicating that no valid values can be obtained.
+                     * The short side length of the target image must not exceed 4096.
+Note: This configuration is used when Mode equals aspect or fixed and the Width and Height fields are unconfigured.
                      */
                     int64_t m_shortSide;
                     bool m_shortSideHasBeenSet;

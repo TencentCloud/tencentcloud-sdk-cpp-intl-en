@@ -111,19 +111,15 @@ namespace TencentCloud
                     bool EndTimeOffsetHasBeenSet() const;
 
                     /**
-                     * 获取<p>Target storage for the file after GIF conversion. If this is not specified, it inherits the value from the upper-level OutputStorage.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return OutputStorage <p>Target storage for the file after GIF conversion. If this is not specified, it inherits the value from the upper-level OutputStorage.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Target storage for the file after animated image conversion. If left blank, it inherits the upper-level OutputStorage value.</p>
+                     * @return OutputStorage <p>Target storage for the file after animated image conversion. If left blank, it inherits the upper-level OutputStorage value.</p>
                      * 
                      */
                     TaskOutputStorage GetOutputStorage() const;
 
                     /**
-                     * 设置<p>Target storage for the file after GIF conversion. If this is not specified, it inherits the value from the upper-level OutputStorage.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _outputStorage <p>Target storage for the file after GIF conversion. If this is not specified, it inherits the value from the upper-level OutputStorage.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Target storage for the file after animated image conversion. If left blank, it inherits the upper-level OutputStorage value.</p>
+                     * @param _outputStorage <p>Target storage for the file after animated image conversion. If left blank, it inherits the upper-level OutputStorage value.</p>
                      * 
                      */
                     void SetOutputStorage(const TaskOutputStorage& _outputStorage);
@@ -198,8 +194,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_endTimeOffsetHasBeenSet;
 
                     /**
-                     * <p>Target storage for the file after GIF conversion. If this is not specified, it inherits the value from the upper-level OutputStorage.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Target storage for the file after animated image conversion. If left blank, it inherits the upper-level OutputStorage value.</p>
                      */
                     TaskOutputStorage m_outputStorage;
                     bool m_outputStorageHasBeenSet;

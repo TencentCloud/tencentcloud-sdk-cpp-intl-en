@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Full details of the hit template; return solely the template with the maximum similarity.
-                     * @return RetrievalLivenessExtraInfo Full details of the hit template; return solely the template with the maximum similarity.
+                     * 获取Detailed information of the hit template, return only the template information with the highest similarity.
+                     * @return RetrievalLivenessExtraInfo Detailed information of the hit template, return only the template information with the highest similarity.
                      * 
                      */
                     std::vector<RetrievalLivenessExtraInfo> GetRetrievalLivenessExtraInfo() const;
 
                     /**
-                     * 设置Full details of the hit template; return solely the template with the maximum similarity.
-                     * @param _retrievalLivenessExtraInfo Full details of the hit template; return solely the template with the maximum similarity.
+                     * 设置Detailed information of the hit template, return only the template information with the highest similarity.
+                     * @param _retrievalLivenessExtraInfo Detailed information of the hit template, return only the template information with the highest similarity.
                      * 
                      */
                     void SetRetrievalLivenessExtraInfo(const std::vector<RetrievalLivenessExtraInfo>& _retrievalLivenessExtraInfo);
@@ -71,7 +71,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Full details of the hit template; return solely the template with the maximum similarity.
+                     * Detailed information of the hit template, return only the template information with the highest similarity.
                      */
                     std::vector<RetrievalLivenessExtraInfo> m_retrievalLivenessExtraInfo;
                     bool m_retrievalLivenessExtraInfoHasBeenSet;

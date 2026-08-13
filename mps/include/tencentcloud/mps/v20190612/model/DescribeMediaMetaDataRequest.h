@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Input information of file for metadata getting.
-                     * @return InputInfo Input information of file for metadata getting.
+                     * 获取Input information of the file that needs to get meta information.
+                     * @return InputInfo Input information of the file that needs to get meta information.
                      * 
                      */
                     MediaInputInfo GetInputInfo() const;
 
                     /**
-                     * 设置Input information of file for metadata getting.
-                     * @param _inputInfo Input information of file for metadata getting.
+                     * 设置Input information of the file that needs to get meta information.
+                     * @param _inputInfo Input information of the file that needs to get meta information.
                      * 
                      */
                     void SetInputInfo(const MediaInputInfo& _inputInfo);
@@ -67,7 +67,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Input information of file for metadata getting.
+                     * Input information of the file that needs to get meta information.
                      */
                     MediaInputInfo m_inputInfo;
                     bool m_inputInfoHasBeenSet;

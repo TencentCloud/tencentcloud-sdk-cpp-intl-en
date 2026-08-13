@@ -49,18 +49,14 @@ namespace TencentCloud
 
                     /**
                      * 获取<p>Insertion method. Valid values:</p><li>subtitle-stream: Inserts a subtitle track.</li><li>close-caption-708: Encodes CEA-708 subtitles into SEI frames.</li><li>close-caption-608: Encodes CEA-608 subtitles into SEI frames.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Type <p>Insertion method. Valid values:</p><li>subtitle-stream: Inserts a subtitle track.</li><li>close-caption-708: Encodes CEA-708 subtitles into SEI frames.</li><li>close-caption-608: Encodes CEA-608 subtitles into SEI frames.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetType() const;
 
                     /**
                      * 设置<p>Insertion method. Valid values:</p><li>subtitle-stream: Inserts a subtitle track.</li><li>close-caption-708: Encodes CEA-708 subtitles into SEI frames.</li><li>close-caption-608: Encodes CEA-608 subtitles into SEI frames.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _type <p>Insertion method. Valid values:</p><li>subtitle-stream: Inserts a subtitle track.</li><li>close-caption-708: Encodes CEA-708 subtitles into SEI frames.</li><li>close-caption-608: Encodes CEA-608 subtitles into SEI frames.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -74,18 +70,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取<p>Subtitle file.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Subtitle <p>Subtitle file.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     MediaInputInfo GetSubtitle() const;
 
                     /**
                      * 设置<p>Subtitle file.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _subtitle <p>Subtitle file.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetSubtitle(const MediaInputInfo& _subtitle);
@@ -99,18 +91,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取<p>Subtitle name.<br>Note: Only Chinese characters, letters, digits, spaces, underscores (_), hyphens (-), periods (.), and brackets are supported. The length cannot exceed 64 characters.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return SubtitleName <p>Subtitle name.<br>Note: Only Chinese characters, letters, digits, spaces, underscores (_), hyphens (-), periods (.), and brackets are supported. The length cannot exceed 64 characters.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetSubtitleName() const;
 
                     /**
                      * 设置<p>Subtitle name.<br>Note: Only Chinese characters, letters, digits, spaces, underscores (_), hyphens (-), periods (.), and brackets are supported. The length cannot exceed 64 characters.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _subtitleName <p>Subtitle name.<br>Note: Only Chinese characters, letters, digits, spaces, underscores (_), hyphens (-), periods (.), and brackets are supported. The length cannot exceed 64 characters.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetSubtitleName(const std::string& _subtitleName);
@@ -189,21 +177,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * <p>Insertion method. Valid values:</p><li>subtitle-stream: Inserts a subtitle track.</li><li>close-caption-708: Encodes CEA-708 subtitles into SEI frames.</li><li>close-caption-608: Encodes CEA-608 subtitles into SEI frames.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
                      * <p>Subtitle file.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     MediaInputInfo m_subtitle;
                     bool m_subtitleHasBeenSet;
 
                     /**
                      * <p>Subtitle name.<br>Note: Only Chinese characters, letters, digits, spaces, underscores (_), hyphens (-), periods (.), and brackets are supported. The length cannot exceed 64 characters.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_subtitleName;
                     bool m_subtitleNameHasBeenSet;

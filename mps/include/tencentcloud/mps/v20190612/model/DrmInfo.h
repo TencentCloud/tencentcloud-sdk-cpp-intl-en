@@ -178,19 +178,15 @@ Specifies that only singlefile mode can be used for MPEG-DASH.
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取The AES-128 encryption details.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SimpleAesDrm The AES-128 encryption details.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取SimpleAes encrypted information.
+                     * @return SimpleAesDrm SimpleAes encrypted information.
                      * 
                      */
                     SimpleAesDrm GetSimpleAesDrm() const;
 
                     /**
-                     * 设置The AES-128 encryption details.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _simpleAesDrm The AES-128 encryption details.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置SimpleAes encrypted information.
+                     * @param _simpleAesDrm SimpleAes encrypted information.
                      * 
                      */
                     void SetSimpleAesDrm(const SimpleAesDrm& _simpleAesDrm);
@@ -259,8 +255,7 @@ Specifies that only singlefile mode can be used for MPEG-DASH.
                     bool m_typeHasBeenSet;
 
                     /**
-                     * The AES-128 encryption details.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * SimpleAes encrypted information.
                      */
                     SimpleAesDrm m_simpleAesDrm;
                     bool m_simpleAesDrmHasBeenSet;
