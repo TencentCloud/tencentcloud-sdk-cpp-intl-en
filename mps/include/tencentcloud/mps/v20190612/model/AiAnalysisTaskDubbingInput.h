@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Intelligent translation task input type.
+                * Input type of the intelligent dubbing task.
                 */
                 class AiAnalysisTaskDubbingInput : public AbstractModel
                 {

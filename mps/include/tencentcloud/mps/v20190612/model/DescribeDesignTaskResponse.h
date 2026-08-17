@@ -86,10 +86,8 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取<p>Voice ID.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return VoiceId <p>Voice ID.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return VoiceId 
                      * 
                      */
                     std::string GetVoiceId() const;
@@ -116,10 +114,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool AudioUrlHasBeenSet() const;
 
                     /**
-                     * 获取<p>Extended information.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ExtInfo <p>Extended information.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return ExtInfo 
                      * 
                      */
                     std::string GetExtInfo() const;
@@ -152,8 +148,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_statusHasBeenSet;
 
                     /**
-                     * <p>Voice ID.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string m_voiceId;
                     bool m_voiceIdHasBeenSet;
@@ -165,8 +160,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_audioUrlHasBeenSet;
 
                     /**
-                     * <p>Extended information.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string m_extInfo;
                     bool m_extInfoHasBeenSet;

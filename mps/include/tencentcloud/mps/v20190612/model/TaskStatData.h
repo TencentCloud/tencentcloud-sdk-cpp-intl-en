@@ -52,20 +52,20 @@ namespace TencentCloud
                      * 获取Task type.
 <li>Transcode: transcoding.</li>
 <li>Enhance: enhancement.</li>
-<li>AIAnalysis: intelligent analysis.</li>
-<li>AIRecognition: intelligent recognition.</li>
-<li>AIReview: content moderation.</li>
+<li>AIAnalysis: intelligent analysis</li>
+<li>AIRecognition: intelligent recognition</li>
+<li>AIReview: content moderation</li>
 <li>Snapshot: screenshot.</li>
-<li>AnimatedGraphics: conversion to GIF.</li>
+<li>AnimatedGraphics: Animated image</li>
 <li>ImageProcess: image processing.</li>
                      * @return TaskType Task type.
 <li>Transcode: transcoding.</li>
 <li>Enhance: enhancement.</li>
-<li>AIAnalysis: intelligent analysis.</li>
-<li>AIRecognition: intelligent recognition.</li>
-<li>AIReview: content moderation.</li>
+<li>AIAnalysis: intelligent analysis</li>
+<li>AIRecognition: intelligent recognition</li>
+<li>AIReview: content moderation</li>
 <li>Snapshot: screenshot.</li>
-<li>AnimatedGraphics: conversion to GIF.</li>
+<li>AnimatedGraphics: Animated image</li>
 <li>ImageProcess: image processing.</li>
                      * 
                      */
@@ -75,20 +75,20 @@ namespace TencentCloud
                      * 设置Task type.
 <li>Transcode: transcoding.</li>
 <li>Enhance: enhancement.</li>
-<li>AIAnalysis: intelligent analysis.</li>
-<li>AIRecognition: intelligent recognition.</li>
-<li>AIReview: content moderation.</li>
+<li>AIAnalysis: intelligent analysis</li>
+<li>AIRecognition: intelligent recognition</li>
+<li>AIReview: content moderation</li>
 <li>Snapshot: screenshot.</li>
-<li>AnimatedGraphics: conversion to GIF.</li>
+<li>AnimatedGraphics: Animated image</li>
 <li>ImageProcess: image processing.</li>
                      * @param _taskType Task type.
 <li>Transcode: transcoding.</li>
 <li>Enhance: enhancement.</li>
-<li>AIAnalysis: intelligent analysis.</li>
-<li>AIRecognition: intelligent recognition.</li>
-<li>AIReview: content moderation.</li>
+<li>AIAnalysis: intelligent analysis</li>
+<li>AIRecognition: intelligent recognition</li>
+<li>AIReview: content moderation</li>
 <li>Snapshot: screenshot.</li>
-<li>AnimatedGraphics: conversion to GIF.</li>
+<li>AnimatedGraphics: Animated image</li>
 <li>ImageProcess: image processing.</li>
                      * 
                      */
@@ -102,7 +102,7 @@ namespace TencentCloud
                     bool TaskTypeHasBeenSet() const;
 
                     /**
-                     * 获取Statistical data overview of the number of tasks.
+                     * 获取Statistics overview of the number of tasks.
 <li>Transcode: The unit of usage is seconds.</li>
 <li>Enhance: The unit of usage is seconds.</li>
 <li>AIAnalysis: The unit of usage is seconds.</li>
@@ -111,7 +111,7 @@ namespace TencentCloud
 <li>Snapshot: The unit of usage is images.</li>
 <li>AnimatedGraphics: The unit of usage is seconds.</li>
 <li>ImageProcess: The unit of usage is images.</li>.
-                     * @return Summary Statistical data overview of the number of tasks.
+                     * @return Summary Statistics overview of the number of tasks.
 <li>Transcode: The unit of usage is seconds.</li>
 <li>Enhance: The unit of usage is seconds.</li>
 <li>AIAnalysis: The unit of usage is seconds.</li>
@@ -125,7 +125,7 @@ namespace TencentCloud
                     std::vector<TaskStatDataItem> GetSummary() const;
 
                     /**
-                     * 设置Statistical data overview of the number of tasks.
+                     * 设置Statistics overview of the number of tasks.
 <li>Transcode: The unit of usage is seconds.</li>
 <li>Enhance: The unit of usage is seconds.</li>
 <li>AIAnalysis: The unit of usage is seconds.</li>
@@ -134,7 +134,7 @@ namespace TencentCloud
 <li>Snapshot: The unit of usage is images.</li>
 <li>AnimatedGraphics: The unit of usage is seconds.</li>
 <li>ImageProcess: The unit of usage is images.</li>.
-                     * @param _summary Statistical data overview of the number of tasks.
+                     * @param _summary Statistics overview of the number of tasks.
 <li>Transcode: The unit of usage is seconds.</li>
 <li>Enhance: The unit of usage is seconds.</li>
 <li>AIAnalysis: The unit of usage is seconds.</li>
@@ -155,18 +155,19 @@ namespace TencentCloud
                     bool SummaryHasBeenSet() const;
 
                     /**
-                     * 获取Statistical data details for tasks of various specifications.
+                     * 获取Task statistics data for varying specifications.
+
 1. Transcoding specification:
 <li>Audio: audio-only.</li>
 <li>Remuxing: conversion to muxing.</li>
-<li>Other transcoding specifications: {TYPE}.{CODEC}.{SPECIFICATION}.</li> Specifically, valid values for TYPE:
-    Standard: standard transcoding.
+<li>Other transcoding specifications: {TYPE}.{CODEC}.{SPECIFICATION}.</li> Among them, valid values for TYPE:
+    Standard: standard transcoding
     TESHD-10: TSC transcoding for videos.
-    TESHD-20: TSC transcoding for audios.
-    TESHD-30: TSC transcoding for audios/videos.
+    TESHD-20: TSC transcoding for audio.
+    TESHD-30: TSC transcoding for audio and video.
     TESHD-30-SDK: duration-based billing of TSC transcoding SDK for audios/videos.
-    TESHD-30-SDKCores: core number-based billing of TSC transcoding SDK for audios/videos.
-    Edit: video editing.
+    TESHD-30-SDKCores: Top Speed Codec (TSC) transcoding SDK for audio and video is billed based on core count.
+    Edit: video editing
   Specifically, valid values for CODEC:
     H264: H. 264 encoding.
     H265: H.265 encoding.
@@ -176,24 +177,25 @@ namespace TencentCloud
     SD: standard definition.
     HD: high definition.
     FHD: full HD.
-    2K: 2K.
-    4K: 4K.
-For example, TESHD-10.H265.HD indicates TSC transcoding using the H.265 encoding method.
-2. Enhancement specification: video enhancement format: {TYPE}.{CODEC}.{SPECIFICATION}.{FPS}, where valid values for CODEC and SPECIFICATION follow the transcoding descriptions mentioned above, and FPS is valid only when the atomic enhancement type is used; audio enhancement format: {TYPE}.
+    2K:2K
+    4K:4K
+For example, TESHD-10.H265.HD means H.265 encoding type high-definition TSC transcoding.
+
+2. Enhancement specification: video enhancement format: {TYPE}.{CODEC}.{SPECIFICATION}.{FPS}, where CODEC and SPECIFICATION follow the transcoding specifications, and FPS is valid only for atomic types; audio enhancement format: {TYPE}.
 Valid values for enhancement TYPE:
-<li>Enhance: common enhancement type, which might be any atomic enhancement type.</li>
+<li>Enhance: Common enhancement type, which might be any atomic enhancement type.</li>
 <li>Atomic enhancement type</li>. Valid values for video atomic enhancement type:
-    Sdr2hdr: SDR2HDR.
-    SuperResolution: super resolution.
+    Sdr2hdr:SDR2HDR
+    SuperResolution: Super-resolution
     InsertFrame: frame interpolation.
     ComprehensiveEnhancement: comprehensive enhancement.
-    NoiseReduction: video noise reduction.
-    ColorEnhancement: color enhancement.
-    RemoveScratches: scratch removal.
-    Deburr:  artifacts removal.
+    NoiseReduction: video noise
+    ColorEnhancement: Color enhancement
+    RemoveScratches: scratch removal
+    Deburr: artifacts removal.
     DetailEnhancement: detail enhancement.
     LightEnhancement: low-light enhancement.
-    FaceEnhancement: face enhancement.
+    FaceEnhancement: face enhancement
   Valid value for audio atomic enhancement type.
     AudioNoiseReduction
     VolumeBalance
@@ -201,18 +203,18 @@ Valid values for enhancement TYPE:
     AudioSeparation
 
 3. Screenshot specification:
-<li>ImageSprite: sprite.</li>
+<li>ImageSprite: sprite sheet</li>
 <li>SampleSnapshot: sampled screenshot.</li>
 <li>SnapshotByTime: time point screenshot.</li>
 4. Image processing specification: {TYPE}.{CODEC}.{SPECIFICATION}.
-<li> ImageCompression: image encoding.</li>
-<li> ImageSuperResolution: image super resolution.</li>
+<li>ImageCompression: image encoding.</li>
+<li> ImageSuperResolution: image super-resolution.</li>
 <li>EnhanceImageColor: image color enhancement.</li>
 5. Intelligent analysis specification:
-<li>AIAnalysis: major category for analysis.</li>
+<li>AIAnalysis: Analytical major category</li>
 <li>VideoTag: video tag.</li>
-<li>VideoClassification: video category.</li>
-<li>SmartCover: smart cover.</li>
+<li>VideoClassification: video classification.</li>
+<li>SmartCover: intelligent cover.</li>
 <li>FrameLabel: frame tag.</li>
 <li>VideoSplit: video splitting.</li>
 <li>Highlights: highlights.</li>
@@ -225,18 +227,19 @@ Valid values for enhancement TYPE:
 <li>VoiceRecognition: automatic speech recognition.</li>
 <li>VoiceTranslation: speech translation.</li>
 7. There are no segmentation specifications for content moderation and conversion to GIF.
-                     * @return Details Statistical data details for tasks of various specifications.
+                     * @return Details Task statistics data for varying specifications.
+
 1. Transcoding specification:
 <li>Audio: audio-only.</li>
 <li>Remuxing: conversion to muxing.</li>
-<li>Other transcoding specifications: {TYPE}.{CODEC}.{SPECIFICATION}.</li> Specifically, valid values for TYPE:
-    Standard: standard transcoding.
+<li>Other transcoding specifications: {TYPE}.{CODEC}.{SPECIFICATION}.</li> Among them, valid values for TYPE:
+    Standard: standard transcoding
     TESHD-10: TSC transcoding for videos.
-    TESHD-20: TSC transcoding for audios.
-    TESHD-30: TSC transcoding for audios/videos.
+    TESHD-20: TSC transcoding for audio.
+    TESHD-30: TSC transcoding for audio and video.
     TESHD-30-SDK: duration-based billing of TSC transcoding SDK for audios/videos.
-    TESHD-30-SDKCores: core number-based billing of TSC transcoding SDK for audios/videos.
-    Edit: video editing.
+    TESHD-30-SDKCores: Top Speed Codec (TSC) transcoding SDK for audio and video is billed based on core count.
+    Edit: video editing
   Specifically, valid values for CODEC:
     H264: H. 264 encoding.
     H265: H.265 encoding.
@@ -246,24 +249,25 @@ Valid values for enhancement TYPE:
     SD: standard definition.
     HD: high definition.
     FHD: full HD.
-    2K: 2K.
-    4K: 4K.
-For example, TESHD-10.H265.HD indicates TSC transcoding using the H.265 encoding method.
-2. Enhancement specification: video enhancement format: {TYPE}.{CODEC}.{SPECIFICATION}.{FPS}, where valid values for CODEC and SPECIFICATION follow the transcoding descriptions mentioned above, and FPS is valid only when the atomic enhancement type is used; audio enhancement format: {TYPE}.
+    2K:2K
+    4K:4K
+For example, TESHD-10.H265.HD means H.265 encoding type high-definition TSC transcoding.
+
+2. Enhancement specification: video enhancement format: {TYPE}.{CODEC}.{SPECIFICATION}.{FPS}, where CODEC and SPECIFICATION follow the transcoding specifications, and FPS is valid only for atomic types; audio enhancement format: {TYPE}.
 Valid values for enhancement TYPE:
-<li>Enhance: common enhancement type, which might be any atomic enhancement type.</li>
+<li>Enhance: Common enhancement type, which might be any atomic enhancement type.</li>
 <li>Atomic enhancement type</li>. Valid values for video atomic enhancement type:
-    Sdr2hdr: SDR2HDR.
-    SuperResolution: super resolution.
+    Sdr2hdr:SDR2HDR
+    SuperResolution: Super-resolution
     InsertFrame: frame interpolation.
     ComprehensiveEnhancement: comprehensive enhancement.
-    NoiseReduction: video noise reduction.
-    ColorEnhancement: color enhancement.
-    RemoveScratches: scratch removal.
-    Deburr:  artifacts removal.
+    NoiseReduction: video noise
+    ColorEnhancement: Color enhancement
+    RemoveScratches: scratch removal
+    Deburr: artifacts removal.
     DetailEnhancement: detail enhancement.
     LightEnhancement: low-light enhancement.
-    FaceEnhancement: face enhancement.
+    FaceEnhancement: face enhancement
   Valid value for audio atomic enhancement type.
     AudioNoiseReduction
     VolumeBalance
@@ -271,18 +275,18 @@ Valid values for enhancement TYPE:
     AudioSeparation
 
 3. Screenshot specification:
-<li>ImageSprite: sprite.</li>
+<li>ImageSprite: sprite sheet</li>
 <li>SampleSnapshot: sampled screenshot.</li>
 <li>SnapshotByTime: time point screenshot.</li>
 4. Image processing specification: {TYPE}.{CODEC}.{SPECIFICATION}.
-<li> ImageCompression: image encoding.</li>
-<li> ImageSuperResolution: image super resolution.</li>
+<li>ImageCompression: image encoding.</li>
+<li> ImageSuperResolution: image super-resolution.</li>
 <li>EnhanceImageColor: image color enhancement.</li>
 5. Intelligent analysis specification:
-<li>AIAnalysis: major category for analysis.</li>
+<li>AIAnalysis: Analytical major category</li>
 <li>VideoTag: video tag.</li>
-<li>VideoClassification: video category.</li>
-<li>SmartCover: smart cover.</li>
+<li>VideoClassification: video classification.</li>
+<li>SmartCover: intelligent cover.</li>
 <li>FrameLabel: frame tag.</li>
 <li>VideoSplit: video splitting.</li>
 <li>Highlights: highlights.</li>
@@ -300,18 +304,19 @@ Valid values for enhancement TYPE:
                     std::vector<SpecificationDataItem> GetDetails() const;
 
                     /**
-                     * 设置Statistical data details for tasks of various specifications.
+                     * 设置Task statistics data for varying specifications.
+
 1. Transcoding specification:
 <li>Audio: audio-only.</li>
 <li>Remuxing: conversion to muxing.</li>
-<li>Other transcoding specifications: {TYPE}.{CODEC}.{SPECIFICATION}.</li> Specifically, valid values for TYPE:
-    Standard: standard transcoding.
+<li>Other transcoding specifications: {TYPE}.{CODEC}.{SPECIFICATION}.</li> Among them, valid values for TYPE:
+    Standard: standard transcoding
     TESHD-10: TSC transcoding for videos.
-    TESHD-20: TSC transcoding for audios.
-    TESHD-30: TSC transcoding for audios/videos.
+    TESHD-20: TSC transcoding for audio.
+    TESHD-30: TSC transcoding for audio and video.
     TESHD-30-SDK: duration-based billing of TSC transcoding SDK for audios/videos.
-    TESHD-30-SDKCores: core number-based billing of TSC transcoding SDK for audios/videos.
-    Edit: video editing.
+    TESHD-30-SDKCores: Top Speed Codec (TSC) transcoding SDK for audio and video is billed based on core count.
+    Edit: video editing
   Specifically, valid values for CODEC:
     H264: H. 264 encoding.
     H265: H.265 encoding.
@@ -321,24 +326,25 @@ Valid values for enhancement TYPE:
     SD: standard definition.
     HD: high definition.
     FHD: full HD.
-    2K: 2K.
-    4K: 4K.
-For example, TESHD-10.H265.HD indicates TSC transcoding using the H.265 encoding method.
-2. Enhancement specification: video enhancement format: {TYPE}.{CODEC}.{SPECIFICATION}.{FPS}, where valid values for CODEC and SPECIFICATION follow the transcoding descriptions mentioned above, and FPS is valid only when the atomic enhancement type is used; audio enhancement format: {TYPE}.
+    2K:2K
+    4K:4K
+For example, TESHD-10.H265.HD means H.265 encoding type high-definition TSC transcoding.
+
+2. Enhancement specification: video enhancement format: {TYPE}.{CODEC}.{SPECIFICATION}.{FPS}, where CODEC and SPECIFICATION follow the transcoding specifications, and FPS is valid only for atomic types; audio enhancement format: {TYPE}.
 Valid values for enhancement TYPE:
-<li>Enhance: common enhancement type, which might be any atomic enhancement type.</li>
+<li>Enhance: Common enhancement type, which might be any atomic enhancement type.</li>
 <li>Atomic enhancement type</li>. Valid values for video atomic enhancement type:
-    Sdr2hdr: SDR2HDR.
-    SuperResolution: super resolution.
+    Sdr2hdr:SDR2HDR
+    SuperResolution: Super-resolution
     InsertFrame: frame interpolation.
     ComprehensiveEnhancement: comprehensive enhancement.
-    NoiseReduction: video noise reduction.
-    ColorEnhancement: color enhancement.
-    RemoveScratches: scratch removal.
-    Deburr:  artifacts removal.
+    NoiseReduction: video noise
+    ColorEnhancement: Color enhancement
+    RemoveScratches: scratch removal
+    Deburr: artifacts removal.
     DetailEnhancement: detail enhancement.
     LightEnhancement: low-light enhancement.
-    FaceEnhancement: face enhancement.
+    FaceEnhancement: face enhancement
   Valid value for audio atomic enhancement type.
     AudioNoiseReduction
     VolumeBalance
@@ -346,18 +352,18 @@ Valid values for enhancement TYPE:
     AudioSeparation
 
 3. Screenshot specification:
-<li>ImageSprite: sprite.</li>
+<li>ImageSprite: sprite sheet</li>
 <li>SampleSnapshot: sampled screenshot.</li>
 <li>SnapshotByTime: time point screenshot.</li>
 4. Image processing specification: {TYPE}.{CODEC}.{SPECIFICATION}.
-<li> ImageCompression: image encoding.</li>
-<li> ImageSuperResolution: image super resolution.</li>
+<li>ImageCompression: image encoding.</li>
+<li> ImageSuperResolution: image super-resolution.</li>
 <li>EnhanceImageColor: image color enhancement.</li>
 5. Intelligent analysis specification:
-<li>AIAnalysis: major category for analysis.</li>
+<li>AIAnalysis: Analytical major category</li>
 <li>VideoTag: video tag.</li>
-<li>VideoClassification: video category.</li>
-<li>SmartCover: smart cover.</li>
+<li>VideoClassification: video classification.</li>
+<li>SmartCover: intelligent cover.</li>
 <li>FrameLabel: frame tag.</li>
 <li>VideoSplit: video splitting.</li>
 <li>Highlights: highlights.</li>
@@ -370,18 +376,19 @@ Valid values for enhancement TYPE:
 <li>VoiceRecognition: automatic speech recognition.</li>
 <li>VoiceTranslation: speech translation.</li>
 7. There are no segmentation specifications for content moderation and conversion to GIF.
-                     * @param _details Statistical data details for tasks of various specifications.
+                     * @param _details Task statistics data for varying specifications.
+
 1. Transcoding specification:
 <li>Audio: audio-only.</li>
 <li>Remuxing: conversion to muxing.</li>
-<li>Other transcoding specifications: {TYPE}.{CODEC}.{SPECIFICATION}.</li> Specifically, valid values for TYPE:
-    Standard: standard transcoding.
+<li>Other transcoding specifications: {TYPE}.{CODEC}.{SPECIFICATION}.</li> Among them, valid values for TYPE:
+    Standard: standard transcoding
     TESHD-10: TSC transcoding for videos.
-    TESHD-20: TSC transcoding for audios.
-    TESHD-30: TSC transcoding for audios/videos.
+    TESHD-20: TSC transcoding for audio.
+    TESHD-30: TSC transcoding for audio and video.
     TESHD-30-SDK: duration-based billing of TSC transcoding SDK for audios/videos.
-    TESHD-30-SDKCores: core number-based billing of TSC transcoding SDK for audios/videos.
-    Edit: video editing.
+    TESHD-30-SDKCores: Top Speed Codec (TSC) transcoding SDK for audio and video is billed based on core count.
+    Edit: video editing
   Specifically, valid values for CODEC:
     H264: H. 264 encoding.
     H265: H.265 encoding.
@@ -391,24 +398,25 @@ Valid values for enhancement TYPE:
     SD: standard definition.
     HD: high definition.
     FHD: full HD.
-    2K: 2K.
-    4K: 4K.
-For example, TESHD-10.H265.HD indicates TSC transcoding using the H.265 encoding method.
-2. Enhancement specification: video enhancement format: {TYPE}.{CODEC}.{SPECIFICATION}.{FPS}, where valid values for CODEC and SPECIFICATION follow the transcoding descriptions mentioned above, and FPS is valid only when the atomic enhancement type is used; audio enhancement format: {TYPE}.
+    2K:2K
+    4K:4K
+For example, TESHD-10.H265.HD means H.265 encoding type high-definition TSC transcoding.
+
+2. Enhancement specification: video enhancement format: {TYPE}.{CODEC}.{SPECIFICATION}.{FPS}, where CODEC and SPECIFICATION follow the transcoding specifications, and FPS is valid only for atomic types; audio enhancement format: {TYPE}.
 Valid values for enhancement TYPE:
-<li>Enhance: common enhancement type, which might be any atomic enhancement type.</li>
+<li>Enhance: Common enhancement type, which might be any atomic enhancement type.</li>
 <li>Atomic enhancement type</li>. Valid values for video atomic enhancement type:
-    Sdr2hdr: SDR2HDR.
-    SuperResolution: super resolution.
+    Sdr2hdr:SDR2HDR
+    SuperResolution: Super-resolution
     InsertFrame: frame interpolation.
     ComprehensiveEnhancement: comprehensive enhancement.
-    NoiseReduction: video noise reduction.
-    ColorEnhancement: color enhancement.
-    RemoveScratches: scratch removal.
-    Deburr:  artifacts removal.
+    NoiseReduction: video noise
+    ColorEnhancement: Color enhancement
+    RemoveScratches: scratch removal
+    Deburr: artifacts removal.
     DetailEnhancement: detail enhancement.
     LightEnhancement: low-light enhancement.
-    FaceEnhancement: face enhancement.
+    FaceEnhancement: face enhancement
   Valid value for audio atomic enhancement type.
     AudioNoiseReduction
     VolumeBalance
@@ -416,18 +424,18 @@ Valid values for enhancement TYPE:
     AudioSeparation
 
 3. Screenshot specification:
-<li>ImageSprite: sprite.</li>
+<li>ImageSprite: sprite sheet</li>
 <li>SampleSnapshot: sampled screenshot.</li>
 <li>SnapshotByTime: time point screenshot.</li>
 4. Image processing specification: {TYPE}.{CODEC}.{SPECIFICATION}.
-<li> ImageCompression: image encoding.</li>
-<li> ImageSuperResolution: image super resolution.</li>
+<li>ImageCompression: image encoding.</li>
+<li> ImageSuperResolution: image super-resolution.</li>
 <li>EnhanceImageColor: image color enhancement.</li>
 5. Intelligent analysis specification:
-<li>AIAnalysis: major category for analysis.</li>
+<li>AIAnalysis: Analytical major category</li>
 <li>VideoTag: video tag.</li>
-<li>VideoClassification: video category.</li>
-<li>SmartCover: smart cover.</li>
+<li>VideoClassification: video classification.</li>
+<li>SmartCover: intelligent cover.</li>
 <li>FrameLabel: frame tag.</li>
 <li>VideoSplit: video splitting.</li>
 <li>Highlights: highlights.</li>
@@ -457,18 +465,18 @@ Valid values for enhancement TYPE:
                      * Task type.
 <li>Transcode: transcoding.</li>
 <li>Enhance: enhancement.</li>
-<li>AIAnalysis: intelligent analysis.</li>
-<li>AIRecognition: intelligent recognition.</li>
-<li>AIReview: content moderation.</li>
+<li>AIAnalysis: intelligent analysis</li>
+<li>AIRecognition: intelligent recognition</li>
+<li>AIReview: content moderation</li>
 <li>Snapshot: screenshot.</li>
-<li>AnimatedGraphics: conversion to GIF.</li>
+<li>AnimatedGraphics: Animated image</li>
 <li>ImageProcess: image processing.</li>
                      */
                     std::string m_taskType;
                     bool m_taskTypeHasBeenSet;
 
                     /**
-                     * Statistical data overview of the number of tasks.
+                     * Statistics overview of the number of tasks.
 <li>Transcode: The unit of usage is seconds.</li>
 <li>Enhance: The unit of usage is seconds.</li>
 <li>AIAnalysis: The unit of usage is seconds.</li>
@@ -482,18 +490,19 @@ Valid values for enhancement TYPE:
                     bool m_summaryHasBeenSet;
 
                     /**
-                     * Statistical data details for tasks of various specifications.
+                     * Task statistics data for varying specifications.
+
 1. Transcoding specification:
 <li>Audio: audio-only.</li>
 <li>Remuxing: conversion to muxing.</li>
-<li>Other transcoding specifications: {TYPE}.{CODEC}.{SPECIFICATION}.</li> Specifically, valid values for TYPE:
-    Standard: standard transcoding.
+<li>Other transcoding specifications: {TYPE}.{CODEC}.{SPECIFICATION}.</li> Among them, valid values for TYPE:
+    Standard: standard transcoding
     TESHD-10: TSC transcoding for videos.
-    TESHD-20: TSC transcoding for audios.
-    TESHD-30: TSC transcoding for audios/videos.
+    TESHD-20: TSC transcoding for audio.
+    TESHD-30: TSC transcoding for audio and video.
     TESHD-30-SDK: duration-based billing of TSC transcoding SDK for audios/videos.
-    TESHD-30-SDKCores: core number-based billing of TSC transcoding SDK for audios/videos.
-    Edit: video editing.
+    TESHD-30-SDKCores: Top Speed Codec (TSC) transcoding SDK for audio and video is billed based on core count.
+    Edit: video editing
   Specifically, valid values for CODEC:
     H264: H. 264 encoding.
     H265: H.265 encoding.
@@ -503,24 +512,25 @@ Valid values for enhancement TYPE:
     SD: standard definition.
     HD: high definition.
     FHD: full HD.
-    2K: 2K.
-    4K: 4K.
-For example, TESHD-10.H265.HD indicates TSC transcoding using the H.265 encoding method.
-2. Enhancement specification: video enhancement format: {TYPE}.{CODEC}.{SPECIFICATION}.{FPS}, where valid values for CODEC and SPECIFICATION follow the transcoding descriptions mentioned above, and FPS is valid only when the atomic enhancement type is used; audio enhancement format: {TYPE}.
+    2K:2K
+    4K:4K
+For example, TESHD-10.H265.HD means H.265 encoding type high-definition TSC transcoding.
+
+2. Enhancement specification: video enhancement format: {TYPE}.{CODEC}.{SPECIFICATION}.{FPS}, where CODEC and SPECIFICATION follow the transcoding specifications, and FPS is valid only for atomic types; audio enhancement format: {TYPE}.
 Valid values for enhancement TYPE:
-<li>Enhance: common enhancement type, which might be any atomic enhancement type.</li>
+<li>Enhance: Common enhancement type, which might be any atomic enhancement type.</li>
 <li>Atomic enhancement type</li>. Valid values for video atomic enhancement type:
-    Sdr2hdr: SDR2HDR.
-    SuperResolution: super resolution.
+    Sdr2hdr:SDR2HDR
+    SuperResolution: Super-resolution
     InsertFrame: frame interpolation.
     ComprehensiveEnhancement: comprehensive enhancement.
-    NoiseReduction: video noise reduction.
-    ColorEnhancement: color enhancement.
-    RemoveScratches: scratch removal.
-    Deburr:  artifacts removal.
+    NoiseReduction: video noise
+    ColorEnhancement: Color enhancement
+    RemoveScratches: scratch removal
+    Deburr: artifacts removal.
     DetailEnhancement: detail enhancement.
     LightEnhancement: low-light enhancement.
-    FaceEnhancement: face enhancement.
+    FaceEnhancement: face enhancement
   Valid value for audio atomic enhancement type.
     AudioNoiseReduction
     VolumeBalance
@@ -528,18 +538,18 @@ Valid values for enhancement TYPE:
     AudioSeparation
 
 3. Screenshot specification:
-<li>ImageSprite: sprite.</li>
+<li>ImageSprite: sprite sheet</li>
 <li>SampleSnapshot: sampled screenshot.</li>
 <li>SnapshotByTime: time point screenshot.</li>
 4. Image processing specification: {TYPE}.{CODEC}.{SPECIFICATION}.
-<li> ImageCompression: image encoding.</li>
-<li> ImageSuperResolution: image super resolution.</li>
+<li>ImageCompression: image encoding.</li>
+<li> ImageSuperResolution: image super-resolution.</li>
 <li>EnhanceImageColor: image color enhancement.</li>
 5. Intelligent analysis specification:
-<li>AIAnalysis: major category for analysis.</li>
+<li>AIAnalysis: Analytical major category</li>
 <li>VideoTag: video tag.</li>
-<li>VideoClassification: video category.</li>
-<li>SmartCover: smart cover.</li>
+<li>VideoClassification: video classification.</li>
+<li>SmartCover: intelligent cover.</li>
 <li>FrameLabel: frame tag.</li>
 <li>VideoSplit: video splitting.</li>
 <li>Highlights: highlights.</li>

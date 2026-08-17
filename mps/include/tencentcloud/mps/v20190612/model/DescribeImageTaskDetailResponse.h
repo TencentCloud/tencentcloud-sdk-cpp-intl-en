@@ -47,10 +47,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Task type. Valid value: </p><li>WorkflowTask: Workflow processing task.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TaskType <p>Task type. Valid value: </p><li>WorkflowTask: Workflow processing task.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return TaskType 
                      * 
                      */
                     std::string GetTaskType() const;
@@ -63,10 +61,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TaskTypeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Task status. Valid values: </p><li>WAITING: Waiting; </li><li>PROCESSING: Processing; </li><li>FINISH: Completed.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Status <p>Task status. Valid values: </p><li>WAITING: Waiting; </li><li>PROCESSING: Processing; </li><li>FINISH: Completed.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return Status 
                      * 
                      */
                     std::string GetStatus() const;
@@ -121,10 +117,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool MessageHasBeenSet() const;
 
                     /**
-                     * 获取<p>Execution status and result of the image processing task.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ImageProcessTaskResultSet <p>Execution status and result of the image processing task.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return ImageProcessTaskResultSet 
                      * 
                      */
                     std::vector<ImageProcessTaskResult> GetImageProcessTaskResultSet() const;
@@ -137,10 +131,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ImageProcessTaskResultSetHasBeenSet() const;
 
                     /**
-                     * 获取<p>Task creation time, in <a href="https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52">ISO date and time format</a>.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return CreateTime <p>Task creation time, in <a href="https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52">ISO date and time format</a>.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return CreateTime 
                      * 
                      */
                     std::string GetCreateTime() const;
@@ -153,10 +145,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Task completion time, in <a href="https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52">ISO date and time format</a>.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return FinishTime <p>Task completion time, in <a href="https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52">ISO date and time format</a>.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return FinishTime 
                      * 
                      */
                     std::string GetFinishTime() const;
@@ -213,15 +203,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * <p>Task type. Valid value: </p><li>WorkflowTask: Workflow processing task.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string m_taskType;
                     bool m_taskTypeHasBeenSet;
 
                     /**
-                     * <p>Task status. Valid values: </p><li>WAITING: Waiting; </li><li>PROCESSING: Processing; </li><li>FINISH: Completed.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
@@ -245,22 +233,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_messageHasBeenSet;
 
                     /**
-                     * <p>Execution status and result of the image processing task.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<ImageProcessTaskResult> m_imageProcessTaskResultSet;
                     bool m_imageProcessTaskResultSetHasBeenSet;
 
                     /**
-                     * <p>Task creation time, in <a href="https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52">ISO date and time format</a>.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * <p>Task completion time, in <a href="https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52">ISO date and time format</a>.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string m_finishTime;
                     bool m_finishTimeHasBeenSet;

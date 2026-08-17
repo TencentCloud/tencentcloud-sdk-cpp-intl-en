@@ -38,7 +38,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Smart erasure custom parameter.
+                * Custom parameters for smart erasing.
                 */
                 class RawSmartEraseParameter : public AbstractModel
                 {
@@ -71,19 +71,15 @@ namespace TencentCloud
                     bool EraseTypeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Subtitle erasing configuration;<br>This field is required when the value of EraseType is set to subtitle.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return EraseSubtitleConfig <p>Subtitle erasing configuration;<br>This field is required when the value of EraseType is set to subtitle.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return EraseSubtitleConfig 
                      * 
                      */
                     SmartEraseSubtitleConfig GetEraseSubtitleConfig() const;
 
                     /**
-                     * 设置<p>Subtitle erasing configuration;<br>This field is required when the value of EraseType is set to subtitle.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _eraseSubtitleConfig <p>Subtitle erasing configuration;<br>This field is required when the value of EraseType is set to subtitle.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _eraseSubtitleConfig 
                      * 
                      */
                     void SetEraseSubtitleConfig(const SmartEraseSubtitleConfig& _eraseSubtitleConfig);
@@ -96,19 +92,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool EraseSubtitleConfigHasBeenSet() const;
 
                     /**
-                     * 获取<p>Watermark erasing configuration.<br>This field is required when the value of EraseType is set to watermark.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return EraseWatermarkConfig <p>Watermark erasing configuration.<br>This field is required when the value of EraseType is set to watermark.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return EraseWatermarkConfig 
                      * 
                      */
                     SmartEraseWatermarkConfig GetEraseWatermarkConfig() const;
 
                     /**
-                     * 设置<p>Watermark erasing configuration.<br>This field is required when the value of EraseType is set to watermark.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _eraseWatermarkConfig <p>Watermark erasing configuration.<br>This field is required when the value of EraseType is set to watermark.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _eraseWatermarkConfig 
                      * 
                      */
                     void SetEraseWatermarkConfig(const SmartEraseWatermarkConfig& _eraseWatermarkConfig);
@@ -121,19 +113,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool EraseWatermarkConfigHasBeenSet() const;
 
                     /**
-                     * 获取<p>Privacy protection configuration.<br>This field is required when the value of EraseType is privacy.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ErasePrivacyConfig <p>Privacy protection configuration.<br>This field is required when the value of EraseType is privacy.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return ErasePrivacyConfig 
                      * 
                      */
                     SmartErasePrivacyConfig GetErasePrivacyConfig() const;
 
                     /**
-                     * 设置<p>Privacy protection configuration.<br>This field is required when the value of EraseType is privacy.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _erasePrivacyConfig <p>Privacy protection configuration.<br>This field is required when the value of EraseType is privacy.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _erasePrivacyConfig 
                      * 
                      */
                     void SetErasePrivacyConfig(const SmartErasePrivacyConfig& _erasePrivacyConfig);
@@ -217,22 +205,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_eraseTypeHasBeenSet;
 
                     /**
-                     * <p>Subtitle erasing configuration;<br>This field is required when the value of EraseType is set to subtitle.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     SmartEraseSubtitleConfig m_eraseSubtitleConfig;
                     bool m_eraseSubtitleConfigHasBeenSet;
 
                     /**
-                     * <p>Watermark erasing configuration.<br>This field is required when the value of EraseType is set to watermark.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     SmartEraseWatermarkConfig m_eraseWatermarkConfig;
                     bool m_eraseWatermarkConfigHasBeenSet;
 
                     /**
-                     * <p>Privacy protection configuration.<br>This field is required when the value of EraseType is privacy.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     SmartErasePrivacyConfig m_erasePrivacyConfig;
                     bool m_erasePrivacyConfigHasBeenSet;

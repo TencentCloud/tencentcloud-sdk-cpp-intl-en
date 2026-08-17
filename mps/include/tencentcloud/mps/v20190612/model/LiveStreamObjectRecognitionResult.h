@@ -152,19 +152,15 @@ namespace TencentCloud
                     bool AreaCoordSetHasBeenSet() const;
 
                     /**
-                     * 获取Screenshot link.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Url Screenshot link.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return Url 
                      * 
                      */
                     std::string GetUrl() const;
 
                     /**
-                     * 设置Screenshot link.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _url Screenshot link.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _url 
                      * 
                      */
                     void SetUrl(const std::string& _url);
@@ -209,8 +205,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_areaCoordSetHasBeenSet;
 
                     /**
-                     * Screenshot link.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string m_url;
                     bool m_urlHasBeenSet;

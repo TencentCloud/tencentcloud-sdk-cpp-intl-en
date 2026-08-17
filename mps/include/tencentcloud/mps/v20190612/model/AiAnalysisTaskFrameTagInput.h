@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Input type of intelligent frame-specific tagging task
+                * Intelligent frame tagging task input type
                 */
                 class AiAnalysisTaskFrameTagInput : public AbstractModel
                 {

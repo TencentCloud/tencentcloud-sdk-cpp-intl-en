@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Control parameter of a full speech recognition task.
+                * Speech Translation Task Control Parameter
                 */
                 class TranslateConfigureInfo : public AbstractModel
                 {
@@ -47,23 +47,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Switch of a full speech recognition task. Valid values:
-<li>ON: Enables an intelligent full speech recognition task;</li>
-<li>OFF: Disables an intelligent full speech recognition task.</li>
-                     * @return Switch Switch of a full speech recognition task. Valid values:
-<li>ON: Enables an intelligent full speech recognition task;</li>
-<li>OFF: Disables an intelligent full speech recognition task.</li>
+                     * 获取Voice translation task switch, available values:
+<li>ON: Enable Intelligent Voice Translation task.</li>
+<li>OFF: Disables the Intelligent Voice Translation task.</li>
+                     * @return Switch Voice translation task switch, available values:
+<li>ON: Enable Intelligent Voice Translation task.</li>
+<li>OFF: Disables the Intelligent Voice Translation task.</li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Switch of a full speech recognition task. Valid values:
-<li>ON: Enables an intelligent full speech recognition task;</li>
-<li>OFF: Disables an intelligent full speech recognition task.</li>
-                     * @param _switch Switch of a full speech recognition task. Valid values:
-<li>ON: Enables an intelligent full speech recognition task;</li>
-<li>OFF: Disables an intelligent full speech recognition task.</li>
+                     * 设置Voice translation task switch, available values:
+<li>ON: Enable Intelligent Voice Translation task.</li>
+<li>OFF: Disables the Intelligent Voice Translation task.</li>
+                     * @param _switch Voice translation task switch, available values:
+<li>ON: Enable Intelligent Voice Translation task.</li>
+<li>OFF: Disables the Intelligent Voice Translation task.</li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -76,15 +76,15 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SourceLanguage 
+                     * 获取Video source language.
+                     * @return SourceLanguage Video source language.
                      * 
                      */
                     std::string GetSourceLanguage() const;
 
                     /**
-                     * 设置
-                     * @param _sourceLanguage 
+                     * 设置Video source language.
+                     * @param _sourceLanguage Video source language.
                      * 
                      */
                     void SetSourceLanguage(const std::string& _sourceLanguage);
@@ -97,15 +97,15 @@ namespace TencentCloud
                     bool SourceLanguageHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return DestinationLanguage 
+                     * 获取Target language.
+                     * @return DestinationLanguage Target language.
                      * 
                      */
                     std::string GetDestinationLanguage() const;
 
                     /**
-                     * 设置
-                     * @param _destinationLanguage 
+                     * 设置Target language.
+                     * @param _destinationLanguage Target language.
                      * 
                      */
                     void SetDestinationLanguage(const std::string& _destinationLanguage);
@@ -118,27 +118,15 @@ namespace TencentCloud
                     bool DestinationLanguageHasBeenSet() const;
 
                     /**
-                     * 获取Generated subtitle file format. Leaving it as an empty string means no subtitle file will be generated. Valid value:
-<li>vtt: Generate a WebVTT subtitle file.</li>
-
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SubtitleFormat Generated subtitle file format. Leaving it as an empty string means no subtitle file will be generated. Valid value:
-<li>vtt: Generate a WebVTT subtitle file.</li>
-
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return SubtitleFormat 
                      * 
                      */
                     std::string GetSubtitleFormat() const;
 
                     /**
-                     * 设置Generated subtitle file format. Leaving it as an empty string means no subtitle file will be generated. Valid value:
-<li>vtt: Generate a WebVTT subtitle file.</li>
-
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _subtitleFormat Generated subtitle file format. Leaving it as an empty string means no subtitle file will be generated. Valid value:
-<li>vtt: Generate a WebVTT subtitle file.</li>
-
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _subtitleFormat 
                      * 
                      */
                     void SetSubtitleFormat(const std::string& _subtitleFormat);
@@ -153,30 +141,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Switch of a full speech recognition task. Valid values:
-<li>ON: Enables an intelligent full speech recognition task;</li>
-<li>OFF: Disables an intelligent full speech recognition task.</li>
+                     * Voice translation task switch, available values:
+<li>ON: Enable Intelligent Voice Translation task.</li>
+<li>OFF: Disables the Intelligent Voice Translation task.</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * 
+                     * Video source language.
                      */
                     std::string m_sourceLanguage;
                     bool m_sourceLanguageHasBeenSet;
 
                     /**
-                     * 
+                     * Target language.
                      */
                     std::string m_destinationLanguage;
                     bool m_destinationLanguageHasBeenSet;
 
                     /**
-                     * Generated subtitle file format. Leaving it as an empty string means no subtitle file will be generated. Valid value:
-<li>vtt: Generate a WebVTT subtitle file.</li>
-
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string m_subtitleFormat;
                     bool m_subtitleFormatHasBeenSet;

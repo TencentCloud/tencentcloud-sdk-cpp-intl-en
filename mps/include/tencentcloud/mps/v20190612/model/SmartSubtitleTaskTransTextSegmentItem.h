@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Confidence of a recognized segment. Value range: 0-100.</p>
-                     * @return Confidence <p>Confidence of a recognized segment. Value range: 0-100.</p>
+                     * 获取<p>Confidence of the recognized segment. Value range: 0–100.</p>
+                     * @return Confidence <p>Confidence of the recognized segment. Value range: 0–100.</p>
                      * 
                      */
                     double GetConfidence() const;
 
                     /**
-                     * 设置<p>Confidence of a recognized segment. Value range: 0-100.</p>
-                     * @param _confidence <p>Confidence of a recognized segment. Value range: 0-100.</p>
+                     * 设置<p>Confidence of the recognized segment. Value range: 0–100.</p>
+                     * @param _confidence <p>Confidence of the recognized segment. Value range: 0–100.</p>
                      * 
                      */
                     void SetConfidence(const double& _confidence);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool ConfidenceHasBeenSet() const;
 
                     /**
-                     * 获取<p>Start time offset of a recognized segment, in seconds.</p>
-                     * @return StartTimeOffset <p>Start time offset of a recognized segment, in seconds.</p>
+                     * 获取<p>Start time offset of the recognized segment, in seconds.</p>
+                     * @return StartTimeOffset <p>Start time offset of the recognized segment, in seconds.</p>
                      * 
                      */
                     double GetStartTimeOffset() const;
 
                     /**
-                     * 设置<p>Start time offset of a recognized segment, in seconds.</p>
-                     * @param _startTimeOffset <p>Start time offset of a recognized segment, in seconds.</p>
+                     * 设置<p>Start time offset of the recognized segment, in seconds.</p>
+                     * @param _startTimeOffset <p>Start time offset of the recognized segment, in seconds.</p>
                      * 
                      */
                     void SetStartTimeOffset(const double& _startTimeOffset);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool StartTimeOffsetHasBeenSet() const;
 
                     /**
-                     * 获取<p>End time offset of a recognized segment, in seconds.</p>
-                     * @return EndTimeOffset <p>End time offset of a recognized segment, in seconds.</p>
+                     * 获取<p>End time offset of the recognized segment, in seconds.</p>
+                     * @return EndTimeOffset <p>End time offset of the recognized segment, in seconds.</p>
                      * 
                      */
                     double GetEndTimeOffset() const;
 
                     /**
-                     * 设置<p>End time offset of a recognized segment, in seconds.</p>
-                     * @param _endTimeOffset <p>End time offset of a recognized segment, in seconds.</p>
+                     * 设置<p>End time offset of the recognized segment, in seconds.</p>
+                     * @param _endTimeOffset <p>End time offset of the recognized segment, in seconds.</p>
                      * 
                      */
                     void SetEndTimeOffset(const double& _endTimeOffset);
@@ -153,19 +153,15 @@ namespace TencentCloud
                     bool TransHasBeenSet() const;
 
                     /**
-                     * 获取<p>Word timestamp information.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Wordlist <p>Word timestamp information.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return Wordlist 
                      * 
                      */
                     std::vector<WordResult> GetWordlist() const;
 
                     /**
-                     * 设置<p>Word timestamp information.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _wordlist <p>Word timestamp information.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _wordlist 
                      * 
                      */
                     void SetWordlist(const std::vector<WordResult>& _wordlist);
@@ -178,15 +174,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool WordlistHasBeenSet() const;
 
                     /**
-                     * 获取<p>Speaker ID (if speaker recognition is enabled)</p>
-                     * @return SpeakerId <p>Speaker ID (if speaker recognition is enabled)</p>
+                     * 获取<p>Speaker ID (if speaker recognition is enabled).</p>
+                     * @return SpeakerId <p>Speaker ID (if speaker recognition is enabled).</p>
                      * 
                      */
                     std::string GetSpeakerId() const;
 
                     /**
-                     * 设置<p>Speaker ID (if speaker recognition is enabled)</p>
-                     * @param _speakerId <p>Speaker ID (if speaker recognition is enabled)</p>
+                     * 设置<p>Speaker ID (if speaker recognition is enabled).</p>
+                     * @param _speakerId <p>Speaker ID (if speaker recognition is enabled).</p>
                      * 
                      */
                     void SetSpeakerId(const std::string& _speakerId);
@@ -201,19 +197,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * <p>Confidence of a recognized segment. Value range: 0-100.</p>
+                     * <p>Confidence of the recognized segment. Value range: 0–100.</p>
                      */
                     double m_confidence;
                     bool m_confidenceHasBeenSet;
 
                     /**
-                     * <p>Start time offset of a recognized segment, in seconds.</p>
+                     * <p>Start time offset of the recognized segment, in seconds.</p>
                      */
                     double m_startTimeOffset;
                     bool m_startTimeOffsetHasBeenSet;
 
                     /**
-                     * <p>End time offset of a recognized segment, in seconds.</p>
+                     * <p>End time offset of the recognized segment, in seconds.</p>
                      */
                     double m_endTimeOffset;
                     bool m_endTimeOffsetHasBeenSet;
@@ -231,14 +227,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_transHasBeenSet;
 
                     /**
-                     * <p>Word timestamp information.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<WordResult> m_wordlist;
                     bool m_wordlistHasBeenSet;
 
                     /**
-                     * <p>Speaker ID (if speaker recognition is enabled)</p>
+                     * <p>Speaker ID (if speaker recognition is enabled).</p>
                      */
                     std::string m_speakerId;
                     bool m_speakerIdHasBeenSet;

@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool WordHasBeenSet() const;
 
                     /**
-                     * 获取List of time segments that contain the speech keyword.
-                     * @return SegmentSet List of time segments that contain the speech keyword.
+                     * 获取List of segments for the time when speech keywords occur.
+                     * @return SegmentSet List of segments for the time when speech keywords occur.
                      * 
                      */
                     std::vector<AiRecognitionTaskAsrWordsSegmentItem> GetSegmentSet() const;
 
                     /**
-                     * 设置List of time segments that contain the speech keyword.
-                     * @param _segmentSet List of time segments that contain the speech keyword.
+                     * 设置List of segments for the time when speech keywords occur.
+                     * @param _segmentSet List of segments for the time when speech keywords occur.
                      * 
                      */
                     void SetSegmentSet(const std::vector<AiRecognitionTaskAsrWordsSegmentItem>& _segmentSet);
@@ -98,7 +98,7 @@ namespace TencentCloud
                     bool m_wordHasBeenSet;
 
                     /**
-                     * List of time segments that contain the speech keyword.
+                     * List of segments for the time when speech keywords occur.
                      */
                     std::vector<AiRecognitionTaskAsrWordsSegmentItem> m_segmentSet;
                     bool m_segmentSetHasBeenSet;

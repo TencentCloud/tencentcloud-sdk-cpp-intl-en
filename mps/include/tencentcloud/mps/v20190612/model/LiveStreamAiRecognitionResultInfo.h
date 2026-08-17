@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Live stream AI recognition results
+                * Live streaming AI recognition result
                 */
                 class LiveStreamAiRecognitionResultInfo : public AbstractModel
                 {

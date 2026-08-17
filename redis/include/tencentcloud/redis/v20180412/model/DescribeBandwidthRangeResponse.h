@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Standard bandwidth, which is the bandwidth allocated by the system to each node when an instance is purchased.
-                     * @return BaseBandwidth Standard bandwidth, which is the bandwidth allocated by the system to each node when an instance is purchased.
+                     * 获取<p>Standard bandwidth. The bandwidth allocated by the system to each node when purchasing instances.</p>Measurement unit: MB/s.
+                     * @return BaseBandwidth <p>Standard bandwidth. The bandwidth allocated by the system to each node when purchasing instances.</p>Measurement unit: MB/s.
                      * 
                      */
                     int64_t GetBaseBandwidth() const;
@@ -58,8 +58,8 @@ namespace TencentCloud
                     bool BaseBandwidthHasBeenSet() const;
 
                     /**
-                     * 获取The additional bandwidth of the instance. If the standard bandwidth does not meet your needs, you can increase the bandwidth on your own. <ul><li>If read-only replica is enabled, the total instance bandwidth = additional bandwidth * shard quantity + standard bandwidth * shard quantity * Max ([read-only replica quantity, 1]). The shard quantity in the standard architecture is 1. </li><li>If read-only replica is not enabled, the total instance bandwidth = additional bandwidth * shard quantity + standard bandwidth * shard quantity. The shard quantity in the standard architecture is 1.</li></ul>
-                     * @return AddBandwidth The additional bandwidth of the instance. If the standard bandwidth does not meet your needs, you can increase the bandwidth on your own. <ul><li>If read-only replica is enabled, the total instance bandwidth = additional bandwidth * shard quantity + standard bandwidth * shard quantity * Max ([read-only replica quantity, 1]). The shard quantity in the standard architecture is 1. </li><li>If read-only replica is not enabled, the total instance bandwidth = additional bandwidth * shard quantity + standard bandwidth * shard quantity. The shard quantity in the standard architecture is 1.</li></ul>
+                     * 获取<p>Refers to the additional bandwidth of the instance. When the standard bandwidth cannot meet needs, users can manually add bandwidth.</p><ul><li>When read-only replicas are enabled, total instance bandwidth = additional bandwidth * shard quantity + standard bandwidth * shard quantity * Max ([number of read-only replicas, 1]). Shard quantity in standard architecture = 1.</li><li>When read-only replicas are not enabled, total instance bandwidth = additional bandwidth * shard quantity + standard bandwidth * shard quantity. Shard quantity in standard architecture = 1.</li></ul>Unit: MB/s.
+                     * @return AddBandwidth <p>Refers to the additional bandwidth of the instance. When the standard bandwidth cannot meet needs, users can manually add bandwidth.</p><ul><li>When read-only replicas are enabled, total instance bandwidth = additional bandwidth * shard quantity + standard bandwidth * shard quantity * Max ([number of read-only replicas, 1]). Shard quantity in standard architecture = 1.</li><li>When read-only replicas are not enabled, total instance bandwidth = additional bandwidth * shard quantity + standard bandwidth * shard quantity. Shard quantity in standard architecture = 1.</li></ul>Unit: MB/s.
                      * 
                      */
                     int64_t GetAddBandwidth() const;
@@ -72,8 +72,8 @@ namespace TencentCloud
                     bool AddBandwidthHasBeenSet() const;
 
                     /**
-                     * 获取The lower limit for additional bandwidth
-                     * @return MinAddBandwidth The lower limit for additional bandwidth
+                     * 获取<p>Minimum set for additional bandwidth.</p> Unit: MB/s.
+                     * @return MinAddBandwidth <p>Minimum set for additional bandwidth.</p> Unit: MB/s.
                      * 
                      */
                     int64_t GetMinAddBandwidth() const;
@@ -86,8 +86,8 @@ namespace TencentCloud
                     bool MinAddBandwidthHasBeenSet() const;
 
                     /**
-                     * 获取The upper limit for additional bandwidth
-                     * @return MaxAddBandwidth The upper limit for additional bandwidth
+                     * 获取<p>Set upper limit for additional bandwidth.</p> Measurement unit: MB/s.
+                     * @return MaxAddBandwidth <p>Set upper limit for additional bandwidth.</p> Measurement unit: MB/s.
                      * 
                      */
                     int64_t GetMaxAddBandwidth() const;
@@ -102,25 +102,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Standard bandwidth, which is the bandwidth allocated by the system to each node when an instance is purchased.
+                     * <p>Standard bandwidth. The bandwidth allocated by the system to each node when purchasing instances.</p>Measurement unit: MB/s.
                      */
                     int64_t m_baseBandwidth;
                     bool m_baseBandwidthHasBeenSet;
 
                     /**
-                     * The additional bandwidth of the instance. If the standard bandwidth does not meet your needs, you can increase the bandwidth on your own. <ul><li>If read-only replica is enabled, the total instance bandwidth = additional bandwidth * shard quantity + standard bandwidth * shard quantity * Max ([read-only replica quantity, 1]). The shard quantity in the standard architecture is 1. </li><li>If read-only replica is not enabled, the total instance bandwidth = additional bandwidth * shard quantity + standard bandwidth * shard quantity. The shard quantity in the standard architecture is 1.</li></ul>
+                     * <p>Refers to the additional bandwidth of the instance. When the standard bandwidth cannot meet needs, users can manually add bandwidth.</p><ul><li>When read-only replicas are enabled, total instance bandwidth = additional bandwidth * shard quantity + standard bandwidth * shard quantity * Max ([number of read-only replicas, 1]). Shard quantity in standard architecture = 1.</li><li>When read-only replicas are not enabled, total instance bandwidth = additional bandwidth * shard quantity + standard bandwidth * shard quantity. Shard quantity in standard architecture = 1.</li></ul>Unit: MB/s.
                      */
                     int64_t m_addBandwidth;
                     bool m_addBandwidthHasBeenSet;
 
                     /**
-                     * The lower limit for additional bandwidth
+                     * <p>Minimum set for additional bandwidth.</p> Unit: MB/s.
                      */
                     int64_t m_minAddBandwidth;
                     bool m_minAddBandwidthHasBeenSet;
 
                     /**
-                     * The upper limit for additional bandwidth
+                     * <p>Set upper limit for additional bandwidth.</p> Measurement unit: MB/s.
                      */
                     int64_t m_maxAddBandwidth;
                     bool m_maxAddBandwidthHasBeenSet;

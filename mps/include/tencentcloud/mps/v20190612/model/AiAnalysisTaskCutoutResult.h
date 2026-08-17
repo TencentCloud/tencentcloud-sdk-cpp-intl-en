@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Data structure of the video intelligent image masking result.
+                * Data structure of the video intelligence matting result.
                 */
                 class AiAnalysisTaskCutoutResult : public AbstractModel
                 {
@@ -70,15 +70,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Error code. An empty string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of [MPS error codes](https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
-                     * @return ErrCodeExt Error code. An empty string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of [MPS error codes](https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+                     * 获取Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Error Codes] (https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+                     * @return ErrCodeExt Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Error Codes] (https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
                      * 
                      */
                     std::string GetErrCodeExt() const;
 
                     /**
-                     * 设置Error code. An empty string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of [MPS error codes](https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
-                     * @param _errCodeExt Error code. An empty string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of [MPS error codes](https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+                     * 设置Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Error Codes] (https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+                     * @param _errCodeExt Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Error Codes] (https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
                      * 
                      */
                     void SetErrCodeExt(const std::string& _errCodeExt);
@@ -91,15 +91,15 @@ namespace TencentCloud
                     bool ErrCodeExtHasBeenSet() const;
 
                     /**
-                     * 获取Error message.
-                     * @return Message Error message.
+                     * 获取Error message
+                     * @return Message Error message
                      * 
                      */
                     std::string GetMessage() const;
 
                     /**
-                     * 设置Error message.
-                     * @param _message Error message.
+                     * 设置Error message
+                     * @param _message Error message
                      * 
                      */
                     void SetMessage(const std::string& _message);
@@ -133,15 +133,15 @@ namespace TencentCloud
                     bool InputHasBeenSet() const;
 
                     /**
-                     * 获取Output of the video matting task.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Output Output of the video matting task.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return Output 
                      * 
                      */
                     AiAnalysisTaskCutoutOutput GetOutput() const;
 
                     /**
-                     * 设置Output of the video matting task.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _output Output of the video matting task.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _output 
                      * 
                      */
                     void SetOutput(const AiAnalysisTaskCutoutOutput& _output);
@@ -154,15 +154,15 @@ namespace TencentCloud
                     bool OutputHasBeenSet() const;
 
                     /**
-                     * 获取Task progress.
-                     * @return Progress Task progress.
+                     * 获取Task progress
+                     * @return Progress Task progress
                      * 
                      */
                     uint64_t GetProgress() const;
 
                     /**
-                     * 设置Task progress.
-                     * @param _progress Task progress.
+                     * 设置Task progress
+                     * @param _progress Task progress
                      * 
                      */
                     void SetProgress(const uint64_t& _progress);
@@ -175,15 +175,15 @@ namespace TencentCloud
                     bool ProgressHasBeenSet() const;
 
                     /**
-                     * 获取Task start time, in ISO date and time format.
-                     * @return BeginProcessTime Task start time, in ISO date and time format.
+                     * 获取Starting time of task execution, in ISO date and time format.
+                     * @return BeginProcessTime Starting time of task execution, in ISO date and time format.
                      * 
                      */
                     std::string GetBeginProcessTime() const;
 
                     /**
-                     * 设置Task start time, in ISO date and time format.
-                     * @param _beginProcessTime Task start time, in ISO date and time format.
+                     * 设置Starting time of task execution, in ISO date and time format.
+                     * @param _beginProcessTime Starting time of task execution, in ISO date and time format.
                      * 
                      */
                     void SetBeginProcessTime(const std::string& _beginProcessTime);
@@ -225,13 +225,13 @@ namespace TencentCloud
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Error code. An empty string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of [MPS error codes](https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+                     * Error code. An empty string indicates that the task is successful, and other values indicate that the task has failed. For specific values, see [Error Codes] (https://www.tencentcloud.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
                      */
                     std::string m_errCodeExt;
                     bool m_errCodeExtHasBeenSet;
 
                     /**
-                     * Error message.
+                     * Error message
                      */
                     std::string m_message;
                     bool m_messageHasBeenSet;
@@ -243,19 +243,19 @@ namespace TencentCloud
                     bool m_inputHasBeenSet;
 
                     /**
-                     * Output of the video matting task.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     AiAnalysisTaskCutoutOutput m_output;
                     bool m_outputHasBeenSet;
 
                     /**
-                     * Task progress.
+                     * Task progress
                      */
                     uint64_t m_progress;
                     bool m_progressHasBeenSet;
 
                     /**
-                     * Task start time, in ISO date and time format.
+                     * Starting time of task execution, in ISO date and time format.
                      */
                     std::string m_beginProcessTime;
                     bool m_beginProcessTimeHasBeenSet;

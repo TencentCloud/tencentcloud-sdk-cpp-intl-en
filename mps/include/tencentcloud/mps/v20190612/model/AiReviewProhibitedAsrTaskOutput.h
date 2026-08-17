@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * ASR-detected prohibited information in speech
+                * Asr text contains prohibited information
                 */
                 class AiReviewProhibitedAsrTaskOutput : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Score of ASR-detected prohibited information in speech between 0 and 100.
-                     * @return Confidence Score of ASR-detected prohibited information in speech between 0 and 100.
+                     * 获取Asr text involves prohibited content scoring, with a score ranging from 0 to 100.
+                     * @return Confidence Asr text involves prohibited content scoring, with a score ranging from 0 to 100.
                      * 
                      */
                     double GetConfidence() const;
 
                     /**
-                     * 设置Score of ASR-detected prohibited information in speech between 0 and 100.
-                     * @param _confidence Score of ASR-detected prohibited information in speech between 0 and 100.
+                     * 设置Asr text involves prohibited content scoring, with a score ranging from 0 to 100.
+                     * @param _confidence Asr text involves prohibited content scoring, with a score ranging from 0 to 100.
                      * 
                      */
                     void SetConfidence(const double& _confidence);
@@ -69,11 +69,11 @@ namespace TencentCloud
                     bool ConfidenceHasBeenSet() const;
 
                     /**
-                     * 获取Suggestion for ASR-detected prohibited information in speech. Valid values:
+                     * 获取Asr text prohibited result suggestion, value ranges from...to...
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
-                     * @return Suggestion Suggestion for ASR-detected prohibited information in speech. Valid values:
+                     * @return Suggestion Asr text prohibited result suggestion, value ranges from...to...
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
@@ -82,11 +82,11 @@ namespace TencentCloud
                     std::string GetSuggestion() const;
 
                     /**
-                     * 设置Suggestion for ASR-detected prohibited information in speech. Valid values:
+                     * 设置Asr text prohibited result suggestion, value ranges from...to...
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
-                     * @param _suggestion Suggestion for ASR-detected prohibited information in speech. Valid values:
+                     * @param _suggestion Asr text prohibited result suggestion, value ranges from...to...
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
@@ -102,15 +102,15 @@ namespace TencentCloud
                     bool SuggestionHasBeenSet() const;
 
                     /**
-                     * 获取List of video segments that contain the ASR-detected prohibited information in speech.
-                     * @return SegmentSet List of video segments that contain the ASR-detected prohibited information in speech.
+                     * 获取Video segment list with Asr text suspected of prohibition violations.
+                     * @return SegmentSet Video segment list with Asr text suspected of prohibition violations.
                      * 
                      */
                     std::vector<MediaContentReviewAsrTextSegmentItem> GetSegmentSet() const;
 
                     /**
-                     * 设置List of video segments that contain the ASR-detected prohibited information in speech.
-                     * @param _segmentSet List of video segments that contain the ASR-detected prohibited information in speech.
+                     * 设置Video segment list with Asr text suspected of prohibition violations.
+                     * @param _segmentSet Video segment list with Asr text suspected of prohibition violations.
                      * 
                      */
                     void SetSegmentSet(const std::vector<MediaContentReviewAsrTextSegmentItem>& _segmentSet);
@@ -125,13 +125,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Score of ASR-detected prohibited information in speech between 0 and 100.
+                     * Asr text involves prohibited content scoring, with a score ranging from 0 to 100.
                      */
                     double m_confidence;
                     bool m_confidenceHasBeenSet;
 
                     /**
-                     * Suggestion for ASR-detected prohibited information in speech. Valid values:
+                     * Asr text prohibited result suggestion, value ranges from...to...
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
@@ -140,7 +140,7 @@ namespace TencentCloud
                     bool m_suggestionHasBeenSet;
 
                     /**
-                     * List of video segments that contain the ASR-detected prohibited information in speech.
+                     * Video segment list with Asr text suspected of prohibition violations.
                      */
                     std::vector<MediaContentReviewAsrTextSegmentItem> m_segmentSet;
                     bool m_segmentSetHasBeenSet;

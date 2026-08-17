@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * OCR-based full live stream recognition
+                * Live stream recognition Ocr full text recognition
                 */
                 class LiveStreamOcrFullTextRecognitionResult : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Speech text.
-                     * @return Text Speech text.
+                     * 获取Speech and text.
+                     * @return Text Speech and text.
                      * 
                      */
                     std::string GetText() const;
 
                     /**
-                     * 设置Speech text.
-                     * @param _text Speech text.
+                     * 设置Speech and text.
+                     * @param _text Speech and text.
                      * 
                      */
                     void SetText(const std::string& _text);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool TextHasBeenSet() const;
 
                     /**
-                     * 获取Start PTS time of recognized segment in seconds.
-                     * @return StartPtsTime Start PTS time of recognized segment in seconds.
+                     * 获取Start PTS time of a recognized segment, in seconds.
+                     * @return StartPtsTime Start PTS time of a recognized segment, in seconds.
                      * 
                      */
                     double GetStartPtsTime() const;
 
                     /**
-                     * 设置Start PTS time of recognized segment in seconds.
-                     * @param _startPtsTime Start PTS time of recognized segment in seconds.
+                     * 设置Start PTS time of a recognized segment, in seconds.
+                     * @param _startPtsTime Start PTS time of a recognized segment, in seconds.
                      * 
                      */
                     void SetStartPtsTime(const double& _startPtsTime);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool StartPtsTimeHasBeenSet() const;
 
                     /**
-                     * 获取End PTS time of recognized segment in seconds.
-                     * @return EndPtsTime End PTS time of recognized segment in seconds.
+                     * 获取End PTS time of a recognized segment, in seconds.
+                     * @return EndPtsTime End PTS time of a recognized segment, in seconds.
                      * 
                      */
                     double GetEndPtsTime() const;
 
                     /**
-                     * 设置End PTS time of recognized segment in seconds.
-                     * @param _endPtsTime End PTS time of recognized segment in seconds.
+                     * 设置End PTS time of a recognized segment, in seconds.
+                     * @param _endPtsTime End PTS time of a recognized segment, in seconds.
                      * 
                      */
                     void SetEndPtsTime(const double& _endPtsTime);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool EndPtsTimeHasBeenSet() const;
 
                     /**
-                     * 获取Confidence of recognized segment. Value range: 0–100.
-                     * @return Confidence Confidence of recognized segment. Value range: 0–100.
+                     * 获取Confidence of a recognized segment. Value range: 0-100.
+                     * @return Confidence Confidence of a recognized segment. Value range: 0-100.
                      * 
                      */
                     double GetConfidence() const;
 
                     /**
-                     * 设置Confidence of recognized segment. Value range: 0–100.
-                     * @param _confidence Confidence of recognized segment. Value range: 0–100.
+                     * 设置Confidence of a recognized segment. Value range: 0-100.
+                     * @param _confidence Confidence of a recognized segment. Value range: 0-100.
                      * 
                      */
                     void SetConfidence(const double& _confidence);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool ConfidenceHasBeenSet() const;
 
                     /**
-                     * 获取Zone coordinates of recognition result. The array contains four elements: [x1,y1,x2,y2], i.e., the horizontal and vertical coordinates of the top-left and bottom-right corners.
-                     * @return AreaCoordSet Zone coordinates of recognition result. The array contains four elements: [x1,y1,x2,y2], i.e., the horizontal and vertical coordinates of the top-left and bottom-right corners.
+                     * 获取Zone coordinates of the recognition result. An array contains four elements: [x1, y1, x2, y2], representing the horizontal and vertical coordinates of the top-left and bottom-right corners, respectively.
+                     * @return AreaCoordSet Zone coordinates of the recognition result. An array contains four elements: [x1, y1, x2, y2], representing the horizontal and vertical coordinates of the top-left and bottom-right corners, respectively.
                      * 
                      */
                     std::vector<int64_t> GetAreaCoordSet() const;
 
                     /**
-                     * 设置Zone coordinates of recognition result. The array contains four elements: [x1,y1,x2,y2], i.e., the horizontal and vertical coordinates of the top-left and bottom-right corners.
-                     * @param _areaCoordSet Zone coordinates of recognition result. The array contains four elements: [x1,y1,x2,y2], i.e., the horizontal and vertical coordinates of the top-left and bottom-right corners.
+                     * 设置Zone coordinates of the recognition result. An array contains four elements: [x1, y1, x2, y2], representing the horizontal and vertical coordinates of the top-left and bottom-right corners, respectively.
+                     * @param _areaCoordSet Zone coordinates of the recognition result. An array contains four elements: [x1, y1, x2, y2], representing the horizontal and vertical coordinates of the top-left and bottom-right corners, respectively.
                      * 
                      */
                     void SetAreaCoordSet(const std::vector<int64_t>& _areaCoordSet);
@@ -154,31 +154,31 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Speech text.
+                     * Speech and text.
                      */
                     std::string m_text;
                     bool m_textHasBeenSet;
 
                     /**
-                     * Start PTS time of recognized segment in seconds.
+                     * Start PTS time of a recognized segment, in seconds.
                      */
                     double m_startPtsTime;
                     bool m_startPtsTimeHasBeenSet;
 
                     /**
-                     * End PTS time of recognized segment in seconds.
+                     * End PTS time of a recognized segment, in seconds.
                      */
                     double m_endPtsTime;
                     bool m_endPtsTimeHasBeenSet;
 
                     /**
-                     * Confidence of recognized segment. Value range: 0–100.
+                     * Confidence of a recognized segment. Value range: 0-100.
                      */
                     double m_confidence;
                     bool m_confidenceHasBeenSet;
 
                     /**
-                     * Zone coordinates of recognition result. The array contains four elements: [x1,y1,x2,y2], i.e., the horizontal and vertical coordinates of the top-left and bottom-right corners.
+                     * Zone coordinates of the recognition result. An array contains four elements: [x1, y1, x2, y2], representing the horizontal and vertical coordinates of the top-left and bottom-right corners, respectively.
                      */
                     std::vector<int64_t> m_areaCoordSet;
                     bool m_areaCoordSetHasBeenSet;

@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Number of parameter templates of the user.
-                     * @return TotalCount Number of parameter templates of the user.
+                     * 获取<p>Number of parameter templates for this user.</p>
+                     * @return TotalCount <p>Number of parameter templates for this user.</p>
                      * 
                      */
                     uint64_t GetTotalCount() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取Parameter template details.
-                     * @return Items Parameter template details.
+                     * 获取<p>Parameter template details.</p>
+                     * @return Items <p>Parameter template details.</p>
                      * 
                      */
                     std::vector<ParamTemplateInfo> GetItems() const;
@@ -75,13 +75,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Number of parameter templates of the user.
+                     * <p>Number of parameter templates for this user.</p>
                      */
                     uint64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * Parameter template details.
+                     * <p>Parameter template details.</p>
                      */
                     std::vector<ParamTemplateInfo> m_items;
                     bool m_itemsHasBeenSet;

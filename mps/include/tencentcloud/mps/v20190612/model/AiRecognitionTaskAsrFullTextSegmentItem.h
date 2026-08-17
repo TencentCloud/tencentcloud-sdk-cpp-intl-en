@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Full speech recognition segment.
+                * Segment undergone full speech recognition.
                 */
                 class AiRecognitionTaskAsrFullTextSegmentItem : public AbstractModel
                 {

@@ -36,9 +36,9 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Smart Erase, specifies the region configuration.
-Erase the designated region directly within a specified period.
-When both BeginMs and EndMs are set to 0, directly perform removal of the designated region in the entire video.
+                * Intelligent erasure, specify the region configuration.
+Directly perform removal in the designated region within a specified period.
+When both BeginMs and EndMs are set to 0, directly erase the designated region in the entire video.
                 */
                 class EraseTimeArea : public AbstractModel
                 {
@@ -50,15 +50,15 @@ When both BeginMs and EndMs are set to 0, directly perform removal of the design
 
 
                     /**
-                     * 获取Start time, in ms.
-                     * @return BeginMs Start time, in ms.
+                     * 获取Start time, unit: ms
+                     * @return BeginMs Start time, unit: ms
                      * 
                      */
                     uint64_t GetBeginMs() const;
 
                     /**
-                     * 设置Start time, in ms.
-                     * @param _beginMs Start time, in ms.
+                     * 设置Start time, unit: ms
+                     * @param _beginMs Start time, unit: ms
                      * 
                      */
                     void SetBeginMs(const uint64_t& _beginMs);
@@ -71,15 +71,15 @@ When both BeginMs and EndMs are set to 0, directly perform removal of the design
                     bool BeginMsHasBeenSet() const;
 
                     /**
-                     * 获取End time, unit: ms.
-                     * @return EndMs End time, unit: ms.
+                     * 获取End time, unit: ms
+                     * @return EndMs End time, unit: ms
                      * 
                      */
                     uint64_t GetEndMs() const;
 
                     /**
-                     * 设置End time, unit: ms.
-                     * @param _endMs End time, unit: ms.
+                     * 设置End time, unit: ms
+                     * @param _endMs End time, unit: ms
                      * 
                      */
                     void SetEndMs(const uint64_t& _endMs);
@@ -92,15 +92,15 @@ When both BeginMs and EndMs are set to 0, directly perform removal of the design
                     bool EndMsHasBeenSet() const;
 
                     /**
-                     * 获取Erases the domain list within the period.
-                     * @return Areas Erases the domain list within the period.
+                     * 获取Erase domain list during the period
+                     * @return Areas Erase domain list during the period
                      * 
                      */
                     std::vector<EraseArea> GetAreas() const;
 
                     /**
-                     * 设置Erases the domain list within the period.
-                     * @param _areas Erases the domain list within the period.
+                     * 设置Erase domain list during the period
+                     * @param _areas Erase domain list during the period
                      * 
                      */
                     void SetAreas(const std::vector<EraseArea>& _areas);
@@ -115,19 +115,19 @@ When both BeginMs and EndMs are set to 0, directly perform removal of the design
                 private:
 
                     /**
-                     * Start time, in ms.
+                     * Start time, unit: ms
                      */
                     uint64_t m_beginMs;
                     bool m_beginMsHasBeenSet;
 
                     /**
-                     * End time, unit: ms.
+                     * End time, unit: ms
                      */
                     uint64_t m_endMs;
                     bool m_endMsHasBeenSet;
 
                     /**
-                     * Erases the domain list within the period.
+                     * Erase domain list during the period
                      */
                     std::vector<EraseArea> m_areas;
                     bool m_areasHasBeenSet;

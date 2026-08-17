@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Backup ID.
-                     * @return BackupId Backup ID.
+                     * 获取<p>Backup ID.</p>
+                     * @return BackupId <p>Backup ID.</p>
                      * 
                      */
                     std::string GetBackupId() const;
@@ -58,8 +58,8 @@ namespace TencentCloud
                     bool BackupIdHasBeenSet() const;
 
                     /**
-                     * 获取Backup start time.
-                     * @return StartTime Backup start time.
+                     * 获取<p>Backup start time.</p>
+                     * @return StartTime <p>Backup start time.</p>
                      * 
                      */
                     std::string GetStartTime() const;
@@ -72,8 +72,8 @@ namespace TencentCloud
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取Backup end time.
-                     * @return EndTime Backup end time.
+                     * 获取<p>Backup end time.</p>
+                     * @return EndTime <p>Backup end time.</p>
                      * 
                      */
                     std::string GetEndTime() const;
@@ -86,14 +86,8 @@ namespace TencentCloud
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取Backup mode.
-
-- 1: manual backup.
-- 0: automatic backup.
-                     * @return BackupType Backup mode.
-
-- 1: manual backup.
-- 0: automatic backup.
+                     * 获取<p>Backup method. </p><ul><li>1: Manual backup.</li><li>0: Auto-backup.</li></ul>
+                     * @return BackupType <p>Backup method. </p><ul><li>1: Manual backup.</li><li>0: Auto-backup.</li></ul>
                      * 
                      */
                     std::string GetBackupType() const;
@@ -106,20 +100,8 @@ namespace TencentCloud
                     bool BackupTypeHasBeenSet() const;
 
                     /**
-                     * 获取Backup status.
-
-- 1: The backup is locked by other processes.
-- 2: The backup is normal and not locked by any processes.
-- -1: The backup has expired.
-- 3: The backup is being exported.
-- 4: The backup is successfully exported.
-                     * @return Status Backup status.
-
-- 1: The backup is locked by other processes.
-- 2: The backup is normal and not locked by any processes.
-- -1: The backup has expired.
-- 3: The backup is being exported.
-- 4: The backup is successfully exported.
+                     * 获取<p>Backup status.</p><ul><li>1: Backup is locked by other processes.</li><li>2: Backup is normal, not locked by any processes.</li><li>-1: Backup has expired.</li><li>3: Backup is being exported.</li><li>4: Backup export successful.</li></ul>
+                     * @return Status <p>Backup status.</p><ul><li>1: Backup is locked by other processes.</li><li>2: Backup is normal, not locked by any processes.</li><li>-1: Backup has expired.</li><li>3: Backup is being exported.</li><li>4: Backup export successful.</li></ul>
                      * 
                      */
                     int64_t GetStatus() const;
@@ -132,8 +114,8 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Backup remarks.
-                     * @return Remark Backup remarks.
+                     * 获取<p>Backup remarks.</p>
+                     * @return Remark <p>Backup remarks.</p>
                      * 
                      */
                     std::string GetRemark() const;
@@ -146,14 +128,8 @@ namespace TencentCloud
                     bool RemarkHasBeenSet() const;
 
                     /**
-                     * 获取Whether the backup is locked.
-
-- 0: not locked.
-- 1: locked.
-                     * @return Locked Whether the backup is locked.
-
-- 0: not locked.
-- 1: locked.
+                     * 获取<p>Backup lock status.</p><ul><li>0: Unlocked.</li><li>1: Has been locked.</li></ul>
+                     * @return Locked <p>Backup lock status.</p><ul><li>0: Unlocked.</li><li>1: Has been locked.</li></ul>
                      * 
                      */
                     int64_t GetLocked() const;
@@ -166,8 +142,8 @@ namespace TencentCloud
                     bool LockedHasBeenSet() const;
 
                     /**
-                     * 获取Backup file size. Unit: byte.
-                     * @return BackupSize Backup file size. Unit: byte.
+                     * 获取<p>Backup file size. Measurement unit: Byte.</p>
+                     * @return BackupSize <p>Backup file size. Measurement unit: Byte.</p>
                      * 
                      */
                     int64_t GetBackupSize() const;
@@ -180,8 +156,8 @@ namespace TencentCloud
                     bool BackupSizeHasBeenSet() const;
 
                     /**
-                     * 获取Instance type.
-                     * @return InstanceType Instance type.
+                     * 获取<p>Instance type.</p>
+                     * @return InstanceType <p>Instance type.</p>
                      * 
                      */
                     int64_t GetInstanceType() const;
@@ -194,8 +170,8 @@ namespace TencentCloud
                     bool InstanceTypeHasBeenSet() const;
 
                     /**
-                     * 获取Memory size of a single shard. Unit: MB.
-                     * @return MemSize Memory size of a single shard. Unit: MB.
+                     * 获取<p>Memory size of a single shard. Unit: MB.</p>
+                     * @return MemSize <p>Memory size of a single shard. Unit: MB.</p>
                      * 
                      */
                     int64_t GetMemSize() const;
@@ -208,8 +184,8 @@ namespace TencentCloud
                     bool MemSizeHasBeenSet() const;
 
                     /**
-                     * 获取Number of shards.
-                     * @return ShardNum Number of shards.
+                     * 获取<p>Number of shards.</p>
+                     * @return ShardNum <p>Number of shards.</p>
                      * 
                      */
                     int64_t GetShardNum() const;
@@ -222,8 +198,8 @@ namespace TencentCloud
                     bool ShardNumHasBeenSet() const;
 
                     /**
-                     * 获取Number of replicas.
-                     * @return ReplicasNum Number of replicas.
+                     * 获取<p>Number of replicas.</p>
+                     * @return ReplicasNum <p>Number of replicas.</p>
                      * 
                      */
                     int64_t GetReplicasNum() const;
@@ -235,91 +211,159 @@ namespace TencentCloud
                      */
                     bool ReplicasNumHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Whether it is encrypted or not.</p><p>Enumeration value:</p><ul><li>true: Encrypted</li><li>false: Unencrypted</li></ul>
+                     * @return Encrypted <p>Whether it is encrypted or not.</p><p>Enumeration value:</p><ul><li>true: Encrypted</li><li>false: Unencrypted</li></ul>
+                     * 
+                     */
+                    bool GetEncrypted() const;
+
+                    /**
+                     * 判断参数 Encrypted 是否已赋值
+                     * @return Encrypted 是否已赋值
+                     * 
+                     */
+                    bool EncryptedHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Decryption key.</p>
+                     * @return DecryptKey <p>Decryption key.</p>
+                     * 
+                     */
+                    std::string GetDecryptKey() const;
+
+                    /**
+                     * 判断参数 DecryptKey 是否已赋值
+                     * @return DecryptKey 是否已赋值
+                     * 
+                     */
+                    bool DecryptKeyHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Key ID of the key in KMS.</p>
+                     * @return KmsKeyId <p>Key ID of the key in KMS.</p>
+                     * 
+                     */
+                    std::string GetKmsKeyId() const;
+
+                    /**
+                     * 判断参数 KmsKeyId 是否已赋值
+                     * @return KmsKeyId 是否已赋值
+                     * 
+                     */
+                    bool KmsKeyIdHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Encryption algorithm used to encrypt the backup file.</p><p>Enumeration value:</p><ul><li>AES-256-CBC: Currently only support AES-256-CBC.</li></ul>
+                     * @return KeyAlgorithm <p>Encryption algorithm used to encrypt the backup file.</p><p>Enumeration value:</p><ul><li>AES-256-CBC: Currently only support AES-256-CBC.</li></ul>
+                     * 
+                     */
+                    std::string GetKeyAlgorithm() const;
+
+                    /**
+                     * 判断参数 KeyAlgorithm 是否已赋值
+                     * @return KeyAlgorithm 是否已赋值
+                     * 
+                     */
+                    bool KeyAlgorithmHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Backup ID.
+                     * <p>Backup ID.</p>
                      */
                     std::string m_backupId;
                     bool m_backupIdHasBeenSet;
 
                     /**
-                     * Backup start time.
+                     * <p>Backup start time.</p>
                      */
                     std::string m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * Backup end time.
+                     * <p>Backup end time.</p>
                      */
                     std::string m_endTime;
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * Backup mode.
-
-- 1: manual backup.
-- 0: automatic backup.
+                     * <p>Backup method. </p><ul><li>1: Manual backup.</li><li>0: Auto-backup.</li></ul>
                      */
                     std::string m_backupType;
                     bool m_backupTypeHasBeenSet;
 
                     /**
-                     * Backup status.
-
-- 1: The backup is locked by other processes.
-- 2: The backup is normal and not locked by any processes.
-- -1: The backup has expired.
-- 3: The backup is being exported.
-- 4: The backup is successfully exported.
+                     * <p>Backup status.</p><ul><li>1: Backup is locked by other processes.</li><li>2: Backup is normal, not locked by any processes.</li><li>-1: Backup has expired.</li><li>3: Backup is being exported.</li><li>4: Backup export successful.</li></ul>
                      */
                     int64_t m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Backup remarks.
+                     * <p>Backup remarks.</p>
                      */
                     std::string m_remark;
                     bool m_remarkHasBeenSet;
 
                     /**
-                     * Whether the backup is locked.
-
-- 0: not locked.
-- 1: locked.
+                     * <p>Backup lock status.</p><ul><li>0: Unlocked.</li><li>1: Has been locked.</li></ul>
                      */
                     int64_t m_locked;
                     bool m_lockedHasBeenSet;
 
                     /**
-                     * Backup file size. Unit: byte.
+                     * <p>Backup file size. Measurement unit: Byte.</p>
                      */
                     int64_t m_backupSize;
                     bool m_backupSizeHasBeenSet;
 
                     /**
-                     * Instance type.
+                     * <p>Instance type.</p>
                      */
                     int64_t m_instanceType;
                     bool m_instanceTypeHasBeenSet;
 
                     /**
-                     * Memory size of a single shard. Unit: MB.
+                     * <p>Memory size of a single shard. Unit: MB.</p>
                      */
                     int64_t m_memSize;
                     bool m_memSizeHasBeenSet;
 
                     /**
-                     * Number of shards.
+                     * <p>Number of shards.</p>
                      */
                     int64_t m_shardNum;
                     bool m_shardNumHasBeenSet;
 
                     /**
-                     * Number of replicas.
+                     * <p>Number of replicas.</p>
                      */
                     int64_t m_replicasNum;
                     bool m_replicasNumHasBeenSet;
+
+                    /**
+                     * <p>Whether it is encrypted or not.</p><p>Enumeration value:</p><ul><li>true: Encrypted</li><li>false: Unencrypted</li></ul>
+                     */
+                    bool m_encrypted;
+                    bool m_encryptedHasBeenSet;
+
+                    /**
+                     * <p>Decryption key.</p>
+                     */
+                    std::string m_decryptKey;
+                    bool m_decryptKeyHasBeenSet;
+
+                    /**
+                     * <p>Key ID of the key in KMS.</p>
+                     */
+                    std::string m_kmsKeyId;
+                    bool m_kmsKeyIdHasBeenSet;
+
+                    /**
+                     * <p>Encryption algorithm used to encrypt the backup file.</p><p>Enumeration value:</p><ul><li>AES-256-CBC: Currently only support AES-256-CBC.</li></ul>
+                     */
+                    std::string m_keyAlgorithm;
+                    bool m_keyAlgorithmHasBeenSet;
 
                 };
             }

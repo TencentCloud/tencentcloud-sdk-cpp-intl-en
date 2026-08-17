@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Video content analysis template name. Length limit: 64 characters.
-                     * @return Name Video content analysis template name. Length limit: 64 characters.
+                     * 获取Name of the video analysis template, length limited to 64 characters.
+                     * @return Name Name of the video analysis template, length limited to 64 characters.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Video content analysis template name. Length limit: 64 characters.
-                     * @param _name Video content analysis template name. Length limit: 64 characters.
+                     * 设置Name of the video analysis template, length limited to 64 characters.
+                     * @param _name Name of the video analysis template, length limited to 64 characters.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Video content analysis template description. Length limit: 256 characters.
-                     * @return Comment Video content analysis template description. Length limit: 256 characters.
+                     * 获取Description of the video analysis template, length limited to 256 characters.
+                     * @return Comment Description of the video analysis template, length limited to 256 characters.
                      * 
                      */
                     std::string GetComment() const;
 
                     /**
-                     * 设置Video content analysis template description. Length limit: 256 characters.
-                     * @param _comment Video content analysis template description. Length limit: 256 characters.
+                     * 设置Description of the video analysis template, length limited to 256 characters.
+                     * @param _comment Description of the video analysis template, length limited to 256 characters.
                      * 
                      */
                     void SetComment(const std::string& _comment);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool CommentHasBeenSet() const;
 
                     /**
-                     * 获取Control parameter of intelligent categorization task.
-                     * @return ClassificationConfigure Control parameter of intelligent categorization task.
+                     * 获取Intelligent Classification Task Control Parameters.
+                     * @return ClassificationConfigure Intelligent Classification Task Control Parameters.
                      * 
                      */
                     ClassificationConfigureInfo GetClassificationConfigure() const;
 
                     /**
-                     * 设置Control parameter of intelligent categorization task.
-                     * @param _classificationConfigure Control parameter of intelligent categorization task.
+                     * 设置Intelligent Classification Task Control Parameters.
+                     * @param _classificationConfigure Intelligent Classification Task Control Parameters.
                      * 
                      */
                     void SetClassificationConfigure(const ClassificationConfigureInfo& _classificationConfigure);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool ClassificationConfigureHasBeenSet() const;
 
                     /**
-                     * 获取Control parameter of intelligent tagging task.
-                     * @return TagConfigure Control parameter of intelligent tagging task.
+                     * 获取Intelligent tag task control parameter.
+                     * @return TagConfigure Intelligent tag task control parameter.
                      * 
                      */
                     TagConfigureInfo GetTagConfigure() const;
 
                     /**
-                     * 设置Control parameter of intelligent tagging task.
-                     * @param _tagConfigure Control parameter of intelligent tagging task.
+                     * 设置Intelligent tag task control parameter.
+                     * @param _tagConfigure Intelligent tag task control parameter.
                      * 
                      */
                     void SetTagConfigure(const TagConfigureInfo& _tagConfigure);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool TagConfigureHasBeenSet() const;
 
                     /**
-                     * 获取Control parameter of intelligent cover generating task.
-                     * @return CoverConfigure Control parameter of intelligent cover generating task.
+                     * 获取Intelligent Cover Task Control Parameters.
+                     * @return CoverConfigure Intelligent Cover Task Control Parameters.
                      * 
                      */
                     CoverConfigureInfo GetCoverConfigure() const;
 
                     /**
-                     * 设置Control parameter of intelligent cover generating task.
-                     * @param _coverConfigure Control parameter of intelligent cover generating task.
+                     * 设置Intelligent Cover Task Control Parameters.
+                     * @param _coverConfigure Intelligent Cover Task Control Parameters.
                      * 
                      */
                     void SetCoverConfigure(const CoverConfigureInfo& _coverConfigure);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool CoverConfigureHasBeenSet() const;
 
                     /**
-                     * 获取Control parameter of intelligent frame-specific tagging task.
-                     * @return FrameTagConfigure Control parameter of intelligent frame-specific tagging task.
+                     * 获取Intelligent frame-specific tagging task control parameter.
+                     * @return FrameTagConfigure Intelligent frame-specific tagging task control parameter.
                      * 
                      */
                     FrameTagConfigureInfo GetFrameTagConfigure() const;
 
                     /**
-                     * 设置Control parameter of intelligent frame-specific tagging task.
-                     * @param _frameTagConfigure Control parameter of intelligent frame-specific tagging task.
+                     * 设置Intelligent frame-specific tagging task control parameter.
+                     * @param _frameTagConfigure Intelligent frame-specific tagging task control parameter.
                      * 
                      */
                     void SetFrameTagConfigure(const FrameTagConfigureInfo& _frameTagConfigure);
@@ -175,37 +175,37 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Video content analysis template name. Length limit: 64 characters.
+                     * Name of the video analysis template, length limited to 64 characters.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Video content analysis template description. Length limit: 256 characters.
+                     * Description of the video analysis template, length limited to 256 characters.
                      */
                     std::string m_comment;
                     bool m_commentHasBeenSet;
 
                     /**
-                     * Control parameter of intelligent categorization task.
+                     * Intelligent Classification Task Control Parameters.
                      */
                     ClassificationConfigureInfo m_classificationConfigure;
                     bool m_classificationConfigureHasBeenSet;
 
                     /**
-                     * Control parameter of intelligent tagging task.
+                     * Intelligent tag task control parameter.
                      */
                     TagConfigureInfo m_tagConfigure;
                     bool m_tagConfigureHasBeenSet;
 
                     /**
-                     * Control parameter of intelligent cover generating task.
+                     * Intelligent Cover Task Control Parameters.
                      */
                     CoverConfigureInfo m_coverConfigure;
                     bool m_coverConfigureHasBeenSet;
 
                     /**
-                     * Control parameter of intelligent frame-specific tagging task.
+                     * Intelligent frame-specific tagging task control parameter.
                      */
                     FrameTagConfigureInfo m_frameTagConfigure;
                     bool m_frameTagConfigureHasBeenSet;

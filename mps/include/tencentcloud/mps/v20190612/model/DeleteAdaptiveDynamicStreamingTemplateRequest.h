@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Unique ID of an adaptive bitrate streaming template.
-                     * @return Definition Unique ID of an adaptive bitrate streaming template.
+                     * 获取Unique identifier of the adaptive transcoding template.
+                     * @return Definition Unique identifier of the adaptive transcoding template.
                      * 
                      */
                     uint64_t GetDefinition() const;
 
                     /**
-                     * 设置Unique ID of an adaptive bitrate streaming template.
-                     * @param _definition Unique ID of an adaptive bitrate streaming template.
+                     * 设置Unique identifier of the adaptive transcoding template.
+                     * @param _definition Unique identifier of the adaptive transcoding template.
                      * 
                      */
                     void SetDefinition(const uint64_t& _definition);
@@ -66,7 +66,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Unique ID of an adaptive bitrate streaming template.
+                     * Unique identifier of the adaptive transcoding template.
                      */
                     uint64_t m_definition;
                     bool m_definitionHasBeenSet;

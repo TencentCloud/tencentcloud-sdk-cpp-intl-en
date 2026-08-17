@@ -38,7 +38,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Smart erasure task.
+                * Intelligent erasure task
                 */
                 class SmartEraseTaskInput : public AbstractModel
                 {
@@ -50,15 +50,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Smart erasure template id.
-                     * @return Definition Smart erasure template id.
+                     * 获取Smart erasing template id.
+                     * @return Definition Smart erasing template id.
                      * 
                      */
                     int64_t GetDefinition() const;
 
                     /**
-                     * 设置Smart erasure template id.
-                     * @param _definition Smart erasure template id.
+                     * 设置Smart erasing template id.
+                     * @param _definition Smart erasing template id.
                      * 
                      */
                     void SetDefinition(const int64_t& _definition);
@@ -71,19 +71,15 @@ namespace TencentCloud
                     bool DefinitionHasBeenSet() const;
 
                     /**
-                     * 获取Intelligent erasure custom parameter. valid when Definition is 0. this parameter is used for highly custom scenarios. we recommend you prioritize using Definition to specify intelligent erasure parameters.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return RawParameter Intelligent erasure custom parameter. valid when Definition is 0. this parameter is used for highly custom scenarios. we recommend you prioritize using Definition to specify intelligent erasure parameters.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取
+                     * @return RawParameter 
                      * 
                      */
                     RawSmartEraseParameter GetRawParameter() const;
 
                     /**
-                     * 设置Intelligent erasure custom parameter. valid when Definition is 0. this parameter is used for highly custom scenarios. we recommend you prioritize using Definition to specify intelligent erasure parameters.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _rawParameter Intelligent erasure custom parameter. valid when Definition is 0. this parameter is used for highly custom scenarios. we recommend you prioritize using Definition to specify intelligent erasure parameters.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置
+                     * @param _rawParameter 
                      * 
                      */
                     void SetRawParameter(const RawSmartEraseParameter& _rawParameter);
@@ -117,19 +113,15 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool OverrideParameterHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the target storage for files. if left blank, it inherits the upper-level OutputStorage value.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return OutputStorage Specifies the target storage for files. if left blank, it inherits the upper-level OutputStorage value.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取
+                     * @return OutputStorage 
                      * 
                      */
                     TaskOutputStorage GetOutputStorage() const;
 
                     /**
-                     * 设置Specifies the target storage for files. if left blank, it inherits the upper-level OutputStorage value.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _outputStorage Specifies the target storage for files. if left blank, it inherits the upper-level OutputStorage value.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置
+                     * @param _outputStorage 
                      * 
                      */
                     void SetOutputStorage(const TaskOutputStorage& _outputStorage);
@@ -143,50 +135,46 @@ Note: This field may return null, indicating that no valid value can be obtained
 
                     /**
                      * 获取Output path of the file, which can be a relative or absolute path.
-Specifies the output path must end with `.{format}`. variable names, please refer to [filename variable explanation](https://www.tencentcloud.com/document/product/1041/33495?has_map=1).
-**Relative path example**:
-<Li>Filename_{Variable name}.{format}</li>
+To define the output path, the path must end with `.{format}`. For variable names, please refer to the Filename Variable Explanation (https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1).
+Relative path example:
+<li>Filename_{Variable name}.{format}</li>
 <li>Filename.{format}</li>
+Absolute path example:
+<li>/Custom path/Filename_{Variable name}.{format}</li>
 
-**Absolute path example**:
-<Li>/Custom path/filename_{variable name}.{format}</li>
-
-**Note**: currently does not support the `BatchProcessMedia` api.
+**Note**: Currently does not support the `BatchProcessMedia` API.
                      * @return OutputObjectPath Output path of the file, which can be a relative or absolute path.
-Specifies the output path must end with `.{format}`. variable names, please refer to [filename variable explanation](https://www.tencentcloud.com/document/product/1041/33495?has_map=1).
-**Relative path example**:
-<Li>Filename_{Variable name}.{format}</li>
+To define the output path, the path must end with `.{format}`. For variable names, please refer to the Filename Variable Explanation (https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1).
+Relative path example:
+<li>Filename_{Variable name}.{format}</li>
 <li>Filename.{format}</li>
+Absolute path example:
+<li>/Custom path/Filename_{Variable name}.{format}</li>
 
-**Absolute path example**:
-<Li>/Custom path/filename_{variable name}.{format}</li>
-
-**Note**: currently does not support the `BatchProcessMedia` api.
+**Note**: Currently does not support the `BatchProcessMedia` API.
                      * 
                      */
                     std::string GetOutputObjectPath() const;
 
                     /**
                      * 设置Output path of the file, which can be a relative or absolute path.
-Specifies the output path must end with `.{format}`. variable names, please refer to [filename variable explanation](https://www.tencentcloud.com/document/product/1041/33495?has_map=1).
-**Relative path example**:
-<Li>Filename_{Variable name}.{format}</li>
+To define the output path, the path must end with `.{format}`. For variable names, please refer to the Filename Variable Explanation (https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1).
+Relative path example:
+<li>Filename_{Variable name}.{format}</li>
 <li>Filename.{format}</li>
+Absolute path example:
+<li>/Custom path/Filename_{Variable name}.{format}</li>
 
-**Absolute path example**:
-<Li>/Custom path/filename_{variable name}.{format}</li>
-
-**Note**: currently does not support the `BatchProcessMedia` api.
+**Note**: Currently does not support the `BatchProcessMedia` API.
                      * @param _outputObjectPath Output path of the file, which can be a relative or absolute path.
-Specifies the output path must end with `.{format}`. variable names, please refer to [filename variable explanation](https://www.tencentcloud.com/document/product/1041/33495?has_map=1).
-**Relative path example**:
-<Li>Filename_{Variable name}.{format}</li>
+To define the output path, the path must end with `.{format}`. For variable names, please refer to the Filename Variable Explanation (https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1).
+Relative path example:
+<li>Filename_{Variable name}.{format}</li>
 <li>Filename.{format}</li>
+Absolute path example:
+<li>/Custom path/Filename_{Variable name}.{format}</li>
 
-**Absolute path example**:
-<Li>/Custom path/filename_{variable name}.{format}</li>
-
-**Note**: currently does not support the `BatchProcessMedia` api.
+**Note**: Currently does not support the `BatchProcessMedia` API.
                      * 
                      */
                     void SetOutputObjectPath(const std::string& _outputObjectPath);
@@ -201,14 +189,13 @@ Specifies the output path must end with `.{format}`. variable names, please refe
                 private:
 
                     /**
-                     * Smart erasure template id.
+                     * Smart erasing template id.
                      */
                     int64_t m_definition;
                     bool m_definitionHasBeenSet;
 
                     /**
-                     * Intelligent erasure custom parameter. valid when Definition is 0. this parameter is used for highly custom scenarios. we recommend you prioritize using Definition to specify intelligent erasure parameters.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
                      */
                     RawSmartEraseParameter m_rawParameter;
                     bool m_rawParameterHasBeenSet;
@@ -220,23 +207,21 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool m_overrideParameterHasBeenSet;
 
                     /**
-                     * Specifies the target storage for files. if left blank, it inherits the upper-level OutputStorage value.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
                      */
                     TaskOutputStorage m_outputStorage;
                     bool m_outputStorageHasBeenSet;
 
                     /**
                      * Output path of the file, which can be a relative or absolute path.
-Specifies the output path must end with `.{format}`. variable names, please refer to [filename variable explanation](https://www.tencentcloud.com/document/product/1041/33495?has_map=1).
-**Relative path example**:
-<Li>Filename_{Variable name}.{format}</li>
+To define the output path, the path must end with `.{format}`. For variable names, please refer to the Filename Variable Explanation (https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1).
+Relative path example:
+<li>Filename_{Variable name}.{format}</li>
 <li>Filename.{format}</li>
+Absolute path example:
+<li>/Custom path/Filename_{Variable name}.{format}</li>
 
-**Absolute path example**:
-<Li>/Custom path/filename_{variable name}.{format}</li>
-
-**Note**: currently does not support the `BatchProcessMedia` api.
+**Note**: Currently does not support the `BatchProcessMedia` API.
                      */
                     std::string m_outputObjectPath;
                     bool m_outputObjectPathHasBeenSet;

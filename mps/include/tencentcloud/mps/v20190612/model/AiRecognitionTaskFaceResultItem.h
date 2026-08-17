@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Face recognition result
+                * Face Recognition result
                 */
                 class AiRecognitionTaskFaceResultItem : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Unique ID of a figure.
-                     * @return Id Unique ID of a figure.
+                     * 获取Unique identification ID of the figure.
+                     * @return Id Unique identification ID of the figure.
                      * 
                      */
                     std::string GetId() const;
 
                     /**
-                     * 设置Unique ID of a figure.
-                     * @param _id Unique ID of a figure.
+                     * 设置Unique identification ID of the figure.
+                     * @param _id Unique identification ID of the figure.
                      * 
                      */
                     void SetId(const std::string& _id);
@@ -69,23 +69,23 @@ namespace TencentCloud
                     bool IdHasBeenSet() const;
 
                     /**
-                     * 获取Figure library type, indicating to which figure library the recognized figure belongs:
-<li>Default: Default figure library;</li>
-<li>UserDefine: Custom figure library.</li>
-                     * @return Type Figure library type, indicating to which figure library the recognized figure belongs:
-<li>Default: Default figure library;</li>
-<li>UserDefine: Custom figure library.</li>
+                     * 获取Figure library type, indicates which figure library the recognized figure comes from.
+<li>Default: default figure library;</li>
+<li>UserDefine: user-defined character library.</li>
+                     * @return Type Figure library type, indicates which figure library the recognized figure comes from.
+<li>Default: default figure library;</li>
+<li>UserDefine: user-defined character library.</li>
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Figure library type, indicating to which figure library the recognized figure belongs:
-<li>Default: Default figure library;</li>
-<li>UserDefine: Custom figure library.</li>
-                     * @param _type Figure library type, indicating to which figure library the recognized figure belongs:
-<li>Default: Default figure library;</li>
-<li>UserDefine: Custom figure library.</li>
+                     * 设置Figure library type, indicates which figure library the recognized figure comes from.
+<li>Default: default figure library;</li>
+<li>UserDefine: user-defined character library.</li>
+                     * @param _type Figure library type, indicates which figure library the recognized figure comes from.
+<li>Default: default figure library;</li>
+<li>UserDefine: user-defined character library.</li>
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -98,15 +98,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Name of a figure.
-                     * @return Name Name of a figure.
+                     * 获取Figure name.
+                     * @return Name Figure name.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Name of a figure.
-                     * @param _name Name of a figure.
+                     * 设置Figure name.
+                     * @param _name Figure name.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -119,15 +119,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Result set of segments that contain a figure.
-                     * @return SegmentSet Result set of segments that contain a figure.
+                     * 获取Result set of segments that contain people.
+                     * @return SegmentSet Result set of segments that contain people.
                      * 
                      */
                     std::vector<AiRecognitionTaskFaceSegmentItem> GetSegmentSet() const;
 
                     /**
-                     * 设置Result set of segments that contain a figure.
-                     * @param _segmentSet Result set of segments that contain a figure.
+                     * 设置Result set of segments that contain people.
+                     * @param _segmentSet Result set of segments that contain people.
                      * 
                      */
                     void SetSegmentSet(const std::vector<AiRecognitionTaskFaceSegmentItem>& _segmentSet);
@@ -140,23 +140,23 @@ namespace TencentCloud
                     bool SegmentSetHasBeenSet() const;
 
                     /**
-                     * 获取Gender of the person.
-<Li>Male: man.</li>.
-<Li>Female: specifies the woman.</li>.
-                     * @return Gender Gender of the person.
-<Li>Male: man.</li>.
-<Li>Female: specifies the woman.</li>.
+                     * 获取Gender
+<li>Male: man</li>
+<li>Female: woman.</li>
+                     * @return Gender Gender
+<li>Male: man</li>
+<li>Female: woman.</li>
                      * 
                      */
                     std::string GetGender() const;
 
                     /**
-                     * 设置Gender of the person.
-<Li>Male: man.</li>.
-<Li>Female: specifies the woman.</li>.
-                     * @param _gender Gender of the person.
-<Li>Male: man.</li>.
-<Li>Female: specifies the woman.</li>.
+                     * 设置Gender
+<li>Male: man</li>
+<li>Female: woman.</li>
+                     * @param _gender Gender
+<li>Male: man</li>
+<li>Female: woman.</li>
                      * 
                      */
                     void SetGender(const std::string& _gender);
@@ -169,15 +169,15 @@ namespace TencentCloud
                     bool GenderHasBeenSet() const;
 
                     /**
-                     * 获取Date of birth.
-                     * @return Birthday Date of birth.
+                     * 获取Date of birth of a person.
+                     * @return Birthday Date of birth of a person.
                      * 
                      */
                     std::string GetBirthday() const;
 
                     /**
-                     * 设置Date of birth.
-                     * @param _birthday Date of birth.
+                     * 设置Date of birth of a person.
+                     * @param _birthday Date of birth of a person.
                      * 
                      */
                     void SetBirthday(const std::string& _birthday);
@@ -190,15 +190,15 @@ namespace TencentCloud
                     bool BirthdayHasBeenSet() const;
 
                     /**
-                     * 获取Occupation or position of a person.
-                     * @return Profession Occupation or position of a person.
+                     * 获取Occupation or position.
+                     * @return Profession Occupation or position.
                      * 
                      */
                     std::string GetProfession() const;
 
                     /**
-                     * 设置Occupation or position of a person.
-                     * @param _profession Occupation or position of a person.
+                     * 设置Occupation or position.
+                     * @param _profession Occupation or position.
                      * 
                      */
                     void SetProfession(const std::string& _profession);
@@ -211,15 +211,15 @@ namespace TencentCloud
                     bool ProfessionHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the graduation institution of the person.
-                     * @return SchoolOfGraduation Specifies the graduation institution of the person.
+                     * 获取Graduation institution of the person.
+                     * @return SchoolOfGraduation Graduation institution of the person.
                      * 
                      */
                     std::string GetSchoolOfGraduation() const;
 
                     /**
-                     * 设置Specifies the graduation institution of the person.
-                     * @param _schoolOfGraduation Specifies the graduation institution of the person.
+                     * 设置Graduation institution of the person.
+                     * @param _schoolOfGraduation Graduation institution of the person.
                      * 
                      */
                     void SetSchoolOfGraduation(const std::string& _schoolOfGraduation);
@@ -232,15 +232,15 @@ namespace TencentCloud
                     bool SchoolOfGraduationHasBeenSet() const;
 
                     /**
-                     * 获取Description of the person.
-                     * @return Abstract Description of the person.
+                     * 获取Figure description.
+                     * @return Abstract Figure description.
                      * 
                      */
                     std::string GetAbstract() const;
 
                     /**
-                     * 设置Description of the person.
-                     * @param _abstract Description of the person.
+                     * 设置Figure description.
+                     * @param _abstract Figure description.
                      * 
                      */
                     void SetAbstract(const std::string& _abstract);
@@ -253,15 +253,15 @@ namespace TencentCloud
                     bool AbstractHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the birthplace or place of origin.
-                     * @return PlaceOfBirth Specifies the birthplace or place of origin.
+                     * 获取Birthplace or place of origin of a person.
+                     * @return PlaceOfBirth Birthplace or place of origin of a person.
                      * 
                      */
                     std::string GetPlaceOfBirth() const;
 
                     /**
-                     * 设置Specifies the birthplace or place of origin.
-                     * @param _placeOfBirth Specifies the birthplace or place of origin.
+                     * 设置Birthplace or place of origin of a person.
+                     * @param _placeOfBirth Birthplace or place of origin of a person.
                      * 
                      */
                     void SetPlaceOfBirth(const std::string& _placeOfBirth);
@@ -274,23 +274,23 @@ namespace TencentCloud
                     bool PlaceOfBirthHasBeenSet() const;
 
                     /**
-                     * 获取Person type.
-<Li>Politician: specifies the official.</li>.
-<Li>Artist: specifies the artist.</li>.
-                     * @return PersonType Person type.
-<Li>Politician: specifies the official.</li>.
-<Li>Artist: specifies the artist.</li>.
+                     * 获取Person type:
+<li>Politician: official.</li>
+<li>Artist: artist.</li>
+                     * @return PersonType Person type:
+<li>Politician: official.</li>
+<li>Artist: artist.</li>
                      * 
                      */
                     std::string GetPersonType() const;
 
                     /**
-                     * 设置Person type.
-<Li>Politician: specifies the official.</li>.
-<Li>Artist: specifies the artist.</li>.
-                     * @param _personType Person type.
-<Li>Politician: specifies the official.</li>.
-<Li>Artist: specifies the artist.</li>.
+                     * 设置Person type:
+<li>Politician: official.</li>
+<li>Artist: artist.</li>
+                     * @param _personType Person type:
+<li>Politician: official.</li>
+<li>Artist: artist.</li>
                      * 
                      */
                     void SetPersonType(const std::string& _personType);
@@ -303,23 +303,23 @@ namespace TencentCloud
                     bool PersonTypeHasBeenSet() const;
 
                     /**
-                     * 获取Sensitivity labeling.
-<Li>Normal: specifies the scaling group is normal.</li>.
-<Li>Sensitive: specifies sensitivity.</li>.
-                     * @return Remark Sensitivity labeling.
-<Li>Normal: specifies the scaling group is normal.</li>.
-<Li>Sensitive: specifies sensitivity.</li>.
+                     * 获取Sensitivity labeling:
+<li>NORMAL: Normal;</li>
+<li>Sensitive: sensitive.</li>
+                     * @return Remark Sensitivity labeling:
+<li>NORMAL: Normal;</li>
+<li>Sensitive: sensitive.</li>
                      * 
                      */
                     std::string GetRemark() const;
 
                     /**
-                     * 设置Sensitivity labeling.
-<Li>Normal: specifies the scaling group is normal.</li>.
-<Li>Sensitive: specifies sensitivity.</li>.
-                     * @param _remark Sensitivity labeling.
-<Li>Normal: specifies the scaling group is normal.</li>.
-<Li>Sensitive: specifies sensitivity.</li>.
+                     * 设置Sensitivity labeling:
+<li>NORMAL: Normal;</li>
+<li>Sensitive: sensitive.</li>
+                     * @param _remark Sensitivity labeling:
+<li>NORMAL: Normal;</li>
+<li>Sensitive: sensitive.</li>
                      * 
                      */
                     void SetRemark(const std::string& _remark);
@@ -332,15 +332,15 @@ namespace TencentCloud
                     bool RemarkHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the screenshot link.
-                     * @return Url Specifies the screenshot link.
+                     * 获取Screenshot link
+                     * @return Url Screenshot link
                      * 
                      */
                     std::string GetUrl() const;
 
                     /**
-                     * 设置Specifies the screenshot link.
-                     * @param _url Specifies the screenshot link.
+                     * 设置Screenshot link
+                     * @param _url Screenshot link
                      * 
                      */
                     void SetUrl(const std::string& _url);
@@ -355,87 +355,87 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Unique ID of a figure.
+                     * Unique identification ID of the figure.
                      */
                     std::string m_id;
                     bool m_idHasBeenSet;
 
                     /**
-                     * Figure library type, indicating to which figure library the recognized figure belongs:
-<li>Default: Default figure library;</li>
-<li>UserDefine: Custom figure library.</li>
+                     * Figure library type, indicates which figure library the recognized figure comes from.
+<li>Default: default figure library;</li>
+<li>UserDefine: user-defined character library.</li>
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Name of a figure.
+                     * Figure name.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Result set of segments that contain a figure.
+                     * Result set of segments that contain people.
                      */
                     std::vector<AiRecognitionTaskFaceSegmentItem> m_segmentSet;
                     bool m_segmentSetHasBeenSet;
 
                     /**
-                     * Gender of the person.
-<Li>Male: man.</li>.
-<Li>Female: specifies the woman.</li>.
+                     * Gender
+<li>Male: man</li>
+<li>Female: woman.</li>
                      */
                     std::string m_gender;
                     bool m_genderHasBeenSet;
 
                     /**
-                     * Date of birth.
+                     * Date of birth of a person.
                      */
                     std::string m_birthday;
                     bool m_birthdayHasBeenSet;
 
                     /**
-                     * Occupation or position of a person.
+                     * Occupation or position.
                      */
                     std::string m_profession;
                     bool m_professionHasBeenSet;
 
                     /**
-                     * Specifies the graduation institution of the person.
+                     * Graduation institution of the person.
                      */
                     std::string m_schoolOfGraduation;
                     bool m_schoolOfGraduationHasBeenSet;
 
                     /**
-                     * Description of the person.
+                     * Figure description.
                      */
                     std::string m_abstract;
                     bool m_abstractHasBeenSet;
 
                     /**
-                     * Specifies the birthplace or place of origin.
+                     * Birthplace or place of origin of a person.
                      */
                     std::string m_placeOfBirth;
                     bool m_placeOfBirthHasBeenSet;
 
                     /**
-                     * Person type.
-<Li>Politician: specifies the official.</li>.
-<Li>Artist: specifies the artist.</li>.
+                     * Person type:
+<li>Politician: official.</li>
+<li>Artist: artist.</li>
                      */
                     std::string m_personType;
                     bool m_personTypeHasBeenSet;
 
                     /**
-                     * Sensitivity labeling.
-<Li>Normal: specifies the scaling group is normal.</li>.
-<Li>Sensitive: specifies sensitivity.</li>.
+                     * Sensitivity labeling:
+<li>NORMAL: Normal;</li>
+<li>Sensitive: sensitive.</li>
                      */
                     std::string m_remark;
                     bool m_remarkHasBeenSet;
 
                     /**
-                     * Specifies the screenshot link.
+                     * Screenshot link
                      */
                     std::string m_url;
                     bool m_urlHasBeenSet;

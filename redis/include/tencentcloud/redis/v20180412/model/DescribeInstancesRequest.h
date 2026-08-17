@@ -461,15 +461,23 @@ namespace TencentCloud
                     bool AutoRenewHasBeenSet() const;
 
                     /**
-                     * 获取Billing mode. Only pay-as-you-go billing is supported.
-                     * @return BillingMode Billing mode. Only pay-as-you-go billing is supported.
+                     * 获取Billing mode.
+- postpaid: pay-as-you-go.
+- prepaid: monthly subscription.
+                     * @return BillingMode Billing mode.
+- postpaid: pay-as-you-go.
+- prepaid: monthly subscription.
                      * 
                      */
                     std::string GetBillingMode() const;
 
                     /**
-                     * 设置Billing mode. Only pay-as-you-go billing is supported.
-                     * @param _billingMode Billing mode. Only pay-as-you-go billing is supported.
+                     * 设置Billing mode.
+- postpaid: pay-as-you-go.
+- prepaid: monthly subscription.
+                     * @param _billingMode Billing mode.
+- postpaid: pay-as-you-go.
+- prepaid: monthly subscription.
                      * 
                      */
                     void SetBillingMode(const std::string& _billingMode);
@@ -862,7 +870,9 @@ namespace TencentCloud
                     bool m_autoRenewHasBeenSet;
 
                     /**
-                     * Billing mode. Only pay-as-you-go billing is supported.
+                     * Billing mode.
+- postpaid: pay-as-you-go.
+- prepaid: monthly subscription.
                      */
                     std::string m_billingMode;
                     bool m_billingModeHasBeenSet;

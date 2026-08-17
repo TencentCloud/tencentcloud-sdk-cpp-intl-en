@@ -43,15 +43,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Validity period in months
-                     * @return Period Validity period in months
+                     * 获取Purchase duration.
+-Unit: month.
+- Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, and 36.
+                     * @return Period Purchase duration.
+-Unit: month.
+- Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, and 36.
                      * 
                      */
                     uint64_t GetPeriod() const;
 
                     /**
-                     * 设置Validity period in months
-                     * @param _period Validity period in months
+                     * 设置Purchase duration.
+-Unit: month.
+- Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, and 36.
+                     * @param _period Purchase duration.
+-Unit: month.
+- Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, and 36.
                      * 
                      */
                     void SetPeriod(const uint64_t& _period);
@@ -64,15 +72,15 @@ namespace TencentCloud
                     bool PeriodHasBeenSet() const;
 
                     /**
-                     * 获取Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
-                     * @return InstanceId Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
+                     * 获取Instance ID. Log in to the [Redis console](https://console.cloud.tencent.com/redis/instance/list) and copy it from the instance list.
+                     * @return InstanceId Instance ID. Log in to the [Redis console](https://console.cloud.tencent.com/redis/instance/list) and copy it from the instance list.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
-                     * @param _instanceId Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
+                     * 设置Instance ID. Log in to the [Redis console](https://console.cloud.tencent.com/redis/instance/list) and copy it from the instance list.
+                     * @param _instanceId Instance ID. Log in to the [Redis console](https://console.cloud.tencent.com/redis/instance/list) and copy it from the instance list.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -85,15 +93,23 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取The parameter used to determine whether to modify the billing mode. <ul><li>If you want to change the billing mode from pay-as-you-go to monthly subscription, specify this parameter as <b>prepaid</b>. </li><li>If the current instance is monthly subscribed, this parameter is not required. </li></ul>
-                     * @return ModifyPayMode The parameter used to determine whether to modify the billing mode. <ul><li>If you want to change the billing mode from pay-as-you-go to monthly subscription, specify this parameter as <b>prepaid</b>. </li><li>If the current instance is monthly subscribed, this parameter is not required. </li></ul>
+                     * 获取Flag whether to change billing mode.
+-The billing mode of the current instance is pay-as-you-go. To convert to yearly/monthly subscription and renew, specify this parameter as <b>prepaid</b>.
+-The current instance billing mode is yearly/monthly subscription, so this parameter can be left unset.
+                     * @return ModifyPayMode Flag whether to change billing mode.
+-The billing mode of the current instance is pay-as-you-go. To convert to yearly/monthly subscription and renew, specify this parameter as <b>prepaid</b>.
+-The current instance billing mode is yearly/monthly subscription, so this parameter can be left unset.
                      * 
                      */
                     std::string GetModifyPayMode() const;
 
                     /**
-                     * 设置The parameter used to determine whether to modify the billing mode. <ul><li>If you want to change the billing mode from pay-as-you-go to monthly subscription, specify this parameter as <b>prepaid</b>. </li><li>If the current instance is monthly subscribed, this parameter is not required. </li></ul>
-                     * @param _modifyPayMode The parameter used to determine whether to modify the billing mode. <ul><li>If you want to change the billing mode from pay-as-you-go to monthly subscription, specify this parameter as <b>prepaid</b>. </li><li>If the current instance is monthly subscribed, this parameter is not required. </li></ul>
+                     * 设置Flag whether to change billing mode.
+-The billing mode of the current instance is pay-as-you-go. To convert to yearly/monthly subscription and renew, specify this parameter as <b>prepaid</b>.
+-The current instance billing mode is yearly/monthly subscription, so this parameter can be left unset.
+                     * @param _modifyPayMode Flag whether to change billing mode.
+-The billing mode of the current instance is pay-as-you-go. To convert to yearly/monthly subscription and renew, specify this parameter as <b>prepaid</b>.
+-The current instance billing mode is yearly/monthly subscription, so this parameter can be left unset.
                      * 
                      */
                     void SetModifyPayMode(const std::string& _modifyPayMode);
@@ -108,19 +124,23 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Validity period in months
+                     * Purchase duration.
+-Unit: month.
+- Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, and 36.
                      */
                     uint64_t m_period;
                     bool m_periodHasBeenSet;
 
                     /**
-                     * Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
+                     * Instance ID. Log in to the [Redis console](https://console.cloud.tencent.com/redis/instance/list) and copy it from the instance list.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * The parameter used to determine whether to modify the billing mode. <ul><li>If you want to change the billing mode from pay-as-you-go to monthly subscription, specify this parameter as <b>prepaid</b>. </li><li>If the current instance is monthly subscribed, this parameter is not required. </li></ul>
+                     * Flag whether to change billing mode.
+-The billing mode of the current instance is pay-as-you-go. To convert to yearly/monthly subscription and renew, specify this parameter as <b>prepaid</b>.
+-The current instance billing mode is yearly/monthly subscription, so this parameter can be left unset.
                      */
                     std::string m_modifyPayMode;
                     bool m_modifyPayModeHasBeenSet;

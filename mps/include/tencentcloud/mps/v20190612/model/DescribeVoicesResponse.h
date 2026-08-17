@@ -87,10 +87,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取<p>Available voice list.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Voices <p>Available voice list.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return Voices 
                      * 
                      */
                     std::vector<VoiceInfo> GetVoices() const;
@@ -123,8 +121,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * <p>Available voice list.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<VoiceInfo> m_voices;
                     bool m_voicesHasBeenSet;

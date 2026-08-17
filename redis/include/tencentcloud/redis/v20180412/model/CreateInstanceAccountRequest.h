@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
-                     * @return InstanceId Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
+                     * 获取<p>Instance ID. Log in to the <a href="https://console.cloud.tencent.com/redis">Redis console</a> and copy the instance ID from the instance list.</p>
+                     * @return InstanceId <p>Instance ID. Log in to the <a href="https://console.cloud.tencent.com/redis">Redis console</a> and copy the instance ID from the instance list.</p>
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
-                     * @param _instanceId Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
+                     * 设置<p>Instance ID. Log in to the <a href="https://console.cloud.tencent.com/redis">Redis console</a> and copy the instance ID from the instance list.</p>
+                     * @param _instanceId <p>Instance ID. Log in to the <a href="https://console.cloud.tencent.com/redis">Redis console</a> and copy the instance ID from the instance list.</p>
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -64,23 +64,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Custom account name for accessing the database.
-- It contains only letters, digits, underscores (_), and hyphens (-).
-- The length cannot exceed 32 characters.
-                     * @return AccountName Custom account name for accessing the database.
-- It contains only letters, digits, underscores (_), and hyphens (-).
-- The length cannot exceed 32 characters.
+                     * 获取<p>Custom account name for accessing the database.</p><ul><li>Consist of letters, digits, underscores, and hyphens only.</li><li>Length cannot be greater than 32.</li></ul>
+                     * @return AccountName <p>Custom account name for accessing the database.</p><ul><li>Consist of letters, digits, underscores, and hyphens only.</li><li>Length cannot be greater than 32.</li></ul>
                      * 
                      */
                     std::string GetAccountName() const;
 
                     /**
-                     * 设置Custom account name for accessing the database.
-- It contains only letters, digits, underscores (_), and hyphens (-).
-- The length cannot exceed 32 characters.
-                     * @param _accountName Custom account name for accessing the database.
-- It contains only letters, digits, underscores (_), and hyphens (-).
-- The length cannot exceed 32 characters.
+                     * 设置<p>Custom account name for accessing the database.</p><ul><li>Consist of letters, digits, underscores, and hyphens only.</li><li>Length cannot be greater than 32.</li></ul>
+                     * @param _accountName <p>Custom account name for accessing the database.</p><ul><li>Consist of letters, digits, underscores, and hyphens only.</li><li>Length cannot be greater than 32.</li></ul>
                      * 
                      */
                     void SetAccountName(const std::string& _accountName);
@@ -93,31 +85,15 @@ namespace TencentCloud
                     bool AccountNameHasBeenSet() const;
 
                     /**
-                     * 获取Password of the custom account. The password complexity requirements are as follows:
-- It can contain 8 to 64 characters.
-- It should contain at least two of the following types: lowercase letters, uppercase letters, digits, and special characters (such as ()`~!@#$%^&*-+=_|{}[]:;<>,.?/).
-- It cannot start with a forward slash (/).
-
-                     * @return AccountPassword Password of the custom account. The password complexity requirements are as follows:
-- It can contain 8 to 64 characters.
-- It should contain at least two of the following types: lowercase letters, uppercase letters, digits, and special characters (such as ()`~!@#$%^&*-+=_|{}[]:;<>,.?/).
-- It cannot start with a forward slash (/).
-
+                     * 获取<p>Set a password for the customized account. The password complexity requirements are as follows:</p><ul><li>Character count: [8,64].</li><li>Contain at least two kinds of lowercase letters, uppercase letters, digits and characters ()`~!@#$%^&amp;*-+=_|{}[]:;&lt;&gt;,.?/.</li><li>Cannot start with "/".</li></ul>
+                     * @return AccountPassword <p>Set a password for the customized account. The password complexity requirements are as follows:</p><ul><li>Character count: [8,64].</li><li>Contain at least two kinds of lowercase letters, uppercase letters, digits and characters ()`~!@#$%^&amp;*-+=_|{}[]:;&lt;&gt;,.?/.</li><li>Cannot start with "/".</li></ul>
                      * 
                      */
                     std::string GetAccountPassword() const;
 
                     /**
-                     * 设置Password of the custom account. The password complexity requirements are as follows:
-- It can contain 8 to 64 characters.
-- It should contain at least two of the following types: lowercase letters, uppercase letters, digits, and special characters (such as ()`~!@#$%^&*-+=_|{}[]:;<>,.?/).
-- It cannot start with a forward slash (/).
-
-                     * @param _accountPassword Password of the custom account. The password complexity requirements are as follows:
-- It can contain 8 to 64 characters.
-- It should contain at least two of the following types: lowercase letters, uppercase letters, digits, and special characters (such as ()`~!@#$%^&*-+=_|{}[]:;<>,.?/).
-- It cannot start with a forward slash (/).
-
+                     * 设置<p>Set a password for the customized account. The password complexity requirements are as follows:</p><ul><li>Character count: [8,64].</li><li>Contain at least two kinds of lowercase letters, uppercase letters, digits and characters ()`~!@#$%^&amp;*-+=_|{}[]:;&lt;&gt;,.?/.</li><li>Cannot start with "/".</li></ul>
+                     * @param _accountPassword <p>Set a password for the customized account. The password complexity requirements are as follows:</p><ul><li>Character count: [8,64].</li><li>Contain at least two kinds of lowercase letters, uppercase letters, digits and characters ()`~!@#$%^&amp;*-+=_|{}[]:;&lt;&gt;,.?/.</li><li>Cannot start with "/".</li></ul>
                      * 
                      */
                     void SetAccountPassword(const std::string& _accountPassword);
@@ -130,19 +106,15 @@ namespace TencentCloud
                     bool AccountPasswordHasBeenSet() const;
 
                     /**
-                     * 获取The read requests for the designated account are routed to either the master node or replica nodes. If the Read-Only Replica is not enabled, the selection of replica nodes is not supported.
-- master: Master node.- replication: Replica node.
-                     * @return ReadonlyPolicy The read requests for the designated account are routed to either the master node or replica nodes. If the Read-Only Replica is not enabled, the selection of replica nodes is not supported.
-- master: Master node.- replication: Replica node.
+                     * 获取<p>Read requests for the designated account are routed to the primary node or replica node. Read-only replica is not enabled, and selection of replica nodes is not supported.</p><ul><li>master: primary node</li><li>replication: replica node</li></ul>
+                     * @return ReadonlyPolicy <p>Read requests for the designated account are routed to the primary node or replica node. Read-only replica is not enabled, and selection of replica nodes is not supported.</p><ul><li>master: primary node</li><li>replication: replica node</li></ul>
                      * 
                      */
                     std::vector<std::string> GetReadonlyPolicy() const;
 
                     /**
-                     * 设置The read requests for the designated account are routed to either the master node or replica nodes. If the Read-Only Replica is not enabled, the selection of replica nodes is not supported.
-- master: Master node.- replication: Replica node.
-                     * @param _readonlyPolicy The read requests for the designated account are routed to either the master node or replica nodes. If the Read-Only Replica is not enabled, the selection of replica nodes is not supported.
-- master: Master node.- replication: Replica node.
+                     * 设置<p>Read requests for the designated account are routed to the primary node or replica node. Read-only replica is not enabled, and selection of replica nodes is not supported.</p><ul><li>master: primary node</li><li>replication: replica node</li></ul>
+                     * @param _readonlyPolicy <p>Read requests for the designated account are routed to the primary node or replica node. Read-only replica is not enabled, and selection of replica nodes is not supported.</p><ul><li>master: primary node</li><li>replication: replica node</li></ul>
                      * 
                      */
                     void SetReadonlyPolicy(const std::vector<std::string>& _readonlyPolicy);
@@ -155,23 +127,15 @@ namespace TencentCloud
                     bool ReadonlyPolicyHasBeenSet() const;
 
                     /**
-                     * 获取Read-write permissions of the account. It supports the selection of read-only and read-write permissions.
-- r: read-only.
-- rw: read-write.
-                     * @return Privilege Read-write permissions of the account. It supports the selection of read-only and read-write permissions.
-- r: read-only.
-- rw: read-write.
+                     * 获取<p>Account read/write permission supports selecting read-only or read-write permission.</p><ul><li>r: Read-only.</li><li>rw: Read-write.</li></ul>
+                     * @return Privilege <p>Account read/write permission supports selecting read-only or read-write permission.</p><ul><li>r: Read-only.</li><li>rw: Read-write.</li></ul>
                      * 
                      */
                     std::string GetPrivilege() const;
 
                     /**
-                     * 设置Read-write permissions of the account. It supports the selection of read-only and read-write permissions.
-- r: read-only.
-- rw: read-write.
-                     * @param _privilege Read-write permissions of the account. It supports the selection of read-only and read-write permissions.
-- r: read-only.
-- rw: read-write.
+                     * 设置<p>Account read/write permission supports selecting read-only or read-write permission.</p><ul><li>r: Read-only.</li><li>rw: Read-write.</li></ul>
+                     * @param _privilege <p>Account read/write permission supports selecting read-only or read-write permission.</p><ul><li>r: Read-only.</li><li>rw: Read-write.</li></ul>
                      * 
                      */
                     void SetPrivilege(const std::string& _privilege);
@@ -184,15 +148,15 @@ namespace TencentCloud
                     bool PrivilegeHasBeenSet() const;
 
                     /**
-                     * 获取Description information about account remarks, with a length of [0, 64] bytes.
-                     * @return Remark Description information about account remarks, with a length of [0, 64] bytes.
+                     * 获取<p>Description information about account remarks, with a length of [0, 64] bytes.</p>
+                     * @return Remark <p>Description information about account remarks, with a length of [0, 64] bytes.</p>
                      * 
                      */
                     std::string GetRemark() const;
 
                     /**
-                     * 设置Description information about account remarks, with a length of [0, 64] bytes.
-                     * @param _remark Description information about account remarks, with a length of [0, 64] bytes.
+                     * 设置<p>Description information about account remarks, with a length of [0, 64] bytes.</p>
+                     * @param _remark <p>Description information about account remarks, with a length of [0, 64] bytes.</p>
                      * 
                      */
                     void SetRemark(const std::string& _remark);
@@ -205,15 +169,15 @@ namespace TencentCloud
                     bool RemarkHasBeenSet() const;
 
                     /**
-                     * 获取Whether to encrypt the password.
-                     * @return EncryptPassword Whether to encrypt the password.
+                     * 获取<p>Whether to enable password encryption for transmission.</p><ul><li>true: Encrypted.</li><li>false: Not encrypted (default value).</li></ul>
+                     * @return EncryptPassword <p>Whether to enable password encryption for transmission.</p><ul><li>true: Encrypted.</li><li>false: Not encrypted (default value).</li></ul>
                      * 
                      */
                     bool GetEncryptPassword() const;
 
                     /**
-                     * 设置Whether to encrypt the password.
-                     * @param _encryptPassword Whether to encrypt the password.
+                     * 设置<p>Whether to enable password encryption for transmission.</p><ul><li>true: Encrypted.</li><li>false: Not encrypted (default value).</li></ul>
+                     * @param _encryptPassword <p>Whether to enable password encryption for transmission.</p><ul><li>true: Encrypted.</li><li>false: Not encrypted (default value).</li></ul>
                      * 
                      */
                     void SetEncryptPassword(const bool& _encryptPassword);
@@ -228,52 +192,43 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
+                     * <p>Instance ID. Log in to the <a href="https://console.cloud.tencent.com/redis">Redis console</a> and copy the instance ID from the instance list.</p>
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Custom account name for accessing the database.
-- It contains only letters, digits, underscores (_), and hyphens (-).
-- The length cannot exceed 32 characters.
+                     * <p>Custom account name for accessing the database.</p><ul><li>Consist of letters, digits, underscores, and hyphens only.</li><li>Length cannot be greater than 32.</li></ul>
                      */
                     std::string m_accountName;
                     bool m_accountNameHasBeenSet;
 
                     /**
-                     * Password of the custom account. The password complexity requirements are as follows:
-- It can contain 8 to 64 characters.
-- It should contain at least two of the following types: lowercase letters, uppercase letters, digits, and special characters (such as ()`~!@#$%^&*-+=_|{}[]:;<>,.?/).
-- It cannot start with a forward slash (/).
-
+                     * <p>Set a password for the customized account. The password complexity requirements are as follows:</p><ul><li>Character count: [8,64].</li><li>Contain at least two kinds of lowercase letters, uppercase letters, digits and characters ()`~!@#$%^&amp;*-+=_|{}[]:;&lt;&gt;,.?/.</li><li>Cannot start with "/".</li></ul>
                      */
                     std::string m_accountPassword;
                     bool m_accountPasswordHasBeenSet;
 
                     /**
-                     * The read requests for the designated account are routed to either the master node or replica nodes. If the Read-Only Replica is not enabled, the selection of replica nodes is not supported.
-- master: Master node.- replication: Replica node.
+                     * <p>Read requests for the designated account are routed to the primary node or replica node. Read-only replica is not enabled, and selection of replica nodes is not supported.</p><ul><li>master: primary node</li><li>replication: replica node</li></ul>
                      */
                     std::vector<std::string> m_readonlyPolicy;
                     bool m_readonlyPolicyHasBeenSet;
 
                     /**
-                     * Read-write permissions of the account. It supports the selection of read-only and read-write permissions.
-- r: read-only.
-- rw: read-write.
+                     * <p>Account read/write permission supports selecting read-only or read-write permission.</p><ul><li>r: Read-only.</li><li>rw: Read-write.</li></ul>
                      */
                     std::string m_privilege;
                     bool m_privilegeHasBeenSet;
 
                     /**
-                     * Description information about account remarks, with a length of [0, 64] bytes.
+                     * <p>Description information about account remarks, with a length of [0, 64] bytes.</p>
                      */
                     std::string m_remark;
                     bool m_remarkHasBeenSet;
 
                     /**
-                     * Whether to encrypt the password.
+                     * <p>Whether to enable password encryption for transmission.</p><ul><li>true: Encrypted.</li><li>false: Not encrypted (default value).</li></ul>
                      */
                     bool m_encryptPassword;
                     bool m_encryptPasswordHasBeenSet;

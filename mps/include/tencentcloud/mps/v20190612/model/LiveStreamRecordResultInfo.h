@@ -48,27 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether recording ends.
-0: Recording does not end, returning a single file.
-1: Recording ends, returning all recording files.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return RecordOver Whether recording ends.
-0: Recording does not end, returning a single file.
-1: Recording ends, returning all recording files.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return RecordOver 
                      * 
                      */
                     uint64_t GetRecordOver() const;
 
                     /**
-                     * 设置Whether recording ends.
-0: Recording does not end, returning a single file.
-1: Recording ends, returning all recording files.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _recordOver Whether recording ends.
-0: Recording does not end, returning a single file.
-1: Recording ends, returning all recording files.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _recordOver 
                      * 
                      */
                     void SetRecordOver(const uint64_t& _recordOver);
@@ -81,23 +69,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool RecordOverHasBeenSet() const;
 
                     /**
-                     * 获取File list.
-
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return FileResults File list.
-
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return FileResults 
                      * 
                      */
                     std::vector<LiveRecordFile> GetFileResults() const;
 
                     /**
-                     * 设置File list.
-
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _fileResults File list.
-
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _fileResults 
                      * 
                      */
                     void SetFileResults(const std::vector<LiveRecordFile>& _fileResults);
@@ -112,18 +92,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Whether recording ends.
-0: Recording does not end, returning a single file.
-1: Recording ends, returning all recording files.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t m_recordOver;
                     bool m_recordOverHasBeenSet;
 
                     /**
-                     * File list.
-
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<LiveRecordFile> m_fileResults;
                     bool m_fileResultsHasBeenSet;

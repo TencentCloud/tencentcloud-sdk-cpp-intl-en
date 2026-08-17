@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * OCR-detected prohibited information in text
+                * Ocr (Optical Character Recognition) text contains prohibited information
                 */
                 class AiReviewProhibitedOcrTaskOutput : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Score of OCR-detected prohibited information in text between 0 and 100.
-                     * @return Confidence Score of OCR-detected prohibited information in text between 0 and 100.
+                     * 获取Ocr text involves prohibited content scoring, with a score ranging from 0 to 100.
+                     * @return Confidence Ocr text involves prohibited content scoring, with a score ranging from 0 to 100.
                      * 
                      */
                     double GetConfidence() const;
 
                     /**
-                     * 设置Score of OCR-detected prohibited information in text between 0 and 100.
-                     * @param _confidence Score of OCR-detected prohibited information in text between 0 and 100.
+                     * 设置Ocr text involves prohibited content scoring, with a score ranging from 0 to 100.
+                     * @param _confidence Ocr text involves prohibited content scoring, with a score ranging from 0 to 100.
                      * 
                      */
                     void SetConfidence(const double& _confidence);
@@ -69,11 +69,11 @@ namespace TencentCloud
                     bool ConfidenceHasBeenSet() const;
 
                     /**
-                     * 获取Suggestion for OCR-detected prohibited information in text. Valid values:
+                     * 获取Ocr text prohibited content result suggestion, value ranges from...to...
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
-                     * @return Suggestion Suggestion for OCR-detected prohibited information in text. Valid values:
+                     * @return Suggestion Ocr text prohibited content result suggestion, value ranges from...to...
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
@@ -82,11 +82,11 @@ namespace TencentCloud
                     std::string GetSuggestion() const;
 
                     /**
-                     * 设置Suggestion for OCR-detected prohibited information in text. Valid values:
+                     * 设置Ocr text prohibited content result suggestion, value ranges from...to...
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
-                     * @param _suggestion Suggestion for OCR-detected prohibited information in text. Valid values:
+                     * @param _suggestion Ocr text prohibited content result suggestion, value ranges from...to...
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
@@ -102,15 +102,15 @@ namespace TencentCloud
                     bool SuggestionHasBeenSet() const;
 
                     /**
-                     * 获取List of video segments that contain the OCR-detected prohibited information in text.
-                     * @return SegmentSet List of video segments that contain the OCR-detected prohibited information in text.
+                     * 获取Video segment list with Ocr text suspected of prohibition violations.
+                     * @return SegmentSet Video segment list with Ocr text suspected of prohibition violations.
                      * 
                      */
                     std::vector<MediaContentReviewOcrTextSegmentItem> GetSegmentSet() const;
 
                     /**
-                     * 设置List of video segments that contain the OCR-detected prohibited information in text.
-                     * @param _segmentSet List of video segments that contain the OCR-detected prohibited information in text.
+                     * 设置Video segment list with Ocr text suspected of prohibition violations.
+                     * @param _segmentSet Video segment list with Ocr text suspected of prohibition violations.
                      * 
                      */
                     void SetSegmentSet(const std::vector<MediaContentReviewOcrTextSegmentItem>& _segmentSet);
@@ -125,13 +125,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Score of OCR-detected prohibited information in text between 0 and 100.
+                     * Ocr text involves prohibited content scoring, with a score ranging from 0 to 100.
                      */
                     double m_confidence;
                     bool m_confidenceHasBeenSet;
 
                     /**
-                     * Suggestion for OCR-detected prohibited information in text. Valid values:
+                     * Ocr text prohibited content result suggestion, value ranges from...to...
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
@@ -140,7 +140,7 @@ namespace TencentCloud
                     bool m_suggestionHasBeenSet;
 
                     /**
-                     * List of video segments that contain the OCR-detected prohibited information in text.
+                     * Video segment list with Ocr text suspected of prohibition violations.
                      */
                     std::vector<MediaContentReviewOcrTextSegmentItem> m_segmentSet;
                     bool m_segmentSetHasBeenSet;

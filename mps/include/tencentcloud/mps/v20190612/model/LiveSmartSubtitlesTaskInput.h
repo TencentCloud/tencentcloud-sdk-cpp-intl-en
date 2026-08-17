@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Live stream smart subtitle input struct.
+                * Live stream smart subtitle input struct
                 */
                 class LiveSmartSubtitlesTaskInput : public AbstractModel
                 {

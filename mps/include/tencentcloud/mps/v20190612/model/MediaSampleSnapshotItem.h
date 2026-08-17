@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Information of a sampled screenshot
+                * Sampling screenshot information
                 */
                 class MediaSampleSnapshotItem : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Sampled screenshot specification ID. For more information, please see [Sampled Screenshot Parameter Template](https://intl.cloud.tencent.com/document/product/266/33480?from_cn_redirect=1#.E9.87.87.E6.A0.B7.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
-                     * @return Definition Sampled screenshot specification ID. For more information, please see [Sampled Screenshot Parameter Template](https://intl.cloud.tencent.com/document/product/266/33480?from_cn_redirect=1#.E9.87.87.E6.A0.B7.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
+                     * 获取Sampled screenshot specification ID. Please refer to the sampling screenshot parameter template (https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.87.87.E6.A0.B7.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
+                     * @return Definition Sampled screenshot specification ID. Please refer to the sampling screenshot parameter template (https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.87.87.E6.A0.B7.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
                      * 
                      */
                     int64_t GetDefinition() const;
 
                     /**
-                     * 设置Sampled screenshot specification ID. For more information, please see [Sampled Screenshot Parameter Template](https://intl.cloud.tencent.com/document/product/266/33480?from_cn_redirect=1#.E9.87.87.E6.A0.B7.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
-                     * @param _definition Sampled screenshot specification ID. For more information, please see [Sampled Screenshot Parameter Template](https://intl.cloud.tencent.com/document/product/266/33480?from_cn_redirect=1#.E9.87.87.E6.A0.B7.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
+                     * 设置Sampled screenshot specification ID. Please refer to the sampling screenshot parameter template (https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.87.87.E6.A0.B7.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
+                     * @param _definition Sampled screenshot specification ID. Please refer to the sampling screenshot parameter template (https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.87.87.E6.A0.B7.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
                      * 
                      */
                     void SetDefinition(const int64_t& _definition);
@@ -69,23 +69,23 @@ namespace TencentCloud
                     bool DefinitionHasBeenSet() const;
 
                     /**
-                     * 获取Sample type. Valid values:
-<li>Percent: Samples at the specified percentage interval.</li>
-<li>Time: Samples at the specified time interval.</li>
-                     * @return SampleType Sample type. Valid values:
-<li>Percent: Samples at the specified percentage interval.</li>
-<li>Time: Samples at the specified time interval.</li>
+                     * 获取Sampling method, Valid value:
+<li>Percent: interval sampling based on percentage.</li>
+<li>Time: sampling based on time interval.</li>
+                     * @return SampleType Sampling method, Valid value:
+<li>Percent: interval sampling based on percentage.</li>
+<li>Time: sampling based on time interval.</li>
                      * 
                      */
                     std::string GetSampleType() const;
 
                     /**
-                     * 设置Sample type. Valid values:
-<li>Percent: Samples at the specified percentage interval.</li>
-<li>Time: Samples at the specified time interval.</li>
-                     * @param _sampleType Sample type. Valid values:
-<li>Percent: Samples at the specified percentage interval.</li>
-<li>Time: Samples at the specified time interval.</li>
+                     * 设置Sampling method, Valid value:
+<li>Percent: interval sampling based on percentage.</li>
+<li>Time: sampling based on time interval.</li>
+                     * @param _sampleType Sampling method, Valid value:
+<li>Percent: interval sampling based on percentage.</li>
+<li>Time: sampling based on time interval.</li>
                      * 
                      */
                     void SetSampleType(const std::string& _sampleType);
@@ -99,22 +99,22 @@ namespace TencentCloud
 
                     /**
                      * 获取Sampling interval
-<li>If `SampleType` is `Percent`, this value means taking a screenshot at an interval of the specified percentage.</li>
-<li>If `SampleType` is `Time`, this value means taking a screenshot at an interval of the specified time (in seconds). The first screenshot is always the first video frame.</li>
+<li>When SampleType is Percent, this value indicates how many percentage points per image.</li>
+<li>When SampleType is Time, this value indicates how many time intervals per image, in seconds. The first image is the first video frame.</li>
                      * @return Interval Sampling interval
-<li>If `SampleType` is `Percent`, this value means taking a screenshot at an interval of the specified percentage.</li>
-<li>If `SampleType` is `Time`, this value means taking a screenshot at an interval of the specified time (in seconds). The first screenshot is always the first video frame.</li>
+<li>When SampleType is Percent, this value indicates how many percentage points per image.</li>
+<li>When SampleType is Time, this value indicates how many time intervals per image, in seconds. The first image is the first video frame.</li>
                      * 
                      */
                     int64_t GetInterval() const;
 
                     /**
                      * 设置Sampling interval
-<li>If `SampleType` is `Percent`, this value means taking a screenshot at an interval of the specified percentage.</li>
-<li>If `SampleType` is `Time`, this value means taking a screenshot at an interval of the specified time (in seconds). The first screenshot is always the first video frame.</li>
+<li>When SampleType is Percent, this value indicates how many percentage points per image.</li>
+<li>When SampleType is Time, this value indicates how many time intervals per image, in seconds. The first image is the first video frame.</li>
                      * @param _interval Sampling interval
-<li>If `SampleType` is `Percent`, this value means taking a screenshot at an interval of the specified percentage.</li>
-<li>If `SampleType` is `Time`, this value means taking a screenshot at an interval of the specified time (in seconds). The first screenshot is always the first video frame.</li>
+<li>When SampleType is Percent, this value indicates how many percentage points per image.</li>
+<li>When SampleType is Time, this value indicates how many time intervals per image, in seconds. The first image is the first video frame.</li>
                      * 
                      */
                     void SetInterval(const int64_t& _interval);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool IntervalHasBeenSet() const;
 
                     /**
-                     * 获取Storage location of a generated screenshot file.
-                     * @return Storage Storage location of a generated screenshot file.
+                     * 获取Storage location of a file after screenshot.
+                     * @return Storage Storage location of a file after screenshot.
                      * 
                      */
                     TaskOutputStorage GetStorage() const;
 
                     /**
-                     * 设置Storage location of a generated screenshot file.
-                     * @param _storage Storage location of a generated screenshot file.
+                     * 设置Storage location of a file after screenshot.
+                     * @param _storage Storage location of a file after screenshot.
                      * 
                      */
                     void SetStorage(const TaskOutputStorage& _storage);
@@ -148,15 +148,15 @@ namespace TencentCloud
                     bool StorageHasBeenSet() const;
 
                     /**
-                     * 获取List of paths to generated screenshots.
-                     * @return ImagePathSet List of paths to generated screenshots.
+                     * 获取List of generated screenshot paths.
+                     * @return ImagePathSet List of generated screenshot paths.
                      * 
                      */
                     std::vector<std::string> GetImagePathSet() const;
 
                     /**
-                     * 设置List of paths to generated screenshots.
-                     * @param _imagePathSet List of paths to generated screenshots.
+                     * 设置List of generated screenshot paths.
+                     * @param _imagePathSet List of generated screenshot paths.
                      * 
                      */
                     void SetImagePathSet(const std::vector<std::string>& _imagePathSet);
@@ -169,15 +169,15 @@ namespace TencentCloud
                     bool ImagePathSetHasBeenSet() const;
 
                     /**
-                     * 获取List of watermarking template IDs if the screenshots are watermarked.
-                     * @return WaterMarkDefinition List of watermarking template IDs if the screenshots are watermarked.
+                     * 获取If a screenshot is watermarked, the watermark template ID list.
+                     * @return WaterMarkDefinition If a screenshot is watermarked, the watermark template ID list.
                      * 
                      */
                     std::vector<int64_t> GetWaterMarkDefinition() const;
 
                     /**
-                     * 设置List of watermarking template IDs if the screenshots are watermarked.
-                     * @param _waterMarkDefinition List of watermarking template IDs if the screenshots are watermarked.
+                     * 设置If a screenshot is watermarked, the watermark template ID list.
+                     * @param _waterMarkDefinition If a screenshot is watermarked, the watermark template ID list.
                      * 
                      */
                     void SetWaterMarkDefinition(const std::vector<int64_t>& _waterMarkDefinition);
@@ -192,41 +192,41 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Sampled screenshot specification ID. For more information, please see [Sampled Screenshot Parameter Template](https://intl.cloud.tencent.com/document/product/266/33480?from_cn_redirect=1#.E9.87.87.E6.A0.B7.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
+                     * Sampled screenshot specification ID. Please refer to the sampling screenshot parameter template (https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.87.87.E6.A0.B7.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
                      */
                     int64_t m_definition;
                     bool m_definitionHasBeenSet;
 
                     /**
-                     * Sample type. Valid values:
-<li>Percent: Samples at the specified percentage interval.</li>
-<li>Time: Samples at the specified time interval.</li>
+                     * Sampling method, Valid value:
+<li>Percent: interval sampling based on percentage.</li>
+<li>Time: sampling based on time interval.</li>
                      */
                     std::string m_sampleType;
                     bool m_sampleTypeHasBeenSet;
 
                     /**
                      * Sampling interval
-<li>If `SampleType` is `Percent`, this value means taking a screenshot at an interval of the specified percentage.</li>
-<li>If `SampleType` is `Time`, this value means taking a screenshot at an interval of the specified time (in seconds). The first screenshot is always the first video frame.</li>
+<li>When SampleType is Percent, this value indicates how many percentage points per image.</li>
+<li>When SampleType is Time, this value indicates how many time intervals per image, in seconds. The first image is the first video frame.</li>
                      */
                     int64_t m_interval;
                     bool m_intervalHasBeenSet;
 
                     /**
-                     * Storage location of a generated screenshot file.
+                     * Storage location of a file after screenshot.
                      */
                     TaskOutputStorage m_storage;
                     bool m_storageHasBeenSet;
 
                     /**
-                     * List of paths to generated screenshots.
+                     * List of generated screenshot paths.
                      */
                     std::vector<std::string> m_imagePathSet;
                     bool m_imagePathSetHasBeenSet;
 
                     /**
-                     * List of watermarking template IDs if the screenshots are watermarked.
+                     * If a screenshot is watermarked, the watermark template ID list.
                      */
                     std::vector<int64_t> m_waterMarkDefinition;
                     bool m_waterMarkDefinitionHasBeenSet;

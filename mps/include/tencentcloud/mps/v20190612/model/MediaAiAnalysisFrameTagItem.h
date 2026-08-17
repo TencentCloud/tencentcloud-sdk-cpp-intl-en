@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Result information of intelligent frame-specific tagging
+                * Intelligent frame tagging result information
                 */
                 class MediaAiAnalysisFrameTagItem : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Frame-specific tag name.
-                     * @return Tag Frame-specific tag name.
+                     * 获取Tag name by frame.
+                     * @return Tag Tag name by frame.
                      * 
                      */
                     std::string GetTag() const;
 
                     /**
-                     * 设置Frame-specific tag name.
-                     * @param _tag Frame-specific tag name.
+                     * 设置Tag name by frame.
+                     * @param _tag Tag name by frame.
                      * 
                      */
                     void SetTag(const std::string& _tag);
@@ -68,15 +68,19 @@ namespace TencentCloud
                     bool TagHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return CategorySet 
+                     * 获取Classification list by frame tag name. CategorySet.N indicates the (N+1)th level classification.
+For example, when the Tag is "tower", CategorySet contains two elements: CategorySet.0 is "scenario" and CategorySet.1 is "building", which means the frame Tag is "tower", the first-level category is "scenario", and the second-level category is "building".
+                     * @return CategorySet Classification list by frame tag name. CategorySet.N indicates the (N+1)th level classification.
+For example, when the Tag is "tower", CategorySet contains two elements: CategorySet.0 is "scenario" and CategorySet.1 is "building", which means the frame Tag is "tower", the first-level category is "scenario", and the second-level category is "building".
                      * 
                      */
                     std::vector<std::string> GetCategorySet() const;
 
                     /**
-                     * 设置
-                     * @param _categorySet 
+                     * 设置Classification list by frame tag name. CategorySet.N indicates the (N+1)th level classification.
+For example, when the Tag is "tower", CategorySet contains two elements: CategorySet.0 is "scenario" and CategorySet.1 is "building", which means the frame Tag is "tower", the first-level category is "scenario", and the second-level category is "building".
+                     * @param _categorySet Classification list by frame tag name. CategorySet.N indicates the (N+1)th level classification.
+For example, when the Tag is "tower", CategorySet contains two elements: CategorySet.0 is "scenario" and CategorySet.1 is "building", which means the frame Tag is "tower", the first-level category is "scenario", and the second-level category is "building".
                      * 
                      */
                     void SetCategorySet(const std::vector<std::string>& _categorySet);
@@ -89,15 +93,15 @@ namespace TencentCloud
                     bool CategorySetHasBeenSet() const;
 
                     /**
-                     * 获取Confidence of intelligently generated frame-specific tag between 0 and 100.
-                     * @return Confidence Confidence of intelligently generated frame-specific tag between 0 and 100.
+                     * 获取Reliability of frame tagging, with a value range from 0 to -100.
+                     * @return Confidence Reliability of frame tagging, with a value range from 0 to -100.
                      * 
                      */
                     double GetConfidence() const;
 
                     /**
-                     * 设置Confidence of intelligently generated frame-specific tag between 0 and 100.
-                     * @param _confidence Confidence of intelligently generated frame-specific tag between 0 and 100.
+                     * 设置Reliability of frame tagging, with a value range from 0 to -100.
+                     * @param _confidence Reliability of frame tagging, with a value range from 0 to -100.
                      * 
                      */
                     void SetConfidence(const double& _confidence);
@@ -112,19 +116,20 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Frame-specific tag name.
+                     * Tag name by frame.
                      */
                     std::string m_tag;
                     bool m_tagHasBeenSet;
 
                     /**
-                     * 
+                     * Classification list by frame tag name. CategorySet.N indicates the (N+1)th level classification.
+For example, when the Tag is "tower", CategorySet contains two elements: CategorySet.0 is "scenario" and CategorySet.1 is "building", which means the frame Tag is "tower", the first-level category is "scenario", and the second-level category is "building".
                      */
                     std::vector<std::string> m_categorySet;
                     bool m_categorySetHasBeenSet;
 
                     /**
-                     * Confidence of intelligently generated frame-specific tag between 0 and 100.
+                     * Reliability of frame tagging, with a value range from 0 to -100.
                      */
                     double m_confidence;
                     bool m_confidenceHasBeenSet;

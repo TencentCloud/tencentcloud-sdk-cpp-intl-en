@@ -133,19 +133,15 @@ namespace TencentCloud
                     bool TranslateSubtitlePathHasBeenSet() const;
 
                     /**
-                     * 获取<p>Subtitle position after removal. <strong>Note</strong>: only applicable to subtitle extraction when return of subtitle position is enabled.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SubtitlePos <p>Subtitle position after removal. <strong>Note</strong>: only applicable to subtitle extraction when return of subtitle position is enabled.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return SubtitlePos 
                      * 
                      */
                     SubtitlePosition GetSubtitlePos() const;
 
                     /**
-                     * 设置<p>Subtitle position after removal. <strong>Note</strong>: only applicable to subtitle extraction when return of subtitle position is enabled.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _subtitlePos <p>Subtitle position after removal. <strong>Note</strong>: only applicable to subtitle extraction when return of subtitle position is enabled.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _subtitlePos 
                      * 
                      */
                     void SetSubtitlePos(const SubtitlePosition& _subtitlePos);
@@ -158,19 +154,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool SubtitlePosHasBeenSet() const;
 
                     /**
-                     * 获取<p>File URL of the video after voice type cloning</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return VoiceClonedVideo <p>File URL of the video after voice type cloning</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return VoiceClonedVideo 
                      * 
                      */
                     std::string GetVoiceClonedVideo() const;
 
                     /**
-                     * 设置<p>File URL of the video after voice type cloning</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _voiceClonedVideo <p>File URL of the video after voice type cloning</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _voiceClonedVideo 
                      * 
                      */
                     void SetVoiceClonedVideo(const std::string& _voiceClonedVideo);
@@ -183,19 +175,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool VoiceClonedVideoHasBeenSet() const;
 
                     /**
-                     * 获取<p>File address of the voice type clone annotation</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return VoiceClonedMarkFile <p>File address of the voice type clone annotation</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return VoiceClonedMarkFile 
                      * 
                      */
                     std::string GetVoiceClonedMarkFile() const;
 
                     /**
-                     * 设置<p>File address of the voice type clone annotation</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _voiceClonedMarkFile <p>File address of the voice type clone annotation</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _voiceClonedMarkFile 
                      * 
                      */
                     void SetVoiceClonedMarkFile(const std::string& _voiceClonedMarkFile);
@@ -339,22 +327,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_translateSubtitlePathHasBeenSet;
 
                     /**
-                     * <p>Subtitle position after removal. <strong>Note</strong>: only applicable to subtitle extraction when return of subtitle position is enabled.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     SubtitlePosition m_subtitlePos;
                     bool m_subtitlePosHasBeenSet;
 
                     /**
-                     * <p>File URL of the video after voice type cloning</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string m_voiceClonedVideo;
                     bool m_voiceClonedVideoHasBeenSet;
 
                     /**
-                     * <p>File address of the voice type clone annotation</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string m_voiceClonedMarkFile;
                     bool m_voiceClonedMarkFileHasBeenSet;

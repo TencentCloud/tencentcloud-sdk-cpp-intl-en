@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Task overview for image processing.
+                * 
                 */
                 class ImageTaskInfo : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>TaskId of the image processing task.</p>
-                     * @return TaskId <p>TaskId of the image processing task.</p>
+                     * 获取
+                     * @return TaskId 
                      * 
                      */
                     std::string GetTaskId() const;
 
                     /**
-                     * 设置<p>TaskId of the image processing task.</p>
-                     * @param _taskId <p>TaskId of the image processing task.</p>
+                     * 设置
+                     * @param _taskId 
                      * 
                      */
                     void SetTaskId(const std::string& _taskId);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool TaskIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>Task status.</p><p>Enumeration values: </p><ul><li>FINISH: Task completion</li><li>PROCESSING: Task processing</li></ul>
-                     * @return Status <p>Task status.</p><p>Enumeration values: </p><ul><li>FINISH: Task completion</li><li>PROCESSING: Task processing</li></ul>
+                     * 获取
+                     * @return Status 
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置<p>Task status.</p><p>Enumeration values: </p><ul><li>FINISH: Task completion</li><li>PROCESSING: Task processing</li></ul>
-                     * @param _status <p>Task status.</p><p>Enumeration values: </p><ul><li>FINISH: Task completion</li><li>PROCESSING: Task processing</li></ul>
+                     * 设置
+                     * @param _status 
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取<p>Input file.</p>
-                     * @return Input <p>Input file.</p>
+                     * 获取
+                     * @return Input 
                      * 
                      */
                     std::string GetInput() const;
 
                     /**
-                     * 设置<p>Input file.</p>
-                     * @param _input <p>Input file.</p>
+                     * 设置
+                     * @param _input 
                      * 
                      */
                     void SetInput(const std::string& _input);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool InputHasBeenSet() const;
 
                     /**
-                     * 获取<p>Creation time.</p><p>Parameter format: YYYY-MM-DDThh:mm:ssZ</p>
-                     * @return CreateTime <p>Creation time.</p><p>Parameter format: YYYY-MM-DDThh:mm:ssZ</p>
+                     * 获取
+                     * @return CreateTime 
                      * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
-                     * 设置<p>Creation time.</p><p>Parameter format: YYYY-MM-DDThh:mm:ssZ</p>
-                     * @param _createTime <p>Creation time.</p><p>Parameter format: YYYY-MM-DDThh:mm:ssZ</p>
+                     * 设置
+                     * @param _createTime 
                      * 
                      */
                     void SetCreateTime(const std::string& _createTime);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Processing start time.</p><p>Parameter format: YYYY-MM-DDThh:mm:ssZ</p>
-                     * @return BeginProcessTime <p>Processing start time.</p><p>Parameter format: YYYY-MM-DDThh:mm:ssZ</p>
+                     * 获取
+                     * @return BeginProcessTime 
                      * 
                      */
                     std::string GetBeginProcessTime() const;
 
                     /**
-                     * 设置<p>Processing start time.</p><p>Parameter format: YYYY-MM-DDThh:mm:ssZ</p>
-                     * @param _beginProcessTime <p>Processing start time.</p><p>Parameter format: YYYY-MM-DDThh:mm:ssZ</p>
+                     * 设置
+                     * @param _beginProcessTime 
                      * 
                      */
                     void SetBeginProcessTime(const std::string& _beginProcessTime);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool BeginProcessTimeHasBeenSet() const;
 
                     /**
-                     * 获取<p>End time.</p><p>Parameter format: YYYY-MM-DDThh:mm:ssZ</p>
-                     * @return FinishTime <p>End time.</p><p>Parameter format: YYYY-MM-DDThh:mm:ssZ</p>
+                     * 获取
+                     * @return FinishTime 
                      * 
                      */
                     std::string GetFinishTime() const;
 
                     /**
-                     * 设置<p>End time.</p><p>Parameter format: YYYY-MM-DDThh:mm:ssZ</p>
-                     * @param _finishTime <p>End time.</p><p>Parameter format: YYYY-MM-DDThh:mm:ssZ</p>
+                     * 设置
+                     * @param _finishTime 
                      * 
                      */
                     void SetFinishTime(const std::string& _finishTime);
@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool FinishTimeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Subtask failure identifier.</p>
-                     * @return SubTaskHasFailed <p>Subtask failure identifier.</p>
+                     * 获取
+                     * @return SubTaskHasFailed 
                      * 
                      */
                     bool GetSubTaskHasFailed() const;
 
                     /**
-                     * 设置<p>Subtask failure identifier.</p>
-                     * @param _subTaskHasFailed <p>Subtask failure identifier.</p>
+                     * 设置
+                     * @param _subTaskHasFailed 
                      * 
                      */
                     void SetSubTaskHasFailed(const bool& _subTaskHasFailed);
@@ -196,43 +196,43 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>TaskId of the image processing task.</p>
+                     * 
                      */
                     std::string m_taskId;
                     bool m_taskIdHasBeenSet;
 
                     /**
-                     * <p>Task status.</p><p>Enumeration values: </p><ul><li>FINISH: Task completion</li><li>PROCESSING: Task processing</li></ul>
+                     * 
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * <p>Input file.</p>
+                     * 
                      */
                     std::string m_input;
                     bool m_inputHasBeenSet;
 
                     /**
-                     * <p>Creation time.</p><p>Parameter format: YYYY-MM-DDThh:mm:ssZ</p>
+                     * 
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * <p>Processing start time.</p><p>Parameter format: YYYY-MM-DDThh:mm:ssZ</p>
+                     * 
                      */
                     std::string m_beginProcessTime;
                     bool m_beginProcessTimeHasBeenSet;
 
                     /**
-                     * <p>End time.</p><p>Parameter format: YYYY-MM-DDThh:mm:ssZ</p>
+                     * 
                      */
                     std::string m_finishTime;
                     bool m_finishTimeHasBeenSet;
 
                     /**
-                     * <p>Subtask failure identifier.</p>
+                     * 
                      */
                     bool m_subTaskHasFailed;
                     bool m_subTaskHasFailedHasBeenSet;

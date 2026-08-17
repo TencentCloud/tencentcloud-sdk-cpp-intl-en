@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The start time of the time interval where the data resides, using the ISO date format. for example, when the time granularity is day, 2018-12-01T00:00:00+08:00 indicates the interval from december 1, 2018 (inclusive) to december 2, 2018 (exclusive).
-                     * @return Time The start time of the time interval where the data resides, using the ISO date format. for example, when the time granularity is day, 2018-12-01T00:00:00+08:00 indicates the interval from december 1, 2018 (inclusive) to december 2, 2018 (exclusive).
+                     * 获取Start time of the time interval where the data resides, using ISO date format. For example, when the time granularity is day, 2018-12-01T00:00:00+08:00 indicates the interval from December 1, 2018 (inclusive) to December III, 2018 (exclusive).
+                     * @return Time Start time of the time interval where the data resides, using ISO date format. For example, when the time granularity is day, 2018-12-01T00:00:00+08:00 indicates the interval from December 1, 2018 (inclusive) to December III, 2018 (exclusive).
                      * 
                      */
                     std::string GetTime() const;
 
                     /**
-                     * 设置The start time of the time interval where the data resides, using the ISO date format. for example, when the time granularity is day, 2018-12-01T00:00:00+08:00 indicates the interval from december 1, 2018 (inclusive) to december 2, 2018 (exclusive).
-                     * @param _time The start time of the time interval where the data resides, using the ISO date format. for example, when the time granularity is day, 2018-12-01T00:00:00+08:00 indicates the interval from december 1, 2018 (inclusive) to december 2, 2018 (exclusive).
+                     * 设置Start time of the time interval where the data resides, using ISO date format. For example, when the time granularity is day, 2018-12-01T00:00:00+08:00 indicates the interval from December 1, 2018 (inclusive) to December III, 2018 (exclusive).
+                     * @param _time Start time of the time interval where the data resides, using ISO date format. For example, when the time granularity is day, 2018-12-01T00:00:00+08:00 indicates the interval from December 1, 2018 (inclusive) to December III, 2018 (exclusive).
                      * 
                      */
                     void SetTime(const std::string& _time);
@@ -112,7 +112,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The start time of the time interval where the data resides, using the ISO date format. for example, when the time granularity is day, 2018-12-01T00:00:00+08:00 indicates the interval from december 1, 2018 (inclusive) to december 2, 2018 (exclusive).
+                     * Start time of the time interval where the data resides, using ISO date format. For example, when the time granularity is day, 2018-12-01T00:00:00+08:00 indicates the interval from December 1, 2018 (inclusive) to December III, 2018 (exclusive).
                      */
                     std::string m_time;
                     bool m_timeHasBeenSet;

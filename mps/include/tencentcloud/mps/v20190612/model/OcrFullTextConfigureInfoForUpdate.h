@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Control parameter of a full text recognition task
+                * Full Text Recognition Task Control Parameter
                 */
                 class OcrFullTextConfigureInfoForUpdate : public AbstractModel
                 {
@@ -47,23 +47,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Switch of a full text recognition task. Valid values:
-<li>ON: Enables an intelligent full text recognition task;</li>
-<li>OFF: Disables an intelligent full text recognition task.</li>
-                     * @return Switch Switch of a full text recognition task. Valid values:
-<li>ON: Enables an intelligent full text recognition task;</li>
-<li>OFF: Disables an intelligent full text recognition task.</li>
+                     * 获取Task switch for full text recognition, available values:
+<li>ON: Enable intelligent full text recognition task;</li>
+<li>OFF: Disables the intelligent full text recognition task.</li>
+                     * @return Switch Task switch for full text recognition, available values:
+<li>ON: Enable intelligent full text recognition task;</li>
+<li>OFF: Disables the intelligent full text recognition task.</li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Switch of a full text recognition task. Valid values:
-<li>ON: Enables an intelligent full text recognition task;</li>
-<li>OFF: Disables an intelligent full text recognition task.</li>
-                     * @param _switch Switch of a full text recognition task. Valid values:
-<li>ON: Enables an intelligent full text recognition task;</li>
-<li>OFF: Disables an intelligent full text recognition task.</li>
+                     * 设置Task switch for full text recognition, available values:
+<li>ON: Enable intelligent full text recognition task;</li>
+<li>OFF: Disables the intelligent full text recognition task.</li>
+                     * @param _switch Task switch for full text recognition, available values:
+<li>ON: Enable intelligent full text recognition task;</li>
+<li>OFF: Disables the intelligent full text recognition task.</li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -78,9 +78,9 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Switch of a full text recognition task. Valid values:
-<li>ON: Enables an intelligent full text recognition task;</li>
-<li>OFF: Disables an intelligent full text recognition task.</li>
+                     * Task switch for full text recognition, available values:
+<li>ON: Enable intelligent full text recognition task;</li>
+<li>OFF: Disables the intelligent full text recognition task.</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;

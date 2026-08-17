@@ -47,11 +47,11 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Reference video URL, which must be accessible from the public network.
+                     * 获取Reference video url. Must be external network accessible.
 This can be used as a feature reference video or a video for editing. The default type is video for editing. You can choose to keep the original sound of the video.
 The ReferType parameter specifies the reference video type: feature indicates feature reference video, and base indicates video for editing.
 If the reference video is a video for editing, the first and last frames cannot be defined.
-                     * @return VideoUrl Reference video URL, which must be accessible from the public network.
+                     * @return VideoUrl Reference video url. Must be external network accessible.
 This can be used as a feature reference video or a video for editing. The default type is video for editing. You can choose to keep the original sound of the video.
 The ReferType parameter specifies the reference video type: feature indicates feature reference video, and base indicates video for editing.
 If the reference video is a video for editing, the first and last frames cannot be defined.
@@ -60,11 +60,11 @@ If the reference video is a video for editing, the first and last frames cannot 
                     std::string GetVideoUrl() const;
 
                     /**
-                     * 设置Reference video URL, which must be accessible from the public network.
+                     * 设置Reference video url. Must be external network accessible.
 This can be used as a feature reference video or a video for editing. The default type is video for editing. You can choose to keep the original sound of the video.
 The ReferType parameter specifies the reference video type: feature indicates feature reference video, and base indicates video for editing.
 If the reference video is a video for editing, the first and last frames cannot be defined.
-                     * @param _videoUrl Reference video URL, which must be accessible from the public network.
+                     * @param _videoUrl Reference video url. Must be external network accessible.
 This can be used as a feature reference video or a video for editing. The default type is video for editing. You can choose to keep the original sound of the video.
 The ReferType parameter specifies the reference video type: feature indicates feature reference video, and base indicates video for editing.
 If the reference video is a video for editing, the first and last frames cannot be defined.
@@ -124,7 +124,7 @@ If the reference video is a video for editing, the first and last frames cannot 
                 private:
 
                     /**
-                     * Reference video URL, which must be accessible from the public network.
+                     * Reference video url. Must be external network accessible.
 This can be used as a feature reference video or a video for editing. The default type is video for editing. You can choose to keep the original sound of the video.
 The ReferType parameter specifies the reference video type: feature indicates feature reference video, and base indicates video for editing.
 If the reference video is a video for editing, the first and last frames cannot be defined.

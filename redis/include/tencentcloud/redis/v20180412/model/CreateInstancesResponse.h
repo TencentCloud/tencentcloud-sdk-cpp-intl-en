@@ -44,22 +44,22 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Transaction ID
-                     * @return DealId Transaction ID
-                     * 
+                     * 获取<p>Transaction ID.</p>
+                     * @return DealId <p>Transaction ID.</p>
+                     * @deprecated
                      */
                     std::string GetDealId() const;
 
                     /**
                      * 判断参数 DealId 是否已赋值
                      * @return DealId 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool DealIdHasBeenSet() const;
 
                     /**
-                     * 获取Instance ID
-                     * @return InstanceIds Instance ID
+                     * 获取<p>Instance ID.</p>
+                     * @return InstanceIds <p>Instance ID.</p>
                      * 
                      */
                     std::vector<std::string> GetInstanceIds() const;
@@ -71,19 +71,39 @@ namespace TencentCloud
                      */
                     bool InstanceIdsHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Order ID.</p>
+                     * @return DealName <p>Order ID.</p>
+                     * 
+                     */
+                    std::string GetDealName() const;
+
+                    /**
+                     * 判断参数 DealName 是否已赋值
+                     * @return DealName 是否已赋值
+                     * 
+                     */
+                    bool DealNameHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Transaction ID
+                     * <p>Transaction ID.</p>
                      */
                     std::string m_dealId;
                     bool m_dealIdHasBeenSet;
 
                     /**
-                     * Instance ID
+                     * <p>Instance ID.</p>
                      */
                     std::vector<std::string> m_instanceIds;
                     bool m_instanceIdsHasBeenSet;
+
+                    /**
+                     * <p>Order ID.</p>
+                     */
+                    std::string m_dealName;
+                    bool m_dealNameHasBeenSet;
 
                 };
             }

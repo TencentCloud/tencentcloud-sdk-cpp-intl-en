@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Smart subtitle task result for live stream.
+                * Live stream smart subtitle result
                 */
                 class LiveSmartSubtitleResult : public AbstractModel
                 {
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool TextHasBeenSet() const;
 
                     /**
-                     * 获取Translate the starting PTS time of a segment, in seconds.
-                     * @return StartPTSTime Translate the starting PTS time of a segment, in seconds.
+                     * 获取Start PTS time of a translated recording clip, in seconds.
+                     * @return StartPTSTime Start PTS time of a translated recording clip, in seconds.
                      * 
                      */
                     double GetStartPTSTime() const;
 
                     /**
-                     * 设置Translate the starting PTS time of a segment, in seconds.
-                     * @param _startPTSTime Translate the starting PTS time of a segment, in seconds.
+                     * 设置Start PTS time of a translated recording clip, in seconds.
+                     * @param _startPTSTime Start PTS time of a translated recording clip, in seconds.
                      * 
                      */
                     void SetStartPTSTime(const double& _startPTSTime);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool StartPTSTimeHasBeenSet() const;
 
                     /**
-                     * 获取End PTS time of a translated segment, in seconds.
-                     * @return EndPTSTime End PTS time of a translated segment, in seconds.
+                     * 获取End PTS time of a translated recording clip, in seconds.
+                     * @return EndPTSTime End PTS time of a translated recording clip, in seconds.
                      * 
                      */
                     double GetEndPTSTime() const;
 
                     /**
-                     * 设置End PTS time of a translated segment, in seconds.
-                     * @param _endPTSTime End PTS time of a translated segment, in seconds.
+                     * 设置End PTS time of a translated recording clip, in seconds.
+                     * @param _endPTSTime End PTS time of a translated recording clip, in seconds.
                      * 
                      */
                     void SetEndPTSTime(const double& _endPTSTime);
@@ -131,19 +131,15 @@ namespace TencentCloud
                     bool TransHasBeenSet() const;
 
                     /**
-                     * 获取Translation started at UTC time.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return StartTime Translation started at UTC time.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return StartTime 
                      * 
                      */
                     std::string GetStartTime() const;
 
                     /**
-                     * 设置Translation started at UTC time.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _startTime Translation started at UTC time.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _startTime 
                      * 
                      */
                     void SetStartTime(const std::string& _startTime);
@@ -156,19 +152,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取Translation ends at UTC time.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return EndTime Translation ends at UTC time.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return EndTime 
                      * 
                      */
                     std::string GetEndTime() const;
 
                     /**
-                     * 设置Translation ends at UTC time.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _endTime Translation ends at UTC time.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _endTime 
                      * 
                      */
                     void SetEndTime(const std::string& _endTime);
@@ -181,19 +173,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取Steady-State tag.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SteadyState Steady-State tag.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return SteadyState 
                      * 
                      */
                     bool GetSteadyState() const;
 
                     /**
-                     * 设置Steady-State tag.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _steadyState Steady-State tag.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _steadyState 
                      * 
                      */
                     void SetSteadyState(const bool& _steadyState);
@@ -206,19 +194,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool SteadyStateHasBeenSet() const;
 
                     /**
-                     * 获取websocket and trtc real-time translation UserId.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return UserId websocket and trtc real-time translation UserId.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return UserId 
                      * 
                      */
                     std::string GetUserId() const;
 
                     /**
-                     * 设置websocket and trtc real-time translation UserId.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _userId websocket and trtc real-time translation UserId.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _userId 
                      * 
                      */
                     void SetUserId(const std::string& _userId);
@@ -239,13 +223,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_textHasBeenSet;
 
                     /**
-                     * Translate the starting PTS time of a segment, in seconds.
+                     * Start PTS time of a translated recording clip, in seconds.
                      */
                     double m_startPTSTime;
                     bool m_startPTSTimeHasBeenSet;
 
                     /**
-                     * End PTS time of a translated segment, in seconds.
+                     * End PTS time of a translated recording clip, in seconds.
                      */
                     double m_endPTSTime;
                     bool m_endPTSTimeHasBeenSet;
@@ -257,29 +241,25 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_transHasBeenSet;
 
                     /**
-                     * Translation started at UTC time.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * Translation ends at UTC time.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string m_endTime;
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * Steady-State tag.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     bool m_steadyState;
                     bool m_steadyStateHasBeenSet;
 
                     /**
-                     * websocket and trtc real-time translation UserId.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string m_userId;
                     bool m_userIdHasBeenSet;

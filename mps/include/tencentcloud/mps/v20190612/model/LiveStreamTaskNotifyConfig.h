@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Event notification configuration of a task.
+                * Event notification configuration for task processing.
                 */
                 class LiveStreamTaskNotifyConfig : public AbstractModel
                 {
@@ -48,12 +48,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Notification type:
-TDMQ-CMQ: message queue.
-"URL": When a URL is specified, HTTP callbacks are pushed to the address specified by NotifyUrl. The callback protocol is HTTP+JSON. The content of the packet body is the same as the output parameters of [ParseLiveStreamProcessNotification](https://www.tencentcloud.com/document/product/862/39229?from_cn_redirect=1).
+TDMQ-CMQ: Message Queue
+"URL": When a URL is specified, the HTTP callback is pushed to the address specified by NotifyUrl. The callback protocol is http+json. The content of the packet body is the same as the output parameters of the [ParseLiveStreamProcessNotification API](https://www.tencentcloud.com/document/product/862/39229?from_cn_redirect=1).
+
 <Font color="red"> Note: if it is unspecified or left blank, no callback will be sent. To send a callback, fill in the corresponding type value. </font>
                      * @return NotifyType Notification type:
-TDMQ-CMQ: message queue.
-"URL": When a URL is specified, HTTP callbacks are pushed to the address specified by NotifyUrl. The callback protocol is HTTP+JSON. The content of the packet body is the same as the output parameters of [ParseLiveStreamProcessNotification](https://www.tencentcloud.com/document/product/862/39229?from_cn_redirect=1).
+TDMQ-CMQ: Message Queue
+"URL": When a URL is specified, the HTTP callback is pushed to the address specified by NotifyUrl. The callback protocol is http+json. The content of the packet body is the same as the output parameters of the [ParseLiveStreamProcessNotification API](https://www.tencentcloud.com/document/product/862/39229?from_cn_redirect=1).
+
 <Font color="red"> Note: if it is unspecified or left blank, no callback will be sent. To send a callback, fill in the corresponding type value. </font>
                      * 
                      */
@@ -61,12 +63,14 @@ TDMQ-CMQ: message queue.
 
                     /**
                      * 设置Notification type:
-TDMQ-CMQ: message queue.
-"URL": When a URL is specified, HTTP callbacks are pushed to the address specified by NotifyUrl. The callback protocol is HTTP+JSON. The content of the packet body is the same as the output parameters of [ParseLiveStreamProcessNotification](https://www.tencentcloud.com/document/product/862/39229?from_cn_redirect=1).
+TDMQ-CMQ: Message Queue
+"URL": When a URL is specified, the HTTP callback is pushed to the address specified by NotifyUrl. The callback protocol is http+json. The content of the packet body is the same as the output parameters of the [ParseLiveStreamProcessNotification API](https://www.tencentcloud.com/document/product/862/39229?from_cn_redirect=1).
+
 <Font color="red"> Note: if it is unspecified or left blank, no callback will be sent. To send a callback, fill in the corresponding type value. </font>
                      * @param _notifyType Notification type:
-TDMQ-CMQ: message queue.
-"URL": When a URL is specified, HTTP callbacks are pushed to the address specified by NotifyUrl. The callback protocol is HTTP+JSON. The content of the packet body is the same as the output parameters of [ParseLiveStreamProcessNotification](https://www.tencentcloud.com/document/product/862/39229?from_cn_redirect=1).
+TDMQ-CMQ: Message Queue
+"URL": When a URL is specified, the HTTP callback is pushed to the address specified by NotifyUrl. The callback protocol is http+json. The content of the packet body is the same as the output parameters of the [ParseLiveStreamProcessNotification API](https://www.tencentcloud.com/document/product/862/39229?from_cn_redirect=1).
+
 <Font color="red"> Note: if it is unspecified or left blank, no callback will be sent. To send a callback, fill in the corresponding type value. </font>
                      * 
                      */
@@ -80,15 +84,15 @@ TDMQ-CMQ: message queue.
                     bool NotifyTypeHasBeenSet() const;
 
                     /**
-                     * 获取HTTP callback URL, required if `NotifyType` is set to `URL`
-                     * @return NotifyUrl HTTP callback URL, required if `NotifyType` is set to `URL`
+                     * 获取HTTP callback URL. This is required if NotifyType is URL.
+                     * @return NotifyUrl HTTP callback URL. This is required if NotifyType is URL.
                      * 
                      */
                     std::string GetNotifyUrl() const;
 
                     /**
-                     * 设置HTTP callback URL, required if `NotifyType` is set to `URL`
-                     * @param _notifyUrl HTTP callback URL, required if `NotifyType` is set to `URL`
+                     * 设置HTTP callback URL. This is required if NotifyType is URL.
+                     * @param _notifyUrl HTTP callback URL. This is required if NotifyType is URL.
                      * 
                      */
                     void SetNotifyUrl(const std::string& _notifyUrl);
@@ -185,19 +189,15 @@ TDMQ-CMQ: message queue.
                     bool TopicNameHasBeenSet() const;
 
                     /**
-                     * 获取Key used to generate a callback signature.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return NotifyKey Key used to generate a callback signature.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return NotifyKey 
                      * 
                      */
                     std::string GetNotifyKey() const;
 
                     /**
-                     * 设置Key used to generate a callback signature.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _notifyKey Key used to generate a callback signature.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _notifyKey 
                      * 
                      */
                     void SetNotifyKey(const std::string& _notifyKey);
@@ -213,15 +213,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Notification type:
-TDMQ-CMQ: message queue.
-"URL": When a URL is specified, HTTP callbacks are pushed to the address specified by NotifyUrl. The callback protocol is HTTP+JSON. The content of the packet body is the same as the output parameters of [ParseLiveStreamProcessNotification](https://www.tencentcloud.com/document/product/862/39229?from_cn_redirect=1).
+TDMQ-CMQ: Message Queue
+"URL": When a URL is specified, the HTTP callback is pushed to the address specified by NotifyUrl. The callback protocol is http+json. The content of the packet body is the same as the output parameters of the [ParseLiveStreamProcessNotification API](https://www.tencentcloud.com/document/product/862/39229?from_cn_redirect=1).
+
 <Font color="red"> Note: if it is unspecified or left blank, no callback will be sent. To send a callback, fill in the corresponding type value. </font>
                      */
                     std::string m_notifyType;
                     bool m_notifyTypeHasBeenSet;
 
                     /**
-                     * HTTP callback URL, required if `NotifyType` is set to `URL`
+                     * HTTP callback URL. This is required if NotifyType is URL.
                      */
                     std::string m_notifyUrl;
                     bool m_notifyUrlHasBeenSet;
@@ -251,8 +252,7 @@ TDMQ-CMQ: message queue.
                     bool m_topicNameHasBeenSet;
 
                     /**
-                     * Key used to generate a callback signature.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string m_notifyKey;
                     bool m_notifyKeyHasBeenSet;

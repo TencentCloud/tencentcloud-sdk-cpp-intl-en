@@ -48,15 +48,19 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Automatically selects custom areas.For the selected areas, the AI model is used to automatically detect and extract the target content.
-                     * @return AutoAreas Automatically selects custom areas.For the selected areas, the AI model is used to automatically detect and extract the target content.
+                     * 获取Automatically select a custom region.
+For the selected areas, the AI model is used to automatically detect and extract the target content.
+                     * @return AutoAreas Automatically select a custom region.
+For the selected areas, the AI model is used to automatically detect and extract the target content.
                      * 
                      */
                     std::vector<EraseArea> GetAutoAreas() const;
 
                     /**
-                     * 设置Automatically selects custom areas.For the selected areas, the AI model is used to automatically detect and extract the target content.
-                     * @param _autoAreas Automatically selects custom areas.For the selected areas, the AI model is used to automatically detect and extract the target content.
+                     * 设置Automatically select a custom region.
+For the selected areas, the AI model is used to automatically detect and extract the target content.
+                     * @param _autoAreas Automatically select a custom region.
+For the selected areas, the AI model is used to automatically detect and extract the target content.
                      * 
                      */
                     void SetAutoAreas(const std::vector<EraseArea>& _autoAreas);
@@ -113,7 +117,8 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Automatically selects custom areas.For the selected areas, the AI model is used to automatically detect and extract the target content.
+                     * Automatically select a custom region.
+For the selected areas, the AI model is used to automatically detect and extract the target content.
                      */
                     std::vector<EraseArea> m_autoAreas;
                     bool m_autoAreasHasBeenSet;

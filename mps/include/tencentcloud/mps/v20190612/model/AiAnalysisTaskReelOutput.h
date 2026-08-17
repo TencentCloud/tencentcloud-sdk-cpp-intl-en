@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * AI narration and video re-creation result info.
+                * AI narration and video re-creation result information
                 */
                 class AiAnalysisTaskReelOutput : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Path of the output video.
-                     * @return VideoPath Path of the output video.
+                     * 获取Path of the commentated video.
+                     * @return VideoPath Path of the commentated video.
                      * 
                      */
                     std::string GetVideoPath() const;
 
                     /**
-                     * 设置Path of the output video.
-                     * @param _videoPath Path of the output video.
+                     * 设置Path of the commentated video.
+                     * @param _videoPath Path of the commentated video.
                      * 
                      */
                     void SetVideoPath(const std::string& _videoPath);
@@ -69,31 +69,31 @@ namespace TencentCloud
                     bool VideoPathHasBeenSet() const;
 
                     /**
-                     * 获取Path list of the output videos.
+                     * 获取Path list of the commentated video.
 
-**Note**:.
-1. when returning a file, `VideoPath` returns a file path, and `VideoPaths` likewise populates an element with the same path.
-2. when multiple files are returned, `VideoPath` returns an empty string, and `VideoPaths` returns the file path list.
-                     * @return VideoPaths Path list of the output videos.
+**Note**:
+1. When returning a file, `VideoPath` returns a file path, and `VideoPaths` is likewise populated with an element of the same path.
+2. When multiple files are returned, `VideoPath` returns an empty string, and `VideoPaths` returns a file path list.
+                     * @return VideoPaths Path list of the commentated video.
 
-**Note**:.
-1. when returning a file, `VideoPath` returns a file path, and `VideoPaths` likewise populates an element with the same path.
-2. when multiple files are returned, `VideoPath` returns an empty string, and `VideoPaths` returns the file path list.
+**Note**:
+1. When returning a file, `VideoPath` returns a file path, and `VideoPaths` is likewise populated with an element of the same path.
+2. When multiple files are returned, `VideoPath` returns an empty string, and `VideoPaths` returns a file path list.
                      * 
                      */
                     std::vector<std::string> GetVideoPaths() const;
 
                     /**
-                     * 设置Path list of the output videos.
+                     * 设置Path list of the commentated video.
 
-**Note**:.
-1. when returning a file, `VideoPath` returns a file path, and `VideoPaths` likewise populates an element with the same path.
-2. when multiple files are returned, `VideoPath` returns an empty string, and `VideoPaths` returns the file path list.
-                     * @param _videoPaths Path list of the output videos.
+**Note**:
+1. When returning a file, `VideoPath` returns a file path, and `VideoPaths` is likewise populated with an element of the same path.
+2. When multiple files are returned, `VideoPath` returns an empty string, and `VideoPaths` returns a file path list.
+                     * @param _videoPaths Path list of the commentated video.
 
-**Note**:.
-1. when returning a file, `VideoPath` returns a file path, and `VideoPaths` likewise populates an element with the same path.
-2. when multiple files are returned, `VideoPath` returns an empty string, and `VideoPaths` returns the file path list.
+**Note**:
+1. When returning a file, `VideoPath` returns a file path, and `VideoPaths` is likewise populated with an element of the same path.
+2. When multiple files are returned, `VideoPath` returns an empty string, and `VideoPaths` returns a file path list.
                      * 
                      */
                     void SetVideoPaths(const std::vector<std::string>& _videoPaths);
@@ -106,18 +106,18 @@ namespace TencentCloud
                     bool VideoPathsHasBeenSet() const;
 
                     /**
-                     * 获取Script file path.
+                     * 获取Script file path
 
-                     * @return ScriptPath Script file path.
+                     * @return ScriptPath Script file path
 
                      * 
                      */
                     std::string GetScriptPath() const;
 
                     /**
-                     * 设置Script file path.
+                     * 设置Script file path
 
-                     * @param _scriptPath Script file path.
+                     * @param _scriptPath Script file path
 
                      * 
                      */
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool ScriptPathHasBeenSet() const;
 
                     /**
-                     * 获取Storage location of the output video.
-                     * @return OutputStorage Storage location of the output video.
+                     * 获取Storage location of the commentated video.
+                     * @return OutputStorage Storage location of the commentated video.
                      * 
                      */
                     TaskOutputStorage GetOutputStorage() const;
 
                     /**
-                     * 设置Storage location of the output video.
-                     * @param _outputStorage Storage location of the output video.
+                     * 设置Storage location of the commentated video.
+                     * @param _outputStorage Storage location of the commentated video.
                      * 
                      */
                     void SetOutputStorage(const TaskOutputStorage& _outputStorage);
@@ -154,30 +154,30 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Path of the output video.
+                     * Path of the commentated video.
                      */
                     std::string m_videoPath;
                     bool m_videoPathHasBeenSet;
 
                     /**
-                     * Path list of the output videos.
+                     * Path list of the commentated video.
 
-**Note**:.
-1. when returning a file, `VideoPath` returns a file path, and `VideoPaths` likewise populates an element with the same path.
-2. when multiple files are returned, `VideoPath` returns an empty string, and `VideoPaths` returns the file path list.
+**Note**:
+1. When returning a file, `VideoPath` returns a file path, and `VideoPaths` is likewise populated with an element of the same path.
+2. When multiple files are returned, `VideoPath` returns an empty string, and `VideoPaths` returns a file path list.
                      */
                     std::vector<std::string> m_videoPaths;
                     bool m_videoPathsHasBeenSet;
 
                     /**
-                     * Script file path.
+                     * Script file path
 
                      */
                     std::string m_scriptPath;
                     bool m_scriptPathHasBeenSet;
 
                     /**
-                     * Storage location of the output video.
+                     * Storage location of the commentated video.
                      */
                     TaskOutputStorage m_outputStorage;
                     bool m_outputStorageHasBeenSet;

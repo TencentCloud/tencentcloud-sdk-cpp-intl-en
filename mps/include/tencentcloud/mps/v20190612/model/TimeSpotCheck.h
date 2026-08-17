@@ -49,13 +49,13 @@ namespace TencentCloud
                     /**
                      * 获取Duration of each loop detection, in seconds. Value range:
 
- - Minimum value: 10.
- - Maximum value: 86400.
+- Minimum value: 10.
+- Maximum value: 86400.
 
                      * @return CheckDuration Duration of each loop detection, in seconds. Value range:
 
- - Minimum value: 10.
- - Maximum value: 86400.
+- Minimum value: 10.
+- Maximum value: 86400.
 
                      * 
                      */
@@ -64,13 +64,13 @@ namespace TencentCloud
                     /**
                      * 设置Duration of each loop detection, in seconds. Value range:
 
- - Minimum value: 10.
- - Maximum value: 86400.
+- Minimum value: 10.
+- Maximum value: 86400.
 
                      * @param _checkDuration Duration of each loop detection, in seconds. Value range:
 
- - Minimum value: 10.
- - Maximum value: 86400.
+- Minimum value: 10.
+- Maximum value: 86400.
 
                      * 
                      */
@@ -85,22 +85,22 @@ namespace TencentCloud
 
                     /**
                      * 获取Detection interval, in seconds. It indicates the duration after a detection is completed and before the next detection is conducted. Value range:
- - Minimum value: 10.
- - Maximum value: 3600.
+- Minimum value: 10.
+- Maximum value: 3600.
                      * @return CheckInterval Detection interval, in seconds. It indicates the duration after a detection is completed and before the next detection is conducted. Value range:
- - Minimum value: 10.
- - Maximum value: 3600.
+- Minimum value: 10.
+- Maximum value: 3600.
                      * 
                      */
                     uint64_t GetCheckInterval() const;
 
                     /**
                      * 设置Detection interval, in seconds. It indicates the duration after a detection is completed and before the next detection is conducted. Value range:
- - Minimum value: 10.
- - Maximum value: 3600.
+- Minimum value: 10.
+- Maximum value: 3600.
                      * @param _checkInterval Detection interval, in seconds. It indicates the duration after a detection is completed and before the next detection is conducted. Value range:
- - Minimum value: 10.
- - Maximum value: 3600.
+- Minimum value: 10.
+- Maximum value: 3600.
                      * 
                      */
                     void SetCheckInterval(const uint64_t& _checkInterval);
@@ -114,22 +114,22 @@ namespace TencentCloud
 
                     /**
                      * 获取Skipped opening duration, in seconds. Value range:
- - Minimum value: 1.
- - Maximum value: 1800.
+- Minimum value: 1.
+- Maximum value: 1800.
                      * @return SkipDuration Skipped opening duration, in seconds. Value range:
- - Minimum value: 1.
- - Maximum value: 1800.
+- Minimum value: 1.
+- Maximum value: 1800.
                      * 
                      */
                     uint64_t GetSkipDuration() const;
 
                     /**
                      * 设置Skipped opening duration, in seconds. Value range:
- - Minimum value: 1.
- - Maximum value: 1800.
+- Minimum value: 1.
+- Maximum value: 1800.
                      * @param _skipDuration Skipped opening duration, in seconds. Value range:
- - Minimum value: 1.
- - Maximum value: 1800.
+- Minimum value: 1.
+- Maximum value: 1800.
                      * 
                      */
                     void SetSkipDuration(const uint64_t& _skipDuration);
@@ -143,13 +143,13 @@ namespace TencentCloud
 
                     /**
                      * 获取Number of loops. Value range:
- - Minimum value: 0.
- - Maximum value: 1000.
+- Minimum value: 0.
+- Maximum value: 1000.
 
 If the value is 0 or not specified, it indicates that loops are executed until the video ends.
                      * @return CirclesNumber Number of loops. Value range:
- - Minimum value: 0.
- - Maximum value: 1000.
+- Minimum value: 0.
+- Maximum value: 1000.
 
 If the value is 0 or not specified, it indicates that loops are executed until the video ends.
                      * 
@@ -158,13 +158,13 @@ If the value is 0 or not specified, it indicates that loops are executed until t
 
                     /**
                      * 设置Number of loops. Value range:
- - Minimum value: 0.
- - Maximum value: 1000.
+- Minimum value: 0.
+- Maximum value: 1000.
 
 If the value is 0 or not specified, it indicates that loops are executed until the video ends.
                      * @param _circlesNumber Number of loops. Value range:
- - Minimum value: 0.
- - Maximum value: 1000.
+- Minimum value: 0.
+- Maximum value: 1000.
 
 If the value is 0 or not specified, it indicates that loops are executed until the video ends.
                      * 
@@ -183,8 +183,8 @@ If the value is 0 or not specified, it indicates that loops are executed until t
                     /**
                      * Duration of each loop detection, in seconds. Value range:
 
- - Minimum value: 10.
- - Maximum value: 86400.
+- Minimum value: 10.
+- Maximum value: 86400.
 
                      */
                     uint64_t m_checkDuration;
@@ -192,24 +192,24 @@ If the value is 0 or not specified, it indicates that loops are executed until t
 
                     /**
                      * Detection interval, in seconds. It indicates the duration after a detection is completed and before the next detection is conducted. Value range:
- - Minimum value: 10.
- - Maximum value: 3600.
+- Minimum value: 10.
+- Maximum value: 3600.
                      */
                     uint64_t m_checkInterval;
                     bool m_checkIntervalHasBeenSet;
 
                     /**
                      * Skipped opening duration, in seconds. Value range:
- - Minimum value: 1.
- - Maximum value: 1800.
+- Minimum value: 1.
+- Maximum value: 1800.
                      */
                     uint64_t m_skipDuration;
                     bool m_skipDurationHasBeenSet;
 
                     /**
                      * Number of loops. Value range:
- - Minimum value: 0.
- - Maximum value: 1000.
+- Minimum value: 0.
+- Maximum value: 1000.
 
 If the value is 0 or not specified, it indicates that loops are executed until the video ends.
                      */

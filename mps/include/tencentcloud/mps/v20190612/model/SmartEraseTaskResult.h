@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Smart erasure task result.
+                * Intelligent erasure task result
                 */
                 class SmartEraseTaskResult : public AbstractModel
                 {
@@ -49,15 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Task status, including PROCESSING, SUCCESS, and FAIL.
-                     * @return Status Task status, including PROCESSING, SUCCESS, and FAIL.
+                     * 获取Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
+                     * @return Status Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置Task status, including PROCESSING, SUCCESS, and FAIL.
-                     * @param _status Task status, including PROCESSING, SUCCESS, and FAIL.
+                     * 设置Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
+                     * @param _status Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -112,19 +112,15 @@ namespace TencentCloud
                     bool MessageHasBeenSet() const;
 
                     /**
-                     * 获取Input of the smart erasure task.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return Input Input of the smart erasure task.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取
+                     * @return Input 
                      * 
                      */
                     SmartEraseTaskInput GetInput() const;
 
                     /**
-                     * 设置Input of the smart erasure task.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _input Input of the smart erasure task.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置
+                     * @param _input 
                      * 
                      */
                     void SetInput(const SmartEraseTaskInput& _input);
@@ -137,19 +133,15 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool InputHasBeenSet() const;
 
                     /**
-                     * 获取Output of the smart erasure task.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return Output Output of the smart erasure task.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取
+                     * @return Output 
                      * 
                      */
                     AiAnalysisTaskDelLogoOutput GetOutput() const;
 
                     /**
-                     * 设置Output of the smart erasure task.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _output Output of the smart erasure task.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置
+                     * @param _output 
                      * 
                      */
                     void SetOutput(const AiAnalysisTaskDelLogoOutput& _output);
@@ -162,15 +154,15 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool OutputHasBeenSet() const;
 
                     /**
-                     * 获取Task progress.		
-                     * @return Progress Task progress.		
+                     * 获取Task progress.	
+                     * @return Progress Task progress.	
                      * 
                      */
                     uint64_t GetProgress() const;
 
                     /**
-                     * 设置Task progress.		
-                     * @param _progress Task progress.		
+                     * 设置Task progress.	
+                     * @param _progress Task progress.	
                      * 
                      */
                     void SetProgress(const uint64_t& _progress);
@@ -183,15 +175,15 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool ProgressHasBeenSet() const;
 
                     /**
-                     * 获取Task execution start time in ISO datetime format.
-                     * @return BeginProcessTime Task execution start time in ISO datetime format.
+                     * 获取Starting time of task execution, in ISO date and time format.
+                     * @return BeginProcessTime Starting time of task execution, in ISO date and time format.
                      * 
                      */
                     std::string GetBeginProcessTime() const;
 
                     /**
-                     * 设置Task execution start time in ISO datetime format.
-                     * @param _beginProcessTime Task execution start time in ISO datetime format.
+                     * 设置Starting time of task execution, in ISO date and time format.
+                     * @param _beginProcessTime Starting time of task execution, in ISO date and time format.
                      * 
                      */
                     void SetBeginProcessTime(const std::string& _beginProcessTime);
@@ -204,15 +196,15 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool BeginProcessTimeHasBeenSet() const;
 
                     /**
-                     * 获取Task execution completion time in ISO datetime format.
-                     * @return FinishTime Task execution completion time in ISO datetime format.
+                     * 获取Task completion time, in ISO date and time format.
+                     * @return FinishTime Task completion time, in ISO date and time format.
                      * 
                      */
                     std::string GetFinishTime() const;
 
                     /**
-                     * 设置Task execution completion time in ISO datetime format.
-                     * @param _finishTime Task execution completion time in ISO datetime format.
+                     * 设置Task completion time, in ISO date and time format.
+                     * @param _finishTime Task completion time, in ISO date and time format.
                      * 
                      */
                     void SetFinishTime(const std::string& _finishTime);
@@ -227,7 +219,7 @@ Note: This field may return null, indicating that no valid value can be obtained
                 private:
 
                     /**
-                     * Task status, including PROCESSING, SUCCESS, and FAIL.
+                     * Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
@@ -245,33 +237,31 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool m_messageHasBeenSet;
 
                     /**
-                     * Input of the smart erasure task.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
                      */
                     SmartEraseTaskInput m_input;
                     bool m_inputHasBeenSet;
 
                     /**
-                     * Output of the smart erasure task.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
                      */
                     AiAnalysisTaskDelLogoOutput m_output;
                     bool m_outputHasBeenSet;
 
                     /**
-                     * Task progress.		
+                     * Task progress.	
                      */
                     uint64_t m_progress;
                     bool m_progressHasBeenSet;
 
                     /**
-                     * Task execution start time in ISO datetime format.
+                     * Starting time of task execution, in ISO date and time format.
                      */
                     std::string m_beginProcessTime;
                     bool m_beginProcessTimeHasBeenSet;
 
                     /**
-                     * Task execution completion time in ISO datetime format.
+                     * Task completion time, in ISO date and time format.
                      */
                     std::string m_finishTime;
                     bool m_finishTimeHasBeenSet;

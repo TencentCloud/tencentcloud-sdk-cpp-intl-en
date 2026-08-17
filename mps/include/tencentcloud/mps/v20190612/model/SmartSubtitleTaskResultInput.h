@@ -69,19 +69,15 @@ namespace TencentCloud
                     bool DefinitionHasBeenSet() const;
 
                     /**
-                     * 获取<p>Custom smart subtitle parameter. It takes effect when Definition is set to 0.<br>This parameter is used in highly customized scenarios. We recommend that you use Definition to specify smart subtitle parameters.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return RawParameter <p>Custom smart subtitle parameter. It takes effect when Definition is set to 0.<br>This parameter is used in highly customized scenarios. We recommend that you use Definition to specify smart subtitle parameters.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return RawParameter 
                      * 
                      */
                     RawSmartSubtitleParameter GetRawParameter() const;
 
                     /**
-                     * 设置<p>Custom smart subtitle parameter. It takes effect when Definition is set to 0.<br>This parameter is used in highly customized scenarios. We recommend that you use Definition to specify smart subtitle parameters.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _rawParameter <p>Custom smart subtitle parameter. It takes effect when Definition is set to 0.<br>This parameter is used in highly customized scenarios. We recommend that you use Definition to specify smart subtitle parameters.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _rawParameter 
                      * 
                      */
                     void SetRawParameter(const RawSmartSubtitleParameter& _rawParameter);
@@ -123,8 +119,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_definitionHasBeenSet;
 
                     /**
-                     * <p>Custom smart subtitle parameter. It takes effect when Definition is set to 0.<br>This parameter is used in highly customized scenarios. We recommend that you use Definition to specify smart subtitle parameters.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     RawSmartSubtitleParameter m_rawParameter;
                     bool m_rawParameterHasBeenSet;

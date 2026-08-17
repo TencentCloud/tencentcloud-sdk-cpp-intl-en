@@ -73,10 +73,8 @@ namespace TencentCloud
                     bool InnerDownloadUrlHasBeenSet() const;
 
                     /**
-                     * 获取Filename. This field will be disused soon.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Filenames Filename. This field will be disused soon.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Filename, this field is gradually being deprecated.
+                     * @return Filenames Filename, this field is gradually being deprecated.
                      * @deprecated
                      */
                     std::vector<std::string> GetFilenames() const;
@@ -117,8 +115,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_innerDownloadUrlHasBeenSet;
 
                     /**
-                     * Filename. This field will be disused soon.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Filename, this field is gradually being deprecated.
                      */
                     std::vector<std::string> m_filenames;
                     bool m_filenamesHasBeenSet;

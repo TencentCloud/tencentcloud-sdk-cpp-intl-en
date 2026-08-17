@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The scheme ID.
-                     * @return ScheduleId The scheme ID.
+                     * 获取Orchestration ID.
+                     * @return ScheduleId Orchestration ID.
                      * 
                      */
                     int64_t GetScheduleId() const;
@@ -60,7 +60,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The scheme ID.
+                     * Orchestration ID.
                      */
                     int64_t m_scheduleId;
                     bool m_scheduleIdHasBeenSet;

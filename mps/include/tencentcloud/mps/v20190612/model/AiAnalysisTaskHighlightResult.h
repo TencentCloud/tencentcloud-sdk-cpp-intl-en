@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * The result of an intelligent highlight generation task.
+                * Result type of the intelligent highlight
                 */
                 class AiAnalysisTaskHighlightResult : public AbstractModel
                 {
@@ -49,15 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The task status. Valid values: `PROCESSING`, `SUCCESS`, `FAIL`.
-                     * @return Status The task status. Valid values: `PROCESSING`, `SUCCESS`, `FAIL`.
+                     * 获取Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
+                     * @return Status Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置The task status. Valid values: `PROCESSING`, `SUCCESS`, `FAIL`.
-                     * @param _status The task status. Valid values: `PROCESSING`, `SUCCESS`, `FAIL`.
+                     * 设置Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
+                     * @param _status Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -70,15 +70,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Error code. `0`: The task succeeded; other values: The task failed.
-                     * @return ErrCode Error code. `0`: The task succeeded; other values: The task failed.
+                     * 获取Error code. 0: Task successful. Other values: Task failed.
+                     * @return ErrCode Error code. 0: Task successful. Other values: Task failed.
                      * 
                      */
                     int64_t GetErrCode() const;
 
                     /**
-                     * 设置Error code. `0`: The task succeeded; other values: The task failed.
-                     * @param _errCode Error code. `0`: The task succeeded; other values: The task failed.
+                     * 设置Error code. 0: Task successful. Other values: Task failed.
+                     * @param _errCode Error code. 0: Task successful. Other values: Task failed.
                      * 
                      */
                     void SetErrCode(const int64_t& _errCode);
@@ -91,15 +91,15 @@ namespace TencentCloud
                     bool ErrCodeHasBeenSet() const;
 
                     /**
-                     * 获取The error message.
-                     * @return Message The error message.
+                     * 获取Error message.
+                     * @return Message Error message.
                      * 
                      */
                     std::string GetMessage() const;
 
                     /**
-                     * 设置The error message.
-                     * @param _message The error message.
+                     * 设置Error message.
+                     * @param _message Error message.
                      * 
                      */
                     void SetMessage(const std::string& _message);
@@ -112,15 +112,15 @@ namespace TencentCloud
                     bool MessageHasBeenSet() const;
 
                     /**
-                     * 获取The input of the intelligent highlight generation task.
-                     * @return Input The input of the intelligent highlight generation task.
+                     * 获取Input of the intelligent highlight task.
+                     * @return Input Input of the intelligent highlight task.
                      * 
                      */
                     AiAnalysisTaskHighlightInput GetInput() const;
 
                     /**
-                     * 设置The input of the intelligent highlight generation task.
-                     * @param _input The input of the intelligent highlight generation task.
+                     * 设置Input of the intelligent highlight task.
+                     * @param _input Input of the intelligent highlight task.
                      * 
                      */
                     void SetInput(const AiAnalysisTaskHighlightInput& _input);
@@ -133,19 +133,15 @@ namespace TencentCloud
                     bool InputHasBeenSet() const;
 
                     /**
-                     * 获取The output of the intelligent highlight generation task.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Output The output of the intelligent highlight generation task.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return Output 
                      * 
                      */
                     AiAnalysisTaskHighlightOutput GetOutput() const;
 
                     /**
-                     * 设置The output of the intelligent highlight generation task.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _output The output of the intelligent highlight generation task.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _output 
                      * 
                      */
                     void SetOutput(const AiAnalysisTaskHighlightOutput& _output);
@@ -160,32 +156,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * The task status. Valid values: `PROCESSING`, `SUCCESS`, `FAIL`.
+                     * Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Error code. `0`: The task succeeded; other values: The task failed.
+                     * Error code. 0: Task successful. Other values: Task failed.
                      */
                     int64_t m_errCode;
                     bool m_errCodeHasBeenSet;
 
                     /**
-                     * The error message.
+                     * Error message.
                      */
                     std::string m_message;
                     bool m_messageHasBeenSet;
 
                     /**
-                     * The input of the intelligent highlight generation task.
+                     * Input of the intelligent highlight task.
                      */
                     AiAnalysisTaskHighlightInput m_input;
                     bool m_inputHasBeenSet;
 
                     /**
-                     * The output of the intelligent highlight generation task.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     AiAnalysisTaskHighlightOutput m_output;
                     bool m_outputHasBeenSet;

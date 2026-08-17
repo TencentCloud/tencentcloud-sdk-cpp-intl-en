@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Total number of backups.
-                     * @return TotalCount Total number of backups.
+                     * 获取<p>Total number of backups.</p>
+                     * @return TotalCount <p>Total number of backups.</p>
                      * 
                      */
                     int64_t GetTotalCount() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取Array of instance backups.
-                     * @return BackupSet Array of instance backups.
+                     * 获取<p>Backup array of the instance.</p>
+                     * @return BackupSet <p>Backup array of the instance.</p>
                      * 
                      */
                     std::vector<RedisBackupSet> GetBackupSet() const;
@@ -75,13 +75,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Total number of backups.
+                     * <p>Total number of backups.</p>
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * Array of instance backups.
+                     * <p>Backup array of the instance.</p>
                      */
                     std::vector<RedisBackupSet> m_backupSet;
                     bool m_backupSetHasBeenSet;

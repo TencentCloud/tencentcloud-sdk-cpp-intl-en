@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * The issues detected by quality control.
+                * Quality inspection exception item.
                 */
                 class QualityControlResult : public AbstractModel
                 {
@@ -48,87 +48,87 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Exception type. valid values:.
+                     * 获取Exception type. Valid values:
 Jitter: jitter.
-Blur: specifies the blur effect.
-LowLighting: specifies low light.
+Blur: blurry.
+LowLighting: low light.
 HighLighting: overexposure.
-CrashScreen: specifies screen glitch.
-BlackWhiteEdge: specifies the black and white edges.
-SolidColorScreen: specifies the solid color screen.
-Noise: specifies the noise.
-Mosaic: mosaic.
-QRCode: specifies the qr code.
-AppletCode: specifies the mini program code.
-BarCode: specifies the barcode.
-LowVoice: specifies the bass.
-HighVoice: specifies high voice detection.
-NoVoice: specifies mute.
-LowEvaluation: specifies the video no-reference score (MOS) is below the threshold.
-AudioEvaluation: specifies the audio no-reference scoring (MOS) is below the threshold.
-AudioNoise: specifies the audio noise.
-                     * @return Type Exception type. valid values:.
+CrashScreen: screen glitch.
+BlackWhiteEdge: Black and white edges
+SolidColorScreen: solid color screen.
+Noise: noise.
+Mosaic: Mosaic
+QRCode: QR code.
+AppletCode: Mini program code.
+BarCode: barcode.
+LowVoice: bass.
+HighVoice: high voice detection.
+NoVoice: mute.
+LowEvaluation: The video no-reference score (MOS) is below the threshold.
+AudioEvaluation: The audio no-reference scoring (MOS) is below the threshold.
+AudioNoise: Audio noise.
+                     * @return Type Exception type. Valid values:
 Jitter: jitter.
-Blur: specifies the blur effect.
-LowLighting: specifies low light.
+Blur: blurry.
+LowLighting: low light.
 HighLighting: overexposure.
-CrashScreen: specifies screen glitch.
-BlackWhiteEdge: specifies the black and white edges.
-SolidColorScreen: specifies the solid color screen.
-Noise: specifies the noise.
-Mosaic: mosaic.
-QRCode: specifies the qr code.
-AppletCode: specifies the mini program code.
-BarCode: specifies the barcode.
-LowVoice: specifies the bass.
-HighVoice: specifies high voice detection.
-NoVoice: specifies mute.
-LowEvaluation: specifies the video no-reference score (MOS) is below the threshold.
-AudioEvaluation: specifies the audio no-reference scoring (MOS) is below the threshold.
-AudioNoise: specifies the audio noise.
+CrashScreen: screen glitch.
+BlackWhiteEdge: Black and white edges
+SolidColorScreen: solid color screen.
+Noise: noise.
+Mosaic: Mosaic
+QRCode: QR code.
+AppletCode: Mini program code.
+BarCode: barcode.
+LowVoice: bass.
+HighVoice: high voice detection.
+NoVoice: mute.
+LowEvaluation: The video no-reference score (MOS) is below the threshold.
+AudioEvaluation: The audio no-reference scoring (MOS) is below the threshold.
+AudioNoise: Audio noise.
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Exception type. valid values:.
+                     * 设置Exception type. Valid values:
 Jitter: jitter.
-Blur: specifies the blur effect.
-LowLighting: specifies low light.
+Blur: blurry.
+LowLighting: low light.
 HighLighting: overexposure.
-CrashScreen: specifies screen glitch.
-BlackWhiteEdge: specifies the black and white edges.
-SolidColorScreen: specifies the solid color screen.
-Noise: specifies the noise.
-Mosaic: mosaic.
-QRCode: specifies the qr code.
-AppletCode: specifies the mini program code.
-BarCode: specifies the barcode.
-LowVoice: specifies the bass.
-HighVoice: specifies high voice detection.
-NoVoice: specifies mute.
-LowEvaluation: specifies the video no-reference score (MOS) is below the threshold.
-AudioEvaluation: specifies the audio no-reference scoring (MOS) is below the threshold.
-AudioNoise: specifies the audio noise.
-                     * @param _type Exception type. valid values:.
+CrashScreen: screen glitch.
+BlackWhiteEdge: Black and white edges
+SolidColorScreen: solid color screen.
+Noise: noise.
+Mosaic: Mosaic
+QRCode: QR code.
+AppletCode: Mini program code.
+BarCode: barcode.
+LowVoice: bass.
+HighVoice: high voice detection.
+NoVoice: mute.
+LowEvaluation: The video no-reference score (MOS) is below the threshold.
+AudioEvaluation: The audio no-reference scoring (MOS) is below the threshold.
+AudioNoise: Audio noise.
+                     * @param _type Exception type. Valid values:
 Jitter: jitter.
-Blur: specifies the blur effect.
-LowLighting: specifies low light.
+Blur: blurry.
+LowLighting: low light.
 HighLighting: overexposure.
-CrashScreen: specifies screen glitch.
-BlackWhiteEdge: specifies the black and white edges.
-SolidColorScreen: specifies the solid color screen.
-Noise: specifies the noise.
-Mosaic: mosaic.
-QRCode: specifies the qr code.
-AppletCode: specifies the mini program code.
-BarCode: specifies the barcode.
-LowVoice: specifies the bass.
-HighVoice: specifies high voice detection.
-NoVoice: specifies mute.
-LowEvaluation: specifies the video no-reference score (MOS) is below the threshold.
-AudioEvaluation: specifies the audio no-reference scoring (MOS) is below the threshold.
-AudioNoise: specifies the audio noise.
+CrashScreen: screen glitch.
+BlackWhiteEdge: Black and white edges
+SolidColorScreen: solid color screen.
+Noise: noise.
+Mosaic: Mosaic
+QRCode: QR code.
+AppletCode: Mini program code.
+BarCode: barcode.
+LowVoice: bass.
+HighVoice: high voice detection.
+NoVoice: mute.
+LowEvaluation: The video no-reference score (MOS) is below the threshold.
+AudioEvaluation: The audio no-reference scoring (MOS) is below the threshold.
+AudioNoise: Audio noise.
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -141,15 +141,15 @@ AudioNoise: specifies the audio noise.
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取The information of a checked segment in quality control.
-                     * @return QualityControlItems The information of a checked segment in quality control.
+                     * 获取Quality inspection result item.
+                     * @return QualityControlItems Quality inspection result item.
                      * 
                      */
                     std::vector<QualityControlItem> GetQualityControlItems() const;
 
                     /**
-                     * 设置The information of a checked segment in quality control.
-                     * @param _qualityControlItems The information of a checked segment in quality control.
+                     * 设置Quality inspection result item.
+                     * @param _qualityControlItems Quality inspection result item.
                      * 
                      */
                     void SetQualityControlItems(const std::vector<QualityControlItem>& _qualityControlItems);
@@ -164,31 +164,31 @@ AudioNoise: specifies the audio noise.
                 private:
 
                     /**
-                     * Exception type. valid values:.
+                     * Exception type. Valid values:
 Jitter: jitter.
-Blur: specifies the blur effect.
-LowLighting: specifies low light.
+Blur: blurry.
+LowLighting: low light.
 HighLighting: overexposure.
-CrashScreen: specifies screen glitch.
-BlackWhiteEdge: specifies the black and white edges.
-SolidColorScreen: specifies the solid color screen.
-Noise: specifies the noise.
-Mosaic: mosaic.
-QRCode: specifies the qr code.
-AppletCode: specifies the mini program code.
-BarCode: specifies the barcode.
-LowVoice: specifies the bass.
-HighVoice: specifies high voice detection.
-NoVoice: specifies mute.
-LowEvaluation: specifies the video no-reference score (MOS) is below the threshold.
-AudioEvaluation: specifies the audio no-reference scoring (MOS) is below the threshold.
-AudioNoise: specifies the audio noise.
+CrashScreen: screen glitch.
+BlackWhiteEdge: Black and white edges
+SolidColorScreen: solid color screen.
+Noise: noise.
+Mosaic: Mosaic
+QRCode: QR code.
+AppletCode: Mini program code.
+BarCode: barcode.
+LowVoice: bass.
+HighVoice: high voice detection.
+NoVoice: mute.
+LowEvaluation: The video no-reference score (MOS) is below the threshold.
+AudioEvaluation: The audio no-reference scoring (MOS) is below the threshold.
+AudioNoise: Audio noise.
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * The information of a checked segment in quality control.
+                     * Quality inspection result item.
                      */
                     std::vector<QualityControlItem> m_qualityControlItems;
                     bool m_qualityControlItemsHasBeenSet;

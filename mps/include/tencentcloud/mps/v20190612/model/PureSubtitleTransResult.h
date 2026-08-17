@@ -49,11 +49,11 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Task status (the three valid values are as follows):
+                     * 获取Task status (the three valid values are as follows): 
 - PROCESSING
 - SUCCESS 
 - FAIL
-                     * @return Status Task status (the three valid values are as follows):
+                     * @return Status Task status (the three valid values are as follows): 
 - PROCESSING
 - SUCCESS 
 - FAIL
@@ -62,11 +62,11 @@ namespace TencentCloud
                     std::string GetStatus() const;
 
                     /**
-                     * 设置Task status (the three valid values are as follows):
+                     * 设置Task status (the three valid values are as follows): 
 - PROCESSING
 - SUCCESS 
 - FAIL
-                     * @param _status Task status (the three valid values are as follows):
+                     * @param _status Task status (the three valid values are as follows): 
 - PROCESSING
 - SUCCESS 
 - FAIL
@@ -166,19 +166,15 @@ namespace TencentCloud
                     bool InputHasBeenSet() const;
 
                     /**
-                     * 获取Translation output result of pure subtitle files.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Output Translation output result of pure subtitle files.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return Output 
                      * 
                      */
                     PureSubtitleTransResultOutput GetOutput() const;
 
                     /**
-                     * 设置Translation output result of pure subtitle files.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _output Translation output result of pure subtitle files.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _output 
                      * 
                      */
                     void SetOutput(const PureSubtitleTransResultOutput& _output);
@@ -214,7 +210,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Task status (the three valid values are as follows):
+                     * Task status (the three valid values are as follows): 
 - PROCESSING
 - SUCCESS 
 - FAIL
@@ -247,8 +243,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_inputHasBeenSet;
 
                     /**
-                     * Translation output result of pure subtitle files.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     PureSubtitleTransResultOutput m_output;
                     bool m_outputHasBeenSet;

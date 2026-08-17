@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Hotword switch.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return Switch Hotword switch.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取
+                     * @return Switch 
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Hotword switch.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _switch Hotword switch.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置
+                     * @param _switch 
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -72,19 +68,15 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取Hotword lexicon ID.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return LibraryId Hotword lexicon ID.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取
+                     * @return LibraryId 
                      * 
                      */
                     std::string GetLibraryId() const;
 
                     /**
-                     * 设置Hotword lexicon ID.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _libraryId Hotword lexicon ID.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置
+                     * @param _libraryId 
                      * 
                      */
                     void SetLibraryId(const std::string& _libraryId);
@@ -99,15 +91,13 @@ Note: This field may return null, indicating that no valid value can be obtained
                 private:
 
                     /**
-                     * Hotword switch.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * Hotword lexicon ID.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string m_libraryId;
                     bool m_libraryIdHasBeenSet;

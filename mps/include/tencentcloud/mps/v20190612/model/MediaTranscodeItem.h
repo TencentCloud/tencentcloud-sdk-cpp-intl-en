@@ -38,7 +38,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Transcoding information
+                * Transcoding info
                 */
                 class MediaTranscodeItem : public AbstractModel
                 {
@@ -50,15 +50,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Target bucket of an output file.
-                     * @return OutputStorage Target bucket of an output file.
+                     * 获取Target storage of the transcoded file.
+                     * @return OutputStorage Target storage of the transcoded file.
                      * 
                      */
                     TaskOutputStorage GetOutputStorage() const;
 
                     /**
-                     * 设置Target bucket of an output file.
-                     * @param _outputStorage Target bucket of an output file.
+                     * 设置Target storage of the transcoded file.
+                     * @param _outputStorage Target storage of the transcoded file.
                      * 
                      */
                     void SetOutputStorage(const TaskOutputStorage& _outputStorage);
@@ -71,15 +71,15 @@ namespace TencentCloud
                     bool OutputStorageHasBeenSet() const;
 
                     /**
-                     * 获取Path to an output video file.
-                     * @return Path Path to an output video file.
+                     * 获取Video file path after transcoding.
+                     * @return Path Video file path after transcoding.
                      * 
                      */
                     std::string GetPath() const;
 
                     /**
-                     * 设置Path to an output video file.
-                     * @param _path Path to an output video file.
+                     * 设置Video file path after transcoding.
+                     * @param _path Video file path after transcoding.
                      * 
                      */
                     void SetPath(const std::string& _path);
@@ -92,15 +92,15 @@ namespace TencentCloud
                     bool PathHasBeenSet() const;
 
                     /**
-                     * 获取Transcoding specification ID. For more information, please see [Transcoding Parameter Template](https://intl.cloud.tencent.com/document/product/266/33478?from_cn_redirect=1#.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF).
-                     * @return Definition Transcoding specification ID. For more information, please see [Transcoding Parameter Template](https://intl.cloud.tencent.com/document/product/266/33478?from_cn_redirect=1#.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF).
+                     * 获取Transcoding specification ID. Please refer to the transcoding parameter template (https://www.tencentcloud.com/document/product/862/37042?from_cn_redirect=1).
+                     * @return Definition Transcoding specification ID. Please refer to the transcoding parameter template (https://www.tencentcloud.com/document/product/862/37042?from_cn_redirect=1).
                      * 
                      */
                     int64_t GetDefinition() const;
 
                     /**
-                     * 设置Transcoding specification ID. For more information, please see [Transcoding Parameter Template](https://intl.cloud.tencent.com/document/product/266/33478?from_cn_redirect=1#.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF).
-                     * @param _definition Transcoding specification ID. For more information, please see [Transcoding Parameter Template](https://intl.cloud.tencent.com/document/product/266/33478?from_cn_redirect=1#.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF).
+                     * 设置Transcoding specification ID. Please refer to the transcoding parameter template (https://www.tencentcloud.com/document/product/862/37042?from_cn_redirect=1).
+                     * @param _definition Transcoding specification ID. Please refer to the transcoding parameter template (https://www.tencentcloud.com/document/product/862/37042?from_cn_redirect=1).
                      * 
                      */
                     void SetDefinition(const int64_t& _definition);
@@ -113,15 +113,15 @@ namespace TencentCloud
                     bool DefinitionHasBeenSet() const;
 
                     /**
-                     * 获取Sum of the average bitrate of a video stream and that of an audio stream in bps.
-                     * @return Bitrate Sum of the average bitrate of a video stream and that of an audio stream in bps.
+                     * 获取Sum of the average video stream bitrate and the average audio stream bit rate. Measurement unit: bps.
+                     * @return Bitrate Sum of the average video stream bitrate and the average audio stream bit rate. Measurement unit: bps.
                      * 
                      */
                     int64_t GetBitrate() const;
 
                     /**
-                     * 设置Sum of the average bitrate of a video stream and that of an audio stream in bps.
-                     * @param _bitrate Sum of the average bitrate of a video stream and that of an audio stream in bps.
+                     * 设置Sum of the average video stream bitrate and the average audio stream bit rate. Measurement unit: bps.
+                     * @param _bitrate Sum of the average video stream bitrate and the average audio stream bit rate. Measurement unit: bps.
                      * 
                      */
                     void SetBitrate(const int64_t& _bitrate);
@@ -134,15 +134,15 @@ namespace TencentCloud
                     bool BitrateHasBeenSet() const;
 
                     /**
-                     * 获取Maximum value of the height of a video stream in px.
-                     * @return Height Maximum value of the height of a video stream in px.
+                     * 获取Maximum value of video stream height, measurement unit: px.
+                     * @return Height Maximum value of video stream height, measurement unit: px.
                      * 
                      */
                     int64_t GetHeight() const;
 
                     /**
-                     * 设置Maximum value of the height of a video stream in px.
-                     * @param _height Maximum value of the height of a video stream in px.
+                     * 设置Maximum value of video stream height, measurement unit: px.
+                     * @param _height Maximum value of video stream height, measurement unit: px.
                      * 
                      */
                     void SetHeight(const int64_t& _height);
@@ -155,15 +155,15 @@ namespace TencentCloud
                     bool HeightHasBeenSet() const;
 
                     /**
-                     * 获取Maximum value of the width of a video stream in px.
-                     * @return Width Maximum value of the width of a video stream in px.
+                     * 获取Maximum value of the video stream width in px.
+                     * @return Width Maximum value of the video stream width in px.
                      * 
                      */
                     int64_t GetWidth() const;
 
                     /**
-                     * 设置Maximum value of the width of a video stream in px.
-                     * @param _width Maximum value of the width of a video stream in px.
+                     * 设置Maximum value of the video stream width in px.
+                     * @param _width Maximum value of the video stream width in px.
                      * 
                      */
                     void SetWidth(const int64_t& _width);
@@ -176,15 +176,15 @@ namespace TencentCloud
                     bool WidthHasBeenSet() const;
 
                     /**
-                     * 获取Total size of a media file in bytes (which is the sum of size of m3u8 and ts files if the video is in HLS format).
-                     * @return Size Total size of a media file in bytes (which is the sum of size of m3u8 and ts files if the video is in HLS format).
+                     * 获取Total size of media files (when the video is HLS, the size is the sum of m3u8 and ts file sizes), measurement unit: byte.
+                     * @return Size Total size of media files (when the video is HLS, the size is the sum of m3u8 and ts file sizes), measurement unit: byte.
                      * 
                      */
                     int64_t GetSize() const;
 
                     /**
-                     * 设置Total size of a media file in bytes (which is the sum of size of m3u8 and ts files if the video is in HLS format).
-                     * @param _size Total size of a media file in bytes (which is the sum of size of m3u8 and ts files if the video is in HLS format).
+                     * 设置Total size of media files (when the video is HLS, the size is the sum of m3u8 and ts file sizes), measurement unit: byte.
+                     * @param _size Total size of media files (when the video is HLS, the size is the sum of m3u8 and ts file sizes), measurement unit: byte.
                      * 
                      */
                     void SetSize(const int64_t& _size);
@@ -197,15 +197,15 @@ namespace TencentCloud
                     bool SizeHasBeenSet() const;
 
                     /**
-                     * 获取Video duration in seconds.
-                     * @return Duration Video duration in seconds.
+                     * 获取Video duration, in seconds.
+                     * @return Duration Video duration, in seconds.
                      * 
                      */
                     double GetDuration() const;
 
                     /**
-                     * 设置Video duration in seconds.
-                     * @param _duration Video duration in seconds.
+                     * 设置Video duration, in seconds.
+                     * @param _duration Video duration, in seconds.
                      * 
                      */
                     void SetDuration(const double& _duration);
@@ -218,15 +218,15 @@ namespace TencentCloud
                     bool DurationHasBeenSet() const;
 
                     /**
-                     * 获取Container, such as m4a and mp4.
-                     * @return Container Container, such as m4a and mp4.
+                     * 获取Container type, such as m4a and mp4.
+                     * @return Container Container type, such as m4a and mp4.
                      * 
                      */
                     std::string GetContainer() const;
 
                     /**
-                     * 设置Container, such as m4a and mp4.
-                     * @param _container Container, such as m4a and mp4.
+                     * 设置Container type, such as m4a and mp4.
+                     * @param _container Container type, such as m4a and mp4.
                      * 
                      */
                     void SetContainer(const std::string& _container);
@@ -239,15 +239,15 @@ namespace TencentCloud
                     bool ContainerHasBeenSet() const;
 
                     /**
-                     * 获取MD5 value of a video.
-                     * @return Md5 MD5 value of a video.
+                     * 获取md5 value of the video.
+                     * @return Md5 md5 value of the video.
                      * 
                      */
                     std::string GetMd5() const;
 
                     /**
-                     * 设置MD5 value of a video.
-                     * @param _md5 MD5 value of a video.
+                     * 设置md5 value of the video.
+                     * @param _md5 md5 value of the video.
                      * 
                      */
                     void SetMd5(const std::string& _md5);
@@ -261,18 +261,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Audio stream information.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return AudioStreamSet Audio stream information.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<MediaAudioStreamItem> GetAudioStreamSet() const;
 
                     /**
                      * 设置Audio stream information.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _audioStreamSet Audio stream information.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetAudioStreamSet(const std::vector<MediaAudioStreamItem>& _audioStreamSet);
@@ -286,18 +282,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Video stream information.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return VideoStreamSet Video stream information.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<MediaVideoStreamItem> GetVideoStreamSet() const;
 
                     /**
                      * 设置Video stream information.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _videoStreamSet Video stream information.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetVideoStreamSet(const std::vector<MediaVideoStreamItem>& _videoStreamSet);
@@ -310,63 +302,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool VideoStreamSetHasBeenSet() const;
 
                     /**
-                     * 获取Enhancement items used for video transcoding. Descriptions of enhancement items:
-<li>hdr: HDR configuration</li>
-<li>wd_fps: configuration of frame interpolation for higher frame rate</li>
-<li>video_super_resolution: 	super-resolution configuration</li>
-<li>repair: comprehensive enhancement configuration</li>
-<li>denoise: video denoising configuration</li>
-<Li>color_enhance: color enhancement configuration</li>
-<Li>scratch: scratch removal configuration</li>
-<li>artifact: artifact (glitch) removal configuration</li>
-<li>sharp: detail enhancement configuration</li>
-<Li>low_light: low-light enhancement configuration</li>
-<Li>face_enhance: face enhancement configuration</li>
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return CallBackExtInfo Enhancement items used for video transcoding. Descriptions of enhancement items:
-<li>hdr: HDR configuration</li>
-<li>wd_fps: configuration of frame interpolation for higher frame rate</li>
-<li>video_super_resolution: 	super-resolution configuration</li>
-<li>repair: comprehensive enhancement configuration</li>
-<li>denoise: video denoising configuration</li>
-<Li>color_enhance: color enhancement configuration</li>
-<Li>scratch: scratch removal configuration</li>
-<li>artifact: artifact (glitch) removal configuration</li>
-<li>sharp: detail enhancement configuration</li>
-<Li>low_light: low-light enhancement configuration</li>
-<Li>face_enhance: face enhancement configuration</li>
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取
+                     * @return CallBackExtInfo 
                      * 
                      */
                     std::string GetCallBackExtInfo() const;
 
                     /**
-                     * 设置Enhancement items used for video transcoding. Descriptions of enhancement items:
-<li>hdr: HDR configuration</li>
-<li>wd_fps: configuration of frame interpolation for higher frame rate</li>
-<li>video_super_resolution: 	super-resolution configuration</li>
-<li>repair: comprehensive enhancement configuration</li>
-<li>denoise: video denoising configuration</li>
-<Li>color_enhance: color enhancement configuration</li>
-<Li>scratch: scratch removal configuration</li>
-<li>artifact: artifact (glitch) removal configuration</li>
-<li>sharp: detail enhancement configuration</li>
-<Li>low_light: low-light enhancement configuration</li>
-<Li>face_enhance: face enhancement configuration</li>
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _callBackExtInfo Enhancement items used for video transcoding. Descriptions of enhancement items:
-<li>hdr: HDR configuration</li>
-<li>wd_fps: configuration of frame interpolation for higher frame rate</li>
-<li>video_super_resolution: 	super-resolution configuration</li>
-<li>repair: comprehensive enhancement configuration</li>
-<li>denoise: video denoising configuration</li>
-<Li>color_enhance: color enhancement configuration</li>
-<Li>scratch: scratch removal configuration</li>
-<li>artifact: artifact (glitch) removal configuration</li>
-<li>sharp: detail enhancement configuration</li>
-<Li>low_light: low-light enhancement configuration</li>
-<Li>face_enhance: face enhancement configuration</li>
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置
+                     * @param _callBackExtInfo 
                      * 
                      */
                     void SetCallBackExtInfo(const std::string& _callBackExtInfo);
@@ -381,93 +325,79 @@ Note: This field may return null, indicating that no valid value can be obtained
                 private:
 
                     /**
-                     * Target bucket of an output file.
+                     * Target storage of the transcoded file.
                      */
                     TaskOutputStorage m_outputStorage;
                     bool m_outputStorageHasBeenSet;
 
                     /**
-                     * Path to an output video file.
+                     * Video file path after transcoding.
                      */
                     std::string m_path;
                     bool m_pathHasBeenSet;
 
                     /**
-                     * Transcoding specification ID. For more information, please see [Transcoding Parameter Template](https://intl.cloud.tencent.com/document/product/266/33478?from_cn_redirect=1#.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF).
+                     * Transcoding specification ID. Please refer to the transcoding parameter template (https://www.tencentcloud.com/document/product/862/37042?from_cn_redirect=1).
                      */
                     int64_t m_definition;
                     bool m_definitionHasBeenSet;
 
                     /**
-                     * Sum of the average bitrate of a video stream and that of an audio stream in bps.
+                     * Sum of the average video stream bitrate and the average audio stream bit rate. Measurement unit: bps.
                      */
                     int64_t m_bitrate;
                     bool m_bitrateHasBeenSet;
 
                     /**
-                     * Maximum value of the height of a video stream in px.
+                     * Maximum value of video stream height, measurement unit: px.
                      */
                     int64_t m_height;
                     bool m_heightHasBeenSet;
 
                     /**
-                     * Maximum value of the width of a video stream in px.
+                     * Maximum value of the video stream width in px.
                      */
                     int64_t m_width;
                     bool m_widthHasBeenSet;
 
                     /**
-                     * Total size of a media file in bytes (which is the sum of size of m3u8 and ts files if the video is in HLS format).
+                     * Total size of media files (when the video is HLS, the size is the sum of m3u8 and ts file sizes), measurement unit: byte.
                      */
                     int64_t m_size;
                     bool m_sizeHasBeenSet;
 
                     /**
-                     * Video duration in seconds.
+                     * Video duration, in seconds.
                      */
                     double m_duration;
                     bool m_durationHasBeenSet;
 
                     /**
-                     * Container, such as m4a and mp4.
+                     * Container type, such as m4a and mp4.
                      */
                     std::string m_container;
                     bool m_containerHasBeenSet;
 
                     /**
-                     * MD5 value of a video.
+                     * md5 value of the video.
                      */
                     std::string m_md5;
                     bool m_md5HasBeenSet;
 
                     /**
                      * Audio stream information.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<MediaAudioStreamItem> m_audioStreamSet;
                     bool m_audioStreamSetHasBeenSet;
 
                     /**
                      * Video stream information.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<MediaVideoStreamItem> m_videoStreamSet;
                     bool m_videoStreamSetHasBeenSet;
 
                     /**
-                     * Enhancement items used for video transcoding. Descriptions of enhancement items:
-<li>hdr: HDR configuration</li>
-<li>wd_fps: configuration of frame interpolation for higher frame rate</li>
-<li>video_super_resolution: 	super-resolution configuration</li>
-<li>repair: comprehensive enhancement configuration</li>
-<li>denoise: video denoising configuration</li>
-<Li>color_enhance: color enhancement configuration</li>
-<Li>scratch: scratch removal configuration</li>
-<li>artifact: artifact (glitch) removal configuration</li>
-<li>sharp: detail enhancement configuration</li>
-<Li>low_light: low-light enhancement configuration</li>
-<Li>face_enhance: face enhancement configuration</li>
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string m_callBackExtInfo;
                     bool m_callBackExtInfoHasBeenSet;

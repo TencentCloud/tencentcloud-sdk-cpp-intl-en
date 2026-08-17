@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Face recognition template ID.
-                     * @return Definition Face recognition template ID.
+                     * 获取Face Recognition template ID.
+                     * @return Definition Face Recognition template ID.
                      * 
                      */
                     int64_t GetDefinition() const;
 
                     /**
-                     * 设置Face recognition template ID.
-                     * @param _definition Face recognition template ID.
+                     * 设置Face Recognition template ID.
+                     * @param _definition Face Recognition template ID.
                      * 
                      */
                     void SetDefinition(const int64_t& _definition);
@@ -70,7 +70,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Face recognition template ID.
+                     * Face Recognition template ID.
                      */
                     int64_t m_definition;
                     bool m_definitionHasBeenSet;

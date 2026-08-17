@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Intelligent translation result type.
+                * Intelligent translation result type
                 */
                 class AiAnalysisTaskDubbingResult : public AbstractModel
                 {
@@ -49,15 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Task status, including PROCESSING, SUCCESS, and FAIL.
-                     * @return Status Task status, including PROCESSING, SUCCESS, and FAIL.
+                     * 获取Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
+                     * @return Status Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置Task status, including PROCESSING, SUCCESS, and FAIL.
-                     * @param _status Task status, including PROCESSING, SUCCESS, and FAIL.
+                     * 设置Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
+                     * @param _status Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -70,15 +70,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Error code. `0`: Task successful. Other values: Task failed.
-                     * @return ErrCode Error code. `0`: Task successful. Other values: Task failed.
+                     * 获取Error code. 0: Task successful. Other values: Task failed.
+                     * @return ErrCode Error code. 0: Task successful. Other values: Task failed.
                      * 
                      */
                     int64_t GetErrCode() const;
 
                     /**
-                     * 设置Error code. `0`: Task successful. Other values: Task failed.
-                     * @param _errCode Error code. `0`: Task successful. Other values: Task failed.
+                     * 设置Error code. 0: Task successful. Other values: Task failed.
+                     * @param _errCode Error code. 0: Task successful. Other values: Task failed.
                      * 
                      */
                     void SetErrCode(const int64_t& _errCode);
@@ -112,15 +112,15 @@ namespace TencentCloud
                     bool MessageHasBeenSet() const;
 
                     /**
-                     * 获取Describes the task input for intelligent translation.
-                     * @return Input Describes the task input for intelligent translation.
+                     * 获取Intelligent dubbing task input.
+                     * @return Input Intelligent dubbing task input.
                      * 
                      */
                     AiAnalysisTaskDubbingInput GetInput() const;
 
                     /**
-                     * 设置Describes the task input for intelligent translation.
-                     * @param _input Describes the task input for intelligent translation.
+                     * 设置Intelligent dubbing task input.
+                     * @param _input Intelligent dubbing task input.
                      * 
                      */
                     void SetInput(const AiAnalysisTaskDubbingInput& _input);
@@ -133,19 +133,15 @@ namespace TencentCloud
                     bool InputHasBeenSet() const;
 
                     /**
-                     * 获取Describes the task output of intelligent translation.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return Output Describes the task output of intelligent translation.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取
+                     * @return Output 
                      * 
                      */
                     AiAnalysisTaskDubbingOutput GetOutput() const;
 
                     /**
-                     * 设置Describes the task output of intelligent translation.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _output Describes the task output of intelligent translation.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置
+                     * @param _output 
                      * 
                      */
                     void SetOutput(const AiAnalysisTaskDubbingOutput& _output);
@@ -160,13 +156,13 @@ Note: This field may return null, indicating that no valid value can be obtained
                 private:
 
                     /**
-                     * Task status, including PROCESSING, SUCCESS, and FAIL.
+                     * Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Error code. `0`: Task successful. Other values: Task failed.
+                     * Error code. 0: Task successful. Other values: Task failed.
                      */
                     int64_t m_errCode;
                     bool m_errCodeHasBeenSet;
@@ -178,14 +174,13 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool m_messageHasBeenSet;
 
                     /**
-                     * Describes the task input for intelligent translation.
+                     * Intelligent dubbing task input.
                      */
                     AiAnalysisTaskDubbingInput m_input;
                     bool m_inputHasBeenSet;
 
                     /**
-                     * Describes the task output of intelligent translation.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
                      */
                     AiAnalysisTaskDubbingOutput m_output;
                     bool m_outputHasBeenSet;

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Information of a live stream processing error
+                * Live stream processing error information
                 */
                 class LiveStreamProcessErrorInfo : public AbstractModel
                 {
@@ -47,23 +47,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Error code:
-<li>0: No error;</li>
-<li>If this parameter is not 0, an error has occurred. Please see the error message (`Message`).</li>
-                     * @return ErrCode Error code:
-<li>0: No error;</li>
-<li>If this parameter is not 0, an error has occurred. Please see the error message (`Message`).</li>
+                     * 获取Error code.
+<li>0 means no error.</li>
+<li>Non-zero means error. Refer to the error information in Message.</li>
+                     * @return ErrCode Error code.
+<li>0 means no error.</li>
+<li>Non-zero means error. Refer to the error information in Message.</li>
                      * 
                      */
                     int64_t GetErrCode() const;
 
                     /**
-                     * 设置Error code:
-<li>0: No error;</li>
-<li>If this parameter is not 0, an error has occurred. Please see the error message (`Message`).</li>
-                     * @param _errCode Error code:
-<li>0: No error;</li>
-<li>If this parameter is not 0, an error has occurred. Please see the error message (`Message`).</li>
+                     * 设置Error code.
+<li>0 means no error.</li>
+<li>Non-zero means error. Refer to the error information in Message.</li>
+                     * @param _errCode Error code.
+<li>0 means no error.</li>
+<li>Non-zero means error. Refer to the error information in Message.</li>
                      * 
                      */
                     void SetErrCode(const int64_t& _errCode);
@@ -99,9 +99,9 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Error code:
-<li>0: No error;</li>
-<li>If this parameter is not 0, an error has occurred. Please see the error message (`Message`).</li>
+                     * Error code.
+<li>0 means no error.</li>
+<li>Non-zero means error. Refer to the error information in Message.</li>
                      */
                     int64_t m_errCode;
                     bool m_errCodeHasBeenSet;

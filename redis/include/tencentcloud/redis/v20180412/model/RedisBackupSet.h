@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Backup start time
-                     * @return StartTime Backup start time
+                     * 获取<p>Backup start time.</p>
+                     * @return StartTime <p>Backup start time.</p>
                      * 
                      */
                     std::string GetStartTime() const;
 
                     /**
-                     * 设置Backup start time
-                     * @param _startTime Backup start time
+                     * 设置<p>Backup start time.</p>
+                     * @param _startTime <p>Backup start time.</p>
                      * 
                      */
                     void SetStartTime(const std::string& _startTime);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取Backup task ID
-                     * @return BackupId Backup task ID
+                     * 获取<p>Backup task ID.</p>
+                     * @return BackupId <p>Backup task ID.</p>
                      * 
                      */
                     std::string GetBackupId() const;
 
                     /**
-                     * 设置Backup task ID
-                     * @param _backupId Backup task ID
+                     * 设置<p>Backup task ID.</p>
+                     * @param _backupId <p>Backup task ID.</p>
                      * 
                      */
                     void SetBackupId(const std::string& _backupId);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool BackupIdHasBeenSet() const;
 
                     /**
-                     * 获取Backup type. Valid values:  `1` (Automatic backup in the early morning initiated by the system.) `0`: Manual backup initiated by the user.
-                     * @return BackupType Backup type. Valid values:  `1` (Automatic backup in the early morning initiated by the system.) `0`: Manual backup initiated by the user.
+                     * 获取<p>Backup type.</p><ul><li>1: Automatic backup initiated by the system in the wee hours.</li><li>0: Manual backup initiated by the user.</li></ul>
+                     * @return BackupType <p>Backup type.</p><ul><li>1: Automatic backup initiated by the system in the wee hours.</li><li>0: Manual backup initiated by the user.</li></ul>
                      * 
                      */
                     std::string GetBackupType() const;
 
                     /**
-                     * 设置Backup type. Valid values:  `1` (Automatic backup in the early morning initiated by the system.) `0`: Manual backup initiated by the user.
-                     * @param _backupType Backup type. Valid values:  `1` (Automatic backup in the early morning initiated by the system.) `0`: Manual backup initiated by the user.
+                     * 设置<p>Backup type.</p><ul><li>1: Automatic backup initiated by the system in the wee hours.</li><li>0: Manual backup initiated by the user.</li></ul>
+                     * @param _backupType <p>Backup type.</p><ul><li>1: Automatic backup initiated by the system in the wee hours.</li><li>0: Manual backup initiated by the user.</li></ul>
                      * 
                      */
                     void SetBackupType(const std::string& _backupType);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool BackupTypeHasBeenSet() const;
 
                     /**
-                     * 获取Backup status. Valid values:  - `1`: The backup is locked by another process. - `2`: The backup is normal and not locked by any process. - `-1`: The backup is expired. - `3`: The backup is being exported. - `4`: Exported the backup successfully.
-                     * @return Status Backup status. Valid values:  - `1`: The backup is locked by another process. - `2`: The backup is normal and not locked by any process. - `-1`: The backup is expired. - `3`: The backup is being exported. - `4`: Exported the backup successfully.
+                     * 获取<p>Backup status.</p><ul><li>1: Backup is locked by other processes.</li><li>2: Backup is normal, not locked by any processes.</li><li>-1: Backup has expired.</li><li>3: Backup is being exported.</li><li>4: Backup export successful.</li></ul>
+                     * @return Status <p>Backup status.</p><ul><li>1: Backup is locked by other processes.</li><li>2: Backup is normal, not locked by any processes.</li><li>-1: Backup has expired.</li><li>3: Backup is being exported.</li><li>4: Backup export successful.</li></ul>
                      * 
                      */
                     int64_t GetStatus() const;
 
                     /**
-                     * 设置Backup status. Valid values:  - `1`: The backup is locked by another process. - `2`: The backup is normal and not locked by any process. - `-1`: The backup is expired. - `3`: The backup is being exported. - `4`: Exported the backup successfully.
-                     * @param _status Backup status. Valid values:  - `1`: The backup is locked by another process. - `2`: The backup is normal and not locked by any process. - `-1`: The backup is expired. - `3`: The backup is being exported. - `4`: Exported the backup successfully.
+                     * 设置<p>Backup status.</p><ul><li>1: Backup is locked by other processes.</li><li>2: Backup is normal, not locked by any processes.</li><li>-1: Backup has expired.</li><li>3: Backup is being exported.</li><li>4: Backup export successful.</li></ul>
+                     * @param _status <p>Backup status.</p><ul><li>1: Backup is locked by other processes.</li><li>2: Backup is normal, not locked by any processes.</li><li>-1: Backup has expired.</li><li>3: Backup is being exported.</li><li>4: Backup export successful.</li></ul>
                      * 
                      */
                     void SetStatus(const int64_t& _status);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Backup remarks
-                     * @return Remark Backup remarks
+                     * 获取<p>Backup remarks.</p>
+                     * @return Remark <p>Backup remarks.</p>
                      * 
                      */
                     std::string GetRemark() const;
 
                     /**
-                     * 设置Backup remarks
-                     * @param _remark Backup remarks
+                     * 设置<p>Backup remarks.</p>
+                     * @param _remark <p>Backup remarks.</p>
                      * 
                      */
                     void SetRemark(const std::string& _remark);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool RemarkHasBeenSet() const;
 
                     /**
-                     * 获取Whether the backup is locked. Valid values:  - `0` (no) - `1` (yes)
-                     * @return Locked Whether the backup is locked. Valid values:  - `0` (no) - `1` (yes)
+                     * 获取<p>Backup lock status.</p><ul><li>0: Unlocked.</li><li>1: Has been locked.</li></ul>
+                     * @return Locked <p>Backup lock status.</p><ul><li>0: Unlocked.</li><li>1: Has been locked.</li></ul>
                      * 
                      */
                     int64_t GetLocked() const;
 
                     /**
-                     * 设置Whether the backup is locked. Valid values:  - `0` (no) - `1` (yes)
-                     * @param _locked Whether the backup is locked. Valid values:  - `0` (no) - `1` (yes)
+                     * 设置<p>Backup lock status.</p><ul><li>0: Unlocked.</li><li>1: Has been locked.</li></ul>
+                     * @param _locked <p>Backup lock status.</p><ul><li>0: Unlocked.</li><li>1: Has been locked.</li></ul>
                      * 
                      */
                     void SetLocked(const int64_t& _locked);
@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool LockedHasBeenSet() const;
 
                     /**
-                     * 获取Internal field, which can be ignored.
-                     * @return BackupSize Internal field, which can be ignored.
+                     * 获取<p>Internal field, which can be ignored.</p>
+                     * @return BackupSize <p>Internal field, which can be ignored.</p>
                      * 
                      */
                     int64_t GetBackupSize() const;
 
                     /**
-                     * 设置Internal field, which can be ignored.
-                     * @param _backupSize Internal field, which can be ignored.
+                     * 设置<p>Internal field, which can be ignored.</p>
+                     * @param _backupSize <p>Internal field, which can be ignored.</p>
                      * 
                      */
                     void SetBackupSize(const int64_t& _backupSize);
@@ -194,15 +194,15 @@ namespace TencentCloud
                     bool BackupSizeHasBeenSet() const;
 
                     /**
-                     * 获取Internal field, which can be ignored.
-                     * @return FullBackup Internal field, which can be ignored.
+                     * 获取<p>Internal field, which can be ignored.</p>
+                     * @return FullBackup <p>Internal field, which can be ignored.</p>
                      * 
                      */
                     int64_t GetFullBackup() const;
 
                     /**
-                     * 设置Internal field, which can be ignored.
-                     * @param _fullBackup Internal field, which can be ignored.
+                     * 设置<p>Internal field, which can be ignored.</p>
+                     * @param _fullBackup <p>Internal field, which can be ignored.</p>
                      * 
                      */
                     void SetFullBackup(const int64_t& _fullBackup);
@@ -215,15 +215,15 @@ namespace TencentCloud
                     bool FullBackupHasBeenSet() const;
 
                     /**
-                     * 获取Internal field, which can be ignored.
-                     * @return InstanceType Internal field, which can be ignored.
+                     * 获取<p>Internal field, which can be ignored.</p>
+                     * @return InstanceType <p>Internal field, which can be ignored.</p>
                      * 
                      */
                     int64_t GetInstanceType() const;
 
                     /**
-                     * 设置Internal field, which can be ignored.
-                     * @param _instanceType Internal field, which can be ignored.
+                     * 设置<p>Internal field, which can be ignored.</p>
+                     * @param _instanceType <p>Internal field, which can be ignored.</p>
                      * 
                      */
                     void SetInstanceType(const int64_t& _instanceType);
@@ -236,15 +236,15 @@ namespace TencentCloud
                     bool InstanceTypeHasBeenSet() const;
 
                     /**
-                     * 获取Instance ID
-                     * @return InstanceId Instance ID
+                     * 获取<p>Instance ID.</p>
+                     * @return InstanceId <p>Instance ID.</p>
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID
-                     * @param _instanceId Instance ID
+                     * 设置<p>Instance ID.</p>
+                     * @param _instanceId <p>Instance ID.</p>
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -257,15 +257,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Instance name
-                     * @return InstanceName Instance name
+                     * 获取<p>Instance name.</p>
+                     * @return InstanceName <p>Instance name.</p>
                      * 
                      */
                     std::string GetInstanceName() const;
 
                     /**
-                     * 设置Instance name
-                     * @param _instanceName Instance name
+                     * 设置<p>Instance name.</p>
+                     * @param _instanceName <p>Instance name.</p>
                      * 
                      */
                     void SetInstanceName(const std::string& _instanceName);
@@ -278,15 +278,15 @@ namespace TencentCloud
                     bool InstanceNameHasBeenSet() const;
 
                     /**
-                     * 获取The region where the local backup resides.
-                     * @return Region The region where the local backup resides.
+                     * 获取<p>Local backup region.</p>
+                     * @return Region <p>Local backup region.</p>
                      * 
                      */
                     std::string GetRegion() const;
 
                     /**
-                     * 设置The region where the local backup resides.
-                     * @param _region The region where the local backup resides.
+                     * 设置<p>Local backup region.</p>
+                     * @param _region <p>Local backup region.</p>
                      * 
                      */
                     void SetRegion(const std::string& _region);
@@ -299,15 +299,15 @@ namespace TencentCloud
                     bool RegionHasBeenSet() const;
 
                     /**
-                     * 获取Backup end time
-                     * @return EndTime Backup end time
+                     * 获取<p>Backup end time.</p>
+                     * @return EndTime <p>Backup end time.</p>
                      * 
                      */
                     std::string GetEndTime() const;
 
                     /**
-                     * 设置Backup end time
-                     * @param _endTime Backup end time
+                     * 设置<p>Backup end time.</p>
+                     * @param _endTime <p>Backup end time.</p>
                      * 
                      */
                     void SetEndTime(const std::string& _endTime);
@@ -320,15 +320,15 @@ namespace TencentCloud
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取Backup file type
-                     * @return FileType Backup file type
+                     * 获取<p>Backup file type.</p>
+                     * @return FileType <p>Backup file type.</p>
                      * 
                      */
                     std::string GetFileType() const;
 
                     /**
-                     * 设置Backup file type
-                     * @param _fileType Backup file type
+                     * 设置<p>Backup file type.</p>
+                     * @param _fileType <p>Backup file type.</p>
                      * 
                      */
                     void SetFileType(const std::string& _fileType);
@@ -341,15 +341,15 @@ namespace TencentCloud
                     bool FileTypeHasBeenSet() const;
 
                     /**
-                     * 获取Backup file expiration time
-                     * @return ExpireTime Backup file expiration time
+                     * 获取<p>Backup file expiration time.</p>
+                     * @return ExpireTime <p>Backup file expiration time.</p>
                      * 
                      */
                     std::string GetExpireTime() const;
 
                     /**
-                     * 设置Backup file expiration time
-                     * @param _expireTime Backup file expiration time
+                     * 设置<p>Backup file expiration time.</p>
+                     * @param _expireTime <p>Backup file expiration time.</p>
                      * 
                      */
                     void SetExpireTime(const std::string& _expireTime);
@@ -361,97 +361,124 @@ namespace TencentCloud
                      */
                     bool ExpireTimeHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Whether the backup file is encrypted</p>
+                     * @return Encrypted <p>Whether the backup file is encrypted</p>
+                     * 
+                     */
+                    bool GetEncrypted() const;
+
+                    /**
+                     * 设置<p>Whether the backup file is encrypted</p>
+                     * @param _encrypted <p>Whether the backup file is encrypted</p>
+                     * 
+                     */
+                    void SetEncrypted(const bool& _encrypted);
+
+                    /**
+                     * 判断参数 Encrypted 是否已赋值
+                     * @return Encrypted 是否已赋值
+                     * 
+                     */
+                    bool EncryptedHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Backup start time
+                     * <p>Backup start time.</p>
                      */
                     std::string m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * Backup task ID
+                     * <p>Backup task ID.</p>
                      */
                     std::string m_backupId;
                     bool m_backupIdHasBeenSet;
 
                     /**
-                     * Backup type. Valid values:  `1` (Automatic backup in the early morning initiated by the system.) `0`: Manual backup initiated by the user.
+                     * <p>Backup type.</p><ul><li>1: Automatic backup initiated by the system in the wee hours.</li><li>0: Manual backup initiated by the user.</li></ul>
                      */
                     std::string m_backupType;
                     bool m_backupTypeHasBeenSet;
 
                     /**
-                     * Backup status. Valid values:  - `1`: The backup is locked by another process. - `2`: The backup is normal and not locked by any process. - `-1`: The backup is expired. - `3`: The backup is being exported. - `4`: Exported the backup successfully.
+                     * <p>Backup status.</p><ul><li>1: Backup is locked by other processes.</li><li>2: Backup is normal, not locked by any processes.</li><li>-1: Backup has expired.</li><li>3: Backup is being exported.</li><li>4: Backup export successful.</li></ul>
                      */
                     int64_t m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Backup remarks
+                     * <p>Backup remarks.</p>
                      */
                     std::string m_remark;
                     bool m_remarkHasBeenSet;
 
                     /**
-                     * Whether the backup is locked. Valid values:  - `0` (no) - `1` (yes)
+                     * <p>Backup lock status.</p><ul><li>0: Unlocked.</li><li>1: Has been locked.</li></ul>
                      */
                     int64_t m_locked;
                     bool m_lockedHasBeenSet;
 
                     /**
-                     * Internal field, which can be ignored.
+                     * <p>Internal field, which can be ignored.</p>
                      */
                     int64_t m_backupSize;
                     bool m_backupSizeHasBeenSet;
 
                     /**
-                     * Internal field, which can be ignored.
+                     * <p>Internal field, which can be ignored.</p>
                      */
                     int64_t m_fullBackup;
                     bool m_fullBackupHasBeenSet;
 
                     /**
-                     * Internal field, which can be ignored.
+                     * <p>Internal field, which can be ignored.</p>
                      */
                     int64_t m_instanceType;
                     bool m_instanceTypeHasBeenSet;
 
                     /**
-                     * Instance ID
+                     * <p>Instance ID.</p>
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Instance name
+                     * <p>Instance name.</p>
                      */
                     std::string m_instanceName;
                     bool m_instanceNameHasBeenSet;
 
                     /**
-                     * The region where the local backup resides.
+                     * <p>Local backup region.</p>
                      */
                     std::string m_region;
                     bool m_regionHasBeenSet;
 
                     /**
-                     * Backup end time
+                     * <p>Backup end time.</p>
                      */
                     std::string m_endTime;
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * Backup file type
+                     * <p>Backup file type.</p>
                      */
                     std::string m_fileType;
                     bool m_fileTypeHasBeenSet;
 
                     /**
-                     * Backup file expiration time
+                     * <p>Backup file expiration time.</p>
                      */
                     std::string m_expireTime;
                     bool m_expireTimeHasBeenSet;
+
+                    /**
+                     * <p>Whether the backup file is encrypted</p>
+                     */
+                    bool m_encrypted;
+                    bool m_encryptedHasBeenSet;
 
                 };
             }

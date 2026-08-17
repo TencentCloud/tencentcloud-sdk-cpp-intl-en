@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * AI-based ASR-based live streaming keyword recognition result
+                * Live streaming AI Asr word recognition result
                 */
                 class LiveStreamAsrWordsRecognitionResult : public AbstractModel
                 {
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool WordHasBeenSet() const;
 
                     /**
-                     * 获取Start PTS time of recognized segment in seconds.
-                     * @return StartPtsTime Start PTS time of recognized segment in seconds.
+                     * 获取Start PTS time of a recognized segment, in seconds.
+                     * @return StartPtsTime Start PTS time of a recognized segment, in seconds.
                      * 
                      */
                     double GetStartPtsTime() const;
 
                     /**
-                     * 设置Start PTS time of recognized segment in seconds.
-                     * @param _startPtsTime Start PTS time of recognized segment in seconds.
+                     * 设置Start PTS time of a recognized segment, in seconds.
+                     * @param _startPtsTime Start PTS time of a recognized segment, in seconds.
                      * 
                      */
                     void SetStartPtsTime(const double& _startPtsTime);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool StartPtsTimeHasBeenSet() const;
 
                     /**
-                     * 获取End PTS time of recognized segment in seconds.
-                     * @return EndPtsTime End PTS time of recognized segment in seconds.
+                     * 获取End PTS time of a recognized segment, in seconds.
+                     * @return EndPtsTime End PTS time of a recognized segment, in seconds.
                      * 
                      */
                     double GetEndPtsTime() const;
 
                     /**
-                     * 设置End PTS time of recognized segment in seconds.
-                     * @param _endPtsTime End PTS time of recognized segment in seconds.
+                     * 设置End PTS time of a recognized segment, in seconds.
+                     * @param _endPtsTime End PTS time of a recognized segment, in seconds.
                      * 
                      */
                     void SetEndPtsTime(const double& _endPtsTime);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool EndPtsTimeHasBeenSet() const;
 
                     /**
-                     * 获取Confidence of recognized segment. Value range: 0–100.
-                     * @return Confidence Confidence of recognized segment. Value range: 0–100.
+                     * 获取Confidence of a recognized segment. Value range: 0-100.
+                     * @return Confidence Confidence of a recognized segment. Value range: 0-100.
                      * 
                      */
                     double GetConfidence() const;
 
                     /**
-                     * 设置Confidence of recognized segment. Value range: 0–100.
-                     * @param _confidence Confidence of recognized segment. Value range: 0–100.
+                     * 设置Confidence of a recognized segment. Value range: 0-100.
+                     * @param _confidence Confidence of a recognized segment. Value range: 0-100.
                      * 
                      */
                     void SetConfidence(const double& _confidence);
@@ -139,19 +139,19 @@ namespace TencentCloud
                     bool m_wordHasBeenSet;
 
                     /**
-                     * Start PTS time of recognized segment in seconds.
+                     * Start PTS time of a recognized segment, in seconds.
                      */
                     double m_startPtsTime;
                     bool m_startPtsTimeHasBeenSet;
 
                     /**
-                     * End PTS time of recognized segment in seconds.
+                     * End PTS time of a recognized segment, in seconds.
                      */
                     double m_endPtsTime;
                     bool m_endPtsTimeHasBeenSet;
 
                     /**
-                     * Confidence of recognized segment. Value range: 0–100.
+                     * Confidence of a recognized segment. Value range: 0-100.
                      */
                     double m_confidence;
                     bool m_confidenceHasBeenSet;

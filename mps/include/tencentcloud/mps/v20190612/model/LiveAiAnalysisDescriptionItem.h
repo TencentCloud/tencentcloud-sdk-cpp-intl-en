@@ -48,19 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Segmentation result.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Paragraphs Segmentation result.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return Paragraphs 
                      * 
                      */
                     std::vector<LiveAiParagraphInfo> GetParagraphs() const;
 
                     /**
-                     * 设置Segmentation result.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _paragraphs Segmentation result.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _paragraphs 
                      * 
                      */
                     void SetParagraphs(const std::vector<LiveAiParagraphInfo>& _paragraphs);
@@ -75,8 +71,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Segmentation result.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<LiveAiParagraphInfo> m_paragraphs;
                     bool m_paragraphsHasBeenSet;

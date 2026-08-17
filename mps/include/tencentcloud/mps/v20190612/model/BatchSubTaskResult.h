@@ -50,19 +50,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Input information for a batch task.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return InputInfos Input information for a batch task.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取
+                     * @return InputInfos 
                      * 
                      */
                     std::vector<MediaInputInfo> GetInputInfos() const;
 
                     /**
-                     * 设置Input information for a batch task.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _inputInfos Input information for a batch task.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置
+                     * @param _inputInfos 
                      * 
                      */
                     void SetInputInfos(const std::vector<MediaInputInfo>& _inputInfos);
@@ -75,19 +71,15 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool InputInfosHasBeenSet() const;
 
                     /**
-                     * 获取Metadata of the original video.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return Metadatas Metadata of the original video.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取
+                     * @return Metadatas 
                      * 
                      */
                     std::vector<MediaMetaData> GetMetadatas() const;
 
                     /**
-                     * 设置Metadata of the original video.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _metadatas Metadata of the original video.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置
+                     * @param _metadatas 
                      * 
                      */
                     void SetMetadatas(const std::vector<MediaMetaData>& _metadatas);
@@ -100,19 +92,15 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool MetadatasHasBeenSet() const;
 
                     /**
-                     * 获取Execution result of the smart subtitle task.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return SmartSubtitlesTaskResult Execution result of the smart subtitle task.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取
+                     * @return SmartSubtitlesTaskResult 
                      * 
                      */
                     BatchSmartSubtitlesResult GetSmartSubtitlesTaskResult() const;
 
                     /**
-                     * 设置Execution result of the smart subtitle task.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _smartSubtitlesTaskResult Execution result of the smart subtitle task.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置
+                     * @param _smartSubtitlesTaskResult 
                      * 
                      */
                     void SetSmartSubtitlesTaskResult(const BatchSmartSubtitlesResult& _smartSubtitlesTaskResult);
@@ -127,22 +115,19 @@ Note: This field may return null, indicating that no valid value can be obtained
                 private:
 
                     /**
-                     * Input information for a batch task.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::vector<MediaInputInfo> m_inputInfos;
                     bool m_inputInfosHasBeenSet;
 
                     /**
-                     * Metadata of the original video.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::vector<MediaMetaData> m_metadatas;
                     bool m_metadatasHasBeenSet;
 
                     /**
-                     * Execution result of the smart subtitle task.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
                      */
                     BatchSmartSubtitlesResult m_smartSubtitlesTaskResult;
                     bool m_smartSubtitlesTaskResultHasBeenSet;

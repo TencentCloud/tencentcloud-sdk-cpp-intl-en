@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Intelligent video splitting recording clip.
                 */
                 class SegmentRecognitionItem : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Confidence 
+                     * 获取Confidence degree.
+                     * @return Confidence Confidence degree.
                      * 
                      */
                     double GetConfidence() const;
 
                     /**
-                     * 设置
-                     * @param _confidence 
+                     * 设置Confidence degree.
+                     * @param _confidence Confidence degree.
                      * 
                      */
                     void SetConfidence(const double& _confidence);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool ConfidenceHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return StartTimeOffset 
+                     * 获取Start time offset of a recording clip.
+                     * @return StartTimeOffset Start time offset of a recording clip.
                      * 
                      */
                     double GetStartTimeOffset() const;
 
                     /**
-                     * 设置
-                     * @param _startTimeOffset 
+                     * 设置Start time offset of a recording clip.
+                     * @param _startTimeOffset Start time offset of a recording clip.
                      * 
                      */
                     void SetStartTimeOffset(const double& _startTimeOffset);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool StartTimeOffsetHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return EndTimeOffset 
+                     * 获取End time offset of the recording clip.
+                     * @return EndTimeOffset End time offset of the recording clip.
                      * 
                      */
                     double GetEndTimeOffset() const;
 
                     /**
-                     * 设置
-                     * @param _endTimeOffset 
+                     * 设置End time offset of the recording clip.
+                     * @param _endTimeOffset End time offset of the recording clip.
                      * 
                      */
                     void SetEndTimeOffset(const double& _endTimeOffset);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool EndTimeOffsetHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the split segment URL.
-                     * @return SegmentUrl Specifies the split segment URL.
+                     * 获取Split segment URL.
+                     * @return SegmentUrl Split segment URL.
                      * 
                      */
                     std::string GetSegmentUrl() const;
 
                     /**
-                     * 设置Specifies the split segment URL.
-                     * @param _segmentUrl Specifies the split segment URL.
+                     * 设置Split segment URL.
+                     * @param _segmentUrl Split segment URL.
                      * 
                      */
                     void SetSegmentUrl(const std::string& _segmentUrl);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool SegmentUrlHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the segment cover.
-                     * @return CovImgUrl Specifies the segment cover.
+                     * 获取Segment cover.
+                     * @return CovImgUrl Segment cover.
                      * 
                      */
                     std::string GetCovImgUrl() const;
 
                     /**
-                     * 设置Specifies the segment cover.
-                     * @param _covImgUrl Specifies the segment cover.
+                     * 设置Segment cover.
+                     * @param _covImgUrl Segment cover.
                      * 
                      */
                     void SetCovImgUrl(const std::string& _covImgUrl);
@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool TitleHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the segment summary.
-                     * @return Summary Specifies the segment summary.
+                     * 获取Segment summary.
+                     * @return Summary Segment summary.
                      * 
                      */
                     std::string GetSummary() const;
 
                     /**
-                     * 设置Specifies the segment summary.
-                     * @param _summary Specifies the segment summary.
+                     * 设置Segment summary.
+                     * @param _summary Segment summary.
                      * 
                      */
                     void SetSummary(const std::string& _summary);
@@ -215,15 +215,15 @@ namespace TencentCloud
                     bool KeywordsHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the start time of a live streaming segment in the ISO date format.
-                     * @return BeginTime Specifies the start time of a live streaming segment in the ISO date format.
+                     * 获取The start time of a live streaming segment, in the ISO date format.
+                     * @return BeginTime The start time of a live streaming segment, in the ISO date format.
                      * 
                      */
                     std::string GetBeginTime() const;
 
                     /**
-                     * 设置Specifies the start time of a live streaming segment in the ISO date format.
-                     * @param _beginTime Specifies the start time of a live streaming segment in the ISO date format.
+                     * 设置The start time of a live streaming segment, in the ISO date format.
+                     * @param _beginTime The start time of a live streaming segment, in the ISO date format.
                      * 
                      */
                     void SetBeginTime(const std::string& _beginTime);
@@ -236,15 +236,15 @@ namespace TencentCloud
                     bool BeginTimeHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the end time of a live streaming segment in the ISO date format.
-                     * @return EndTime Specifies the end time of a live streaming segment in the ISO date format.
+                     * 获取The end time of a live streaming segment, in the ISO date format.
+                     * @return EndTime The end time of a live streaming segment, in the ISO date format.
                      * 
                      */
                     std::string GetEndTime() const;
 
                     /**
-                     * 设置Specifies the end time of a live streaming segment in the ISO date format.
-                     * @param _endTime Specifies the end time of a live streaming segment in the ISO date format.
+                     * 设置The end time of a live streaming segment, in the ISO date format.
+                     * @param _endTime The end time of a live streaming segment, in the ISO date format.
                      * 
                      */
                     void SetEndTime(const std::string& _endTime);
@@ -257,15 +257,15 @@ namespace TencentCloud
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the character ID.
-                     * @return PersonId Specifies the character ID.
+                     * 获取Specify the figure ID.
+                     * @return PersonId Specify the figure ID.
                      * 
                      */
                     std::string GetPersonId() const;
 
                     /**
-                     * 设置Specifies the character ID.
-                     * @param _personId Specifies the character ID.
+                     * 设置Specify the figure ID.
+                     * @param _personId Specify the figure ID.
                      * 
                      */
                     void SetPersonId(const std::string& _personId);
@@ -280,31 +280,31 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Confidence degree.
                      */
                     double m_confidence;
                     bool m_confidenceHasBeenSet;
 
                     /**
-                     * 
+                     * Start time offset of a recording clip.
                      */
                     double m_startTimeOffset;
                     bool m_startTimeOffsetHasBeenSet;
 
                     /**
-                     * 
+                     * End time offset of the recording clip.
                      */
                     double m_endTimeOffset;
                     bool m_endTimeOffsetHasBeenSet;
 
                     /**
-                     * Specifies the split segment URL.
+                     * Split segment URL.
                      */
                     std::string m_segmentUrl;
                     bool m_segmentUrlHasBeenSet;
 
                     /**
-                     * Specifies the segment cover.
+                     * Segment cover.
                      */
                     std::string m_covImgUrl;
                     bool m_covImgUrlHasBeenSet;
@@ -316,7 +316,7 @@ namespace TencentCloud
                     bool m_titleHasBeenSet;
 
                     /**
-                     * Specifies the segment summary.
+                     * Segment summary.
                      */
                     std::string m_summary;
                     bool m_summaryHasBeenSet;
@@ -328,19 +328,19 @@ namespace TencentCloud
                     bool m_keywordsHasBeenSet;
 
                     /**
-                     * Specifies the start time of a live streaming segment in the ISO date format.
+                     * The start time of a live streaming segment, in the ISO date format.
                      */
                     std::string m_beginTime;
                     bool m_beginTimeHasBeenSet;
 
                     /**
-                     * Specifies the end time of a live streaming segment in the ISO date format.
+                     * The end time of a live streaming segment, in the ISO date format.
                      */
                     std::string m_endTime;
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * Specifies the character ID.
+                     * Specify the figure ID.
                      */
                     std::string m_personId;
                     bool m_personIdHasBeenSet;

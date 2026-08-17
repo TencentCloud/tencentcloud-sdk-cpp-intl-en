@@ -26,6 +26,7 @@
 #include <tencentcloud/mps/v20190612/model/OcrWordsConfigureInfo.h>
 #include <tencentcloud/mps/v20190612/model/AsrFullTextConfigureInfo.h>
 #include <tencentcloud/mps/v20190612/model/AsrWordsConfigureInfo.h>
+#include <tencentcloud/mps/v20190612/model/TranslateConfigureInfo.h>
 
 
 namespace TencentCloud
@@ -48,15 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Name of a video content recognition template. Length limit: 64 characters.
-                     * @return Name Name of a video content recognition template. Length limit: 64 characters.
+                     * 获取Video content recognition template name, length limited to 64 characters.
+                     * @return Name Video content recognition template name, length limited to 64 characters.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Name of a video content recognition template. Length limit: 64 characters.
-                     * @param _name Name of a video content recognition template. Length limit: 64 characters.
+                     * 设置Video content recognition template name, length limited to 64 characters.
+                     * @param _name Video content recognition template name, length limited to 64 characters.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -69,15 +70,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Description of a video content recognition template. Length limit: 256 characters.
-                     * @return Comment Description of a video content recognition template. Length limit: 256 characters.
+                     * 获取Video Content Recognition template description, length limited to 256 characters.
+                     * @return Comment Video Content Recognition template description, length limited to 256 characters.
                      * 
                      */
                     std::string GetComment() const;
 
                     /**
-                     * 设置Description of a video content recognition template. Length limit: 256 characters.
-                     * @param _comment Description of a video content recognition template. Length limit: 256 characters.
+                     * 设置Video Content Recognition template description, length limited to 256 characters.
+                     * @param _comment Video Content Recognition template description, length limited to 256 characters.
                      * 
                      */
                     void SetComment(const std::string& _comment);
@@ -90,15 +91,15 @@ namespace TencentCloud
                     bool CommentHasBeenSet() const;
 
                     /**
-                     * 获取Face recognition control parameter.
-                     * @return FaceConfigure Face recognition control parameter.
+                     * 获取Face Recognition Control Parameter.
+                     * @return FaceConfigure Face Recognition Control Parameter.
                      * 
                      */
                     FaceConfigureInfo GetFaceConfigure() const;
 
                     /**
-                     * 设置Face recognition control parameter.
-                     * @param _faceConfigure Face recognition control parameter.
+                     * 设置Face Recognition Control Parameter.
+                     * @param _faceConfigure Face Recognition Control Parameter.
                      * 
                      */
                     void SetFaceConfigure(const FaceConfigureInfo& _faceConfigure);
@@ -111,15 +112,15 @@ namespace TencentCloud
                     bool FaceConfigureHasBeenSet() const;
 
                     /**
-                     * 获取Full text recognition control parameter.
-                     * @return OcrFullTextConfigure Full text recognition control parameter.
+                     * 获取Full Text Recognition Control Parameter.
+                     * @return OcrFullTextConfigure Full Text Recognition Control Parameter.
                      * 
                      */
                     OcrFullTextConfigureInfo GetOcrFullTextConfigure() const;
 
                     /**
-                     * 设置Full text recognition control parameter.
-                     * @param _ocrFullTextConfigure Full text recognition control parameter.
+                     * 设置Full Text Recognition Control Parameter.
+                     * @param _ocrFullTextConfigure Full Text Recognition Control Parameter.
                      * 
                      */
                     void SetOcrFullTextConfigure(const OcrFullTextConfigureInfo& _ocrFullTextConfigure);
@@ -132,15 +133,15 @@ namespace TencentCloud
                     bool OcrFullTextConfigureHasBeenSet() const;
 
                     /**
-                     * 获取Text keyword recognition control parameter.
-                     * @return OcrWordsConfigure Text keyword recognition control parameter.
+                     * 获取Text keyword recognition control.
+                     * @return OcrWordsConfigure Text keyword recognition control.
                      * 
                      */
                     OcrWordsConfigureInfo GetOcrWordsConfigure() const;
 
                     /**
-                     * 设置Text keyword recognition control parameter.
-                     * @param _ocrWordsConfigure Text keyword recognition control parameter.
+                     * 设置Text keyword recognition control.
+                     * @param _ocrWordsConfigure Text keyword recognition control.
                      * 
                      */
                     void SetOcrWordsConfigure(const OcrWordsConfigureInfo& _ocrWordsConfigure);
@@ -153,15 +154,15 @@ namespace TencentCloud
                     bool OcrWordsConfigureHasBeenSet() const;
 
                     /**
-                     * 获取Full speech recognition control parameter.
-                     * @return AsrFullTextConfigure Full speech recognition control parameter.
+                     * 获取Speech Full-text Recognition Control Parameter.
+                     * @return AsrFullTextConfigure Speech Full-text Recognition Control Parameter.
                      * 
                      */
                     AsrFullTextConfigureInfo GetAsrFullTextConfigure() const;
 
                     /**
-                     * 设置Full speech recognition control parameter.
-                     * @param _asrFullTextConfigure Full speech recognition control parameter.
+                     * 设置Speech Full-text Recognition Control Parameter.
+                     * @param _asrFullTextConfigure Speech Full-text Recognition Control Parameter.
                      * 
                      */
                     void SetAsrFullTextConfigure(const AsrFullTextConfigureInfo& _asrFullTextConfigure);
@@ -174,15 +175,15 @@ namespace TencentCloud
                     bool AsrFullTextConfigureHasBeenSet() const;
 
                     /**
-                     * 获取Speech keyword recognition control parameter.
-                     * @return AsrWordsConfigure Speech keyword recognition control parameter.
+                     * 获取Voice keyword recognition control parameters.
+                     * @return AsrWordsConfigure Voice keyword recognition control parameters.
                      * 
                      */
                     AsrWordsConfigureInfo GetAsrWordsConfigure() const;
 
                     /**
-                     * 设置Speech keyword recognition control parameter.
-                     * @param _asrWordsConfigure Speech keyword recognition control parameter.
+                     * 设置Voice keyword recognition control parameters.
+                     * @param _asrWordsConfigure Voice keyword recognition control parameters.
                      * 
                      */
                     void SetAsrWordsConfigure(const AsrWordsConfigureInfo& _asrWordsConfigure);
@@ -194,49 +195,76 @@ namespace TencentCloud
                      */
                     bool AsrWordsConfigureHasBeenSet() const;
 
+                    /**
+                     * 获取Voice translation control parameters.
+                     * @return TranslateConfigure Voice translation control parameters.
+                     * 
+                     */
+                    TranslateConfigureInfo GetTranslateConfigure() const;
+
+                    /**
+                     * 设置Voice translation control parameters.
+                     * @param _translateConfigure Voice translation control parameters.
+                     * 
+                     */
+                    void SetTranslateConfigure(const TranslateConfigureInfo& _translateConfigure);
+
+                    /**
+                     * 判断参数 TranslateConfigure 是否已赋值
+                     * @return TranslateConfigure 是否已赋值
+                     * 
+                     */
+                    bool TranslateConfigureHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Name of a video content recognition template. Length limit: 64 characters.
+                     * Video content recognition template name, length limited to 64 characters.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Description of a video content recognition template. Length limit: 256 characters.
+                     * Video Content Recognition template description, length limited to 256 characters.
                      */
                     std::string m_comment;
                     bool m_commentHasBeenSet;
 
                     /**
-                     * Face recognition control parameter.
+                     * Face Recognition Control Parameter.
                      */
                     FaceConfigureInfo m_faceConfigure;
                     bool m_faceConfigureHasBeenSet;
 
                     /**
-                     * Full text recognition control parameter.
+                     * Full Text Recognition Control Parameter.
                      */
                     OcrFullTextConfigureInfo m_ocrFullTextConfigure;
                     bool m_ocrFullTextConfigureHasBeenSet;
 
                     /**
-                     * Text keyword recognition control parameter.
+                     * Text keyword recognition control.
                      */
                     OcrWordsConfigureInfo m_ocrWordsConfigure;
                     bool m_ocrWordsConfigureHasBeenSet;
 
                     /**
-                     * Full speech recognition control parameter.
+                     * Speech Full-text Recognition Control Parameter.
                      */
                     AsrFullTextConfigureInfo m_asrFullTextConfigure;
                     bool m_asrFullTextConfigureHasBeenSet;
 
                     /**
-                     * Speech keyword recognition control parameter.
+                     * Voice keyword recognition control parameters.
                      */
                     AsrWordsConfigureInfo m_asrWordsConfigure;
                     bool m_asrWordsConfigureHasBeenSet;
+
+                    /**
+                     * Voice translation control parameters.
+                     */
+                    TranslateConfigureInfo m_translateConfigure;
+                    bool m_translateConfigureHasBeenSet;
 
                 };
             }

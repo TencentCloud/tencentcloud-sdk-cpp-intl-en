@@ -86,6 +86,27 @@ namespace TencentCloud
                      */
                     bool CosInfoHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return ResourceId 
+                     * 
+                     */
+                    std::string GetResourceId() const;
+
+                    /**
+                     * 设置
+                     * @param _resourceId 
+                     * 
+                     */
+                    void SetResourceId(const std::string& _resourceId);
+
+                    /**
+                     * 判断参数 ResourceId 是否已赋值
+                     * @return ResourceId 是否已赋值
+                     * 
+                     */
+                    bool ResourceIdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -99,6 +120,12 @@ namespace TencentCloud
                      */
                     DocToVideoCosInfo m_cosInfo;
                     bool m_cosInfoHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_resourceId;
+                    bool m_resourceIdHasBeenSet;
 
                 };
             }

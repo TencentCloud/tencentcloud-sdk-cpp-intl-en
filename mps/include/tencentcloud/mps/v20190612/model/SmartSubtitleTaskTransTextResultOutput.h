@@ -50,19 +50,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>List of segments for translation.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SegmentSet <p>List of segments for translation.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return SegmentSet 
                      * 
                      */
                     std::vector<SmartSubtitleTaskTransTextSegmentItem> GetSegmentSet() const;
 
                     /**
-                     * 设置<p>List of segments for translation.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _segmentSet <p>List of segments for translation.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _segmentSet 
                      * 
                      */
                     void SetSegmentSet(const std::vector<SmartSubtitleTaskTransTextSegmentItem>& _segmentSet);
@@ -161,8 +157,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * <p>List of segments for translation.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<SmartSubtitleTaskTransTextSegmentItem> m_segmentSet;
                     bool m_segmentSetHasBeenSet;

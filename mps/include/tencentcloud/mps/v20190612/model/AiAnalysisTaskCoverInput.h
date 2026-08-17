@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Input type of intelligent categorization task
+                * Intelligent classification task input type.
                 */
                 class AiAnalysisTaskCoverInput : public AbstractModel
                 {

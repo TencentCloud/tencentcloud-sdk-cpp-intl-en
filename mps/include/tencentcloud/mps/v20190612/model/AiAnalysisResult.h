@@ -50,7 +50,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Intelligent analysis results
+                * Intelligent analysis result
                 */
                 class AiAnalysisResult : public AbstractModel
                 {
@@ -62,19 +62,63 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Task type. Valid values:<li>Classification: intelligent classification.</li><li>Cover: intelligent cover.</li><li>Tag: intelligent tagging.</li><li>FrameTag: intelligent frame-level tagging.</li><li>Highlight: intelligent highlights.</li><li>DeLogo: intelligent removal.</li><li>Description: LLM summarization.</li><li>Dubbing: intelligent dubbing.</li><li>VideoRemake: video recreation.</li><li>VideoComprehension: video (audio) recognition.</li>
-<li>Cutout: video matting.</li><li>Reel: intelligent video editing.</li>
-                     * @return Type Task type. Valid values:<li>Classification: intelligent classification.</li><li>Cover: intelligent cover.</li><li>Tag: intelligent tagging.</li><li>FrameTag: intelligent frame-level tagging.</li><li>Highlight: intelligent highlights.</li><li>DeLogo: intelligent removal.</li><li>Description: LLM summarization.</li><li>Dubbing: intelligent dubbing.</li><li>VideoRemake: video recreation.</li><li>VideoComprehension: video (audio) recognition.</li>
-<li>Cutout: video matting.</li><li>Reel: intelligent video editing.</li>
+                     * 获取Task type. Valid values:
+<li>Classification: intelligent classification.</li>
+<li>Cover: intelligent cover</li>
+<li>Tag: intelligent tagging.</li>
+<li>FrameTag: intelligent frame tagging.</li>
+<li>Highlight: Intelligent Highlights</li>
+<li>DeLogo: intelligent removal.</li>
+<li>Description: large model summarization.</li>
+<li>Dubbing: Intelligent Dubbing</li>
+<li>VideoRemake: Video deduplication</li>
+<li>VideoComprehension: video (audio) recognition.</li>
+<li>Cutout: Video matting</li>
+<li>Reel: intelligent video editing.</li>
+                     * @return Type Task type. Valid values:
+<li>Classification: intelligent classification.</li>
+<li>Cover: intelligent cover</li>
+<li>Tag: intelligent tagging.</li>
+<li>FrameTag: intelligent frame tagging.</li>
+<li>Highlight: Intelligent Highlights</li>
+<li>DeLogo: intelligent removal.</li>
+<li>Description: large model summarization.</li>
+<li>Dubbing: Intelligent Dubbing</li>
+<li>VideoRemake: Video deduplication</li>
+<li>VideoComprehension: video (audio) recognition.</li>
+<li>Cutout: Video matting</li>
+<li>Reel: intelligent video editing.</li>
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Task type. Valid values:<li>Classification: intelligent classification.</li><li>Cover: intelligent cover.</li><li>Tag: intelligent tagging.</li><li>FrameTag: intelligent frame-level tagging.</li><li>Highlight: intelligent highlights.</li><li>DeLogo: intelligent removal.</li><li>Description: LLM summarization.</li><li>Dubbing: intelligent dubbing.</li><li>VideoRemake: video recreation.</li><li>VideoComprehension: video (audio) recognition.</li>
-<li>Cutout: video matting.</li><li>Reel: intelligent video editing.</li>
-                     * @param _type Task type. Valid values:<li>Classification: intelligent classification.</li><li>Cover: intelligent cover.</li><li>Tag: intelligent tagging.</li><li>FrameTag: intelligent frame-level tagging.</li><li>Highlight: intelligent highlights.</li><li>DeLogo: intelligent removal.</li><li>Description: LLM summarization.</li><li>Dubbing: intelligent dubbing.</li><li>VideoRemake: video recreation.</li><li>VideoComprehension: video (audio) recognition.</li>
-<li>Cutout: video matting.</li><li>Reel: intelligent video editing.</li>
+                     * 设置Task type. Valid values:
+<li>Classification: intelligent classification.</li>
+<li>Cover: intelligent cover</li>
+<li>Tag: intelligent tagging.</li>
+<li>FrameTag: intelligent frame tagging.</li>
+<li>Highlight: Intelligent Highlights</li>
+<li>DeLogo: intelligent removal.</li>
+<li>Description: large model summarization.</li>
+<li>Dubbing: Intelligent Dubbing</li>
+<li>VideoRemake: Video deduplication</li>
+<li>VideoComprehension: video (audio) recognition.</li>
+<li>Cutout: Video matting</li>
+<li>Reel: intelligent video editing.</li>
+                     * @param _type Task type. Valid values:
+<li>Classification: intelligent classification.</li>
+<li>Cover: intelligent cover</li>
+<li>Tag: intelligent tagging.</li>
+<li>FrameTag: intelligent frame tagging.</li>
+<li>Highlight: Intelligent Highlights</li>
+<li>DeLogo: intelligent removal.</li>
+<li>Description: large model summarization.</li>
+<li>Dubbing: Intelligent Dubbing</li>
+<li>VideoRemake: Video deduplication</li>
+<li>VideoComprehension: video (audio) recognition.</li>
+<li>Cutout: Video matting</li>
+<li>Reel: intelligent video editing.</li>
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -87,15 +131,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Query result of intelligent categorization task in video content analysis, which is valid if task type is `Classification`.
-                     * @return ClassificationTask Query result of intelligent categorization task in video content analysis, which is valid if task type is `Classification`.
+                     * 获取
+                     * @return ClassificationTask 
                      * 
                      */
                     AiAnalysisTaskClassificationResult GetClassificationTask() const;
 
                     /**
-                     * 设置Query result of intelligent categorization task in video content analysis, which is valid if task type is `Classification`.
-                     * @param _classificationTask Query result of intelligent categorization task in video content analysis, which is valid if task type is `Classification`.
+                     * 设置
+                     * @param _classificationTask 
                      * 
                      */
                     void SetClassificationTask(const AiAnalysisTaskClassificationResult& _classificationTask);
@@ -108,15 +152,15 @@ namespace TencentCloud
                     bool ClassificationTaskHasBeenSet() const;
 
                     /**
-                     * 获取Query result of intelligent cover generating task in video content analysis, which is valid if task type is `Cover`.
-                     * @return CoverTask Query result of intelligent cover generating task in video content analysis, which is valid if task type is `Cover`.
+                     * 获取
+                     * @return CoverTask 
                      * 
                      */
                     AiAnalysisTaskCoverResult GetCoverTask() const;
 
                     /**
-                     * 设置Query result of intelligent cover generating task in video content analysis, which is valid if task type is `Cover`.
-                     * @param _coverTask Query result of intelligent cover generating task in video content analysis, which is valid if task type is `Cover`.
+                     * 设置
+                     * @param _coverTask 
                      * 
                      */
                     void SetCoverTask(const AiAnalysisTaskCoverResult& _coverTask);
@@ -129,15 +173,15 @@ namespace TencentCloud
                     bool CoverTaskHasBeenSet() const;
 
                     /**
-                     * 获取Query result of intelligent tagging task in video content analysis, which is valid if task type is `Tag`.
-                     * @return TagTask Query result of intelligent tagging task in video content analysis, which is valid if task type is `Tag`.
+                     * 获取
+                     * @return TagTask 
                      * 
                      */
                     AiAnalysisTaskTagResult GetTagTask() const;
 
                     /**
-                     * 设置Query result of intelligent tagging task in video content analysis, which is valid if task type is `Tag`.
-                     * @param _tagTask Query result of intelligent tagging task in video content analysis, which is valid if task type is `Tag`.
+                     * 设置
+                     * @param _tagTask 
                      * 
                      */
                     void SetTagTask(const AiAnalysisTaskTagResult& _tagTask);
@@ -150,15 +194,15 @@ namespace TencentCloud
                     bool TagTaskHasBeenSet() const;
 
                     /**
-                     * 获取Query result of intelligent frame-specific tagging task in video content analysis, which is valid if task type is `FrameTag`.
-                     * @return FrameTagTask Query result of intelligent frame-specific tagging task in video content analysis, which is valid if task type is `FrameTag`.
+                     * 获取
+                     * @return FrameTagTask 
                      * 
                      */
                     AiAnalysisTaskFrameTagResult GetFrameTagTask() const;
 
                     /**
-                     * 设置Query result of intelligent frame-specific tagging task in video content analysis, which is valid if task type is `FrameTag`.
-                     * @param _frameTagTask Query result of intelligent frame-specific tagging task in video content analysis, which is valid if task type is `FrameTag`.
+                     * 设置
+                     * @param _frameTagTask 
                      * 
                      */
                     void SetFrameTagTask(const AiAnalysisTaskFrameTagResult& _frameTagTask);
@@ -171,19 +215,15 @@ namespace TencentCloud
                     bool FrameTagTaskHasBeenSet() const;
 
                     /**
-                     * 获取The result of a highlight generation task. This parameter is valid if `Type` is `Highlight`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return HighlightTask The result of a highlight generation task. This parameter is valid if `Type` is `Highlight`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return HighlightTask 
                      * 
                      */
                     AiAnalysisTaskHighlightResult GetHighlightTask() const;
 
                     /**
-                     * 设置The result of a highlight generation task. This parameter is valid if `Type` is `Highlight`.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _highlightTask The result of a highlight generation task. This parameter is valid if `Type` is `Highlight`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _highlightTask 
                      * 
                      */
                     void SetHighlightTask(const AiAnalysisTaskHighlightResult& _highlightTask);
@@ -196,19 +236,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool HighlightTaskHasBeenSet() const;
 
                     /**
-                     * 获取The query result of an intelligent removal task for video analysis, which is valid when the task type is DeLogo.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DeLogoTask The query result of an intelligent removal task for video analysis, which is valid when the task type is DeLogo.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return DeLogoTask 
                      * 
                      */
                     AiAnalysisTaskDelLogoResult GetDeLogoTask() const;
 
                     /**
-                     * 设置The query result of an intelligent removal task for video analysis, which is valid when the task type is DeLogo.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _deLogoTask The query result of an intelligent removal task for video analysis, which is valid when the task type is DeLogo.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _deLogoTask 
                      * 
                      */
                     void SetDeLogoTask(const AiAnalysisTaskDelLogoResult& _deLogoTask);
@@ -221,19 +257,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DeLogoTaskHasBeenSet() const;
 
                     /**
-                     * 获取The query result of a splitting task for video analysis, which is valid when the task type is SegmentRecognition.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SegmentTask The query result of a splitting task for video analysis, which is valid when the task type is SegmentRecognition.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return SegmentTask 
                      * 
                      */
                     AiAnalysisTaskSegmentResult GetSegmentTask() const;
 
                     /**
-                     * 设置The query result of a splitting task for video analysis, which is valid when the task type is SegmentRecognition.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _segmentTask The query result of a splitting task for video analysis, which is valid when the task type is SegmentRecognition.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _segmentTask 
                      * 
                      */
                     void SetSegmentTask(const AiAnalysisTaskSegmentResult& _segmentTask);
@@ -246,19 +278,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool SegmentTaskHasBeenSet() const;
 
                     /**
-                     * 获取The query result of an opening and closing segments recognition task for video analysis, which is valid when the task type is HeadTailRecognition.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return HeadTailTask The query result of an opening and closing segments recognition task for video analysis, which is valid when the task type is HeadTailRecognition.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return HeadTailTask 
                      * 
                      */
                     AiAnalysisTaskHeadTailResult GetHeadTailTask() const;
 
                     /**
-                     * 设置The query result of an opening and closing segments recognition task for video analysis, which is valid when the task type is HeadTailRecognition.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _headTailTask The query result of an opening and closing segments recognition task for video analysis, which is valid when the task type is HeadTailRecognition.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _headTailTask 
                      * 
                      */
                     void SetHeadTailTask(const AiAnalysisTaskHeadTailResult& _headTailTask);
@@ -271,19 +299,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool HeadTailTaskHasBeenSet() const;
 
                     /**
-                     * 获取The query result of a video analysis summarization task, which is valid when the task type is Description.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DescriptionTask The query result of a video analysis summarization task, which is valid when the task type is Description.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return DescriptionTask 
                      * 
                      */
                     AiAnalysisTaskDescriptionResult GetDescriptionTask() const;
 
                     /**
-                     * 设置The query result of a video analysis summarization task, which is valid when the task type is Description.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _descriptionTask The query result of a video analysis summarization task, which is valid when the task type is Description.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _descriptionTask 
                      * 
                      */
                     void SetDescriptionTask(const AiAnalysisTaskDescriptionResult& _descriptionTask);
@@ -296,19 +320,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DescriptionTaskHasBeenSet() const;
 
                     /**
-                     * 获取The query result of a landscape-to-portrait task for video analysis, which is valid when the task type is HorizontalToVertical.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return HorizontalToVerticalTask The query result of a landscape-to-portrait task for video analysis, which is valid when the task type is HorizontalToVertical.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return HorizontalToVerticalTask 
                      * 
                      */
                     AiAnalysisTaskHorizontalToVerticalResult GetHorizontalToVerticalTask() const;
 
                     /**
-                     * 设置The query result of a landscape-to-portrait task for video analysis, which is valid when the task type is HorizontalToVertical.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _horizontalToVerticalTask The query result of a landscape-to-portrait task for video analysis, which is valid when the task type is HorizontalToVertical.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _horizontalToVerticalTask 
                      * 
                      */
                     void SetHorizontalToVerticalTask(const AiAnalysisTaskHorizontalToVerticalResult& _horizontalToVerticalTask);
@@ -321,19 +341,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool HorizontalToVerticalTaskHasBeenSet() const;
 
                     /**
-                     * 获取The query result of a Dubbing task for video content analysis, which is valid when the task type is Dubbing.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return DubbingTask The query result of a Dubbing task for video content analysis, which is valid when the task type is Dubbing.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取
+                     * @return DubbingTask 
                      * 
                      */
                     AiAnalysisTaskDubbingResult GetDubbingTask() const;
 
                     /**
-                     * 设置The query result of a Dubbing task for video content analysis, which is valid when the task type is Dubbing.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _dubbingTask The query result of a Dubbing task for video content analysis, which is valid when the task type is Dubbing.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置
+                     * @param _dubbingTask 
                      * 
                      */
                     void SetDubbingTask(const AiAnalysisTaskDubbingResult& _dubbingTask);
@@ -346,19 +362,15 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool DubbingTaskHasBeenSet() const;
 
                     /**
-                     * 获取The query result of a video content deduplication task, which is valid when the task type is VideoRemake.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return VideoRemakeTask The query result of a video content deduplication task, which is valid when the task type is VideoRemake.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取
+                     * @return VideoRemakeTask 
                      * 
                      */
                     AiAnalysisTaskVideoRemakeResult GetVideoRemakeTask() const;
 
                     /**
-                     * 设置The query result of a video content deduplication task, which is valid when the task type is VideoRemake.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _videoRemakeTask The query result of a video content deduplication task, which is valid when the task type is VideoRemake.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置
+                     * @param _videoRemakeTask 
                      * 
                      */
                     void SetVideoRemakeTask(const AiAnalysisTaskVideoRemakeResult& _videoRemakeTask);
@@ -371,19 +383,15 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool VideoRemakeTaskHasBeenSet() const;
 
                     /**
-                     * 获取Query result of the video (audio) recognition task. This parameter is valid when the task type is VideoComprehension.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return VideoComprehensionTask Query result of the video (audio) recognition task. This parameter is valid when the task type is VideoComprehension.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return VideoComprehensionTask 
                      * 
                      */
                     AiAnalysisTaskVideoComprehensionResult GetVideoComprehensionTask() const;
 
                     /**
-                     * 设置Query result of the video (audio) recognition task. This parameter is valid when the task type is VideoComprehension.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _videoComprehensionTask Query result of the video (audio) recognition task. This parameter is valid when the task type is VideoComprehension.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _videoComprehensionTask 
                      * 
                      */
                     void SetVideoComprehensionTask(const AiAnalysisTaskVideoComprehensionResult& _videoComprehensionTask);
@@ -396,19 +404,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool VideoComprehensionTaskHasBeenSet() const;
 
                     /**
-                     * 获取Query result of video content analysis intelligent image masking task. valid when task type is Cutout.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return CutoutTask Query result of video content analysis intelligent image masking task. valid when task type is Cutout.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return CutoutTask 
                      * 
                      */
                     AiAnalysisTaskCutoutResult GetCutoutTask() const;
 
                     /**
-                     * 设置Query result of video content analysis intelligent image masking task. valid when task type is Cutout.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _cutoutTask Query result of video content analysis intelligent image masking task. valid when task type is Cutout.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _cutoutTask 
                      * 
                      */
                     void SetCutoutTask(const AiAnalysisTaskCutoutResult& _cutoutTask);
@@ -421,19 +425,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CutoutTaskHasBeenSet() const;
 
                     /**
-                     * 获取Query result of the video content analysis AI narration and video re-creation task. valid when the task type is Reel.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ReelTask Query result of the video content analysis AI narration and video re-creation task. valid when the task type is Reel.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return ReelTask 
                      * 
                      */
                     AiAnalysisTaskReelResult GetReelTask() const;
 
                     /**
-                     * 设置Query result of the video content analysis AI narration and video re-creation task. valid when the task type is Reel.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _reelTask Query result of the video content analysis AI narration and video re-creation task. valid when the task type is Reel.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _reelTask 
                      * 
                      */
                     void SetReelTask(const AiAnalysisTaskReelResult& _reelTask);
@@ -448,109 +448,109 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Task type. Valid values:<li>Classification: intelligent classification.</li><li>Cover: intelligent cover.</li><li>Tag: intelligent tagging.</li><li>FrameTag: intelligent frame-level tagging.</li><li>Highlight: intelligent highlights.</li><li>DeLogo: intelligent removal.</li><li>Description: LLM summarization.</li><li>Dubbing: intelligent dubbing.</li><li>VideoRemake: video recreation.</li><li>VideoComprehension: video (audio) recognition.</li>
-<li>Cutout: video matting.</li><li>Reel: intelligent video editing.</li>
+                     * Task type. Valid values:
+<li>Classification: intelligent classification.</li>
+<li>Cover: intelligent cover</li>
+<li>Tag: intelligent tagging.</li>
+<li>FrameTag: intelligent frame tagging.</li>
+<li>Highlight: Intelligent Highlights</li>
+<li>DeLogo: intelligent removal.</li>
+<li>Description: large model summarization.</li>
+<li>Dubbing: Intelligent Dubbing</li>
+<li>VideoRemake: Video deduplication</li>
+<li>VideoComprehension: video (audio) recognition.</li>
+<li>Cutout: Video matting</li>
+<li>Reel: intelligent video editing.</li>
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Query result of intelligent categorization task in video content analysis, which is valid if task type is `Classification`.
+                     * 
                      */
                     AiAnalysisTaskClassificationResult m_classificationTask;
                     bool m_classificationTaskHasBeenSet;
 
                     /**
-                     * Query result of intelligent cover generating task in video content analysis, which is valid if task type is `Cover`.
+                     * 
                      */
                     AiAnalysisTaskCoverResult m_coverTask;
                     bool m_coverTaskHasBeenSet;
 
                     /**
-                     * Query result of intelligent tagging task in video content analysis, which is valid if task type is `Tag`.
+                     * 
                      */
                     AiAnalysisTaskTagResult m_tagTask;
                     bool m_tagTaskHasBeenSet;
 
                     /**
-                     * Query result of intelligent frame-specific tagging task in video content analysis, which is valid if task type is `FrameTag`.
+                     * 
                      */
                     AiAnalysisTaskFrameTagResult m_frameTagTask;
                     bool m_frameTagTaskHasBeenSet;
 
                     /**
-                     * The result of a highlight generation task. This parameter is valid if `Type` is `Highlight`.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     AiAnalysisTaskHighlightResult m_highlightTask;
                     bool m_highlightTaskHasBeenSet;
 
                     /**
-                     * The query result of an intelligent removal task for video analysis, which is valid when the task type is DeLogo.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     AiAnalysisTaskDelLogoResult m_deLogoTask;
                     bool m_deLogoTaskHasBeenSet;
 
                     /**
-                     * The query result of a splitting task for video analysis, which is valid when the task type is SegmentRecognition.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     AiAnalysisTaskSegmentResult m_segmentTask;
                     bool m_segmentTaskHasBeenSet;
 
                     /**
-                     * The query result of an opening and closing segments recognition task for video analysis, which is valid when the task type is HeadTailRecognition.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     AiAnalysisTaskHeadTailResult m_headTailTask;
                     bool m_headTailTaskHasBeenSet;
 
                     /**
-                     * The query result of a video analysis summarization task, which is valid when the task type is Description.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     AiAnalysisTaskDescriptionResult m_descriptionTask;
                     bool m_descriptionTaskHasBeenSet;
 
                     /**
-                     * The query result of a landscape-to-portrait task for video analysis, which is valid when the task type is HorizontalToVertical.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     AiAnalysisTaskHorizontalToVerticalResult m_horizontalToVerticalTask;
                     bool m_horizontalToVerticalTaskHasBeenSet;
 
                     /**
-                     * The query result of a Dubbing task for video content analysis, which is valid when the task type is Dubbing.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
                      */
                     AiAnalysisTaskDubbingResult m_dubbingTask;
                     bool m_dubbingTaskHasBeenSet;
 
                     /**
-                     * The query result of a video content deduplication task, which is valid when the task type is VideoRemake.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
                      */
                     AiAnalysisTaskVideoRemakeResult m_videoRemakeTask;
                     bool m_videoRemakeTaskHasBeenSet;
 
                     /**
-                     * Query result of the video (audio) recognition task. This parameter is valid when the task type is VideoComprehension.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     AiAnalysisTaskVideoComprehensionResult m_videoComprehensionTask;
                     bool m_videoComprehensionTaskHasBeenSet;
 
                     /**
-                     * Query result of video content analysis intelligent image masking task. valid when task type is Cutout.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     AiAnalysisTaskCutoutResult m_cutoutTask;
                     bool m_cutoutTaskHasBeenSet;
 
                     /**
-                     * Query result of the video content analysis AI narration and video re-creation task. valid when the task type is Reel.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     AiAnalysisTaskReelResult m_reelTask;
                     bool m_reelTaskHasBeenSet;

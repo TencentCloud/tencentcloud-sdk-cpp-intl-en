@@ -133,19 +133,15 @@ namespace TencentCloud
                     bool MessageHasBeenSet() const;
 
                     /**
-                     * 获取<p>Translation task output information.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TransTextTask <p>Translation task output information.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return TransTextTask 
                      * 
                      */
                     SmartSubtitleTaskTransTextResultOutput GetTransTextTask() const;
 
                     /**
-                     * 设置<p>Translation task output information.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _transTextTask <p>Translation task output information.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _transTextTask 
                      * 
                      */
                     void SetTransTextTask(const SmartSubtitleTaskTransTextResultOutput& _transTextTask);
@@ -158,19 +154,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TransTextTaskHasBeenSet() const;
 
                     /**
-                     * 获取<p>Full speech recognition task output information.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return AsrFullTextTask <p>Full speech recognition task output information.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return AsrFullTextTask 
                      * 
                      */
                     SmartSubtitleTaskAsrFullTextResultOutput GetAsrFullTextTask() const;
 
                     /**
-                     * 设置<p>Full speech recognition task output information.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _asrFullTextTask <p>Full speech recognition task output information.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _asrFullTextTask 
                      * 
                      */
                     void SetAsrFullTextTask(const SmartSubtitleTaskAsrFullTextResultOutput& _asrFullTextTask);
@@ -209,15 +201,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_messageHasBeenSet;
 
                     /**
-                     * <p>Translation task output information.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     SmartSubtitleTaskTransTextResultOutput m_transTextTask;
                     bool m_transTextTaskHasBeenSet;
 
                     /**
-                     * <p>Full speech recognition task output information.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     SmartSubtitleTaskAsrFullTextResultOutput m_asrFullTextTask;
                     bool m_asrFullTextTaskHasBeenSet;

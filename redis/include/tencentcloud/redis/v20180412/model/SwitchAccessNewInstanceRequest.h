@@ -44,10 +44,10 @@ namespace TencentCloud
 
                     /**
                      * 获取Specify the instance ID.
- For example: crs-xjhsdj****. Please log in to the [Redis Console] (https://console.cloud.tencent.com/redis#/) and copy the instance ID from the instance list.
+ For example: crs-xjhsdj****. Please log in to the[ Redis Colose](https://console.tencentcloud.com/redis) and copy the instance ID from the instance list.
 Sample value: crs-asdasdas.
                      * @return InstanceId Specify the instance ID.
- For example: crs-xjhsdj****. Please log in to the [Redis Console] (https://console.cloud.tencent.com/redis#/) and copy the instance ID from the instance list.
+ For example: crs-xjhsdj****. Please log in to the[ Redis Colose](https://console.tencentcloud.com/redis) and copy the instance ID from the instance list.
 Sample value: crs-asdasdas.
                      * 
                      */
@@ -55,10 +55,10 @@ Sample value: crs-asdasdas.
 
                     /**
                      * 设置Specify the instance ID.
- For example: crs-xjhsdj****. Please log in to the [Redis Console] (https://console.cloud.tencent.com/redis#/) and copy the instance ID from the instance list.
+ For example: crs-xjhsdj****. Please log in to the[ Redis Colose](https://console.tencentcloud.com/redis) and copy the instance ID from the instance list.
 Sample value: crs-asdasdas.
                      * @param _instanceId Specify the instance ID.
- For example: crs-xjhsdj****. Please log in to the [Redis Console] (https://console.cloud.tencent.com/redis#/) and copy the instance ID from the instance list.
+ For example: crs-xjhsdj****. Please log in to the[ Redis Colose](https://console.tencentcloud.com/redis) and copy the instance ID from the instance list.
 Sample value: crs-asdasdas.
                      * 
                      */
@@ -75,7 +75,7 @@ Sample value: crs-asdasdas.
 
                     /**
                      * Specify the instance ID.
- For example: crs-xjhsdj****. Please log in to the [Redis Console] (https://console.cloud.tencent.com/redis#/) and copy the instance ID from the instance list.
+ For example: crs-xjhsdj****. Please log in to the[ Redis Colose](https://console.tencentcloud.com/redis) and copy the instance ID from the instance list.
 Sample value: crs-asdasdas.
                      */
                     std::string m_instanceId;

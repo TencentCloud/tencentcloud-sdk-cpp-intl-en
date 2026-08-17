@@ -91,19 +91,15 @@ namespace TencentCloud
                     bool UserExtParaHasBeenSet() const;
 
                     /**
-                     * 获取Custom smart subtitle parameter. It takes effect when Definition is set to 0. This parameter is used in high customization scenarios. It is recommended that you preferentially use Definition to specify smart subtitle parameters.	
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return RawParameter Custom smart subtitle parameter. It takes effect when Definition is set to 0. This parameter is used in high customization scenarios. It is recommended that you preferentially use Definition to specify smart subtitle parameters.	
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取
+                     * @return RawParameter 
                      * 
                      */
                     RawSmartSubtitleParameter GetRawParameter() const;
 
                     /**
-                     * 设置Custom smart subtitle parameter. It takes effect when Definition is set to 0. This parameter is used in high customization scenarios. It is recommended that you preferentially use Definition to specify smart subtitle parameters.	
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _rawParameter Custom smart subtitle parameter. It takes effect when Definition is set to 0. This parameter is used in high customization scenarios. It is recommended that you preferentially use Definition to specify smart subtitle parameters.	
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置
+                     * @param _rawParameter 
                      * 
                      */
                     void SetRawParameter(const RawSmartSubtitleParameter& _rawParameter);
@@ -116,23 +112,15 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool RawParameterHasBeenSet() const;
 
                     /**
-                     * 获取Bucket that stores the output file. If it is left unspecified, the storage location in InputInfo will be inherited.
-**Note**: This parameter is required when InputInfo.Type is set to URL.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return OutputStorage Bucket that stores the output file. If it is left unspecified, the storage location in InputInfo will be inherited.
-**Note**: This parameter is required when InputInfo.Type is set to URL.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取
+                     * @return OutputStorage 
                      * 
                      */
                     TaskOutputStorage GetOutputStorage() const;
 
                     /**
-                     * 设置Bucket that stores the output file. If it is left unspecified, the storage location in InputInfo will be inherited.
-**Note**: This parameter is required when InputInfo.Type is set to URL.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _outputStorage Bucket that stores the output file. If it is left unspecified, the storage location in InputInfo will be inherited.
-**Note**: This parameter is required when InputInfo.Type is set to URL.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置
+                     * @param _outputStorage 
                      * 
                      */
                     void SetOutputStorage(const TaskOutputStorage& _outputStorage);
@@ -146,25 +134,25 @@ Note: This field may return null, indicating that no valid value can be obtained
 
                     /**
                      * 获取Output path of the generated subtitle file, which can be a relative or absolute path.
-To define the output path, end the path with .{format}. For variable names, see the description of file name variables at https://www.tencentcloud.com/document/product/862/37039.?from_cn_redirect=1
+To define the output path, the path must end with `.{format}`. For variable names, please refer to the Filename Variable Explanation (https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1).
 
 Relative path example:
- - File name_{variable name}.{format}.
- - File name.{format}.
+- File name_{variable name}.{format}
+-File name.{format}
 
 Absolute path example:
- -/Custom path/File name_{variable name}.{format}.
+-/Custom path/Filename_{variable name}.{format}
 
 If this field is left unspecified, the default value is the relative path in the following format: {inputName}_smartsubtitle_{definition}.{format}.
                      * @return OutputObjectPath Output path of the generated subtitle file, which can be a relative or absolute path.
-To define the output path, end the path with .{format}. For variable names, see the description of file name variables at https://www.tencentcloud.com/document/product/862/37039.?from_cn_redirect=1
+To define the output path, the path must end with `.{format}`. For variable names, please refer to the Filename Variable Explanation (https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1).
 
 Relative path example:
- - File name_{variable name}.{format}.
- - File name.{format}.
+- File name_{variable name}.{format}
+-File name.{format}
 
 Absolute path example:
- -/Custom path/File name_{variable name}.{format}.
+-/Custom path/Filename_{variable name}.{format}
 
 If this field is left unspecified, the default value is the relative path in the following format: {inputName}_smartsubtitle_{definition}.{format}.
                      * 
@@ -173,25 +161,25 @@ If this field is left unspecified, the default value is the relative path in the
 
                     /**
                      * 设置Output path of the generated subtitle file, which can be a relative or absolute path.
-To define the output path, end the path with .{format}. For variable names, see the description of file name variables at https://www.tencentcloud.com/document/product/862/37039.?from_cn_redirect=1
+To define the output path, the path must end with `.{format}`. For variable names, please refer to the Filename Variable Explanation (https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1).
 
 Relative path example:
- - File name_{variable name}.{format}.
- - File name.{format}.
+- File name_{variable name}.{format}
+-File name.{format}
 
 Absolute path example:
- -/Custom path/File name_{variable name}.{format}.
+-/Custom path/Filename_{variable name}.{format}
 
 If this field is left unspecified, the default value is the relative path in the following format: {inputName}_smartsubtitle_{definition}.{format}.
                      * @param _outputObjectPath Output path of the generated subtitle file, which can be a relative or absolute path.
-To define the output path, end the path with .{format}. For variable names, see the description of file name variables at https://www.tencentcloud.com/document/product/862/37039.?from_cn_redirect=1
+To define the output path, the path must end with `.{format}`. For variable names, please refer to the Filename Variable Explanation (https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1).
 
 Relative path example:
- - File name_{variable name}.{format}.
- - File name.{format}.
+- File name_{variable name}.{format}
+-File name.{format}
 
 Absolute path example:
- -/Custom path/File name_{variable name}.{format}.
+-/Custom path/Filename_{variable name}.{format}
 
 If this field is left unspecified, the default value is the relative path in the following format: {inputName}_smartsubtitle_{definition}.{format}.
                      * 
@@ -220,30 +208,27 @@ If this field is left unspecified, the default value is the relative path in the
                     bool m_userExtParaHasBeenSet;
 
                     /**
-                     * Custom smart subtitle parameter. It takes effect when Definition is set to 0. This parameter is used in high customization scenarios. It is recommended that you preferentially use Definition to specify smart subtitle parameters.	
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
                      */
                     RawSmartSubtitleParameter m_rawParameter;
                     bool m_rawParameterHasBeenSet;
 
                     /**
-                     * Bucket that stores the output file. If it is left unspecified, the storage location in InputInfo will be inherited.
-**Note**: This parameter is required when InputInfo.Type is set to URL.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
                      */
                     TaskOutputStorage m_outputStorage;
                     bool m_outputStorageHasBeenSet;
 
                     /**
                      * Output path of the generated subtitle file, which can be a relative or absolute path.
-To define the output path, end the path with .{format}. For variable names, see the description of file name variables at https://www.tencentcloud.com/document/product/862/37039.?from_cn_redirect=1
+To define the output path, the path must end with `.{format}`. For variable names, please refer to the Filename Variable Explanation (https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1).
 
 Relative path example:
- - File name_{variable name}.{format}.
- - File name.{format}.
+- File name_{variable name}.{format}
+-File name.{format}
 
 Absolute path example:
- -/Custom path/File name_{variable name}.{format}.
+-/Custom path/Filename_{variable name}.{format}
 
 If this field is left unspecified, the default value is the relative path in the following format: {inputName}_smartsubtitle_{definition}.{format}.
                      */

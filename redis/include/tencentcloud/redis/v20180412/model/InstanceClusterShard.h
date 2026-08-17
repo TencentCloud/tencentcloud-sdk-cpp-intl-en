@@ -280,6 +280,48 @@ namespace TencentCloud
                      */
                     bool ConnectedHasBeenSet() const;
 
+                    /**
+                     * 获取AZ information.
+                     * @return ZoneId AZ information.
+                     * 
+                     */
+                    std::string GetZoneId() const;
+
+                    /**
+                     * 设置AZ information.
+                     * @param _zoneId AZ information.
+                     * 
+                     */
+                    void SetZoneId(const std::string& _zoneId);
+
+                    /**
+                     * 判断参数 ZoneId 是否已赋值
+                     * @return ZoneId 是否已赋值
+                     * 
+                     */
+                    bool ZoneIdHasBeenSet() const;
+
+                    /**
+                     * 获取Node group ID.
+                     * @return ReplicasNodeId Node group ID.
+                     * 
+                     */
+                    int64_t GetReplicasNodeId() const;
+
+                    /**
+                     * 设置Node group ID.
+                     * @param _replicasNodeId Node group ID.
+                     * 
+                     */
+                    void SetReplicasNodeId(const int64_t& _replicasNodeId);
+
+                    /**
+                     * 判断参数 ReplicasNodeId 是否已赋值
+                     * @return ReplicasNodeId 是否已赋值
+                     * 
+                     */
+                    bool ReplicasNodeIdHasBeenSet() const;
+
                 private:
 
                     /**
@@ -347,6 +389,18 @@ namespace TencentCloud
                      */
                     int64_t m_connected;
                     bool m_connectedHasBeenSet;
+
+                    /**
+                     * AZ information.
+                     */
+                    std::string m_zoneId;
+                    bool m_zoneIdHasBeenSet;
+
+                    /**
+                     * Node group ID.
+                     */
+                    int64_t m_replicasNodeId;
+                    bool m_replicasNodeIdHasBeenSet;
 
                 };
             }

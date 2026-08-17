@@ -72,10 +72,8 @@ namespace TencentCloud
                     bool MsgHasBeenSet() const;
 
                     /**
-                     * 获取<p>Synthetic audio in Base64 encoding and WAV format.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return AudioData <p>Synthetic audio in Base64 encoding and WAV format.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return AudioData 
                      * 
                      */
                     std::string GetAudioData() const;
@@ -102,10 +100,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool AudioUrlHasBeenSet() const;
 
                     /**
-                     * 获取<p>Cloned voice ID.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return VoiceId <p>Cloned voice ID.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return VoiceId 
                      * 
                      */
                     std::string GetVoiceId() const;
@@ -146,8 +142,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_msgHasBeenSet;
 
                     /**
-                     * <p>Synthetic audio in Base64 encoding and WAV format.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string m_audioData;
                     bool m_audioDataHasBeenSet;
@@ -159,8 +154,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_audioUrlHasBeenSet;
 
                     /**
-                     * <p>Cloned voice ID.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string m_voiceId;
                     bool m_voiceIdHasBeenSet;

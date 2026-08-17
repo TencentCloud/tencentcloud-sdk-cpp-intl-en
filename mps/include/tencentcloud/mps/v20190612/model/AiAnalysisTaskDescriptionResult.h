@@ -49,15 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Task status, including PROCESSING, SUCCESS, and FAIL.
-                     * @return Status Task status, including PROCESSING, SUCCESS, and FAIL.
+                     * 获取Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
+                     * @return Status Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置Task status, including PROCESSING, SUCCESS, and FAIL.
-                     * @param _status Task status, including PROCESSING, SUCCESS, and FAIL.
+                     * 设置Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
+                     * @param _status Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -70,15 +70,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Error code. `0`: Task successful. Other values: Task failed.
-                     * @return ErrCode Error code. `0`: Task successful. Other values: Task failed.
+                     * 获取Error code. 0: Task successful. Other values: Task failed.
+                     * @return ErrCode Error code. 0: Task successful. Other values: Task failed.
                      * 
                      */
                     int64_t GetErrCode() const;
 
                     /**
-                     * 设置Error code. `0`: Task successful. Other values: Task failed.
-                     * @param _errCode Error code. `0`: Task successful. Other values: Task failed.
+                     * 设置Error code. 0: Task successful. Other values: Task failed.
+                     * @param _errCode Error code. 0: Task successful. Other values: Task failed.
                      * 
                      */
                     void SetErrCode(const int64_t& _errCode);
@@ -133,19 +133,15 @@ namespace TencentCloud
                     bool InputHasBeenSet() const;
 
                     /**
-                     * 获取Intelligent description task output.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Output Intelligent description task output.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return Output 
                      * 
                      */
                     AiAnalysisTaskDescriptionOutput GetOutput() const;
 
                     /**
-                     * 设置Intelligent description task output.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _output Intelligent description task output.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _output 
                      * 
                      */
                     void SetOutput(const AiAnalysisTaskDescriptionOutput& _output);
@@ -160,13 +156,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Task status, including PROCESSING, SUCCESS, and FAIL.
+                     * Task status. Valid values are PROCESSING, SUCCESS, and FAIL.
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Error code. `0`: Task successful. Other values: Task failed.
+                     * Error code. 0: Task successful. Other values: Task failed.
                      */
                     int64_t m_errCode;
                     bool m_errCodeHasBeenSet;
@@ -184,8 +180,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_inputHasBeenSet;
 
                     /**
-                     * Intelligent description task output.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     AiAnalysisTaskDescriptionOutput m_output;
                     bool m_outputHasBeenSet;

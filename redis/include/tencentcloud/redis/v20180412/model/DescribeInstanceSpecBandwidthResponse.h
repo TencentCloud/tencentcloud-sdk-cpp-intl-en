@@ -43,7 +43,47 @@ namespace TencentCloud
                     std::string ToJsonString() const;
 
 
+                    /**
+                     * 获取<p>Basic bandwidth.</p>
+                     * @return Bandwidth <p>Basic bandwidth.</p>
+                     * 
+                     */
+                    int64_t GetBandwidth() const;
+
+                    /**
+                     * 判断参数 Bandwidth 是否已赋值
+                     * @return Bandwidth 是否已赋值
+                     * 
+                     */
+                    bool BandwidthHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Connection limit.</p>
+                     * @return ClientLimit <p>Connection limit.</p>
+                     * 
+                     */
+                    int64_t GetClientLimit() const;
+
+                    /**
+                     * 判断参数 ClientLimit 是否已赋值
+                     * @return ClientLimit 是否已赋值
+                     * 
+                     */
+                    bool ClientLimitHasBeenSet() const;
+
                 private:
+
+                    /**
+                     * <p>Basic bandwidth.</p>
+                     */
+                    int64_t m_bandwidth;
+                    bool m_bandwidthHasBeenSet;
+
+                    /**
+                     * <p>Connection limit.</p>
+                     */
+                    int64_t m_clientLimit;
+                    bool m_clientLimitHasBeenSet;
 
                 };
             }

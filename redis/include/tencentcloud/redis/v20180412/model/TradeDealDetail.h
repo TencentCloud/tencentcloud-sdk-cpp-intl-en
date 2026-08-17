@@ -49,21 +49,21 @@ namespace TencentCloud
                     /**
                      * 获取Order ID, which is used when a TencentCloud API is called.
                      * @return DealId Order ID, which is used when a TencentCloud API is called.
-                     * 
+                     * @deprecated
                      */
                     std::string GetDealId() const;
 
                     /**
                      * 设置Order ID, which is used when a TencentCloud API is called.
                      * @param _dealId Order ID, which is used when a TencentCloud API is called.
-                     * 
+                     * @deprecated
                      */
                     void SetDealId(const std::string& _dealId);
 
                     /**
                      * 判断参数 DealId 是否已赋值
                      * @return DealId 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool DealIdHasBeenSet() const;
 

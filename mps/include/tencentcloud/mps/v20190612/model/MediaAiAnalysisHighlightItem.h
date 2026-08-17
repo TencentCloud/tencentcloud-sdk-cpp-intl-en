@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * The information of intelligently generated highlight segments.
+                * Intelligent highlight info
                 */
                 class MediaAiAnalysisHighlightItem : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The URL of the highlight segments.
-                     * @return HighlightPath The URL of the highlight segments.
+                     * 获取Intelligent highlight address.
+                     * @return HighlightPath Intelligent highlight address.
                      * 
                      */
                     std::string GetHighlightPath() const;
 
                     /**
-                     * 设置The URL of the highlight segments.
-                     * @param _highlightPath The URL of the highlight segments.
+                     * 设置Intelligent highlight address.
+                     * @param _highlightPath Intelligent highlight address.
                      * 
                      */
                     void SetHighlightPath(const std::string& _highlightPath);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool HighlightPathHasBeenSet() const;
 
                     /**
-                     * 获取The URL of the thumbnail.
-                     * @return CovImgPath The URL of the thumbnail.
+                     * 获取Intelligent highlight cover address.
+                     * @return CovImgPath Intelligent highlight cover address.
                      * 
                      */
                     std::string GetCovImgPath() const;
 
                     /**
-                     * 设置The URL of the thumbnail.
-                     * @param _covImgPath The URL of the thumbnail.
+                     * 设置Intelligent highlight cover address.
+                     * @param _covImgPath Intelligent highlight cover address.
                      * 
                      */
                     void SetCovImgPath(const std::string& _covImgPath);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool CovImgPathHasBeenSet() const;
 
                     /**
-                     * 获取The confidence score. Value range: 0-100.
-                     * @return Confidence The confidence score. Value range: 0-100.
+                     * 获取Reliability of the intelligent highlights, with a value range from 0 to 100.
+                     * @return Confidence Reliability of the intelligent highlights, with a value range from 0 to 100.
                      * 
                      */
                     double GetConfidence() const;
 
                     /**
-                     * 设置The confidence score. Value range: 0-100.
-                     * @param _confidence The confidence score. Value range: 0-100.
+                     * 设置Reliability of the intelligent highlights, with a value range from 0 to 100.
+                     * @param _confidence Reliability of the intelligent highlights, with a value range from 0 to 100.
                      * 
                      */
                     void SetConfidence(const double& _confidence);
@@ -111,15 +111,15 @@ namespace TencentCloud
                     bool ConfidenceHasBeenSet() const;
 
                     /**
-                     * 获取The duration of the highlights.
-                     * @return Duration The duration of the highlights.
+                     * 获取Intelligent highlight duration.
+                     * @return Duration Intelligent highlight duration.
                      * 
                      */
                     double GetDuration() const;
 
                     /**
-                     * 设置The duration of the highlights.
-                     * @param _duration The duration of the highlights.
+                     * 设置Intelligent highlight duration.
+                     * @param _duration Intelligent highlight duration.
                      * 
                      */
                     void SetDuration(const double& _duration);
@@ -132,15 +132,15 @@ namespace TencentCloud
                     bool DurationHasBeenSet() const;
 
                     /**
-                     * 获取A list of the highlight segments.
-                     * @return SegmentSet A list of the highlight segments.
+                     * 获取Intelligent highlight sub-clip list.
+                     * @return SegmentSet Intelligent highlight sub-clip list.
                      * 
                      */
                     std::vector<HighlightSegmentItem> GetSegmentSet() const;
 
                     /**
-                     * 设置A list of the highlight segments.
-                     * @param _segmentSet A list of the highlight segments.
+                     * 设置Intelligent highlight sub-clip list.
+                     * @param _segmentSet Intelligent highlight sub-clip list.
                      * 
                      */
                     void SetSegmentSet(const std::vector<HighlightSegmentItem>& _segmentSet);
@@ -153,19 +153,15 @@ namespace TencentCloud
                     bool SegmentSetHasBeenSet() const;
 
                     /**
-                     * 获取Intelligent highlight address.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return HighlightUrl Intelligent highlight address.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return HighlightUrl 
                      * 
                      */
                     std::string GetHighlightUrl() const;
 
                     /**
-                     * 设置Intelligent highlight address.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _highlightUrl Intelligent highlight address.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _highlightUrl 
                      * 
                      */
                     void SetHighlightUrl(const std::string& _highlightUrl);
@@ -178,19 +174,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool HighlightUrlHasBeenSet() const;
 
                     /**
-                     * 获取Intelligent highlight cover address.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return CovImgUrl Intelligent highlight cover address.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return CovImgUrl 
                      * 
                      */
                     std::string GetCovImgUrl() const;
 
                     /**
-                     * 设置Intelligent highlight cover address.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _covImgUrl Intelligent highlight cover address.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _covImgUrl 
                      * 
                      */
                     void SetCovImgUrl(const std::string& _covImgUrl);
@@ -205,45 +197,43 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * The URL of the highlight segments.
+                     * Intelligent highlight address.
                      */
                     std::string m_highlightPath;
                     bool m_highlightPathHasBeenSet;
 
                     /**
-                     * The URL of the thumbnail.
+                     * Intelligent highlight cover address.
                      */
                     std::string m_covImgPath;
                     bool m_covImgPathHasBeenSet;
 
                     /**
-                     * The confidence score. Value range: 0-100.
+                     * Reliability of the intelligent highlights, with a value range from 0 to 100.
                      */
                     double m_confidence;
                     bool m_confidenceHasBeenSet;
 
                     /**
-                     * The duration of the highlights.
+                     * Intelligent highlight duration.
                      */
                     double m_duration;
                     bool m_durationHasBeenSet;
 
                     /**
-                     * A list of the highlight segments.
+                     * Intelligent highlight sub-clip list.
                      */
                     std::vector<HighlightSegmentItem> m_segmentSet;
                     bool m_segmentSetHasBeenSet;
 
                     /**
-                     * Intelligent highlight address.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string m_highlightUrl;
                     bool m_highlightUrlHasBeenSet;
 
                     /**
-                     * Intelligent highlight cover address.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string m_covImgUrl;
                     bool m_covImgUrlHasBeenSet;

@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Specifies the recording template unique identifier filter condition, with an array length limit of 100.
-                     * @return Definitions Specifies the recording template unique identifier filter condition, with an array length limit of 100.
+                     * 获取Filter condition for the unique identifier of the recording template. The array can contain up to 100 unique identifiers.
+                     * @return Definitions Filter condition for the unique identifier of the recording template. The array can contain up to 100 unique identifiers.
                      * 
                      */
                     std::vector<int64_t> GetDefinitions() const;
 
                     /**
-                     * 设置Specifies the recording template unique identifier filter condition, with an array length limit of 100.
-                     * @param _definitions Specifies the recording template unique identifier filter condition, with an array length limit of 100.
+                     * 设置Filter condition for the unique identifier of the recording template. The array can contain up to 100 unique identifiers.
+                     * @param _definitions Filter condition for the unique identifier of the recording template. The array can contain up to 100 unique identifiers.
                      * 
                      */
                     void SetDefinitions(const std::vector<int64_t>& _definitions);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool DefinitionsHasBeenSet() const;
 
                     /**
-                     * 获取Paging offset. Default value: 0.
-                     * @return Offset Paging offset. Default value: 0.
+                     * 获取Pagination offset. Default value: 0.
+                     * @return Offset Pagination offset. Default value: 0.
                      * 
                      */
                     int64_t GetOffset() const;
 
                     /**
-                     * 设置Paging offset. Default value: 0.
-                     * @param _offset Paging offset. Default value: 0.
+                     * 设置Pagination offset. Default value: 0.
+                     * @param _offset Pagination offset. Default value: 0.
                      * 
                      */
                     void SetOffset(const int64_t& _offset);
@@ -106,23 +106,23 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Indicates the template type filter condition. If left empty, all templates are returned. Valid values:
-* Preset: System preset template;
-* Custom
-                     * @return Type Indicates the template type filter condition. If left empty, all templates are returned. Valid values:
-* Preset: System preset template;
-* Custom
+                     * 获取Condition for filtering templates by type. If this field is not specified, all templates are returned. Available values:
+* Preset: system preset template
+* Custom: user-defined template.
+                     * @return Type Condition for filtering templates by type. If this field is not specified, all templates are returned. Available values:
+* Preset: system preset template
+* Custom: user-defined template.
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Indicates the template type filter condition. If left empty, all templates are returned. Valid values:
-* Preset: System preset template;
-* Custom
-                     * @param _type Indicates the template type filter condition. If left empty, all templates are returned. Valid values:
-* Preset: System preset template;
-* Custom
+                     * 设置Condition for filtering templates by type. If this field is not specified, all templates are returned. Available values:
+* Preset: system preset template
+* Custom: user-defined template.
+                     * @param _type Condition for filtering templates by type. If this field is not specified, all templates are returned. Available values:
+* Preset: system preset template
+* Custom: user-defined template.
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -135,15 +135,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the recording template identifier filter condition, with a length limit of 64 characters.
-                     * @return Name Specifies the recording template identifier filter condition, with a length limit of 64 characters.
+                     * 获取Filter condition for recording template identifiers, with a length limit of 64 characters.
+                     * @return Name Filter condition for recording template identifiers, with a length limit of 64 characters.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Specifies the recording template identifier filter condition, with a length limit of 64 characters.
-                     * @param _name Specifies the recording template identifier filter condition, with a length limit of 64 characters.
+                     * 设置Filter condition for recording template identifiers, with a length limit of 64 characters.
+                     * @param _name Filter condition for recording template identifiers, with a length limit of 64 characters.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -158,13 +158,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Specifies the recording template unique identifier filter condition, with an array length limit of 100.
+                     * Filter condition for the unique identifier of the recording template. The array can contain up to 100 unique identifiers.
                      */
                     std::vector<int64_t> m_definitions;
                     bool m_definitionsHasBeenSet;
 
                     /**
-                     * Paging offset. Default value: 0.
+                     * Pagination offset. Default value: 0.
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;
@@ -176,15 +176,15 @@ namespace TencentCloud
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Indicates the template type filter condition. If left empty, all templates are returned. Valid values:
-* Preset: System preset template;
-* Custom
+                     * Condition for filtering templates by type. If this field is not specified, all templates are returned. Available values:
+* Preset: system preset template
+* Custom: user-defined template.
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Specifies the recording template identifier filter condition, with a length limit of 64 characters.
+                     * Filter condition for recording template identifiers, with a length limit of 64 characters.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;

@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Number of backups returned per page. Default value: `20`. Maximum value: `100`.
-                     * @return Limit Number of backups returned per page. Default value: `20`. Maximum value: `100`.
+                     * 获取<p>List size of output backup per page. Default size is 20, maximum value is 100.</p>
+                     * @return Limit <p>List size of output backup per page. Default size is 20, maximum value is 100.</p>
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Number of backups returned per page. Default value: `20`. Maximum value: `100`.
-                     * @param _limit Number of backups returned per page. Default value: `20`. Maximum value: `100`.
+                     * 设置<p>List size of output backup per page. Default size is 20, maximum value is 100.</p>
+                     * @param _limit <p>List size of output backup per page. Default size is 20, maximum value is 100.</p>
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Pagination offset, which is an integral multiple of `Limit`. `offset` = `limit` * (page number - 1).
-                     * @return Offset Pagination offset, which is an integral multiple of `Limit`. `offset` = `limit` * (page number - 1).
+                     * 获取<p>Pagination offset, integer multiple of Limit. Calculation formula: offset=limit*(page number-1).</p>
+                     * @return Offset <p>Pagination offset, integer multiple of Limit. Calculation formula: offset=limit*(page number-1).</p>
                      * 
                      */
                     int64_t GetOffset() const;
 
                     /**
-                     * 设置Pagination offset, which is an integral multiple of `Limit`. `offset` = `limit` * (page number - 1).
-                     * @param _offset Pagination offset, which is an integral multiple of `Limit`. `offset` = `limit` * (page number - 1).
+                     * 设置<p>Pagination offset, integer multiple of Limit. Calculation formula: offset=limit*(page number-1).</p>
+                     * @param _offset <p>Pagination offset, integer multiple of Limit. Calculation formula: offset=limit*(page number-1).</p>
                      * 
                      */
                     void SetOffset(const int64_t& _offset);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取ID of the instance to be operated on, which can be obtained through the `InstanceId` field in the return value of the `DescribeInstance` API.
-                     * @return InstanceId ID of the instance to be operated on, which can be obtained through the `InstanceId` field in the return value of the `DescribeInstance` API.
+                     * 获取<p>Instance ID to be operated. You can get it from the InstanceId in the return value from the DescribeInstance API.</p>
+                     * @return InstanceId <p>Instance ID to be operated. You can get it from the InstanceId in the return value from the DescribeInstance API.</p>
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置ID of the instance to be operated on, which can be obtained through the `InstanceId` field in the return value of the `DescribeInstance` API.
-                     * @param _instanceId ID of the instance to be operated on, which can be obtained through the `InstanceId` field in the return value of the `DescribeInstance` API.
+                     * 设置<p>Instance ID to be operated. You can get it from the InstanceId in the return value from the DescribeInstance API.</p>
+                     * @param _instanceId <p>Instance ID to be operated. You can get it from the InstanceId in the return value from the DescribeInstance API.</p>
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Start time for a query, for example, in the format of 2017-02-08 16:46:34, with a maximum query span of 30 days. You can query the list of instances backed up within the [beginTime, endTime] period.
-                     * @return BeginTime Start time for a query, for example, in the format of 2017-02-08 16:46:34, with a maximum query span of 30 days. You can query the list of instances backed up within the [beginTime, endTime] period.
+                     * 获取<p>Start time, for example, in the format of 2017-02-08 16:46:34. Query the backup list of instances that started backup during the [beginTime, endTime] period, with a maximum query span of 30 days.</p>
+                     * @return BeginTime <p>Start time, for example, in the format of 2017-02-08 16:46:34. Query the backup list of instances that started backup during the [beginTime, endTime] period, with a maximum query span of 30 days.</p>
                      * 
                      */
                     std::string GetBeginTime() const;
 
                     /**
-                     * 设置Start time for a query, for example, in the format of 2017-02-08 16:46:34, with a maximum query span of 30 days. You can query the list of instances backed up within the [beginTime, endTime] period.
-                     * @param _beginTime Start time for a query, for example, in the format of 2017-02-08 16:46:34, with a maximum query span of 30 days. You can query the list of instances backed up within the [beginTime, endTime] period.
+                     * 设置<p>Start time, for example, in the format of 2017-02-08 16:46:34. Query the backup list of instances that started backup during the [beginTime, endTime] period, with a maximum query span of 30 days.</p>
+                     * @param _beginTime <p>Start time, for example, in the format of 2017-02-08 16:46:34. Query the backup list of instances that started backup during the [beginTime, endTime] period, with a maximum query span of 30 days.</p>
                      * 
                      */
                     void SetBeginTime(const std::string& _beginTime);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool BeginTimeHasBeenSet() const;
 
                     /**
-                     * 获取End time for a query, for example, in the format of 2017-02-08 19:09:26, with a maximum query span of 30 days. You can query the list of instances backed up within the [BeginTime, EndTime] period.
-                     * @return EndTime End time for a query, for example, in the format of 2017-02-08 19:09:26, with a maximum query span of 30 days. You can query the list of instances backed up within the [BeginTime, EndTime] period.
+                     * 获取<p>End time, in the format of 2017-02-08 19:09:26. Query the backup list of instances that started backup within the period of [beginTime, endTime]. The maximum query time span is 30 days.</p>
+                     * @return EndTime <p>End time, in the format of 2017-02-08 19:09:26. Query the backup list of instances that started backup within the period of [beginTime, endTime]. The maximum query time span is 30 days.</p>
                      * 
                      */
                     std::string GetEndTime() const;
 
                     /**
-                     * 设置End time for a query, for example, in the format of 2017-02-08 19:09:26, with a maximum query span of 30 days. You can query the list of instances backed up within the [BeginTime, EndTime] period.
-                     * @param _endTime End time for a query, for example, in the format of 2017-02-08 19:09:26, with a maximum query span of 30 days. You can query the list of instances backed up within the [BeginTime, EndTime] period.
+                     * 设置<p>End time, in the format of 2017-02-08 19:09:26. Query the backup list of instances that started backup within the period of [beginTime, endTime]. The maximum query time span is 30 days.</p>
+                     * @param _endTime <p>End time, in the format of 2017-02-08 19:09:26. Query the backup list of instances that started backup within the period of [beginTime, endTime]. The maximum query time span is 30 days.</p>
                      * 
                      */
                     void SetEndTime(const std::string& _endTime);
@@ -148,39 +148,15 @@ namespace TencentCloud
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取Backup task status:
-`1`: The backup is in the process.
-`2`: The backup is normal.
-`3`: The backup is being converted to an RDB file.
-`4`: Conversion to RDB has been completed.
-`-1`: The backup expired.
-`-2`: The backup has been deleted.
-                     * @return Status Backup task status:
-`1`: The backup is in the process.
-`2`: The backup is normal.
-`3`: The backup is being converted to an RDB file.
-`4`: Conversion to RDB has been completed.
-`-1`: The backup expired.
-`-2`: The backup has been deleted.
+                     * 获取<p>Backup task status:<br>1: Backup is in progress.<br>2: Backup is normal.<br>3: Backup is switching to RDB file processing.<br>4: RDB switch completed.<br>-1: Backup has expired.<br>-2: Backup has been deleted.</p>
+                     * @return Status <p>Backup task status:<br>1: Backup is in progress.<br>2: Backup is normal.<br>3: Backup is switching to RDB file processing.<br>4: RDB switch completed.<br>-1: Backup has expired.<br>-2: Backup has been deleted.</p>
                      * 
                      */
                     std::vector<int64_t> GetStatus() const;
 
                     /**
-                     * 设置Backup task status:
-`1`: The backup is in the process.
-`2`: The backup is normal.
-`3`: The backup is being converted to an RDB file.
-`4`: Conversion to RDB has been completed.
-`-1`: The backup expired.
-`-2`: The backup has been deleted.
-                     * @param _status Backup task status:
-`1`: The backup is in the process.
-`2`: The backup is normal.
-`3`: The backup is being converted to an RDB file.
-`4`: Conversion to RDB has been completed.
-`-1`: The backup expired.
-`-2`: The backup has been deleted.
+                     * 设置<p>Backup task status:<br>1: Backup is in progress.<br>2: Backup is normal.<br>3: Backup is switching to RDB file processing.<br>4: RDB switch completed.<br>-1: Backup has expired.<br>-2: Backup has been deleted.</p>
+                     * @param _status <p>Backup task status:<br>1: Backup is in progress.<br>2: Backup is normal.<br>3: Backup is switching to RDB file processing.<br>4: RDB switch completed.<br>-1: Backup has expired.<br>-2: Backup has been deleted.</p>
                      * 
                      */
                     void SetStatus(const std::vector<int64_t>& _status);
@@ -193,15 +169,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Instance name, which can be fuzzily searched.
-                     * @return InstanceName Instance name, which can be fuzzily searched.
+                     * 获取<p>Instance name, supports name fuzzy search based on instance name.</p>
+                     * @return InstanceName <p>Instance name, supports name fuzzy search based on instance name.</p>
                      * 
                      */
                     std::string GetInstanceName() const;
 
                     /**
-                     * 设置Instance name, which can be fuzzily searched.
-                     * @param _instanceName Instance name, which can be fuzzily searched.
+                     * 设置<p>Instance name, supports name fuzzy search based on instance name.</p>
+                     * @param _instanceName <p>Instance name, supports name fuzzy search based on instance name.</p>
                      * 
                      */
                     void SetInstanceName(const std::string& _instanceName);
@@ -216,49 +192,43 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Number of backups returned per page. Default value: `20`. Maximum value: `100`.
+                     * <p>List size of output backup per page. Default size is 20, maximum value is 100.</p>
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Pagination offset, which is an integral multiple of `Limit`. `offset` = `limit` * (page number - 1).
+                     * <p>Pagination offset, integer multiple of Limit. Calculation formula: offset=limit*(page number-1).</p>
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * ID of the instance to be operated on, which can be obtained through the `InstanceId` field in the return value of the `DescribeInstance` API.
+                     * <p>Instance ID to be operated. You can get it from the InstanceId in the return value from the DescribeInstance API.</p>
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Start time for a query, for example, in the format of 2017-02-08 16:46:34, with a maximum query span of 30 days. You can query the list of instances backed up within the [beginTime, endTime] period.
+                     * <p>Start time, for example, in the format of 2017-02-08 16:46:34. Query the backup list of instances that started backup during the [beginTime, endTime] period, with a maximum query span of 30 days.</p>
                      */
                     std::string m_beginTime;
                     bool m_beginTimeHasBeenSet;
 
                     /**
-                     * End time for a query, for example, in the format of 2017-02-08 19:09:26, with a maximum query span of 30 days. You can query the list of instances backed up within the [BeginTime, EndTime] period.
+                     * <p>End time, in the format of 2017-02-08 19:09:26. Query the backup list of instances that started backup within the period of [beginTime, endTime]. The maximum query time span is 30 days.</p>
                      */
                     std::string m_endTime;
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * Backup task status:
-`1`: The backup is in the process.
-`2`: The backup is normal.
-`3`: The backup is being converted to an RDB file.
-`4`: Conversion to RDB has been completed.
-`-1`: The backup expired.
-`-2`: The backup has been deleted.
+                     * <p>Backup task status:<br>1: Backup is in progress.<br>2: Backup is normal.<br>3: Backup is switching to RDB file processing.<br>4: RDB switch completed.<br>-1: Backup has expired.<br>-2: Backup has been deleted.</p>
                      */
                     std::vector<int64_t> m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Instance name, which can be fuzzily searched.
+                     * <p>Instance name, supports name fuzzy search based on instance name.</p>
                      */
                     std::string m_instanceName;
                     bool m_instanceNameHasBeenSet;

@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
-                     * @return InstanceId Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
+                     * 获取<p>Instance ID. Log in to the <a href="https://console.cloud.tencent.com/redis/instance/list">Redis console</a> and copy the instance ID from the instance list.</p>
+                     * @return InstanceId <p>Instance ID. Log in to the <a href="https://console.cloud.tencent.com/redis/instance/list">Redis console</a> and copy the instance ID from the instance list.</p>
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
-                     * @param _instanceId Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
+                     * 设置<p>Instance ID. Log in to the <a href="https://console.cloud.tencent.com/redis/instance/list">Redis console</a> and copy the instance ID from the instance list.</p>
+                     * @param _instanceId <p>Instance ID. Log in to the <a href="https://console.cloud.tencent.com/redis/instance/list">Redis console</a> and copy the instance ID from the instance list.</p>
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -64,23 +64,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the account that needs modification.
-- root: refers to the automatically generated account when a TencentDB for Redis® instance is created. Users cannot modify read-write permissions for the account, but can only modify its request routing policies.
-- Custom account: an account manually created by users after successful instance creation. Users can modify read-write permissions and request routing policies for the account at any time.
-                     * @return AccountName Specifies the account that needs modification.
-- root: refers to the automatically generated account when a TencentDB for Redis® instance is created. Users cannot modify read-write permissions for the account, but can only modify its request routing policies.
-- Custom account: an account manually created by users after successful instance creation. Users can modify read-write permissions and request routing policies for the account at any time.
+                     * 获取<p>Specify the account that needs modification.</p><ul><li>root: refers to the automatically generated account when a Redis Database Instance is created. Users cannot modify its read-write permissions, but can only modify its request routing strategy.</li><li>Custom account: an account manually created by users once an instance is created successfully. Users can modify its read and write permissions and request routing strategy at any time.</li></ul>
+                     * @return AccountName <p>Specify the account that needs modification.</p><ul><li>root: refers to the automatically generated account when a Redis Database Instance is created. Users cannot modify its read-write permissions, but can only modify its request routing strategy.</li><li>Custom account: an account manually created by users once an instance is created successfully. Users can modify its read and write permissions and request routing strategy at any time.</li></ul>
                      * 
                      */
                     std::string GetAccountName() const;
 
                     /**
-                     * 设置Specifies the account that needs modification.
-- root: refers to the automatically generated account when a TencentDB for Redis® instance is created. Users cannot modify read-write permissions for the account, but can only modify its request routing policies.
-- Custom account: an account manually created by users after successful instance creation. Users can modify read-write permissions and request routing policies for the account at any time.
-                     * @param _accountName Specifies the account that needs modification.
-- root: refers to the automatically generated account when a TencentDB for Redis® instance is created. Users cannot modify read-write permissions for the account, but can only modify its request routing policies.
-- Custom account: an account manually created by users after successful instance creation. Users can modify read-write permissions and request routing policies for the account at any time.
+                     * 设置<p>Specify the account that needs modification.</p><ul><li>root: refers to the automatically generated account when a Redis Database Instance is created. Users cannot modify its read-write permissions, but can only modify its request routing strategy.</li><li>Custom account: an account manually created by users once an instance is created successfully. Users can modify its read and write permissions and request routing strategy at any time.</li></ul>
+                     * @param _accountName <p>Specify the account that needs modification.</p><ul><li>root: refers to the automatically generated account when a Redis Database Instance is created. Users cannot modify its read-write permissions, but can only modify its request routing strategy.</li><li>Custom account: an account manually created by users once an instance is created successfully. Users can modify its read and write permissions and request routing strategy at any time.</li></ul>
                      * 
                      */
                     void SetAccountName(const std::string& _accountName);
@@ -93,15 +85,15 @@ namespace TencentCloud
                     bool AccountNameHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the access password for the account to be modified.
-                     * @return AccountPassword Specifies the access password for the account to be modified.
+                     * 获取<p>Specifies the access password for the account to be modified.</p>
+                     * @return AccountPassword <p>Specifies the access password for the account to be modified.</p>
                      * 
                      */
                     std::string GetAccountPassword() const;
 
                     /**
-                     * 设置Specifies the access password for the account to be modified.
-                     * @param _accountPassword Specifies the access password for the account to be modified.
+                     * 设置<p>Specifies the access password for the account to be modified.</p>
+                     * @param _accountPassword <p>Specifies the access password for the account to be modified.</p>
                      * 
                      */
                     void SetAccountPassword(const std::string& _accountPassword);
@@ -114,15 +106,15 @@ namespace TencentCloud
                     bool AccountPasswordHasBeenSet() const;
 
                     /**
-                     * 获取Account description information.
-                     * @return Remark Account description information.
+                     * 获取<p>Account description.</p>
+                     * @return Remark <p>Account description.</p>
                      * 
                      */
                     std::string GetRemark() const;
 
                     /**
-                     * 设置Account description information.
-                     * @param _remark Account description information.
+                     * 设置<p>Account description.</p>
+                     * @param _remark <p>Account description.</p>
                      * 
                      */
                     void SetRemark(const std::string& _remark);
@@ -135,23 +127,15 @@ namespace TencentCloud
                     bool RemarkHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the read-write request routing policies for the account to be modified.
-- master: read-write request routing to the primary node.
-- replication: read-write request routing to the secondary node.
-                     * @return ReadonlyPolicy Specifies the read-write request routing policies for the account to be modified.
-- master: read-write request routing to the primary node.
-- replication: read-write request routing to the secondary node.
+                     * 获取<p>Specify the policy for request routing of read-write requests for the modified account.</p><ul><li>master: means read-write requests are routed to the primary node.</li><li>replication: means read-write requests are routed to the secondary node.</li></ul>
+                     * @return ReadonlyPolicy <p>Specify the policy for request routing of read-write requests for the modified account.</p><ul><li>master: means read-write requests are routed to the primary node.</li><li>replication: means read-write requests are routed to the secondary node.</li></ul>
                      * 
                      */
                     std::vector<std::string> GetReadonlyPolicy() const;
 
                     /**
-                     * 设置Specifies the read-write request routing policies for the account to be modified.
-- master: read-write request routing to the primary node.
-- replication: read-write request routing to the secondary node.
-                     * @param _readonlyPolicy Specifies the read-write request routing policies for the account to be modified.
-- master: read-write request routing to the primary node.
-- replication: read-write request routing to the secondary node.
+                     * 设置<p>Specify the policy for request routing of read-write requests for the modified account.</p><ul><li>master: means read-write requests are routed to the primary node.</li><li>replication: means read-write requests are routed to the secondary node.</li></ul>
+                     * @param _readonlyPolicy <p>Specify the policy for request routing of read-write requests for the modified account.</p><ul><li>master: means read-write requests are routed to the primary node.</li><li>replication: means read-write requests are routed to the secondary node.</li></ul>
                      * 
                      */
                     void SetReadonlyPolicy(const std::vector<std::string>& _readonlyPolicy);
@@ -164,27 +148,15 @@ namespace TencentCloud
                     bool ReadonlyPolicyHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the read-write permissions for the account to be modified.
-- r: read-only.
-- w: write-only.
-- rw: read-write.
-                     * @return Privilege Specifies the read-write permissions for the account to be modified.
-- r: read-only.
-- w: write-only.
-- rw: read-write.
+                     * 获取<p>Specify the read/write permission of the account to be modified.</p><ul><li>r: Read-only.</li><li>w: Write-only.</li><li>rw: Read-write.</li></ul>
+                     * @return Privilege <p>Specify the read/write permission of the account to be modified.</p><ul><li>r: Read-only.</li><li>w: Write-only.</li><li>rw: Read-write.</li></ul>
                      * 
                      */
                     std::string GetPrivilege() const;
 
                     /**
-                     * 设置Specifies the read-write permissions for the account to be modified.
-- r: read-only.
-- w: write-only.
-- rw: read-write.
-                     * @param _privilege Specifies the read-write permissions for the account to be modified.
-- r: read-only.
-- w: write-only.
-- rw: read-write.
+                     * 设置<p>Specify the read/write permission of the account to be modified.</p><ul><li>r: Read-only.</li><li>w: Write-only.</li><li>rw: Read-write.</li></ul>
+                     * @param _privilege <p>Specify the read/write permission of the account to be modified.</p><ul><li>r: Read-only.</li><li>w: Write-only.</li><li>rw: Read-write.</li></ul>
                      * 
                      */
                     void SetPrivilege(const std::string& _privilege);
@@ -197,23 +169,15 @@ namespace TencentCloud
                     bool PrivilegeHasBeenSet() const;
 
                     /**
-                     * 获取Specifies whether to set the default account (root) to a password-free account. Custom accounts do not support password-free access.
-- true: set the default account (root) to a password-free account.
-- false: not set the default account (root) to a password-free account.
-                     * @return NoAuth Specifies whether to set the default account (root) to a password-free account. Custom accounts do not support password-free access.
-- true: set the default account (root) to a password-free account.
-- false: not set the default account (root) to a password-free account.
+                     * 获取<p>Specifies whether to set the default account (root) to a password-free account. Custom accounts do not support password-free access.</p><ul><li>true: The default account (root) is set to a password-free account.</li><li>false: The default account (root) is not set to a password-free account.</li></ul>
+                     * @return NoAuth <p>Specifies whether to set the default account (root) to a password-free account. Custom accounts do not support password-free access.</p><ul><li>true: The default account (root) is set to a password-free account.</li><li>false: The default account (root) is not set to a password-free account.</li></ul>
                      * 
                      */
                     bool GetNoAuth() const;
 
                     /**
-                     * 设置Specifies whether to set the default account (root) to a password-free account. Custom accounts do not support password-free access.
-- true: set the default account (root) to a password-free account.
-- false: not set the default account (root) to a password-free account.
-                     * @param _noAuth Specifies whether to set the default account (root) to a password-free account. Custom accounts do not support password-free access.
-- true: set the default account (root) to a password-free account.
-- false: not set the default account (root) to a password-free account.
+                     * 设置<p>Specifies whether to set the default account (root) to a password-free account. Custom accounts do not support password-free access.</p><ul><li>true: The default account (root) is set to a password-free account.</li><li>false: The default account (root) is not set to a password-free account.</li></ul>
+                     * @param _noAuth <p>Specifies whether to set the default account (root) to a password-free account. Custom accounts do not support password-free access.</p><ul><li>true: The default account (root) is set to a password-free account.</li><li>false: The default account (root) is not set to a password-free account.</li></ul>
                      * 
                      */
                     void SetNoAuth(const bool& _noAuth);
@@ -226,15 +190,15 @@ namespace TencentCloud
                     bool NoAuthHasBeenSet() const;
 
                     /**
-                     * 获取Specifies whether to encrypt the password for the account to be modified.
-                     * @return EncryptPassword Specifies whether to encrypt the password for the account to be modified.
+                     * 获取<p>Whether to enable password encryption for transmission.</p><ul><li>true: Encrypted.</li><li>false: Not encrypted (default value).</li></ul>
+                     * @return EncryptPassword <p>Whether to enable password encryption for transmission.</p><ul><li>true: Encrypted.</li><li>false: Not encrypted (default value).</li></ul>
                      * 
                      */
                     bool GetEncryptPassword() const;
 
                     /**
-                     * 设置Specifies whether to encrypt the password for the account to be modified.
-                     * @param _encryptPassword Specifies whether to encrypt the password for the account to be modified.
+                     * 设置<p>Whether to enable password encryption for transmission.</p><ul><li>true: Encrypted.</li><li>false: Not encrypted (default value).</li></ul>
+                     * @param _encryptPassword <p>Whether to enable password encryption for transmission.</p><ul><li>true: Encrypted.</li><li>false: Not encrypted (default value).</li></ul>
                      * 
                      */
                     void SetEncryptPassword(const bool& _encryptPassword);
@@ -249,58 +213,49 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Instance ID. Log in to the [Redis console](https://console.tencentcloud.com/redis/instance) and copy it in the instance list.
+                     * <p>Instance ID. Log in to the <a href="https://console.cloud.tencent.com/redis/instance/list">Redis console</a> and copy the instance ID from the instance list.</p>
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Specifies the account that needs modification.
-- root: refers to the automatically generated account when a TencentDB for Redis® instance is created. Users cannot modify read-write permissions for the account, but can only modify its request routing policies.
-- Custom account: an account manually created by users after successful instance creation. Users can modify read-write permissions and request routing policies for the account at any time.
+                     * <p>Specify the account that needs modification.</p><ul><li>root: refers to the automatically generated account when a Redis Database Instance is created. Users cannot modify its read-write permissions, but can only modify its request routing strategy.</li><li>Custom account: an account manually created by users once an instance is created successfully. Users can modify its read and write permissions and request routing strategy at any time.</li></ul>
                      */
                     std::string m_accountName;
                     bool m_accountNameHasBeenSet;
 
                     /**
-                     * Specifies the access password for the account to be modified.
+                     * <p>Specifies the access password for the account to be modified.</p>
                      */
                     std::string m_accountPassword;
                     bool m_accountPasswordHasBeenSet;
 
                     /**
-                     * Account description information.
+                     * <p>Account description.</p>
                      */
                     std::string m_remark;
                     bool m_remarkHasBeenSet;
 
                     /**
-                     * Specifies the read-write request routing policies for the account to be modified.
-- master: read-write request routing to the primary node.
-- replication: read-write request routing to the secondary node.
+                     * <p>Specify the policy for request routing of read-write requests for the modified account.</p><ul><li>master: means read-write requests are routed to the primary node.</li><li>replication: means read-write requests are routed to the secondary node.</li></ul>
                      */
                     std::vector<std::string> m_readonlyPolicy;
                     bool m_readonlyPolicyHasBeenSet;
 
                     /**
-                     * Specifies the read-write permissions for the account to be modified.
-- r: read-only.
-- w: write-only.
-- rw: read-write.
+                     * <p>Specify the read/write permission of the account to be modified.</p><ul><li>r: Read-only.</li><li>w: Write-only.</li><li>rw: Read-write.</li></ul>
                      */
                     std::string m_privilege;
                     bool m_privilegeHasBeenSet;
 
                     /**
-                     * Specifies whether to set the default account (root) to a password-free account. Custom accounts do not support password-free access.
-- true: set the default account (root) to a password-free account.
-- false: not set the default account (root) to a password-free account.
+                     * <p>Specifies whether to set the default account (root) to a password-free account. Custom accounts do not support password-free access.</p><ul><li>true: The default account (root) is set to a password-free account.</li><li>false: The default account (root) is not set to a password-free account.</li></ul>
                      */
                     bool m_noAuth;
                     bool m_noAuthHasBeenSet;
 
                     /**
-                     * Specifies whether to encrypt the password for the account to be modified.
+                     * <p>Whether to enable password encryption for transmission.</p><ul><li>true: Encrypted.</li><li>false: Not encrypted (default value).</li></ul>
                      */
                     bool m_encryptPassword;
                     bool m_encryptPasswordHasBeenSet;

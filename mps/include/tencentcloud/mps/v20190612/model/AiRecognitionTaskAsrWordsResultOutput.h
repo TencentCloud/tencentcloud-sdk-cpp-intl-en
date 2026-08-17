@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Output of speech keyword recognition.
+                * Speech keyword recognition output.
                 */
                 class AiRecognitionTaskAsrWordsResultOutput : public AbstractModel
                 {

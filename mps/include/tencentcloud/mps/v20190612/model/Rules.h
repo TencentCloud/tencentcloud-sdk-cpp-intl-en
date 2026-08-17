@@ -48,19 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Judgment condition ID.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return Id Judgment condition ID.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取
+                     * @return Id 
                      * 
                      */
                     std::string GetId() const;
 
                     /**
-                     * 设置Judgment condition ID.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _id Judgment condition ID.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置
+                     * @param _id 
                      * 
                      */
                     void SetId(const std::string& _id);
@@ -73,19 +69,15 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool IdHasBeenSet() const;
 
                     /**
-                     * 获取Judgment condition configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return Conditions Judgment condition configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取
+                     * @return Conditions 
                      * 
                      */
                     std::vector<RuleConditionItem> GetConditions() const;
 
                     /**
-                     * 设置Judgment condition configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _conditions Judgment condition configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置
+                     * @param _conditions 
                      * 
                      */
                     void SetConditions(const std::vector<RuleConditionItem>& _conditions);
@@ -100,12 +92,12 @@ Note: This field may return null, indicating that no valid value can be obtained
                     /**
                      * 获取Logical operator for the list of conditions. Valid values:
 
- - &&: logical AND
- - ||: logical OR
+- &&: logical AND
+- ||: logical OR
                      * @return Linker Logical operator for the list of conditions. Valid values:
 
- - &&: logical AND
- - ||: logical OR
+- &&: logical AND
+- ||: logical OR
                      * 
                      */
                     std::string GetLinker() const;
@@ -113,12 +105,12 @@ Note: This field may return null, indicating that no valid value can be obtained
                     /**
                      * 设置Logical operator for the list of conditions. Valid values:
 
- - &&: logical AND
- - ||: logical OR
+- &&: logical AND
+- ||: logical OR
                      * @param _linker Logical operator for the list of conditions. Valid values:
 
- - &&: logical AND
- - ||: logical OR
+- &&: logical AND
+- ||: logical OR
                      * 
                      */
                     void SetLinker(const std::string& _linker);
@@ -131,19 +123,15 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool LinkerHasBeenSet() const;
 
                     /**
-                     * 获取Indexes of the nodes to execute if the judgment conditions are met.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return RearDriveIndexs Indexes of the nodes to execute if the judgment conditions are met.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取
+                     * @return RearDriveIndexs 
                      * 
                      */
                     std::vector<int64_t> GetRearDriveIndexs() const;
 
                     /**
-                     * 设置Indexes of the nodes to execute if the judgment conditions are met.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _rearDriveIndexs Indexes of the nodes to execute if the judgment conditions are met.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置
+                     * @param _rearDriveIndexs 
                      * 
                      */
                     void SetRearDriveIndexs(const std::vector<int64_t>& _rearDriveIndexs);
@@ -158,15 +146,13 @@ Note: This field may return null, indicating that no valid value can be obtained
                 private:
 
                     /**
-                     * Judgment condition ID.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string m_id;
                     bool m_idHasBeenSet;
 
                     /**
-                     * Judgment condition configuration.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::vector<RuleConditionItem> m_conditions;
                     bool m_conditionsHasBeenSet;
@@ -174,15 +160,14 @@ Note: This field may return null, indicating that no valid value can be obtained
                     /**
                      * Logical operator for the list of conditions. Valid values:
 
- - &&: logical AND
- - ||: logical OR
+- &&: logical AND
+- ||: logical OR
                      */
                     std::string m_linker;
                     bool m_linkerHasBeenSet;
 
                     /**
-                     * Indexes of the nodes to execute if the judgment conditions are met.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::vector<int64_t> m_rearDriveIndexs;
                     bool m_rearDriveIndexsHasBeenSet;

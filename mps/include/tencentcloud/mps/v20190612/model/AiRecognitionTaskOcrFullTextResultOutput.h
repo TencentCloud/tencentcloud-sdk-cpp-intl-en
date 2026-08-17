@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Output of full text recognition.
+                * Full text recognition output.
                 */
                 class AiRecognitionTaskOcrFullTextResultOutput : public AbstractModel
                 {

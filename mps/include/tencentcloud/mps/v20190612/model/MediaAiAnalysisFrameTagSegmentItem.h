@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * List of frame-specific tag segments
+                * Frame tagging segments
                 */
                 class MediaAiAnalysisFrameTagSegmentItem : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Start time offset of frame-specific tag.
-                     * @return StartTimeOffset Start time offset of frame-specific tag.
+                     * 获取Offset time starting from frame tagging.
+                     * @return StartTimeOffset Offset time starting from frame tagging.
                      * 
                      */
                     double GetStartTimeOffset() const;
 
                     /**
-                     * 设置Start time offset of frame-specific tag.
-                     * @param _startTimeOffset Start time offset of frame-specific tag.
+                     * 设置Offset time starting from frame tagging.
+                     * @param _startTimeOffset Offset time starting from frame tagging.
                      * 
                      */
                     void SetStartTimeOffset(const double& _startTimeOffset);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool StartTimeOffsetHasBeenSet() const;
 
                     /**
-                     * 获取End time offset of frame-specific tag.
-                     * @return EndTimeOffset End time offset of frame-specific tag.
+                     * 获取Offset time for frame tagging completion.
+                     * @return EndTimeOffset Offset time for frame tagging completion.
                      * 
                      */
                     double GetEndTimeOffset() const;
 
                     /**
-                     * 设置End time offset of frame-specific tag.
-                     * @param _endTimeOffset End time offset of frame-specific tag.
+                     * 设置Offset time for frame tagging completion.
+                     * @param _endTimeOffset Offset time for frame tagging completion.
                      * 
                      */
                     void SetEndTimeOffset(const double& _endTimeOffset);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool EndTimeOffsetHasBeenSet() const;
 
                     /**
-                     * 获取List of tags in time period.
-                     * @return TagSet List of tags in time period.
+                     * 获取Tag list within the time segment.
+                     * @return TagSet Tag list within the time segment.
                      * 
                      */
                     std::vector<MediaAiAnalysisFrameTagItem> GetTagSet() const;
 
                     /**
-                     * 设置List of tags in time period.
-                     * @param _tagSet List of tags in time period.
+                     * 设置Tag list within the time segment.
+                     * @param _tagSet Tag list within the time segment.
                      * 
                      */
                     void SetTagSet(const std::vector<MediaAiAnalysisFrameTagItem>& _tagSet);
@@ -113,19 +113,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Start time offset of frame-specific tag.
+                     * Offset time starting from frame tagging.
                      */
                     double m_startTimeOffset;
                     bool m_startTimeOffsetHasBeenSet;
 
                     /**
-                     * End time offset of frame-specific tag.
+                     * Offset time for frame tagging completion.
                      */
                     double m_endTimeOffset;
                     bool m_endTimeOffsetHasBeenSet;
 
                     /**
-                     * List of tags in time period.
+                     * Tag list within the time segment.
                      */
                     std::vector<MediaAiAnalysisFrameTagItem> m_tagSet;
                     bool m_tagSetHasBeenSet;

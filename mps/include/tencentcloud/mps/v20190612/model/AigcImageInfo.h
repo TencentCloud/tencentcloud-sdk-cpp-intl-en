@@ -68,19 +68,27 @@ namespace TencentCloud
                     bool ImageUrlHasBeenSet() const;
 
                     /**
-                     * 获取Reference type.
-Note:1. When the model uses Vidu's q2 multi-reference image generation, this can also be used to specify the subject ID.2. If the GV model is used, this serves as the reference method. Valid values are asset and style.
-                     * @return ReferenceType Reference type.
-Note:1. When the model uses Vidu's q2 multi-reference image generation, this can also be used to specify the subject ID.2. If the GV model is used, this serves as the reference method. Valid values are asset and style.
+                     * 获取Reference Type.
+Note:
+1. When the model uses Vidu's q2 multi-reference image generation, it can also be used to specify the subject ID.
+2. If the GV model is used, this serves as the reference method. Valid values are asset and style.
+                     * @return ReferenceType Reference Type.
+Note:
+1. When the model uses Vidu's q2 multi-reference image generation, it can also be used to specify the subject ID.
+2. If the GV model is used, this serves as the reference method. Valid values are asset and style.
                      * 
                      */
                     std::string GetReferenceType() const;
 
                     /**
-                     * 设置Reference type.
-Note:1. When the model uses Vidu's q2 multi-reference image generation, this can also be used to specify the subject ID.2. If the GV model is used, this serves as the reference method. Valid values are asset and style.
-                     * @param _referenceType Reference type.
-Note:1. When the model uses Vidu's q2 multi-reference image generation, this can also be used to specify the subject ID.2. If the GV model is used, this serves as the reference method. Valid values are asset and style.
+                     * 设置Reference Type.
+Note:
+1. When the model uses Vidu's q2 multi-reference image generation, it can also be used to specify the subject ID.
+2. If the GV model is used, this serves as the reference method. Valid values are asset and style.
+                     * @param _referenceType Reference Type.
+Note:
+1. When the model uses Vidu's q2 multi-reference image generation, it can also be used to specify the subject ID.
+2. If the GV model is used, this serves as the reference method. Valid values are asset and style.
                      * 
                      */
                     void SetReferenceType(const std::string& _referenceType);
@@ -101,8 +109,10 @@ Note:1. When the model uses Vidu's q2 multi-reference image generation, this can
                     bool m_imageUrlHasBeenSet;
 
                     /**
-                     * Reference type.
-Note:1. When the model uses Vidu's q2 multi-reference image generation, this can also be used to specify the subject ID.2. If the GV model is used, this serves as the reference method. Valid values are asset and style.
+                     * Reference Type.
+Note:
+1. When the model uses Vidu's q2 multi-reference image generation, it can also be used to specify the subject ID.
+2. If the GV model is used, this serves as the reference method. Valid values are asset and style.
                      */
                     std::string m_referenceType;
                     bool m_referenceTypeHasBeenSet;

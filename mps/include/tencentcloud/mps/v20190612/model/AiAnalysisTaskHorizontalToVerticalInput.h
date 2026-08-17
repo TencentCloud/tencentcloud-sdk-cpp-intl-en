@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>ID of the horizontal-to-vertical video transformation template.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Definition <p>ID of the horizontal-to-vertical video transformation template.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return Definition 
                      * 
                      */
                     uint64_t GetDefinition() const;
 
                     /**
-                     * 设置<p>ID of the horizontal-to-vertical video transformation template.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _definition <p>ID of the horizontal-to-vertical video transformation template.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _definition 
                      * 
                      */
                     void SetDefinition(const uint64_t& _definition);
@@ -95,8 +91,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * <p>ID of the horizontal-to-vertical video transformation template.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t m_definition;
                     bool m_definitionHasBeenSet;

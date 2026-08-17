@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * The information about the sensitive segments detected.
+                * Content review suspected segment
                 */
                 class MediaContentReviewPoliticalSegmentItem : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Start time offset of a suspected segment in seconds.
-                     * @return StartTimeOffset Start time offset of a suspected segment in seconds.
+                     * 获取Start time offset of a suspected segment, in seconds.
+                     * @return StartTimeOffset Start time offset of a suspected segment, in seconds.
                      * 
                      */
                     double GetStartTimeOffset() const;
 
                     /**
-                     * 设置Start time offset of a suspected segment in seconds.
-                     * @param _startTimeOffset Start time offset of a suspected segment in seconds.
+                     * 设置Start time offset of a suspected segment, in seconds.
+                     * @param _startTimeOffset Start time offset of a suspected segment, in seconds.
                      * 
                      */
                     void SetStartTimeOffset(const double& _startTimeOffset);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool StartTimeOffsetHasBeenSet() const;
 
                     /**
-                     * 获取End time offset of a suspected segment in seconds.
-                     * @return EndTimeOffset End time offset of a suspected segment in seconds.
+                     * 获取End time offset of a suspected segment, in seconds.
+                     * @return EndTimeOffset End time offset of a suspected segment, in seconds.
                      * 
                      */
                     double GetEndTimeOffset() const;
 
                     /**
-                     * 设置End time offset of a suspected segment in seconds.
-                     * @param _endTimeOffset End time offset of a suspected segment in seconds.
+                     * 设置End time offset of a suspected segment, in seconds.
+                     * @param _endTimeOffset End time offset of a suspected segment, in seconds.
                      * 
                      */
                     void SetEndTimeOffset(const double& _endTimeOffset);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool EndTimeOffsetHasBeenSet() const;
 
                     /**
-                     * 获取The confidence score for the detected sensitive segments.
-                     * @return Confidence The confidence score for the detected sensitive segments.
+                     * 获取Suspected segment sensitivity score.
+                     * @return Confidence Suspected segment sensitivity score.
                      * 
                      */
                     double GetConfidence() const;
 
                     /**
-                     * 设置The confidence score for the detected sensitive segments.
-                     * @param _confidence The confidence score for the detected sensitive segments.
+                     * 设置Suspected segment sensitivity score.
+                     * @param _confidence Suspected segment sensitivity score.
                      * 
                      */
                     void SetConfidence(const double& _confidence);
@@ -110,27 +110,27 @@ namespace TencentCloud
                     bool ConfidenceHasBeenSet() const;
 
                     /**
-                     * 获取The suggestion for handling the sensitive segments. Valid values:
-<li>pass</li>
-<li>review</li>
-<li>block</li>
-                     * @return Suggestion The suggestion for handling the sensitive segments. Valid values:
-<li>pass</li>
-<li>review</li>
-<li>block</li>
+                     * 获取Suspected segment sensitive result suggestion, value ranges from...to...
+<li>pass.</li>
+<li>review.</li>
+<li>block.</li>
+                     * @return Suggestion Suspected segment sensitive result suggestion, value ranges from...to...
+<li>pass.</li>
+<li>review.</li>
+<li>block.</li>
                      * 
                      */
                     std::string GetSuggestion() const;
 
                     /**
-                     * 设置The suggestion for handling the sensitive segments. Valid values:
-<li>pass</li>
-<li>review</li>
-<li>block</li>
-                     * @param _suggestion The suggestion for handling the sensitive segments. Valid values:
-<li>pass</li>
-<li>review</li>
-<li>block</li>
+                     * 设置Suspected segment sensitive result suggestion, value ranges from...to...
+<li>pass.</li>
+<li>review.</li>
+<li>block.</li>
+                     * @param _suggestion Suspected segment sensitive result suggestion, value ranges from...to...
+<li>pass.</li>
+<li>review.</li>
+<li>block.</li>
                      * 
                      */
                     void SetSuggestion(const std::string& _suggestion);
@@ -143,15 +143,15 @@ namespace TencentCloud
                     bool SuggestionHasBeenSet() const;
 
                     /**
-                     * 获取The name of a sensitive person or banned icon.
-                     * @return Name The name of a sensitive person or banned icon.
+                     * 获取Sensitive person, violative icon name.
+                     * @return Name Sensitive person, violative icon name.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置The name of a sensitive person or banned icon.
-                     * @param _name The name of a sensitive person or banned icon.
+                     * 设置Sensitive person, violative icon name.
+                     * @param _name Sensitive person, violative icon name.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -164,107 +164,107 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取The labels for the detected sensitive segments. The relationship between the values of this parameter and those of the `LabelSet` parameter in [PoliticalImgReviewTemplateInfo](https://intl.cloud.tencent.com/document/api/862/37615?from_cn_redirect=1#PoliticalImgReviewTemplateInfo) is as follows:
+                     * 获取Suspected segment sensitive result Tag. The mapping between the LabelSet parameter in the content moderation template [visual sensitive task control parameter](https://www.tencentcloud.com/document/api/862/37615?from_cn_redirect=1#PoliticalImgReviewTemplateInfo) and the parameter value range of this parameter:
 violation_photo:
-<li>violation_photo (banned icons)</li>
+<li>violation_photo: violation icon.</li>
 politician:
-<li>nation_politician (state leader)</li>
-<li>province_politician (provincial officials)</li>
-<li>bureau_politician (bureau-level officials)</li>
-<li>county_politician (county-level officials)</li>
-<li>rural_politician (township-level officials)</li>
-<li>sensitive_politician (sensitive people)</li>
-<li>foreign_politician (state leaders of other countries)</li>
+<li>nation_politician: State leaders;</li>
+<li>province_politician: provincial and ministerial leaders;</li>
+<li>bureau_politician: bureau-level official;</li>
+<li>county_politician: county-level official;</li>
+<li>rural_politician: township-level official;</li>
+<li>sensitive_politician: sensitive person.</li>
+<li>foreign_politician: state leaders of other countries.</li>
 entertainment:
-<li>sensitive_entertainment (sensitive people in the entertainment industry</li>
+<li>sensitive_entertainment: sensitive entertainment figure.</li>
 sport:
-<li>sensitive_sport (sensitive sports celebrities)</li>
+<li>Sensitive_sport: sensitive sports celebrity.</li>
 entrepreneur:
-<li>sensitive_entrepreneur</li>
+<li>sensitive_entrepreneur: sensitive entrepreneur.</li>
 scholar:
-<li>sensitive_scholar</li>
+<li>sensitive_scholar: Sensitive educational scholars.</li>
 celebrity:
-<li>sensitive_celebrity</li>
-<li>historical_celebrity (sensitive historical figures)</li>
+<li>sensitive_celebrity: sensitive celebrity.</li>
+<li>historical_celebrity: historical celebrity.</li>
 military:
-<li>sensitive_military (sensitive people in military)</li>
-                     * @return Label The labels for the detected sensitive segments. The relationship between the values of this parameter and those of the `LabelSet` parameter in [PoliticalImgReviewTemplateInfo](https://intl.cloud.tencent.com/document/api/862/37615?from_cn_redirect=1#PoliticalImgReviewTemplateInfo) is as follows:
+<li>sensitive_military: sensitive military figure.</li>
+                     * @return Label Suspected segment sensitive result Tag. The mapping between the LabelSet parameter in the content moderation template [visual sensitive task control parameter](https://www.tencentcloud.com/document/api/862/37615?from_cn_redirect=1#PoliticalImgReviewTemplateInfo) and the parameter value range of this parameter:
 violation_photo:
-<li>violation_photo (banned icons)</li>
+<li>violation_photo: violation icon.</li>
 politician:
-<li>nation_politician (state leader)</li>
-<li>province_politician (provincial officials)</li>
-<li>bureau_politician (bureau-level officials)</li>
-<li>county_politician (county-level officials)</li>
-<li>rural_politician (township-level officials)</li>
-<li>sensitive_politician (sensitive people)</li>
-<li>foreign_politician (state leaders of other countries)</li>
+<li>nation_politician: State leaders;</li>
+<li>province_politician: provincial and ministerial leaders;</li>
+<li>bureau_politician: bureau-level official;</li>
+<li>county_politician: county-level official;</li>
+<li>rural_politician: township-level official;</li>
+<li>sensitive_politician: sensitive person.</li>
+<li>foreign_politician: state leaders of other countries.</li>
 entertainment:
-<li>sensitive_entertainment (sensitive people in the entertainment industry</li>
+<li>sensitive_entertainment: sensitive entertainment figure.</li>
 sport:
-<li>sensitive_sport (sensitive sports celebrities)</li>
+<li>Sensitive_sport: sensitive sports celebrity.</li>
 entrepreneur:
-<li>sensitive_entrepreneur</li>
+<li>sensitive_entrepreneur: sensitive entrepreneur.</li>
 scholar:
-<li>sensitive_scholar</li>
+<li>sensitive_scholar: Sensitive educational scholars.</li>
 celebrity:
-<li>sensitive_celebrity</li>
-<li>historical_celebrity (sensitive historical figures)</li>
+<li>sensitive_celebrity: sensitive celebrity.</li>
+<li>historical_celebrity: historical celebrity.</li>
 military:
-<li>sensitive_military (sensitive people in military)</li>
+<li>sensitive_military: sensitive military figure.</li>
                      * 
                      */
                     std::string GetLabel() const;
 
                     /**
-                     * 设置The labels for the detected sensitive segments. The relationship between the values of this parameter and those of the `LabelSet` parameter in [PoliticalImgReviewTemplateInfo](https://intl.cloud.tencent.com/document/api/862/37615?from_cn_redirect=1#PoliticalImgReviewTemplateInfo) is as follows:
+                     * 设置Suspected segment sensitive result Tag. The mapping between the LabelSet parameter in the content moderation template [visual sensitive task control parameter](https://www.tencentcloud.com/document/api/862/37615?from_cn_redirect=1#PoliticalImgReviewTemplateInfo) and the parameter value range of this parameter:
 violation_photo:
-<li>violation_photo (banned icons)</li>
+<li>violation_photo: violation icon.</li>
 politician:
-<li>nation_politician (state leader)</li>
-<li>province_politician (provincial officials)</li>
-<li>bureau_politician (bureau-level officials)</li>
-<li>county_politician (county-level officials)</li>
-<li>rural_politician (township-level officials)</li>
-<li>sensitive_politician (sensitive people)</li>
-<li>foreign_politician (state leaders of other countries)</li>
+<li>nation_politician: State leaders;</li>
+<li>province_politician: provincial and ministerial leaders;</li>
+<li>bureau_politician: bureau-level official;</li>
+<li>county_politician: county-level official;</li>
+<li>rural_politician: township-level official;</li>
+<li>sensitive_politician: sensitive person.</li>
+<li>foreign_politician: state leaders of other countries.</li>
 entertainment:
-<li>sensitive_entertainment (sensitive people in the entertainment industry</li>
+<li>sensitive_entertainment: sensitive entertainment figure.</li>
 sport:
-<li>sensitive_sport (sensitive sports celebrities)</li>
+<li>Sensitive_sport: sensitive sports celebrity.</li>
 entrepreneur:
-<li>sensitive_entrepreneur</li>
+<li>sensitive_entrepreneur: sensitive entrepreneur.</li>
 scholar:
-<li>sensitive_scholar</li>
+<li>sensitive_scholar: Sensitive educational scholars.</li>
 celebrity:
-<li>sensitive_celebrity</li>
-<li>historical_celebrity (sensitive historical figures)</li>
+<li>sensitive_celebrity: sensitive celebrity.</li>
+<li>historical_celebrity: historical celebrity.</li>
 military:
-<li>sensitive_military (sensitive people in military)</li>
-                     * @param _label The labels for the detected sensitive segments. The relationship between the values of this parameter and those of the `LabelSet` parameter in [PoliticalImgReviewTemplateInfo](https://intl.cloud.tencent.com/document/api/862/37615?from_cn_redirect=1#PoliticalImgReviewTemplateInfo) is as follows:
+<li>sensitive_military: sensitive military figure.</li>
+                     * @param _label Suspected segment sensitive result Tag. The mapping between the LabelSet parameter in the content moderation template [visual sensitive task control parameter](https://www.tencentcloud.com/document/api/862/37615?from_cn_redirect=1#PoliticalImgReviewTemplateInfo) and the parameter value range of this parameter:
 violation_photo:
-<li>violation_photo (banned icons)</li>
+<li>violation_photo: violation icon.</li>
 politician:
-<li>nation_politician (state leader)</li>
-<li>province_politician (provincial officials)</li>
-<li>bureau_politician (bureau-level officials)</li>
-<li>county_politician (county-level officials)</li>
-<li>rural_politician (township-level officials)</li>
-<li>sensitive_politician (sensitive people)</li>
-<li>foreign_politician (state leaders of other countries)</li>
+<li>nation_politician: State leaders;</li>
+<li>province_politician: provincial and ministerial leaders;</li>
+<li>bureau_politician: bureau-level official;</li>
+<li>county_politician: county-level official;</li>
+<li>rural_politician: township-level official;</li>
+<li>sensitive_politician: sensitive person.</li>
+<li>foreign_politician: state leaders of other countries.</li>
 entertainment:
-<li>sensitive_entertainment (sensitive people in the entertainment industry</li>
+<li>sensitive_entertainment: sensitive entertainment figure.</li>
 sport:
-<li>sensitive_sport (sensitive sports celebrities)</li>
+<li>Sensitive_sport: sensitive sports celebrity.</li>
 entrepreneur:
-<li>sensitive_entrepreneur</li>
+<li>sensitive_entrepreneur: sensitive entrepreneur.</li>
 scholar:
-<li>sensitive_scholar</li>
+<li>sensitive_scholar: Sensitive educational scholars.</li>
 celebrity:
-<li>sensitive_celebrity</li>
-<li>historical_celebrity (sensitive historical figures)</li>
+<li>sensitive_celebrity: sensitive celebrity.</li>
+<li>historical_celebrity: historical celebrity.</li>
 military:
-<li>sensitive_military (sensitive people in military)</li>
+<li>sensitive_military: sensitive military figure.</li>
                      * 
                      */
                     void SetLabel(const std::string& _label);
@@ -277,19 +277,19 @@ military:
                     bool LabelHasBeenSet() const;
 
                     /**
-                     * 获取URL of a suspected image (which will not be permanently stored
- and will be deleted after `PicUrlExpireTime`).
-                     * @return Url URL of a suspected image (which will not be permanently stored
- and will be deleted after `PicUrlExpireTime`).
+                     * 获取Suspected image URL (Images are not retained permanently upon arrival)
+The image will be deleted after the PicUrlExpireTime time point.
+                     * @return Url Suspected image URL (Images are not retained permanently upon arrival)
+The image will be deleted after the PicUrlExpireTime time point.
                      * 
                      */
                     std::string GetUrl() const;
 
                     /**
-                     * 设置URL of a suspected image (which will not be permanently stored
- and will be deleted after `PicUrlExpireTime`).
-                     * @param _url URL of a suspected image (which will not be permanently stored
- and will be deleted after `PicUrlExpireTime`).
+                     * 设置Suspected image URL (Images are not retained permanently upon arrival)
+The image will be deleted after the PicUrlExpireTime time point.
+                     * @param _url Suspected image URL (Images are not retained permanently upon arrival)
+The image will be deleted after the PicUrlExpireTime time point.
                      * 
                      */
                     void SetUrl(const std::string& _url);
@@ -302,15 +302,15 @@ military:
                     bool UrlHasBeenSet() const;
 
                     /**
-                     * 获取The pixel coordinates of the detected sensitive people or banned icons. The format is [x1, y1, x2, y2], which indicates the coordinates of the top-left and bottom-right corners.
-                     * @return AreaCoordSet The pixel coordinates of the detected sensitive people or banned icons. The format is [x1, y1, x2, y2], which indicates the coordinates of the top-left and bottom-right corners.
+                     * 获取Area coordinates of sensitive person and violation icon occurrence (pixel-level), [x1, y1, x2, y2], i.e., coordinates of the top-left corner and coordinate of the bottom-right corner.
+                     * @return AreaCoordSet Area coordinates of sensitive person and violation icon occurrence (pixel-level), [x1, y1, x2, y2], i.e., coordinates of the top-left corner and coordinate of the bottom-right corner.
                      * 
                      */
                     std::vector<int64_t> GetAreaCoordSet() const;
 
                     /**
-                     * 设置The pixel coordinates of the detected sensitive people or banned icons. The format is [x1, y1, x2, y2], which indicates the coordinates of the top-left and bottom-right corners.
-                     * @param _areaCoordSet The pixel coordinates of the detected sensitive people or banned icons. The format is [x1, y1, x2, y2], which indicates the coordinates of the top-left and bottom-right corners.
+                     * 设置Area coordinates of sensitive person and violation icon occurrence (pixel-level), [x1, y1, x2, y2], i.e., coordinates of the top-left corner and coordinate of the bottom-right corner.
+                     * @param _areaCoordSet Area coordinates of sensitive person and violation icon occurrence (pixel-level), [x1, y1, x2, y2], i.e., coordinates of the top-left corner and coordinate of the bottom-right corner.
                      * 
                      */
                     void SetAreaCoordSet(const std::vector<int64_t>& _areaCoordSet);
@@ -323,15 +323,15 @@ military:
                     bool AreaCoordSetHasBeenSet() const;
 
                     /**
-                     * 获取Expiration time of a suspected image URL in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
-                     * @return PicUrlExpireTime Expiration time of a suspected image URL in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+                     * 获取Expiration time of the suspected image URL, using the ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
+                     * @return PicUrlExpireTime Expiration time of the suspected image URL, using the ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
                      * 
                      */
                     std::string GetPicUrlExpireTime() const;
 
                     /**
-                     * 设置Expiration time of a suspected image URL in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
-                     * @param _picUrlExpireTime Expiration time of a suspected image URL in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+                     * 设置Expiration time of the suspected image URL, using the ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
+                     * @param _picUrlExpireTime Expiration time of the suspected image URL, using the ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
                      * 
                      */
                     void SetPicUrlExpireTime(const std::string& _picUrlExpireTime);
@@ -346,82 +346,82 @@ military:
                 private:
 
                     /**
-                     * Start time offset of a suspected segment in seconds.
+                     * Start time offset of a suspected segment, in seconds.
                      */
                     double m_startTimeOffset;
                     bool m_startTimeOffsetHasBeenSet;
 
                     /**
-                     * End time offset of a suspected segment in seconds.
+                     * End time offset of a suspected segment, in seconds.
                      */
                     double m_endTimeOffset;
                     bool m_endTimeOffsetHasBeenSet;
 
                     /**
-                     * The confidence score for the detected sensitive segments.
+                     * Suspected segment sensitivity score.
                      */
                     double m_confidence;
                     bool m_confidenceHasBeenSet;
 
                     /**
-                     * The suggestion for handling the sensitive segments. Valid values:
-<li>pass</li>
-<li>review</li>
-<li>block</li>
+                     * Suspected segment sensitive result suggestion, value ranges from...to...
+<li>pass.</li>
+<li>review.</li>
+<li>block.</li>
                      */
                     std::string m_suggestion;
                     bool m_suggestionHasBeenSet;
 
                     /**
-                     * The name of a sensitive person or banned icon.
+                     * Sensitive person, violative icon name.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * The labels for the detected sensitive segments. The relationship between the values of this parameter and those of the `LabelSet` parameter in [PoliticalImgReviewTemplateInfo](https://intl.cloud.tencent.com/document/api/862/37615?from_cn_redirect=1#PoliticalImgReviewTemplateInfo) is as follows:
+                     * Suspected segment sensitive result Tag. The mapping between the LabelSet parameter in the content moderation template [visual sensitive task control parameter](https://www.tencentcloud.com/document/api/862/37615?from_cn_redirect=1#PoliticalImgReviewTemplateInfo) and the parameter value range of this parameter:
 violation_photo:
-<li>violation_photo (banned icons)</li>
+<li>violation_photo: violation icon.</li>
 politician:
-<li>nation_politician (state leader)</li>
-<li>province_politician (provincial officials)</li>
-<li>bureau_politician (bureau-level officials)</li>
-<li>county_politician (county-level officials)</li>
-<li>rural_politician (township-level officials)</li>
-<li>sensitive_politician (sensitive people)</li>
-<li>foreign_politician (state leaders of other countries)</li>
+<li>nation_politician: State leaders;</li>
+<li>province_politician: provincial and ministerial leaders;</li>
+<li>bureau_politician: bureau-level official;</li>
+<li>county_politician: county-level official;</li>
+<li>rural_politician: township-level official;</li>
+<li>sensitive_politician: sensitive person.</li>
+<li>foreign_politician: state leaders of other countries.</li>
 entertainment:
-<li>sensitive_entertainment (sensitive people in the entertainment industry</li>
+<li>sensitive_entertainment: sensitive entertainment figure.</li>
 sport:
-<li>sensitive_sport (sensitive sports celebrities)</li>
+<li>Sensitive_sport: sensitive sports celebrity.</li>
 entrepreneur:
-<li>sensitive_entrepreneur</li>
+<li>sensitive_entrepreneur: sensitive entrepreneur.</li>
 scholar:
-<li>sensitive_scholar</li>
+<li>sensitive_scholar: Sensitive educational scholars.</li>
 celebrity:
-<li>sensitive_celebrity</li>
-<li>historical_celebrity (sensitive historical figures)</li>
+<li>sensitive_celebrity: sensitive celebrity.</li>
+<li>historical_celebrity: historical celebrity.</li>
 military:
-<li>sensitive_military (sensitive people in military)</li>
+<li>sensitive_military: sensitive military figure.</li>
                      */
                     std::string m_label;
                     bool m_labelHasBeenSet;
 
                     /**
-                     * URL of a suspected image (which will not be permanently stored
- and will be deleted after `PicUrlExpireTime`).
+                     * Suspected image URL (Images are not retained permanently upon arrival)
+The image will be deleted after the PicUrlExpireTime time point.
                      */
                     std::string m_url;
                     bool m_urlHasBeenSet;
 
                     /**
-                     * The pixel coordinates of the detected sensitive people or banned icons. The format is [x1, y1, x2, y2], which indicates the coordinates of the top-left and bottom-right corners.
+                     * Area coordinates of sensitive person and violation icon occurrence (pixel-level), [x1, y1, x2, y2], i.e., coordinates of the top-left corner and coordinate of the bottom-right corner.
                      */
                     std::vector<int64_t> m_areaCoordSet;
                     bool m_areaCoordSetHasBeenSet;
 
                     /**
-                     * Expiration time of a suspected image URL in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+                     * Expiration time of the suspected image URL, using the ISO date format (https://www.tencentcloud.com/document/product/862/37710?from_cn_redirect=1#52).
                      */
                     std::string m_picUrlExpireTime;
                     bool m_picUrlExpireTimeHasBeenSet;

@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * The information about the sensitive content detected based on OCR.
+                * Ocr text sensitive information
                 */
                 class AiReviewTerrorismOcrTaskOutput : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The confidence score for the OCR-based detection of sensitive information. Value range: 1-100.
-                     * @return Confidence The confidence score for the OCR-based detection of sensitive information. Value range: 1-100.
+                     * 获取Ocr text sensitive content score, ranging from 0 to III.
+                     * @return Confidence Ocr text sensitive content score, ranging from 0 to III.
                      * 
                      */
                     double GetConfidence() const;
 
                     /**
-                     * 设置The confidence score for the OCR-based detection of sensitive information. Value range: 1-100.
-                     * @param _confidence The confidence score for the OCR-based detection of sensitive information. Value range: 1-100.
+                     * 设置Ocr text sensitive content score, ranging from 0 to III.
+                     * @param _confidence Ocr text sensitive content score, ranging from 0 to III.
                      * 
                      */
                     void SetConfidence(const double& _confidence);
@@ -69,27 +69,27 @@ namespace TencentCloud
                     bool ConfidenceHasBeenSet() const;
 
                     /**
-                     * 获取The suggestion for handling the sensitive information detected based on OCR. Valid values:
-<li>pass</li>
-<li>review</li>
-<li>block</li>
-                     * @return Suggestion The suggestion for handling the sensitive information detected based on OCR. Valid values:
-<li>pass</li>
-<li>review</li>
-<li>block</li>
+                     * 获取Ocr text sensitive result suggestion, value ranges from...to...
+<li>pass.</li>
+<li>review.</li>
+<li>block.</li>
+                     * @return Suggestion Ocr text sensitive result suggestion, value ranges from...to...
+<li>pass.</li>
+<li>review.</li>
+<li>block.</li>
                      * 
                      */
                     std::string GetSuggestion() const;
 
                     /**
-                     * 设置The suggestion for handling the sensitive information detected based on OCR. Valid values:
-<li>pass</li>
-<li>review</li>
-<li>block</li>
-                     * @param _suggestion The suggestion for handling the sensitive information detected based on OCR. Valid values:
-<li>pass</li>
-<li>review</li>
-<li>block</li>
+                     * 设置Ocr text sensitive result suggestion, value ranges from...to...
+<li>pass.</li>
+<li>review.</li>
+<li>block.</li>
+                     * @param _suggestion Ocr text sensitive result suggestion, value ranges from...to...
+<li>pass.</li>
+<li>review.</li>
+<li>block.</li>
                      * 
                      */
                     void SetSuggestion(const std::string& _suggestion);
@@ -102,15 +102,15 @@ namespace TencentCloud
                     bool SuggestionHasBeenSet() const;
 
                     /**
-                     * 获取The video segments that contain sensitive information detected based on OCR.
-                     * @return SegmentSet The video segments that contain sensitive information detected based on OCR.
+                     * 获取List of video segments suspected of containing sensitive content in Ocr text.
+                     * @return SegmentSet List of video segments suspected of containing sensitive content in Ocr text.
                      * 
                      */
                     std::vector<MediaContentReviewOcrTextSegmentItem> GetSegmentSet() const;
 
                     /**
-                     * 设置The video segments that contain sensitive information detected based on OCR.
-                     * @param _segmentSet The video segments that contain sensitive information detected based on OCR.
+                     * 设置List of video segments suspected of containing sensitive content in Ocr text.
+                     * @param _segmentSet List of video segments suspected of containing sensitive content in Ocr text.
                      * 
                      */
                     void SetSegmentSet(const std::vector<MediaContentReviewOcrTextSegmentItem>& _segmentSet);
@@ -125,22 +125,22 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The confidence score for the OCR-based detection of sensitive information. Value range: 1-100.
+                     * Ocr text sensitive content score, ranging from 0 to III.
                      */
                     double m_confidence;
                     bool m_confidenceHasBeenSet;
 
                     /**
-                     * The suggestion for handling the sensitive information detected based on OCR. Valid values:
-<li>pass</li>
-<li>review</li>
-<li>block</li>
+                     * Ocr text sensitive result suggestion, value ranges from...to...
+<li>pass.</li>
+<li>review.</li>
+<li>block.</li>
                      */
                     std::string m_suggestion;
                     bool m_suggestionHasBeenSet;
 
                     /**
-                     * The video segments that contain sensitive information detected based on OCR.
+                     * List of video segments suspected of containing sensitive content in Ocr text.
                      */
                     std::vector<MediaContentReviewOcrTextSegmentItem> m_segmentSet;
                     bool m_segmentSetHasBeenSet;

@@ -133,19 +133,15 @@ namespace TencentCloud
                     bool KeywordsHasBeenSet() const;
 
                     /**
-                     * 获取Segmentation result.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Paragraphs Segmentation result.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return Paragraphs 
                      * 
                      */
                     std::vector<AiParagraphInfo> GetParagraphs() const;
 
                     /**
-                     * 设置Segmentation result.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _paragraphs Segmentation result.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _paragraphs 
                      * 
                      */
                     void SetParagraphs(const std::vector<AiParagraphInfo>& _paragraphs);
@@ -158,19 +154,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ParagraphsHasBeenSet() const;
 
                     /**
-                     * 获取Address of the mind map of a summary task.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return MindMapUrl Address of the mind map of a summary task.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取
+                     * @return MindMapUrl 
                      * 
                      */
                     std::string GetMindMapUrl() const;
 
                     /**
-                     * 设置Address of the mind map of a summary task.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _mindMapUrl Address of the mind map of a summary task.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置
+                     * @param _mindMapUrl 
                      * 
                      */
                     void SetMindMapUrl(const std::string& _mindMapUrl);
@@ -272,15 +264,13 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool m_keywordsHasBeenSet;
 
                     /**
-                     * Segmentation result.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<AiParagraphInfo> m_paragraphs;
                     bool m_paragraphsHasBeenSet;
 
                     /**
-                     * Address of the mind map of a summary task.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string m_mindMapUrl;
                     bool m_mindMapUrlHasBeenSet;

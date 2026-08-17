@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * A subtask of a scheme.
+                * Orchestrate atomic tasks
                 */
                 class Activity : public AbstractModel
                 {
@@ -49,40 +49,40 @@ namespace TencentCloud
 
                     /**
                      * 获取Atomic task type.
-<li>input: starting node.</li>.
-<li>output: termination node.</li>.
-<li>action-trans: specifies transcoding.</li>.
-<li>action-samplesnapshot: specifies sampled screenshot taking.</li>.
-<li>action-AIAnalysis: analysis.</li>.
-<li>action-AIRecognition: recognition.</li>.
-<li>action-aiReview: specifies the review action.</li>.
-<li>action-animated-graphics: specifies the animated image.</li>.
-<li>action-image-sprite: specifies the sprite sheet.</li>.
-<li>action-snapshotByTimeOffset: specifies time point screenshot taking.</li>.
-<li>action-adaptive-substream: specifies the adaptive bitrate stream.</li>.
-<li>action-AIQualityControl: media quality inspection.</li>.
-<li>action-SmartSubtitles: smart subtitling.</li>.
-<li>action-exec-rules: judgment rule.</li>.
-<li>action-SmartErase: smart erasure.</li>.
+<li>input: start node.</li>
+<li>output: termination node.</li>
+<li>action-trans: transcoding.</li>
+<li>action-samplesnapshot: sampled screenshot taking.</li>
+<li>action-AIAnalysis: analysis</li>
+<li>action-AIRecognition: recognition.</li>
+<li>action-aiReview: review</li>
+<li>action-animated-graphics: animated image</li>
+<li>action-image-sprite: sprite sheet</li>
+<li>action-snapshotByTimeOffset: time point screenshot taking</li>
+<li>action-adaptive-substream: adaptive bitrate streaming.</li>
+<li>action-AIQualityControl: media quality inspection.</li>
+<li>action-SmartSubtitles: smart subtitle</li>
+<li>action-exec-rules: judgment rule</li>
+<li>action-SmartErase: intelligent removal.</li>
 
 
 
                      * @return ActivityType Atomic task type.
-<li>input: starting node.</li>.
-<li>output: termination node.</li>.
-<li>action-trans: specifies transcoding.</li>.
-<li>action-samplesnapshot: specifies sampled screenshot taking.</li>.
-<li>action-AIAnalysis: analysis.</li>.
-<li>action-AIRecognition: recognition.</li>.
-<li>action-aiReview: specifies the review action.</li>.
-<li>action-animated-graphics: specifies the animated image.</li>.
-<li>action-image-sprite: specifies the sprite sheet.</li>.
-<li>action-snapshotByTimeOffset: specifies time point screenshot taking.</li>.
-<li>action-adaptive-substream: specifies the adaptive bitrate stream.</li>.
-<li>action-AIQualityControl: media quality inspection.</li>.
-<li>action-SmartSubtitles: smart subtitling.</li>.
-<li>action-exec-rules: judgment rule.</li>.
-<li>action-SmartErase: smart erasure.</li>.
+<li>input: start node.</li>
+<li>output: termination node.</li>
+<li>action-trans: transcoding.</li>
+<li>action-samplesnapshot: sampled screenshot taking.</li>
+<li>action-AIAnalysis: analysis</li>
+<li>action-AIRecognition: recognition.</li>
+<li>action-aiReview: review</li>
+<li>action-animated-graphics: animated image</li>
+<li>action-image-sprite: sprite sheet</li>
+<li>action-snapshotByTimeOffset: time point screenshot taking</li>
+<li>action-adaptive-substream: adaptive bitrate streaming.</li>
+<li>action-AIQualityControl: media quality inspection.</li>
+<li>action-SmartSubtitles: smart subtitle</li>
+<li>action-exec-rules: judgment rule</li>
+<li>action-SmartErase: intelligent removal.</li>
 
 
 
@@ -92,40 +92,40 @@ namespace TencentCloud
 
                     /**
                      * 设置Atomic task type.
-<li>input: starting node.</li>.
-<li>output: termination node.</li>.
-<li>action-trans: specifies transcoding.</li>.
-<li>action-samplesnapshot: specifies sampled screenshot taking.</li>.
-<li>action-AIAnalysis: analysis.</li>.
-<li>action-AIRecognition: recognition.</li>.
-<li>action-aiReview: specifies the review action.</li>.
-<li>action-animated-graphics: specifies the animated image.</li>.
-<li>action-image-sprite: specifies the sprite sheet.</li>.
-<li>action-snapshotByTimeOffset: specifies time point screenshot taking.</li>.
-<li>action-adaptive-substream: specifies the adaptive bitrate stream.</li>.
-<li>action-AIQualityControl: media quality inspection.</li>.
-<li>action-SmartSubtitles: smart subtitling.</li>.
-<li>action-exec-rules: judgment rule.</li>.
-<li>action-SmartErase: smart erasure.</li>.
+<li>input: start node.</li>
+<li>output: termination node.</li>
+<li>action-trans: transcoding.</li>
+<li>action-samplesnapshot: sampled screenshot taking.</li>
+<li>action-AIAnalysis: analysis</li>
+<li>action-AIRecognition: recognition.</li>
+<li>action-aiReview: review</li>
+<li>action-animated-graphics: animated image</li>
+<li>action-image-sprite: sprite sheet</li>
+<li>action-snapshotByTimeOffset: time point screenshot taking</li>
+<li>action-adaptive-substream: adaptive bitrate streaming.</li>
+<li>action-AIQualityControl: media quality inspection.</li>
+<li>action-SmartSubtitles: smart subtitle</li>
+<li>action-exec-rules: judgment rule</li>
+<li>action-SmartErase: intelligent removal.</li>
 
 
 
                      * @param _activityType Atomic task type.
-<li>input: starting node.</li>.
-<li>output: termination node.</li>.
-<li>action-trans: specifies transcoding.</li>.
-<li>action-samplesnapshot: specifies sampled screenshot taking.</li>.
-<li>action-AIAnalysis: analysis.</li>.
-<li>action-AIRecognition: recognition.</li>.
-<li>action-aiReview: specifies the review action.</li>.
-<li>action-animated-graphics: specifies the animated image.</li>.
-<li>action-image-sprite: specifies the sprite sheet.</li>.
-<li>action-snapshotByTimeOffset: specifies time point screenshot taking.</li>.
-<li>action-adaptive-substream: specifies the adaptive bitrate stream.</li>.
-<li>action-AIQualityControl: media quality inspection.</li>.
-<li>action-SmartSubtitles: smart subtitling.</li>.
-<li>action-exec-rules: judgment rule.</li>.
-<li>action-SmartErase: smart erasure.</li>.
+<li>input: start node.</li>
+<li>output: termination node.</li>
+<li>action-trans: transcoding.</li>
+<li>action-samplesnapshot: sampled screenshot taking.</li>
+<li>action-AIAnalysis: analysis</li>
+<li>action-AIRecognition: recognition.</li>
+<li>action-aiReview: review</li>
+<li>action-animated-graphics: animated image</li>
+<li>action-image-sprite: sprite sheet</li>
+<li>action-snapshotByTimeOffset: time point screenshot taking</li>
+<li>action-adaptive-substream: adaptive bitrate streaming.</li>
+<li>action-AIQualityControl: media quality inspection.</li>
+<li>action-SmartSubtitles: smart subtitle</li>
+<li>action-exec-rules: judgment rule</li>
+<li>action-SmartErase: intelligent removal.</li>
 
 
 
@@ -141,15 +141,15 @@ namespace TencentCloud
                     bool ActivityTypeHasBeenSet() const;
 
                     /**
-                     * 获取Rear node index array.
-                     * @return ReardriveIndex Rear node index array.
+                     * 获取Rear drive node index array
+                     * @return ReardriveIndex Rear drive node index array
                      * 
                      */
                     std::vector<int64_t> GetReardriveIndex() const;
 
                     /**
-                     * 设置Rear node index array.
-                     * @param _reardriveIndex Rear node index array.
+                     * 设置Rear drive node index array
+                     * @param _reardriveIndex Rear drive node index array
                      * 
                      */
                     void SetReardriveIndex(const std::vector<int64_t>& _reardriveIndex);
@@ -162,19 +162,15 @@ namespace TencentCloud
                     bool ReardriveIndexHasBeenSet() const;
 
                     /**
-                     * 获取The parameters of a subtask.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ActivityPara The parameters of a subtask.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return ActivityPara 
                      * 
                      */
                     ActivityPara GetActivityPara() const;
 
                     /**
-                     * 设置The parameters of a subtask.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _activityPara The parameters of a subtask.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _activityPara 
                      * 
                      */
                     void SetActivityPara(const ActivityPara& _activityPara);
@@ -190,21 +186,21 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Atomic task type.
-<li>input: starting node.</li>.
-<li>output: termination node.</li>.
-<li>action-trans: specifies transcoding.</li>.
-<li>action-samplesnapshot: specifies sampled screenshot taking.</li>.
-<li>action-AIAnalysis: analysis.</li>.
-<li>action-AIRecognition: recognition.</li>.
-<li>action-aiReview: specifies the review action.</li>.
-<li>action-animated-graphics: specifies the animated image.</li>.
-<li>action-image-sprite: specifies the sprite sheet.</li>.
-<li>action-snapshotByTimeOffset: specifies time point screenshot taking.</li>.
-<li>action-adaptive-substream: specifies the adaptive bitrate stream.</li>.
-<li>action-AIQualityControl: media quality inspection.</li>.
-<li>action-SmartSubtitles: smart subtitling.</li>.
-<li>action-exec-rules: judgment rule.</li>.
-<li>action-SmartErase: smart erasure.</li>.
+<li>input: start node.</li>
+<li>output: termination node.</li>
+<li>action-trans: transcoding.</li>
+<li>action-samplesnapshot: sampled screenshot taking.</li>
+<li>action-AIAnalysis: analysis</li>
+<li>action-AIRecognition: recognition.</li>
+<li>action-aiReview: review</li>
+<li>action-animated-graphics: animated image</li>
+<li>action-image-sprite: sprite sheet</li>
+<li>action-snapshotByTimeOffset: time point screenshot taking</li>
+<li>action-adaptive-substream: adaptive bitrate streaming.</li>
+<li>action-AIQualityControl: media quality inspection.</li>
+<li>action-SmartSubtitles: smart subtitle</li>
+<li>action-exec-rules: judgment rule</li>
+<li>action-SmartErase: intelligent removal.</li>
 
 
 
@@ -213,14 +209,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_activityTypeHasBeenSet;
 
                     /**
-                     * Rear node index array.
+                     * Rear drive node index array
                      */
                     std::vector<int64_t> m_reardriveIndex;
                     bool m_reardriveIndexHasBeenSet;
 
                     /**
-                     * The parameters of a subtask.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     ActivityPara m_activityPara;
                     bool m_activityParaHasBeenSet;

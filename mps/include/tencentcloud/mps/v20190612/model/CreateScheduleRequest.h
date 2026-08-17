@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The scheme name (max 128 characters). This name should be unique across your account.
-                     * @return ScheduleName The scheme name (max 128 characters). This name should be unique across your account.
+                     * 获取Orchestration name, up to 128 characters. The name is unique for the same user.
+                     * @return ScheduleName Orchestration name, up to 128 characters. The name is unique for the same user.
                      * 
                      */
                     std::string GetScheduleName() const;
 
                     /**
-                     * 设置The scheme name (max 128 characters). This name should be unique across your account.
-                     * @param _scheduleName The scheme name (max 128 characters). This name should be unique across your account.
+                     * 设置Orchestration name, up to 128 characters. The name is unique for the same user.
+                     * @param _scheduleName Orchestration name, up to 128 characters. The name is unique for the same user.
                      * 
                      */
                     void SetScheduleName(const std::string& _scheduleName);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool ScheduleNameHasBeenSet() const;
 
                     /**
-                     * 获取The trigger of the scheme. If a file is uploaded to the specified bucket, the scheme will be triggered.
-                     * @return Trigger The trigger of the scheme. If a file is uploaded to the specified bucket, the scheme will be triggered.
+                     * 获取Orchestrate the bound trigger rule. The orchestration is triggered when an uploaded video hits the rule for the object.
+                     * @return Trigger Orchestrate the bound trigger rule. The orchestration is triggered when an uploaded video hits the rule for the object.
                      * 
                      */
                     WorkflowTrigger GetTrigger() const;
 
                     /**
-                     * 设置The trigger of the scheme. If a file is uploaded to the specified bucket, the scheme will be triggered.
-                     * @param _trigger The trigger of the scheme. If a file is uploaded to the specified bucket, the scheme will be triggered.
+                     * 设置Orchestrate the bound trigger rule. The orchestration is triggered when an uploaded video hits the rule for the object.
+                     * @param _trigger Orchestrate the bound trigger rule. The orchestration is triggered when an uploaded video hits the rule for the object.
                      * 
                      */
                     void SetTrigger(const WorkflowTrigger& _trigger);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool TriggerHasBeenSet() const;
 
                     /**
-                     * 获取The subtasks of the scheme.
-                     * @return Activities The subtasks of the scheme.
+                     * 获取Orchestration task list.
+                     * @return Activities Orchestration task list.
                      * 
                      */
                     std::vector<Activity> GetActivities() const;
 
                     /**
-                     * 设置The subtasks of the scheme.
-                     * @param _activities The subtasks of the scheme.
+                     * 设置Orchestration task list.
+                     * @param _activities Orchestration task list.
                      * 
                      */
                     void SetActivities(const std::vector<Activity>& _activities);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool ActivitiesHasBeenSet() const;
 
                     /**
-                     * 获取The bucket to save the output file. If you do not specify this parameter, the bucket in `Trigger` will be used.
-                     * @return OutputStorage The bucket to save the output file. If you do not specify this parameter, the bucket in `Trigger` will be used.
+                     * 获取Media Processing Service output storage location. If left blank, it inherits the storage location from Trigger.
+                     * @return OutputStorage Media Processing Service output storage location. If left blank, it inherits the storage location from Trigger.
                      * 
                      */
                     TaskOutputStorage GetOutputStorage() const;
 
                     /**
-                     * 设置The bucket to save the output file. If you do not specify this parameter, the bucket in `Trigger` will be used.
-                     * @param _outputStorage The bucket to save the output file. If you do not specify this parameter, the bucket in `Trigger` will be used.
+                     * 设置Media Processing Service output storage location. If left blank, it inherits the storage location from Trigger.
+                     * @param _outputStorage Media Processing Service output storage location. If left blank, it inherits the storage location from Trigger.
                      * 
                      */
                     void SetOutputStorage(const TaskOutputStorage& _outputStorage);
@@ -131,19 +131,19 @@ namespace TencentCloud
                     bool OutputStorageHasBeenSet() const;
 
                     /**
-                     * 获取The directory to save the media processing output file, which must start and end with `/`, such as `/movie/201907/`.
-If you do not specify this, the file will be saved to the trigger directory.
-                     * @return OutputDir The directory to save the media processing output file, which must start and end with `/`, such as `/movie/201907/`.
-If you do not specify this, the file will be saved to the trigger directory.
+                     * 获取Storage directory for the output file. It should start and end with a slash (/), such as `/movie/201907/`.
+If left empty, it is the same as the directory of the trigger file.
+                     * @return OutputDir Storage directory for the output file. It should start and end with a slash (/), such as `/movie/201907/`.
+If left empty, it is the same as the directory of the trigger file.
                      * 
                      */
                     std::string GetOutputDir() const;
 
                     /**
-                     * 设置The directory to save the media processing output file, which must start and end with `/`, such as `/movie/201907/`.
-If you do not specify this, the file will be saved to the trigger directory.
-                     * @param _outputDir The directory to save the media processing output file, which must start and end with `/`, such as `/movie/201907/`.
-If you do not specify this, the file will be saved to the trigger directory.
+                     * 设置Storage directory for the output file. It should start and end with a slash (/), such as `/movie/201907/`.
+If left empty, it is the same as the directory of the trigger file.
+                     * @param _outputDir Storage directory for the output file. It should start and end with a slash (/), such as `/movie/201907/`.
+If left empty, it is the same as the directory of the trigger file.
                      * 
                      */
                     void SetOutputDir(const std::string& _outputDir);
@@ -156,15 +156,15 @@ If you do not specify this, the file will be saved to the trigger directory.
                     bool OutputDirHasBeenSet() const;
 
                     /**
-                     * 获取The notification configuration. If you do not specify this parameter, notifications will not be sent.
-                     * @return TaskNotifyConfig The notification configuration. If you do not specify this parameter, notifications will not be sent.
+                     * 获取Event notification configuration of the task. If left blank, it indicates that no event notification will be obtained.
+                     * @return TaskNotifyConfig Event notification configuration of the task. If left blank, it indicates that no event notification will be obtained.
                      * 
                      */
                     TaskNotifyConfig GetTaskNotifyConfig() const;
 
                     /**
-                     * 设置The notification configuration. If you do not specify this parameter, notifications will not be sent.
-                     * @param _taskNotifyConfig The notification configuration. If you do not specify this parameter, notifications will not be sent.
+                     * 设置Event notification configuration of the task. If left blank, it indicates that no event notification will be obtained.
+                     * @param _taskNotifyConfig Event notification configuration of the task. If left blank, it indicates that no event notification will be obtained.
                      * 
                      */
                     void SetTaskNotifyConfig(const TaskNotifyConfig& _taskNotifyConfig);
@@ -200,38 +200,38 @@ If you do not specify this, the file will be saved to the trigger directory.
                 private:
 
                     /**
-                     * The scheme name (max 128 characters). This name should be unique across your account.
+                     * Orchestration name, up to 128 characters. The name is unique for the same user.
                      */
                     std::string m_scheduleName;
                     bool m_scheduleNameHasBeenSet;
 
                     /**
-                     * The trigger of the scheme. If a file is uploaded to the specified bucket, the scheme will be triggered.
+                     * Orchestrate the bound trigger rule. The orchestration is triggered when an uploaded video hits the rule for the object.
                      */
                     WorkflowTrigger m_trigger;
                     bool m_triggerHasBeenSet;
 
                     /**
-                     * The subtasks of the scheme.
+                     * Orchestration task list.
                      */
                     std::vector<Activity> m_activities;
                     bool m_activitiesHasBeenSet;
 
                     /**
-                     * The bucket to save the output file. If you do not specify this parameter, the bucket in `Trigger` will be used.
+                     * Media Processing Service output storage location. If left blank, it inherits the storage location from Trigger.
                      */
                     TaskOutputStorage m_outputStorage;
                     bool m_outputStorageHasBeenSet;
 
                     /**
-                     * The directory to save the media processing output file, which must start and end with `/`, such as `/movie/201907/`.
-If you do not specify this, the file will be saved to the trigger directory.
+                     * Storage directory for the output file. It should start and end with a slash (/), such as `/movie/201907/`.
+If left empty, it is the same as the directory of the trigger file.
                      */
                     std::string m_outputDir;
                     bool m_outputDirHasBeenSet;
 
                     /**
-                     * The notification configuration. If you do not specify this parameter, notifications will not be sent.
+                     * Event notification configuration of the task. If left blank, it indicates that no event notification will be obtained.
                      */
                     TaskNotifyConfig m_taskNotifyConfig;
                     bool m_taskNotifyConfigHasBeenSet;

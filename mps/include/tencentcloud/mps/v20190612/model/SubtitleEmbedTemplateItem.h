@@ -69,19 +69,15 @@ namespace TencentCloud
                     bool DefinitionHasBeenSet() const;
 
                     /**
-                     * 获取Subtitle suppression template name
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Name Subtitle suppression template name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return Name 
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Subtitle suppression template name
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _name Subtitle suppression template name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _name 
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -94,19 +90,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Subtitle suppression template description
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Comment Subtitle suppression template description
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return Comment 
                      * 
                      */
                     std::string GetComment() const;
 
                     /**
-                     * 设置Subtitle suppression template description
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _comment Subtitle suppression template description
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _comment 
                      * 
                      */
                     void SetComment(const std::string& _comment);
@@ -119,27 +111,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CommentHasBeenSet() const;
 
                     /**
-                     * 获取Template type. Valid values:
-* Preset: system preset template
-* Custom: user-defined template.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Type Template type. Valid values:
-* Preset: system preset template
-* Custom: user-defined template.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return Type 
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Template type. Valid values:
-* Preset: system preset template
-* Custom: user-defined template.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _type Template type. Valid values:
-* Preset: system preset template
-* Custom: user-defined template.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _type 
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -236,19 +216,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool SubtitleEmbedConfigHasBeenSet() const;
 
                     /**
-                     * 获取Subtitle suppression template English name
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return AliasName Subtitle suppression template English name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return AliasName 
                      * 
                      */
                     std::string GetAliasName() const;
 
                     /**
-                     * 设置Subtitle suppression template English name
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _aliasName Subtitle suppression template English name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _aliasName 
                      * 
                      */
                     void SetAliasName(const std::string& _aliasName);
@@ -269,24 +245,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_definitionHasBeenSet;
 
                     /**
-                     * Subtitle suppression template name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Subtitle suppression template description
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string m_comment;
                     bool m_commentHasBeenSet;
 
                     /**
-                     * Template type. Valid values:
-* Preset: system preset template
-* Custom: user-defined template.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
@@ -316,8 +287,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_subtitleEmbedConfigHasBeenSet;
 
                     /**
-                     * Subtitle suppression template English name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string m_aliasName;
                     bool m_aliasNameHasBeenSet;

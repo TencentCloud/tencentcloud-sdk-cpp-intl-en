@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Video deduplication result information.
+                * Video deduplication result info
                 */
                 class AiAnalysisTaskVideoRemakeOutput : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Specifies the file path for intelligent video deduplication.
-                     * @return Path Specifies the file path for intelligent video deduplication.
+                     * 获取File path for intelligent video deduplication
+                     * @return Path File path for intelligent video deduplication
                      * 
                      */
                     std::string GetPath() const;
 
                     /**
-                     * 设置Specifies the file path for intelligent video deduplication.
-                     * @param _path Specifies the file path for intelligent video deduplication.
+                     * 设置File path for intelligent video deduplication
+                     * @param _path File path for intelligent video deduplication
                      * 
                      */
                     void SetPath(const std::string& _path);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool PathHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the storage location for intelligent video deduplication.
-                     * @return OutputStorage Specifies the storage location for intelligent video deduplication.
+                     * 获取Storage location of intelligent video deduplication
+                     * @return OutputStorage Storage location of intelligent video deduplication
                      * 
                      */
                     TaskOutputStorage GetOutputStorage() const;
 
                     /**
-                     * 设置Specifies the storage location for intelligent video deduplication.
-                     * @param _outputStorage Specifies the storage location for intelligent video deduplication.
+                     * 设置Storage location of intelligent video deduplication
+                     * @param _outputStorage Storage location of intelligent video deduplication
                      * 
                      */
                     void SetOutputStorage(const TaskOutputStorage& _outputStorage);
@@ -92,13 +92,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Specifies the file path for intelligent video deduplication.
+                     * File path for intelligent video deduplication
                      */
                     std::string m_path;
                     bool m_pathHasBeenSet;
 
                     /**
-                     * Specifies the storage location for intelligent video deduplication.
+                     * Storage location of intelligent video deduplication
                      */
                     TaskOutputStorage m_outputStorage;
                     bool m_outputStorageHasBeenSet;

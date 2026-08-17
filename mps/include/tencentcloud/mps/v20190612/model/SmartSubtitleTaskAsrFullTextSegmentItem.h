@@ -132,19 +132,15 @@ namespace TencentCloud
                     bool TextHasBeenSet() const;
 
                     /**
-                     * 获取<p>Word timestamp information.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Wordlist <p>Word timestamp information.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return Wordlist 
                      * 
                      */
                     std::vector<WordResult> GetWordlist() const;
 
                     /**
-                     * 设置<p>Word timestamp information.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _wordlist <p>Word timestamp information.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _wordlist 
                      * 
                      */
                     void SetWordlist(const std::vector<WordResult>& _wordlist);
@@ -204,8 +200,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_textHasBeenSet;
 
                     /**
-                     * <p>Word timestamp information.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<WordResult> m_wordlist;
                     bool m_wordlistHasBeenSet;

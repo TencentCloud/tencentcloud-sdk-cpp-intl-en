@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Opening segment PTS.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return HeadTimeOffset Opening segment PTS.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return HeadTimeOffset 
                      * 
                      */
                     double GetHeadTimeOffset() const;
 
                     /**
-                     * 设置Opening segment PTS.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _headTimeOffset Opening segment PTS.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _headTimeOffset 
                      * 
                      */
                     void SetHeadTimeOffset(const double& _headTimeOffset);
@@ -72,19 +68,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool HeadTimeOffsetHasBeenSet() const;
 
                     /**
-                     * 获取Closing segment PTS.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TailTimeOffset Closing segment PTS.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return TailTimeOffset 
                      * 
                      */
                     double GetTailTimeOffset() const;
 
                     /**
-                     * 设置Closing segment PTS.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _tailTimeOffset Closing segment PTS.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _tailTimeOffset 
                      * 
                      */
                     void SetTailTimeOffset(const double& _tailTimeOffset);
@@ -99,15 +91,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Opening segment PTS.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     double m_headTimeOffset;
                     bool m_headTimeOffsetHasBeenSet;
 
                     /**
-                     * Closing segment PTS.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     double m_tailTimeOffset;
                     bool m_tailTimeOffsetHasBeenSet;

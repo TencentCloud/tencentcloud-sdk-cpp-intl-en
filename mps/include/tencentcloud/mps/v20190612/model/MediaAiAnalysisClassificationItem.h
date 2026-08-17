@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Intelligent categorization result
+                * Intelligent classification result
                 */
                 class MediaAiAnalysisClassificationItem : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Name of intelligently generated category.
-                     * @return Classification Name of intelligently generated category.
+                     * 获取Category name for intelligent classification.
+                     * @return Classification Category name for intelligent classification.
                      * 
                      */
                     std::string GetClassification() const;
 
                     /**
-                     * 设置Name of intelligently generated category.
-                     * @param _classification Name of intelligently generated category.
+                     * 设置Category name for intelligent classification.
+                     * @param _classification Category name for intelligent classification.
                      * 
                      */
                     void SetClassification(const std::string& _classification);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool ClassificationHasBeenSet() const;
 
                     /**
-                     * 获取Confidence of intelligently generated category between 0 and 100.
-                     * @return Confidence Confidence of intelligently generated category between 0 and 100.
+                     * 获取Reliability of intelligent classification, with a value range from 0 to 100.
+                     * @return Confidence Reliability of intelligent classification, with a value range from 0 to 100.
                      * 
                      */
                     double GetConfidence() const;
 
                     /**
-                     * 设置Confidence of intelligently generated category between 0 and 100.
-                     * @param _confidence Confidence of intelligently generated category between 0 and 100.
+                     * 设置Reliability of intelligent classification, with a value range from 0 to 100.
+                     * @param _confidence Reliability of intelligent classification, with a value range from 0 to 100.
                      * 
                      */
                     void SetConfidence(const double& _confidence);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Name of intelligently generated category.
+                     * Category name for intelligent classification.
                      */
                     std::string m_classification;
                     bool m_classificationHasBeenSet;
 
                     /**
-                     * Confidence of intelligently generated category between 0 and 100.
+                     * Reliability of intelligent classification, with a value range from 0 to 100.
                      */
                     double m_confidence;
                     bool m_confidenceHasBeenSet;

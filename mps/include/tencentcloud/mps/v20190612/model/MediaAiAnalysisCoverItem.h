@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Information of intelligently generated cover
+                * Intelligent cover information
                 */
                 class MediaAiAnalysisCoverItem : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Storage path of intelligently generated cover.
-                     * @return CoverPath Storage path of intelligently generated cover.
+                     * 获取Intelligent cover storage path.
+                     * @return CoverPath Intelligent cover storage path.
                      * 
                      */
                     std::string GetCoverPath() const;
 
                     /**
-                     * 设置Storage path of intelligently generated cover.
-                     * @param _coverPath Storage path of intelligently generated cover.
+                     * 设置Intelligent cover storage path.
+                     * @param _coverPath Intelligent cover storage path.
                      * 
                      */
                     void SetCoverPath(const std::string& _coverPath);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool CoverPathHasBeenSet() const;
 
                     /**
-                     * 获取Confidence of intelligently generated cover between 0 and 100.
-                     * @return Confidence Confidence of intelligently generated cover between 0 and 100.
+                     * 获取Reliability of the intelligent cover, with a value range from 0 to -100.
+                     * @return Confidence Reliability of the intelligent cover, with a value range from 0 to -100.
                      * 
                      */
                     double GetConfidence() const;
 
                     /**
-                     * 设置Confidence of intelligently generated cover between 0 and 100.
-                     * @param _confidence Confidence of intelligently generated cover between 0 and 100.
+                     * 设置Reliability of the intelligent cover, with a value range from 0 to -100.
+                     * @param _confidence Reliability of the intelligent cover, with a value range from 0 to -100.
                      * 
                      */
                     void SetConfidence(const double& _confidence);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Storage path of intelligently generated cover.
+                     * Intelligent cover storage path.
                      */
                     std::string m_coverPath;
                     bool m_coverPathHasBeenSet;
 
                     /**
-                     * Confidence of intelligently generated cover between 0 and 100.
+                     * Reliability of the intelligent cover, with a value range from 0 to -100.
                      */
                     double m_confidence;
                     bool m_confidenceHasBeenSet;

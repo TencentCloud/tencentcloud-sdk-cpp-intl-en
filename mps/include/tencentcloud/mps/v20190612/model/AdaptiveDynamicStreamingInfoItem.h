@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Adaptive bitrate streaming information
+                * Adaptive Bitrate Streaming information
                 */
                 class AdaptiveDynamicStreamingInfoItem : public AbstractModel
                 {
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool DefinitionHasBeenSet() const;
 
                     /**
-                     * 获取Container format. Valid values: HLS, MPEG-DASH.
-                     * @return Package Container format. Valid values: HLS, MPEG-DASH.
+                     * 获取Packaging format, which may be two kinds: HLS and MPEG-DASH.
+                     * @return Package Packaging format, which may be two kinds: HLS and MPEG-DASH.
                      * 
                      */
                     std::string GetPackage() const;
 
                     /**
-                     * 设置Container format. Valid values: HLS, MPEG-DASH.
-                     * @param _package Container format. Valid values: HLS, MPEG-DASH.
+                     * 设置Packaging format, which may be two kinds: HLS and MPEG-DASH.
+                     * @param _package Packaging format, which may be two kinds: HLS and MPEG-DASH.
                      * 
                      */
                     void SetPackage(const std::string& _package);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool PackageHasBeenSet() const;
 
                     /**
-                     * 获取Playback address.
-                     * @return Path Playback address.
+                     * 获取Playback path.
+                     * @return Path Playback path.
                      * 
                      */
                     std::string GetPath() const;
 
                     /**
-                     * 设置Playback address.
-                     * @param _path Playback address.
+                     * 设置Playback path.
+                     * @param _path Playback path.
                      * 
                      */
                     void SetPath(const std::string& _path);
@@ -111,15 +111,15 @@ namespace TencentCloud
                     bool PathHasBeenSet() const;
 
                     /**
-                     * 获取Storage location of adaptive bitrate streaming files.
-                     * @return Storage Storage location of adaptive bitrate streaming files.
+                     * 获取Storage location of the adaptive bitrate stream file.
+                     * @return Storage Storage location of the adaptive bitrate stream file.
                      * 
                      */
                     TaskOutputStorage GetStorage() const;
 
                     /**
-                     * 设置Storage location of adaptive bitrate streaming files.
-                     * @param _storage Storage location of adaptive bitrate streaming files.
+                     * 设置Storage location of the adaptive bitrate stream file.
+                     * @param _storage Storage location of the adaptive bitrate stream file.
                      * 
                      */
                     void SetStorage(const TaskOutputStorage& _storage);
@@ -140,19 +140,19 @@ namespace TencentCloud
                     bool m_definitionHasBeenSet;
 
                     /**
-                     * Container format. Valid values: HLS, MPEG-DASH.
+                     * Packaging format, which may be two kinds: HLS and MPEG-DASH.
                      */
                     std::string m_package;
                     bool m_packageHasBeenSet;
 
                     /**
-                     * Playback address.
+                     * Playback path.
                      */
                     std::string m_path;
                     bool m_pathHasBeenSet;
 
                     /**
-                     * Storage location of adaptive bitrate streaming files.
+                     * Storage location of the adaptive bitrate stream file.
                      */
                     TaskOutputStorage m_storage;
                     bool m_storageHasBeenSet;

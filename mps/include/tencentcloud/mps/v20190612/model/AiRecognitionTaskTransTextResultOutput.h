@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * The translation result.
+                * Translation result.
                 */
                 class AiRecognitionTaskTransTextResultOutput : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The translated segments.
-                     * @return SegmentSet The translated segments.
+                     * 获取Translate segments.
+                     * @return SegmentSet Translate segments.
                      * 
                      */
                     std::vector<AiRecognitionTaskTransTextSegmentItem> GetSegmentSet() const;
 
                     /**
-                     * 设置The translated segments.
-                     * @param _segmentSet The translated segments.
+                     * 设置Translate segments.
+                     * @param _segmentSet Translate segments.
                      * 
                      */
                     void SetSegmentSet(const std::vector<AiRecognitionTaskTransTextSegmentItem>& _segmentSet);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool SegmentSetHasBeenSet() const;
 
                     /**
-                     * 获取The subtitle URL.
-                     * @return SubtitlePath The subtitle URL.
+                     * 获取Subtitle file path.
+                     * @return SubtitlePath Subtitle file path.
                      * 
                      */
                     std::string GetSubtitlePath() const;
 
                     /**
-                     * 设置The subtitle URL.
-                     * @param _subtitlePath The subtitle URL.
+                     * 设置Subtitle file path.
+                     * @param _subtitlePath Subtitle file path.
                      * 
                      */
                     void SetSubtitlePath(const std::string& _subtitlePath);
@@ -92,13 +92,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The translated segments.
+                     * Translate segments.
                      */
                     std::vector<AiRecognitionTaskTransTextSegmentItem> m_segmentSet;
                     bool m_segmentSetHasBeenSet;
 
                     /**
-                     * The subtitle URL.
+                     * Subtitle file path.
                      */
                     std::string m_subtitlePath;
                     bool m_subtitlePathHasBeenSet;

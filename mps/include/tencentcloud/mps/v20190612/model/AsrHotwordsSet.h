@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Hotword lexicon ID.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return HotwordsId Hotword lexicon ID.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取
+                     * @return HotwordsId 
                      * 
                      */
                     std::string GetHotwordsId() const;
 
                     /**
-                     * 设置Hotword lexicon ID.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _hotwordsId Hotword lexicon ID.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置
+                     * @param _hotwordsId 
                      * 
                      */
                     void SetHotwordsId(const std::string& _hotwordsId);
@@ -72,27 +68,15 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool HotwordsIdHasBeenSet() const;
 
                     /**
-                     * 获取Current hotword lexicon status. The value indicates the number of smart subtitle templates bound to this hotword lexicon.
-If the value of Status is 0, it indicates that the hotword lexicon is not referenced by any smart subtitle template and that it can be deleted.
-If the value of Status is not 0, it indicates that the hotword lexicon cannot be deleted.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return Status Current hotword lexicon status. The value indicates the number of smart subtitle templates bound to this hotword lexicon.
-If the value of Status is 0, it indicates that the hotword lexicon is not referenced by any smart subtitle template and that it can be deleted.
-If the value of Status is not 0, it indicates that the hotword lexicon cannot be deleted.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取
+                     * @return Status 
                      * 
                      */
                     uint64_t GetStatus() const;
 
                     /**
-                     * 设置Current hotword lexicon status. The value indicates the number of smart subtitle templates bound to this hotword lexicon.
-If the value of Status is 0, it indicates that the hotword lexicon is not referenced by any smart subtitle template and that it can be deleted.
-If the value of Status is not 0, it indicates that the hotword lexicon cannot be deleted.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _status Current hotword lexicon status. The value indicates the number of smart subtitle templates bound to this hotword lexicon.
-If the value of Status is 0, it indicates that the hotword lexicon is not referenced by any smart subtitle template and that it can be deleted.
-If the value of Status is not 0, it indicates that the hotword lexicon cannot be deleted.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置
+                     * @param _status 
                      * 
                      */
                     void SetStatus(const uint64_t& _status);
@@ -105,19 +89,15 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Hotword lexicon name.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return Name Hotword lexicon name.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取
+                     * @return Name 
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Hotword lexicon name.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _name Hotword lexicon name.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置
+                     * @param _name 
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -130,19 +110,15 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Number of hotwords in the hotword lexicon.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return WordCount Number of hotwords in the hotword lexicon.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取
+                     * @return WordCount 
                      * 
                      */
                     uint64_t GetWordCount() const;
 
                     /**
-                     * 设置Number of hotwords in the hotword lexicon.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _wordCount Number of hotwords in the hotword lexicon.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置
+                     * @param _wordCount 
                      * 
                      */
                     void SetWordCount(const uint64_t& _wordCount);
@@ -155,19 +131,15 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool WordCountHasBeenSet() const;
 
                     /**
-                     * 获取Name of the uploaded hotword file.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return FileName Name of the uploaded hotword file.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取
+                     * @return FileName 
                      * 
                      */
                     std::string GetFileName() const;
 
                     /**
-                     * 设置Name of the uploaded hotword file.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _fileName Name of the uploaded hotword file.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置
+                     * @param _fileName 
                      * 
                      */
                     void SetFileName(const std::string& _fileName);
@@ -180,19 +152,15 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool FileNameHasBeenSet() const;
 
                     /**
-                     * 获取Creation time of the hotword lexicon in ISO datetime format (UTC time). For example, 2006-01-02T15:04:05Z.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return CreateTime Creation time of the hotword lexicon in ISO datetime format (UTC time). For example, 2006-01-02T15:04:05Z.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取
+                     * @return CreateTime 
                      * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
-                     * 设置Creation time of the hotword lexicon in ISO datetime format (UTC time). For example, 2006-01-02T15:04:05Z.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _createTime Creation time of the hotword lexicon in ISO datetime format (UTC time). For example, 2006-01-02T15:04:05Z.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置
+                     * @param _createTime 
                      * 
                      */
                     void SetCreateTime(const std::string& _createTime);
@@ -205,19 +173,15 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Creation time of the hotword lexicon in ISO datetime format (UTC time). For example, 2006-01-02T15:04:05Z.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return UpdateTime Creation time of the hotword lexicon in ISO datetime format (UTC time). For example, 2006-01-02T15:04:05Z.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取
+                     * @return UpdateTime 
                      * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
-                     * 设置Creation time of the hotword lexicon in ISO datetime format (UTC time). For example, 2006-01-02T15:04:05Z.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _updateTime Creation time of the hotword lexicon in ISO datetime format (UTC time). For example, 2006-01-02T15:04:05Z.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置
+                     * @param _updateTime 
                      * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
@@ -230,23 +194,15 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool UpdateTimeHasBeenSet() const;
 
                     /**
-                     * 获取0: temporary hotword lexicon
-1: file-based hotword lexicon
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return Type 0: temporary hotword lexicon
-1: file-based hotword lexicon
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取
+                     * @return Type 
                      * 
                      */
                     uint64_t GetType() const;
 
                     /**
-                     * 设置0: temporary hotword lexicon
-1: file-based hotword lexicon
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _type 0: temporary hotword lexicon
-1: file-based hotword lexicon
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置
+                     * @param _type 
                      * 
                      */
                     void SetType(const uint64_t& _type);
@@ -261,60 +217,49 @@ Note: This field may return null, indicating that no valid value can be obtained
                 private:
 
                     /**
-                     * Hotword lexicon ID.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string m_hotwordsId;
                     bool m_hotwordsIdHasBeenSet;
 
                     /**
-                     * Current hotword lexicon status. The value indicates the number of smart subtitle templates bound to this hotword lexicon.
-If the value of Status is 0, it indicates that the hotword lexicon is not referenced by any smart subtitle template and that it can be deleted.
-If the value of Status is not 0, it indicates that the hotword lexicon cannot be deleted.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
                      */
                     uint64_t m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Hotword lexicon name.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Number of hotwords in the hotword lexicon.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
                      */
                     uint64_t m_wordCount;
                     bool m_wordCountHasBeenSet;
 
                     /**
-                     * Name of the uploaded hotword file.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string m_fileName;
                     bool m_fileNameHasBeenSet;
 
                     /**
-                     * Creation time of the hotword lexicon in ISO datetime format (UTC time). For example, 2006-01-02T15:04:05Z.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * Creation time of the hotword lexicon in ISO datetime format (UTC time). For example, 2006-01-02T15:04:05Z.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string m_updateTime;
                     bool m_updateTimeHasBeenSet;
 
                     /**
-                     * 0: temporary hotword lexicon
-1: file-based hotword lexicon
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
                      */
                     uint64_t m_type;
                     bool m_typeHasBeenSet;

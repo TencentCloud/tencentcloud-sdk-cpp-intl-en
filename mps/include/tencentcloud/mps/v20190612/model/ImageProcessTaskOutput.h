@@ -48,19 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Path of the output file.</p>
-Attention: This field may return null, indicating that no valid values can be obtained.
-                     * @return Path <p>Path of the output file.</p>
-Attention: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return Path 
                      * 
                      */
                     std::string GetPath() const;
 
                     /**
-                     * 设置<p>Path of the output file.</p>
-Attention: This field may return null, indicating that no valid values can be obtained.
-                     * @param _path <p>Path of the output file.</p>
-Attention: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _path 
                      * 
                      */
                     void SetPath(const std::string& _path);
@@ -73,19 +69,15 @@ Attention: This field may return null, indicating that no valid values can be ob
                     bool PathHasBeenSet() const;
 
                     /**
-                     * 获取<p>Storage location of the output file.</p>
-Attention: This field may return null, indicating that no valid values can be obtained.
-                     * @return OutputStorage <p>Storage location of the output file.</p>
-Attention: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return OutputStorage 
                      * 
                      */
                     TaskOutputStorage GetOutputStorage() const;
 
                     /**
-                     * 设置<p>Storage location of the output file.</p>
-Attention: This field may return null, indicating that no valid values can be obtained.
-                     * @param _outputStorage <p>Storage location of the output file.</p>
-Attention: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _outputStorage 
                      * 
                      */
                     void SetOutputStorage(const TaskOutputStorage& _outputStorage);
@@ -142,15 +134,13 @@ Attention: This field may return null, indicating that no valid values can be ob
                 private:
 
                     /**
-                     * <p>Path of the output file.</p>
-Attention: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string m_path;
                     bool m_pathHasBeenSet;
 
                     /**
-                     * <p>Storage location of the output file.</p>
-Attention: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     TaskOutputStorage m_outputStorage;
                     bool m_outputStorageHasBeenSet;

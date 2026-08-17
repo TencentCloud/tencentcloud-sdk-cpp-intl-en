@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * The sensitive information detected.
+                * Sensitive information
                 */
                 class AiReviewPoliticalTaskOutput : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The confidence score for the detection of sensitive information. Value range: 0-100.
-                     * @return Confidence The confidence score for the detection of sensitive information. Value range: 0-100.
+                     * 获取Video sensitive content score, ranging from 0 to 100.
+                     * @return Confidence Video sensitive content score, ranging from 0 to 100.
                      * 
                      */
                     double GetConfidence() const;
 
                     /**
-                     * 设置The confidence score for the detection of sensitive information. Value range: 0-100.
-                     * @param _confidence The confidence score for the detection of sensitive information. Value range: 0-100.
+                     * 设置Video sensitive content score, ranging from 0 to 100.
+                     * @param _confidence Video sensitive content score, ranging from 0 to 100.
                      * 
                      */
                     void SetConfidence(const double& _confidence);
@@ -69,27 +69,27 @@ namespace TencentCloud
                     bool ConfidenceHasBeenSet() const;
 
                     /**
-                     * 获取The suggestion for handling the sensitive information detected. Valid values:
-<li>pass</li>
-<li>review</li>
-<li>block</li>
-                     * @return Suggestion The suggestion for handling the sensitive information detected. Valid values:
-<li>pass</li>
-<li>review</li>
-<li>block</li>
+                     * 获取Result Suggestions for sensitive content, value ranges from...to...
+<li>pass.</li>
+<li>review.</li>
+<li>block.</li>
+                     * @return Suggestion Result Suggestions for sensitive content, value ranges from...to...
+<li>pass.</li>
+<li>review.</li>
+<li>block.</li>
                      * 
                      */
                     std::string GetSuggestion() const;
 
                     /**
-                     * 设置The suggestion for handling the sensitive information detected. Valid values:
-<li>pass</li>
-<li>review</li>
-<li>block</li>
-                     * @param _suggestion The suggestion for handling the sensitive information detected. Valid values:
-<li>pass</li>
-<li>review</li>
-<li>block</li>
+                     * 设置Result Suggestions for sensitive content, value ranges from...to...
+<li>pass.</li>
+<li>review.</li>
+<li>block.</li>
+                     * @param _suggestion Result Suggestions for sensitive content, value ranges from...to...
+<li>pass.</li>
+<li>review.</li>
+<li>block.</li>
                      * 
                      */
                     void SetSuggestion(const std::string& _suggestion);
@@ -102,31 +102,31 @@ namespace TencentCloud
                     bool SuggestionHasBeenSet() const;
 
                     /**
-                     * 获取The labels for the detected sensitive content. The relationship between the values of this parameter and those of the `LabelSet` parameter in [PoliticalImgReviewTemplateInfo](https://intl.cloud.tencent.com/document/api/862/37615?from_cn_redirect=1#AiReviewPoliticalTaskOutput) is as follows:
+                     * 获取Video sensitive content result tag. The mapping between the LabelSet parameter in the content moderation template's visual sensitive content task control parameter (https://www.tencentcloud.com/document/api/862/37615?from_cn_redirect=1#AiReviewPoliticalTaskOutput) and the parameter value range of this parameter:
 violation_photo:
-<li>violation_photo (banned icons)</li>
-Other values (politician/entertainment/sport/entrepreneur/scholar/celebrity/military):
-<li>politician</li>
-                     * @return Label The labels for the detected sensitive content. The relationship between the values of this parameter and those of the `LabelSet` parameter in [PoliticalImgReviewTemplateInfo](https://intl.cloud.tencent.com/document/api/862/37615?from_cn_redirect=1#AiReviewPoliticalTaskOutput) is as follows:
+<li>violation_photo: violation icon.</li>
+Other (i.e., politician/entertainment/sport/entrepreneur/scholar/celebrity/military):
+<li>politician: sensitive person.</li>
+                     * @return Label Video sensitive content result tag. The mapping between the LabelSet parameter in the content moderation template's visual sensitive content task control parameter (https://www.tencentcloud.com/document/api/862/37615?from_cn_redirect=1#AiReviewPoliticalTaskOutput) and the parameter value range of this parameter:
 violation_photo:
-<li>violation_photo (banned icons)</li>
-Other values (politician/entertainment/sport/entrepreneur/scholar/celebrity/military):
-<li>politician</li>
+<li>violation_photo: violation icon.</li>
+Other (i.e., politician/entertainment/sport/entrepreneur/scholar/celebrity/military):
+<li>politician: sensitive person.</li>
                      * 
                      */
                     std::string GetLabel() const;
 
                     /**
-                     * 设置The labels for the detected sensitive content. The relationship between the values of this parameter and those of the `LabelSet` parameter in [PoliticalImgReviewTemplateInfo](https://intl.cloud.tencent.com/document/api/862/37615?from_cn_redirect=1#AiReviewPoliticalTaskOutput) is as follows:
+                     * 设置Video sensitive content result tag. The mapping between the LabelSet parameter in the content moderation template's visual sensitive content task control parameter (https://www.tencentcloud.com/document/api/862/37615?from_cn_redirect=1#AiReviewPoliticalTaskOutput) and the parameter value range of this parameter:
 violation_photo:
-<li>violation_photo (banned icons)</li>
-Other values (politician/entertainment/sport/entrepreneur/scholar/celebrity/military):
-<li>politician</li>
-                     * @param _label The labels for the detected sensitive content. The relationship between the values of this parameter and those of the `LabelSet` parameter in [PoliticalImgReviewTemplateInfo](https://intl.cloud.tencent.com/document/api/862/37615?from_cn_redirect=1#AiReviewPoliticalTaskOutput) is as follows:
+<li>violation_photo: violation icon.</li>
+Other (i.e., politician/entertainment/sport/entrepreneur/scholar/celebrity/military):
+<li>politician: sensitive person.</li>
+                     * @param _label Video sensitive content result tag. The mapping between the LabelSet parameter in the content moderation template's visual sensitive content task control parameter (https://www.tencentcloud.com/document/api/862/37615?from_cn_redirect=1#AiReviewPoliticalTaskOutput) and the parameter value range of this parameter:
 violation_photo:
-<li>violation_photo (banned icons)</li>
-Other values (politician/entertainment/sport/entrepreneur/scholar/celebrity/military):
-<li>politician</li>
+<li>violation_photo: violation icon.</li>
+Other (i.e., politician/entertainment/sport/entrepreneur/scholar/celebrity/military):
+<li>politician: sensitive person.</li>
                      * 
                      */
                     void SetLabel(const std::string& _label);
@@ -139,15 +139,15 @@ Other values (politician/entertainment/sport/entrepreneur/scholar/celebrity/mili
                     bool LabelHasBeenSet() const;
 
                     /**
-                     * 获取The video segments that contain sensitive information.
-                     * @return SegmentSet The video segments that contain sensitive information.
+                     * 获取List of video segments suspected of containing sensitive content.
+                     * @return SegmentSet List of video segments suspected of containing sensitive content.
                      * 
                      */
                     std::vector<MediaContentReviewPoliticalSegmentItem> GetSegmentSet() const;
 
                     /**
-                     * 设置The video segments that contain sensitive information.
-                     * @param _segmentSet The video segments that contain sensitive information.
+                     * 设置List of video segments suspected of containing sensitive content.
+                     * @param _segmentSet List of video segments suspected of containing sensitive content.
                      * 
                      */
                     void SetSegmentSet(const std::vector<MediaContentReviewPoliticalSegmentItem>& _segmentSet);
@@ -162,32 +162,32 @@ Other values (politician/entertainment/sport/entrepreneur/scholar/celebrity/mili
                 private:
 
                     /**
-                     * The confidence score for the detection of sensitive information. Value range: 0-100.
+                     * Video sensitive content score, ranging from 0 to 100.
                      */
                     double m_confidence;
                     bool m_confidenceHasBeenSet;
 
                     /**
-                     * The suggestion for handling the sensitive information detected. Valid values:
-<li>pass</li>
-<li>review</li>
-<li>block</li>
+                     * Result Suggestions for sensitive content, value ranges from...to...
+<li>pass.</li>
+<li>review.</li>
+<li>block.</li>
                      */
                     std::string m_suggestion;
                     bool m_suggestionHasBeenSet;
 
                     /**
-                     * The labels for the detected sensitive content. The relationship between the values of this parameter and those of the `LabelSet` parameter in [PoliticalImgReviewTemplateInfo](https://intl.cloud.tencent.com/document/api/862/37615?from_cn_redirect=1#AiReviewPoliticalTaskOutput) is as follows:
+                     * Video sensitive content result tag. The mapping between the LabelSet parameter in the content moderation template's visual sensitive content task control parameter (https://www.tencentcloud.com/document/api/862/37615?from_cn_redirect=1#AiReviewPoliticalTaskOutput) and the parameter value range of this parameter:
 violation_photo:
-<li>violation_photo (banned icons)</li>
-Other values (politician/entertainment/sport/entrepreneur/scholar/celebrity/military):
-<li>politician</li>
+<li>violation_photo: violation icon.</li>
+Other (i.e., politician/entertainment/sport/entrepreneur/scholar/celebrity/military):
+<li>politician: sensitive person.</li>
                      */
                     std::string m_label;
                     bool m_labelHasBeenSet;
 
                     /**
-                     * The video segments that contain sensitive information.
+                     * List of video segments suspected of containing sensitive content.
                      */
                     std::vector<MediaContentReviewPoliticalSegmentItem> m_segmentSet;
                     bool m_segmentSetHasBeenSet;

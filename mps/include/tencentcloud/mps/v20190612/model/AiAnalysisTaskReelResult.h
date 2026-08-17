@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * AI narration and video re-creation result type.
+                * AI narration and video re-creation result type
                 */
                 class AiAnalysisTaskReelResult : public AbstractModel
                 {
@@ -133,19 +133,15 @@ namespace TencentCloud
                     bool InputHasBeenSet() const;
 
                     /**
-                     * 获取AI narration and video re-creation task output.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Output AI narration and video re-creation task output.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return Output 
                      * 
                      */
                     AiAnalysisTaskReelOutput GetOutput() const;
 
                     /**
-                     * 设置AI narration and video re-creation task output.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _output AI narration and video re-creation task output.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _output 
                      * 
                      */
                     void SetOutput(const AiAnalysisTaskReelOutput& _output);
@@ -158,15 +154,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool OutputHasBeenSet() const;
 
                     /**
-                     * 获取Error code. An empty string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of MPS error codes.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ErrCodeExt Error code. An empty string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of MPS error codes.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return ErrCodeExt 
                      * 
                      */
                     std::string GetErrCodeExt() const;
 
                     /**
-                     * 设置Error code. An empty string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of MPS error codes.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _errCodeExt Error code. An empty string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of MPS error codes.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _errCodeExt 
                      * 
                      */
                     void SetErrCodeExt(const std::string& _errCodeExt);
@@ -179,19 +175,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ErrCodeExtHasBeenSet() const;
 
                     /**
-                     * 获取Task progress.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Progress Task progress.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return Progress 
                      * 
                      */
                     uint64_t GetProgress() const;
 
                     /**
-                     * 设置Task progress.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _progress Task progress.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _progress 
                      * 
                      */
                     void SetProgress(const uint64_t& _progress);
@@ -204,15 +196,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ProgressHasBeenSet() const;
 
                     /**
-                     * 获取Task start time, in ISO date and time format.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return BeginProcessTime Task start time, in ISO date and time format.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return BeginProcessTime 
                      * 
                      */
                     std::string GetBeginProcessTime() const;
 
                     /**
-                     * 设置Task start time, in ISO date and time format.Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _beginProcessTime Task start time, in ISO date and time format.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _beginProcessTime 
                      * 
                      */
                     void SetBeginProcessTime(const std::string& _beginProcessTime);
@@ -225,19 +217,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool BeginProcessTimeHasBeenSet() const;
 
                     /**
-                     * 获取Task completion time, in ISO date and time format.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return FinishTime Task completion time, in ISO date and time format.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return FinishTime 
                      * 
                      */
                     std::string GetFinishTime() const;
 
                     /**
-                     * 设置Task completion time, in ISO date and time format.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _finishTime Task completion time, in ISO date and time format.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _finishTime 
                      * 
                      */
                     void SetFinishTime(const std::string& _finishTime);
@@ -276,34 +264,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_inputHasBeenSet;
 
                     /**
-                     * AI narration and video re-creation task output.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     AiAnalysisTaskReelOutput m_output;
                     bool m_outputHasBeenSet;
 
                     /**
-                     * Error code. An empty string indicates that the task is successful, while other values indicate that the task has failed. For valid values, see the list of MPS error codes.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string m_errCodeExt;
                     bool m_errCodeExtHasBeenSet;
 
                     /**
-                     * Task progress.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t m_progress;
                     bool m_progressHasBeenSet;
 
                     /**
-                     * Task start time, in ISO date and time format.Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string m_beginProcessTime;
                     bool m_beginProcessTimeHasBeenSet;
 
                     /**
-                     * Task completion time, in ISO date and time format.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string m_finishTime;
                     bool m_finishTimeHasBeenSet;

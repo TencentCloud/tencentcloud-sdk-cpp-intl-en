@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Intelligent translation result information.
+                * Intelligent translation result information
                 */
                 class AiAnalysisTaskDubbingOutput : public AbstractModel
                 {

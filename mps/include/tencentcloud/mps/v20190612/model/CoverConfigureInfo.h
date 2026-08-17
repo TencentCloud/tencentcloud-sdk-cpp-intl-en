@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Control parameter of intelligent cover generating task
+                * Intelligent Cover Task Control Parameters
                 */
                 class CoverConfigureInfo : public AbstractModel
                 {
@@ -47,23 +47,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Switch of intelligent cover generating task. Valid values:
-<li>ON: enables intelligent cover generating task;</li>
-<li>OFF: disables intelligent cover generating task.</li>
-                     * @return Switch Switch of intelligent cover generating task. Valid values:
-<li>ON: enables intelligent cover generating task;</li>
-<li>OFF: disables intelligent cover generating task.</li>
+                     * 获取Intelligent Cover Task Switch. Valid values:
+<li>ON: Enable intelligent thumbnail generation.</li>
+<li>OFF: Disables the intelligent thumbnail generation task.</li>
+                     * @return Switch Intelligent Cover Task Switch. Valid values:
+<li>ON: Enable intelligent thumbnail generation.</li>
+<li>OFF: Disables the intelligent thumbnail generation task.</li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Switch of intelligent cover generating task. Valid values:
-<li>ON: enables intelligent cover generating task;</li>
-<li>OFF: disables intelligent cover generating task.</li>
-                     * @param _switch Switch of intelligent cover generating task. Valid values:
-<li>ON: enables intelligent cover generating task;</li>
-<li>OFF: disables intelligent cover generating task.</li>
+                     * 设置Intelligent Cover Task Switch. Valid values:
+<li>ON: Enable intelligent thumbnail generation.</li>
+<li>OFF: Disables the intelligent thumbnail generation task.</li>
+                     * @param _switch Intelligent Cover Task Switch. Valid values:
+<li>ON: Enable intelligent thumbnail generation.</li>
+<li>OFF: Disables the intelligent thumbnail generation task.</li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -78,9 +78,9 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Switch of intelligent cover generating task. Valid values:
-<li>ON: enables intelligent cover generating task;</li>
-<li>OFF: disables intelligent cover generating task.</li>
+                     * Intelligent Cover Task Switch. Valid values:
+<li>ON: Enable intelligent thumbnail generation.</li>
+<li>OFF: Disables the intelligent thumbnail generation task.</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;

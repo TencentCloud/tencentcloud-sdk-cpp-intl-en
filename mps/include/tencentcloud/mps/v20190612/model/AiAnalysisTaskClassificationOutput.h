@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Result information of intelligent categorization
+                * Intelligent classification results info
                 */
                 class AiAnalysisTaskClassificationOutput : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取List of intelligently generated video categories.
-                     * @return ClassificationSet List of intelligently generated video categories.
+                     * 获取Video intelligent classification list.
+                     * @return ClassificationSet Video intelligent classification list.
                      * 
                      */
                     std::vector<MediaAiAnalysisClassificationItem> GetClassificationSet() const;
 
                     /**
-                     * 设置List of intelligently generated video categories.
-                     * @param _classificationSet List of intelligently generated video categories.
+                     * 设置Video intelligent classification list.
+                     * @param _classificationSet Video intelligent classification list.
                      * 
                      */
                     void SetClassificationSet(const std::vector<MediaAiAnalysisClassificationItem>& _classificationSet);
@@ -71,7 +71,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * List of intelligently generated video categories.
+                     * Video intelligent classification list.
                      */
                     std::vector<MediaAiAnalysisClassificationItem> m_classificationSet;
                     bool m_classificationSetHasBeenSet;

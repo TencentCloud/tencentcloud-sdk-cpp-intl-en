@@ -49,19 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Content quality inspection result list.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return QualityControlResults Content quality inspection result list.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return QualityControlResults 
                      * @deprecated
                      */
                     std::vector<QualityControlResult> GetQualityControlResults() const;
 
                     /**
-                     * 设置Content quality inspection result list.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _qualityControlResults Content quality inspection result list.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _qualityControlResults 
                      * @deprecated
                      */
                     void SetQualityControlResults(const std::vector<QualityControlResult>& _qualityControlResults);
@@ -95,19 +91,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DiagnoseResultsHasBeenSet() const;
 
                     /**
-                     * 获取Content quality inspection result list.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return QualityControlResultSet Content quality inspection result list.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return QualityControlResultSet 
                      * 
                      */
                     std::vector<QualityControlResult> GetQualityControlResultSet() const;
 
                     /**
-                     * 设置Content quality inspection result list.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _qualityControlResultSet Content quality inspection result list.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _qualityControlResultSet 
                      * 
                      */
                     void SetQualityControlResultSet(const std::vector<QualityControlResult>& _qualityControlResultSet);
@@ -120,19 +112,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool QualityControlResultSetHasBeenSet() const;
 
                     /**
-                     * 获取Format diagnostic result list.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DiagnoseResultSet Format diagnostic result list.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return DiagnoseResultSet 
                      * 
                      */
                     std::vector<DiagnoseResult> GetDiagnoseResultSet() const;
 
                     /**
-                     * 设置Format diagnostic result list.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _diagnoseResultSet Format diagnostic result list.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _diagnoseResultSet 
                      * 
                      */
                     void SetDiagnoseResultSet(const std::vector<DiagnoseResult>& _diagnoseResultSet);
@@ -147,8 +135,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Content quality inspection result list.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<QualityControlResult> m_qualityControlResults;
                     bool m_qualityControlResultsHasBeenSet;
@@ -160,15 +147,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_diagnoseResultsHasBeenSet;
 
                     /**
-                     * Content quality inspection result list.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<QualityControlResult> m_qualityControlResultSet;
                     bool m_qualityControlResultSetHasBeenSet;
 
                     /**
-                     * Format diagnostic result list.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<DiagnoseResult> m_diagnoseResultSet;
                     bool m_diagnoseResultSetHasBeenSet;

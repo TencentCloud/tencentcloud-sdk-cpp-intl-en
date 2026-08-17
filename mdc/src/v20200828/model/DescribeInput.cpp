@@ -32,11 +32,15 @@ DescribeInput::DescribeInput() :
     m_inputRegionHasBeenSet(false),
     m_rTMPSettingsHasBeenSet(false),
     m_failOverHasBeenSet(false),
+    m_zonesHasBeenSet(false),
     m_rTMPPullSettingsHasBeenSet(false),
     m_rTSPPullSettingsHasBeenSet(false),
     m_hLSPullSettingsHasBeenSet(false),
     m_resilientStreamHasBeenSet(false),
-    m_securityGroupIdsHasBeenSet(false)
+    m_securityGroupIdsHasBeenSet(false),
+    m_rISTSettingsHasBeenSet(false),
+    m_streamUrlsHasBeenSet(false),
+    m_failOverOptionHasBeenSet(false)
 {
 }
 
@@ -189,6 +193,19 @@ CoreInternalOutcome DescribeInput::Deserialize(const rapidjson::Value &value)
         m_failOverHasBeenSet = true;
     }
 
+    if (value.HasMember("Zones") && !value["Zones"].IsNull())
+    {
+        if (!value["Zones"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `DescribeInput.Zones` is not array type"));
+
+        const rapidjson::Value &tmpValue = value["Zones"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            m_zones.push_back((*itr).GetString());
+        }
+        m_zonesHasBeenSet = true;
+    }
+
     if (value.HasMember("RTMPPullSettings") && !value["RTMPPullSettings"].IsNull())
     {
         if (!value["RTMPPullSettings"].IsObject())
@@ -268,6 +285,60 @@ CoreInternalOutcome DescribeInput::Deserialize(const rapidjson::Value &value)
             m_securityGroupIds.push_back((*itr).GetString());
         }
         m_securityGroupIdsHasBeenSet = true;
+    }
+
+    if (value.HasMember("RISTSettings") && !value["RISTSettings"].IsNull())
+    {
+        if (!value["RISTSettings"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `DescribeInput.RISTSettings` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_rISTSettings.Deserialize(value["RISTSettings"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_rISTSettingsHasBeenSet = true;
+    }
+
+    if (value.HasMember("StreamUrls") && !value["StreamUrls"].IsNull())
+    {
+        if (!value["StreamUrls"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `DescribeInput.StreamUrls` is not array type"));
+
+        const rapidjson::Value &tmpValue = value["StreamUrls"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            StreamUrlDetail item;
+            CoreInternalOutcome outcome = item.Deserialize(*itr);
+            if (!outcome.IsSuccess())
+            {
+                outcome.GetError().SetRequestId(requestId);
+                return outcome;
+            }
+            m_streamUrls.push_back(item);
+        }
+        m_streamUrlsHasBeenSet = true;
+    }
+
+    if (value.HasMember("FailOverOption") && !value["FailOverOption"].IsNull())
+    {
+        if (!value["FailOverOption"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `DescribeInput.FailOverOption` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_failOverOption.Deserialize(value["FailOverOption"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_failOverOptionHasBeenSet = true;
     }
 
 
@@ -380,6 +451,19 @@ void DescribeInput::ToJsonObject(rapidjson::Value &value, rapidjson::Document::A
         value.AddMember(iKey, rapidjson::Value(m_failOver.c_str(), allocator).Move(), allocator);
     }
 
+    if (m_zonesHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Zones";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        for (auto itr = m_zones.begin(); itr != m_zones.end(); ++itr)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
+        }
+    }
+
     if (m_rTMPPullSettingsHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
@@ -427,6 +511,39 @@ void DescribeInput::ToJsonObject(rapidjson::Value &value, rapidjson::Document::A
         {
             value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
+    }
+
+    if (m_rISTSettingsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "RISTSettings";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_rISTSettings.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_streamUrlsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "StreamUrls";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_streamUrls.begin(); itr != m_streamUrls.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
+    }
+
+    if (m_failOverOptionHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "FailOverOption";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_failOverOption.ToJsonObject(value[key.c_str()], allocator);
     }
 
 }
@@ -608,6 +725,22 @@ bool DescribeInput::FailOverHasBeenSet() const
     return m_failOverHasBeenSet;
 }
 
+vector<string> DescribeInput::GetZones() const
+{
+    return m_zones;
+}
+
+void DescribeInput::SetZones(const vector<string>& _zones)
+{
+    m_zones = _zones;
+    m_zonesHasBeenSet = true;
+}
+
+bool DescribeInput::ZonesHasBeenSet() const
+{
+    return m_zonesHasBeenSet;
+}
+
 DescribeInputRTMPPullSettings DescribeInput::GetRTMPPullSettings() const
 {
     return m_rTMPPullSettings;
@@ -686,5 +819,53 @@ void DescribeInput::SetSecurityGroupIds(const vector<string>& _securityGroupIds)
 bool DescribeInput::SecurityGroupIdsHasBeenSet() const
 {
     return m_securityGroupIdsHasBeenSet;
+}
+
+DescribeInputRISTSettings DescribeInput::GetRISTSettings() const
+{
+    return m_rISTSettings;
+}
+
+void DescribeInput::SetRISTSettings(const DescribeInputRISTSettings& _rISTSettings)
+{
+    m_rISTSettings = _rISTSettings;
+    m_rISTSettingsHasBeenSet = true;
+}
+
+bool DescribeInput::RISTSettingsHasBeenSet() const
+{
+    return m_rISTSettingsHasBeenSet;
+}
+
+vector<StreamUrlDetail> DescribeInput::GetStreamUrls() const
+{
+    return m_streamUrls;
+}
+
+void DescribeInput::SetStreamUrls(const vector<StreamUrlDetail>& _streamUrls)
+{
+    m_streamUrls = _streamUrls;
+    m_streamUrlsHasBeenSet = true;
+}
+
+bool DescribeInput::StreamUrlsHasBeenSet() const
+{
+    return m_streamUrlsHasBeenSet;
+}
+
+FailOverOption DescribeInput::GetFailOverOption() const
+{
+    return m_failOverOption;
+}
+
+void DescribeInput::SetFailOverOption(const FailOverOption& _failOverOption)
+{
+    m_failOverOption = _failOverOption;
+    m_failOverOptionHasBeenSet = true;
+}
+
+bool DescribeInput::FailOverOptionHasBeenSet() const
+{
+    return m_failOverOptionHasBeenSet;
 }
 

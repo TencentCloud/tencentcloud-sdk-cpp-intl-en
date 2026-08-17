@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Intelligent erasure template subtitle configuration.
+                * Subtitle removal configuration for the smart erasing template.
                 */
                 class SmartEraseSubtitleConfig : public AbstractModel
                 {

@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Price.
-                     * @return Price Price.
+                     * 获取<p>Discounted price.</p>
+                     * @return Price <p>Discounted price.</p>
                      * 
                      */
                     double GetPrice() const;
@@ -58,8 +58,8 @@ namespace TencentCloud
                     bool PriceHasBeenSet() const;
 
                     /**
-                     * 获取High precision price. 
-                     * @return HighPrecisionPrice High precision price. 
+                     * 获取<p>High-precision discounted price</p>
+                     * @return HighPrecisionPrice <p>High-precision discounted price</p>
                      * 
                      */
                     double GetHighPrecisionPrice() const;
@@ -72,8 +72,36 @@ namespace TencentCloud
                     bool HighPrecisionPriceHasBeenSet() const;
 
                     /**
-                     * 获取Currency.
-                     * @return Currency Currency.
+                     * 获取<p>Original price</p>
+                     * @return OriginalPrice <p>Original price</p>
+                     * 
+                     */
+                    double GetOriginalPrice() const;
+
+                    /**
+                     * 判断参数 OriginalPrice 是否已赋值
+                     * @return OriginalPrice 是否已赋值
+                     * 
+                     */
+                    bool OriginalPriceHasBeenSet() const;
+
+                    /**
+                     * 获取<p>High-precision original price</p>
+                     * @return HighPrecisionOriginalPrice <p>High-precision original price</p>
+                     * 
+                     */
+                    double GetHighPrecisionOriginalPrice() const;
+
+                    /**
+                     * 判断参数 HighPrecisionOriginalPrice 是否已赋值
+                     * @return HighPrecisionOriginalPrice 是否已赋值
+                     * 
+                     */
+                    bool HighPrecisionOriginalPriceHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Currency</p>
+                     * @return Currency <p>Currency</p>
                      * 
                      */
                     std::string GetCurrency() const;
@@ -86,14 +114,8 @@ namespace TencentCloud
                     bool CurrencyHasBeenSet() const;
 
                     /**
-                     * 获取Price unit.
-
- - pent: cent.
- - microPent: microcent.
-                     * @return AmountUnit Price unit.
-
- - pent: cent.
- - microPent: microcent.
+                     * 获取<p>Price amount unit</p><ul><li>pent: cent</li><li>microPent: microcent</li></ul>
+                     * @return AmountUnit <p>Price amount unit</p><ul><li>pent: cent</li><li>microPent: microcent</li></ul>
                      * 
                      */
                     std::string GetAmountUnit() const;
@@ -108,28 +130,37 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Price.
+                     * <p>Discounted price.</p>
                      */
                     double m_price;
                     bool m_priceHasBeenSet;
 
                     /**
-                     * High precision price. 
+                     * <p>High-precision discounted price</p>
                      */
                     double m_highPrecisionPrice;
                     bool m_highPrecisionPriceHasBeenSet;
 
                     /**
-                     * Currency.
+                     * <p>Original price</p>
+                     */
+                    double m_originalPrice;
+                    bool m_originalPriceHasBeenSet;
+
+                    /**
+                     * <p>High-precision original price</p>
+                     */
+                    double m_highPrecisionOriginalPrice;
+                    bool m_highPrecisionOriginalPriceHasBeenSet;
+
+                    /**
+                     * <p>Currency</p>
                      */
                     std::string m_currency;
                     bool m_currencyHasBeenSet;
 
                     /**
-                     * Price unit.
-
- - pent: cent.
- - microPent: microcent.
+                     * <p>Price amount unit</p><ul><li>pent: cent</li><li>microPent: microcent</li></ul>
                      */
                     std::string m_amountUnit;
                     bool m_amountUnitHasBeenSet;

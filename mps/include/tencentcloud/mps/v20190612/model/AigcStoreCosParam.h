@@ -89,15 +89,23 @@ namespace TencentCloud
                     bool CosBucketRegionHasBeenSet() const;
 
                     /**
-                     * 获取Path of the COS bucket to store to.Optional.Example value: my_file.
-                     * @return CosBucketPath Path of the COS bucket to store to.Optional.Example value: my_file.
+                     * 获取Store to the bucket path of cos.
+Option.
+Example value: my_file.
+                     * @return CosBucketPath Store to the bucket path of cos.
+Option.
+Example value: my_file.
                      * 
                      */
                     std::string GetCosBucketPath() const;
 
                     /**
-                     * 设置Path of the COS bucket to store to.Optional.Example value: my_file.
-                     * @param _cosBucketPath Path of the COS bucket to store to.Optional.Example value: my_file.
+                     * 设置Store to the bucket path of cos.
+Option.
+Example value: my_file.
+                     * @param _cosBucketPath Store to the bucket path of cos.
+Option.
+Example value: my_file.
                      * 
                      */
                     void SetCosBucketPath(const std::string& _cosBucketPath);
@@ -124,7 +132,9 @@ namespace TencentCloud
                     bool m_cosBucketRegionHasBeenSet;
 
                     /**
-                     * Path of the COS bucket to store to.Optional.Example value: my_file.
+                     * Store to the bucket path of cos.
+Option.
+Example value: my_file.
                      */
                     std::string m_cosBucketPath;
                     bool m_cosBucketPathHasBeenSet;

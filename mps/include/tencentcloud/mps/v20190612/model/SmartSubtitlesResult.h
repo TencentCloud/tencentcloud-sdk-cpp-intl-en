@@ -52,13 +52,13 @@ namespace TencentCloud
 
                     /**
                      * 获取Task type. Valid values:
-- AsrFullTextRecognition: full speech recognition.
-- TransTextRecognition: speech translation.
+- AsrFullTextRecognition: full speech recognition
+- TransTextRecognition: speech translation
 - PureSubtitleTrans: pure subtitle translation.
 - OcrFullTextRecognition: text-based subtitle extraction.
                      * @return Type Task type. Valid values:
-- AsrFullTextRecognition: full speech recognition.
-- TransTextRecognition: speech translation.
+- AsrFullTextRecognition: full speech recognition
+- TransTextRecognition: speech translation
 - PureSubtitleTrans: pure subtitle translation.
 - OcrFullTextRecognition: text-based subtitle extraction.
                      * 
@@ -67,13 +67,13 @@ namespace TencentCloud
 
                     /**
                      * 设置Task type. Valid values:
-- AsrFullTextRecognition: full speech recognition.
-- TransTextRecognition: speech translation.
+- AsrFullTextRecognition: full speech recognition
+- TransTextRecognition: speech translation
 - PureSubtitleTrans: pure subtitle translation.
 - OcrFullTextRecognition: text-based subtitle extraction.
                      * @param _type Task type. Valid values:
-- AsrFullTextRecognition: full speech recognition.
-- TransTextRecognition: speech translation.
+- AsrFullTextRecognition: full speech recognition
+- TransTextRecognition: speech translation
 - PureSubtitleTrans: pure subtitle translation.
 - OcrFullTextRecognition: text-based subtitle extraction.
                      * 
@@ -88,23 +88,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Full speech recognition result. When Type is
- set to AsrFullTextRecognition, this parameter takes effect.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return AsrFullTextTask Full speech recognition result. When Type is
- set to AsrFullTextRecognition, this parameter takes effect.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取
+                     * @return AsrFullTextTask 
                      * 
                      */
                     SmartSubtitleTaskAsrFullTextResult GetAsrFullTextTask() const;
 
                     /**
-                     * 设置Full speech recognition result. When Type is
- set to AsrFullTextRecognition, this parameter takes effect.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _asrFullTextTask Full speech recognition result. When Type is
- set to AsrFullTextRecognition, this parameter takes effect.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置
+                     * @param _asrFullTextTask 
                      * 
                      */
                     void SetAsrFullTextTask(const SmartSubtitleTaskAsrFullTextResult& _asrFullTextTask);
@@ -117,27 +109,15 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool AsrFullTextTaskHasBeenSet() const;
 
                     /**
-                     * 获取Translation result. When Type is
-
- set to TransTextRecognition, this parameter takes effect.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return TransTextTask Translation result. When Type is
-
- set to TransTextRecognition, this parameter takes effect.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取
+                     * @return TransTextTask 
                      * 
                      */
                     SmartSubtitleTaskTransTextResult GetTransTextTask() const;
 
                     /**
-                     * 设置Translation result. When Type is
-
- set to TransTextRecognition, this parameter takes effect.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _transTextTask Translation result. When Type is
-
- set to TransTextRecognition, this parameter takes effect.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置
+                     * @param _transTextTask 
                      * 
                      */
                     void SetTransTextTask(const SmartSubtitleTaskTransTextResult& _transTextTask);
@@ -150,19 +130,15 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool TransTextTaskHasBeenSet() const;
 
                     /**
-                     * 获取The translation result of the pure subtitle file is returned when the translation type is PureSubtitleTrans.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return PureSubtitleTransTask The translation result of the pure subtitle file is returned when the translation type is PureSubtitleTrans.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return PureSubtitleTransTask 
                      * 
                      */
                     PureSubtitleTransResult GetPureSubtitleTransTask() const;
 
                     /**
-                     * 设置The translation result of the pure subtitle file is returned when the translation type is PureSubtitleTrans.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _pureSubtitleTransTask The translation result of the pure subtitle file is returned when the translation type is PureSubtitleTrans.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _pureSubtitleTransTask 
                      * 
                      */
                     void SetPureSubtitleTransTask(const PureSubtitleTransResult& _pureSubtitleTransTask);
@@ -175,23 +151,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool PureSubtitleTransTaskHasBeenSet() const;
 
                     /**
-                     * 获取Text-based subtitle extraction result. This field is valid when the value of Type is
-OcrFullTextRecognition.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return OcrFullTextTask Text-based subtitle extraction result. This field is valid when the value of Type is
-OcrFullTextRecognition.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return OcrFullTextTask 
                      * 
                      */
                     SmartSubtitleTaskFullTextResult GetOcrFullTextTask() const;
 
                     /**
-                     * 设置Text-based subtitle extraction result. This field is valid when the value of Type is
-OcrFullTextRecognition.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _ocrFullTextTask Text-based subtitle extraction result. This field is valid when the value of Type is
-OcrFullTextRecognition.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _ocrFullTextTask 
                      * 
                      */
                     void SetOcrFullTextTask(const SmartSubtitleTaskFullTextResult& _ocrFullTextTask);
@@ -207,8 +175,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Task type. Valid values:
-- AsrFullTextRecognition: full speech recognition.
-- TransTextRecognition: speech translation.
+- AsrFullTextRecognition: full speech recognition
+- TransTextRecognition: speech translation
 - PureSubtitleTrans: pure subtitle translation.
 - OcrFullTextRecognition: text-based subtitle extraction.
                      */
@@ -216,33 +184,25 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Full speech recognition result. When Type is
- set to AsrFullTextRecognition, this parameter takes effect.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
                      */
                     SmartSubtitleTaskAsrFullTextResult m_asrFullTextTask;
                     bool m_asrFullTextTaskHasBeenSet;
 
                     /**
-                     * Translation result. When Type is
-
- set to TransTextRecognition, this parameter takes effect.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
                      */
                     SmartSubtitleTaskTransTextResult m_transTextTask;
                     bool m_transTextTaskHasBeenSet;
 
                     /**
-                     * The translation result of the pure subtitle file is returned when the translation type is PureSubtitleTrans.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     PureSubtitleTransResult m_pureSubtitleTransTask;
                     bool m_pureSubtitleTransTaskHasBeenSet;
 
                     /**
-                     * Text-based subtitle extraction result. This field is valid when the value of Type is
-OcrFullTextRecognition.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     SmartSubtitleTaskFullTextResult m_ocrFullTextTask;
                     bool m_ocrFullTextTaskHasBeenSet;

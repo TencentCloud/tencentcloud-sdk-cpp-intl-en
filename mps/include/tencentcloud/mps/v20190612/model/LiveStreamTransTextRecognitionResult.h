@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * The live stream translation result.
+                * Live stream real-time translation result
                 */
                 class LiveStreamTransTextRecognitionResult : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The text transcript.
-                     * @return Text The text transcript.
+                     * 获取Recognized text.
+                     * @return Text Recognized text.
                      * 
                      */
                     std::string GetText() const;
 
                     /**
-                     * 设置The text transcript.
-                     * @param _text The text transcript.
+                     * 设置Recognized text.
+                     * @param _text Recognized text.
                      * 
                      */
                     void SetText(const std::string& _text);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool TextHasBeenSet() const;
 
                     /**
-                     * 获取The PTS (seconds) of the start of a segment.
-                     * @return StartPtsTime The PTS (seconds) of the start of a segment.
+                     * 获取Start PTS time of a translated fragment, in seconds.
+                     * @return StartPtsTime Start PTS time of a translated fragment, in seconds.
                      * 
                      */
                     double GetStartPtsTime() const;
 
                     /**
-                     * 设置The PTS (seconds) of the start of a segment.
-                     * @param _startPtsTime The PTS (seconds) of the start of a segment.
+                     * 设置Start PTS time of a translated fragment, in seconds.
+                     * @param _startPtsTime Start PTS time of a translated fragment, in seconds.
                      * 
                      */
                     void SetStartPtsTime(const double& _startPtsTime);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool StartPtsTimeHasBeenSet() const;
 
                     /**
-                     * 获取The PTS (seconds) of the end of a segment.
-                     * @return EndPtsTime The PTS (seconds) of the end of a segment.
+                     * 获取End PTS time of a translated segment, in seconds.
+                     * @return EndPtsTime End PTS time of a translated segment, in seconds.
                      * 
                      */
                     double GetEndPtsTime() const;
 
                     /**
-                     * 设置The PTS (seconds) of the end of a segment.
-                     * @param _endPtsTime The PTS (seconds) of the end of a segment.
+                     * 设置End PTS time of a translated segment, in seconds.
+                     * @param _endPtsTime End PTS time of a translated segment, in seconds.
                      * 
                      */
                     void SetEndPtsTime(const double& _endPtsTime);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool EndPtsTimeHasBeenSet() const;
 
                     /**
-                     * 获取The confidence score for a segment. Value range: 0-100.
-                     * @return Confidence The confidence score for a segment. Value range: 0-100.
+                     * 获取Confidence of a translated segment. Value range: 0-100.
+                     * @return Confidence Confidence of a translated segment. Value range: 0-100.
                      * 
                      */
                     double GetConfidence() const;
 
                     /**
-                     * 设置The confidence score for a segment. Value range: 0-100.
-                     * @param _confidence The confidence score for a segment. Value range: 0-100.
+                     * 设置Confidence of a translated segment. Value range: 0-100.
+                     * @param _confidence Confidence of a translated segment. Value range: 0-100.
                      * 
                      */
                     void SetConfidence(const double& _confidence);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool ConfidenceHasBeenSet() const;
 
                     /**
-                     * 获取The translation.
-                     * @return Trans The translation.
+                     * 获取Translated text.
+                     * @return Trans Translated text.
                      * 
                      */
                     std::string GetTrans() const;
 
                     /**
-                     * 设置The translation.
-                     * @param _trans The translation.
+                     * 设置Translated text.
+                     * @param _trans Translated text.
                      * 
                      */
                     void SetTrans(const std::string& _trans);
@@ -215,19 +215,15 @@ namespace TencentCloud
                     bool SteadyStateHasBeenSet() const;
 
                     /**
-                     * 获取User ID in the result of real-time translation via WebSocket and TRTC.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return UserId User ID in the result of real-time translation via WebSocket and TRTC.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取
+                     * @return UserId 
                      * 
                      */
                     std::string GetUserId() const;
 
                     /**
-                     * 设置User ID in the result of real-time translation via WebSocket and TRTC.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _userId User ID in the result of real-time translation via WebSocket and TRTC.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置
+                     * @param _userId 
                      * 
                      */
                     void SetUserId(const std::string& _userId);
@@ -242,31 +238,31 @@ Note: This field may return null, indicating that no valid value can be obtained
                 private:
 
                     /**
-                     * The text transcript.
+                     * Recognized text.
                      */
                     std::string m_text;
                     bool m_textHasBeenSet;
 
                     /**
-                     * The PTS (seconds) of the start of a segment.
+                     * Start PTS time of a translated fragment, in seconds.
                      */
                     double m_startPtsTime;
                     bool m_startPtsTimeHasBeenSet;
 
                     /**
-                     * The PTS (seconds) of the end of a segment.
+                     * End PTS time of a translated segment, in seconds.
                      */
                     double m_endPtsTime;
                     bool m_endPtsTimeHasBeenSet;
 
                     /**
-                     * The confidence score for a segment. Value range: 0-100.
+                     * Confidence of a translated segment. Value range: 0-100.
                      */
                     double m_confidence;
                     bool m_confidenceHasBeenSet;
 
                     /**
-                     * The translation.
+                     * Translated text.
                      */
                     std::string m_trans;
                     bool m_transHasBeenSet;
@@ -290,8 +286,7 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool m_steadyStateHasBeenSet;
 
                     /**
-                     * User ID in the result of real-time translation via WebSocket and TRTC.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string m_userId;
                     bool m_userIdHasBeenSet;

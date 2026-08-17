@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool EndTimeOffsetHasBeenSet() const;
 
                     /**
-                     * 获取Starting time point of the live streaming segment in ISO date and time format.	
-                     * @return BeginTime Starting time point of the live streaming segment in ISO date and time format.	
+                     * 获取The start time of a live streaming segment, in the ISO date format.	
+                     * @return BeginTime The start time of a live streaming segment, in the ISO date format.	
                      * 
                      */
                     std::string GetBeginTime() const;
 
                     /**
-                     * 设置Starting time point of the live streaming segment in ISO date and time format.	
-                     * @param _beginTime Starting time point of the live streaming segment in ISO date and time format.	
+                     * 设置The start time of a live streaming segment, in the ISO date format.	
+                     * @param _beginTime The start time of a live streaming segment, in the ISO date format.	
                      * 
                      */
                     void SetBeginTime(const std::string& _beginTime);
@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool BeginTimeHasBeenSet() const;
 
                     /**
-                     * 获取End time point of the live streaming segment in ISO date and time format.	
-                     * @return EndTime End time point of the live streaming segment in ISO date and time format.	
+                     * 获取The end time of a live streaming segment, in the ISO date format.	
+                     * @return EndTime The end time of a live streaming segment, in the ISO date format.	
                      * 
                      */
                     std::string GetEndTime() const;
 
                     /**
-                     * 设置End time point of the live streaming segment in ISO date and time format.	
-                     * @param _endTime End time point of the live streaming segment in ISO date and time format.	
+                     * 设置The end time of a live streaming segment, in the ISO date format.	
+                     * @param _endTime The end time of a live streaming segment, in the ISO date format.	
                      * 
                      */
                     void SetEndTime(const std::string& _endTime);
@@ -226,13 +226,13 @@ namespace TencentCloud
                     bool m_endTimeOffsetHasBeenSet;
 
                     /**
-                     * Starting time point of the live streaming segment in ISO date and time format.	
+                     * The start time of a live streaming segment, in the ISO date format.	
                      */
                     std::string m_beginTime;
                     bool m_beginTimeHasBeenSet;
 
                     /**
-                     * End time point of the live streaming segment in ISO date and time format.	
+                     * The end time of a live streaming segment, in the ISO date format.	
                      */
                     std::string m_endTime;
                     bool m_endTimeHasBeenSet;

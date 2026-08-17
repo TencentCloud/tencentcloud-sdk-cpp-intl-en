@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Result of AI-based live stream audit
+                * Live stream AI review result
                 */
                 class LiveStreamAiReviewResultInfo : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取List of content audit results.
-                     * @return ResultSet List of content audit results.
+                     * 获取Content moderation result list.
+                     * @return ResultSet Content moderation result list.
                      * 
                      */
                     std::vector<LiveStreamAiReviewResultItem> GetResultSet() const;
 
                     /**
-                     * 设置List of content audit results.
-                     * @param _resultSet List of content audit results.
+                     * 设置Content moderation result list.
+                     * @param _resultSet Content moderation result list.
                      * 
                      */
                     void SetResultSet(const std::vector<LiveStreamAiReviewResultItem>& _resultSet);
@@ -71,7 +71,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * List of content audit results.
+                     * Content moderation result list.
                      */
                     std::vector<LiveStreamAiReviewResultItem> m_resultSet;
                     bool m_resultSetHasBeenSet;

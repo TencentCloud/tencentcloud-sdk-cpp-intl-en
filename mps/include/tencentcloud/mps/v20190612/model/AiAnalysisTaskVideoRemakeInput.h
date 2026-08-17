@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Video deduplication task input type.
+                * Video deduplication task input type
                 */
                 class AiAnalysisTaskVideoRemakeInput : public AbstractModel
                 {

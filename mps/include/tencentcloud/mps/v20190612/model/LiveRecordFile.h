@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * The information of a live recording file.
+                * Live streaming Recording output file information
                 */
                 class LiveRecordFile : public AbstractModel
                 {
@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The URL of the recording file.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Url The URL of the recording file.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return Url 
                      * 
                      */
                     std::string GetUrl() const;
 
                     /**
-                     * 设置The URL of the recording file.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _url The URL of the recording file.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _url 
                      * 
                      */
                     void SetUrl(const std::string& _url);
@@ -72,19 +68,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool UrlHasBeenSet() const;
 
                     /**
-                     * 获取The size of the recording file.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Size The size of the recording file.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return Size 
                      * 
                      */
                     int64_t GetSize() const;
 
                     /**
-                     * 设置The size of the recording file.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _size The size of the recording file.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _size 
                      * 
                      */
                     void SetSize(const int64_t& _size);
@@ -97,19 +89,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool SizeHasBeenSet() const;
 
                     /**
-                     * 获取The duration of the recording file.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Duration The duration of the recording file.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return Duration 
                      * 
                      */
                     int64_t GetDuration() const;
 
                     /**
-                     * 设置The duration of the recording file.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _duration The duration of the recording file.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _duration 
                      * 
                      */
                     void SetDuration(const int64_t& _duration);
@@ -122,19 +110,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DurationHasBeenSet() const;
 
                     /**
-                     * 获取The recording start time in [ISO date format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return StartTime The recording start time in [ISO date format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return StartTime 
                      * 
                      */
                     std::string GetStartTime() const;
 
                     /**
-                     * 设置The recording start time in [ISO date format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _startTime The recording start time in [ISO date format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _startTime 
                      * 
                      */
                     void SetStartTime(const std::string& _startTime);
@@ -147,19 +131,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取The recording end time in [ISO date format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return EndTime The recording end time in [ISO date format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return EndTime 
                      * 
                      */
                     std::string GetEndTime() const;
 
                     /**
-                     * 设置The recording end time in [ISO date format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _endTime The recording end time in [ISO date format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _endTime 
                      * 
                      */
                     void SetEndTime(const std::string& _endTime);
@@ -174,36 +154,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * The URL of the recording file.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string m_url;
                     bool m_urlHasBeenSet;
 
                     /**
-                     * The size of the recording file.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t m_size;
                     bool m_sizeHasBeenSet;
 
                     /**
-                     * The duration of the recording file.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t m_duration;
                     bool m_durationHasBeenSet;
 
                     /**
-                     * The recording start time in [ISO date format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * The recording end time in [ISO date format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string m_endTime;
                     bool m_endTimeHasBeenSet;

@@ -25,6 +25,7 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/mps/v20190612/model/TaskOutputStorage.h>
+#include <tencentcloud/mps/v20190612/model/MediaMetaData.h>
 
 
 namespace TencentCloud
@@ -36,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Output of video editing task
+                * Output of the video editing task
                 */
                 class EditMediaTaskOutput : public AbstractModel
                 {
@@ -48,15 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Target storage of edited file.
-                     * @return OutputStorage Target storage of edited file.
+                     * 获取Target storage for the edited file.
+                     * @return OutputStorage Target storage for the edited file.
                      * 
                      */
                     TaskOutputStorage GetOutputStorage() const;
 
                     /**
-                     * 设置Target storage of edited file.
-                     * @param _outputStorage Target storage of edited file.
+                     * 设置Target storage for the edited file.
+                     * @param _outputStorage Target storage for the edited file.
                      * 
                      */
                     void SetOutputStorage(const TaskOutputStorage& _outputStorage);
@@ -69,15 +70,15 @@ namespace TencentCloud
                     bool OutputStorageHasBeenSet() const;
 
                     /**
-                     * 获取Path of edited video file.
-                     * @return Path Path of edited video file.
+                     * 获取Path of the edited video file.
+                     * @return Path Path of the edited video file.
                      * 
                      */
                     std::string GetPath() const;
 
                     /**
-                     * 设置Path of edited video file.
-                     * @param _path Path of edited video file.
+                     * 设置Path of the edited video file.
+                     * @param _path Path of the edited video file.
                      * 
                      */
                     void SetPath(const std::string& _path);
@@ -89,19 +90,46 @@ namespace TencentCloud
                      */
                     bool PathHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return MetaData 
+                     * 
+                     */
+                    MediaMetaData GetMetaData() const;
+
+                    /**
+                     * 设置
+                     * @param _metaData 
+                     * 
+                     */
+                    void SetMetaData(const MediaMetaData& _metaData);
+
+                    /**
+                     * 判断参数 MetaData 是否已赋值
+                     * @return MetaData 是否已赋值
+                     * 
+                     */
+                    bool MetaDataHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Target storage of edited file.
+                     * Target storage for the edited file.
                      */
                     TaskOutputStorage m_outputStorage;
                     bool m_outputStorageHasBeenSet;
 
                     /**
-                     * Path of edited video file.
+                     * Path of the edited video file.
                      */
                     std::string m_path;
                     bool m_pathHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    MediaMetaData m_metaData;
+                    bool m_metaDataHasBeenSet;
 
                 };
             }

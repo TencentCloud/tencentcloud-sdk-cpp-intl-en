@@ -49,19 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Storage location of the subtitle file.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return OutputStorage Storage location of the subtitle file.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return OutputStorage 
                      * 
                      */
                     TaskOutputStorage GetOutputStorage() const;
 
                     /**
-                     * 设置Storage location of the subtitle file.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _outputStorage Storage location of the subtitle file.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _outputStorage 
                      * 
                      */
                     void SetOutputStorage(const TaskOutputStorage& _outputStorage);
@@ -97,8 +93,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Storage location of the subtitle file.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     TaskOutputStorage m_outputStorage;
                     bool m_outputStorageHasBeenSet;

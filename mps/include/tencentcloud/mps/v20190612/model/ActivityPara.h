@@ -48,7 +48,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * A subtask of a scheme.
+                * Orchestrate atomic tasks
                 */
                 class ActivityPara : public AbstractModel
                 {
@@ -60,15 +60,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取A transcoding task.
-                     * @return TranscodeTask A transcoding task.
+                     * 获取
+                     * @return TranscodeTask 
                      * 
                      */
                     TranscodeTaskInput GetTranscodeTask() const;
 
                     /**
-                     * 设置A transcoding task.
-                     * @param _transcodeTask A transcoding task.
+                     * 设置
+                     * @param _transcodeTask 
                      * 
                      */
                     void SetTranscodeTask(const TranscodeTaskInput& _transcodeTask);
@@ -81,15 +81,15 @@ namespace TencentCloud
                     bool TranscodeTaskHasBeenSet() const;
 
                     /**
-                     * 获取An animated screenshot generation task.
-                     * @return AnimatedGraphicTask An animated screenshot generation task.
+                     * 获取
+                     * @return AnimatedGraphicTask 
                      * 
                      */
                     AnimatedGraphicTaskInput GetAnimatedGraphicTask() const;
 
                     /**
-                     * 设置An animated screenshot generation task.
-                     * @param _animatedGraphicTask An animated screenshot generation task.
+                     * 设置
+                     * @param _animatedGraphicTask 
                      * 
                      */
                     void SetAnimatedGraphicTask(const AnimatedGraphicTaskInput& _animatedGraphicTask);
@@ -102,15 +102,15 @@ namespace TencentCloud
                     bool AnimatedGraphicTaskHasBeenSet() const;
 
                     /**
-                     * 获取A time point screenshot task.
-                     * @return SnapshotByTimeOffsetTask A time point screenshot task.
+                     * 获取
+                     * @return SnapshotByTimeOffsetTask 
                      * 
                      */
                     SnapshotByTimeOffsetTaskInput GetSnapshotByTimeOffsetTask() const;
 
                     /**
-                     * 设置A time point screenshot task.
-                     * @param _snapshotByTimeOffsetTask A time point screenshot task.
+                     * 设置
+                     * @param _snapshotByTimeOffsetTask 
                      * 
                      */
                     void SetSnapshotByTimeOffsetTask(const SnapshotByTimeOffsetTaskInput& _snapshotByTimeOffsetTask);
@@ -123,15 +123,15 @@ namespace TencentCloud
                     bool SnapshotByTimeOffsetTaskHasBeenSet() const;
 
                     /**
-                     * 获取A sampled screenshot task.
-                     * @return SampleSnapshotTask A sampled screenshot task.
+                     * 获取
+                     * @return SampleSnapshotTask 
                      * 
                      */
                     SampleSnapshotTaskInput GetSampleSnapshotTask() const;
 
                     /**
-                     * 设置A sampled screenshot task.
-                     * @param _sampleSnapshotTask A sampled screenshot task.
+                     * 设置
+                     * @param _sampleSnapshotTask 
                      * 
                      */
                     void SetSampleSnapshotTask(const SampleSnapshotTaskInput& _sampleSnapshotTask);
@@ -144,15 +144,15 @@ namespace TencentCloud
                     bool SampleSnapshotTaskHasBeenSet() const;
 
                     /**
-                     * 获取An image sprite screenshot task.
-                     * @return ImageSpriteTask An image sprite screenshot task.
+                     * 获取
+                     * @return ImageSpriteTask 
                      * 
                      */
                     ImageSpriteTaskInput GetImageSpriteTask() const;
 
                     /**
-                     * 设置An image sprite screenshot task.
-                     * @param _imageSpriteTask An image sprite screenshot task.
+                     * 设置
+                     * @param _imageSpriteTask 
                      * 
                      */
                     void SetImageSpriteTask(const ImageSpriteTaskInput& _imageSpriteTask);
@@ -165,15 +165,15 @@ namespace TencentCloud
                     bool ImageSpriteTaskHasBeenSet() const;
 
                     /**
-                     * 获取An adaptive bitrate streaming task.
-                     * @return AdaptiveDynamicStreamingTask An adaptive bitrate streaming task.
+                     * 获取
+                     * @return AdaptiveDynamicStreamingTask 
                      * 
                      */
                     AdaptiveDynamicStreamingTaskInput GetAdaptiveDynamicStreamingTask() const;
 
                     /**
-                     * 设置An adaptive bitrate streaming task.
-                     * @param _adaptiveDynamicStreamingTask An adaptive bitrate streaming task.
+                     * 设置
+                     * @param _adaptiveDynamicStreamingTask 
                      * 
                      */
                     void SetAdaptiveDynamicStreamingTask(const AdaptiveDynamicStreamingTaskInput& _adaptiveDynamicStreamingTask);
@@ -186,15 +186,15 @@ namespace TencentCloud
                     bool AdaptiveDynamicStreamingTaskHasBeenSet() const;
 
                     /**
-                     * 获取A content moderation task.
-                     * @return AiContentReviewTask A content moderation task.
+                     * 获取
+                     * @return AiContentReviewTask 
                      * 
                      */
                     AiContentReviewTaskInput GetAiContentReviewTask() const;
 
                     /**
-                     * 设置A content moderation task.
-                     * @param _aiContentReviewTask A content moderation task.
+                     * 设置
+                     * @param _aiContentReviewTask 
                      * 
                      */
                     void SetAiContentReviewTask(const AiContentReviewTaskInput& _aiContentReviewTask);
@@ -207,15 +207,15 @@ namespace TencentCloud
                     bool AiContentReviewTaskHasBeenSet() const;
 
                     /**
-                     * 获取A content analysis task.
-                     * @return AiAnalysisTask A content analysis task.
+                     * 获取
+                     * @return AiAnalysisTask 
                      * 
                      */
                     AiAnalysisTaskInput GetAiAnalysisTask() const;
 
                     /**
-                     * 设置A content analysis task.
-                     * @param _aiAnalysisTask A content analysis task.
+                     * 设置
+                     * @param _aiAnalysisTask 
                      * 
                      */
                     void SetAiAnalysisTask(const AiAnalysisTaskInput& _aiAnalysisTask);
@@ -228,15 +228,15 @@ namespace TencentCloud
                     bool AiAnalysisTaskHasBeenSet() const;
 
                     /**
-                     * 获取A content recognition task.
-                     * @return AiRecognitionTask A content recognition task.
+                     * 获取
+                     * @return AiRecognitionTask 
                      * 
                      */
                     AiRecognitionTaskInput GetAiRecognitionTask() const;
 
                     /**
-                     * 设置A content recognition task.
-                     * @param _aiRecognitionTask A content recognition task.
+                     * 设置
+                     * @param _aiRecognitionTask 
                      * 
                      */
                     void SetAiRecognitionTask(const AiRecognitionTaskInput& _aiRecognitionTask);
@@ -249,19 +249,15 @@ namespace TencentCloud
                     bool AiRecognitionTaskHasBeenSet() const;
 
                     /**
-                     * 获取Media quality inspection task.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return QualityControlTask Media quality inspection task.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return QualityControlTask 
                      * 
                      */
                     AiQualityControlTaskInput GetQualityControlTask() const;
 
                     /**
-                     * 设置Media quality inspection task.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _qualityControlTask Media quality inspection task.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _qualityControlTask 
                      * 
                      */
                     void SetQualityControlTask(const AiQualityControlTaskInput& _qualityControlTask);
@@ -274,19 +270,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool QualityControlTaskHasBeenSet() const;
 
                     /**
-                     * 获取Conditional judgment of the task.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return ExecRulesTask Conditional judgment of the task.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取
+                     * @return ExecRulesTask 
                      * 
                      */
                     ExecRulesTask GetExecRulesTask() const;
 
                     /**
-                     * 设置Conditional judgment of the task.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _execRulesTask Conditional judgment of the task.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置
+                     * @param _execRulesTask 
                      * 
                      */
                     void SetExecRulesTask(const ExecRulesTask& _execRulesTask);
@@ -299,19 +291,15 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool ExecRulesTaskHasBeenSet() const;
 
                     /**
-                     * 获取Smart subtitle task.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return SmartSubtitlesTask Smart subtitle task.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取
+                     * @return SmartSubtitlesTask 
                      * 
                      */
                     SmartSubtitlesTaskInput GetSmartSubtitlesTask() const;
 
                     /**
-                     * 设置Smart subtitle task.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _smartSubtitlesTask Smart subtitle task.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置
+                     * @param _smartSubtitlesTask 
                      * 
                      */
                     void SetSmartSubtitlesTask(const SmartSubtitlesTaskInput& _smartSubtitlesTask);
@@ -324,19 +312,15 @@ Note: This field may return null, indicating that no valid value can be obtained
                     bool SmartSubtitlesTaskHasBeenSet() const;
 
                     /**
-                     * 获取Smart erasure task.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return SmartEraseTask Smart erasure task.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取
+                     * @return SmartEraseTask 
                      * 
                      */
                     SmartEraseTaskInput GetSmartEraseTask() const;
 
                     /**
-                     * 设置Smart erasure task.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _smartEraseTask Smart erasure task.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置
+                     * @param _smartEraseTask 
                      * 
                      */
                     void SetSmartEraseTask(const SmartEraseTaskInput& _smartEraseTask);
@@ -351,83 +335,79 @@ Note: This field may return null, indicating that no valid value can be obtained
                 private:
 
                     /**
-                     * A transcoding task.
+                     * 
                      */
                     TranscodeTaskInput m_transcodeTask;
                     bool m_transcodeTaskHasBeenSet;
 
                     /**
-                     * An animated screenshot generation task.
+                     * 
                      */
                     AnimatedGraphicTaskInput m_animatedGraphicTask;
                     bool m_animatedGraphicTaskHasBeenSet;
 
                     /**
-                     * A time point screenshot task.
+                     * 
                      */
                     SnapshotByTimeOffsetTaskInput m_snapshotByTimeOffsetTask;
                     bool m_snapshotByTimeOffsetTaskHasBeenSet;
 
                     /**
-                     * A sampled screenshot task.
+                     * 
                      */
                     SampleSnapshotTaskInput m_sampleSnapshotTask;
                     bool m_sampleSnapshotTaskHasBeenSet;
 
                     /**
-                     * An image sprite screenshot task.
+                     * 
                      */
                     ImageSpriteTaskInput m_imageSpriteTask;
                     bool m_imageSpriteTaskHasBeenSet;
 
                     /**
-                     * An adaptive bitrate streaming task.
+                     * 
                      */
                     AdaptiveDynamicStreamingTaskInput m_adaptiveDynamicStreamingTask;
                     bool m_adaptiveDynamicStreamingTaskHasBeenSet;
 
                     /**
-                     * A content moderation task.
+                     * 
                      */
                     AiContentReviewTaskInput m_aiContentReviewTask;
                     bool m_aiContentReviewTaskHasBeenSet;
 
                     /**
-                     * A content analysis task.
+                     * 
                      */
                     AiAnalysisTaskInput m_aiAnalysisTask;
                     bool m_aiAnalysisTaskHasBeenSet;
 
                     /**
-                     * A content recognition task.
+                     * 
                      */
                     AiRecognitionTaskInput m_aiRecognitionTask;
                     bool m_aiRecognitionTaskHasBeenSet;
 
                     /**
-                     * Media quality inspection task.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     AiQualityControlTaskInput m_qualityControlTask;
                     bool m_qualityControlTaskHasBeenSet;
 
                     /**
-                     * Conditional judgment of the task.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
                      */
                     ExecRulesTask m_execRulesTask;
                     bool m_execRulesTaskHasBeenSet;
 
                     /**
-                     * Smart subtitle task.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
                      */
                     SmartSubtitlesTaskInput m_smartSubtitlesTask;
                     bool m_smartSubtitlesTaskHasBeenSet;
 
                     /**
-                     * Smart erasure task.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
                      */
                     SmartEraseTaskInput m_smartEraseTask;
                     bool m_smartEraseTaskHasBeenSet;

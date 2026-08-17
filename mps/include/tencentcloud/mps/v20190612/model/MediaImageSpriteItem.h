@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Image sprite information
+                * Sprite image information
                 */
                 class MediaImageSpriteItem : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Image sprite specification. For more information, please see [Image Sprite Parameter Template](https://intl.cloud.tencent.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF).
-                     * @return Definition Image sprite specification. For more information, please see [Image Sprite Parameter Template](https://intl.cloud.tencent.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF).
+                     * 获取Sprite sheet specification, please refer to the [Sprite Sheet Parameter Template](https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF).
+                     * @return Definition Sprite sheet specification, please refer to the [Sprite Sheet Parameter Template](https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF).
                      * 
                      */
                     int64_t GetDefinition() const;
 
                     /**
-                     * 设置Image sprite specification. For more information, please see [Image Sprite Parameter Template](https://intl.cloud.tencent.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF).
-                     * @param _definition Image sprite specification. For more information, please see [Image Sprite Parameter Template](https://intl.cloud.tencent.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF).
+                     * 设置Sprite sheet specification, please refer to the [Sprite Sheet Parameter Template](https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF).
+                     * @param _definition Sprite sheet specification, please refer to the [Sprite Sheet Parameter Template](https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF).
                      * 
                      */
                     void SetDefinition(const int64_t& _definition);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool DefinitionHasBeenSet() const;
 
                     /**
-                     * 获取Subimage height of an image sprite.
-                     * @return Height Subimage height of an image sprite.
+                     * 获取Height of small images in sprite sheet.
+                     * @return Height Height of small images in sprite sheet.
                      * 
                      */
                     int64_t GetHeight() const;
 
                     /**
-                     * 设置Subimage height of an image sprite.
-                     * @param _height Subimage height of an image sprite.
+                     * 设置Height of small images in sprite sheet.
+                     * @param _height Height of small images in sprite sheet.
                      * 
                      */
                     void SetHeight(const int64_t& _height);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool HeightHasBeenSet() const;
 
                     /**
-                     * 获取Subimage width of an image sprite.
-                     * @return Width Subimage width of an image sprite.
+                     * 获取Width of small images in sprite sheet.
+                     * @return Width Width of small images in sprite sheet.
                      * 
                      */
                     int64_t GetWidth() const;
 
                     /**
-                     * 设置Subimage width of an image sprite.
-                     * @param _width Subimage width of an image sprite.
+                     * 设置Width of small images in sprite sheet.
+                     * @param _width Width of small images in sprite sheet.
                      * 
                      */
                     void SetWidth(const int64_t& _width);
@@ -111,15 +111,15 @@ namespace TencentCloud
                     bool WidthHasBeenSet() const;
 
                     /**
-                     * 获取Total number of subimages in each image sprite.
-                     * @return TotalCount Total number of subimages in each image sprite.
+                     * 获取Number of small images in each sprite sheet.
+                     * @return TotalCount Number of small images in each sprite sheet.
                      * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
-                     * 设置Total number of subimages in each image sprite.
-                     * @param _totalCount Total number of subimages in each image sprite.
+                     * 设置Number of small images in each sprite sheet.
+                     * @param _totalCount Number of small images in each sprite sheet.
                      * 
                      */
                     void SetTotalCount(const int64_t& _totalCount);
@@ -132,15 +132,15 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取Path to each image sprite.
-                     * @return ImagePathSet Path to each image sprite.
+                     * 获取Path of each sprite sheet.
+                     * @return ImagePathSet Path of each sprite sheet.
                      * 
                      */
                     std::vector<std::string> GetImagePathSet() const;
 
                     /**
-                     * 设置Path to each image sprite.
-                     * @param _imagePathSet Path to each image sprite.
+                     * 设置Path of each sprite sheet.
+                     * @param _imagePathSet Path of each sprite sheet.
                      * 
                      */
                     void SetImagePathSet(const std::vector<std::string>& _imagePathSet);
@@ -153,15 +153,15 @@ namespace TencentCloud
                     bool ImagePathSetHasBeenSet() const;
 
                     /**
-                     * 获取Path to a WebVtt file for the position-time relationship among subimages in an image sprite. The WebVtt file indicates the corresponding time points of each subimage and their coordinates in the image sprite, which is typically used by the player for implementing preview.
-                     * @return WebVttPath Path to a WebVtt file for the position-time relationship among subimages in an image sprite. The WebVtt file indicates the corresponding time points of each subimage and their coordinates in the image sprite, which is typically used by the player for implementing preview.
+                     * 获取
+                     * @return WebVttPath 
                      * 
                      */
                     std::string GetWebVttPath() const;
 
                     /**
-                     * 设置Path to a WebVtt file for the position-time relationship among subimages in an image sprite. The WebVtt file indicates the corresponding time points of each subimage and their coordinates in the image sprite, which is typically used by the player for implementing preview.
-                     * @param _webVttPath Path to a WebVtt file for the position-time relationship among subimages in an image sprite. The WebVtt file indicates the corresponding time points of each subimage and their coordinates in the image sprite, which is typically used by the player for implementing preview.
+                     * 设置
+                     * @param _webVttPath 
                      * 
                      */
                     void SetWebVttPath(const std::string& _webVttPath);
@@ -174,15 +174,15 @@ namespace TencentCloud
                     bool WebVttPathHasBeenSet() const;
 
                     /**
-                     * 获取Storage location of an image sprite file.
-                     * @return Storage Storage location of an image sprite file.
+                     * 获取Storage location of the sprite sheet file.
+                     * @return Storage Storage location of the sprite sheet file.
                      * 
                      */
                     TaskOutputStorage GetStorage() const;
 
                     /**
-                     * 设置Storage location of an image sprite file.
-                     * @param _storage Storage location of an image sprite file.
+                     * 设置Storage location of the sprite sheet file.
+                     * @param _storage Storage location of the sprite sheet file.
                      * 
                      */
                     void SetStorage(const TaskOutputStorage& _storage);
@@ -197,43 +197,43 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Image sprite specification. For more information, please see [Image Sprite Parameter Template](https://intl.cloud.tencent.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF).
+                     * Sprite sheet specification, please refer to the [Sprite Sheet Parameter Template](https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF).
                      */
                     int64_t m_definition;
                     bool m_definitionHasBeenSet;
 
                     /**
-                     * Subimage height of an image sprite.
+                     * Height of small images in sprite sheet.
                      */
                     int64_t m_height;
                     bool m_heightHasBeenSet;
 
                     /**
-                     * Subimage width of an image sprite.
+                     * Width of small images in sprite sheet.
                      */
                     int64_t m_width;
                     bool m_widthHasBeenSet;
 
                     /**
-                     * Total number of subimages in each image sprite.
+                     * Number of small images in each sprite sheet.
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * Path to each image sprite.
+                     * Path of each sprite sheet.
                      */
                     std::vector<std::string> m_imagePathSet;
                     bool m_imagePathSetHasBeenSet;
 
                     /**
-                     * Path to a WebVtt file for the position-time relationship among subimages in an image sprite. The WebVtt file indicates the corresponding time points of each subimage and their coordinates in the image sprite, which is typically used by the player for implementing preview.
+                     * 
                      */
                     std::string m_webVttPath;
                     bool m_webVttPathHasBeenSet;
 
                     /**
-                     * Storage location of an image sprite file.
+                     * Storage location of the sprite sheet file.
                      */
                     TaskOutputStorage m_storage;
                     bool m_storageHasBeenSet;

@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Video deduplication result data structure.
+                * Data structure of the video deduplication result.
                 */
                 class AiAnalysisTaskVideoRemakeResult : public AbstractModel
                 {
@@ -49,15 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Specifies the task status. valid values: `PROCESSING`, `SUCCESS`, and `FAIL`.
-                     * @return Status Specifies the task status. valid values: `PROCESSING`, `SUCCESS`, and `FAIL`.
+                     * 获取Task status. Valid values are `PROCESSING`, `SUCCESS`, and `FAIL`.
+                     * @return Status Task status. Valid values are `PROCESSING`, `SUCCESS`, and `FAIL`.
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置Specifies the task status. valid values: `PROCESSING`, `SUCCESS`, and `FAIL`.
-                     * @param _status Specifies the task status. valid values: `PROCESSING`, `SUCCESS`, and `FAIL`.
+                     * 设置Task status. Valid values are `PROCESSING`, `SUCCESS`, and `FAIL`.
+                     * @param _status Task status. Valid values are `PROCESSING`, `SUCCESS`, and `FAIL`.
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -70,15 +70,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Error code. 0: success. other values: failure.
-                     * @return ErrCode Error code. 0: success. other values: failure.
+                     * 获取Error code. 0: successful; other values: failed.
+                     * @return ErrCode Error code. 0: successful; other values: failed.
                      * 
                      */
                     int64_t GetErrCode() const;
 
                     /**
-                     * 设置Error code. 0: success. other values: failure.
-                     * @param _errCode Error code. 0: success. other values: failure.
+                     * 设置Error code. 0: successful; other values: failed.
+                     * @param _errCode Error code. 0: successful; other values: failed.
                      * 
                      */
                     void SetErrCode(const int64_t& _errCode);
@@ -91,15 +91,15 @@ namespace TencentCloud
                     bool ErrCodeHasBeenSet() const;
 
                     /**
-                     * 获取Error message.
-                     * @return Message Error message.
+                     * 获取Error message
+                     * @return Message Error message
                      * 
                      */
                     std::string GetMessage() const;
 
                     /**
-                     * 设置Error message.
-                     * @param _message Error message.
+                     * 设置Error message
+                     * @param _message Error message
                      * 
                      */
                     void SetMessage(const std::string& _message);
@@ -112,15 +112,15 @@ namespace TencentCloud
                     bool MessageHasBeenSet() const;
 
                     /**
-                     * 获取Deduplication task input.
-                     * @return Input Deduplication task input.
+                     * 获取Task input for deduplication
+                     * @return Input Task input for deduplication
                      * 
                      */
                     AiAnalysisTaskVideoRemakeInput GetInput() const;
 
                     /**
-                     * 设置Deduplication task input.
-                     * @param _input Deduplication task input.
+                     * 设置Task input for deduplication
+                     * @param _input Task input for deduplication
                      * 
                      */
                     void SetInput(const AiAnalysisTaskVideoRemakeInput& _input);
@@ -133,19 +133,15 @@ namespace TencentCloud
                     bool InputHasBeenSet() const;
 
                     /**
-                     * 获取Task output.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return Output Task output.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取
+                     * @return Output 
                      * 
                      */
                     AiAnalysisTaskVideoRemakeOutput GetOutput() const;
 
                     /**
-                     * 设置Task output.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _output Task output.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置
+                     * @param _output 
                      * 
                      */
                     void SetOutput(const AiAnalysisTaskVideoRemakeOutput& _output);
@@ -160,32 +156,31 @@ Note: This field may return null, indicating that no valid value can be obtained
                 private:
 
                     /**
-                     * Specifies the task status. valid values: `PROCESSING`, `SUCCESS`, and `FAIL`.
+                     * Task status. Valid values are `PROCESSING`, `SUCCESS`, and `FAIL`.
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Error code. 0: success. other values: failure.
+                     * Error code. 0: successful; other values: failed.
                      */
                     int64_t m_errCode;
                     bool m_errCodeHasBeenSet;
 
                     /**
-                     * Error message.
+                     * Error message
                      */
                     std::string m_message;
                     bool m_messageHasBeenSet;
 
                     /**
-                     * Deduplication task input.
+                     * Task input for deduplication
                      */
                     AiAnalysisTaskVideoRemakeInput m_input;
                     bool m_inputHasBeenSet;
 
                     /**
-                     * Task output.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
                      */
                     AiAnalysisTaskVideoRemakeOutput m_output;
                     bool m_outputHasBeenSet;

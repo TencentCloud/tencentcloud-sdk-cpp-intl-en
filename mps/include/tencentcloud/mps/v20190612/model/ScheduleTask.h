@@ -38,7 +38,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * The information of a scheme.
+                * Orchestration task info
                 */
                 class ScheduleTask : public AbstractModel
                 {
@@ -50,15 +50,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The scheme ID.
-                     * @return TaskId The scheme ID.
+                     * 获取Orchestration task ID.
+                     * @return TaskId Orchestration task ID.
                      * 
                      */
                     std::string GetTaskId() const;
 
                     /**
-                     * 设置The scheme ID.
-                     * @param _taskId The scheme ID.
+                     * 设置Orchestration task ID.
+                     * @param _taskId Orchestration task ID.
                      * 
                      */
                     void SetTaskId(const std::string& _taskId);
@@ -71,23 +71,23 @@ namespace TencentCloud
                     bool TaskIdHasBeenSet() const;
 
                     /**
-                     * 获取The scheme status. Valid values:
-<li>PROCESSING</li>
-<li>FINISH</li>
-                     * @return Status The scheme status. Valid values:
-<li>PROCESSING</li>
-<li>FINISH</li>
+                     * 获取Task flow status. Valid values:
+<li>PROCESSING: Processing;</li>
+<li>FINISH: completed</li>
+                     * @return Status Task flow status. Valid values:
+<li>PROCESSING: Processing;</li>
+<li>FINISH: completed</li>
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置The scheme status. Valid values:
-<li>PROCESSING</li>
-<li>FINISH</li>
-                     * @param _status The scheme status. Valid values:
-<li>PROCESSING</li>
-<li>FINISH</li>
+                     * 设置Task flow status. Valid values:
+<li>PROCESSING: Processing;</li>
+<li>FINISH: completed</li>
+                     * @param _status Task flow status. Valid values:
+<li>PROCESSING: Processing;</li>
+<li>FINISH: completed</li>
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -100,15 +100,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取If the value returned is not 0, there was a source error. If 0 is returned, refer to the error codes of the corresponding task type.
-                     * @return ErrCode If the value returned is not 0, there was a source error. If 0 is returned, refer to the error codes of the corresponding task type.
+                     * 获取An error code other than 0 is returned in case of a source exception. Use the error code of the specific task when a value of 0 is returned.
+                     * @return ErrCode An error code other than 0 is returned in case of a source exception. Use the error code of the specific task when a value of 0 is returned.
                      * 
                      */
                     int64_t GetErrCode() const;
 
                     /**
-                     * 设置If the value returned is not 0, there was a source error. If 0 is returned, refer to the error codes of the corresponding task type.
-                     * @param _errCode If the value returned is not 0, there was a source error. If 0 is returned, refer to the error codes of the corresponding task type.
+                     * 设置An error code other than 0 is returned in case of a source exception. Use the error code of the specific task when a value of 0 is returned.
+                     * @param _errCode An error code other than 0 is returned in case of a source exception. Use the error code of the specific task when a value of 0 is returned.
                      * 
                      */
                     void SetErrCode(const int64_t& _errCode);
@@ -121,15 +121,15 @@ namespace TencentCloud
                     bool ErrCodeHasBeenSet() const;
 
                     /**
-                     * 获取If there was a source error, this parameter is the error message. For other errors, refer to the error messages of the corresponding task type.
-                     * @return Message If there was a source error, this parameter is the error message. For other errors, refer to the error messages of the corresponding task type.
+                     * 获取The corresponding exception message is returned in case of a source exception. If no source exception occurs, use the message of each specific task.
+                     * @return Message The corresponding exception message is returned in case of a source exception. If no source exception occurs, use the message of each specific task.
                      * 
                      */
                     std::string GetMessage() const;
 
                     /**
-                     * 设置If there was a source error, this parameter is the error message. For other errors, refer to the error messages of the corresponding task type.
-                     * @param _message If there was a source error, this parameter is the error message. For other errors, refer to the error messages of the corresponding task type.
+                     * 设置The corresponding exception message is returned in case of a source exception. If no source exception occurs, use the message of each specific task.
+                     * @param _message The corresponding exception message is returned in case of a source exception. If no source exception occurs, use the message of each specific task.
                      * 
                      */
                     void SetMessage(const std::string& _message);
@@ -142,19 +142,15 @@ namespace TencentCloud
                     bool MessageHasBeenSet() const;
 
                     /**
-                     * 获取The information of the file processed.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return InputInfo The information of the file processed.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return InputInfo 
                      * 
                      */
                     MediaInputInfo GetInputInfo() const;
 
                     /**
-                     * 设置The information of the file processed.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _inputInfo The information of the file processed.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _inputInfo 
                      * 
                      */
                     void SetInputInfo(const MediaInputInfo& _inputInfo);
@@ -167,19 +163,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool InputInfoHasBeenSet() const;
 
                     /**
-                     * 获取The metadata of the source video.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return MetaData The metadata of the source video.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return MetaData 
                      * 
                      */
                     MediaMetaData GetMetaData() const;
 
                     /**
-                     * 设置The metadata of the source video.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _metaData The metadata of the source video.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _metaData 
                      * 
                      */
                     void SetMetaData(const MediaMetaData& _metaData);
@@ -192,19 +184,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool MetaDataHasBeenSet() const;
 
                     /**
-                     * 获取The output of the scheme.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ActivityResultSet The output of the scheme.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return ActivityResultSet 
                      * 
                      */
                     std::vector<ActivityResult> GetActivityResultSet() const;
 
                     /**
-                     * 设置The output of the scheme.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _activityResultSet The output of the scheme.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _activityResultSet 
                      * 
                      */
                     void SetActivityResultSet(const std::vector<ActivityResult>& _activityResultSet);
@@ -219,48 +207,45 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * The scheme ID.
+                     * Orchestration task ID.
                      */
                     std::string m_taskId;
                     bool m_taskIdHasBeenSet;
 
                     /**
-                     * The scheme status. Valid values:
-<li>PROCESSING</li>
-<li>FINISH</li>
+                     * Task flow status. Valid values:
+<li>PROCESSING: Processing;</li>
+<li>FINISH: completed</li>
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * If the value returned is not 0, there was a source error. If 0 is returned, refer to the error codes of the corresponding task type.
+                     * An error code other than 0 is returned in case of a source exception. Use the error code of the specific task when a value of 0 is returned.
                      */
                     int64_t m_errCode;
                     bool m_errCodeHasBeenSet;
 
                     /**
-                     * If there was a source error, this parameter is the error message. For other errors, refer to the error messages of the corresponding task type.
+                     * The corresponding exception message is returned in case of a source exception. If no source exception occurs, use the message of each specific task.
                      */
                     std::string m_message;
                     bool m_messageHasBeenSet;
 
                     /**
-                     * The information of the file processed.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     MediaInputInfo m_inputInfo;
                     bool m_inputInfoHasBeenSet;
 
                     /**
-                     * The metadata of the source video.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     MediaMetaData m_metaData;
                     bool m_metaDataHasBeenSet;
 
                     /**
-                     * The output of the scheme.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<ActivityResult> m_activityResultSet;
                     bool m_activityResultSetHasBeenSet;

@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID.
-                     * @return InstanceId Instance ID.
+                     * 获取<p>Instance ID.</p>
+                     * @return InstanceId <p>Instance ID.</p>
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID.
-                     * @param _instanceId Instance ID.
+                     * 设置<p>Instance ID.</p>
+                     * @param _instanceId <p>Instance ID.</p>
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Account name.
-                     * @return AccountName Account name.
+                     * 获取<p>Account name.</p>
+                     * @return AccountName <p>Account name.</p>
                      * 
                      */
                     std::string GetAccountName() const;
 
                     /**
-                     * 设置Account name.
-                     * @param _accountName Account name.
+                     * 设置<p>Account name.</p>
+                     * @param _accountName <p>Account name.</p>
                      * 
                      */
                     void SetAccountName(const std::string& _accountName);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool AccountNameHasBeenSet() const;
 
                     /**
-                     * 获取Account description.
-                     * @return Remark Account description.
+                     * 获取<p>Account description.</p>
+                     * @return Remark <p>Account description.</p>
                      * 
                      */
                     std::string GetRemark() const;
 
                     /**
-                     * 设置Account description.
-                     * @param _remark Account description.
+                     * 设置<p>Account description.</p>
+                     * @param _remark <p>Account description.</p>
                      * 
                      */
                     void SetRemark(const std::string& _remark);
@@ -110,31 +110,15 @@ namespace TencentCloud
                     bool RemarkHasBeenSet() const;
 
                     /**
-                     * 获取Read/Write permission policy.
-- r: read-only.
-
- - w: write-only.
-- rw: read/write.
-                     * @return Privilege Read/Write permission policy.
-- r: read-only.
-
- - w: write-only.
-- rw: read/write.
+                     * 获取<p>Read/write permission policy. - r: read-only. - w: write-only. - rw: read-write.</p>
+                     * @return Privilege <p>Read/write permission policy. - r: read-only. - w: write-only. - rw: read-write.</p>
                      * 
                      */
                     std::string GetPrivilege() const;
 
                     /**
-                     * 设置Read/Write permission policy.
-- r: read-only.
-
- - w: write-only.
-- rw: read/write.
-                     * @param _privilege Read/Write permission policy.
-- r: read-only.
-
- - w: write-only.
-- rw: read/write.
+                     * 设置<p>Read/write permission policy. - r: read-only. - w: write-only. - rw: read-write.</p>
+                     * @param _privilege <p>Read/write permission policy. - r: read-only. - w: write-only. - rw: read-write.</p>
                      * 
                      */
                     void SetPrivilege(const std::string& _privilege);
@@ -147,23 +131,15 @@ namespace TencentCloud
                     bool PrivilegeHasBeenSet() const;
 
                     /**
-                     * 获取Read-only routing policy.
- - master: primary node.
- - replication: replica node.
-                     * @return ReadonlyPolicy Read-only routing policy.
- - master: primary node.
- - replication: replica node.
+                     * 获取<p>Read-only Routing Policy. - master: Master node. - replication: Replica node.</p>
+                     * @return ReadonlyPolicy <p>Read-only Routing Policy. - master: Master node. - replication: Replica node.</p>
                      * 
                      */
                     std::vector<std::string> GetReadonlyPolicy() const;
 
                     /**
-                     * 设置Read-only routing policy.
- - master: primary node.
- - replication: replica node.
-                     * @param _readonlyPolicy Read-only routing policy.
- - master: primary node.
- - replication: replica node.
+                     * 设置<p>Read-only Routing Policy. - master: Master node. - replication: Replica node.</p>
+                     * @param _readonlyPolicy <p>Read-only Routing Policy. - master: Master node. - replication: Replica node.</p>
                      * 
                      */
                     void SetReadonlyPolicy(const std::vector<std::string>& _readonlyPolicy);
@@ -176,27 +152,15 @@ namespace TencentCloud
                     bool ReadonlyPolicyHasBeenSet() const;
 
                     /**
-                     * 获取Sub-account status.
- - 1: account under modification.
- - 2: valid account.
- - 4: account deleted.
-                     * @return Status Sub-account status.
- - 1: account under modification.
- - 2: valid account.
- - 4: account deleted.
+                     * 获取<p>Sub-account status. - 1: Account change in progress. - 2: Valid. - 4: Deleted.</p>
+                     * @return Status <p>Sub-account status. - 1: Account change in progress. - 2: Valid. - 4: Deleted.</p>
                      * 
                      */
                     int64_t GetStatus() const;
 
                     /**
-                     * 设置Sub-account status.
- - 1: account under modification.
- - 2: valid account.
- - 4: account deleted.
-                     * @param _status Sub-account status.
- - 1: account under modification.
- - 2: valid account.
- - 4: account deleted.
+                     * 设置<p>Sub-account status. - 1: Account change in progress. - 2: Valid. - 4: Deleted.</p>
+                     * @param _status <p>Sub-account status. - 1: Account change in progress. - 2: Valid. - 4: Deleted.</p>
                      * 
                      */
                     void SetStatus(const int64_t& _status);
@@ -209,15 +173,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Creation time
-                     * @return CreateTime Creation time
+                     * 获取<p>Account creation time.</p><p>If the parameter is an empty string, the account was created in an earlier version where the recording feature was not supported.</p>
+                     * @return CreateTime <p>Account creation time.</p><p>If the parameter is an empty string, the account was created in an earlier version where the recording feature was not supported.</p>
                      * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
-                     * 设置Creation time
-                     * @param _createTime Creation time
+                     * 设置<p>Account creation time.</p><p>If the parameter is an empty string, the account was created in an earlier version where the recording feature was not supported.</p>
+                     * @param _createTime <p>Account creation time.</p><p>If the parameter is an empty string, the account was created in an earlier version where the recording feature was not supported.</p>
                      * 
                      */
                     void SetCreateTime(const std::string& _createTime);
@@ -229,58 +193,76 @@ namespace TencentCloud
                      */
                     bool CreateTimeHasBeenSet() const;
 
+                    /**
+                     * 获取<p>The time when the account last changed the password.</p><p>If the parameter is an empty string, it means the account was created in an earlier version that did not support the password modification time recording feature.</p>
+                     * @return PasswordLastModifiedTime <p>The time when the account last changed the password.</p><p>If the parameter is an empty string, it means the account was created in an earlier version that did not support the password modification time recording feature.</p>
+                     * 
+                     */
+                    std::string GetPasswordLastModifiedTime() const;
+
+                    /**
+                     * 设置<p>The time when the account last changed the password.</p><p>If the parameter is an empty string, it means the account was created in an earlier version that did not support the password modification time recording feature.</p>
+                     * @param _passwordLastModifiedTime <p>The time when the account last changed the password.</p><p>If the parameter is an empty string, it means the account was created in an earlier version that did not support the password modification time recording feature.</p>
+                     * 
+                     */
+                    void SetPasswordLastModifiedTime(const std::string& _passwordLastModifiedTime);
+
+                    /**
+                     * 判断参数 PasswordLastModifiedTime 是否已赋值
+                     * @return PasswordLastModifiedTime 是否已赋值
+                     * 
+                     */
+                    bool PasswordLastModifiedTimeHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Instance ID.
+                     * <p>Instance ID.</p>
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Account name.
+                     * <p>Account name.</p>
                      */
                     std::string m_accountName;
                     bool m_accountNameHasBeenSet;
 
                     /**
-                     * Account description.
+                     * <p>Account description.</p>
                      */
                     std::string m_remark;
                     bool m_remarkHasBeenSet;
 
                     /**
-                     * Read/Write permission policy.
-- r: read-only.
-
- - w: write-only.
-- rw: read/write.
+                     * <p>Read/write permission policy. - r: read-only. - w: write-only. - rw: read-write.</p>
                      */
                     std::string m_privilege;
                     bool m_privilegeHasBeenSet;
 
                     /**
-                     * Read-only routing policy.
- - master: primary node.
- - replication: replica node.
+                     * <p>Read-only Routing Policy. - master: Master node. - replication: Replica node.</p>
                      */
                     std::vector<std::string> m_readonlyPolicy;
                     bool m_readonlyPolicyHasBeenSet;
 
                     /**
-                     * Sub-account status.
- - 1: account under modification.
- - 2: valid account.
- - 4: account deleted.
+                     * <p>Sub-account status. - 1: Account change in progress. - 2: Valid. - 4: Deleted.</p>
                      */
                     int64_t m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Creation time
+                     * <p>Account creation time.</p><p>If the parameter is an empty string, the account was created in an earlier version where the recording feature was not supported.</p>
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
+
+                    /**
+                     * <p>The time when the account last changed the password.</p><p>If the parameter is an empty string, it means the account was created in an earlier version that did not support the password modification time recording feature.</p>
+                     */
+                    std::string m_passwordLastModifiedTime;
+                    bool m_passwordLastModifiedTimeHasBeenSet;
 
                 };
             }

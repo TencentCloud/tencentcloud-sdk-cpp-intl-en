@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Information of a time point screenshot
+                * Screenshot information at the specified time point
                 */
                 class MediaSnapshotByTimePicInfoItem : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The timestamp (seconds) of the screenshot.
-                     * @return TimeOffset The timestamp (seconds) of the screenshot.
+                     * 获取The screenshot corresponds to the time offset in the video file, expressed in seconds.
+                     * @return TimeOffset The screenshot corresponds to the time offset in the video file, expressed in seconds.
                      * 
                      */
                     double GetTimeOffset() const;
 
                     /**
-                     * 设置The timestamp (seconds) of the screenshot.
-                     * @param _timeOffset The timestamp (seconds) of the screenshot.
+                     * 设置The screenshot corresponds to the time offset in the video file, expressed in seconds.
+                     * @param _timeOffset The screenshot corresponds to the time offset in the video file, expressed in seconds.
                      * 
                      */
                     void SetTimeOffset(const double& _timeOffset);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool TimeOffsetHasBeenSet() const;
 
                     /**
-                     * 获取Path to the screenshot.
-                     * @return Path Path to the screenshot.
+                     * 获取Path of the screenshot.
+                     * @return Path Path of the screenshot.
                      * 
                      */
                     std::string GetPath() const;
 
                     /**
-                     * 设置Path to the screenshot.
-                     * @param _path Path to the screenshot.
+                     * 设置Path of the screenshot.
+                     * @param _path Path of the screenshot.
                      * 
                      */
                     void SetPath(const std::string& _path);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool PathHasBeenSet() const;
 
                     /**
-                     * 获取List of watermarking template IDs if the screenshots are watermarked.
-                     * @return WaterMarkDefinition List of watermarking template IDs if the screenshots are watermarked.
+                     * 获取If a screenshot is watermarked, list of template IDs used for watermarking.
+                     * @return WaterMarkDefinition If a screenshot is watermarked, list of template IDs used for watermarking.
                      * 
                      */
                     std::vector<int64_t> GetWaterMarkDefinition() const;
 
                     /**
-                     * 设置List of watermarking template IDs if the screenshots are watermarked.
-                     * @param _waterMarkDefinition List of watermarking template IDs if the screenshots are watermarked.
+                     * 设置If a screenshot is watermarked, list of template IDs used for watermarking.
+                     * @param _waterMarkDefinition If a screenshot is watermarked, list of template IDs used for watermarking.
                      * 
                      */
                     void SetWaterMarkDefinition(const std::vector<int64_t>& _waterMarkDefinition);
@@ -112,19 +112,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The timestamp (seconds) of the screenshot.
+                     * The screenshot corresponds to the time offset in the video file, expressed in seconds.
                      */
                     double m_timeOffset;
                     bool m_timeOffsetHasBeenSet;
 
                     /**
-                     * Path to the screenshot.
+                     * Path of the screenshot.
                      */
                     std::string m_path;
                     bool m_pathHasBeenSet;
 
                     /**
-                     * List of watermarking template IDs if the screenshots are watermarked.
+                     * If a screenshot is watermarked, list of template IDs used for watermarking.
                      */
                     std::vector<int64_t> m_waterMarkDefinition;
                     bool m_waterMarkDefinitionHasBeenSet;

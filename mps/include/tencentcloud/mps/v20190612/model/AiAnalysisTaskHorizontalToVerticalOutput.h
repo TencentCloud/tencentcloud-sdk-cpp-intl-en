@@ -48,19 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Intelligent landscape-to-portrait video list.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Path Intelligent landscape-to-portrait video list.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return Path 
                      * 
                      */
                     std::string GetPath() const;
 
                     /**
-                     * 设置Intelligent landscape-to-portrait video list.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _path Intelligent landscape-to-portrait video list.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _path 
                      * 
                      */
                     void SetPath(const std::string& _path);
@@ -73,19 +69,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool PathHasBeenSet() const;
 
                     /**
-                     * 获取Storage location of intelligent landscape-to-portrait videos.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return OutputStorage Storage location of intelligent landscape-to-portrait videos.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return OutputStorage 
                      * 
                      */
                     TaskOutputStorage GetOutputStorage() const;
 
                     /**
-                     * 设置Storage location of intelligent landscape-to-portrait videos.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _outputStorage Storage location of intelligent landscape-to-portrait videos.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _outputStorage 
                      * 
                      */
                     void SetOutputStorage(const TaskOutputStorage& _outputStorage);
@@ -98,23 +90,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool OutputStorageHasBeenSet() const;
 
                     /**
-                     * 获取Confidence.	
-	
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Confidence Confidence.	
-	
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return Confidence 
                      * 
                      */
                     double GetConfidence() const;
 
                     /**
-                     * 设置Confidence.	
-	
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _confidence Confidence.	
-	
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _confidence 
                      * 
                      */
                     void SetConfidence(const double& _confidence);
@@ -129,23 +113,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Intelligent landscape-to-portrait video list.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string m_path;
                     bool m_pathHasBeenSet;
 
                     /**
-                     * Storage location of intelligent landscape-to-portrait videos.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     TaskOutputStorage m_outputStorage;
                     bool m_outputStorageHasBeenSet;
 
                     /**
-                     * Confidence.	
-	
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     double m_confidence;
                     bool m_confidenceHasBeenSet;

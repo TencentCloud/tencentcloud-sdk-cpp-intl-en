@@ -38,7 +38,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Live streaming AI analysis result
                 */
                 class LiveStreamAiAnalysisResultItem : public AbstractModel
                 {
@@ -104,19 +104,15 @@ namespace TencentCloud
                     bool SegmentResultSetHasBeenSet() const;
 
                     /**
-                     * 获取Highlight result. This field is valid when Type is set to Highlight.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return HighlightResultSet Highlight result. This field is valid when Type is set to Highlight.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return HighlightResultSet 
                      * 
                      */
                     std::vector<MediaAiAnalysisHighlightItem> GetHighlightResultSet() const;
 
                     /**
-                     * 设置Highlight result. This field is valid when Type is set to Highlight.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _highlightResultSet Highlight result. This field is valid when Type is set to Highlight.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _highlightResultSet 
                      * 
                      */
                     void SetHighlightResultSet(const std::vector<MediaAiAnalysisHighlightItem>& _highlightResultSet);
@@ -167,8 +163,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_segmentResultSetHasBeenSet;
 
                     /**
-                     * Highlight result. This field is valid when Type is set to Highlight.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<MediaAiAnalysisHighlightItem> m_highlightResultSet;
                     bool m_highlightResultSetHasBeenSet;

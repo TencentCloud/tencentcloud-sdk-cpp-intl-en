@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Full text recognition segment.
+                * Full text recognition recording clip.
                 */
                 class AiRecognitionTaskOcrFullTextSegmentItem : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Start time offset of a recognition segment in seconds.
-                     * @return StartTimeOffset Start time offset of a recognition segment in seconds.
+                     * 获取Start time offset of a recognized segment, in seconds.
+                     * @return StartTimeOffset Start time offset of a recognized segment, in seconds.
                      * 
                      */
                     double GetStartTimeOffset() const;
 
                     /**
-                     * 设置Start time offset of a recognition segment in seconds.
-                     * @param _startTimeOffset Start time offset of a recognition segment in seconds.
+                     * 设置Start time offset of a recognized segment, in seconds.
+                     * @param _startTimeOffset Start time offset of a recognized segment, in seconds.
                      * 
                      */
                     void SetStartTimeOffset(const double& _startTimeOffset);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool StartTimeOffsetHasBeenSet() const;
 
                     /**
-                     * 获取End time offset of a recognition segment in seconds.
-                     * @return EndTimeOffset End time offset of a recognition segment in seconds.
+                     * 获取End time offset of a recognized segment, in seconds.
+                     * @return EndTimeOffset End time offset of a recognized segment, in seconds.
                      * 
                      */
                     double GetEndTimeOffset() const;
 
                     /**
-                     * 设置End time offset of a recognition segment in seconds.
-                     * @param _endTimeOffset End time offset of a recognition segment in seconds.
+                     * 设置End time offset of a recognized segment, in seconds.
+                     * @param _endTimeOffset End time offset of a recognized segment, in seconds.
                      * 
                      */
                     void SetEndTimeOffset(const double& _endTimeOffset);
@@ -113,13 +113,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Start time offset of a recognition segment in seconds.
+                     * Start time offset of a recognized segment, in seconds.
                      */
                     double m_startTimeOffset;
                     bool m_startTimeOffsetHasBeenSet;
 
                     /**
-                     * End time offset of a recognition segment in seconds.
+                     * End time offset of a recognized segment, in seconds.
                      */
                     double m_endTimeOffset;
                     bool m_endTimeOffsetHasBeenSet;

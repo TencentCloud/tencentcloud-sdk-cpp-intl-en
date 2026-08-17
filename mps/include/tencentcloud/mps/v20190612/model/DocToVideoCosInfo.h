@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * cos information. Stores user‑provided cos information for saving results
+                * 
                 */
                 class DocToVideoCosInfo : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>cos bucket region</p>
-                     * @return CosBucketRegion <p>cos bucket region</p>
+                     * 获取
+                     * @return CosBucketRegion 
                      * 
                      */
                     std::string GetCosBucketRegion() const;
 
                     /**
-                     * 设置<p>cos bucket region</p>
-                     * @param _cosBucketRegion <p>cos bucket region</p>
+                     * 设置
+                     * @param _cosBucketRegion 
                      * 
                      */
                     void SetCosBucketRegion(const std::string& _cosBucketRegion);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool CosBucketRegionHasBeenSet() const;
 
                     /**
-                     * 获取<p>cos bucket name</p>
-                     * @return CosBucketName <p>cos bucket name</p>
+                     * 获取
+                     * @return CosBucketName 
                      * 
                      */
                     std::string GetCosBucketName() const;
 
                     /**
-                     * 设置<p>cos bucket name</p>
-                     * @param _cosBucketName <p>cos bucket name</p>
+                     * 设置
+                     * @param _cosBucketName 
                      * 
                      */
                     void SetCosBucketName(const std::string& _cosBucketName);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool CosBucketNameHasBeenSet() const;
 
                     /**
-                     * 获取<p>cos bucket path</p>
-                     * @return CosBucketPath <p>cos bucket path</p>
+                     * 获取
+                     * @return CosBucketPath 
                      * 
                      */
                     std::string GetCosBucketPath() const;
 
                     /**
-                     * 设置<p>cos bucket path</p>
-                     * @param _cosBucketPath <p>cos bucket path</p>
+                     * 设置
+                     * @param _cosBucketPath 
                      * 
                      */
                     void SetCosBucketPath(const std::string& _cosBucketPath);
@@ -112,19 +112,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>cos bucket region</p>
+                     * 
                      */
                     std::string m_cosBucketRegion;
                     bool m_cosBucketRegionHasBeenSet;
 
                     /**
-                     * <p>cos bucket name</p>
+                     * 
                      */
                     std::string m_cosBucketName;
                     bool m_cosBucketNameHasBeenSet;
 
                     /**
-                     * <p>cos bucket path</p>
+                     * 
                      */
                     std::string m_cosBucketPath;
                     bool m_cosBucketPathHasBeenSet;

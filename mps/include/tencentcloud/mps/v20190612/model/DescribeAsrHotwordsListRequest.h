@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Paging offset. Default value: 0.
-                     * @return Offset Paging offset. Default value: 0.
+                     * 获取Pagination offset. Default value: 0.
+                     * @return Offset Pagination offset. Default value: 0.
                      * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
-                     * 设置Paging offset. Default value: 0.
-                     * @param _offset Paging offset. Default value: 0.
+                     * 设置Pagination offset. Default value: 0.
+                     * @param _offset Pagination offset. Default value: 0.
                      * 
                      */
                     void SetOffset(const uint64_t& _offset);
@@ -127,11 +127,11 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Hotword lexicon sorting order.
+                     * 获取Hotword lexicon sort order
 
 0: ascending (default)
 1: descending
-                     * @return OrderType Hotword lexicon sorting order.
+                     * @return OrderType Hotword lexicon sort order
 
 0: ascending (default)
 1: descending
@@ -140,11 +140,11 @@ namespace TencentCloud
                     uint64_t GetOrderType() const;
 
                     /**
-                     * 设置Hotword lexicon sorting order.
+                     * 设置Hotword lexicon sort order
 
 0: ascending (default)
 1: descending
-                     * @param _orderType Hotword lexicon sorting order.
+                     * @param _orderType Hotword lexicon sort order
 
 0: ascending (default)
 1: descending
@@ -160,39 +160,39 @@ namespace TencentCloud
                     bool OrderTypeHasBeenSet() const;
 
                     /**
-                     * 获取Sorts hotword lexicons by a specific field. By default, hotword lexicons are sorted by creation time. If an invalid field is used for sorting, the default sorting field applies.
+                     * 获取Sorts by a certain field. By default, sorts by creation time. Using an illegal field is deemed as the default.
 
- - CreateTime: sort by creation time
- - UpdateTime: sort by update time
- - Name: sort by hotword lexicon name
- - WordCount: sort by the number of hotwords
- - HotwordsId: sort by hotword lexicon ID
-                     * @return OrderBy Sorts hotword lexicons by a specific field. By default, hotword lexicons are sorted by creation time. If an invalid field is used for sorting, the default sorting field applies.
+- CreateTime: sort by creation time
+-UpdateTime: Update time sorting
+-Name: Sort by hotword lexicon name.
+- WordCount: sort by the number of hotwords
+- HotwordsId: sort by hotword lexicon ID
+                     * @return OrderBy Sorts by a certain field. By default, sorts by creation time. Using an illegal field is deemed as the default.
 
- - CreateTime: sort by creation time
- - UpdateTime: sort by update time
- - Name: sort by hotword lexicon name
- - WordCount: sort by the number of hotwords
- - HotwordsId: sort by hotword lexicon ID
+- CreateTime: sort by creation time
+-UpdateTime: Update time sorting
+-Name: Sort by hotword lexicon name.
+- WordCount: sort by the number of hotwords
+- HotwordsId: sort by hotword lexicon ID
                      * 
                      */
                     std::string GetOrderBy() const;
 
                     /**
-                     * 设置Sorts hotword lexicons by a specific field. By default, hotword lexicons are sorted by creation time. If an invalid field is used for sorting, the default sorting field applies.
+                     * 设置Sorts by a certain field. By default, sorts by creation time. Using an illegal field is deemed as the default.
 
- - CreateTime: sort by creation time
- - UpdateTime: sort by update time
- - Name: sort by hotword lexicon name
- - WordCount: sort by the number of hotwords
- - HotwordsId: sort by hotword lexicon ID
-                     * @param _orderBy Sorts hotword lexicons by a specific field. By default, hotword lexicons are sorted by creation time. If an invalid field is used for sorting, the default sorting field applies.
+- CreateTime: sort by creation time
+-UpdateTime: Update time sorting
+-Name: Sort by hotword lexicon name.
+- WordCount: sort by the number of hotwords
+- HotwordsId: sort by hotword lexicon ID
+                     * @param _orderBy Sorts by a certain field. By default, sorts by creation time. Using an illegal field is deemed as the default.
 
- - CreateTime: sort by creation time
- - UpdateTime: sort by update time
- - Name: sort by hotword lexicon name
- - WordCount: sort by the number of hotwords
- - HotwordsId: sort by hotword lexicon ID
+- CreateTime: sort by creation time
+-UpdateTime: Update time sorting
+-Name: Sort by hotword lexicon name.
+- WordCount: sort by the number of hotwords
+- HotwordsId: sort by hotword lexicon ID
                      * 
                      */
                     void SetOrderBy(const std::string& _orderBy);
@@ -240,7 +240,7 @@ namespace TencentCloud
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Paging offset. Default value: 0.
+                     * Pagination offset. Default value: 0.
                      */
                     uint64_t m_offset;
                     bool m_offsetHasBeenSet;
@@ -252,7 +252,7 @@ namespace TencentCloud
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Hotword lexicon sorting order.
+                     * Hotword lexicon sort order
 
 0: ascending (default)
 1: descending
@@ -261,13 +261,13 @@ namespace TencentCloud
                     bool m_orderTypeHasBeenSet;
 
                     /**
-                     * Sorts hotword lexicons by a specific field. By default, hotword lexicons are sorted by creation time. If an invalid field is used for sorting, the default sorting field applies.
+                     * Sorts by a certain field. By default, sorts by creation time. Using an illegal field is deemed as the default.
 
- - CreateTime: sort by creation time
- - UpdateTime: sort by update time
- - Name: sort by hotword lexicon name
- - WordCount: sort by the number of hotwords
- - HotwordsId: sort by hotword lexicon ID
+- CreateTime: sort by creation time
+-UpdateTime: Update time sorting
+-Name: Sort by hotword lexicon name.
+- WordCount: sort by the number of hotwords
+- HotwordsId: sort by hotword lexicon ID
                      */
                     std::string m_orderBy;
                     bool m_orderByHasBeenSet;

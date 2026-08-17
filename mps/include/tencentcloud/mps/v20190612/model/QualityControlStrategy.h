@@ -48,18 +48,18 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Policy type. Valid values:
+                     * 获取Policy type. Value:
 - TimeSpotCheck
-                     * @return StrategyType Policy type. Valid values:
+                     * @return StrategyType Policy type. Value:
 - TimeSpotCheck
                      * 
                      */
                     std::string GetStrategyType() const;
 
                     /**
-                     * 设置Policy type. Valid values:
+                     * 设置Policy type. Value:
 - TimeSpotCheck
-                     * @param _strategyType Policy type. Valid values:
+                     * @param _strategyType Policy type. Value:
 - TimeSpotCheck
                      * 
                      */
@@ -96,7 +96,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Policy type. Valid values:
+                     * Policy type. Value:
 - TimeSpotCheck
                      */
                     std::string m_strategyType;

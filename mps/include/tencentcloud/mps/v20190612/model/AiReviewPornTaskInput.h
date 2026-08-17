@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Input parameter type of a porn information detection task during content audit
+                * Content review porn detection task input parameter type
                 */
                 class AiReviewPornTaskInput : public AbstractModel
                 {
@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The ID of a porn detection template.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Definition The ID of a porn detection template.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return Definition 
                      * 
                      */
                     uint64_t GetDefinition() const;
 
                     /**
-                     * 设置The ID of a porn detection template.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _definition The ID of a porn detection template.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _definition 
                      * 
                      */
                     void SetDefinition(const uint64_t& _definition);
@@ -74,8 +70,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * The ID of a porn detection template.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t m_definition;
                     bool m_definitionHasBeenSet;

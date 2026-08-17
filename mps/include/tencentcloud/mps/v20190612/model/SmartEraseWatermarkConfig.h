@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * smart erasure template watermark configuration.
+                * Watermark removal configuration for the smart erasing template.
                 */
                 class SmartEraseWatermarkConfig : public AbstractModel
                 {
@@ -49,43 +49,43 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Specifies the watermark removal method.
-**Auto-Removal:** automatically identifies watermarks in the video using model a and generates a new video after removal. suitable for dynamic watermarks.
-When using automated removal, if you do not specify AutoAreas, the full-screen video will be erased automatically. if AutoAreas is specified, it will change to erase the designated areas.
-**Specified area erasure:** for static watermarks with fixed locations, we recommend you directly specify the erasure area.
-When you choose specified area erasure, import at least one specified region.
+                     * 获取Watermark removal method.
+**Automatic erasing:** Video watermarks are automatically recognized using an AI model and are erased to generate a new video. It applies to dynamic watermarks.
+When using automatic erasing, if AutoAreas is not specified, the full-screen video image area will be erased automatically. If AutoAreas is specified, the specified area will be erased automatically.
+**Specified area erasure:** For static watermarks with a relatively fixed position, we recommend you directly specify the area to erase.
+When you choose specified area erasure, import at least a specified region.
 
--Automated removal.
--Specifies the custom specified area erasure.
-                     * @return WatermarkEraseMethod Specifies the watermark removal method.
-**Auto-Removal:** automatically identifies watermarks in the video using model a and generates a new video after removal. suitable for dynamic watermarks.
-When using automated removal, if you do not specify AutoAreas, the full-screen video will be erased automatically. if AutoAreas is specified, it will change to erase the designated areas.
-**Specified area erasure:** for static watermarks with fixed locations, we recommend you directly specify the erasure area.
-When you choose specified area erasure, import at least one specified region.
+-. auto: automatic removal
+- custom: specified area erasing.
+                     * @return WatermarkEraseMethod Watermark removal method.
+**Automatic erasing:** Video watermarks are automatically recognized using an AI model and are erased to generate a new video. It applies to dynamic watermarks.
+When using automatic erasing, if AutoAreas is not specified, the full-screen video image area will be erased automatically. If AutoAreas is specified, the specified area will be erased automatically.
+**Specified area erasure:** For static watermarks with a relatively fixed position, we recommend you directly specify the area to erase.
+When you choose specified area erasure, import at least a specified region.
 
--Automated removal.
--Specifies the custom specified area erasure.
+-. auto: automatic removal
+- custom: specified area erasing.
                      * 
                      */
                     std::string GetWatermarkEraseMethod() const;
 
                     /**
-                     * 设置Specifies the watermark removal method.
-**Auto-Removal:** automatically identifies watermarks in the video using model a and generates a new video after removal. suitable for dynamic watermarks.
-When using automated removal, if you do not specify AutoAreas, the full-screen video will be erased automatically. if AutoAreas is specified, it will change to erase the designated areas.
-**Specified area erasure:** for static watermarks with fixed locations, we recommend you directly specify the erasure area.
-When you choose specified area erasure, import at least one specified region.
+                     * 设置Watermark removal method.
+**Automatic erasing:** Video watermarks are automatically recognized using an AI model and are erased to generate a new video. It applies to dynamic watermarks.
+When using automatic erasing, if AutoAreas is not specified, the full-screen video image area will be erased automatically. If AutoAreas is specified, the specified area will be erased automatically.
+**Specified area erasure:** For static watermarks with a relatively fixed position, we recommend you directly specify the area to erase.
+When you choose specified area erasure, import at least a specified region.
 
--Automated removal.
--Specifies the custom specified area erasure.
-                     * @param _watermarkEraseMethod Specifies the watermark removal method.
-**Auto-Removal:** automatically identifies watermarks in the video using model a and generates a new video after removal. suitable for dynamic watermarks.
-When using automated removal, if you do not specify AutoAreas, the full-screen video will be erased automatically. if AutoAreas is specified, it will change to erase the designated areas.
-**Specified area erasure:** for static watermarks with fixed locations, we recommend you directly specify the erasure area.
-When you choose specified area erasure, import at least one specified region.
+-. auto: automatic removal
+- custom: specified area erasing.
+                     * @param _watermarkEraseMethod Watermark removal method.
+**Automatic erasing:** Video watermarks are automatically recognized using an AI model and are erased to generate a new video. It applies to dynamic watermarks.
+When using automatic erasing, if AutoAreas is not specified, the full-screen video image area will be erased automatically. If AutoAreas is specified, the specified area will be erased automatically.
+**Specified area erasure:** For static watermarks with a relatively fixed position, we recommend you directly specify the area to erase.
+When you choose specified area erasure, import at least a specified region.
 
--Automated removal.
--Specifies the custom specified area erasure.
+-. auto: automatic removal
+- custom: specified area erasing.
                      * 
                      */
                     void SetWatermarkEraseMethod(const std::string& _watermarkEraseMethod);
@@ -98,35 +98,31 @@ When you choose specified area erasure, import at least one specified region.
                     bool WatermarkEraseMethodHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the watermark removal model.
-Basic version: average effect, cost-effective, suitable for videos with clean backgrounds or animations.
-Advanced edition: better effectiveness, suitable for mini-drama and reality style video.
-**Supported values**:
-- basic
-- advanced
-                     * @return WatermarkModel Specifies the watermark removal model.
-Basic version: average effect, cost-effective, suitable for videos with clean backgrounds or animations.
-Advanced edition: better effectiveness, suitable for mini-drama and reality style video.
-**Supported values**:
-- basic
-- advanced
+                     * 获取Watermark removal model.
+Basic Edition: Provides average effects and high cost performance. Suitable for animations or videos with clean backgrounds.
+Advanced edition: Better effectiveness, suitable for reality style videos such as short drama.
+-.
+- advanced: Advanced Edition.
+                     * @return WatermarkModel Watermark removal model.
+Basic Edition: Provides average effects and high cost performance. Suitable for animations or videos with clean backgrounds.
+Advanced edition: Better effectiveness, suitable for reality style videos such as short drama.
+-.
+- advanced: Advanced Edition.
                      * 
                      */
                     std::string GetWatermarkModel() const;
 
                     /**
-                     * 设置Specifies the watermark removal model.
-Basic version: average effect, cost-effective, suitable for videos with clean backgrounds or animations.
-Advanced edition: better effectiveness, suitable for mini-drama and reality style video.
-**Supported values**:
-- basic
-- advanced
-                     * @param _watermarkModel Specifies the watermark removal model.
-Basic version: average effect, cost-effective, suitable for videos with clean backgrounds or animations.
-Advanced edition: better effectiveness, suitable for mini-drama and reality style video.
-**Supported values**:
-- basic
-- advanced
+                     * 设置Watermark removal model.
+Basic Edition: Provides average effects and high cost performance. Suitable for animations or videos with clean backgrounds.
+Advanced edition: Better effectiveness, suitable for reality style videos such as short drama.
+-.
+- advanced: Advanced Edition.
+                     * @param _watermarkModel Watermark removal model.
+Basic Edition: Provides average effects and high cost performance. Suitable for animations or videos with clean backgrounds.
+Advanced edition: Better effectiveness, suitable for reality style videos such as short drama.
+-.
+- advanced: Advanced Edition.
                      * 
                      */
                     void SetWatermarkModel(const std::string& _watermarkModel);
@@ -139,23 +135,23 @@ Advanced edition: better effectiveness, suitable for mini-drama and reality styl
                     bool WatermarkModelHasBeenSet() const;
 
                     /**
-                     * 获取Automatically erase the custom region.
-Automatically detects and erases the targeted removal in the specified region using the AI model.
-Note that this parameter will not take effect when the removal method is custom. to modify the template, input [] for the clean-up region. if not provided, the template region information remains unchanged.
-                     * @return AutoAreas Automatically erase the custom region.
-Automatically detects and erases the targeted removal in the specified region using the AI model.
-Note that this parameter will not take effect when the removal method is custom. to modify the template, input [] for the clean-up region. if not provided, the template region information remains unchanged.
+                     * 获取Custom area for automatic erasing.
+For the specified area, AI models are used to automatically detect and erase the target objects.
+Note: When the erasing method is set to custom, this parameter is invalid. When a template is modified, input [] for the erasing area; if this parameter is unspecified, the template area information will remain unchanged.
+                     * @return AutoAreas Custom area for automatic erasing.
+For the specified area, AI models are used to automatically detect and erase the target objects.
+Note: When the erasing method is set to custom, this parameter is invalid. When a template is modified, input [] for the erasing area; if this parameter is unspecified, the template area information will remain unchanged.
                      * 
                      */
                     std::vector<EraseArea> GetAutoAreas() const;
 
                     /**
-                     * 设置Automatically erase the custom region.
-Automatically detects and erases the targeted removal in the specified region using the AI model.
-Note that this parameter will not take effect when the removal method is custom. to modify the template, input [] for the clean-up region. if not provided, the template region information remains unchanged.
-                     * @param _autoAreas Automatically erase the custom region.
-Automatically detects and erases the targeted removal in the specified region using the AI model.
-Note that this parameter will not take effect when the removal method is custom. to modify the template, input [] for the clean-up region. if not provided, the template region information remains unchanged.
+                     * 设置Custom area for automatic erasing.
+For the specified area, AI models are used to automatically detect and erase the target objects.
+Note: When the erasing method is set to custom, this parameter is invalid. When a template is modified, input [] for the erasing area; if this parameter is unspecified, the template area information will remain unchanged.
+                     * @param _autoAreas Custom area for automatic erasing.
+For the specified area, AI models are used to automatically detect and erase the target objects.
+Note: When the erasing method is set to custom, this parameter is invalid. When a template is modified, input [] for the erasing area; if this parameter is unspecified, the template area information will remain unchanged.
                      * 
                      */
                     void SetAutoAreas(const std::vector<EraseArea>& _autoAreas);
@@ -168,23 +164,23 @@ Note that this parameter will not take effect when the removal method is custom.
                     bool AutoAreasHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the removal of a custom region.
-Specifies to directly perform removal without detection and recognition within a selected time range for the specified region.
-Note: when modifying the template, pass [] to clear the region. the template region information remains unchanged if not passed.
-                     * @return CustomAreas Specifies the removal of a custom region.
-Specifies to directly perform removal without detection and recognition within a selected time range for the specified region.
-Note: when modifying the template, pass [] to clear the region. the template region information remains unchanged if not passed.
+                     * 获取Specify the custom region for erasing.
+For the specified area, erase the target objects directly without detection and recognition within a selected time period.
+Note: When a template is modified, input [] for the erasing area; if this parameter is unspecified, the template area information will remain unchanged.
+                     * @return CustomAreas Specify the custom region for erasing.
+For the specified area, erase the target objects directly without detection and recognition within a selected time period.
+Note: When a template is modified, input [] for the erasing area; if this parameter is unspecified, the template area information will remain unchanged.
                      * 
                      */
                     std::vector<EraseTimeArea> GetCustomAreas() const;
 
                     /**
-                     * 设置Specifies the removal of a custom region.
-Specifies to directly perform removal without detection and recognition within a selected time range for the specified region.
-Note: when modifying the template, pass [] to clear the region. the template region information remains unchanged if not passed.
-                     * @param _customAreas Specifies the removal of a custom region.
-Specifies to directly perform removal without detection and recognition within a selected time range for the specified region.
-Note: when modifying the template, pass [] to clear the region. the template region information remains unchanged if not passed.
+                     * 设置Specify the custom region for erasing.
+For the specified area, erase the target objects directly without detection and recognition within a selected time period.
+Note: When a template is modified, input [] for the erasing area; if this parameter is unspecified, the template area information will remain unchanged.
+                     * @param _customAreas Specify the custom region for erasing.
+For the specified area, erase the target objects directly without detection and recognition within a selected time period.
+Note: When a template is modified, input [] for the erasing area; if this parameter is unspecified, the template area information will remain unchanged.
                      * 
                      */
                     void SetCustomAreas(const std::vector<EraseTimeArea>& _customAreas);
@@ -199,41 +195,40 @@ Note: when modifying the template, pass [] to clear the region. the template reg
                 private:
 
                     /**
-                     * Specifies the watermark removal method.
-**Auto-Removal:** automatically identifies watermarks in the video using model a and generates a new video after removal. suitable for dynamic watermarks.
-When using automated removal, if you do not specify AutoAreas, the full-screen video will be erased automatically. if AutoAreas is specified, it will change to erase the designated areas.
-**Specified area erasure:** for static watermarks with fixed locations, we recommend you directly specify the erasure area.
-When you choose specified area erasure, import at least one specified region.
+                     * Watermark removal method.
+**Automatic erasing:** Video watermarks are automatically recognized using an AI model and are erased to generate a new video. It applies to dynamic watermarks.
+When using automatic erasing, if AutoAreas is not specified, the full-screen video image area will be erased automatically. If AutoAreas is specified, the specified area will be erased automatically.
+**Specified area erasure:** For static watermarks with a relatively fixed position, we recommend you directly specify the area to erase.
+When you choose specified area erasure, import at least a specified region.
 
--Automated removal.
--Specifies the custom specified area erasure.
+-. auto: automatic removal
+- custom: specified area erasing.
                      */
                     std::string m_watermarkEraseMethod;
                     bool m_watermarkEraseMethodHasBeenSet;
 
                     /**
-                     * Specifies the watermark removal model.
-Basic version: average effect, cost-effective, suitable for videos with clean backgrounds or animations.
-Advanced edition: better effectiveness, suitable for mini-drama and reality style video.
-**Supported values**:
-- basic
-- advanced
+                     * Watermark removal model.
+Basic Edition: Provides average effects and high cost performance. Suitable for animations or videos with clean backgrounds.
+Advanced edition: Better effectiveness, suitable for reality style videos such as short drama.
+-.
+- advanced: Advanced Edition.
                      */
                     std::string m_watermarkModel;
                     bool m_watermarkModelHasBeenSet;
 
                     /**
-                     * Automatically erase the custom region.
-Automatically detects and erases the targeted removal in the specified region using the AI model.
-Note that this parameter will not take effect when the removal method is custom. to modify the template, input [] for the clean-up region. if not provided, the template region information remains unchanged.
+                     * Custom area for automatic erasing.
+For the specified area, AI models are used to automatically detect and erase the target objects.
+Note: When the erasing method is set to custom, this parameter is invalid. When a template is modified, input [] for the erasing area; if this parameter is unspecified, the template area information will remain unchanged.
                      */
                     std::vector<EraseArea> m_autoAreas;
                     bool m_autoAreasHasBeenSet;
 
                     /**
-                     * Specifies the removal of a custom region.
-Specifies to directly perform removal without detection and recognition within a selected time range for the specified region.
-Note: when modifying the template, pass [] to clear the region. the template region information remains unchanged if not passed.
+                     * Specify the custom region for erasing.
+For the specified area, erase the target objects directly without detection and recognition within a selected time period.
+Note: When a template is modified, input [] for the erasing area; if this parameter is unspecified, the template area information will remain unchanged.
                      */
                     std::vector<EraseTimeArea> m_customAreas;
                     bool m_customAreasHasBeenSet;

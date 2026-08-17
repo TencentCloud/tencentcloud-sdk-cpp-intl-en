@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Control parameter of a face recognition task
+                * Face Recognition Task Control Parameter
                 */
                 class FaceConfigureInfoForUpdate : public AbstractModel
                 {
@@ -47,23 +47,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Switch of a face recognition task. Valid values:
-<li>ON: Enables an intelligent face recognition task;</li>
-<li>OFF: Disables an intelligent face recognition task.</li>
-                     * @return Switch Switch of a face recognition task. Valid values:
-<li>ON: Enables an intelligent face recognition task;</li>
-<li>OFF: Disables an intelligent face recognition task.</li>
+                     * 获取Face Recognition task switch. Valid values:
+<li>ON: Enable intelligent face recognition task.</li>
+<li>OFF: Disables the intelligent face recognition task.</li>
+                     * @return Switch Face Recognition task switch. Valid values:
+<li>ON: Enable intelligent face recognition task.</li>
+<li>OFF: Disables the intelligent face recognition task.</li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Switch of a face recognition task. Valid values:
-<li>ON: Enables an intelligent face recognition task;</li>
-<li>OFF: Disables an intelligent face recognition task.</li>
-                     * @param _switch Switch of a face recognition task. Valid values:
-<li>ON: Enables an intelligent face recognition task;</li>
-<li>OFF: Disables an intelligent face recognition task.</li>
+                     * 设置Face Recognition task switch. Valid values:
+<li>ON: Enable intelligent face recognition task.</li>
+<li>OFF: Disables the intelligent face recognition task.</li>
+                     * @param _switch Face Recognition task switch. Valid values:
+<li>ON: Enable intelligent face recognition task.</li>
+<li>OFF: Disables the intelligent face recognition task.</li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -76,15 +76,15 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取Face recognition filter score. If this score is reached or exceeded, a recognition result will be returned. Value range: 0-100.
-                     * @return Score Face recognition filter score. If this score is reached or exceeded, a recognition result will be returned. Value range: 0-100.
+                     * 获取Face recognition filter score. Returns the recognition result when the recognition result reaches this score or higher. Value ranges from 0 to 100.
+                     * @return Score Face recognition filter score. Returns the recognition result when the recognition result reaches this score or higher. Value ranges from 0 to 100.
                      * 
                      */
                     double GetScore() const;
 
                     /**
-                     * 设置Face recognition filter score. If this score is reached or exceeded, a recognition result will be returned. Value range: 0-100.
-                     * @param _score Face recognition filter score. If this score is reached or exceeded, a recognition result will be returned. Value range: 0-100.
+                     * 设置Face recognition filter score. Returns the recognition result when the recognition result reaches this score or higher. Value ranges from 0 to 100.
+                     * @param _score Face recognition filter score. Returns the recognition result when the recognition result reaches this score or higher. Value ranges from 0 to 100.
                      * 
                      */
                     void SetScore(const double& _score);
@@ -97,27 +97,27 @@ namespace TencentCloud
                     bool ScoreHasBeenSet() const;
 
                     /**
-                     * 获取The default face filter labels, which specify the types of faces to return. If this parameter is left empty, the detection results for all labels are returned. Valid values:
-<li>entertainment (people in the entertainment industry)</li>
-<li>sport (sports celebrities)</li>
-<li>politician</li>
-                     * @return DefaultLibraryLabelSet The default face filter labels, which specify the types of faces to return. If this parameter is left empty, the detection results for all labels are returned. Valid values:
-<li>entertainment (people in the entertainment industry)</li>
-<li>sport (sports celebrities)</li>
-<li>politician</li>
+                     * 获取Default character filter tag. Specify the tag of the default character to be returned. If left blank or empty, all default character results will be returned. Tag value range:
+<li>entertainment: entertainment star;</li>
+<li>Sport: sports celebrity;</li>
+<li>politician: sensitive person.</li>
+                     * @return DefaultLibraryLabelSet Default character filter tag. Specify the tag of the default character to be returned. If left blank or empty, all default character results will be returned. Tag value range:
+<li>entertainment: entertainment star;</li>
+<li>Sport: sports celebrity;</li>
+<li>politician: sensitive person.</li>
                      * 
                      */
                     std::vector<std::string> GetDefaultLibraryLabelSet() const;
 
                     /**
-                     * 设置The default face filter labels, which specify the types of faces to return. If this parameter is left empty, the detection results for all labels are returned. Valid values:
-<li>entertainment (people in the entertainment industry)</li>
-<li>sport (sports celebrities)</li>
-<li>politician</li>
-                     * @param _defaultLibraryLabelSet The default face filter labels, which specify the types of faces to return. If this parameter is left empty, the detection results for all labels are returned. Valid values:
-<li>entertainment (people in the entertainment industry)</li>
-<li>sport (sports celebrities)</li>
-<li>politician</li>
+                     * 设置Default character filter tag. Specify the tag of the default character to be returned. If left blank or empty, all default character results will be returned. Tag value range:
+<li>entertainment: entertainment star;</li>
+<li>Sport: sports celebrity;</li>
+<li>politician: sensitive person.</li>
+                     * @param _defaultLibraryLabelSet Default character filter tag. Specify the tag of the default character to be returned. If left blank or empty, all default character results will be returned. Tag value range:
+<li>entertainment: entertainment star;</li>
+<li>Sport: sports celebrity;</li>
+<li>politician: sensitive person.</li>
                      * 
                      */
                     void SetDefaultLibraryLabelSet(const std::vector<std::string>& _defaultLibraryLabelSet);
@@ -130,19 +130,19 @@ namespace TencentCloud
                     bool DefaultLibraryLabelSetHasBeenSet() const;
 
                     /**
-                     * 获取Custom face tags for filter, which specify the face recognition results to return. If this parameter is not specified or left empty, the recognition results for all custom face tags are returned.
-Up to 100 tags are allowed, each containing no more than 16 characters.
-                     * @return UserDefineLibraryLabelSet Custom face tags for filter, which specify the face recognition results to return. If this parameter is not specified or left empty, the recognition results for all custom face tags are returned.
-Up to 100 tags are allowed, each containing no more than 16 characters.
+                     * 获取User-defined character filter tag. Specify the tag of the user-defined character to return. If left blank or empty, all custom character results are returned.
+The number of tags is up to 100, and each tag can have up to 16 characters.
+                     * @return UserDefineLibraryLabelSet User-defined character filter tag. Specify the tag of the user-defined character to return. If left blank or empty, all custom character results are returned.
+The number of tags is up to 100, and each tag can have up to 16 characters.
                      * 
                      */
                     std::vector<std::string> GetUserDefineLibraryLabelSet() const;
 
                     /**
-                     * 设置Custom face tags for filter, which specify the face recognition results to return. If this parameter is not specified or left empty, the recognition results for all custom face tags are returned.
-Up to 100 tags are allowed, each containing no more than 16 characters.
-                     * @param _userDefineLibraryLabelSet Custom face tags for filter, which specify the face recognition results to return. If this parameter is not specified or left empty, the recognition results for all custom face tags are returned.
-Up to 100 tags are allowed, each containing no more than 16 characters.
+                     * 设置User-defined character filter tag. Specify the tag of the user-defined character to return. If left blank or empty, all custom character results are returned.
+The number of tags is up to 100, and each tag can have up to 16 characters.
+                     * @param _userDefineLibraryLabelSet User-defined character filter tag. Specify the tag of the user-defined character to return. If left blank or empty, all custom character results are returned.
+The number of tags is up to 100, and each tag can have up to 16 characters.
                      * 
                      */
                     void SetUserDefineLibraryLabelSet(const std::vector<std::string>& _userDefineLibraryLabelSet);
@@ -155,27 +155,27 @@ Up to 100 tags are allowed, each containing no more than 16 characters.
                     bool UserDefineLibraryLabelSetHasBeenSet() const;
 
                     /**
-                     * 获取Figure library. Valid values:
-<li>Default: Default figure library;</li>
-<li>UserDefine: Custom figure library.</li>
-<li>All: Both default and custom figure libraries will be used.</li>
-                     * @return FaceLibrary Figure library. Valid values:
-<li>Default: Default figure library;</li>
-<li>UserDefine: Custom figure library.</li>
-<li>All: Both default and custom figure libraries will be used.</li>
+                     * 获取Figure library selection. Available values:
+<li>Default: Use default character library;</li>
+<li>UserDefine: Use the user-defined character library.</li>
+<li>All: Use default character library and user-defined character library simultaneously.</li>
+                     * @return FaceLibrary Figure library selection. Available values:
+<li>Default: Use default character library;</li>
+<li>UserDefine: Use the user-defined character library.</li>
+<li>All: Use default character library and user-defined character library simultaneously.</li>
                      * 
                      */
                     std::string GetFaceLibrary() const;
 
                     /**
-                     * 设置Figure library. Valid values:
-<li>Default: Default figure library;</li>
-<li>UserDefine: Custom figure library.</li>
-<li>All: Both default and custom figure libraries will be used.</li>
-                     * @param _faceLibrary Figure library. Valid values:
-<li>Default: Default figure library;</li>
-<li>UserDefine: Custom figure library.</li>
-<li>All: Both default and custom figure libraries will be used.</li>
+                     * 设置Figure library selection. Available values:
+<li>Default: Use default character library;</li>
+<li>UserDefine: Use the user-defined character library.</li>
+<li>All: Use default character library and user-defined character library simultaneously.</li>
+                     * @param _faceLibrary Figure library selection. Available values:
+<li>Default: Use default character library;</li>
+<li>UserDefine: Use the user-defined character library.</li>
+<li>All: Use default character library and user-defined character library simultaneously.</li>
                      * 
                      */
                     void SetFaceLibrary(const std::string& _faceLibrary);
@@ -190,40 +190,40 @@ Up to 100 tags are allowed, each containing no more than 16 characters.
                 private:
 
                     /**
-                     * Switch of a face recognition task. Valid values:
-<li>ON: Enables an intelligent face recognition task;</li>
-<li>OFF: Disables an intelligent face recognition task.</li>
+                     * Face Recognition task switch. Valid values:
+<li>ON: Enable intelligent face recognition task.</li>
+<li>OFF: Disables the intelligent face recognition task.</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * Face recognition filter score. If this score is reached or exceeded, a recognition result will be returned. Value range: 0-100.
+                     * Face recognition filter score. Returns the recognition result when the recognition result reaches this score or higher. Value ranges from 0 to 100.
                      */
                     double m_score;
                     bool m_scoreHasBeenSet;
 
                     /**
-                     * The default face filter labels, which specify the types of faces to return. If this parameter is left empty, the detection results for all labels are returned. Valid values:
-<li>entertainment (people in the entertainment industry)</li>
-<li>sport (sports celebrities)</li>
-<li>politician</li>
+                     * Default character filter tag. Specify the tag of the default character to be returned. If left blank or empty, all default character results will be returned. Tag value range:
+<li>entertainment: entertainment star;</li>
+<li>Sport: sports celebrity;</li>
+<li>politician: sensitive person.</li>
                      */
                     std::vector<std::string> m_defaultLibraryLabelSet;
                     bool m_defaultLibraryLabelSetHasBeenSet;
 
                     /**
-                     * Custom face tags for filter, which specify the face recognition results to return. If this parameter is not specified or left empty, the recognition results for all custom face tags are returned.
-Up to 100 tags are allowed, each containing no more than 16 characters.
+                     * User-defined character filter tag. Specify the tag of the user-defined character to return. If left blank or empty, all custom character results are returned.
+The number of tags is up to 100, and each tag can have up to 16 characters.
                      */
                     std::vector<std::string> m_userDefineLibraryLabelSet;
                     bool m_userDefineLibraryLabelSetHasBeenSet;
 
                     /**
-                     * Figure library. Valid values:
-<li>Default: Default figure library;</li>
-<li>UserDefine: Custom figure library.</li>
-<li>All: Both default and custom figure libraries will be used.</li>
+                     * Figure library selection. Available values:
+<li>Default: Use default character library;</li>
+<li>UserDefine: Use the user-defined character library.</li>
+<li>All: Use default character library and user-defined character library simultaneously.</li>
                      */
                     std::string m_faceLibrary;
                     bool m_faceLibraryHasBeenSet;

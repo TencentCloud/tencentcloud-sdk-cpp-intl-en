@@ -72,10 +72,8 @@ namespace TencentCloud
                     bool TaskStatusHasBeenSet() const;
 
                     /**
-                     * 获取<p>Output url</p>
-Attention: This field may return null, indicating that no valid values can be obtained.
-                     * @return OutputUrl <p>Output url</p>
-Attention: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return OutputUrl 
                      * 
                      */
                     std::string GetOutputUrl() const;
@@ -200,8 +198,7 @@ Attention: This field may return null, indicating that no valid values can be ob
                     bool m_taskStatusHasBeenSet;
 
                     /**
-                     * <p>Output url</p>
-Attention: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string m_outputUrl;
                     bool m_outputUrlHasBeenSet;

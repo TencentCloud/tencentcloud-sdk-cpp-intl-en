@@ -91,15 +91,15 @@ namespace TencentCloud
                     bool ErrCodeHasBeenSet() const;
 
                     /**
-                     * 获取Error message.
-                     * @return Message Error message.
+                     * 获取Error message
+                     * @return Message Error message
                      * 
                      */
                     std::string GetMessage() const;
 
                     /**
-                     * 设置Error message.
-                     * @param _message Error message.
+                     * 设置Error message
+                     * @param _message Error message
                      * 
                      */
                     void SetMessage(const std::string& _message);
@@ -133,19 +133,15 @@ namespace TencentCloud
                     bool InputHasBeenSet() const;
 
                     /**
-                     * 获取Output file for video (audio) recognition.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Output Output file for video (audio) recognition.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return Output 
                      * 
                      */
                     AiAnalysisTaskVideoComprehensionOutput GetOutput() const;
 
                     /**
-                     * 设置Output file for video (audio) recognition.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _output Output file for video (audio) recognition.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _output 
                      * 
                      */
                     void SetOutput(const AiAnalysisTaskVideoComprehensionOutput& _output);
@@ -256,7 +252,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_errCodeHasBeenSet;
 
                     /**
-                     * Error message.
+                     * Error message
                      */
                     std::string m_message;
                     bool m_messageHasBeenSet;
@@ -268,8 +264,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_inputHasBeenSet;
 
                     /**
-                     * Output file for video (audio) recognition.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     AiAnalysisTaskVideoComprehensionOutput m_output;
                     bool m_outputHasBeenSet;

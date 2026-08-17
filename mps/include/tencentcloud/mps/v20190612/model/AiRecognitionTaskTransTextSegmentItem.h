@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * The translated segments.
+                * Translated segment.
                 */
                 class AiRecognitionTaskTransTextSegmentItem : public AbstractModel
                 {

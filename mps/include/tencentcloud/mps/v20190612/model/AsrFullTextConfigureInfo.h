@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Control parameter of a full speech recognition task.
+                * Speech Full-text Recognition Task Control Parameter
                 */
                 class AsrFullTextConfigureInfo : public AbstractModel
                 {
@@ -47,23 +47,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Switch of a full speech recognition task. Valid values:
-<li>ON: Enables an intelligent full speech recognition task;</li>
-<li>OFF: Disables an intelligent full speech recognition task.</li>
-                     * @return Switch Switch of a full speech recognition task. Valid values:
-<li>ON: Enables an intelligent full speech recognition task;</li>
-<li>OFF: Disables an intelligent full speech recognition task.</li>
+                     * 获取Voice full-text recognition task switch, available values:
+<li>ON: Enable intelligent voice full-text recognition task.</li>
+<li>OFF: Disables the intelligent voice full-text recognition task.</li>
+                     * @return Switch Voice full-text recognition task switch, available values:
+<li>ON: Enable intelligent voice full-text recognition task.</li>
+<li>OFF: Disables the intelligent voice full-text recognition task.</li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Switch of a full speech recognition task. Valid values:
-<li>ON: Enables an intelligent full speech recognition task;</li>
-<li>OFF: Disables an intelligent full speech recognition task.</li>
-                     * @param _switch Switch of a full speech recognition task. Valid values:
-<li>ON: Enables an intelligent full speech recognition task;</li>
-<li>OFF: Disables an intelligent full speech recognition task.</li>
+                     * 设置Voice full-text recognition task switch, available values:
+<li>ON: Enable intelligent voice full-text recognition task.</li>
+<li>OFF: Disables the intelligent voice full-text recognition task.</li>
+                     * @param _switch Voice full-text recognition task switch, available values:
+<li>ON: Enable intelligent voice full-text recognition task.</li>
+<li>OFF: Disables the intelligent voice full-text recognition task.</li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -76,19 +76,19 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取Format of the generated subtitles file. If this parameter is left empty or an empty string is entered, no subtitles files will be generated. Valid value:
-<li>vtt: Generates a WebVTT subtitles file.</li>
-                     * @return SubtitleFormat Format of the generated subtitles file. If this parameter is left empty or an empty string is entered, no subtitles files will be generated. Valid value:
-<li>vtt: Generates a WebVTT subtitles file.</li>
+                     * 获取Generated subtitle file format. Leaving it as an empty string or not filling it in means no subtitle file will be generated. Available values:
+<li>vtt: Generate a WebVTT subtitle file.</li>
+                     * @return SubtitleFormat Generated subtitle file format. Leaving it as an empty string or not filling it in means no subtitle file will be generated. Available values:
+<li>vtt: Generate a WebVTT subtitle file.</li>
                      * 
                      */
                     std::string GetSubtitleFormat() const;
 
                     /**
-                     * 设置Format of the generated subtitles file. If this parameter is left empty or an empty string is entered, no subtitles files will be generated. Valid value:
-<li>vtt: Generates a WebVTT subtitles file.</li>
-                     * @param _subtitleFormat Format of the generated subtitles file. If this parameter is left empty or an empty string is entered, no subtitles files will be generated. Valid value:
-<li>vtt: Generates a WebVTT subtitles file.</li>
+                     * 设置Generated subtitle file format. Leaving it as an empty string or not filling it in means no subtitle file will be generated. Available values:
+<li>vtt: Generate a WebVTT subtitle file.</li>
+                     * @param _subtitleFormat Generated subtitle file format. Leaving it as an empty string or not filling it in means no subtitle file will be generated. Available values:
+<li>vtt: Generate a WebVTT subtitle file.</li>
                      * 
                      */
                     void SetSubtitleFormat(const std::string& _subtitleFormat);
@@ -100,22 +100,49 @@ namespace TencentCloud
                      */
                     bool SubtitleFormatHasBeenSet() const;
 
+                    /**
+                     * 获取Video source language.
+                     * @return SourceLanguage Video source language.
+                     * 
+                     */
+                    std::string GetSourceLanguage() const;
+
+                    /**
+                     * 设置Video source language.
+                     * @param _sourceLanguage Video source language.
+                     * 
+                     */
+                    void SetSourceLanguage(const std::string& _sourceLanguage);
+
+                    /**
+                     * 判断参数 SourceLanguage 是否已赋值
+                     * @return SourceLanguage 是否已赋值
+                     * 
+                     */
+                    bool SourceLanguageHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Switch of a full speech recognition task. Valid values:
-<li>ON: Enables an intelligent full speech recognition task;</li>
-<li>OFF: Disables an intelligent full speech recognition task.</li>
+                     * Voice full-text recognition task switch, available values:
+<li>ON: Enable intelligent voice full-text recognition task.</li>
+<li>OFF: Disables the intelligent voice full-text recognition task.</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * Format of the generated subtitles file. If this parameter is left empty or an empty string is entered, no subtitles files will be generated. Valid value:
-<li>vtt: Generates a WebVTT subtitles file.</li>
+                     * Generated subtitle file format. Leaving it as an empty string or not filling it in means no subtitle file will be generated. Available values:
+<li>vtt: Generate a WebVTT subtitle file.</li>
                      */
                     std::string m_subtitleFormat;
                     bool m_subtitleFormatHasBeenSet;
+
+                    /**
+                     * Video source language.
+                     */
+                    std::string m_sourceLanguage;
+                    bool m_sourceLanguageHasBeenSet;
 
                 };
             }

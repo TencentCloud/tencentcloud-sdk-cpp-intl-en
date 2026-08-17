@@ -49,15 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取List of full speech recognition segments.
-                     * @return SegmentSet List of full speech recognition segments.
+                     * 获取Full speech recognition segment list.
+                     * @return SegmentSet Full speech recognition segment list.
                      * 
                      */
                     std::vector<AiRecognitionTaskAsrFullTextSegmentItem> GetSegmentSet() const;
 
                     /**
-                     * 设置List of full speech recognition segments.
-                     * @param _segmentSet List of full speech recognition segments.
+                     * 设置Full speech recognition segment list.
+                     * @param _segmentSet Full speech recognition segment list.
                      * 
                      */
                     void SetSegmentSet(const std::vector<AiRecognitionTaskAsrFullTextSegmentItem>& _segmentSet);
@@ -70,15 +70,15 @@ namespace TencentCloud
                     bool SegmentSetHasBeenSet() const;
 
                     /**
-                     * 获取Subtitles file address.
-                     * @return SubtitlePath Subtitles file address.
+                     * 获取Subtitle file path.
+                     * @return SubtitlePath Subtitle file path.
                      * 
                      */
                     std::string GetSubtitlePath() const;
 
                     /**
-                     * 设置Subtitles file address.
-                     * @param _subtitlePath Subtitles file address.
+                     * 设置Subtitle file path.
+                     * @param _subtitlePath Subtitle file path.
                      * 
                      */
                     void SetSubtitlePath(const std::string& _subtitlePath);
@@ -91,15 +91,15 @@ namespace TencentCloud
                     bool SubtitlePathHasBeenSet() const;
 
                     /**
-                     * 获取Subtitles file storage location.
-                     * @return OutputStorage Subtitles file storage location.
+                     * 获取Storage location of the subtitle file.
+                     * @return OutputStorage Storage location of the subtitle file.
                      * @deprecated
                      */
                     TaskOutputStorage GetOutputStorage() const;
 
                     /**
-                     * 设置Subtitles file storage location.
-                     * @param _outputStorage Subtitles file storage location.
+                     * 设置Storage location of the subtitle file.
+                     * @param _outputStorage Storage location of the subtitle file.
                      * @deprecated
                      */
                     void SetOutputStorage(const TaskOutputStorage& _outputStorage);
@@ -114,19 +114,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * List of full speech recognition segments.
+                     * Full speech recognition segment list.
                      */
                     std::vector<AiRecognitionTaskAsrFullTextSegmentItem> m_segmentSet;
                     bool m_segmentSetHasBeenSet;
 
                     /**
-                     * Subtitles file address.
+                     * Subtitle file path.
                      */
                     std::string m_subtitlePath;
                     bool m_subtitlePathHasBeenSet;
 
                     /**
-                     * Subtitles file storage location.
+                     * Storage location of the subtitle file.
                      */
                     TaskOutputStorage m_outputStorage;
                     bool m_outputStorageHasBeenSet;

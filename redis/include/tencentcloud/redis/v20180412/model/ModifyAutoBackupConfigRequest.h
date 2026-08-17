@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool AutoBackupTypeHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the retention days of full backup files. unit: day.
-                     * @return BackupStorageDays Specifies the retention days of full backup files. unit: day.
+                     * 获取Retention days for full backup files. Only support setting to 7, unit: day. If needed for longer period, please submit a ticket (https://console.cloud.tencent.com/workorder/category) to apply.
+                     * @return BackupStorageDays Retention days for full backup files. Only support setting to 7, unit: day. If needed for longer period, please submit a ticket (https://console.cloud.tencent.com/workorder/category) to apply.
                      * 
                      */
                     int64_t GetBackupStorageDays() const;
 
                     /**
-                     * 设置Specifies the retention days of full backup files. unit: day.
-                     * @param _backupStorageDays Specifies the retention days of full backup files. unit: day.
+                     * 设置Retention days for full backup files. Only support setting to 7, unit: day. If needed for longer period, please submit a ticket (https://console.cloud.tencent.com/workorder/category) to apply.
+                     * @param _backupStorageDays Retention days for full backup files. Only support setting to 7, unit: day. If needed for longer period, please submit a ticket (https://console.cloud.tencent.com/workorder/category) to apply.
                      * 
                      */
                     void SetBackupStorageDays(const int64_t& _backupStorageDays);
@@ -179,7 +179,7 @@ namespace TencentCloud
                     bool m_autoBackupTypeHasBeenSet;
 
                     /**
-                     * Specifies the retention days of full backup files. unit: day.
+                     * Retention days for full backup files. Only support setting to 7, unit: day. If needed for longer period, please submit a ticket (https://console.cloud.tencent.com/workorder/category) to apply.
                      */
                     int64_t m_backupStorageDays;
                     bool m_backupStorageDaysHasBeenSet;

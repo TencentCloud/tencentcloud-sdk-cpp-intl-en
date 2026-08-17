@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * The output of an intelligent highlight generation task.
+                * Intelligent highlight result.
                 */
                 class AiAnalysisTaskHighlightOutput : public AbstractModel
                 {
@@ -49,15 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取A list of the highlight segments generated.
-                     * @return HighlightSet A list of the highlight segments generated.
+                     * 获取Intelligent video highlight list.
+                     * @return HighlightSet Intelligent video highlight list.
                      * 
                      */
                     std::vector<MediaAiAnalysisHighlightItem> GetHighlightSet() const;
 
                     /**
-                     * 设置A list of the highlight segments generated.
-                     * @param _highlightSet A list of the highlight segments generated.
+                     * 设置Intelligent video highlight list.
+                     * @param _highlightSet Intelligent video highlight list.
                      * 
                      */
                     void SetHighlightSet(const std::vector<MediaAiAnalysisHighlightItem>& _highlightSet);
@@ -70,19 +70,15 @@ namespace TencentCloud
                     bool HighlightSetHasBeenSet() const;
 
                     /**
-                     * 获取The storage location of the highlight segments.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return OutputStorage The storage location of the highlight segments.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return OutputStorage 
                      * 
                      */
                     TaskOutputStorage GetOutputStorage() const;
 
                     /**
-                     * 设置The storage location of the highlight segments.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _outputStorage The storage location of the highlight segments.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _outputStorage 
                      * 
                      */
                     void SetOutputStorage(const TaskOutputStorage& _outputStorage);
@@ -97,14 +93,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * A list of the highlight segments generated.
+                     * Intelligent video highlight list.
                      */
                     std::vector<MediaAiAnalysisHighlightItem> m_highlightSet;
                     bool m_highlightSetHasBeenSet;
 
                     /**
-                     * The storage location of the highlight segments.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     TaskOutputStorage m_outputStorage;
                     bool m_outputStorageHasBeenSet;

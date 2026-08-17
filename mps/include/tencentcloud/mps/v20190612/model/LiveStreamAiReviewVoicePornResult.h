@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Result of porn information detection in speech in AI-based live stream content audit
+                * Live stream AI content review sound pornographic result
                 */
                 class LiveStreamAiReviewVoicePornResult : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Start PTS time of a suspected segment in seconds.
-                     * @return StartPtsTime Start PTS time of a suspected segment in seconds.
+                     * 获取Start PTS time of a suspected segment, in seconds.
+                     * @return StartPtsTime Start PTS time of a suspected segment, in seconds.
                      * 
                      */
                     double GetStartPtsTime() const;
 
                     /**
-                     * 设置Start PTS time of a suspected segment in seconds.
-                     * @param _startPtsTime Start PTS time of a suspected segment in seconds.
+                     * 设置Start PTS time of a suspected segment, in seconds.
+                     * @param _startPtsTime Start PTS time of a suspected segment, in seconds.
                      * 
                      */
                     void SetStartPtsTime(const double& _startPtsTime);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool StartPtsTimeHasBeenSet() const;
 
                     /**
-                     * 获取End PTS time of a suspected segment in seconds.
-                     * @return EndPtsTime End PTS time of a suspected segment in seconds.
+                     * 获取End PTS time of a suspected segment, in seconds.
+                     * @return EndPtsTime End PTS time of a suspected segment, in seconds.
                      * 
                      */
                     double GetEndPtsTime() const;
 
                     /**
-                     * 设置End PTS time of a suspected segment in seconds.
-                     * @param _endPtsTime End PTS time of a suspected segment in seconds.
+                     * 设置End PTS time of a suspected segment, in seconds.
+                     * @param _endPtsTime End PTS time of a suspected segment, in seconds.
                      * 
                      */
                     void SetEndPtsTime(const double& _endPtsTime);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool EndPtsTimeHasBeenSet() const;
 
                     /**
-                     * 获取Score of a suspected porn segment.
-                     * @return Confidence Score of a suspected porn segment.
+                     * 获取Suspected segment porn score.
+                     * @return Confidence Suspected segment porn score.
                      * 
                      */
                     double GetConfidence() const;
 
                     /**
-                     * 设置Score of a suspected porn segment.
-                     * @param _confidence Score of a suspected porn segment.
+                     * 设置Suspected segment porn score.
+                     * @param _confidence Suspected segment porn score.
                      * 
                      */
                     void SetConfidence(const double& _confidence);
@@ -110,11 +110,11 @@ namespace TencentCloud
                     bool ConfidenceHasBeenSet() const;
 
                     /**
-                     * 获取Suggestion for porn information detection of a suspected segment. Valid values:
+                     * 获取Pornographic result suggestion for suspected segment, value ranges from...to...
 <li>pass</li>
 <li>review</li>
 <li>block</li>
-                     * @return Suggestion Suggestion for porn information detection of a suspected segment. Valid values:
+                     * @return Suggestion Pornographic result suggestion for suspected segment, value ranges from...to...
 <li>pass</li>
 <li>review</li>
 <li>block</li>
@@ -123,11 +123,11 @@ namespace TencentCloud
                     std::string GetSuggestion() const;
 
                     /**
-                     * 设置Suggestion for porn information detection of a suspected segment. Valid values:
+                     * 设置Pornographic result suggestion for suspected segment, value ranges from...to...
 <li>pass</li>
 <li>review</li>
 <li>block</li>
-                     * @param _suggestion Suggestion for porn information detection of a suspected segment. Valid values:
+                     * @param _suggestion Pornographic result suggestion for suspected segment, value ranges from...to...
 <li>pass</li>
 <li>review</li>
 <li>block</li>
@@ -143,19 +143,19 @@ namespace TencentCloud
                     bool SuggestionHasBeenSet() const;
 
                     /**
-                     * 获取Tag of the detected porn information in video. Valid values:
-<li>sexual_moan: Sexual moans.</li>
-                     * @return Label Tag of the detected porn information in video. Valid values:
-<li>sexual_moan: Sexual moans.</li>
+                     * 获取Video porn detection result tag, value ranges from...to...
+<li>sexual_moan: Moan.</li>
+                     * @return Label Video porn detection result tag, value ranges from...to...
+<li>sexual_moan: Moan.</li>
                      * 
                      */
                     std::string GetLabel() const;
 
                     /**
-                     * 设置Tag of the detected porn information in video. Valid values:
-<li>sexual_moan: Sexual moans.</li>
-                     * @param _label Tag of the detected porn information in video. Valid values:
-<li>sexual_moan: Sexual moans.</li>
+                     * 设置Video porn detection result tag, value ranges from...to...
+<li>sexual_moan: Moan.</li>
+                     * @param _label Video porn detection result tag, value ranges from...to...
+<li>sexual_moan: Moan.</li>
                      * 
                      */
                     void SetLabel(const std::string& _label);
@@ -170,25 +170,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Start PTS time of a suspected segment in seconds.
+                     * Start PTS time of a suspected segment, in seconds.
                      */
                     double m_startPtsTime;
                     bool m_startPtsTimeHasBeenSet;
 
                     /**
-                     * End PTS time of a suspected segment in seconds.
+                     * End PTS time of a suspected segment, in seconds.
                      */
                     double m_endPtsTime;
                     bool m_endPtsTimeHasBeenSet;
 
                     /**
-                     * Score of a suspected porn segment.
+                     * Suspected segment porn score.
                      */
                     double m_confidence;
                     bool m_confidenceHasBeenSet;
 
                     /**
-                     * Suggestion for porn information detection of a suspected segment. Valid values:
+                     * Pornographic result suggestion for suspected segment, value ranges from...to...
 <li>pass</li>
 <li>review</li>
 <li>block</li>
@@ -197,8 +197,8 @@ namespace TencentCloud
                     bool m_suggestionHasBeenSet;
 
                     /**
-                     * Tag of the detected porn information in video. Valid values:
-<li>sexual_moan: Sexual moans.</li>
+                     * Video porn detection result tag, value ranges from...to...
+<li>sexual_moan: Moan.</li>
                      */
                     std::string m_label;
                     bool m_labelHasBeenSet;

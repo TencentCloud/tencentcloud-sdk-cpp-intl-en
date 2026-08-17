@@ -48,19 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Conditional judgment information.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return Rules Conditional judgment information.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取
+                     * @return Rules 
                      * 
                      */
                     std::vector<Rules> GetRules() const;
 
                     /**
-                     * 设置Conditional judgment information.
-Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _rules Conditional judgment information.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置
+                     * @param _rules 
                      * 
                      */
                     void SetRules(const std::vector<Rules>& _rules);
@@ -75,8 +71,7 @@ Note: This field may return null, indicating that no valid value can be obtained
                 private:
 
                     /**
-                     * Conditional judgment information.
-Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::vector<Rules> m_rules;
                     bool m_rulesHasBeenSet;

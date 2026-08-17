@@ -118,18 +118,18 @@ namespace TencentCloud
                     bool ShadowWidthUnitHasBeenSet() const;
 
                     /**
-                     * 获取Shadow color. 6-digit base 16 RGB. Black by default if left blank (has set shadow in the current situation).
+                     * 获取Shadow color. 6-digit base 16 RGB. Black by default if left blank (when shadow is set).
 
-                     * @return ShadowColor Shadow color. 6-digit base 16 RGB. Black by default if left blank (has set shadow in the current situation).
+                     * @return ShadowColor Shadow color. 6-digit base 16 RGB. Black by default if left blank (when shadow is set).
 
                      * 
                      */
                     std::string GetShadowColor() const;
 
                     /**
-                     * 设置Shadow color. 6-digit base 16 RGB. Black by default if left blank (has set shadow in the current situation).
+                     * 设置Shadow color. 6-digit base 16 RGB. Black by default if left blank (when shadow is set).
 
-                     * @param _shadowColor Shadow color. 6-digit base 16 RGB. Black by default if left blank (has set shadow in the current situation).
+                     * @param _shadowColor Shadow color. 6-digit base 16 RGB. Black by default if left blank (when shadow is set).
 
                      * 
                      */
@@ -143,18 +143,18 @@ namespace TencentCloud
                     bool ShadowColorHasBeenSet() const;
 
                     /**
-                     * 获取Shadow transparency. The value should be a positive floating-point number in the range of (0, 1]. If this is not specified, the default value is 1, which means completely opaque (with shadow configured).
+                     * 获取Shadow transparency. A positive floating-point number in the range of (0, 1]. By default if left blank, the value is 1, which means completely opaque (with shadow configured).
 
-                     * @return ShadowAlpha Shadow transparency. The value should be a positive floating-point number in the range of (0, 1]. If this is not specified, the default value is 1, which means completely opaque (with shadow configured).
+                     * @return ShadowAlpha Shadow transparency. A positive floating-point number in the range of (0, 1]. By default if left blank, the value is 1, which means completely opaque (with shadow configured).
 
                      * 
                      */
                     double GetShadowAlpha() const;
 
                     /**
-                     * 设置Shadow transparency. The value should be a positive floating-point number in the range of (0, 1]. If this is not specified, the default value is 1, which means completely opaque (with shadow configured).
+                     * 设置Shadow transparency. A positive floating-point number in the range of (0, 1]. By default if left blank, the value is 1, which means completely opaque (with shadow configured).
 
-                     * @param _shadowAlpha Shadow transparency. The value should be a positive floating-point number in the range of (0, 1]. If this is not specified, the default value is 1, which means completely opaque (with shadow configured).
+                     * @param _shadowAlpha Shadow transparency. A positive floating-point number in the range of (0, 1]. By default if left blank, the value is 1, which means completely opaque (with shadow configured).
 
                      * 
                      */
@@ -190,14 +190,14 @@ namespace TencentCloud
                     bool m_shadowWidthUnitHasBeenSet;
 
                     /**
-                     * Shadow color. 6-digit base 16 RGB. Black by default if left blank (has set shadow in the current situation).
+                     * Shadow color. 6-digit base 16 RGB. Black by default if left blank (when shadow is set).
 
                      */
                     std::string m_shadowColor;
                     bool m_shadowColorHasBeenSet;
 
                     /**
-                     * Shadow transparency. The value should be a positive floating-point number in the range of (0, 1]. If this is not specified, the default value is 1, which means completely opaque (with shadow configured).
+                     * Shadow transparency. A positive floating-point number in the range of (0, 1]. By default if left blank, the value is 1, which means completely opaque (with shadow configured).
 
                      */
                     double m_shadowAlpha;

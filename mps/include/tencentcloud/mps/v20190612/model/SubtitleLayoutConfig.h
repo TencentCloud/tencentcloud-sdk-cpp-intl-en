@@ -69,12 +69,12 @@ namespace TencentCloud
 
                     /**
                      * 获取Line spacing. The value should be a positive integer.
--Value range for pixels: [0, 1000].
-- Value range for percentages: [0, 100]. If this is not specified, the default value is 0.
+- Value range for pixels: [0, 1000].
+- Value range for percentages: [0, 100]. If left blank, the default is 0.
 
                      * @return LineSpacing Line spacing. The value should be a positive integer.
--Value range for pixels: [0, 1000].
-- Value range for percentages: [0, 100]. If this is not specified, the default value is 0.
+- Value range for pixels: [0, 1000].
+- Value range for percentages: [0, 100]. If left blank, the default is 0.
 
                      * 
                      */
@@ -82,12 +82,12 @@ namespace TencentCloud
 
                     /**
                      * 设置Line spacing. The value should be a positive integer.
--Value range for pixels: [0, 1000].
-- Value range for percentages: [0, 100]. If this is not specified, the default value is 0.
+- Value range for pixels: [0, 1000].
+- Value range for percentages: [0, 100]. If left blank, the default is 0.
 
                      * @param _lineSpacing Line spacing. The value should be a positive integer.
--Value range for pixels: [0, 1000].
-- Value range for percentages: [0, 100]. If this is not specified, the default value is 0.
+- Value range for pixels: [0, 1000].
+- Value range for percentages: [0, 100]. If left blank, the default is 0.
 
                      * 
                      */
@@ -101,18 +101,18 @@ namespace TencentCloud
                     bool LineSpacingHasBeenSet() const;
 
                     /**
-                     * 获取LineSpacing unit, 0 pixel, 1 percentage, defaults to 0, pixel
+                     * 获取LineSpacing measurement unit, 0 pixel, 1 percentage, defaults to 0, pixel
 
-                     * @return LineSpacingUnit LineSpacing unit, 0 pixel, 1 percentage, defaults to 0, pixel
+                     * @return LineSpacingUnit LineSpacing measurement unit, 0 pixel, 1 percentage, defaults to 0, pixel
 
                      * 
                      */
                     int64_t GetLineSpacingUnit() const;
 
                     /**
-                     * 设置LineSpacing unit, 0 pixel, 1 percentage, defaults to 0, pixel
+                     * 设置LineSpacing measurement unit, 0 pixel, 1 percentage, defaults to 0, pixel
 
-                     * @param _lineSpacingUnit LineSpacing unit, 0 pixel, 1 percentage, defaults to 0, pixel
+                     * @param _lineSpacingUnit LineSpacing measurement unit, 0 pixel, 1 percentage, defaults to 0, pixel
 
                      * 
                      */
@@ -160,15 +160,15 @@ namespace TencentCloud
 
                     /**
                      * Line spacing. The value should be a positive integer.
--Value range for pixels: [0, 1000].
-- Value range for percentages: [0, 100]. If this is not specified, the default value is 0.
+- Value range for pixels: [0, 1000].
+- Value range for percentages: [0, 100]. If left blank, the default is 0.
 
                      */
                     int64_t m_lineSpacing;
                     bool m_lineSpacingHasBeenSet;
 
                     /**
-                     * LineSpacing unit, 0 pixel, 1 percentage, defaults to 0, pixel
+                     * LineSpacing measurement unit, 0 pixel, 1 percentage, defaults to 0, pixel
 
                      */
                     int64_t m_lineSpacingUnit;
