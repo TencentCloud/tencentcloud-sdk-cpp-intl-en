@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Dashboard id. Obtain DashboardId through the [Get Dashboard](https://www.tencentcloud.com/document/api/614/95636?from_cn_redirect=1) API.
-                     * @return DashboardId Dashboard id. Obtain DashboardId through the [Get Dashboard](https://www.tencentcloud.com/document/api/614/95636?from_cn_redirect=1) API.
+                     * 获取Dashboard id.
+                     * @return DashboardId Dashboard id.
                      * 
                      */
                     std::string GetDashboardId() const;
 
                     /**
-                     * 设置Dashboard id. Obtain DashboardId through the [Get Dashboard](https://www.tencentcloud.com/document/api/614/95636?from_cn_redirect=1) API.
-                     * @param _dashboardId Dashboard id. Obtain DashboardId through the [Get Dashboard](https://www.tencentcloud.com/document/api/614/95636?from_cn_redirect=1) API.
+                     * 设置Dashboard id.
+                     * @param _dashboardId Dashboard id.
                      * 
                      */
                     void SetDashboardId(const std::string& _dashboardId);
@@ -130,7 +130,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Dashboard id. Obtain DashboardId through the [Get Dashboard](https://www.tencentcloud.com/document/api/614/95636?from_cn_redirect=1) API.
+                     * Dashboard id.
                      */
                     std::string m_dashboardId;
                     bool m_dashboardIdHasBeenSet;

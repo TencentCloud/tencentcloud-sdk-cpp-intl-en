@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool SessionContextHasBeenSet() const;
 
                     /**
-                     * 获取SMS request error code. For specific meanings, see [Error Codes](https://intl.cloud.tencent.com/zh/document/product/382/40536#6.-error-code). `Ok` will be returned for successful delivery.
-                     * @return Code SMS request error code. For specific meanings, see [Error Codes](https://intl.cloud.tencent.com/zh/document/product/382/40536#6.-error-code). `Ok` will be returned for successful delivery.
+                     * 获取SMS request error code. For specific meanings, see [Error Codes](https://www.tencentcloud.com/zh/document/product/382/40536#6.-Error-Code). `Ok` will be returned for successful delivery.
+                     * @return Code SMS request error code. For specific meanings, see [Error Codes](https://www.tencentcloud.com/zh/document/product/382/40536#6.-Error-Code). `Ok` will be returned for successful delivery.
                      * 
                      */
                     std::string GetCode() const;
 
                     /**
-                     * 设置SMS request error code. For specific meanings, see [Error Codes](https://intl.cloud.tencent.com/zh/document/product/382/40536#6.-error-code). `Ok` will be returned for successful delivery.
-                     * @param _code SMS request error code. For specific meanings, see [Error Codes](https://intl.cloud.tencent.com/zh/document/product/382/40536#6.-error-code). `Ok` will be returned for successful delivery.
+                     * 设置SMS request error code. For specific meanings, see [Error Codes](https://www.tencentcloud.com/zh/document/product/382/40536#6.-Error-Code). `Ok` will be returned for successful delivery.
+                     * @param _code SMS request error code. For specific meanings, see [Error Codes](https://www.tencentcloud.com/zh/document/product/382/40536#6.-Error-Code). `Ok` will be returned for successful delivery.
                      * 
                      */
                     void SetCode(const std::string& _code);
@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool MessageHasBeenSet() const;
 
                     /**
-                     * 获取Country/Region code, such as US and MY. For unrecognized country/region codes, `DEF` is returned by default. For the specific list of supported values, please see [Global SMS Price Overview](https://intl.cloud.tencent.com/document/product/382/18051?from_cn_redirect=1).
-                     * @return IsoCode Country/Region code, such as US and MY. For unrecognized country/region codes, `DEF` is returned by default. For the specific list of supported values, please see [Global SMS Price Overview](https://intl.cloud.tencent.com/document/product/382/18051?from_cn_redirect=1).
+                     * 获取Country/Region code, such as US and MY. For unrecognized country/region codes, `DEF` is returned by default. For the specific list of supported values, please see [Global SMS Price Overview](https://www.tencentcloud.com/zh/document/product/382/8414).
+                     * @return IsoCode Country/Region code, such as US and MY. For unrecognized country/region codes, `DEF` is returned by default. For the specific list of supported values, please see [Global SMS Price Overview](https://www.tencentcloud.com/zh/document/product/382/8414).
                      * 
                      */
                     std::string GetIsoCode() const;
 
                     /**
-                     * 设置Country/Region code, such as US and MY. For unrecognized country/region codes, `DEF` is returned by default. For the specific list of supported values, please see [Global SMS Price Overview](https://intl.cloud.tencent.com/document/product/382/18051?from_cn_redirect=1).
-                     * @param _isoCode Country/Region code, such as US and MY. For unrecognized country/region codes, `DEF` is returned by default. For the specific list of supported values, please see [Global SMS Price Overview](https://intl.cloud.tencent.com/document/product/382/18051?from_cn_redirect=1).
+                     * 设置Country/Region code, such as US and MY. For unrecognized country/region codes, `DEF` is returned by default. For the specific list of supported values, please see [Global SMS Price Overview](https://www.tencentcloud.com/zh/document/product/382/8414).
+                     * @param _isoCode Country/Region code, such as US and MY. For unrecognized country/region codes, `DEF` is returned by default. For the specific list of supported values, please see [Global SMS Price Overview](https://www.tencentcloud.com/zh/document/product/382/8414).
                      * 
                      */
                     void SetIsoCode(const std::string& _isoCode);
@@ -220,7 +220,7 @@ namespace TencentCloud
                     bool m_sessionContextHasBeenSet;
 
                     /**
-                     * SMS request error code. For specific meanings, see [Error Codes](https://intl.cloud.tencent.com/zh/document/product/382/40536#6.-error-code). `Ok` will be returned for successful delivery.
+                     * SMS request error code. For specific meanings, see [Error Codes](https://www.tencentcloud.com/zh/document/product/382/40536#6.-Error-Code). `Ok` will be returned for successful delivery.
                      */
                     std::string m_code;
                     bool m_codeHasBeenSet;
@@ -232,7 +232,7 @@ namespace TencentCloud
                     bool m_messageHasBeenSet;
 
                     /**
-                     * Country/Region code, such as US and MY. For unrecognized country/region codes, `DEF` is returned by default. For the specific list of supported values, please see [Global SMS Price Overview](https://intl.cloud.tencent.com/document/product/382/18051?from_cn_redirect=1).
+                     * Country/Region code, such as US and MY. For unrecognized country/region codes, `DEF` is returned by default. For the specific list of supported values, please see [Global SMS Price Overview](https://www.tencentcloud.com/zh/document/product/382/8414).
                      */
                     std::string m_isoCode;
                     bool m_isoCodeHasBeenSet;
