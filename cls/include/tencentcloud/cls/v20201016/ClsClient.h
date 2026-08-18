@@ -213,6 +213,8 @@
 #include <tencentcloud/cls/v20201016/model/DescribeCosRechargesResponse.h>
 #include <tencentcloud/cls/v20201016/model/DescribeDashboardSubscribesRequest.h>
 #include <tencentcloud/cls/v20201016/model/DescribeDashboardSubscribesResponse.h>
+#include <tencentcloud/cls/v20201016/model/DescribeDashboardsRequest.h>
+#include <tencentcloud/cls/v20201016/model/DescribeDashboardsResponse.h>
 #include <tencentcloud/cls/v20201016/model/DescribeDataTransformInfoRequest.h>
 #include <tencentcloud/cls/v20201016/model/DescribeDataTransformInfoResponse.h>
 #include <tencentcloud/cls/v20201016/model/DescribeDlcDeliversRequest.h>
@@ -696,6 +698,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeDashboardSubscribesResponse> DescribeDashboardSubscribesOutcome;
                 typedef std::future<DescribeDashboardSubscribesOutcome> DescribeDashboardSubscribesOutcomeCallable;
                 typedef std::function<void(const ClsClient*, const Model::DescribeDashboardSubscribesRequest&, DescribeDashboardSubscribesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDashboardSubscribesAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeDashboardsResponse> DescribeDashboardsOutcome;
+                typedef std::future<DescribeDashboardsOutcome> DescribeDashboardsOutcomeCallable;
+                typedef std::function<void(const ClsClient*, const Model::DescribeDashboardsRequest&, DescribeDashboardsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDashboardsAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeDataTransformInfoResponse> DescribeDataTransformInfoOutcome;
                 typedef std::future<DescribeDataTransformInfoOutcome> DescribeDataTransformInfoOutcomeCallable;
                 typedef std::function<void(const ClsClient*, const Model::DescribeDataTransformInfoRequest&, DescribeDataTransformInfoOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDataTransformInfoAsyncHandler;
@@ -1844,6 +1849,15 @@ Note:
                 DescribeDashboardSubscribesOutcome DescribeDashboardSubscribes(const Model::DescribeDashboardSubscribesRequest &request);
                 void DescribeDashboardSubscribesAsync(const Model::DescribeDashboardSubscribesRequest& request, const DescribeDashboardSubscribesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeDashboardSubscribesOutcomeCallable DescribeDashboardSubscribesCallable(const Model::DescribeDashboardSubscribesRequest& request);
+
+                /**
+                 *This API is used to obtain the dashboard.
+                 * @param req DescribeDashboardsRequest
+                 * @return DescribeDashboardsOutcome
+                 */
+                DescribeDashboardsOutcome DescribeDashboards(const Model::DescribeDashboardsRequest &request);
+                void DescribeDashboardsAsync(const Model::DescribeDashboardsRequest& request, const DescribeDashboardsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeDashboardsOutcomeCallable DescribeDashboardsCallable(const Model::DescribeDashboardsRequest& request);
 
                 /**
                  *This API is used to get the basic information of data processing tasks.

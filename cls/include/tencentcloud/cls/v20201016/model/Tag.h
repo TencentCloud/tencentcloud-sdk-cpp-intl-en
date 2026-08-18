@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Description of the tag pair bound to a resource instance when it is created
+                * Description of tag pairs bound at the time of resource instance creation
                 */
                 class Tag : public AbstractModel
                 {

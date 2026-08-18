@@ -46,14 +46,14 @@ namespace TencentCloud
                     /**
                      * 获取Dashboard subscription name.
 Input limit:
--Cannot be empty
--Length cannot exceed 128 bytes
--Cannot contain character '|'
+-cannot be empty
+-Length cannot exceed 128 bytes.
+-Cannot contain the character '|'
                      * @return Name Dashboard subscription name.
 Input limit:
--Cannot be empty
--Length cannot exceed 128 bytes
--Cannot contain character '|'
+-cannot be empty
+-Length cannot exceed 128 bytes.
+-Cannot contain the character '|'
                      * 
                      */
                     std::string GetName() const;
@@ -61,14 +61,14 @@ Input limit:
                     /**
                      * 设置Dashboard subscription name.
 Input limit:
--Cannot be empty
--Length cannot exceed 128 bytes
--Cannot contain character '|'
+-cannot be empty
+-Length cannot exceed 128 bytes.
+-Cannot contain the character '|'
                      * @param _name Dashboard subscription name.
 Input limit:
--Cannot be empty
--Length cannot exceed 128 bytes
--Cannot contain character '|'
+-cannot be empty
+-Length cannot exceed 128 bytes.
+-Cannot contain the character '|'
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -82,18 +82,18 @@ Input limit:
 
                     /**
                      * 获取Dashboard Id.
--Get the dashboard Id by [searching for the dashboard](https://www.tencentcloud.com/document/product/614/95636?from_cn_redirect=1).
+-Get the dashboard Id by [searching for a dashboard](https://www.tencentcloud.com/document/product/614/95636?from_cn_redirect=1).
                      * @return DashboardId Dashboard Id.
--Get the dashboard Id by [searching for the dashboard](https://www.tencentcloud.com/document/product/614/95636?from_cn_redirect=1).
+-Get the dashboard Id by [searching for a dashboard](https://www.tencentcloud.com/document/product/614/95636?from_cn_redirect=1).
                      * 
                      */
                     std::string GetDashboardId() const;
 
                     /**
                      * 设置Dashboard Id.
--Get the dashboard Id by [searching for the dashboard](https://www.tencentcloud.com/document/product/614/95636?from_cn_redirect=1).
+-Get the dashboard Id by [searching for a dashboard](https://www.tencentcloud.com/document/product/614/95636?from_cn_redirect=1).
                      * @param _dashboardId Dashboard Id.
--Get the dashboard Id by [searching for the dashboard](https://www.tencentcloud.com/document/product/614/95636?from_cn_redirect=1).
+-Get the dashboard Id by [searching for a dashboard](https://www.tencentcloud.com/document/product/614/95636?from_cn_redirect=1).
                      * 
                      */
                     void SetDashboardId(const std::string& _dashboardId);
@@ -107,38 +107,38 @@ Input limit:
 
                     /**
                      * 获取Subscription time cron expression, in format {seconds} {minutes} {hours} {date} {month} {weekday}; (valid data: {minutes} {hours} {date} {month} {weekday})
--{seconds} Value ranges from 0 to 59. 
+-{seconds} value ranges from 0 to 59. 
 -{Minutes} Value ranges from 0 to 59. 
 -Hour. Value ranges from 0 to 23. 
--{Date} value ranges from 1 to 31 AND (last day of month: L) 
+-{Date} value ranges from 1 to 31 AND (dayOfMonth last day: L) 
 -{Month} value ranges from 1 to 12. 
--Week value ranges from 0 to 6 [0:Sunday, 6:Saturday]
+-Week value ranges from 0 to 6 [0:Sunday, 6:Saturday].
                      * @return Cron Subscription time cron expression, in format {seconds} {minutes} {hours} {date} {month} {weekday}; (valid data: {minutes} {hours} {date} {month} {weekday})
--{seconds} Value ranges from 0 to 59. 
+-{seconds} value ranges from 0 to 59. 
 -{Minutes} Value ranges from 0 to 59. 
 -Hour. Value ranges from 0 to 23. 
--{Date} value ranges from 1 to 31 AND (last day of month: L) 
+-{Date} value ranges from 1 to 31 AND (dayOfMonth last day: L) 
 -{Month} value ranges from 1 to 12. 
--Week value ranges from 0 to 6 [0:Sunday, 6:Saturday]
+-Week value ranges from 0 to 6 [0:Sunday, 6:Saturday].
                      * 
                      */
                     std::string GetCron() const;
 
                     /**
                      * 设置Subscription time cron expression, in format {seconds} {minutes} {hours} {date} {month} {weekday}; (valid data: {minutes} {hours} {date} {month} {weekday})
--{seconds} Value ranges from 0 to 59. 
+-{seconds} value ranges from 0 to 59. 
 -{Minutes} Value ranges from 0 to 59. 
 -Hour. Value ranges from 0 to 23. 
--{Date} value ranges from 1 to 31 AND (last day of month: L) 
+-{Date} value ranges from 1 to 31 AND (dayOfMonth last day: L) 
 -{Month} value ranges from 1 to 12. 
--Week value ranges from 0 to 6 [0:Sunday, 6:Saturday]
+-Week value ranges from 0 to 6 [0:Sunday, 6:Saturday].
                      * @param _cron Subscription time cron expression, in format {seconds} {minutes} {hours} {date} {month} {weekday}; (valid data: {minutes} {hours} {date} {month} {weekday})
--{seconds} Value ranges from 0 to 59. 
+-{seconds} value ranges from 0 to 59. 
 -{Minutes} Value ranges from 0 to 59. 
 -Hour. Value ranges from 0 to 23. 
--{Date} value ranges from 1 to 31 AND (last day of month: L) 
+-{Date} value ranges from 1 to 31 AND (dayOfMonth last day: L) 
 -{Month} value ranges from 1 to 12. 
--Week value ranges from 0 to 6 [0:Sunday, 6:Saturday]
+-Week value ranges from 0 to 6 [0:Sunday, 6:Saturday].
                      * 
                      */
                     void SetCron(const std::string& _cron);
@@ -176,28 +176,28 @@ Input limit:
                     /**
                      * Dashboard subscription name.
 Input limit:
--Cannot be empty
--Length cannot exceed 128 bytes
--Cannot contain character '|'
+-cannot be empty
+-Length cannot exceed 128 bytes.
+-Cannot contain the character '|'
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
                      * Dashboard Id.
--Get the dashboard Id by [searching for the dashboard](https://www.tencentcloud.com/document/product/614/95636?from_cn_redirect=1).
+-Get the dashboard Id by [searching for a dashboard](https://www.tencentcloud.com/document/product/614/95636?from_cn_redirect=1).
                      */
                     std::string m_dashboardId;
                     bool m_dashboardIdHasBeenSet;
 
                     /**
                      * Subscription time cron expression, in format {seconds} {minutes} {hours} {date} {month} {weekday}; (valid data: {minutes} {hours} {date} {month} {weekday})
--{seconds} Value ranges from 0 to 59. 
+-{seconds} value ranges from 0 to 59. 
 -{Minutes} Value ranges from 0 to 59. 
 -Hour. Value ranges from 0 to 23. 
--{Date} value ranges from 1 to 31 AND (last day of month: L) 
+-{Date} value ranges from 1 to 31 AND (dayOfMonth last day: L) 
 -{Month} value ranges from 1 to 12. 
--Week value ranges from 0 to 6 [0:Sunday, 6:Saturday]
+-Week value ranges from 0 to 6 [0:Sunday, 6:Saturday].
                      */
                     std::string m_cron;
                     bool m_cronHasBeenSet;

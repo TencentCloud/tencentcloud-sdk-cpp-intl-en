@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取dashboard name
-                     * @return DashboardName dashboard name
+                     * 获取Dashboard name
+                     * @return DashboardName Dashboard name
                      * 
                      */
                     std::string GetDashboardName() const;
 
                     /**
-                     * 设置dashboard name
-                     * @param _dashboardName dashboard name
+                     * 设置Dashboard name
+                     * @param _dashboardName Dashboard name
                      * 
                      */
                     void SetDashboardName(const std::string& _dashboardName);
@@ -109,7 +109,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * dashboard name
+                     * Dashboard name
                      */
                     std::string m_dashboardName;
                     bool m_dashboardNameHasBeenSet;

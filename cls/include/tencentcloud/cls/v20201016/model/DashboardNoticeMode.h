@@ -53,7 +53,7 @@ namespace TencentCloud
 -Group: Tencent Cloud user group
 -WeCom: wecom callback
 -Email: Custom email
--DingTalk
+- DingTalk: DingTalk
 -Lark
                      * @return ReceiverType Dashboard notification method.
 
@@ -61,7 +61,7 @@ namespace TencentCloud
 -Group: Tencent Cloud user group
 -WeCom: wecom callback
 -Email: Custom email
--DingTalk
+- DingTalk: DingTalk
 -Lark
                      * 
                      */
@@ -74,7 +74,7 @@ namespace TencentCloud
 -Group: Tencent Cloud user group
 -WeCom: wecom callback
 -Email: Custom email
--DingTalk
+- DingTalk: DingTalk
 -Lark
                      * @param _receiverType Dashboard notification method.
 
@@ -82,7 +82,7 @@ namespace TencentCloud
 -Group: Tencent Cloud user group
 -WeCom: wecom callback
 -Email: Custom email
--DingTalk
+- DingTalk: DingTalk
 -Lark
                      * 
                      */
@@ -96,35 +96,35 @@ namespace TencentCloud
                     bool ReceiverTypeHasBeenSet() const;
 
                     /**
-                     * 获取Value of the known method.
+                     * 获取Method corresponding value.
 -When ReceiverType is `WeCom`, `DingTalk`, or `Lark`, Values must be empty and the Url field is required.
--When ReceiverType is `Uin`, `Group`, or `Email`, the Values field is required and the Url field must be empty.
--When ReceiverType is `Uin`, Values is the user id. Obtain the sub-user UID by [querying sub-users](https://www.tencentcloud.com/document/product/598/34587?from_cn_redirect=1).
--When ReceiverType is `Group`, Values is the user Group id. Obtain user Group id by querying the user Group list (https://www.tencentcloud.com/document/product/598/34589?from_cn_redirect=1).
--When ReceiverType is `Email`, Values is the user email info.
-                     * @return Values Value of the known method.
+-When ReceiverType is `Uin`, `Group`, or `Email`, the Values field is required, and the Url field must be empty.
+-When ReceiverType is `Uin`, Values is the user id. Obtain the sub-user UID by pulling sub-users (https://www.tencentcloud.com/document/product/598/34587?from_cn_redirect=1).
+-When ReceiverType is `Group`, Values is the user Group id. Query the user Group list (https://www.tencentcloud.com/document/product/598/34589?from_cn_redirect=1) to obtain the user Group id.
+-When ReceiverType is `Email`, Values is the user email.
+                     * @return Values Method corresponding value.
 -When ReceiverType is `WeCom`, `DingTalk`, or `Lark`, Values must be empty and the Url field is required.
--When ReceiverType is `Uin`, `Group`, or `Email`, the Values field is required and the Url field must be empty.
--When ReceiverType is `Uin`, Values is the user id. Obtain the sub-user UID by [querying sub-users](https://www.tencentcloud.com/document/product/598/34587?from_cn_redirect=1).
--When ReceiverType is `Group`, Values is the user Group id. Obtain user Group id by querying the user Group list (https://www.tencentcloud.com/document/product/598/34589?from_cn_redirect=1).
--When ReceiverType is `Email`, Values is the user email info.
+-When ReceiverType is `Uin`, `Group`, or `Email`, the Values field is required, and the Url field must be empty.
+-When ReceiverType is `Uin`, Values is the user id. Obtain the sub-user UID by pulling sub-users (https://www.tencentcloud.com/document/product/598/34587?from_cn_redirect=1).
+-When ReceiverType is `Group`, Values is the user Group id. Query the user Group list (https://www.tencentcloud.com/document/product/598/34589?from_cn_redirect=1) to obtain the user Group id.
+-When ReceiverType is `Email`, Values is the user email.
                      * 
                      */
                     std::vector<std::string> GetValues() const;
 
                     /**
-                     * 设置Value of the known method.
+                     * 设置Method corresponding value.
 -When ReceiverType is `WeCom`, `DingTalk`, or `Lark`, Values must be empty and the Url field is required.
--When ReceiverType is `Uin`, `Group`, or `Email`, the Values field is required and the Url field must be empty.
--When ReceiverType is `Uin`, Values is the user id. Obtain the sub-user UID by [querying sub-users](https://www.tencentcloud.com/document/product/598/34587?from_cn_redirect=1).
--When ReceiverType is `Group`, Values is the user Group id. Obtain user Group id by querying the user Group list (https://www.tencentcloud.com/document/product/598/34589?from_cn_redirect=1).
--When ReceiverType is `Email`, Values is the user email info.
-                     * @param _values Value of the known method.
+-When ReceiverType is `Uin`, `Group`, or `Email`, the Values field is required, and the Url field must be empty.
+-When ReceiverType is `Uin`, Values is the user id. Obtain the sub-user UID by pulling sub-users (https://www.tencentcloud.com/document/product/598/34587?from_cn_redirect=1).
+-When ReceiverType is `Group`, Values is the user Group id. Query the user Group list (https://www.tencentcloud.com/document/product/598/34589?from_cn_redirect=1) to obtain the user Group id.
+-When ReceiverType is `Email`, Values is the user email.
+                     * @param _values Method corresponding value.
 -When ReceiverType is `WeCom`, `DingTalk`, or `Lark`, Values must be empty and the Url field is required.
--When ReceiverType is `Uin`, `Group`, or `Email`, the Values field is required and the Url field must be empty.
--When ReceiverType is `Uin`, Values is the user id. Obtain the sub-user UID by [querying sub-users](https://www.tencentcloud.com/document/product/598/34587?from_cn_redirect=1).
--When ReceiverType is `Group`, Values is the user Group id. Obtain user Group id by querying the user Group list (https://www.tencentcloud.com/document/product/598/34589?from_cn_redirect=1).
--When ReceiverType is `Email`, Values is the user email info.
+-When ReceiverType is `Uin`, `Group`, or `Email`, the Values field is required, and the Url field must be empty.
+-When ReceiverType is `Uin`, Values is the user id. Obtain the sub-user UID by pulling sub-users (https://www.tencentcloud.com/document/product/598/34587?from_cn_redirect=1).
+-When ReceiverType is `Group`, Values is the user Group id. Query the user Group list (https://www.tencentcloud.com/document/product/598/34589?from_cn_redirect=1) to obtain the user Group id.
+-When ReceiverType is `Email`, Values is the user email.
                      * 
                      */
                     void SetValues(const std::vector<std::string>& _values);
@@ -140,13 +140,11 @@ namespace TencentCloud
                      * 获取Dashboard notification channel.
 
 -Support: ["Email","Sms","WeChat","Phone"].
--When ReceiverType is `Email` or `WeCom`, ReceiverChannels is invalid.
-Note: This field may return null, indicating that no valid values can be obtained.
+-   When ReceiverType is `Email` or `WeCom`, ReceiverChannels is unavailable.
                      * @return ReceiverChannels Dashboard notification channel.
 
 -Support: ["Email","Sms","WeChat","Phone"].
--When ReceiverType is `Email` or `WeCom`, ReceiverChannels is invalid.
-Note: This field may return null, indicating that no valid values can be obtained.
+-   When ReceiverType is `Email` or `WeCom`, ReceiverChannels is unavailable.
                      * 
                      */
                     std::vector<std::string> GetReceiverChannels() const;
@@ -155,13 +153,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * 设置Dashboard notification channel.
 
 -Support: ["Email","Sms","WeChat","Phone"].
--When ReceiverType is `Email` or `WeCom`, ReceiverChannels is invalid.
-Note: This field may return null, indicating that no valid values can be obtained.
+-   When ReceiverType is `Email` or `WeCom`, ReceiverChannels is unavailable.
                      * @param _receiverChannels Dashboard notification channel.
 
 -Support: ["Email","Sms","WeChat","Phone"].
--When ReceiverType is `Email` or `WeCom`, ReceiverChannels is invalid.
-Note: This field may return null, indicating that no valid values can be obtained.
+-   When ReceiverType is `Email` or `WeCom`, ReceiverChannels is unavailable.
                      * 
                      */
                     void SetReceiverChannels(const std::vector<std::string>& _receiverChannels);
@@ -175,16 +171,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Subscription method - Callback URL.
--When ReceiverType is `WeCom`, `DingTalk`, or `Lark`, the Url field is required as the callback URL of each channel.
--When the value is `WeCom`, the Url is the enterprise wechat callback address.
--When the value is `DingTalk`, Url is the chatbot Webhook address.
--When `Lark`, Url is the chatbot Webhook address.
+-When ReceiverType is `WeCom`, `DingTalk`, or `Lark`, the Url field is required as the callback URL for each channel.
+-When it is `WeCom`, the Url is the enterprise wechat callback address.
+-For `DingTalk`, the Url is the chatbot Webhook address.
+-When it is `Lark`, the Url is the chatbot Webhook address.
 -When ReceiverType is `Uin`, `Group`, or `Email`, the Url field must be empty.
                      * @return Url Subscription method - Callback URL.
--When ReceiverType is `WeCom`, `DingTalk`, or `Lark`, the Url field is required as the callback URL of each channel.
--When the value is `WeCom`, the Url is the enterprise wechat callback address.
--When the value is `DingTalk`, Url is the chatbot Webhook address.
--When `Lark`, Url is the chatbot Webhook address.
+-When ReceiverType is `WeCom`, `DingTalk`, or `Lark`, the Url field is required as the callback URL for each channel.
+-When it is `WeCom`, the Url is the enterprise wechat callback address.
+-For `DingTalk`, the Url is the chatbot Webhook address.
+-When it is `Lark`, the Url is the chatbot Webhook address.
 -When ReceiverType is `Uin`, `Group`, or `Email`, the Url field must be empty.
                      * 
                      */
@@ -192,16 +188,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 设置Subscription method - Callback URL.
--When ReceiverType is `WeCom`, `DingTalk`, or `Lark`, the Url field is required as the callback URL of each channel.
--When the value is `WeCom`, the Url is the enterprise wechat callback address.
--When the value is `DingTalk`, Url is the chatbot Webhook address.
--When `Lark`, Url is the chatbot Webhook address.
+-When ReceiverType is `WeCom`, `DingTalk`, or `Lark`, the Url field is required as the callback URL for each channel.
+-When it is `WeCom`, the Url is the enterprise wechat callback address.
+-For `DingTalk`, the Url is the chatbot Webhook address.
+-When it is `Lark`, the Url is the chatbot Webhook address.
 -When ReceiverType is `Uin`, `Group`, or `Email`, the Url field must be empty.
                      * @param _url Subscription method - Callback URL.
--When ReceiverType is `WeCom`, `DingTalk`, or `Lark`, the Url field is required as the callback URL of each channel.
--When the value is `WeCom`, the Url is the enterprise wechat callback address.
--When the value is `DingTalk`, Url is the chatbot Webhook address.
--When `Lark`, Url is the chatbot Webhook address.
+-When ReceiverType is `WeCom`, `DingTalk`, or `Lark`, the Url field is required as the callback URL for each channel.
+-When it is `WeCom`, the Url is the enterprise wechat callback address.
+-For `DingTalk`, the Url is the chatbot Webhook address.
+-When it is `Lark`, the Url is the chatbot Webhook address.
 -When ReceiverType is `Uin`, `Group`, or `Email`, the Url field must be empty.
                      * 
                      */
@@ -223,19 +219,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
 -Group: Tencent Cloud user group
 -WeCom: wecom callback
 -Email: Custom email
--DingTalk
+- DingTalk: DingTalk
 -Lark
                      */
                     std::string m_receiverType;
                     bool m_receiverTypeHasBeenSet;
 
                     /**
-                     * Value of the known method.
+                     * Method corresponding value.
 -When ReceiverType is `WeCom`, `DingTalk`, or `Lark`, Values must be empty and the Url field is required.
--When ReceiverType is `Uin`, `Group`, or `Email`, the Values field is required and the Url field must be empty.
--When ReceiverType is `Uin`, Values is the user id. Obtain the sub-user UID by [querying sub-users](https://www.tencentcloud.com/document/product/598/34587?from_cn_redirect=1).
--When ReceiverType is `Group`, Values is the user Group id. Obtain user Group id by querying the user Group list (https://www.tencentcloud.com/document/product/598/34589?from_cn_redirect=1).
--When ReceiverType is `Email`, Values is the user email info.
+-When ReceiverType is `Uin`, `Group`, or `Email`, the Values field is required, and the Url field must be empty.
+-When ReceiverType is `Uin`, Values is the user id. Obtain the sub-user UID by pulling sub-users (https://www.tencentcloud.com/document/product/598/34587?from_cn_redirect=1).
+-When ReceiverType is `Group`, Values is the user Group id. Query the user Group list (https://www.tencentcloud.com/document/product/598/34589?from_cn_redirect=1) to obtain the user Group id.
+-When ReceiverType is `Email`, Values is the user email.
                      */
                     std::vector<std::string> m_values;
                     bool m_valuesHasBeenSet;
@@ -244,18 +240,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * Dashboard notification channel.
 
 -Support: ["Email","Sms","WeChat","Phone"].
--When ReceiverType is `Email` or `WeCom`, ReceiverChannels is invalid.
-Note: This field may return null, indicating that no valid values can be obtained.
+-   When ReceiverType is `Email` or `WeCom`, ReceiverChannels is unavailable.
                      */
                     std::vector<std::string> m_receiverChannels;
                     bool m_receiverChannelsHasBeenSet;
 
                     /**
                      * Subscription method - Callback URL.
--When ReceiverType is `WeCom`, `DingTalk`, or `Lark`, the Url field is required as the callback URL of each channel.
--When the value is `WeCom`, the Url is the enterprise wechat callback address.
--When the value is `DingTalk`, Url is the chatbot Webhook address.
--When `Lark`, Url is the chatbot Webhook address.
+-When ReceiverType is `WeCom`, `DingTalk`, or `Lark`, the Url field is required as the callback URL for each channel.
+-When it is `WeCom`, the Url is the enterprise wechat callback address.
+-For `DingTalk`, the Url is the chatbot Webhook address.
+-When it is `Lark`, the Url is the chatbot Webhook address.
 -When ReceiverType is `Uin`, `Group`, or `Email`, the Url field must be empty.
                      */
                     std::string m_url;

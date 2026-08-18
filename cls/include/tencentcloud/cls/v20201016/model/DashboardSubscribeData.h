@@ -71,18 +71,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Dashboard subscription time. If this field is empty, the dashboard default time is used.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return DashboardTime Dashboard subscription time. If this field is empty, the dashboard default time is used.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<std::string> GetDashboardTime() const;
 
                     /**
                      * 设置Dashboard subscription time. If this field is empty, the dashboard default time is used.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _dashboardTime Dashboard subscription time. If this field is empty, the dashboard default time is used.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetDashboardTime(const std::vector<std::string>& _dashboardTime);
@@ -96,18 +92,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Dashboard subscription template variable.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return TemplateVariables Dashboard subscription template variable.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<DashboardTemplateVariable> GetTemplateVariables() const;
 
                     /**
                      * 设置Dashboard subscription template variable.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _templateVariables Dashboard subscription template variable.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetTemplateVariables(const std::vector<DashboardTemplateVariable>& _templateVariables);
@@ -213,14 +205,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Dashboard subscription time. If this field is empty, the dashboard default time is used.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> m_dashboardTime;
                     bool m_dashboardTimeHasBeenSet;
 
                     /**
                      * Dashboard subscription template variable.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<DashboardTemplateVariable> m_templateVariables;
                     bool m_templateVariablesHasBeenSet;

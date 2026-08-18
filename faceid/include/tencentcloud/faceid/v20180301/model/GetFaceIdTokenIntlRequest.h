@@ -152,15 +152,31 @@ namespace TencentCloud
                     bool ActionListHasBeenSet() const;
 
                     /**
-                     * 获取<p>PLUS: PLUS version, PRO: PRO version, ENHANCED: enhanced, BASIC: basic (default)</p>
-                     * @return SdkVersion <p>PLUS: PLUS version, PRO: PRO version, ENHANCED: enhanced, BASIC: basic (default)</p>
+                     * 获取BASIC: Basic version (Default).
+ENHANCED: Enhance version, enable additional output of device risk level field.
+PRO: Pro version, enable additional output of attack type fields.
+PLUS: Plus version, enable additional output of device risk level and attack type fields.
+Please contact us to access enhance version & plus version.	
+                     * @return SdkVersion BASIC: Basic version (Default).
+ENHANCED: Enhance version, enable additional output of device risk level field.
+PRO: Pro version, enable additional output of attack type fields.
+PLUS: Plus version, enable additional output of device risk level and attack type fields.
+Please contact us to access enhance version & plus version.	
                      * 
                      */
                     std::string GetSdkVersion() const;
 
                     /**
-                     * 设置<p>PLUS: PLUS version, PRO: PRO version, ENHANCED: enhanced, BASIC: basic (default)</p>
-                     * @param _sdkVersion <p>PLUS: PLUS version, PRO: PRO version, ENHANCED: enhanced, BASIC: basic (default)</p>
+                     * 设置BASIC: Basic version (Default).
+ENHANCED: Enhance version, enable additional output of device risk level field.
+PRO: Pro version, enable additional output of attack type fields.
+PLUS: Plus version, enable additional output of device risk level and attack type fields.
+Please contact us to access enhance version & plus version.	
+                     * @param _sdkVersion BASIC: Basic version (Default).
+ENHANCED: Enhance version, enable additional output of device risk level field.
+PRO: Pro version, enable additional output of attack type fields.
+PLUS: Plus version, enable additional output of device risk level and attack type fields.
+Please contact us to access enhance version & plus version.	
                      * 
                      */
                     void SetSdkVersion(const std::string& _sdkVersion);
@@ -227,7 +243,11 @@ namespace TencentCloud
                     bool m_actionListHasBeenSet;
 
                     /**
-                     * <p>PLUS: PLUS version, PRO: PRO version, ENHANCED: enhanced, BASIC: basic (default)</p>
+                     * BASIC: Basic version (Default).
+ENHANCED: Enhance version, enable additional output of device risk level field.
+PRO: Pro version, enable additional output of attack type fields.
+PLUS: Plus version, enable additional output of device risk level and attack type fields.
+Please contact us to access enhance version & plus version.	
                      */
                     std::string m_sdkVersion;
                     bool m_sdkVersionHasBeenSet;

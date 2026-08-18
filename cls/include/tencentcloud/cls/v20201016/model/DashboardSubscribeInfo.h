@@ -174,15 +174,15 @@ namespace TencentCloud
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Dashboard subscription record update time. Format: `YYYY-MM-DD HH:MM:SS`
-                     * @return UpdateTime Dashboard subscription record update time. Format: `YYYY-MM-DD HH:MM:SS`
+                     * 获取Dashboard subscription record update time. Format: YYYY-MM-DD HH:MM:SS
+                     * @return UpdateTime Dashboard subscription record update time. Format: YYYY-MM-DD HH:MM:SS
                      * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
-                     * 设置Dashboard subscription record update time. Format: `YYYY-MM-DD HH:MM:SS`
-                     * @param _updateTime Dashboard subscription record update time. Format: `YYYY-MM-DD HH:MM:SS`
+                     * 设置Dashboard subscription record update time. Format: YYYY-MM-DD HH:MM:SS
+                     * @param _updateTime Dashboard subscription record update time. Format: YYYY-MM-DD HH:MM:SS
                      * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
@@ -195,15 +195,15 @@ namespace TencentCloud
                     bool UpdateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Time sent successfully of dashboard subscription record. Format: `YYYY-MM-DD HH:MM:SS`
-                     * @return LastTime Time sent successfully of dashboard subscription record. Format: `YYYY-MM-DD HH:MM:SS`
+                     * 获取Last time for successful sending of dashboard subscription record. Format: `YYYY-MM-DD HH:MM:SS`
+                     * @return LastTime Last time for successful sending of dashboard subscription record. Format: `YYYY-MM-DD HH:MM:SS`
                      * 
                      */
                     std::string GetLastTime() const;
 
                     /**
-                     * 设置Time sent successfully of dashboard subscription record. Format: `YYYY-MM-DD HH:MM:SS`
-                     * @param _lastTime Time sent successfully of dashboard subscription record. Format: `YYYY-MM-DD HH:MM:SS`
+                     * 设置Last time for successful sending of dashboard subscription record. Format: `YYYY-MM-DD HH:MM:SS`
+                     * @param _lastTime Last time for successful sending of dashboard subscription record. Format: `YYYY-MM-DD HH:MM:SS`
                      * 
                      */
                     void SetLastTime(const std::string& _lastTime);
@@ -317,13 +317,13 @@ namespace TencentCloud
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * Dashboard subscription record update time. Format: `YYYY-MM-DD HH:MM:SS`
+                     * Dashboard subscription record update time. Format: YYYY-MM-DD HH:MM:SS
                      */
                     std::string m_updateTime;
                     bool m_updateTimeHasBeenSet;
 
                     /**
-                     * Time sent successfully of dashboard subscription record. Format: `YYYY-MM-DD HH:MM:SS`
+                     * Last time for successful sending of dashboard subscription record. Format: `YYYY-MM-DD HH:MM:SS`
                      */
                     std::string m_lastTime;
                     bool m_lastTimeHasBeenSet;

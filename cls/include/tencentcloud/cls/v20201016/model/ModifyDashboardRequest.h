@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Dashboard id. Obtain the DashboardId through the [Get Dashboard](https://www.tencentcloud.com/document/api/614/95636?from_cn_redirect=1) API.
-                     * @return DashboardId Dashboard id. Obtain the DashboardId through the [Get Dashboard](https://www.tencentcloud.com/document/api/614/95636?from_cn_redirect=1) API.
+                     * 获取Dashboard id. Obtain DashboardId through the [Get Dashboard](https://www.tencentcloud.com/document/api/614/95636?from_cn_redirect=1) API.
+                     * @return DashboardId Dashboard id. Obtain DashboardId through the [Get Dashboard](https://www.tencentcloud.com/document/api/614/95636?from_cn_redirect=1) API.
                      * 
                      */
                     std::string GetDashboardId() const;
 
                     /**
-                     * 设置Dashboard id. Obtain the DashboardId through the [Get Dashboard](https://www.tencentcloud.com/document/api/614/95636?from_cn_redirect=1) API.
-                     * @param _dashboardId Dashboard id. Obtain the DashboardId through the [Get Dashboard](https://www.tencentcloud.com/document/api/614/95636?from_cn_redirect=1) API.
+                     * 设置Dashboard id. Obtain DashboardId through the [Get Dashboard](https://www.tencentcloud.com/document/api/614/95636?from_cn_redirect=1) API.
+                     * @param _dashboardId Dashboard id. Obtain DashboardId through the [Get Dashboard](https://www.tencentcloud.com/document/api/614/95636?from_cn_redirect=1) API.
                      * 
                      */
                     void SetDashboardId(const std::string& _dashboardId);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool DashboardIdHasBeenSet() const;
 
                     /**
-                     * 获取dashboard name
-                     * @return DashboardName dashboard name
+                     * 获取Dashboard name
+                     * @return DashboardName Dashboard name
                      * 
                      */
                     std::string GetDashboardName() const;
 
                     /**
-                     * 设置dashboard name
-                     * @param _dashboardName dashboard name
+                     * 设置Dashboard name
+                     * @param _dashboardName Dashboard name
                      * 
                      */
                     void SetDashboardName(const std::string& _dashboardName);
@@ -130,13 +130,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Dashboard id. Obtain the DashboardId through the [Get Dashboard](https://www.tencentcloud.com/document/api/614/95636?from_cn_redirect=1) API.
+                     * Dashboard id. Obtain DashboardId through the [Get Dashboard](https://www.tencentcloud.com/document/api/614/95636?from_cn_redirect=1) API.
                      */
                     std::string m_dashboardId;
                     bool m_dashboardIdHasBeenSet;
 
                     /**
-                     * dashboard name
+                     * Dashboard name
                      */
                     std::string m_dashboardName;
                     bool m_dashboardNameHasBeenSet;

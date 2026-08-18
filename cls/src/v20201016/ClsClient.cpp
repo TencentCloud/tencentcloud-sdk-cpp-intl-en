@@ -4790,6 +4790,56 @@ ClsClient::DescribeDashboardSubscribesOutcomeCallable ClsClient::DescribeDashboa
     return prom->get_future();
 }
 
+ClsClient::DescribeDashboardsOutcome ClsClient::DescribeDashboards(const DescribeDashboardsRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeDashboards");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeDashboardsResponse rsp = DescribeDashboardsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeDashboardsOutcome(rsp);
+        else
+            return DescribeDashboardsOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeDashboardsOutcome(outcome.GetError());
+    }
+}
+
+void ClsClient::DescribeDashboardsAsync(const DescribeDashboardsRequest& request, const DescribeDashboardsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeDashboardsRequest&;
+    using Resp = DescribeDashboardsResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeDashboards", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+ClsClient::DescribeDashboardsOutcomeCallable ClsClient::DescribeDashboardsCallable(const DescribeDashboardsRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeDashboardsOutcome>>();
+    DescribeDashboardsAsync(
+    request,
+    [prom](
+        const ClsClient*,
+        const DescribeDashboardsRequest&,
+        DescribeDashboardsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 ClsClient::DescribeDataTransformInfoOutcome ClsClient::DescribeDataTransformInfo(const DescribeDataTransformInfoRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeDataTransformInfo");

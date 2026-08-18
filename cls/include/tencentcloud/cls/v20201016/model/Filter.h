@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Filter
+                * Filters
                 */
                 class Filter : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Field to be filtered
-                     * @return Key Field to be filtered
+                     * 获取Fields that need to be filtered.
+                     * @return Key Fields that need to be filtered.
                      * 
                      */
                     std::string GetKey() const;
 
                     /**
-                     * 设置Field to be filtered
-                     * @param _key Field to be filtered
+                     * 设置Fields that need to be filtered.
+                     * @param _key Fields that need to be filtered.
                      * 
                      */
                     void SetKey(const std::string& _key);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool KeyHasBeenSet() const;
 
                     /**
-                     * 获取Value to be filtered
-                     * @return Values Value to be filtered
+                     * 获取Values to be filtered
+                     * @return Values Values to be filtered
                      * 
                      */
                     std::vector<std::string> GetValues() const;
 
                     /**
-                     * 设置Value to be filtered
-                     * @param _values Value to be filtered
+                     * 设置Values to be filtered
+                     * @param _values Values to be filtered
                      * 
                      */
                     void SetValues(const std::vector<std::string>& _values);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Field to be filtered
+                     * Fields that need to be filtered.
                      */
                     std::string m_key;
                     bool m_keyHasBeenSet;
 
                     /**
-                     * Value to be filtered
+                     * Values to be filtered
                      */
                     std::vector<std::string> m_values;
                     bool m_valuesHasBeenSet;
