@@ -101,8 +101,8 @@ namespace TencentCloud
                     bool UrlHasBeenSet() const;
 
                     /**
-                     * 获取Repository type, which can be `harbor`.
-                     * @return RegistryType Repository type, which can be `harbor`.
+                     * 获取Repository type, which can be `harbor`
+                     * @return RegistryType Repository type, which can be `harbor`
                      * 
                      */
                     std::string GetRegistryType() const;
@@ -115,8 +115,8 @@ namespace TencentCloud
                     bool RegistryTypeHasBeenSet() const;
 
                     /**
-                     * 获取warehouse version
-                     * @return RegistryVersion warehouse version
+                     * 获取Registry version
+                     * @return RegistryVersion Registry version
                      * 
                      */
                     std::string GetRegistryVersion() const;
@@ -129,8 +129,8 @@ namespace TencentCloud
                     bool RegistryVersionHasBeenSet() const;
 
                     /**
-                     * 获取Network type, which can be `public` (public network).
-                     * @return NetType Network type, which can be `public` (public network).
+                     * 获取Network type, which can be `public` (public network)
+                     * @return NetType Network type, which can be `public` (public network)
                      * 
                      */
                     std::string GetNetType() const;
@@ -157,8 +157,8 @@ namespace TencentCloud
                     bool RegistryRegionHasBeenSet() const;
 
                     /**
-                     * 获取rate limiting
-                     * @return SpeedLimit rate limiting
+                     * 获取Rate limiting
+                     * @return SpeedLimit Rate limiting
                      * 
                      */
                     uint64_t GetSpeedLimit() const;
@@ -185,8 +185,8 @@ namespace TencentCloud
                     bool InsecureHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ConnDetectDetail 
+                     * 获取Connectivity test results
+                     * @return ConnDetectDetail Connectivity test results
                      * 
                      */
                     std::vector<RegistryConnDetectResult> GetConnDetectDetail() const;
@@ -199,8 +199,8 @@ namespace TencentCloud
                     bool ConnDetectDetailHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return InstanceID 
+                     * 获取TCR Instance ID
+                     * @return InstanceID TCR Instance ID
                      * 
                      */
                     std::string GetInstanceID() const;
@@ -213,8 +213,8 @@ namespace TencentCloud
                     bool InstanceIDHasBeenSet() const;
 
                     /**
-                     * 获取Synchronization method. 0: full synchronization; 1: incremental synchronization.
-                     * @return SyncMode Synchronization method. 0: full synchronization; 1: incremental synchronization.
+                     * 获取Synchronization method. 0: full synchronization; 1: incremental synchronization
+                     * @return SyncMode Synchronization method. 0: full synchronization; 1: incremental synchronization
                      * 
                      */
                     uint64_t GetSyncMode() const;
@@ -227,8 +227,8 @@ namespace TencentCloud
                     bool SyncModeHasBeenSet() const;
 
                     /**
-                     * 获取Whether authorization and scanning are performed automatically. For full synchronization, only images of the latest version are involved. For incremental synchronization, all new images are involved.
-                     * @return NeedScan Whether authorization and scanning are performed automatically. For full synchronization, only images of the latest version are involved. For incremental synchronization, all new images are involved.
+                     * 获取Whether authorization and scanning are performed automatically. For full synchronization, only images of the latest version are involved. For incremental synchronization, all new images are involved
+                     * @return NeedScan Whether authorization and scanning are performed automatically. For full synchronization, only images of the latest version are involved. For incremental synchronization, all new images are involved
                      * 
                      */
                     bool GetNeedScan() const;
@@ -241,8 +241,8 @@ namespace TencentCloud
                     bool NeedScanHasBeenSet() const;
 
                     /**
-                     * 获取Webhook access address.
-                     * @return WebhookUrl Webhook access address.
+                     * 获取Webhook access address
+                     * @return WebhookUrl Webhook access address
                      * 
                      */
                     std::string GetWebhookUrl() const;
@@ -255,8 +255,8 @@ namespace TencentCloud
                     bool WebhookUrlHasBeenSet() const;
 
                     /**
-                     * 获取Webhook access token.	
-                     * @return WebhookToken Webhook access token.	
+                     * 获取Webhook access token.
+                     * @return WebhookToken Webhook access token.
                      * 
                      */
                     std::string GetWebhookToken() const;
@@ -295,19 +295,19 @@ namespace TencentCloud
                     bool m_urlHasBeenSet;
 
                     /**
-                     * Repository type, which can be `harbor`.
+                     * Repository type, which can be `harbor`
                      */
                     std::string m_registryType;
                     bool m_registryTypeHasBeenSet;
 
                     /**
-                     * warehouse version
+                     * Registry version
                      */
                     std::string m_registryVersion;
                     bool m_registryVersionHasBeenSet;
 
                     /**
-                     * Network type, which can be `public` (public network).
+                     * Network type, which can be `public` (public network)
                      */
                     std::string m_netType;
                     bool m_netTypeHasBeenSet;
@@ -319,7 +319,7 @@ namespace TencentCloud
                     bool m_registryRegionHasBeenSet;
 
                     /**
-                     * rate limiting
+                     * Rate limiting
                      */
                     uint64_t m_speedLimit;
                     bool m_speedLimitHasBeenSet;
@@ -331,37 +331,37 @@ namespace TencentCloud
                     bool m_insecureHasBeenSet;
 
                     /**
-                     * 
+                     * Connectivity test results
                      */
                     std::vector<RegistryConnDetectResult> m_connDetectDetail;
                     bool m_connDetectDetailHasBeenSet;
 
                     /**
-                     * 
+                     * TCR Instance ID
                      */
                     std::string m_instanceID;
                     bool m_instanceIDHasBeenSet;
 
                     /**
-                     * Synchronization method. 0: full synchronization; 1: incremental synchronization.
+                     * Synchronization method. 0: full synchronization; 1: incremental synchronization
                      */
                     uint64_t m_syncMode;
                     bool m_syncModeHasBeenSet;
 
                     /**
-                     * Whether authorization and scanning are performed automatically. For full synchronization, only images of the latest version are involved. For incremental synchronization, all new images are involved.
+                     * Whether authorization and scanning are performed automatically. For full synchronization, only images of the latest version are involved. For incremental synchronization, all new images are involved
                      */
                     bool m_needScan;
                     bool m_needScanHasBeenSet;
 
                     /**
-                     * Webhook access address.
+                     * Webhook access address
                      */
                     std::string m_webhookUrl;
                     bool m_webhookUrlHasBeenSet;
 
                     /**
-                     * Webhook access token.	
+                     * Webhook access token.
                      */
                     std::string m_webhookToken;
                     bool m_webhookTokenHasBeenSet;
