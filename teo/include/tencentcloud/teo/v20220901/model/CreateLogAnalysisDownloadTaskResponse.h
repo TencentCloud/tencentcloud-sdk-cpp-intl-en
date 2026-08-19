@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-#ifndef TENCENTCLOUD_TEO_V20220901_MODEL_IMPORTZONECONFIGRESPONSE_H_
-#define TENCENTCLOUD_TEO_V20220901_MODEL_IMPORTZONECONFIGRESPONSE_H_
+#ifndef TENCENTCLOUD_TEO_V20220901_MODEL_CREATELOGANALYSISDOWNLOADTASKRESPONSE_H_
+#define TENCENTCLOUD_TEO_V20220901_MODEL_CREATELOGANALYSISDOWNLOADTASKRESPONSE_H_
 
 #include <string>
 #include <vector>
@@ -32,20 +32,20 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * ImportZoneConfig response structure.
+                * CreateLogAnalysisDownloadTask response structure.
                 */
-                class ImportZoneConfigResponse : public AbstractModel
+                class CreateLogAnalysisDownloadTaskResponse : public AbstractModel
                 {
                 public:
-                    ImportZoneConfigResponse();
-                    ~ImportZoneConfigResponse() = default;
+                    CreateLogAnalysisDownloadTaskResponse();
+                    ~CreateLogAnalysisDownloadTaskResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
                     std::string ToJsonString() const;
 
 
                     /**
-                     * 获取<p>Task Id of this import configuration. Use the site configuration import result query API (DescribeZoneConfigImportResult) to get the execution result of this import job. Note: The import task Id only supports querying the most recent 7 days of import tasks.</p>
-                     * @return TaskId <p>Task Id of this import configuration. Use the site configuration import result query API (DescribeZoneConfigImportResult) to get the execution result of this import job. Note: The import task Id only supports querying the most recent 7 days of import tasks.</p>
+                     * 获取<p>Log analysis download task ID.</p>
+                     * @return TaskId <p>Log analysis download task ID.</p>
                      * 
                      */
                     std::string GetTaskId() const;
@@ -60,7 +60,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Task Id of this import configuration. Use the site configuration import result query API (DescribeZoneConfigImportResult) to get the execution result of this import job. Note: The import task Id only supports querying the most recent 7 days of import tasks.</p>
+                     * <p>Log analysis download task ID.</p>
                      */
                     std::string m_taskId;
                     bool m_taskIdHasBeenSet;
@@ -71,4 +71,4 @@ namespace TencentCloud
     }
 }
 
-#endif // !TENCENTCLOUD_TEO_V20220901_MODEL_IMPORTZONECONFIGRESPONSE_H_
+#endif // !TENCENTCLOUD_TEO_V20220901_MODEL_CREATELOGANALYSISDOWNLOADTASKRESPONSE_H_

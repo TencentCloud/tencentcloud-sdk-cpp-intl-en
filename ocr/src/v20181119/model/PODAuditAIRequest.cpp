@@ -26,7 +26,8 @@ PODAuditAIRequest::PODAuditAIRequest() :
     m_imageBase64ListHasBeenSet(false),
     m_imageUrlListHasBeenSet(false),
     m_waybillNumberHasBeenSet(false),
-    m_signTypeHasBeenSet(false)
+    m_signTypeHasBeenSet(false),
+    m_shipToAddressHasBeenSet(false)
 {
 }
 
@@ -77,6 +78,14 @@ string PODAuditAIRequest::ToJsonString() const
         string key = "SignType";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_signType, allocator);
+    }
+
+    if (m_shipToAddressHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ShipToAddress";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_shipToAddress.c_str(), allocator).Move(), allocator);
     }
 
 
@@ -149,6 +158,22 @@ void PODAuditAIRequest::SetSignType(const int64_t& _signType)
 bool PODAuditAIRequest::SignTypeHasBeenSet() const
 {
     return m_signTypeHasBeenSet;
+}
+
+string PODAuditAIRequest::GetShipToAddress() const
+{
+    return m_shipToAddress;
+}
+
+void PODAuditAIRequest::SetShipToAddress(const string& _shipToAddress)
+{
+    m_shipToAddress = _shipToAddress;
+    m_shipToAddressHasBeenSet = true;
+}
+
+bool PODAuditAIRequest::ShipToAddressHasBeenSet() const
+{
+    return m_shipToAddressHasBeenSet;
 }
 
 

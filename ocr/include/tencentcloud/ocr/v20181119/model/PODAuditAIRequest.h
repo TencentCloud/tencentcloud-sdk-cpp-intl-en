@@ -126,6 +126,27 @@ namespace TencentCloud
                      */
                     bool SignTypeHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Shipping address of the waybill in the business system</p>
+                     * @return ShipToAddress <p>Shipping address of the waybill in the business system</p>
+                     * 
+                     */
+                    std::string GetShipToAddress() const;
+
+                    /**
+                     * 设置<p>Shipping address of the waybill in the business system</p>
+                     * @param _shipToAddress <p>Shipping address of the waybill in the business system</p>
+                     * 
+                     */
+                    void SetShipToAddress(const std::string& _shipToAddress);
+
+                    /**
+                     * 判断参数 ShipToAddress 是否已赋值
+                     * @return ShipToAddress 是否已赋值
+                     * 
+                     */
+                    bool ShipToAddressHasBeenSet() const;
+
                 private:
 
                     /**
@@ -151,6 +172,12 @@ namespace TencentCloud
                      */
                     int64_t m_signType;
                     bool m_signTypeHasBeenSet;
+
+                    /**
+                     * <p>Shipping address of the waybill in the business system</p>
+                     */
+                    std::string m_shipToAddress;
+                    bool m_shipToAddressHasBeenSet;
 
                 };
             }

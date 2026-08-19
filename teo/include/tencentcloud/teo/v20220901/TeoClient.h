@@ -79,6 +79,8 @@
 #include <tencentcloud/teo/v20220901/model/CreateL7AccRulesResponse.h>
 #include <tencentcloud/teo/v20220901/model/CreateLoadBalancerRequest.h>
 #include <tencentcloud/teo/v20220901/model/CreateLoadBalancerResponse.h>
+#include <tencentcloud/teo/v20220901/model/CreateLogAnalysisDownloadTaskRequest.h>
+#include <tencentcloud/teo/v20220901/model/CreateLogAnalysisDownloadTaskResponse.h>
 #include <tencentcloud/teo/v20220901/model/CreateMultiPathGatewayRequest.h>
 #include <tencentcloud/teo/v20220901/model/CreateMultiPathGatewayResponse.h>
 #include <tencentcloud/teo/v20220901/model/CreateMultiPathGatewayLineRequest.h>
@@ -571,6 +573,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateLoadBalancerResponse> CreateLoadBalancerOutcome;
                 typedef std::future<CreateLoadBalancerOutcome> CreateLoadBalancerOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::CreateLoadBalancerRequest&, CreateLoadBalancerOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateLoadBalancerAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateLogAnalysisDownloadTaskResponse> CreateLogAnalysisDownloadTaskOutcome;
+                typedef std::future<CreateLogAnalysisDownloadTaskOutcome> CreateLogAnalysisDownloadTaskOutcomeCallable;
+                typedef std::function<void(const TeoClient*, const Model::CreateLogAnalysisDownloadTaskRequest&, CreateLogAnalysisDownloadTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateLogAnalysisDownloadTaskAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateMultiPathGatewayResponse> CreateMultiPathGatewayOutcome;
                 typedef std::future<CreateMultiPathGatewayOutcome> CreateMultiPathGatewayOutcomeCallable;
                 typedef std::function<void(const TeoClient*, const Model::CreateMultiPathGatewayRequest&, CreateMultiPathGatewayOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateMultiPathGatewayAsyncHandler;
@@ -1433,6 +1438,19 @@ This API is used to learn about the detailed capacity of JIT transcoding. EdgeOn
                 CreateLoadBalancerOutcome CreateLoadBalancer(const Model::CreateLoadBalancerRequest &request);
                 void CreateLoadBalancerAsync(const Model::CreateLoadBalancerRequest& request, const CreateLoadBalancerAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreateLoadBalancerOutcomeCallable CreateLoadBalancerCallable(const Model::CreateLoadBalancerRequest& request);
+
+                /**
+                 *This API is used to create a log analysis download task. After creation, you can query the download task via the DescribeLogAnalysisDownloadTasks API.
+Note:
+1. Supports up to 50 million log entries per download.
+2. Log files are reserved for 3 days.
+3. When multiple tasks exist at the same time, they are processed sequentially based on task creation time.
+                 * @param req CreateLogAnalysisDownloadTaskRequest
+                 * @return CreateLogAnalysisDownloadTaskOutcome
+                 */
+                CreateLogAnalysisDownloadTaskOutcome CreateLogAnalysisDownloadTask(const Model::CreateLogAnalysisDownloadTaskRequest &request);
+                void CreateLogAnalysisDownloadTaskAsync(const Model::CreateLogAnalysisDownloadTaskRequest& request, const CreateLogAnalysisDownloadTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateLogAnalysisDownloadTaskOutcomeCallable CreateLogAnalysisDownloadTaskCallable(const Model::CreateLogAnalysisDownloadTaskRequest& request);
 
                 /**
                  *Create a multi-channel security acceleration gateway via this API, including Cloud Gateway (gateway created and managed by Tencent Cloud) and private gateway (gateway deployed by users). Query the status using DescribeMultiPathGateway, and creation is successful if the status is online.
@@ -2725,7 +2743,7 @@ After the environment variables are set, they can be used in the function code. 
                 IdentifyZoneOutcomeCallable IdentifyZoneCallable(const Model::IdentifyZoneRequest& request);
 
                 /**
-                 *This API is used to quickly import site configuration files. After the import is initiated, the API will return the corresponding task ID (TaskId). Users need to use the site configuration import result query API (DescribeZoneConfigImportResult) to obtain the results of this import task. This feature only supports the sites in the plans of the Standard Edition and the Enterprise Edition.
+                 *This API is used to quickly import site configuration files. After the import is initiated, the API will return the corresponding task ID. Users need to use the site configuration import result query API to obtain the execution result of this import task.
                  * @param req ImportZoneConfigRequest
                  * @return ImportZoneConfigOutcome
                  */

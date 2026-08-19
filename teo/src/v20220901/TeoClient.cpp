@@ -1440,6 +1440,56 @@ TeoClient::CreateLoadBalancerOutcomeCallable TeoClient::CreateLoadBalancerCallab
     return prom->get_future();
 }
 
+TeoClient::CreateLogAnalysisDownloadTaskOutcome TeoClient::CreateLogAnalysisDownloadTask(const CreateLogAnalysisDownloadTaskRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateLogAnalysisDownloadTask");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateLogAnalysisDownloadTaskResponse rsp = CreateLogAnalysisDownloadTaskResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateLogAnalysisDownloadTaskOutcome(rsp);
+        else
+            return CreateLogAnalysisDownloadTaskOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateLogAnalysisDownloadTaskOutcome(outcome.GetError());
+    }
+}
+
+void TeoClient::CreateLogAnalysisDownloadTaskAsync(const CreateLogAnalysisDownloadTaskRequest& request, const CreateLogAnalysisDownloadTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const CreateLogAnalysisDownloadTaskRequest&;
+    using Resp = CreateLogAnalysisDownloadTaskResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "CreateLogAnalysisDownloadTask", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TeoClient::CreateLogAnalysisDownloadTaskOutcomeCallable TeoClient::CreateLogAnalysisDownloadTaskCallable(const CreateLogAnalysisDownloadTaskRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<CreateLogAnalysisDownloadTaskOutcome>>();
+    CreateLogAnalysisDownloadTaskAsync(
+    request,
+    [prom](
+        const TeoClient*,
+        const CreateLogAnalysisDownloadTaskRequest&,
+        CreateLogAnalysisDownloadTaskOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 TeoClient::CreateMultiPathGatewayOutcome TeoClient::CreateMultiPathGateway(const CreateMultiPathGatewayRequest &request)
 {
     auto outcome = MakeRequest(request, "CreateMultiPathGateway");

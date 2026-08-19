@@ -30,6 +30,7 @@ set(teo_public_header_model
   include/tencentcloud/teo/v20220901/model/DeleteL4ProxyRulesRequest.h
   include/tencentcloud/teo/v20220901/model/DescribeOriginGroupResponse.h
   include/tencentcloud/teo/v20220901/model/ModifySecurityJSInjectionRuleRequest.h
+  include/tencentcloud/teo/v20220901/model/CreateLogAnalysisDownloadTaskResponse.h
   include/tencentcloud/teo/v20220901/model/DescribeSecurityIPGroupInfoResponse.h
   include/tencentcloud/teo/v20220901/model/AdaptiveFrequencyControl.h
   include/tencentcloud/teo/v20220901/model/RenewFlag.h
@@ -597,6 +598,7 @@ set(teo_public_header_model
   include/tencentcloud/teo/v20220901/model/DropPageConfig.h
   include/tencentcloud/teo/v20220901/model/DescribeSecurityIPGroupInfoRequest.h
   include/tencentcloud/teo/v20220901/model/ExceptUserRuleScope.h
+  include/tencentcloud/teo/v20220901/model/CreateLogAnalysisDownloadTaskRequest.h
   include/tencentcloud/teo/v20220901/model/PartialModule.h
   include/tencentcloud/teo/v20220901/model/DescribeZoneConfigImportResultRequest.h
   include/tencentcloud/teo/v20220901/model/ModifyApplicationProxyRuleStatusRequest.h
@@ -1159,6 +1161,7 @@ set(teo_src
   src/v20220901/model/DeleteL4ProxyRulesRequest.cpp
   src/v20220901/model/DescribeOriginGroupResponse.cpp
   src/v20220901/model/ModifySecurityJSInjectionRuleRequest.cpp
+  src/v20220901/model/CreateLogAnalysisDownloadTaskResponse.cpp
   src/v20220901/model/DescribeSecurityIPGroupInfoResponse.cpp
   src/v20220901/model/AdaptiveFrequencyControl.cpp
   src/v20220901/model/RenewFlag.cpp
@@ -1726,6 +1729,7 @@ set(teo_src
   src/v20220901/model/DropPageConfig.cpp
   src/v20220901/model/DescribeSecurityIPGroupInfoRequest.cpp
   src/v20220901/model/ExceptUserRuleScope.cpp
+  src/v20220901/model/CreateLogAnalysisDownloadTaskRequest.cpp
   src/v20220901/model/PartialModule.cpp
   src/v20220901/model/DescribeZoneConfigImportResultRequest.cpp
   src/v20220901/model/ModifyApplicationProxyRuleStatusRequest.cpp
