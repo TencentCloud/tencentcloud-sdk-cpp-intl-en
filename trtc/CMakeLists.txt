@@ -67,11 +67,13 @@ set(trtc_public_header_model
   include/tencentcloud/trtc/v20190722/model/DeleteCloudModerationResponse.h
   include/tencentcloud/trtc/v20190722/model/DescribeRelayUsageRequest.h
   include/tencentcloud/trtc/v20190722/model/DismissRoomResponse.h
+  include/tencentcloud/trtc/v20190722/model/MessageInfo.h
   include/tencentcloud/trtc/v20190722/model/CloudStorage.h
   include/tencentcloud/trtc/v20190722/model/VoicePrint.h
   include/tencentcloud/trtc/v20190722/model/DescribeTrtcUsageResponse.h
   include/tencentcloud/trtc/v20190722/model/TimeValue.h
   include/tencentcloud/trtc/v20190722/model/CreateCloudRecordingResponse.h
+  include/tencentcloud/trtc/v20190722/model/QueryAIMessageListResponse.h
   include/tencentcloud/trtc/v20190722/model/DescribeWebRecordRequest.h
   include/tencentcloud/trtc/v20190722/model/DescribeTRTCRealTimeScaleDataResponse.h
   include/tencentcloud/trtc/v20190722/model/DescribeRoomInfoRequest.h
@@ -193,6 +195,7 @@ set(trtc_public_header_model
   include/tencentcloud/trtc/v20190722/model/TextToSpeechSSERequest.h
   include/tencentcloud/trtc/v20190722/model/StopWebRecordResponse.h
   include/tencentcloud/trtc/v20190722/model/TermPair.h
+  include/tencentcloud/trtc/v20190722/model/QueryAIMessageListRequest.h
   include/tencentcloud/trtc/v20190722/model/STTConfig.h
   include/tencentcloud/trtc/v20190722/model/StopWebRecordRequest.h
   include/tencentcloud/trtc/v20190722/model/McuSeiParams.h
@@ -276,11 +279,13 @@ set(trtc_src
   src/v20190722/model/DeleteCloudModerationResponse.cpp
   src/v20190722/model/DescribeRelayUsageRequest.cpp
   src/v20190722/model/DismissRoomResponse.cpp
+  src/v20190722/model/MessageInfo.cpp
   src/v20190722/model/CloudStorage.cpp
   src/v20190722/model/VoicePrint.cpp
   src/v20190722/model/DescribeTrtcUsageResponse.cpp
   src/v20190722/model/TimeValue.cpp
   src/v20190722/model/CreateCloudRecordingResponse.cpp
+  src/v20190722/model/QueryAIMessageListResponse.cpp
   src/v20190722/model/DescribeWebRecordRequest.cpp
   src/v20190722/model/DescribeTRTCRealTimeScaleDataResponse.cpp
   src/v20190722/model/DescribeRoomInfoRequest.cpp
@@ -402,6 +407,7 @@ set(trtc_src
   src/v20190722/model/TextToSpeechSSERequest.cpp
   src/v20190722/model/StopWebRecordResponse.cpp
   src/v20190722/model/TermPair.cpp
+  src/v20190722/model/QueryAIMessageListRequest.cpp
   src/v20190722/model/STTConfig.cpp
   src/v20190722/model/StopWebRecordRequest.cpp
   src/v20190722/model/McuSeiParams.cpp

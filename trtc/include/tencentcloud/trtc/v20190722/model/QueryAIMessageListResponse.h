@@ -1,0 +1,95 @@
+/*
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+#ifndef TENCENTCLOUD_TRTC_V20190722_MODEL_QUERYAIMESSAGELISTRESPONSE_H_
+#define TENCENTCLOUD_TRTC_V20190722_MODEL_QUERYAIMESSAGELISTRESPONSE_H_
+
+#include <string>
+#include <vector>
+#include <map>
+#include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/trtc/v20190722/model/MessageInfo.h>
+
+
+namespace TencentCloud
+{
+    namespace Trtc
+    {
+        namespace V20190722
+        {
+            namespace Model
+            {
+                /**
+                * QueryAIMessageList response structure.
+                */
+                class QueryAIMessageListResponse : public AbstractModel
+                {
+                public:
+                    QueryAIMessageListResponse();
+                    ~QueryAIMessageListResponse() = default;
+                    CoreInternalOutcome Deserialize(const std::string &payload);
+                    std::string ToJsonString() const;
+
+
+                    /**
+                     * 获取Total number of AI conversation context messages.
+                     * @return Total Total number of AI conversation context messages.
+                     * 
+                     */
+                    uint64_t GetTotal() const;
+
+                    /**
+                     * 判断参数 Total 是否已赋值
+                     * @return Total 是否已赋值
+                     * 
+                     */
+                    bool TotalHasBeenSet() const;
+
+                    /**
+                     * 获取List of AI conversation context information.
+                     * @return MessageList List of AI conversation context information.
+                     * 
+                     */
+                    std::vector<MessageInfo> GetMessageList() const;
+
+                    /**
+                     * 判断参数 MessageList 是否已赋值
+                     * @return MessageList 是否已赋值
+                     * 
+                     */
+                    bool MessageListHasBeenSet() const;
+
+                private:
+
+                    /**
+                     * Total number of AI conversation context messages.
+                     */
+                    uint64_t m_total;
+                    bool m_totalHasBeenSet;
+
+                    /**
+                     * List of AI conversation context information.
+                     */
+                    std::vector<MessageInfo> m_messageList;
+                    bool m_messageListHasBeenSet;
+
+                };
+            }
+        }
+    }
+}
+
+#endif // !TENCENTCLOUD_TRTC_V20190722_MODEL_QUERYAIMESSAGELISTRESPONSE_H_

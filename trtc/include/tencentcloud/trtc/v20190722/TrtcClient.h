@@ -97,6 +97,8 @@
 #include <tencentcloud/trtc/v20190722/model/ModifyCloudRecordingResponse.h>
 #include <tencentcloud/trtc/v20190722/model/ModifyCloudSliceTaskRequest.h>
 #include <tencentcloud/trtc/v20190722/model/ModifyCloudSliceTaskResponse.h>
+#include <tencentcloud/trtc/v20190722/model/QueryAIMessageListRequest.h>
+#include <tencentcloud/trtc/v20190722/model/QueryAIMessageListResponse.h>
 #include <tencentcloud/trtc/v20190722/model/RemoveUserRequest.h>
 #include <tencentcloud/trtc/v20190722/model/RemoveUserResponse.h>
 #include <tencentcloud/trtc/v20190722/model/RemoveUserByStrRoomIdRequest.h>
@@ -262,6 +264,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyCloudSliceTaskResponse> ModifyCloudSliceTaskOutcome;
                 typedef std::future<ModifyCloudSliceTaskOutcome> ModifyCloudSliceTaskOutcomeCallable;
                 typedef std::function<void(const TrtcClient*, const Model::ModifyCloudSliceTaskRequest&, ModifyCloudSliceTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyCloudSliceTaskAsyncHandler;
+                typedef Outcome<Core::Error, Model::QueryAIMessageListResponse> QueryAIMessageListOutcome;
+                typedef std::future<QueryAIMessageListOutcome> QueryAIMessageListOutcomeCallable;
+                typedef std::function<void(const TrtcClient*, const Model::QueryAIMessageListRequest&, QueryAIMessageListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> QueryAIMessageListAsyncHandler;
                 typedef Outcome<Core::Error, Model::RemoveUserResponse> RemoveUserOutcome;
                 typedef std::future<RemoveUserOutcome> RemoveUserOutcomeCallable;
                 typedef std::function<void(const TrtcClient*, const Model::RemoveUserRequest&, RemoveUserOutcome, const std::shared_ptr<const AsyncCallerContext>&)> RemoveUserAsyncHandler;
@@ -738,6 +743,15 @@ For details about the error events, see https://intl.cloud.tencent.com/document/
                 ModifyCloudSliceTaskOutcome ModifyCloudSliceTask(const Model::ModifyCloudSliceTaskRequest &request);
                 void ModifyCloudSliceTaskAsync(const Model::ModifyCloudSliceTaskRequest& request, const ModifyCloudSliceTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ModifyCloudSliceTaskOutcomeCallable ModifyCloudSliceTaskCallable(const Model::ModifyCloudSliceTaskRequest& request);
+
+                /**
+                 *input a task ID to query the list of AI conversation context information.
+                 * @param req QueryAIMessageListRequest
+                 * @return QueryAIMessageListOutcome
+                 */
+                QueryAIMessageListOutcome QueryAIMessageList(const Model::QueryAIMessageListRequest &request);
+                void QueryAIMessageListAsync(const Model::QueryAIMessageListRequest& request, const QueryAIMessageListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                QueryAIMessageListOutcomeCallable QueryAIMessageListCallable(const Model::QueryAIMessageListRequest& request);
 
                 /**
                  *This API is used to remove a user from a room. It is applicable to scenarios where the anchor, room owner, or admin wants to kick out a user. It supports all platforms. For Android, iOS, Windows, and macOS, the TRTC SDK needs to be upgraded to v6.6 or above.

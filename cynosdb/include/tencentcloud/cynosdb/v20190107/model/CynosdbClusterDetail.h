@@ -1292,6 +1292,48 @@ namespace TencentCloud
                      */
                     bool RealZoneHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Exceed limit enabled status</p><p>Enumeration value:</p><ul><li>yes: Exceed limit enabled</li><li>no: Exceed limit disabled</li></ul><p>Default value: no</p>
+                     * @return StorageOverUse <p>Exceed limit enabled status</p><p>Enumeration value:</p><ul><li>yes: Exceed limit enabled</li><li>no: Exceed limit disabled</li></ul><p>Default value: no</p>
+                     * 
+                     */
+                    std::string GetStorageOverUse() const;
+
+                    /**
+                     * 设置<p>Exceed limit enabled status</p><p>Enumeration value:</p><ul><li>yes: Exceed limit enabled</li><li>no: Exceed limit disabled</li></ul><p>Default value: no</p>
+                     * @param _storageOverUse <p>Exceed limit enabled status</p><p>Enumeration value:</p><ul><li>yes: Exceed limit enabled</li><li>no: Exceed limit disabled</li></ul><p>Default value: no</p>
+                     * 
+                     */
+                    void SetStorageOverUse(const std::string& _storageOverUse);
+
+                    /**
+                     * 判断参数 StorageOverUse 是否已赋值
+                     * @return StorageOverUse 是否已赋值
+                     * 
+                     */
+                    bool StorageOverUseHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Auto-scaling enabled status</p><p>Enumeration value:</p><ul><li>yes: On</li><li>no: Off</li></ul><p>Default value: no</p>
+                     * @return StorageAutoExpand <p>Auto-scaling enabled status</p><p>Enumeration value:</p><ul><li>yes: On</li><li>no: Off</li></ul><p>Default value: no</p>
+                     * 
+                     */
+                    std::string GetStorageAutoExpand() const;
+
+                    /**
+                     * 设置<p>Auto-scaling enabled status</p><p>Enumeration value:</p><ul><li>yes: On</li><li>no: Off</li></ul><p>Default value: no</p>
+                     * @param _storageAutoExpand <p>Auto-scaling enabled status</p><p>Enumeration value:</p><ul><li>yes: On</li><li>no: Off</li></ul><p>Default value: no</p>
+                     * 
+                     */
+                    void SetStorageAutoExpand(const std::string& _storageAutoExpand);
+
+                    /**
+                     * 判断参数 StorageAutoExpand 是否已赋值
+                     * @return StorageAutoExpand 是否已赋值
+                     * 
+                     */
+                    bool StorageAutoExpandHasBeenSet() const;
+
                 private:
 
                     /**
@@ -1647,6 +1689,18 @@ namespace TencentCloud
                      */
                     std::string m_realZone;
                     bool m_realZoneHasBeenSet;
+
+                    /**
+                     * <p>Exceed limit enabled status</p><p>Enumeration value:</p><ul><li>yes: Exceed limit enabled</li><li>no: Exceed limit disabled</li></ul><p>Default value: no</p>
+                     */
+                    std::string m_storageOverUse;
+                    bool m_storageOverUseHasBeenSet;
+
+                    /**
+                     * <p>Auto-scaling enabled status</p><p>Enumeration value:</p><ul><li>yes: On</li><li>no: Off</li></ul><p>Default value: no</p>
+                     */
+                    std::string m_storageAutoExpand;
+                    bool m_storageAutoExpandHasBeenSet;
 
                 };
             }

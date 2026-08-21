@@ -1890,6 +1890,56 @@ TrtcClient::ModifyCloudSliceTaskOutcomeCallable TrtcClient::ModifyCloudSliceTask
     return prom->get_future();
 }
 
+TrtcClient::QueryAIMessageListOutcome TrtcClient::QueryAIMessageList(const QueryAIMessageListRequest &request)
+{
+    auto outcome = MakeRequest(request, "QueryAIMessageList");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        QueryAIMessageListResponse rsp = QueryAIMessageListResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return QueryAIMessageListOutcome(rsp);
+        else
+            return QueryAIMessageListOutcome(o.GetError());
+    }
+    else
+    {
+        return QueryAIMessageListOutcome(outcome.GetError());
+    }
+}
+
+void TrtcClient::QueryAIMessageListAsync(const QueryAIMessageListRequest& request, const QueryAIMessageListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const QueryAIMessageListRequest&;
+    using Resp = QueryAIMessageListResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "QueryAIMessageList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TrtcClient::QueryAIMessageListOutcomeCallable TrtcClient::QueryAIMessageListCallable(const QueryAIMessageListRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<QueryAIMessageListOutcome>>();
+    QueryAIMessageListAsync(
+    request,
+    [prom](
+        const TrtcClient*,
+        const QueryAIMessageListRequest&,
+        QueryAIMessageListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 TrtcClient::RemoveUserOutcome TrtcClient::RemoveUser(const RemoveUserRequest &request)
 {
     auto outcome = MakeRequest(request, "RemoveUser");
