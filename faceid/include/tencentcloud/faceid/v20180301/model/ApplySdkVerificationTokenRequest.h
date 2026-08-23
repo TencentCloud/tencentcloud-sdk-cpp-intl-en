@@ -121,71 +121,71 @@ Default value: 4
                     bool SecurityLevelHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the identity document type used for authentication. valid values:.  
+                     * 获取Specifies the identity document type used for authentication. Valid values:
 
-1. HK (default): hong kong (china) identity card.
-2. ML: malaysian identity card.
-3. Indonesian identity card.
-4. PhilippinesVoteID: specifies the voter card in the philippines.
-5. PhilippinesDrivingLicense: specifies the driving license in philippines.
-6. PhilippinesTinID: specifies the philippines tin id.
-7. PhilippinesSSSID: specifies the SSSID in the philippines.
-8. philippines UMID: specifies the philippines UMID.
-9. MLIDPassport: specifies the passport for hong kong (china), macao (china), and taiwan (china) as well as overseas passports.
-10. ThailandIDCard: specifies the thai identity card.
-11. Mainland id card.
-12. SingaporeIDCard: specifies the Singapore id card.
-13. HMTPermit: specifies the hong kong, macau and taiwan travel permit.
-                     * @return IdCardType Specifies the identity document type used for authentication. valid values:.  
+1. HK (default): Hong Kong (China) Identity Card.
+2. ML: Malaysia Identity Card.
+3. IndonesiaIDCard: Indonesia Identity Card.
+4. PhilippinesVoteID: Philippines Voter's ID.
+5. PhilippinesDrivingLicense: Philippines Driving License.
+6. PhilippinesTinID: Philippines TIN ID.
+7. PhilippinesSSSID: Philippines SSS ID.
+8. PhilippinesUMID: Philippines UMID.
+9. MLIDPassport: Passports of Hong Kong (China), Macao (China), and Taiwan (China), as well as overseas regions.
+10. ThailandIDCard: Thailand Identity Card.
+11. MainlandIDCard: Chinese Mainland Identity Card.
+12. SingaporeIDCard: Singapore Identity Card.
+13. HMTPermit: Travel Permit for Hong Kong (China), Macao (China), and Taiwan (China).
+                     * @return IdCardType Specifies the identity document type used for authentication. Valid values:
 
-1. HK (default): hong kong (china) identity card.
-2. ML: malaysian identity card.
-3. Indonesian identity card.
-4. PhilippinesVoteID: specifies the voter card in the philippines.
-5. PhilippinesDrivingLicense: specifies the driving license in philippines.
-6. PhilippinesTinID: specifies the philippines tin id.
-7. PhilippinesSSSID: specifies the SSSID in the philippines.
-8. philippines UMID: specifies the philippines UMID.
-9. MLIDPassport: specifies the passport for hong kong (china), macao (china), and taiwan (china) as well as overseas passports.
-10. ThailandIDCard: specifies the thai identity card.
-11. Mainland id card.
-12. SingaporeIDCard: specifies the Singapore id card.
-13. HMTPermit: specifies the hong kong, macau and taiwan travel permit.
+1. HK (default): Hong Kong (China) Identity Card.
+2. ML: Malaysia Identity Card.
+3. IndonesiaIDCard: Indonesia Identity Card.
+4. PhilippinesVoteID: Philippines Voter's ID.
+5. PhilippinesDrivingLicense: Philippines Driving License.
+6. PhilippinesTinID: Philippines TIN ID.
+7. PhilippinesSSSID: Philippines SSS ID.
+8. PhilippinesUMID: Philippines UMID.
+9. MLIDPassport: Passports of Hong Kong (China), Macao (China), and Taiwan (China), as well as overseas regions.
+10. ThailandIDCard: Thailand Identity Card.
+11. MainlandIDCard: Chinese Mainland Identity Card.
+12. SingaporeIDCard: Singapore Identity Card.
+13. HMTPermit: Travel Permit for Hong Kong (China), Macao (China), and Taiwan (China).
                      * 
                      */
                     std::string GetIdCardType() const;
 
                     /**
-                     * 设置Specifies the identity document type used for authentication. valid values:.  
+                     * 设置Specifies the identity document type used for authentication. Valid values:
 
-1. HK (default): hong kong (china) identity card.
-2. ML: malaysian identity card.
-3. Indonesian identity card.
-4. PhilippinesVoteID: specifies the voter card in the philippines.
-5. PhilippinesDrivingLicense: specifies the driving license in philippines.
-6. PhilippinesTinID: specifies the philippines tin id.
-7. PhilippinesSSSID: specifies the SSSID in the philippines.
-8. philippines UMID: specifies the philippines UMID.
-9. MLIDPassport: specifies the passport for hong kong (china), macao (china), and taiwan (china) as well as overseas passports.
-10. ThailandIDCard: specifies the thai identity card.
-11. Mainland id card.
-12. SingaporeIDCard: specifies the Singapore id card.
-13. HMTPermit: specifies the hong kong, macau and taiwan travel permit.
-                     * @param _idCardType Specifies the identity document type used for authentication. valid values:.  
+1. HK (default): Hong Kong (China) Identity Card.
+2. ML: Malaysia Identity Card.
+3. IndonesiaIDCard: Indonesia Identity Card.
+4. PhilippinesVoteID: Philippines Voter's ID.
+5. PhilippinesDrivingLicense: Philippines Driving License.
+6. PhilippinesTinID: Philippines TIN ID.
+7. PhilippinesSSSID: Philippines SSS ID.
+8. PhilippinesUMID: Philippines UMID.
+9. MLIDPassport: Passports of Hong Kong (China), Macao (China), and Taiwan (China), as well as overseas regions.
+10. ThailandIDCard: Thailand Identity Card.
+11. MainlandIDCard: Chinese Mainland Identity Card.
+12. SingaporeIDCard: Singapore Identity Card.
+13. HMTPermit: Travel Permit for Hong Kong (China), Macao (China), and Taiwan (China).
+                     * @param _idCardType Specifies the identity document type used for authentication. Valid values:
 
-1. HK (default): hong kong (china) identity card.
-2. ML: malaysian identity card.
-3. Indonesian identity card.
-4. PhilippinesVoteID: specifies the voter card in the philippines.
-5. PhilippinesDrivingLicense: specifies the driving license in philippines.
-6. PhilippinesTinID: specifies the philippines tin id.
-7. PhilippinesSSSID: specifies the SSSID in the philippines.
-8. philippines UMID: specifies the philippines UMID.
-9. MLIDPassport: specifies the passport for hong kong (china), macao (china), and taiwan (china) as well as overseas passports.
-10. ThailandIDCard: specifies the thai identity card.
-11. Mainland id card.
-12. SingaporeIDCard: specifies the Singapore id card.
-13. HMTPermit: specifies the hong kong, macau and taiwan travel permit.
+1. HK (default): Hong Kong (China) Identity Card.
+2. ML: Malaysia Identity Card.
+3. IndonesiaIDCard: Indonesia Identity Card.
+4. PhilippinesVoteID: Philippines Voter's ID.
+5. PhilippinesDrivingLicense: Philippines Driving License.
+6. PhilippinesTinID: Philippines TIN ID.
+7. PhilippinesSSSID: Philippines SSS ID.
+8. PhilippinesUMID: Philippines UMID.
+9. MLIDPassport: Passports of Hong Kong (China), Macao (China), and Taiwan (China), as well as overseas regions.
+10. ThailandIDCard: Thailand Identity Card.
+11. MainlandIDCard: Chinese Mainland Identity Card.
+12. SingaporeIDCard: Singapore Identity Card.
+13. HMTPermit: Travel Permit for Hong Kong (China), Macao (China), and Taiwan (China).
                      * 
                      */
                     void SetIdCardType(const std::string& _idCardType);
@@ -651,6 +651,31 @@ false : Expired HKID is rejected and cannot enter the liveness process.
                      */
                     bool AllowUploadPhotoHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Whether to enable Bank of Thailand-specific background detection.<br>This parameter requires whitelist activation; please contact us to request access before it can take effect.</p><p>Default value: false</p>
+
+                     * @return EnableBotBgDetection <p>Whether to enable Bank of Thailand-specific background detection.<br>This parameter requires whitelist activation; please contact us to request access before it can take effect.</p><p>Default value: false</p>
+
+                     * 
+                     */
+                    bool GetEnableBotBgDetection() const;
+
+                    /**
+                     * 设置<p>Whether to enable Bank of Thailand-specific background detection.<br>This parameter requires whitelist activation; please contact us to request access before it can take effect.</p><p>Default value: false</p>
+
+                     * @param _enableBotBgDetection <p>Whether to enable Bank of Thailand-specific background detection.<br>This parameter requires whitelist activation; please contact us to request access before it can take effect.</p><p>Default value: false</p>
+
+                     * 
+                     */
+                    void SetEnableBotBgDetection(const bool& _enableBotBgDetection);
+
+                    /**
+                     * 判断参数 EnableBotBgDetection 是否已赋值
+                     * @return EnableBotBgDetection 是否已赋值
+                     * 
+                     */
+                    bool EnableBotBgDetectionHasBeenSet() const;
+
                 private:
 
                     /**
@@ -675,21 +700,21 @@ Default value: 4
                     bool m_securityLevelHasBeenSet;
 
                     /**
-                     * Specifies the identity document type used for authentication. valid values:.  
+                     * Specifies the identity document type used for authentication. Valid values:
 
-1. HK (default): hong kong (china) identity card.
-2. ML: malaysian identity card.
-3. Indonesian identity card.
-4. PhilippinesVoteID: specifies the voter card in the philippines.
-5. PhilippinesDrivingLicense: specifies the driving license in philippines.
-6. PhilippinesTinID: specifies the philippines tin id.
-7. PhilippinesSSSID: specifies the SSSID in the philippines.
-8. philippines UMID: specifies the philippines UMID.
-9. MLIDPassport: specifies the passport for hong kong (china), macao (china), and taiwan (china) as well as overseas passports.
-10. ThailandIDCard: specifies the thai identity card.
-11. Mainland id card.
-12. SingaporeIDCard: specifies the Singapore id card.
-13. HMTPermit: specifies the hong kong, macau and taiwan travel permit.
+1. HK (default): Hong Kong (China) Identity Card.
+2. ML: Malaysia Identity Card.
+3. IndonesiaIDCard: Indonesia Identity Card.
+4. PhilippinesVoteID: Philippines Voter's ID.
+5. PhilippinesDrivingLicense: Philippines Driving License.
+6. PhilippinesTinID: Philippines TIN ID.
+7. PhilippinesSSSID: Philippines SSS ID.
+8. PhilippinesUMID: Philippines UMID.
+9. MLIDPassport: Passports of Hong Kong (China), Macao (China), and Taiwan (China), as well as overseas regions.
+10. ThailandIDCard: Thailand Identity Card.
+11. MainlandIDCard: Chinese Mainland Identity Card.
+12. SingaporeIDCard: Singapore Identity Card.
+13. HMTPermit: Travel Permit for Hong Kong (China), Macao (China), and Taiwan (China).
                      */
                     std::string m_idCardType;
                     bool m_idCardTypeHasBeenSet;
@@ -820,6 +845,13 @@ false : Expired HKID is rejected and cannot enter the liveness process.
                      */
                     bool m_allowUploadPhoto;
                     bool m_allowUploadPhotoHasBeenSet;
+
+                    /**
+                     * <p>Whether to enable Bank of Thailand-specific background detection.<br>This parameter requires whitelist activation; please contact us to request access before it can take effect.</p><p>Default value: false</p>
+
+                     */
+                    bool m_enableBotBgDetection;
+                    bool m_enableBotBgDetectionHasBeenSet;
 
                 };
             }

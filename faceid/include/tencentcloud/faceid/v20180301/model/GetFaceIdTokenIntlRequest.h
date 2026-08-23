@@ -209,6 +209,31 @@ Please contact us to access enhance version & plus version.
                      */
                     bool RetryLimitHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Whether to enable Bank of Thailand-specific background detection.<br>This parameter requires whitelist activation; please contact us to request access before it can take effect.</p><p>Default value: false</p>
+
+                     * @return EnableBotBgDetection <p>Whether to enable Bank of Thailand-specific background detection.<br>This parameter requires whitelist activation; please contact us to request access before it can take effect.</p><p>Default value: false</p>
+
+                     * 
+                     */
+                    bool GetEnableBotBgDetection() const;
+
+                    /**
+                     * 设置<p>Whether to enable Bank of Thailand-specific background detection.<br>This parameter requires whitelist activation; please contact us to request access before it can take effect.</p><p>Default value: false</p>
+
+                     * @param _enableBotBgDetection <p>Whether to enable Bank of Thailand-specific background detection.<br>This parameter requires whitelist activation; please contact us to request access before it can take effect.</p><p>Default value: false</p>
+
+                     * 
+                     */
+                    void SetEnableBotBgDetection(const bool& _enableBotBgDetection);
+
+                    /**
+                     * 判断参数 EnableBotBgDetection 是否已赋值
+                     * @return EnableBotBgDetection 是否已赋值
+                     * 
+                     */
+                    bool EnableBotBgDetectionHasBeenSet() const;
+
                 private:
 
                     /**
@@ -257,6 +282,13 @@ Please contact us to access enhance version & plus version.
                      */
                     int64_t m_retryLimit;
                     bool m_retryLimitHasBeenSet;
+
+                    /**
+                     * <p>Whether to enable Bank of Thailand-specific background detection.<br>This parameter requires whitelist activation; please contact us to request access before it can take effect.</p><p>Default value: false</p>
+
+                     */
+                    bool m_enableBotBgDetection;
+                    bool m_enableBotBgDetectionHasBeenSet;
 
                 };
             }

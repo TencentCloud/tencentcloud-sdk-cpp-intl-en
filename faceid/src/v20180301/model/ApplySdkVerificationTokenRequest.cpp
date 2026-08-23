@@ -43,7 +43,8 @@ ApplySdkVerificationTokenRequest::ApplySdkVerificationTokenRequest() :
     m_skipLaunchPageHasBeenSet(false),
     m_skipOcrConfirmPageHasBeenSet(false),
     m_hideProgressBarHasBeenSet(false),
-    m_allowUploadPhotoHasBeenSet(false)
+    m_allowUploadPhotoHasBeenSet(false),
+    m_enableBotBgDetectionHasBeenSet(false)
 {
 }
 
@@ -230,6 +231,14 @@ string ApplySdkVerificationTokenRequest::ToJsonString() const
         string key = "AllowUploadPhoto";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_allowUploadPhoto, allocator);
+    }
+
+    if (m_enableBotBgDetectionHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "EnableBotBgDetection";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_enableBotBgDetection, allocator);
     }
 
 
@@ -574,6 +583,22 @@ void ApplySdkVerificationTokenRequest::SetAllowUploadPhoto(const bool& _allowUpl
 bool ApplySdkVerificationTokenRequest::AllowUploadPhotoHasBeenSet() const
 {
     return m_allowUploadPhotoHasBeenSet;
+}
+
+bool ApplySdkVerificationTokenRequest::GetEnableBotBgDetection() const
+{
+    return m_enableBotBgDetection;
+}
+
+void ApplySdkVerificationTokenRequest::SetEnableBotBgDetection(const bool& _enableBotBgDetection)
+{
+    m_enableBotBgDetection = _enableBotBgDetection;
+    m_enableBotBgDetectionHasBeenSet = true;
+}
+
+bool ApplySdkVerificationTokenRequest::EnableBotBgDetectionHasBeenSet() const
+{
+    return m_enableBotBgDetectionHasBeenSet;
 }
 
 

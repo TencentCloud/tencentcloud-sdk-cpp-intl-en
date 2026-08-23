@@ -57,6 +57,20 @@ namespace TencentCloud
                      */
                     bool SdkTokenHasBeenSet() const;
 
+                    /**
+                     * 获取Encrypted string of server-side parameters
+                     * @return ServerParamInfo Encrypted string of server-side parameters
+                     * 
+                     */
+                    std::string GetServerParamInfo() const;
+
+                    /**
+                     * 判断参数 ServerParamInfo 是否已赋值
+                     * @return ServerParamInfo 是否已赋值
+                     * 
+                     */
+                    bool ServerParamInfoHasBeenSet() const;
+
                 private:
 
                     /**
@@ -64,6 +78,12 @@ namespace TencentCloud
                      */
                     std::string m_sdkToken;
                     bool m_sdkTokenHasBeenSet;
+
+                    /**
+                     * Encrypted string of server-side parameters
+                     */
+                    std::string m_serverParamInfo;
+                    bool m_serverParamInfoHasBeenSet;
 
                 };
             }

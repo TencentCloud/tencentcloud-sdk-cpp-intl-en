@@ -29,7 +29,8 @@ GetFaceIdTokenIntlRequest::GetFaceIdTokenIntlRequest() :
     m_extraHasBeenSet(false),
     m_actionListHasBeenSet(false),
     m_sdkVersionHasBeenSet(false),
-    m_retryLimitHasBeenSet(false)
+    m_retryLimitHasBeenSet(false),
+    m_enableBotBgDetectionHasBeenSet(false)
 {
 }
 
@@ -94,6 +95,14 @@ string GetFaceIdTokenIntlRequest::ToJsonString() const
         string key = "RetryLimit";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_retryLimit, allocator);
+    }
+
+    if (m_enableBotBgDetectionHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "EnableBotBgDetection";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_enableBotBgDetection, allocator);
     }
 
 
@@ -214,6 +223,22 @@ void GetFaceIdTokenIntlRequest::SetRetryLimit(const int64_t& _retryLimit)
 bool GetFaceIdTokenIntlRequest::RetryLimitHasBeenSet() const
 {
     return m_retryLimitHasBeenSet;
+}
+
+bool GetFaceIdTokenIntlRequest::GetEnableBotBgDetection() const
+{
+    return m_enableBotBgDetection;
+}
+
+void GetFaceIdTokenIntlRequest::SetEnableBotBgDetection(const bool& _enableBotBgDetection)
+{
+    m_enableBotBgDetection = _enableBotBgDetection;
+    m_enableBotBgDetectionHasBeenSet = true;
+}
+
+bool GetFaceIdTokenIntlRequest::EnableBotBgDetectionHasBeenSet() const
+{
+    return m_enableBotBgDetectionHasBeenSet;
 }
 
 
