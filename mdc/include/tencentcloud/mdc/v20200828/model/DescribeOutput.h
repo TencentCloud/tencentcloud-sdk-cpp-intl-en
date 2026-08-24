@@ -31,6 +31,10 @@
 #include <tencentcloud/mdc/v20200828/model/DescribeOutputRTMPPullSettings.h>
 #include <tencentcloud/mdc/v20200828/model/DescribeOutputRTSPPullSettings.h>
 #include <tencentcloud/mdc/v20200828/model/DescribeOutputHLSPullSettings.h>
+#include <tencentcloud/mdc/v20200828/model/DescribeOutputRISTSettings.h>
+#include <tencentcloud/mdc/v20200828/model/PidSelector.h>
+#include <tencentcloud/mdc/v20200828/model/StreamUrlDetail.h>
+#include <tencentcloud/mdc/v20200828/model/StreamSelector.h>
 
 
 namespace TencentCloud
@@ -309,23 +313,15 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool RTMPPullSettingsHasBeenSet() const;
 
                     /**
-                     * 获取CIDR allowlist
-This parameter is valid if `Protocol` is set to `RTMP_PULL`. If this parameter is left empty, there is no restriction on clients’ IP addresses.
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @return AllowIpList CIDR allowlist
-This parameter is valid if `Protocol` is set to `RTMP_PULL`. If this parameter is left empty, there is no restriction on clients’ IP addresses.
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 获取CIDR Whitelist List. Effective when Protocol is RTMP_PULL. Empty means no restriction on client IP.
+                     * @return AllowIpList CIDR Whitelist List. Effective when Protocol is RTMP_PULL. Empty means no restriction on client IP.
                      * 
                      */
                     std::vector<std::string> GetAllowIpList() const;
 
                     /**
-                     * 设置CIDR allowlist
-This parameter is valid if `Protocol` is set to `RTMP_PULL`. If this parameter is left empty, there is no restriction on clients’ IP addresses.
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @param _allowIpList CIDR allowlist
-This parameter is valid if `Protocol` is set to `RTMP_PULL`. If this parameter is left empty, there is no restriction on clients’ IP addresses.
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 设置CIDR Whitelist List. Effective when Protocol is RTMP_PULL. Empty means no restriction on client IP.
+                     * @param _allowIpList CIDR Whitelist List. Effective when Protocol is RTMP_PULL. Empty means no restriction on client IP.
                      * 
                      */
                     void SetAllowIpList(const std::vector<std::string>& _allowIpList);
@@ -338,15 +334,15 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool AllowIpListHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return RTSPPullSettings 
+                     * 获取The output RTSP streaming configuration information.
+                     * @return RTSPPullSettings The output RTSP streaming configuration information.
                      * 
                      */
                     DescribeOutputRTSPPullSettings GetRTSPPullSettings() const;
 
                     /**
-                     * 设置
-                     * @param _rTSPPullSettings 
+                     * 设置The output RTSP streaming configuration information.
+                     * @param _rTSPPullSettings The output RTSP streaming configuration information.
                      * 
                      */
                     void SetRTSPPullSettings(const DescribeOutputRTSPPullSettings& _rTSPPullSettings);
@@ -359,15 +355,15 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool RTSPPullSettingsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return HLSPullSettings 
+                     * 获取Output the HLS streaming configuration information.
+                     * @return HLSPullSettings Output the HLS streaming configuration information.
                      * 
                      */
                     DescribeOutputHLSPullSettings GetHLSPullSettings() const;
 
                     /**
-                     * 设置
-                     * @param _hLSPullSettings 
+                     * 设置Output the HLS streaming configuration information.
+                     * @param _hLSPullSettings Output the HLS streaming configuration information.
                      * 
                      */
                     void SetHLSPullSettings(const DescribeOutputHLSPullSettings& _hLSPullSettings);
@@ -380,15 +376,15 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool HLSPullSettingsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return MaxConcurrent 
+                     * 获取The maximum number of concurrent streams is 4, with a default of 4.
+                     * @return MaxConcurrent The maximum number of concurrent streams is 4, with a default of 4.
                      * 
                      */
                     uint64_t GetMaxConcurrent() const;
 
                     /**
-                     * 设置
-                     * @param _maxConcurrent 
+                     * 设置The maximum number of concurrent streams is 4, with a default of 4.
+                     * @param _maxConcurrent The maximum number of concurrent streams is 4, with a default of 4.
                      * 
                      */
                     void SetMaxConcurrent(const uint64_t& _maxConcurrent);
@@ -420,6 +416,132 @@ Note: This field may return `null`, indicating that no valid value was found.
                      * 
                      */
                     bool SecurityGroupIdsHasBeenSet() const;
+
+                    /**
+                     * 获取The available zone currently only supports a maximum of one output.
+                     * @return Zones The available zone currently only supports a maximum of one output.
+                     * 
+                     */
+                    std::vector<std::string> GetZones() const;
+
+                    /**
+                     * 设置The available zone currently only supports a maximum of one output.
+                     * @param _zones The available zone currently only supports a maximum of one output.
+                     * 
+                     */
+                    void SetZones(const std::vector<std::string>& _zones);
+
+                    /**
+                     * 判断参数 Zones 是否已赋值
+                     * @return Zones 是否已赋值
+                     * 
+                     */
+                    bool ZonesHasBeenSet() const;
+
+                    /**
+                     * 获取Output RIST configuration information.
+                     * @return RISTSettings Output RIST configuration information.
+                     * 
+                     */
+                    DescribeOutputRISTSettings GetRISTSettings() const;
+
+                    /**
+                     * 设置Output RIST configuration information.
+                     * @param _rISTSettings Output RIST configuration information.
+                     * 
+                     */
+                    void SetRISTSettings(const DescribeOutputRISTSettings& _rISTSettings);
+
+                    /**
+                     * 判断参数 RISTSettings 是否已赋值
+                     * @return RISTSettings 是否已赋值
+                     * 
+                     */
+                    bool RISTSettingsHasBeenSet() const;
+
+                    /**
+                     * 获取For streams containing multiple audio/video tracks, you can specify the tracks that need to be used
+                     * @return PidSelector For streams containing multiple audio/video tracks, you can specify the tracks that need to be used
+                     * @deprecated
+                     */
+                    PidSelector GetPidSelector() const;
+
+                    /**
+                     * 设置For streams containing multiple audio/video tracks, you can specify the tracks that need to be used
+                     * @param _pidSelector For streams containing multiple audio/video tracks, you can specify the tracks that need to be used
+                     * @deprecated
+                     */
+                    void SetPidSelector(const PidSelector& _pidSelector);
+
+                    /**
+                     * 判断参数 PidSelector 是否已赋值
+                     * @return PidSelector 是否已赋值
+                     * @deprecated
+                     */
+                    bool PidSelectorHasBeenSet() const;
+
+                    /**
+                     * 获取Output module types, including Pinpoint (single point output, supporting up to four concurrent outputs); MultiMesh (Multi output, supports concurrent outputs greater than four, currently up to 200). The default type is Pinpoint output. For a single Flow, a region can only have a maximum of one MultiMesh output.
+                     * @return OutputKind Output module types, including Pinpoint (single point output, supporting up to four concurrent outputs); MultiMesh (Multi output, supports concurrent outputs greater than four, currently up to 200). The default type is Pinpoint output. For a single Flow, a region can only have a maximum of one MultiMesh output.
+                     * 
+                     */
+                    std::string GetOutputKind() const;
+
+                    /**
+                     * 设置Output module types, including Pinpoint (single point output, supporting up to four concurrent outputs); MultiMesh (Multi output, supports concurrent outputs greater than four, currently up to 200). The default type is Pinpoint output. For a single Flow, a region can only have a maximum of one MultiMesh output.
+                     * @param _outputKind Output module types, including Pinpoint (single point output, supporting up to four concurrent outputs); MultiMesh (Multi output, supports concurrent outputs greater than four, currently up to 200). The default type is Pinpoint output. For a single Flow, a region can only have a maximum of one MultiMesh output.
+                     * 
+                     */
+                    void SetOutputKind(const std::string& _outputKind);
+
+                    /**
+                     * 判断参数 OutputKind 是否已赋值
+                     * @return OutputKind 是否已赋值
+                     * 
+                     */
+                    bool OutputKindHasBeenSet() const;
+
+                    /**
+                     * 获取Output module configuration, relevant URLs, including provided streaming addresses or configured output to third-party forwarding addresses
+                     * @return StreamUrls Output module configuration, relevant URLs, including provided streaming addresses or configured output to third-party forwarding addresses
+                     * 
+                     */
+                    std::vector<StreamUrlDetail> GetStreamUrls() const;
+
+                    /**
+                     * 设置Output module configuration, relevant URLs, including provided streaming addresses or configured output to third-party forwarding addresses
+                     * @param _streamUrls Output module configuration, relevant URLs, including provided streaming addresses or configured output to third-party forwarding addresses
+                     * 
+                     */
+                    void SetStreamUrls(const std::vector<StreamUrlDetail>& _streamUrls);
+
+                    /**
+                     * 判断参数 StreamUrls 是否已赋值
+                     * @return StreamUrls 是否已赋值
+                     * 
+                     */
+                    bool StreamUrlsHasBeenSet() const;
+
+                    /**
+                     * 获取For streams containing multiple audio/video tracks, you can specify the tracks that need to be used
+                     * @return StreamSelector For streams containing multiple audio/video tracks, you can specify the tracks that need to be used
+                     * 
+                     */
+                    StreamSelector GetStreamSelector() const;
+
+                    /**
+                     * 设置For streams containing multiple audio/video tracks, you can specify the tracks that need to be used
+                     * @param _streamSelector For streams containing multiple audio/video tracks, you can specify the tracks that need to be used
+                     * 
+                     */
+                    void SetStreamSelector(const StreamSelector& _streamSelector);
+
+                    /**
+                     * 判断参数 StreamSelector 是否已赋值
+                     * @return StreamSelector 是否已赋值
+                     * 
+                     */
+                    bool StreamSelectorHasBeenSet() const;
 
                 private:
 
@@ -496,27 +618,25 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool m_rTMPPullSettingsHasBeenSet;
 
                     /**
-                     * CIDR allowlist
-This parameter is valid if `Protocol` is set to `RTMP_PULL`. If this parameter is left empty, there is no restriction on clients’ IP addresses.
-Note: This field may return `null`, indicating that no valid value was found.
+                     * CIDR Whitelist List. Effective when Protocol is RTMP_PULL. Empty means no restriction on client IP.
                      */
                     std::vector<std::string> m_allowIpList;
                     bool m_allowIpListHasBeenSet;
 
                     /**
-                     * 
+                     * The output RTSP streaming configuration information.
                      */
                     DescribeOutputRTSPPullSettings m_rTSPPullSettings;
                     bool m_rTSPPullSettingsHasBeenSet;
 
                     /**
-                     * 
+                     * Output the HLS streaming configuration information.
                      */
                     DescribeOutputHLSPullSettings m_hLSPullSettings;
                     bool m_hLSPullSettingsHasBeenSet;
 
                     /**
-                     * 
+                     * The maximum number of concurrent streams is 4, with a default of 4.
                      */
                     uint64_t m_maxConcurrent;
                     bool m_maxConcurrentHasBeenSet;
@@ -526,6 +646,42 @@ Note: This field may return `null`, indicating that no valid value was found.
                      */
                     std::vector<std::string> m_securityGroupIds;
                     bool m_securityGroupIdsHasBeenSet;
+
+                    /**
+                     * The available zone currently only supports a maximum of one output.
+                     */
+                    std::vector<std::string> m_zones;
+                    bool m_zonesHasBeenSet;
+
+                    /**
+                     * Output RIST configuration information.
+                     */
+                    DescribeOutputRISTSettings m_rISTSettings;
+                    bool m_rISTSettingsHasBeenSet;
+
+                    /**
+                     * For streams containing multiple audio/video tracks, you can specify the tracks that need to be used
+                     */
+                    PidSelector m_pidSelector;
+                    bool m_pidSelectorHasBeenSet;
+
+                    /**
+                     * Output module types, including Pinpoint (single point output, supporting up to four concurrent outputs); MultiMesh (Multi output, supports concurrent outputs greater than four, currently up to 200). The default type is Pinpoint output. For a single Flow, a region can only have a maximum of one MultiMesh output.
+                     */
+                    std::string m_outputKind;
+                    bool m_outputKindHasBeenSet;
+
+                    /**
+                     * Output module configuration, relevant URLs, including provided streaming addresses or configured output to third-party forwarding addresses
+                     */
+                    std::vector<StreamUrlDetail> m_streamUrls;
+                    bool m_streamUrlsHasBeenSet;
+
+                    /**
+                     * For streams containing multiple audio/video tracks, you can specify the tracks that need to be used
+                     */
+                    StreamSelector m_streamSelector;
+                    bool m_streamSelectorHasBeenSet;
 
                 };
             }

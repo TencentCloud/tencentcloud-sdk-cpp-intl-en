@@ -36,7 +36,13 @@ DescribeOutput::DescribeOutput() :
     m_rTSPPullSettingsHasBeenSet(false),
     m_hLSPullSettingsHasBeenSet(false),
     m_maxConcurrentHasBeenSet(false),
-    m_securityGroupIdsHasBeenSet(false)
+    m_securityGroupIdsHasBeenSet(false),
+    m_zonesHasBeenSet(false),
+    m_rISTSettingsHasBeenSet(false),
+    m_pidSelectorHasBeenSet(false),
+    m_outputKindHasBeenSet(false),
+    m_streamUrlsHasBeenSet(false),
+    m_streamSelectorHasBeenSet(false)
 {
 }
 
@@ -263,6 +269,100 @@ CoreInternalOutcome DescribeOutput::Deserialize(const rapidjson::Value &value)
         m_securityGroupIdsHasBeenSet = true;
     }
 
+    if (value.HasMember("Zones") && !value["Zones"].IsNull())
+    {
+        if (!value["Zones"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `DescribeOutput.Zones` is not array type"));
+
+        const rapidjson::Value &tmpValue = value["Zones"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            m_zones.push_back((*itr).GetString());
+        }
+        m_zonesHasBeenSet = true;
+    }
+
+    if (value.HasMember("RISTSettings") && !value["RISTSettings"].IsNull())
+    {
+        if (!value["RISTSettings"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `DescribeOutput.RISTSettings` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_rISTSettings.Deserialize(value["RISTSettings"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_rISTSettingsHasBeenSet = true;
+    }
+
+    if (value.HasMember("PidSelector") && !value["PidSelector"].IsNull())
+    {
+        if (!value["PidSelector"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `DescribeOutput.PidSelector` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_pidSelector.Deserialize(value["PidSelector"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_pidSelectorHasBeenSet = true;
+    }
+
+    if (value.HasMember("OutputKind") && !value["OutputKind"].IsNull())
+    {
+        if (!value["OutputKind"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `DescribeOutput.OutputKind` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_outputKind = string(value["OutputKind"].GetString());
+        m_outputKindHasBeenSet = true;
+    }
+
+    if (value.HasMember("StreamUrls") && !value["StreamUrls"].IsNull())
+    {
+        if (!value["StreamUrls"].IsArray())
+            return CoreInternalOutcome(Core::Error("response `DescribeOutput.StreamUrls` is not array type"));
+
+        const rapidjson::Value &tmpValue = value["StreamUrls"];
+        for (rapidjson::Value::ConstValueIterator itr = tmpValue.Begin(); itr != tmpValue.End(); ++itr)
+        {
+            StreamUrlDetail item;
+            CoreInternalOutcome outcome = item.Deserialize(*itr);
+            if (!outcome.IsSuccess())
+            {
+                outcome.GetError().SetRequestId(requestId);
+                return outcome;
+            }
+            m_streamUrls.push_back(item);
+        }
+        m_streamUrlsHasBeenSet = true;
+    }
+
+    if (value.HasMember("StreamSelector") && !value["StreamSelector"].IsNull())
+    {
+        if (!value["StreamSelector"].IsObject())
+        {
+            return CoreInternalOutcome(Core::Error("response `DescribeOutput.StreamSelector` is not object type").SetRequestId(requestId));
+        }
+
+        CoreInternalOutcome outcome = m_streamSelector.Deserialize(value["StreamSelector"]);
+        if (!outcome.IsSuccess())
+        {
+            outcome.GetError().SetRequestId(requestId);
+            return outcome;
+        }
+
+        m_streamSelectorHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -419,6 +519,69 @@ void DescribeOutput::ToJsonObject(rapidjson::Value &value, rapidjson::Document::
         {
             value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
+    }
+
+    if (m_zonesHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Zones";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        for (auto itr = m_zones.begin(); itr != m_zones.end(); ++itr)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
+        }
+    }
+
+    if (m_rISTSettingsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "RISTSettings";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_rISTSettings.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_pidSelectorHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "PidSelector";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_pidSelector.ToJsonObject(value[key.c_str()], allocator);
+    }
+
+    if (m_outputKindHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "OutputKind";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_outputKind.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_streamUrlsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "StreamUrls";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_streamUrls.begin(); itr != m_streamUrls.end(); ++itr, ++i)
+        {
+            value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(value[key.c_str()][i], allocator);
+        }
+    }
+
+    if (m_streamSelectorHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "StreamSelector";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+        m_streamSelector.ToJsonObject(value[key.c_str()], allocator);
     }
 
 }
@@ -678,5 +841,101 @@ void DescribeOutput::SetSecurityGroupIds(const vector<string>& _securityGroupIds
 bool DescribeOutput::SecurityGroupIdsHasBeenSet() const
 {
     return m_securityGroupIdsHasBeenSet;
+}
+
+vector<string> DescribeOutput::GetZones() const
+{
+    return m_zones;
+}
+
+void DescribeOutput::SetZones(const vector<string>& _zones)
+{
+    m_zones = _zones;
+    m_zonesHasBeenSet = true;
+}
+
+bool DescribeOutput::ZonesHasBeenSet() const
+{
+    return m_zonesHasBeenSet;
+}
+
+DescribeOutputRISTSettings DescribeOutput::GetRISTSettings() const
+{
+    return m_rISTSettings;
+}
+
+void DescribeOutput::SetRISTSettings(const DescribeOutputRISTSettings& _rISTSettings)
+{
+    m_rISTSettings = _rISTSettings;
+    m_rISTSettingsHasBeenSet = true;
+}
+
+bool DescribeOutput::RISTSettingsHasBeenSet() const
+{
+    return m_rISTSettingsHasBeenSet;
+}
+
+PidSelector DescribeOutput::GetPidSelector() const
+{
+    return m_pidSelector;
+}
+
+void DescribeOutput::SetPidSelector(const PidSelector& _pidSelector)
+{
+    m_pidSelector = _pidSelector;
+    m_pidSelectorHasBeenSet = true;
+}
+
+bool DescribeOutput::PidSelectorHasBeenSet() const
+{
+    return m_pidSelectorHasBeenSet;
+}
+
+string DescribeOutput::GetOutputKind() const
+{
+    return m_outputKind;
+}
+
+void DescribeOutput::SetOutputKind(const string& _outputKind)
+{
+    m_outputKind = _outputKind;
+    m_outputKindHasBeenSet = true;
+}
+
+bool DescribeOutput::OutputKindHasBeenSet() const
+{
+    return m_outputKindHasBeenSet;
+}
+
+vector<StreamUrlDetail> DescribeOutput::GetStreamUrls() const
+{
+    return m_streamUrls;
+}
+
+void DescribeOutput::SetStreamUrls(const vector<StreamUrlDetail>& _streamUrls)
+{
+    m_streamUrls = _streamUrls;
+    m_streamUrlsHasBeenSet = true;
+}
+
+bool DescribeOutput::StreamUrlsHasBeenSet() const
+{
+    return m_streamUrlsHasBeenSet;
+}
+
+StreamSelector DescribeOutput::GetStreamSelector() const
+{
+    return m_streamSelector;
+}
+
+void DescribeOutput::SetStreamSelector(const StreamSelector& _streamSelector)
+{
+    m_streamSelector = _streamSelector;
+    m_streamSelectorHasBeenSet = true;
+}
+
+bool DescribeOutput::StreamSelectorHasBeenSet() const
+{
+    return m_streamSelectorHasBeenSet;
 }
 
