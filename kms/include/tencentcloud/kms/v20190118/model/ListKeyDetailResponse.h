@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Total number of CMKs
-                     * @return TotalCount Total number of CMKs
+                     * 获取<p>Total number of CMKs</p>
+                     * @return TotalCount <p>Total number of CMKs</p>
                      * 
                      */
                     uint64_t GetTotalCount() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the returned attribute information list.
-                     * @return KeyMetadatas Specifies the returned attribute information list.
+                     * 获取<p>Returned attribute information list.</p>
+                     * @return KeyMetadatas <p>Returned attribute information list.</p>
                      * 
                      */
                     std::vector<KeyMetadata> GetKeyMetadatas() const;
@@ -75,13 +75,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Total number of CMKs
+                     * <p>Total number of CMKs</p>
                      */
                     uint64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * Specifies the returned attribute information list.
+                     * <p>Returned attribute information list.</p>
                      */
                     std::vector<KeyMetadata> m_keyMetadatas;
                     bool m_keyMetadatasHasBeenSet;

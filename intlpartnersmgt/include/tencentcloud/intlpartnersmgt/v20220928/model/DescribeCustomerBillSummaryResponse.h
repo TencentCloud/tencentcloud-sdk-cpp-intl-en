@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Total amount
-                     * @return TotalCost Total amount
+                     * 获取<p>Total amount</p>
+                     * @return TotalCost <p>Total amount</p>
                      * 
                      */
                     double GetTotalCost() const;
@@ -60,7 +60,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Total amount
+                     * <p>Total amount</p>
                      */
                     double m_totalCost;
                     bool m_totalCostHasBeenSet;

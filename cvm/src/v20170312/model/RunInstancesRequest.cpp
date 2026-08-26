@@ -53,8 +53,10 @@ RunInstancesRequest::RunInstancesRequest() :
     m_launchTemplateHasBeenSet(false),
     m_dedicatedClusterIdHasBeenSet(false),
     m_chcIdsHasBeenSet(false),
+    m_partitionNumberHasBeenSet(false),
     m_disableApiTerminationHasBeenSet(false),
-    m_enableJumboFrameHasBeenSet(false)
+    m_enableJumboFrameHasBeenSet(false),
+    m_networkInterfacesHasBeenSet(false)
 {
 }
 
@@ -346,6 +348,14 @@ string RunInstancesRequest::ToJsonString() const
         }
     }
 
+    if (m_partitionNumberHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "PartitionNumber";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_partitionNumber, allocator);
+    }
+
     if (m_disableApiTerminationHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
@@ -360,6 +370,21 @@ string RunInstancesRequest::ToJsonString() const
         string key = "EnableJumboFrame";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_enableJumboFrame, allocator);
+    }
+
+    if (m_networkInterfacesHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "NetworkInterfaces";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        int i=0;
+        for (auto itr = m_networkInterfaces.begin(); itr != m_networkInterfaces.end(); ++itr, ++i)
+        {
+            d[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
+            (*itr).ToJsonObject(d[key.c_str()][i], allocator);
+        }
     }
 
 
@@ -850,6 +875,22 @@ bool RunInstancesRequest::ChcIdsHasBeenSet() const
     return m_chcIdsHasBeenSet;
 }
 
+int64_t RunInstancesRequest::GetPartitionNumber() const
+{
+    return m_partitionNumber;
+}
+
+void RunInstancesRequest::SetPartitionNumber(const int64_t& _partitionNumber)
+{
+    m_partitionNumber = _partitionNumber;
+    m_partitionNumberHasBeenSet = true;
+}
+
+bool RunInstancesRequest::PartitionNumberHasBeenSet() const
+{
+    return m_partitionNumberHasBeenSet;
+}
+
 bool RunInstancesRequest::GetDisableApiTermination() const
 {
     return m_disableApiTermination;
@@ -880,6 +921,22 @@ void RunInstancesRequest::SetEnableJumboFrame(const bool& _enableJumboFrame)
 bool RunInstancesRequest::EnableJumboFrameHasBeenSet() const
 {
     return m_enableJumboFrameHasBeenSet;
+}
+
+vector<NetworkInterfaces> RunInstancesRequest::GetNetworkInterfaces() const
+{
+    return m_networkInterfaces;
+}
+
+void RunInstancesRequest::SetNetworkInterfaces(const vector<NetworkInterfaces>& _networkInterfaces)
+{
+    m_networkInterfaces = _networkInterfaces;
+    m_networkInterfacesHasBeenSet = true;
+}
+
+bool RunInstancesRequest::NetworkInterfacesHasBeenSet() const
+{
+    return m_networkInterfacesHasBeenSet;
 }
 
 

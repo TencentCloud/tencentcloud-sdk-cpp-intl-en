@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Returns the attribute information list.
-                     * @return DataKeyMetadatas Returns the attribute information list.
+                     * 获取<p>Returned attribute information list.</p>
+                     * @return DataKeyMetadatas <p>Returned attribute information list.</p>
                      * 
                      */
                     std::vector<DataKeyMetadata> GetDataKeyMetadatas() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool DataKeyMetadatasHasBeenSet() const;
 
                     /**
-                     * 获取Total number of datakeys.
-                     * @return TotalCount Total number of datakeys.
+                     * 获取<p>Total number of DataKeys</p>
+                     * @return TotalCount <p>Total number of DataKeys</p>
                      * 
                      */
                     uint64_t GetTotalCount() const;
@@ -75,13 +75,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Returns the attribute information list.
+                     * <p>Returned attribute information list.</p>
                      */
                     std::vector<DataKeyMetadata> m_dataKeyMetadatas;
                     bool m_dataKeyMetadatasHasBeenSet;
 
                     /**
-                     * Total number of datakeys.
+                     * <p>Total number of DataKeys</p>
                      */
                     uint64_t m_totalCount;
                     bool m_totalCountHasBeenSet;

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Customer bill details
+                * Customer Bill Details
                 */
                 class BillDetailData : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取reseller account.
-                     * @return PayerAccountId reseller account.
+                     * 获取<p> Distributor account</p>
+                     * @return PayerAccountId <p> Distributor account</p>
                      * 
                      */
                     int64_t GetPayerAccountId() const;
 
                     /**
-                     * 设置reseller account.
-                     * @param _payerAccountId reseller account.
+                     * 设置<p> Distributor account</p>
+                     * @param _payerAccountId <p> Distributor account</p>
                      * 
                      */
                     void SetPayerAccountId(const int64_t& _payerAccountId);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool PayerAccountIdHasBeenSet() const;
 
                     /**
-                     * 获取Subaccount.
-                     * @return OwnerAccountId Subaccount.
+                     * 获取<p>Sub-Customer account</p>
+                     * @return OwnerAccountId <p>Sub-Customer account</p>
                      * 
                      */
                     int64_t GetOwnerAccountId() const;
 
                     /**
-                     * 设置Subaccount.
-                     * @param _ownerAccountId Subaccount.
+                     * 设置<p>Sub-Customer account</p>
+                     * @param _ownerAccountId <p>Sub-Customer account</p>
                      * 
                      */
                     void SetOwnerAccountId(const int64_t& _ownerAccountId);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool OwnerAccountIdHasBeenSet() const;
 
                     /**
-                     * 获取Operator account.
-                     * @return OperatorAccountId Operator account.
+                     * 获取<p>Operator account</p>
+                     * @return OperatorAccountId <p>Operator account</p>
                      * 
                      */
                     int64_t GetOperatorAccountId() const;
 
                     /**
-                     * 设置Operator account.
-                     * @param _operatorAccountId Operator account.
+                     * 设置<p>Operator account</p>
+                     * @param _operatorAccountId <p>Operator account</p>
                      * 
                      */
                     void SetOperatorAccountId(const int64_t& _operatorAccountId);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool OperatorAccountIdHasBeenSet() const;
 
                     /**
-                     * 获取Product name.
-                     * @return ProductName Product name.
+                     * 获取<p>Product name.</p>
+                     * @return ProductName <p>Product name.</p>
                      * 
                      */
                     std::string GetProductName() const;
 
                     /**
-                     * 设置Product name.
-                     * @param _productName Product name.
+                     * 设置<p>Product name.</p>
+                     * @param _productName <p>Product name.</p>
                      * 
                      */
                     void SetProductName(const std::string& _productName);
@@ -131,31 +131,15 @@ namespace TencentCloud
                     bool ProductNameHasBeenSet() const;
 
                     /**
-                     * 获取Billing mode
-.
-Monthly subscription (annual and monthly).
-Pay-As-You-Go resources.
-Standard ri reserved instance.
-                     * @return BillingMode Billing mode
-.
-Monthly subscription (annual and monthly).
-Pay-As-You-Go resources.
-Standard ri reserved instance.
+                     * 获取<p>Billing mode</p><p>Enumeration values:</p><ul><li>yearly/monthly subscription</li><li>Pay-As-You-Go resources</li></ul>
+                     * @return BillingMode <p>Billing mode</p><p>Enumeration values:</p><ul><li>yearly/monthly subscription</li><li>Pay-As-You-Go resources</li></ul>
                      * 
                      */
                     std::string GetBillingMode() const;
 
                     /**
-                     * 设置Billing mode
-.
-Monthly subscription (annual and monthly).
-Pay-As-You-Go resources.
-Standard ri reserved instance.
-                     * @param _billingMode Billing mode
-.
-Monthly subscription (annual and monthly).
-Pay-As-You-Go resources.
-Standard ri reserved instance.
+                     * 设置<p>Billing mode</p><p>Enumeration values:</p><ul><li>yearly/monthly subscription</li><li>Pay-As-You-Go resources</li></ul>
+                     * @param _billingMode <p>Billing mode</p><p>Enumeration values:</p><ul><li>yearly/monthly subscription</li><li>Pay-As-You-Go resources</li></ul>
                      * 
                      */
                     void SetBillingMode(const std::string& _billingMode);
@@ -168,19 +152,15 @@ Standard ri reserved instance.
                     bool BillingModeHasBeenSet() const;
 
                     /**
-                     * 获取Project name.
-
-                     * @return ProjectName Project name.
-
+                     * 获取<p>Project name.</p>
+                     * @return ProjectName <p>Project name.</p>
                      * 
                      */
                     std::string GetProjectName() const;
 
                     /**
-                     * 设置Project name.
-
-                     * @param _projectName Project name.
-
+                     * 设置<p>Project name.</p>
+                     * @param _projectName <p>Project name.</p>
                      * 
                      */
                     void SetProjectName(const std::string& _projectName);
@@ -193,15 +173,15 @@ Standard ri reserved instance.
                     bool ProjectNameHasBeenSet() const;
 
                     /**
-                     * 获取Resource region.
-                     * @return Region Resource region.
+                     * 获取<p>Associated region of the resource</p>
+                     * @return Region <p>Associated region of the resource</p>
                      * 
                      */
                     std::string GetRegion() const;
 
                     /**
-                     * 设置Resource region.
-                     * @param _region Resource region.
+                     * 设置<p>Associated region of the resource</p>
+                     * @param _region <p>Associated region of the resource</p>
                      * 
                      */
                     void SetRegion(const std::string& _region);
@@ -214,15 +194,15 @@ Standard ri reserved instance.
                     bool RegionHasBeenSet() const;
 
                     /**
-                     * 获取Resource available zone.
-                     * @return AvailabilityZone Resource available zone.
+                     * 获取<p>Availability zone of resource</p>
+                     * @return AvailabilityZone <p>Availability zone of resource</p>
                      * 
                      */
                     std::string GetAvailabilityZone() const;
 
                     /**
-                     * 设置Resource available zone.
-                     * @param _availabilityZone Resource available zone.
+                     * 设置<p>Availability zone of resource</p>
+                     * @param _availabilityZone <p>Availability zone of resource</p>
                      * 
                      */
                     void SetAvailabilityZone(const std::string& _availabilityZone);
@@ -235,15 +215,15 @@ Standard ri reserved instance.
                     bool AvailabilityZoneHasBeenSet() const;
 
                     /**
-                     * 获取Instance id.
-                     * @return InstanceId Instance id.
+                     * 获取<p>Instance ID.</p>
+                     * @return InstanceId <p>Instance ID.</p>
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance id.
-                     * @param _instanceId Instance id.
+                     * 设置<p>Instance ID.</p>
+                     * @param _instanceId <p>Instance ID.</p>
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -256,15 +236,15 @@ Standard ri reserved instance.
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Instance name.
-                     * @return InstanceName Instance name.
+                     * 获取<p>Instance name.</p>
+                     * @return InstanceName <p>Instance name.</p>
                      * 
                      */
                     std::string GetInstanceName() const;
 
                     /**
-                     * 设置Instance name.
-                     * @param _instanceName Instance name.
+                     * 设置<p>Instance name.</p>
+                     * @param _instanceName <p>Instance name.</p>
                      * 
                      */
                     void SetInstanceName(const std::string& _instanceName);
@@ -277,23 +257,15 @@ Standard ri reserved instance.
                     bool InstanceNameHasBeenSet() const;
 
                     /**
-                     * 获取Sub-Product name
-.
-
-                     * @return SubProductName Sub-Product name
-.
-
+                     * 获取<p>Sub-product name</p>
+                     * @return SubProductName <p>Sub-product name</p>
                      * 
                      */
                     std::string GetSubProductName() const;
 
                     /**
-                     * 设置Sub-Product name
-.
-
-                     * @param _subProductName Sub-Product name
-.
-
+                     * 设置<p>Sub-product name</p>
+                     * @param _subProductName <p>Sub-product name</p>
                      * 
                      */
                     void SetSubProductName(const std::string& _subProductName);
@@ -306,15 +278,15 @@ Standard ri reserved instance.
                     bool SubProductNameHasBeenSet() const;
 
                     /**
-                     * 获取Settlement type.
-                     * @return TransactionType Settlement type.
+                     * 获取<p>Settlement type</p>
+                     * @return TransactionType <p>Settlement type</p>
                      * 
                      */
                     std::string GetTransactionType() const;
 
                     /**
-                     * 设置Settlement type.
-                     * @param _transactionType Settlement type.
+                     * 设置<p>Settlement type</p>
+                     * @param _transactionType <p>Settlement type</p>
                      * 
                      */
                     void SetTransactionType(const std::string& _transactionType);
@@ -327,15 +299,15 @@ Standard ri reserved instance.
                     bool TransactionTypeHasBeenSet() const;
 
                     /**
-                     * 获取<Transaction id>.
-                     * @return TransactionId <Transaction id>.
+                     * 获取<p>Transaction log ID</p>
+                     * @return TransactionId <p>Transaction log ID</p>
                      * 
                      */
                     std::string GetTransactionId() const;
 
                     /**
-                     * 设置<Transaction id>.
-                     * @param _transactionId <Transaction id>.
+                     * 设置<p>Transaction log ID</p>
+                     * @param _transactionId <p>Transaction log ID</p>
                      * 
                      */
                     void SetTransactionId(const std::string& _transactionId);
@@ -348,19 +320,15 @@ Standard ri reserved instance.
                     bool TransactionIdHasBeenSet() const;
 
                     /**
-                     * 获取Settlement time.
-
-                     * @return TransactionTime Settlement time.
-
+                     * 获取<p>Time of settlement</p>
+                     * @return TransactionTime <p>Time of settlement</p>
                      * 
                      */
                     std::string GetTransactionTime() const;
 
                     /**
-                     * 设置Settlement time.
-
-                     * @param _transactionTime Settlement time.
-
+                     * 设置<p>Time of settlement</p>
+                     * @param _transactionTime <p>Time of settlement</p>
                      * 
                      */
                     void SetTransactionTime(const std::string& _transactionTime);
@@ -373,15 +341,15 @@ Standard ri reserved instance.
                     bool TransactionTimeHasBeenSet() const;
 
                     /**
-                     * 获取<Resource start time>.
-                     * @return UsageStartTime <Resource start time>.
+                     * 获取<p>Resource usage start time</p>
+                     * @return UsageStartTime <p>Resource usage start time</p>
                      * 
                      */
                     std::string GetUsageStartTime() const;
 
                     /**
-                     * 设置<Resource start time>.
-                     * @param _usageStartTime <Resource start time>.
+                     * 设置<p>Resource usage start time</p>
+                     * @param _usageStartTime <p>Resource usage start time</p>
                      * 
                      */
                     void SetUsageStartTime(const std::string& _usageStartTime);
@@ -394,15 +362,15 @@ Standard ri reserved instance.
                     bool UsageStartTimeHasBeenSet() const;
 
                     /**
-                     * 获取<Resource end usage time>.
-                     * @return UsageEndTime <Resource end usage time>.
+                     * 获取<p>Resource usage end time</p>
+                     * @return UsageEndTime <p>Resource usage end time</p>
                      * 
                      */
                     std::string GetUsageEndTime() const;
 
                     /**
-                     * 设置<Resource end usage time>.
-                     * @param _usageEndTime <Resource end usage time>.
+                     * 设置<p>Resource usage end time</p>
+                     * @param _usageEndTime <p>Resource usage end time</p>
                      * 
                      */
                     void SetUsageEndTime(const std::string& _usageEndTime);
@@ -415,15 +383,15 @@ Standard ri reserved instance.
                     bool UsageEndTimeHasBeenSet() const;
 
                     /**
-                     * 获取Component.
-                     * @return ComponentType Component.
+                     * 获取<p>Component</p>
+                     * @return ComponentType <p>Component</p>
                      * 
                      */
                     std::string GetComponentType() const;
 
                     /**
-                     * 设置Component.
-                     * @param _componentType Component.
+                     * 设置<p>Component</p>
+                     * @param _componentType <p>Component</p>
                      * 
                      */
                     void SetComponentType(const std::string& _componentType);
@@ -436,15 +404,15 @@ Standard ri reserved instance.
                     bool ComponentTypeHasBeenSet() const;
 
                     /**
-                     * 获取Component name.
-                     * @return ComponentName Component name.
+                     * 获取<p>Component name</p>
+                     * @return ComponentName <p>Component name</p>
                      * 
                      */
                     std::string GetComponentName() const;
 
                     /**
-                     * 设置Component name.
-                     * @param _componentName Component name.
+                     * 设置<p>Component name</p>
+                     * @param _componentName <p>Component name</p>
                      * 
                      */
                     void SetComponentName(const std::string& _componentName);
@@ -457,15 +425,15 @@ Standard ri reserved instance.
                     bool ComponentNameHasBeenSet() const;
 
                     /**
-                     * 获取Component list price.
-                     * @return ComponentListPrice Component list price.
+                     * 获取<p>Component list price</p>
+                     * @return ComponentListPrice <p>Component list price</p>
                      * 
                      */
                     std::string GetComponentListPrice() const;
 
                     /**
-                     * 设置Component list price.
-                     * @param _componentListPrice Component list price.
+                     * 设置<p>Component list price</p>
+                     * @param _componentListPrice <p>Component list price</p>
                      * 
                      */
                     void SetComponentListPrice(const std::string& _componentListPrice);
@@ -478,15 +446,15 @@ Standard ri reserved instance.
                     bool ComponentListPriceHasBeenSet() const;
 
                     /**
-                     * 获取Price unit.
-                     * @return ComponentPriceMeasurementUnit Price unit.
+                     * 获取<p>Price unit</p>
+                     * @return ComponentPriceMeasurementUnit <p>Price unit</p>
                      * 
                      */
                     std::string GetComponentPriceMeasurementUnit() const;
 
                     /**
-                     * 设置Price unit.
-                     * @param _componentPriceMeasurementUnit Price unit.
+                     * 设置<p>Price unit</p>
+                     * @param _componentPriceMeasurementUnit <p>Price unit</p>
                      * 
                      */
                     void SetComponentPriceMeasurementUnit(const std::string& _componentPriceMeasurementUnit);
@@ -499,15 +467,15 @@ Standard ri reserved instance.
                     bool ComponentPriceMeasurementUnitHasBeenSet() const;
 
                     /**
-                     * 获取Component usage.
-                     * @return ComponentUsage Component usage.
+                     * 获取<p>Component usage</p>
+                     * @return ComponentUsage <p>Component usage</p>
                      * 
                      */
                     std::string GetComponentUsage() const;
 
                     /**
-                     * 设置Component usage.
-                     * @param _componentUsage Component usage.
+                     * 设置<p>Component usage</p>
+                     * @param _componentUsage <p>Component usage</p>
                      * 
                      */
                     void SetComponentUsage(const std::string& _componentUsage);
@@ -520,15 +488,15 @@ Standard ri reserved instance.
                     bool ComponentUsageHasBeenSet() const;
 
                     /**
-                     * 获取Component usage unit.
-                     * @return ComponentUsageUnit Component usage unit.
+                     * 获取<p>Component usage unit</p>
+                     * @return ComponentUsageUnit <p>Component usage unit</p>
                      * 
                      */
                     std::string GetComponentUsageUnit() const;
 
                     /**
-                     * 设置Component usage unit.
-                     * @param _componentUsageUnit Component usage unit.
+                     * 设置<p>Component usage unit</p>
+                     * @param _componentUsageUnit <p>Component usage unit</p>
                      * 
                      */
                     void SetComponentUsageUnit(const std::string& _componentUsageUnit);
@@ -541,15 +509,15 @@ Standard ri reserved instance.
                     bool ComponentUsageUnitHasBeenSet() const;
 
                     /**
-                     * 获取Resource usage duration.
-                     * @return UsageDuration Resource usage duration.
+                     * 获取<p>Resource usage duration</p>
+                     * @return UsageDuration <p>Resource usage duration</p>
                      * 
                      */
                     std::string GetUsageDuration() const;
 
                     /**
-                     * 设置Resource usage duration.
-                     * @param _usageDuration Resource usage duration.
+                     * 设置<p>Resource usage duration</p>
+                     * @param _usageDuration <p>Resource usage duration</p>
                      * 
                      */
                     void SetUsageDuration(const std::string& _usageDuration);
@@ -562,15 +530,15 @@ Standard ri reserved instance.
                     bool UsageDurationHasBeenSet() const;
 
                     /**
-                     * 获取duration unit.
-                     * @return DurationUnit duration unit.
+                     * 获取<p>Duration unit</p>
+                     * @return DurationUnit <p>Duration unit</p>
                      * 
                      */
                     std::string GetDurationUnit() const;
 
                     /**
-                     * 设置duration unit.
-                     * @param _durationUnit duration unit.
+                     * 设置<p>Duration unit</p>
+                     * @param _durationUnit <p>Duration unit</p>
                      * 
                      */
                     void SetDurationUnit(const std::string& _durationUnit);
@@ -583,19 +551,15 @@ Standard ri reserved instance.
                     bool DurationUnitHasBeenSet() const;
 
                     /**
-                     * 获取Total original price.
-Original cost = component list price * component usage * usage duration.
-                     * @return OriginalCost Total original price.
-Original cost = component list price * component usage * usage duration.
+                     * 获取<p>Original total price<br>Original Cost = Component List Price * Component Usage * Usage Duration</p>
+                     * @return OriginalCost <p>Original total price<br>Original Cost = Component List Price * Component Usage * Usage Duration</p>
                      * 
                      */
                     std::string GetOriginalCost() const;
 
                     /**
-                     * 设置Total original price.
-Original cost = component list price * component usage * usage duration.
-                     * @param _originalCost Total original price.
-Original cost = component list price * component usage * usage duration.
+                     * 设置<p>Original total price<br>Original Cost = Component List Price * Component Usage * Usage Duration</p>
+                     * @param _originalCost <p>Original total price<br>Original Cost = Component List Price * Component Usage * Usage Duration</p>
                      * 
                      */
                     void SetOriginalCost(const std::string& _originalCost);
@@ -608,15 +572,15 @@ Original cost = component list price * component usage * usage duration.
                     bool OriginalCostHasBeenSet() const;
 
                     /**
-                     * 获取Discount (default is 1) - abandoned.
-                     * @return DiscountRate Discount (default is 1) - abandoned.
+                     * 获取<p>Discount (default: 1) - abandoned</p>
+                     * @return DiscountRate <p>Discount (default: 1) - abandoned</p>
                      * 
                      */
                     std::string GetDiscountRate() const;
 
                     /**
-                     * 设置Discount (default is 1) - abandoned.
-                     * @param _discountRate Discount (default is 1) - abandoned.
+                     * 设置<p>Discount (default: 1) - abandoned</p>
+                     * @param _discountRate <p>Discount (default: 1) - abandoned</p>
                      * 
                      */
                     void SetDiscountRate(const std::string& _discountRate);
@@ -629,15 +593,15 @@ Original cost = component list price * component usage * usage duration.
                     bool DiscountRateHasBeenSet() const;
 
                     /**
-                     * 获取Currency.
-                     * @return Currency Currency.
+                     * 获取<p>Currency.</p>
+                     * @return Currency <p>Currency.</p>
                      * 
                      */
                     std::string GetCurrency() const;
 
                     /**
-                     * 设置Currency.
-                     * @param _currency Currency.
+                     * 设置<p>Currency.</p>
+                     * @param _currency <p>Currency.</p>
                      * 
                      */
                     void SetCurrency(const std::string& _currency);
@@ -650,15 +614,15 @@ Original cost = component list price * component usage * usage duration.
                     bool CurrencyHasBeenSet() const;
 
                     /**
-                     * 获取Total cost after discount.
-                     * @return TotalAmountAfterDiscount Total cost after discount.
+                     * 获取<p>Total cost after discount</p>
+                     * @return TotalAmountAfterDiscount <p>Total cost after discount</p>
                      * 
                      */
                     std::string GetTotalAmountAfterDiscount() const;
 
                     /**
-                     * 设置Total cost after discount.
-                     * @param _totalAmountAfterDiscount Total cost after discount.
+                     * 设置<p>Total cost after discount</p>
+                     * @param _totalAmountAfterDiscount <p>Total cost after discount</p>
                      * 
                      */
                     void SetTotalAmountAfterDiscount(const std::string& _totalAmountAfterDiscount);
@@ -671,15 +635,15 @@ Original cost = component list price * component usage * usage duration.
                     bool TotalAmountAfterDiscountHasBeenSet() const;
 
                     /**
-                     * 获取Voucher deduction amount.
-                     * @return VoucherDeduction Voucher deduction amount.
+                     * 获取<p>Voucher deducted amount</p>
+                     * @return VoucherDeduction <p>Voucher deducted amount</p>
                      * 
                      */
                     std::string GetVoucherDeduction() const;
 
                     /**
-                     * 设置Voucher deduction amount.
-                     * @param _voucherDeduction Voucher deduction amount.
+                     * 设置<p>Voucher deducted amount</p>
+                     * @param _voucherDeduction <p>Voucher deducted amount</p>
                      * 
                      */
                     void SetVoucherDeduction(const std::string& _voucherDeduction);
@@ -692,15 +656,15 @@ Original cost = component list price * component usage * usage duration.
                     bool VoucherDeductionHasBeenSet() const;
 
                     /**
-                     * 获取= Total Amount After Discount - Voucher Deduction
-                     * @return TotalCost = Total Amount After Discount - Voucher Deduction
+                     * 获取<p>= Total Amount After Discount - Voucher Deduction</p>
+                     * @return TotalCost <p>= Total Amount After Discount - Voucher Deduction</p>
                      * 
                      */
                     std::string GetTotalCost() const;
 
                     /**
-                     * 设置= Total Amount After Discount - Voucher Deduction
-                     * @param _totalCost = Total Amount After Discount - Voucher Deduction
+                     * 设置<p>= Total Amount After Discount - Voucher Deduction</p>
+                     * @param _totalCost <p>= Total Amount After Discount - Voucher Deduction</p>
                      * 
                      */
                     void SetTotalCost(const std::string& _totalCost);
@@ -713,15 +677,15 @@ Original cost = component list price * component usage * usage duration.
                     bool TotalCostHasBeenSet() const;
 
                     /**
-                     * 获取Identifier (id).
-                     * @return Id Identifier (id).
+                     * 获取<p>id</p>
+                     * @return Id <p>id</p>
                      * 
                      */
                     std::string GetId() const;
 
                     /**
-                     * 设置Identifier (id).
-                     * @param _id Identifier (id).
+                     * 设置<p>id</p>
+                     * @param _id <p>id</p>
                      * 
                      */
                     void SetId(const std::string& _id);
@@ -734,15 +698,15 @@ Original cost = component list price * component usage * usage duration.
                     bool IdHasBeenSet() const;
 
                     /**
-                     * 获取customer discount rate. The discount rate applied to the reseller's customer, which set by reseller, default value equal to 1.
-                     * @return CustomerDiscountRate customer discount rate. The discount rate applied to the reseller's customer, which set by reseller, default value equal to 1.
+                     * 获取<p>customer discount rate. The discount rate for customers of resellers, set by the reseller. The default value is 1.</p>
+                     * @return CustomerDiscountRate <p>customer discount rate. The discount rate for customers of resellers, set by the reseller. The default value is 1.</p>
                      * 
                      */
                     std::string GetCustomerDiscountRate() const;
 
                     /**
-                     * 设置customer discount rate. The discount rate applied to the reseller's customer, which set by reseller, default value equal to 1.
-                     * @param _customerDiscountRate customer discount rate. The discount rate applied to the reseller's customer, which set by reseller, default value equal to 1.
+                     * 设置<p>customer discount rate. The discount rate for customers of resellers, set by the reseller. The default value is 1.</p>
+                     * @param _customerDiscountRate <p>customer discount rate. The discount rate for customers of resellers, set by the reseller. The default value is 1.</p>
                      * 
                      */
                     void SetCustomerDiscountRate(const std::string& _customerDiscountRate);
@@ -754,208 +718,307 @@ Original cost = component list price * component usage * usage duration.
                      */
                     bool CustomerDiscountRateHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Product code</p>
+                     * @return BusinessCode <p>Product code</p>
+                     * 
+                     */
+                    std::string GetBusinessCode() const;
+
+                    /**
+                     * 设置<p>Product code</p>
+                     * @param _businessCode <p>Product code</p>
+                     * 
+                     */
+                    void SetBusinessCode(const std::string& _businessCode);
+
+                    /**
+                     * 判断参数 BusinessCode 是否已赋值
+                     * @return BusinessCode 是否已赋值
+                     * 
+                     */
+                    bool BusinessCodeHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Sub-product code</p>
+                     * @return ProductCode <p>Sub-product code</p>
+                     * 
+                     */
+                    std::string GetProductCode() const;
+
+                    /**
+                     * 设置<p>Sub-product code</p>
+                     * @param _productCode <p>Sub-product code</p>
+                     * 
+                     */
+                    void SetProductCode(const std::string& _productCode);
+
+                    /**
+                     * 判断参数 ProductCode 是否已赋值
+                     * @return ProductCode 是否已赋值
+                     * 
+                     */
+                    bool ProductCodeHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Component type code</p>
+                     * @return ComponentCode <p>Component type code</p>
+                     * 
+                     */
+                    std::string GetComponentCode() const;
+
+                    /**
+                     * 设置<p>Component type code</p>
+                     * @param _componentCode <p>Component type code</p>
+                     * 
+                     */
+                    void SetComponentCode(const std::string& _componentCode);
+
+                    /**
+                     * 判断参数 ComponentCode 是否已赋值
+                     * @return ComponentCode 是否已赋值
+                     * 
+                     */
+                    bool ComponentCodeHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Component code</p>
+                     * @return ItemCode <p>Component code</p>
+                     * 
+                     */
+                    std::string GetItemCode() const;
+
+                    /**
+                     * 设置<p>Component code</p>
+                     * @param _itemCode <p>Component code</p>
+                     * 
+                     */
+                    void SetItemCode(const std::string& _itemCode);
+
+                    /**
+                     * 判断参数 ItemCode 是否已赋值
+                     * @return ItemCode 是否已赋值
+                     * 
+                     */
+                    bool ItemCodeHasBeenSet() const;
+
                 private:
 
                     /**
-                     * reseller account.
+                     * <p> Distributor account</p>
                      */
                     int64_t m_payerAccountId;
                     bool m_payerAccountIdHasBeenSet;
 
                     /**
-                     * Subaccount.
+                     * <p>Sub-Customer account</p>
                      */
                     int64_t m_ownerAccountId;
                     bool m_ownerAccountIdHasBeenSet;
 
                     /**
-                     * Operator account.
+                     * <p>Operator account</p>
                      */
                     int64_t m_operatorAccountId;
                     bool m_operatorAccountIdHasBeenSet;
 
                     /**
-                     * Product name.
+                     * <p>Product name.</p>
                      */
                     std::string m_productName;
                     bool m_productNameHasBeenSet;
 
                     /**
-                     * Billing mode
-.
-Monthly subscription (annual and monthly).
-Pay-As-You-Go resources.
-Standard ri reserved instance.
+                     * <p>Billing mode</p><p>Enumeration values:</p><ul><li>yearly/monthly subscription</li><li>Pay-As-You-Go resources</li></ul>
                      */
                     std::string m_billingMode;
                     bool m_billingModeHasBeenSet;
 
                     /**
-                     * Project name.
-
+                     * <p>Project name.</p>
                      */
                     std::string m_projectName;
                     bool m_projectNameHasBeenSet;
 
                     /**
-                     * Resource region.
+                     * <p>Associated region of the resource</p>
                      */
                     std::string m_region;
                     bool m_regionHasBeenSet;
 
                     /**
-                     * Resource available zone.
+                     * <p>Availability zone of resource</p>
                      */
                     std::string m_availabilityZone;
                     bool m_availabilityZoneHasBeenSet;
 
                     /**
-                     * Instance id.
+                     * <p>Instance ID.</p>
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Instance name.
+                     * <p>Instance name.</p>
                      */
                     std::string m_instanceName;
                     bool m_instanceNameHasBeenSet;
 
                     /**
-                     * Sub-Product name
-.
-
+                     * <p>Sub-product name</p>
                      */
                     std::string m_subProductName;
                     bool m_subProductNameHasBeenSet;
 
                     /**
-                     * Settlement type.
+                     * <p>Settlement type</p>
                      */
                     std::string m_transactionType;
                     bool m_transactionTypeHasBeenSet;
 
                     /**
-                     * <Transaction id>.
+                     * <p>Transaction log ID</p>
                      */
                     std::string m_transactionId;
                     bool m_transactionIdHasBeenSet;
 
                     /**
-                     * Settlement time.
-
+                     * <p>Time of settlement</p>
                      */
                     std::string m_transactionTime;
                     bool m_transactionTimeHasBeenSet;
 
                     /**
-                     * <Resource start time>.
+                     * <p>Resource usage start time</p>
                      */
                     std::string m_usageStartTime;
                     bool m_usageStartTimeHasBeenSet;
 
                     /**
-                     * <Resource end usage time>.
+                     * <p>Resource usage end time</p>
                      */
                     std::string m_usageEndTime;
                     bool m_usageEndTimeHasBeenSet;
 
                     /**
-                     * Component.
+                     * <p>Component</p>
                      */
                     std::string m_componentType;
                     bool m_componentTypeHasBeenSet;
 
                     /**
-                     * Component name.
+                     * <p>Component name</p>
                      */
                     std::string m_componentName;
                     bool m_componentNameHasBeenSet;
 
                     /**
-                     * Component list price.
+                     * <p>Component list price</p>
                      */
                     std::string m_componentListPrice;
                     bool m_componentListPriceHasBeenSet;
 
                     /**
-                     * Price unit.
+                     * <p>Price unit</p>
                      */
                     std::string m_componentPriceMeasurementUnit;
                     bool m_componentPriceMeasurementUnitHasBeenSet;
 
                     /**
-                     * Component usage.
+                     * <p>Component usage</p>
                      */
                     std::string m_componentUsage;
                     bool m_componentUsageHasBeenSet;
 
                     /**
-                     * Component usage unit.
+                     * <p>Component usage unit</p>
                      */
                     std::string m_componentUsageUnit;
                     bool m_componentUsageUnitHasBeenSet;
 
                     /**
-                     * Resource usage duration.
+                     * <p>Resource usage duration</p>
                      */
                     std::string m_usageDuration;
                     bool m_usageDurationHasBeenSet;
 
                     /**
-                     * duration unit.
+                     * <p>Duration unit</p>
                      */
                     std::string m_durationUnit;
                     bool m_durationUnitHasBeenSet;
 
                     /**
-                     * Total original price.
-Original cost = component list price * component usage * usage duration.
+                     * <p>Original total price<br>Original Cost = Component List Price * Component Usage * Usage Duration</p>
                      */
                     std::string m_originalCost;
                     bool m_originalCostHasBeenSet;
 
                     /**
-                     * Discount (default is 1) - abandoned.
+                     * <p>Discount (default: 1) - abandoned</p>
                      */
                     std::string m_discountRate;
                     bool m_discountRateHasBeenSet;
 
                     /**
-                     * Currency.
+                     * <p>Currency.</p>
                      */
                     std::string m_currency;
                     bool m_currencyHasBeenSet;
 
                     /**
-                     * Total cost after discount.
+                     * <p>Total cost after discount</p>
                      */
                     std::string m_totalAmountAfterDiscount;
                     bool m_totalAmountAfterDiscountHasBeenSet;
 
                     /**
-                     * Voucher deduction amount.
+                     * <p>Voucher deducted amount</p>
                      */
                     std::string m_voucherDeduction;
                     bool m_voucherDeductionHasBeenSet;
 
                     /**
-                     * = Total Amount After Discount - Voucher Deduction
+                     * <p>= Total Amount After Discount - Voucher Deduction</p>
                      */
                     std::string m_totalCost;
                     bool m_totalCostHasBeenSet;
 
                     /**
-                     * Identifier (id).
+                     * <p>id</p>
                      */
                     std::string m_id;
                     bool m_idHasBeenSet;
 
                     /**
-                     * customer discount rate. The discount rate applied to the reseller's customer, which set by reseller, default value equal to 1.
+                     * <p>customer discount rate. The discount rate for customers of resellers, set by the reseller. The default value is 1.</p>
                      */
                     std::string m_customerDiscountRate;
                     bool m_customerDiscountRateHasBeenSet;
+
+                    /**
+                     * <p>Product code</p>
+                     */
+                    std::string m_businessCode;
+                    bool m_businessCodeHasBeenSet;
+
+                    /**
+                     * <p>Sub-product code</p>
+                     */
+                    std::string m_productCode;
+                    bool m_productCodeHasBeenSet;
+
+                    /**
+                     * <p>Component type code</p>
+                     */
+                    std::string m_componentCode;
+                    bool m_componentCodeHasBeenSet;
+
+                    /**
+                     * <p>Component code</p>
+                     */
+                    std::string m_itemCode;
+                    bool m_itemCodeHasBeenSet;
 
                 };
             }

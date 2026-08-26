@@ -45,15 +45,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Meaning matches the Offset in SQL queries, indicates the retrieval starts from the Offset-th element in a sequentially arranged array, defaults to 0.
-                     * @return Offset Meaning matches the Offset in SQL queries, indicates the retrieval starts from the Offset-th element in a sequentially arranged array, defaults to 0.
+                     * 获取<p>It means the same as the Offset in SQL queries, indicating that this retrieval starts from the Offset-th element of the sequentially arranged array. It defaults to 0.</p>
+                     * @return Offset <p>It means the same as the Offset in SQL queries, indicating that this retrieval starts from the Offset-th element of the sequentially arranged array. It defaults to 0.</p>
                      * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
-                     * 设置Meaning matches the Offset in SQL queries, indicates the retrieval starts from the Offset-th element in a sequentially arranged array, defaults to 0.
-                     * @param _offset Meaning matches the Offset in SQL queries, indicates the retrieval starts from the Offset-th element in a sequentially arranged array, defaults to 0.
+                     * 设置<p>It means the same as the Offset in SQL queries, indicating that this retrieval starts from the Offset-th element of the sequentially arranged array. It defaults to 0.</p>
+                     * @param _offset <p>It means the same as the Offset in SQL queries, indicating that this retrieval starts from the Offset-th element of the sequentially arranged array. It defaults to 0.</p>
                      * 
                      */
                     void SetOffset(const uint64_t& _offset);
@@ -66,15 +66,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the maximum number of elements to retrieve, same as the Limit in SQL queries. default value is 10. maximum value is 200.
-                     * @return Limit Specifies the maximum number of elements to retrieve, same as the Limit in SQL queries. default value is 10. maximum value is 200.
+                     * 获取<p>The meaning is consistent with the Limit in SQL queries, indicating that this time up to Limit elements can be retrieved. The default value is 10, and the maximum value is 200.</p>
+                     * @return Limit <p>The meaning is consistent with the Limit in SQL queries, indicating that this time up to Limit elements can be retrieved. The default value is 10, and the maximum value is 200.</p>
                      * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
-                     * 设置Specifies the maximum number of elements to retrieve, same as the Limit in SQL queries. default value is 10. maximum value is 200.
-                     * @param _limit Specifies the maximum number of elements to retrieve, same as the Limit in SQL queries. default value is 10. maximum value is 200.
+                     * 设置<p>The meaning is consistent with the Limit in SQL queries, indicating that this time up to Limit elements can be retrieved. The default value is 10, and the maximum value is 200.</p>
+                     * @param _limit <p>The meaning is consistent with the Limit in SQL queries, indicating that this time up to Limit elements can be retrieved. The default value is 10, and the maximum value is 200.</p>
                      * 
                      */
                     void SetLimit(const uint64_t& _limit);
@@ -87,15 +87,15 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Filter by creator role. default 0 means data keys created by the user, 1 means data keys automatically created by authorized cloud services.
-                     * @return Role Filter by creator role. default 0 means data keys created by the user, 1 means data keys automatically created by authorized cloud services.
+                     * 获取<p>Filter by creator role. Default value 0 indicates data keys created by the user, and 1 indicates data keys automatically created by authorized other Cloud services.</p>
+                     * @return Role <p>Filter by creator role. Default value 0 indicates data keys created by the user, and 1 indicates data keys automatically created by authorized other Cloud services.</p>
                      * 
                      */
                     uint64_t GetRole() const;
 
                     /**
-                     * 设置Filter by creator role. default 0 means data keys created by the user, 1 means data keys automatically created by authorized cloud services.
-                     * @param _role Filter by creator role. default 0 means data keys created by the user, 1 means data keys automatically created by authorized cloud services.
+                     * 设置<p>Filter by creator role. Default value 0 indicates data keys created by the user, and 1 indicates data keys automatically created by authorized other Cloud services.</p>
+                     * @param _role <p>Filter by creator role. Default value 0 indicates data keys created by the user, and 1 indicates data keys automatically created by authorized other Cloud services.</p>
                      * 
                      */
                     void SetRole(const uint64_t& _role);
@@ -108,15 +108,15 @@ namespace TencentCloud
                     bool RoleHasBeenSet() const;
 
                     /**
-                     * 获取Sorts according to the creation time of DataKey. 0 indicates descending sort. 1 indicates ascending sort.
-                     * @return OrderType Sorts according to the creation time of DataKey. 0 indicates descending sort. 1 indicates ascending sort.
+                     * 获取<p>Sort by DataKey creation time. 0 indicates sort in descending order, and 1 indicates sort in ascending order.</p>
+                     * @return OrderType <p>Sort by DataKey creation time. 0 indicates sort in descending order, and 1 indicates sort in ascending order.</p>
                      * 
                      */
                     uint64_t GetOrderType() const;
 
                     /**
-                     * 设置Sorts according to the creation time of DataKey. 0 indicates descending sort. 1 indicates ascending sort.
-                     * @param _orderType Sorts according to the creation time of DataKey. 0 indicates descending sort. 1 indicates ascending sort.
+                     * 设置<p>Sort by DataKey creation time. 0 indicates sort in descending order, and 1 indicates sort in ascending order.</p>
+                     * @param _orderType <p>Sort by DataKey creation time. 0 indicates sort in descending order, and 1 indicates sort in ascending order.</p>
                      * 
                      */
                     void SetOrderType(const uint64_t& _orderType);
@@ -129,15 +129,15 @@ namespace TencentCloud
                     bool OrderTypeHasBeenSet() const;
 
                     /**
-                     * 获取Filter based on DataKey state. 0 means all datakeys, 1 means querying only Enabled datakeys, 2 means querying only Disabled datakeys, 3 means querying datakeys in PendingDelete state (keys in scheduled deletion status).
-                     * @return KeyState Filter based on DataKey state. 0 means all datakeys, 1 means querying only Enabled datakeys, 2 means querying only Disabled datakeys, 3 means querying datakeys in PendingDelete state (keys in scheduled deletion status).
+                     * 获取<p>Filter by DataKey status. 0 indicates all DataKeys, 1 indicates querying only Enabled DataKeys, 2 indicates querying only Disabled DataKeys, and 3 indicates querying DataKeys in PendingDelete state (keys in scheduled deletion status).</p>
+                     * @return KeyState <p>Filter by DataKey status. 0 indicates all DataKeys, 1 indicates querying only Enabled DataKeys, 2 indicates querying only Disabled DataKeys, and 3 indicates querying DataKeys in PendingDelete state (keys in scheduled deletion status).</p>
                      * 
                      */
                     uint64_t GetKeyState() const;
 
                     /**
-                     * 设置Filter based on DataKey state. 0 means all datakeys, 1 means querying only Enabled datakeys, 2 means querying only Disabled datakeys, 3 means querying datakeys in PendingDelete state (keys in scheduled deletion status).
-                     * @param _keyState Filter based on DataKey state. 0 means all datakeys, 1 means querying only Enabled datakeys, 2 means querying only Disabled datakeys, 3 means querying datakeys in PendingDelete state (keys in scheduled deletion status).
+                     * 设置<p>Filter by DataKey status. 0 indicates all DataKeys, 1 indicates querying only Enabled DataKeys, 2 indicates querying only Disabled DataKeys, and 3 indicates querying DataKeys in PendingDelete state (keys in scheduled deletion status).</p>
+                     * @param _keyState <p>Filter by DataKey status. 0 indicates all DataKeys, 1 indicates querying only Enabled DataKeys, 2 indicates querying only Disabled DataKeys, and 3 indicates querying DataKeys in PendingDelete state (keys in scheduled deletion status).</p>
                      * 
                      */
                     void SetKeyState(const uint64_t& _keyState);
@@ -150,15 +150,15 @@ namespace TencentCloud
                     bool KeyStateHasBeenSet() const;
 
                     /**
-                     * 获取Performs a fuzzy match query based on DataKeyId or DataKeyName.
-                     * @return SearchKeyAlias Performs a fuzzy match query based on DataKeyId or DataKeyName.
+                     * 获取<p>Perform a fuzzy match query by DataKeyId or DataKeyName</p>
+                     * @return SearchKeyAlias <p>Perform a fuzzy match query by DataKeyId or DataKeyName</p>
                      * 
                      */
                     std::string GetSearchKeyAlias() const;
 
                     /**
-                     * 设置Performs a fuzzy match query based on DataKeyId or DataKeyName.
-                     * @param _searchKeyAlias Performs a fuzzy match query based on DataKeyId or DataKeyName.
+                     * 设置<p>Perform a fuzzy match query by DataKeyId or DataKeyName</p>
+                     * @param _searchKeyAlias <p>Perform a fuzzy match query by DataKeyId or DataKeyName</p>
                      * 
                      */
                     void SetSearchKeyAlias(const std::string& _searchKeyAlias);
@@ -171,15 +171,15 @@ namespace TencentCloud
                     bool SearchKeyAliasHasBeenSet() const;
 
                     /**
-                     * 获取Filters data keys by DateKey type. "TENCENT_KMS" filters data keys with key material created by KMS. "EXTERNAL" filters EXTERNAL type data keys requiring user-imported key material. "ALL" or leave unset queries both types. case-sensitive.
-                     * @return Origin Filters data keys by DateKey type. "TENCENT_KMS" filters data keys with key material created by KMS. "EXTERNAL" filters EXTERNAL type data keys requiring user-imported key material. "ALL" or leave unset queries both types. case-sensitive.
+                     * 获取<p>Filter by DateKey type. "TENCENT_KMS" filters data keys with key material created by KMS. "EXTERNAL" filters EXTERNAL type data keys with key material to import. "ALL" or leave unset queries both types. Case-sensitive.</p>
+                     * @return Origin <p>Filter by DateKey type. "TENCENT_KMS" filters data keys with key material created by KMS. "EXTERNAL" filters EXTERNAL type data keys with key material to import. "ALL" or leave unset queries both types. Case-sensitive.</p>
                      * 
                      */
                     std::string GetOrigin() const;
 
                     /**
-                     * 设置Filters data keys by DateKey type. "TENCENT_KMS" filters data keys with key material created by KMS. "EXTERNAL" filters EXTERNAL type data keys requiring user-imported key material. "ALL" or leave unset queries both types. case-sensitive.
-                     * @param _origin Filters data keys by DateKey type. "TENCENT_KMS" filters data keys with key material created by KMS. "EXTERNAL" filters EXTERNAL type data keys requiring user-imported key material. "ALL" or leave unset queries both types. case-sensitive.
+                     * 设置<p>Filter by DateKey type. "TENCENT_KMS" filters data keys with key material created by KMS. "EXTERNAL" filters EXTERNAL type data keys with key material to import. "ALL" or leave unset queries both types. Case-sensitive.</p>
+                     * @param _origin <p>Filter by DateKey type. "TENCENT_KMS" filters data keys with key material created by KMS. "EXTERNAL" filters EXTERNAL type data keys with key material to import. "ALL" or leave unset queries both types. Case-sensitive.</p>
                      * 
                      */
                     void SetOrigin(const std::string& _origin);
@@ -192,15 +192,15 @@ namespace TencentCloud
                     bool OriginHasBeenSet() const;
 
                     /**
-                     * 获取HSM cluster ID corresponding to KMS advanced edition.
-                     * @return HsmClusterId HSM cluster ID corresponding to KMS advanced edition.
+                     * 获取<p>HSM Cluster ID corresponding to the KMS advanced edition. When specifying a cluster ID, query the key list within the specified cluster. When specifying default, query the key list of the public cloud shared version. If empty, query all key lists by default, including cluster and non-cluster.</p>
+                     * @return HsmClusterId <p>HSM Cluster ID corresponding to the KMS advanced edition. When specifying a cluster ID, query the key list within the specified cluster. When specifying default, query the key list of the public cloud shared version. If empty, query all key lists by default, including cluster and non-cluster.</p>
                      * 
                      */
                     std::string GetHsmClusterId() const;
 
                     /**
-                     * 设置HSM cluster ID corresponding to KMS advanced edition.
-                     * @param _hsmClusterId HSM cluster ID corresponding to KMS advanced edition.
+                     * 设置<p>HSM Cluster ID corresponding to the KMS advanced edition. When specifying a cluster ID, query the key list within the specified cluster. When specifying default, query the key list of the public cloud shared version. If empty, query all key lists by default, including cluster and non-cluster.</p>
+                     * @param _hsmClusterId <p>HSM Cluster ID corresponding to the KMS advanced edition. When specifying a cluster ID, query the key list within the specified cluster. When specifying default, query the key list of the public cloud shared version. If empty, query all key lists by default, including cluster and non-cluster.</p>
                      * 
                      */
                     void SetHsmClusterId(const std::string& _hsmClusterId);
@@ -213,15 +213,15 @@ namespace TencentCloud
                     bool HsmClusterIdHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the globally unique identifier of the root key.
-                     * @return KeyId Specifies the globally unique identifier of the root key.
+                     * 获取<p>Root key globally unique identifier</p>
+                     * @return KeyId <p>Root key globally unique identifier</p>
                      * 
                      */
                     std::string GetKeyId() const;
 
                     /**
-                     * 设置Specifies the globally unique identifier of the root key.
-                     * @param _keyId Specifies the globally unique identifier of the root key.
+                     * 设置<p>Root key globally unique identifier</p>
+                     * @param _keyId <p>Root key globally unique identifier</p>
                      * 
                      */
                     void SetKeyId(const std::string& _keyId);
@@ -234,15 +234,15 @@ namespace TencentCloud
                     bool KeyIdHasBeenSet() const;
 
                     /**
-                     * 获取Length of the data key.
-                     * @return DataKeyLen Length of the data key.
+                     * 获取<p>Length of the data key</p>
+                     * @return DataKeyLen <p>Length of the data key</p>
                      * 
                      */
                     uint64_t GetDataKeyLen() const;
 
                     /**
-                     * 设置Length of the data key.
-                     * @param _dataKeyLen Length of the data key.
+                     * 设置<p>Length of the data key</p>
+                     * @param _dataKeyLen <p>Length of the data key</p>
                      * 
                      */
                     void SetDataKeyLen(const uint64_t& _dataKeyLen);
@@ -255,15 +255,15 @@ namespace TencentCloud
                     bool DataKeyLenHasBeenSet() const;
 
                     /**
-                     * 获取Tag filtering conditions.
-                     * @return TagFilters Tag filtering conditions.
+                     * 获取<p>Tag filtering condition</p>
+                     * @return TagFilters <p>Tag filtering condition</p>
                      * 
                      */
                     std::vector<TagFilter> GetTagFilters() const;
 
                     /**
-                     * 设置Tag filtering conditions.
-                     * @param _tagFilters Tag filtering conditions.
+                     * 设置<p>Tag filtering condition</p>
+                     * @param _tagFilters <p>Tag filtering condition</p>
                      * 
                      */
                     void SetTagFilters(const std::vector<TagFilter>& _tagFilters);
@@ -276,15 +276,15 @@ namespace TencentCloud
                     bool TagFiltersHasBeenSet() const;
 
                     /**
-                     * 获取Array of member account information.
-                     * @return MemberAccounts Array of member account information.
+                     * 获取<p>Member account information array</p>
+                     * @return MemberAccounts <p>Member account information array</p>
                      * 
                      */
                     std::vector<MemberAccount> GetMemberAccounts() const;
 
                     /**
-                     * 设置Array of member account information.
-                     * @param _memberAccounts Array of member account information.
+                     * 设置<p>Member account information array</p>
+                     * @param _memberAccounts <p>Member account information array</p>
                      * 
                      */
                     void SetMemberAccounts(const std::vector<MemberAccount>& _memberAccounts);
@@ -299,73 +299,73 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Meaning matches the Offset in SQL queries, indicates the retrieval starts from the Offset-th element in a sequentially arranged array, defaults to 0.
+                     * <p>It means the same as the Offset in SQL queries, indicating that this retrieval starts from the Offset-th element of the sequentially arranged array. It defaults to 0.</p>
                      */
                     uint64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Specifies the maximum number of elements to retrieve, same as the Limit in SQL queries. default value is 10. maximum value is 200.
+                     * <p>The meaning is consistent with the Limit in SQL queries, indicating that this time up to Limit elements can be retrieved. The default value is 10, and the maximum value is 200.</p>
                      */
                     uint64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Filter by creator role. default 0 means data keys created by the user, 1 means data keys automatically created by authorized cloud services.
+                     * <p>Filter by creator role. Default value 0 indicates data keys created by the user, and 1 indicates data keys automatically created by authorized other Cloud services.</p>
                      */
                     uint64_t m_role;
                     bool m_roleHasBeenSet;
 
                     /**
-                     * Sorts according to the creation time of DataKey. 0 indicates descending sort. 1 indicates ascending sort.
+                     * <p>Sort by DataKey creation time. 0 indicates sort in descending order, and 1 indicates sort in ascending order.</p>
                      */
                     uint64_t m_orderType;
                     bool m_orderTypeHasBeenSet;
 
                     /**
-                     * Filter based on DataKey state. 0 means all datakeys, 1 means querying only Enabled datakeys, 2 means querying only Disabled datakeys, 3 means querying datakeys in PendingDelete state (keys in scheduled deletion status).
+                     * <p>Filter by DataKey status. 0 indicates all DataKeys, 1 indicates querying only Enabled DataKeys, 2 indicates querying only Disabled DataKeys, and 3 indicates querying DataKeys in PendingDelete state (keys in scheduled deletion status).</p>
                      */
                     uint64_t m_keyState;
                     bool m_keyStateHasBeenSet;
 
                     /**
-                     * Performs a fuzzy match query based on DataKeyId or DataKeyName.
+                     * <p>Perform a fuzzy match query by DataKeyId or DataKeyName</p>
                      */
                     std::string m_searchKeyAlias;
                     bool m_searchKeyAliasHasBeenSet;
 
                     /**
-                     * Filters data keys by DateKey type. "TENCENT_KMS" filters data keys with key material created by KMS. "EXTERNAL" filters EXTERNAL type data keys requiring user-imported key material. "ALL" or leave unset queries both types. case-sensitive.
+                     * <p>Filter by DateKey type. "TENCENT_KMS" filters data keys with key material created by KMS. "EXTERNAL" filters EXTERNAL type data keys with key material to import. "ALL" or leave unset queries both types. Case-sensitive.</p>
                      */
                     std::string m_origin;
                     bool m_originHasBeenSet;
 
                     /**
-                     * HSM cluster ID corresponding to KMS advanced edition.
+                     * <p>HSM Cluster ID corresponding to the KMS advanced edition. When specifying a cluster ID, query the key list within the specified cluster. When specifying default, query the key list of the public cloud shared version. If empty, query all key lists by default, including cluster and non-cluster.</p>
                      */
                     std::string m_hsmClusterId;
                     bool m_hsmClusterIdHasBeenSet;
 
                     /**
-                     * Specifies the globally unique identifier of the root key.
+                     * <p>Root key globally unique identifier</p>
                      */
                     std::string m_keyId;
                     bool m_keyIdHasBeenSet;
 
                     /**
-                     * Length of the data key.
+                     * <p>Length of the data key</p>
                      */
                     uint64_t m_dataKeyLen;
                     bool m_dataKeyLenHasBeenSet;
 
                     /**
-                     * Tag filtering conditions.
+                     * <p>Tag filtering condition</p>
                      */
                     std::vector<TagFilter> m_tagFilters;
                     bool m_tagFiltersHasBeenSet;
 
                     /**
-                     * Array of member account information.
+                     * <p>Member account information array</p>
                      */
                     std::vector<MemberAccount> m_memberAccounts;
                     bool m_memberAccountsHasBeenSet;

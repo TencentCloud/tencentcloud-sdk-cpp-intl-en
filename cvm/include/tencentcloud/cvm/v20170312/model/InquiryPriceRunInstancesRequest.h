@@ -34,6 +34,7 @@
 #include <tencentcloud/cvm/v20170312/model/Metadata.h>
 #include <tencentcloud/cvm/v20170312/model/CpuTopology.h>
 #include <tencentcloud/cvm/v20170312/model/LaunchTemplate.h>
+#include <tencentcloud/cvm/v20170312/model/NetworkInterfaces.h>
 
 
 namespace TencentCloud
@@ -537,6 +538,27 @@ namespace TencentCloud
                      */
                     bool LaunchTemplateHasBeenSet() const;
 
+                    /**
+                     * 获取Network interface configuration for instance creation, including VPCs, subnets, and IP address allocation for primary and secondary network interfaces. This feature is in beta test in selected regions. To use this feature, [submit a ticket](https://console.tencentcloud.com/workorder/category).
+                     * @return NetworkInterfaces Network interface configuration for instance creation, including VPCs, subnets, and IP address allocation for primary and secondary network interfaces. This feature is in beta test in selected regions. To use this feature, [submit a ticket](https://console.tencentcloud.com/workorder/category).
+                     * 
+                     */
+                    std::vector<NetworkInterfaces> GetNetworkInterfaces() const;
+
+                    /**
+                     * 设置Network interface configuration for instance creation, including VPCs, subnets, and IP address allocation for primary and secondary network interfaces. This feature is in beta test in selected regions. To use this feature, [submit a ticket](https://console.tencentcloud.com/workorder/category).
+                     * @param _networkInterfaces Network interface configuration for instance creation, including VPCs, subnets, and IP address allocation for primary and secondary network interfaces. This feature is in beta test in selected regions. To use this feature, [submit a ticket](https://console.tencentcloud.com/workorder/category).
+                     * 
+                     */
+                    void SetNetworkInterfaces(const std::vector<NetworkInterfaces>& _networkInterfaces);
+
+                    /**
+                     * 判断参数 NetworkInterfaces 是否已赋值
+                     * @return NetworkInterfaces 是否已赋值
+                     * 
+                     */
+                    bool NetworkInterfacesHasBeenSet() const;
+
                 private:
 
                     /**
@@ -675,6 +697,12 @@ namespace TencentCloud
                      */
                     LaunchTemplate m_launchTemplate;
                     bool m_launchTemplateHasBeenSet;
+
+                    /**
+                     * Network interface configuration for instance creation, including VPCs, subnets, and IP address allocation for primary and secondary network interfaces. This feature is in beta test in selected regions. To use this feature, [submit a ticket](https://console.tencentcloud.com/workorder/category).
+                     */
+                    std::vector<NetworkInterfaces> m_networkInterfaces;
+                    bool m_networkInterfacesHasBeenSet;
 
                 };
             }

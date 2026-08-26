@@ -134,12 +134,12 @@ namespace TencentCloud
                     /**
                      * 获取Billing mode
 .
-Monthly subscription.
+yearly/monthly subscription.
 Pay-As-You-Go resources.
 Standard ri reserved instances.
                      * @return BillingMode Billing mode
 .
-Monthly subscription.
+yearly/monthly subscription.
 Pay-As-You-Go resources.
 Standard ri reserved instances.
                      * 
@@ -149,12 +149,12 @@ Standard ri reserved instances.
                     /**
                      * 设置Billing mode
 .
-Monthly subscription.
+yearly/monthly subscription.
 Pay-As-You-Go resources.
 Standard ri reserved instances.
                      * @param _billingMode Billing mode
 .
-Monthly subscription.
+yearly/monthly subscription.
 Pay-As-You-Go resources.
 Standard ri reserved instances.
                      * 
@@ -696,6 +696,90 @@ Original cost = component list price * component usage * usage duration.
                      */
                     bool TagsHasBeenSet() const;
 
+                    /**
+                     * 获取Product code
+                     * @return BusinessCode Product code
+                     * 
+                     */
+                    std::string GetBusinessCode() const;
+
+                    /**
+                     * 设置Product code
+                     * @param _businessCode Product code
+                     * 
+                     */
+                    void SetBusinessCode(const std::string& _businessCode);
+
+                    /**
+                     * 判断参数 BusinessCode 是否已赋值
+                     * @return BusinessCode 是否已赋值
+                     * 
+                     */
+                    bool BusinessCodeHasBeenSet() const;
+
+                    /**
+                     * 获取Subproduct code
+                     * @return ProductCode Subproduct code
+                     * 
+                     */
+                    std::string GetProductCode() const;
+
+                    /**
+                     * 设置Subproduct code
+                     * @param _productCode Subproduct code
+                     * 
+                     */
+                    void SetProductCode(const std::string& _productCode);
+
+                    /**
+                     * 判断参数 ProductCode 是否已赋值
+                     * @return ProductCode 是否已赋值
+                     * 
+                     */
+                    bool ProductCodeHasBeenSet() const;
+
+                    /**
+                     * 获取Component type code
+                     * @return ComponentCode Component type code
+                     * 
+                     */
+                    std::string GetComponentCode() const;
+
+                    /**
+                     * 设置Component type code
+                     * @param _componentCode Component type code
+                     * 
+                     */
+                    void SetComponentCode(const std::string& _componentCode);
+
+                    /**
+                     * 判断参数 ComponentCode 是否已赋值
+                     * @return ComponentCode 是否已赋值
+                     * 
+                     */
+                    bool ComponentCodeHasBeenSet() const;
+
+                    /**
+                     * 获取Component code
+                     * @return ItemCode Component code
+                     * 
+                     */
+                    std::string GetItemCode() const;
+
+                    /**
+                     * 设置Component code
+                     * @param _itemCode Component code
+                     * 
+                     */
+                    void SetItemCode(const std::string& _itemCode);
+
+                    /**
+                     * 判断参数 ItemCode 是否已赋值
+                     * @return ItemCode 是否已赋值
+                     * 
+                     */
+                    bool ItemCodeHasBeenSet() const;
+
                 private:
 
                     /**
@@ -725,7 +809,7 @@ Original cost = component list price * component usage * usage duration.
                     /**
                      * Billing mode
 .
-Monthly subscription.
+yearly/monthly subscription.
 Pay-As-You-Go resources.
 Standard ri reserved instances.
                      */
@@ -881,6 +965,30 @@ Original cost = component list price * component usage * usage duration.
                      */
                     std::vector<TagInfo> m_tags;
                     bool m_tagsHasBeenSet;
+
+                    /**
+                     * Product code
+                     */
+                    std::string m_businessCode;
+                    bool m_businessCodeHasBeenSet;
+
+                    /**
+                     * Subproduct code
+                     */
+                    std::string m_productCode;
+                    bool m_productCodeHasBeenSet;
+
+                    /**
+                     * Component type code
+                     */
+                    std::string m_componentCode;
+                    bool m_componentCodeHasBeenSet;
+
+                    /**
+                     * Component code
+                     */
+                    std::string m_itemCode;
+                    bool m_itemCodeHasBeenSet;
 
                 };
             }

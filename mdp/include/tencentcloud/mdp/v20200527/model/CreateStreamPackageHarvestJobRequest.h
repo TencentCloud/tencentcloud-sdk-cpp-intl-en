@@ -210,6 +210,27 @@ namespace TencentCloud
                      */
                     bool ManifestHasBeenSet() const;
 
+                    /**
+                     * 获取Callback address after recording completion
+                     * @return CallbackURL Callback address after recording completion
+                     * 
+                     */
+                    std::string GetCallbackURL() const;
+
+                    /**
+                     * 设置Callback address after recording completion
+                     * @param _callbackURL Callback address after recording completion
+                     * 
+                     */
+                    void SetCallbackURL(const std::string& _callbackURL);
+
+                    /**
+                     * 判断参数 CallbackURL 是否已赋值
+                     * @return CallbackURL 是否已赋值
+                     * 
+                     */
+                    bool CallbackURLHasBeenSet() const;
+
                 private:
 
                     /**
@@ -259,6 +280,12 @@ namespace TencentCloud
                      */
                     std::string m_manifest;
                     bool m_manifestHasBeenSet;
+
+                    /**
+                     * Callback address after recording completion
+                     */
+                    std::string m_callbackURL;
+                    bool m_callbackURLHasBeenSet;
 
                 };
             }

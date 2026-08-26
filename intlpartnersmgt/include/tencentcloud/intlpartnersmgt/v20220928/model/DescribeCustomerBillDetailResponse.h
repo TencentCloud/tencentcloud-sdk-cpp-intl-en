@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Total number of data entries
-                     * @return Total Total number of data entries
+                     * 获取<p>total number of records</p>
+                     * @return Total <p>total number of records</p>
                      * 
                      */
                     int64_t GetTotal() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalHasBeenSet() const;
 
                     /**
-                     * 获取Data detailsNote: This field may return null, indicating that no valid values can be obtained.
-                     * @return DetailSet Data detailsNote: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Data details</p>
+                     * @return DetailSet <p>Data details</p>
                      * 
                      */
                     std::vector<BillDetailData> GetDetailSet() const;
@@ -75,13 +75,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Total number of data entries
+                     * <p>total number of records</p>
                      */
                     int64_t m_total;
                     bool m_totalHasBeenSet;
 
                     /**
-                     * Data detailsNote: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Data details</p>
                      */
                     std::vector<BillDetailData> m_detailSet;
                     bool m_detailSetHasBeenSet;

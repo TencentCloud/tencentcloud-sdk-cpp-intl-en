@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Customer UIN
-                     * @return CustomerUin Customer UIN
+                     * 获取<p>Sub-customer uin</p>
+                     * @return CustomerUin <p>Sub-customer uin</p>
                      * 
                      */
                     uint64_t GetCustomerUin() const;
 
                     /**
-                     * 设置Customer UIN
-                     * @param _customerUin Customer UIN
+                     * 设置<p>Sub-customer uin</p>
+                     * @param _customerUin <p>Sub-customer uin</p>
                      * 
                      */
                     void SetCustomerUin(const uint64_t& _customerUin);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool CustomerUinHasBeenSet() const;
 
                     /**
-                     * 获取The queried month in "YYYY-MM" format, such as 2023-01.
-                     * @return Month The queried month in "YYYY-MM" format, such as 2023-01.
+                     * 获取<p>Inquiry month, in the format of YYYY-MM, such as 2023-01</p>
+                     * @return Month <p>Inquiry month, in the format of YYYY-MM, such as 2023-01</p>
                      * 
                      */
                     std::string GetMonth() const;
 
                     /**
-                     * 设置The queried month in "YYYY-MM" format, such as 2023-01.
-                     * @param _month The queried month in "YYYY-MM" format, such as 2023-01.
+                     * 设置<p>Inquiry month, in the format of YYYY-MM, such as 2023-01</p>
+                     * @param _month <p>Inquiry month, in the format of YYYY-MM, such as 2023-01</p>
                      * 
                      */
                     void SetMonth(const std::string& _month);
@@ -85,23 +85,15 @@ namespace TencentCloud
                     bool MonthHasBeenSet() const;
 
                     /**
-                     * 获取Billing mode. Valid values:
-`prePay` (Monthly subscription)
-`postPay` (Pay-as-you-go)
-                     * @return PayMode Billing mode. Valid values:
-`prePay` (Monthly subscription)
-`postPay` (Pay-as-you-go)
+                     * 获取<p>Billing mode</p><p>Enumeration values:</p><ul><li>prePay: yearly/monthly subscription</li><li>postPay: Pay-As-You-Go resources</li></ul>
+                     * @return PayMode <p>Billing mode</p><p>Enumeration values:</p><ul><li>prePay: yearly/monthly subscription</li><li>postPay: Pay-As-You-Go resources</li></ul>
                      * 
                      */
                     std::string GetPayMode() const;
 
                     /**
-                     * 设置Billing mode. Valid values:
-`prePay` (Monthly subscription)
-`postPay` (Pay-as-you-go)
-                     * @param _payMode Billing mode. Valid values:
-`prePay` (Monthly subscription)
-`postPay` (Pay-as-you-go)
+                     * 设置<p>Billing mode</p><p>Enumeration values:</p><ul><li>prePay: yearly/monthly subscription</li><li>postPay: Pay-As-You-Go resources</li></ul>
+                     * @param _payMode <p>Billing mode</p><p>Enumeration values:</p><ul><li>prePay: yearly/monthly subscription</li><li>postPay: Pay-As-You-Go resources</li></ul>
                      * 
                      */
                     void SetPayMode(const std::string& _payMode);
@@ -114,115 +106,15 @@ namespace TencentCloud
                     bool PayModeHasBeenSet() const;
 
                     /**
-                     * 获取Transaction type. Valid values:
-`prepay_purchase` (Purchase)
-`prepay_renew` (Renewal)
-`prepay_modify` (Upgrade/Downgrade)
-`prepay_return` (Monthly subscription refund)
-`postpay_deduct` (Pay-as-you-go)
-`postpay_deduct_h` (Hourly settlement)
-`postpay_deduct_d` (Daily settlement)
-`postpay_deduct_m` (Monthly settlement)
-`offline_deduct` (Offline project deduction)
-`online_deduct` (Offline product deduction)
-`recon_deduct` (Adjustment - deduction)
-`recon_increase` (Adjustment - compensation)
-`ripay_purchase` (One-off RI Fee)
-`postpay_deduct_s` (Spot)
-`ri_hour_pay` (Hourly RI fee)
-`prePurchase` (New monthly subscription)
-`preRenew` (Monthly subscription renewal)
-`preUpgrade` (Upgrade/Downgrade)
-`preDowngrade` (Upgrade/Downgrade)
-`svp_hour_pay` (Hourly Savings Plan fee)
-`recon_guarantee` (Minimum spend deduction)
-`pre_purchase` (New monthly subscription)
-`pre_renew` (Monthly subscription renewal)
-`pre_upgrade` (Upgrade/Downgrade)
-`pre_downgrade` (Upgrade/Downgrade)
-                     * @return ActionType Transaction type. Valid values:
-`prepay_purchase` (Purchase)
-`prepay_renew` (Renewal)
-`prepay_modify` (Upgrade/Downgrade)
-`prepay_return` (Monthly subscription refund)
-`postpay_deduct` (Pay-as-you-go)
-`postpay_deduct_h` (Hourly settlement)
-`postpay_deduct_d` (Daily settlement)
-`postpay_deduct_m` (Monthly settlement)
-`offline_deduct` (Offline project deduction)
-`online_deduct` (Offline product deduction)
-`recon_deduct` (Adjustment - deduction)
-`recon_increase` (Adjustment - compensation)
-`ripay_purchase` (One-off RI Fee)
-`postpay_deduct_s` (Spot)
-`ri_hour_pay` (Hourly RI fee)
-`prePurchase` (New monthly subscription)
-`preRenew` (Monthly subscription renewal)
-`preUpgrade` (Upgrade/Downgrade)
-`preDowngrade` (Upgrade/Downgrade)
-`svp_hour_pay` (Hourly Savings Plan fee)
-`recon_guarantee` (Minimum spend deduction)
-`pre_purchase` (New monthly subscription)
-`pre_renew` (Monthly subscription renewal)
-`pre_upgrade` (Upgrade/Downgrade)
-`pre_downgrade` (Upgrade/Downgrade)
+                     * 获取<p>Transaction type</p><p>Enumeration values:</p><ul><li>prepay_purchase: Purchase</li><li>prepay_renew: Renewal</li><li>prepay_modify: Upgrade/Downgrade</li><li>prepay_return: yearly/monthly subscription refund</li><li>postpay_deduct: Pay-as-you-go</li><li>postpay_deduct_h: Hourly settlement</li><li>postpay_deduct_d: Daily settlement</li><li>postpay_deduct_m: Monthly settlement</li><li>offline_deduct: Offline project deduction</li><li>online_deduct: Offline product deduction</li><li>recon_deduct: Adjustment - deduction</li><li>ripay_purchase: One-off RI Fee</li><li>postpay_deduct_s: Spot</li><li>ri_hour_pay: Hourly RI fee</li><li>prePurchase: New yearly/monthly subscription</li><li>preRenew: yearly/monthly subscription renewal</li><li>preUpgrade: Upgrade/Downgrade</li></ul>
+                     * @return ActionType <p>Transaction type</p><p>Enumeration values:</p><ul><li>prepay_purchase: Purchase</li><li>prepay_renew: Renewal</li><li>prepay_modify: Upgrade/Downgrade</li><li>prepay_return: yearly/monthly subscription refund</li><li>postpay_deduct: Pay-as-you-go</li><li>postpay_deduct_h: Hourly settlement</li><li>postpay_deduct_d: Daily settlement</li><li>postpay_deduct_m: Monthly settlement</li><li>offline_deduct: Offline project deduction</li><li>online_deduct: Offline product deduction</li><li>recon_deduct: Adjustment - deduction</li><li>ripay_purchase: One-off RI Fee</li><li>postpay_deduct_s: Spot</li><li>ri_hour_pay: Hourly RI fee</li><li>prePurchase: New yearly/monthly subscription</li><li>preRenew: yearly/monthly subscription renewal</li><li>preUpgrade: Upgrade/Downgrade</li></ul>
                      * 
                      */
                     std::string GetActionType() const;
 
                     /**
-                     * 设置Transaction type. Valid values:
-`prepay_purchase` (Purchase)
-`prepay_renew` (Renewal)
-`prepay_modify` (Upgrade/Downgrade)
-`prepay_return` (Monthly subscription refund)
-`postpay_deduct` (Pay-as-you-go)
-`postpay_deduct_h` (Hourly settlement)
-`postpay_deduct_d` (Daily settlement)
-`postpay_deduct_m` (Monthly settlement)
-`offline_deduct` (Offline project deduction)
-`online_deduct` (Offline product deduction)
-`recon_deduct` (Adjustment - deduction)
-`recon_increase` (Adjustment - compensation)
-`ripay_purchase` (One-off RI Fee)
-`postpay_deduct_s` (Spot)
-`ri_hour_pay` (Hourly RI fee)
-`prePurchase` (New monthly subscription)
-`preRenew` (Monthly subscription renewal)
-`preUpgrade` (Upgrade/Downgrade)
-`preDowngrade` (Upgrade/Downgrade)
-`svp_hour_pay` (Hourly Savings Plan fee)
-`recon_guarantee` (Minimum spend deduction)
-`pre_purchase` (New monthly subscription)
-`pre_renew` (Monthly subscription renewal)
-`pre_upgrade` (Upgrade/Downgrade)
-`pre_downgrade` (Upgrade/Downgrade)
-                     * @param _actionType Transaction type. Valid values:
-`prepay_purchase` (Purchase)
-`prepay_renew` (Renewal)
-`prepay_modify` (Upgrade/Downgrade)
-`prepay_return` (Monthly subscription refund)
-`postpay_deduct` (Pay-as-you-go)
-`postpay_deduct_h` (Hourly settlement)
-`postpay_deduct_d` (Daily settlement)
-`postpay_deduct_m` (Monthly settlement)
-`offline_deduct` (Offline project deduction)
-`online_deduct` (Offline product deduction)
-`recon_deduct` (Adjustment - deduction)
-`recon_increase` (Adjustment - compensation)
-`ripay_purchase` (One-off RI Fee)
-`postpay_deduct_s` (Spot)
-`ri_hour_pay` (Hourly RI fee)
-`prePurchase` (New monthly subscription)
-`preRenew` (Monthly subscription renewal)
-`preUpgrade` (Upgrade/Downgrade)
-`preDowngrade` (Upgrade/Downgrade)
-`svp_hour_pay` (Hourly Savings Plan fee)
-`recon_guarantee` (Minimum spend deduction)
-`pre_purchase` (New monthly subscription)
-`pre_renew` (Monthly subscription renewal)
-`pre_upgrade` (Upgrade/Downgrade)
-`pre_downgrade` (Upgrade/Downgrade)
+                     * 设置<p>Transaction type</p><p>Enumeration values:</p><ul><li>prepay_purchase: Purchase</li><li>prepay_renew: Renewal</li><li>prepay_modify: Upgrade/Downgrade</li><li>prepay_return: yearly/monthly subscription refund</li><li>postpay_deduct: Pay-as-you-go</li><li>postpay_deduct_h: Hourly settlement</li><li>postpay_deduct_d: Daily settlement</li><li>postpay_deduct_m: Monthly settlement</li><li>offline_deduct: Offline project deduction</li><li>online_deduct: Offline product deduction</li><li>recon_deduct: Adjustment - deduction</li><li>ripay_purchase: One-off RI Fee</li><li>postpay_deduct_s: Spot</li><li>ri_hour_pay: Hourly RI fee</li><li>prePurchase: New yearly/monthly subscription</li><li>preRenew: yearly/monthly subscription renewal</li><li>preUpgrade: Upgrade/Downgrade</li></ul>
+                     * @param _actionType <p>Transaction type</p><p>Enumeration values:</p><ul><li>prepay_purchase: Purchase</li><li>prepay_renew: Renewal</li><li>prepay_modify: Upgrade/Downgrade</li><li>prepay_return: yearly/monthly subscription refund</li><li>postpay_deduct: Pay-as-you-go</li><li>postpay_deduct_h: Hourly settlement</li><li>postpay_deduct_d: Daily settlement</li><li>postpay_deduct_m: Monthly settlement</li><li>offline_deduct: Offline project deduction</li><li>online_deduct: Offline product deduction</li><li>recon_deduct: Adjustment - deduction</li><li>ripay_purchase: One-off RI Fee</li><li>postpay_deduct_s: Spot</li><li>ri_hour_pay: Hourly RI fee</li><li>prePurchase: New yearly/monthly subscription</li><li>preRenew: yearly/monthly subscription renewal</li><li>preUpgrade: Upgrade/Downgrade</li></ul>
                      * 
                      */
                     void SetActionType(const std::string& _actionType);
@@ -235,27 +127,15 @@ namespace TencentCloud
                     bool ActionTypeHasBeenSet() const;
 
                     /**
-                     * 获取Payment status
-`0`: N/A
-`1`: Paid
-`2`: Unpaid
-                     * @return IsConfirmed Payment status
-`0`: N/A
-`1`: Paid
-`2`: Unpaid
+                     * 获取<p>Payment Status<br>0: case-insensitive<br>1: paid<br>2: unpaid</p>
+                     * @return IsConfirmed <p>Payment Status<br>0: case-insensitive<br>1: paid<br>2: unpaid</p>
                      * 
                      */
                     std::string GetIsConfirmed() const;
 
                     /**
-                     * 设置Payment status
-`0`: N/A
-`1`: Paid
-`2`: Unpaid
-                     * @param _isConfirmed Payment status
-`0`: N/A
-`1`: Paid
-`2`: Unpaid
+                     * 设置<p>Payment Status<br>0: case-insensitive<br>1: paid<br>2: unpaid</p>
+                     * @param _isConfirmed <p>Payment Status<br>0: case-insensitive<br>1: paid<br>2: unpaid</p>
                      * 
                      */
                     void SetIsConfirmed(const std::string& _isConfirmed);
@@ -270,61 +150,31 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Customer UIN
+                     * <p>Sub-customer uin</p>
                      */
                     uint64_t m_customerUin;
                     bool m_customerUinHasBeenSet;
 
                     /**
-                     * The queried month in "YYYY-MM" format, such as 2023-01.
+                     * <p>Inquiry month, in the format of YYYY-MM, such as 2023-01</p>
                      */
                     std::string m_month;
                     bool m_monthHasBeenSet;
 
                     /**
-                     * Billing mode. Valid values:
-`prePay` (Monthly subscription)
-`postPay` (Pay-as-you-go)
+                     * <p>Billing mode</p><p>Enumeration values:</p><ul><li>prePay: yearly/monthly subscription</li><li>postPay: Pay-As-You-Go resources</li></ul>
                      */
                     std::string m_payMode;
                     bool m_payModeHasBeenSet;
 
                     /**
-                     * Transaction type. Valid values:
-`prepay_purchase` (Purchase)
-`prepay_renew` (Renewal)
-`prepay_modify` (Upgrade/Downgrade)
-`prepay_return` (Monthly subscription refund)
-`postpay_deduct` (Pay-as-you-go)
-`postpay_deduct_h` (Hourly settlement)
-`postpay_deduct_d` (Daily settlement)
-`postpay_deduct_m` (Monthly settlement)
-`offline_deduct` (Offline project deduction)
-`online_deduct` (Offline product deduction)
-`recon_deduct` (Adjustment - deduction)
-`recon_increase` (Adjustment - compensation)
-`ripay_purchase` (One-off RI Fee)
-`postpay_deduct_s` (Spot)
-`ri_hour_pay` (Hourly RI fee)
-`prePurchase` (New monthly subscription)
-`preRenew` (Monthly subscription renewal)
-`preUpgrade` (Upgrade/Downgrade)
-`preDowngrade` (Upgrade/Downgrade)
-`svp_hour_pay` (Hourly Savings Plan fee)
-`recon_guarantee` (Minimum spend deduction)
-`pre_purchase` (New monthly subscription)
-`pre_renew` (Monthly subscription renewal)
-`pre_upgrade` (Upgrade/Downgrade)
-`pre_downgrade` (Upgrade/Downgrade)
+                     * <p>Transaction type</p><p>Enumeration values:</p><ul><li>prepay_purchase: Purchase</li><li>prepay_renew: Renewal</li><li>prepay_modify: Upgrade/Downgrade</li><li>prepay_return: yearly/monthly subscription refund</li><li>postpay_deduct: Pay-as-you-go</li><li>postpay_deduct_h: Hourly settlement</li><li>postpay_deduct_d: Daily settlement</li><li>postpay_deduct_m: Monthly settlement</li><li>offline_deduct: Offline project deduction</li><li>online_deduct: Offline product deduction</li><li>recon_deduct: Adjustment - deduction</li><li>ripay_purchase: One-off RI Fee</li><li>postpay_deduct_s: Spot</li><li>ri_hour_pay: Hourly RI fee</li><li>prePurchase: New yearly/monthly subscription</li><li>preRenew: yearly/monthly subscription renewal</li><li>preUpgrade: Upgrade/Downgrade</li></ul>
                      */
                     std::string m_actionType;
                     bool m_actionTypeHasBeenSet;
 
                     /**
-                     * Payment status
-`0`: N/A
-`1`: Paid
-`2`: Unpaid
+                     * <p>Payment Status<br>0: case-insensitive<br>1: paid<br>2: unpaid</p>
                      */
                     std::string m_isConfirmed;
                     bool m_isConfirmedHasBeenSet;

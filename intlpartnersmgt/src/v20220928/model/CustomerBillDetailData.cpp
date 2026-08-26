@@ -49,7 +49,11 @@ CustomerBillDetailData::CustomerBillDetailData() :
     m_currencyHasBeenSet(false),
     m_totalCostHasBeenSet(false),
     m_idHasBeenSet(false),
-    m_tagsHasBeenSet(false)
+    m_tagsHasBeenSet(false),
+    m_businessCodeHasBeenSet(false),
+    m_productCodeHasBeenSet(false),
+    m_componentCodeHasBeenSet(false),
+    m_itemCodeHasBeenSet(false)
 {
 }
 
@@ -358,6 +362,46 @@ CoreInternalOutcome CustomerBillDetailData::Deserialize(const rapidjson::Value &
         m_tagsHasBeenSet = true;
     }
 
+    if (value.HasMember("BusinessCode") && !value["BusinessCode"].IsNull())
+    {
+        if (!value["BusinessCode"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `CustomerBillDetailData.BusinessCode` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_businessCode = string(value["BusinessCode"].GetString());
+        m_businessCodeHasBeenSet = true;
+    }
+
+    if (value.HasMember("ProductCode") && !value["ProductCode"].IsNull())
+    {
+        if (!value["ProductCode"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `CustomerBillDetailData.ProductCode` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_productCode = string(value["ProductCode"].GetString());
+        m_productCodeHasBeenSet = true;
+    }
+
+    if (value.HasMember("ComponentCode") && !value["ComponentCode"].IsNull())
+    {
+        if (!value["ComponentCode"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `CustomerBillDetailData.ComponentCode` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_componentCode = string(value["ComponentCode"].GetString());
+        m_componentCodeHasBeenSet = true;
+    }
+
+    if (value.HasMember("ItemCode") && !value["ItemCode"].IsNull())
+    {
+        if (!value["ItemCode"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `CustomerBillDetailData.ItemCode` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_itemCode = string(value["ItemCode"].GetString());
+        m_itemCodeHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -602,6 +646,38 @@ void CustomerBillDetailData::ToJsonObject(rapidjson::Value &value, rapidjson::Do
             value[key.c_str()].PushBack(rapidjson::Value(rapidjson::kObjectType).Move(), allocator);
             (*itr).ToJsonObject(value[key.c_str()][i], allocator);
         }
+    }
+
+    if (m_businessCodeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "BusinessCode";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_businessCode.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_productCodeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ProductCode";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_productCode.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_componentCodeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ComponentCode";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_componentCode.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_itemCodeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ItemCode";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_itemCode.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -1069,5 +1145,69 @@ void CustomerBillDetailData::SetTags(const vector<TagInfo>& _tags)
 bool CustomerBillDetailData::TagsHasBeenSet() const
 {
     return m_tagsHasBeenSet;
+}
+
+string CustomerBillDetailData::GetBusinessCode() const
+{
+    return m_businessCode;
+}
+
+void CustomerBillDetailData::SetBusinessCode(const string& _businessCode)
+{
+    m_businessCode = _businessCode;
+    m_businessCodeHasBeenSet = true;
+}
+
+bool CustomerBillDetailData::BusinessCodeHasBeenSet() const
+{
+    return m_businessCodeHasBeenSet;
+}
+
+string CustomerBillDetailData::GetProductCode() const
+{
+    return m_productCode;
+}
+
+void CustomerBillDetailData::SetProductCode(const string& _productCode)
+{
+    m_productCode = _productCode;
+    m_productCodeHasBeenSet = true;
+}
+
+bool CustomerBillDetailData::ProductCodeHasBeenSet() const
+{
+    return m_productCodeHasBeenSet;
+}
+
+string CustomerBillDetailData::GetComponentCode() const
+{
+    return m_componentCode;
+}
+
+void CustomerBillDetailData::SetComponentCode(const string& _componentCode)
+{
+    m_componentCode = _componentCode;
+    m_componentCodeHasBeenSet = true;
+}
+
+bool CustomerBillDetailData::ComponentCodeHasBeenSet() const
+{
+    return m_componentCodeHasBeenSet;
+}
+
+string CustomerBillDetailData::GetItemCode() const
+{
+    return m_itemCode;
+}
+
+void CustomerBillDetailData::SetItemCode(const string& _itemCode)
+{
+    m_itemCode = _itemCode;
+    m_itemCodeHasBeenSet = true;
+}
+
+bool CustomerBillDetailData::ItemCodeHasBeenSet() const
+{
+    return m_itemCodeHasBeenSet;
 }
 

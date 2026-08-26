@@ -406,8 +406,8 @@ Callable roles: Distributor, Second-level reseller, Reseller
                 DescribeBillSummaryByRegionOutcomeCallable DescribeBillSummaryByRegionCallable(const Model::DescribeBillSummaryByRegionRequest& request);
 
                 /**
-                 *This API is used to query the customer bill details by resellers.
-Callable roles: Distributor, Second-level reseller, Reseller.
+                 *Description: Query customer bill details.
+Resellers, first-level resellers, and second-level resellers can call this API.
                  * @param req DescribeCustomerBillDetailRequest
                  * @return DescribeCustomerBillDetailOutcome
                  */
@@ -437,8 +437,7 @@ Invocation Role: first-level reseller, second-level reseller, reseller.
                 DescribeCustomerBillDownloadUrlOutcomeCallable DescribeCustomerBillDownloadUrlCallable(const Model::DescribeCustomerBillDownloadUrlRequest& request);
 
                 /**
-                 *This API is used to query the total amount of customer bills.
-Callable roles: Distributor, Second-level reseller, Reseller
+                 *Query the aggregate value of a sub-client bill
                  * @param req DescribeCustomerBillSummaryRequest
                  * @return DescribeCustomerBillSummaryOutcome
                  */

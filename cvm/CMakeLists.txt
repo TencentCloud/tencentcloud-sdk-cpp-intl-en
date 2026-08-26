@@ -156,6 +156,7 @@ set(cvm_public_header_model
   include/tencentcloud/cvm/v20170312/model/ConfigureChcAssistVpcRequest.h
   include/tencentcloud/cvm/v20170312/model/DescribeImportImageOsRequest.h
   include/tencentcloud/cvm/v20170312/model/CreateLaunchTemplateResponse.h
+  include/tencentcloud/cvm/v20170312/model/NetworkInterfaces.h
   include/tencentcloud/cvm/v20170312/model/CreateKeyPairRequest.h
   include/tencentcloud/cvm/v20170312/model/InstanceStatus.h
   include/tencentcloud/cvm/v20170312/model/InquiryPriceRenewInstancesResponse.h
@@ -392,6 +393,7 @@ set(cvm_src
   src/v20170312/model/ConfigureChcAssistVpcRequest.cpp
   src/v20170312/model/DescribeImportImageOsRequest.cpp
   src/v20170312/model/CreateLaunchTemplateResponse.cpp
+  src/v20170312/model/NetworkInterfaces.cpp
   src/v20170312/model/CreateKeyPairRequest.cpp
   src/v20170312/model/InstanceStatus.cpp
   src/v20170312/model/InquiryPriceRenewInstancesResponse.cpp

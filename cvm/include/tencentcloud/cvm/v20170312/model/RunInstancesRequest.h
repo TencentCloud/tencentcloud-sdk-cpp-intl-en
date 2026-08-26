@@ -35,6 +35,7 @@
 #include <tencentcloud/cvm/v20170312/model/Metadata.h>
 #include <tencentcloud/cvm/v20170312/model/CpuTopology.h>
 #include <tencentcloud/cvm/v20170312/model/LaunchTemplate.h>
+#include <tencentcloud/cvm/v20170312/model/NetworkInterfaces.h>
 
 
 namespace TencentCloud
@@ -771,6 +772,27 @@ If the dry run succeeds, the RequestId will be returned.
                     bool ChcIdsHasBeenSet() const;
 
                     /**
+                     * 获取Partition number of the partition placement group. Valid values depend on the number of partitions in the selected placement group. If the selected placement group is a partition placement group and this parameter is not specified, a partition is randomly assigned. This feature is in beta test.
+                     * @return PartitionNumber Partition number of the partition placement group. Valid values depend on the number of partitions in the selected placement group. If the selected placement group is a partition placement group and this parameter is not specified, a partition is randomly assigned. This feature is in beta test.
+                     * 
+                     */
+                    int64_t GetPartitionNumber() const;
+
+                    /**
+                     * 设置Partition number of the partition placement group. Valid values depend on the number of partitions in the selected placement group. If the selected placement group is a partition placement group and this parameter is not specified, a partition is randomly assigned. This feature is in beta test.
+                     * @param _partitionNumber Partition number of the partition placement group. Valid values depend on the number of partitions in the selected placement group. If the selected placement group is a partition placement group and this parameter is not specified, a partition is randomly assigned. This feature is in beta test.
+                     * 
+                     */
+                    void SetPartitionNumber(const int64_t& _partitionNumber);
+
+                    /**
+                     * 判断参数 PartitionNumber 是否已赋值
+                     * @return PartitionNumber 是否已赋值
+                     * 
+                     */
+                    bool PartitionNumberHasBeenSet() const;
+
+                    /**
                      * 获取Instance termination protection flag, indicating whether an instance is allowed to be deleted through an API. Valid values:<br><li>true: Instance protection is enabled, and the instance is not allowed to be deleted through the API.</li><br><li>false: Instance protection is disabled, and the instance is allowed to be deleted through the API.</li><br><br>Default value: false.
                      * @return DisableApiTermination Instance termination protection flag, indicating whether an instance is allowed to be deleted through an API. Valid values:<br><li>true: Instance protection is enabled, and the instance is not allowed to be deleted through the API.</li><br><li>false: Instance protection is disabled, and the instance is allowed to be deleted through the API.</li><br><br>Default value: false.
                      * 
@@ -811,6 +833,27 @@ If the dry run succeeds, the RequestId will be returned.
                      * 
                      */
                     bool EnableJumboFrameHasBeenSet() const;
+
+                    /**
+                     * 获取Network interface configuration for instance creation, including VPCs, subnets, and IP address allocation for primary and secondary network interfaces. This feature is in beta test in selected regions. To use this feature, [submit a ticket](https://console.tencentcloud.com/workorder/category).
+                     * @return NetworkInterfaces Network interface configuration for instance creation, including VPCs, subnets, and IP address allocation for primary and secondary network interfaces. This feature is in beta test in selected regions. To use this feature, [submit a ticket](https://console.tencentcloud.com/workorder/category).
+                     * 
+                     */
+                    std::vector<NetworkInterfaces> GetNetworkInterfaces() const;
+
+                    /**
+                     * 设置Network interface configuration for instance creation, including VPCs, subnets, and IP address allocation for primary and secondary network interfaces. This feature is in beta test in selected regions. To use this feature, [submit a ticket](https://console.tencentcloud.com/workorder/category).
+                     * @param _networkInterfaces Network interface configuration for instance creation, including VPCs, subnets, and IP address allocation for primary and secondary network interfaces. This feature is in beta test in selected regions. To use this feature, [submit a ticket](https://console.tencentcloud.com/workorder/category).
+                     * 
+                     */
+                    void SetNetworkInterfaces(const std::vector<NetworkInterfaces>& _networkInterfaces);
+
+                    /**
+                     * 判断参数 NetworkInterfaces 是否已赋值
+                     * @return NetworkInterfaces 是否已赋值
+                     * 
+                     */
+                    bool NetworkInterfacesHasBeenSet() const;
 
                 private:
 
@@ -1016,6 +1059,12 @@ If the dry run succeeds, the RequestId will be returned.
                     bool m_chcIdsHasBeenSet;
 
                     /**
+                     * Partition number of the partition placement group. Valid values depend on the number of partitions in the selected placement group. If the selected placement group is a partition placement group and this parameter is not specified, a partition is randomly assigned. This feature is in beta test.
+                     */
+                    int64_t m_partitionNumber;
+                    bool m_partitionNumberHasBeenSet;
+
+                    /**
                      * Instance termination protection flag, indicating whether an instance is allowed to be deleted through an API. Valid values:<br><li>true: Instance protection is enabled, and the instance is not allowed to be deleted through the API.</li><br><li>false: Instance protection is disabled, and the instance is allowed to be deleted through the API.</li><br><br>Default value: false.
                      */
                     bool m_disableApiTermination;
@@ -1026,6 +1075,12 @@ If the dry run succeeds, the RequestId will be returned.
                      */
                     bool m_enableJumboFrame;
                     bool m_enableJumboFrameHasBeenSet;
+
+                    /**
+                     * Network interface configuration for instance creation, including VPCs, subnets, and IP address allocation for primary and secondary network interfaces. This feature is in beta test in selected regions. To use this feature, [submit a ticket](https://console.tencentcloud.com/workorder/category).
+                     */
+                    std::vector<NetworkInterfaces> m_networkInterfaces;
+                    bool m_networkInterfacesHasBeenSet;
 
                 };
             }

@@ -30,7 +30,8 @@ CreateStreamPackageHarvestJobRequest::CreateStreamPackageHarvestJobRequest() :
     m_startTimeHasBeenSet(false),
     m_endTimeHasBeenSet(false),
     m_destinationHasBeenSet(false),
-    m_manifestHasBeenSet(false)
+    m_manifestHasBeenSet(false),
+    m_callbackURLHasBeenSet(false)
 {
 }
 
@@ -103,6 +104,14 @@ string CreateStreamPackageHarvestJobRequest::ToJsonString() const
         string key = "Manifest";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, rapidjson::Value(m_manifest.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_callbackURLHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CallbackURL";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_callbackURL.c_str(), allocator).Move(), allocator);
     }
 
 
@@ -239,6 +248,22 @@ void CreateStreamPackageHarvestJobRequest::SetManifest(const string& _manifest)
 bool CreateStreamPackageHarvestJobRequest::ManifestHasBeenSet() const
 {
     return m_manifestHasBeenSet;
+}
+
+string CreateStreamPackageHarvestJobRequest::GetCallbackURL() const
+{
+    return m_callbackURL;
+}
+
+void CreateStreamPackageHarvestJobRequest::SetCallbackURL(const string& _callbackURL)
+{
+    m_callbackURL = _callbackURL;
+    m_callbackURLHasBeenSet = true;
+}
+
+bool CreateStreamPackageHarvestJobRequest::CallbackURLHasBeenSet() const
+{
+    return m_callbackURLHasBeenSet;
 }
 
 
