@@ -61,6 +61,8 @@
 #include <tencentcloud/tokenhub/v20260322/model/DescribeTokenPlanApiKeyUsageDetailResponse.h>
 #include <tencentcloud/tokenhub/v20260322/model/DescribeTokenPlanListRequest.h>
 #include <tencentcloud/tokenhub/v20260322/model/DescribeTokenPlanListResponse.h>
+#include <tencentcloud/tokenhub/v20260322/model/DescribeUsageRankListRequest.h>
+#include <tencentcloud/tokenhub/v20260322/model/DescribeUsageRankListResponse.h>
 #include <tencentcloud/tokenhub/v20260322/model/ModifyApiKeyInfoRequest.h>
 #include <tencentcloud/tokenhub/v20260322/model/ModifyApiKeyInfoResponse.h>
 #include <tencentcloud/tokenhub/v20260322/model/ModifyApiKeyStatusRequest.h>
@@ -146,6 +148,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeTokenPlanListResponse> DescribeTokenPlanListOutcome;
                 typedef std::future<DescribeTokenPlanListOutcome> DescribeTokenPlanListOutcomeCallable;
                 typedef std::function<void(const TokenhubClient*, const Model::DescribeTokenPlanListRequest&, DescribeTokenPlanListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeTokenPlanListAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeUsageRankListResponse> DescribeUsageRankListOutcome;
+                typedef std::future<DescribeUsageRankListOutcome> DescribeUsageRankListOutcomeCallable;
+                typedef std::function<void(const TokenhubClient*, const Model::DescribeUsageRankListRequest&, DescribeUsageRankListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeUsageRankListAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyApiKeyInfoResponse> ModifyApiKeyInfoOutcome;
                 typedef std::future<ModifyApiKeyInfoOutcome> ModifyApiKeyInfoOutcomeCallable;
                 typedef std::function<void(const TokenhubClient*, const Model::ModifyApiKeyInfoRequest&, ModifyApiKeyInfoOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyApiKeyInfoAsyncHandler;
@@ -374,6 +379,27 @@ Supports pagination, filtering, and sorting. Root accounts can view all packages
                 DescribeTokenPlanListOutcome DescribeTokenPlanList(const Model::DescribeTokenPlanListRequest &request);
                 void DescribeTokenPlanListAsync(const Model::DescribeTokenPlanListRequest& request, const DescribeTokenPlanListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeTokenPlanListOutcomeCallable DescribeTokenPlanListCallable(const Model::DescribeTokenPlanListRequest& request);
+
+                /**
+                 *Query the usage ranking list.
+
+Metric family (MetricType)
+- `tokens` (default): Token usage statistics. Supports Dimension = apikey / endpoint / model.
+Metrics returned: TotalToken (total) / InputTotalToken (input) / OutputTotalToken (output) / CacheTotalToken (read cache).
+- `search`: [To be launched] Online search usage statistics. Supports Dimension = apikey / endpoint / model.
+Returns metrics: SearchRequestCount (search request count)/SearchCount (search engine call count).
+
+content
+-The MetricType field is used to switch metric families. The response echoes back MetricType and MetricKeys.
+-TotalStats: The aggregated value of all objects over the entire time window.
+-PageStats: The aggregated value of objects on the current page.
+- TopList: A list of objects sorted by MetricKeys[0] in descending order, including the aggregated value over the entire period and point-in-time curves.
+                 * @param req DescribeUsageRankListRequest
+                 * @return DescribeUsageRankListOutcome
+                 */
+                DescribeUsageRankListOutcome DescribeUsageRankList(const Model::DescribeUsageRankListRequest &request);
+                void DescribeUsageRankListAsync(const Model::DescribeUsageRankListRequest& request, const DescribeUsageRankListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeUsageRankListOutcomeCallable DescribeUsageRankListCallable(const Model::DescribeUsageRankListRequest& request);
 
                 /**
                  *Refresh API key information.

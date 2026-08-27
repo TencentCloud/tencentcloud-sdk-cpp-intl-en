@@ -38,10 +38,12 @@ set(tokenhub_public_header_model
   include/tencentcloud/tokenhub/v20260322/model/DeleteGlossaryEntriesResponse.h
   include/tencentcloud/tokenhub/v20260322/model/DescribeApiKeyListResponse.h
   include/tencentcloud/tokenhub/v20260322/model/RenewTokenPlanTeamOrderResponse.h
+  include/tencentcloud/tokenhub/v20260322/model/UsageRankItem.h
   include/tencentcloud/tokenhub/v20260322/model/TokenPlanApiKeyInfo.h
   include/tencentcloud/tokenhub/v20260322/model/ModifyApiKeyInfoResponse.h
   include/tencentcloud/tokenhub/v20260322/model/ModifyTokenPlanApiKeyResponse.h
   include/tencentcloud/tokenhub/v20260322/model/DescribeApiKeyListRequest.h
+  include/tencentcloud/tokenhub/v20260322/model/UsageSeries.h
   include/tencentcloud/tokenhub/v20260322/model/CreateGlossaryRequest.h
   include/tencentcloud/tokenhub/v20260322/model/DescribeGlossaryEntriesResponse.h
   include/tencentcloud/tokenhub/v20260322/model/DeleteGlossaryRequest.h
@@ -54,7 +56,7 @@ set(tokenhub_public_header_model
   include/tencentcloud/tokenhub/v20260322/model/DeleteApiKeyResponse.h
   include/tencentcloud/tokenhub/v20260322/model/ModifyGlossaryEntryInput.h
   include/tencentcloud/tokenhub/v20260322/model/ModifyTokenPlanApiKeyRequest.h
-  include/tencentcloud/tokenhub/v20260322/model/TokenSummaryBillingItem.h
+  include/tencentcloud/tokenhub/v20260322/model/ModifyApiKeyStatusRequest.h
   include/tencentcloud/tokenhub/v20260322/model/DescribeTokenPlanApiKeyUsageDetailResponse.h
   include/tencentcloud/tokenhub/v20260322/model/RequestSort.h
   include/tencentcloud/tokenhub/v20260322/model/ModifyApiKeyInfoRequest.h
@@ -66,8 +68,9 @@ set(tokenhub_public_header_model
   include/tencentcloud/tokenhub/v20260322/model/DescribeGlossariesRequest.h
   include/tencentcloud/tokenhub/v20260322/model/DeleteTokenPlanApiKeyResponse.h
   include/tencentcloud/tokenhub/v20260322/model/DescribeTokenPlanApiKeyUsageDetailRequest.h
+  include/tencentcloud/tokenhub/v20260322/model/TokenSummaryBillingItem.h
   include/tencentcloud/tokenhub/v20260322/model/UpgradeTokenPlanTeamOrderRequest.h
-  include/tencentcloud/tokenhub/v20260322/model/ModifyApiKeyStatusRequest.h
+  include/tencentcloud/tokenhub/v20260322/model/DescribeUsageRankListRequest.h
   include/tencentcloud/tokenhub/v20260322/model/QuotaInfo.h
   include/tencentcloud/tokenhub/v20260322/model/CreateGlossaryEntriesRequest.h
   include/tencentcloud/tokenhub/v20260322/model/ApiKeyDetail.h
@@ -85,6 +88,8 @@ set(tokenhub_public_header_model
   include/tencentcloud/tokenhub/v20260322/model/ModifyGlossaryEntriesResponse.h
   include/tencentcloud/tokenhub/v20260322/model/DescribeTokenPlanResponse.h
   include/tencentcloud/tokenhub/v20260322/model/CreateTokenPlanApiKeysRequest.h
+  include/tencentcloud/tokenhub/v20260322/model/UsageStats.h
+  include/tencentcloud/tokenhub/v20260322/model/DescribeUsageRankListResponse.h
   include/tencentcloud/tokenhub/v20260322/model/DeleteTokenPlanApiKeyRequest.h
   include/tencentcloud/tokenhub/v20260322/model/DescribeApiKeyResponse.h
   include/tencentcloud/tokenhub/v20260322/model/DescribeTokenPlanApiKeyListRequest.h
@@ -113,10 +118,12 @@ set(tokenhub_src
   src/v20260322/model/DeleteGlossaryEntriesResponse.cpp
   src/v20260322/model/DescribeApiKeyListResponse.cpp
   src/v20260322/model/RenewTokenPlanTeamOrderResponse.cpp
+  src/v20260322/model/UsageRankItem.cpp
   src/v20260322/model/TokenPlanApiKeyInfo.cpp
   src/v20260322/model/ModifyApiKeyInfoResponse.cpp
   src/v20260322/model/ModifyTokenPlanApiKeyResponse.cpp
   src/v20260322/model/DescribeApiKeyListRequest.cpp
+  src/v20260322/model/UsageSeries.cpp
   src/v20260322/model/CreateGlossaryRequest.cpp
   src/v20260322/model/DescribeGlossaryEntriesResponse.cpp
   src/v20260322/model/DeleteGlossaryRequest.cpp
@@ -129,7 +136,7 @@ set(tokenhub_src
   src/v20260322/model/DeleteApiKeyResponse.cpp
   src/v20260322/model/ModifyGlossaryEntryInput.cpp
   src/v20260322/model/ModifyTokenPlanApiKeyRequest.cpp
-  src/v20260322/model/TokenSummaryBillingItem.cpp
+  src/v20260322/model/ModifyApiKeyStatusRequest.cpp
   src/v20260322/model/DescribeTokenPlanApiKeyUsageDetailResponse.cpp
   src/v20260322/model/RequestSort.cpp
   src/v20260322/model/ModifyApiKeyInfoRequest.cpp
@@ -141,8 +148,9 @@ set(tokenhub_src
   src/v20260322/model/DescribeGlossariesRequest.cpp
   src/v20260322/model/DeleteTokenPlanApiKeyResponse.cpp
   src/v20260322/model/DescribeTokenPlanApiKeyUsageDetailRequest.cpp
+  src/v20260322/model/TokenSummaryBillingItem.cpp
   src/v20260322/model/UpgradeTokenPlanTeamOrderRequest.cpp
-  src/v20260322/model/ModifyApiKeyStatusRequest.cpp
+  src/v20260322/model/DescribeUsageRankListRequest.cpp
   src/v20260322/model/QuotaInfo.cpp
   src/v20260322/model/CreateGlossaryEntriesRequest.cpp
   src/v20260322/model/ApiKeyDetail.cpp
@@ -160,6 +168,8 @@ set(tokenhub_src
   src/v20260322/model/ModifyGlossaryEntriesResponse.cpp
   src/v20260322/model/DescribeTokenPlanResponse.cpp
   src/v20260322/model/CreateTokenPlanApiKeysRequest.cpp
+  src/v20260322/model/UsageStats.cpp
+  src/v20260322/model/DescribeUsageRankListResponse.cpp
   src/v20260322/model/DeleteTokenPlanApiKeyRequest.cpp
   src/v20260322/model/DescribeApiKeyResponse.cpp
   src/v20260322/model/DescribeTokenPlanApiKeyListRequest.cpp

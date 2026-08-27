@@ -990,6 +990,56 @@ TokenhubClient::DescribeTokenPlanListOutcomeCallable TokenhubClient::DescribeTok
     return prom->get_future();
 }
 
+TokenhubClient::DescribeUsageRankListOutcome TokenhubClient::DescribeUsageRankList(const DescribeUsageRankListRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeUsageRankList");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeUsageRankListResponse rsp = DescribeUsageRankListResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeUsageRankListOutcome(rsp);
+        else
+            return DescribeUsageRankListOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeUsageRankListOutcome(outcome.GetError());
+    }
+}
+
+void TokenhubClient::DescribeUsageRankListAsync(const DescribeUsageRankListRequest& request, const DescribeUsageRankListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeUsageRankListRequest&;
+    using Resp = DescribeUsageRankListResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeUsageRankList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TokenhubClient::DescribeUsageRankListOutcomeCallable TokenhubClient::DescribeUsageRankListCallable(const DescribeUsageRankListRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeUsageRankListOutcome>>();
+    DescribeUsageRankListAsync(
+    request,
+    [prom](
+        const TokenhubClient*,
+        const DescribeUsageRankListRequest&,
+        DescribeUsageRankListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 TokenhubClient::ModifyApiKeyInfoOutcome TokenhubClient::ModifyApiKeyInfo(const ModifyApiKeyInfoRequest &request)
 {
     auto outcome = MakeRequest(request, "ModifyApiKeyInfo");

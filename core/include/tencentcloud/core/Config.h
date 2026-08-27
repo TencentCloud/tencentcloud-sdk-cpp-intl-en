@@ -20,6 +20,6 @@
 // version = (major << 16) + (minor << 8) + patch
 #define TENCENTCLOUD_VERSION ((3 << 16) + (0 << 8) + 540)
 
-#define TENCENTCLOUD_VERSION_STR "3.1.168"
+#define TENCENTCLOUD_VERSION_STR "3.1.169"
 
 #endif // !TENCENTCLOUD_CORE_CONFIG_H_
