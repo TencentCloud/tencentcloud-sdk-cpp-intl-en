@@ -24,7 +24,7 @@ set(edgezone_public_header_model
   include/tencentcloud/edgezone/v20260401/model/DescribePrivateNetworkInstancesRequest.h
   include/tencentcloud/edgezone/v20260401/model/DescribePublicNetworkInstancesResponse.h
   include/tencentcloud/edgezone/v20260401/model/DeletePublicNetworkInstanceRequest.h
-  include/tencentcloud/edgezone/v20260401/model/TerminateInstancesResponse.h
+  include/tencentcloud/edgezone/v20260401/model/CreateEdgeNodeServiceResponse.h
   include/tencentcloud/edgezone/v20260401/model/CreateInstancesRequest.h
   include/tencentcloud/edgezone/v20260401/model/DescribeInstanceTypesRequest.h
   include/tencentcloud/edgezone/v20260401/model/PrivateNetworkInstanceInfo.h
@@ -39,6 +39,7 @@ set(edgezone_public_header_model
   include/tencentcloud/edgezone/v20260401/model/ModifyPublicNetworkInstanceRequest.h
   include/tencentcloud/edgezone/v20260401/model/ReleasePublicIpRequest.h
   include/tencentcloud/edgezone/v20260401/model/DescribeInstancesResponse.h
+  include/tencentcloud/edgezone/v20260401/model/CreateEdgeNodeServiceRequest.h
   include/tencentcloud/edgezone/v20260401/model/DescribeInstancesRequest.h
   include/tencentcloud/edgezone/v20260401/model/PublicNetworkSegment.h
   include/tencentcloud/edgezone/v20260401/model/ReleasePublicIpResponse.h
@@ -46,6 +47,7 @@ set(edgezone_public_header_model
   include/tencentcloud/edgezone/v20260401/model/DeletePrivateNetworkInstanceRequest.h
   include/tencentcloud/edgezone/v20260401/model/DescribePrivateNetworkInstancesResponse.h
   include/tencentcloud/edgezone/v20260401/model/CreatePrivateNetworkInstanceResponse.h
+  include/tencentcloud/edgezone/v20260401/model/TerminateInstancesResponse.h
   include/tencentcloud/edgezone/v20260401/model/ModifyInstanceAttributeRequest.h
   include/tencentcloud/edgezone/v20260401/model/ApplyPublicIpsRequest.h
   include/tencentcloud/edgezone/v20260401/model/DescribePublicIpsResponse.h
@@ -73,7 +75,7 @@ set(edgezone_src
   src/v20260401/model/DescribePrivateNetworkInstancesRequest.cpp
   src/v20260401/model/DescribePublicNetworkInstancesResponse.cpp
   src/v20260401/model/DeletePublicNetworkInstanceRequest.cpp
-  src/v20260401/model/TerminateInstancesResponse.cpp
+  src/v20260401/model/CreateEdgeNodeServiceResponse.cpp
   src/v20260401/model/CreateInstancesRequest.cpp
   src/v20260401/model/DescribeInstanceTypesRequest.cpp
   src/v20260401/model/PrivateNetworkInstanceInfo.cpp
@@ -88,6 +90,7 @@ set(edgezone_src
   src/v20260401/model/ModifyPublicNetworkInstanceRequest.cpp
   src/v20260401/model/ReleasePublicIpRequest.cpp
   src/v20260401/model/DescribeInstancesResponse.cpp
+  src/v20260401/model/CreateEdgeNodeServiceRequest.cpp
   src/v20260401/model/DescribeInstancesRequest.cpp
   src/v20260401/model/PublicNetworkSegment.cpp
   src/v20260401/model/ReleasePublicIpResponse.cpp
@@ -95,6 +98,7 @@ set(edgezone_src
   src/v20260401/model/DeletePrivateNetworkInstanceRequest.cpp
   src/v20260401/model/DescribePrivateNetworkInstancesResponse.cpp
   src/v20260401/model/CreatePrivateNetworkInstanceResponse.cpp
+  src/v20260401/model/TerminateInstancesResponse.cpp
   src/v20260401/model/ModifyInstanceAttributeRequest.cpp
   src/v20260401/model/ApplyPublicIpsRequest.cpp
   src/v20260401/model/DescribePublicIpsResponse.cpp

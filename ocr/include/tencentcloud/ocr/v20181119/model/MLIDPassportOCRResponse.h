@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Passport ID
-                     * @return ID Passport ID
+                     * 获取Parsed passport ID extracted from the MRZ (Machine-Readable Zone) of passport
+                     * @return ID Parsed passport ID extracted from the MRZ (Machine-Readable Zone) of passport
                      * 
                      */
                     std::string GetID() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool IDHasBeenSet() const;
 
                     /**
-                     * 获取Name
-                     * @return Name Name
+                     * 获取Parsed full name extracted from the MRZ (Machine-Readable Zone) of passport
+                     * @return Name Parsed full name extracted from the MRZ (Machine-Readable Zone) of passport
                      * 
                      */
                     std::string GetName() const;
@@ -73,8 +73,8 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Date of birth
-                     * @return DateOfBirth Date of birth
+                     * 获取Parsed date of birth extracted from the MRZ (Machine-Readable Zone) of passport
+                     * @return DateOfBirth Parsed date of birth extracted from the MRZ (Machine-Readable Zone) of passport
                      * 
                      */
                     std::string GetDateOfBirth() const;
@@ -87,8 +87,8 @@ namespace TencentCloud
                     bool DateOfBirthHasBeenSet() const;
 
                     /**
-                     * 获取Gender (F: female, M: male)
-                     * @return Sex Gender (F: female, M: male)
+                     * 获取Parsed gender extracted from the MRZ (Machine-Readable Zone) of passport
+                     * @return Sex Parsed gender extracted from the MRZ (Machine-Readable Zone) of passport
                      * 
                      */
                     std::string GetSex() const;
@@ -101,8 +101,8 @@ namespace TencentCloud
                     bool SexHasBeenSet() const;
 
                     /**
-                     * 获取Expiration date
-                     * @return DateOfExpiration Expiration date
+                     * 获取Parsed expiry date extracted from the MRZ (Machine-Readable Zone) of passport
+                     * @return DateOfExpiration Parsed expiry date extracted from the MRZ (Machine-Readable Zone) of passport
                      * 
                      */
                     std::string GetDateOfExpiration() const;
@@ -115,8 +115,8 @@ namespace TencentCloud
                     bool DateOfExpirationHasBeenSet() const;
 
                     /**
-                     * 获取Issuing country
-                     * @return IssuingCountry Issuing country
+                     * 获取Parsed issuing country extracted from the MRZ (Machine-Readable Zone) of passport
+                     * @return IssuingCountry Parsed issuing country extracted from the MRZ (Machine-Readable Zone) of passport
                      * 
                      */
                     std::string GetIssuingCountry() const;
@@ -129,8 +129,8 @@ namespace TencentCloud
                     bool IssuingCountryHasBeenSet() const;
 
                     /**
-                     * 获取Nationality code (MRZ field)
-                     * @return Nationality Nationality code (MRZ field)
+                     * 获取Parsed country-region code extracted from the MRZ (Machine-Readable Zone) of passport
+                     * @return Nationality Parsed country-region code extracted from the MRZ (Machine-Readable Zone) of passport
                      * 
                      */
                     std::string GetNationality() const;
@@ -185,8 +185,8 @@ namespace TencentCloud
                     bool AdvancedInfoHasBeenSet() const;
 
                     /**
-                     * 获取The first row of the machine-readable zone (MRZ) at the bottom
-                     * @return CodeSet The first row of the machine-readable zone (MRZ) at the bottom
+                     * 获取Parsed MRZ line 1 raw sequence extracted from the MRZ (Machine-Readable Zone) of passport
+                     * @return CodeSet Parsed MRZ line 1 raw sequence extracted from the MRZ (Machine-Readable Zone) of passport
                      * 
                      */
                     std::string GetCodeSet() const;
@@ -199,8 +199,8 @@ namespace TencentCloud
                     bool CodeSetHasBeenSet() const;
 
                     /**
-                     * 获取The second row of the MRZ at the bottom
-                     * @return CodeCrc The second row of the MRZ at the bottom
+                     * 获取Parsed MRZ line 2 raw sequence extracted from the MRZ (Machine-Readable Zone) of passport
+                     * @return CodeCrc Parsed MRZ line 2 raw sequence extracted from the MRZ (Machine-Readable Zone) of passport
                      * 
                      */
                     std::string GetCodeCrc() const;
@@ -213,10 +213,8 @@ namespace TencentCloud
                     bool CodeCrcHasBeenSet() const;
 
                     /**
-                     * 获取The surname.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Surname The surname.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Parsed surname extracted from the MRZ (Machine-Readable Zone) of passport
+                     * @return Surname Parsed surname extracted from the MRZ (Machine-Readable Zone) of passport
                      * 
                      */
                     std::string GetSurname() const;
@@ -229,10 +227,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool SurnameHasBeenSet() const;
 
                     /**
-                     * 获取The given name.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return GivenName The given name.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Parsed given name extracted from the MRZ (Machine-Readable Zone) of passport
+                     * @return GivenName Parsed given name extracted from the MRZ (Machine-Readable Zone) of passport
                      * 
                      */
                     std::string GetGivenName() const;
@@ -245,8 +241,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool GivenNameHasBeenSet() const;
 
                     /**
-                     * 获取Type (in Machine Readable Zone)
-                     * @return Type Type (in Machine Readable Zone)
+                     * 获取Parsed document type extracted from the MRZ (Machine-Readable Zone) of passport
+                     * @return Type Parsed document type extracted from the MRZ (Machine-Readable Zone) of passport
                      * 
                      */
                     std::string GetType() const;
@@ -278,7 +274,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 -9101 Alarm for covered certificate
 -9102 Alarm for photocopied certificate
 -9103 Alarm for photographed certificate
--9104 Alarm for tamper certificate
+-9104 Alarm for PS certificate
 -9107 Alarm for reflective certificate
 -9108 Alarm for blurry certificate 
 -9109 This capability is not enabled. Please contact customer support to activate the alert service.
@@ -287,7 +283,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 -9101 Alarm for covered certificate
 -9102 Alarm for photocopied certificate
 -9103 Alarm for photographed certificate
--9104 Alarm for tamper certificate
+-9104 Alarm for PS certificate
 -9107 Alarm for reflective certificate
 -9108 Alarm for blurry certificate 
 -9109 This capability is not enabled. Please contact customer support to activate the alert service.
@@ -333,43 +329,43 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Passport ID
+                     * Parsed passport ID extracted from the MRZ (Machine-Readable Zone) of passport
                      */
                     std::string m_iD;
                     bool m_iDHasBeenSet;
 
                     /**
-                     * Name
+                     * Parsed full name extracted from the MRZ (Machine-Readable Zone) of passport
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Date of birth
+                     * Parsed date of birth extracted from the MRZ (Machine-Readable Zone) of passport
                      */
                     std::string m_dateOfBirth;
                     bool m_dateOfBirthHasBeenSet;
 
                     /**
-                     * Gender (F: female, M: male)
+                     * Parsed gender extracted from the MRZ (Machine-Readable Zone) of passport
                      */
                     std::string m_sex;
                     bool m_sexHasBeenSet;
 
                     /**
-                     * Expiration date
+                     * Parsed expiry date extracted from the MRZ (Machine-Readable Zone) of passport
                      */
                     std::string m_dateOfExpiration;
                     bool m_dateOfExpirationHasBeenSet;
 
                     /**
-                     * Issuing country
+                     * Parsed issuing country extracted from the MRZ (Machine-Readable Zone) of passport
                      */
                     std::string m_issuingCountry;
                     bool m_issuingCountryHasBeenSet;
 
                     /**
-                     * Nationality code (MRZ field)
+                     * Parsed country-region code extracted from the MRZ (Machine-Readable Zone) of passport
                      */
                     std::string m_nationality;
                     bool m_nationalityHasBeenSet;
@@ -393,33 +389,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_advancedInfoHasBeenSet;
 
                     /**
-                     * The first row of the machine-readable zone (MRZ) at the bottom
+                     * Parsed MRZ line 1 raw sequence extracted from the MRZ (Machine-Readable Zone) of passport
                      */
                     std::string m_codeSet;
                     bool m_codeSetHasBeenSet;
 
                     /**
-                     * The second row of the MRZ at the bottom
+                     * Parsed MRZ line 2 raw sequence extracted from the MRZ (Machine-Readable Zone) of passport
                      */
                     std::string m_codeCrc;
                     bool m_codeCrcHasBeenSet;
 
                     /**
-                     * The surname.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Parsed surname extracted from the MRZ (Machine-Readable Zone) of passport
                      */
                     std::string m_surname;
                     bool m_surnameHasBeenSet;
 
                     /**
-                     * The given name.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Parsed given name extracted from the MRZ (Machine-Readable Zone) of passport
                      */
                     std::string m_givenName;
                     bool m_givenNameHasBeenSet;
 
                     /**
-                     * Type (in Machine Readable Zone)
+                     * Parsed document type extracted from the MRZ (Machine-Readable Zone) of passport
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
@@ -436,7 +430,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 -9101 Alarm for covered certificate
 -9102 Alarm for photocopied certificate
 -9103 Alarm for photographed certificate
--9104 Alarm for tamper certificate
+-9104 Alarm for PS certificate
 -9107 Alarm for reflective certificate
 -9108 Alarm for blurry certificate 
 -9109 This capability is not enabled. Please contact customer support to activate the alert service.

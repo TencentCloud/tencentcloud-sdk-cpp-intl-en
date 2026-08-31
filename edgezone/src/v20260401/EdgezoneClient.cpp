@@ -90,6 +90,56 @@ EdgezoneClient::ApplyPublicIpsOutcomeCallable EdgezoneClient::ApplyPublicIpsCall
     return prom->get_future();
 }
 
+EdgezoneClient::CreateEdgeNodeServiceOutcome EdgezoneClient::CreateEdgeNodeService(const CreateEdgeNodeServiceRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateEdgeNodeService");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateEdgeNodeServiceResponse rsp = CreateEdgeNodeServiceResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateEdgeNodeServiceOutcome(rsp);
+        else
+            return CreateEdgeNodeServiceOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateEdgeNodeServiceOutcome(outcome.GetError());
+    }
+}
+
+void EdgezoneClient::CreateEdgeNodeServiceAsync(const CreateEdgeNodeServiceRequest& request, const CreateEdgeNodeServiceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const CreateEdgeNodeServiceRequest&;
+    using Resp = CreateEdgeNodeServiceResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "CreateEdgeNodeService", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+EdgezoneClient::CreateEdgeNodeServiceOutcomeCallable EdgezoneClient::CreateEdgeNodeServiceCallable(const CreateEdgeNodeServiceRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<CreateEdgeNodeServiceOutcome>>();
+    CreateEdgeNodeServiceAsync(
+    request,
+    [prom](
+        const EdgezoneClient*,
+        const CreateEdgeNodeServiceRequest&,
+        CreateEdgeNodeServiceOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 EdgezoneClient::CreateInstancesOutcome EdgezoneClient::CreateInstances(const CreateInstancesRequest &request)
 {
     auto outcome = MakeRequest(request, "CreateInstances");

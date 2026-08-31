@@ -25,6 +25,8 @@
 #include <tencentcloud/core/AsyncCallerContext.h>
 #include <tencentcloud/edgezone/v20260401/model/ApplyPublicIpsRequest.h>
 #include <tencentcloud/edgezone/v20260401/model/ApplyPublicIpsResponse.h>
+#include <tencentcloud/edgezone/v20260401/model/CreateEdgeNodeServiceRequest.h>
+#include <tencentcloud/edgezone/v20260401/model/CreateEdgeNodeServiceResponse.h>
 #include <tencentcloud/edgezone/v20260401/model/CreateInstancesRequest.h>
 #include <tencentcloud/edgezone/v20260401/model/CreateInstancesResponse.h>
 #include <tencentcloud/edgezone/v20260401/model/CreatePrivateNetworkInstanceRequest.h>
@@ -76,6 +78,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ApplyPublicIpsResponse> ApplyPublicIpsOutcome;
                 typedef std::future<ApplyPublicIpsOutcome> ApplyPublicIpsOutcomeCallable;
                 typedef std::function<void(const EdgezoneClient*, const Model::ApplyPublicIpsRequest&, ApplyPublicIpsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ApplyPublicIpsAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateEdgeNodeServiceResponse> CreateEdgeNodeServiceOutcome;
+                typedef std::future<CreateEdgeNodeServiceOutcome> CreateEdgeNodeServiceOutcomeCallable;
+                typedef std::function<void(const EdgezoneClient*, const Model::CreateEdgeNodeServiceRequest&, CreateEdgeNodeServiceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateEdgeNodeServiceAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateInstancesResponse> CreateInstancesOutcome;
                 typedef std::future<CreateInstancesOutcome> CreateInstancesOutcomeCallable;
                 typedef std::function<void(const EdgezoneClient*, const Model::CreateInstancesRequest&, CreateInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateInstancesAsyncHandler;
@@ -139,6 +144,15 @@ This API is applicable only to public network instances with `RouteMode=static`.
                 ApplyPublicIpsOutcome ApplyPublicIps(const Model::ApplyPublicIpsRequest &request);
                 void ApplyPublicIpsAsync(const Model::ApplyPublicIpsRequest& request, const ApplyPublicIpsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ApplyPublicIpsOutcomeCallable ApplyPublicIpsCallable(const Model::ApplyPublicIpsRequest& request);
+
+                /**
+                 *Enable the billing service for edge nodes.
+                 * @param req CreateEdgeNodeServiceRequest
+                 * @return CreateEdgeNodeServiceOutcome
+                 */
+                CreateEdgeNodeServiceOutcome CreateEdgeNodeService(const Model::CreateEdgeNodeServiceRequest &request);
+                void CreateEdgeNodeServiceAsync(const Model::CreateEdgeNodeServiceRequest& request, const CreateEdgeNodeServiceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateEdgeNodeServiceOutcomeCallable CreateEdgeNodeServiceCallable(const Model::CreateEdgeNodeServiceRequest& request);
 
                 /**
                  *This API is used to create a physical machine instance. The system automatically allocates physical machine resources and completes installation. If the user is not in the current availability zone, the system automatically enables billing. It supports concurrent allocation of physical machine resources and async execution of network assignment and installation tasks.
