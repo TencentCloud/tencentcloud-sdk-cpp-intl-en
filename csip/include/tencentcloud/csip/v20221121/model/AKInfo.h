@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * AK brief information.
+                * AK brief information
                 */
                 class AKInfo : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取ak id.
-                     * @return ID ak id.
+                     * 获取id of the ak
+                     * @return ID id of the ak
                      * 
                      */
                     uint64_t GetID() const;
 
                     /**
-                     * 设置ak id.
-                     * @param _iD ak id.
+                     * 设置id of the ak
+                     * @param _iD id of the ak
                      * 
                      */
                     void SetID(const uint64_t& _iD);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool IDHasBeenSet() const;
 
                     /**
-                     * 获取ak specific value. returns temporary key when temporary key is used.
-                     * @return Name ak specific value. returns temporary key when temporary key is used.
+                     * 获取`ak` specific value. This field returns the temporary key when the temporary key is used.
+                     * @return Name `ak` specific value. This field returns the temporary key when the temporary key is used.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置ak specific value. returns temporary key when temporary key is used.
-                     * @param _name ak specific value. returns temporary key when temporary key is used.
+                     * 设置`ak` specific value. This field returns the temporary key when the temporary key is used.
+                     * @param _name `ak` specific value. This field returns the temporary key when the temporary key is used.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Associated account.
-                     * @return User Associated account.
+                     * 获取Associated account
+                     * @return User Associated account
                      * 
                      */
                     std::string GetUser() const;
 
                     /**
-                     * 设置Associated account.
-                     * @param _user Associated account.
+                     * 设置Associated account
+                     * @param _user Associated account
                      * 
                      */
                     void SetUser(const std::string& _user);
@@ -133,19 +133,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * ak id.
+                     * id of the ak
                      */
                     uint64_t m_iD;
                     bool m_iDHasBeenSet;
 
                     /**
-                     * ak specific value. returns temporary key when temporary key is used.
+                     * `ak` specific value. This field returns the temporary key when the temporary key is used.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Associated account.
+                     * Associated account
                      */
                     std::string m_user;
                     bool m_userHasBeenSet;

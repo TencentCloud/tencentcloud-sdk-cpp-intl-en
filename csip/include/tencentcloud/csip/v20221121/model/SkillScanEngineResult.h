@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Sub-engine scanning result
+                * Scanning result of the sub-engine
                 */
                 class SkillScanEngineResult : public AbstractModel
                 {
@@ -48,27 +48,27 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Sub-engine type
-Enumeration value:
+                     * 获取Sub-engine type.
+Enumeration values:
 AI: AI engine
-STATIC: Static analysis engine
-                     * @return ScanType Sub-engine type
-Enumeration value:
+STATIC: static analysis engine
+                     * @return ScanType Sub-engine type.
+Enumeration values:
 AI: AI engine
-STATIC: Static analysis engine
+STATIC: static analysis engine
                      * 
                      */
                     std::string GetScanType() const;
 
                     /**
-                     * 设置Sub-engine type
-Enumeration value:
+                     * 设置Sub-engine type.
+Enumeration values:
 AI: AI engine
-STATIC: Static analysis engine
-                     * @param _scanType Sub-engine type
-Enumeration value:
+STATIC: static analysis engine
+                     * @param _scanType Sub-engine type.
+Enumeration values:
 AI: AI engine
-STATIC: Static analysis engine
+STATIC: static analysis engine
                      * 
                      */
                     void SetScanType(const std::string& _scanType);
@@ -81,15 +81,15 @@ STATIC: Static analysis engine
                     bool ScanTypeHasBeenSet() const;
 
                     /**
-                     * 获取The rule list hit by the engine
-                     * @return RuleList The rule list hit by the engine
+                     * 获取Hit rule list.
+                     * @return RuleList Hit rule list.
                      * 
                      */
                     std::vector<SkillScanRuleHit> GetRuleList() const;
 
                     /**
-                     * 设置The rule list hit by the engine
-                     * @param _ruleList The rule list hit by the engine
+                     * 设置Hit rule list.
+                     * @param _ruleList Hit rule list.
                      * 
                      */
                     void SetRuleList(const std::vector<SkillScanRuleHit>& _ruleList);
@@ -104,16 +104,16 @@ STATIC: Static analysis engine
                 private:
 
                     /**
-                     * Sub-engine type
-Enumeration value:
+                     * Sub-engine type.
+Enumeration values:
 AI: AI engine
-STATIC: Static analysis engine
+STATIC: static analysis engine
                      */
                     std::string m_scanType;
                     bool m_scanTypeHasBeenSet;
 
                     /**
-                     * The rule list hit by the engine
+                     * Hit rule list.
                      */
                     std::vector<SkillScanRuleHit> m_ruleList;
                     bool m_ruleListHasBeenSet;

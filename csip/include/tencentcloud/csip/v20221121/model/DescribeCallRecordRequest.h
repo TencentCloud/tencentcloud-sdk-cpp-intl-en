@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool MemberIdHasBeenSet() const;
 
                     /**
-                     * 获取Access key ID.
-                     * @return AccessKeyID Access key ID.
+                     * 获取Access key ID
+                     * @return AccessKeyID Access key ID
                      * 
                      */
                     uint64_t GetAccessKeyID() const;
 
                     /**
-                     * 设置Access key ID.
-                     * @param _accessKeyID Access key ID.
+                     * 设置Access key ID
+                     * @param _accessKeyID Access key ID
                      * 
                      */
                     void SetAccessKeyID(const uint64_t& _accessKeyID);
@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool AccessKeyIDHasBeenSet() const;
 
                     /**
-                     * 获取ID of the source IP for the call.
-                     * @return SourceIPID ID of the source IP for the call.
+                     * 获取ID of the call source IP
+                     * @return SourceIPID ID of the call source IP
                      * 
                      */
                     uint64_t GetSourceIPID() const;
 
                     /**
-                     * 设置ID of the source IP for the call.
-                     * @param _sourceIPID ID of the source IP for the call.
+                     * 设置ID of the call source IP
+                     * @param _sourceIPID ID of the call source IP
                      * 
                      */
                     void SetSourceIPID(const uint64_t& _sourceIPID);
@@ -107,15 +107,15 @@ namespace TencentCloud
                     bool SourceIPIDHasBeenSet() const;
 
                     /**
-                     * 获取Access account uin.
-                     * @return AccUin Access account uin.
+                     * 获取Access account uin
+                     * @return AccUin Access account uin
                      * 
                      */
                     std::string GetAccUin() const;
 
                     /**
-                     * 设置Access account uin.
-                     * @param _accUin Access account uin.
+                     * 设置Access account uin
+                     * @param _accUin Access account uin
                      * 
                      */
                     void SetAccUin(const std::string& _accUin);
@@ -128,15 +128,15 @@ namespace TencentCloud
                     bool AccUinHasBeenSet() const;
 
                     /**
-                     * 获取Access key. Note: Temporary key is unsupported.
-                     * @return AccessKey Access key. Note: Temporary key is unsupported.
+                     * 获取Access key. Note: unsupported for temporary keys.
+                     * @return AccessKey Access key. Note: unsupported for temporary keys.
                      * 
                      */
                     std::string GetAccessKey() const;
 
                     /**
-                     * 设置Access key. Note: Temporary key is unsupported.
-                     * @param _accessKey Access key. Note: Temporary key is unsupported.
+                     * 设置Access key. Note: unsupported for temporary keys.
+                     * @param _accessKey Access key. Note: unsupported for temporary keys.
                      * 
                      */
                     void SetAccessKey(const std::string& _accessKey);
@@ -178,25 +178,25 @@ namespace TencentCloud
                     bool m_memberIdHasBeenSet;
 
                     /**
-                     * Access key ID.
+                     * Access key ID
                      */
                     uint64_t m_accessKeyID;
                     bool m_accessKeyIDHasBeenSet;
 
                     /**
-                     * ID of the source IP for the call.
+                     * ID of the call source IP
                      */
                     uint64_t m_sourceIPID;
                     bool m_sourceIPIDHasBeenSet;
 
                     /**
-                     * Access account uin.
+                     * Access account uin
                      */
                     std::string m_accUin;
                     bool m_accUinHasBeenSet;
 
                     /**
-                     * Access key. Note: Temporary key is unsupported.
+                     * Access key. Note: unsupported for temporary keys.
                      */
                     std::string m_accessKey;
                     bool m_accessKeyHasBeenSet;

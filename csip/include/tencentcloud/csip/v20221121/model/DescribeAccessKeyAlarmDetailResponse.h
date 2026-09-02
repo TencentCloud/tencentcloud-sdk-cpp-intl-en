@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool AlarmInfoHasBeenSet() const;
 
                     /**
-                     * 获取Number of CAM policies in the associated account.
-                     * @return CamCount Number of CAM policies in the associated account.
+                     * 获取Number of CAM policies of the associated account
+                     * @return CamCount Number of CAM policies of the associated account
                      * 
                      */
                     int64_t GetCamCount() const;
@@ -73,8 +73,8 @@ namespace TencentCloud
                     bool CamCountHasBeenSet() const;
 
                     /**
-                     * 获取Number of AK risks.
-                     * @return RiskCount Number of AK risks.
+                     * 获取Number of AK risks
+                     * @return RiskCount Number of AK risks
                      * 
                      */
                     int64_t GetRiskCount() const;
@@ -87,8 +87,8 @@ namespace TencentCloud
                     bool RiskCountHasBeenSet() const;
 
                     /**
-                     * 获取Alarm policy description.
-                     * @return AlarmDesc Alarm policy description.
+                     * 获取Alarm policy description
+                     * @return AlarmDesc Alarm policy description
                      * 
                      */
                     std::string GetAlarmDesc() const;
@@ -109,19 +109,19 @@ namespace TencentCloud
                     bool m_alarmInfoHasBeenSet;
 
                     /**
-                     * Number of CAM policies in the associated account.
+                     * Number of CAM policies of the associated account
                      */
                     int64_t m_camCount;
                     bool m_camCountHasBeenSet;
 
                     /**
-                     * Number of AK risks.
+                     * Number of AK risks
                      */
                     int64_t m_riskCount;
                     bool m_riskCountHasBeenSet;
 
                     /**
-                     * Alarm policy description.
+                     * Alarm policy description
                      */
                     std::string m_alarmDesc;
                     bool m_alarmDescHasBeenSet;

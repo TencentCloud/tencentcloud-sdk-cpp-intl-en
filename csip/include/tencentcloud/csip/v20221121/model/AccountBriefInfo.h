@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Account brief information
+                * Brief account information
                 */
                 class AccountBriefInfo : public AbstractModel
                 {
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool NickHasBeenSet() const;
 
                     /**
-                     * 获取<p>account Uin</p>
-                     * @return Uin <p>account Uin</p>
+                     * 获取<p>Account Uin</p>
+                     * @return Uin <p>Account Uin</p>
                      * 
                      */
                     std::string GetUin() const;
 
                     /**
-                     * 设置<p>account Uin</p>
-                     * @param _uin <p>account Uin</p>
+                     * 设置<p>Account Uin</p>
+                     * @param _uin <p>Account Uin</p>
                      * 
                      */
                     void SetUin(const std::string& _uin);
@@ -124,7 +124,7 @@ namespace TencentCloud
                     bool m_nickHasBeenSet;
 
                     /**
-                     * <p>account Uin</p>
+                     * <p>Account Uin</p>
                      */
                     std::string m_uin;
                     bool m_uinHasBeenSet;

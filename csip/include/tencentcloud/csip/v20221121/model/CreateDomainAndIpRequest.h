@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool MemberIdHasBeenSet() const;
 
                     /**
-                     * 获取Asset tags
-                     * @return Tags Asset tags
+                     * 获取Asset tag
+                     * @return Tags Asset tag
                      * 
                      */
                     std::vector<AssetTag> GetTags() const;
 
                     /**
-                     * 设置Asset tags
-                     * @param _tags Asset tags
+                     * 设置Asset tag
+                     * @param _tags Asset tag
                      * 
                      */
                     void SetTags(const std::vector<AssetTag>& _tags);
@@ -121,7 +121,7 @@ namespace TencentCloud
                     bool m_memberIdHasBeenSet;
 
                     /**
-                     * Asset tags
+                     * Asset tag
                      */
                     std::vector<AssetTag> m_tags;
                     bool m_tagsHasBeenSet;

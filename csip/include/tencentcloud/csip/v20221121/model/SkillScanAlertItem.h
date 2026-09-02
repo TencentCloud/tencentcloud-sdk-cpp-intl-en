@@ -1,0 +1,624 @@
+/*
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+#ifndef TENCENTCLOUD_CSIP_V20221121_MODEL_SKILLSCANALERTITEM_H_
+#define TENCENTCLOUD_CSIP_V20221121_MODEL_SKILLSCANALERTITEM_H_
+
+#include <string>
+#include <vector>
+#include <map>
+#include <tencentcloud/core/utils/rapidjson/document.h>
+#include <tencentcloud/core/utils/rapidjson/writer.h>
+#include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
+#include <tencentcloud/core/AbstractModel.h>
+
+
+namespace TencentCloud
+{
+    namespace Csip
+    {
+        namespace V20221121
+        {
+            namespace Model
+            {
+                /**
+                * Single record in the Skill security detection alarm list
+                */
+                class SkillScanAlertItem : public AbstractModel
+                {
+                public:
+                    SkillScanAlertItem();
+                    ~SkillScanAlertItem() = default;
+                    void ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const;
+                    CoreInternalOutcome Deserialize(const rapidjson::Value &value);
+
+
+                    /**
+                     * 获取<p>Alarm record ID</p>
+                     * @return ID <p>Alarm record ID</p>
+                     * 
+                     */
+                    int64_t GetID() const;
+
+                    /**
+                     * 设置<p>Alarm record ID</p>
+                     * @param _iD <p>Alarm record ID</p>
+                     * 
+                     */
+                    void SetID(const int64_t& _iD);
+
+                    /**
+                     * 判断参数 ID 是否已赋值
+                     * @return ID 是否已赋值
+                     * 
+                     */
+                    bool IDHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Tenant AppID</p>
+                     * @return AppID <p>Tenant AppID</p>
+                     * 
+                     */
+                    int64_t GetAppID() const;
+
+                    /**
+                     * 设置<p>Tenant AppID</p>
+                     * @param _appID <p>Tenant AppID</p>
+                     * 
+                     */
+                    void SetAppID(const int64_t& _appID);
+
+                    /**
+                     * 判断参数 AppID 是否已赋值
+                     * @return AppID 是否已赋值
+                     * 
+                     */
+                    bool AppIDHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Host UUID</p>
+                     * @return UUID <p>Host UUID</p>
+                     * 
+                     */
+                    std::string GetUUID() const;
+
+                    /**
+                     * 设置<p>Host UUID</p>
+                     * @param _uUID <p>Host UUID</p>
+                     * 
+                     */
+                    void SetUUID(const std::string& _uUID);
+
+                    /**
+                     * 判断参数 UUID 是否已赋值
+                     * @return UUID 是否已赋值
+                     * 
+                     */
+                    bool UUIDHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Host IP address</p>
+                     * @return HostIP <p>Host IP address</p>
+                     * 
+                     */
+                    std::string GetHostIP() const;
+
+                    /**
+                     * 设置<p>Host IP address</p>
+                     * @param _hostIP <p>Host IP address</p>
+                     * 
+                     */
+                    void SetHostIP(const std::string& _hostIP);
+
+                    /**
+                     * 判断参数 HostIP 是否已赋值
+                     * @return HostIP 是否已赋值
+                     * 
+                     */
+                    bool HostIPHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Instance ID<br>Parameter format: such as ins-xxxxxxxx</p>
+                     * @return InstanceID <p>Instance ID<br>Parameter format: such as ins-xxxxxxxx</p>
+                     * 
+                     */
+                    std::string GetInstanceID() const;
+
+                    /**
+                     * 设置<p>Instance ID<br>Parameter format: such as ins-xxxxxxxx</p>
+                     * @param _instanceID <p>Instance ID<br>Parameter format: such as ins-xxxxxxxx</p>
+                     * 
+                     */
+                    void SetInstanceID(const std::string& _instanceID);
+
+                    /**
+                     * 判断参数 InstanceID 是否已赋值
+                     * @return InstanceID 是否已赋值
+                     * 
+                     */
+                    bool InstanceIDHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Instance name.</p>
+                     * @return InstanceName <p>Instance name.</p>
+                     * 
+                     */
+                    std::string GetInstanceName() const;
+
+                    /**
+                     * 设置<p>Instance name.</p>
+                     * @param _instanceName <p>Instance name.</p>
+                     * 
+                     */
+                    void SetInstanceName(const std::string& _instanceName);
+
+                    /**
+                     * 判断参数 InstanceName 是否已赋值
+                     * @return InstanceName 是否已赋值
+                     * 
+                     */
+                    bool InstanceNameHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Asset type affiliation<br>Enumeration values:<br>HOST: Host<br>CONTAINER: Container</p>
+                     * @return BelongAssetType <p>Asset type affiliation<br>Enumeration values:<br>HOST: Host<br>CONTAINER: Container</p>
+                     * 
+                     */
+                    std::string GetBelongAssetType() const;
+
+                    /**
+                     * 设置<p>Asset type affiliation<br>Enumeration values:<br>HOST: Host<br>CONTAINER: Container</p>
+                     * @param _belongAssetType <p>Asset type affiliation<br>Enumeration values:<br>HOST: Host<br>CONTAINER: Container</p>
+                     * 
+                     */
+                    void SetBelongAssetType(const std::string& _belongAssetType);
+
+                    /**
+                     * 判断参数 BelongAssetType 是否已赋值
+                     * @return BelongAssetType 是否已赋值
+                     * 
+                     */
+                    bool BelongAssetTypeHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Skill name</p>
+                     * @return SkillName <p>Skill name</p>
+                     * 
+                     */
+                    std::string GetSkillName() const;
+
+                    /**
+                     * 设置<p>Skill name</p>
+                     * @param _skillName <p>Skill name</p>
+                     * 
+                     */
+                    void SetSkillName(const std::string& _skillName);
+
+                    /**
+                     * 判断参数 SkillName 是否已赋值
+                     * @return SkillName 是否已赋值
+                     * 
+                     */
+                    bool SkillNameHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Skill file path</p>
+                     * @return SkillPath <p>Skill file path</p>
+                     * 
+                     */
+                    std::string GetSkillPath() const;
+
+                    /**
+                     * 设置<p>Skill file path</p>
+                     * @param _skillPath <p>Skill file path</p>
+                     * 
+                     */
+                    void SetSkillPath(const std::string& _skillPath);
+
+                    /**
+                     * 判断参数 SkillPath 是否已赋值
+                     * @return SkillPath 是否已赋值
+                     * 
+                     */
+                    bool SkillPathHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Skill application scope</p>
+                     * @return Scope <p>Skill application scope</p>
+                     * 
+                     */
+                    std::string GetScope() const;
+
+                    /**
+                     * 设置<p>Skill application scope</p>
+                     * @param _scope <p>Skill application scope</p>
+                     * 
+                     */
+                    void SetScope(const std::string& _scope);
+
+                    /**
+                     * 判断参数 Scope 是否已赋值
+                     * @return Scope 是否已赋值
+                     * 
+                     */
+                    bool ScopeHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Skill version number</p>
+                     * @return Version <p>Skill version number</p>
+                     * 
+                     */
+                    std::string GetVersion() const;
+
+                    /**
+                     * 设置<p>Skill version number</p>
+                     * @param _version <p>Skill version number</p>
+                     * 
+                     */
+                    void SetVersion(const std::string& _version);
+
+                    /**
+                     * 判断参数 Version 是否已赋值
+                     * @return Version 是否已赋值
+                     * 
+                     */
+                    bool VersionHasBeenSet() const;
+
+                    /**
+                     * 获取<p>SHA256 hash of file content<br>Parameter format: sha256:&lt;64-digit hex&gt;</p>
+                     * @return ContentHash <p>SHA256 hash of file content<br>Parameter format: sha256:&lt;64-digit hex&gt;</p>
+                     * 
+                     */
+                    std::string GetContentHash() const;
+
+                    /**
+                     * 设置<p>SHA256 hash of file content<br>Parameter format: sha256:&lt;64-digit hex&gt;</p>
+                     * @param _contentHash <p>SHA256 hash of file content<br>Parameter format: sha256:&lt;64-digit hex&gt;</p>
+                     * 
+                     */
+                    void SetContentHash(const std::string& _contentHash);
+
+                    /**
+                     * 判断参数 ContentHash 是否已赋值
+                     * @return ContentHash 是否已赋值
+                     * 
+                     */
+                    bool ContentHashHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Risk level<br>Enumeration values:<br>malicious: Malicious<br>suspicious: Suspicious</p>
+                     * @return RiskLevel <p>Risk level<br>Enumeration values:<br>malicious: Malicious<br>suspicious: Suspicious</p>
+                     * 
+                     */
+                    std::string GetRiskLevel() const;
+
+                    /**
+                     * 设置<p>Risk level<br>Enumeration values:<br>malicious: Malicious<br>suspicious: Suspicious</p>
+                     * @param _riskLevel <p>Risk level<br>Enumeration values:<br>malicious: Malicious<br>suspicious: Suspicious</p>
+                     * 
+                     */
+                    void SetRiskLevel(const std::string& _riskLevel);
+
+                    /**
+                     * 判断参数 RiskLevel 是否已赋值
+                     * @return RiskLevel 是否已赋值
+                     * 
+                     */
+                    bool RiskLevelHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Security score<br>Value range: [0, 100]</p>
+                     * @return SecurityScore <p>Security score<br>Value range: [0, 100]</p>
+                     * 
+                     */
+                    int64_t GetSecurityScore() const;
+
+                    /**
+                     * 设置<p>Security score<br>Value range: [0, 100]</p>
+                     * @param _securityScore <p>Security score<br>Value range: [0, 100]</p>
+                     * 
+                     */
+                    void SetSecurityScore(const int64_t& _securityScore);
+
+                    /**
+                     * 判断参数 SecurityScore 是否已赋值
+                     * @return SecurityScore 是否已赋值
+                     * 
+                     */
+                    bool SecurityScoreHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Main matched rule ID</p>
+                     * @return PrimaryRuleID <p>Main matched rule ID</p>
+                     * 
+                     */
+                    std::string GetPrimaryRuleID() const;
+
+                    /**
+                     * 设置<p>Main matched rule ID</p>
+                     * @param _primaryRuleID <p>Main matched rule ID</p>
+                     * 
+                     */
+                    void SetPrimaryRuleID(const std::string& _primaryRuleID);
+
+                    /**
+                     * 判断参数 PrimaryRuleID 是否已赋值
+                     * @return PrimaryRuleID 是否已赋值
+                     * 
+                     */
+                    bool PrimaryRuleIDHasBeenSet() const;
+
+                    /**
+                     * 获取<p>List of hit rule IDs (9xxxx), deduplicated by RuleID<br>The display name is translated using the RuleCatalog dictionary in the outer layer of the response<br>If historical alarms do not persist this field, an empty array is returned</p>
+                     * @return HitRules <p>List of hit rule IDs (9xxxx), deduplicated by RuleID<br>The display name is translated using the RuleCatalog dictionary in the outer layer of the response<br>If historical alarms do not persist this field, an empty array is returned</p>
+                     * 
+                     */
+                    std::vector<std::string> GetHitRules() const;
+
+                    /**
+                     * 设置<p>List of hit rule IDs (9xxxx), deduplicated by RuleID<br>The display name is translated using the RuleCatalog dictionary in the outer layer of the response<br>If historical alarms do not persist this field, an empty array is returned</p>
+                     * @param _hitRules <p>List of hit rule IDs (9xxxx), deduplicated by RuleID<br>The display name is translated using the RuleCatalog dictionary in the outer layer of the response<br>If historical alarms do not persist this field, an empty array is returned</p>
+                     * 
+                     */
+                    void SetHitRules(const std::vector<std::string>& _hitRules);
+
+                    /**
+                     * 判断参数 HitRules 是否已赋值
+                     * @return HitRules 是否已赋值
+                     * 
+                     */
+                    bool HitRulesHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Detection engine version number</p>
+                     * @return EngineVersion <p>Detection engine version number</p>
+                     * 
+                     */
+                    int64_t GetEngineVersion() const;
+
+                    /**
+                     * 设置<p>Detection engine version number</p>
+                     * @param _engineVersion <p>Detection engine version number</p>
+                     * 
+                     */
+                    void SetEngineVersion(const int64_t& _engineVersion);
+
+                    /**
+                     * 判断参数 EngineVersion 是否已赋值
+                     * @return EngineVersion 是否已赋值
+                     * 
+                     */
+                    bool EngineVersionHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Processing status<br>Enumeration values:<br>0: unprocessed<br>1: processed<br>2: ignored<br>3: trusted<br>4: deleted (soft deletion)</p>
+                     * @return Status <p>Processing status<br>Enumeration values:<br>0: unprocessed<br>1: processed<br>2: ignored<br>3: trusted<br>4: deleted (soft deletion)</p>
+                     * 
+                     */
+                    int64_t GetStatus() const;
+
+                    /**
+                     * 设置<p>Processing status<br>Enumeration values:<br>0: unprocessed<br>1: processed<br>2: ignored<br>3: trusted<br>4: deleted (soft deletion)</p>
+                     * @param _status <p>Processing status<br>Enumeration values:<br>0: unprocessed<br>1: processed<br>2: ignored<br>3: trusted<br>4: deleted (soft deletion)</p>
+                     * 
+                     */
+                    void SetStatus(const int64_t& _status);
+
+                    /**
+                     * 判断参数 Status 是否已赋值
+                     * @return Status 是否已赋值
+                     * 
+                     */
+                    bool StatusHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Alarm level<br>Enumeration values:<br>high: High risk<br>medium: Medium risk</p>
+                     * @return Level <p>Alarm level<br>Enumeration values:<br>high: High risk<br>medium: Medium risk</p>
+                     * 
+                     */
+                    std::string GetLevel() const;
+
+                    /**
+                     * 设置<p>Alarm level<br>Enumeration values:<br>high: High risk<br>medium: Medium risk</p>
+                     * @param _level <p>Alarm level<br>Enumeration values:<br>high: High risk<br>medium: Medium risk</p>
+                     * 
+                     */
+                    void SetLevel(const std::string& _level);
+
+                    /**
+                     * 判断参数 Level 是否已赋值
+                     * @return Level 是否已赋值
+                     * 
+                     */
+                    bool LevelHasBeenSet() const;
+
+                    /**
+                     * 获取<p>First detection time<br>Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)</p>
+                     * @return CreateTime <p>First detection time<br>Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)</p>
+                     * 
+                     */
+                    std::string GetCreateTime() const;
+
+                    /**
+                     * 设置<p>First detection time<br>Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)</p>
+                     * @param _createTime <p>First detection time<br>Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)</p>
+                     * 
+                     */
+                    void SetCreateTime(const std::string& _createTime);
+
+                    /**
+                     * 判断参数 CreateTime 是否已赋值
+                     * @return CreateTime 是否已赋值
+                     * 
+                     */
+                    bool CreateTimeHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Last update time<br>Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)</p>
+                     * @return UpdateTime <p>Last update time<br>Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)</p>
+                     * 
+                     */
+                    std::string GetUpdateTime() const;
+
+                    /**
+                     * 设置<p>Last update time<br>Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)</p>
+                     * @param _updateTime <p>Last update time<br>Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)</p>
+                     * 
+                     */
+                    void SetUpdateTime(const std::string& _updateTime);
+
+                    /**
+                     * 判断参数 UpdateTime 是否已赋值
+                     * @return UpdateTime 是否已赋值
+                     * 
+                     */
+                    bool UpdateTimeHasBeenSet() const;
+
+                private:
+
+                    /**
+                     * <p>Alarm record ID</p>
+                     */
+                    int64_t m_iD;
+                    bool m_iDHasBeenSet;
+
+                    /**
+                     * <p>Tenant AppID</p>
+                     */
+                    int64_t m_appID;
+                    bool m_appIDHasBeenSet;
+
+                    /**
+                     * <p>Host UUID</p>
+                     */
+                    std::string m_uUID;
+                    bool m_uUIDHasBeenSet;
+
+                    /**
+                     * <p>Host IP address</p>
+                     */
+                    std::string m_hostIP;
+                    bool m_hostIPHasBeenSet;
+
+                    /**
+                     * <p>Instance ID<br>Parameter format: such as ins-xxxxxxxx</p>
+                     */
+                    std::string m_instanceID;
+                    bool m_instanceIDHasBeenSet;
+
+                    /**
+                     * <p>Instance name.</p>
+                     */
+                    std::string m_instanceName;
+                    bool m_instanceNameHasBeenSet;
+
+                    /**
+                     * <p>Asset type affiliation<br>Enumeration values:<br>HOST: Host<br>CONTAINER: Container</p>
+                     */
+                    std::string m_belongAssetType;
+                    bool m_belongAssetTypeHasBeenSet;
+
+                    /**
+                     * <p>Skill name</p>
+                     */
+                    std::string m_skillName;
+                    bool m_skillNameHasBeenSet;
+
+                    /**
+                     * <p>Skill file path</p>
+                     */
+                    std::string m_skillPath;
+                    bool m_skillPathHasBeenSet;
+
+                    /**
+                     * <p>Skill application scope</p>
+                     */
+                    std::string m_scope;
+                    bool m_scopeHasBeenSet;
+
+                    /**
+                     * <p>Skill version number</p>
+                     */
+                    std::string m_version;
+                    bool m_versionHasBeenSet;
+
+                    /**
+                     * <p>SHA256 hash of file content<br>Parameter format: sha256:&lt;64-digit hex&gt;</p>
+                     */
+                    std::string m_contentHash;
+                    bool m_contentHashHasBeenSet;
+
+                    /**
+                     * <p>Risk level<br>Enumeration values:<br>malicious: Malicious<br>suspicious: Suspicious</p>
+                     */
+                    std::string m_riskLevel;
+                    bool m_riskLevelHasBeenSet;
+
+                    /**
+                     * <p>Security score<br>Value range: [0, 100]</p>
+                     */
+                    int64_t m_securityScore;
+                    bool m_securityScoreHasBeenSet;
+
+                    /**
+                     * <p>Main matched rule ID</p>
+                     */
+                    std::string m_primaryRuleID;
+                    bool m_primaryRuleIDHasBeenSet;
+
+                    /**
+                     * <p>List of hit rule IDs (9xxxx), deduplicated by RuleID<br>The display name is translated using the RuleCatalog dictionary in the outer layer of the response<br>If historical alarms do not persist this field, an empty array is returned</p>
+                     */
+                    std::vector<std::string> m_hitRules;
+                    bool m_hitRulesHasBeenSet;
+
+                    /**
+                     * <p>Detection engine version number</p>
+                     */
+                    int64_t m_engineVersion;
+                    bool m_engineVersionHasBeenSet;
+
+                    /**
+                     * <p>Processing status<br>Enumeration values:<br>0: unprocessed<br>1: processed<br>2: ignored<br>3: trusted<br>4: deleted (soft deletion)</p>
+                     */
+                    int64_t m_status;
+                    bool m_statusHasBeenSet;
+
+                    /**
+                     * <p>Alarm level<br>Enumeration values:<br>high: High risk<br>medium: Medium risk</p>
+                     */
+                    std::string m_level;
+                    bool m_levelHasBeenSet;
+
+                    /**
+                     * <p>First detection time<br>Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)</p>
+                     */
+                    std::string m_createTime;
+                    bool m_createTimeHasBeenSet;
+
+                    /**
+                     * <p>Last update time<br>Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)</p>
+                     */
+                    std::string m_updateTime;
+                    bool m_updateTimeHasBeenSet;
+
+                };
+            }
+        }
+    }
+}
+
+#endif // !TENCENTCLOUD_CSIP_V20221121_MODEL_SKILLSCANALERTITEM_H_

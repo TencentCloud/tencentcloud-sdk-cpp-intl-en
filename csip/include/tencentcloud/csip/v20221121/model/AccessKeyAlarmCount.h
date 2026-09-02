@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Alarm count for access key.
+                * Access key alarm count
                 */
                 class AccessKeyAlarmCount : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Access key ID.
-                     * @return ID Access key ID.
+                     * 获取Access key ID
+                     * @return ID Access key ID
                      * 
                      */
                     int64_t GetID() const;
 
                     /**
-                     * 设置Access key ID.
-                     * @param _iD Access key ID.
+                     * 设置Access key ID
+                     * @param _iD Access key ID
                      * 
                      */
                     void SetID(const int64_t& _iD);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool IDHasBeenSet() const;
 
                     /**
-                     * 获取Access key.
-                     * @return AccessKey Access key.
+                     * 获取Access key
+                     * @return AccessKey Access key
                      * 
                      */
                     std::string GetAccessKey() const;
 
                     /**
-                     * 设置Access key.
-                     * @param _accessKey Access key.
+                     * 设置Access key
+                     * @param _accessKey Access key
                      * 
                      */
                     void SetAccessKey(const std::string& _accessKey);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool AccessKeyHasBeenSet() const;
 
                     /**
-                     * 获取Alarm count.
-                     * @return AlarmCount Alarm count.
+                     * 获取Alarm count
+                     * @return AlarmCount Alarm count
                      * 
                      */
                     int64_t GetAlarmCount() const;
 
                     /**
-                     * 设置Alarm count.
-                     * @param _alarmCount Alarm count.
+                     * 设置Alarm count
+                     * @param _alarmCount Alarm count
                      * 
                      */
                     void SetAlarmCount(const int64_t& _alarmCount);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool AlarmCountHasBeenSet() const;
 
                     /**
-                     * 获取Security credentials status. valid values: 0 (disabled), 1 (enabled), 2 (deleted).
-                     * @return AccessKeyStatus Security credentials status. valid values: 0 (disabled), 1 (enabled), 2 (deleted).
+                     * 获取Access key status: `0`: disabled, `1`: enabled, `2`: deleted
+                     * @return AccessKeyStatus Access key status: `0`: disabled, `1`: enabled, `2`: deleted
                      * 
                      */
                     int64_t GetAccessKeyStatus() const;
 
                     /**
-                     * 设置Security credentials status. valid values: 0 (disabled), 1 (enabled), 2 (deleted).
-                     * @param _accessKeyStatus Security credentials status. valid values: 0 (disabled), 1 (enabled), 2 (deleted).
+                     * 设置Access key status: `0`: disabled, `1`: enabled, `2`: deleted
+                     * @param _accessKeyStatus Access key status: `0`: disabled, `1`: enabled, `2`: deleted
                      * 
                      */
                     void SetAccessKeyStatus(const int64_t& _accessKeyStatus);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool AccessKeyStatusHasBeenSet() const;
 
                     /**
-                     * 获取AK creation time.
-                     * @return AccessKeyCreateTime AK creation time.
+                     * 获取AK creation time
+                     * @return AccessKeyCreateTime AK creation time
                      * 
                      */
                     std::string GetAccessKeyCreateTime() const;
 
                     /**
-                     * 设置AK creation time.
-                     * @param _accessKeyCreateTime AK creation time.
+                     * 设置AK creation time
+                     * @param _accessKeyCreateTime AK creation time
                      * 
                      */
                     void SetAccessKeyCreateTime(const std::string& _accessKeyCreateTime);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool AccessKeyCreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取AK last usage time. returns "-" if never used.
-                     * @return LastAccessTime AK last usage time. returns "-" if never used.
+                     * 获取Last AK usage time. If it has never been used, "-" is returned.
+                     * @return LastAccessTime Last AK usage time. If it has never been used, "-" is returned.
                      * 
                      */
                     std::string GetLastAccessTime() const;
 
                     /**
-                     * 设置AK last usage time. returns "-" if never used.
-                     * @param _lastAccessTime AK last usage time. returns "-" if never used.
+                     * 设置Last AK usage time. If it has never been used, "-" is returned.
+                     * @param _lastAccessTime Last AK usage time. If it has never been used, "-" is returned.
                      * 
                      */
                     void SetLastAccessTime(const std::string& _lastAccessTime);
@@ -175,37 +175,37 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Access key ID.
+                     * Access key ID
                      */
                     int64_t m_iD;
                     bool m_iDHasBeenSet;
 
                     /**
-                     * Access key.
+                     * Access key
                      */
                     std::string m_accessKey;
                     bool m_accessKeyHasBeenSet;
 
                     /**
-                     * Alarm count.
+                     * Alarm count
                      */
                     int64_t m_alarmCount;
                     bool m_alarmCountHasBeenSet;
 
                     /**
-                     * Security credentials status. valid values: 0 (disabled), 1 (enabled), 2 (deleted).
+                     * Access key status: `0`: disabled, `1`: enabled, `2`: deleted
                      */
                     int64_t m_accessKeyStatus;
                     bool m_accessKeyStatusHasBeenSet;
 
                     /**
-                     * AK creation time.
+                     * AK creation time
                      */
                     std::string m_accessKeyCreateTime;
                     bool m_accessKeyCreateTimeHasBeenSet;
 
                     /**
-                     * AK last usage time. returns "-" if never used.
+                     * Last AK usage time. If it has never been used, "-" is returned.
                      */
                     std::string m_lastAccessTime;
                     bool m_lastAccessTimeHasBeenSet;

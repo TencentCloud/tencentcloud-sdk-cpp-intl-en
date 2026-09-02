@@ -234,15 +234,15 @@ namespace TencentCloud
                     bool SelfDefiningAssetsHasBeenSet() const;
 
                     /**
-                     * 获取Advanced configuration.
-                     * @return TaskAdvanceCFG Advanced configuration.
+                     * 获取Advanced Configuration
+                     * @return TaskAdvanceCFG Advanced Configuration
                      * 
                      */
                     TaskAdvanceCFG GetTaskAdvanceCFG() const;
 
                     /**
-                     * 设置Advanced configuration.
-                     * @param _taskAdvanceCFG Advanced configuration.
+                     * 设置Advanced Configuration
+                     * @param _taskAdvanceCFG Advanced Configuration
                      * 
                      */
                     void SetTaskAdvanceCFG(const TaskAdvanceCFG& _taskAdvanceCFG);
@@ -276,15 +276,15 @@ namespace TencentCloud
                     bool TaskModeHasBeenSet() const;
 
                     /**
-                     * 获取Task complete callback webhook url.
-                     * @return FinishWebHook Task complete callback webhook url.
+                     * 获取webhook URL for task completion callbacks
+                     * @return FinishWebHook webhook URL for task completion callbacks
                      * 
                      */
                     std::string GetFinishWebHook() const;
 
                     /**
-                     * 设置Task complete callback webhook url.
-                     * @param _finishWebHook Task complete callback webhook url.
+                     * 设置webhook URL for task completion callbacks
+                     * @param _finishWebHook webhook URL for task completion callbacks
                      * 
                      */
                     void SetFinishWebHook(const std::string& _finishWebHook);
@@ -353,7 +353,7 @@ namespace TencentCloud
                     bool m_selfDefiningAssetsHasBeenSet;
 
                     /**
-                     * Advanced configuration.
+                     * Advanced Configuration
                      */
                     TaskAdvanceCFG m_taskAdvanceCFG;
                     bool m_taskAdvanceCFGHasBeenSet;
@@ -365,7 +365,7 @@ namespace TencentCloud
                     bool m_taskModeHasBeenSet;
 
                     /**
-                     * Task complete callback webhook url.
+                     * webhook URL for task completion callbacks
                      */
                     std::string m_finishWebHook;
                     bool m_finishWebHookHasBeenSet;

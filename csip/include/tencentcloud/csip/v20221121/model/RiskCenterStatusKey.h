@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Risk data
+                * Risk Center Status Handling Key
                 */
                 class RiskCenterStatusKey : public AbstractModel
                 {
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取User AppId
-                     * @return AppId User AppId
+                     * 获取APP ID
+                     * @return AppId APP ID
                      * 
                      */
                     std::string GetAppId() const;
 
                     /**
-                     * 设置User AppId
-                     * @param _appId User AppId
+                     * 设置APP ID
+                     * @param _appId APP ID
                      * 
                      */
                     void SetAppId(const std::string& _appId);
@@ -151,7 +151,7 @@ namespace TencentCloud
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * User AppId
+                     * APP ID
                      */
                     std::string m_appId;
                     bool m_appIdHasBeenSet;

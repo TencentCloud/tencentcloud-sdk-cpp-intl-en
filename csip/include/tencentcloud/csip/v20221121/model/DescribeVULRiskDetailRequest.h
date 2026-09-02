@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool MemberIdHasBeenSet() const;
 
                     /**
-                     * 获取Risk id.
-                     * @return RiskId Risk id.
+                     * 获取Risk id
+                     * @return RiskId Risk id
                      * 
                      */
                     std::string GetRiskId() const;
 
                     /**
-                     * 设置Risk id.
-                     * @param _riskId Risk id.
+                     * 设置Risk id
+                     * @param _riskId Risk id
                      * 
                      */
                     void SetRiskId(const std::string& _riskId);
@@ -114,7 +114,7 @@ namespace TencentCloud
                     bool m_memberIdHasBeenSet;
 
                     /**
-                     * Risk id.
+                     * Risk id
                      */
                     std::string m_riskId;
                     bool m_riskIdHasBeenSet;

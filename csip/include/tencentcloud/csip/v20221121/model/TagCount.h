@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Product Name
-                     * @return Name Product Name
+                     * 获取Product name
+                     * @return Name Product name
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Product Name
-                     * @param _name Product Name
+                     * 设置Product name
+                     * @param _name Product name
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -91,7 +91,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Product Name
+                     * Product name
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;

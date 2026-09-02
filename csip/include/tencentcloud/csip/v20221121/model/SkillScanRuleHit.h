@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * hit rule
+                * Matched rule items
                 */
                 class SkillScanRuleHit : public AbstractModel
                 {
@@ -47,15 +47,19 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Fusion rule number (9xxxx) can be cross-referenced with RuleCatalog.
-                     * @return RuleID Fusion rule number (9xxxx) can be cross-referenced with RuleCatalog.
+                     * 获取Fusion rule number
+Parameter format: such as 9xxxx
+                     * @return RuleID Fusion rule number
+Parameter format: such as 9xxxx
                      * 
                      */
                     std::string GetRuleID() const;
 
                     /**
-                     * 设置Fusion rule number (9xxxx) can be cross-referenced with RuleCatalog.
-                     * @param _ruleID Fusion rule number (9xxxx) can be cross-referenced with RuleCatalog.
+                     * 设置Fusion rule number
+Parameter format: such as 9xxxx
+                     * @param _ruleID Fusion rule number
+Parameter format: such as 9xxxx
                      * 
                      */
                     void SetRuleID(const std::string& _ruleID);
@@ -68,15 +72,15 @@ namespace TencentCloud
                     bool RuleIDHasBeenSet() const;
 
                     /**
-                     * 获取Current description of the specific detection for the matched rule, including file location, behavioral features, risks, etc.
-                     * @return Description Current description of the specific detection for the matched rule, including file location, behavioral features, risks, etc.
+                     * 获取Risk discovery description
+                     * @return Description Risk discovery description
                      * 
                      */
                     std::string GetDescription() const;
 
                     /**
-                     * 设置Current description of the specific detection for the matched rule, including file location, behavioral features, risks, etc.
-                     * @param _description Current description of the specific detection for the matched rule, including file location, behavioral features, risks, etc.
+                     * 设置Risk discovery description
+                     * @param _description Risk discovery description
                      * 
                      */
                     void SetDescription(const std::string& _description);
@@ -91,13 +95,14 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Fusion rule number (9xxxx) can be cross-referenced with RuleCatalog.
+                     * Fusion rule number
+Parameter format: such as 9xxxx
                      */
                     std::string m_ruleID;
                     bool m_ruleIDHasBeenSet;
 
                     /**
-                     * Current description of the specific detection for the matched rule, including file location, behavioral features, risks, etc.
+                     * Risk discovery description
                      */
                     std::string m_description;
                     bool m_descriptionHasBeenSet;

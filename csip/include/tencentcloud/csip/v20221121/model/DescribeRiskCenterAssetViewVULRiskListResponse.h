@@ -46,8 +46,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Total number of entries
-                     * @return TotalCount Total number of entries
+                     * 获取Total quantity.
+                     * @return TotalCount Total quantity.
                      * 
                      */
                     int64_t GetTotalCount() const;
@@ -60,8 +60,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取List of vulnerabilities
-                     * @return Data List of vulnerabilities
+                     * 获取Vulnerability Risk List from Asset's Perspective
+                     * @return Data Vulnerability Risk List from Asset's Perspective
                      * 
                      */
                     std::vector<AssetViewVULRisk> GetData() const;
@@ -74,8 +74,8 @@ namespace TencentCloud
                     bool DataHasBeenSet() const;
 
                     /**
-                     * 获取List of risk handling status
-                     * @return StatusLists List of risk handling status
+                     * 获取Status list
+                     * @return StatusLists Status list
                      * 
                      */
                     std::vector<FilterDataObject> GetStatusLists() const;
@@ -88,8 +88,8 @@ namespace TencentCloud
                     bool StatusListsHasBeenSet() const;
 
                     /**
-                     * 获取List of risk levels
-                     * @return LevelLists List of risk levels
+                     * 获取Danger Level List
+                     * @return LevelLists Danger Level List
                      * 
                      */
                     std::vector<FilterDataObject> GetLevelLists() const;
@@ -102,8 +102,8 @@ namespace TencentCloud
                     bool LevelListsHasBeenSet() const;
 
                     /**
-                     * 获取List of check source
-                     * @return FromLists List of check source
+                     * 获取Source List
+                     * @return FromLists Source List
                      * 
                      */
                     std::vector<FilterDataObject> GetFromLists() const;
@@ -116,8 +116,8 @@ namespace TencentCloud
                     bool FromListsHasBeenSet() const;
 
                     /**
-                     * 获取List of vulnerability types
-                     * @return VULTypeLists List of vulnerability types
+                     * 获取Vulnerability Type List
+                     * @return VULTypeLists Vulnerability Type List
                      * 
                      */
                     std::vector<FilterDataObject> GetVULTypeLists() const;
@@ -130,8 +130,8 @@ namespace TencentCloud
                     bool VULTypeListsHasBeenSet() const;
 
                     /**
-                     * 获取List of asset types
-                     * @return InstanceTypeLists List of asset types
+                     * 获取Asset Type List
+                     * @return InstanceTypeLists Asset Type List
                      * 
                      */
                     std::vector<FilterDataObject> GetInstanceTypeLists() const;
@@ -146,43 +146,43 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Total number of entries
+                     * Total quantity.
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * List of vulnerabilities
+                     * Vulnerability Risk List from Asset's Perspective
                      */
                     std::vector<AssetViewVULRisk> m_data;
                     bool m_dataHasBeenSet;
 
                     /**
-                     * List of risk handling status
+                     * Status list
                      */
                     std::vector<FilterDataObject> m_statusLists;
                     bool m_statusListsHasBeenSet;
 
                     /**
-                     * List of risk levels
+                     * Danger Level List
                      */
                     std::vector<FilterDataObject> m_levelLists;
                     bool m_levelListsHasBeenSet;
 
                     /**
-                     * List of check source
+                     * Source List
                      */
                     std::vector<FilterDataObject> m_fromLists;
                     bool m_fromListsHasBeenSet;
 
                     /**
-                     * List of vulnerability types
+                     * Vulnerability Type List
                      */
                     std::vector<FilterDataObject> m_vULTypeLists;
                     bool m_vULTypeListsHasBeenSet;
 
                     /**
-                     * List of asset types
+                     * Asset Type List
                      */
                     std::vector<FilterDataObject> m_instanceTypeLists;
                     bool m_instanceTypeListsHasBeenSet;

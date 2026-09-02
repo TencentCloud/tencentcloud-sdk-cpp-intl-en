@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Initiate a sync task.
-                     * @return TaskID Initiate a sync task.
+                     * 获取Trigger a sync task
+                     * @return TaskID Trigger a sync task
                      * 
                      */
                     int64_t GetTaskID() const;
@@ -58,8 +58,8 @@ namespace TencentCloud
                     bool TaskIDHasBeenSet() const;
 
                     /**
-                     * 获取0: success; 1: failure.
-                     * @return Code 0: success; 1: failure.
+                     * 获取0: Success; 1: Failure
+                     * @return Code 0: Success; 1: Failure
                      * 
                      */
                     int64_t GetCode() const;
@@ -88,13 +88,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Initiate a sync task.
+                     * Trigger a sync task
                      */
                     int64_t m_taskID;
                     bool m_taskIDHasBeenSet;
 
                     /**
-                     * 0: success; 1: failure.
+                     * 0: Success; 1: Failure
                      */
                     int64_t m_code;
                     bool m_codeHasBeenSet;

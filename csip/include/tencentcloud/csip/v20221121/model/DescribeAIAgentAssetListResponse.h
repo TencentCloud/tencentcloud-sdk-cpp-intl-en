@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取asset list
-                     * @return AssetList asset list
+                     * 获取Asset list
+                     * @return AssetList Asset list
                      * 
                      */
                     std::vector<AIAgentAsset> GetAssetList() const;
@@ -75,7 +75,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * asset list
+                     * Asset list
                      */
                     std::vector<AIAgentAsset> m_assetList;
                     bool m_assetListHasBeenSet;

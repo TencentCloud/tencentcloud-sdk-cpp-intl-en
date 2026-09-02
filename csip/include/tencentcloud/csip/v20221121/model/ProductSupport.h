@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Vulnerability Information Product Support Status
+                * Vulnerability information product support status
                 */
                 class ProductSupport : public AbstractModel
                 {

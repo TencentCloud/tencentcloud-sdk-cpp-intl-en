@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Details of a scan task
+                * Scan Task Details
                 */
                 class ScanTaskInfo : public AbstractModel
                 {
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool ProgressHasBeenSet() const;
 
                     /**
-                     * 获取Task Completion Time
-                     * @return TaskTime Task Completion Time
+                     * 获取Task completion time
+                     * @return TaskTime Task completion time
                      * 
                      */
                     std::string GetTaskTime() const;
 
                     /**
-                     * 设置Task Completion Time
-                     * @param _taskTime Task Completion Time
+                     * 设置Task completion time
+                     * @param _taskTime Task completion time
                      * 
                      */
                     void SetTaskTime(const std::string& _taskTime);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool TaskTimeHasBeenSet() const;
 
                     /**
-                     * 获取report ID
-                     * @return ReportId report ID
+                     * 获取Report ID
+                     * @return ReportId Report ID
                      * 
                      */
                     std::string GetReportId() const;
 
                     /**
-                     * 设置report ID
-                     * @param _reportId report ID
+                     * 设置Report ID
+                     * @param _reportId Report ID
                      * 
                      */
                     void SetReportId(const std::string& _reportId);
@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool ReportIdHasBeenSet() const;
 
                     /**
-                     * 获取report name
-                     * @return ReportName report name
+                     * 获取Report name
+                     * @return ReportName Report name
                      * 
                      */
                     std::string GetReportName() const;
 
                     /**
-                     * 设置report name
-                     * @param _reportName report name
+                     * 设置Report name
+                     * @param _reportName Report name
                      * 
                      */
                     void SetReportName(const std::string& _reportName);
@@ -325,19 +325,19 @@ namespace TencentCloud
                     bool m_progressHasBeenSet;
 
                     /**
-                     * Task Completion Time
+                     * Task completion time
                      */
                     std::string m_taskTime;
                     bool m_taskTimeHasBeenSet;
 
                     /**
-                     * report ID
+                     * Report ID
                      */
                     std::string m_reportId;
                     bool m_reportIdHasBeenSet;
 
                     /**
-                     * report name
+                     * Report name
                      */
                     std::string m_reportName;
                     bool m_reportNameHasBeenSet;

@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool UinHasBeenSet() const;
 
                     /**
-                     * 获取Nickname.
-                     * @return NickName Nickname.
+                     * 获取Nickname
+                     * @return NickName Nickname
                      * 
                      */
                     std::string GetNickName() const;
 
                     /**
-                     * 设置Nickname.
-                     * @param _nickName Nickname.
+                     * 设置Nickname
+                     * @param _nickName Nickname
                      * 
                      */
                     void SetNickName(const std::string& _nickName);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool NickNameHasBeenSet() const;
 
                     /**
-                     * 获取Mirror id.
-                     * @return InstanceId Mirror id.
+                     * 获取Image id
+                     * @return InstanceId Image id
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Mirror id.
-                     * @param _instanceId Mirror id.
+                     * 设置Image id
+                     * @param _instanceId Image id
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Image name.
-                     * @return InstanceName Image name.
+                     * 获取Image Name
+                     * @return InstanceName Image Name
                      * 
                      */
                     std::string GetInstanceName() const;
 
                     /**
-                     * 设置Image name.
-                     * @param _instanceName Image name.
+                     * 设置Image Name
+                     * @param _instanceName Image Name
                      * 
                      */
                     void SetInstanceName(const std::string& _instanceName);
@@ -194,15 +194,15 @@ namespace TencentCloud
                     bool InstanceSizeHasBeenSet() const;
 
                     /**
-                     * 获取Build times.
-                     * @return BuildCount Build times.
+                     * 获取Build Times
+                     * @return BuildCount Build Times
                      * 
                      */
                     int64_t GetBuildCount() const;
 
                     /**
-                     * 设置Build times.
-                     * @param _buildCount Build times.
+                     * 设置Build Times
+                     * @param _buildCount Build Times
                      * 
                      */
                     void SetBuildCount(const int64_t& _buildCount);
@@ -236,15 +236,15 @@ namespace TencentCloud
                     bool InstanceTypeHasBeenSet() const;
 
                     /**
-                     * 获取Authorization status.
-                     * @return AuthStatus Authorization status.
+                     * 获取Authorization status
+                     * @return AuthStatus Authorization status
                      * 
                      */
                     int64_t GetAuthStatus() const;
 
                     /**
-                     * 设置Authorization status.
-                     * @param _authStatus Authorization status.
+                     * 设置Authorization status
+                     * @param _authStatus Authorization status
                      * 
                      */
                     void SetAuthStatus(const int64_t& _authStatus);
@@ -257,15 +257,15 @@ namespace TencentCloud
                     bool AuthStatusHasBeenSet() const;
 
                     /**
-                     * 获取Mirror version.
-                     * @return InstanceVersion Mirror version.
+                     * 获取Mirror version
+                     * @return InstanceVersion Mirror version
                      * 
                      */
                     std::string GetInstanceVersion() const;
 
                     /**
-                     * 设置Mirror version.
-                     * @param _instanceVersion Mirror version.
+                     * 设置Mirror version
+                     * @param _instanceVersion Mirror version
                      * 
                      */
                     void SetInstanceVersion(const std::string& _instanceVersion);
@@ -299,15 +299,15 @@ namespace TencentCloud
                     bool RegionHasBeenSet() const;
 
                     /**
-                     * 获取Repository address.
-                     * @return RepositoryUrl Repository address.
+                     * 获取Repository address
+                     * @return RepositoryUrl Repository address
                      * 
                      */
                     std::string GetRepositoryUrl() const;
 
                     /**
-                     * 设置Repository address.
-                     * @param _repositoryUrl Repository address.
+                     * 设置Repository address
+                     * @param _repositoryUrl Repository address
                      * 
                      */
                     void SetRepositoryUrl(const std::string& _repositoryUrl);
@@ -320,15 +320,15 @@ namespace TencentCloud
                     bool RepositoryUrlHasBeenSet() const;
 
                     /**
-                     * 获取Repository name.
-                     * @return RepositoryName Repository name.
+                     * 获取Repository name
+                     * @return RepositoryName Repository name
                      * 
                      */
                     std::string GetRepositoryName() const;
 
                     /**
-                     * 设置Repository name.
-                     * @param _repositoryName Repository name.
+                     * 设置Repository name
+                     * @param _repositoryName Repository name
                      * 
                      */
                     void SetRepositoryName(const std::string& _repositoryName);
@@ -362,15 +362,15 @@ namespace TencentCloud
                     bool IsCoreHasBeenSet() const;
 
                     /**
-                     * 获取Vulnerability risk.
-                     * @return VulRisk Vulnerability risk.
+                     * 获取Vulnerability risk
+                     * @return VulRisk Vulnerability risk
                      * 
                      */
                     int64_t GetVulRisk() const;
 
                     /**
-                     * 设置Vulnerability risk.
-                     * @param _vulRisk Vulnerability risk.
+                     * 设置Vulnerability risk
+                     * @param _vulRisk Vulnerability risk
                      * 
                      */
                     void SetVulRisk(const int64_t& _vulRisk);
@@ -383,15 +383,15 @@ namespace TencentCloud
                     bool VulRiskHasBeenSet() const;
 
                     /**
-                     * 获取Check task.
-                     * @return CheckCount Check task.
+                     * 获取Check task
+                     * @return CheckCount Check task
                      * 
                      */
                     int64_t GetCheckCount() const;
 
                     /**
-                     * 设置Check task.
-                     * @param _checkCount Check task.
+                     * 设置Check task
+                     * @param _checkCount Check task
                      * 
                      */
                     void SetCheckCount(const int64_t& _checkCount);
@@ -460,19 +460,19 @@ namespace TencentCloud
                     bool m_uinHasBeenSet;
 
                     /**
-                     * Nickname.
+                     * Nickname
                      */
                     std::string m_nickName;
                     bool m_nickNameHasBeenSet;
 
                     /**
-                     * Mirror id.
+                     * Image id
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Image name.
+                     * Image Name
                      */
                     std::string m_instanceName;
                     bool m_instanceNameHasBeenSet;
@@ -490,7 +490,7 @@ namespace TencentCloud
                     bool m_instanceSizeHasBeenSet;
 
                     /**
-                     * Build times.
+                     * Build Times
                      */
                     int64_t m_buildCount;
                     bool m_buildCountHasBeenSet;
@@ -502,13 +502,13 @@ namespace TencentCloud
                     bool m_instanceTypeHasBeenSet;
 
                     /**
-                     * Authorization status.
+                     * Authorization status
                      */
                     int64_t m_authStatus;
                     bool m_authStatusHasBeenSet;
 
                     /**
-                     * Mirror version.
+                     * Mirror version
                      */
                     std::string m_instanceVersion;
                     bool m_instanceVersionHasBeenSet;
@@ -520,13 +520,13 @@ namespace TencentCloud
                     bool m_regionHasBeenSet;
 
                     /**
-                     * Repository address.
+                     * Repository address
                      */
                     std::string m_repositoryUrl;
                     bool m_repositoryUrlHasBeenSet;
 
                     /**
-                     * Repository name.
+                     * Repository name
                      */
                     std::string m_repositoryName;
                     bool m_repositoryNameHasBeenSet;
@@ -538,13 +538,13 @@ namespace TencentCloud
                     bool m_isCoreHasBeenSet;
 
                     /**
-                     * Vulnerability risk.
+                     * Vulnerability risk
                      */
                     int64_t m_vulRisk;
                     bool m_vulRiskHasBeenSet;
 
                     /**
-                     * Check task.
+                     * Check task
                      */
                     int64_t m_checkCount;
                     bool m_checkCountHasBeenSet;

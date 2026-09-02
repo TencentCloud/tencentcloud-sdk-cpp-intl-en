@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Query filters
+                * The list query API adopts the new filter API, which is directly passed to the backend for query filtering.
                 */
                 class Filter : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Max number of returned results
-                     * @return Limit Max number of returned results
+                     * 获取Query Quantity Limit
+                     * @return Limit Query Quantity Limit
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Max number of returned results
-                     * @param _limit Max number of returned results
+                     * 设置Query Quantity Limit
+                     * @param _limit Query Quantity Limit
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Query offset
-                     * @return Offset Query offset
+                     * 获取Query Offset Position
+                     * @return Offset Query Offset Position
                      * 
                      */
                     int64_t GetOffset() const;
 
                     /**
-                     * 设置Query offset
-                     * @param _offset Query offset
+                     * 设置Query Offset Position
+                     * @param _offset Query Offset Position
                      * 
                      */
                     void SetOffset(const int64_t& _offset);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Sorting order. Values: `asc` (ascending), `desc` (descending).
-                     * @return Order Sorting order. Values: `asc` (ascending), `desc` (descending).
+                     * 获取Sort by Ascending or Descending Order. Ascending: asc, Descending: desc.
+                     * @return Order Sort by Ascending or Descending Order. Ascending: asc, Descending: desc.
                      * 
                      */
                     std::string GetOrder() const;
 
                     /**
-                     * 设置Sorting order. Values: `asc` (ascending), `desc` (descending).
-                     * @param _order Sorting order. Values: `asc` (ascending), `desc` (descending).
+                     * 设置Sort by Ascending or Descending Order. Ascending: asc, Descending: desc.
+                     * @param _order Sort by Ascending or Descending Order. Ascending: asc, Descending: desc.
                      * 
                      */
                     void SetOrder(const std::string& _order);
@@ -111,15 +111,15 @@ namespace TencentCloud
                     bool OrderHasBeenSet() const;
 
                     /**
-                     * 获取Specify the field used for sorting
-                     * @return By Specify the field used for sorting
+                     * 获取Fields to Sort
+                     * @return By Fields to Sort
                      * 
                      */
                     std::string GetBy() const;
 
                     /**
-                     * 设置Specify the field used for sorting
-                     * @param _by Specify the field used for sorting
+                     * 设置Fields to Sort
+                     * @param _by Fields to Sort
                      * 
                      */
                     void SetBy(const std::string& _by);
@@ -132,15 +132,15 @@ namespace TencentCloud
                     bool ByHasBeenSet() const;
 
                     /**
-                     * 获取Filtered columns and content
-                     * @return Filters Filtered columns and content
+                     * 获取Filtered Columns and Content
+                     * @return Filters Filtered Columns and Content
                      * 
                      */
                     std::vector<WhereFilter> GetFilters() const;
 
                     /**
-                     * 设置Filtered columns and content
-                     * @param _filters Filtered columns and content
+                     * 设置Filtered Columns and Content
+                     * @param _filters Filtered Columns and Content
                      * 
                      */
                     void SetFilters(const std::vector<WhereFilter>& _filters);
@@ -153,15 +153,15 @@ namespace TencentCloud
                     bool FiltersHasBeenSet() const;
 
                     /**
-                     * 获取Start time of the query period. 
-                     * @return StartTime Start time of the query period. 
+                     * 获取Can be left blank. Log usage query time.
+                     * @return StartTime Can be left blank. Log usage query time.
                      * 
                      */
                     std::string GetStartTime() const;
 
                     /**
-                     * 设置Start time of the query period. 
-                     * @param _startTime Start time of the query period. 
+                     * 设置Can be left blank. Log usage query time.
+                     * @param _startTime Can be left blank. Log usage query time.
                      * 
                      */
                     void SetStartTime(const std::string& _startTime);
@@ -174,15 +174,15 @@ namespace TencentCloud
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取End time of the query period.
-                     * @return EndTime End time of the query period.
+                     * 获取Can be left blank. Log usage query time.
+                     * @return EndTime Can be left blank. Log usage query time.
                      * 
                      */
                     std::string GetEndTime() const;
 
                     /**
-                     * 设置End time of the query period.
-                     * @param _endTime End time of the query period.
+                     * 设置Can be left blank. Log usage query time.
+                     * @param _endTime Can be left blank. Log usage query time.
                      * 
                      */
                     void SetEndTime(const std::string& _endTime);
@@ -197,43 +197,43 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Max number of returned results
+                     * Query Quantity Limit
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Query offset
+                     * Query Offset Position
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Sorting order. Values: `asc` (ascending), `desc` (descending).
+                     * Sort by Ascending or Descending Order. Ascending: asc, Descending: desc.
                      */
                     std::string m_order;
                     bool m_orderHasBeenSet;
 
                     /**
-                     * Specify the field used for sorting
+                     * Fields to Sort
                      */
                     std::string m_by;
                     bool m_byHasBeenSet;
 
                     /**
-                     * Filtered columns and content
+                     * Filtered Columns and Content
                      */
                     std::vector<WhereFilter> m_filters;
                     bool m_filtersHasBeenSet;
 
                     /**
-                     * Start time of the query period. 
+                     * Can be left blank. Log usage query time.
                      */
                     std::string m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * End time of the query period.
+                     * Can be left blank. Log usage query time.
                      */
                     std::string m_endTime;
                     bool m_endTimeHasBeenSet;

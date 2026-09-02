@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Emergency vulnerability basic data.
+                * Basic data of urgent vulnerabilities
                 */
                 class VULBaseInfo : public AbstractModel
                 {
@@ -47,19 +47,19 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Risk level.
-High - high risk, middle - medium risk, low - low risk, info - Note.
-                     * @return Level Risk level.
-High - high risk, middle - medium risk, low - low risk, info - Note.
+                     * 获取Risk level
+high risk / Medium risk / low risk / Notification
+                     * @return Level Risk level
+high risk / Medium risk / low risk / Notification
                      * 
                      */
                     std::string GetLevel() const;
 
                     /**
-                     * 设置Risk level.
-High - high risk, middle - medium risk, low - low risk, info - Note.
-                     * @param _level Risk level.
-High - high risk, middle - medium risk, low - low risk, info - Note.
+                     * 设置Risk level
+high risk / Medium risk / low risk / Notification
+                     * @param _level Risk level
+high risk / Medium risk / low risk / Notification
                      * 
                      */
                     void SetLevel(const std::string& _level);
@@ -72,15 +72,15 @@ High - high risk, middle - medium risk, low - low risk, info - Note.
                     bool LevelHasBeenSet() const;
 
                     /**
-                     * 获取Component.
-                     * @return Component Component.
+                     * 获取Component
+                     * @return Component Component
                      * 
                      */
                     std::string GetComponent() const;
 
                     /**
-                     * 设置Component.
-                     * @param _component Component.
+                     * 设置Component
+                     * @param _component Component
                      * 
                      */
                     void SetComponent(const std::string& _component);
@@ -93,15 +93,15 @@ High - high risk, middle - medium risk, low - low risk, info - Note.
                     bool ComponentHasBeenSet() const;
 
                     /**
-                     * 获取Release date.
-                     * @return PublishTime Release date.
+                     * 获取Vulnerability release time
+                     * @return PublishTime Vulnerability release time
                      * 
                      */
                     std::string GetPublishTime() const;
 
                     /**
-                     * 设置Release date.
-                     * @param _publishTime Release date.
+                     * 设置Vulnerability release time
+                     * @param _publishTime Vulnerability release time
                      * 
                      */
                     void SetPublishTime(const std::string& _publishTime);
@@ -177,15 +177,15 @@ High - high risk, middle - medium risk, low - low risk, info - Note.
                     bool RiskIdHasBeenSet() const;
 
                     /**
-                     * 获取Vulnerability type.
-                     * @return VULType Vulnerability type.
+                     * 获取Vulnerability type
+                     * @return VULType Vulnerability type
                      * 
                      */
                     std::string GetVULType() const;
 
                     /**
-                     * 设置Vulnerability type.
-                     * @param _vULType Vulnerability type.
+                     * 设置Vulnerability type
+                     * @param _vULType Vulnerability type
                      * 
                      */
                     void SetVULType(const std::string& _vULType);
@@ -282,15 +282,15 @@ High - high risk, middle - medium risk, low - low risk, info - Note.
                     bool PayloadHasBeenSet() const;
 
                     /**
-                     * 获取Vulnerability impact component.
-                     * @return AppName Vulnerability impact component.
+                     * 获取Vulnerability Impact component
+                     * @return AppName Vulnerability Impact component
                      * 
                      */
                     std::string GetAppName() const;
 
                     /**
-                     * 设置Vulnerability impact component.
-                     * @param _appName Vulnerability impact component.
+                     * 设置Vulnerability Impact component
+                     * @param _appName Vulnerability Impact component
                      * 
                      */
                     void SetAppName(const std::string& _appName);
@@ -303,15 +303,15 @@ High - high risk, middle - medium risk, low - low risk, info - Note.
                     bool AppNameHasBeenSet() const;
 
                     /**
-                     * 获取Technology reference.
-                     * @return References Technology reference.
+                     * 获取Technical reference
+                     * @return References Technical reference
                      * 
                      */
                     std::string GetReferences() const;
 
                     /**
-                     * 设置Technology reference.
-                     * @param _references Technology reference.
+                     * 设置Technical reference
+                     * @param _references Technical reference
                      * 
                      */
                     void SetReferences(const std::string& _references);
@@ -324,15 +324,15 @@ High - high risk, middle - medium risk, low - low risk, info - Note.
                     bool ReferencesHasBeenSet() const;
 
                     /**
-                     * 获取Vulnerability impact version.
-                     * @return AppVersion Vulnerability impact version.
+                     * 获取Vulnerability Impact version
+                     * @return AppVersion Vulnerability Impact version
                      * 
                      */
                     std::string GetAppVersion() const;
 
                     /**
-                     * 设置Vulnerability impact version.
-                     * @param _appVersion Vulnerability impact version.
+                     * 设置Vulnerability Impact version
+                     * @param _appVersion Vulnerability Impact version
                      * 
                      */
                     void SetAppVersion(const std::string& _appVersion);
@@ -345,15 +345,15 @@ High - high risk, middle - medium risk, low - low risk, info - Note.
                     bool AppVersionHasBeenSet() const;
 
                     /**
-                     * 获取Risks.
-                     * @return VULURL Risks.
+                     * 获取Risk point
+                     * @return VULURL Risk point
                      * 
                      */
                     std::string GetVULURL() const;
 
                     /**
-                     * 设置Risks.
-                     * @param _vULURL Risks.
+                     * 设置Risk point
+                     * @param _vULURL Risk point
                      * 
                      */
                     void SetVULURL(const std::string& _vULURL);
@@ -367,18 +367,14 @@ High - high risk, middle - medium risk, low - low risk, info - Note.
 
                     /**
                      * 获取User Nickname
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Nick User Nickname
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetNick() const;
 
                     /**
                      * 设置User Nickname
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _nick User Nickname
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetNick(const std::string& _nick);
@@ -413,18 +409,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取User UIN
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Uin User UIN
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetUin() const;
 
                     /**
                      * 设置User UIN
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _uin User UIN
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetUin(const std::string& _uin);
@@ -438,18 +430,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Fixing suggestion
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Fix Fixing suggestion
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetFix() const;
 
                     /**
                      * 设置Fixing suggestion
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _fix Fixing suggestion
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetFix(const std::string& _fix);
@@ -463,18 +451,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Emergency Vulnerability Type. 1-Emergency Vulnerability; 0-Non-emergency Vulnerability.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return EMGCVulType Emergency Vulnerability Type. 1-Emergency Vulnerability; 0-Non-emergency Vulnerability.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetEMGCVulType() const;
 
                     /**
                      * 设置Emergency Vulnerability Type. 1-Emergency Vulnerability; 0-Non-emergency Vulnerability.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _eMGCVulType Emergency Vulnerability Type. 1-Emergency Vulnerability; 0-Non-emergency Vulnerability.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetEMGCVulType(const int64_t& _eMGCVulType);
@@ -488,18 +472,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取CVSS score
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return CVSS CVSS score
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     double GetCVSS() const;
 
                     /**
                      * 设置CVSS score
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _cVSS CVSS score
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetCVSS(const double& _cVSS);
@@ -512,23 +492,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CVSSHasBeenSet() const;
 
                     /**
-                     * 获取Attack intensity.
+                     * 获取Attack heat
 0/1/2/3 
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return AttackHeat Attack intensity.
+                     * @return AttackHeat Attack heat
 0/1/2/3 
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetAttackHeat() const;
 
                     /**
-                     * 设置Attack intensity.
+                     * 设置Attack heat
 0/1/2/3 
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _attackHeat Attack intensity.
+                     * @param _attackHeat Attack heat
 0/1/2/3 
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetAttackHeat(const int64_t& _attackHeat);
@@ -541,19 +517,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool AttackHeatHasBeenSet() const;
 
                     /**
-                     * 获取Detection status 0 unscanned 1 scan in progress 2 scan complete.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ScanStatus Detection status 0 unscanned 1 scan in progress 2 scan complete.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Detection status. 0: unscanned; 1: scan in progress; 2: scan complete
+                     * @return ScanStatus Detection status. 0: unscanned; 1: scan in progress; 2: scan complete
                      * 
                      */
                     int64_t GetScanStatus() const;
 
                     /**
-                     * 设置Detection status 0 unscanned 1 scan in progress 2 scan complete.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _scanStatus Detection status 0 unscanned 1 scan in progress 2 scan complete.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Detection status. 0: unscanned; 1: scan in progress; 2: scan complete
+                     * @param _scanStatus Detection status. 0: unscanned; 1: scan in progress; 2: scan complete
                      * 
                      */
                     void SetScanStatus(const int64_t& _scanStatus);
@@ -566,19 +538,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ScanStatusHasBeenSet() const;
 
                     /**
-                     * 获取1/0 whether compulsory.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return IsSuggest 1/0 whether compulsory.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Whether 1/0 is required
+                     * @return IsSuggest Whether 1/0 is required
                      * 
                      */
                     int64_t GetIsSuggest() const;
 
                     /**
-                     * 设置1/0 whether compulsory.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _isSuggest 1/0 whether compulsory.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Whether 1/0 is required
+                     * @param _isSuggest Whether 1/0 is required
                      * 
                      */
                     void SetIsSuggest(const int64_t& _isSuggest);
@@ -592,18 +560,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Tag.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return VulTag Tag.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<std::string> GetVulTag() const;
 
                     /**
                      * 设置Tag.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _vulTag Tag.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetVulTag(const std::vector<std::string>& _vulTag);
@@ -616,19 +580,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool VulTagHasBeenSet() const;
 
                     /**
-                     * 获取Support products: "cfw_waf_virtual", "cwp_detect", "cwp_defense", "cwp_fix" (comma-separated).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SupportProduct Support products: "cfw_waf_virtual", "cwp_detect", "cwp_defense", "cwp_fix" (comma-separated).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Supported products, separate with commas: "cfw_waf_virtual", "cwp_detect", "cwp_defense", "cwp_fix"
+                     * @return SupportProduct Supported products, separate with commas: "cfw_waf_virtual", "cwp_detect", "cwp_defense", "cwp_fix"
                      * 
                      */
                     std::string GetSupportProduct() const;
 
                     /**
-                     * 设置Support products: "cfw_waf_virtual", "cwp_detect", "cwp_defense", "cwp_fix" (comma-separated).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _supportProduct Support products: "cfw_waf_virtual", "cwp_detect", "cwp_defense", "cwp_fix" (comma-separated).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Supported products, separate with commas: "cfw_waf_virtual", "cwp_detect", "cwp_defense", "cwp_fix"
+                     * @param _supportProduct Supported products, separate with commas: "cfw_waf_virtual", "cwp_detect", "cwp_defense", "cwp_fix"
                      * 
                      */
                     void SetSupportProduct(const std::string& _supportProduct);
@@ -641,19 +601,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool SupportProductHasBeenSet() const;
 
                     /**
-                     * 获取Vulnerability detection task id.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TaskId Vulnerability detection task id.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Vulnerability detection task id
+                     * @return TaskId Vulnerability detection task id
                      * 
                      */
                     std::string GetTaskId() const;
 
                     /**
-                     * 设置Vulnerability detection task id.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _taskId Vulnerability detection task id.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Vulnerability detection task id
+                     * @param _taskId Vulnerability detection task id
                      * 
                      */
                     void SetTaskId(const std::string& _taskId);
@@ -667,18 +623,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Primary key
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Index Primary key
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetIndex() const;
 
                     /**
                      * 设置Primary key
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _index Primary key
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetIndex(const std::string& _index);
@@ -691,19 +643,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool IndexHasBeenSet() const;
 
                     /**
-                     * 获取Vulnerability id old version.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return PcmgrID Vulnerability id old version.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Vulnerability id (legacy version)
+                     * @return PcmgrID Vulnerability id (legacy version)
                      * 
                      */
                     std::string GetPcmgrID() const;
 
                     /**
-                     * 设置Vulnerability id old version.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _pcmgrID Vulnerability id old version.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Vulnerability id (legacy version)
+                     * @param _pcmgrID Vulnerability id (legacy version)
                      * 
                      */
                     void SetPcmgrID(const std::string& _pcmgrID);
@@ -716,19 +664,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool PcmgrIDHasBeenSet() const;
 
                     /**
-                     * 获取Vulnerability id new version.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TvdID Vulnerability id new version.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Vulnerability id New version
+                     * @return TvdID Vulnerability id New version
                      * 
                      */
                     std::string GetTvdID() const;
 
                     /**
-                     * 设置Vulnerability id new version.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _tvdID Vulnerability id new version.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Vulnerability id New version
+                     * @param _tvdID Vulnerability id New version
                      * 
                      */
                     void SetTvdID(const std::string& _tvdID);
@@ -743,20 +687,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Risk level.
-High - high risk, middle - medium risk, low - low risk, info - Note.
+                     * Risk level
+high risk / Medium risk / low risk / Notification
                      */
                     std::string m_level;
                     bool m_levelHasBeenSet;
 
                     /**
-                     * Component.
+                     * Component
                      */
                     std::string m_component;
                     bool m_componentHasBeenSet;
 
                     /**
-                     * Release date.
+                     * Vulnerability release time
                      */
                     std::string m_publishTime;
                     bool m_publishTimeHasBeenSet;
@@ -780,7 +724,7 @@ High - high risk, middle - medium risk, low - low risk, info - Note.
                     bool m_riskIdHasBeenSet;
 
                     /**
-                     * Vulnerability type.
+                     * Vulnerability type
                      */
                     std::string m_vULType;
                     bool m_vULTypeHasBeenSet;
@@ -810,32 +754,31 @@ High - high risk, middle - medium risk, low - low risk, info - Note.
                     bool m_payloadHasBeenSet;
 
                     /**
-                     * Vulnerability impact component.
+                     * Vulnerability Impact component
                      */
                     std::string m_appName;
                     bool m_appNameHasBeenSet;
 
                     /**
-                     * Technology reference.
+                     * Technical reference
                      */
                     std::string m_references;
                     bool m_referencesHasBeenSet;
 
                     /**
-                     * Vulnerability impact version.
+                     * Vulnerability Impact version
                      */
                     std::string m_appVersion;
                     bool m_appVersionHasBeenSet;
 
                     /**
-                     * Risks.
+                     * Risk point
                      */
                     std::string m_vULURL;
                     bool m_vULURLHasBeenSet;
 
                     /**
                      * User Nickname
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_nick;
                     bool m_nickHasBeenSet;
@@ -848,92 +791,79 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * User UIN
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_uin;
                     bool m_uinHasBeenSet;
 
                     /**
                      * Fixing suggestion
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_fix;
                     bool m_fixHasBeenSet;
 
                     /**
                      * Emergency Vulnerability Type. 1-Emergency Vulnerability; 0-Non-emergency Vulnerability.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_eMGCVulType;
                     bool m_eMGCVulTypeHasBeenSet;
 
                     /**
                      * CVSS score
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     double m_cVSS;
                     bool m_cVSSHasBeenSet;
 
                     /**
-                     * Attack intensity.
+                     * Attack heat
 0/1/2/3 
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_attackHeat;
                     bool m_attackHeatHasBeenSet;
 
                     /**
-                     * Detection status 0 unscanned 1 scan in progress 2 scan complete.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Detection status. 0: unscanned; 1: scan in progress; 2: scan complete
                      */
                     int64_t m_scanStatus;
                     bool m_scanStatusHasBeenSet;
 
                     /**
-                     * 1/0 whether compulsory.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Whether 1/0 is required
                      */
                     int64_t m_isSuggest;
                     bool m_isSuggestHasBeenSet;
 
                     /**
                      * Tag.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> m_vulTag;
                     bool m_vulTagHasBeenSet;
 
                     /**
-                     * Support products: "cfw_waf_virtual", "cwp_detect", "cwp_defense", "cwp_fix" (comma-separated).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Supported products, separate with commas: "cfw_waf_virtual", "cwp_detect", "cwp_defense", "cwp_fix"
                      */
                     std::string m_supportProduct;
                     bool m_supportProductHasBeenSet;
 
                     /**
-                     * Vulnerability detection task id.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Vulnerability detection task id
                      */
                     std::string m_taskId;
                     bool m_taskIdHasBeenSet;
 
                     /**
                      * Primary key
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_index;
                     bool m_indexHasBeenSet;
 
                     /**
-                     * Vulnerability id old version.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Vulnerability id (legacy version)
                      */
                     std::string m_pcmgrID;
                     bool m_pcmgrIDHasBeenSet;
 
                     /**
-                     * Vulnerability id new version.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Vulnerability id New version
                      */
                     std::string m_tvdID;
                     bool m_tvdIDHasBeenSet;

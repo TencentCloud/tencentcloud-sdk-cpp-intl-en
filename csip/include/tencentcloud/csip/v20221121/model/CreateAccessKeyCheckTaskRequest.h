@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool RiskIDListHasBeenSet() const;
 
                     /**
-                     * 获取Access key list.
-                     * @return AccessKeyList Access key list.
+                     * 获取Access key list
+                     * @return AccessKeyList Access key list
                      * 
                      */
                     std::vector<std::string> GetAccessKeyList() const;
 
                     /**
-                     * 设置Access key list.
-                     * @param _accessKeyList Access key list.
+                     * 设置Access key list
+                     * @param _accessKeyList Access key list
                      * 
                      */
                     void SetAccessKeyList(const std::vector<std::string>& _accessKeyList);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool AccessKeyListHasBeenSet() const;
 
                     /**
-                     * 获取Account uin list.
-                     * @return SubUinList Account uin list.
+                     * 获取List of account uins
+                     * @return SubUinList List of account uins
                      * 
                      */
                     std::vector<std::string> GetSubUinList() const;
 
                     /**
-                     * 设置Account uin list.
-                     * @param _subUinList Account uin list.
+                     * 设置List of account uins
+                     * @param _subUinList List of account uins
                      * 
                      */
                     void SetSubUinList(const std::vector<std::string>& _subUinList);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool SubUinListHasBeenSet() const;
 
                     /**
-                     * 获取Risk rule id list.
-                     * @return RiskRuleIDList Risk rule id list.
+                     * 获取List of risk rule IDs
+                     * @return RiskRuleIDList List of risk rule IDs
                      * 
                      */
                     std::vector<int64_t> GetRiskRuleIDList() const;
 
                     /**
-                     * 设置Risk rule id list.
-                     * @param _riskRuleIDList Risk rule id list.
+                     * 设置List of risk rule IDs
+                     * @param _riskRuleIDList List of risk rule IDs
                      * 
                      */
                     void SetRiskRuleIDList(const std::vector<int64_t>& _riskRuleIDList);
@@ -162,19 +162,19 @@ namespace TencentCloud
                     bool m_riskIDListHasBeenSet;
 
                     /**
-                     * Access key list.
+                     * Access key list
                      */
                     std::vector<std::string> m_accessKeyList;
                     bool m_accessKeyListHasBeenSet;
 
                     /**
-                     * Account uin list.
+                     * List of account uins
                      */
                     std::vector<std::string> m_subUinList;
                     bool m_subUinListHasBeenSet;
 
                     /**
-                     * Risk rule id list.
+                     * List of risk rule IDs
                      */
                     std::vector<int64_t> m_riskRuleIDList;
                     bool m_riskRuleIDListHasBeenSet;

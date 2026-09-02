@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取`0`: Operation succeeded; Others: failed
-                     * @return Status `0`: Operation succeeded; Others: failed
+                     * 获取Stopping succeeds when Status is 0.
+                     * @return Status Stopping succeeds when Status is 0.
                      * 
                      */
                     int64_t GetStatus() const;
@@ -60,7 +60,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * `0`: Operation succeeded; Others: failed
+                     * Stopping succeeds when Status is 0.
                      */
                     int64_t m_status;
                     bool m_statusHasBeenSet;

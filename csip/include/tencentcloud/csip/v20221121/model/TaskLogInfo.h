@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Task report information
+                * Task Report Information
                 */
                 class TaskLogInfo : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取report name
-                     * @return TaskLogName report name
+                     * 获取Report Name
+                     * @return TaskLogName Report Name
                      * 
                      */
                     std::string GetTaskLogName() const;
 
                     /**
-                     * 设置report name
-                     * @param _taskLogName report name
+                     * 设置Report Name
+                     * @param _taskLogName Report Name
                      * 
                      */
                     void SetTaskLogName(const std::string& _taskLogName);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool TaskLogNameHasBeenSet() const;
 
                     /**
-                     * 获取Report ID.
-                     * @return TaskLogId Report ID.
+                     * 获取Report ID
+                     * @return TaskLogId Report ID
                      * 
                      */
                     std::string GetTaskLogId() const;
 
                     /**
-                     * 设置Report ID.
-                     * @param _taskLogId Report ID.
+                     * 设置Report ID
+                     * @param _taskLogId Report ID
                      * 
                      */
                     void SetTaskLogId(const std::string& _taskLogId);
@@ -343,13 +343,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * report name
+                     * Report Name
                      */
                     std::string m_taskLogName;
                     bool m_taskLogNameHasBeenSet;
 
                     /**
-                     * Report ID.
+                     * Report ID
                      */
                     std::string m_taskLogId;
                     bool m_taskLogIdHasBeenSet;

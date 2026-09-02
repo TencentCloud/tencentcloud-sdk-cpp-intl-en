@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Data returned in the list of scan tasks list to display information
+                * Scan Task List Display Information
                 */
                 class ScanTaskInfoList : public AbstractModel
                 {
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool TaskNameHasBeenSet() const;
 
                     /**
-                     * 获取start time of the task
-                     * @return StartTime start time of the task
+                     * 获取Task start time
+                     * @return StartTime Task start time
                      * 
                      */
                     std::string GetStartTime() const;
 
                     /**
-                     * 设置start time of the task
-                     * @param _startTime start time of the task
+                     * 设置Task start time
+                     * @param _startTime Task start time
                      * 
                      */
                     void SetStartTime(const std::string& _startTime);
@@ -573,15 +573,15 @@ namespace TencentCloud
                     bool ErrorCodeHasBeenSet() const;
 
                     /**
-                     * 获取Exception information
-                     * @return ErrorInfo Exception information
+                     * 获取Exception message
+                     * @return ErrorInfo Exception message
                      * 
                      */
                     std::string GetErrorInfo() const;
 
                     /**
-                     * 设置Exception information
-                     * @param _errorInfo Exception information
+                     * 设置Exception message
+                     * @param _errorInfo Exception message
                      * 
                      */
                     void SetErrorInfo(const std::string& _errorInfo);
@@ -678,15 +678,15 @@ namespace TencentCloud
                     bool CompleteAssetNumberHasBeenSet() const;
 
                     /**
-                     * 获取risk count
-                     * @return RiskCount risk count
+                     * 获取Risk count
+                     * @return RiskCount Risk count
                      * 
                      */
                     int64_t GetRiskCount() const;
 
                     /**
-                     * 设置risk count
-                     * @param _riskCount risk count
+                     * 设置Risk count
+                     * @param _riskCount Risk count
                      * 
                      */
                     void SetRiskCount(const int64_t& _riskCount);
@@ -896,7 +896,7 @@ namespace TencentCloud
                     bool m_taskNameHasBeenSet;
 
                     /**
-                     * start time of the task
+                     * Task start time
                      */
                     std::string m_startTime;
                     bool m_startTimeHasBeenSet;
@@ -1040,7 +1040,7 @@ namespace TencentCloud
                     bool m_errorCodeHasBeenSet;
 
                     /**
-                     * Exception information
+                     * Exception message
                      */
                     std::string m_errorInfo;
                     bool m_errorInfoHasBeenSet;
@@ -1070,7 +1070,7 @@ namespace TencentCloud
                     bool m_completeAssetNumberHasBeenSet;
 
                     /**
-                     * risk count
+                     * Risk count
                      */
                     int64_t m_riskCount;
                     bool m_riskCountHasBeenSet;

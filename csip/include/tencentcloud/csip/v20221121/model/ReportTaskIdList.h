@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * List of task IDs in the report
+                * Task_id List in the Report
                 */
                 class ReportTaskIdList : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取List of task IDs
-                     * @return TaskIdList List of task IDs
+                     * 获取Task ID List
+                     * @return TaskIdList Task ID List
                      * 
                      */
                     std::vector<std::string> GetTaskIdList() const;
 
                     /**
-                     * 设置List of task IDs
-                     * @param _taskIdList List of task IDs
+                     * 设置Task ID List
+                     * @param _taskIdList Task ID List
                      * 
                      */
                     void SetTaskIdList(const std::vector<std::string>& _taskIdList);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool TaskIdListHasBeenSet() const;
 
                     /**
-                     * 获取User AppId
-                     * @return AppId User AppId
+                     * 获取Tenant ID
+                     * @return AppId Tenant ID
                      * 
                      */
                     std::string GetAppId() const;
 
                     /**
-                     * 设置User AppId
-                     * @param _appId User AppId
+                     * 设置Tenant ID
+                     * @param _appId Tenant ID
                      * 
                      */
                     void SetAppId(const std::string& _appId);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * List of task IDs
+                     * Task ID List
                      */
                     std::vector<std::string> m_taskIdList;
                     bool m_taskIdListHasBeenSet;
 
                     /**
-                     * User AppId
+                     * Tenant ID
                      */
                     std::string m_appId;
                     bool m_appIdHasBeenSet;

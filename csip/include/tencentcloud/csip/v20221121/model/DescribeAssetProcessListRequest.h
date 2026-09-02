@@ -170,15 +170,15 @@ namespace TencentCloud
                     bool ByHasBeenSet() const;
 
                     /**
-                     * 获取Cloud service provider.
-                     * @return Provider Cloud service provider.
+                     * 获取Cloud service provider
+                     * @return Provider Cloud service provider
                      * 
                      */
                     std::string GetProvider() const;
 
                     /**
-                     * 设置Cloud service provider.
-                     * @param _provider Cloud service provider.
+                     * 设置Cloud service provider
+                     * @param _provider Cloud service provider
                      * 
                      */
                     void SetProvider(const std::string& _provider);
@@ -229,7 +229,7 @@ namespace TencentCloud
                     bool m_byHasBeenSet;
 
                     /**
-                     * Cloud service provider.
+                     * Cloud service provider
                      */
                     std::string m_provider;
                     bool m_providerHasBeenSet;

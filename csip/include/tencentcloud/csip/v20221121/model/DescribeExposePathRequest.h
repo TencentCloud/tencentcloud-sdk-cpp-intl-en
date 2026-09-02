@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool MemberIdHasBeenSet() const;
 
                     /**
-                     * 获取Asset ID.
-                     * @return AssetId Asset ID.
+                     * 获取Asset ID
+                     * @return AssetId Asset ID
                      * 
                      */
                     std::string GetAssetId() const;
 
                     /**
-                     * 设置Asset ID.
-                     * @param _assetId Asset ID.
+                     * 设置Asset ID
+                     * @param _assetId Asset ID
                      * 
                      */
                     void SetAssetId(const std::string& _assetId);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool AssetIdHasBeenSet() const;
 
                     /**
-                     * 获取Asset IP.
-                     * @return Ip Asset IP.
+                     * 获取Asset IP
+                     * @return Ip Asset IP
                      * 
                      */
                     std::string GetIp() const;
 
                     /**
-                     * 设置Asset IP.
-                     * @param _ip Asset IP.
+                     * 设置Asset IP
+                     * @param _ip Asset IP
                      * 
                      */
                     void SetIp(const std::string& _ip);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool IpHasBeenSet() const;
 
                     /**
-                     * 获取Asset domain name.
-                     * @return Domain Asset domain name.
+                     * 获取Asset domain
+                     * @return Domain Asset domain
                      * 
                      */
                     std::string GetDomain() const;
 
                     /**
-                     * 设置Asset domain name.
-                     * @param _domain Asset domain name.
+                     * 设置Asset domain
+                     * @param _domain Asset domain
                      * 
                      */
                     void SetDomain(const std::string& _domain);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool DomainHasBeenSet() const;
 
                     /**
-                     * 获取Port or port range.
-                     * @return Port Port or port range.
+                     * 获取Port or port range
+                     * @return Port Port or port range
                      * 
                      */
                     std::string GetPort() const;
 
                     /**
-                     * 设置Port or port range.
-                     * @param _port Port or port range.
+                     * 设置Port or port range
+                     * @param _port Port or port range
                      * 
                      */
                     void SetPort(const std::string& _port);
@@ -156,25 +156,25 @@ namespace TencentCloud
                     bool m_memberIdHasBeenSet;
 
                     /**
-                     * Asset ID.
+                     * Asset ID
                      */
                     std::string m_assetId;
                     bool m_assetIdHasBeenSet;
 
                     /**
-                     * Asset IP.
+                     * Asset IP
                      */
                     std::string m_ip;
                     bool m_ipHasBeenSet;
 
                     /**
-                     * Asset domain name.
+                     * Asset domain
                      */
                     std::string m_domain;
                     bool m_domainHasBeenSet;
 
                     /**
-                     * Port or port range.
+                     * Port or port range
                      */
                     std::string m_port;
                     bool m_portHasBeenSet;

@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Details of server assets
+                * Host asset details
                 */
                 class AssetBaseInfoResponse : public AbstractModel
                 {
@@ -552,15 +552,15 @@ namespace TencentCloud
                     bool SystemInstallationPackageNumHasBeenSet() const;
 
                     /**
-                     * 获取remaining protection duration
-                     * @return SurplusProtectDay remaining protection duration
+                     * 获取Remaining protection duration
+                     * @return SurplusProtectDay Remaining protection duration
                      * 
                      */
                     uint64_t GetSurplusProtectDay() const;
 
                     /**
-                     * 设置remaining protection duration
-                     * @param _surplusProtectDay remaining protection duration
+                     * 设置Remaining protection duration
+                     * @param _surplusProtectDay Remaining protection duration
                      * 
                      */
                     void SetSurplusProtectDay(const uint64_t& _surplusProtectDay);
@@ -636,15 +636,15 @@ namespace TencentCloud
                     bool ProtectLevelHasBeenSet() const;
 
                     /**
-                     * 获取protection duration
-                     * @return ProtectedDay protection duration
+                     * 获取Protection duration
+                     * @return ProtectedDay Protection duration
                      * 
                      */
                     uint64_t GetProtectedDay() const;
 
                     /**
-                     * 设置protection duration
-                     * @param _protectedDay protection duration
+                     * 设置Protection duration
+                     * @param _protectedDay Protection duration
                      * 
                      */
                     void SetProtectedDay(const uint64_t& _protectedDay);
@@ -803,7 +803,7 @@ namespace TencentCloud
                     bool m_systemInstallationPackageNumHasBeenSet;
 
                     /**
-                     * remaining protection duration
+                     * Remaining protection duration
                      */
                     uint64_t m_surplusProtectDay;
                     bool m_surplusProtectDayHasBeenSet;
@@ -827,7 +827,7 @@ namespace TencentCloud
                     bool m_protectLevelHasBeenSet;
 
                     /**
-                     * protection duration
+                     * Protection duration
                      */
                     uint64_t m_protectedDay;
                     bool m_protectedDayHasBeenSet;

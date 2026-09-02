@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取<p>Result storage duration (30/60/90/120/150/180 days)</p>
-                     * @return Period <p>Result storage duration (30/60/90/120/150/180 days)</p>
+                     * 获取<p>Storage duration of scanning results (30/60/90/120/150/180 days)</p>
+                     * @return Period <p>Storage duration of scanning results (30/60/90/120/150/180 days)</p>
                      * 
                      */
                     uint64_t GetPeriod() const;
 
                     /**
-                     * 设置<p>Result storage duration (30/60/90/120/150/180 days)</p>
-                     * @param _period <p>Result storage duration (30/60/90/120/150/180 days)</p>
+                     * 设置<p>Storage duration of scanning results (30/60/90/120/150/180 days)</p>
+                     * @param _period <p>Storage duration of scanning results (30/60/90/120/150/180 days)</p>
                      * 
                      */
                     void SetPeriod(const uint64_t& _period);
@@ -93,7 +93,7 @@ namespace TencentCloud
                     bool m_nameHasBeenSet;
 
                     /**
-                     * <p>Result storage duration (30/60/90/120/150/180 days)</p>
+                     * <p>Storage duration of scanning results (30/60/90/120/150/180 days)</p>
                      */
                     uint64_t m_period;
                     bool m_periodHasBeenSet;

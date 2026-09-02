@@ -169,15 +169,15 @@ namespace TencentCloud
                     bool AssetNameHasBeenSet() const;
 
                     /**
-                     * 获取0: Default all 1: Asset ID 2: Domain name
-                     * @return AssetType 0: Default all 1: Asset ID 2: Domain name
+                     * 获取0: Default: All; 1: Asset ID; 2: Domain name
+                     * @return AssetType 0: Default: All; 1: Asset ID; 2: Domain name
                      * 
                      */
                     int64_t GetAssetType() const;
 
                     /**
-                     * 设置0: Default all 1: Asset ID 2: Domain name
-                     * @param _assetType 0: Default all 1: Asset ID 2: Domain name
+                     * 设置0: Default: All; 1: Asset ID; 2: Domain name
+                     * @param _assetType 0: Default: All; 1: Asset ID; 2: Domain name
                      * 
                      */
                     void SetAssetType(const int64_t& _assetType);
@@ -228,7 +228,7 @@ namespace TencentCloud
                     bool m_assetNameHasBeenSet;
 
                     /**
-                     * 0: Default all 1: Asset ID 2: Domain name
+                     * 0: Default: All; 1: Asset ID; 2: Domain name
                      */
                     int64_t m_assetType;
                     bool m_assetTypeHasBeenSet;

@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool MemberIdHasBeenSet() const;
 
                     /**
-                     * 获取Task ID
-                     * @return TaskId Task ID
+                     * 获取Task ID.
+                     * @return TaskId Task ID.
                      * 
                      */
                     std::string GetTaskId() const;
 
                     /**
-                     * 设置Task ID
-                     * @param _taskId Task ID
+                     * 设置Task ID.
+                     * @param _taskId Task ID.
                      * 
                      */
                     void SetTaskId(const std::string& _taskId);
@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool TaskIdHasBeenSet() const;
 
                     /**
-                     * 获取Filter conditions.
-                     * @return Filter Filter conditions.
+                     * 获取Filter criteria.
+                     * @return Filter Filter criteria.
                      * 
                      */
                     Filter GetFilter() const;
 
                     /**
-                     * 设置Filter conditions.
-                     * @param _filter Filter conditions.
+                     * 设置Filter criteria.
+                     * @param _filter Filter criteria.
                      * 
                      */
                     void SetFilter(const Filter& _filter);
@@ -115,13 +115,13 @@ namespace TencentCloud
                     bool m_memberIdHasBeenSet;
 
                     /**
-                     * Task ID
+                     * Task ID.
                      */
                     std::string m_taskId;
                     bool m_taskIdHasBeenSet;
 
                     /**
-                     * Filter conditions.
+                     * Filter criteria.
                      */
                     Filter m_filter;
                     bool m_filterHasBeenSet;

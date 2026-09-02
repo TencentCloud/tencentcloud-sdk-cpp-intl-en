@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取task id and target AppID list
-                     * @return TaskIdList task id and target AppID list
+                     * 获取Task id and target AppID list
+                     * @return TaskIdList Task id and target AppID list
                      * 
                      */
                     std::vector<TaskIdListKey> GetTaskIdList() const;
 
                     /**
-                     * 设置task id and target AppID list
-                     * @param _taskIdList task id and target AppID list
+                     * 设置Task id and target AppID list
+                     * @param _taskIdList Task id and target AppID list
                      * 
                      */
                     void SetTaskIdList(const std::vector<TaskIdListKey>& _taskIdList);
@@ -88,7 +88,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * task id and target AppID list
+                     * Task id and target AppID list
                      */
                     std::vector<TaskIdListKey> m_taskIdList;
                     bool m_taskIdListHasBeenSet;

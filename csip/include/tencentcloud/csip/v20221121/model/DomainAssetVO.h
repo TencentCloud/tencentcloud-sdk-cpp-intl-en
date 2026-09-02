@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Domain assets 
+                * Domain assets
                 */
                 class DomainAssetVO : public AbstractModel
                 {
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool AssetIdHasBeenSet() const;
 
                     /**
-                     * 获取Asset Name
-                     * @return AssetName Asset Name
+                     * 获取Asset name
+                     * @return AssetName Asset name
                      * 
                      */
                     std::vector<std::string> GetAssetName() const;
 
                     /**
-                     * 设置Asset Name
-                     * @param _assetName Asset Name
+                     * 设置Asset name
+                     * @param _assetName Asset name
                      * 
                      */
                     void SetAssetName(const std::vector<std::string>& _assetName);
@@ -153,15 +153,15 @@ namespace TencentCloud
                     bool WAFStatusHasBeenSet() const;
 
                     /**
-                     * 获取Asset Creation Time
-                     * @return AssetCreateTime Asset Creation Time
+                     * 获取Asset creation time
+                     * @return AssetCreateTime Asset creation time
                      * 
                      */
                     std::string GetAssetCreateTime() const;
 
                     /**
-                     * 设置Asset Creation Time
-                     * @param _assetCreateTime Asset Creation Time
+                     * 设置Asset creation time
+                     * @param _assetCreateTime Asset creation time
                      * 
                      */
                     void SetAssetCreateTime(const std::string& _assetCreateTime);
@@ -279,15 +279,15 @@ namespace TencentCloud
                     bool IsCloudHasBeenSet() const;
 
                     /**
-                     * 获取network attack
-                     * @return Attack network attack
+                     * 获取Network attack
+                     * @return Attack Network attack
                      * 
                      */
                     uint64_t GetAttack() const;
 
                     /**
-                     * 设置network attack
-                     * @param _attack network attack
+                     * 设置Network attack
+                     * @param _attack Network attack
                      * 
                      */
                     void SetAttack(const uint64_t& _attack);
@@ -447,15 +447,15 @@ namespace TencentCloud
                     bool LastScanTimeHasBeenSet() const;
 
                     /**
-                     * 获取port risk
-                     * @return PortRisk port risk
+                     * 获取Port risk
+                     * @return PortRisk Port risk
                      * 
                      */
                     uint64_t GetPortRisk() const;
 
                     /**
-                     * 设置port risk
-                     * @param _portRisk port risk
+                     * 设置Port risk
+                     * @param _portRisk Port risk
                      * 
                      */
                     void SetPortRisk(const uint64_t& _portRisk);
@@ -657,15 +657,15 @@ namespace TencentCloud
                     bool TagHasBeenSet() const;
 
                     /**
-                     * 获取Associated instance type
-                     * @return SourceType Associated instance type
+                     * 获取Type of the associated instance
+                     * @return SourceType Type of the associated instance
                      * 
                      */
                     std::string GetSourceType() const;
 
                     /**
-                     * 设置Associated instance type
-                     * @param _sourceType Associated instance type
+                     * 设置Type of the associated instance
+                     * @param _sourceType Type of the associated instance
                      * 
                      */
                     void SetSourceType(const std::string& _sourceType);
@@ -678,15 +678,15 @@ namespace TencentCloud
                     bool SourceTypeHasBeenSet() const;
 
                     /**
-                     * 获取Member ID information
-                     * @return MemberId Member ID information
+                     * 获取memberId information
+                     * @return MemberId memberId information
                      * 
                      */
                     std::string GetMemberId() const;
 
                     /**
-                     * 设置Member ID information
-                     * @param _memberId Member ID information
+                     * 设置memberId information
+                     * @param _memberId memberId information
                      * 
                      */
                     void SetMemberId(const std::string& _memberId);
@@ -875,7 +875,7 @@ namespace TencentCloud
                     bool m_assetIdHasBeenSet;
 
                     /**
-                     * Asset Name
+                     * Asset name
                      */
                     std::vector<std::string> m_assetName;
                     bool m_assetNameHasBeenSet;
@@ -899,7 +899,7 @@ namespace TencentCloud
                     bool m_wAFStatusHasBeenSet;
 
                     /**
-                     * Asset Creation Time
+                     * Asset creation time
                      */
                     std::string m_assetCreateTime;
                     bool m_assetCreateTimeHasBeenSet;
@@ -935,7 +935,7 @@ namespace TencentCloud
                     bool m_isCloudHasBeenSet;
 
                     /**
-                     * network attack
+                     * Network attack
                      */
                     uint64_t m_attack;
                     bool m_attackHasBeenSet;
@@ -983,7 +983,7 @@ namespace TencentCloud
                     bool m_lastScanTimeHasBeenSet;
 
                     /**
-                     * port risk
+                     * Port risk
                      */
                     uint64_t m_portRisk;
                     bool m_portRiskHasBeenSet;
@@ -1043,13 +1043,13 @@ namespace TencentCloud
                     bool m_tagHasBeenSet;
 
                     /**
-                     * Associated instance type
+                     * Type of the associated instance
                      */
                     std::string m_sourceType;
                     bool m_sourceTypeHasBeenSet;
 
                     /**
-                     * Member ID information
+                     * memberId information
                      */
                     std::string m_memberId;
                     bool m_memberIdHasBeenSet;

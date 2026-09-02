@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * List of public IPs/domain name assets
+                * Public IP and Domain Asset List Key
                 */
                 class PublicIpDomainListKey : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取IP/Domain
-                     * @return Asset IP/Domain
+                     * 获取Asset Value
+                     * @return Asset Asset Value
                      * 
                      */
                     std::string GetAsset() const;
 
                     /**
-                     * 设置IP/Domain
-                     * @param _asset IP/Domain
+                     * 设置Asset Value
+                     * @param _asset Asset Value
                      * 
                      */
                     void SetAsset(const std::string& _asset);
@@ -70,7 +70,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * IP/Domain
+                     * Asset Value
                      */
                     std::string m_asset;
                     bool m_assetHasBeenSet;

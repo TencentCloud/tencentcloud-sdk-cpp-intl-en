@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * User behavior analysis Custom policy structure
+                * User behavior analysis custom policy structure
                 */
                 class UebaCustomRule : public AbstractModel
                 {
@@ -95,16 +95,16 @@ namespace TencentCloud
 
                     /**
                      * 获取Occurrence time
-10 minutes
-2:1 hour
+1: 10 minutes
+2: 1 hour
 3: One day
-4: A week
+4: One week
 5: One month
                      * @return TimeInterval Occurrence time
-10 minutes
-2:1 hour
+1: 10 minutes
+2: 1 hour
 3: One day
-4: A week
+4: One week
 5: One month
                      * 
                      */
@@ -112,16 +112,16 @@ namespace TencentCloud
 
                     /**
                      * 设置Occurrence time
-10 minutes
-2:1 hour
+1: 10 minutes
+2: 1 hour
 3: One day
-4: A week
+4: One week
 5: One month
                      * @param _timeInterval Occurrence time
-10 minutes
-2:1 hour
+1: 10 minutes
+2: 1 hour
 3: One day
-4: A week
+4: One week
 5: One month
                      * 
                      */
@@ -135,15 +135,15 @@ namespace TencentCloud
                     bool TimeIntervalHasBeenSet() const;
 
                     /**
-                     * 获取Event
-                     * @return EventContent Event
+                     * 获取Event that occurred
+                     * @return EventContent Event that occurred
                      * 
                      */
                     UebaEventContent GetEventContent() const;
 
                     /**
-                     * 设置Event
-                     * @param _eventContent Event
+                     * 设置Event that occurred
+                     * @param _eventContent Event that occurred
                      * 
                      */
                     void SetEventContent(const UebaEventContent& _eventContent);
@@ -178,14 +178,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Alarm type
-Prompt.
-1: low
+0: Notification
+1: Low risk
 2: Medium risk
 3: High risk
 4: Critical
                      * @return AlterLevel Alarm type
-Prompt.
-1: low
+0: Notification
+1: Low risk
 2: Medium risk
 3: High risk
 4: Critical
@@ -195,14 +195,14 @@ Prompt.
 
                     /**
                      * 设置Alarm type
-Prompt.
-1: low
+0: Notification
+1: Low risk
 2: Medium risk
 3: High risk
 4: Critical
                      * @param _alterLevel Alarm type
-Prompt.
-1: low
+0: Notification
+1: Low risk
 2: Medium risk
 3: High risk
 4: Critical
@@ -260,15 +260,15 @@ Prompt.
                     bool OperateObjectHasBeenSet() const;
 
                     /**
-                     * 获取Operation method
-                     * @return OperateMethod Operation method
+                     * 获取Operation method.
+                     * @return OperateMethod Operation method.
                      * 
                      */
                     std::vector<std::string> GetOperateMethod() const;
 
                     /**
-                     * 设置Operation method
-                     * @param _operateMethod Operation method
+                     * 设置Operation method.
+                     * @param _operateMethod Operation method.
                      * 
                      */
                     void SetOperateMethod(const std::vector<std::string>& _operateMethod);
@@ -302,15 +302,15 @@ Prompt.
                     bool LogTypeHasBeenSet() const;
 
                     /**
-                     * 获取Chinese name in logs
-                     * @return LogTypeStr Chinese name in logs
+                     * 获取Log Chinese name
+                     * @return LogTypeStr Log Chinese name
                      * 
                      */
                     std::string GetLogTypeStr() const;
 
                     /**
-                     * 设置Chinese name in logs
-                     * @param _logTypeStr Chinese name in logs
+                     * 设置Log Chinese name
+                     * @param _logTypeStr Log Chinese name
                      * 
                      */
                     void SetLogTypeStr(const std::string& _logTypeStr);
@@ -339,17 +339,17 @@ Prompt.
 
                     /**
                      * Occurrence time
-10 minutes
-2:1 hour
+1: 10 minutes
+2: 1 hour
 3: One day
-4: A week
+4: One week
 5: One month
                      */
                     int64_t m_timeInterval;
                     bool m_timeIntervalHasBeenSet;
 
                     /**
-                     * Event
+                     * Event that occurred
                      */
                     UebaEventContent m_eventContent;
                     bool m_eventContentHasBeenSet;
@@ -362,8 +362,8 @@ Prompt.
 
                     /**
                      * Alarm type
-Prompt.
-1: low
+0: Notification
+1: Low risk
 2: Medium risk
 3: High risk
 4: Critical
@@ -384,7 +384,7 @@ Prompt.
                     bool m_operateObjectHasBeenSet;
 
                     /**
-                     * Operation method
+                     * Operation method.
                      */
                     std::vector<std::string> m_operateMethod;
                     bool m_operateMethodHasBeenSet;
@@ -396,7 +396,7 @@ Prompt.
                     bool m_logTypeHasBeenSet;
 
                     /**
-                     * Chinese name in logs
+                     * Log Chinese name
                      */
                     std::string m_logTypeStr;
                     bool m_logTypeStrHasBeenSet;

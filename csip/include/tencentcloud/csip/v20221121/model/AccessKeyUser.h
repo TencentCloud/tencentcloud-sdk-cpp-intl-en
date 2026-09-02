@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Access key account information.
+                * Access key account information
                 */
                 class AccessKeyUser : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Account ID.
-                     * @return ID Account ID.
+                     * 获取Account ID
+                     * @return ID Account ID
                      * 
                      */
                     uint64_t GetID() const;
 
                     /**
-                     * 设置Account ID.
-                     * @param _iD Account ID.
+                     * 设置Account ID
+                     * @param _iD Account ID
                      * 
                      */
                     void SetID(const uint64_t& _iD);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取0 root account 1 sub-account.
-                     * @return Type 0 root account 1 sub-account.
+                     * 获取0 Root account 1 Sub-account
+                     * @return Type 0 Root account 1 Sub-account
                      * 
                      */
                     int64_t GetType() const;
 
                     /**
-                     * 设置0 root account 1 sub-account.
-                     * @param _type 0 root account 1 sub-account.
+                     * 设置0 Root account 1 Sub-account
+                     * @param _type 0 Root account 1 Sub-account
                      * 
                      */
                     void SetType(const int64_t& _type);
@@ -111,23 +111,23 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Access method.
+                     * 获取Access method
 0 API
-1 console and API.
-                     * @return AccessType Access method.
+1 Console and API
+                     * @return AccessType Access method
 0 API
-1 console and API.
+1 Console and API
                      * 
                      */
                     int64_t GetAccessType() const;
 
                     /**
-                     * 设置Access method.
+                     * 设置Access method
 0 API
-1 console and API.
-                     * @param _accessType Access method.
+1 Console and API
+                     * @param _accessType Access method
 0 API
-1 console and API.
+1 Console and API
                      * 
                      */
                     void SetAccessType(const int64_t& _accessType);
@@ -140,15 +140,15 @@ namespace TencentCloud
                     bool AccessTypeHasBeenSet() const;
 
                     /**
-                     * 获取Security recommendation enumerate 0 normal 1 process immediately 2 recommend reinforcement.
-                     * @return Advice Security recommendation enumerate 0 normal 1 process immediately 2 recommend reinforcement.
+                     * 获取Security advice. Enumerated values: 0: Normal. 1: Process now. 2: Hardening recommended.
+                     * @return Advice Security advice. Enumerated values: 0: Normal. 1: Process now. 2: Hardening recommended.
                      * 
                      */
                     int64_t GetAdvice() const;
 
                     /**
-                     * 设置Security recommendation enumerate 0 normal 1 process immediately 2 recommend reinforcement.
-                     * @param _advice Security recommendation enumerate 0 normal 1 process immediately 2 recommend reinforcement.
+                     * 设置Security advice. Enumerated values: 0: Normal. 1: Process now. 2: Hardening recommended.
+                     * @param _advice Security advice. Enumerated values: 0: Normal. 1: Process now. 2: Hardening recommended.
                      * 
                      */
                     void SetAdvice(const int64_t& _advice);
@@ -203,15 +203,15 @@ namespace TencentCloud
                     bool AccessKeyRiskListHasBeenSet() const;
 
                     /**
-                     * 获取Account associate APPID.
-                     * @return AppID Account associate APPID.
+                     * 获取APPID of the account
+                     * @return AppID APPID of the account
                      * 
                      */
                     int64_t GetAppID() const;
 
                     /**
-                     * 设置Account associate APPID.
-                     * @param _appID Account associate APPID.
+                     * 设置APPID of the account
+                     * @param _appID APPID of the account
                      * 
                      */
                     void SetAppID(const int64_t& _appID);
@@ -224,15 +224,15 @@ namespace TencentCloud
                     bool AppIDHasBeenSet() const;
 
                     /**
-                     * 获取Nickname of the main account.
-                     * @return Nickname Nickname of the main account.
+                     * 获取Main account nickname
+                     * @return Nickname Main account nickname
                      * 
                      */
                     std::string GetNickname() const;
 
                     /**
-                     * 设置Nickname of the main account.
-                     * @param _nickname Nickname of the main account.
+                     * 设置Main account nickname
+                     * @param _nickname Main account nickname
                      * 
                      */
                     void SetNickname(const std::string& _nickname);
@@ -245,15 +245,15 @@ namespace TencentCloud
                     bool NicknameHasBeenSet() const;
 
                     /**
-                     * 获取Sub-Account nickname.
-                     * @return SubNickname Sub-Account nickname.
+                     * 获取Sub-account nickname
+                     * @return SubNickname Sub-account nickname
                      * 
                      */
                     std::string GetSubNickname() const;
 
                     /**
-                     * 设置Sub-Account nickname.
-                     * @param _subNickname Sub-Account nickname.
+                     * 设置Sub-account nickname
+                     * @param _subNickname Sub-account nickname
                      * 
                      */
                     void SetSubNickname(const std::string& _subNickname);
@@ -266,15 +266,15 @@ namespace TencentCloud
                     bool SubNicknameHasBeenSet() const;
 
                     /**
-                     * 获取Account Uin belonging to main account.
-                     * @return Uin Account Uin belonging to main account.
+                     * 获取Uin of the main account to which the account belongs
+                     * @return Uin Uin of the main account to which the account belongs
                      * 
                      */
                     std::string GetUin() const;
 
                     /**
-                     * 设置Account Uin belonging to main account.
-                     * @param _uin Account Uin belonging to main account.
+                     * 设置Uin of the main account to which the account belongs
+                     * @param _uin Uin of the main account to which the account belongs
                      * 
                      */
                     void SetUin(const std::string& _uin);
@@ -287,15 +287,15 @@ namespace TencentCloud
                     bool UinHasBeenSet() const;
 
                     /**
-                     * 获取Account self uin, same as root account uin when it is the root account.
-                     * @return SubUin Account self uin, same as root account uin when it is the root account.
+                     * 获取Account's own uin. For a root account, it is the same as the root account uin.
+                     * @return SubUin Account's own uin. For a root account, it is the same as the root account uin.
                      * 
                      */
                     std::string GetSubUin() const;
 
                     /**
-                     * 设置Account self uin, same as root account uin when it is the root account.
-                     * @param _subUin Account self uin, same as root account uin when it is the root account.
+                     * 设置Account's own uin. For a root account, it is the same as the root account uin.
+                     * @param _subUin Account's own uin. For a root account, it is the same as the root account uin.
                      * 
                      */
                     void SetSubUin(const std::string& _subUin);
@@ -308,15 +308,15 @@ namespace TencentCloud
                     bool SubUinHasBeenSet() const;
 
                     /**
-                     * 获取Login IP.
-                     * @return LoginIP Login IP.
+                     * 获取Login IP
+                     * @return LoginIP Login IP
                      * 
                      */
                     std::string GetLoginIP() const;
 
                     /**
-                     * 设置Login IP.
-                     * @param _loginIP Login IP.
+                     * 设置Login IP
+                     * @param _loginIP Login IP
                      * 
                      */
                     void SetLoginIP(const std::string& _loginIP);
@@ -350,15 +350,15 @@ namespace TencentCloud
                     bool LoginLocationHasBeenSet() const;
 
                     /**
-                     * 获取Log-In time.
-                     * @return LoginTime Log-In time.
+                     * 获取Log-in time
+                     * @return LoginTime Log-in time
                      * 
                      */
                     std::string GetLoginTime() const;
 
                     /**
-                     * 设置Log-In time.
-                     * @param _loginTime Log-In time.
+                     * 设置Log-in time
+                     * @param _loginTime Log-in time
                      * 
                      */
                     void SetLoginTime(const std::string& _loginTime);
@@ -392,23 +392,23 @@ namespace TencentCloud
                     bool ISPHasBeenSet() const;
 
                     /**
-                     * 获取Whether operation protection is enabled.
-0 not enabled.
-1: enabled.
-                     * @return ActionFlag Whether operation protection is enabled.
-0 not enabled.
-1: enabled.
+                     * 获取Whether operation protection is enabled
+0: not enabled
+1: On.
+                     * @return ActionFlag Whether operation protection is enabled
+0: not enabled
+1: On.
                      * 
                      */
                     int64_t GetActionFlag() const;
 
                     /**
-                     * 设置Whether operation protection is enabled.
-0 not enabled.
-1: enabled.
-                     * @param _actionFlag Whether operation protection is enabled.
-0 not enabled.
-1: enabled.
+                     * 设置Whether operation protection is enabled
+0: not enabled
+1: On.
+                     * @param _actionFlag Whether operation protection is enabled
+0: not enabled
+1: On.
                      * 
                      */
                     void SetActionFlag(const int64_t& _actionFlag);
@@ -421,23 +421,23 @@ namespace TencentCloud
                     bool ActionFlagHasBeenSet() const;
 
                     /**
-                     * 获取Is login protection enabled?.
-0 not enabled.
-1: enabled.
-                     * @return LoginFlag Is login protection enabled?.
-0 not enabled.
-1: enabled.
+                     * 获取Whether login protection is enabled
+0: not enabled
+1: On.
+                     * @return LoginFlag Whether login protection is enabled
+0: not enabled
+1: On.
                      * 
                      */
                     int64_t GetLoginFlag() const;
 
                     /**
-                     * 设置Is login protection enabled?.
-0 not enabled.
-1: enabled.
-                     * @param _loginFlag Is login protection enabled?.
-0 not enabled.
-1: enabled.
+                     * 设置Whether login protection is enabled
+0: not enabled
+1: On.
+                     * @param _loginFlag Whether login protection is enabled
+0: not enabled
+1: On.
                      * 
                      */
                     void SetLoginFlag(const int64_t& _loginFlag);
@@ -450,15 +450,15 @@ namespace TencentCloud
                     bool LoginFlagHasBeenSet() const;
 
                     /**
-                     * 获取0 means detected. 1 means detecting.
-                     * @return CheckStatus 0 means detected. 1 means detecting.
+                     * 获取0 indicates detected, and 1 indicates in-progress detection.
+                     * @return CheckStatus 0 indicates detected, and 1 indicates in-progress detection.
                      * 
                      */
                     int64_t GetCheckStatus() const;
 
                     /**
-                     * 设置0 means detected. 1 means detecting.
-                     * @param _checkStatus 0 means detected. 1 means detecting.
+                     * 设置0 indicates detected, and 1 indicates in-progress detection.
+                     * @param _checkStatus 0 indicates detected, and 1 indicates in-progress detection.
                      * 
                      */
                     void SetCheckStatus(const int64_t& _checkStatus);
@@ -471,15 +471,15 @@ namespace TencentCloud
                     bool CheckStatusHasBeenSet() const;
 
                     /**
-                     * 获取Cloud vendor type 0: tencent cloud 1: amazon web services 2: microsoft azure 3: google cloud 4: alibaba cloud 5: huawei cloud.
-                     * @return CloudType Cloud vendor type 0: tencent cloud 1: amazon web services 2: microsoft azure 3: google cloud 4: alibaba cloud 5: huawei cloud.
+                     * 获取Cloud vendor type. 0: Tencent Cloud. 1: Amazon Web Services. 2: Microsoft Azure. 3: Google Cloud. 4: Alibaba Cloud. 5: Huawei Cloud
+                     * @return CloudType Cloud vendor type. 0: Tencent Cloud. 1: Amazon Web Services. 2: Microsoft Azure. 3: Google Cloud. 4: Alibaba Cloud. 5: Huawei Cloud
                      * 
                      */
                     int64_t GetCloudType() const;
 
                     /**
-                     * 设置Cloud vendor type 0: tencent cloud 1: amazon web services 2: microsoft azure 3: google cloud 4: alibaba cloud 5: huawei cloud.
-                     * @param _cloudType Cloud vendor type 0: tencent cloud 1: amazon web services 2: microsoft azure 3: google cloud 4: alibaba cloud 5: huawei cloud.
+                     * 设置Cloud vendor type. 0: Tencent Cloud. 1: Amazon Web Services. 2: Microsoft Azure. 3: Google Cloud. 4: Alibaba Cloud. 5: Huawei Cloud
+                     * @param _cloudType Cloud vendor type. 0: Tencent Cloud. 1: Amazon Web Services. 2: Microsoft Azure. 3: Google Cloud. 4: Alibaba Cloud. 5: Huawei Cloud
                      * 
                      */
                     void SetCloudType(const int64_t& _cloudType);
@@ -494,7 +494,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Account ID.
+                     * Account ID
                      */
                     uint64_t m_iD;
                     bool m_iDHasBeenSet;
@@ -506,21 +506,21 @@ namespace TencentCloud
                     bool m_nameHasBeenSet;
 
                     /**
-                     * 0 root account 1 sub-account.
+                     * 0 Root account 1 Sub-account
                      */
                     int64_t m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Access method.
+                     * Access method
 0 API
-1 console and API.
+1 Console and API
                      */
                     int64_t m_accessType;
                     bool m_accessTypeHasBeenSet;
 
                     /**
-                     * Security recommendation enumerate 0 normal 1 process immediately 2 recommend reinforcement.
+                     * Security advice. Enumerated values: 0: Normal. 1: Process now. 2: Hardening recommended.
                      */
                     int64_t m_advice;
                     bool m_adviceHasBeenSet;
@@ -538,37 +538,37 @@ namespace TencentCloud
                     bool m_accessKeyRiskListHasBeenSet;
 
                     /**
-                     * Account associate APPID.
+                     * APPID of the account
                      */
                     int64_t m_appID;
                     bool m_appIDHasBeenSet;
 
                     /**
-                     * Nickname of the main account.
+                     * Main account nickname
                      */
                     std::string m_nickname;
                     bool m_nicknameHasBeenSet;
 
                     /**
-                     * Sub-Account nickname.
+                     * Sub-account nickname
                      */
                     std::string m_subNickname;
                     bool m_subNicknameHasBeenSet;
 
                     /**
-                     * Account Uin belonging to main account.
+                     * Uin of the main account to which the account belongs
                      */
                     std::string m_uin;
                     bool m_uinHasBeenSet;
 
                     /**
-                     * Account self uin, same as root account uin when it is the root account.
+                     * Account's own uin. For a root account, it is the same as the root account uin.
                      */
                     std::string m_subUin;
                     bool m_subUinHasBeenSet;
 
                     /**
-                     * Login IP.
+                     * Login IP
                      */
                     std::string m_loginIP;
                     bool m_loginIPHasBeenSet;
@@ -580,7 +580,7 @@ namespace TencentCloud
                     bool m_loginLocationHasBeenSet;
 
                     /**
-                     * Log-In time.
+                     * Log-in time
                      */
                     std::string m_loginTime;
                     bool m_loginTimeHasBeenSet;
@@ -592,29 +592,29 @@ namespace TencentCloud
                     bool m_iSPHasBeenSet;
 
                     /**
-                     * Whether operation protection is enabled.
-0 not enabled.
-1: enabled.
+                     * Whether operation protection is enabled
+0: not enabled
+1: On.
                      */
                     int64_t m_actionFlag;
                     bool m_actionFlagHasBeenSet;
 
                     /**
-                     * Is login protection enabled?.
-0 not enabled.
-1: enabled.
+                     * Whether login protection is enabled
+0: not enabled
+1: On.
                      */
                     int64_t m_loginFlag;
                     bool m_loginFlagHasBeenSet;
 
                     /**
-                     * 0 means detected. 1 means detecting.
+                     * 0 indicates detected, and 1 indicates in-progress detection.
                      */
                     int64_t m_checkStatus;
                     bool m_checkStatusHasBeenSet;
 
                     /**
-                     * Cloud vendor type 0: tencent cloud 1: amazon web services 2: microsoft azure 3: google cloud 4: alibaba cloud 5: huawei cloud.
+                     * Cloud vendor type. 0: Tencent Cloud. 1: Amazon Web Services. 2: Microsoft Azure. 3: Google Cloud. 4: Alibaba Cloud. 5: Huawei Cloud
                      */
                     int64_t m_cloudType;
                     bool m_cloudTypeHasBeenSet;

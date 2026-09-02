@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Normal key credential (dedicated for output parameters), used for the response of the query details api. The Value field returns a masked value without exposing plaintext.
+                * General key credential (dedicated output parameter), used for the response of the details query API. The Value field returns the masked value without exposing the plaintext.
                 */
                 class AccessCredentialOutput : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Credential key name (original), such as SecretId, SecretKey, Token
-                     * @return Key Credential key name (original), such as SecretId, SecretKey, Token
+                     * 获取Credential key name (original text), for example, SecretId, SecretKey, and Token.
+                     * @return Key Credential key name (original text), for example, SecretId, SecretKey, and Token.
                      * 
                      */
                     std::string GetKey() const;
 
                     /**
-                     * 设置Credential key name (original), such as SecretId, SecretKey, Token
-                     * @param _key Credential key name (original), such as SecretId, SecretKey, Token
+                     * 设置Credential key name (original text), for example, SecretId, SecretKey, and Token.
+                     * @param _key Credential key name (original text), for example, SecretId, SecretKey, and Token.
                      * 
                      */
                     void SetKey(const std::string& _key);
@@ -69,18 +69,18 @@ namespace TencentCloud
 
                     /**
                      * 获取Credential key-value (masked)
-Supplementary description: Reserve the first 3 and last 4 digits, replace the middle with ***; replace all with *** if the length is less than 7.
+Supplemental description: Reserve the first 3 and last 4 digits, replace the middle with ***; if the length is less than 7 digits, replace all with ***.
                      * @return Value Credential key-value (masked)
-Supplementary description: Reserve the first 3 and last 4 digits, replace the middle with ***; replace all with *** if the length is less than 7.
+Supplemental description: Reserve the first 3 and last 4 digits, replace the middle with ***; if the length is less than 7 digits, replace all with ***.
                      * 
                      */
                     std::string GetValue() const;
 
                     /**
                      * 设置Credential key-value (masked)
-Supplementary description: Reserve the first 3 and last 4 digits, replace the middle with ***; replace all with *** if the length is less than 7.
+Supplemental description: Reserve the first 3 and last 4 digits, replace the middle with ***; if the length is less than 7 digits, replace all with ***.
                      * @param _value Credential key-value (masked)
-Supplementary description: Reserve the first 3 and last 4 digits, replace the middle with ***; replace all with *** if the length is less than 7.
+Supplemental description: Reserve the first 3 and last 4 digits, replace the middle with ***; if the length is less than 7 digits, replace all with ***.
                      * 
                      */
                     void SetValue(const std::string& _value);
@@ -95,14 +95,14 @@ Supplementary description: Reserve the first 3 and last 4 digits, replace the mi
                 private:
 
                     /**
-                     * Credential key name (original), such as SecretId, SecretKey, Token
+                     * Credential key name (original text), for example, SecretId, SecretKey, and Token.
                      */
                     std::string m_key;
                     bool m_keyHasBeenSet;
 
                     /**
                      * Credential key-value (masked)
-Supplementary description: Reserve the first 3 and last 4 digits, replace the middle with ***; replace all with *** if the length is less than 7.
+Supplemental description: Reserve the first 3 and last 4 digits, replace the middle with ***; if the length is less than 7 digits, replace all with ***.
                      */
                     std::string m_value;
                     bool m_valueHasBeenSet;

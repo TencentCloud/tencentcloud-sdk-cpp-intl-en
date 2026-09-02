@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Temp download URL for the report PDF
+                * Temporary Link for Report PDF Download
                 */
                 class TaskLogURL : public AbstractModel
                 {

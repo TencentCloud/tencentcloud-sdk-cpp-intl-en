@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Access key asset information.
+                * Access key asset information
                 */
                 class AccessKeyAsset : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取AK id.
-                     * @return ID AK id.
+                     * 获取id of the AK
+                     * @return ID id of the AK
                      * 
                      */
                     uint64_t GetID() const;
 
                     /**
-                     * 设置AK id.
-                     * @param _iD AK id.
+                     * 设置id of the AK
+                     * @param _iD id of the AK
                      * 
                      */
                     void SetID(const uint64_t& _iD);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool IDHasBeenSet() const;
 
                     /**
-                     * 获取AK name.
-                     * @return Name AK name.
+                     * 获取AK name
+                     * @return Name AK name
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置AK name.
-                     * @param _name AK name.
+                     * 设置AK name
+                     * @param _name AK name
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -111,15 +111,15 @@ namespace TencentCloud
                     bool RemarkHasBeenSet() const;
 
                     /**
-                     * 获取Account associate APPID.
-                     * @return AppID Account associate APPID.
+                     * 获取APPID of the account
+                     * @return AppID APPID of the account
                      * 
                      */
                     int64_t GetAppID() const;
 
                     /**
-                     * 设置Account associate APPID.
-                     * @param _appID Account associate APPID.
+                     * 设置APPID of the account
+                     * @param _appID APPID of the account
                      * 
                      */
                     void SetAppID(const int64_t& _appID);
@@ -132,15 +132,15 @@ namespace TencentCloud
                     bool AppIDHasBeenSet() const;
 
                     /**
-                     * 获取Account associate Uin belonging to main account.
-                     * @return Uin Account associate Uin belonging to main account.
+                     * 获取Uin of the main account
+                     * @return Uin Uin of the main account
                      * 
                      */
                     std::string GetUin() const;
 
                     /**
-                     * 设置Account associate Uin belonging to main account.
-                     * @param _uin Account associate Uin belonging to main account.
+                     * 设置Uin of the main account
+                     * @param _uin Uin of the main account
                      * 
                      */
                     void SetUin(const std::string& _uin);
@@ -153,15 +153,15 @@ namespace TencentCloud
                     bool UinHasBeenSet() const;
 
                     /**
-                     * 获取Nickname of the main account.
-                     * @return Nickname Nickname of the main account.
+                     * 获取Account nickname
+                     * @return Nickname Account nickname
                      * 
                      */
                     std::string GetNickname() const;
 
                     /**
-                     * 设置Nickname of the main account.
-                     * @param _nickname Nickname of the main account.
+                     * 设置Account nickname
+                     * @param _nickname Account nickname
                      * 
                      */
                     void SetNickname(const std::string& _nickname);
@@ -174,15 +174,15 @@ namespace TencentCloud
                     bool NicknameHasBeenSet() const;
 
                     /**
-                     * 获取Sub-Account Uin belonging to.
-                     * @return SubUin Sub-Account Uin belonging to.
+                     * 获取Sub-account Uin it belongs to
+                     * @return SubUin Sub-account Uin it belongs to
                      * 
                      */
                     std::string GetSubUin() const;
 
                     /**
-                     * 设置Sub-Account Uin belonging to.
-                     * @param _subUin Sub-Account Uin belonging to.
+                     * 设置Sub-account Uin it belongs to
+                     * @param _subUin Sub-account Uin it belongs to
                      * 
                      */
                     void SetSubUin(const std::string& _subUin);
@@ -195,15 +195,15 @@ namespace TencentCloud
                     bool SubUinHasBeenSet() const;
 
                     /**
-                     * 获取Sub-Account nickname.
-                     * @return SubNickname Sub-Account nickname.
+                     * 获取Sub-account nickname
+                     * @return SubNickname Sub-account nickname
                      * 
                      */
                     std::string GetSubNickname() const;
 
                     /**
-                     * 设置Sub-Account nickname.
-                     * @param _subNickname Sub-Account nickname.
+                     * 设置Sub-account nickname
+                     * @param _subNickname Sub-account nickname
                      * 
                      */
                     void SetSubNickname(const std::string& _subNickname);
@@ -216,23 +216,23 @@ namespace TencentCloud
                     bool SubNicknameHasBeenSet() const;
 
                     /**
-                     * 获取Root account AK.
-Sub-Account AK.
-2 temporary key.
-                     * @return Type Root account AK.
-Sub-Account AK.
-2 temporary key.
+                     * 获取0 root account AK
+1 Sub-account AK
+2 Temporary key
+                     * @return Type 0 root account AK
+1 Sub-account AK
+2 Temporary key
                      * 
                      */
                     int64_t GetType() const;
 
                     /**
-                     * 设置Root account AK.
-Sub-Account AK.
-2 temporary key.
-                     * @param _type Root account AK.
-Sub-Account AK.
-2 temporary key.
+                     * 设置0 root account AK
+1 Sub-account AK
+2 Temporary key
+                     * @param _type 0 root account AK
+1 Sub-account AK
+2 Temporary key
                      * 
                      */
                     void SetType(const int64_t& _type);
@@ -245,27 +245,27 @@ Sub-Account AK.
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Security advice enumeration.
-Normal.
-Process now.
-2 recommend reinforcement.
-                     * @return Advice Security advice enumeration.
-Normal.
-Process now.
-2 recommend reinforcement.
+                     * 获取Security advice Enumerate
+0 Normal
+1 Process now
+2. Hardening is recommended.
+                     * @return Advice Security advice Enumerate
+0 Normal
+1 Process now
+2. Hardening is recommended.
                      * 
                      */
                     int64_t GetAdvice() const;
 
                     /**
-                     * 设置Security advice enumeration.
-Normal.
-Process now.
-2 recommend reinforcement.
-                     * @param _advice Security advice enumeration.
-Normal.
-Process now.
-2 recommend reinforcement.
+                     * 设置Security advice Enumerate
+0 Normal
+1 Process now
+2. Hardening is recommended.
+                     * @param _advice Security advice Enumerate
+0 Normal
+1 Process now
+2. Hardening is recommended.
                      * 
                      */
                     void SetAdvice(const int64_t& _advice);
@@ -320,15 +320,15 @@ Process now.
                     bool AccessKeyRiskListHasBeenSet() const;
 
                     /**
-                     * 获取Source IP quantity.
-                     * @return IPCount Source IP quantity.
+                     * 获取Source IP quantity
+                     * @return IPCount Source IP quantity
                      * 
                      */
                     int64_t GetIPCount() const;
 
                     /**
-                     * 设置Source IP quantity.
-                     * @param _iPCount Source IP quantity.
+                     * 设置Source IP quantity
+                     * @param _iPCount Source IP quantity
                      * 
                      */
                     void SetIPCount(const int64_t& _iPCount);
@@ -342,22 +342,14 @@ Process now.
 
                     /**
                      * 获取Creation time.
-
-
                      * @return CreateTime Creation time.
-
-
                      * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
                      * 设置Creation time.
-
-
                      * @param _createTime Creation time.
-
-
                      * 
                      */
                     void SetCreateTime(const std::string& _createTime);
@@ -391,27 +383,27 @@ Process now.
                     bool LastAccessTimeHasBeenSet() const;
 
                     /**
-                     * 获取AK status. 
-0: disabled.
-1: enabled.
-2: deleted (deleted in cam, the security center still retains the previous log).
-                     * @return Status AK status. 
-0: disabled.
-1: enabled.
-2: deleted (deleted in cam, the security center still retains the previous log).
+                     * 获取AK status 
+0: Disable
+1: Enabled
+2: Deleted (already deleted on the cam side, and the security center still retains earlier records)
+                     * @return Status AK status 
+0: Disable
+1: Enabled
+2: Deleted (already deleted on the cam side, and the security center still retains earlier records)
                      * 
                      */
                     int64_t GetStatus() const;
 
                     /**
-                     * 设置AK status. 
-0: disabled.
-1: enabled.
-2: deleted (deleted in cam, the security center still retains the previous log).
-                     * @param _status AK status. 
-0: disabled.
-1: enabled.
-2: deleted (deleted in cam, the security center still retains the previous log).
+                     * 设置AK status 
+0: Disable
+1: Enabled
+2: Deleted (already deleted on the cam side, and the security center still retains earlier records)
+                     * @param _status AK status 
+0: Disable
+1: Enabled
+2: Deleted (already deleted on the cam side, and the security center still retains earlier records)
                      * 
                      */
                     void SetStatus(const int64_t& _status);
@@ -424,19 +416,19 @@ Process now.
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取0 means detected.
-1 indicates detecting.
-                     * @return CheckStatus 0 means detected.
-1 indicates detecting.
+                     * 获取0 indicates detected
+1: Indicates detection in progress
+                     * @return CheckStatus 0 indicates detected
+1: Indicates detection in progress
                      * 
                      */
                     int64_t GetCheckStatus() const;
 
                     /**
-                     * 设置0 means detected.
-1 indicates detecting.
-                     * @param _checkStatus 0 means detected.
-1 indicates detecting.
+                     * 设置0 indicates detected
+1: Indicates detection in progress
+                     * @param _checkStatus 0 indicates detected
+1: Indicates detection in progress
                      * 
                      */
                     void SetCheckStatus(const int64_t& _checkStatus);
@@ -449,15 +441,15 @@ Process now.
                     bool CheckStatusHasBeenSet() const;
 
                     /**
-                     * 获取Cloud vendor type 0: tencent cloud 1: amazon web services 2: microsoft azure 3: google cloud 4: alibaba cloud 5: huawei cloud.
-                     * @return CloudType Cloud vendor type 0: tencent cloud 1: amazon web services 2: microsoft azure 3: google cloud 4: alibaba cloud 5: huawei cloud.
+                     * 获取Cloud vendor type. 0: Tencent Cloud. 1: Amazon Web Services. 2: Microsoft Azure. 3: Google Cloud. 4: Alibaba Cloud. 5: Huawei Cloud
+                     * @return CloudType Cloud vendor type. 0: Tencent Cloud. 1: Amazon Web Services. 2: Microsoft Azure. 3: Google Cloud. 4: Alibaba Cloud. 5: Huawei Cloud
                      * 
                      */
                     int64_t GetCloudType() const;
 
                     /**
-                     * 设置Cloud vendor type 0: tencent cloud 1: amazon web services 2: microsoft azure 3: google cloud 4: alibaba cloud 5: huawei cloud.
-                     * @param _cloudType Cloud vendor type 0: tencent cloud 1: amazon web services 2: microsoft azure 3: google cloud 4: alibaba cloud 5: huawei cloud.
+                     * 设置Cloud vendor type. 0: Tencent Cloud. 1: Amazon Web Services. 2: Microsoft Azure. 3: Google Cloud. 4: Alibaba Cloud. 5: Huawei Cloud
+                     * @param _cloudType Cloud vendor type. 0: Tencent Cloud. 1: Amazon Web Services. 2: Microsoft Azure. 3: Google Cloud. 4: Alibaba Cloud. 5: Huawei Cloud
                      * 
                      */
                     void SetCloudType(const int64_t& _cloudType);
@@ -472,13 +464,13 @@ Process now.
                 private:
 
                     /**
-                     * AK id.
+                     * id of the AK
                      */
                     uint64_t m_iD;
                     bool m_iDHasBeenSet;
 
                     /**
-                     * AK name.
+                     * AK name
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
@@ -490,48 +482,48 @@ Process now.
                     bool m_remarkHasBeenSet;
 
                     /**
-                     * Account associate APPID.
+                     * APPID of the account
                      */
                     int64_t m_appID;
                     bool m_appIDHasBeenSet;
 
                     /**
-                     * Account associate Uin belonging to main account.
+                     * Uin of the main account
                      */
                     std::string m_uin;
                     bool m_uinHasBeenSet;
 
                     /**
-                     * Nickname of the main account.
+                     * Account nickname
                      */
                     std::string m_nickname;
                     bool m_nicknameHasBeenSet;
 
                     /**
-                     * Sub-Account Uin belonging to.
+                     * Sub-account Uin it belongs to
                      */
                     std::string m_subUin;
                     bool m_subUinHasBeenSet;
 
                     /**
-                     * Sub-Account nickname.
+                     * Sub-account nickname
                      */
                     std::string m_subNickname;
                     bool m_subNicknameHasBeenSet;
 
                     /**
-                     * Root account AK.
-Sub-Account AK.
-2 temporary key.
+                     * 0 root account AK
+1 Sub-account AK
+2 Temporary key
                      */
                     int64_t m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Security advice enumeration.
-Normal.
-Process now.
-2 recommend reinforcement.
+                     * Security advice Enumerate
+0 Normal
+1 Process now
+2. Hardening is recommended.
                      */
                     int64_t m_advice;
                     bool m_adviceHasBeenSet;
@@ -549,15 +541,13 @@ Process now.
                     bool m_accessKeyRiskListHasBeenSet;
 
                     /**
-                     * Source IP quantity.
+                     * Source IP quantity
                      */
                     int64_t m_iPCount;
                     bool m_iPCountHasBeenSet;
 
                     /**
                      * Creation time.
-
-
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
@@ -569,23 +559,23 @@ Process now.
                     bool m_lastAccessTimeHasBeenSet;
 
                     /**
-                     * AK status. 
-0: disabled.
-1: enabled.
-2: deleted (deleted in cam, the security center still retains the previous log).
+                     * AK status 
+0: Disable
+1: Enabled
+2: Deleted (already deleted on the cam side, and the security center still retains earlier records)
                      */
                     int64_t m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * 0 means detected.
-1 indicates detecting.
+                     * 0 indicates detected
+1: Indicates detection in progress
                      */
                     int64_t m_checkStatus;
                     bool m_checkStatusHasBeenSet;
 
                     /**
-                     * Cloud vendor type 0: tencent cloud 1: amazon web services 2: microsoft azure 3: google cloud 4: alibaba cloud 5: huawei cloud.
+                     * Cloud vendor type. 0: Tencent Cloud. 1: Amazon Web Services. 2: Microsoft Azure. 3: Google Cloud. 4: Alibaba Cloud. 5: Huawei Cloud
                      */
                     int64_t m_cloudType;
                     bool m_cloudTypeHasBeenSet;

@@ -98,6 +98,7 @@ set(mps_public_header_model
   include/tencentcloud/mps/v20190612/model/AiReviewPoliticalTaskInput.h
   include/tencentcloud/mps/v20190612/model/ModifyContentReviewTemplateResponse.h
   include/tencentcloud/mps/v20190612/model/ModifyScheduleRequest.h
+  include/tencentcloud/mps/v20190612/model/SubmitHunyuan3DTaskRequest.h
   include/tencentcloud/mps/v20190612/model/MediaMetaData.h
   include/tencentcloud/mps/v20190612/model/ClassificationConfigureInfo.h
   include/tencentcloud/mps/v20190612/model/MediaAiAnalysisClassificationItem.h
@@ -133,6 +134,7 @@ set(mps_public_header_model
   include/tencentcloud/mps/v20190612/model/TerrorismImgReviewTemplateInfoForUpdate.h
   include/tencentcloud/mps/v20190612/model/ModifyTranscodeTemplateRequest.h
   include/tencentcloud/mps/v20190612/model/CloneViralAIGC.h
+  include/tencentcloud/mps/v20190612/model/ViewImage.h
   include/tencentcloud/mps/v20190612/model/DescribeImageSpriteTemplatesRequest.h
   include/tencentcloud/mps/v20190612/model/FissionTaskInfo.h
   include/tencentcloud/mps/v20190612/model/TimeSpotCheck.h
@@ -330,6 +332,7 @@ set(mps_public_header_model
   include/tencentcloud/mps/v20190612/model/ProcessMediaRequest.h
   include/tencentcloud/mps/v20190612/model/PatternConfig.h
   include/tencentcloud/mps/v20190612/model/ProcessImageResponse.h
+  include/tencentcloud/mps/v20190612/model/QueryHunyuan3DTaskRequest.h
   include/tencentcloud/mps/v20190612/model/VideoDramaCosInfo.h
   include/tencentcloud/mps/v20190612/model/CreateBlindWatermarkTemplateResponse.h
   include/tencentcloud/mps/v20190612/model/AiRecognitionTaskOcrFullTextResult.h
@@ -544,6 +547,7 @@ set(mps_public_header_model
   include/tencentcloud/mps/v20190612/model/CreateSubtitleEmbedTemplateResponse.h
   include/tencentcloud/mps/v20190612/model/ImageTaskInfo.h
   include/tencentcloud/mps/v20190612/model/ResetWorkflowResponse.h
+  include/tencentcloud/mps/v20190612/model/QueryHunyuan3DTaskResponse.h
   include/tencentcloud/mps/v20190612/model/HLSConfigureInfo.h
   include/tencentcloud/mps/v20190612/model/CreateAIAnalysisTemplateResponse.h
   include/tencentcloud/mps/v20190612/model/CreateSmartEraseTemplateResponse.h
@@ -622,6 +626,7 @@ set(mps_public_header_model
   include/tencentcloud/mps/v20190612/model/LiveScheduleLiveRecordTaskResult.h
   include/tencentcloud/mps/v20190612/model/AiSampleFailFaceInfo.h
   include/tencentcloud/mps/v20190612/model/UserDefineFaceReviewTemplateInfoForUpdate.h
+  include/tencentcloud/mps/v20190612/model/File3D.h
   include/tencentcloud/mps/v20190612/model/CloneViralPersona.h
   include/tencentcloud/mps/v20190612/model/AigcVideoReferenceAudioInfo.h
   include/tencentcloud/mps/v20190612/model/DeleteProcessImageTemplateResponse.h
@@ -772,6 +777,7 @@ set(mps_public_header_model
   include/tencentcloud/mps/v20190612/model/QualityControlTemplate.h
   include/tencentcloud/mps/v20190612/model/TerrorismConfigureInfo.h
   include/tencentcloud/mps/v20190612/model/PoliticalAsrReviewTemplateInfo.h
+  include/tencentcloud/mps/v20190612/model/SubmitHunyuan3DTaskResponse.h
   include/tencentcloud/mps/v20190612/model/DeleteProcessImageTemplateRequest.h
   include/tencentcloud/mps/v20190612/model/SmartSubtitlesTaskInput.h
   include/tencentcloud/mps/v20190612/model/CreateAnimatedGraphicsTemplateResponse.h
@@ -891,6 +897,7 @@ set(mps_src
   src/v20190612/model/AiReviewPoliticalTaskInput.cpp
   src/v20190612/model/ModifyContentReviewTemplateResponse.cpp
   src/v20190612/model/ModifyScheduleRequest.cpp
+  src/v20190612/model/SubmitHunyuan3DTaskRequest.cpp
   src/v20190612/model/MediaMetaData.cpp
   src/v20190612/model/ClassificationConfigureInfo.cpp
   src/v20190612/model/MediaAiAnalysisClassificationItem.cpp
@@ -926,6 +933,7 @@ set(mps_src
   src/v20190612/model/TerrorismImgReviewTemplateInfoForUpdate.cpp
   src/v20190612/model/ModifyTranscodeTemplateRequest.cpp
   src/v20190612/model/CloneViralAIGC.cpp
+  src/v20190612/model/ViewImage.cpp
   src/v20190612/model/DescribeImageSpriteTemplatesRequest.cpp
   src/v20190612/model/FissionTaskInfo.cpp
   src/v20190612/model/TimeSpotCheck.cpp
@@ -1123,6 +1131,7 @@ set(mps_src
   src/v20190612/model/ProcessMediaRequest.cpp
   src/v20190612/model/PatternConfig.cpp
   src/v20190612/model/ProcessImageResponse.cpp
+  src/v20190612/model/QueryHunyuan3DTaskRequest.cpp
   src/v20190612/model/VideoDramaCosInfo.cpp
   src/v20190612/model/CreateBlindWatermarkTemplateResponse.cpp
   src/v20190612/model/AiRecognitionTaskOcrFullTextResult.cpp
@@ -1337,6 +1346,7 @@ set(mps_src
   src/v20190612/model/CreateSubtitleEmbedTemplateResponse.cpp
   src/v20190612/model/ImageTaskInfo.cpp
   src/v20190612/model/ResetWorkflowResponse.cpp
+  src/v20190612/model/QueryHunyuan3DTaskResponse.cpp
   src/v20190612/model/HLSConfigureInfo.cpp
   src/v20190612/model/CreateAIAnalysisTemplateResponse.cpp
   src/v20190612/model/CreateSmartEraseTemplateResponse.cpp
@@ -1415,6 +1425,7 @@ set(mps_src
   src/v20190612/model/LiveScheduleLiveRecordTaskResult.cpp
   src/v20190612/model/AiSampleFailFaceInfo.cpp
   src/v20190612/model/UserDefineFaceReviewTemplateInfoForUpdate.cpp
+  src/v20190612/model/File3D.cpp
   src/v20190612/model/CloneViralPersona.cpp
   src/v20190612/model/AigcVideoReferenceAudioInfo.cpp
   src/v20190612/model/DeleteProcessImageTemplateResponse.cpp
@@ -1565,6 +1576,7 @@ set(mps_src
   src/v20190612/model/QualityControlTemplate.cpp
   src/v20190612/model/TerrorismConfigureInfo.cpp
   src/v20190612/model/PoliticalAsrReviewTemplateInfo.cpp
+  src/v20190612/model/SubmitHunyuan3DTaskResponse.cpp
   src/v20190612/model/DeleteProcessImageTemplateRequest.cpp
   src/v20190612/model/SmartSubtitlesTaskInput.cpp
   src/v20190612/model/CreateAnimatedGraphicsTemplateResponse.cpp

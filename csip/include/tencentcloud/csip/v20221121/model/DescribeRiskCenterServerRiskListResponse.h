@@ -46,8 +46,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Total number of entries
-                     * @return TotalCount Total number of entries
+                     * 获取Total quantity.
+                     * @return TotalCount Total quantity.
                      * 
                      */
                     int64_t GetTotalCount() const;
@@ -60,8 +60,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取List of services in risk
-                     * @return Data List of services in risk
+                     * 获取Risk Service List
+                     * @return Data Risk Service List
                      * 
                      */
                     std::vector<ServerRisk> GetData() const;
@@ -74,8 +74,8 @@ namespace TencentCloud
                     bool DataHasBeenSet() const;
 
                     /**
-                     * 获取List of asset types
-                     * @return InstanceTypeLists List of asset types
+                     * 获取Asset Type Enumeration
+                     * @return InstanceTypeLists Asset Type Enumeration
                      * 
                      */
                     std::vector<FilterDataObject> GetInstanceTypeLists() const;
@@ -90,19 +90,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Total number of entries
+                     * Total quantity.
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * List of services in risk
+                     * Risk Service List
                      */
                     std::vector<ServerRisk> m_data;
                     bool m_dataHasBeenSet;
 
                     /**
-                     * List of asset types
+                     * Asset Type Enumeration
                      */
                     std::vector<FilterDataObject> m_instanceTypeLists;
                     bool m_instanceTypeListsHasBeenSet;

@@ -60,8 +60,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取Risk rule list
-                     * @return RuleList Risk rule list
+                     * 获取List of risk rules
+                     * @return RuleList List of risk rules
                      * 
                      */
                     std::vector<RiskRuleInfo> GetRuleList() const;
@@ -74,8 +74,8 @@ namespace TencentCloud
                     bool RuleListHasBeenSet() const;
 
                     /**
-                     * 获取Cloud vendor type options
-                     * @return ProviderList Cloud vendor type options
+                     * 获取Cloud vendor type option
+                     * @return ProviderList Cloud vendor type option
                      * 
                      */
                     std::vector<AttributeOptionSet> GetProviderList() const;
@@ -102,8 +102,8 @@ namespace TencentCloud
                     bool RiskLevelListHasBeenSet() const;
 
                     /**
-                     * 获取Disposal categorization options
-                     * @return DispositionTypeList Disposal categorization options
+                     * 获取Disposal category options
+                     * @return DispositionTypeList Disposal category options
                      * 
                      */
                     std::vector<AttributeOptionSet> GetDispositionTypeList() const;
@@ -138,13 +138,13 @@ namespace TencentCloud
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * Risk rule list
+                     * List of risk rules
                      */
                     std::vector<RiskRuleInfo> m_ruleList;
                     bool m_ruleListHasBeenSet;
 
                     /**
-                     * Cloud vendor type options
+                     * Cloud vendor type option
                      */
                     std::vector<AttributeOptionSet> m_providerList;
                     bool m_providerListHasBeenSet;
@@ -156,7 +156,7 @@ namespace TencentCloud
                     bool m_riskLevelListHasBeenSet;
 
                     /**
-                     * Disposal categorization options
+                     * Disposal category options
                      */
                     std::vector<AttributeOptionSet> m_dispositionTypeList;
                     bool m_dispositionTypeListHasBeenSet;

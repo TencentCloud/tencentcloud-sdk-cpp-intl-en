@@ -74,8 +74,8 @@ namespace TencentCloud
                     bool DataHasBeenSet() const;
 
                     /**
-                     * 获取Manufacturer list
-                     * @return CloudTypeLst Manufacturer list
+                     * 获取Manufacturer enumeration list
+                     * @return CloudTypeLst Manufacturer enumeration list
                      * 
                      */
                     std::vector<FilterDataObject> GetCloudTypeLst() const;
@@ -88,8 +88,8 @@ namespace TencentCloud
                     bool CloudTypeLstHasBeenSet() const;
 
                     /**
-                     * 获取Enumerate appid belonging to main account
-                     * @return OwnerAppIDLst Enumerate appid belonging to main account
+                     * 获取appid list of the main account
+                     * @return OwnerAppIDLst appid list of the main account
                      * 
                      */
                     std::vector<FilterDataObject> GetOwnerAppIDLst() const;
@@ -116,13 +116,13 @@ namespace TencentCloud
                     bool m_dataHasBeenSet;
 
                     /**
-                     * Manufacturer list
+                     * Manufacturer enumeration list
                      */
                     std::vector<FilterDataObject> m_cloudTypeLst;
                     bool m_cloudTypeLstHasBeenSet;
 
                     /**
-                     * Enumerate appid belonging to main account
+                     * appid list of the main account
                      */
                     std::vector<FilterDataObject> m_ownerAppIDLst;
                     bool m_ownerAppIDLstHasBeenSet;

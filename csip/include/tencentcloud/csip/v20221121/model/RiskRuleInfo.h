@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * risk rule
+                * Risk rule
                 */
                 class RiskRuleInfo : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Risk Check Item ID
-                     * @return RuleID Risk Check Item ID
+                     * 获取Risk check item ID
+                     * @return RuleID Risk check item ID
                      * 
                      */
                     std::string GetRuleID() const;
 
                     /**
-                     * 设置Risk Check Item ID
-                     * @param _ruleID Risk Check Item ID
+                     * 设置Risk check item ID
+                     * @param _ruleID Risk check item ID
                      * 
                      */
                     void SetRuleID(const std::string& _ruleID);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool RuleIDHasBeenSet() const;
 
                     /**
-                     * 获取Cloud vendor name
-                     * @return Provider Cloud vendor name
+                     * 获取Vendor name
+                     * @return Provider Vendor name
                      * 
                      */
                     std::string GetProvider() const;
 
                     /**
-                     * 设置Cloud vendor name
-                     * @param _provider Cloud vendor name
+                     * 设置Vendor name
+                     * @param _provider Vendor name
                      * 
                      */
                     void SetProvider(const std::string& _provider);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool InstanceTypeHasBeenSet() const;
 
                     /**
-                     * 获取risk name
-                     * @return RiskTitle risk name
+                     * 获取Risk name
+                     * @return RiskTitle Risk name
                      * 
                      */
                     std::string GetRiskTitle() const;
 
                     /**
-                     * 设置risk name
-                     * @param _riskTitle risk name
+                     * 设置Risk name
+                     * @param _riskTitle Risk name
                      * 
                      */
                     void SetRiskTitle(const std::string& _riskTitle);
@@ -215,15 +215,15 @@ namespace TencentCloud
                     bool RiskFixAdvanceHasBeenSet() const;
 
                     /**
-                     * 获取Boundary control
-                     * @return DispositionType Boundary control
+                     * 获取Boundary management and control
+                     * @return DispositionType Boundary management and control
                      * 
                      */
                     std::string GetDispositionType() const;
 
                     /**
-                     * 设置Boundary control
-                     * @param _dispositionType Boundary control
+                     * 设置Boundary management and control
+                     * @param _dispositionType Boundary management and control
                      * 
                      */
                     void SetDispositionType(const std::string& _dispositionType);
@@ -238,13 +238,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Risk Check Item ID
+                     * Risk check item ID
                      */
                     std::string m_ruleID;
                     bool m_ruleIDHasBeenSet;
 
                     /**
-                     * Cloud vendor name
+                     * Vendor name
                      */
                     std::string m_provider;
                     bool m_providerHasBeenSet;
@@ -256,7 +256,7 @@ namespace TencentCloud
                     bool m_instanceTypeHasBeenSet;
 
                     /**
-                     * risk name
+                     * Risk name
                      */
                     std::string m_riskTitle;
                     bool m_riskTitleHasBeenSet;
@@ -286,7 +286,7 @@ namespace TencentCloud
                     bool m_riskFixAdvanceHasBeenSet;
 
                     /**
-                     * Boundary control
+                     * Boundary management and control
                      */
                     std::string m_dispositionType;
                     bool m_dispositionTypeHasBeenSet;

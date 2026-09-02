@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Brief asset tag element for CSIP internal use.
+                * Brief asset tag element for internal CSIP use.
                 */
                 class MiniTagItem : public AbstractModel
                 {

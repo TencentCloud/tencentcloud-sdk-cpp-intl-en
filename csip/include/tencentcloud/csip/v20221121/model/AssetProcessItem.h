@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Host process content.
+                * Host process content
                 */
                 class AssetProcessItem : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Cloud account ID.
-                     * @return CloudAccountID Cloud account ID.
+                     * 获取Cloud Account ID
+                     * @return CloudAccountID Cloud Account ID
                      * 
                      */
                     std::string GetCloudAccountID() const;
 
                     /**
-                     * 设置Cloud account ID.
-                     * @param _cloudAccountID Cloud account ID.
+                     * 设置Cloud Account ID
+                     * @param _cloudAccountID Cloud Account ID
                      * 
                      */
                     void SetCloudAccountID(const std::string& _cloudAccountID);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool CloudAccountIDHasBeenSet() const;
 
                     /**
-                     * 获取Instance name
-                     * @return InstanceName Instance name
+                     * 获取Instance name.
+                     * @return InstanceName Instance name.
                      * 
                      */
                     std::string GetInstanceName() const;
 
                     /**
-                     * 设置Instance name
-                     * @param _instanceName Instance name
+                     * 设置Instance name.
+                     * @param _instanceName Instance name.
                      * 
                      */
                     void SetInstanceName(const std::string& _instanceName);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool InstanceNameHasBeenSet() const;
 
                     /**
-                     * 获取Tenant ID.
-                     * @return AppID Tenant ID.
+                     * 获取Tenant ID
+                     * @return AppID Tenant ID
                      * 
                      */
                     uint64_t GetAppID() const;
 
                     /**
-                     * 设置Tenant ID.
-                     * @param _appID Tenant ID.
+                     * 设置Tenant ID
+                     * @param _appID Tenant ID
                      * 
                      */
                     void SetAppID(const uint64_t& _appID);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool AppIDHasBeenSet() const;
 
                     /**
-                     * 获取Account name.
-                     * @return CloudAccountName Account name.
+                     * 获取Cloud account name
+                     * @return CloudAccountName Cloud account name
                      * 
                      */
                     std::string GetCloudAccountName() const;
 
                     /**
-                     * 设置Account name.
-                     * @param _cloudAccountName Account name.
+                     * 设置Cloud account name
+                     * @param _cloudAccountName Cloud account name
                      * 
                      */
                     void SetCloudAccountName(const std::string& _cloudAccountName);
@@ -257,15 +257,15 @@ namespace TencentCloud
                     bool CmdLineHasBeenSet() const;
 
                     /**
-                     * 获取Listening port list.
-                     * @return Port Listening port list.
+                     * 获取Listening port list
+                     * @return Port Listening port list
                      * 
                      */
                     std::string GetPort() const;
 
                     /**
-                     * 设置Listening port list.
-                     * @param _port Listening port list.
+                     * 设置Listening port list
+                     * @param _port Listening port list
                      * 
                      */
                     void SetPort(const std::string& _port);
@@ -280,25 +280,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Cloud account ID.
+                     * Cloud Account ID
                      */
                     std::string m_cloudAccountID;
                     bool m_cloudAccountIDHasBeenSet;
 
                     /**
-                     * Instance name
+                     * Instance name.
                      */
                     std::string m_instanceName;
                     bool m_instanceNameHasBeenSet;
 
                     /**
-                     * Tenant ID.
+                     * Tenant ID
                      */
                     uint64_t m_appID;
                     bool m_appIDHasBeenSet;
 
                     /**
-                     * Account name.
+                     * Cloud account name
                      */
                     std::string m_cloudAccountName;
                     bool m_cloudAccountNameHasBeenSet;
@@ -340,7 +340,7 @@ namespace TencentCloud
                     bool m_cmdLineHasBeenSet;
 
                     /**
-                     * Listening port list.
+                     * Listening port list
                      */
                     std::string m_port;
                     bool m_portHasBeenSet;

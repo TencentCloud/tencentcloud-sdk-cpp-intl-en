@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Vulnerability risk information.
+                * Vulnerability risk information
                 */
                 class VULRiskInfo : public AbstractModel
                 {
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool FixHasBeenSet() const;
 
                     /**
-                     * 获取Technology reference/reference link.
-                     * @return References Technology reference/reference link.
+                     * 获取Technical reference/Reference link
+                     * @return References Technical reference/Reference link
                      * 
                      */
                     std::string GetReferences() const;
 
                     /**
-                     * 设置Technology reference/reference link.
-                     * @param _references Technology reference/reference link.
+                     * 设置Technical reference/Reference link
+                     * @param _references Technical reference/Reference link
                      * 
                      */
                     void SetReferences(const std::string& _references);
@@ -111,15 +111,15 @@ namespace TencentCloud
                     bool DescribeHasBeenSet() const;
 
                     /**
-                     * 获取Affected component.
-                     * @return ImpactComponent Affected component.
+                     * 获取Affected component
+                     * @return ImpactComponent Affected component
                      * 
                      */
                     std::vector<VulImpactComponentInfo> GetImpactComponent() const;
 
                     /**
-                     * 设置Affected component.
-                     * @param _impactComponent Affected component.
+                     * 设置Affected component
+                     * @param _impactComponent Affected component
                      * 
                      */
                     void SetImpactComponent(const std::vector<VulImpactComponentInfo>& _impactComponent);
@@ -140,7 +140,7 @@ namespace TencentCloud
                     bool m_fixHasBeenSet;
 
                     /**
-                     * Technology reference/reference link.
+                     * Technical reference/Reference link
                      */
                     std::string m_references;
                     bool m_referencesHasBeenSet;
@@ -152,7 +152,7 @@ namespace TencentCloud
                     bool m_describeHasBeenSet;
 
                     /**
-                     * Affected component.
+                     * Affected component
                      */
                     std::vector<VulImpactComponentInfo> m_impactComponent;
                     bool m_impactComponentHasBeenSet;

@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Plug-in installation status (upper layer aggregation)<br>Enumeration value:<br>NONE: Not installed<br>INSTALLING: Installing<br>INSTALLED: Installed<br>INSTALL_FAIL: Installation failure</p>
-                     * @return InstallStatus <p>Plug-in installation status (upper layer aggregation)<br>Enumeration value:<br>NONE: Not installed<br>INSTALLING: Installing<br>INSTALLED: Installed<br>INSTALL_FAIL: Installation failure</p>
+                     * 获取<p>Plug-in installation status (upper-layer aggregation)<br>Enumeration values:<br>NONE: not installed<br>INSTALLING: installing<br>INSTALLED: installed<br>INSTALL_FAIL: installation failure</p>
+                     * @return InstallStatus <p>Plug-in installation status (upper-layer aggregation)<br>Enumeration values:<br>NONE: not installed<br>INSTALLING: installing<br>INSTALLED: installed<br>INSTALL_FAIL: installation failure</p>
                      * 
                      */
                     std::string GetInstallStatus() const;
 
                     /**
-                     * 设置<p>Plug-in installation status (upper layer aggregation)<br>Enumeration value:<br>NONE: Not installed<br>INSTALLING: Installing<br>INSTALLED: Installed<br>INSTALL_FAIL: Installation failure</p>
-                     * @param _installStatus <p>Plug-in installation status (upper layer aggregation)<br>Enumeration value:<br>NONE: Not installed<br>INSTALLING: Installing<br>INSTALLED: Installed<br>INSTALL_FAIL: Installation failure</p>
+                     * 设置<p>Plug-in installation status (upper-layer aggregation)<br>Enumeration values:<br>NONE: not installed<br>INSTALLING: installing<br>INSTALLED: installed<br>INSTALL_FAIL: installation failure</p>
+                     * @param _installStatus <p>Plug-in installation status (upper-layer aggregation)<br>Enumeration values:<br>NONE: not installed<br>INSTALLING: installing<br>INSTALLED: installed<br>INSTALL_FAIL: installation failure</p>
                      * 
                      */
                     void SetInstallStatus(const std::string& _installStatus);
@@ -70,7 +70,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Plug-in installation status (upper layer aggregation)<br>Enumeration value:<br>NONE: Not installed<br>INSTALLING: Installing<br>INSTALLED: Installed<br>INSTALL_FAIL: Installation failure</p>
+                     * <p>Plug-in installation status (upper-layer aggregation)<br>Enumeration values:<br>NONE: not installed<br>INSTALLING: installing<br>INSTALLED: installed<br>INSTALL_FAIL: installation failure</p>
                      */
                     std::string m_installStatus;
                     bool m_installStatusHasBeenSet;

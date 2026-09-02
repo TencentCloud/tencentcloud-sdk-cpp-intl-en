@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Task asset information
+                * Task Asset Items
                 */
                 class TaskAssetObject : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Asset name.
-                     * @return AssetName Asset name.
+                     * 获取Asset name
+                     * @return AssetName Asset name
                      * 
                      */
                     std::string GetAssetName() const;
 
                     /**
-                     * 设置Asset name.
-                     * @param _assetName Asset name.
+                     * 设置Asset name
+                     * @param _assetName Asset name
                      * 
                      */
                     void SetAssetName(const std::string& _assetName);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool AssetNameHasBeenSet() const;
 
                     /**
-                     * 获取Asset type.
-                     * @return InstanceType Asset type.
+                     * 获取Asset type
+                     * @return InstanceType Asset type
                      * 
                      */
                     std::string GetInstanceType() const;
 
                     /**
-                     * 设置Asset type.
-                     * @param _instanceType Asset type.
+                     * 设置Asset type
+                     * @param _instanceType Asset type
                      * 
                      */
                     void SetInstanceType(const std::string& _instanceType);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool InstanceTypeHasBeenSet() const;
 
                     /**
-                     * 获取Asset category.
-                     * @return AssetType Asset category.
+                     * 获取Asset category
+                     * @return AssetType Asset category
                      * 
                      */
                     std::string GetAssetType() const;
 
                     /**
-                     * 设置Asset category.
-                     * @param _assetType Asset category.
+                     * 设置Asset category
+                     * @param _assetType Asset category
                      * 
                      */
                     void SetAssetType(const std::string& _assetType);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool AssetTypeHasBeenSet() const;
 
                     /**
-                     * 获取IP, domain name, asset ID, database ID, and more
-                     * @return Asset IP, domain name, asset ID, database ID, and more
+                     * 获取IP/Domain/Asset ID, Database ID, etc.
+                     * @return Asset IP/Domain/Asset ID, Database ID, etc.
                      * 
                      */
                     std::string GetAsset() const;
 
                     /**
-                     * 设置IP, domain name, asset ID, database ID, and more
-                     * @param _asset IP, domain name, asset ID, database ID, and more
+                     * 设置IP/Domain/Asset ID, Database ID, etc.
+                     * @param _asset IP/Domain/Asset ID, Database ID, etc.
                      * 
                      */
                     void SetAsset(const std::string& _asset);
@@ -175,25 +175,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Asset name.
+                     * Asset name
                      */
                     std::string m_assetName;
                     bool m_assetNameHasBeenSet;
 
                     /**
-                     * Asset type.
+                     * Asset type
                      */
                     std::string m_instanceType;
                     bool m_instanceTypeHasBeenSet;
 
                     /**
-                     * Asset category.
+                     * Asset category
                      */
                     std::string m_assetType;
                     bool m_assetTypeHasBeenSet;
 
                     /**
-                     * IP, domain name, asset ID, database ID, and more
+                     * IP/Domain/Asset ID, Database ID, etc.
                      */
                     std::string m_asset;
                     bool m_assetHasBeenSet;

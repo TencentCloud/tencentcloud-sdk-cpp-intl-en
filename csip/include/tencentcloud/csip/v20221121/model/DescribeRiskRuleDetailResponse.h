@@ -58,8 +58,8 @@ namespace TencentCloud
                     bool RiskRuleIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>Cloud vendor</p>
-                     * @return Provider <p>Cloud vendor</p>
+                     * 获取<p>Cloud service provider.</p>
+                     * @return Provider <p>Cloud service provider.</p>
                      * 
                      */
                     std::string GetProvider() const;
@@ -86,8 +86,8 @@ namespace TencentCloud
                     bool RiskNameHasBeenSet() const;
 
                     /**
-                     * 获取<p>Risk damage</p>
-                     * @return RiskInfluence <p>Risk damage</p>
+                     * 获取<p>Risk and damage</p>
+                     * @return RiskInfluence <p>Risk and damage</p>
                      * 
                      */
                     std::string GetRiskInfluence() const;
@@ -136,7 +136,7 @@ namespace TencentCloud
                     bool m_riskRuleIdHasBeenSet;
 
                     /**
-                     * <p>Cloud vendor</p>
+                     * <p>Cloud service provider.</p>
                      */
                     std::string m_provider;
                     bool m_providerHasBeenSet;
@@ -148,7 +148,7 @@ namespace TencentCloud
                     bool m_riskNameHasBeenSet;
 
                     /**
-                     * <p>Risk damage</p>
+                     * <p>Risk and damage</p>
                      */
                     std::string m_riskInfluence;
                     bool m_riskInfluenceHasBeenSet;

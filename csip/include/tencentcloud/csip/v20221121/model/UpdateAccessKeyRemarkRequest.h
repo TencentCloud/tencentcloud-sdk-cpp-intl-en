@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool MemberIdHasBeenSet() const;
 
                     /**
-                     * 获取Source IP name.
-                     * @return SourceIPList Source IP name.
+                     * 获取Source IP Name
+                     * @return SourceIPList Source IP Name
                      * 
                      */
                     std::vector<std::string> GetSourceIPList() const;
 
                     /**
-                     * 设置Source IP name.
-                     * @param _sourceIPList Source IP name.
+                     * 设置Source IP Name
+                     * @param _sourceIPList Source IP Name
                      * 
                      */
                     void SetSourceIPList(const std::vector<std::string>& _sourceIPList);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool SourceIPListHasBeenSet() const;
 
                     /**
-                     * 获取ak name.
-                     * @return AccessKeyList ak name.
+                     * 获取ak name
+                     * @return AccessKeyList ak name
                      * 
                      */
                     std::vector<std::string> GetAccessKeyList() const;
 
                     /**
-                     * 设置ak name.
-                     * @param _accessKeyList ak name.
+                     * 设置ak name
+                     * @param _accessKeyList ak name
                      * 
                      */
                     void SetAccessKeyList(const std::vector<std::string>& _accessKeyList);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool AccessKeyListHasBeenSet() const;
 
                     /**
-                     * 获取ID of the source IP.
-                     * @return SourceIPIDList ID of the source IP.
+                     * 获取ID of the source IP
+                     * @return SourceIPIDList ID of the source IP
                      * 
                      */
                     std::vector<uint64_t> GetSourceIPIDList() const;
 
                     /**
-                     * 设置ID of the source IP.
-                     * @param _sourceIPIDList ID of the source IP.
+                     * 设置ID of the source IP
+                     * @param _sourceIPIDList ID of the source IP
                      * 
                      */
                     void SetSourceIPIDList(const std::vector<uint64_t>& _sourceIPIDList);
@@ -148,15 +148,15 @@ namespace TencentCloud
                     bool SourceIPIDListHasBeenSet() const;
 
                     /**
-                     * 获取AK ID.
-                     * @return AccessKeyIDList AK ID.
+                     * 获取ID of the AK
+                     * @return AccessKeyIDList ID of the AK
                      * 
                      */
                     std::vector<uint64_t> GetAccessKeyIDList() const;
 
                     /**
-                     * 设置AK ID.
-                     * @param _accessKeyIDList AK ID.
+                     * 设置ID of the AK
+                     * @param _accessKeyIDList ID of the AK
                      * 
                      */
                     void SetAccessKeyIDList(const std::vector<uint64_t>& _accessKeyIDList);
@@ -183,25 +183,25 @@ namespace TencentCloud
                     bool m_memberIdHasBeenSet;
 
                     /**
-                     * Source IP name.
+                     * Source IP Name
                      */
                     std::vector<std::string> m_sourceIPList;
                     bool m_sourceIPListHasBeenSet;
 
                     /**
-                     * ak name.
+                     * ak name
                      */
                     std::vector<std::string> m_accessKeyList;
                     bool m_accessKeyListHasBeenSet;
 
                     /**
-                     * ID of the source IP.
+                     * ID of the source IP
                      */
                     std::vector<uint64_t> m_sourceIPIDList;
                     bool m_sourceIPIDListHasBeenSet;
 
                     /**
-                     * AK ID.
+                     * ID of the AK
                      */
                     std::vector<uint64_t> m_accessKeyIDList;
                     bool m_accessKeyIDListHasBeenSet;

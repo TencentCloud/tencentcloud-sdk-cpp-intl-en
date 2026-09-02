@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Account list.
-                     * @return Data Account list.
+                     * 获取Account list
+                     * @return Data Account list
                      * 
                      */
                     std::vector<AccessKeyUser> GetData() const;
@@ -75,7 +75,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Account list.
+                     * Account list
                      */
                     std::vector<AccessKeyUser> m_data;
                     bool m_dataHasBeenSet;

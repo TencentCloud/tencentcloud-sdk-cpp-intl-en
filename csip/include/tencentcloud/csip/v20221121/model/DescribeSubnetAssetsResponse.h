@@ -46,8 +46,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Data list
-                     * @return Data Data list
+                     * 获取List
+                     * @return Data List
                      * 
                      */
                     std::vector<SubnetAsset> GetData() const;
@@ -60,8 +60,8 @@ namespace TencentCloud
                     bool DataHasBeenSet() const;
 
                     /**
-                     * 获取Total number of results
-                     * @return TotalCount Total number of results
+                     * 获取Total number.
+                     * @return TotalCount Total number.
                      * 
                      */
                     int64_t GetTotalCount() const;
@@ -74,8 +74,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取List of regions
-                     * @return RegionList List of regions
+                     * 获取Region list
+                     * @return RegionList Region list
                      * 
                      */
                     std::vector<FilterDataObject> GetRegionList() const;
@@ -88,8 +88,8 @@ namespace TencentCloud
                     bool RegionListHasBeenSet() const;
 
                     /**
-                     * 获取List of VPCs
-                     * @return VpcList List of VPCs
+                     * 获取VPC List
+                     * @return VpcList VPC List
                      * 
                      */
                     std::vector<FilterDataObject> GetVpcList() const;
@@ -102,8 +102,8 @@ namespace TencentCloud
                     bool VpcListHasBeenSet() const;
 
                     /**
-                     * 获取List of AppIds
-                     * @return AppIdList List of AppIds
+                     * 获取AppID List
+                     * @return AppIdList AppID List
                      * 
                      */
                     std::vector<FilterDataObject> GetAppIdList() const;
@@ -116,8 +116,8 @@ namespace TencentCloud
                     bool AppIdListHasBeenSet() const;
 
                     /**
-                     * 获取List of availability zones
-                     * @return ZoneList List of availability zones
+                     * 获取Availability Zone List
+                     * @return ZoneList Availability Zone List
                      * 
                      */
                     std::vector<FilterDataObject> GetZoneList() const;
@@ -132,37 +132,37 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Data list
+                     * List
                      */
                     std::vector<SubnetAsset> m_data;
                     bool m_dataHasBeenSet;
 
                     /**
-                     * Total number of results
+                     * Total number.
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * List of regions
+                     * Region list
                      */
                     std::vector<FilterDataObject> m_regionList;
                     bool m_regionListHasBeenSet;
 
                     /**
-                     * List of VPCs
+                     * VPC List
                      */
                     std::vector<FilterDataObject> m_vpcList;
                     bool m_vpcListHasBeenSet;
 
                     /**
-                     * List of AppIds
+                     * AppID List
                      */
                     std::vector<FilterDataObject> m_appIdList;
                     bool m_appIdListHasBeenSet;
 
                     /**
-                     * List of availability zones
+                     * Availability Zone List
                      */
                     std::vector<FilterDataObject> m_zoneList;
                     bool m_zoneListHasBeenSet;

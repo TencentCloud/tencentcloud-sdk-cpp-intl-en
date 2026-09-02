@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * User Behavior Analysis Statistical Condition
+                * User behavior analysis statistical conditions
                 */
                 class StatisticalFilter : public AbstractModel
                 {
@@ -49,12 +49,12 @@ namespace TencentCloud
                     /**
                      * 获取0: Not based on statistical testing
 1: Occurrence count higher than a fixed value
-2: Occurrence count exceeds 100 percent of the period average
-3: Occurrences higher than 50 percent of the user average
+2: Occurrence count exceeds the cycle average by percent
+3: Occurrences higher than the user average percent
                      * @return OperatorType 0: Not based on statistical testing
 1: Occurrence count higher than a fixed value
-2: Occurrence count exceeds 100 percent of the period average
-3: Occurrences higher than 50 percent of the user average
+2: Occurrence count exceeds the cycle average by percent
+3: Occurrences higher than the user average percent
                      * 
                      */
                     int64_t GetOperatorType() const;
@@ -62,12 +62,12 @@ namespace TencentCloud
                     /**
                      * 设置0: Not based on statistical testing
 1: Occurrence count higher than a fixed value
-2: Occurrence count exceeds 100 percent of the period average
-3: Occurrences higher than 50 percent of the user average
+2: Occurrence count exceeds the cycle average by percent
+3: Occurrences higher than the user average percent
                      * @param _operatorType 0: Not based on statistical testing
 1: Occurrence count higher than a fixed value
-2: Occurrence count exceeds 100 percent of the period average
-3: Occurrences higher than 50 percent of the user average
+2: Occurrence count exceeds the cycle average by percent
+3: Occurrences higher than the user average percent
                      * 
                      */
                     void SetOperatorType(const int64_t& _operatorType);
@@ -105,8 +105,8 @@ namespace TencentCloud
                     /**
                      * 0: Not based on statistical testing
 1: Occurrence count higher than a fixed value
-2: Occurrence count exceeds 100 percent of the period average
-3: Occurrences higher than 50 percent of the user average
+2: Occurrence count exceeds the cycle average by percent
+3: Occurrences higher than the user average percent
                      */
                     int64_t m_operatorType;
                     bool m_operatorTypeHasBeenSet;

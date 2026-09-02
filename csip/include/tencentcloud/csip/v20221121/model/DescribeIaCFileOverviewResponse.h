@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Number of files.</p>
-                     * @return TotalFile <p>Number of files.</p>
+                     * 获取<p>Number of files</p>
+                     * @return TotalFile <p>Number of files</p>
                      * 
                      */
                     uint64_t GetTotalFile() const;
@@ -75,7 +75,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Number of files.</p>
+                     * <p>Number of files</p>
                      */
                     uint64_t m_totalFile;
                     bool m_totalFileHasBeenSet;

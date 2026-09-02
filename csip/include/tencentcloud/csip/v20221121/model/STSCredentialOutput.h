@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * STS temporary key credential (dedicated for output parameters), used for the response of the query details api. The SecretID and SecretKey fields return masked values, while System returns the original text.
+                * STS temporary key credential (dedicated for output parameters), used for the response of the query details API. The SecretID and SecretKey fields return masked values, and System returns the original text.
                 */
                 class STSCredentialOutput : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Credential provider flag (original text), such as tencentCam, aws, aliyun
-                     * @return System Credential provider flag (original text), such as tencentCam, aws, aliyun
+                     * 获取Credential provider identifier (original), for example tencentCam, aws, aliyun
+                     * @return System Credential provider identifier (original), for example tencentCam, aws, aliyun
                      * 
                      */
                     std::string GetSystem() const;
 
                     /**
-                     * 设置Credential provider flag (original text), such as tencentCam, aws, aliyun
-                     * @param _system Credential provider flag (original text), such as tencentCam, aws, aliyun
+                     * 设置Credential provider identifier (original), for example tencentCam, aws, aliyun
+                     * @param _system Credential provider identifier (original), for example tencentCam, aws, aliyun
                      * 
                      */
                     void SetSystem(const std::string& _system);
@@ -69,18 +69,18 @@ namespace TencentCloud
 
                     /**
                      * 获取SecretID (masked)
-Supplementary description: Reserve the first 3 and last 4 digits, replace the middle with ***; replace all with *** if the length is less than 7.
+Supplemental description: Reserve the first 3 and last 4 digits, replace the middle with ***. If the length is less than 7, use *** as a complete replacement.
                      * @return SecretID SecretID (masked)
-Supplementary description: Reserve the first 3 and last 4 digits, replace the middle with ***; replace all with *** if the length is less than 7.
+Supplemental description: Reserve the first 3 and last 4 digits, replace the middle with ***. If the length is less than 7, use *** as a complete replacement.
                      * 
                      */
                     std::string GetSecretID() const;
 
                     /**
                      * 设置SecretID (masked)
-Supplementary description: Reserve the first 3 and last 4 digits, replace the middle with ***; replace all with *** if the length is less than 7.
+Supplemental description: Reserve the first 3 and last 4 digits, replace the middle with ***. If the length is less than 7, use *** as a complete replacement.
                      * @param _secretID SecretID (masked)
-Supplementary description: Reserve the first 3 and last 4 digits, replace the middle with ***; replace all with *** if the length is less than 7.
+Supplemental description: Reserve the first 3 and last 4 digits, replace the middle with ***. If the length is less than 7, use *** as a complete replacement.
                      * 
                      */
                     void SetSecretID(const std::string& _secretID);
@@ -94,18 +94,18 @@ Supplementary description: Reserve the first 3 and last 4 digits, replace the mi
 
                     /**
                      * 获取SecretKey (masked)
-Supplementary description: Reserve the first 3 and last 4 digits, replace the middle with ***; replace all with *** if the length is less than 7.
+Supplemental description: Reserve the first 3 and last 4 digits, replace the middle with ***. If the length is less than 7, use *** as a complete replacement.
                      * @return SecretKey SecretKey (masked)
-Supplementary description: Reserve the first 3 and last 4 digits, replace the middle with ***; replace all with *** if the length is less than 7.
+Supplemental description: Reserve the first 3 and last 4 digits, replace the middle with ***. If the length is less than 7, use *** as a complete replacement.
                      * 
                      */
                     std::string GetSecretKey() const;
 
                     /**
                      * 设置SecretKey (masked)
-Supplementary description: Reserve the first 3 and last 4 digits, replace the middle with ***; replace all with *** if the length is less than 7.
+Supplemental description: Reserve the first 3 and last 4 digits, replace the middle with ***. If the length is less than 7, use *** as a complete replacement.
                      * @param _secretKey SecretKey (masked)
-Supplementary description: Reserve the first 3 and last 4 digits, replace the middle with ***; replace all with *** if the length is less than 7.
+Supplemental description: Reserve the first 3 and last 4 digits, replace the middle with ***. If the length is less than 7, use *** as a complete replacement.
                      * 
                      */
                     void SetSecretKey(const std::string& _secretKey);
@@ -120,21 +120,21 @@ Supplementary description: Reserve the first 3 and last 4 digits, replace the mi
                 private:
 
                     /**
-                     * Credential provider flag (original text), such as tencentCam, aws, aliyun
+                     * Credential provider identifier (original), for example tencentCam, aws, aliyun
                      */
                     std::string m_system;
                     bool m_systemHasBeenSet;
 
                     /**
                      * SecretID (masked)
-Supplementary description: Reserve the first 3 and last 4 digits, replace the middle with ***; replace all with *** if the length is less than 7.
+Supplemental description: Reserve the first 3 and last 4 digits, replace the middle with ***. If the length is less than 7, use *** as a complete replacement.
                      */
                     std::string m_secretID;
                     bool m_secretIDHasBeenSet;
 
                     /**
                      * SecretKey (masked)
-Supplementary description: Reserve the first 3 and last 4 digits, replace the middle with ***; replace all with *** if the length is less than 7.
+Supplemental description: Reserve the first 3 and last 4 digits, replace the middle with ***. If the length is less than 7, use *** as a complete replacement.
                      */
                     std::string m_secretKey;
                     bool m_secretKeyHasBeenSet;

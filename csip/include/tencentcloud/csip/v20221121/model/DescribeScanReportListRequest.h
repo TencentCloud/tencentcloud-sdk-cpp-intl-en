@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool MemberIdHasBeenSet() const;
 
                     /**
-                     * 获取Filter conditions
-                     * @return Filter Filter conditions
+                     * 获取List Filters
+                     * @return Filter List Filters
                      * 
                      */
                     Filter GetFilter() const;
 
                     /**
-                     * 设置Filter conditions
-                     * @param _filter Filter conditions
+                     * 设置List Filters
+                     * @param _filter List Filters
                      * 
                      */
                     void SetFilter(const Filter& _filter);
@@ -94,7 +94,7 @@ namespace TencentCloud
                     bool m_memberIdHasBeenSet;
 
                     /**
-                     * Filter conditions
+                     * List Filters
                      */
                     Filter m_filter;
                     bool m_filterHasBeenSet;

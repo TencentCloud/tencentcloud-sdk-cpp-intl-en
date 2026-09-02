@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool MemberIdHasBeenSet() const;
 
                     /**
-                     * 获取Access key ID.
-                     * @return AccessKeyID Access key ID.
+                     * 获取Access key ID
+                     * @return AccessKeyID Access key ID
                      * 
                      */
                     uint64_t GetAccessKeyID() const;
 
                     /**
-                     * 设置Access key ID.
-                     * @param _accessKeyID Access key ID.
+                     * 设置Access key ID
+                     * @param _accessKeyID Access key ID
                      * 
                      */
                     void SetAccessKeyID(const uint64_t& _accessKeyID);
@@ -142,7 +142,7 @@ namespace TencentCloud
                     bool m_memberIdHasBeenSet;
 
                     /**
-                     * Access key ID.
+                     * Access key ID
                      */
                     uint64_t m_accessKeyID;
                     bool m_accessKeyIDHasBeenSet;

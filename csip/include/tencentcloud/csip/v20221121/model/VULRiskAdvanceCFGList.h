@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * List of advanced vulnerability scan configurations
+                * Vulnerability Risk Advanced Configuration List
                 */
                 class VULRiskAdvanceCFGList : public AbstractModel
                 {
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool VULNameHasBeenSet() const;
 
                     /**
-                     * 获取Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
-                     * @return RiskLevel Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
+                     * 获取Risk level. low: low risk. high: high risk. middle: medium risk. info: notification. extreme: critical.
+                     * @return RiskLevel Risk level. low: low risk. high: high risk. middle: medium risk. info: notification. extreme: critical.
                      * 
                      */
                     std::string GetRiskLevel() const;
 
                     /**
-                     * 设置Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
-                     * @param _riskLevel Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
+                     * 设置Risk level. low: low risk. high: high risk. middle: medium risk. info: notification. extreme: critical.
+                     * @param _riskLevel Risk level. low: low risk. high: high risk. middle: medium risk. info: notification. extreme: critical.
                      * 
                      */
                     void SetRiskLevel(const std::string& _riskLevel);
@@ -111,15 +111,15 @@ namespace TencentCloud
                     bool RiskLevelHasBeenSet() const;
 
                     /**
-                     * 获取Source of the check task
-                     * @return CheckFrom Source of the check task
+                     * 获取Recognition source
+                     * @return CheckFrom Recognition source
                      * 
                      */
                     std::string GetCheckFrom() const;
 
                     /**
-                     * 设置Source of the check task
-                     * @param _checkFrom Source of the check task
+                     * 设置Recognition source
+                     * @param _checkFrom Recognition source
                      * 
                      */
                     void SetCheckFrom(const std::string& _checkFrom);
@@ -153,15 +153,15 @@ namespace TencentCloud
                     bool EnableHasBeenSet() const;
 
                     /**
-                     * 获取Risk type.
-                     * @return VULType Risk type.
+                     * 获取Risk type
+                     * @return VULType Risk type
                      * 
                      */
                     std::string GetVULType() const;
 
                     /**
-                     * 设置Risk type.
-                     * @param _vULType Risk type.
+                     * 设置Risk type
+                     * @param _vULType Risk type
                      * 
                      */
                     void SetVULType(const std::string& _vULType);
@@ -174,15 +174,15 @@ namespace TencentCloud
                     bool VULTypeHasBeenSet() const;
 
                     /**
-                     * 获取Affected versions
-                     * @return ImpactVersion Affected versions
+                     * 获取Affected version
+                     * @return ImpactVersion Affected version
                      * 
                      */
                     std::string GetImpactVersion() const;
 
                     /**
-                     * 设置Affected versions
-                     * @param _impactVersion Affected versions
+                     * 设置Affected version
+                     * @param _impactVersion Affected version
                      * 
                      */
                     void SetImpactVersion(const std::string& _impactVersion);
@@ -363,15 +363,15 @@ namespace TencentCloud
                     bool PayloadHasBeenSet() const;
 
                     /**
-                     * 获取Technology reference
-                     * @return References Technology reference
+                     * 获取Technical reference
+                     * @return References Technical reference
                      * 
                      */
                     std::string GetReferences() const;
 
                     /**
-                     * 设置Technology reference
-                     * @param _references Technology reference
+                     * 设置Technical reference
+                     * @param _references Technical reference
                      * 
                      */
                     void SetReferences(const std::string& _references);
@@ -405,15 +405,15 @@ namespace TencentCloud
                     bool CVSSHasBeenSet() const;
 
                     /**
-                     * 获取Attack intensity
-                     * @return AttackHeat Attack intensity
+                     * 获取Attack level
+                     * @return AttackHeat Attack level
                      * 
                      */
                     std::string GetAttackHeat() const;
 
                     /**
-                     * 设置Attack intensity
-                     * @param _attackHeat Attack intensity
+                     * 设置Attack level
+                     * @param _attackHeat Attack level
                      * 
                      */
                     void SetAttackHeat(const std::string& _attackHeat);
@@ -426,15 +426,15 @@ namespace TencentCloud
                     bool AttackHeatHasBeenSet() const;
 
                     /**
-                     * 获取Security Product Support Status
-                     * @return ServiceSupport Security Product Support Status
+                     * 获取Security product support status
+                     * @return ServiceSupport Security product support status
                      * 
                      */
                     std::vector<ServiceSupport> GetServiceSupport() const;
 
                     /**
-                     * 设置Security Product Support Status
-                     * @param _serviceSupport Security Product Support Status
+                     * 设置Security product support status
+                     * @param _serviceSupport Security product support status
                      * 
                      */
                     void SetServiceSupport(const std::vector<ServiceSupport>& _serviceSupport);
@@ -482,13 +482,13 @@ namespace TencentCloud
                     bool m_vULNameHasBeenSet;
 
                     /**
-                     * Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
+                     * Risk level. low: low risk. high: high risk. middle: medium risk. info: notification. extreme: critical.
                      */
                     std::string m_riskLevel;
                     bool m_riskLevelHasBeenSet;
 
                     /**
-                     * Source of the check task
+                     * Recognition source
                      */
                     std::string m_checkFrom;
                     bool m_checkFromHasBeenSet;
@@ -500,13 +500,13 @@ namespace TencentCloud
                     bool m_enableHasBeenSet;
 
                     /**
-                     * Risk type.
+                     * Risk type
                      */
                     std::string m_vULType;
                     bool m_vULTypeHasBeenSet;
 
                     /**
-                     * Affected versions
+                     * Affected version
                      */
                     std::string m_impactVersion;
                     bool m_impactVersionHasBeenSet;
@@ -560,7 +560,7 @@ namespace TencentCloud
                     bool m_payloadHasBeenSet;
 
                     /**
-                     * Technology reference
+                     * Technical reference
                      */
                     std::string m_references;
                     bool m_referencesHasBeenSet;
@@ -572,13 +572,13 @@ namespace TencentCloud
                     bool m_cVSSHasBeenSet;
 
                     /**
-                     * Attack intensity
+                     * Attack level
                      */
                     std::string m_attackHeat;
                     bool m_attackHeatHasBeenSet;
 
                     /**
-                     * Security Product Support Status
+                     * Security product support status
                      */
                     std::vector<ServiceSupport> m_serviceSupport;
                     bool m_serviceSupportHasBeenSet;

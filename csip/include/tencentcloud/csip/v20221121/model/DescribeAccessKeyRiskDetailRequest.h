@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Risk record ID.
-                     * @return ID Risk record ID.
+                     * 获取Risk record ID
+                     * @return ID Risk record ID
                      * 
                      */
                     int64_t GetID() const;
 
                     /**
-                     * 设置Risk record ID.
-                     * @param _iD Risk record ID.
+                     * 设置Risk record ID
+                     * @param _iD Risk record ID
                      * 
                      */
                     void SetID(const int64_t& _iD);
@@ -87,7 +87,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Risk record ID.
+                     * Risk record ID
                      */
                     int64_t m_iD;
                     bool m_iDHasBeenSet;

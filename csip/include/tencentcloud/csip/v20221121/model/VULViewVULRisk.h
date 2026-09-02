@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Details of a vulnerability
+                * Vulnerability Risk Objects from Vulnerability's Perspective
                 */
                 class VULViewVULRisk : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Port
-                     * @return Port Port
+                     * 获取Port.
+                     * @return Port Port.
                      * 
                      */
                     std::string GetPort() const;
 
                     /**
-                     * 设置Port
-                     * @param _port Port
+                     * 设置Port.
+                     * @param _port Port.
                      * 
                      */
                     void SetPort(const std::string& _port);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool PortHasBeenSet() const;
 
                     /**
-                     * 获取Affected assets
-                     * @return NoHandleCount Affected assets
+                     * 获取Affect assets
+                     * @return NoHandleCount Affect assets
                      * 
                      */
                     int64_t GetNoHandleCount() const;
 
                     /**
-                     * 设置Affected assets
-                     * @param _noHandleCount Affected assets
+                     * 设置Affect assets
+                     * @param _noHandleCount Affect assets
                      * 
                      */
                     void SetNoHandleCount(const int64_t& _noHandleCount);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool NoHandleCountHasBeenSet() const;
 
                     /**
-                     * 获取Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
-                     * @return Level Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
+                     * 获取Risk level. low: low risk, high: high risk, middle: medium risk, info: notification, extreme: critical.
+                     * @return Level Risk level. low: low risk, high: high risk, middle: medium risk, info: notification, extreme: critical.
                      * 
                      */
                     std::string GetLevel() const;
 
                     /**
-                     * 设置Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
-                     * @param _level Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
+                     * 设置Risk level. low: low risk, high: high risk, middle: medium risk, info: notification, extreme: critical.
+                     * @param _level Risk level. low: low risk, high: high risk, middle: medium risk, info: notification, extreme: critical.
                      * 
                      */
                     void SetLevel(const std::string& _level);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool LevelHasBeenSet() const;
 
                     /**
-                     * 获取Components
-                     * @return Component Components
+                     * 获取Component
+                     * @return Component Component
                      * 
                      */
                     std::string GetComponent() const;
 
                     /**
-                     * 设置Components
-                     * @param _component Components
+                     * 设置Component
+                     * @param _component Component
                      * 
                      */
                     void SetComponent(const std::string& _component);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool ComponentHasBeenSet() const;
 
                     /**
-                     * 获取Last detected 
-                     * @return RecentTime Last detected 
+                     * 获取Latest Recognition Time
+                     * @return RecentTime Latest Recognition Time
                      * 
                      */
                     std::string GetRecentTime() const;
 
                     /**
-                     * 设置Last detected 
-                     * @param _recentTime Last detected 
+                     * 设置Latest Recognition Time
+                     * @param _recentTime Latest Recognition Time
                      * 
                      */
                     void SetRecentTime(const std::string& _recentTime);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool RecentTimeHasBeenSet() const;
 
                     /**
-                     * 获取First detected
-                     * @return FirstTime First detected
+                     * 获取First Recognition Time
+                     * @return FirstTime First Recognition Time
                      * 
                      */
                     std::string GetFirstTime() const;
 
                     /**
-                     * 设置First detected
-                     * @param _firstTime First detected
+                     * 设置First Recognition Time
+                     * @param _firstTime First Recognition Time
                      * 
                      */
                     void SetFirstTime(const std::string& _firstTime);
@@ -236,15 +236,15 @@ namespace TencentCloud
                     bool FromHasBeenSet() const;
 
                     /**
-                     * 获取Frontend index
-                     * @return Index Frontend index
+                     * 获取Front-end Index
+                     * @return Index Front-end Index
                      * 
                      */
                     std::string GetIndex() const;
 
                     /**
-                     * 设置Frontend index
-                     * @param _index Frontend index
+                     * 设置Front-end Index
+                     * @param _index Front-end Index
                      * 
                      */
                     void SetIndex(const std::string& _index);
@@ -299,15 +299,15 @@ namespace TencentCloud
                     bool VULNameHasBeenSet() const;
 
                     /**
-                     * 获取CVE number
-                     * @return CVE CVE number
+                     * 获取cve
+                     * @return CVE cve
                      * 
                      */
                     std::string GetCVE() const;
 
                     /**
-                     * 设置CVE number
-                     * @param _cVE CVE number
+                     * 设置cve
+                     * @param _cVE cve
                      * 
                      */
                     void SetCVE(const std::string& _cVE);
@@ -362,15 +362,15 @@ namespace TencentCloud
                     bool PayloadHasBeenSet() const;
 
                     /**
-                     * 获取Affected component
-                     * @return AppName Affected component
+                     * 获取Vulnerability Impact Component
+                     * @return AppName Vulnerability Impact Component
                      * 
                      */
                     std::string GetAppName() const;
 
                     /**
-                     * 设置Affected component
-                     * @param _appName Affected component
+                     * 设置Vulnerability Impact Component
+                     * @param _appName Vulnerability Impact Component
                      * 
                      */
                     void SetAppName(const std::string& _appName);
@@ -383,15 +383,15 @@ namespace TencentCloud
                     bool AppNameHasBeenSet() const;
 
                     /**
-                     * 获取Technology reference
-                     * @return References Technology reference
+                     * 获取Technical reference
+                     * @return References Technical reference
                      * 
                      */
                     std::string GetReferences() const;
 
                     /**
-                     * 设置Technology reference
-                     * @param _references Technology reference
+                     * 设置Technical reference
+                     * @param _references Technical reference
                      * 
                      */
                     void SetReferences(const std::string& _references);
@@ -404,15 +404,15 @@ namespace TencentCloud
                     bool ReferencesHasBeenSet() const;
 
                     /**
-                     * 获取Vulnerability Affected Version
-                     * @return AppVersion Vulnerability Affected Version
+                     * 获取Affected versions
+                     * @return AppVersion Affected versions
                      * 
                      */
                     std::string GetAppVersion() const;
 
                     /**
-                     * 设置Vulnerability Affected Version
-                     * @param _appVersion Vulnerability Affected Version
+                     * 设置Affected versions
+                     * @param _appVersion Affected versions
                      * 
                      */
                     void SetAppVersion(const std::string& _appVersion);
@@ -425,15 +425,15 @@ namespace TencentCloud
                     bool AppVersionHasBeenSet() const;
 
                     /**
-                     * 获取risks
-                     * @return VULURL risks
+                     * 获取Risk Points
+                     * @return VULURL Risk Points
                      * 
                      */
                     std::string GetVULURL() const;
 
                     /**
-                     * 设置risks
-                     * @param _vULURL risks
+                     * 设置Risk Points
+                     * @param _vULURL Risk Points
                      * 
                      */
                     void SetVULURL(const std::string& _vULURL);
@@ -467,15 +467,15 @@ namespace TencentCloud
                     bool NickHasBeenSet() const;
 
                     /**
-                     * 获取User `appid`
-                     * @return AppId User `appid`
+                     * 获取User appid.
+                     * @return AppId User appid.
                      * 
                      */
                     std::string GetAppId() const;
 
                     /**
-                     * 设置User `appid`
-                     * @param _appId User `appid`
+                     * 设置User appid.
+                     * @param _appId User appid.
                      * 
                      */
                     void SetAppId(const std::string& _appId);
@@ -553,37 +553,37 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Port
+                     * Port.
                      */
                     std::string m_port;
                     bool m_portHasBeenSet;
 
                     /**
-                     * Affected assets
+                     * Affect assets
                      */
                     int64_t m_noHandleCount;
                     bool m_noHandleCountHasBeenSet;
 
                     /**
-                     * Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
+                     * Risk level. low: low risk, high: high risk, middle: medium risk, info: notification, extreme: critical.
                      */
                     std::string m_level;
                     bool m_levelHasBeenSet;
 
                     /**
-                     * Components
+                     * Component
                      */
                     std::string m_component;
                     bool m_componentHasBeenSet;
 
                     /**
-                     * Last detected 
+                     * Latest Recognition Time
                      */
                     std::string m_recentTime;
                     bool m_recentTimeHasBeenSet;
 
                     /**
-                     * First detected
+                     * First Recognition Time
                      */
                     std::string m_firstTime;
                     bool m_firstTimeHasBeenSet;
@@ -607,7 +607,7 @@ namespace TencentCloud
                     bool m_fromHasBeenSet;
 
                     /**
-                     * Frontend index
+                     * Front-end Index
                      */
                     std::string m_index;
                     bool m_indexHasBeenSet;
@@ -625,7 +625,7 @@ namespace TencentCloud
                     bool m_vULNameHasBeenSet;
 
                     /**
-                     * CVE number
+                     * cve
                      */
                     std::string m_cVE;
                     bool m_cVEHasBeenSet;
@@ -643,25 +643,25 @@ namespace TencentCloud
                     bool m_payloadHasBeenSet;
 
                     /**
-                     * Affected component
+                     * Vulnerability Impact Component
                      */
                     std::string m_appName;
                     bool m_appNameHasBeenSet;
 
                     /**
-                     * Technology reference
+                     * Technical reference
                      */
                     std::string m_references;
                     bool m_referencesHasBeenSet;
 
                     /**
-                     * Vulnerability Affected Version
+                     * Affected versions
                      */
                     std::string m_appVersion;
                     bool m_appVersionHasBeenSet;
 
                     /**
-                     * risks
+                     * Risk Points
                      */
                     std::string m_vULURL;
                     bool m_vULURLHasBeenSet;
@@ -673,7 +673,7 @@ namespace TencentCloud
                     bool m_nickHasBeenSet;
 
                     /**
-                     * User `appid`
+                     * User appid.
                      */
                     std::string m_appId;
                     bool m_appIdHasBeenSet;

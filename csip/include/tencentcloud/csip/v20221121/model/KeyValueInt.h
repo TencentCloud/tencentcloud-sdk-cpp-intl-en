@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Key-value pair (integer).
+                * Key-value pair (integer)
                 */
                 class KeyValueInt : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Key</p>
-                     * @return Key <p>Key</p>
+                     * 获取<p>Key.</p>
+                     * @return Key <p>Key.</p>
                      * 
                      */
                     int64_t GetKey() const;
 
                     /**
-                     * 设置<p>Key</p>
-                     * @param _key <p>Key</p>
+                     * 设置<p>Key.</p>
+                     * @param _key <p>Key.</p>
                      * 
                      */
                     void SetKey(const int64_t& _key);
@@ -91,7 +91,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Key</p>
+                     * <p>Key.</p>
                      */
                     int64_t m_key;
                     bool m_keyHasBeenSet;

@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Group Account Member ID
-                     * @return MemberId Group Account Member ID
+                     * 获取<p>Group account member id</p>
+                     * @return MemberId <p>Group account member id</p>
                      * 
                      */
                     std::vector<std::string> GetMemberId() const;
 
                     /**
-                     * 设置Group Account Member ID
-                     * @param _memberId Group Account Member ID
+                     * 设置<p>Group account member id</p>
+                     * @param _memberId <p>Group account member id</p>
                      * 
                      */
                     void SetMemberId(const std::vector<std::string>& _memberId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool MemberIdHasBeenSet() const;
 
                     /**
-                     * 获取Health check task id.
-                     * @return TaskLogId Health check task id.
+                     * 获取Health check task id
+                     * @return TaskLogId Health check task id
                      * 
                      */
                     std::string GetTaskLogId() const;
 
                     /**
-                     * 设置Health check task id.
-                     * @param _taskLogId Health check task id.
+                     * 设置Health check task id
+                     * @param _taskLogId Health check task id
                      * 
                      */
                     void SetTaskLogId(const std::string& _taskLogId);
@@ -87,13 +87,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Group Account Member ID
+                     * <p>Group account member id</p>
                      */
                     std::vector<std::string> m_memberId;
                     bool m_memberIdHasBeenSet;
 
                     /**
-                     * Health check task id.
+                     * Health check task id
                      */
                     std::string m_taskLogId;
                     bool m_taskLogIdHasBeenSet;

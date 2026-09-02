@@ -130,8 +130,8 @@ namespace TencentCloud
                     bool AppIdListHasBeenSet() const;
 
                     /**
-                     * 获取Public network private network enumeration
-                     * @return PublicPrivateAttr Public network private network enumeration
+                     * 获取Public/private network enumeration
+                     * @return PublicPrivateAttr Public/private network enumeration
                      * 
                      */
                     std::vector<FilterDataObject> GetPublicPrivateAttr() const;
@@ -182,7 +182,7 @@ namespace TencentCloud
                     bool m_appIdListHasBeenSet;
 
                     /**
-                     * Public network private network enumeration
+                     * Public/private network enumeration
                      */
                     std::vector<FilterDataObject> m_publicPrivateAttr;
                     bool m_publicPrivateAttrHasBeenSet;

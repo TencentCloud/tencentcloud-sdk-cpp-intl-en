@@ -46,8 +46,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Data list
-                     * @return Data Data list
+                     * 获取List
+                     * @return Data List
                      * 
                      */
                     std::vector<AssetClusterPod> GetData() const;
@@ -60,8 +60,8 @@ namespace TencentCloud
                     bool DataHasBeenSet() const;
 
                     /**
-                     * 获取Total number of results
-                     * @return TotalCount Total number of results
+                     * 获取Total number.
+                     * @return TotalCount Total number.
                      * 
                      */
                     int64_t GetTotalCount() const;
@@ -74,8 +74,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取List of cluster pod status
-                     * @return PodStatusList List of cluster pod status
+                     * 获取Cluster Pod Status Enumeration
+                     * @return PodStatusList Cluster Pod Status Enumeration
                      * 
                      */
                     std::vector<FilterDataObject> GetPodStatusList() const;
@@ -88,8 +88,8 @@ namespace TencentCloud
                     bool PodStatusListHasBeenSet() const;
 
                     /**
-                     * 获取List of namespaces
-                     * @return NamespaceList List of namespaces
+                     * 获取Namespace Enumeration
+                     * @return NamespaceList Namespace Enumeration
                      * 
                      */
                     std::vector<FilterDataObject> GetNamespaceList() const;
@@ -102,8 +102,8 @@ namespace TencentCloud
                     bool NamespaceListHasBeenSet() const;
 
                     /**
-                     * 获取List of regions
-                     * @return RegionList List of regions
+                     * 获取Region Enumeration
+                     * @return RegionList Region Enumeration
                      * 
                      */
                     std::vector<FilterDataObject> GetRegionList() const;
@@ -116,8 +116,8 @@ namespace TencentCloud
                     bool RegionListHasBeenSet() const;
 
                     /**
-                     * 获取List of users (AppId)
-                     * @return AppIdList List of users (AppId)
+                     * 获取Tenant Enumeration
+                     * @return AppIdList Tenant Enumeration
                      * 
                      */
                     std::vector<FilterDataObject> GetAppIdList() const;
@@ -132,37 +132,37 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Data list
+                     * List
                      */
                     std::vector<AssetClusterPod> m_data;
                     bool m_dataHasBeenSet;
 
                     /**
-                     * Total number of results
+                     * Total number.
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * List of cluster pod status
+                     * Cluster Pod Status Enumeration
                      */
                     std::vector<FilterDataObject> m_podStatusList;
                     bool m_podStatusListHasBeenSet;
 
                     /**
-                     * List of namespaces
+                     * Namespace Enumeration
                      */
                     std::vector<FilterDataObject> m_namespaceList;
                     bool m_namespaceListHasBeenSet;
 
                     /**
-                     * List of regions
+                     * Region Enumeration
                      */
                     std::vector<FilterDataObject> m_regionList;
                     bool m_regionListHasBeenSet;
 
                     /**
-                     * List of users (AppId)
+                     * Tenant Enumeration
                      */
                     std::vector<FilterDataObject> m_appIdList;
                     bool m_appIdListHasBeenSet;

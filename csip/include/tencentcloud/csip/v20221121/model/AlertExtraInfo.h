@@ -91,15 +91,15 @@ namespace TencentCloud
                     bool LeakContentHasBeenSet() const;
 
                     /**
-                     * 获取Leak API
-                     * @return LeakAPI Leak API
+                     * 获取Leak APIs
+                     * @return LeakAPI Leak APIs
                      * 
                      */
                     std::string GetLeakAPI() const;
 
                     /**
-                     * 设置Leak API
-                     * @param _leakAPI Leak API
+                     * 设置Leak APIs
+                     * @param _leakAPI Leak APIs
                      * 
                      */
                     void SetLeakAPI(const std::string& _leakAPI);
@@ -133,15 +133,15 @@ namespace TencentCloud
                     bool SecretIDHasBeenSet() const;
 
                     /**
-                     * 获取hit rule
-                     * @return Rule hit rule
+                     * 获取Matched rule
+                     * @return Rule Matched rule
                      * 
                      */
                     std::string GetRule() const;
 
                     /**
-                     * 设置hit rule
-                     * @param _rule hit rule
+                     * 设置Matched rule
+                     * @param _rule Matched rule
                      * 
                      */
                     void SetRule(const std::string& _rule);
@@ -217,15 +217,15 @@ namespace TencentCloud
                     bool AttackContentHasBeenSet() const;
 
                     /**
-                     * 获取Attack IP profiling
-                     * @return AttackIPProfile Attack IP profiling
+                     * 获取Attack IP profiling.
+                     * @return AttackIPProfile Attack IP profiling.
                      * 
                      */
                     std::string GetAttackIPProfile() const;
 
                     /**
-                     * 设置Attack IP profiling
-                     * @param _attackIPProfile Attack IP profiling
+                     * 设置Attack IP profiling.
+                     * @param _attackIPProfile Attack IP profiling.
                      * 
                      */
                     void SetAttackIPProfile(const std::string& _attackIPProfile);
@@ -469,15 +469,15 @@ namespace TencentCloud
                     bool ServiceProcessHasBeenSet() const;
 
                     /**
-                     * 获取Filename
-                     * @return FileName Filename
+                     * 获取File name
+                     * @return FileName File name
                      * 
                      */
                     std::string GetFileName() const;
 
                     /**
-                     * 设置Filename
-                     * @param _fileName Filename
+                     * 设置File name
+                     * @param _fileName File name
                      * 
                      */
                     void SetFileName(const std::string& _fileName);
@@ -553,15 +553,15 @@ namespace TencentCloud
                     bool FileLastAccessTimeHasBeenSet() const;
 
                     /**
-                     * 获取file modification time
-                     * @return FileModifyTime file modification time
+                     * 获取File modification time
+                     * @return FileModifyTime File modification time
                      * 
                      */
                     std::string GetFileModifyTime() const;
 
                     /**
-                     * 设置file modification time
-                     * @param _fileModifyTime file modification time
+                     * 设置File modification time
+                     * @param _fileModifyTime File modification time
                      * 
                      */
                     void SetFileModifyTime(const std::string& _fileModifyTime);
@@ -658,15 +658,15 @@ namespace TencentCloud
                     bool VirusFileTagsHasBeenSet() const;
 
                     /**
-                     * 获取behavioral characteristics
-                     * @return BehavioralCharacteristics behavioral characteristics
+                     * 获取Behavioral characteristics
+                     * @return BehavioralCharacteristics Behavioral characteristics
                      * 
                      */
                     std::string GetBehavioralCharacteristics() const;
 
                     /**
-                     * 设置behavioral characteristics
-                     * @param _behavioralCharacteristics behavioral characteristics
+                     * 设置Behavioral characteristics
+                     * @param _behavioralCharacteristics Behavioral characteristics
                      * 
                      */
                     void SetBehavioralCharacteristics(const std::string& _behavioralCharacteristics);
@@ -679,15 +679,15 @@ namespace TencentCloud
                     bool BehavioralCharacteristicsHasBeenSet() const;
 
                     /**
-                     * 获取process name (PID)
-                     * @return ProcessNamePID process name (PID)
+                     * 获取Process name (PID)
+                     * @return ProcessNamePID Process name (PID)
                      * 
                      */
                     std::string GetProcessNamePID() const;
 
                     /**
-                     * 设置process name (PID)
-                     * @param _processNamePID process name (PID)
+                     * 设置Process name (PID)
+                     * @param _processNamePID Process name (PID)
                      * 
                      */
                     void SetProcessNamePID(const std::string& _processNamePID);
@@ -721,15 +721,15 @@ namespace TencentCloud
                     bool ProcessPathHasBeenSet() const;
 
                     /**
-                     * 获取Command line of the process
-                     * @return ProcessCommandLine Command line of the process
+                     * 获取Process command line
+                     * @return ProcessCommandLine Process command line
                      * 
                      */
                     std::string GetProcessCommandLine() const;
 
                     /**
-                     * 设置Command line of the process
-                     * @param _processCommandLine Command line of the process
+                     * 设置Process command line
+                     * @param _processCommandLine Process command line
                      * 
                      */
                     void SetProcessCommandLine(const std::string& _processCommandLine);
@@ -784,15 +784,15 @@ namespace TencentCloud
                     bool ExecutedCommandHasBeenSet() const;
 
                     /**
-                     * 获取Affected Filename
-                     * @return AffectedFileName Affected Filename
+                     * 获取Affected file name
+                     * @return AffectedFileName Affected file name
                      * 
                      */
                     std::string GetAffectedFileName() const;
 
                     /**
-                     * 设置Affected Filename
-                     * @param _affectedFileName Affected Filename
+                     * 设置Affected file name
+                     * @param _affectedFileName Affected file name
                      * 
                      */
                     void SetAffectedFileName(const std::string& _affectedFileName);
@@ -805,15 +805,15 @@ namespace TencentCloud
                     bool AffectedFileNameHasBeenSet() const;
 
                     /**
-                     * 获取bait path
-                     * @return DecoyPath bait path
+                     * 获取Bait path
+                     * @return DecoyPath Bait path
                      * 
                      */
                     std::string GetDecoyPath() const;
 
                     /**
-                     * 设置bait path
-                     * @param _decoyPath bait path
+                     * 设置Bait path
+                     * @param _decoyPath Bait path
                      * 
                      */
                     void SetDecoyPath(const std::string& _decoyPath);
@@ -847,15 +847,15 @@ namespace TencentCloud
                     bool MaliciousProcessFileSizeHasBeenSet() const;
 
                     /**
-                     * 获取Malicious process file MD5
-                     * @return MaliciousProcessFileMD5 Malicious process file MD5
+                     * 获取MD5 of the malicious process file
+                     * @return MaliciousProcessFileMD5 MD5 of the malicious process file
                      * 
                      */
                     std::string GetMaliciousProcessFileMD5() const;
 
                     /**
-                     * 设置Malicious process file MD5
-                     * @param _maliciousProcessFileMD5 Malicious process file MD5
+                     * 设置MD5 of the malicious process file
+                     * @param _maliciousProcessFileMD5 MD5 of the malicious process file
                      * 
                      */
                     void SetMaliciousProcessFileMD5(const std::string& _maliciousProcessFileMD5);
@@ -910,15 +910,15 @@ namespace TencentCloud
                     bool MaliciousProcessPathHasBeenSet() const;
 
                     /**
-                     * 获取malicious process start time
-                     * @return MaliciousProcessStartTime malicious process start time
+                     * 获取Malicious process startup time
+                     * @return MaliciousProcessStartTime Malicious process startup time
                      * 
                      */
                     std::string GetMaliciousProcessStartTime() const;
 
                     /**
-                     * 设置malicious process start time
-                     * @param _maliciousProcessStartTime malicious process start time
+                     * 设置Malicious process startup time
+                     * @param _maliciousProcessStartTime Malicious process startup time
                      * 
                      */
                     void SetMaliciousProcessStartTime(const std::string& _maliciousProcessStartTime);
@@ -931,15 +931,15 @@ namespace TencentCloud
                     bool MaliciousProcessStartTimeHasBeenSet() const;
 
                     /**
-                     * 获取command content
-                     * @return CommandContent command content
+                     * 获取Command
+                     * @return CommandContent Command
                      * 
                      */
                     std::string GetCommandContent() const;
 
                     /**
-                     * 设置command content
-                     * @param _commandContent command content
+                     * 设置Command
+                     * @param _commandContent Command
                      * 
                      */
                     void SetCommandContent(const std::string& _commandContent);
@@ -994,15 +994,15 @@ namespace TencentCloud
                     bool UserGroupHasBeenSet() const;
 
                     /**
-                     * 获取Add new permission
-                     * @return NewPermissions Add new permission
+                     * 获取Added permission
+                     * @return NewPermissions Added permission
                      * 
                      */
                     std::string GetNewPermissions() const;
 
                     /**
-                     * 设置Add new permission
-                     * @param _newPermissions Add new permission
+                     * 设置Added permission
+                     * @param _newPermissions Added permission
                      * 
                      */
                     void SetNewPermissions(const std::string& _newPermissions);
@@ -1057,15 +1057,15 @@ namespace TencentCloud
                     bool ClassNameHasBeenSet() const;
 
                     /**
-                     * 获取class loader
-                     * @return ClassLoader class loader
+                     * 获取Class loader to which it belongs
+                     * @return ClassLoader Class loader to which it belongs
                      * 
                      */
                     std::string GetClassLoader() const;
 
                     /**
-                     * 设置class loader
-                     * @param _classLoader class loader
+                     * 设置Class loader to which it belongs
+                     * @param _classLoader Class loader to which it belongs
                      * 
                      */
                     void SetClassLoader(const std::string& _classLoader);
@@ -1078,15 +1078,15 @@ namespace TencentCloud
                     bool ClassLoaderHasBeenSet() const;
 
                     /**
-                     * 获取File size
-                     * @return ClassFileSize File size
+                     * 获取Individual file size
+                     * @return ClassFileSize Individual file size
                      * 
                      */
                     std::string GetClassFileSize() const;
 
                     /**
-                     * 设置File size
-                     * @param _classFileSize File size
+                     * 设置Individual file size
+                     * @param _classFileSize Individual file size
                      * 
                      */
                     void SetClassFileSize(const std::string& _classFileSize);
@@ -1141,15 +1141,15 @@ namespace TencentCloud
                     bool ParentClassNameHasBeenSet() const;
 
                     /**
-                     * 获取inherit an API
-                     * @return InheritedInterface inherit an API
+                     * 获取Inherit interfaces
+                     * @return InheritedInterface Inherit interfaces
                      * 
                      */
                     std::string GetInheritedInterface() const;
 
                     /**
-                     * 设置inherit an API
-                     * @param _inheritedInterface inherit an API
+                     * 设置Inherit interfaces
+                     * @param _inheritedInterface Inherit interfaces
                      * 
                      */
                     void SetInheritedInterface(const std::string& _inheritedInterface);
@@ -1183,15 +1183,15 @@ namespace TencentCloud
                     bool CommentHasBeenSet() const;
 
                     /**
-                     * 获取payload content
-                     * @return PayloadContent payload content
+                     * 获取Payload content
+                     * @return PayloadContent Payload content
                      * 
                      */
                     std::string GetPayloadContent() const;
 
                     /**
-                     * 设置payload content
-                     * @param _payloadContent payload content
+                     * 设置Payload content
+                     * @param _payloadContent Payload content
                      * 
                      */
                     void SetPayloadContent(const std::string& _payloadContent);
@@ -1288,15 +1288,15 @@ namespace TencentCloud
                     bool FilePermissionHasBeenSet() const;
 
                     /**
-                     * 获取Information field from log analysis
-                     * @return FromLogAnalysisData Information field from log analysis
+                     * 获取Information fields that come from log analysis
+                     * @return FromLogAnalysisData Information fields that come from log analysis
                      * 
                      */
                     std::vector<KeyValue> GetFromLogAnalysisData() const;
 
                     /**
-                     * 设置Information field from log analysis
-                     * @param _fromLogAnalysisData Information field from log analysis
+                     * 设置Information fields that come from log analysis
+                     * @param _fromLogAnalysisData Information fields that come from log analysis
                      * 
                      */
                     void SetFromLogAnalysisData(const std::vector<KeyValue>& _fromLogAnalysisData);
@@ -1309,15 +1309,15 @@ namespace TencentCloud
                     bool FromLogAnalysisDataHasBeenSet() const;
 
                     /**
-                     * 获取probe hit
-                     * @return HitProbe probe hit
+                     * 获取Cache hit probe
+                     * @return HitProbe Cache hit probe
                      * 
                      */
                     std::string GetHitProbe() const;
 
                     /**
-                     * 设置probe hit
-                     * @param _hitProbe probe hit
+                     * 设置Cache hit probe
+                     * @param _hitProbe Cache hit probe
                      * 
                      */
                     void SetHitProbe(const std::string& _hitProbe);
@@ -1330,18 +1330,18 @@ namespace TencentCloud
                     bool HitProbeHasBeenSet() const;
 
                     /**
-                     * 获取hit honeypot
+                     * 获取Hit a honeypot
 
-                     * @return HitHoneyPot hit honeypot
+                     * @return HitHoneyPot Hit a honeypot
 
                      * 
                      */
                     std::string GetHitHoneyPot() const;
 
                     /**
-                     * 设置hit honeypot
+                     * 设置Hit a honeypot
 
-                     * @param _hitHoneyPot hit honeypot
+                     * @param _hitHoneyPot Hit a honeypot
 
                      * 
                      */
@@ -1355,15 +1355,15 @@ namespace TencentCloud
                     bool HitHoneyPotHasBeenSet() const;
 
                     /**
-                     * 获取command list
-                     * @return CommandList command list
+                     * 获取Command list
+                     * @return CommandList Command list
                      * 
                      */
                     std::string GetCommandList() const;
 
                     /**
-                     * 设置command list
-                     * @param _commandList command list
+                     * 设置Command list
+                     * @param _commandList Command list
                      * 
                      */
                     void SetCommandList(const std::string& _commandList);
@@ -1376,18 +1376,18 @@ namespace TencentCloud
                     bool CommandListHasBeenSet() const;
 
                     /**
-                     * 获取Attack event description
+                     * 获取Description of the attack event
 
-                     * @return AttackEventDesc Attack event description
+                     * @return AttackEventDesc Description of the attack event
 
                      * 
                      */
                     std::string GetAttackEventDesc() const;
 
                     /**
-                     * 设置Attack event description
+                     * 设置Description of the attack event
 
-                     * @param _attackEventDesc Attack event description
+                     * @param _attackEventDesc Description of the attack event
 
                      * 
                      */
@@ -1401,15 +1401,15 @@ namespace TencentCloud
                     bool AttackEventDescHasBeenSet() const;
 
                     /**
-                     * 获取Process information
-                     * @return ProcessInfo Process information
+                     * 获取Process information.
+                     * @return ProcessInfo Process information.
                      * 
                      */
                     std::string GetProcessInfo() const;
 
                     /**
-                     * 设置Process information
-                     * @param _processInfo Process information
+                     * 设置Process information.
+                     * @param _processInfo Process information.
                      * 
                      */
                     void SetProcessInfo(const std::string& _processInfo);
@@ -1422,15 +1422,15 @@ namespace TencentCloud
                     bool ProcessInfoHasBeenSet() const;
 
                     /**
-                     * 获取Login username & password
-                     * @return UserNameAndPwd Login username & password
+                     * 获取Use username and password
+                     * @return UserNameAndPwd Use username and password
                      * 
                      */
                     std::string GetUserNameAndPwd() const;
 
                     /**
-                     * 设置Login username & password
-                     * @param _userNameAndPwd Login username & password
+                     * 设置Use username and password
+                     * @param _userNameAndPwd Use username and password
                      * 
                      */
                     void SetUserNameAndPwd(const std::string& _userNameAndPwd);
@@ -1485,15 +1485,15 @@ namespace TencentCloud
                     bool StrategyNameHasBeenSet() const;
 
                     /**
-                     * 获取Host protection hit policy is a combination of policy ID and Policy Name
-                     * @return HitStrategy Host protection hit policy is a combination of policy ID and Policy Name
+                     * 获取Host protection hit policy, which is a combination of the policy ID and policy name.
+                     * @return HitStrategy Host protection hit policy, which is a combination of the policy ID and policy name.
                      * 
                      */
                     std::string GetHitStrategy() const;
 
                     /**
-                     * 设置Host protection hit policy is a combination of policy ID and Policy Name
-                     * @param _hitStrategy Host protection hit policy is a combination of policy ID and Policy Name
+                     * 设置Host protection hit policy, which is a combination of the policy ID and policy name.
+                     * @param _hitStrategy Host protection hit policy, which is a combination of the policy ID and policy name.
                      * 
                      */
                     void SetHitStrategy(const std::string& _hitStrategy);
@@ -1548,15 +1548,15 @@ namespace TencentCloud
                     bool PIDHasBeenSet() const;
 
                     /**
-                     * 获取Container Pod name
-                     * @return PodName Container Pod name
+                     * 获取Pod name of the container
+                     * @return PodName Pod name of the container
                      * 
                      */
                     std::string GetPodName() const;
 
                     /**
-                     * 设置Container Pod name
-                     * @param _podName Container Pod name
+                     * 设置Pod name of the container
+                     * @param _podName Pod name of the container
                      * 
                      */
                     void SetPodName(const std::string& _podName);
@@ -1569,15 +1569,15 @@ namespace TencentCloud
                     bool PodNameHasBeenSet() const;
 
                     /**
-                     * 获取Container Pod ID
-                     * @return PodID Container Pod ID
+                     * 获取Pod ID of the container
+                     * @return PodID Pod ID of the container
                      * 
                      */
                     std::string GetPodID() const;
 
                     /**
-                     * 设置Container Pod ID
-                     * @param _podID Container Pod ID
+                     * 设置Pod ID of the container
+                     * @param _podID Pod ID of the container
                      * 
                      */
                     void SetPodID(const std::string& _podID);
@@ -1611,15 +1611,15 @@ namespace TencentCloud
                     bool ResponseHasBeenSet() const;
 
                     /**
-                     * 获取system call
-                     * @return SystemCall system call
+                     * 获取System call
+                     * @return SystemCall System call
                      * 
                      */
                     std::string GetSystemCall() const;
 
                     /**
-                     * 设置system call
-                     * @param _systemCall system call
+                     * 设置System call
+                     * @param _systemCall System call
                      * 
                      */
                     void SetSystemCall(const std::string& _systemCall);
@@ -1632,15 +1632,15 @@ namespace TencentCloud
                     bool SystemCallHasBeenSet() const;
 
                     /**
-                     * 获取Operation type
-                     * @return Verb Operation type
+                     * 获取Operation type.
+                     * @return Verb Operation type.
                      * 
                      */
                     std::string GetVerb() const;
 
                     /**
-                     * 设置Operation type
-                     * @param _verb Operation type
+                     * 设置Operation type.
+                     * @param _verb Operation type.
                      * 
                      */
                     void SetVerb(const std::string& _verb);
@@ -1737,15 +1737,15 @@ namespace TencentCloud
                     bool DescriptionHasBeenSet() const;
 
                     /**
-                     * 获取Destination address (container reverse shell)
-                     * @return TargetAddress Destination address (container reverse shell)
+                     * 获取Target address (container reverse shell)
+                     * @return TargetAddress Target address (container reverse shell)
                      * 
                      */
                     std::string GetTargetAddress() const;
 
                     /**
-                     * 设置Destination address (container reverse shell)
-                     * @param _targetAddress Destination address (container reverse shell)
+                     * 设置Target address (container reverse shell)
+                     * @param _targetAddress Target address (container reverse shell)
                      * 
                      */
                     void SetTargetAddress(const std::string& _targetAddress);
@@ -1758,15 +1758,15 @@ namespace TencentCloud
                     bool TargetAddressHasBeenSet() const;
 
                     /**
-                     * 获取Malicious request domain name (container malicious outbound connection)
-                     * @return MaliciousRequestDomain Malicious request domain name (container malicious outbound connection)
+                     * 获取Malicious request domain name (malicious outbound connection of a container)
+                     * @return MaliciousRequestDomain Malicious request domain name (malicious outbound connection of a container)
                      * 
                      */
                     std::string GetMaliciousRequestDomain() const;
 
                     /**
-                     * 设置Malicious request domain name (container malicious outbound connection)
-                     * @param _maliciousRequestDomain Malicious request domain name (container malicious outbound connection)
+                     * 设置Malicious request domain name (malicious outbound connection of a container)
+                     * @param _maliciousRequestDomain Malicious request domain name (malicious outbound connection of a container)
                      * 
                      */
                     void SetMaliciousRequestDomain(const std::string& _maliciousRequestDomain);
@@ -1779,15 +1779,15 @@ namespace TencentCloud
                     bool MaliciousRequestDomainHasBeenSet() const;
 
                     /**
-                     * 获取Rule Type (Container K8sAPI Exception Request)
-                     * @return RuleType Rule Type (Container K8sAPI Exception Request)
+                     * 获取Rule type (exceptional request of the K8s API in the container)
+                     * @return RuleType Rule type (exceptional request of the K8s API in the container)
                      * 
                      */
                     std::string GetRuleType() const;
 
                     /**
-                     * 设置Rule Type (Container K8sAPI Exception Request)
-                     * @param _ruleType Rule Type (Container K8sAPI Exception Request)
+                     * 设置Rule type (exceptional request of the K8s API in the container)
+                     * @param _ruleType Rule type (exceptional request of the K8s API in the container)
                      * 
                      */
                     void SetRuleType(const std::string& _ruleType);
@@ -1800,15 +1800,15 @@ namespace TencentCloud
                     bool RuleTypeHasBeenSet() const;
 
                     /**
-                     * 获取Requested Resource (Container K8sAPI Exception Request)
-                     * @return RequestURI Requested Resource (Container K8sAPI Exception Request)
+                     * 获取Requested resource (exceptional request for K8s API of a container)
+                     * @return RequestURI Requested resource (exceptional request for K8s API of a container)
                      * 
                      */
                     std::string GetRequestURI() const;
 
                     /**
-                     * 设置Requested Resource (Container K8sAPI Exception Request)
-                     * @param _requestURI Requested Resource (Container K8sAPI Exception Request)
+                     * 设置Requested resource (exceptional request for K8s API of a container)
+                     * @param _requestURI Requested resource (exceptional request for K8s API of a container)
                      * 
                      */
                     void SetRequestURI(const std::string& _requestURI);
@@ -1821,15 +1821,15 @@ namespace TencentCloud
                     bool RequestURIHasBeenSet() const;
 
                     /**
-                     * 获取Request Initiating User (Container K8sAPI Exception Request)
-                     * @return RequestUser Request Initiating User (Container K8sAPI Exception Request)
+                     * 获取Request initiating user (container K8s API abnormal request)
+                     * @return RequestUser Request initiating user (container K8s API abnormal request)
                      * 
                      */
                     std::string GetRequestUser() const;
 
                     /**
-                     * 设置Request Initiating User (Container K8sAPI Exception Request)
-                     * @param _requestUser Request Initiating User (Container K8sAPI Exception Request)
+                     * 设置Request initiating user (container K8s API abnormal request)
+                     * @param _requestUser Request initiating user (container K8s API abnormal request)
                      * 
                      */
                     void SetRequestUser(const std::string& _requestUser);
@@ -1842,15 +1842,15 @@ namespace TencentCloud
                     bool RequestUserHasBeenSet() const;
 
                     /**
-                     * 获取Request Object (Container K8sAPI Exception Request)
-                     * @return RequestObject Request Object (Container K8sAPI Exception Request)
+                     * 获取Request object (exceptional K8s API request in a container)
+                     * @return RequestObject Request object (exceptional K8s API request in a container)
                      * 
                      */
                     std::string GetRequestObject() const;
 
                     /**
-                     * 设置Request Object (Container K8sAPI Exception Request)
-                     * @param _requestObject Request Object (Container K8sAPI Exception Request)
+                     * 设置Request object (exceptional K8s API request in a container)
+                     * @param _requestObject Request object (exceptional K8s API request in a container)
                      * 
                      */
                     void SetRequestObject(const std::string& _requestObject);
@@ -1863,15 +1863,15 @@ namespace TencentCloud
                     bool RequestObjectHasBeenSet() const;
 
                     /**
-                     * 获取Response object (container K8sAPI exception request)
-                     * @return ResponseObject Response object (container K8sAPI exception request)
+                     * 获取object (for exceptional requests from the K8s API in a container)
+                     * @return ResponseObject object (for exceptional requests from the K8s API in a container)
                      * 
                      */
                     std::string GetResponseObject() const;
 
                     /**
-                     * 设置Response object (container K8sAPI exception request)
-                     * @param _responseObject Response object (container K8sAPI exception request)
+                     * 设置object (for exceptional requests from the K8s API in a container)
+                     * @param _responseObject object (for exceptional requests from the K8s API in a container)
                      * 
                      */
                     void SetResponseObject(const std::string& _responseObject);
@@ -1884,15 +1884,15 @@ namespace TencentCloud
                     bool ResponseObjectHasBeenSet() const;
 
                     /**
-                     * 获取File type (Container file tamper)
-                     * @return FileType File type (Container file tamper)
+                     * 获取File type (container file tampering)
+                     * @return FileType File type (container file tampering)
                      * 
                      */
                     std::string GetFileType() const;
 
                     /**
-                     * 设置File type (Container file tamper)
-                     * @param _fileType File type (Container file tamper)
+                     * 设置File type (container file tampering)
+                     * @param _fileType File type (container file tampering)
                      * 
                      */
                     void SetFileType(const std::string& _fileType);
@@ -1905,15 +1905,15 @@ namespace TencentCloud
                     bool FileTypeHasBeenSet() const;
 
                     /**
-                     * 获取Tag feature (malicious outbound connection of container)
-                     * @return TIType Tag feature (malicious outbound connection of container)
+                     * 获取Tag feature (container malicious outbound connection)
+                     * @return TIType Tag feature (container malicious outbound connection)
                      * 
                      */
                     std::string GetTIType() const;
 
                     /**
-                     * 设置Tag feature (malicious outbound connection of container)
-                     * @param _tIType Tag feature (malicious outbound connection of container)
+                     * 设置Tag feature (container malicious outbound connection)
+                     * @param _tIType Tag feature (container malicious outbound connection)
                      * 
                      */
                     void SetTIType(const std::string& _tIType);
@@ -1926,15 +1926,15 @@ namespace TencentCloud
                     bool TITypeHasBeenSet() const;
 
                     /**
-                     * 获取Source IP Address (Container K8sAPI Exception Request)
-                     * @return SourceIP Source IP Address (Container K8sAPI Exception Request)
+                     * 获取Source IP address (exceptional request to the K8s API of a container)
+                     * @return SourceIP Source IP address (exceptional request to the K8s API of a container)
                      * 
                      */
                     std::string GetSourceIP() const;
 
                     /**
-                     * 设置Source IP Address (Container K8sAPI Exception Request)
-                     * @param _sourceIP Source IP Address (Container K8sAPI Exception Request)
+                     * 设置Source IP address (exceptional request to the K8s API of a container)
+                     * @param _sourceIP Source IP address (exceptional request to the K8s API of a container)
                      * 
                      */
                     void SetSourceIP(const std::string& _sourceIP);
@@ -1961,7 +1961,7 @@ namespace TencentCloud
                     bool m_leakContentHasBeenSet;
 
                     /**
-                     * Leak API
+                     * Leak APIs
                      */
                     std::string m_leakAPI;
                     bool m_leakAPIHasBeenSet;
@@ -1973,7 +1973,7 @@ namespace TencentCloud
                     bool m_secretIDHasBeenSet;
 
                     /**
-                     * hit rule
+                     * Matched rule
                      */
                     std::string m_rule;
                     bool m_ruleHasBeenSet;
@@ -1997,7 +1997,7 @@ namespace TencentCloud
                     bool m_attackContentHasBeenSet;
 
                     /**
-                     * Attack IP profiling
+                     * Attack IP profiling.
                      */
                     std::string m_attackIPProfile;
                     bool m_attackIPProfileHasBeenSet;
@@ -2069,7 +2069,7 @@ namespace TencentCloud
                     bool m_serviceProcessHasBeenSet;
 
                     /**
-                     * Filename
+                     * File name
                      */
                     std::string m_fileName;
                     bool m_fileNameHasBeenSet;
@@ -2093,7 +2093,7 @@ namespace TencentCloud
                     bool m_fileLastAccessTimeHasBeenSet;
 
                     /**
-                     * file modification time
+                     * File modification time
                      */
                     std::string m_fileModifyTime;
                     bool m_fileModifyTimeHasBeenSet;
@@ -2123,13 +2123,13 @@ namespace TencentCloud
                     bool m_virusFileTagsHasBeenSet;
 
                     /**
-                     * behavioral characteristics
+                     * Behavioral characteristics
                      */
                     std::string m_behavioralCharacteristics;
                     bool m_behavioralCharacteristicsHasBeenSet;
 
                     /**
-                     * process name (PID)
+                     * Process name (PID)
                      */
                     std::string m_processNamePID;
                     bool m_processNamePIDHasBeenSet;
@@ -2141,7 +2141,7 @@ namespace TencentCloud
                     bool m_processPathHasBeenSet;
 
                     /**
-                     * Command line of the process
+                     * Process command line
                      */
                     std::string m_processCommandLine;
                     bool m_processCommandLineHasBeenSet;
@@ -2159,13 +2159,13 @@ namespace TencentCloud
                     bool m_executedCommandHasBeenSet;
 
                     /**
-                     * Affected Filename
+                     * Affected file name
                      */
                     std::string m_affectedFileName;
                     bool m_affectedFileNameHasBeenSet;
 
                     /**
-                     * bait path
+                     * Bait path
                      */
                     std::string m_decoyPath;
                     bool m_decoyPathHasBeenSet;
@@ -2177,7 +2177,7 @@ namespace TencentCloud
                     bool m_maliciousProcessFileSizeHasBeenSet;
 
                     /**
-                     * Malicious process file MD5
+                     * MD5 of the malicious process file
                      */
                     std::string m_maliciousProcessFileMD5;
                     bool m_maliciousProcessFileMD5HasBeenSet;
@@ -2195,13 +2195,13 @@ namespace TencentCloud
                     bool m_maliciousProcessPathHasBeenSet;
 
                     /**
-                     * malicious process start time
+                     * Malicious process startup time
                      */
                     std::string m_maliciousProcessStartTime;
                     bool m_maliciousProcessStartTimeHasBeenSet;
 
                     /**
-                     * command content
+                     * Command
                      */
                     std::string m_commandContent;
                     bool m_commandContentHasBeenSet;
@@ -2219,7 +2219,7 @@ namespace TencentCloud
                     bool m_userGroupHasBeenSet;
 
                     /**
-                     * Add new permission
+                     * Added permission
                      */
                     std::string m_newPermissions;
                     bool m_newPermissionsHasBeenSet;
@@ -2237,13 +2237,13 @@ namespace TencentCloud
                     bool m_classNameHasBeenSet;
 
                     /**
-                     * class loader
+                     * Class loader to which it belongs
                      */
                     std::string m_classLoader;
                     bool m_classLoaderHasBeenSet;
 
                     /**
-                     * File size
+                     * Individual file size
                      */
                     std::string m_classFileSize;
                     bool m_classFileSizeHasBeenSet;
@@ -2261,7 +2261,7 @@ namespace TencentCloud
                     bool m_parentClassNameHasBeenSet;
 
                     /**
-                     * inherit an API
+                     * Inherit interfaces
                      */
                     std::string m_inheritedInterface;
                     bool m_inheritedInterfaceHasBeenSet;
@@ -2273,7 +2273,7 @@ namespace TencentCloud
                     bool m_commentHasBeenSet;
 
                     /**
-                     * payload content
+                     * Payload content
                      */
                     std::string m_payloadContent;
                     bool m_payloadContentHasBeenSet;
@@ -2303,45 +2303,45 @@ namespace TencentCloud
                     bool m_filePermissionHasBeenSet;
 
                     /**
-                     * Information field from log analysis
+                     * Information fields that come from log analysis
                      */
                     std::vector<KeyValue> m_fromLogAnalysisData;
                     bool m_fromLogAnalysisDataHasBeenSet;
 
                     /**
-                     * probe hit
+                     * Cache hit probe
                      */
                     std::string m_hitProbe;
                     bool m_hitProbeHasBeenSet;
 
                     /**
-                     * hit honeypot
+                     * Hit a honeypot
 
                      */
                     std::string m_hitHoneyPot;
                     bool m_hitHoneyPotHasBeenSet;
 
                     /**
-                     * command list
+                     * Command list
                      */
                     std::string m_commandList;
                     bool m_commandListHasBeenSet;
 
                     /**
-                     * Attack event description
+                     * Description of the attack event
 
                      */
                     std::string m_attackEventDesc;
                     bool m_attackEventDescHasBeenSet;
 
                     /**
-                     * Process information
+                     * Process information.
                      */
                     std::string m_processInfo;
                     bool m_processInfoHasBeenSet;
 
                     /**
-                     * Login username & password
+                     * Use username and password
                      */
                     std::string m_userNameAndPwd;
                     bool m_userNameAndPwdHasBeenSet;
@@ -2359,7 +2359,7 @@ namespace TencentCloud
                     bool m_strategyNameHasBeenSet;
 
                     /**
-                     * Host protection hit policy is a combination of policy ID and Policy Name
+                     * Host protection hit policy, which is a combination of the policy ID and policy name.
                      */
                     std::string m_hitStrategy;
                     bool m_hitStrategyHasBeenSet;
@@ -2377,13 +2377,13 @@ namespace TencentCloud
                     bool m_pIDHasBeenSet;
 
                     /**
-                     * Container Pod name
+                     * Pod name of the container
                      */
                     std::string m_podName;
                     bool m_podNameHasBeenSet;
 
                     /**
-                     * Container Pod ID
+                     * Pod ID of the container
                      */
                     std::string m_podID;
                     bool m_podIDHasBeenSet;
@@ -2395,13 +2395,13 @@ namespace TencentCloud
                     bool m_responseHasBeenSet;
 
                     /**
-                     * system call
+                     * System call
                      */
                     std::string m_systemCall;
                     bool m_systemCallHasBeenSet;
 
                     /**
-                     * Operation type
+                     * Operation type.
                      */
                     std::string m_verb;
                     bool m_verbHasBeenSet;
@@ -2431,61 +2431,61 @@ namespace TencentCloud
                     bool m_descriptionHasBeenSet;
 
                     /**
-                     * Destination address (container reverse shell)
+                     * Target address (container reverse shell)
                      */
                     std::string m_targetAddress;
                     bool m_targetAddressHasBeenSet;
 
                     /**
-                     * Malicious request domain name (container malicious outbound connection)
+                     * Malicious request domain name (malicious outbound connection of a container)
                      */
                     std::string m_maliciousRequestDomain;
                     bool m_maliciousRequestDomainHasBeenSet;
 
                     /**
-                     * Rule Type (Container K8sAPI Exception Request)
+                     * Rule type (exceptional request of the K8s API in the container)
                      */
                     std::string m_ruleType;
                     bool m_ruleTypeHasBeenSet;
 
                     /**
-                     * Requested Resource (Container K8sAPI Exception Request)
+                     * Requested resource (exceptional request for K8s API of a container)
                      */
                     std::string m_requestURI;
                     bool m_requestURIHasBeenSet;
 
                     /**
-                     * Request Initiating User (Container K8sAPI Exception Request)
+                     * Request initiating user (container K8s API abnormal request)
                      */
                     std::string m_requestUser;
                     bool m_requestUserHasBeenSet;
 
                     /**
-                     * Request Object (Container K8sAPI Exception Request)
+                     * Request object (exceptional K8s API request in a container)
                      */
                     std::string m_requestObject;
                     bool m_requestObjectHasBeenSet;
 
                     /**
-                     * Response object (container K8sAPI exception request)
+                     * object (for exceptional requests from the K8s API in a container)
                      */
                     std::string m_responseObject;
                     bool m_responseObjectHasBeenSet;
 
                     /**
-                     * File type (Container file tamper)
+                     * File type (container file tampering)
                      */
                     std::string m_fileType;
                     bool m_fileTypeHasBeenSet;
 
                     /**
-                     * Tag feature (malicious outbound connection of container)
+                     * Tag feature (container malicious outbound connection)
                      */
                     std::string m_tIType;
                     bool m_tITypeHasBeenSet;
 
                     /**
-                     * Source IP Address (Container K8sAPI Exception Request)
+                     * Source IP address (exceptional request to the K8s API of a container)
                      */
                     std::string m_sourceIP;
                     bool m_sourceIPHasBeenSet;

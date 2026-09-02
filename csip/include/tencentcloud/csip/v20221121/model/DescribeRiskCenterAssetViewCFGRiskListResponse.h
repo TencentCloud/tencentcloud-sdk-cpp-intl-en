@@ -46,8 +46,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Total number of entries
-                     * @return TotalCount Total number of entries
+                     * 获取Total quantity.
+                     * @return TotalCount Total quantity.
                      * 
                      */
                     int64_t GetTotalCount() const;
@@ -60,8 +60,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取List of configuration risks
-                     * @return Data List of configuration risks
+                     * 获取Configuration Risk List from Asset's Perspective
+                     * @return Data Configuration Risk List from Asset's Perspective
                      * 
                      */
                     std::vector<AssetViewCFGRisk> GetData() const;
@@ -74,8 +74,8 @@ namespace TencentCloud
                     bool DataHasBeenSet() const;
 
                     /**
-                     * 获取List of risk handling status
-                     * @return StatusLists List of risk handling status
+                     * 获取Status list
+                     * @return StatusLists Status list
                      * 
                      */
                     std::vector<FilterDataObject> GetStatusLists() const;
@@ -88,8 +88,8 @@ namespace TencentCloud
                     bool StatusListsHasBeenSet() const;
 
                     /**
-                     * 获取List of risk levels
-                     * @return LevelLists List of risk levels
+                     * 获取Danger Level List
+                     * @return LevelLists Danger Level List
                      * 
                      */
                     std::vector<FilterDataObject> GetLevelLists() const;
@@ -102,8 +102,8 @@ namespace TencentCloud
                     bool LevelListsHasBeenSet() const;
 
                     /**
-                     * 获取List of configuration names
-                     * @return CFGNameLists List of configuration names
+                     * 获取Configuration Name List
+                     * @return CFGNameLists Configuration Name List
                      * 
                      */
                     std::vector<FilterDataObject> GetCFGNameLists() const;
@@ -116,8 +116,8 @@ namespace TencentCloud
                     bool CFGNameListsHasBeenSet() const;
 
                     /**
-                     * 获取List of check types
-                     * @return CheckTypeLists List of check types
+                     * 获取Check Type List
+                     * @return CheckTypeLists Check Type List
                      * 
                      */
                     std::vector<FilterDataObject> GetCheckTypeLists() const;
@@ -130,8 +130,8 @@ namespace TencentCloud
                     bool CheckTypeListsHasBeenSet() const;
 
                     /**
-                     * 获取List of asset types
-                     * @return InstanceTypeLists List of asset types
+                     * 获取Asset Type List
+                     * @return InstanceTypeLists Asset Type List
                      * 
                      */
                     std::vector<FilterDataObject> GetInstanceTypeLists() const;
@@ -144,8 +144,8 @@ namespace TencentCloud
                     bool InstanceTypeListsHasBeenSet() const;
 
                     /**
-                     * 获取List of check source
-                     * @return FromLists List of check source
+                     * 获取Source List
+                     * @return FromLists Source List
                      * 
                      */
                     std::vector<FilterDataObject> GetFromLists() const;
@@ -160,49 +160,49 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Total number of entries
+                     * Total quantity.
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * List of configuration risks
+                     * Configuration Risk List from Asset's Perspective
                      */
                     std::vector<AssetViewCFGRisk> m_data;
                     bool m_dataHasBeenSet;
 
                     /**
-                     * List of risk handling status
+                     * Status list
                      */
                     std::vector<FilterDataObject> m_statusLists;
                     bool m_statusListsHasBeenSet;
 
                     /**
-                     * List of risk levels
+                     * Danger Level List
                      */
                     std::vector<FilterDataObject> m_levelLists;
                     bool m_levelListsHasBeenSet;
 
                     /**
-                     * List of configuration names
+                     * Configuration Name List
                      */
                     std::vector<FilterDataObject> m_cFGNameLists;
                     bool m_cFGNameListsHasBeenSet;
 
                     /**
-                     * List of check types
+                     * Check Type List
                      */
                     std::vector<FilterDataObject> m_checkTypeLists;
                     bool m_checkTypeListsHasBeenSet;
 
                     /**
-                     * List of asset types
+                     * Asset Type List
                      */
                     std::vector<FilterDataObject> m_instanceTypeLists;
                     bool m_instanceTypeListsHasBeenSet;
 
                     /**
-                     * List of check source
+                     * Source List
                      */
                     std::vector<FilterDataObject> m_fromLists;
                     bool m_fromListsHasBeenSet;

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * SKILL installation status info
+                * SKILL installation status information
                 */
                 class SkillState : public AbstractModel
                 {
@@ -47,43 +47,43 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取SKILL Installation Status
+                     * 获取SKILL installation status
 Enumeration value:
 0: Not installed
-Installing
+1: Installing
 2: Installed
 3: Installation failure
 4: Uninstalling
-5: Uninstallation failed.
-                     * @return SkillInstallStatus SKILL Installation Status
+5: Uninstallation failed
+                     * @return SkillInstallStatus SKILL installation status
 Enumeration value:
 0: Not installed
-Installing
+1: Installing
 2: Installed
 3: Installation failure
 4: Uninstalling
-5: Uninstallation failed.
+5: Uninstallation failed
                      * 
                      */
                     int64_t GetSkillInstallStatus() const;
 
                     /**
-                     * 设置SKILL Installation Status
+                     * 设置SKILL installation status
 Enumeration value:
 0: Not installed
-Installing
+1: Installing
 2: Installed
 3: Installation failure
 4: Uninstalling
-5: Uninstallation failed.
-                     * @param _skillInstallStatus SKILL Installation Status
+5: Uninstallation failed
+                     * @param _skillInstallStatus SKILL installation status
 Enumeration value:
 0: Not installed
-Installing
+1: Installing
 2: Installed
 3: Installation failure
 4: Uninstalling
-5: Uninstallation failed.
+5: Uninstallation failed
                      * 
                      */
                     void SetSkillInstallStatus(const int64_t& _skillInstallStatus);
@@ -97,18 +97,18 @@ Installing
 
                     /**
                      * 获取SKILL installation/uninstallation operation time
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
                      * @return SkillInstallTime SKILL installation/uninstallation operation time
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
                      * 
                      */
                     std::string GetSkillInstallTime() const;
 
                     /**
                      * 设置SKILL installation/uninstallation operation time
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
                      * @param _skillInstallTime SKILL installation/uninstallation operation time
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
                      * 
                      */
                     void SetSkillInstallTime(const std::string& _skillInstallTime);
@@ -144,21 +144,21 @@ Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
                 private:
 
                     /**
-                     * SKILL Installation Status
+                     * SKILL installation status
 Enumeration value:
 0: Not installed
-Installing
+1: Installing
 2: Installed
 3: Installation failure
 4: Uninstalling
-5: Uninstallation failed.
+5: Uninstallation failed
                      */
                     int64_t m_skillInstallStatus;
                     bool m_skillInstallStatusHasBeenSet;
 
                     /**
                      * SKILL installation/uninstallation operation time
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
                      */
                     std::string m_skillInstallTime;
                     bool m_skillInstallTimeHasBeenSet;

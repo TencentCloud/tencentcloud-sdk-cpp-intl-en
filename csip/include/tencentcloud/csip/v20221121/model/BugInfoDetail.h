@@ -236,15 +236,15 @@ namespace TencentCloud
                     bool ImpactOsHasBeenSet() const;
 
                     /**
-                     * 获取Affected component
-                     * @return ImpactCOMPENT Affected component
+                     * 获取Components affected by the vulnerability
+                     * @return ImpactCOMPENT Components affected by the vulnerability
                      * 
                      */
                     std::string GetImpactCOMPENT() const;
 
                     /**
-                     * 设置Affected component
-                     * @param _impactCOMPENT Affected component
+                     * 设置Components affected by the vulnerability
+                     * @param _impactCOMPENT Components affected by the vulnerability
                      * 
                      */
                     void SetImpactCOMPENT(const std::string& _impactCOMPENT);
@@ -257,15 +257,15 @@ namespace TencentCloud
                     bool ImpactCOMPENTHasBeenSet() const;
 
                     /**
-                     * 获取Vulnerability Affected Version
-                     * @return ImpactVersion Vulnerability Affected Version
+                     * 获取Vulnerability affected version
+                     * @return ImpactVersion Vulnerability affected version
                      * 
                      */
                     std::string GetImpactVersion() const;
 
                     /**
-                     * 设置Vulnerability Affected Version
-                     * @param _impactVersion Vulnerability Affected Version
+                     * 设置Vulnerability affected version
+                     * @param _impactVersion Vulnerability affected version
                      * 
                      */
                     void SetImpactVersion(const std::string& _impactVersion);
@@ -523,13 +523,13 @@ namespace TencentCloud
                     bool m_impactOsHasBeenSet;
 
                     /**
-                     * Affected component
+                     * Components affected by the vulnerability
                      */
                     std::string m_impactCOMPENT;
                     bool m_impactCOMPENTHasBeenSet;
 
                     /**
-                     * Vulnerability Affected Version
+                     * Vulnerability affected version
                      */
                     std::string m_impactVersion;
                     bool m_impactVersionHasBeenSet;

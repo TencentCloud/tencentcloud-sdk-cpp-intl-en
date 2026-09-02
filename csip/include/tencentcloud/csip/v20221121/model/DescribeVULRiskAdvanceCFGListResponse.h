@@ -60,8 +60,8 @@ namespace TencentCloud
                     bool DataHasBeenSet() const;
 
                     /**
-                     * 获取Total number of results
-                     * @return TotalCount Total number of results
+                     * 获取Total number.
+                     * @return TotalCount Total number.
                      * 
                      */
                     int64_t GetTotalCount() const;
@@ -138,7 +138,7 @@ namespace TencentCloud
                     bool m_dataHasBeenSet;
 
                     /**
-                     * Total number of results
+                     * Total number.
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;

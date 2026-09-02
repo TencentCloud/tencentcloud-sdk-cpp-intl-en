@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Risk center risk overview statistics.
+                * Risk center risk overview statistics
                 */
                 class CsipRiskCenterStatistics : public AbstractModel
                 {
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool PortHighLevelHasBeenSet() const;
 
                     /**
-                     * 获取	Total number of weak password risks.
-                     * @return WeakPasswordTotal 	Total number of weak password risks.
+                     * 获取	Total number of weak password risks
+                     * @return WeakPasswordTotal 	Total number of weak password risks
                      * 
                      */
                     uint64_t GetWeakPasswordTotal() const;
 
                     /**
-                     * 设置	Total number of weak password risks.
-                     * @param _weakPasswordTotal 	Total number of weak password risks.
+                     * 设置	Total number of weak password risks
+                     * @param _weakPasswordTotal 	Total number of weak password risks
                      * 
                      */
                     void SetWeakPasswordTotal(const uint64_t& _weakPasswordTotal);
@@ -194,15 +194,15 @@ namespace TencentCloud
                     bool LastScanTimeHasBeenSet() const;
 
                     /**
-                     * 获取Number of vulnerability risks.
-                     * @return VULTotal Number of vulnerability risks.
+                     * 获取Number of Vulnerability Risks
+                     * @return VULTotal Number of Vulnerability Risks
                      * 
                      */
                     int64_t GetVULTotal() const;
 
                     /**
-                     * 设置Number of vulnerability risks.
-                     * @param _vULTotal Number of vulnerability risks.
+                     * 设置Number of Vulnerability Risks
+                     * @param _vULTotal Number of Vulnerability Risks
                      * 
                      */
                     void SetVULTotal(const int64_t& _vULTotal);
@@ -279,18 +279,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Mapping Service Risk Count
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ServerTotal Mapping Service Risk Count
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetServerTotal() const;
 
                     /**
                      * 设置Mapping Service Risk Count
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _serverTotal Mapping Service Risk Count
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetServerTotal(const int64_t& _serverTotal);
@@ -304,18 +300,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取High Mapping Service Risk Count
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ServerHighLevel High Mapping Service Risk Count
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetServerHighLevel() const;
 
                     /**
                      * 设置High Mapping Service Risk Count
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _serverHighLevel High Mapping Service Risk Count
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetServerHighLevel(const int64_t& _serverHighLevel);
@@ -328,15 +320,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ServerHighLevelHasBeenSet() const;
 
                     /**
-                     * 获取Number of host baseline risks.
-                     * @return HostBaseLineRiskTotal Number of host baseline risks.
+                     * 获取Number of host baseline risks
+                     * @return HostBaseLineRiskTotal Number of host baseline risks
                      * 
                      */
                     int64_t GetHostBaseLineRiskTotal() const;
 
                     /**
-                     * 设置Number of host baseline risks.
-                     * @param _hostBaseLineRiskTotal Number of host baseline risks.
+                     * 设置Number of host baseline risks
+                     * @param _hostBaseLineRiskTotal Number of host baseline risks
                      * 
                      */
                     void SetHostBaseLineRiskTotal(const int64_t& _hostBaseLineRiskTotal);
@@ -349,15 +341,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool HostBaseLineRiskTotalHasBeenSet() const;
 
                     /**
-                     * 获取Number of high-risk risks.
-                     * @return HostBaseLineRiskHighLevel Number of high-risk risks.
+                     * 获取Number of high-risk risks in the host baseline
+                     * @return HostBaseLineRiskHighLevel Number of high-risk risks in the host baseline
                      * 
                      */
                     int64_t GetHostBaseLineRiskHighLevel() const;
 
                     /**
-                     * 设置Number of high-risk risks.
-                     * @param _hostBaseLineRiskHighLevel Number of high-risk risks.
+                     * 设置Number of high-risk risks in the host baseline
+                     * @param _hostBaseLineRiskHighLevel Number of high-risk risks in the host baseline
                      * 
                      */
                     void SetHostBaseLineRiskHighLevel(const int64_t& _hostBaseLineRiskHighLevel);
@@ -370,15 +362,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool HostBaseLineRiskHighLevelHasBeenSet() const;
 
                     /**
-                     * 获取Baseline risk count of the container.
-                     * @return PodBaseLineRiskTotal Baseline risk count of the container.
+                     * 获取Number of baseline risks in the container
+                     * @return PodBaseLineRiskTotal Number of baseline risks in the container
                      * 
                      */
                     int64_t GetPodBaseLineRiskTotal() const;
 
                     /**
-                     * 设置Baseline risk count of the container.
-                     * @param _podBaseLineRiskTotal Baseline risk count of the container.
+                     * 设置Number of baseline risks in the container
+                     * @param _podBaseLineRiskTotal Number of baseline risks in the container
                      * 
                      */
                     void SetPodBaseLineRiskTotal(const int64_t& _podBaseLineRiskTotal);
@@ -391,15 +383,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool PodBaseLineRiskTotalHasBeenSet() const;
 
                     /**
-                     * 获取Number of high-risk baseline risks in the container.
-                     * @return PodBaseLineRiskHighLevel Number of high-risk baseline risks in the container.
+                     * 获取Number of high-risk risks in the container baseline
+                     * @return PodBaseLineRiskHighLevel Number of high-risk risks in the container baseline
                      * 
                      */
                     int64_t GetPodBaseLineRiskHighLevel() const;
 
                     /**
-                     * 设置Number of high-risk baseline risks in the container.
-                     * @param _podBaseLineRiskHighLevel Number of high-risk baseline risks in the container.
+                     * 设置Number of high-risk risks in the container baseline
+                     * @param _podBaseLineRiskHighLevel Number of high-risk risks in the container baseline
                      * 
                      */
                     void SetPodBaseLineRiskHighLevel(const int64_t& _podBaseLineRiskHighLevel);
@@ -426,7 +418,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_portHighLevelHasBeenSet;
 
                     /**
-                     * 	Total number of weak password risks.
+                     * 	Total number of weak password risks
                      */
                     uint64_t m_weakPasswordTotal;
                     bool m_weakPasswordTotalHasBeenSet;
@@ -456,7 +448,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_lastScanTimeHasBeenSet;
 
                     /**
-                     * Number of vulnerability risks.
+                     * Number of Vulnerability Risks
                      */
                     int64_t m_vULTotal;
                     bool m_vULTotalHasBeenSet;
@@ -481,38 +473,36 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Mapping Service Risk Count
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_serverTotal;
                     bool m_serverTotalHasBeenSet;
 
                     /**
                      * High Mapping Service Risk Count
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_serverHighLevel;
                     bool m_serverHighLevelHasBeenSet;
 
                     /**
-                     * Number of host baseline risks.
+                     * Number of host baseline risks
                      */
                     int64_t m_hostBaseLineRiskTotal;
                     bool m_hostBaseLineRiskTotalHasBeenSet;
 
                     /**
-                     * Number of high-risk risks.
+                     * Number of high-risk risks in the host baseline
                      */
                     int64_t m_hostBaseLineRiskHighLevel;
                     bool m_hostBaseLineRiskHighLevelHasBeenSet;
 
                     /**
-                     * Baseline risk count of the container.
+                     * Number of baseline risks in the container
                      */
                     int64_t m_podBaseLineRiskTotal;
                     bool m_podBaseLineRiskTotalHasBeenSet;
 
                     /**
-                     * Number of high-risk baseline risks in the container.
+                     * Number of high-risk risks in the container baseline
                      */
                     int64_t m_podBaseLineRiskHighLevel;
                     bool m_podBaseLineRiskHighLevelHasBeenSet;

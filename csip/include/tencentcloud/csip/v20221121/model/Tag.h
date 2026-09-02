@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Native tag key-value pair on the cloud.
+                * Native tag key-value pair in the cloud.
                 */
                 class Tag : public AbstractModel
                 {

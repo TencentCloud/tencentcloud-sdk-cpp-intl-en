@@ -47,15 +47,15 @@ namespace TencentCloud
                     /**
                      * 获取Detection status
 Enumeration value:
-SUCCESS: Detection completed, results returned.
-SCANNING: Detection in progress
-NOT_FOUND: No detection record.
+SUCCESS: Detection complete, results returned
+SCANNING: detection in progress
+NOT_FOUND: No detection record
 FAILED: Detection failed
                      * @return Status Detection status
 Enumeration value:
-SUCCESS: Detection completed, results returned.
-SCANNING: Detection in progress
-NOT_FOUND: No detection record.
+SUCCESS: Detection complete, results returned
+SCANNING: detection in progress
+NOT_FOUND: No detection record
 FAILED: Detection failed
                      * 
                      */
@@ -87,9 +87,9 @@ FAILED: Detection failed
                     /**
                      * Detection status
 Enumeration value:
-SUCCESS: Detection completed, results returned.
-SCANNING: Detection in progress
-NOT_FOUND: No detection record.
+SUCCESS: Detection complete, results returned
+SCANNING: detection in progress
+NOT_FOUND: No detection record
 FAILED: Detection failed
                      */
                     std::string m_status;

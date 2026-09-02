@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool TokenHasBeenSet() const;
 
                     /**
-                     * 获取<p>Scanning result storage duration</p>
-                     * @return Period <p>Scanning result storage duration</p>
+                     * 获取<p>Result storage duration of scan</p>
+                     * @return Period <p>Result storage duration of scan</p>
                      * 
                      */
                     uint64_t GetPeriod() const;
 
                     /**
-                     * 设置<p>Scanning result storage duration</p>
-                     * @param _period <p>Scanning result storage duration</p>
+                     * 设置<p>Result storage duration of scan</p>
+                     * @param _period <p>Result storage duration of scan</p>
                      * 
                      */
                     void SetPeriod(const uint64_t& _period);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool PeriodHasBeenSet() const;
 
                     /**
-                     * 获取<p>Scanned file</p>
-                     * @return FileCnt <p>Scanned file</p>
+                     * 获取<p>Scanned file.</p>
+                     * @return FileCnt <p>Scanned file.</p>
                      * 
                      */
                     uint64_t GetFileCnt() const;
 
                     /**
-                     * 设置<p>Scanned file</p>
-                     * @param _fileCnt <p>Scanned file</p>
+                     * 设置<p>Scanned file.</p>
+                     * @param _fileCnt <p>Scanned file.</p>
                      * 
                      */
                     void SetFileCnt(const uint64_t& _fileCnt);
@@ -241,13 +241,13 @@ namespace TencentCloud
                     bool m_tokenHasBeenSet;
 
                     /**
-                     * <p>Scanning result storage duration</p>
+                     * <p>Result storage duration of scan</p>
                      */
                     uint64_t m_period;
                     bool m_periodHasBeenSet;
 
                     /**
-                     * <p>Scanned file</p>
+                     * <p>Scanned file.</p>
                      */
                     uint64_t m_fileCnt;
                     bool m_fileCntHasBeenSet;

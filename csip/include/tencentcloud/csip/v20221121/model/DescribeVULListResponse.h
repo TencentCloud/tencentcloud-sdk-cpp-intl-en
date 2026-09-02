@@ -88,8 +88,8 @@ namespace TencentCloud
                     bool VULTypeListsHasBeenSet() const;
 
                     /**
-                     * 获取Risk level list.
-                     * @return RiskLevels Risk level list.
+                     * 获取Risk level list
+                     * @return RiskLevels Risk level list
                      * 
                      */
                     std::vector<FilterDataObject> GetRiskLevels() const;
@@ -116,8 +116,8 @@ namespace TencentCloud
                     bool TagsHasBeenSet() const;
 
                     /**
-                     * 获取Product support.
-                     * @return ProductSupport Product support.
+                     * 获取Product support status
+                     * @return ProductSupport Product support status
                      * 
                      */
                     std::vector<FilterDataObject> GetProductSupport() const;
@@ -130,8 +130,8 @@ namespace TencentCloud
                     bool ProductSupportHasBeenSet() const;
 
                     /**
-                     * 获取Product support.
-                     * @return CheckStatus Product support.
+                     * 获取Product support status
+                     * @return CheckStatus Product support status
                      * 
                      */
                     std::vector<FilterDataObject> GetCheckStatus() const;
@@ -144,8 +144,8 @@ namespace TencentCloud
                     bool CheckStatusHasBeenSet() const;
 
                     /**
-                     * 获取Attack intensity enumeration.
-                     * @return AttackHeat Attack intensity enumeration.
+                     * 获取Attack level enumeration
+                     * @return AttackHeat Attack level enumeration
                      * 
                      */
                     std::vector<FilterDataObject> GetAttackHeat() const;
@@ -178,7 +178,7 @@ namespace TencentCloud
                     bool m_vULTypeListsHasBeenSet;
 
                     /**
-                     * Risk level list.
+                     * Risk level list
                      */
                     std::vector<FilterDataObject> m_riskLevels;
                     bool m_riskLevelsHasBeenSet;
@@ -190,19 +190,19 @@ namespace TencentCloud
                     bool m_tagsHasBeenSet;
 
                     /**
-                     * Product support.
+                     * Product support status
                      */
                     std::vector<FilterDataObject> m_productSupport;
                     bool m_productSupportHasBeenSet;
 
                     /**
-                     * Product support.
+                     * Product support status
                      */
                     std::vector<FilterDataObject> m_checkStatus;
                     bool m_checkStatusHasBeenSet;
 
                     /**
-                     * Attack intensity enumeration.
+                     * Attack level enumeration
                      */
                     std::vector<FilterDataObject> m_attackHeat;
                     bool m_attackHeatHasBeenSet;

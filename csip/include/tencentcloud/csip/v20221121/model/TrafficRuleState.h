@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool ModuleHasBeenSet() const;
 
                     /**
-                     * 获取<p>Sandbox rule status</p><p>Enumeration value:</p><ul><li>ON: Enable</li><li>OFF: Disable</li></ul>
-                     * @return Status <p>Sandbox rule status</p><p>Enumeration value:</p><ul><li>ON: Enable</li><li>OFF: Disable</li></ul>
+                     * 获取<p>Sandbox rule status</p><p>Enumeration values:</p><ul><li>ON: Enable</li><li>OFF: Disable</li></ul>
+                     * @return Status <p>Sandbox rule status</p><p>Enumeration values:</p><ul><li>ON: Enable</li><li>OFF: Disable</li></ul>
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置<p>Sandbox rule status</p><p>Enumeration value:</p><ul><li>ON: Enable</li><li>OFF: Disable</li></ul>
-                     * @param _status <p>Sandbox rule status</p><p>Enumeration value:</p><ul><li>ON: Enable</li><li>OFF: Disable</li></ul>
+                     * 设置<p>Sandbox rule status</p><p>Enumeration values:</p><ul><li>ON: Enable</li><li>OFF: Disable</li></ul>
+                     * @param _status <p>Sandbox rule status</p><p>Enumeration values:</p><ul><li>ON: Enable</li><li>OFF: Disable</li></ul>
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -97,7 +97,7 @@ namespace TencentCloud
                     bool m_moduleHasBeenSet;
 
                     /**
-                     * <p>Sandbox rule status</p><p>Enumeration value:</p><ul><li>ON: Enable</li><li>OFF: Disable</li></ul>
+                     * <p>Sandbox rule status</p><p>Enumeration values:</p><ul><li>ON: Enable</li><li>OFF: Disable</li></ul>
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;

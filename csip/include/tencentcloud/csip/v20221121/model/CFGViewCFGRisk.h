@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Impact assets.
-                     * @return NoHandleCount Impact assets.
+                     * 获取Affect assets
+                     * @return NoHandleCount Affect assets
                      * 
                      */
                     int64_t GetNoHandleCount() const;
 
                     /**
-                     * 设置Impact assets.
-                     * @param _noHandleCount Impact assets.
+                     * 设置Affect assets
+                     * @param _noHandleCount Affect assets
                      * 
                      */
                     void SetNoHandleCount(const int64_t& _noHandleCount);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool NoHandleCountHasBeenSet() const;
 
                     /**
-                     * 获取Risk level: low - low risk, high - high risk, middle - medium risk, info - note, extreme - critical.
-                     * @return Level Risk level: low - low risk, high - high risk, middle - medium risk, info - note, extreme - critical.
+                     * 获取Risk level. low: low risk. high: high risk. middle: medium risk. info: notification. extreme: critical.
+                     * @return Level Risk level. low: low risk. high: high risk. middle: medium risk. info: notification. extreme: critical.
                      * 
                      */
                     std::string GetLevel() const;
 
                     /**
-                     * 设置Risk level: low - low risk, high - high risk, middle - medium risk, info - note, extreme - critical.
-                     * @param _level Risk level: low - low risk, high - high risk, middle - medium risk, info - note, extreme - critical.
+                     * 设置Risk level. low: low risk. high: high risk. middle: medium risk. info: notification. extreme: critical.
+                     * @param _level Risk level. low: low risk. high: high risk. middle: medium risk. info: notification. extreme: critical.
                      * 
                      */
                     void SetLevel(const std::string& _level);
@@ -237,18 +237,14 @@ namespace TencentCloud
 
                     /**
                      * 获取User Nickname
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Nick User Nickname
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetNick() const;
 
                     /**
                      * 设置User Nickname
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _nick User Nickname
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetNick(const std::string& _nick);
@@ -262,18 +258,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取User UIN
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Uin User UIN
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetUin() const;
 
                     /**
                      * 设置User UIN
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _uin User UIN
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetUin(const std::string& _uin);
@@ -286,19 +278,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool UinHasBeenSet() const;
 
                     /**
-                     * 获取Configuration name.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return CFGName Configuration name.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Configuration name
+                     * @return CFGName Configuration name
                      * 
                      */
                     std::string GetCFGName() const;
 
                     /**
-                     * 设置Configuration name.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _cFGName Configuration name.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Configuration name
+                     * @param _cFGName Configuration name
                      * 
                      */
                     void SetCFGName(const std::string& _cFGName);
@@ -311,19 +299,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CFGNameHasBeenSet() const;
 
                     /**
-                     * 获取Check type.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return CheckType Check type.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Check type
+                     * @return CheckType Check type
                      * 
                      */
                     std::string GetCheckType() const;
 
                     /**
-                     * 设置Check type.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _checkType Check type.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Check type
+                     * @param _checkType Check type
                      * 
                      */
                     void SetCheckType(const std::string& _checkType);
@@ -337,18 +321,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取-
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return CFGSTD -
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetCFGSTD() const;
 
                     /**
                      * 设置-
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _cFGSTD -
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetCFGSTD(const std::string& _cFGSTD);
@@ -362,18 +342,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Description
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return CFGDescribe Description
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetCFGDescribe() const;
 
                     /**
                      * 设置Description
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _cFGDescribe Description
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetCFGDescribe(const std::string& _cFGDescribe);
@@ -387,18 +363,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Fixing suggestion
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return CFGFix Fixing suggestion
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetCFGFix() const;
 
                     /**
                      * 设置Fixing suggestion
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _cFGFix Fixing suggestion
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetCFGFix(const std::string& _cFGFix);
@@ -411,19 +383,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CFGFixHasBeenSet() const;
 
                     /**
-                     * 获取Help documentation.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return CFGHelpURL Help documentation.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Help documentation
+                     * @return CFGHelpURL Help documentation
                      * 
                      */
                     std::string GetCFGHelpURL() const;
 
                     /**
-                     * 设置Help documentation.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _cFGHelpURL Help documentation.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Help documentation
+                     * @param _cFGHelpURL Help documentation
                      * 
                      */
                     void SetCFGHelpURL(const std::string& _cFGHelpURL);
@@ -438,13 +406,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Impact assets.
+                     * Affect assets
                      */
                     int64_t m_noHandleCount;
                     bool m_noHandleCountHasBeenSet;
 
                     /**
-                     * Risk level: low - low risk, high - high risk, middle - medium risk, info - note, extreme - critical.
+                     * Risk level. low: low risk. high: high risk. middle: medium risk. info: notification. extreme: critical.
                      */
                     std::string m_level;
                     bool m_levelHasBeenSet;
@@ -493,56 +461,48 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * User Nickname
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_nick;
                     bool m_nickHasBeenSet;
 
                     /**
                      * User UIN
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_uin;
                     bool m_uinHasBeenSet;
 
                     /**
-                     * Configuration name.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Configuration name
                      */
                     std::string m_cFGName;
                     bool m_cFGNameHasBeenSet;
 
                     /**
-                     * Check type.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Check type
                      */
                     std::string m_checkType;
                     bool m_checkTypeHasBeenSet;
 
                     /**
                      * -
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_cFGSTD;
                     bool m_cFGSTDHasBeenSet;
 
                     /**
                      * Description
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_cFGDescribe;
                     bool m_cFGDescribeHasBeenSet;
 
                     /**
                      * Fixing suggestion
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_cFGFix;
                     bool m_cFGFixHasBeenSet;
 
                     /**
-                     * Help documentation.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Help documentation
                      */
                     std::string m_cFGHelpURL;
                     bool m_cFGHelpURLHasBeenSet;

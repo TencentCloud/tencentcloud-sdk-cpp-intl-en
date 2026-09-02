@@ -38,7 +38,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Access key asset information (source IP perspective).
+                * Access key asset information (source IP perspective)
                 */
                 class SourceIPAsset : public AbstractModel
                 {
@@ -50,15 +50,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取id of the source IP.
-                     * @return ID id of the source IP.
+                     * 获取Source IP id
+                     * @return ID Source IP id
                      * 
                      */
                     uint64_t GetID() const;
 
                     /**
-                     * 设置id of the source IP.
-                     * @param _iD id of the source IP.
+                     * 设置Source IP id
+                     * @param _iD Source IP id
                      * 
                      */
                     void SetID(const uint64_t& _iD);
@@ -71,15 +71,15 @@ namespace TencentCloud
                     bool IDHasBeenSet() const;
 
                     /**
-                     * 获取Source IP.
-                     * @return SourceIP Source IP.
+                     * 获取Source IP
+                     * @return SourceIP Source IP
                      * 
                      */
                     std::string GetSourceIP() const;
 
                     /**
-                     * 设置Source IP.
-                     * @param _sourceIP Source IP.
+                     * 设置Source IP
+                     * @param _sourceIP Source IP
                      * 
                      */
                     void SetSourceIP(const std::string& _sourceIP);
@@ -113,15 +113,15 @@ namespace TencentCloud
                     bool RemarkHasBeenSet() const;
 
                     /**
-                     * 获取Account associate APPID.
-                     * @return AppID Account associate APPID.
+                     * 获取APPID of the account
+                     * @return AppID APPID of the account
                      * 
                      */
                     int64_t GetAppID() const;
 
                     /**
-                     * 设置Account associate APPID.
-                     * @param _appID Account associate APPID.
+                     * 设置APPID of the account
+                     * @param _appID APPID of the account
                      * 
                      */
                     void SetAppID(const int64_t& _appID);
@@ -134,15 +134,15 @@ namespace TencentCloud
                     bool AppIDHasBeenSet() const;
 
                     /**
-                     * 获取IP region.
-                     * @return Region IP region.
+                     * 获取IP region
+                     * @return Region IP region
                      * 
                      */
                     std::string GetRegion() const;
 
                     /**
-                     * 设置IP region.
-                     * @param _region IP region.
+                     * 设置IP region
+                     * @param _region IP region
                      * 
                      */
                     void SetRegion(const std::string& _region);
@@ -155,26 +155,26 @@ namespace TencentCloud
                     bool RegionHasBeenSet() const;
 
                     /**
-                     * 获取API call method.
--1: uncounted.
-0: console invocation.
+                     * 获取Calling method
+-1: Uncounted
+0: Console invocation
 1:API
-                     * @return EventType API call method.
--1: uncounted.
-0: console invocation.
+                     * @return EventType Calling method
+-1: Uncounted
+0: Console invocation
 1:API
                      * 
                      */
                     int64_t GetEventType() const;
 
                     /**
-                     * 设置API call method.
--1: uncounted.
-0: console invocation.
+                     * 设置Calling method
+-1: Uncounted
+0: Console invocation
 1:API
-                     * @param _eventType API call method.
--1: uncounted.
-0: console invocation.
+                     * @param _eventType Calling method
+-1: Uncounted
+0: Console invocation
 1:API
                      * 
                      */
@@ -188,31 +188,31 @@ namespace TencentCloud
                     bool EventTypeHasBeenSet() const;
 
                     /**
-                     * 获取IP type.
-0: within the account (unremarked).
-1: external accounts (unremarked).
-2: within the account (remarked).
-3: external account (remarked).
-                     * @return IPType IP type.
-0: within the account (unremarked).
-1: external accounts (unremarked).
-2: within the account (remarked).
-3: external account (remarked).
+                     * 获取IP type
+0: within the account (no remark)
+1: Outside the account (no remarks)
+2: Within the account (remarked)
+3: Outside the account   (Remarks added)
+                     * @return IPType IP type
+0: within the account (no remark)
+1: Outside the account (no remarks)
+2: Within the account (remarked)
+3: Outside the account   (Remarks added)
                      * 
                      */
                     int64_t GetIPType() const;
 
                     /**
-                     * 设置IP type.
-0: within the account (unremarked).
-1: external accounts (unremarked).
-2: within the account (remarked).
-3: external account (remarked).
-                     * @param _iPType IP type.
-0: within the account (unremarked).
-1: external accounts (unremarked).
-2: within the account (remarked).
-3: external account (remarked).
+                     * 设置IP type
+0: within the account (no remark)
+1: Outside the account (no remarks)
+2: Within the account (remarked)
+3: Outside the account   (Remarks added)
+                     * @param _iPType IP type
+0: within the account (no remark)
+1: Outside the account (no remarks)
+2: Within the account (remarked)
+3: Outside the account   (Remarks added)
                      * 
                      */
                     void SetIPType(const int64_t& _iPType);
@@ -246,15 +246,15 @@ namespace TencentCloud
                     bool AccessKeyAlarmListHasBeenSet() const;
 
                     /**
-                     * 获取ak information list.
-                     * @return AKInfo ak information list.
+                     * 获取ak information list
+                     * @return AKInfo ak information list
                      * 
                      */
                     std::vector<AKInfo> GetAKInfo() const;
 
                     /**
-                     * 设置ak information list.
-                     * @param _aKInfo ak information list.
+                     * 设置ak information list
+                     * @param _aKInfo ak information list
                      * 
                      */
                     void SetAKInfo(const std::vector<AKInfo>& _aKInfo);
@@ -309,15 +309,15 @@ namespace TencentCloud
                     bool LastAccessTimeHasBeenSet() const;
 
                     /**
-                     * 获取IP associated instance ID. if an empty string, represents an asset not within the account.
-                     * @return InstanceID IP associated instance ID. if an empty string, represents an asset not within the account.
+                     * 获取Associated instance ID of the IP. If it is an empty string, the asset is not within the account.
+                     * @return InstanceID Associated instance ID of the IP. If it is an empty string, the asset is not within the account.
                      * 
                      */
                     std::string GetInstanceID() const;
 
                     /**
-                     * 设置IP associated instance ID. if an empty string, represents an asset not within the account.
-                     * @param _instanceID IP associated instance ID. if an empty string, represents an asset not within the account.
+                     * 设置Associated instance ID of the IP. If it is an empty string, the asset is not within the account.
+                     * @param _instanceID Associated instance ID of the IP. If it is an empty string, the asset is not within the account.
                      * 
                      */
                     void SetInstanceID(const std::string& _instanceID);
@@ -330,15 +330,15 @@ namespace TencentCloud
                     bool InstanceIDHasBeenSet() const;
 
                     /**
-                     * 获取Associated instance name.
-                     * @return InstanceName Associated instance name.
+                     * 获取IP associated instance name
+                     * @return InstanceName IP associated instance name
                      * 
                      */
                     std::string GetInstanceName() const;
 
                     /**
-                     * 设置Associated instance name.
-                     * @param _instanceName Associated instance name.
+                     * 设置IP associated instance name
+                     * @param _instanceName IP associated instance name
                      * 
                      */
                     void SetInstanceName(const std::string& _instanceName);
@@ -351,15 +351,15 @@ namespace TencentCloud
                     bool InstanceNameHasBeenSet() const;
 
                     /**
-                     * 获取Account associate Uin.
-                     * @return Uin Account associate Uin.
+                     * 获取Uin of the account
+                     * @return Uin Uin of the account
                      * 
                      */
                     std::string GetUin() const;
 
                     /**
-                     * 设置Account associate Uin.
-                     * @param _uin Account associate Uin.
+                     * 设置Uin of the account
+                     * @param _uin Uin of the account
                      * 
                      */
                     void SetUin(const std::string& _uin);
@@ -372,15 +372,15 @@ namespace TencentCloud
                     bool UinHasBeenSet() const;
 
                     /**
-                     * 获取Nickname.
-                     * @return Nickname Nickname.
+                     * 获取Nickname
+                     * @return Nickname Nickname
                      * 
                      */
                     std::string GetNickname() const;
 
                     /**
-                     * 设置Nickname.
-                     * @param _nickname Nickname.
+                     * 设置Nickname
+                     * @param _nickname Nickname
                      * 
                      */
                     void SetNickname(const std::string& _nickname);
@@ -414,15 +414,15 @@ namespace TencentCloud
                     bool ShowStatusHasBeenSet() const;
 
                     /**
-                     * 获取ISP field.
-                     * @return ISP ISP field.
+                     * 获取Carrier field
+                     * @return ISP Carrier field
                      * 
                      */
                     std::string GetISP() const;
 
                     /**
-                     * 设置ISP field.
-                     * @param _iSP ISP field.
+                     * 设置Carrier field
+                     * @param _iSP Carrier field
                      * 
                      */
                     void SetISP(const std::string& _iSP);
@@ -435,15 +435,15 @@ namespace TencentCloud
                     bool ISPHasBeenSet() const;
 
                     /**
-                     * 获取vpc information outside the account.
-                     * @return VpcInfo vpc information outside the account.
+                     * 获取vpc information outside the account
+                     * @return VpcInfo vpc information outside the account
                      * 
                      */
                     std::vector<SourceIPVpcInfo> GetVpcInfo() const;
 
                     /**
-                     * 设置vpc information outside the account.
-                     * @param _vpcInfo vpc information outside the account.
+                     * 设置vpc information outside the account
+                     * @param _vpcInfo vpc information outside the account
                      * 
                      */
                     void SetVpcInfo(const std::vector<SourceIPVpcInfo>& _vpcInfo);
@@ -456,19 +456,19 @@ namespace TencentCloud
                     bool VpcInfoHasBeenSet() const;
 
                     /**
-                     * 获取Cloud type.
-0 for tencent cloud.
-                     * @return CloudType Cloud type.
-0 for tencent cloud.
+                     * 获取Cloud type
+0: Tencent Cloud
+                     * @return CloudType Cloud type
+0: Tencent Cloud
                      * 
                      */
                     int64_t GetCloudType() const;
 
                     /**
-                     * 设置Cloud type.
-0 for tencent cloud.
-                     * @param _cloudType Cloud type.
-0 for tencent cloud.
+                     * 设置Cloud type
+0: Tencent Cloud
+                     * @param _cloudType Cloud type
+0: Tencent Cloud
                      * 
                      */
                     void SetCloudType(const int64_t& _cloudType);
@@ -483,13 +483,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * id of the source IP.
+                     * Source IP id
                      */
                     uint64_t m_iD;
                     bool m_iDHasBeenSet;
 
                     /**
-                     * Source IP.
+                     * Source IP
                      */
                     std::string m_sourceIP;
                     bool m_sourceIPHasBeenSet;
@@ -501,32 +501,32 @@ namespace TencentCloud
                     bool m_remarkHasBeenSet;
 
                     /**
-                     * Account associate APPID.
+                     * APPID of the account
                      */
                     int64_t m_appID;
                     bool m_appIDHasBeenSet;
 
                     /**
-                     * IP region.
+                     * IP region
                      */
                     std::string m_region;
                     bool m_regionHasBeenSet;
 
                     /**
-                     * API call method.
--1: uncounted.
-0: console invocation.
+                     * Calling method
+-1: Uncounted
+0: Console invocation
 1:API
                      */
                     int64_t m_eventType;
                     bool m_eventTypeHasBeenSet;
 
                     /**
-                     * IP type.
-0: within the account (unremarked).
-1: external accounts (unremarked).
-2: within the account (remarked).
-3: external account (remarked).
+                     * IP type
+0: within the account (no remark)
+1: Outside the account (no remarks)
+2: Within the account (remarked)
+3: Outside the account   (Remarks added)
                      */
                     int64_t m_iPType;
                     bool m_iPTypeHasBeenSet;
@@ -538,7 +538,7 @@ namespace TencentCloud
                     bool m_accessKeyAlarmListHasBeenSet;
 
                     /**
-                     * ak information list.
+                     * ak information list
                      */
                     std::vector<AKInfo> m_aKInfo;
                     bool m_aKInfoHasBeenSet;
@@ -556,25 +556,25 @@ namespace TencentCloud
                     bool m_lastAccessTimeHasBeenSet;
 
                     /**
-                     * IP associated instance ID. if an empty string, represents an asset not within the account.
+                     * Associated instance ID of the IP. If it is an empty string, the asset is not within the account.
                      */
                     std::string m_instanceID;
                     bool m_instanceIDHasBeenSet;
 
                     /**
-                     * Associated instance name.
+                     * IP associated instance name
                      */
                     std::string m_instanceName;
                     bool m_instanceNameHasBeenSet;
 
                     /**
-                     * Account associate Uin.
+                     * Uin of the account
                      */
                     std::string m_uin;
                     bool m_uinHasBeenSet;
 
                     /**
-                     * Nickname.
+                     * Nickname
                      */
                     std::string m_nickname;
                     bool m_nicknameHasBeenSet;
@@ -586,20 +586,20 @@ namespace TencentCloud
                     bool m_showStatusHasBeenSet;
 
                     /**
-                     * ISP field.
+                     * Carrier field
                      */
                     std::string m_iSP;
                     bool m_iSPHasBeenSet;
 
                     /**
-                     * vpc information outside the account.
+                     * vpc information outside the account
                      */
                     std::vector<SourceIPVpcInfo> m_vpcInfo;
                     bool m_vpcInfoHasBeenSet;
 
                     /**
-                     * Cloud type.
-0 for tencent cloud.
+                     * Cloud type
+0: Tencent Cloud
                      */
                     int64_t m_cloudType;
                     bool m_cloudTypeHasBeenSet;

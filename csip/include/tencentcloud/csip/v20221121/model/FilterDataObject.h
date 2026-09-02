@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Filter condition
+                * Filter Data Objects
                 */
                 class FilterDataObject : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Filter value
-                     * @return Value Filter value
+                     * 获取English Translation
+                     * @return Value English Translation
                      * 
                      */
                     std::string GetValue() const;
 
                     /**
-                     * 设置Filter value
-                     * @param _value Filter value
+                     * 设置English Translation
+                     * @param _value English Translation
                      * 
                      */
                     void SetValue(const std::string& _value);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool ValueHasBeenSet() const;
 
                     /**
-                     * 获取Filter name
-                     * @return Text Filter name
+                     * 获取Chinese Translation
+                     * @return Text Chinese Translation
                      * 
                      */
                     std::string GetText() const;
 
                     /**
-                     * 设置Filter name
-                     * @param _text Filter name
+                     * 设置Chinese Translation
+                     * @param _text Chinese Translation
                      * 
                      */
                     void SetText(const std::string& _text);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Filter value
+                     * English Translation
                      */
                     std::string m_value;
                     bool m_valueHasBeenSet;
 
                     /**
-                     * Filter name
+                     * Chinese Translation
                      */
                     std::string m_text;
                     bool m_textHasBeenSet;

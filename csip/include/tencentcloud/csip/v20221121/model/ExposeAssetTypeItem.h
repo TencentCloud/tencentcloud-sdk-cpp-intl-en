@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Exposed asset category.
+                * Exposed asset category
                 */
                 class ExposeAssetTypeItem : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Cloud service provider.
-                     * @return Provider Cloud service provider.
+                     * 获取Cloud service provider
+                     * @return Provider Cloud service provider
                      * 
                      */
                     std::string GetProvider() const;
 
                     /**
-                     * 设置Cloud service provider.
-                     * @param _provider Cloud service provider.
+                     * 设置Cloud service provider
+                     * @param _provider Cloud service provider
                      * 
                      */
                     void SetProvider(const std::string& _provider);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool ProviderHasBeenSet() const;
 
                     /**
-                     * 获取Vendor name.
-                     * @return ProviderName Vendor name.
+                     * 获取Cloud vendor name
+                     * @return ProviderName Cloud vendor name
                      * 
                      */
                     std::string GetProviderName() const;
 
                     /**
-                     * 设置Vendor name.
-                     * @param _providerName Vendor name.
+                     * 设置Cloud vendor name
+                     * @param _providerName Cloud vendor name
                      * 
                      */
                     void SetProviderName(const std::string& _providerName);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool ProviderNameHasBeenSet() const;
 
                     /**
-                     * 获取Asset type.
-                     * @return AssetType Asset type.
+                     * 获取Asset type
+                     * @return AssetType Asset type
                      * 
                      */
                     std::string GetAssetType() const;
 
                     /**
-                     * 设置Asset type.
-                     * @param _assetType Asset type.
+                     * 设置Asset type
+                     * @param _assetType Asset type
                      * 
                      */
                     void SetAssetType(const std::string& _assetType);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool AssetTypeHasBeenSet() const;
 
                     /**
-                     * 获取Asset type name.
-                     * @return AssetTypeName Asset type name.
+                     * 获取Asset type name
+                     * @return AssetTypeName Asset type name
                      * 
                      */
                     std::string GetAssetTypeName() const;
 
                     /**
-                     * 设置Asset type name.
-                     * @param _assetTypeName Asset type name.
+                     * 设置Asset type name
+                     * @param _assetTypeName Asset type name
                      * 
                      */
                     void SetAssetTypeName(const std::string& _assetTypeName);
@@ -133,25 +133,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Cloud service provider.
+                     * Cloud service provider
                      */
                     std::string m_provider;
                     bool m_providerHasBeenSet;
 
                     /**
-                     * Vendor name.
+                     * Cloud vendor name
                      */
                     std::string m_providerName;
                     bool m_providerNameHasBeenSet;
 
                     /**
-                     * Asset type.
+                     * Asset type
                      */
                     std::string m_assetType;
                     bool m_assetTypeHasBeenSet;
 
                     /**
-                     * Asset type name.
+                     * Asset type name
                      */
                     std::string m_assetTypeName;
                     bool m_assetTypeNameHasBeenSet;

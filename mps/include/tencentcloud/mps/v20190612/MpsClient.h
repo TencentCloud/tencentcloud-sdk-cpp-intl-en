@@ -293,12 +293,16 @@
 #include <tencentcloud/mps/v20190612/model/ProcessLiveStreamResponse.h>
 #include <tencentcloud/mps/v20190612/model/ProcessMediaRequest.h>
 #include <tencentcloud/mps/v20190612/model/ProcessMediaResponse.h>
+#include <tencentcloud/mps/v20190612/model/QueryHunyuan3DTaskRequest.h>
+#include <tencentcloud/mps/v20190612/model/QueryHunyuan3DTaskResponse.h>
 #include <tencentcloud/mps/v20190612/model/QueryProjectRequest.h>
 #include <tencentcloud/mps/v20190612/model/QueryProjectResponse.h>
 #include <tencentcloud/mps/v20190612/model/RecognizeAudioRequest.h>
 #include <tencentcloud/mps/v20190612/model/RecognizeAudioResponse.h>
 #include <tencentcloud/mps/v20190612/model/ResetWorkflowRequest.h>
 #include <tencentcloud/mps/v20190612/model/ResetWorkflowResponse.h>
+#include <tencentcloud/mps/v20190612/model/SubmitHunyuan3DTaskRequest.h>
+#include <tencentcloud/mps/v20190612/model/SubmitHunyuan3DTaskResponse.h>
 #include <tencentcloud/mps/v20190612/model/SyncDubbingRequest.h>
 #include <tencentcloud/mps/v20190612/model/SyncDubbingResponse.h>
 #include <tencentcloud/mps/v20190612/model/TextToSpeechRequest.h>
@@ -730,6 +734,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ProcessMediaResponse> ProcessMediaOutcome;
                 typedef std::future<ProcessMediaOutcome> ProcessMediaOutcomeCallable;
                 typedef std::function<void(const MpsClient*, const Model::ProcessMediaRequest&, ProcessMediaOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ProcessMediaAsyncHandler;
+                typedef Outcome<Core::Error, Model::QueryHunyuan3DTaskResponse> QueryHunyuan3DTaskOutcome;
+                typedef std::future<QueryHunyuan3DTaskOutcome> QueryHunyuan3DTaskOutcomeCallable;
+                typedef std::function<void(const MpsClient*, const Model::QueryHunyuan3DTaskRequest&, QueryHunyuan3DTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> QueryHunyuan3DTaskAsyncHandler;
                 typedef Outcome<Core::Error, Model::QueryProjectResponse> QueryProjectOutcome;
                 typedef std::future<QueryProjectOutcome> QueryProjectOutcomeCallable;
                 typedef std::function<void(const MpsClient*, const Model::QueryProjectRequest&, QueryProjectOutcome, const std::shared_ptr<const AsyncCallerContext>&)> QueryProjectAsyncHandler;
@@ -739,6 +746,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ResetWorkflowResponse> ResetWorkflowOutcome;
                 typedef std::future<ResetWorkflowOutcome> ResetWorkflowOutcomeCallable;
                 typedef std::function<void(const MpsClient*, const Model::ResetWorkflowRequest&, ResetWorkflowOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ResetWorkflowAsyncHandler;
+                typedef Outcome<Core::Error, Model::SubmitHunyuan3DTaskResponse> SubmitHunyuan3DTaskOutcome;
+                typedef std::future<SubmitHunyuan3DTaskOutcome> SubmitHunyuan3DTaskOutcomeCallable;
+                typedef std::function<void(const MpsClient*, const Model::SubmitHunyuan3DTaskRequest&, SubmitHunyuan3DTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> SubmitHunyuan3DTaskAsyncHandler;
                 typedef Outcome<Core::Error, Model::SyncDubbingResponse> SyncDubbingOutcome;
                 typedef std::future<SyncDubbingOutcome> SyncDubbingOutcomeCallable;
                 typedef std::function<void(const MpsClient*, const Model::SyncDubbingRequest&, SyncDubbingOutcome, const std::shared_ptr<const AsyncCallerContext>&)> SyncDubbingAsyncHandler;
@@ -2049,6 +2059,15 @@ Live stream processing event notification supports HTTP callbacks and also suppo
                 ProcessMediaOutcomeCallable ProcessMediaCallable(const Model::ProcessMediaRequest& request);
 
                 /**
+                 *Query the result corresponding to a Hunyuan3D task.
+                 * @param req QueryHunyuan3DTaskRequest
+                 * @return QueryHunyuan3DTaskOutcome
+                 */
+                QueryHunyuan3DTaskOutcome QueryHunyuan3DTask(const Model::QueryHunyuan3DTaskRequest &request);
+                void QueryHunyuan3DTaskAsync(const Model::QueryHunyuan3DTaskRequest& request, const QueryHunyuan3DTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                QueryHunyuan3DTaskOutcomeCallable QueryHunyuan3DTaskCallable(const Model::QueryHunyuan3DTaskRequest& request);
+
+                /**
                  *This API is used to query an episode project.
                  * @param req QueryProjectRequest
                  * @return QueryProjectOutcome
@@ -2074,6 +2093,15 @@ Live stream processing event notification supports HTTP callbacks and also suppo
                 ResetWorkflowOutcome ResetWorkflow(const Model::ResetWorkflowRequest &request);
                 void ResetWorkflowAsync(const Model::ResetWorkflowRequest& request, const ResetWorkflowAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ResetWorkflowOutcomeCallable ResetWorkflowCallable(const Model::ResetWorkflowRequest& request);
+
+                /**
+                 *Submit creation of a Hunyuan 3D task.
+                 * @param req SubmitHunyuan3DTaskRequest
+                 * @return SubmitHunyuan3DTaskOutcome
+                 */
+                SubmitHunyuan3DTaskOutcome SubmitHunyuan3DTask(const Model::SubmitHunyuan3DTaskRequest &request);
+                void SubmitHunyuan3DTaskAsync(const Model::SubmitHunyuan3DTaskRequest& request, const SubmitHunyuan3DTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                SubmitHunyuan3DTaskOutcomeCallable SubmitHunyuan3DTaskCallable(const Model::SubmitHunyuan3DTaskRequest& request);
 
                 /**
                  *This API is used to return the cloned voice ID or synthetic audio result. The default maximum number of cloned or designed voices is 100.

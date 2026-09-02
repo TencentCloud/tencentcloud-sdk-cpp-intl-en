@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Token integration</p>
-                     * @return Token <p>Token integration</p>
+                     * 获取<p>Integration Token</p>
+                     * @return Token <p>Integration Token</p>
                      * 
                      */
                     std::string GetToken() const;
@@ -60,7 +60,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Token integration</p>
+                     * <p>Integration Token</p>
                      */
                     std::string m_token;
                     bool m_tokenHasBeenSet;

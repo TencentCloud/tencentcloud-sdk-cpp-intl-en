@@ -74,8 +74,8 @@ namespace TencentCloud
                     bool DataHasBeenSet() const;
 
                     /**
-                     * 获取Join method enumeration
-                     * @return JoinTypeLst Join method enumeration
+                     * 获取Joining method enumeration
+                     * @return JoinTypeLst Joining method enumeration
                      * 
                      */
                     std::vector<FilterDataObject> GetJoinTypeLst() const;
@@ -88,8 +88,8 @@ namespace TencentCloud
                     bool JoinTypeLstHasBeenSet() const;
 
                     /**
-                     * 获取Cloud vendor enumeration
-                     * @return CloudTypeLst Cloud vendor enumeration
+                     * 获取Cloud service provider enumeration
+                     * @return CloudTypeLst Cloud service provider enumeration
                      * 
                      */
                     std::vector<FilterDataObject> GetCloudTypeLst() const;
@@ -116,13 +116,13 @@ namespace TencentCloud
                     bool m_dataHasBeenSet;
 
                     /**
-                     * Join method enumeration
+                     * Joining method enumeration
                      */
                     std::vector<FilterDataObject> m_joinTypeLst;
                     bool m_joinTypeLstHasBeenSet;
 
                     /**
-                     * Cloud vendor enumeration
+                     * Cloud service provider enumeration
                      */
                     std::vector<FilterDataObject> m_cloudTypeLst;
                     bool m_cloudTypeLstHasBeenSet;

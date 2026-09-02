@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Sub-account Details
+                * Sub-account details
                 */
                 class SubUserInfo : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Primary key ID, with no business significance, only serves as a unique key.</p>
-                     * @return ID <p>Primary key ID, with no business significance, only serves as a unique key.</p>
+                     * 获取<p>Primary key ID, no business significance, used only as a unique key</p>
+                     * @return ID <p>Primary key ID, no business significance, used only as a unique key</p>
                      * 
                      */
                     int64_t GetID() const;
 
                     /**
-                     * 设置<p>Primary key ID, with no business significance, only serves as a unique key.</p>
-                     * @param _iD <p>Primary key ID, with no business significance, only serves as a unique key.</p>
+                     * 设置<p>Primary key ID, no business significance, used only as a unique key</p>
+                     * @param _iD <p>Primary key ID, no business significance, used only as a unique key</p>
                      * 
                      */
                     void SetID(const int64_t& _iD);
@@ -194,15 +194,15 @@ namespace TencentCloud
                     bool OwnerNickNameHasBeenSet() const;
 
                     /**
-                     * 获取<p>Member ID information belonging to main account</p>
-                     * @return OwnerMemberID <p>Member ID information belonging to main account</p>
+                     * 获取<p>memberId information belonging to main account</p>
+                     * @return OwnerMemberID <p>memberId information belonging to main account</p>
                      * 
                      */
                     std::string GetOwnerMemberID() const;
 
                     /**
-                     * 设置<p>Member ID information belonging to main account</p>
-                     * @param _ownerMemberID <p>Member ID information belonging to main account</p>
+                     * 设置<p>memberId information belonging to main account</p>
+                     * @param _ownerMemberID <p>memberId information belonging to main account</p>
                      * 
                      */
                     void SetOwnerMemberID(const std::string& _ownerMemberID);
@@ -215,15 +215,15 @@ namespace TencentCloud
                     bool OwnerMemberIDHasBeenSet() const;
 
                     /**
-                     * 获取<p>Account type. 0 indicates a Tencent Cloud account, and 1 indicates an AWS account.</p>
-                     * @return CloudType <p>Account type. 0 indicates a Tencent Cloud account, and 1 indicates an AWS account.</p>
+                     * 获取<p>Account type. 0: Tencent Cloud account; 1: AWS account</p>
+                     * @return CloudType <p>Account type. 0: Tencent Cloud account; 1: AWS account</p>
                      * 
                      */
                     int64_t GetCloudType() const;
 
                     /**
-                     * 设置<p>Account type. 0 indicates a Tencent Cloud account, and 1 indicates an AWS account.</p>
-                     * @param _cloudType <p>Account type. 0 indicates a Tencent Cloud account, and 1 indicates an AWS account.</p>
+                     * 设置<p>Account type. 0: Tencent Cloud account; 1: AWS account</p>
+                     * @param _cloudType <p>Account type. 0: Tencent Cloud account; 1: AWS account</p>
                      * 
                      */
                     void SetCloudType(const int64_t& _cloudType);
@@ -383,15 +383,15 @@ namespace TencentCloud
                     bool IsAccessCloudAuditHasBeenSet() const;
 
                     /**
-                     * 获取<p>Security check for configuration risk required or not</p>
-                     * @return IsAccessCheck <p>Security check for configuration risk required or not</p>
+                     * 获取<p>Whether to configure a security check for risks</p>
+                     * @return IsAccessCheck <p>Whether to configure a security check for risks</p>
                      * 
                      */
                     bool GetIsAccessCheck() const;
 
                     /**
-                     * 设置<p>Security check for configuration risk required or not</p>
-                     * @param _isAccessCheck <p>Security check for configuration risk required or not</p>
+                     * 设置<p>Whether to configure a security check for risks</p>
+                     * @param _isAccessCheck <p>Whether to configure a security check for risks</p>
                      * 
                      */
                     void SetIsAccessCheck(const bool& _isAccessCheck);
@@ -404,15 +404,15 @@ namespace TencentCloud
                     bool IsAccessCheckHasBeenSet() const;
 
                     /**
-                     * 获取<p>Whether configure user behavior management policy</p>
-                     * @return IsAccessUeba <p>Whether configure user behavior management policy</p>
+                     * 获取<p>Whether to configure a user behavior management policy</p>
+                     * @return IsAccessUeba <p>Whether to configure a user behavior management policy</p>
                      * 
                      */
                     bool GetIsAccessUeba() const;
 
                     /**
-                     * 设置<p>Whether configure user behavior management policy</p>
-                     * @param _isAccessUeba <p>Whether configure user behavior management policy</p>
+                     * 设置<p>Whether to configure a user behavior management policy</p>
+                     * @param _isAccessUeba <p>Whether to configure a user behavior management policy</p>
                      * 
                      */
                     void SetIsAccessUeba(const bool& _isAccessUeba);
@@ -448,7 +448,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Primary key ID, with no business significance, only serves as a unique key.</p>
+                     * <p>Primary key ID, no business significance, used only as a unique key</p>
                      */
                     int64_t m_iD;
                     bool m_iDHasBeenSet;
@@ -490,13 +490,13 @@ namespace TencentCloud
                     bool m_ownerNickNameHasBeenSet;
 
                     /**
-                     * <p>Member ID information belonging to main account</p>
+                     * <p>memberId information belonging to main account</p>
                      */
                     std::string m_ownerMemberID;
                     bool m_ownerMemberIDHasBeenSet;
 
                     /**
-                     * <p>Account type. 0 indicates a Tencent Cloud account, and 1 indicates an AWS account.</p>
+                     * <p>Account type. 0: Tencent Cloud account; 1: AWS account</p>
                      */
                     int64_t m_cloudType;
                     bool m_cloudTypeHasBeenSet;
@@ -544,13 +544,13 @@ namespace TencentCloud
                     bool m_isAccessCloudAuditHasBeenSet;
 
                     /**
-                     * <p>Security check for configuration risk required or not</p>
+                     * <p>Whether to configure a security check for risks</p>
                      */
                     bool m_isAccessCheck;
                     bool m_isAccessCheckHasBeenSet;
 
                     /**
-                     * <p>Whether configure user behavior management policy</p>
+                     * <p>Whether to configure a user behavior management policy</p>
                      */
                     bool m_isAccessUeba;
                     bool m_isAccessUebaHasBeenSet;

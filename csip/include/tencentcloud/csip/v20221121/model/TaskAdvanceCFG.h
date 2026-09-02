@@ -39,7 +39,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Advanced task configuration
+                * Task Advanced Configuration
                 */
                 class TaskAdvanceCFG : public AbstractModel
                 {
@@ -72,15 +72,15 @@ namespace TencentCloud
                     bool PortRiskHasBeenSet() const;
 
                     /**
-                     * 获取Advanced vulnerability scan configuration
-                     * @return VulRisk Advanced vulnerability scan configuration
+                     * 获取Vulnerability Risk Advanced Configuration
+                     * @return VulRisk Vulnerability Risk Advanced Configuration
                      * 
                      */
                     std::vector<TaskCenterVulRiskInputParam> GetVulRisk() const;
 
                     /**
-                     * 设置Advanced vulnerability scan configuration
-                     * @param _vulRisk Advanced vulnerability scan configuration
+                     * 设置Vulnerability Risk Advanced Configuration
+                     * @param _vulRisk Vulnerability Risk Advanced Configuration
                      * 
                      */
                     void SetVulRisk(const std::vector<TaskCenterVulRiskInputParam>& _vulRisk);
@@ -93,15 +93,15 @@ namespace TencentCloud
                     bool VulRiskHasBeenSet() const;
 
                     /**
-                     * 获取Advanced weak password check configuration
-                     * @return WeakPwdRisk Advanced weak password check configuration
+                     * 获取Weak Password Risk Advanced Configuration
+                     * @return WeakPwdRisk Weak Password Risk Advanced Configuration
                      * 
                      */
                     std::vector<TaskCenterWeakPwdRiskInputParam> GetWeakPwdRisk() const;
 
                     /**
-                     * 设置Advanced weak password check configuration
-                     * @param _weakPwdRisk Advanced weak password check configuration
+                     * 设置Weak Password Risk Advanced Configuration
+                     * @param _weakPwdRisk Weak Password Risk Advanced Configuration
                      * 
                      */
                     void SetWeakPwdRisk(const std::vector<TaskCenterWeakPwdRiskInputParam>& _weakPwdRisk);
@@ -114,15 +114,15 @@ namespace TencentCloud
                     bool WeakPwdRiskHasBeenSet() const;
 
                     /**
-                     * 获取Advanced configuration risk scan configuration
-                     * @return CFGRisk Advanced configuration risk scan configuration
+                     * 获取Advanced Configuration of Configuration Risk
+                     * @return CFGRisk Advanced Configuration of Configuration Risk
                      * 
                      */
                     std::vector<TaskCenterCFGRiskInputParam> GetCFGRisk() const;
 
                     /**
-                     * 设置Advanced configuration risk scan configuration
-                     * @param _cFGRisk Advanced configuration risk scan configuration
+                     * 设置Advanced Configuration of Configuration Risk
+                     * @param _cFGRisk Advanced Configuration of Configuration Risk
                      * 
                      */
                     void SetCFGRisk(const std::vector<TaskCenterCFGRiskInputParam>& _cFGRisk);
@@ -143,19 +143,19 @@ namespace TencentCloud
                     bool m_portRiskHasBeenSet;
 
                     /**
-                     * Advanced vulnerability scan configuration
+                     * Vulnerability Risk Advanced Configuration
                      */
                     std::vector<TaskCenterVulRiskInputParam> m_vulRisk;
                     bool m_vulRiskHasBeenSet;
 
                     /**
-                     * Advanced weak password check configuration
+                     * Weak Password Risk Advanced Configuration
                      */
                     std::vector<TaskCenterWeakPwdRiskInputParam> m_weakPwdRisk;
                     bool m_weakPwdRiskHasBeenSet;
 
                     /**
-                     * Advanced configuration risk scan configuration
+                     * Advanced Configuration of Configuration Risk
                      */
                     std::vector<TaskCenterCFGRiskInputParam> m_cFGRisk;
                     bool m_cFGRiskHasBeenSet;

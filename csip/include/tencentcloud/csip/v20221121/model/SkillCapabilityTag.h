@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Skill power tag
+                * Skill capacity tag
                 */
                 class SkillCapabilityTag : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Capacity tag identification, suitable for program judgment, filtering or aggregation usage
-                     * @return ID Capacity tag identification, suitable for program judgment, filtering or aggregation usage
+                     * 获取Capacity tag identification
+                     * @return ID Capacity tag identification
                      * 
                      */
                     std::string GetID() const;
 
                     /**
-                     * 设置Capacity tag identification, suitable for program judgment, filtering or aggregation usage
-                     * @param _iD Capacity tag identification, suitable for program judgment, filtering or aggregation usage
+                     * 设置Capacity tag identification
+                     * @param _iD Capacity tag identification
                      * 
                      */
                     void SetID(const std::string& _iD);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool IDHasBeenSet() const;
 
                     /**
-                     * 获取Capacity Tag Display Name
-                     * @return Name Capacity Tag Display Name
+                     * 获取Display name of the capability tag
+                     * @return Name Display name of the capability tag
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Capacity Tag Display Name
-                     * @param _name Capacity Tag Display Name
+                     * 设置Display name of the capability tag
+                     * @param _name Display name of the capability tag
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Capacity tag identification, suitable for program judgment, filtering or aggregation usage
+                     * Capacity tag identification
                      */
                     std::string m_iD;
                     bool m_iDHasBeenSet;
 
                     /**
-                     * Capacity Tag Display Name
+                     * Display name of the capability tag
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;

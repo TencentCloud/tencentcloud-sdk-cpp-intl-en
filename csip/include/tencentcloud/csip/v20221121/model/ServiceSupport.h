@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Product support.
+                * Product support status
                 */
                 class ServiceSupport : public AbstractModel
                 {
@@ -47,18 +47,18 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Product name.
+                     * 获取Product name:
 "cfw_waf_virtual", "cwp_detect", "cwp_defense", "cwp_fix"
-                     * @return ServiceName Product name.
+                     * @return ServiceName Product name:
 "cfw_waf_virtual", "cwp_detect", "cwp_defense", "cwp_fix"
                      * 
                      */
                     std::string GetServiceName() const;
 
                     /**
-                     * 设置Product name.
+                     * 设置Product name:
 "cfw_waf_virtual", "cwp_detect", "cwp_defense", "cwp_fix"
-                     * @param _serviceName Product name.
+                     * @param _serviceName Product name:
 "cfw_waf_virtual", "cwp_detect", "cwp_defense", "cwp_fix"
                      * 
                      */
@@ -72,15 +72,15 @@ namespace TencentCloud
                     bool ServiceNameHasBeenSet() const;
 
                     /**
-                     * 获取Total number of processed assets.
-                     * @return SupportHandledCount Total number of processed assets.
+                     * 获取Total number of fixed assets
+                     * @return SupportHandledCount Total number of fixed assets
                      * 
                      */
                     int64_t GetSupportHandledCount() const;
 
                     /**
-                     * 设置Total number of processed assets.
-                     * @param _supportHandledCount Total number of processed assets.
+                     * 设置Total number of fixed assets
+                     * @param _supportHandledCount Total number of fixed assets
                      * 
                      */
                     void SetSupportHandledCount(const int64_t& _supportHandledCount);
@@ -93,15 +93,15 @@ namespace TencentCloud
                     bool SupportHandledCountHasBeenSet() const;
 
                     /**
-                     * 获取Total number of supported assets.
-                     * @return SupportTotalCount Total number of supported assets.
+                     * 获取Total number of supported assets
+                     * @return SupportTotalCount Total number of supported assets
                      * 
                      */
                     int64_t GetSupportTotalCount() const;
 
                     /**
-                     * 设置Total number of supported assets.
-                     * @param _supportTotalCount Total number of supported assets.
+                     * 设置Total number of supported assets
+                     * @param _supportTotalCount Total number of supported assets
                      * 
                      */
                     void SetSupportTotalCount(const int64_t& _supportTotalCount);
@@ -114,15 +114,15 @@ namespace TencentCloud
                     bool SupportTotalCountHasBeenSet() const;
 
                     /**
-                     * 获取Whether the product is supported: 1 for supported; 0 for unsupported.
-                     * @return IsSupport Whether the product is supported: 1 for supported; 0 for unsupported.
+                     * 获取Whether the product is supported. 1: supported; 0: not supported
+                     * @return IsSupport Whether the product is supported. 1: supported; 0: not supported
                      * 
                      */
                     bool GetIsSupport() const;
 
                     /**
-                     * 设置Whether the product is supported: 1 for supported; 0 for unsupported.
-                     * @param _isSupport Whether the product is supported: 1 for supported; 0 for unsupported.
+                     * 设置Whether the product is supported. 1: supported; 0: not supported
+                     * @param _isSupport Whether the product is supported. 1: supported; 0: not supported
                      * 
                      */
                     void SetIsSupport(const bool& _isSupport);
@@ -137,26 +137,26 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Product name.
+                     * Product name:
 "cfw_waf_virtual", "cwp_detect", "cwp_defense", "cwp_fix"
                      */
                     std::string m_serviceName;
                     bool m_serviceNameHasBeenSet;
 
                     /**
-                     * Total number of processed assets.
+                     * Total number of fixed assets
                      */
                     int64_t m_supportHandledCount;
                     bool m_supportHandledCountHasBeenSet;
 
                     /**
-                     * Total number of supported assets.
+                     * Total number of supported assets
                      */
                     int64_t m_supportTotalCount;
                     bool m_supportTotalCountHasBeenSet;
 
                     /**
-                     * Whether the product is supported: 1 for supported; 0 for unsupported.
+                     * Whether the product is supported. 1: supported; 0: not supported
                      */
                     bool m_isSupport;
                     bool m_isSupportHasBeenSet;

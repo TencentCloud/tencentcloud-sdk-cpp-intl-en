@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Details of a database asset
+                * DB Asset Output Fields
                 */
                 class DBAssetVO : public AbstractModel
                 {
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool AssetIdHasBeenSet() const;
 
                     /**
-                     * 获取Asset name.
-                     * @return AssetName Asset name.
+                     * 获取Asset name
+                     * @return AssetName Asset name
                      * 
                      */
                     std::string GetAssetName() const;
 
                     /**
-                     * 设置Asset name.
-                     * @param _assetName Asset name.
+                     * 设置Asset name
+                     * @param _assetName Asset name
                      * 
                      */
                     void SetAssetName(const std::string& _assetName);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool AssetNameHasBeenSet() const;
 
                     /**
-                     * 获取Asset type.
-                     * @return AssetType Asset type.
+                     * 获取Asset type
+                     * @return AssetType Asset type
                      * 
                      */
                     std::string GetAssetType() const;
 
                     /**
-                     * 设置Asset type.
-                     * @param _assetType Asset type.
+                     * 设置Asset type
+                     * @param _assetType Asset type
                      * 
                      */
                     void SetAssetType(const std::string& _assetType);
@@ -132,15 +132,15 @@ namespace TencentCloud
                     bool VpcIdHasBeenSet() const;
 
                     /**
-                     * 获取vpc Tag.
-                     * @return VpcName vpc Tag.
+                     * 获取vpc tag
+                     * @return VpcName vpc tag
                      * 
                      */
                     std::string GetVpcName() const;
 
                     /**
-                     * 设置vpc Tag.
-                     * @param _vpcName vpc Tag.
+                     * 设置vpc tag
+                     * @param _vpcName vpc tag
                      * 
                      */
                     void SetVpcName(const std::string& _vpcName);
@@ -237,15 +237,15 @@ namespace TencentCloud
                     bool LastScanTimeHasBeenSet() const;
 
                     /**
-                     * 获取Configuration risk.
-                     * @return ConfigurationRisk Configuration risk.
+                     * 获取Configuration risk
+                     * @return ConfigurationRisk Configuration risk
                      * 
                      */
                     uint64_t GetConfigurationRisk() const;
 
                     /**
-                     * 设置Configuration risk.
-                     * @param _configurationRisk Configuration risk.
+                     * 设置Configuration risk
+                     * @param _configurationRisk Configuration risk
                      * 
                      */
                     void SetConfigurationRisk(const uint64_t& _configurationRisk);
@@ -258,15 +258,15 @@ namespace TencentCloud
                     bool ConfigurationRiskHasBeenSet() const;
 
                     /**
-                     * 获取Network attack.
-                     * @return Attack Network attack.
+                     * 获取Network attack
+                     * @return Attack Network attack
                      * 
                      */
                     uint64_t GetAttack() const;
 
                     /**
-                     * 设置Network attack.
-                     * @param _attack Network attack.
+                     * 设置Network attack
+                     * @param _attack Network attack
                      * 
                      */
                     void SetAttack(const uint64_t& _attack);
@@ -279,15 +279,15 @@ namespace TencentCloud
                     bool AttackHasBeenSet() const;
 
                     /**
-                     * 获取Network access.
-                     * @return Access Network access.
+                     * 获取Network access
+                     * @return Access Network access
                      * 
                      */
                     uint64_t GetAccess() const;
 
                     /**
-                     * 设置Network access.
-                     * @param _access Network access.
+                     * 设置Network access
+                     * @param _access Network access
                      * 
                      */
                     void SetAccess(const uint64_t& _access);
@@ -539,13 +539,13 @@ namespace TencentCloud
                     bool m_assetIdHasBeenSet;
 
                     /**
-                     * Asset name.
+                     * Asset name
                      */
                     std::string m_assetName;
                     bool m_assetNameHasBeenSet;
 
                     /**
-                     * Asset type.
+                     * Asset type
                      */
                     std::string m_assetType;
                     bool m_assetTypeHasBeenSet;
@@ -557,7 +557,7 @@ namespace TencentCloud
                     bool m_vpcIdHasBeenSet;
 
                     /**
-                     * vpc Tag.
+                     * vpc tag
                      */
                     std::string m_vpcName;
                     bool m_vpcNameHasBeenSet;
@@ -587,19 +587,19 @@ namespace TencentCloud
                     bool m_lastScanTimeHasBeenSet;
 
                     /**
-                     * Configuration risk.
+                     * Configuration risk
                      */
                     uint64_t m_configurationRisk;
                     bool m_configurationRiskHasBeenSet;
 
                     /**
-                     * Network attack.
+                     * Network attack
                      */
                     uint64_t m_attack;
                     bool m_attackHasBeenSet;
 
                     /**
-                     * Network access.
+                     * Network access
                      */
                     uint64_t m_access;
                     bool m_accessHasBeenSet;

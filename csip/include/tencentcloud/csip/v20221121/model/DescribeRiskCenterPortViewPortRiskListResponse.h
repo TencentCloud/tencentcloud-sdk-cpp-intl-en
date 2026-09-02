@@ -46,8 +46,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Total number of entries
-                     * @return TotalCount Total number of entries
+                     * 获取Total quantity.
+                     * @return TotalCount Total quantity.
                      * 
                      */
                     int64_t GetTotalCount() const;
@@ -74,8 +74,8 @@ namespace TencentCloud
                     bool DataHasBeenSet() const;
 
                     /**
-                     * 获取List of risk levels
-                     * @return LevelLists List of risk levels
+                     * 获取Danger Level List
+                     * @return LevelLists Danger Level List
                      * 
                      */
                     std::vector<FilterDataObject> GetLevelLists() const;
@@ -88,8 +88,8 @@ namespace TencentCloud
                     bool LevelListsHasBeenSet() const;
 
                     /**
-                     * 获取List of suggestions
-                     * @return SuggestionLists List of suggestions
+                     * 获取Disposal Suggestion List
+                     * @return SuggestionLists Disposal Suggestion List
                      * 
                      */
                     std::vector<FilterDataObject> GetSuggestionLists() const;
@@ -102,8 +102,8 @@ namespace TencentCloud
                     bool SuggestionListsHasBeenSet() const;
 
                     /**
-                     * 获取List of check source
-                     * @return FromLists List of check source
+                     * 获取Source List
+                     * @return FromLists Source List
                      * 
                      */
                     std::vector<FilterDataObject> GetFromLists() const;
@@ -118,7 +118,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Total number of entries
+                     * Total quantity.
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
@@ -130,19 +130,19 @@ namespace TencentCloud
                     bool m_dataHasBeenSet;
 
                     /**
-                     * List of risk levels
+                     * Danger Level List
                      */
                     std::vector<FilterDataObject> m_levelLists;
                     bool m_levelListsHasBeenSet;
 
                     /**
-                     * List of suggestions
+                     * Disposal Suggestion List
                      */
                     std::vector<FilterDataObject> m_suggestionLists;
                     bool m_suggestionListsHasBeenSet;
 
                     /**
-                     * List of check source
+                     * Source List
                      */
                     std::vector<FilterDataObject> m_fromLists;
                     bool m_fromListsHasBeenSet;

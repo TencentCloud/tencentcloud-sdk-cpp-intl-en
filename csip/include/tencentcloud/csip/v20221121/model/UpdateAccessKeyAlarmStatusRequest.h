@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Status  0: unprocessed 1: fixed 2: ignored.
-                     * @return Status Status  0: unprocessed 1: fixed 2: ignored.
+                     * 获取Status. 0: unprocessed; 1: processed; 2: ignored
+                     * @return Status Status. 0: unprocessed; 1: processed; 2: ignored
                      * 
                      */
                     int64_t GetStatus() const;
 
                     /**
-                     * 设置Status  0: unprocessed 1: fixed 2: ignored.
-                     * @param _status Status  0: unprocessed 1: fixed 2: ignored.
+                     * 设置Status. 0: unprocessed; 1: processed; 2: ignored
+                     * @param _status Status. 0: unprocessed; 1: processed; 2: ignored
                      * 
                      */
                     void SetStatus(const int64_t& _status);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool MemberIdHasBeenSet() const;
 
                     /**
-                     * 获取Alarm ID list.
-                     * @return AlarmIDList Alarm ID list.
+                     * 获取List of alarm IDs
+                     * @return AlarmIDList List of alarm IDs
                      * 
                      */
                     std::vector<int64_t> GetAlarmIDList() const;
 
                     /**
-                     * 设置Alarm ID list.
-                     * @param _alarmIDList Alarm ID list.
+                     * 设置List of alarm IDs
+                     * @param _alarmIDList List of alarm IDs
                      * 
                      */
                     void SetAlarmIDList(const std::vector<int64_t>& _alarmIDList);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool AlarmIDListHasBeenSet() const;
 
                     /**
-                     * 获取Risk ID list.
-                     * @return RiskIDList Risk ID list.
+                     * 获取Risk ID list
+                     * @return RiskIDList Risk ID list
                      * 
                      */
                     std::vector<int64_t> GetRiskIDList() const;
 
                     /**
-                     * 设置Risk ID list.
-                     * @param _riskIDList Risk ID list.
+                     * 设置Risk ID list
+                     * @param _riskIDList Risk ID list
                      * 
                      */
                     void SetRiskIDList(const std::vector<int64_t>& _riskIDList);
@@ -129,7 +129,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Status  0: unprocessed 1: fixed 2: ignored.
+                     * Status. 0: unprocessed; 1: processed; 2: ignored
                      */
                     int64_t m_status;
                     bool m_statusHasBeenSet;
@@ -141,13 +141,13 @@ namespace TencentCloud
                     bool m_memberIdHasBeenSet;
 
                     /**
-                     * Alarm ID list.
+                     * List of alarm IDs
                      */
                     std::vector<int64_t> m_alarmIDList;
                     bool m_alarmIDListHasBeenSet;
 
                     /**
-                     * Risk ID list.
+                     * Risk ID list
                      */
                     std::vector<int64_t> m_riskIDList;
                     bool m_riskIDListHasBeenSet;

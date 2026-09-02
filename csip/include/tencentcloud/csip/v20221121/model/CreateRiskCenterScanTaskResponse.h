@@ -58,8 +58,8 @@ namespace TencentCloud
                     bool TaskIdHasBeenSet() const;
 
                     /**
-                     * 获取`0`: Task created successfully. `-1`: There are unauthorized assets. 
-                     * @return Status `0`: Task created successfully. `-1`: There are unauthorized assets. 
+                     * 获取0: Task creation succeeded; less than 0: Failed; -1: Unauthenticated assets exist.
+                     * @return Status 0: Task creation succeeded; less than 0: Failed; -1: Unauthenticated assets exist.
                      * 
                      */
                     int64_t GetStatus() const;
@@ -72,8 +72,8 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取List of unauthorized assets
-                     * @return UnAuthAsset List of unauthorized assets
+                     * 获取Unauthenticated Asset List
+                     * @return UnAuthAsset Unauthenticated Asset List
                      * 
                      */
                     std::vector<std::string> GetUnAuthAsset() const;
@@ -94,13 +94,13 @@ namespace TencentCloud
                     bool m_taskIdHasBeenSet;
 
                     /**
-                     * `0`: Task created successfully. `-1`: There are unauthorized assets. 
+                     * 0: Task creation succeeded; less than 0: Failed; -1: Unauthenticated assets exist.
                      */
                     int64_t m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * List of unauthorized assets
+                     * Unauthenticated Asset List
                      */
                     std::vector<std::string> m_unAuthAsset;
                     bool m_unAuthAssetHasBeenSet;

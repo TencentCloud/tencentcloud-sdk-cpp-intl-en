@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Number of created assets
-                     * @return Data Number of created assets
+                     * 获取Returns the Number of Successful Creations
+                     * @return Data Returns the Number of Successful Creations
                      * 
                      */
                     int64_t GetData() const;
@@ -60,7 +60,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Number of created assets
+                     * Returns the Number of Successful Creations
                      */
                     int64_t m_data;
                     bool m_dataHasBeenSet;

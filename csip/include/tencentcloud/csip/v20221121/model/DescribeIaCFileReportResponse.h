@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Detect file</p>
-                     * @return File <p>Detect file</p>
+                     * 获取<p>Detection file.</p>
+                     * @return File <p>Detection file.</p>
                      * 
                      */
                     std::string GetFile() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool FileHasBeenSet() const;
 
                     /**
-                     * 获取<p>Detection status (0: pending scan, 1: detecting, 2: completed, 3: detection exception)</p>
-                     * @return Status <p>Detection status (0: pending scan, 1: detecting, 2: completed, 3: detection exception)</p>
+                     * 获取<p>Detection status (0: Pending scan, 1: Detecting, 2: Completed, 3: Detection exception)</p>
+                     * @return Status <p>Detection status (0: Pending scan, 1: Detecting, 2: Completed, 3: Detection exception)</p>
                      * 
                      */
                     int64_t GetStatus() const;
@@ -103,13 +103,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Detect file</p>
+                     * <p>Detection file.</p>
                      */
                     std::string m_file;
                     bool m_fileHasBeenSet;
 
                     /**
-                     * <p>Detection status (0: pending scan, 1: detecting, 2: completed, 3: detection exception)</p>
+                     * <p>Detection status (0: Pending scan, 1: Detecting, 2: Completed, 3: Detection exception)</p>
                      */
                     int64_t m_status;
                     bool m_statusHasBeenSet;

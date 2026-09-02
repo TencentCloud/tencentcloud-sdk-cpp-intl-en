@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Details of asset scan result
+                * Asset Scan Structure Details
                 */
                 class AssetInfoDetail : public AbstractModel
                 {
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool AppIDHasBeenSet() const;
 
                     /**
-                     * 获取CVE id
-                     * @return CVEId CVE id
+                     * 获取CVE ID
+                     * @return CVEId CVE ID
                      * 
                      */
                     std::string GetCVEId() const;
 
                     /**
-                     * 设置CVE id
-                     * @param _cVEId CVE id
+                     * 设置CVE ID
+                     * @param _cVEId CVE ID
                      * 
                      */
                     void SetCVEId(const std::string& _cVEId);
@@ -215,15 +215,15 @@ namespace TencentCloud
                     bool TaskPercentHasBeenSet() const;
 
                     /**
-                     * 获取Task Time
-                     * @return TaskTime Task Time
+                     * 获取Task time
+                     * @return TaskTime Task time
                      * 
                      */
                     int64_t GetTaskTime() const;
 
                     /**
-                     * 设置Task Time
-                     * @param _taskTime Task Time
+                     * 设置Task time
+                     * @param _taskTime Task time
                      * 
                      */
                     void SetTaskTime(const int64_t& _taskTime);
@@ -265,7 +265,7 @@ namespace TencentCloud
                     bool m_appIDHasBeenSet;
 
                     /**
-                     * CVE id
+                     * CVE ID
                      */
                     std::string m_cVEId;
                     bool m_cVEIdHasBeenSet;
@@ -307,7 +307,7 @@ namespace TencentCloud
                     bool m_taskPercentHasBeenSet;
 
                     /**
-                     * Task Time
+                     * Task time
                      */
                     int64_t m_taskTime;
                     bool m_taskTimeHasBeenSet;

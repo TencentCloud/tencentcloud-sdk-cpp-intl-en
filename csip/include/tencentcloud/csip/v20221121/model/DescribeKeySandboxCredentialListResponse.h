@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Credential data list
-                     * @return Data Credential data list
+                     * 获取Credential data list.
+                     * @return Data Credential data list.
                      * 
                      */
                     std::vector<KeySandboxCredential> GetData() const;
@@ -75,7 +75,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Credential data list
+                     * Credential data list.
                      */
                     std::vector<KeySandboxCredential> m_data;
                     bool m_dataHasBeenSet;

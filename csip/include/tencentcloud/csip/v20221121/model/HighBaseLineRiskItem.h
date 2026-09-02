@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * High-Risk baseline risk content.
+                * Risk content of high-risk baseline
                 */
                 class HighBaseLineRiskItem : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Cloud account ID.
-                     * @return CloudAccountID Cloud account ID.
+                     * 获取Cloud Account ID
+                     * @return CloudAccountID Cloud Account ID
                      * 
                      */
                     std::string GetCloudAccountID() const;
 
                     /**
-                     * 设置Cloud account ID.
-                     * @param _cloudAccountID Cloud account ID.
+                     * 设置Cloud Account ID
+                     * @param _cloudAccountID Cloud Account ID
                      * 
                      */
                     void SetCloudAccountID(const std::string& _cloudAccountID);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool InstanceStatusHasBeenSet() const;
 
                     /**
-                     * 获取Instance name
-                     * @return InstanceName Instance name
+                     * 获取Instance name.
+                     * @return InstanceName Instance name.
                      * 
                      */
                     std::string GetInstanceName() const;
 
                     /**
-                     * 设置Instance name
-                     * @param _instanceName Instance name
+                     * 设置Instance name.
+                     * @param _instanceName Instance name.
                      * 
                      */
                     void SetInstanceName(const std::string& _instanceName);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool InstanceNameHasBeenSet() const;
 
                     /**
-                     * 获取Risk name.
-                     * @return RiskName Risk name.
+                     * 获取Risk name
+                     * @return RiskName Risk name
                      * 
                      */
                     std::string GetRiskName() const;
 
                     /**
-                     * 设置Risk name.
-                     * @param _riskName Risk name.
+                     * 设置Risk name
+                     * @param _riskName Risk name
                      * 
                      */
                     void SetRiskName(const std::string& _riskName);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool RiskNameHasBeenSet() const;
 
                     /**
-                     * 获取Risk classification.
-                     * @return RiskCategory Risk classification.
+                     * 获取Risk classification
+                     * @return RiskCategory Risk classification
                      * 
                      */
                     std::string GetRiskCategory() const;
 
                     /**
-                     * 设置Risk classification.
-                     * @param _riskCategory Risk classification.
+                     * 设置Risk classification
+                     * @param _riskCategory Risk classification
                      * 
                      */
                     void SetRiskCategory(const std::string& _riskCategory);
@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool RiskCategoryHasBeenSet() const;
 
                     /**
-                     * 获取Risk level.
-                     * @return RiskLevel Risk level.
+                     * 获取Risk level
+                     * @return RiskLevel Risk level
                      * 
                      */
                     std::string GetRiskLevel() const;
 
                     /**
-                     * 设置Risk level.
-                     * @param _riskLevel Risk level.
+                     * 设置Risk level
+                     * @param _riskLevel Risk level
                      * 
                      */
                     void SetRiskLevel(const std::string& _riskLevel);
@@ -194,15 +194,15 @@ namespace TencentCloud
                     bool RiskLevelHasBeenSet() const;
 
                     /**
-                     * 获取Risk description.
-                     * @return RiskDesc Risk description.
+                     * 获取Risk description
+                     * @return RiskDesc Risk description
                      * 
                      */
                     std::string GetRiskDesc() const;
 
                     /**
-                     * 设置Risk description.
-                     * @param _riskDesc Risk description.
+                     * 设置Risk description
+                     * @param _riskDesc Risk description
                      * 
                      */
                     void SetRiskDesc(const std::string& _riskDesc);
@@ -215,15 +215,15 @@ namespace TencentCloud
                     bool RiskDescHasBeenSet() const;
 
                     /**
-                     * 获取Risk result.
-                     * @return RiskResult Risk result.
+                     * 获取Risk result
+                     * @return RiskResult Risk result
                      * 
                      */
                     std::string GetRiskResult() const;
 
                     /**
-                     * 设置Risk result.
-                     * @param _riskResult Risk result.
+                     * 设置Risk result
+                     * @param _riskResult Risk result
                      * 
                      */
                     void SetRiskResult(const std::string& _riskResult);
@@ -257,15 +257,15 @@ namespace TencentCloud
                     bool FixAdviceHasBeenSet() const;
 
                     /**
-                     * 获取Linux vulnerability.
-                     * @return RiskCategoryName Linux vulnerability.
+                     * 获取Linux vulnerability
+                     * @return RiskCategoryName Linux vulnerability
                      * 
                      */
                     std::string GetRiskCategoryName() const;
 
                     /**
-                     * 设置Linux vulnerability.
-                     * @param _riskCategoryName Linux vulnerability.
+                     * 设置Linux vulnerability
+                     * @param _riskCategoryName Linux vulnerability
                      * 
                      */
                     void SetRiskCategoryName(const std::string& _riskCategoryName);
@@ -278,15 +278,15 @@ namespace TencentCloud
                     bool RiskCategoryNameHasBeenSet() const;
 
                     /**
-                     * 获取Risk name.
-                     * @return RiskLevelName Risk name.
+                     * 获取Risk level name
+                     * @return RiskLevelName Risk level name
                      * 
                      */
                     std::string GetRiskLevelName() const;
 
                     /**
-                     * 设置Risk name.
-                     * @param _riskLevelName Risk name.
+                     * 设置Risk level name
+                     * @param _riskLevelName Risk level name
                      * 
                      */
                     void SetRiskLevelName(const std::string& _riskLevelName);
@@ -362,15 +362,15 @@ namespace TencentCloud
                     bool UpdateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Tenant ID.
-                     * @return AppID Tenant ID.
+                     * 获取Tenant ID
+                     * @return AppID Tenant ID
                      * 
                      */
                     uint64_t GetAppID() const;
 
                     /**
-                     * 设置Tenant ID.
-                     * @param _appID Tenant ID.
+                     * 设置Tenant ID
+                     * @param _appID Tenant ID
                      * 
                      */
                     void SetAppID(const uint64_t& _appID);
@@ -385,7 +385,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Cloud account ID.
+                     * Cloud Account ID
                      */
                     std::string m_cloudAccountID;
                     bool m_cloudAccountIDHasBeenSet;
@@ -403,37 +403,37 @@ namespace TencentCloud
                     bool m_instanceStatusHasBeenSet;
 
                     /**
-                     * Instance name
+                     * Instance name.
                      */
                     std::string m_instanceName;
                     bool m_instanceNameHasBeenSet;
 
                     /**
-                     * Risk name.
+                     * Risk name
                      */
                     std::string m_riskName;
                     bool m_riskNameHasBeenSet;
 
                     /**
-                     * Risk classification.
+                     * Risk classification
                      */
                     std::string m_riskCategory;
                     bool m_riskCategoryHasBeenSet;
 
                     /**
-                     * Risk level.
+                     * Risk level
                      */
                     std::string m_riskLevel;
                     bool m_riskLevelHasBeenSet;
 
                     /**
-                     * Risk description.
+                     * Risk description
                      */
                     std::string m_riskDesc;
                     bool m_riskDescHasBeenSet;
 
                     /**
-                     * Risk result.
+                     * Risk result
                      */
                     std::string m_riskResult;
                     bool m_riskResultHasBeenSet;
@@ -445,13 +445,13 @@ namespace TencentCloud
                     bool m_fixAdviceHasBeenSet;
 
                     /**
-                     * Linux vulnerability.
+                     * Linux vulnerability
                      */
                     std::string m_riskCategoryName;
                     bool m_riskCategoryNameHasBeenSet;
 
                     /**
-                     * Risk name.
+                     * Risk level name
                      */
                     std::string m_riskLevelName;
                     bool m_riskLevelNameHasBeenSet;
@@ -475,7 +475,7 @@ namespace TencentCloud
                     bool m_updateTimeHasBeenSet;
 
                     /**
-                     * Tenant ID.
+                     * Tenant ID
                      */
                     uint64_t m_appID;
                     bool m_appIDHasBeenSet;

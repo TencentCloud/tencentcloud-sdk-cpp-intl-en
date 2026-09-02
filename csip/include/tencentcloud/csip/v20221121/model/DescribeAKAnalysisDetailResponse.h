@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Alarm AI analysis status -1 Analysis failed 0 Not analyzed 1 Under analysis 2 Analysis successful, real alarm 3 Analysis successful, suspicious alarm
-                     * @return AIStatus Alarm AI analysis status -1 Analysis failed 0 Not analyzed 1 Under analysis 2 Analysis successful, real alarm 3 Analysis successful, suspicious alarm
+                     * 获取Alarm AI analysis status. -1: analysis failed. 0: not analyzed. 1: under analysis. 2: analysis successful, real alarm. 3: analysis successful, suspicious alarm.
+                     * @return AIStatus Alarm AI analysis status. -1: analysis failed. 0: not analyzed. 1: under analysis. 2: analysis successful, real alarm. 3: analysis successful, suspicious alarm.
                      * 
                      */
                     int64_t GetAIStatus() const;
@@ -58,8 +58,8 @@ namespace TencentCloud
                     bool AIStatusHasBeenSet() const;
 
                     /**
-                     * 获取AI Analysis Task ID
-                     * @return AITaskID AI Analysis Task ID
+                     * 获取AI analysis task ID
+                     * @return AITaskID AI analysis task ID
                      * 
                      */
                     std::string GetAITaskID() const;
@@ -72,8 +72,8 @@ namespace TencentCloud
                     bool AITaskIDHasBeenSet() const;
 
                     /**
-                     * 获取Alarm AI analysis result, base64 format, avoid data interception
-                     * @return AIResult Alarm AI analysis result, base64 format, avoid data interception
+                     * 获取Alarm AI analysis result in base64 format to avoid data interception.
+                     * @return AIResult Alarm AI analysis result in base64 format to avoid data interception.
                      * 
                      */
                     std::string GetAIResult() const;
@@ -100,8 +100,8 @@ namespace TencentCloud
                     bool FeedbackHasBeenSet() const;
 
                     /**
-                     * 获取Feedback status  0 means no feedback, 1 means recognized, 2 means not recognized
-                     * @return FeedbackResult Feedback status  0 means no feedback, 1 means recognized, 2 means not recognized
+                     * 获取Feedback status. 0 means no feedback, 1 means recognized, and 2 means not recognized.
+                     * @return FeedbackResult Feedback status. 0 means no feedback, 1 means recognized, and 2 means not recognized.
                      * 
                      */
                     int64_t GetFeedbackResult() const;
@@ -130,19 +130,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Alarm AI analysis status -1 Analysis failed 0 Not analyzed 1 Under analysis 2 Analysis successful, real alarm 3 Analysis successful, suspicious alarm
+                     * Alarm AI analysis status. -1: analysis failed. 0: not analyzed. 1: under analysis. 2: analysis successful, real alarm. 3: analysis successful, suspicious alarm.
                      */
                     int64_t m_aIStatus;
                     bool m_aIStatusHasBeenSet;
 
                     /**
-                     * AI Analysis Task ID
+                     * AI analysis task ID
                      */
                     std::string m_aITaskID;
                     bool m_aITaskIDHasBeenSet;
 
                     /**
-                     * Alarm AI analysis result, base64 format, avoid data interception
+                     * Alarm AI analysis result in base64 format to avoid data interception.
                      */
                     std::string m_aIResult;
                     bool m_aIResultHasBeenSet;
@@ -154,7 +154,7 @@ namespace TencentCloud
                     bool m_feedbackHasBeenSet;
 
                     /**
-                     * Feedback status  0 means no feedback, 1 means recognized, 2 means not recognized
+                     * Feedback status. 0 means no feedback, 1 means recognized, and 2 means not recognized.
                      */
                     int64_t m_feedbackResult;
                     bool m_feedbackResultHasBeenSet;

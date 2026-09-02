@@ -68,19 +68,19 @@ Parameter format: sha256:<64-bit hex>
                     bool ContentHashHasBeenSet() const;
 
                     /**
-                     * 获取Specify the engine version number
-Value for reference: API response of CreateSkillScan
-                     * @return EngineVersion Specify the engine version number
-Value for reference: API response of CreateSkillScan
+                     * 获取Specify the engine version number.
+Parameter value for reference: returned by the CreateSkillScan API.
+                     * @return EngineVersion Specify the engine version number.
+Parameter value for reference: returned by the CreateSkillScan API.
                      * 
                      */
                     int64_t GetEngineVersion() const;
 
                     /**
-                     * 设置Specify the engine version number
-Value for reference: API response of CreateSkillScan
-                     * @param _engineVersion Specify the engine version number
-Value for reference: API response of CreateSkillScan
+                     * 设置Specify the engine version number.
+Parameter value for reference: returned by the CreateSkillScan API.
+                     * @param _engineVersion Specify the engine version number.
+Parameter value for reference: returned by the CreateSkillScan API.
                      * 
                      */
                     void SetEngineVersion(const int64_t& _engineVersion);
@@ -93,27 +93,27 @@ Value for reference: API response of CreateSkillScan
                     bool EngineVersionHasBeenSet() const;
 
                     /**
-                     * 获取Report signature address validity
+                     * 获取Address validity period of the report signature
 Unit: hr
-Default value: 8760 (1 year).
-Supplementary explanation: The returned ReportURL takes effect.
-                     * @return ReportURLExpireHours Report signature address validity
+Default value: 8760 (1 year)
+Supplementary description: It takes effect on the returned ReportURL.
+                     * @return ReportURLExpireHours Address validity period of the report signature
 Unit: hr
-Default value: 8760 (1 year).
-Supplementary explanation: The returned ReportURL takes effect.
+Default value: 8760 (1 year)
+Supplementary description: It takes effect on the returned ReportURL.
                      * 
                      */
                     int64_t GetReportURLExpireHours() const;
 
                     /**
-                     * 设置Report signature address validity
+                     * 设置Address validity period of the report signature
 Unit: hr
-Default value: 8760 (1 year).
-Supplementary explanation: The returned ReportURL takes effect.
-                     * @param _reportURLExpireHours Report signature address validity
+Default value: 8760 (1 year)
+Supplementary description: It takes effect on the returned ReportURL.
+                     * @param _reportURLExpireHours Address validity period of the report signature
 Unit: hr
-Default value: 8760 (1 year).
-Supplementary explanation: The returned ReportURL takes effect.
+Default value: 8760 (1 year)
+Supplementary description: It takes effect on the returned ReportURL.
                      * 
                      */
                     void SetReportURLExpireHours(const int64_t& _reportURLExpireHours);
@@ -135,17 +135,17 @@ Parameter format: sha256:<64-bit hex>
                     bool m_contentHashHasBeenSet;
 
                     /**
-                     * Specify the engine version number
-Value for reference: API response of CreateSkillScan
+                     * Specify the engine version number.
+Parameter value for reference: returned by the CreateSkillScan API.
                      */
                     int64_t m_engineVersion;
                     bool m_engineVersionHasBeenSet;
 
                     /**
-                     * Report signature address validity
+                     * Address validity period of the report signature
 Unit: hr
-Default value: 8760 (1 year).
-Supplementary explanation: The returned ReportURL takes effect.
+Default value: 8760 (1 year)
+Supplementary description: It takes effect on the returned ReportURL.
                      */
                     int64_t m_reportURLExpireHours;
                     bool m_reportURLExpireHoursHasBeenSet;

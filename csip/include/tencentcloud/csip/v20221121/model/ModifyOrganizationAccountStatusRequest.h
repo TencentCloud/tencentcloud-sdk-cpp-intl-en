@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Modify group account status. 1 Enable, 0 Disable.
-                     * @return Status Modify group account status. 1 Enable, 0 Disable.
+                     * 获取Modify the group account status. 1: enable, 0: disable.
+                     * @return Status Modify the group account status. 1: enable, 0: disable.
                      * 
                      */
                     int64_t GetStatus() const;
 
                     /**
-                     * 设置Modify group account status. 1 Enable, 0 Disable.
-                     * @param _status Modify group account status. 1 Enable, 0 Disable.
+                     * 设置Modify the group account status. 1: enable, 0: disable.
+                     * @param _status Modify the group account status. 1: enable, 0: disable.
                      * 
                      */
                     void SetStatus(const int64_t& _status);
@@ -87,7 +87,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Modify group account status. 1 Enable, 0 Disable.
+                     * Modify the group account status. 1: enable, 0: disable.
                      */
                     int64_t m_status;
                     bool m_statusHasBeenSet;

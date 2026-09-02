@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * User Behavior Analysis Policy
+                * User behavior analysis policy
                 */
                 class UebaRule : public AbstractModel
                 {
@@ -90,23 +90,23 @@ namespace TencentCloud
                     bool RuleNameHasBeenSet() const;
 
                     /**
-                     * 获取Policy type
-System policy
-custom policy
-                     * @return RuleType Policy type
-System policy
-custom policy
+                     * 获取Policy type.
+0: System policy
+1: Create custom policy
+                     * @return RuleType Policy type.
+0: System policy
+1: Create custom policy
                      * 
                      */
                     int64_t GetRuleType() const;
 
                     /**
-                     * 设置Policy type
-System policy
-custom policy
-                     * @param _ruleType Policy type
-System policy
-custom policy
+                     * 设置Policy type.
+0: System policy
+1: Create custom policy
+                     * @param _ruleType Policy type.
+0: System policy
+1: Create custom policy
                      * 
                      */
                     void SetRuleType(const int64_t& _ruleType);
@@ -120,13 +120,13 @@ custom policy
 
                     /**
                      * 获取Policy level
-Prompt.
+0: Prompt.
 1: low
 2: Medium risk
 3: High risk
 4: Critical
                      * @return RuleLevel Policy level
-Prompt.
+0: Prompt.
 1: low
 2: Medium risk
 3: High risk
@@ -137,13 +137,13 @@ Prompt.
 
                     /**
                      * 设置Policy level
-Prompt.
+0: Prompt.
 1: low
 2: Medium risk
 3: High risk
 4: Critical
                      * @param _ruleLevel Policy level
-Prompt.
+0: Prompt.
 1: low
 2: Medium risk
 3: High risk
@@ -223,15 +223,15 @@ Prompt.
                     bool HitCountHasBeenSet() const;
 
                     /**
-                     * 获取Associated account Appid.
-                     * @return AppID Associated account Appid.
+                     * 获取Appid of the associated account
+                     * @return AppID Appid of the associated account
                      * 
                      */
                     std::string GetAppID() const;
 
                     /**
-                     * 设置Associated account Appid.
-                     * @param _appID Associated account Appid.
+                     * 设置Appid of the associated account
+                     * @param _appID Appid of the associated account
                      * 
                      */
                     void SetAppID(const std::string& _appID);
@@ -307,15 +307,15 @@ Prompt.
                     bool NicknameHasBeenSet() const;
 
                     /**
-                     * 获取Custom rule specific content
-                     * @return CustomRuleDetail Custom rule specific content
+                     * 获取Specific content of the custom rule
+                     * @return CustomRuleDetail Specific content of the custom rule
                      * 
                      */
                     UebaCustomRule GetCustomRuleDetail() const;
 
                     /**
-                     * 设置Custom rule specific content
-                     * @param _customRuleDetail Custom rule specific content
+                     * 设置Specific content of the custom rule
+                     * @param _customRuleDetail Specific content of the custom rule
                      * 
                      */
                     void SetCustomRuleDetail(const UebaCustomRule& _customRuleDetail);
@@ -329,10 +329,10 @@ Prompt.
 
                     /**
                      * 获取Cloud type
-0 Tencent Cloud
+Tencent Cloud: 0
 aws:1
                      * @return CloudType Cloud type
-0 Tencent Cloud
+Tencent Cloud: 0
 aws:1
                      * 
                      */
@@ -340,10 +340,10 @@ aws:1
 
                     /**
                      * 设置Cloud type
-0 Tencent Cloud
+Tencent Cloud: 0
 aws:1
                      * @param _cloudType Cloud type
-0 Tencent Cloud
+Tencent Cloud: 0
 aws:1
                      * 
                      */
@@ -371,16 +371,16 @@ aws:1
                     bool m_ruleNameHasBeenSet;
 
                     /**
-                     * Policy type
-System policy
-custom policy
+                     * Policy type.
+0: System policy
+1: Create custom policy
                      */
                     int64_t m_ruleType;
                     bool m_ruleTypeHasBeenSet;
 
                     /**
                      * Policy level
-Prompt.
+0: Prompt.
 1: low
 2: Medium risk
 3: High risk
@@ -408,7 +408,7 @@ Prompt.
                     bool m_hitCountHasBeenSet;
 
                     /**
-                     * Associated account Appid.
+                     * Appid of the associated account
                      */
                     std::string m_appID;
                     bool m_appIDHasBeenSet;
@@ -432,14 +432,14 @@ Prompt.
                     bool m_nicknameHasBeenSet;
 
                     /**
-                     * Custom rule specific content
+                     * Specific content of the custom rule
                      */
                     UebaCustomRule m_customRuleDetail;
                     bool m_customRuleDetailHasBeenSet;
 
                     /**
                      * Cloud type
-0 Tencent Cloud
+Tencent Cloud: 0
 aws:1
                      */
                     int64_t m_cloudType;

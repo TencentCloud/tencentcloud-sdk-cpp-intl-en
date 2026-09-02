@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Advanced weak password check configuration
+                * Weak Password Risk Advanced Configuration
                 */
                 class TaskCenterWeakPwdRiskInputParam : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Check item ID
-                     * @return CheckItemId Check item ID
+                     * 获取Detection Item ID
+                     * @return CheckItemId Detection Item ID
                      * 
                      */
                     int64_t GetCheckItemId() const;
 
                     /**
-                     * 设置Check item ID
-                     * @param _checkItemId Check item ID
+                     * 设置Detection Item ID
+                     * @param _checkItemId Detection Item ID
                      * 
                      */
                     void SetCheckItemId(const int64_t& _checkItemId);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool CheckItemIdHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable. `0`: no, `1`: yes.
-                     * @return Enable Whether to enable. `0`: no, `1`: yes.
+                     * 获取Whether to enable. 0-Not to Enable; 1-Enable.
+                     * @return Enable Whether to enable. 0-Not to Enable; 1-Enable.
                      * 
                      */
                     int64_t GetEnable() const;
 
                     /**
-                     * 设置Whether to enable. `0`: no, `1`: yes.
-                     * @param _enable Whether to enable. `0`: no, `1`: yes.
+                     * 设置Whether to enable. 0-Not to Enable; 1-Enable.
+                     * @param _enable Whether to enable. 0-Not to Enable; 1-Enable.
                      * 
                      */
                     void SetEnable(const int64_t& _enable);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Check item ID
+                     * Detection Item ID
                      */
                     int64_t m_checkItemId;
                     bool m_checkItemIdHasBeenSet;
 
                     /**
-                     * Whether to enable. `0`: no, `1`: yes.
+                     * Whether to enable. 0-Not to Enable; 1-Enable.
                      */
                     int64_t m_enable;
                     bool m_enableHasBeenSet;

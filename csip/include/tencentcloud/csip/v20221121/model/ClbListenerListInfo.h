@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * CLB instance and listener information
+                * CLB Instance and Listener Information
                 */
                 class ClbListenerListInfo : public AbstractModel
                 {
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool ListenerIdHasBeenSet() const;
 
                     /**
-                     * 获取listener name
-                     * @return ListenerName listener name
+                     * 获取Listener name
+                     * @return ListenerName Listener name
                      * 
                      */
                     std::string GetListenerName() const;
 
                     /**
-                     * 设置listener name
-                     * @param _listenerName listener name
+                     * 设置Listener name
+                     * @param _listenerName Listener name
                      * 
                      */
                     void SetListenerName(const std::string& _listenerName);
@@ -328,7 +328,7 @@ namespace TencentCloud
                     bool m_listenerIdHasBeenSet;
 
                     /**
-                     * listener name
+                     * Listener name
                      */
                     std::string m_listenerName;
                     bool m_listenerNameHasBeenSet;

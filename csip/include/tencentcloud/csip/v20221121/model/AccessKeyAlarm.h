@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Access key Alarm record.
+                * Access key alarm records
                 */
                 class AccessKeyAlarm : public AbstractModel
                 {
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取<p>Alarm level<br>0-Unavailable 1-Notification 2-Low risk 3-Medium risk 4-High risk 5-Critical</p>
-                     * @return Level <p>Alarm level<br>0-Unavailable 1-Notification 2-Low risk 3-Medium risk 4-High risk 5-Critical</p>
+                     * 获取<p>Alarm level<br>0 - Invalid, 1 - Notification, 2 - Low risk, 3 - Medium risk, 4 - High risk, 5 - Critical</p>
+                     * @return Level <p>Alarm level<br>0 - Invalid, 1 - Notification, 2 - Low risk, 3 - Medium risk, 4 - High risk, 5 - Critical</p>
                      * 
                      */
                     int64_t GetLevel() const;
 
                     /**
-                     * 设置<p>Alarm level<br>0-Unavailable 1-Notification 2-Low risk 3-Medium risk 4-High risk 5-Critical</p>
-                     * @param _level <p>Alarm level<br>0-Unavailable 1-Notification 2-Low risk 3-Medium risk 4-High risk 5-Critical</p>
+                     * 设置<p>Alarm level<br>0 - Invalid, 1 - Notification, 2 - Low risk, 3 - Medium risk, 4 - High risk, 5 - Critical</p>
+                     * @param _level <p>Alarm level<br>0 - Invalid, 1 - Notification, 2 - Low risk, 3 - Medium risk, 4 - High risk, 5 - Critical</p>
                      * 
                      */
                     void SetLevel(const int64_t& _level);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool AlarmRuleIDHasBeenSet() const;
 
                     /**
-                     * 获取<p>Alarm type<br>0 Abnormal call<br>1 Leak monitoring</p>
-                     * @return AlarmType <p>Alarm type<br>0 Abnormal call<br>1 Leak monitoring</p>
+                     * 获取<p>Alarm type<br>0 Abnormal calls<br>1 Leak monitoring</p>
+                     * @return AlarmType <p>Alarm type<br>0 Abnormal calls<br>1 Leak monitoring</p>
                      * 
                      */
                     int64_t GetAlarmType() const;
 
                     /**
-                     * 设置<p>Alarm type<br>0 Abnormal call<br>1 Leak monitoring</p>
-                     * @param _alarmType <p>Alarm type<br>0 Abnormal call<br>1 Leak monitoring</p>
+                     * 设置<p>Alarm type<br>0 Abnormal calls<br>1 Leak monitoring</p>
+                     * @param _alarmType <p>Alarm type<br>0 Abnormal calls<br>1 Leak monitoring</p>
                      * 
                      */
                     void SetAlarmType(const int64_t& _alarmType);
@@ -236,15 +236,15 @@ namespace TencentCloud
                     bool LastAlarmTimeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Alarm status<br>0-unprocessed 1-processed 2-ignored</p>
-                     * @return Status <p>Alarm status<br>0-unprocessed 1-processed 2-ignored</p>
+                     * 获取<p>Alarm status<br>0 - Unprocessed, 1 - Processed, 2 - Ignored</p>
+                     * @return Status <p>Alarm status<br>0 - Unprocessed, 1 - Processed, 2 - Ignored</p>
                      * 
                      */
                     int64_t GetStatus() const;
 
                     /**
-                     * 设置<p>Alarm status<br>0-unprocessed 1-processed 2-ignored</p>
-                     * @param _status <p>Alarm status<br>0-unprocessed 1-processed 2-ignored</p>
+                     * 设置<p>Alarm status<br>0 - Unprocessed, 1 - Processed, 2 - Ignored</p>
+                     * @param _status <p>Alarm status<br>0 - Unprocessed, 1 - Processed, 2 - Ignored</p>
                      * 
                      */
                     void SetStatus(const int64_t& _status);
@@ -257,15 +257,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取<p>Aggregate date</p>
-                     * @return Date <p>Aggregate date</p>
+                     * 获取<p>Aggregation date</p>
+                     * @return Date <p>Aggregation date</p>
                      * 
                      */
                     std::string GetDate() const;
 
                     /**
-                     * 设置<p>Aggregate date</p>
-                     * @param _date <p>Aggregate date</p>
+                     * 设置<p>Aggregation date</p>
+                     * @param _date <p>Aggregation date</p>
                      * 
                      */
                     void SetDate(const std::string& _date);
@@ -362,15 +362,15 @@ namespace TencentCloud
                     bool SubUinHasBeenSet() const;
 
                     /**
-                     * 获取<p>Sub-account nickname</p>
-                     * @return SubNickname <p>Sub-account nickname</p>
+                     * 获取<p>Belonging sub-account nickname</p>
+                     * @return SubNickname <p>Belonging sub-account nickname</p>
                      * 
                      */
                     std::string GetSubNickname() const;
 
                     /**
-                     * 设置<p>Sub-account nickname</p>
-                     * @param _subNickname <p>Sub-account nickname</p>
+                     * 设置<p>Belonging sub-account nickname</p>
+                     * @param _subNickname <p>Belonging sub-account nickname</p>
                      * 
                      */
                     void SetSubNickname(const std::string& _subNickname);
@@ -383,15 +383,15 @@ namespace TencentCloud
                     bool SubNicknameHasBeenSet() const;
 
                     /**
-                     * 获取<p>Account type<br>0 Root account AK 1 Sub-account AK 2 Temporary key</p>
-                     * @return Type <p>Account type<br>0 Root account AK 1 Sub-account AK 2 Temporary key</p>
+                     * 获取<p>Account type<br>0: root account AK; 1: sub-account AK; 2: temporary key</p>
+                     * @return Type <p>Account type<br>0: root account AK; 1: sub-account AK; 2: temporary key</p>
                      * 
                      */
                     int64_t GetType() const;
 
                     /**
-                     * 设置<p>Account type<br>0 Root account AK 1 Sub-account AK 2 Temporary key</p>
-                     * @param _type <p>Account type<br>0 Root account AK 1 Sub-account AK 2 Temporary key</p>
+                     * 设置<p>Account type<br>0: root account AK; 1: sub-account AK; 2: temporary key</p>
+                     * @param _type <p>Account type<br>0: root account AK; 1: sub-account AK; 2: temporary key</p>
                      * 
                      */
                     void SetType(const int64_t& _type);
@@ -446,15 +446,15 @@ namespace TencentCloud
                     bool LeakEvidenceHasBeenSet() const;
 
                     /**
-                     * 获取<p>Whether support editing trust account</p>
-                     * @return IsSupportEditWhiteAccount <p>Whether support editing trust account</p>
+                     * 获取<p>Whether editing trusted accounts is supported</p>
+                     * @return IsSupportEditWhiteAccount <p>Whether editing trusted accounts is supported</p>
                      * 
                      */
                     bool GetIsSupportEditWhiteAccount() const;
 
                     /**
-                     * 设置<p>Whether support editing trust account</p>
-                     * @param _isSupportEditWhiteAccount <p>Whether support editing trust account</p>
+                     * 设置<p>Whether editing trusted accounts is supported</p>
+                     * @param _isSupportEditWhiteAccount <p>Whether editing trusted accounts is supported</p>
                      * 
                      */
                     void SetIsSupportEditWhiteAccount(const bool& _isSupportEditWhiteAccount);
@@ -488,15 +488,15 @@ namespace TencentCloud
                     bool EvidenceHasBeenSet() const;
 
                     /**
-                     * 获取<p>Alarm rule flag</p>
-                     * @return RuleKey <p>Alarm rule flag</p>
+                     * 获取<p>Alarm rule identifier</p>
+                     * @return RuleKey <p>Alarm rule identifier</p>
                      * 
                      */
                     std::string GetRuleKey() const;
 
                     /**
-                     * 设置<p>Alarm rule flag</p>
-                     * @param _ruleKey <p>Alarm rule flag</p>
+                     * 设置<p>Alarm rule identifier</p>
+                     * @param _ruleKey <p>Alarm rule identifier</p>
                      * 
                      */
                     void SetRuleKey(const std::string& _ruleKey);
@@ -509,15 +509,15 @@ namespace TencentCloud
                     bool RuleKeyHasBeenSet() const;
 
                     /**
-                     * 获取<p>Cloud vendor type 0:Tencent Cloud 1:Amazon Web Services 2:Microsoft Azure 3:Google Cloud 4:Alibaba Cloud 5:Huawei Cloud</p>
-                     * @return CloudType <p>Cloud vendor type 0:Tencent Cloud 1:Amazon Web Services 2:Microsoft Azure 3:Google Cloud 4:Alibaba Cloud 5:Huawei Cloud</p>
+                     * 获取<p>Cloud vendor type. 0: Tencent Cloud. 1: Amazon Web Services. 2: Microsoft Azure. 3: Google Cloud. 4: Alibaba Cloud. 5: Huawei Cloud</p>
+                     * @return CloudType <p>Cloud vendor type. 0: Tencent Cloud. 1: Amazon Web Services. 2: Microsoft Azure. 3: Google Cloud. 4: Alibaba Cloud. 5: Huawei Cloud</p>
                      * 
                      */
                     int64_t GetCloudType() const;
 
                     /**
-                     * 设置<p>Cloud vendor type 0:Tencent Cloud 1:Amazon Web Services 2:Microsoft Azure 3:Google Cloud 4:Alibaba Cloud 5:Huawei Cloud</p>
-                     * @param _cloudType <p>Cloud vendor type 0:Tencent Cloud 1:Amazon Web Services 2:Microsoft Azure 3:Google Cloud 4:Alibaba Cloud 5:Huawei Cloud</p>
+                     * 设置<p>Cloud vendor type. 0: Tencent Cloud. 1: Amazon Web Services. 2: Microsoft Azure. 3: Google Cloud. 4: Alibaba Cloud. 5: Huawei Cloud</p>
+                     * @param _cloudType <p>Cloud vendor type. 0: Tencent Cloud. 1: Amazon Web Services. 2: Microsoft Azure. 3: Google Cloud. 4: Alibaba Cloud. 5: Huawei Cloud</p>
                      * 
                      */
                     void SetCloudType(const int64_t& _cloudType);
@@ -530,15 +530,15 @@ namespace TencentCloud
                     bool CloudTypeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Alarm AI analysis status<br>-1 Analysis failed<br>0 Not analyzed<br>1 Under analysis<br>2 Analysis successful, real alarm<br>3 Analysis successful, suspicious alarm</p>
-                     * @return AIStatus <p>Alarm AI analysis status<br>-1 Analysis failed<br>0 Not analyzed<br>1 Under analysis<br>2 Analysis successful, real alarm<br>3 Analysis successful, suspicious alarm</p>
+                     * 获取<p>Alarm AI analysis status<br>-1: Analysis failed<br>0: Not analyzed<br>1: Under analysis<br>2: Analysis successful, real alarm<br>3: Analysis successful, suspicious alarm</p>
+                     * @return AIStatus <p>Alarm AI analysis status<br>-1: Analysis failed<br>0: Not analyzed<br>1: Under analysis<br>2: Analysis successful, real alarm<br>3: Analysis successful, suspicious alarm</p>
                      * 
                      */
                     int64_t GetAIStatus() const;
 
                     /**
-                     * 设置<p>Alarm AI analysis status<br>-1 Analysis failed<br>0 Not analyzed<br>1 Under analysis<br>2 Analysis successful, real alarm<br>3 Analysis successful, suspicious alarm</p>
-                     * @param _aIStatus <p>Alarm AI analysis status<br>-1 Analysis failed<br>0 Not analyzed<br>1 Under analysis<br>2 Analysis successful, real alarm<br>3 Analysis successful, suspicious alarm</p>
+                     * 设置<p>Alarm AI analysis status<br>-1: Analysis failed<br>0: Not analyzed<br>1: Under analysis<br>2: Analysis successful, real alarm<br>3: Analysis successful, suspicious alarm</p>
+                     * @param _aIStatus <p>Alarm AI analysis status<br>-1: Analysis failed<br>0: Not analyzed<br>1: Under analysis<br>2: Analysis successful, real alarm<br>3: Analysis successful, suspicious alarm</p>
                      * 
                      */
                     void SetAIStatus(const int64_t& _aIStatus);
@@ -551,15 +551,15 @@ namespace TencentCloud
                     bool AIStatusHasBeenSet() const;
 
                     /**
-                     * 获取<p>First alarm timestamp (in seconds)</p>
-                     * @return FirstAlarmTimestamp <p>First alarm timestamp (in seconds)</p>
+                     * 获取<p>Initial alarm timestamp (in seconds)</p>
+                     * @return FirstAlarmTimestamp <p>Initial alarm timestamp (in seconds)</p>
                      * 
                      */
                     int64_t GetFirstAlarmTimestamp() const;
 
                     /**
-                     * 设置<p>First alarm timestamp (in seconds)</p>
-                     * @param _firstAlarmTimestamp <p>First alarm timestamp (in seconds)</p>
+                     * 设置<p>Initial alarm timestamp (in seconds)</p>
+                     * @param _firstAlarmTimestamp <p>Initial alarm timestamp (in seconds)</p>
                      * 
                      */
                     void SetFirstAlarmTimestamp(const int64_t& _firstAlarmTimestamp);
@@ -593,15 +593,15 @@ namespace TencentCloud
                     bool LastAlarmTimestampHasBeenSet() const;
 
                     /**
-                     * 获取<p>AI analysis failure description. Empty string if not failed.</p>
-                     * @return AIFailedReason <p>AI analysis failure description. Empty string if not failed.</p>
+                     * 获取<p>AI analysis failure description, an empty string if no failure</p>
+                     * @return AIFailedReason <p>AI analysis failure description, an empty string if no failure</p>
                      * 
                      */
                     std::string GetAIFailedReason() const;
 
                     /**
-                     * 设置<p>AI analysis failure description. Empty string if not failed.</p>
-                     * @param _aIFailedReason <p>AI analysis failure description. Empty string if not failed.</p>
+                     * 设置<p>AI analysis failure description, an empty string if no failure</p>
+                     * @param _aIFailedReason <p>AI analysis failure description, an empty string if no failure</p>
                      * 
                      */
                     void SetAIFailedReason(const std::string& _aIFailedReason);
@@ -622,7 +622,7 @@ namespace TencentCloud
                     bool m_nameHasBeenSet;
 
                     /**
-                     * <p>Alarm level<br>0-Unavailable 1-Notification 2-Low risk 3-Medium risk 4-High risk 5-Critical</p>
+                     * <p>Alarm level<br>0 - Invalid, 1 - Notification, 2 - Low risk, 3 - Medium risk, 4 - High risk, 5 - Critical</p>
                      */
                     int64_t m_level;
                     bool m_levelHasBeenSet;
@@ -640,7 +640,7 @@ namespace TencentCloud
                     bool m_alarmRuleIDHasBeenSet;
 
                     /**
-                     * <p>Alarm type<br>0 Abnormal call<br>1 Leak monitoring</p>
+                     * <p>Alarm type<br>0 Abnormal calls<br>1 Leak monitoring</p>
                      */
                     int64_t m_alarmType;
                     bool m_alarmTypeHasBeenSet;
@@ -670,13 +670,13 @@ namespace TencentCloud
                     bool m_lastAlarmTimeHasBeenSet;
 
                     /**
-                     * <p>Alarm status<br>0-unprocessed 1-processed 2-ignored</p>
+                     * <p>Alarm status<br>0 - Unprocessed, 1 - Processed, 2 - Ignored</p>
                      */
                     int64_t m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * <p>Aggregate date</p>
+                     * <p>Aggregation date</p>
                      */
                     std::string m_date;
                     bool m_dateHasBeenSet;
@@ -706,13 +706,13 @@ namespace TencentCloud
                     bool m_subUinHasBeenSet;
 
                     /**
-                     * <p>Sub-account nickname</p>
+                     * <p>Belonging sub-account nickname</p>
                      */
                     std::string m_subNickname;
                     bool m_subNicknameHasBeenSet;
 
                     /**
-                     * <p>Account type<br>0 Root account AK 1 Sub-account AK 2 Temporary key</p>
+                     * <p>Account type<br>0: root account AK; 1: sub-account AK; 2: temporary key</p>
                      */
                     int64_t m_type;
                     bool m_typeHasBeenSet;
@@ -730,7 +730,7 @@ namespace TencentCloud
                     bool m_leakEvidenceHasBeenSet;
 
                     /**
-                     * <p>Whether support editing trust account</p>
+                     * <p>Whether editing trusted accounts is supported</p>
                      */
                     bool m_isSupportEditWhiteAccount;
                     bool m_isSupportEditWhiteAccountHasBeenSet;
@@ -742,25 +742,25 @@ namespace TencentCloud
                     bool m_evidenceHasBeenSet;
 
                     /**
-                     * <p>Alarm rule flag</p>
+                     * <p>Alarm rule identifier</p>
                      */
                     std::string m_ruleKey;
                     bool m_ruleKeyHasBeenSet;
 
                     /**
-                     * <p>Cloud vendor type 0:Tencent Cloud 1:Amazon Web Services 2:Microsoft Azure 3:Google Cloud 4:Alibaba Cloud 5:Huawei Cloud</p>
+                     * <p>Cloud vendor type. 0: Tencent Cloud. 1: Amazon Web Services. 2: Microsoft Azure. 3: Google Cloud. 4: Alibaba Cloud. 5: Huawei Cloud</p>
                      */
                     int64_t m_cloudType;
                     bool m_cloudTypeHasBeenSet;
 
                     /**
-                     * <p>Alarm AI analysis status<br>-1 Analysis failed<br>0 Not analyzed<br>1 Under analysis<br>2 Analysis successful, real alarm<br>3 Analysis successful, suspicious alarm</p>
+                     * <p>Alarm AI analysis status<br>-1: Analysis failed<br>0: Not analyzed<br>1: Under analysis<br>2: Analysis successful, real alarm<br>3: Analysis successful, suspicious alarm</p>
                      */
                     int64_t m_aIStatus;
                     bool m_aIStatusHasBeenSet;
 
                     /**
-                     * <p>First alarm timestamp (in seconds)</p>
+                     * <p>Initial alarm timestamp (in seconds)</p>
                      */
                     int64_t m_firstAlarmTimestamp;
                     bool m_firstAlarmTimestampHasBeenSet;
@@ -772,7 +772,7 @@ namespace TencentCloud
                     bool m_lastAlarmTimestampHasBeenSet;
 
                     /**
-                     * <p>AI analysis failure description. Empty string if not failed.</p>
+                     * <p>AI analysis failure description, an empty string if no failure</p>
                      */
                     std::string m_aIFailedReason;
                     bool m_aIFailedReasonHasBeenSet;

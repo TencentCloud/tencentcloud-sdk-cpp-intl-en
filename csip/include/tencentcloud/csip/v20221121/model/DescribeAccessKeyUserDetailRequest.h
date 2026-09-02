@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Account uin itself.
-                     * @return SubUin Account uin itself.
+                     * 获取Account's own uin
+                     * @return SubUin Account's own uin
                      * 
                      */
                     std::string GetSubUin() const;
 
                     /**
-                     * 设置Account uin itself.
-                     * @param _subUin Account uin itself.
+                     * 设置Account's own uin
+                     * @param _subUin Account's own uin
                      * 
                      */
                     void SetSubUin(const std::string& _subUin);
@@ -87,7 +87,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Account uin itself.
+                     * Account's own uin
                      */
                     std::string m_subUin;
                     bool m_subUinHasBeenSet;

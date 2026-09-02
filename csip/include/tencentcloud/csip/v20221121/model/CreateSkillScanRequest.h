@@ -43,19 +43,19 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Base64 encoding of the ZIP file content
-Input limit: File size limit 7MB (before encoding), only effective ZIP format.
-                     * @return FileBase64 Base64 encoding of the ZIP file content
-Input limit: File size limit 7MB (before encoding), only effective ZIP format.
+                     * 获取Base64-encoded ZIP file content
+Input limits: file size limit 7 MB (before encoding). Only valid ZIP format is accepted.
+                     * @return FileBase64 Base64-encoded ZIP file content
+Input limits: file size limit 7 MB (before encoding). Only valid ZIP format is accepted.
                      * 
                      */
                     std::string GetFileBase64() const;
 
                     /**
-                     * 设置Base64 encoding of the ZIP file content
-Input limit: File size limit 7MB (before encoding), only effective ZIP format.
-                     * @param _fileBase64 Base64 encoding of the ZIP file content
-Input limit: File size limit 7MB (before encoding), only effective ZIP format.
+                     * 设置Base64-encoded ZIP file content
+Input limits: file size limit 7 MB (before encoding). Only valid ZIP format is accepted.
+                     * @param _fileBase64 Base64-encoded ZIP file content
+Input limits: file size limit 7 MB (before encoding). Only valid ZIP format is accepted.
                      * 
                      */
                     void SetFileBase64(const std::string& _fileBase64);
@@ -95,8 +95,8 @@ Parameter format: such as my-skill.zip
                 private:
 
                     /**
-                     * Base64 encoding of the ZIP file content
-Input limit: File size limit 7MB (before encoding), only effective ZIP format.
+                     * Base64-encoded ZIP file content
+Input limits: file size limit 7 MB (before encoding). Only valid ZIP format is accepted.
                      */
                     std::string m_fileBase64;
                     bool m_fileBase64HasBeenSet;

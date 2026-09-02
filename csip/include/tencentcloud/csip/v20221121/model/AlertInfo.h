@@ -49,15 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取alarm ID
-                     * @return ID alarm ID
+                     * 获取Alarm ID
+                     * @return ID Alarm ID
                      * 
                      */
                     std::string GetID() const;
 
                     /**
-                     * 设置alarm ID
-                     * @param _iD alarm ID
+                     * 设置Alarm ID
+                     * @param _iD Alarm ID
                      * 
                      */
                     void SetID(const std::string& _iD);
@@ -70,15 +70,15 @@ namespace TencentCloud
                     bool IDHasBeenSet() const;
 
                     /**
-                     * 获取alarm name
-                     * @return Name alarm name
+                     * 获取Alarm name
+                     * @return Name Alarm name
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置alarm name
-                     * @param _name alarm name
+                     * 设置Alarm name
+                     * @param _name Alarm name
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -92,12 +92,12 @@ namespace TencentCloud
 
                     /**
                      * 获取Alarm source
-CFW: Cloud Firewall
+CFW: Cloud firewall
 WAF: Web application firewall
 CWP: Host Security
 CSIP: Cloud Security Center
                      * @return Source Alarm source
-CFW: Cloud Firewall
+CFW: Cloud firewall
 WAF: Web application firewall
 CWP: Host Security
 CSIP: Cloud Security Center
@@ -107,12 +107,12 @@ CSIP: Cloud Security Center
 
                     /**
                      * 设置Alarm source
-CFW: Cloud Firewall
+CFW: Cloud firewall
 WAF: Web application firewall
 CWP: Host Security
 CSIP: Cloud Security Center
                      * @param _source Alarm source
-CFW: Cloud Firewall
+CFW: Cloud firewall
 WAF: Web application firewall
 CWP: Host Security
 CSIP: Cloud Security Center
@@ -128,15 +128,15 @@ CSIP: Cloud Security Center
                     bool SourceHasBeenSet() const;
 
                     /**
-                     * 获取alarm level
-Prompt.
-2: Low risk
+                     * 获取Alarm level
+1: Prompt
+2: Low-risk
 3: Medium risk
 4: High risk
 5: Critical
-                     * @return Level alarm level
-Prompt.
-2: Low risk
+                     * @return Level Alarm level
+1: Prompt
+2: Low-risk
 3: Medium risk
 4: High risk
 5: Critical
@@ -145,15 +145,15 @@ Prompt.
                     uint64_t GetLevel() const;
 
                     /**
-                     * 设置alarm level
-Prompt.
-2: Low risk
+                     * 设置Alarm level
+1: Prompt
+2: Low-risk
 3: Medium risk
 4: High risk
 5: Critical
-                     * @param _level alarm level
-Prompt.
-2: Low risk
+                     * @param _level Alarm level
+1: Prompt
+2: Low-risk
 3: Medium risk
 4: High risk
 5: Critical
@@ -169,15 +169,15 @@ Prompt.
                     bool LevelHasBeenSet() const;
 
                     /**
-                     * 获取attacker
-                     * @return Attacker attacker
+                     * 获取Attacker
+                     * @return Attacker Attacker
                      * 
                      */
                     RoleInfo GetAttacker() const;
 
                     /**
-                     * 设置attacker
-                     * @param _attacker attacker
+                     * 设置Attacker
+                     * @param _attacker Attacker
                      * 
                      */
                     void SetAttacker(const RoleInfo& _attacker);
@@ -190,15 +190,15 @@ Prompt.
                     bool AttackerHasBeenSet() const;
 
                     /**
-                     * 获取victim
-                     * @return Victim victim
+                     * 获取Victim.
+                     * @return Victim Victim.
                      * 
                      */
                     RoleInfo GetVictim() const;
 
                     /**
-                     * 设置victim
-                     * @param _victim victim
+                     * 设置Victim.
+                     * @param _victim Victim.
                      * 
                      */
                     void SetVictim(const RoleInfo& _victim);
@@ -211,15 +211,15 @@ Prompt.
                     bool VictimHasBeenSet() const;
 
                     /**
-                     * 获取Evidence data (such as attack content, base64 encoded)
-                     * @return EvidenceData Evidence data (such as attack content, base64 encoded)
+                     * 获取Evidence data (for example, attack content, base64 encoded)
+                     * @return EvidenceData Evidence data (for example, attack content, base64 encoded)
                      * 
                      */
                     std::string GetEvidenceData() const;
 
                     /**
-                     * 设置Evidence data (such as attack content, base64 encoded)
-                     * @param _evidenceData Evidence data (such as attack content, base64 encoded)
+                     * 设置Evidence data (for example, attack content, base64 encoded)
+                     * @param _evidenceData Evidence data (for example, attack content, base64 encoded)
                      * 
                      */
                     void SetEvidenceData(const std::string& _evidenceData);
@@ -232,15 +232,15 @@ Prompt.
                     bool EvidenceDataHasBeenSet() const;
 
                     /**
-                     * 获取evidence location (for example protocol port)
-                     * @return EvidenceLocation evidence location (for example protocol port)
+                     * 获取Evidence location (such as protocol port)
+                     * @return EvidenceLocation Evidence location (such as protocol port)
                      * 
                      */
                     std::string GetEvidenceLocation() const;
 
                     /**
-                     * 设置evidence location (for example protocol port)
-                     * @param _evidenceLocation evidence location (for example protocol port)
+                     * 设置Evidence location (such as protocol port)
+                     * @param _evidenceLocation Evidence location (such as protocol port)
                      * 
                      */
                     void SetEvidenceLocation(const std::string& _evidenceLocation);
@@ -274,15 +274,15 @@ Prompt.
                     bool EvidencePathHasBeenSet() const;
 
                     /**
-                     * 获取Initial alarm time
-                     * @return CreateTime Initial alarm time
+                     * 获取First alarm time
+                     * @return CreateTime First alarm time
                      * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
-                     * 设置Initial alarm time
-                     * @param _createTime Initial alarm time
+                     * 设置First alarm time
+                     * @param _createTime First alarm time
                      * 
                      */
                     void SetCreateTime(const std::string& _createTime);
@@ -380,18 +380,18 @@ Prompt.
 
                     /**
                      * 获取Processing status
-0: unprocessed, 1: ignored, 2: processed
+0: Unprocessed; 1: Ignored; 2: Processed.
                      * @return Status Processing status
-0: unprocessed, 1: ignored, 2: processed
+0: Unprocessed; 1: Ignored; 2: Processed.
                      * 
                      */
                     uint64_t GetStatus() const;
 
                     /**
                      * 设置Processing status
-0: unprocessed, 1: ignored, 2: processed
+0: Unprocessed; 1: Ignored; 2: Processed.
                      * @param _status Processing status
-0: unprocessed, 1: ignored, 2: processed
+0: Unprocessed; 1: Ignored; 2: Processed.
                      * 
                      */
                     void SetStatus(const uint64_t& _status);
@@ -572,15 +572,15 @@ Prompt.
                     bool NickNameHasBeenSet() const;
 
                     /**
-                     * 获取account ID
-                     * @return Uin account ID
+                     * 获取Account ID
+                     * @return Uin Account ID
                      * 
                      */
                     std::string GetUin() const;
 
                     /**
-                     * 设置account ID
-                     * @param _uin account ID
+                     * 设置Account ID
+                     * @param _uin Account ID
                      * 
                      */
                     void SetUin(const std::string& _uin);
@@ -593,15 +593,15 @@ Prompt.
                     bool UinHasBeenSet() const;
 
                     /**
-                     * 获取Behavior
-                     * @return Action Behavior
+                     * 获取Action
+                     * @return Action Action
                      * 
                      */
                     uint64_t GetAction() const;
 
                     /**
-                     * 设置Behavior
-                     * @param _action Behavior
+                     * 设置Action
+                     * @param _action Action
                      * 
                      */
                     void SetAction(const uint64_t& _action);
@@ -614,15 +614,15 @@ Prompt.
                     bool ActionHasBeenSet() const;
 
                     /**
-                     * 获取risk detection
-                     * @return RiskInvestigation risk detection
+                     * 获取Risk detection
+                     * @return RiskInvestigation Risk detection
                      * 
                      */
                     std::string GetRiskInvestigation() const;
 
                     /**
-                     * 设置risk detection
-                     * @param _riskInvestigation risk detection
+                     * 设置Risk detection
+                     * @param _riskInvestigation Risk detection
                      * 
                      */
                     void SetRiskInvestigation(const std::string& _riskInvestigation);
@@ -656,15 +656,15 @@ Prompt.
                     bool RiskTreatmentHasBeenSet() const;
 
                     /**
-                     * 获取log type
-                     * @return LogType log type
+                     * 获取Log type
+                     * @return LogType Log type
                      * 
                      */
                     std::string GetLogType() const;
 
                     /**
-                     * 设置log type
-                     * @param _logType log type
+                     * 设置Log type
+                     * @param _logType Log type
                      * 
                      */
                     void SetLogType(const std::string& _logType);
@@ -700,20 +700,20 @@ Prompt.
                 private:
 
                     /**
-                     * alarm ID
+                     * Alarm ID
                      */
                     std::string m_iD;
                     bool m_iDHasBeenSet;
 
                     /**
-                     * alarm name
+                     * Alarm name
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
                      * Alarm source
-CFW: Cloud Firewall
+CFW: Cloud firewall
 WAF: Web application firewall
 CWP: Host Security
 CSIP: Cloud Security Center
@@ -722,9 +722,9 @@ CSIP: Cloud Security Center
                     bool m_sourceHasBeenSet;
 
                     /**
-                     * alarm level
-Prompt.
-2: Low risk
+                     * Alarm level
+1: Prompt
+2: Low-risk
 3: Medium risk
 4: High risk
 5: Critical
@@ -733,25 +733,25 @@ Prompt.
                     bool m_levelHasBeenSet;
 
                     /**
-                     * attacker
+                     * Attacker
                      */
                     RoleInfo m_attacker;
                     bool m_attackerHasBeenSet;
 
                     /**
-                     * victim
+                     * Victim.
                      */
                     RoleInfo m_victim;
                     bool m_victimHasBeenSet;
 
                     /**
-                     * Evidence data (such as attack content, base64 encoded)
+                     * Evidence data (for example, attack content, base64 encoded)
                      */
                     std::string m_evidenceData;
                     bool m_evidenceDataHasBeenSet;
 
                     /**
-                     * evidence location (for example protocol port)
+                     * Evidence location (such as protocol port)
                      */
                     std::string m_evidenceLocation;
                     bool m_evidenceLocationHasBeenSet;
@@ -763,7 +763,7 @@ Prompt.
                     bool m_evidencePathHasBeenSet;
 
                     /**
-                     * Initial alarm time
+                     * First alarm time
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
@@ -794,7 +794,7 @@ Prompt.
 
                     /**
                      * Processing status
-0: unprocessed, 1: ignored, 2: processed
+0: Unprocessed; 1: Ignored; 2: Processed.
                      */
                     uint64_t m_status;
                     bool m_statusHasBeenSet;
@@ -848,19 +848,19 @@ Prompt.
                     bool m_nickNameHasBeenSet;
 
                     /**
-                     * account ID
+                     * Account ID
                      */
                     std::string m_uin;
                     bool m_uinHasBeenSet;
 
                     /**
-                     * Behavior
+                     * Action
                      */
                     uint64_t m_action;
                     bool m_actionHasBeenSet;
 
                     /**
-                     * risk detection
+                     * Risk detection
                      */
                     std::string m_riskInvestigation;
                     bool m_riskInvestigationHasBeenSet;
@@ -872,7 +872,7 @@ Prompt.
                     bool m_riskTreatmentHasBeenSet;
 
                     /**
-                     * log type
+                     * Log type
                      */
                     std::string m_logType;
                     bool m_logTypeHasBeenSet;

@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Port service quantity.
-                     * @return PortServiceCount Port service quantity.
+                     * 获取Number of port services
+                     * @return PortServiceCount Number of port services
                      * 
                      */
                     uint64_t GetPortServiceCount() const;
@@ -58,8 +58,8 @@ namespace TencentCloud
                     bool PortServiceCountHasBeenSet() const;
 
                     /**
-                     * 获取Number of Web services.
-                     * @return WebAppCount Number of Web services.
+                     * 获取Number of Web services
+                     * @return WebAppCount Number of Web services
                      * 
                      */
                     uint64_t GetWebAppCount() const;
@@ -86,8 +86,8 @@ namespace TencentCloud
                     bool WeakPasswordCountHasBeenSet() const;
 
                     /**
-                     * 获取Vulnerability risk quantity.
-                     * @return VulCount Vulnerability risk quantity.
+                     * 获取Vulnerability risk quantity
+                     * @return VulCount Vulnerability risk quantity
                      * 
                      */
                     uint64_t GetVulCount() const;
@@ -100,8 +100,8 @@ namespace TencentCloud
                     bool VulCountHasBeenSet() const;
 
                     /**
-                     * 获取High-Risk port service quantity.
-                     * @return HighRiskPortServiceCount High-Risk port service quantity.
+                     * 获取Number of high-risk port services
+                     * @return HighRiskPortServiceCount Number of high-risk port services
                      * 
                      */
                     uint64_t GetHighRiskPortServiceCount() const;
@@ -114,8 +114,8 @@ namespace TencentCloud
                     bool HighRiskPortServiceCountHasBeenSet() const;
 
                     /**
-                     * 获取Number of Web services at risk.
-                     * @return RiskWebAppCount Number of Web services at risk.
+                     * 获取Number of risky Web services
+                     * @return RiskWebAppCount Number of risky Web services
                      * 
                      */
                     uint64_t GetRiskWebAppCount() const;
@@ -128,8 +128,8 @@ namespace TencentCloud
                     bool RiskWebAppCountHasBeenSet() const;
 
                     /**
-                     * 获取Newly-Added port services in the last 7 days.
-                     * @return PortServiceIncrement Newly-Added port services in the last 7 days.
+                     * 获取Number of new port services in the last 7 days
+                     * @return PortServiceIncrement Number of new port services in the last 7 days
                      * 
                      */
                     uint64_t GetPortServiceIncrement() const;
@@ -142,8 +142,8 @@ namespace TencentCloud
                     bool PortServiceIncrementHasBeenSet() const;
 
                     /**
-                     * 获取Newly-Added Web services in the last 7 days.
-                     * @return WebAppIncrement Newly-Added Web services in the last 7 days.
+                     * 获取Number of Web services added in the last 7 days
+                     * @return WebAppIncrement Number of Web services added in the last 7 days
                      * 
                      */
                     uint64_t GetWebAppIncrement() const;
@@ -158,13 +158,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Port service quantity.
+                     * Number of port services
                      */
                     uint64_t m_portServiceCount;
                     bool m_portServiceCountHasBeenSet;
 
                     /**
-                     * Number of Web services.
+                     * Number of Web services
                      */
                     uint64_t m_webAppCount;
                     bool m_webAppCountHasBeenSet;
@@ -176,31 +176,31 @@ namespace TencentCloud
                     bool m_weakPasswordCountHasBeenSet;
 
                     /**
-                     * Vulnerability risk quantity.
+                     * Vulnerability risk quantity
                      */
                     uint64_t m_vulCount;
                     bool m_vulCountHasBeenSet;
 
                     /**
-                     * High-Risk port service quantity.
+                     * Number of high-risk port services
                      */
                     uint64_t m_highRiskPortServiceCount;
                     bool m_highRiskPortServiceCountHasBeenSet;
 
                     /**
-                     * Number of Web services at risk.
+                     * Number of risky Web services
                      */
                     uint64_t m_riskWebAppCount;
                     bool m_riskWebAppCountHasBeenSet;
 
                     /**
-                     * Newly-Added port services in the last 7 days.
+                     * Number of new port services in the last 7 days
                      */
                     uint64_t m_portServiceIncrement;
                     bool m_portServiceIncrementHasBeenSet;
 
                     /**
-                     * Newly-Added Web services in the last 7 days.
+                     * Number of Web services added in the last 7 days
                      */
                     uint64_t m_webAppIncrement;
                     bool m_webAppIncrementHasBeenSet;

@@ -47,8 +47,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Number of risks from asset perspective
-                     * @return TotalCount Number of risks from asset perspective
+                     * 获取Number of risks from the asset perspective
+                     * @return TotalCount Number of risks from the asset perspective
                      * 
                      */
                     int64_t GetTotalCount() const;
@@ -61,8 +61,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取Risk list from asset perspective
-                     * @return AssetRiskList Risk list from asset perspective
+                     * 获取Risk list from the asset perspective
+                     * @return AssetRiskList Risk list from the asset perspective
                      * 
                      */
                     std::vector<AssetRiskItem> GetAssetRiskList() const;
@@ -75,8 +75,8 @@ namespace TencentCloud
                     bool AssetRiskListHasBeenSet() const;
 
                     /**
-                     * 获取Standard name collection
-                     * @return StandardNameList Standard name collection
+                     * 获取Collection of MLPS standard names
+                     * @return StandardNameList Collection of MLPS standard names
                      * 
                      */
                     std::vector<StandardItem> GetStandardNameList() const;
@@ -105,19 +105,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Number of risks from asset perspective
+                     * Number of risks from the asset perspective
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * Risk list from asset perspective
+                     * Risk list from the asset perspective
                      */
                     std::vector<AssetRiskItem> m_assetRiskList;
                     bool m_assetRiskListHasBeenSet;
 
                     /**
-                     * Standard name collection
+                     * Collection of MLPS standard names
                      */
                     std::vector<StandardItem> m_standardNameList;
                     bool m_standardNameListHasBeenSet;

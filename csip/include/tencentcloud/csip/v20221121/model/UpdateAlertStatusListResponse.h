@@ -58,8 +58,8 @@ namespace TencentCloud
                     bool MsgHasBeenSet() const;
 
                     /**
-                     * 获取Result Code
-                     * @return Code Result Code
+                     * 获取Result code
+                     * @return Code Result code
                      * 
                      */
                     std::string GetCode() const;
@@ -80,7 +80,7 @@ namespace TencentCloud
                     bool m_msgHasBeenSet;
 
                     /**
-                     * Result Code
+                     * Result code
                      */
                     std::string m_code;
                     bool m_codeHasBeenSet;

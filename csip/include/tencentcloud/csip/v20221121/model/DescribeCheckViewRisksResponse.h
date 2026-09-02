@@ -47,8 +47,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Number of risks from check perspective</p>
-                     * @return TotalCount <p>Number of risks from check perspective</p>
+                     * 获取<p>Number of risks in the check perspective</p>
+                     * @return TotalCount <p>Number of risks in the check perspective</p>
                      * 
                      */
                     int64_t GetTotalCount() const;
@@ -61,8 +61,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取<p>Risk list in check perspective</p>
-                     * @return CheckViewRiskList <p>Risk list in check perspective</p>
+                     * 获取<p>Risk list from the check perspective</p>
+                     * @return CheckViewRiskList <p>Risk list from the check perspective</p>
                      * 
                      */
                     std::vector<CheckViewRiskItem> GetCheckViewRiskList() const;
@@ -75,8 +75,8 @@ namespace TencentCloud
                     bool CheckViewRiskListHasBeenSet() const;
 
                     /**
-                     * 获取<p>Tag list of cspm standard from a checking perspective</p>
-                     * @return StandardNameList <p>Tag list of cspm standard from a checking perspective</p>
+                     * 获取<p>cspm specification tag list from the checking perspective</p>
+                     * @return StandardNameList <p>cspm specification tag list from the checking perspective</p>
                      * 
                      */
                     std::vector<StandardItem> GetStandardNameList() const;
@@ -119,19 +119,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Number of risks from check perspective</p>
+                     * <p>Number of risks in the check perspective</p>
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * <p>Risk list in check perspective</p>
+                     * <p>Risk list from the check perspective</p>
                      */
                     std::vector<CheckViewRiskItem> m_checkViewRiskList;
                     bool m_checkViewRiskListHasBeenSet;
 
                     /**
-                     * <p>Tag list of cspm standard from a checking perspective</p>
+                     * <p>cspm specification tag list from the checking perspective</p>
                      */
                     std::vector<StandardItem> m_standardNameList;
                     bool m_standardNameListHasBeenSet;

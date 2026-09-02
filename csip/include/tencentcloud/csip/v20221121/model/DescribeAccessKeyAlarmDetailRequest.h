@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Alarm record ID.
-                     * @return ID Alarm record ID.
+                     * 获取Alarm record ID
+                     * @return ID Alarm record ID
                      * 
                      */
                     int64_t GetID() const;
 
                     /**
-                     * 设置Alarm record ID.
-                     * @param _iD Alarm record ID.
+                     * 设置Alarm record ID
+                     * @param _iD Alarm record ID
                      * 
                      */
                     void SetID(const int64_t& _iD);
@@ -87,7 +87,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Alarm record ID.
+                     * Alarm record ID
                      */
                     int64_t m_iD;
                     bool m_iDHasBeenSet;

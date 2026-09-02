@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool MemberIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>Filter content</p>
-                     * @return Filters <p>Filter content</p>
+                     * 获取<p>Filter content.</p>
+                     * @return Filters <p>Filter content.</p>
                      * 
                      */
                     std::vector<Filters> GetFilters() const;
 
                     /**
-                     * 设置<p>Filter content</p>
-                     * @param _filters <p>Filter content</p>
+                     * 设置<p>Filter content.</p>
+                     * @param _filters <p>Filter content.</p>
                      * 
                      */
                     void SetFilters(const std::vector<Filters>& _filters);
@@ -178,7 +178,7 @@ namespace TencentCloud
                     bool m_memberIdHasBeenSet;
 
                     /**
-                     * <p>Filter content</p>
+                     * <p>Filter content.</p>
                      */
                     std::vector<Filters> m_filters;
                     bool m_filtersHasBeenSet;

@@ -1,0 +1,458 @@
+/*
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+#ifndef TENCENTCLOUD_CSIP_V20221121_MODEL_DESCRIBEDSPMSESSIONLISTREQUEST_H_
+#define TENCENTCLOUD_CSIP_V20221121_MODEL_DESCRIBEDSPMSESSIONLISTREQUEST_H_
+
+#include <string>
+#include <vector>
+#include <map>
+#include <tencentcloud/core/AbstractModel.h>
+
+
+namespace TencentCloud
+{
+    namespace Csip
+    {
+        namespace V20221121
+        {
+            namespace Model
+            {
+                /**
+                * DescribeDspmSessionList request structure.
+                */
+                class DescribeDspmSessionListRequest : public AbstractModel
+                {
+                public:
+                    DescribeDspmSessionListRequest();
+                    ~DescribeDspmSessionListRequest() = default;
+                    std::string ToJsonString() const;
+
+
+                    /**
+                     * 获取<p>Group account member id</p>
+                     * @return MemberId <p>Group account member id</p>
+                     * 
+                     */
+                    std::vector<std::string> GetMemberId() const;
+
+                    /**
+                     * 设置<p>Group account member id</p>
+                     * @param _memberId <p>Group account member id</p>
+                     * 
+                     */
+                    void SetMemberId(const std::vector<std::string>& _memberId);
+
+                    /**
+                     * 判断参数 MemberId 是否已赋值
+                     * @return MemberId 是否已赋值
+                     * 
+                     */
+                    bool MemberIdHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Number limit.</p>
+                     * @return Limit <p>Number limit.</p>
+                     * 
+                     */
+                    int64_t GetLimit() const;
+
+                    /**
+                     * 设置<p>Number limit.</p>
+                     * @param _limit <p>Number limit.</p>
+                     * 
+                     */
+                    void SetLimit(const int64_t& _limit);
+
+                    /**
+                     * 判断参数 Limit 是否已赋值
+                     * @return Limit 是否已赋值
+                     * 
+                     */
+                    bool LimitHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Offset.</p>
+                     * @return Offset <p>Offset.</p>
+                     * 
+                     */
+                    int64_t GetOffset() const;
+
+                    /**
+                     * 设置<p>Offset.</p>
+                     * @param _offset <p>Offset.</p>
+                     * 
+                     */
+                    void SetOffset(const int64_t& _offset);
+
+                    /**
+                     * 判断参数 Offset 是否已赋值
+                     * @return Offset 是否已赋值
+                     * 
+                     */
+                    bool OffsetHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Login status</p><p>Enumeration values:</p><ul><li>0: all</li><li>1: successful</li><li>2: failed</li></ul>
+                     * @return LoginType <p>Login status</p><p>Enumeration values:</p><ul><li>0: all</li><li>1: successful</li><li>2: failed</li></ul>
+                     * 
+                     */
+                    int64_t GetLoginType() const;
+
+                    /**
+                     * 设置<p>Login status</p><p>Enumeration values:</p><ul><li>0: all</li><li>1: successful</li><li>2: failed</li></ul>
+                     * @param _loginType <p>Login status</p><p>Enumeration values:</p><ul><li>0: all</li><li>1: successful</li><li>2: failed</li></ul>
+                     * 
+                     */
+                    void SetLoginType(const int64_t& _loginType);
+
+                    /**
+                     * 判断参数 LoginType 是否已赋值
+                     * @return LoginType 是否已赋值
+                     * 
+                     */
+                    bool LoginTypeHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Database port</p>
+                     * @return DbName <p>Database port</p>
+                     * 
+                     */
+                    std::string GetDbName() const;
+
+                    /**
+                     * 设置<p>Database port</p>
+                     * @param _dbName <p>Database port</p>
+                     * 
+                     */
+                    void SetDbName(const std::string& _dbName);
+
+                    /**
+                     * 判断参数 DbName 是否已赋值
+                     * @return DbName 是否已赋值
+                     * 
+                     */
+                    bool DbNameHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Database name</p>
+                     * @return DbPort <p>Database name</p>
+                     * 
+                     */
+                    int64_t GetDbPort() const;
+
+                    /**
+                     * 设置<p>Database name</p>
+                     * @param _dbPort <p>Database name</p>
+                     * 
+                     */
+                    void SetDbPort(const int64_t& _dbPort);
+
+                    /**
+                     * 判断参数 DbPort 是否已赋值
+                     * @return DbPort 是否已赋值
+                     * 
+                     */
+                    bool DbPortHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Database IP</p>
+                     * @return DbIp <p>Database IP</p>
+                     * 
+                     */
+                    std::string GetDbIp() const;
+
+                    /**
+                     * 设置<p>Database IP</p>
+                     * @param _dbIp <p>Database IP</p>
+                     * 
+                     */
+                    void SetDbIp(const std::string& _dbIp);
+
+                    /**
+                     * 判断参数 DbIp 是否已赋值
+                     * @return DbIp 是否已赋值
+                     * 
+                     */
+                    bool DbIpHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Asset ID.</p>
+                     * @return AssetsId <p>Asset ID.</p>
+                     * 
+                     */
+                    int64_t GetAssetsId() const;
+
+                    /**
+                     * 设置<p>Asset ID.</p>
+                     * @param _assetsId <p>Asset ID.</p>
+                     * 
+                     */
+                    void SetAssetsId(const int64_t& _assetsId);
+
+                    /**
+                     * 判断参数 AssetsId 是否已赋值
+                     * @return AssetsId 是否已赋值
+                     * 
+                     */
+                    bool AssetsIdHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Conversation ID</p>
+                     * @return SessionId <p>Conversation ID</p>
+                     * 
+                     */
+                    std::string GetSessionId() const;
+
+                    /**
+                     * 设置<p>Conversation ID</p>
+                     * @param _sessionId <p>Conversation ID</p>
+                     * 
+                     */
+                    void SetSessionId(const std::string& _sessionId);
+
+                    /**
+                     * 判断参数 SessionId 是否已赋值
+                     * @return SessionId 是否已赋值
+                     * 
+                     */
+                    bool SessionIdHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Client IP</p>
+                     * @return ClientSideIp <p>Client IP</p>
+                     * 
+                     */
+                    std::string GetClientSideIp() const;
+
+                    /**
+                     * 设置<p>Client IP</p>
+                     * @param _clientSideIp <p>Client IP</p>
+                     * 
+                     */
+                    void SetClientSideIp(const std::string& _clientSideIp);
+
+                    /**
+                     * 判断参数 ClientSideIp 是否已赋值
+                     * @return ClientSideIp 是否已赋值
+                     * 
+                     */
+                    bool ClientSideIpHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Username.</p>
+                     * @return UserName <p>Username.</p>
+                     * 
+                     */
+                    std::string GetUserName() const;
+
+                    /**
+                     * 设置<p>Username.</p>
+                     * @param _userName <p>Username.</p>
+                     * 
+                     */
+                    void SetUserName(const std::string& _userName);
+
+                    /**
+                     * 判断参数 UserName 是否已赋值
+                     * @return UserName 是否已赋值
+                     * 
+                     */
+                    bool UserNameHasBeenSet() const;
+
+                    /**
+                     * 获取<p>End time.</p>
+                     * @return EndTime <p>End time.</p>
+                     * 
+                     */
+                    int64_t GetEndTime() const;
+
+                    /**
+                     * 设置<p>End time.</p>
+                     * @param _endTime <p>End time.</p>
+                     * 
+                     */
+                    void SetEndTime(const int64_t& _endTime);
+
+                    /**
+                     * 判断参数 EndTime 是否已赋值
+                     * @return EndTime 是否已赋值
+                     * 
+                     */
+                    bool EndTimeHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Start time.</p>
+                     * @return StartTime <p>Start time.</p>
+                     * 
+                     */
+                    int64_t GetStartTime() const;
+
+                    /**
+                     * 设置<p>Start time.</p>
+                     * @param _startTime <p>Start time.</p>
+                     * 
+                     */
+                    void SetStartTime(const int64_t& _startTime);
+
+                    /**
+                     * 判断参数 StartTime 是否已赋值
+                     * @return StartTime 是否已赋值
+                     * 
+                     */
+                    bool StartTimeHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Traffic source. Value: Agent/Proxy/empty. If Agent is passed, agent logs will be returned. If Proxy is passed, proxy logs will be returned. If both or neither is passed, all logs will be returned.</p>
+                     * @return SourceTypes <p>Traffic source. Value: Agent/Proxy/empty. If Agent is passed, agent logs will be returned. If Proxy is passed, proxy logs will be returned. If both or neither is passed, all logs will be returned.</p>
+                     * 
+                     */
+                    std::vector<std::string> GetSourceTypes() const;
+
+                    /**
+                     * 设置<p>Traffic source. Value: Agent/Proxy/empty. If Agent is passed, agent logs will be returned. If Proxy is passed, proxy logs will be returned. If both or neither is passed, all logs will be returned.</p>
+                     * @param _sourceTypes <p>Traffic source. Value: Agent/Proxy/empty. If Agent is passed, agent logs will be returned. If Proxy is passed, proxy logs will be returned. If both or neither is passed, all logs will be returned.</p>
+                     * 
+                     */
+                    void SetSourceTypes(const std::vector<std::string>& _sourceTypes);
+
+                    /**
+                     * 判断参数 SourceTypes 是否已赋值
+                     * @return SourceTypes 是否已赋值
+                     * 
+                     */
+                    bool SourceTypesHasBeenSet() const;
+
+                    /**
+                     * 获取<p>[&quot;MySQL&quot;]</p>
+                     * @return DbTypes <p>[&quot;MySQL&quot;]</p>
+                     * 
+                     */
+                    std::vector<std::string> GetDbTypes() const;
+
+                    /**
+                     * 设置<p>[&quot;MySQL&quot;]</p>
+                     * @param _dbTypes <p>[&quot;MySQL&quot;]</p>
+                     * 
+                     */
+                    void SetDbTypes(const std::vector<std::string>& _dbTypes);
+
+                    /**
+                     * 判断参数 DbTypes 是否已赋值
+                     * @return DbTypes 是否已赋值
+                     * 
+                     */
+                    bool DbTypesHasBeenSet() const;
+
+                private:
+
+                    /**
+                     * <p>Group account member id</p>
+                     */
+                    std::vector<std::string> m_memberId;
+                    bool m_memberIdHasBeenSet;
+
+                    /**
+                     * <p>Number limit.</p>
+                     */
+                    int64_t m_limit;
+                    bool m_limitHasBeenSet;
+
+                    /**
+                     * <p>Offset.</p>
+                     */
+                    int64_t m_offset;
+                    bool m_offsetHasBeenSet;
+
+                    /**
+                     * <p>Login status</p><p>Enumeration values:</p><ul><li>0: all</li><li>1: successful</li><li>2: failed</li></ul>
+                     */
+                    int64_t m_loginType;
+                    bool m_loginTypeHasBeenSet;
+
+                    /**
+                     * <p>Database port</p>
+                     */
+                    std::string m_dbName;
+                    bool m_dbNameHasBeenSet;
+
+                    /**
+                     * <p>Database name</p>
+                     */
+                    int64_t m_dbPort;
+                    bool m_dbPortHasBeenSet;
+
+                    /**
+                     * <p>Database IP</p>
+                     */
+                    std::string m_dbIp;
+                    bool m_dbIpHasBeenSet;
+
+                    /**
+                     * <p>Asset ID.</p>
+                     */
+                    int64_t m_assetsId;
+                    bool m_assetsIdHasBeenSet;
+
+                    /**
+                     * <p>Conversation ID</p>
+                     */
+                    std::string m_sessionId;
+                    bool m_sessionIdHasBeenSet;
+
+                    /**
+                     * <p>Client IP</p>
+                     */
+                    std::string m_clientSideIp;
+                    bool m_clientSideIpHasBeenSet;
+
+                    /**
+                     * <p>Username.</p>
+                     */
+                    std::string m_userName;
+                    bool m_userNameHasBeenSet;
+
+                    /**
+                     * <p>End time.</p>
+                     */
+                    int64_t m_endTime;
+                    bool m_endTimeHasBeenSet;
+
+                    /**
+                     * <p>Start time.</p>
+                     */
+                    int64_t m_startTime;
+                    bool m_startTimeHasBeenSet;
+
+                    /**
+                     * <p>Traffic source. Value: Agent/Proxy/empty. If Agent is passed, agent logs will be returned. If Proxy is passed, proxy logs will be returned. If both or neither is passed, all logs will be returned.</p>
+                     */
+                    std::vector<std::string> m_sourceTypes;
+                    bool m_sourceTypesHasBeenSet;
+
+                    /**
+                     * <p>[&quot;MySQL&quot;]</p>
+                     */
+                    std::vector<std::string> m_dbTypes;
+                    bool m_dbTypesHasBeenSet;
+
+                };
+            }
+        }
+    }
+}
+
+#endif // !TENCENTCLOUD_CSIP_V20221121_MODEL_DESCRIBEDSPMSESSIONLISTREQUEST_H_

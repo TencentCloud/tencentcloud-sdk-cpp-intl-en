@@ -75,12 +75,12 @@ namespace TencentCloud
                     bool CredentialNameHasBeenSet() const;
 
                     /**
-                     * 获取Credential Type
-Enumeration value:
+                     * 获取Credential type
+Enumeration values:
 access: standard key
 sts: STS temporary key
-                     * @return CredentialType Credential Type
-Enumeration value:
+                     * @return CredentialType Credential type
+Enumeration values:
 access: standard key
 sts: STS temporary key
                      * 
@@ -95,8 +95,8 @@ sts: STS temporary key
                     bool CredentialTypeHasBeenSet() const;
 
                     /**
-                     * 获取Effective machine scope
-                     * @return CredentialEffectScope Effective machine scope
+                     * 获取Scope of effective machines
+                     * @return CredentialEffectScope Scope of effective machines
                      * 
                      */
                     CredentialEffectScope GetCredentialEffectScope() const;
@@ -110,11 +110,9 @@ sts: STS temporary key
 
                     /**
                      * 获取Normal key credential data (masked). Returned when CredentialType is access.
-Supplementary explanation: Key is the original text, and Value is the masked value (reserve the first 3 and last 4 digits, with *** as substitution in the middle).
-Note: This field may return null, indicating that no valid values can be obtained.
+Supplemental description: Key is the original text, and Value is the masked value (first 3 and last 4 characters retained, middle replaced by ***).
                      * @return Access Normal key credential data (masked). Returned when CredentialType is access.
-Supplementary explanation: Key is the original text, and Value is the masked value (reserve the first 3 and last 4 digits, with *** as substitution in the middle).
-Note: This field may return null, indicating that no valid values can be obtained.
+Supplemental description: Key is the original text, and Value is the masked value (first 3 and last 4 characters retained, middle replaced by ***).
                      * 
                      */
                     std::vector<AccessCredentialOutput> GetAccess() const;
@@ -128,11 +126,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取STS credential data (masked). Returned when CredentialType is sts.
-Supplementary description: System is the original text, SecretID and SecretKey are masked values (reserve the first 3 and last 4 characters, with *** as substitution in the middle).
-Note: This field may return null, indicating that no valid values can be obtained.
+Supplemental description: System is the original text. SecretID and SecretKey are masked values (first 3 and last 4 characters reserved, middle replaced with ***).
                      * @return STS STS credential data (masked). Returned when CredentialType is sts.
-Supplementary description: System is the original text, SecretID and SecretKey are masked values (reserve the first 3 and last 4 characters, with *** as substitution in the middle).
-Note: This field may return null, indicating that no valid values can be obtained.
+Supplemental description: System is the original text. SecretID and SecretKey are masked values (first 3 and last 4 characters reserved, middle replaced with ***).
                      * 
                      */
                     STSCredentialOutput GetSTS() const;
@@ -146,9 +142,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Creation time.
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
                      * @return CreateTime Creation time.
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
                      * 
                      */
                     std::string GetCreateTime() const;
@@ -162,9 +158,9 @@ Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
 
                     /**
                      * 获取Update time
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
                      * @return UpdateTime Update time
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
                      * 
                      */
                     std::string GetUpdateTime() const;
@@ -191,8 +187,8 @@ Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
                     bool m_credentialNameHasBeenSet;
 
                     /**
-                     * Credential Type
-Enumeration value:
+                     * Credential type
+Enumeration values:
 access: standard key
 sts: STS temporary key
                      */
@@ -200,37 +196,35 @@ sts: STS temporary key
                     bool m_credentialTypeHasBeenSet;
 
                     /**
-                     * Effective machine scope
+                     * Scope of effective machines
                      */
                     CredentialEffectScope m_credentialEffectScope;
                     bool m_credentialEffectScopeHasBeenSet;
 
                     /**
                      * Normal key credential data (masked). Returned when CredentialType is access.
-Supplementary explanation: Key is the original text, and Value is the masked value (reserve the first 3 and last 4 digits, with *** as substitution in the middle).
-Note: This field may return null, indicating that no valid values can be obtained.
+Supplemental description: Key is the original text, and Value is the masked value (first 3 and last 4 characters retained, middle replaced by ***).
                      */
                     std::vector<AccessCredentialOutput> m_access;
                     bool m_accessHasBeenSet;
 
                     /**
                      * STS credential data (masked). Returned when CredentialType is sts.
-Supplementary description: System is the original text, SecretID and SecretKey are masked values (reserve the first 3 and last 4 characters, with *** as substitution in the middle).
-Note: This field may return null, indicating that no valid values can be obtained.
+Supplemental description: System is the original text. SecretID and SecretKey are masked values (first 3 and last 4 characters reserved, middle replaced with ***).
                      */
                     STSCredentialOutput m_sTS;
                     bool m_sTSHasBeenSet;
 
                     /**
                      * Creation time.
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
                      * Update time
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
                      */
                     std::string m_updateTime;
                     bool m_updateTimeHasBeenSet;

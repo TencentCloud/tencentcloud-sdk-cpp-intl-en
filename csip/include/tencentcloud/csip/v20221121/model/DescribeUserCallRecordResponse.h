@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Account call record list.
-                     * @return Data Account call record list.
+                     * 获取List of call records of an account
+                     * @return Data List of call records of an account
                      * 
                      */
                     std::vector<UserCallRecord> GetData() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool DataHasBeenSet() const;
 
                     /**
-                     * 获取Total number of records.
-                     * @return Total Total number of records.
+                     * 获取Total number of call records
+                     * @return Total Total number of call records
                      * 
                      */
                     int64_t GetTotal() const;
@@ -75,13 +75,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Account call record list.
+                     * List of call records of an account
                      */
                     std::vector<UserCallRecord> m_data;
                     bool m_dataHasBeenSet;
 
                     /**
-                     * Total number of records.
+                     * Total number of call records
                      */
                     int64_t m_total;
                     bool m_totalHasBeenSet;

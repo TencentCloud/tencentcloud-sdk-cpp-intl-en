@@ -74,8 +74,8 @@ namespace TencentCloud
                     bool DataHasBeenSet() const;
 
                     /**
-                     * 获取Alarm category enumeration for custom policy
-                     * @return AlterType Alarm category enumeration for custom policy
+                     * 获取Enumeration of alarm types corresponding to a custom policy.
+                     * @return AlterType Enumeration of alarm types corresponding to a custom policy.
                      * 
                      */
                     std::vector<FilterDataObject> GetAlterType() const;
@@ -102,7 +102,7 @@ namespace TencentCloud
                     bool m_dataHasBeenSet;
 
                     /**
-                     * Alarm category enumeration for custom policy
+                     * Enumeration of alarm types corresponding to a custom policy.
                      */
                     std::vector<FilterDataObject> m_alterType;
                     bool m_alterTypeHasBeenSet;

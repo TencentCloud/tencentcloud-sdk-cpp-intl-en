@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Check item perspective risk
+                * Check item viewing angle risk
                 */
                 class CheckViewRiskItem : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Check item rule ID</p>
-                     * @return RiskRuleId <p>Check item rule ID</p>
+                     * 获取<p>check item rule ID</p>
+                     * @return RiskRuleId <p>check item rule ID</p>
                      * 
                      */
                     std::string GetRiskRuleId() const;
 
                     /**
-                     * 设置<p>Check item rule ID</p>
-                     * @param _riskRuleId <p>Check item rule ID</p>
+                     * 设置<p>check item rule ID</p>
+                     * @param _riskRuleId <p>check item rule ID</p>
                      * 
                      */
                     void SetRiskRuleId(const std::string& _riskRuleId);
@@ -111,15 +111,15 @@ namespace TencentCloud
                     bool CheckTypeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Risk level</p>
-                     * @return Severity <p>Risk level</p>
+                     * 获取<p>Risk level.</p>
+                     * @return Severity <p>Risk level.</p>
                      * 
                      */
                     std::string GetSeverity() const;
 
                     /**
-                     * 设置<p>Risk level</p>
-                     * @param _severity <p>Risk level</p>
+                     * 设置<p>Risk level.</p>
+                     * @param _severity <p>Risk level.</p>
                      * 
                      */
                     void SetSeverity(const std::string& _severity);
@@ -132,15 +132,15 @@ namespace TencentCloud
                     bool SeverityHasBeenSet() const;
 
                     /**
-                     * 获取<p>1 risk item exists</p>
-                     * @return RiskDesc <p>1 risk item exists</p>
+                     * 获取<p>There is 1 risk item</p>
+                     * @return RiskDesc <p>There is 1 risk item</p>
                      * 
                      */
                     std::string GetRiskDesc() const;
 
                     /**
-                     * 设置<p>1 risk item exists</p>
-                     * @param _riskDesc <p>1 risk item exists</p>
+                     * 设置<p>There is 1 risk item</p>
+                     * @param _riskDesc <p>There is 1 risk item</p>
                      * 
                      */
                     void SetRiskDesc(const std::string& _riskDesc);
@@ -195,15 +195,15 @@ namespace TencentCloud
                     bool UpdateTimeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Cloud vendor</p>
-                     * @return Provider <p>Cloud vendor</p>
+                     * 获取<p>Cloud service provider.</p>
+                     * @return Provider <p>Cloud service provider.</p>
                      * 
                      */
                     std::string GetProvider() const;
 
                     /**
-                     * 设置<p>Cloud vendor</p>
-                     * @param _provider <p>Cloud vendor</p>
+                     * 设置<p>Cloud service provider.</p>
+                     * @param _provider <p>Cloud service provider.</p>
                      * 
                      */
                     void SetProvider(const std::string& _provider);
@@ -321,15 +321,15 @@ namespace TencentCloud
                     bool EventTypeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Disposal categorization</p>
-                     * @return Classify <p>Disposal categorization</p>
+                     * 获取<p>Handling category</p>
+                     * @return Classify <p>Handling category</p>
                      * 
                      */
                     std::string GetClassify() const;
 
                     /**
-                     * 设置<p>Disposal categorization</p>
-                     * @param _classify <p>Disposal categorization</p>
+                     * 设置<p>Handling category</p>
+                     * @param _classify <p>Handling category</p>
                      * 
                      */
                     void SetClassify(const std::string& _classify);
@@ -342,15 +342,15 @@ namespace TencentCloud
                     bool ClassifyHasBeenSet() const;
 
                     /**
-                     * 获取<p>cspm standard clauses</p>
-                     * @return StandardTerms <p>cspm standard clauses</p>
+                     * 获取<p>cspm specification clause</p>
+                     * @return StandardTerms <p>cspm specification clause</p>
                      * 
                      */
                     std::vector<StandardTerm> GetStandardTerms() const;
 
                     /**
-                     * 设置<p>cspm standard clauses</p>
-                     * @param _standardTerms <p>cspm standard clauses</p>
+                     * 设置<p>cspm specification clause</p>
+                     * @param _standardTerms <p>cspm specification clause</p>
                      * 
                      */
                     void SetStandardTerms(const std::vector<StandardTerm>& _standardTerms);
@@ -386,7 +386,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Check item rule ID</p>
+                     * <p>check item rule ID</p>
                      */
                     std::string m_riskRuleId;
                     bool m_riskRuleIdHasBeenSet;
@@ -404,13 +404,13 @@ namespace TencentCloud
                     bool m_checkTypeHasBeenSet;
 
                     /**
-                     * <p>Risk level</p>
+                     * <p>Risk level.</p>
                      */
                     std::string m_severity;
                     bool m_severityHasBeenSet;
 
                     /**
-                     * <p>1 risk item exists</p>
+                     * <p>There is 1 risk item</p>
                      */
                     std::string m_riskDesc;
                     bool m_riskDescHasBeenSet;
@@ -428,7 +428,7 @@ namespace TencentCloud
                     bool m_updateTimeHasBeenSet;
 
                     /**
-                     * <p>Cloud vendor</p>
+                     * <p>Cloud service provider.</p>
                      */
                     std::string m_provider;
                     bool m_providerHasBeenSet;
@@ -464,13 +464,13 @@ namespace TencentCloud
                     bool m_eventTypeHasBeenSet;
 
                     /**
-                     * <p>Disposal categorization</p>
+                     * <p>Handling category</p>
                      */
                     std::string m_classify;
                     bool m_classifyHasBeenSet;
 
                     /**
-                     * <p>cspm standard clauses</p>
+                     * <p>cspm specification clause</p>
                      */
                     std::vector<StandardTerm> m_standardTerms;
                     bool m_standardTermsHasBeenSet;

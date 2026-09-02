@@ -38,7 +38,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Vulnerability and asset information
+                * Vulnerability and Asset Information
                 */
                 class DataSearchBug : public AbstractModel
                 {
@@ -50,15 +50,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Query status code
-                     * @return StateCode Query status code
+                     * 获取Return to Query Status
+                     * @return StateCode Return to Query Status
                      * 
                      */
                     std::string GetStateCode() const;
 
                     /**
-                     * 设置Query status code
-                     * @param _stateCode Query status code
+                     * 设置Return to Query Status
+                     * @param _stateCode Return to Query Status
                      * 
                      */
                     void SetStateCode(const std::string& _stateCode);
@@ -92,15 +92,15 @@ namespace TencentCloud
                     bool DataBugHasBeenSet() const;
 
                     /**
-                     * 获取Vulnerability impact assets details
-                     * @return DataAsset Vulnerability impact assets details
+                     * 获取Vulnerability impact asset details
+                     * @return DataAsset Vulnerability impact asset details
                      * 
                      */
                     std::vector<AssetInfoDetail> GetDataAsset() const;
 
                     /**
-                     * 设置Vulnerability impact assets details
-                     * @param _dataAsset Vulnerability impact assets details
+                     * 设置Vulnerability impact asset details
+                     * @param _dataAsset Vulnerability impact asset details
                      * 
                      */
                     void SetDataAsset(const std::vector<AssetInfoDetail>& _dataAsset);
@@ -218,15 +218,15 @@ namespace TencentCloud
                     bool CWPFixHasBeenSet() const;
 
                     /**
-                     * 获取Product Support Status
-                     * @return DataSupport Product Support Status
+                     * 获取Product support status
+                     * @return DataSupport Product support status
                      * 
                      */
                     std::vector<ProductSupport> GetDataSupport() const;
 
                     /**
-                     * 设置Product Support Status
-                     * @param _dataSupport Product Support Status
+                     * 设置Product support status
+                     * @param _dataSupport Product support status
                      * 
                      */
                     void SetDataSupport(const std::vector<ProductSupport>& _dataSupport);
@@ -262,7 +262,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Query status code
+                     * Return to Query Status
                      */
                     std::string m_stateCode;
                     bool m_stateCodeHasBeenSet;
@@ -274,7 +274,7 @@ namespace TencentCloud
                     bool m_dataBugHasBeenSet;
 
                     /**
-                     * Vulnerability impact assets details
+                     * Vulnerability impact asset details
                      */
                     std::vector<AssetInfoDetail> m_dataAsset;
                     bool m_dataAssetHasBeenSet;
@@ -310,7 +310,7 @@ namespace TencentCloud
                     bool m_cWPFixHasBeenSet;
 
                     /**
-                     * Product Support Status
+                     * Product support status
                      */
                     std::vector<ProductSupport> m_dataSupport;
                     bool m_dataSupportHasBeenSet;

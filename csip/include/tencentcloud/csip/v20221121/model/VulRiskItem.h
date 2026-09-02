@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Host vulnerability risk content.
+                * Host vulnerability risk content
                 */
                 class VulRiskItem : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Cloud account ID.
-                     * @return CloudAccountID Cloud account ID.
+                     * 获取Cloud Account ID
+                     * @return CloudAccountID Cloud Account ID
                      * 
                      */
                     std::string GetCloudAccountID() const;
 
                     /**
-                     * 设置Cloud account ID.
-                     * @param _cloudAccountID Cloud account ID.
+                     * 设置Cloud Account ID
+                     * @param _cloudAccountID Cloud Account ID
                      * 
                      */
                     void SetCloudAccountID(const std::string& _cloudAccountID);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool InstanceStatusHasBeenSet() const;
 
                     /**
-                     * 获取Instance name
-                     * @return InstanceName Instance name
+                     * 获取Instance name.
+                     * @return InstanceName Instance name.
                      * 
                      */
                     std::string GetInstanceName() const;
 
                     /**
-                     * 设置Instance name
-                     * @param _instanceName Instance name
+                     * 设置Instance name.
+                     * @param _instanceName Instance name.
                      * 
                      */
                     void SetInstanceName(const std::string& _instanceName);
@@ -132,22 +132,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Creation time.
-
-
                      * @return CreateTime Creation time.
-
-
                      * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
                      * 设置Creation time.
-
-
                      * @param _createTime Creation time.
-
-
                      * 
                      */
                     void SetCreateTime(const std::string& _createTime);
@@ -202,15 +194,15 @@ namespace TencentCloud
                     bool VulNameHasBeenSet() const;
 
                     /**
-                     * 获取Vulnerability type.
-                     * @return VulCategory Vulnerability type.
+                     * 获取vulnerability type
+                     * @return VulCategory vulnerability type
                      * 
                      */
                     std::string GetVulCategory() const;
 
                     /**
-                     * 设置Vulnerability type.
-                     * @param _vulCategory Vulnerability type.
+                     * 设置vulnerability type
+                     * @param _vulCategory vulnerability type
                      * 
                      */
                     void SetVulCategory(const std::string& _vulCategory);
@@ -244,15 +236,15 @@ namespace TencentCloud
                     bool VulLevelHasBeenSet() const;
 
                     /**
-                     * 获取CVE id.
-                     * @return CveID CVE id.
+                     * 获取CVE ID
+                     * @return CveID CVE ID
                      * 
                      */
                     std::string GetCveID() const;
 
                     /**
-                     * 设置CVE id.
-                     * @param _cveID CVE id.
+                     * 设置CVE ID
+                     * @param _cveID CVE ID
                      * 
                      */
                     void SetCveID(const std::string& _cveID);
@@ -286,15 +278,15 @@ namespace TencentCloud
                     bool DescriptionHasBeenSet() const;
 
                     /**
-                     * 获取Container ID.
-                     * @return ContainerID Container ID.
+                     * 获取Container ID
+                     * @return ContainerID Container ID
                      * 
                      */
                     std::string GetContainerID() const;
 
                     /**
-                     * 设置Container ID.
-                     * @param _containerID Container ID.
+                     * 设置Container ID
+                     * @param _containerID Container ID
                      * 
                      */
                     void SetContainerID(const std::string& _containerID);
@@ -307,15 +299,15 @@ namespace TencentCloud
                     bool ContainerIDHasBeenSet() const;
 
                     /**
-                     * 获取Vulnerability risk remediation recommendation.
-                     * @return Fix Vulnerability risk remediation recommendation.
+                     * 获取Vulnerability risk remediation recommendations
+                     * @return Fix Vulnerability risk remediation recommendations
                      * 
                      */
                     std::string GetFix() const;
 
                     /**
-                     * 设置Vulnerability risk remediation recommendation.
-                     * @param _fix Vulnerability risk remediation recommendation.
+                     * 设置Vulnerability risk remediation recommendations
+                     * @param _fix Vulnerability risk remediation recommendations
                      * 
                      */
                     void SetFix(const std::string& _fix);
@@ -328,15 +320,15 @@ namespace TencentCloud
                     bool FixHasBeenSet() const;
 
                     /**
-                     * 获取Linux vulnerability.
-                     * @return VulCategoryName Linux vulnerability.
+                     * 获取Linux vulnerability
+                     * @return VulCategoryName Linux vulnerability
                      * 
                      */
                     std::string GetVulCategoryName() const;
 
                     /**
-                     * 设置Linux vulnerability.
-                     * @param _vulCategoryName Linux vulnerability.
+                     * 设置Linux vulnerability
+                     * @param _vulCategoryName Linux vulnerability
                      * 
                      */
                     void SetVulCategoryName(const std::string& _vulCategoryName);
@@ -349,15 +341,15 @@ namespace TencentCloud
                     bool VulCategoryNameHasBeenSet() const;
 
                     /**
-                     * 获取Vulnerability level name.
-                     * @return VulLevelName Vulnerability level name.
+                     * 获取Vulnerability level name
+                     * @return VulLevelName Vulnerability level name
                      * 
                      */
                     std::string GetVulLevelName() const;
 
                     /**
-                     * 设置Vulnerability level name.
-                     * @param _vulLevelName Vulnerability level name.
+                     * 设置Vulnerability level name
+                     * @param _vulLevelName Vulnerability level name
                      * 
                      */
                     void SetVulLevelName(const std::string& _vulLevelName);
@@ -370,15 +362,15 @@ namespace TencentCloud
                     bool VulLevelNameHasBeenSet() const;
 
                     /**
-                     * 获取Instance status chinese information.
-                     * @return InstanceStatusName Instance status chinese information.
+                     * 获取Chinese information of instance status
+                     * @return InstanceStatusName Chinese information of instance status
                      * 
                      */
                     std::string GetInstanceStatusName() const;
 
                     /**
-                     * 设置Instance status chinese information.
-                     * @param _instanceStatusName Instance status chinese information.
+                     * 设置Chinese information of instance status
+                     * @param _instanceStatusName Chinese information of instance status
                      * 
                      */
                     void SetInstanceStatusName(const std::string& _instanceStatusName);
@@ -391,15 +383,15 @@ namespace TencentCloud
                     bool InstanceStatusNameHasBeenSet() const;
 
                     /**
-                     * 获取Tenant ID.
-                     * @return AppID Tenant ID.
+                     * 获取Tenant ID
+                     * @return AppID Tenant ID
                      * 
                      */
                     uint64_t GetAppID() const;
 
                     /**
-                     * 设置Tenant ID.
-                     * @param _appID Tenant ID.
+                     * 设置Tenant ID
+                     * @param _appID Tenant ID
                      * 
                      */
                     void SetAppID(const uint64_t& _appID);
@@ -414,7 +406,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Cloud account ID.
+                     * Cloud Account ID
                      */
                     std::string m_cloudAccountID;
                     bool m_cloudAccountIDHasBeenSet;
@@ -432,15 +424,13 @@ namespace TencentCloud
                     bool m_instanceStatusHasBeenSet;
 
                     /**
-                     * Instance name
+                     * Instance name.
                      */
                     std::string m_instanceName;
                     bool m_instanceNameHasBeenSet;
 
                     /**
                      * Creation time.
-
-
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
@@ -458,7 +448,7 @@ namespace TencentCloud
                     bool m_vulNameHasBeenSet;
 
                     /**
-                     * Vulnerability type.
+                     * vulnerability type
                      */
                     std::string m_vulCategory;
                     bool m_vulCategoryHasBeenSet;
@@ -470,7 +460,7 @@ namespace TencentCloud
                     bool m_vulLevelHasBeenSet;
 
                     /**
-                     * CVE id.
+                     * CVE ID
                      */
                     std::string m_cveID;
                     bool m_cveIDHasBeenSet;
@@ -482,37 +472,37 @@ namespace TencentCloud
                     bool m_descriptionHasBeenSet;
 
                     /**
-                     * Container ID.
+                     * Container ID
                      */
                     std::string m_containerID;
                     bool m_containerIDHasBeenSet;
 
                     /**
-                     * Vulnerability risk remediation recommendation.
+                     * Vulnerability risk remediation recommendations
                      */
                     std::string m_fix;
                     bool m_fixHasBeenSet;
 
                     /**
-                     * Linux vulnerability.
+                     * Linux vulnerability
                      */
                     std::string m_vulCategoryName;
                     bool m_vulCategoryNameHasBeenSet;
 
                     /**
-                     * Vulnerability level name.
+                     * Vulnerability level name
                      */
                     std::string m_vulLevelName;
                     bool m_vulLevelNameHasBeenSet;
 
                     /**
-                     * Instance status chinese information.
+                     * Chinese information of instance status
                      */
                     std::string m_instanceStatusName;
                     bool m_instanceStatusNameHasBeenSet;
 
                     /**
-                     * Tenant ID.
+                     * Tenant ID
                      */
                     uint64_t m_appID;
                     bool m_appIDHasBeenSet;

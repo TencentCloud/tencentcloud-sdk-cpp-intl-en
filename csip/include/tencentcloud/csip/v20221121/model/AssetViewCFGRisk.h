@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Details of a configuration risk
+                * Configuration Risk from Asset's Perspective
                 */
                 class AssetViewCFGRisk : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The unique ID.
-                     * @return Id The unique ID.
+                     * 获取Unique ID
+                     * @return Id Unique ID
                      * 
                      */
                     std::string GetId() const;
 
                     /**
-                     * 设置The unique ID.
-                     * @param _id The unique ID.
+                     * 设置Unique ID
+                     * @param _id Unique ID
                      * 
                      */
                     void SetId(const std::string& _id);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool CheckTypeHasBeenSet() const;
 
                     /**
-                     * 获取Instance ID
-                     * @return InstanceId Instance ID
+                     * 获取Instance ID.
+                     * @return InstanceId Instance ID.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID
-                     * @param _instanceId Instance ID
+                     * 设置Instance ID.
+                     * @param _instanceId Instance ID.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Instance name
-                     * @return InstanceName Instance name
+                     * 获取Instance name.
+                     * @return InstanceName Instance name.
                      * 
                      */
                     std::string GetInstanceName() const;
 
                     /**
-                     * 设置Instance name
-                     * @param _instanceName Instance name
+                     * 设置Instance name.
+                     * @param _instanceName Instance name.
                      * 
                      */
                     void SetInstanceName(const std::string& _instanceName);
@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool InstanceTypeHasBeenSet() const;
 
                     /**
-                     * 获取Affected assets
-                     * @return AffectAsset Affected assets
+                     * 获取Affect assets
+                     * @return AffectAsset Affect assets
                      * 
                      */
                     std::string GetAffectAsset() const;
 
                     /**
-                     * 设置Affected assets
-                     * @param _affectAsset Affected assets
+                     * 设置Affect assets
+                     * @param _affectAsset Affect assets
                      * 
                      */
                     void SetAffectAsset(const std::string& _affectAsset);
@@ -194,15 +194,15 @@ namespace TencentCloud
                     bool AffectAssetHasBeenSet() const;
 
                     /**
-                     * 获取Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
-                     * @return Level Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
+                     * 获取Risk level. low: low risk. high: high risk. middle: medium risk. info: notification. extreme: critical.
+                     * @return Level Risk level. low: low risk. high: high risk. middle: medium risk. info: notification. extreme: critical.
                      * 
                      */
                     std::string GetLevel() const;
 
                     /**
-                     * 设置Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
-                     * @param _level Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
+                     * 设置Risk level. low: low risk. high: high risk. middle: medium risk. info: notification. extreme: critical.
+                     * @param _level Risk level. low: low risk. high: high risk. middle: medium risk. info: notification. extreme: critical.
                      * 
                      */
                     void SetLevel(const std::string& _level);
@@ -215,15 +215,15 @@ namespace TencentCloud
                     bool LevelHasBeenSet() const;
 
                     /**
-                     * 获取First detected
-                     * @return FirstTime First detected
+                     * 获取First Recognition Time
+                     * @return FirstTime First Recognition Time
                      * 
                      */
                     std::string GetFirstTime() const;
 
                     /**
-                     * 设置First detected
-                     * @param _firstTime First detected
+                     * 设置First Recognition Time
+                     * @param _firstTime First Recognition Time
                      * 
                      */
                     void SetFirstTime(const std::string& _firstTime);
@@ -236,15 +236,15 @@ namespace TencentCloud
                     bool FirstTimeHasBeenSet() const;
 
                     /**
-                     * 获取Last detected 
-                     * @return RecentTime Last detected 
+                     * 获取Latest Recognition Time
+                     * @return RecentTime Latest Recognition Time
                      * 
                      */
                     std::string GetRecentTime() const;
 
                     /**
-                     * 设置Last detected 
-                     * @param _recentTime Last detected 
+                     * 设置Latest Recognition Time
+                     * @param _recentTime Latest Recognition Time
                      * 
                      */
                     void SetRecentTime(const std::string& _recentTime);
@@ -257,15 +257,15 @@ namespace TencentCloud
                     bool RecentTimeHasBeenSet() const;
 
                     /**
-                     * 获取Source of the task
-                     * @return From Source of the task
+                     * 获取Source.
+                     * @return From Source.
                      * 
                      */
                     std::string GetFrom() const;
 
                     /**
-                     * 设置Source of the task
-                     * @param _from Source of the task
+                     * 设置Source.
+                     * @param _from Source.
                      * 
                      */
                     void SetFrom(const std::string& _from);
@@ -278,15 +278,15 @@ namespace TencentCloud
                     bool FromHasBeenSet() const;
 
                     /**
-                     * 获取Status
-                     * @return Status Status
+                     * 获取Status.
+                     * @return Status Status.
                      * 
                      */
                     int64_t GetStatus() const;
 
                     /**
-                     * 设置Status
-                     * @param _status Status
+                     * 设置Status.
+                     * @param _status Status.
                      * 
                      */
                     void SetStatus(const int64_t& _status);
@@ -299,15 +299,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取relevant standards
-                     * @return CFGSTD relevant standards
+                     * 获取Relevant standards
+                     * @return CFGSTD Relevant standards
                      * 
                      */
                     std::string GetCFGSTD() const;
 
                     /**
-                     * 设置relevant standards
-                     * @param _cFGSTD relevant standards
+                     * 设置Relevant standards
+                     * @param _cFGSTD Relevant standards
                      * 
                      */
                     void SetCFGSTD(const std::string& _cFGSTD);
@@ -320,15 +320,15 @@ namespace TencentCloud
                     bool CFGSTDHasBeenSet() const;
 
                     /**
-                     * 获取Configuration details.
-                     * @return CFGDescribe Configuration details.
+                     * 获取Configuration detail
+                     * @return CFGDescribe Configuration detail
                      * 
                      */
                     std::string GetCFGDescribe() const;
 
                     /**
-                     * 设置Configuration details.
-                     * @param _cFGDescribe Configuration details.
+                     * 设置Configuration detail
+                     * @param _cFGDescribe Configuration detail
                      * 
                      */
                     void SetCFGDescribe(const std::string& _cFGDescribe);
@@ -341,15 +341,15 @@ namespace TencentCloud
                     bool CFGDescribeHasBeenSet() const;
 
                     /**
-                     * 获取Fix suggestion
-                     * @return CFGFix Fix suggestion
+                     * 获取Fixing suggestion
+                     * @return CFGFix Fixing suggestion
                      * 
                      */
                     std::string GetCFGFix() const;
 
                     /**
-                     * 设置Fix suggestion
-                     * @param _cFGFix Fix suggestion
+                     * 设置Fixing suggestion
+                     * @param _cFGFix Fixing suggestion
                      * 
                      */
                     void SetCFGFix(const std::string& _cFGFix);
@@ -362,15 +362,15 @@ namespace TencentCloud
                     bool CFGFixHasBeenSet() const;
 
                     /**
-                     * 获取URL of the help documentation
-                     * @return CFGHelpURL URL of the help documentation
+                     * 获取Help Document Link
+                     * @return CFGHelpURL Help Document Link
                      * 
                      */
                     std::string GetCFGHelpURL() const;
 
                     /**
-                     * 设置URL of the help documentation
-                     * @param _cFGHelpURL URL of the help documentation
+                     * 设置Help Document Link
+                     * @param _cFGHelpURL Help Document Link
                      * 
                      */
                     void SetCFGHelpURL(const std::string& _cFGHelpURL);
@@ -383,15 +383,15 @@ namespace TencentCloud
                     bool CFGHelpURLHasBeenSet() const;
 
                     /**
-                     * 获取Data entry key
-                     * @return Index Data entry key
+                     * 获取Front-end Usage Index
+                     * @return Index Front-end Usage Index
                      * 
                      */
                     std::string GetIndex() const;
 
                     /**
-                     * 设置Data entry key
-                     * @param _index Data entry key
+                     * 设置Front-end Usage Index
+                     * @param _index Front-end Usage Index
                      * 
                      */
                     void SetIndex(const std::string& _index);
@@ -404,15 +404,15 @@ namespace TencentCloud
                     bool IndexHasBeenSet() const;
 
                     /**
-                     * 获取User AppId
-                     * @return AppId User AppId
+                     * 获取User appid.
+                     * @return AppId User appid.
                      * 
                      */
                     std::string GetAppId() const;
 
                     /**
-                     * 设置User AppId
-                     * @param _appId User AppId
+                     * 设置User appid.
+                     * @param _appId User appid.
                      * 
                      */
                     void SetAppId(const std::string& _appId);
@@ -467,15 +467,15 @@ namespace TencentCloud
                     bool UinHasBeenSet() const;
 
                     /**
-                     * 获取When the asset type is LBL, show this field to locate the specific LB.
-                     * @return ClbId When the asset type is LBL, show this field to locate the specific LB.
+                     * 获取This field is displayed when the asset type is LBL, to help locate the specific LB.
+                     * @return ClbId This field is displayed when the asset type is LBL, to help locate the specific LB.
                      * 
                      */
                     std::string GetClbId() const;
 
                     /**
-                     * 设置When the asset type is LBL, show this field to locate the specific LB.
-                     * @param _clbId When the asset type is LBL, show this field to locate the specific LB.
+                     * 设置This field is displayed when the asset type is LBL, to help locate the specific LB.
+                     * @param _clbId This field is displayed when the asset type is LBL, to help locate the specific LB.
                      * 
                      */
                     void SetClbId(const std::string& _clbId);
@@ -490,7 +490,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The unique ID.
+                     * Unique ID
                      */
                     std::string m_id;
                     bool m_idHasBeenSet;
@@ -508,13 +508,13 @@ namespace TencentCloud
                     bool m_checkTypeHasBeenSet;
 
                     /**
-                     * Instance ID
+                     * Instance ID.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Instance name
+                     * Instance name.
                      */
                     std::string m_instanceName;
                     bool m_instanceNameHasBeenSet;
@@ -526,73 +526,73 @@ namespace TencentCloud
                     bool m_instanceTypeHasBeenSet;
 
                     /**
-                     * Affected assets
+                     * Affect assets
                      */
                     std::string m_affectAsset;
                     bool m_affectAssetHasBeenSet;
 
                     /**
-                     * Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
+                     * Risk level. low: low risk. high: high risk. middle: medium risk. info: notification. extreme: critical.
                      */
                     std::string m_level;
                     bool m_levelHasBeenSet;
 
                     /**
-                     * First detected
+                     * First Recognition Time
                      */
                     std::string m_firstTime;
                     bool m_firstTimeHasBeenSet;
 
                     /**
-                     * Last detected 
+                     * Latest Recognition Time
                      */
                     std::string m_recentTime;
                     bool m_recentTimeHasBeenSet;
 
                     /**
-                     * Source of the task
+                     * Source.
                      */
                     std::string m_from;
                     bool m_fromHasBeenSet;
 
                     /**
-                     * Status
+                     * Status.
                      */
                     int64_t m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * relevant standards
+                     * Relevant standards
                      */
                     std::string m_cFGSTD;
                     bool m_cFGSTDHasBeenSet;
 
                     /**
-                     * Configuration details.
+                     * Configuration detail
                      */
                     std::string m_cFGDescribe;
                     bool m_cFGDescribeHasBeenSet;
 
                     /**
-                     * Fix suggestion
+                     * Fixing suggestion
                      */
                     std::string m_cFGFix;
                     bool m_cFGFixHasBeenSet;
 
                     /**
-                     * URL of the help documentation
+                     * Help Document Link
                      */
                     std::string m_cFGHelpURL;
                     bool m_cFGHelpURLHasBeenSet;
 
                     /**
-                     * Data entry key
+                     * Front-end Usage Index
                      */
                     std::string m_index;
                     bool m_indexHasBeenSet;
 
                     /**
-                     * User AppId
+                     * User appid.
                      */
                     std::string m_appId;
                     bool m_appIdHasBeenSet;
@@ -610,7 +610,7 @@ namespace TencentCloud
                     bool m_uinHasBeenSet;
 
                     /**
-                     * When the asset type is LBL, show this field to locate the specific LB.
+                     * This field is displayed when the asset type is LBL, to help locate the specific LB.
                      */
                     std::string m_clbId;
                     bool m_clbIdHasBeenSet;

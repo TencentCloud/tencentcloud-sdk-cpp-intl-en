@@ -158,8 +158,8 @@ namespace TencentCloud
                     bool AppIdListHasBeenSet() const;
 
                     /**
-                     * 获取Cluster protection status enumeration.
-                     * @return ProtectStatusList Cluster protection status enumeration.
+                     * 获取Cluster Protection Status Enumeration
+                     * @return ProtectStatusList Cluster Protection Status Enumeration
                      * 
                      */
                     std::vector<FilterDataObject> GetProtectStatusList() const;
@@ -222,7 +222,7 @@ namespace TencentCloud
                     bool m_appIdListHasBeenSet;
 
                     /**
-                     * Cluster protection status enumeration.
+                     * Cluster Protection Status Enumeration
                      */
                     std::vector<FilterDataObject> m_protectStatusList;
                     bool m_protectStatusListHasBeenSet;

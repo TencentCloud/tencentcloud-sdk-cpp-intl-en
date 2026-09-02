@@ -46,8 +46,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Total number of entries
-                     * @return TotalCount Total number of entries
+                     * 获取Total quantity.
+                     * @return TotalCount Total quantity.
                      * 
                      */
                     int64_t GetTotalCount() const;
@@ -116,8 +116,8 @@ namespace TencentCloud
                     bool VULTypeListsHasBeenSet() const;
 
                     /**
-                     * 获取tag enumeration.
-                     * @return Tags tag enumeration.
+                     * 获取tag enumeration
+                     * @return Tags tag enumeration
                      * 
                      */
                     std::vector<FilterDataObject> GetTags() const;
@@ -132,7 +132,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Total number of entries
+                     * Total quantity.
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
@@ -162,7 +162,7 @@ namespace TencentCloud
                     bool m_vULTypeListsHasBeenSet;
 
                     /**
-                     * tag enumeration.
+                     * tag enumeration
                      */
                     std::vector<FilterDataObject> m_tags;
                     bool m_tagsHasBeenSet;

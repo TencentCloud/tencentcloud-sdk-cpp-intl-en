@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Vulnerability impact component information.
+                * Vulnerability Impact component information
                 */
                 class VulImpactComponentInfo : public AbstractModel
                 {
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool ComponentHasBeenSet() const;
 
                     /**
-                     * 获取Version name.
-                     * @return Version Version name.
+                     * 获取Version name
+                     * @return Version Version name
                      * 
                      */
                     std::string GetVersion() const;
 
                     /**
-                     * 设置Version name.
-                     * @param _version Version name.
+                     * 设置Version name
+                     * @param _version Version name
                      * 
                      */
                     void SetVersion(const std::string& _version);
@@ -97,7 +97,7 @@ namespace TencentCloud
                     bool m_componentHasBeenSet;
 
                     /**
-                     * Version name.
+                     * Version name
                      */
                     std::string m_version;
                     bool m_versionHasBeenSet;

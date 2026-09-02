@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Temp download URL of the report
-                     * @return Data Temp download URL of the report
+                     * 获取Return Report Temporary Download URL
+                     * @return Data Return Report Temporary Download URL
                      * 
                      */
                     std::vector<TaskLogURL> GetData() const;
@@ -61,7 +61,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Temp download URL of the report
+                     * Return Report Temporary Download URL
                      */
                     std::vector<TaskLogURL> m_data;
                     bool m_dataHasBeenSet;

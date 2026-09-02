@@ -39,7 +39,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Ai Agent Asset Information List Item
+                * Ai Agent asset information list item
                 */
                 class AIAgentAsset : public AbstractModel
                 {
@@ -93,15 +93,15 @@ namespace TencentCloud
                     bool AgentNameHasBeenSet() const;
 
                     /**
-                     * 获取<p>agent model name usage</p>
-                     * @return AgentModel <p>agent model name usage</p>
+                     * 获取<p>Model name used by the agent</p>
+                     * @return AgentModel <p>Model name used by the agent</p>
                      * 
                      */
                     std::vector<std::string> GetAgentModel() const;
 
                     /**
-                     * 设置<p>agent model name usage</p>
-                     * @param _agentModel <p>agent model name usage</p>
+                     * 设置<p>Model name used by the agent</p>
+                     * @param _agentModel <p>Model name used by the agent</p>
                      * 
                      */
                     void SetAgentModel(const std::vector<std::string>& _agentModel);
@@ -135,15 +135,15 @@ namespace TencentCloud
                     bool InstanceIDHasBeenSet() const;
 
                     /**
-                     * 获取<p>Instance name</p>
-                     * @return InstanceName <p>Instance name</p>
+                     * 获取<p>Instance name.</p>
+                     * @return InstanceName <p>Instance name.</p>
                      * 
                      */
                     std::string GetInstanceName() const;
 
                     /**
-                     * 设置<p>Instance name</p>
-                     * @param _instanceName <p>Instance name</p>
+                     * 设置<p>Instance name.</p>
+                     * @param _instanceName <p>Instance name.</p>
                      * 
                      */
                     void SetInstanceName(const std::string& _instanceName);
@@ -156,15 +156,15 @@ namespace TencentCloud
                     bool InstanceNameHasBeenSet() const;
 
                     /**
-                     * 获取<p>metadata risk list. Has the following enumeration values: 1. AK_TMP 2. USER_DATA</p>
-                     * @return MetadataRiskList <p>metadata risk list. Has the following enumeration values: 1. AK_TMP 2. USER_DATA</p>
+                     * 获取<p>metadata risk list. It has the following enumeration values: 1. AK_TMP  2. USER_DATA</p>
+                     * @return MetadataRiskList <p>metadata risk list. It has the following enumeration values: 1. AK_TMP  2. USER_DATA</p>
                      * 
                      */
                     std::vector<std::string> GetMetadataRiskList() const;
 
                     /**
-                     * 设置<p>metadata risk list. Has the following enumeration values: 1. AK_TMP 2. USER_DATA</p>
-                     * @param _metadataRiskList <p>metadata risk list. Has the following enumeration values: 1. AK_TMP 2. USER_DATA</p>
+                     * 设置<p>metadata risk list. It has the following enumeration values: 1. AK_TMP  2. USER_DATA</p>
+                     * @param _metadataRiskList <p>metadata risk list. It has the following enumeration values: 1. AK_TMP  2. USER_DATA</p>
                      * 
                      */
                     void SetMetadataRiskList(const std::vector<std::string>& _metadataRiskList);
@@ -219,15 +219,15 @@ namespace TencentCloud
                     bool IdentityTimeLastHasBeenSet() const;
 
                     /**
-                     * 获取<p>Detect method. Has the following enumeration values: 1. FINGER Detect via asset fingerprinting 2. NETWORK Detect via network access mode</p>
-                     * @return IdentityMethod <p>Detect method. Has the following enumeration values: 1. FINGER Detect via asset fingerprinting 2. NETWORK Detect via network access mode</p>
+                     * 获取<p>Detection method. It has the following enumeration values: 1. FINGER: detected by asset fingerprinting. 2. NETWORK: detected by network access mode</p>
+                     * @return IdentityMethod <p>Detection method. It has the following enumeration values: 1. FINGER: detected by asset fingerprinting. 2. NETWORK: detected by network access mode</p>
                      * 
                      */
                     std::string GetIdentityMethod() const;
 
                     /**
-                     * 设置<p>Detect method. Has the following enumeration values: 1. FINGER Detect via asset fingerprinting 2. NETWORK Detect via network access mode</p>
-                     * @param _identityMethod <p>Detect method. Has the following enumeration values: 1. FINGER Detect via asset fingerprinting 2. NETWORK Detect via network access mode</p>
+                     * 设置<p>Detection method. It has the following enumeration values: 1. FINGER: detected by asset fingerprinting. 2. NETWORK: detected by network access mode</p>
+                     * @param _identityMethod <p>Detection method. It has the following enumeration values: 1. FINGER: detected by asset fingerprinting. 2. NETWORK: detected by network access mode</p>
                      * 
                      */
                     void SetIdentityMethod(const std::string& _identityMethod);
@@ -240,15 +240,15 @@ namespace TencentCloud
                     bool IdentityMethodHasBeenSet() const;
 
                     /**
-                     * 获取<p>Exposure status. Has the following enumeration values. 1. EXPOSED; 2. UNEXPOSED;</p><ol start="3"><li>UNKNOWN;</li></ol>
-                     * @return ExposureStatus <p>Exposure status. Has the following enumeration values. 1. EXPOSED; 2. UNEXPOSED;</p><ol start="3"><li>UNKNOWN;</li></ol>
+                     * 获取<p>Exposure status. It has the following enumeration values: 1. EXPOSED; 2. UNEXPOSED;</p><ol start="3"><li>UNKNOWN;</li></ol>
+                     * @return ExposureStatus <p>Exposure status. It has the following enumeration values: 1. EXPOSED; 2. UNEXPOSED;</p><ol start="3"><li>UNKNOWN;</li></ol>
                      * 
                      */
                     std::string GetExposureStatus() const;
 
                     /**
-                     * 设置<p>Exposure status. Has the following enumeration values. 1. EXPOSED; 2. UNEXPOSED;</p><ol start="3"><li>UNKNOWN;</li></ol>
-                     * @param _exposureStatus <p>Exposure status. Has the following enumeration values. 1. EXPOSED; 2. UNEXPOSED;</p><ol start="3"><li>UNKNOWN;</li></ol>
+                     * 设置<p>Exposure status. It has the following enumeration values: 1. EXPOSED; 2. UNEXPOSED;</p><ol start="3"><li>UNKNOWN;</li></ol>
+                     * @param _exposureStatus <p>Exposure status. It has the following enumeration values: 1. EXPOSED; 2. UNEXPOSED;</p><ol start="3"><li>UNKNOWN;</li></ol>
                      * 
                      */
                     void SetExposureStatus(const std::string& _exposureStatus);
@@ -282,15 +282,15 @@ namespace TencentCloud
                     bool MetadataRiskURLHasBeenSet() const;
 
                     /**
-                     * 获取<p>None</p>
-                     * @return SkillState <p>None</p>
+                     * 获取<p>Credential Skill installation status</p>
+                     * @return SkillState <p>Credential Skill installation status</p>
                      * 
                      */
                     SkillState GetSkillState() const;
 
                     /**
-                     * 设置<p>None</p>
-                     * @param _skillState <p>None</p>
+                     * 设置<p>Credential Skill installation status</p>
+                     * @param _skillState <p>Credential Skill installation status</p>
                      * 
                      */
                     void SetSkillState(const SkillState& _skillState);
@@ -324,15 +324,15 @@ namespace TencentCloud
                     bool TrafficPluginStateHasBeenSet() const;
 
                     /**
-                     * 获取<p>Sandbox rule status for traffic</p>
-                     * @return TrafficRuleState <p>Sandbox rule status for traffic</p>
+                     * 获取<p>Traffic sandbox rule status</p>
+                     * @return TrafficRuleState <p>Traffic sandbox rule status</p>
                      * 
                      */
                     std::vector<TrafficRuleState> GetTrafficRuleState() const;
 
                     /**
-                     * 设置<p>Sandbox rule status for traffic</p>
-                     * @param _trafficRuleState <p>Sandbox rule status for traffic</p>
+                     * 设置<p>Traffic sandbox rule status</p>
+                     * @param _trafficRuleState <p>Traffic sandbox rule status</p>
                      * 
                      */
                     void SetTrafficRuleState(const std::vector<TrafficRuleState>& _trafficRuleState);
@@ -380,7 +380,7 @@ namespace TencentCloud
                     bool m_agentNameHasBeenSet;
 
                     /**
-                     * <p>agent model name usage</p>
+                     * <p>Model name used by the agent</p>
                      */
                     std::vector<std::string> m_agentModel;
                     bool m_agentModelHasBeenSet;
@@ -392,13 +392,13 @@ namespace TencentCloud
                     bool m_instanceIDHasBeenSet;
 
                     /**
-                     * <p>Instance name</p>
+                     * <p>Instance name.</p>
                      */
                     std::string m_instanceName;
                     bool m_instanceNameHasBeenSet;
 
                     /**
-                     * <p>metadata risk list. Has the following enumeration values: 1. AK_TMP 2. USER_DATA</p>
+                     * <p>metadata risk list. It has the following enumeration values: 1. AK_TMP  2. USER_DATA</p>
                      */
                     std::vector<std::string> m_metadataRiskList;
                     bool m_metadataRiskListHasBeenSet;
@@ -416,13 +416,13 @@ namespace TencentCloud
                     bool m_identityTimeLastHasBeenSet;
 
                     /**
-                     * <p>Detect method. Has the following enumeration values: 1. FINGER Detect via asset fingerprinting 2. NETWORK Detect via network access mode</p>
+                     * <p>Detection method. It has the following enumeration values: 1. FINGER: detected by asset fingerprinting. 2. NETWORK: detected by network access mode</p>
                      */
                     std::string m_identityMethod;
                     bool m_identityMethodHasBeenSet;
 
                     /**
-                     * <p>Exposure status. Has the following enumeration values. 1. EXPOSED; 2. UNEXPOSED;</p><ol start="3"><li>UNKNOWN;</li></ol>
+                     * <p>Exposure status. It has the following enumeration values: 1. EXPOSED; 2. UNEXPOSED;</p><ol start="3"><li>UNKNOWN;</li></ol>
                      */
                     std::string m_exposureStatus;
                     bool m_exposureStatusHasBeenSet;
@@ -434,7 +434,7 @@ namespace TencentCloud
                     bool m_metadataRiskURLHasBeenSet;
 
                     /**
-                     * <p>None</p>
+                     * <p>Credential Skill installation status</p>
                      */
                     SkillState m_skillState;
                     bool m_skillStateHasBeenSet;
@@ -446,7 +446,7 @@ namespace TencentCloud
                     bool m_trafficPluginStateHasBeenSet;
 
                     /**
-                     * <p>Sandbox rule status for traffic</p>
+                     * <p>Traffic sandbox rule status</p>
                      */
                     std::vector<TrafficRuleState> m_trafficRuleState;
                     bool m_trafficRuleStateHasBeenSet;

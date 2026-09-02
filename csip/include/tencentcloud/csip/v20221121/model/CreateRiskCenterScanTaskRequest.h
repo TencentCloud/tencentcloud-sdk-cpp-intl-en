@@ -46,15 +46,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Task name
-                     * @return TaskName Task name
+                     * 获取Task name.
+                     * @return TaskName Task name.
                      * 
                      */
                     std::string GetTaskName() const;
 
                     /**
-                     * 设置Task name
-                     * @param _taskName Task name
+                     * 设置Task name.
+                     * @param _taskName Task name.
                      * 
                      */
                     void SetTaskName(const std::string& _taskName);
@@ -67,15 +67,15 @@ namespace TencentCloud
                     bool TaskNameHasBeenSet() const;
 
                     /**
-                     * 获取Values: `0` (Scan all); `1` (Scan specific assets); `2` (Scan all expect the specified assets); `3` (Custom assets). When `ScanAssetType=1/2`, `Assets` is required. When `ScanAssetType=3`, `SelfDefiningAssets` is required. 
-                     * @return ScanAssetType Values: `0` (Scan all); `1` (Scan specific assets); `2` (Scan all expect the specified assets); `3` (Custom assets). When `ScanAssetType=1/2`, `Assets` is required. When `ScanAssetType=3`, `SelfDefiningAssets` is required. 
+                     * 获取0: Full Scan; 1: Specified Asset Scan; 2: Excluded Asset Scan; 3: Manual Entry Scan. 1 and 2 require the Assets field; 3 requires SelfDefiningAssets.
+                     * @return ScanAssetType 0: Full Scan; 1: Specified Asset Scan; 2: Excluded Asset Scan; 3: Manual Entry Scan. 1 and 2 require the Assets field; 3 requires SelfDefiningAssets.
                      * 
                      */
                     int64_t GetScanAssetType() const;
 
                     /**
-                     * 设置Values: `0` (Scan all); `1` (Scan specific assets); `2` (Scan all expect the specified assets); `3` (Custom assets). When `ScanAssetType=1/2`, `Assets` is required. When `ScanAssetType=3`, `SelfDefiningAssets` is required. 
-                     * @param _scanAssetType Values: `0` (Scan all); `1` (Scan specific assets); `2` (Scan all expect the specified assets); `3` (Custom assets). When `ScanAssetType=1/2`, `Assets` is required. When `ScanAssetType=3`, `SelfDefiningAssets` is required. 
+                     * 设置0: Full Scan; 1: Specified Asset Scan; 2: Excluded Asset Scan; 3: Manual Entry Scan. 1 and 2 require the Assets field; 3 requires SelfDefiningAssets.
+                     * @param _scanAssetType 0: Full Scan; 1: Specified Asset Scan; 2: Excluded Asset Scan; 3: Manual Entry Scan. 1 and 2 require the Assets field; 3 requires SelfDefiningAssets.
                      * 
                      */
                     void SetScanAssetType(const int64_t& _scanAssetType);
@@ -88,15 +88,15 @@ namespace TencentCloud
                     bool ScanAssetTypeHasBeenSet() const;
 
                     /**
-                     * 获取Project to scan: port/poc/weakpass/webcontent/configrisk/exposedserver
-                     * @return ScanItem Project to scan: port/poc/weakpass/webcontent/configrisk/exposedserver
+                     * 获取Scan items. port/poc/weakpass/webcontent/configrisk/exposedserver.
+                     * @return ScanItem Scan items. port/poc/weakpass/webcontent/configrisk/exposedserver.
                      * 
                      */
                     std::vector<std::string> GetScanItem() const;
 
                     /**
-                     * 设置Project to scan: port/poc/weakpass/webcontent/configrisk/exposedserver
-                     * @param _scanItem Project to scan: port/poc/weakpass/webcontent/configrisk/exposedserver
+                     * 设置Scan items. port/poc/weakpass/webcontent/configrisk/exposedserver.
+                     * @param _scanItem Scan items. port/poc/weakpass/webcontent/configrisk/exposedserver.
                      * 
                      */
                     void SetScanItem(const std::vector<std::string>& _scanItem);
@@ -109,15 +109,15 @@ namespace TencentCloud
                     bool ScanItemHasBeenSet() const;
 
                     /**
-                     * 获取Task type. `0`: Scheduled task, `1`: Scan immediately; `2`: Scanned at the specified time; `3`: Custom. When ScanPlanType=0,2,3, `ScanPlanContent` is required.
-                     * @return ScanPlanType Task type. `0`: Scheduled task, `1`: Scan immediately; `2`: Scanned at the specified time; `3`: Custom. When ScanPlanType=0,2,3, `ScanPlanContent` is required.
+                     * 获取0: Periodic Task; 1: Scan Now; 2: Scheduled Scan; 3: Custom. If 0, 2, 3, ScanPlanContent is required.
+                     * @return ScanPlanType 0: Periodic Task; 1: Scan Now; 2: Scheduled Scan; 3: Custom. If 0, 2, 3, ScanPlanContent is required.
                      * 
                      */
                     int64_t GetScanPlanType() const;
 
                     /**
-                     * 设置Task type. `0`: Scheduled task, `1`: Scan immediately; `2`: Scanned at the specified time; `3`: Custom. When ScanPlanType=0,2,3, `ScanPlanContent` is required.
-                     * @param _scanPlanType Task type. `0`: Scheduled task, `1`: Scan immediately; `2`: Scanned at the specified time; `3`: Custom. When ScanPlanType=0,2,3, `ScanPlanContent` is required.
+                     * 设置0: Periodic Task; 1: Scan Now; 2: Scheduled Scan; 3: Custom. If 0, 2, 3, ScanPlanContent is required.
+                     * @param _scanPlanType 0: Periodic Task; 1: Scan Now; 2: Scheduled Scan; 3: Custom. If 0, 2, 3, ScanPlanContent is required.
                      * 
                      */
                     void SetScanPlanType(const int64_t& _scanPlanType);
@@ -151,15 +151,15 @@ namespace TencentCloud
                     bool MemberIdHasBeenSet() const;
 
                     /**
-                     * 获取List of assets to scan
-                     * @return Assets List of assets to scan
+                     * 获取Scanned Asset Information List
+                     * @return Assets Scanned Asset Information List
                      * 
                      */
                     std::vector<TaskAssetObject> GetAssets() const;
 
                     /**
-                     * 设置List of assets to scan
-                     * @param _assets List of assets to scan
+                     * 设置Scanned Asset Information List
+                     * @param _assets Scanned Asset Information List
                      * 
                      */
                     void SetAssets(const std::vector<TaskAssetObject>& _assets);
@@ -172,15 +172,15 @@ namespace TencentCloud
                     bool AssetsHasBeenSet() const;
 
                     /**
-                     * 获取Details of a scheduled scan task
-                     * @return ScanPlanContent Details of a scheduled scan task
+                     * 获取Scan Plan Details
+                     * @return ScanPlanContent Scan Plan Details
                      * 
                      */
                     std::string GetScanPlanContent() const;
 
                     /**
-                     * 设置Details of a scheduled scan task
-                     * @param _scanPlanContent Details of a scheduled scan task
+                     * 设置Scan Plan Details
+                     * @param _scanPlanContent Scan Plan Details
                      * 
                      */
                     void SetScanPlanContent(const std::string& _scanPlanContent);
@@ -193,15 +193,15 @@ namespace TencentCloud
                     bool ScanPlanContentHasBeenSet() const;
 
                     /**
-                     * 获取IP/Domain name/URL
-                     * @return SelfDefiningAssets IP/Domain name/URL
+                     * 获取IP/Domain/URL Array
+                     * @return SelfDefiningAssets IP/Domain/URL Array
                      * 
                      */
                     std::vector<std::string> GetSelfDefiningAssets() const;
 
                     /**
-                     * 设置IP/Domain name/URL
-                     * @param _selfDefiningAssets IP/Domain name/URL
+                     * 设置IP/Domain/URL Array
+                     * @param _selfDefiningAssets IP/Domain/URL Array
                      * 
                      */
                     void SetSelfDefiningAssets(const std::vector<std::string>& _selfDefiningAssets);
@@ -214,15 +214,15 @@ namespace TencentCloud
                     bool SelfDefiningAssetsHasBeenSet() const;
 
                     /**
-                     * 获取Request initiation source, vss means vulnerability scan service, the user of CSC fill in csip, default csip
-                     * @return ScanFrom Request initiation source, vss means vulnerability scan service, the user of CSC fill in csip, default csip
+                     * 获取Request initiation source. `vss` refers to Vulnerability Scan Service. Users of CSC should fill in `csip`. Default value: `csip`.
+                     * @return ScanFrom Request initiation source. `vss` refers to Vulnerability Scan Service. Users of CSC should fill in `csip`. Default value: `csip`.
                      * 
                      */
                     std::string GetScanFrom() const;
 
                     /**
-                     * 设置Request initiation source, vss means vulnerability scan service, the user of CSC fill in csip, default csip
-                     * @param _scanFrom Request initiation source, vss means vulnerability scan service, the user of CSC fill in csip, default csip
+                     * 设置Request initiation source. `vss` refers to Vulnerability Scan Service. Users of CSC should fill in `csip`. Default value: `csip`.
+                     * @param _scanFrom Request initiation source. `vss` refers to Vulnerability Scan Service. Users of CSC should fill in `csip`. Default value: `csip`.
                      * 
                      */
                     void SetScanFrom(const std::string& _scanFrom);
@@ -235,15 +235,15 @@ namespace TencentCloud
                     bool ScanFromHasBeenSet() const;
 
                     /**
-                     * 获取Advanced settings
-                     * @return TaskAdvanceCFG Advanced settings
+                     * 获取Advanced configuration
+                     * @return TaskAdvanceCFG Advanced configuration
                      * 
                      */
                     TaskAdvanceCFG GetTaskAdvanceCFG() const;
 
                     /**
-                     * 设置Advanced settings
-                     * @param _taskAdvanceCFG Advanced settings
+                     * 设置Advanced configuration
+                     * @param _taskAdvanceCFG Advanced configuration
                      * 
                      */
                     void SetTaskAdvanceCFG(const TaskAdvanceCFG& _taskAdvanceCFG);
@@ -256,15 +256,15 @@ namespace TencentCloud
                     bool TaskAdvanceCFGHasBeenSet() const;
 
                     /**
-                     * 获取Scan task mode: `0` (Standard), `1` (Quick), `2` (Advanced). Default: `0`
-                     * @return TaskMode Scan task mode: `0` (Standard), `1` (Quick), `2` (Advanced). Default: `0`
+                     * 获取Checkup Mode. 0: Standard Mode; 1: Quick Mode; 2: Advanced Mode. Standard Mode by default.
+                     * @return TaskMode Checkup Mode. 0: Standard Mode; 1: Quick Mode; 2: Advanced Mode. Standard Mode by default.
                      * 
                      */
                     int64_t GetTaskMode() const;
 
                     /**
-                     * 设置Scan task mode: `0` (Standard), `1` (Quick), `2` (Advanced). Default: `0`
-                     * @param _taskMode Scan task mode: `0` (Standard), `1` (Quick), `2` (Advanced). Default: `0`
+                     * 设置Checkup Mode. 0: Standard Mode; 1: Quick Mode; 2: Advanced Mode. Standard Mode by default.
+                     * @param _taskMode Checkup Mode. 0: Standard Mode; 1: Quick Mode; 2: Advanced Mode. Standard Mode by default.
                      * 
                      */
                     void SetTaskMode(const int64_t& _taskMode);
@@ -277,15 +277,15 @@ namespace TencentCloud
                     bool TaskModeHasBeenSet() const;
 
                     /**
-                     * 获取Asset tags
-                     * @return Tags Asset tags
+                     * 获取Asset tag
+                     * @return Tags Asset tag
                      * 
                      */
                     AssetTag GetTags() const;
 
                     /**
-                     * 设置Asset tags
-                     * @param _tags Asset tags
+                     * 设置Asset tag
+                     * @param _tags Asset tag
                      * 
                      */
                     void SetTags(const AssetTag& _tags);
@@ -298,15 +298,15 @@ namespace TencentCloud
                     bool TagsHasBeenSet() const;
 
                     /**
-                     * 获取Task completed callback webhook url
-                     * @return FinishWebHook Task completed callback webhook url
+                     * 获取webhook URL for task completion callback
+                     * @return FinishWebHook webhook URL for task completion callback
                      * 
                      */
                     std::string GetFinishWebHook() const;
 
                     /**
-                     * 设置Task completed callback webhook url
-                     * @param _finishWebHook Task completed callback webhook url
+                     * 设置webhook URL for task completion callback
+                     * @param _finishWebHook webhook URL for task completion callback
                      * 
                      */
                     void SetFinishWebHook(const std::string& _finishWebHook);
@@ -321,25 +321,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Task name
+                     * Task name.
                      */
                     std::string m_taskName;
                     bool m_taskNameHasBeenSet;
 
                     /**
-                     * Values: `0` (Scan all); `1` (Scan specific assets); `2` (Scan all expect the specified assets); `3` (Custom assets). When `ScanAssetType=1/2`, `Assets` is required. When `ScanAssetType=3`, `SelfDefiningAssets` is required. 
+                     * 0: Full Scan; 1: Specified Asset Scan; 2: Excluded Asset Scan; 3: Manual Entry Scan. 1 and 2 require the Assets field; 3 requires SelfDefiningAssets.
                      */
                     int64_t m_scanAssetType;
                     bool m_scanAssetTypeHasBeenSet;
 
                     /**
-                     * Project to scan: port/poc/weakpass/webcontent/configrisk/exposedserver
+                     * Scan items. port/poc/weakpass/webcontent/configrisk/exposedserver.
                      */
                     std::vector<std::string> m_scanItem;
                     bool m_scanItemHasBeenSet;
 
                     /**
-                     * Task type. `0`: Scheduled task, `1`: Scan immediately; `2`: Scanned at the specified time; `3`: Custom. When ScanPlanType=0,2,3, `ScanPlanContent` is required.
+                     * 0: Periodic Task; 1: Scan Now; 2: Scheduled Scan; 3: Custom. If 0, 2, 3, ScanPlanContent is required.
                      */
                     int64_t m_scanPlanType;
                     bool m_scanPlanTypeHasBeenSet;
@@ -351,49 +351,49 @@ namespace TencentCloud
                     bool m_memberIdHasBeenSet;
 
                     /**
-                     * List of assets to scan
+                     * Scanned Asset Information List
                      */
                     std::vector<TaskAssetObject> m_assets;
                     bool m_assetsHasBeenSet;
 
                     /**
-                     * Details of a scheduled scan task
+                     * Scan Plan Details
                      */
                     std::string m_scanPlanContent;
                     bool m_scanPlanContentHasBeenSet;
 
                     /**
-                     * IP/Domain name/URL
+                     * IP/Domain/URL Array
                      */
                     std::vector<std::string> m_selfDefiningAssets;
                     bool m_selfDefiningAssetsHasBeenSet;
 
                     /**
-                     * Request initiation source, vss means vulnerability scan service, the user of CSC fill in csip, default csip
+                     * Request initiation source. `vss` refers to Vulnerability Scan Service. Users of CSC should fill in `csip`. Default value: `csip`.
                      */
                     std::string m_scanFrom;
                     bool m_scanFromHasBeenSet;
 
                     /**
-                     * Advanced settings
+                     * Advanced configuration
                      */
                     TaskAdvanceCFG m_taskAdvanceCFG;
                     bool m_taskAdvanceCFGHasBeenSet;
 
                     /**
-                     * Scan task mode: `0` (Standard), `1` (Quick), `2` (Advanced). Default: `0`
+                     * Checkup Mode. 0: Standard Mode; 1: Quick Mode; 2: Advanced Mode. Standard Mode by default.
                      */
                     int64_t m_taskMode;
                     bool m_taskModeHasBeenSet;
 
                     /**
-                     * Asset tags
+                     * Asset tag
                      */
                     AssetTag m_tags;
                     bool m_tagsHasBeenSet;
 
                     /**
-                     * Task completed callback webhook url
+                     * webhook URL for task completion callback
                      */
                     std::string m_finishWebHook;
                     bool m_finishWebHookHasBeenSet;

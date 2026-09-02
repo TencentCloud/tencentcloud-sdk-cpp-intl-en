@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Alarm list.
-                     * @return Data Alarm list.
+                     * 获取Alarm list
+                     * @return Data Alarm list
                      * 
                      */
                     std::vector<AccessKeyAlarm> GetData() const;
@@ -75,7 +75,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Alarm list.
+                     * Alarm list
                      */
                     std::vector<AccessKeyAlarm> m_data;
                     bool m_dataHasBeenSet;

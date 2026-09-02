@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool UinHasBeenSet() const;
 
                     /**
-                     * 获取member account name
-                     * @return NickName member account name
+                     * 获取Member account name
+                     * @return NickName Member account name
                      * 
                      */
                     std::string GetNickName() const;
 
                     /**
-                     * 设置member account name
-                     * @param _nickName member account name
+                     * 设置Member account name
+                     * @param _nickName Member account name
                      * 
                      */
                     void SetNickName(const std::string& _nickName);
@@ -488,23 +488,23 @@ namespace TencentCloud
                     bool AuthTypeHasBeenSet() const;
 
                     /**
-                     * 获取Tencent Cloud Group Account
-Tencent Cloud access account
-2: non-Tencent Cloud
-                     * @return TcMemberType Tencent Cloud Group Account
-Tencent Cloud access account
-2: non-Tencent Cloud
+                     * 获取0 Tencent Cloud Group Account
+1 Tencent Cloud access account
+2. Non-Tencent Cloud
+                     * @return TcMemberType 0 Tencent Cloud Group Account
+1 Tencent Cloud access account
+2. Non-Tencent Cloud
                      * 
                      */
                     int64_t GetTcMemberType() const;
 
                     /**
-                     * 设置Tencent Cloud Group Account
-Tencent Cloud access account
-2: non-Tencent Cloud
-                     * @param _tcMemberType Tencent Cloud Group Account
-Tencent Cloud access account
-2: non-Tencent Cloud
+                     * 设置0 Tencent Cloud Group Account
+1 Tencent Cloud access account
+2. Non-Tencent Cloud
+                     * @param _tcMemberType 0 Tencent Cloud Group Account
+1 Tencent Cloud access account
+2. Non-Tencent Cloud
                      * 
                      */
                     void SetTcMemberType(const int64_t& _tcMemberType);
@@ -567,7 +567,7 @@ Tencent Cloud access account
                     bool m_uinHasBeenSet;
 
                     /**
-                     * member account name
+                     * Member account name
                      */
                     std::string m_nickName;
                     bool m_nickNameHasBeenSet;
@@ -687,9 +687,9 @@ Tencent Cloud access account
                     bool m_authTypeHasBeenSet;
 
                     /**
-                     * Tencent Cloud Group Account
-Tencent Cloud access account
-2: non-Tencent Cloud
+                     * 0 Tencent Cloud Group Account
+1 Tencent Cloud access account
+2. Non-Tencent Cloud
                      */
                     int64_t m_tcMemberType;
                     bool m_tcMemberTypeHasBeenSet;

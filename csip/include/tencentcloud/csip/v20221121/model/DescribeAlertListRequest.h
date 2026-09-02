@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Tag search filter criteria
-                     * @return Filter Tag search filter criteria
+                     * 获取Filter criteria for tag search
+                     * @return Filter Filter criteria for tag search
                      * 
                      */
                     Filter GetFilter() const;
 
                     /**
-                     * 设置Tag search filter criteria
-                     * @param _filter Tag search filter criteria
+                     * 设置Filter criteria for tag search
+                     * @param _filter Filter criteria for tag search
                      * 
                      */
                     void SetFilter(const Filter& _filter);
@@ -107,15 +107,15 @@ namespace TencentCloud
                     bool OperatedMemberIdHasBeenSet() const;
 
                     /**
-                     * 获取0: Default all 1: Asset ID 2: Domain name
-                     * @return AssetType 0: Default all 1: Asset ID 2: Domain name
+                     * 获取0: Default: All; 1: Asset ID; 2: Domain name
+                     * @return AssetType 0: Default: All; 1: Asset ID; 2: Domain name
                      * 
                      */
                     int64_t GetAssetType() const;
 
                     /**
-                     * 设置0: Default all 1: Asset ID 2: Domain name
-                     * @param _assetType 0: Default all 1: Asset ID 2: Domain name
+                     * 设置0: Default: All; 1: Asset ID; 2: Domain name
+                     * @param _assetType 0: Default: All; 1: Asset ID; 2: Domain name
                      * 
                      */
                     void SetAssetType(const int64_t& _assetType);
@@ -130,7 +130,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Tag search filter criteria
+                     * Filter criteria for tag search
                      */
                     Filter m_filter;
                     bool m_filterHasBeenSet;
@@ -148,7 +148,7 @@ namespace TencentCloud
                     bool m_operatedMemberIdHasBeenSet;
 
                     /**
-                     * 0: Default all 1: Asset ID 2: Domain name
+                     * 0: Default: All; 1: Asset ID; 2: Domain name
                      */
                     int64_t m_assetType;
                     bool m_assetTypeHasBeenSet;

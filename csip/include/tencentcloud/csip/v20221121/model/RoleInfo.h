@@ -132,15 +132,15 @@ namespace TencentCloud
                     bool PortHasBeenSet() const;
 
                     /**
-                     * 获取asset ID
-                     * @return InstanceID asset ID
+                     * 获取Asset ID
+                     * @return InstanceID Asset ID
                      * 
                      */
                     std::string GetInstanceID() const;
 
                     /**
-                     * 设置asset ID
-                     * @param _instanceID asset ID
+                     * 设置Asset ID
+                     * @param _instanceID Asset ID
                      * 
                      */
                     void SetInstanceID(const std::string& _instanceID);
@@ -153,15 +153,15 @@ namespace TencentCloud
                     bool InstanceIDHasBeenSet() const;
 
                     /**
-                     * 获取city
-                     * @return City city
+                     * 获取City
+                     * @return City City
                      * 
                      */
                     std::string GetCity() const;
 
                     /**
-                     * 设置city
-                     * @param _city city
+                     * 设置City
+                     * @param _city City
                      * 
                      */
                     void SetCity(const std::string& _city);
@@ -195,15 +195,15 @@ namespace TencentCloud
                     bool ProvinceHasBeenSet() const;
 
                     /**
-                     * 获取nation
-                     * @return Country nation
+                     * 获取national
+                     * @return Country national
                      * 
                      */
                     std::string GetCountry() const;
 
                     /**
-                     * 设置nation
-                     * @param _country nation
+                     * 设置national
+                     * @param _country national
                      * 
                      */
                     void SetCountry(const std::string& _country);
@@ -237,15 +237,15 @@ namespace TencentCloud
                     bool AddressHasBeenSet() const;
 
                     /**
-                     * 获取latitude
-                     * @return Latitude latitude
+                     * 获取Latitude
+                     * @return Latitude Latitude
                      * 
                      */
                     std::string GetLatitude() const;
 
                     /**
-                     * 设置latitude
-                     * @param _latitude latitude
+                     * 设置Latitude
+                     * @param _latitude Latitude
                      * 
                      */
                     void SetLatitude(const std::string& _latitude);
@@ -258,15 +258,15 @@ namespace TencentCloud
                     bool LatitudeHasBeenSet() const;
 
                     /**
-                     * 获取longitude
-                     * @return Longitude longitude
+                     * 获取Longitude
+                     * @return Longitude Longitude
                      * 
                      */
                     std::string GetLongitude() const;
 
                     /**
-                     * 设置longitude
-                     * @param _longitude longitude
+                     * 设置Longitude
+                     * @param _longitude Longitude
                      * 
                      */
                     void SetLongitude(const std::string& _longitude);
@@ -321,15 +321,15 @@ namespace TencentCloud
                     bool DomainHasBeenSet() const;
 
                     /**
-                     * 获取Enterprise Name
-                     * @return Name Enterprise Name
+                     * 获取Enterprise name
+                     * @return Name Enterprise name
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Enterprise Name
-                     * @param _name Enterprise Name
+                     * 设置Enterprise name
+                     * @param _name Enterprise name
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -426,15 +426,15 @@ namespace TencentCloud
                     bool MD5HasBeenSet() const;
 
                     /**
-                     * 获取Malicious process filename
-                     * @return FileName Malicious process filename
+                     * 获取Malicious process file name
+                     * @return FileName Malicious process file name
                      * 
                      */
                     std::string GetFileName() const;
 
                     /**
-                     * 设置Malicious process filename
-                     * @param _fileName Malicious process filename
+                     * 设置Malicious process file name
+                     * @param _fileName Malicious process file name
                      * 
                      */
                     void SetFileName(const std::string& _fileName);
@@ -510,15 +510,15 @@ namespace TencentCloud
                     bool ContainerNameHasBeenSet() const;
 
                     /**
-                     * 获取container ID
-                     * @return ContainerID container ID
+                     * 获取Container ID
+                     * @return ContainerID Container ID
                      * 
                      */
                     std::string GetContainerID() const;
 
                     /**
-                     * 设置container ID
-                     * @param _containerID container ID
+                     * 设置Container ID
+                     * @param _containerID Container ID
                      * 
                      */
                     void SetContainerID(const std::string& _containerID);
@@ -557,13 +557,13 @@ namespace TencentCloud
                     bool m_portHasBeenSet;
 
                     /**
-                     * asset ID
+                     * Asset ID
                      */
                     std::string m_instanceID;
                     bool m_instanceIDHasBeenSet;
 
                     /**
-                     * city
+                     * City
                      */
                     std::string m_city;
                     bool m_cityHasBeenSet;
@@ -575,7 +575,7 @@ namespace TencentCloud
                     bool m_provinceHasBeenSet;
 
                     /**
-                     * nation
+                     * national
                      */
                     std::string m_country;
                     bool m_countryHasBeenSet;
@@ -587,13 +587,13 @@ namespace TencentCloud
                     bool m_addressHasBeenSet;
 
                     /**
-                     * latitude
+                     * Latitude
                      */
                     std::string m_latitude;
                     bool m_latitudeHasBeenSet;
 
                     /**
-                     * longitude
+                     * Longitude
                      */
                     std::string m_longitude;
                     bool m_longitudeHasBeenSet;
@@ -611,7 +611,7 @@ namespace TencentCloud
                     bool m_domainHasBeenSet;
 
                     /**
-                     * Enterprise Name
+                     * Enterprise name
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
@@ -641,7 +641,7 @@ namespace TencentCloud
                     bool m_mD5HasBeenSet;
 
                     /**
-                     * Malicious process filename
+                     * Malicious process file name
                      */
                     std::string m_fileName;
                     bool m_fileNameHasBeenSet;
@@ -665,7 +665,7 @@ namespace TencentCloud
                     bool m_containerNameHasBeenSet;
 
                     /**
-                     * container ID
+                     * Container ID
                      */
                     std::string m_containerID;
                     bool m_containerIDHasBeenSet;

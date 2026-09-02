@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Service risk
+                * Service Risk
                 */
                 class ServerRisk : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Service tag
-                     * @return ServiceTag Service tag
+                     * 获取Mapping Tag
+                     * @return ServiceTag Mapping Tag
                      * 
                      */
                     std::string GetServiceTag() const;
 
                     /**
-                     * 设置Service tag
-                     * @param _serviceTag Service tag
+                     * 设置Mapping Tag
+                     * @param _serviceTag Mapping Tag
                      * 
                      */
                     void SetServiceTag(const std::string& _serviceTag);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool PortHasBeenSet() const;
 
                     /**
-                     * 获取Affected assets
-                     * @return AffectAsset Affected assets
+                     * 获取Affect assets
+                     * @return AffectAsset Affect assets
                      * 
                      */
                     std::string GetAffectAsset() const;
 
                     /**
-                     * 设置Affected assets
-                     * @param _affectAsset Affected assets
+                     * 设置Affect assets
+                     * @param _affectAsset Affect assets
                      * 
                      */
                     void SetAffectAsset(const std::string& _affectAsset);
@@ -111,15 +111,15 @@ namespace TencentCloud
                     bool AffectAssetHasBeenSet() const;
 
                     /**
-                     * 获取Instance ID
-                     * @return InstanceId Instance ID
+                     * 获取Instance ID.
+                     * @return InstanceId Instance ID.
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID
-                     * @param _instanceId Instance ID
+                     * 设置Instance ID.
+                     * @param _instanceId Instance ID.
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -132,15 +132,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Instance name
-                     * @return InstanceName Instance name
+                     * 获取Instance name.
+                     * @return InstanceName Instance name.
                      * 
                      */
                     std::string GetInstanceName() const;
 
                     /**
-                     * 设置Instance name
-                     * @param _instanceName Instance name
+                     * 设置Instance name.
+                     * @param _instanceName Instance name.
                      * 
                      */
                     void SetInstanceName(const std::string& _instanceName);
@@ -174,15 +174,15 @@ namespace TencentCloud
                     bool InstanceTypeHasBeenSet() const;
 
                     /**
-                     * 获取Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
-                     * @return Level Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
+                     * 获取Risk level. low: low risk. high: high risk. middle: medium risk. info: notification. extreme: critical
+                     * @return Level Risk level. low: low risk. high: high risk. middle: medium risk. info: notification. extreme: critical
                      * 
                      */
                     std::string GetLevel() const;
 
                     /**
-                     * 设置Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
-                     * @param _level Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
+                     * 设置Risk level. low: low risk. high: high risk. middle: medium risk. info: notification. extreme: critical
+                     * @param _level Risk level. low: low risk. high: high risk. middle: medium risk. info: notification. extreme: critical
                      * 
                      */
                     void SetLevel(const std::string& _level);
@@ -195,15 +195,15 @@ namespace TencentCloud
                     bool LevelHasBeenSet() const;
 
                     /**
-                     * 获取Network protocol
-                     * @return Protocol Network protocol
+                     * 获取Protocol
+                     * @return Protocol Protocol
                      * 
                      */
                     std::string GetProtocol() const;
 
                     /**
-                     * 设置Network protocol
-                     * @param _protocol Network protocol
+                     * 设置Protocol
+                     * @param _protocol Protocol
                      * 
                      */
                     void SetProtocol(const std::string& _protocol);
@@ -216,15 +216,15 @@ namespace TencentCloud
                     bool ProtocolHasBeenSet() const;
 
                     /**
-                     * 获取Components
-                     * @return Component Components
+                     * 获取component
+                     * @return Component component
                      * 
                      */
                     std::string GetComponent() const;
 
                     /**
-                     * 设置Components
-                     * @param _component Components
+                     * 设置component
+                     * @param _component component
                      * 
                      */
                     void SetComponent(const std::string& _component);
@@ -237,15 +237,15 @@ namespace TencentCloud
                     bool ComponentHasBeenSet() const;
 
                     /**
-                     * 获取Service
-                     * @return Service Service
+                     * 获取Service.
+                     * @return Service Service.
                      * 
                      */
                     std::string GetService() const;
 
                     /**
-                     * 设置Service
-                     * @param _service Service
+                     * 设置Service.
+                     * @param _service Service.
                      * 
                      */
                     void SetService(const std::string& _service);
@@ -258,15 +258,15 @@ namespace TencentCloud
                     bool ServiceHasBeenSet() const;
 
                     /**
-                     * 获取Last detected 
-                     * @return RecentTime Last detected 
+                     * 获取Latest Recognition Time
+                     * @return RecentTime Latest Recognition Time
                      * 
                      */
                     std::string GetRecentTime() const;
 
                     /**
-                     * 设置Last detected 
-                     * @param _recentTime Last detected 
+                     * 设置Latest Recognition Time
+                     * @param _recentTime Latest Recognition Time
                      * 
                      */
                     void SetRecentTime(const std::string& _recentTime);
@@ -279,15 +279,15 @@ namespace TencentCloud
                     bool RecentTimeHasBeenSet() const;
 
                     /**
-                     * 获取First detected
-                     * @return FirstTime First detected
+                     * 获取First Recognition Time
+                     * @return FirstTime First Recognition Time
                      * 
                      */
                     std::string GetFirstTime() const;
 
                     /**
-                     * 设置First detected
-                     * @param _firstTime First detected
+                     * 设置First Recognition Time
+                     * @param _firstTime First Recognition Time
                      * 
                      */
                     void SetFirstTime(const std::string& _firstTime);
@@ -342,15 +342,15 @@ namespace TencentCloud
                     bool SuggestionHasBeenSet() const;
 
                     /**
-                     * 获取Status, 0 unprocessed, 1 processed, 2 ignored, 3 defended by cloud protection
-                     * @return Status Status, 0 unprocessed, 1 processed, 2 ignored, 3 defended by cloud protection
+                     * 获取Status. 0-Unprocessed; 1-Disposed; 2-Ignored; 3-Defended by Cloud Firewall.
+                     * @return Status Status. 0-Unprocessed; 1-Disposed; 2-Ignored; 3-Defended by Cloud Firewall.
                      * 
                      */
                     uint64_t GetStatus() const;
 
                     /**
-                     * 设置Status, 0 unprocessed, 1 processed, 2 ignored, 3 defended by cloud protection
-                     * @param _status Status, 0 unprocessed, 1 processed, 2 ignored, 3 defended by cloud protection
+                     * 设置Status. 0-Unprocessed; 1-Disposed; 2-Ignored; 3-Defended by Cloud Firewall.
+                     * @param _status Status. 0-Unprocessed; 1-Disposed; 2-Ignored; 3-Defended by Cloud Firewall.
                      * 
                      */
                     void SetStatus(const uint64_t& _status);
@@ -363,15 +363,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Unique ID of the asset
-                     * @return Id Unique ID of the asset
+                     * 获取Unique ID of Asset
+                     * @return Id Unique ID of Asset
                      * 
                      */
                     std::string GetId() const;
 
                     /**
-                     * 设置Unique ID of the asset
-                     * @param _id Unique ID of the asset
+                     * 设置Unique ID of Asset
+                     * @param _id Unique ID of Asset
                      * 
                      */
                     void SetId(const std::string& _id);
@@ -384,15 +384,15 @@ namespace TencentCloud
                     bool IdHasBeenSet() const;
 
                     /**
-                     * 获取User `appid`
-                     * @return AppId User `appid`
+                     * 获取User appid.
+                     * @return AppId User appid.
                      * 
                      */
                     std::string GetAppId() const;
 
                     /**
-                     * 设置User `appid`
-                     * @param _appId User `appid`
+                     * 设置User appid.
+                     * @param _appId User appid.
                      * 
                      */
                     void SetAppId(const std::string& _appId);
@@ -573,15 +573,15 @@ namespace TencentCloud
                     bool StatusCodeHasBeenSet() const;
 
                     /**
-                     * 获取New risk level, high_risk high risk suspect Suspected Normal Does not have risks currently
-                     * @return NewLevel New risk level, high_risk high risk suspect Suspected Normal Does not have risks currently
+                     * 获取New risk level. high_risk: high risk. suspect: suspected. Normal: no risk data yet.
+                     * @return NewLevel New risk level. high_risk: high risk. suspect: suspected. Normal: no risk data yet.
                      * 
                      */
                     std::string GetNewLevel() const;
 
                     /**
-                     * 设置New risk level, high_risk high risk suspect Suspected Normal Does not have risks currently
-                     * @param _newLevel New risk level, high_risk high risk suspect Suspected Normal Does not have risks currently
+                     * 设置New risk level. high_risk: high risk. suspect: suspected. Normal: no risk data yet.
+                     * @param _newLevel New risk level. high_risk: high risk. suspect: suspected. Normal: no risk data yet.
                      * 
                      */
                     void SetNewLevel(const std::string& _newLevel);
@@ -594,15 +594,15 @@ namespace TencentCloud
                     bool NewLevelHasBeenSet() const;
 
                     /**
-                     * 获取Status, 0 unprocessed, 1 processed, 2 ignored, 3 defended by cloud protection, 4 no action is required
-                     * @return XspmStatus Status, 0 unprocessed, 1 processed, 2 ignored, 3 defended by cloud protection, 4 no action is required
+                     * 获取Status. 0: unprocessed; 1: processed; 2: ignored; 3: defended by Cloud Firewall; 4: no action is required.
+                     * @return XspmStatus Status. 0: unprocessed; 1: processed; 2: ignored; 3: defended by Cloud Firewall; 4: no action is required.
                      * 
                      */
                     uint64_t GetXspmStatus() const;
 
                     /**
-                     * 设置Status, 0 unprocessed, 1 processed, 2 ignored, 3 defended by cloud protection, 4 no action is required
-                     * @param _xspmStatus Status, 0 unprocessed, 1 processed, 2 ignored, 3 defended by cloud protection, 4 no action is required
+                     * 设置Status. 0: unprocessed; 1: processed; 2: ignored; 3: defended by Cloud Firewall; 4: no action is required.
+                     * @param _xspmStatus Status. 0: unprocessed; 1: processed; 2: ignored; 3: defended by Cloud Firewall; 4: no action is required.
                      * 
                      */
                     void SetXspmStatus(const uint64_t& _xspmStatus);
@@ -617,7 +617,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Service tag
+                     * Mapping Tag
                      */
                     std::string m_serviceTag;
                     bool m_serviceTagHasBeenSet;
@@ -629,19 +629,19 @@ namespace TencentCloud
                     bool m_portHasBeenSet;
 
                     /**
-                     * Affected assets
+                     * Affect assets
                      */
                     std::string m_affectAsset;
                     bool m_affectAssetHasBeenSet;
 
                     /**
-                     * Instance ID
+                     * Instance ID.
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Instance name
+                     * Instance name.
                      */
                     std::string m_instanceName;
                     bool m_instanceNameHasBeenSet;
@@ -653,37 +653,37 @@ namespace TencentCloud
                     bool m_instanceTypeHasBeenSet;
 
                     /**
-                     * Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
+                     * Risk level. low: low risk. high: high risk. middle: medium risk. info: notification. extreme: critical
                      */
                     std::string m_level;
                     bool m_levelHasBeenSet;
 
                     /**
-                     * Network protocol
+                     * Protocol
                      */
                     std::string m_protocol;
                     bool m_protocolHasBeenSet;
 
                     /**
-                     * Components
+                     * component
                      */
                     std::string m_component;
                     bool m_componentHasBeenSet;
 
                     /**
-                     * Service
+                     * Service.
                      */
                     std::string m_service;
                     bool m_serviceHasBeenSet;
 
                     /**
-                     * Last detected 
+                     * Latest Recognition Time
                      */
                     std::string m_recentTime;
                     bool m_recentTimeHasBeenSet;
 
                     /**
-                     * First detected
+                     * First Recognition Time
                      */
                     std::string m_firstTime;
                     bool m_firstTimeHasBeenSet;
@@ -701,19 +701,19 @@ namespace TencentCloud
                     bool m_suggestionHasBeenSet;
 
                     /**
-                     * Status, 0 unprocessed, 1 processed, 2 ignored, 3 defended by cloud protection
+                     * Status. 0-Unprocessed; 1-Disposed; 2-Ignored; 3-Defended by Cloud Firewall.
                      */
                     uint64_t m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Unique ID of the asset
+                     * Unique ID of Asset
                      */
                     std::string m_id;
                     bool m_idHasBeenSet;
 
                     /**
-                     * User `appid`
+                     * User appid.
                      */
                     std::string m_appId;
                     bool m_appIdHasBeenSet;
@@ -767,13 +767,13 @@ namespace TencentCloud
                     bool m_statusCodeHasBeenSet;
 
                     /**
-                     * New risk level, high_risk high risk suspect Suspected Normal Does not have risks currently
+                     * New risk level. high_risk: high risk. suspect: suspected. Normal: no risk data yet.
                      */
                     std::string m_newLevel;
                     bool m_newLevelHasBeenSet;
 
                     /**
-                     * Status, 0 unprocessed, 1 processed, 2 ignored, 3 defended by cloud protection, 4 no action is required
+                     * Status. 0: unprocessed; 1: processed; 2: ignored; 3: defended by Cloud Firewall; 4: no action is required.
                      */
                     uint64_t m_xspmStatus;
                     bool m_xspmStatusHasBeenSet;

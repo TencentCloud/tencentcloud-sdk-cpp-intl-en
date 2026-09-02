@@ -39,14 +39,14 @@ namespace TencentCloud
                 /**
                 * Host Asset Information
 
-Enumerate host protection status. left is a constant, right side displays.
-0: not installed.
-Basic edition protection.
-2: inclusive edition protection.
-3: protection by pro edition.
-4: flagship protection.
-5: offline.
-6: shut down.
+Enumeration of host protection status. The left side is a constant, and the right side is the display.
+0: not installed
+1: In basic edition protection
+2: In inclusive edition protection
+3: Protection by pro edition
+4: Flagship edition protection
+5: offline
+6: Shutdown
                 */
                 class CVMAssetVO : public AbstractModel
                 {
@@ -79,15 +79,15 @@ Basic edition protection.
                     bool AssetIdHasBeenSet() const;
 
                     /**
-                     * 获取Asset name.
-                     * @return AssetName Asset name.
+                     * 获取Asset name
+                     * @return AssetName Asset name
                      * 
                      */
                     std::string GetAssetName() const;
 
                     /**
-                     * 设置Asset name.
-                     * @param _assetName Asset name.
+                     * 设置Asset name
+                     * @param _assetName Asset name
                      * 
                      */
                     void SetAssetName(const std::string& _assetName);
@@ -100,15 +100,15 @@ Basic edition protection.
                     bool AssetNameHasBeenSet() const;
 
                     /**
-                     * 获取Asset type.
-                     * @return AssetType Asset type.
+                     * 获取Asset type
+                     * @return AssetType Asset type
                      * 
                      */
                     std::string GetAssetType() const;
 
                     /**
-                     * 设置Asset type.
-                     * @param _assetType Asset type.
+                     * 设置Asset type
+                     * @param _assetType Asset type
                      * 
                      */
                     void SetAssetType(const std::string& _assetType);
@@ -163,15 +163,15 @@ Basic edition protection.
                     bool CWPStatusHasBeenSet() const;
 
                     /**
-                     * 获取Asset creation time.
-                     * @return AssetCreateTime Asset creation time.
+                     * 获取Asset creation time
+                     * @return AssetCreateTime Asset creation time
                      * 
                      */
                     std::string GetAssetCreateTime() const;
 
                     /**
-                     * 设置Asset creation time.
-                     * @param _assetCreateTime Asset creation time.
+                     * 设置Asset creation time
+                     * @param _assetCreateTime Asset creation time
                      * 
                      */
                     void SetAssetCreateTime(const std::string& _assetCreateTime);
@@ -205,15 +205,15 @@ Basic edition protection.
                     bool PublicIpHasBeenSet() const;
 
                     /**
-                     * 获取Private IP.
-                     * @return PrivateIp Private IP.
+                     * 获取Private IP
+                     * @return PrivateIp Private IP
                      * 
                      */
                     std::string GetPrivateIp() const;
 
                     /**
-                     * 设置Private IP.
-                     * @param _privateIp Private IP.
+                     * 设置Private IP
+                     * @param _privateIp Private IP
                      * 
                      */
                     void SetPrivateIp(const std::string& _privateIp);
@@ -415,15 +415,15 @@ Basic edition protection.
                     bool SubnetNameHasBeenSet() const;
 
                     /**
-                     * 获取CWP Agent UUID.
-                     * @return InstanceUuid CWP Agent UUID.
+                     * 获取Host security Agent UUID
+                     * @return InstanceUuid Host security Agent UUID
                      * 
                      */
                     std::string GetInstanceUuid() const;
 
                     /**
-                     * 设置CWP Agent UUID.
-                     * @param _instanceUuid CWP Agent UUID.
+                     * 设置Host security Agent UUID
+                     * @param _instanceUuid Host security Agent UUID
                      * 
                      */
                     void SetInstanceUuid(const std::string& _instanceUuid);
@@ -436,15 +436,15 @@ Basic edition protection.
                     bool InstanceUuidHasBeenSet() const;
 
                     /**
-                     * 获取CVM host UUID.
-                     * @return InstanceQUuid CVM host UUID.
+                     * 获取CVM UUID
+                     * @return InstanceQUuid CVM UUID
                      * 
                      */
                     std::string GetInstanceQUuid() const;
 
                     /**
-                     * 设置CVM host UUID.
-                     * @param _instanceQUuid CVM host UUID.
+                     * 设置CVM UUID
+                     * @param _instanceQUuid CVM UUID
                      * 
                      */
                     void SetInstanceQUuid(const std::string& _instanceQUuid);
@@ -688,15 +688,15 @@ Basic edition protection.
                     bool ProcessCountHasBeenSet() const;
 
                     /**
-                     * 获取Software application.
-                     * @return AppCount Software application.
+                     * 获取Software application
+                     * @return AppCount Software application
                      * 
                      */
                     std::string GetAppCount() const;
 
                     /**
-                     * 设置Software application.
-                     * @param _appCount Software application.
+                     * 设置Software application
+                     * @param _appCount Software application
                      * 
                      */
                     void SetAppCount(const std::string& _appCount);
@@ -730,15 +730,15 @@ Basic edition protection.
                     bool PortCountHasBeenSet() const;
 
                     /**
-                     * 获取Network attack.
-                     * @return Attack Network attack.
+                     * 获取Network attack
+                     * @return Attack Network attack
                      * 
                      */
                     uint64_t GetAttack() const;
 
                     /**
-                     * 设置Network attack.
-                     * @param _attack Network attack.
+                     * 设置Network attack
+                     * @param _attack Network attack
                      * 
                      */
                     void SetAttack(const uint64_t& _attack);
@@ -751,15 +751,15 @@ Basic edition protection.
                     bool AttackHasBeenSet() const;
 
                     /**
-                     * 获取Network access.
-                     * @return Access Network access.
+                     * 获取Network access
+                     * @return Access Network access
                      * 
                      */
                     uint64_t GetAccess() const;
 
                     /**
-                     * 设置Network access.
-                     * @param _access Network access.
+                     * 设置Network access
+                     * @param _access Network access
                      * 
                      */
                     void SetAccess(const uint64_t& _access);
@@ -793,15 +793,15 @@ Basic edition protection.
                     bool InterceptHasBeenSet() const;
 
                     /**
-                     * 获取Inbound peak bandwidth.
-                     * @return InBandwidth Inbound peak bandwidth.
+                     * 获取Inbound peak bandwidth
+                     * @return InBandwidth Inbound peak bandwidth
                      * 
                      */
                     std::string GetInBandwidth() const;
 
                     /**
-                     * 设置Inbound peak bandwidth.
-                     * @param _inBandwidth Inbound peak bandwidth.
+                     * 设置Inbound peak bandwidth
+                     * @param _inBandwidth Inbound peak bandwidth
                      * 
                      */
                     void SetInBandwidth(const std::string& _inBandwidth);
@@ -814,15 +814,15 @@ Basic edition protection.
                     bool InBandwidthHasBeenSet() const;
 
                     /**
-                     * 获取Outbound peak bandwidth.
-                     * @return OutBandwidth Outbound peak bandwidth.
+                     * 获取Outbound peak bandwidth
+                     * @return OutBandwidth Outbound peak bandwidth
                      * 
                      */
                     std::string GetOutBandwidth() const;
 
                     /**
-                     * 设置Outbound peak bandwidth.
-                     * @param _outBandwidth Outbound peak bandwidth.
+                     * 设置Outbound peak bandwidth
+                     * @param _outBandwidth Outbound peak bandwidth
                      * 
                      */
                     void SetOutBandwidth(const std::string& _outBandwidth);
@@ -835,15 +835,15 @@ Basic edition protection.
                     bool OutBandwidthHasBeenSet() const;
 
                     /**
-                     * 获取Total inbound traffic.
-                     * @return InFlow Total inbound traffic.
+                     * 获取Total inbound traffic
+                     * @return InFlow Total inbound traffic
                      * 
                      */
                     std::string GetInFlow() const;
 
                     /**
-                     * 设置Total inbound traffic.
-                     * @param _inFlow Total inbound traffic.
+                     * 设置Total inbound traffic
+                     * @param _inFlow Total inbound traffic
                      * 
                      */
                     void SetInFlow(const std::string& _inFlow);
@@ -856,15 +856,15 @@ Basic edition protection.
                     bool InFlowHasBeenSet() const;
 
                     /**
-                     * 获取Outbound cumulative traffic.
-                     * @return OutFlow Outbound cumulative traffic.
+                     * 获取Outbound cumulative traffic
+                     * @return OutFlow Outbound cumulative traffic
                      * 
                      */
                     std::string GetOutFlow() const;
 
                     /**
-                     * 设置Outbound cumulative traffic.
-                     * @param _outFlow Outbound cumulative traffic.
+                     * 设置Outbound cumulative traffic
+                     * @param _outFlow Outbound cumulative traffic
                      * 
                      */
                     void SetOutFlow(const std::string& _outFlow);
@@ -898,15 +898,15 @@ Basic edition protection.
                     bool LastScanTimeHasBeenSet() const;
 
                     /**
-                     * 获取Malicious outgoing request.
-                     * @return NetWorkOut Malicious outgoing request.
+                     * 获取Malicious outgoing request
+                     * @return NetWorkOut Malicious outgoing request
                      * 
                      */
                     uint64_t GetNetWorkOut() const;
 
                     /**
-                     * 设置Malicious outgoing request.
-                     * @param _netWorkOut Malicious outgoing request.
+                     * 设置Malicious outgoing request
+                     * @param _netWorkOut Malicious outgoing request
                      * 
                      */
                     void SetNetWorkOut(const uint64_t& _netWorkOut);
@@ -919,15 +919,15 @@ Basic edition protection.
                     bool NetWorkOutHasBeenSet() const;
 
                     /**
-                     * 获取Port risk.
-                     * @return PortRisk Port risk.
+                     * 获取Port risk
+                     * @return PortRisk Port risk
                      * 
                      */
                     uint64_t GetPortRisk() const;
 
                     /**
-                     * 设置Port risk.
-                     * @param _portRisk Port risk.
+                     * 设置Port risk
+                     * @param _portRisk Port risk
                      * 
                      */
                     void SetPortRisk(const uint64_t& _portRisk);
@@ -940,15 +940,15 @@ Basic edition protection.
                     bool PortRiskHasBeenSet() const;
 
                     /**
-                     * 获取Vulnerability risk.
-                     * @return VulnerabilityRisk Vulnerability risk.
+                     * 获取Vulnerability risk
+                     * @return VulnerabilityRisk Vulnerability risk
                      * 
                      */
                     uint64_t GetVulnerabilityRisk() const;
 
                     /**
-                     * 设置Vulnerability risk.
-                     * @param _vulnerabilityRisk Vulnerability risk.
+                     * 设置Vulnerability risk
+                     * @param _vulnerabilityRisk Vulnerability risk
                      * 
                      */
                     void SetVulnerabilityRisk(const uint64_t& _vulnerabilityRisk);
@@ -961,15 +961,15 @@ Basic edition protection.
                     bool VulnerabilityRiskHasBeenSet() const;
 
                     /**
-                     * 获取Configuration risk.
-                     * @return ConfigurationRisk Configuration risk.
+                     * 获取Configuration risk
+                     * @return ConfigurationRisk Configuration risk
                      * 
                      */
                     uint64_t GetConfigurationRisk() const;
 
                     /**
-                     * 设置Configuration risk.
-                     * @param _configurationRisk Configuration risk.
+                     * 设置Configuration risk
+                     * @param _configurationRisk Configuration risk
                      * 
                      */
                     void SetConfigurationRisk(const uint64_t& _configurationRisk);
@@ -1066,15 +1066,15 @@ Basic edition protection.
                     bool OsHasBeenSet() const;
 
                     /**
-                     * 获取Risk service exposure.
-                     * @return RiskExposure Risk service exposure.
+                     * 获取Risk service exposure
+                     * @return RiskExposure Risk service exposure
                      * 
                      */
                     int64_t GetRiskExposure() const;
 
                     /**
-                     * 设置Risk service exposure.
-                     * @param _riskExposure Risk service exposure.
+                     * 设置Risk service exposure
+                     * @param _riskExposure Risk service exposure
                      * 
                      */
                     void SetRiskExposure(const int64_t& _riskExposure);
@@ -1129,15 +1129,15 @@ Basic edition protection.
                     bool IsNewAssetHasBeenSet() const;
 
                     /**
-                     * 获取0: not installed; 1: install; 2: installing.
-                     * @return CVMAgentStatus 0: not installed; 1: install; 2: installing.
+                     * 获取0: not installed; 1: installed; 2: installing
+                     * @return CVMAgentStatus 0: not installed; 1: installed; 2: installing
                      * 
                      */
                     int64_t GetCVMAgentStatus() const;
 
                     /**
-                     * 设置0: not installed; 1: install; 2: installing.
-                     * @param _cVMAgentStatus 0: not installed; 1: install; 2: installing.
+                     * 设置0: not installed; 1: installed; 2: installing
+                     * @param _cVMAgentStatus 0: not installed; 1: installed; 2: installing
                      * 
                      */
                     void SetCVMAgentStatus(const int64_t& _cVMAgentStatus);
@@ -1150,15 +1150,15 @@ Basic edition protection.
                     bool CVMAgentStatusHasBeenSet() const;
 
                     /**
-                     * 获取1: enable 0: not enabled.
-                     * @return CVMStatus 1: enable 0: not enabled.
+                     * 获取1: Enable; 0: Not enabled
+                     * @return CVMStatus 1: Enable; 0: Not enabled
                      * 
                      */
                     int64_t GetCVMStatus() const;
 
                     /**
-                     * 设置1: enable 0: not enabled.
-                     * @param _cVMStatus 1: enable 0: not enabled.
+                     * 设置1: Enable; 0: Not enabled
+                     * @param _cVMStatus 1: Enable; 0: Not enabled
                      * 
                      */
                     void SetCVMStatus(const int64_t& _cVMStatus);
@@ -1171,15 +1171,15 @@ Basic edition protection.
                     bool CVMStatusHasBeenSet() const;
 
                     /**
-                     * 获取1: client installed 0: not installed 2: Agentless.
-                     * @return DefenseModel 1: client installed 0: not installed 2: Agentless.
+                     * 获取1: Installed on the client 0: Not installed 2: Agentless
+                     * @return DefenseModel 1: Installed on the client 0: Not installed 2: Agentless
                      * 
                      */
                     int64_t GetDefenseModel() const;
 
                     /**
-                     * 设置1: client installed 0: not installed 2: Agentless.
-                     * @param _defenseModel 1: client installed 0: not installed 2: Agentless.
+                     * 设置1: Installed on the client 0: Not installed 2: Agentless
+                     * @param _defenseModel 1: Installed on the client 0: Not installed 2: Agentless
                      * 
                      */
                     void SetDefenseModel(const int64_t& _defenseModel);
@@ -1192,15 +1192,15 @@ Basic edition protection.
                     bool DefenseModelHasBeenSet() const;
 
                     /**
-                     * 获取1: installed 0: not installed.
-                     * @return TatStatus 1: installed 0: not installed.
+                     * 获取1: installed; 0: not installed
+                     * @return TatStatus 1: installed; 0: not installed
                      * 
                      */
                     int64_t GetTatStatus() const;
 
                     /**
-                     * 设置1: installed 0: not installed.
-                     * @param _tatStatus 1: installed 0: not installed.
+                     * 设置1: installed; 0: not installed
+                     * @param _tatStatus 1: installed; 0: not installed
                      * 
                      */
                     void SetTatStatus(const int64_t& _tatStatus);
@@ -1213,15 +1213,15 @@ Basic edition protection.
                     bool TatStatusHasBeenSet() const;
 
                     /**
-                     * 获取cpu trend chart.
-                     * @return CpuTrend cpu trend chart.
+                     * 获取cpu trend chart
+                     * @return CpuTrend cpu trend chart
                      * 
                      */
                     std::vector<Element> GetCpuTrend() const;
 
                     /**
-                     * 设置cpu trend chart.
-                     * @param _cpuTrend cpu trend chart.
+                     * 设置cpu trend chart
+                     * @param _cpuTrend cpu trend chart
                      * 
                      */
                     void SetCpuTrend(const std::vector<Element>& _cpuTrend);
@@ -1234,15 +1234,15 @@ Basic edition protection.
                     bool CpuTrendHasBeenSet() const;
 
                     /**
-                     * 获取Memory trend chart.
-                     * @return MemoryTrend Memory trend chart.
+                     * 获取Memory trend chart
+                     * @return MemoryTrend Memory trend chart
                      * 
                      */
                     std::vector<Element> GetMemoryTrend() const;
 
                     /**
-                     * 设置Memory trend chart.
-                     * @param _memoryTrend Memory trend chart.
+                     * 设置Memory trend chart
+                     * @param _memoryTrend Memory trend chart
                      * 
                      */
                     void SetMemoryTrend(const std::vector<Element>& _memoryTrend);
@@ -1255,15 +1255,15 @@ Basic edition protection.
                     bool MemoryTrendHasBeenSet() const;
 
                     /**
-                     * 获取1: agent online 0: agent offline 2: host offline.
-                     * @return AgentStatus 1: agent online 0: agent offline 2: host offline.
+                     * 获取1: agent online 0: agent offline 2: Host offline
+                     * @return AgentStatus 1: agent online 0: agent offline 2: Host offline
                      * 
                      */
                     int64_t GetAgentStatus() const;
 
                     /**
-                     * 设置1: agent online 0: agent offline 2: host offline.
-                     * @param _agentStatus 1: agent online 0: agent offline 2: host offline.
+                     * 设置1: agent online 0: agent offline 2: Host offline
+                     * @param _agentStatus 1: agent online 0: agent offline 2: Host offline
                      * 
                      */
                     void SetAgentStatus(const int64_t& _agentStatus);
@@ -1276,15 +1276,15 @@ Basic edition protection.
                     bool AgentStatusHasBeenSet() const;
 
                     /**
-                     * 获取Number of shutdowns this month.
-                     * @return CloseDefenseCount Number of shutdowns this month.
+                     * 获取Number of protection shutdowns this month
+                     * @return CloseDefenseCount Number of protection shutdowns this month
                      * 
                      */
                     int64_t GetCloseDefenseCount() const;
 
                     /**
-                     * 设置Number of shutdowns this month.
-                     * @param _closeDefenseCount Number of shutdowns this month.
+                     * 设置Number of protection shutdowns this month
+                     * @param _closeDefenseCount Number of protection shutdowns this month
                      * 
                      */
                     void SetCloseDefenseCount(const int64_t& _closeDefenseCount);
@@ -1297,15 +1297,15 @@ Basic edition protection.
                     bool CloseDefenseCountHasBeenSet() const;
 
                     /**
-                     * 获取Running state.
-                     * @return InstanceState Running state.
+                     * 获取Running status.
+                     * @return InstanceState Running status.
                      * 
                      */
                     std::string GetInstanceState() const;
 
                     /**
-                     * 设置Running state.
-                     * @param _instanceState Running state.
+                     * 设置Running status.
+                     * @param _instanceState Running status.
                      * 
                      */
                     void SetInstanceState(const std::string& _instanceState);
@@ -1318,15 +1318,15 @@ Basic edition protection.
                     bool InstanceStateHasBeenSet() const;
 
                     /**
-                     * 获取Security group data.
-                     * @return SecurityGroupIds Security group data.
+                     * 获取Security group data
+                     * @return SecurityGroupIds Security group data
                      * 
                      */
                     std::vector<std::string> GetSecurityGroupIds() const;
 
                     /**
-                     * 设置Security group data.
-                     * @param _securityGroupIds Security group data.
+                     * 设置Security group data
+                     * @param _securityGroupIds Security group data
                      * 
                      */
                     void SetSecurityGroupIds(const std::vector<std::string>& _securityGroupIds);
@@ -1339,15 +1339,15 @@ Basic edition protection.
                     bool SecurityGroupIdsHasBeenSet() const;
 
                     /**
-                     * 获取Physical memory occupied KB.
-                     * @return AgentMemRss Physical memory occupied KB.
+                     * 获取Physical memory usage in KB
+                     * @return AgentMemRss Physical memory usage in KB
                      * 
                      */
                     int64_t GetAgentMemRss() const;
 
                     /**
-                     * 设置Physical memory occupied KB.
-                     * @param _agentMemRss Physical memory occupied KB.
+                     * 设置Physical memory usage in KB
+                     * @param _agentMemRss Physical memory usage in KB
                      * 
                      */
                     void SetAgentMemRss(const int64_t& _agentMemRss);
@@ -1360,15 +1360,15 @@ Basic edition protection.
                     bool AgentMemRssHasBeenSet() const;
 
                     /**
-                     * 获取CPU utilization percentage.
-                     * @return AgentCpuPer CPU utilization percentage.
+                     * 获取CPU utilization percentage
+                     * @return AgentCpuPer CPU utilization percentage
                      * 
                      */
                     double GetAgentCpuPer() const;
 
                     /**
-                     * 设置CPU utilization percentage.
-                     * @param _agentCpuPer CPU utilization percentage.
+                     * 设置CPU utilization percentage
+                     * @param _agentCpuPer CPU utilization percentage
                      * 
                      */
                     void SetAgentCpuPer(const double& _agentCpuPer);
@@ -1381,15 +1381,15 @@ Basic edition protection.
                     bool AgentCpuPerHasBeenSet() const;
 
                     /**
-                     * 获取Actual appid belonging to cvm.
-                     * @return RealAppid Actual appid belonging to cvm.
+                     * 获取appid that the cvm actually belongs to
+                     * @return RealAppid appid that the cvm actually belongs to
                      * 
                      */
                     int64_t GetRealAppid() const;
 
                     /**
-                     * 设置Actual appid belonging to cvm.
-                     * @param _realAppid Actual appid belonging to cvm.
+                     * 设置appid that the cvm actually belongs to
+                     * @param _realAppid appid that the cvm actually belongs to
                      * 
                      */
                     void SetRealAppid(const int64_t& _realAppid);
@@ -1402,15 +1402,15 @@ Basic edition protection.
                     bool RealAppidHasBeenSet() const;
 
                     /**
-                     * 获取Cloud asset type: 0: tencent cloud, 1: aws, 2: azure.
-                     * @return CloudType Cloud asset type: 0: tencent cloud, 1: aws, 2: azure.
+                     * 获取Cloud asset type: 0: Tencent Cloud, 1: aws, 2: azure
+                     * @return CloudType Cloud asset type: 0: Tencent Cloud, 1: aws, 2: azure
                      * 
                      */
                     int64_t GetCloudType() const;
 
                     /**
-                     * 设置Cloud asset type: 0: tencent cloud, 1: aws, 2: azure.
-                     * @param _cloudType Cloud asset type: 0: tencent cloud, 1: aws, 2: azure.
+                     * 设置Cloud asset type: 0: Tencent Cloud, 1: aws, 2: azure
+                     * @param _cloudType Cloud asset type: 0: Tencent Cloud, 1: aws, 2: azure
                      * 
                      */
                     void SetCloudType(const int64_t& _cloudType);
@@ -1423,43 +1423,43 @@ Basic edition protection.
                     bool CloudTypeHasBeenSet() const;
 
                     /**
-                     * 获取Host protection status enumeration.
-0: not installed.
-Basic edition protection.
-2: inclusive edition protection.
-3: protection by pro edition.
-4: ultimate edition protection.
-5: offline.
-6: shutdown.
-                     * @return ProtectStatus Host protection status enumeration.
-0: not installed.
-Basic edition protection.
-2: inclusive edition protection.
-3: protection by pro edition.
-4: ultimate edition protection.
-5: offline.
-6: shutdown.
+                     * 获取Host Protection Status Enumeration
+0: not installed
+1: In basic edition protection
+2: In inclusive edition protection
+3: Protection by pro edition
+4: Flagship edition protection
+5: offline
+6: Shutdown
+                     * @return ProtectStatus Host Protection Status Enumeration
+0: not installed
+1: In basic edition protection
+2: In inclusive edition protection
+3: Protection by pro edition
+4: Flagship edition protection
+5: offline
+6: Shutdown
                      * 
                      */
                     int64_t GetProtectStatus() const;
 
                     /**
-                     * 设置Host protection status enumeration.
-0: not installed.
-Basic edition protection.
-2: inclusive edition protection.
-3: protection by pro edition.
-4: ultimate edition protection.
-5: offline.
-6: shutdown.
-                     * @param _protectStatus Host protection status enumeration.
-0: not installed.
-Basic edition protection.
-2: inclusive edition protection.
-3: protection by pro edition.
-4: ultimate edition protection.
-5: offline.
-6: shutdown.
+                     * 设置Host Protection Status Enumeration
+0: not installed
+1: In basic edition protection
+2: In inclusive edition protection
+3: Protection by pro edition
+4: Flagship edition protection
+5: offline
+6: Shutdown
+                     * @param _protectStatus Host Protection Status Enumeration
+0: not installed
+1: In basic edition protection
+2: In inclusive edition protection
+3: Protection by pro edition
+4: Flagship edition protection
+5: offline
+6: Shutdown
                      * 
                      */
                     void SetProtectStatus(const int64_t& _protectStatus);
@@ -1472,15 +1472,15 @@ Basic edition protection.
                     bool ProtectStatusHasBeenSet() const;
 
                     /**
-                     * 获取Last offline time.
-                     * @return OfflineTime Last offline time.
+                     * 获取Last offline time
+                     * @return OfflineTime Last offline time
                      * 
                      */
                     std::string GetOfflineTime() const;
 
                     /**
-                     * 设置Last offline time.
-                     * @param _offlineTime Last offline time.
+                     * 设置Last offline time
+                     * @param _offlineTime Last offline time
                      * 
                      */
                     void SetOfflineTime(const std::string& _offlineTime);
@@ -1501,13 +1501,13 @@ Basic edition protection.
                     bool m_assetIdHasBeenSet;
 
                     /**
-                     * Asset name.
+                     * Asset name
                      */
                     std::string m_assetName;
                     bool m_assetNameHasBeenSet;
 
                     /**
-                     * Asset type.
+                     * Asset type
                      */
                     std::string m_assetType;
                     bool m_assetTypeHasBeenSet;
@@ -1525,7 +1525,7 @@ Basic edition protection.
                     bool m_cWPStatusHasBeenSet;
 
                     /**
-                     * Asset creation time.
+                     * Asset creation time
                      */
                     std::string m_assetCreateTime;
                     bool m_assetCreateTimeHasBeenSet;
@@ -1537,7 +1537,7 @@ Basic edition protection.
                     bool m_publicIpHasBeenSet;
 
                     /**
-                     * Private IP.
+                     * Private IP
                      */
                     std::string m_privateIp;
                     bool m_privateIpHasBeenSet;
@@ -1597,13 +1597,13 @@ Basic edition protection.
                     bool m_subnetNameHasBeenSet;
 
                     /**
-                     * CWP Agent UUID.
+                     * Host security Agent UUID
                      */
                     std::string m_instanceUuid;
                     bool m_instanceUuidHasBeenSet;
 
                     /**
-                     * CVM host UUID.
+                     * CVM UUID
                      */
                     std::string m_instanceQUuid;
                     bool m_instanceQUuidHasBeenSet;
@@ -1675,7 +1675,7 @@ Basic edition protection.
                     bool m_processCountHasBeenSet;
 
                     /**
-                     * Software application.
+                     * Software application
                      */
                     std::string m_appCount;
                     bool m_appCountHasBeenSet;
@@ -1687,13 +1687,13 @@ Basic edition protection.
                     bool m_portCountHasBeenSet;
 
                     /**
-                     * Network attack.
+                     * Network attack
                      */
                     uint64_t m_attack;
                     bool m_attackHasBeenSet;
 
                     /**
-                     * Network access.
+                     * Network access
                      */
                     uint64_t m_access;
                     bool m_accessHasBeenSet;
@@ -1705,25 +1705,25 @@ Basic edition protection.
                     bool m_interceptHasBeenSet;
 
                     /**
-                     * Inbound peak bandwidth.
+                     * Inbound peak bandwidth
                      */
                     std::string m_inBandwidth;
                     bool m_inBandwidthHasBeenSet;
 
                     /**
-                     * Outbound peak bandwidth.
+                     * Outbound peak bandwidth
                      */
                     std::string m_outBandwidth;
                     bool m_outBandwidthHasBeenSet;
 
                     /**
-                     * Total inbound traffic.
+                     * Total inbound traffic
                      */
                     std::string m_inFlow;
                     bool m_inFlowHasBeenSet;
 
                     /**
-                     * Outbound cumulative traffic.
+                     * Outbound cumulative traffic
                      */
                     std::string m_outFlow;
                     bool m_outFlowHasBeenSet;
@@ -1735,25 +1735,25 @@ Basic edition protection.
                     bool m_lastScanTimeHasBeenSet;
 
                     /**
-                     * Malicious outgoing request.
+                     * Malicious outgoing request
                      */
                     uint64_t m_netWorkOut;
                     bool m_netWorkOutHasBeenSet;
 
                     /**
-                     * Port risk.
+                     * Port risk
                      */
                     uint64_t m_portRisk;
                     bool m_portRiskHasBeenSet;
 
                     /**
-                     * Vulnerability risk.
+                     * Vulnerability risk
                      */
                     uint64_t m_vulnerabilityRisk;
                     bool m_vulnerabilityRiskHasBeenSet;
 
                     /**
-                     * Configuration risk.
+                     * Configuration risk
                      */
                     uint64_t m_configurationRisk;
                     bool m_configurationRiskHasBeenSet;
@@ -1783,7 +1783,7 @@ Basic edition protection.
                     bool m_osHasBeenSet;
 
                     /**
-                     * Risk service exposure.
+                     * Risk service exposure
                      */
                     int64_t m_riskExposure;
                     bool m_riskExposureHasBeenSet;
@@ -1801,104 +1801,104 @@ Basic edition protection.
                     bool m_isNewAssetHasBeenSet;
 
                     /**
-                     * 0: not installed; 1: install; 2: installing.
+                     * 0: not installed; 1: installed; 2: installing
                      */
                     int64_t m_cVMAgentStatus;
                     bool m_cVMAgentStatusHasBeenSet;
 
                     /**
-                     * 1: enable 0: not enabled.
+                     * 1: Enable; 0: Not enabled
                      */
                     int64_t m_cVMStatus;
                     bool m_cVMStatusHasBeenSet;
 
                     /**
-                     * 1: client installed 0: not installed 2: Agentless.
+                     * 1: Installed on the client 0: Not installed 2: Agentless
                      */
                     int64_t m_defenseModel;
                     bool m_defenseModelHasBeenSet;
 
                     /**
-                     * 1: installed 0: not installed.
+                     * 1: installed; 0: not installed
                      */
                     int64_t m_tatStatus;
                     bool m_tatStatusHasBeenSet;
 
                     /**
-                     * cpu trend chart.
+                     * cpu trend chart
                      */
                     std::vector<Element> m_cpuTrend;
                     bool m_cpuTrendHasBeenSet;
 
                     /**
-                     * Memory trend chart.
+                     * Memory trend chart
                      */
                     std::vector<Element> m_memoryTrend;
                     bool m_memoryTrendHasBeenSet;
 
                     /**
-                     * 1: agent online 0: agent offline 2: host offline.
+                     * 1: agent online 0: agent offline 2: Host offline
                      */
                     int64_t m_agentStatus;
                     bool m_agentStatusHasBeenSet;
 
                     /**
-                     * Number of shutdowns this month.
+                     * Number of protection shutdowns this month
                      */
                     int64_t m_closeDefenseCount;
                     bool m_closeDefenseCountHasBeenSet;
 
                     /**
-                     * Running state.
+                     * Running status.
                      */
                     std::string m_instanceState;
                     bool m_instanceStateHasBeenSet;
 
                     /**
-                     * Security group data.
+                     * Security group data
                      */
                     std::vector<std::string> m_securityGroupIds;
                     bool m_securityGroupIdsHasBeenSet;
 
                     /**
-                     * Physical memory occupied KB.
+                     * Physical memory usage in KB
                      */
                     int64_t m_agentMemRss;
                     bool m_agentMemRssHasBeenSet;
 
                     /**
-                     * CPU utilization percentage.
+                     * CPU utilization percentage
                      */
                     double m_agentCpuPer;
                     bool m_agentCpuPerHasBeenSet;
 
                     /**
-                     * Actual appid belonging to cvm.
+                     * appid that the cvm actually belongs to
                      */
                     int64_t m_realAppid;
                     bool m_realAppidHasBeenSet;
 
                     /**
-                     * Cloud asset type: 0: tencent cloud, 1: aws, 2: azure.
+                     * Cloud asset type: 0: Tencent Cloud, 1: aws, 2: azure
                      */
                     int64_t m_cloudType;
                     bool m_cloudTypeHasBeenSet;
 
                     /**
-                     * Host protection status enumeration.
-0: not installed.
-Basic edition protection.
-2: inclusive edition protection.
-3: protection by pro edition.
-4: ultimate edition protection.
-5: offline.
-6: shutdown.
+                     * Host Protection Status Enumeration
+0: not installed
+1: In basic edition protection
+2: In inclusive edition protection
+3: Protection by pro edition
+4: Flagship edition protection
+5: offline
+6: Shutdown
                      */
                     int64_t m_protectStatus;
                     bool m_protectStatusHasBeenSet;
 
                     /**
-                     * Last offline time.
+                     * Last offline time
                      */
                     std::string m_offlineTime;
                     bool m_offlineTimeHasBeenSet;

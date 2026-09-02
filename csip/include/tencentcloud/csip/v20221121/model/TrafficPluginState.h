@@ -47,35 +47,35 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Plugin installation status (upper layer aggregation)
+                     * 获取Plugin installation status (upper-level aggregation)
 Enumeration value:
-NONE: Not installed
-INSTALLING
-INSTALLED: Installed
-INSTALL_FAIL: Installation failure
-                     * @return InstallStatus Plugin installation status (upper layer aggregation)
+NONE: not installed
+INSTALLING: installing
+INSTALLED: installed
+INSTALL_FAIL: installation failure
+                     * @return InstallStatus Plugin installation status (upper-level aggregation)
 Enumeration value:
-NONE: Not installed
-INSTALLING
-INSTALLED: Installed
-INSTALL_FAIL: Installation failure
+NONE: not installed
+INSTALLING: installing
+INSTALLED: installed
+INSTALL_FAIL: installation failure
                      * 
                      */
                     std::string GetInstallStatus() const;
 
                     /**
-                     * 设置Plugin installation status (upper layer aggregation)
+                     * 设置Plugin installation status (upper-level aggregation)
 Enumeration value:
-NONE: Not installed
-INSTALLING
-INSTALLED: Installed
-INSTALL_FAIL: Installation failure
-                     * @param _installStatus Plugin installation status (upper layer aggregation)
+NONE: not installed
+INSTALLING: installing
+INSTALLED: installed
+INSTALL_FAIL: installation failure
+                     * @param _installStatus Plugin installation status (upper-level aggregation)
 Enumeration value:
-NONE: Not installed
-INSTALLING
-INSTALLED: Installed
-INSTALL_FAIL: Installation failure
+NONE: not installed
+INSTALLING: installing
+INSTALLED: installed
+INSTALL_FAIL: installation failure
                      * 
                      */
                     void SetInstallStatus(const std::string& _installStatus);
@@ -88,22 +88,22 @@ INSTALL_FAIL: Installation failure
                     bool InstallStatusHasBeenSet() const;
 
                     /**
-                     * 获取Plugin installation sub-status. The value corresponds to InstallStatus: empty string when not installed (InstallStatus=UNINSTALL); SUCCESS when successfully installed (InstallStatus=INSTALLED); specific failure reason when installation failure (InstallStatus=INSTALL_FAIL).
+                     * 获取Plug-in installation sub-status. The value corresponds to InstallStatus: empty string when not installed (InstallStatus=UNINSTALL); SUCCESS when installation is successful (InstallStatus=INSTALLED); specific failure reason when installation fails (InstallStatus=INSTALL_FAIL).
 Enumeration value:
-NOT_SUPPORT: Unsupported environment
-CONTAINER_NOT_FOUND: Container does not exist.
-RESTART required
+NOT_SUPPORT: The environment does not support it
+CONTAINER_NOT_FOUND: container does not exist.
+REQUIRE_RESTART: restart required
 CA_FAILED: CA failed
-EBPF_FAILED: eBPF failed
+EBPF_FAILED: eBPF failure
 IPTABLE_FAILED: iptables failed.
 REDIRECT_FAILED: Traffic redirection failed.
-                     * @return Status Plugin installation sub-status. The value corresponds to InstallStatus: empty string when not installed (InstallStatus=UNINSTALL); SUCCESS when successfully installed (InstallStatus=INSTALLED); specific failure reason when installation failure (InstallStatus=INSTALL_FAIL).
+                     * @return Status Plug-in installation sub-status. The value corresponds to InstallStatus: empty string when not installed (InstallStatus=UNINSTALL); SUCCESS when installation is successful (InstallStatus=INSTALLED); specific failure reason when installation fails (InstallStatus=INSTALL_FAIL).
 Enumeration value:
-NOT_SUPPORT: Unsupported environment
-CONTAINER_NOT_FOUND: Container does not exist.
-RESTART required
+NOT_SUPPORT: The environment does not support it
+CONTAINER_NOT_FOUND: container does not exist.
+REQUIRE_RESTART: restart required
 CA_FAILED: CA failed
-EBPF_FAILED: eBPF failed
+EBPF_FAILED: eBPF failure
 IPTABLE_FAILED: iptables failed.
 REDIRECT_FAILED: Traffic redirection failed.
                      * 
@@ -111,22 +111,22 @@ REDIRECT_FAILED: Traffic redirection failed.
                     std::string GetStatus() const;
 
                     /**
-                     * 设置Plugin installation sub-status. The value corresponds to InstallStatus: empty string when not installed (InstallStatus=UNINSTALL); SUCCESS when successfully installed (InstallStatus=INSTALLED); specific failure reason when installation failure (InstallStatus=INSTALL_FAIL).
+                     * 设置Plug-in installation sub-status. The value corresponds to InstallStatus: empty string when not installed (InstallStatus=UNINSTALL); SUCCESS when installation is successful (InstallStatus=INSTALLED); specific failure reason when installation fails (InstallStatus=INSTALL_FAIL).
 Enumeration value:
-NOT_SUPPORT: Unsupported environment
-CONTAINER_NOT_FOUND: Container does not exist.
-RESTART required
+NOT_SUPPORT: The environment does not support it
+CONTAINER_NOT_FOUND: container does not exist.
+REQUIRE_RESTART: restart required
 CA_FAILED: CA failed
-EBPF_FAILED: eBPF failed
+EBPF_FAILED: eBPF failure
 IPTABLE_FAILED: iptables failed.
 REDIRECT_FAILED: Traffic redirection failed.
-                     * @param _status Plugin installation sub-status. The value corresponds to InstallStatus: empty string when not installed (InstallStatus=UNINSTALL); SUCCESS when successfully installed (InstallStatus=INSTALLED); specific failure reason when installation failure (InstallStatus=INSTALL_FAIL).
+                     * @param _status Plug-in installation sub-status. The value corresponds to InstallStatus: empty string when not installed (InstallStatus=UNINSTALL); SUCCESS when installation is successful (InstallStatus=INSTALLED); specific failure reason when installation fails (InstallStatus=INSTALL_FAIL).
 Enumeration value:
-NOT_SUPPORT: Unsupported environment
-CONTAINER_NOT_FOUND: Container does not exist.
-RESTART required
+NOT_SUPPORT: The environment does not support it
+CONTAINER_NOT_FOUND: container does not exist.
+REQUIRE_RESTART: restart required
 CA_FAILED: CA failed
-EBPF_FAILED: eBPF failed
+EBPF_FAILED: eBPF failure
 IPTABLE_FAILED: iptables failed.
 REDIRECT_FAILED: Traffic redirection failed.
                      * 
@@ -141,15 +141,15 @@ REDIRECT_FAILED: Traffic redirection failed.
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Status copywriting (internationalization description derived from Status based on request language)
-                     * @return Message Status copywriting (internationalization description derived from Status based on request language)
+                     * 获取Status copywriting (an internationalized description derived from Status based on the request language)
+                     * @return Message Status copywriting (an internationalized description derived from Status based on the request language)
                      * 
                      */
                     std::string GetMessage() const;
 
                     /**
-                     * 设置Status copywriting (internationalization description derived from Status based on request language)
-                     * @param _message Status copywriting (internationalization description derived from Status based on request language)
+                     * 设置Status copywriting (an internationalized description derived from Status based on the request language)
+                     * @param _message Status copywriting (an internationalized description derived from Status based on the request language)
                      * 
                      */
                     void SetMessage(const std::string& _message);
@@ -163,18 +163,18 @@ REDIRECT_FAILED: Traffic redirection failed.
 
                     /**
                      * 获取Recent activity time of the plug-in
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
                      * @return ActivityTime Recent activity time of the plug-in
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
                      * 
                      */
                     std::string GetActivityTime() const;
 
                     /**
                      * 设置Recent activity time of the plug-in
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
                      * @param _activityTime Recent activity time of the plug-in
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
                      * 
                      */
                     void SetActivityTime(const std::string& _activityTime);
@@ -189,24 +189,24 @@ Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
                 private:
 
                     /**
-                     * Plugin installation status (upper layer aggregation)
+                     * Plugin installation status (upper-level aggregation)
 Enumeration value:
-NONE: Not installed
-INSTALLING
-INSTALLED: Installed
-INSTALL_FAIL: Installation failure
+NONE: not installed
+INSTALLING: installing
+INSTALLED: installed
+INSTALL_FAIL: installation failure
                      */
                     std::string m_installStatus;
                     bool m_installStatusHasBeenSet;
 
                     /**
-                     * Plugin installation sub-status. The value corresponds to InstallStatus: empty string when not installed (InstallStatus=UNINSTALL); SUCCESS when successfully installed (InstallStatus=INSTALLED); specific failure reason when installation failure (InstallStatus=INSTALL_FAIL).
+                     * Plug-in installation sub-status. The value corresponds to InstallStatus: empty string when not installed (InstallStatus=UNINSTALL); SUCCESS when installation is successful (InstallStatus=INSTALLED); specific failure reason when installation fails (InstallStatus=INSTALL_FAIL).
 Enumeration value:
-NOT_SUPPORT: Unsupported environment
-CONTAINER_NOT_FOUND: Container does not exist.
-RESTART required
+NOT_SUPPORT: The environment does not support it
+CONTAINER_NOT_FOUND: container does not exist.
+REQUIRE_RESTART: restart required
 CA_FAILED: CA failed
-EBPF_FAILED: eBPF failed
+EBPF_FAILED: eBPF failure
 IPTABLE_FAILED: iptables failed.
 REDIRECT_FAILED: Traffic redirection failed.
                      */
@@ -214,14 +214,14 @@ REDIRECT_FAILED: Traffic redirection failed.
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Status copywriting (internationalization description derived from Status based on request language)
+                     * Status copywriting (an internationalized description derived from Status based on the request language)
                      */
                     std::string m_message;
                     bool m_messageHasBeenSet;
 
                     /**
                      * Recent activity time of the plug-in
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
                      */
                     std::string m_activityTime;
                     bool m_activityTimeHasBeenSet;

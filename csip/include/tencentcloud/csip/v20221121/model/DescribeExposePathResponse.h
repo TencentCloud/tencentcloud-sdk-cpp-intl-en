@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Cloud boundary analysis path within node.
-                     * @return Content Cloud boundary analysis path within node.
+                     * 获取Content within the cloud boundary analysis path node
+                     * @return Content Content within the cloud boundary analysis path node
                      * 
                      */
                     std::string GetContent() const;
@@ -60,7 +60,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Cloud boundary analysis path within node.
+                     * Content within the cloud boundary analysis path node
                      */
                     std::string m_content;
                     bool m_contentHasBeenSet;

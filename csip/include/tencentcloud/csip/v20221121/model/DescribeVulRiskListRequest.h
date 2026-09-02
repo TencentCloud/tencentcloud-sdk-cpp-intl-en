@@ -170,15 +170,15 @@ namespace TencentCloud
                     bool ByHasBeenSet() const;
 
                     /**
-                     * 获取Cloud account ID.
-                     * @return CloudAccountID Cloud account ID.
+                     * 获取Cloud Account ID
+                     * @return CloudAccountID Cloud Account ID
                      * 
                      */
                     std::string GetCloudAccountID() const;
 
                     /**
-                     * 设置Cloud account ID.
-                     * @param _cloudAccountID Cloud account ID.
+                     * 设置Cloud Account ID
+                     * @param _cloudAccountID Cloud Account ID
                      * 
                      */
                     void SetCloudAccountID(const std::string& _cloudAccountID);
@@ -191,15 +191,15 @@ namespace TencentCloud
                     bool CloudAccountIDHasBeenSet() const;
 
                     /**
-                     * 获取Cloud service provider.
-                     * @return Provider Cloud service provider.
+                     * 获取cloud service provider
+                     * @return Provider cloud service provider
                      * 
                      */
                     std::string GetProvider() const;
 
                     /**
-                     * 设置Cloud service provider.
-                     * @param _provider Cloud service provider.
+                     * 设置cloud service provider
+                     * @param _provider cloud service provider
                      * 
                      */
                     void SetProvider(const std::string& _provider);
@@ -250,13 +250,13 @@ namespace TencentCloud
                     bool m_byHasBeenSet;
 
                     /**
-                     * Cloud account ID.
+                     * Cloud Account ID
                      */
                     std::string m_cloudAccountID;
                     bool m_cloudAccountIDHasBeenSet;
 
                     /**
-                     * Cloud service provider.
+                     * cloud service provider
                      */
                     std::string m_provider;
                     bool m_providerHasBeenSet;

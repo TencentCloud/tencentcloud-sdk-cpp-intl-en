@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Port risk details
+                * Port Risk Objects from Port's Perspective
                 */
                 class PortViewPortRisk : public AbstractModel
                 {
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool NoHandleCountHasBeenSet() const;
 
                     /**
-                     * 获取Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
-                     * @return Level Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
+                     * 获取Risk level. low: low risk, high: high risk, middle: medium risk, info: notification, extreme: severe.
+                     * @return Level Risk level. low: low risk, high: high risk, middle: medium risk, info: notification, extreme: severe.
                      * 
                      */
                     std::string GetLevel() const;
 
                     /**
-                     * 设置Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
-                     * @param _level Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
+                     * 设置Risk level. low: low risk, high: high risk, middle: medium risk, info: notification, extreme: severe.
+                     * @param _level Risk level. low: low risk, high: high risk, middle: medium risk, info: notification, extreme: severe.
                      * 
                      */
                     void SetLevel(const std::string& _level);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool LevelHasBeenSet() const;
 
                     /**
-                     * 获取Network protocol
-                     * @return Protocol Network protocol
+                     * 获取Protocol
+                     * @return Protocol Protocol
                      * 
                      */
                     std::string GetProtocol() const;
 
                     /**
-                     * 设置Network protocol
-                     * @param _protocol Network protocol
+                     * 设置Protocol
+                     * @param _protocol Protocol
                      * 
                      */
                     void SetProtocol(const std::string& _protocol);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool ProtocolHasBeenSet() const;
 
                     /**
-                     * 获取Components
-                     * @return Component Components
+                     * 获取Component
+                     * @return Component Component
                      * 
                      */
                     std::string GetComponent() const;
 
                     /**
-                     * 设置Components
-                     * @param _component Components
+                     * 设置Component
+                     * @param _component Component
                      * 
                      */
                     void SetComponent(const std::string& _component);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool ComponentHasBeenSet() const;
 
                     /**
-                     * 获取Port
-                     * @return Port Port
+                     * 获取Port.
+                     * @return Port Port.
                      * 
                      */
                     int64_t GetPort() const;
 
                     /**
-                     * 设置Port
-                     * @param _port Port
+                     * 设置Port.
+                     * @param _port Port.
                      * 
                      */
                     void SetPort(const int64_t& _port);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool PortHasBeenSet() const;
 
                     /**
-                     * 获取Last detected 
-                     * @return RecentTime Last detected 
+                     * 获取Latest Recognition Time
+                     * @return RecentTime Latest Recognition Time
                      * 
                      */
                     std::string GetRecentTime() const;
 
                     /**
-                     * 设置Last detected 
-                     * @param _recentTime Last detected 
+                     * 设置Latest Recognition Time
+                     * @param _recentTime Latest Recognition Time
                      * 
                      */
                     void SetRecentTime(const std::string& _recentTime);
@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool RecentTimeHasBeenSet() const;
 
                     /**
-                     * 获取First detected
-                     * @return FirstTime First detected
+                     * 获取First Recognition Time
+                     * @return FirstTime First Recognition Time
                      * 
                      */
                     std::string GetFirstTime() const;
 
                     /**
-                     * 设置First detected
-                     * @param _firstTime First detected
+                     * 设置First Recognition Time
+                     * @param _firstTime First Recognition Time
                      * 
                      */
                     void SetFirstTime(const std::string& _firstTime);
@@ -194,15 +194,15 @@ namespace TencentCloud
                     bool FirstTimeHasBeenSet() const;
 
                     /**
-                     * 获取Suggested action. `0`: Keep as it is; `1`: Block access requests; `2`: Block the port
-                     * @return Suggestion Suggested action. `0`: Keep as it is; `1`: Block access requests; `2`: Block the port
+                     * 获取Disposal Suggestions. 0: Maintain Status Quo; 1: Restrict Access; 2: Block Port.
+                     * @return Suggestion Disposal Suggestions. 0: Maintain Status Quo; 1: Restrict Access; 2: Block Port.
                      * 
                      */
                     uint64_t GetSuggestion() const;
 
                     /**
-                     * 设置Suggested action. `0`: Keep as it is; `1`: Block access requests; `2`: Block the port
-                     * @param _suggestion Suggested action. `0`: Keep as it is; `1`: Block access requests; `2`: Block the port
+                     * 设置Disposal Suggestions. 0: Maintain Status Quo; 1: Restrict Access; 2: Block Port.
+                     * @param _suggestion Disposal Suggestions. 0: Maintain Status Quo; 1: Restrict Access; 2: Block Port.
                      * 
                      */
                     void SetSuggestion(const uint64_t& _suggestion);
@@ -278,15 +278,15 @@ namespace TencentCloud
                     bool FromHasBeenSet() const;
 
                     /**
-                     * 获取Data entry key
-                     * @return Index Data entry key
+                     * 获取Front-end Index
+                     * @return Index Front-end Index
                      * 
                      */
                     std::string GetIndex() const;
 
                     /**
-                     * 设置Data entry key
-                     * @param _index Data entry key
+                     * 设置Front-end Index
+                     * @param _index Front-end Index
                      * 
                      */
                     void SetIndex(const std::string& _index);
@@ -299,15 +299,15 @@ namespace TencentCloud
                     bool IndexHasBeenSet() const;
 
                     /**
-                     * 获取User AppId
-                     * @return AppId User AppId
+                     * 获取User appid.
+                     * @return AppId User appid.
                      * 
                      */
                     std::string GetAppId() const;
 
                     /**
-                     * 设置User AppId
-                     * @param _appId User AppId
+                     * 设置User appid.
+                     * @param _appId User appid.
                      * 
                      */
                     void SetAppId(const std::string& _appId);
@@ -362,15 +362,15 @@ namespace TencentCloud
                     bool UinHasBeenSet() const;
 
                     /**
-                     * 获取Service
-                     * @return Service Service
+                     * 获取Service.
+                     * @return Service Service.
                      * 
                      */
                     std::string GetService() const;
 
                     /**
-                     * 设置Service
-                     * @param _service Service
+                     * 设置Service.
+                     * @param _service Service.
                      * 
                      */
                     void SetService(const std::string& _service);
@@ -391,43 +391,43 @@ namespace TencentCloud
                     bool m_noHandleCountHasBeenSet;
 
                     /**
-                     * Risk level, low - low risk, high - high risk, middle - medium risk, info - notification, extreme - critical.
+                     * Risk level. low: low risk, high: high risk, middle: medium risk, info: notification, extreme: severe.
                      */
                     std::string m_level;
                     bool m_levelHasBeenSet;
 
                     /**
-                     * Network protocol
+                     * Protocol
                      */
                     std::string m_protocol;
                     bool m_protocolHasBeenSet;
 
                     /**
-                     * Components
+                     * Component
                      */
                     std::string m_component;
                     bool m_componentHasBeenSet;
 
                     /**
-                     * Port
+                     * Port.
                      */
                     int64_t m_port;
                     bool m_portHasBeenSet;
 
                     /**
-                     * Last detected 
+                     * Latest Recognition Time
                      */
                     std::string m_recentTime;
                     bool m_recentTimeHasBeenSet;
 
                     /**
-                     * First detected
+                     * First Recognition Time
                      */
                     std::string m_firstTime;
                     bool m_firstTimeHasBeenSet;
 
                     /**
-                     * Suggested action. `0`: Keep as it is; `1`: Block access requests; `2`: Block the port
+                     * Disposal Suggestions. 0: Maintain Status Quo; 1: Restrict Access; 2: Block Port.
                      */
                     uint64_t m_suggestion;
                     bool m_suggestionHasBeenSet;
@@ -451,13 +451,13 @@ namespace TencentCloud
                     bool m_fromHasBeenSet;
 
                     /**
-                     * Data entry key
+                     * Front-end Index
                      */
                     std::string m_index;
                     bool m_indexHasBeenSet;
 
                     /**
-                     * User AppId
+                     * User appid.
                      */
                     std::string m_appId;
                     bool m_appIdHasBeenSet;
@@ -475,7 +475,7 @@ namespace TencentCloud
                     bool m_uinHasBeenSet;
 
                     /**
-                     * Service
+                     * Service.
                      */
                     std::string m_service;
                     bool m_serviceHasBeenSet;

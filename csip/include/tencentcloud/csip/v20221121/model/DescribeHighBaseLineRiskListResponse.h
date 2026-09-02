@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Number of high-risk risks.
-                     * @return TotalCount Number of high-risk risks.
+                     * 获取Number of high-risk baseline risks
+                     * @return TotalCount Number of high-risk baseline risks
                      * 
                      */
                     int64_t GetTotalCount() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取High-Risk baseline risk list.
-                     * @return HighBaseLineRiskList High-Risk baseline risk list.
+                     * 获取List of risks in high-risk baselines
+                     * @return HighBaseLineRiskList List of risks in high-risk baselines
                      * 
                      */
                     std::vector<HighBaseLineRiskItem> GetHighBaseLineRiskList() const;
@@ -75,13 +75,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Number of high-risk risks.
+                     * Number of high-risk baseline risks
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * High-Risk baseline risk list.
+                     * List of risks in high-risk baselines
                      */
                     std::vector<HighBaseLineRiskItem> m_highBaseLineRiskList;
                     bool m_highBaseLineRiskListHasBeenSet;

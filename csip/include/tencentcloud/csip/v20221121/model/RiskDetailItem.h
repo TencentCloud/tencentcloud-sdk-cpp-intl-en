@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * risk details
+                * Risk details
                 */
                 class RiskDetailItem : public AbstractModel
                 {
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool RiskContentHasBeenSet() const;
 
                     /**
-                     * 获取<p>Cloud service provider</p>
-                     * @return Provider <p>Cloud service provider</p>
+                     * 获取<p>Cloud service provider.</p>
+                     * @return Provider <p>Cloud service provider.</p>
                      * 
                      */
                     std::string GetProvider() const;
 
                     /**
-                     * 设置<p>Cloud service provider</p>
-                     * @param _provider <p>Cloud service provider</p>
+                     * 设置<p>Cloud service provider.</p>
+                     * @param _provider <p>Cloud service provider.</p>
                      * 
                      */
                     void SetProvider(const std::string& _provider);
@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool ProviderNameHasBeenSet() const;
 
                     /**
-                     * 获取<p>cloud account</p>
-                     * @return CloudAccountId <p>cloud account</p>
+                     * 获取<p>Cloud account</p>
+                     * @return CloudAccountId <p>Cloud account</p>
                      * 
                      */
                     std::string GetCloudAccountId() const;
 
                     /**
-                     * 设置<p>cloud account</p>
-                     * @param _cloudAccountId <p>cloud account</p>
+                     * 设置<p>Cloud account</p>
+                     * @param _cloudAccountId <p>Cloud account</p>
                      * 
                      */
                     void SetCloudAccountId(const std::string& _cloudAccountId);
@@ -236,15 +236,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>Instance name</p>
-                     * @return InstanceName <p>Instance name</p>
+                     * 获取<p>Instance name.</p>
+                     * @return InstanceName <p>Instance name.</p>
                      * 
                      */
                     std::string GetInstanceName() const;
 
                     /**
-                     * 设置<p>Instance name</p>
-                     * @param _instanceName <p>Instance name</p>
+                     * 设置<p>Instance name.</p>
+                     * @param _instanceName <p>Instance name.</p>
                      * 
                      */
                     void SetInstanceName(const std::string& _instanceName);
@@ -320,15 +320,15 @@ namespace TencentCloud
                     bool CheckStatusHasBeenSet() const;
 
                     /**
-                     * 获取<p>User AppID</p>
-                     * @return AppID <p>User AppID</p>
+                     * 获取<p>User AppID.</p>
+                     * @return AppID <p>User AppID.</p>
                      * 
                      */
                     uint64_t GetAppID() const;
 
                     /**
-                     * 设置<p>User AppID</p>
-                     * @param _appID <p>User AppID</p>
+                     * 设置<p>User AppID.</p>
+                     * @param _appID <p>User AppID.</p>
                      * 
                      */
                     void SetAppID(const uint64_t& _appID);
@@ -361,6 +361,27 @@ namespace TencentCloud
                      */
                     bool AssetTypeHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Risk ignore reason</p>
+                     * @return Reason <p>Risk ignore reason</p>
+                     * 
+                     */
+                    std::string GetReason() const;
+
+                    /**
+                     * 设置<p>Risk ignore reason</p>
+                     * @param _reason <p>Risk ignore reason</p>
+                     * 
+                     */
+                    void SetReason(const std::string& _reason);
+
+                    /**
+                     * 判断参数 Reason 是否已赋值
+                     * @return Reason 是否已赋值
+                     * 
+                     */
+                    bool ReasonHasBeenSet() const;
+
                 private:
 
                     /**
@@ -388,7 +409,7 @@ namespace TencentCloud
                     bool m_riskContentHasBeenSet;
 
                     /**
-                     * <p>Cloud service provider</p>
+                     * <p>Cloud service provider.</p>
                      */
                     std::string m_provider;
                     bool m_providerHasBeenSet;
@@ -400,7 +421,7 @@ namespace TencentCloud
                     bool m_providerNameHasBeenSet;
 
                     /**
-                     * <p>cloud account</p>
+                     * <p>Cloud account</p>
                      */
                     std::string m_cloudAccountId;
                     bool m_cloudAccountIdHasBeenSet;
@@ -418,7 +439,7 @@ namespace TencentCloud
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * <p>Instance name</p>
+                     * <p>Instance name.</p>
                      */
                     std::string m_instanceName;
                     bool m_instanceNameHasBeenSet;
@@ -442,7 +463,7 @@ namespace TencentCloud
                     bool m_checkStatusHasBeenSet;
 
                     /**
-                     * <p>User AppID</p>
+                     * <p>User AppID.</p>
                      */
                     uint64_t m_appID;
                     bool m_appIDHasBeenSet;
@@ -452,6 +473,12 @@ namespace TencentCloud
                      */
                     std::string m_assetType;
                     bool m_assetTypeHasBeenSet;
+
+                    /**
+                     * <p>Risk ignore reason</p>
+                     */
+                    std::string m_reason;
+                    bool m_reasonHasBeenSet;
 
                 };
             }

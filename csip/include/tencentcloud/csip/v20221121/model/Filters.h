@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Filtering Conditions. Multiple Values under the same Name are OR; different Names are AND. Supported Names: Status (execution result, Values: SUCCESS/FAILED/USER_CANCELED/CHECKING).
+                * Filter criteria. Multiple Values under the same Name are OR-related, while different Names are AND-related. Supported Name: Status (execution result, Values: SUCCESS/FAILED/USER_CANCELED/CHECKING)
                 */
                 class Filters : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Filter criterion name. Parameter: Status (Execution result, Values: SUCCESS/FAILED/USER_CANCELED/CHECKING).
-                     * @return Name Filter criterion name. Parameter: Status (Execution result, Values: SUCCESS/FAILED/USER_CANCELED/CHECKING).
+                     * 获取Filter criterion name. Parameter value: Status (Execution result. Values: SUCCESS/FAILED/USER_CANCELED/CHECKING)
+                     * @return Name Filter criterion name. Parameter value: Status (Execution result. Values: SUCCESS/FAILED/USER_CANCELED/CHECKING)
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Filter criterion name. Parameter: Status (Execution result, Values: SUCCESS/FAILED/USER_CANCELED/CHECKING).
-                     * @param _name Filter criterion name. Parameter: Status (Execution result, Values: SUCCESS/FAILED/USER_CANCELED/CHECKING).
+                     * 设置Filter criterion name. Parameter value: Status (Execution result. Values: SUCCESS/FAILED/USER_CANCELED/CHECKING)
+                     * @param _name Filter criterion name. Parameter value: Status (Execution result. Values: SUCCESS/FAILED/USER_CANCELED/CHECKING)
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Filter condition value list
-                     * @return Values Filter condition value list
+                     * 获取List of filter condition values
+                     * @return Values List of filter condition values
                      * 
                      */
                     std::vector<std::string> GetValues() const;
 
                     /**
-                     * 设置Filter condition value list
-                     * @param _values Filter condition value list
+                     * 设置List of filter condition values
+                     * @param _values List of filter condition values
                      * 
                      */
                     void SetValues(const std::vector<std::string>& _values);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool ValuesHasBeenSet() const;
 
                     /**
-                     * 获取Exact match: 1 - exact match; default - fuzzy matching
-                     * @return ExactMatch Exact match: 1 - exact match; default - fuzzy matching
+                     * 获取Exact match: 1 for exact match; fuzzy match by default
+                     * @return ExactMatch Exact match: 1 for exact match; fuzzy match by default
                      * 
                      */
                     std::string GetExactMatch() const;
 
                     /**
-                     * 设置Exact match: 1 - exact match; default - fuzzy matching
-                     * @param _exactMatch Exact match: 1 - exact match; default - fuzzy matching
+                     * 设置Exact match: 1 for exact match; fuzzy match by default
+                     * @param _exactMatch Exact match: 1 for exact match; fuzzy match by default
                      * 
                      */
                     void SetExactMatch(const std::string& _exactMatch);
@@ -112,19 +112,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Filter criterion name. Parameter: Status (Execution result, Values: SUCCESS/FAILED/USER_CANCELED/CHECKING).
+                     * Filter criterion name. Parameter value: Status (Execution result. Values: SUCCESS/FAILED/USER_CANCELED/CHECKING)
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Filter condition value list
+                     * List of filter condition values
                      */
                     std::vector<std::string> m_values;
                     bool m_valuesHasBeenSet;
 
                     /**
-                     * Exact match: 1 - exact match; default - fuzzy matching
+                     * Exact match: 1 for exact match; fuzzy match by default
                      */
                     std::string m_exactMatch;
                     bool m_exactMatchHasBeenSet;

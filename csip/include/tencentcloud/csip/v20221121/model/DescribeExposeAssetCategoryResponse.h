@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Cloud boundary analytics asset classification list.
-                     * @return ExposeAssetTypeList Cloud boundary analytics asset classification list.
+                     * 获取Cloud boundary analysis asset classification list
+                     * @return ExposeAssetTypeList Cloud boundary analysis asset classification list
                      * 
                      */
                     std::vector<ExposeAssetTypeItem> GetExposeAssetTypeList() const;
@@ -61,7 +61,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Cloud boundary analytics asset classification list.
+                     * Cloud boundary analysis asset classification list
                      */
                     std::vector<ExposeAssetTypeItem> m_exposeAssetTypeList;
                     bool m_exposeAssetTypeListHasBeenSet;

@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Cloud boundary analytics number of assets.
-                     * @return TotalCount Cloud boundary analytics number of assets.
+                     * 获取Number of assets in cloud boundary analysis
+                     * @return TotalCount Number of assets in cloud boundary analysis
                      * 
                      */
                     int64_t GetTotalCount() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取Cloud boundary analytics asset list.
-                     * @return ExposeList Cloud boundary analytics asset list.
+                     * 获取Cloud boundary analysis asset list
+                     * @return ExposeList Cloud boundary analysis asset list
                      * 
                      */
                     std::vector<ExposesItem> GetExposeList() const;
@@ -75,13 +75,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Cloud boundary analytics number of assets.
+                     * Number of assets in cloud boundary analysis
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * Cloud boundary analytics asset list.
+                     * Cloud boundary analysis asset list
                      */
                     std::vector<ExposesItem> m_exposeList;
                     bool m_exposeListHasBeenSet;

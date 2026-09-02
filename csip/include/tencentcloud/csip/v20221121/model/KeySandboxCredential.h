@@ -90,26 +90,26 @@ namespace TencentCloud
                     bool CredentialNameHasBeenSet() const;
 
                     /**
-                     * 获取Credential Type
+                     * 获取Credential type
 Enumeration value:
-access: normal Key (Key-Value pair)
+access: standard Key (Key-Value pair)
 sts: STS temporary key credential
-                     * @return CredentialType Credential Type
+                     * @return CredentialType Credential type
 Enumeration value:
-access: normal Key (Key-Value pair)
+access: standard Key (Key-Value pair)
 sts: STS temporary key credential
                      * 
                      */
                     std::string GetCredentialType() const;
 
                     /**
-                     * 设置Credential Type
+                     * 设置Credential type
 Enumeration value:
-access: normal Key (Key-Value pair)
+access: standard Key (Key-Value pair)
 sts: STS temporary key credential
-                     * @param _credentialType Credential Type
+                     * @param _credentialType Credential type
 Enumeration value:
-access: normal Key (Key-Value pair)
+access: standard Key (Key-Value pair)
 sts: STS temporary key credential
                      * 
                      */
@@ -123,15 +123,15 @@ sts: STS temporary key credential
                     bool CredentialTypeHasBeenSet() const;
 
                     /**
-                     * 获取Effective machine scope
-                     * @return CredentialEffectScope Effective machine scope
+                     * 获取Scope of effective machines
+                     * @return CredentialEffectScope Scope of effective machines
                      * 
                      */
                     CredentialEffectScope GetCredentialEffectScope() const;
 
                     /**
-                     * 设置Effective machine scope
-                     * @param _credentialEffectScope Effective machine scope
+                     * 设置Scope of effective machines
+                     * @param _credentialEffectScope Scope of effective machines
                      * 
                      */
                     void SetCredentialEffectScope(const CredentialEffectScope& _credentialEffectScope);
@@ -145,18 +145,18 @@ sts: STS temporary key credential
 
                     /**
                      * 获取Creation time.
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
                      * @return CreateTime Creation time.
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
                      * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
                      * 设置Creation time.
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
                      * @param _createTime Creation time.
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
                      * 
                      */
                     void SetCreateTime(const std::string& _createTime);
@@ -170,18 +170,18 @@ Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
 
                     /**
                      * 获取Update time
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
                      * @return UpdateTime Update time
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
                      * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
                      * 设置Update time
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
                      * @param _updateTime Update time
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
                      * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
@@ -208,30 +208,30 @@ Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
                     bool m_credentialNameHasBeenSet;
 
                     /**
-                     * Credential Type
+                     * Credential type
 Enumeration value:
-access: normal Key (Key-Value pair)
+access: standard Key (Key-Value pair)
 sts: STS temporary key credential
                      */
                     std::string m_credentialType;
                     bool m_credentialTypeHasBeenSet;
 
                     /**
-                     * Effective machine scope
+                     * Scope of effective machines
                      */
                     CredentialEffectScope m_credentialEffectScope;
                     bool m_credentialEffectScopeHasBeenSet;
 
                     /**
                      * Creation time.
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
                      * Update time
-Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format).
+Parameter format: YYYY-MM-DDTHH:mm:ssZ (ISO8601 format)
                      */
                     std::string m_updateTime;
                     bool m_updateTimeHasBeenSet;

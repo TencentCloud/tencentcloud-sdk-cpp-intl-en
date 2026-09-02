@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Top attack types/attackers by count
-                     * @return TopAttackInfo Top attack types/attackers by count
+                     * 获取Top attack types/attacker count
+                     * @return TopAttackInfo Top attack types/attacker count
                      * 
                      */
                     std::vector<TagCount> GetTopAttackInfo() const;
@@ -61,7 +61,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Top attack types/attackers by count
+                     * Top attack types/attacker count
                      */
                     std::vector<TagCount> m_topAttackInfo;
                     bool m_topAttackInfoHasBeenSet;

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Effective machine range, used to specify which machines the credential takes effect on
+                * Scope of effective machines, used to specify which machines a credential takes effect on
                 */
                 class CredentialEffectScope : public AbstractModel
                 {
@@ -47,27 +47,27 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether to exclude the mode
+                     * 获取Whether to exclude mode
 Enumeration values:
-0: Inclusion mode (only takes effect on the Real Server in Instances). At this point, Instances is required.
-1: Exclusion mode (Machines in Instances do not take effect, remaining machines take effect). At this point, Instances is selectable (Empty list means all machines take effect).
-                     * @return Exclude Whether to exclude the mode
+0: Inclusion mode (only for the Real Server in Instances). At this point, Instances is required.
+1: Exclusion mode (machines in Instances do not take effect, remaining machines take effect). At this point, Instances is selectable. An empty list means all machines take effect.
+                     * @return Exclude Whether to exclude mode
 Enumeration values:
-0: Inclusion mode (only takes effect on the Real Server in Instances). At this point, Instances is required.
-1: Exclusion mode (Machines in Instances do not take effect, remaining machines take effect). At this point, Instances is selectable (Empty list means all machines take effect).
+0: Inclusion mode (only for the Real Server in Instances). At this point, Instances is required.
+1: Exclusion mode (machines in Instances do not take effect, remaining machines take effect). At this point, Instances is selectable. An empty list means all machines take effect.
                      * 
                      */
                     int64_t GetExclude() const;
 
                     /**
-                     * 设置Whether to exclude the mode
+                     * 设置Whether to exclude mode
 Enumeration values:
-0: Inclusion mode (only takes effect on the Real Server in Instances). At this point, Instances is required.
-1: Exclusion mode (Machines in Instances do not take effect, remaining machines take effect). At this point, Instances is selectable (Empty list means all machines take effect).
-                     * @param _exclude Whether to exclude the mode
+0: Inclusion mode (only for the Real Server in Instances). At this point, Instances is required.
+1: Exclusion mode (machines in Instances do not take effect, remaining machines take effect). At this point, Instances is selectable. An empty list means all machines take effect.
+                     * @param _exclude Whether to exclude mode
 Enumeration values:
-0: Inclusion mode (only takes effect on the Real Server in Instances). At this point, Instances is required.
-1: Exclusion mode (Machines in Instances do not take effect, remaining machines take effect). At this point, Instances is selectable (Empty list means all machines take effect).
+0: Inclusion mode (only for the Real Server in Instances). At this point, Instances is required.
+1: Exclusion mode (machines in Instances do not take effect, remaining machines take effect). At this point, Instances is selectable. An empty list means all machines take effect.
                      * 
                      */
                     void SetExclude(const int64_t& _exclude);
@@ -80,19 +80,15 @@ Enumeration values:
                     bool ExcludeHasBeenSet() const;
 
                     /**
-                     * 获取Machine instance ID list. Required when Exclude is 0, means only these machines can access the credential; Option when Exclude is 1, means these machines cannot access the credential (Empty list means all machines take effect).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Instances Machine instance ID list. Required when Exclude is 0, means only these machines can access the credential; Option when Exclude is 1, means these machines cannot access the credential (Empty list means all machines take effect).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取List of machine instance IDs. Required when Exclude is 0, means only these machines can access the credential. Optional when Exclude is 1, means these machines cannot access the credential (Empty list means all machines take effect)
+                     * @return Instances List of machine instance IDs. Required when Exclude is 0, means only these machines can access the credential. Optional when Exclude is 1, means these machines cannot access the credential (Empty list means all machines take effect)
                      * 
                      */
                     std::vector<std::string> GetInstances() const;
 
                     /**
-                     * 设置Machine instance ID list. Required when Exclude is 0, means only these machines can access the credential; Option when Exclude is 1, means these machines cannot access the credential (Empty list means all machines take effect).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _instances Machine instance ID list. Required when Exclude is 0, means only these machines can access the credential; Option when Exclude is 1, means these machines cannot access the credential (Empty list means all machines take effect).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置List of machine instance IDs. Required when Exclude is 0, means only these machines can access the credential. Optional when Exclude is 1, means these machines cannot access the credential (Empty list means all machines take effect)
+                     * @param _instances List of machine instance IDs. Required when Exclude is 0, means only these machines can access the credential. Optional when Exclude is 1, means these machines cannot access the credential (Empty list means all machines take effect)
                      * 
                      */
                     void SetInstances(const std::vector<std::string>& _instances);
@@ -107,17 +103,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Whether to exclude the mode
+                     * Whether to exclude mode
 Enumeration values:
-0: Inclusion mode (only takes effect on the Real Server in Instances). At this point, Instances is required.
-1: Exclusion mode (Machines in Instances do not take effect, remaining machines take effect). At this point, Instances is selectable (Empty list means all machines take effect).
+0: Inclusion mode (only for the Real Server in Instances). At this point, Instances is required.
+1: Exclusion mode (machines in Instances do not take effect, remaining machines take effect). At this point, Instances is selectable. An empty list means all machines take effect.
                      */
                     int64_t m_exclude;
                     bool m_excludeHasBeenSet;
 
                     /**
-                     * Machine instance ID list. Required when Exclude is 0, means only these machines can access the credential; Option when Exclude is 1, means these machines cannot access the credential (Empty list means all machines take effect).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * List of machine instance IDs. Required when Exclude is 0, means only these machines can access the credential. Optional when Exclude is 1, means these machines cannot access the credential (Empty list means all machines take effect)
                      */
                     std::vector<std::string> m_instances;
                     bool m_instancesHasBeenSet;

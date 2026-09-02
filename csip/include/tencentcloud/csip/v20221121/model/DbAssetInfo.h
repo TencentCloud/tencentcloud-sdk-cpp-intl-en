@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Details of a database asset. 
+                * DB Asset Details
                 */
                 class DbAssetInfo : public AbstractModel
                 {

@@ -216,15 +216,15 @@ namespace TencentCloud
                     bool RiskTotalCntHasBeenSet() const;
 
                     /**
-                     * 获取<p>Risk level count (0: Low risk, 1: Medium risk, 2: High risk, 3: Critical)</p>
-                     * @return RiskLevelCnt <p>Risk level count (0: Low risk, 1: Medium risk, 2: High risk, 3: Critical)</p>
+                     * 获取<p>Number of risk levels (0: low risk, 1: medium risk, 2: high risk, 3: critical)</p>
+                     * @return RiskLevelCnt <p>Number of risk levels (0: low risk, 1: medium risk, 2: high risk, 3: critical)</p>
                      * 
                      */
                     std::vector<KeyValueInt> GetRiskLevelCnt() const;
 
                     /**
-                     * 设置<p>Risk level count (0: Low risk, 1: Medium risk, 2: High risk, 3: Critical)</p>
-                     * @param _riskLevelCnt <p>Risk level count (0: Low risk, 1: Medium risk, 2: High risk, 3: Critical)</p>
+                     * 设置<p>Number of risk levels (0: low risk, 1: medium risk, 2: high risk, 3: critical)</p>
+                     * @param _riskLevelCnt <p>Number of risk levels (0: low risk, 1: medium risk, 2: high risk, 3: critical)</p>
                      * 
                      */
                     void SetRiskLevelCnt(const std::vector<KeyValueInt>& _riskLevelCnt);
@@ -237,15 +237,15 @@ namespace TencentCloud
                     bool RiskLevelCntHasBeenSet() const;
 
                     /**
-                     * 获取<p>Scan time</p>
-                     * @return ScanTime <p>Scan time</p>
+                     * 获取<p>Scan time.</p>
+                     * @return ScanTime <p>Scan time.</p>
                      * 
                      */
                     std::string GetScanTime() const;
 
                     /**
-                     * 设置<p>Scan time</p>
-                     * @param _scanTime <p>Scan time</p>
+                     * 设置<p>Scan time.</p>
+                     * @param _scanTime <p>Scan time.</p>
                      * 
                      */
                     void SetScanTime(const std::string& _scanTime);
@@ -258,15 +258,15 @@ namespace TencentCloud
                     bool ScanTimeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Detection status (0: pending scan, 1: detecting, 2: completed, 3: detection exception)</p>
-                     * @return Status <p>Detection status (0: pending scan, 1: detecting, 2: completed, 3: detection exception)</p>
+                     * 获取<p>Detection status (0: Pending scan, 1: Detecting, 2: Completed, 3: Detection exception)</p>
+                     * @return Status <p>Detection status (0: Pending scan, 1: Detecting, 2: Completed, 3: Detection exception)</p>
                      * 
                      */
                     int64_t GetStatus() const;
 
                     /**
-                     * 设置<p>Detection status (0: pending scan, 1: detecting, 2: completed, 3: detection exception)</p>
-                     * @param _status <p>Detection status (0: pending scan, 1: detecting, 2: completed, 3: detection exception)</p>
+                     * 设置<p>Detection status (0: Pending scan, 1: Detecting, 2: Completed, 3: Detection exception)</p>
+                     * @param _status <p>Detection status (0: Pending scan, 1: Detecting, 2: Completed, 3: Detection exception)</p>
                      * 
                      */
                     void SetStatus(const int64_t& _status);
@@ -279,15 +279,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取<p>Scan failure type (0: No failure, 1: Detection timeout, 2: File format parsing failed, 3: Detection failed)</p>
-                     * @return FailType <p>Scan failure type (0: No failure, 1: Detection timeout, 2: File format parsing failed, 3: Detection failed)</p>
+                     * 获取<p>Scan failure type (0: no failure, 1: detection timeout, 2: file format parsing failed, 3: detection failed)</p>
+                     * @return FailType <p>Scan failure type (0: no failure, 1: detection timeout, 2: file format parsing failed, 3: detection failed)</p>
                      * 
                      */
                     int64_t GetFailType() const;
 
                     /**
-                     * 设置<p>Scan failure type (0: No failure, 1: Detection timeout, 2: File format parsing failed, 3: Detection failed)</p>
-                     * @param _failType <p>Scan failure type (0: No failure, 1: Detection timeout, 2: File format parsing failed, 3: Detection failed)</p>
+                     * 设置<p>Scan failure type (0: no failure, 1: detection timeout, 2: file format parsing failed, 3: detection failed)</p>
+                     * @param _failType <p>Scan failure type (0: no failure, 1: detection timeout, 2: file format parsing failed, 3: detection failed)</p>
                      * 
                      */
                     void SetFailType(const int64_t& _failType);
@@ -350,25 +350,25 @@ namespace TencentCloud
                     bool m_riskTotalCntHasBeenSet;
 
                     /**
-                     * <p>Risk level count (0: Low risk, 1: Medium risk, 2: High risk, 3: Critical)</p>
+                     * <p>Number of risk levels (0: low risk, 1: medium risk, 2: high risk, 3: critical)</p>
                      */
                     std::vector<KeyValueInt> m_riskLevelCnt;
                     bool m_riskLevelCntHasBeenSet;
 
                     /**
-                     * <p>Scan time</p>
+                     * <p>Scan time.</p>
                      */
                     std::string m_scanTime;
                     bool m_scanTimeHasBeenSet;
 
                     /**
-                     * <p>Detection status (0: pending scan, 1: detecting, 2: completed, 3: detection exception)</p>
+                     * <p>Detection status (0: Pending scan, 1: Detecting, 2: Completed, 3: Detection exception)</p>
                      */
                     int64_t m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * <p>Scan failure type (0: No failure, 1: Detection timeout, 2: File format parsing failed, 3: Detection failed)</p>
+                     * <p>Scan failure type (0: no failure, 1: detection timeout, 2: file format parsing failed, 3: detection failed)</p>
                      */
                     int64_t m_failType;
                     bool m_failTypeHasBeenSet;

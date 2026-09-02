@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Tag name<br>Enumeration VALUE:<br>INTRUSION: Exploitation IN THE WILD<br>EXP: Has EXP<br>POC: Has POC<br>INTERNET_EXPOSED: Public network exposure<br>NO_RESTART: NO RESTART required<br>HIGH_VALUE_ASSET: Important ASSET<br>MALWARE_WEAPONIZED: Weaponization</p>
-                     * @return Name <p>Tag name<br>Enumeration VALUE:<br>INTRUSION: Exploitation IN THE WILD<br>EXP: Has EXP<br>POC: Has POC<br>INTERNET_EXPOSED: Public network exposure<br>NO_RESTART: NO RESTART required<br>HIGH_VALUE_ASSET: Important ASSET<br>MALWARE_WEAPONIZED: Weaponization</p>
+                     * 获取<p>Tag name<br>Enumeration values:<br>IN_THE_WILD: exploitation in the wild<br>EXP: has EXP<br>POC: has POC<br>INTERNET_EXPOSED: public network exposure<br>NO_RESTART: no restart required<br>HIGH_VALUE_ASSET: important asset<br>MALWARE_WEAPONIZED: weaponized</p>
+                     * @return Name <p>Tag name<br>Enumeration values:<br>IN_THE_WILD: exploitation in the wild<br>EXP: has EXP<br>POC: has POC<br>INTERNET_EXPOSED: public network exposure<br>NO_RESTART: no restart required<br>HIGH_VALUE_ASSET: important asset<br>MALWARE_WEAPONIZED: weaponized</p>
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置<p>Tag name<br>Enumeration VALUE:<br>INTRUSION: Exploitation IN THE WILD<br>EXP: Has EXP<br>POC: Has POC<br>INTERNET_EXPOSED: Public network exposure<br>NO_RESTART: NO RESTART required<br>HIGH_VALUE_ASSET: Important ASSET<br>MALWARE_WEAPONIZED: Weaponization</p>
-                     * @param _name <p>Tag name<br>Enumeration VALUE:<br>INTRUSION: Exploitation IN THE WILD<br>EXP: Has EXP<br>POC: Has POC<br>INTERNET_EXPOSED: Public network exposure<br>NO_RESTART: NO RESTART required<br>HIGH_VALUE_ASSET: Important ASSET<br>MALWARE_WEAPONIZED: Weaponization</p>
+                     * 设置<p>Tag name<br>Enumeration values:<br>IN_THE_WILD: exploitation in the wild<br>EXP: has EXP<br>POC: has POC<br>INTERNET_EXPOSED: public network exposure<br>NO_RESTART: no restart required<br>HIGH_VALUE_ASSET: important asset<br>MALWARE_WEAPONIZED: weaponized</p>
+                     * @param _name <p>Tag name<br>Enumeration values:<br>IN_THE_WILD: exploitation in the wild<br>EXP: has EXP<br>POC: has POC<br>INTERNET_EXPOSED: public network exposure<br>NO_RESTART: no restart required<br>HIGH_VALUE_ASSET: important asset<br>MALWARE_WEAPONIZED: weaponized</p>
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取<p>Tag severity<br>Enumeration value:<br>HIGH: High<br>MEDIUM: Medium<br>LOW: Low</p>
-                     * @return Level <p>Tag severity<br>Enumeration value:<br>HIGH: High<br>MEDIUM: Medium<br>LOW: Low</p>
+                     * 获取<p>Tag level<br>Enumeration values:<br>HIGH: High<br>MEDIUM: Medium<br>LOW: Low</p>
+                     * @return Level <p>Tag level<br>Enumeration values:<br>HIGH: High<br>MEDIUM: Medium<br>LOW: Low</p>
                      * 
                      */
                     std::string GetLevel() const;
 
                     /**
-                     * 设置<p>Tag severity<br>Enumeration value:<br>HIGH: High<br>MEDIUM: Medium<br>LOW: Low</p>
-                     * @param _level <p>Tag severity<br>Enumeration value:<br>HIGH: High<br>MEDIUM: Medium<br>LOW: Low</p>
+                     * 设置<p>Tag level<br>Enumeration values:<br>HIGH: High<br>MEDIUM: Medium<br>LOW: Low</p>
+                     * @param _level <p>Tag level<br>Enumeration values:<br>HIGH: High<br>MEDIUM: Medium<br>LOW: Low</p>
                      * 
                      */
                     void SetLevel(const std::string& _level);
@@ -112,13 +112,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Tag name<br>Enumeration VALUE:<br>INTRUSION: Exploitation IN THE WILD<br>EXP: Has EXP<br>POC: Has POC<br>INTERNET_EXPOSED: Public network exposure<br>NO_RESTART: NO RESTART required<br>HIGH_VALUE_ASSET: Important ASSET<br>MALWARE_WEAPONIZED: Weaponization</p>
+                     * <p>Tag name<br>Enumeration values:<br>IN_THE_WILD: exploitation in the wild<br>EXP: has EXP<br>POC: has POC<br>INTERNET_EXPOSED: public network exposure<br>NO_RESTART: no restart required<br>HIGH_VALUE_ASSET: important asset<br>MALWARE_WEAPONIZED: weaponized</p>
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * <p>Tag severity<br>Enumeration value:<br>HIGH: High<br>MEDIUM: Medium<br>LOW: Low</p>
+                     * <p>Tag level<br>Enumeration values:<br>HIGH: High<br>MEDIUM: Medium<br>LOW: Low</p>
                      */
                     std::string m_level;
                     bool m_levelHasBeenSet;

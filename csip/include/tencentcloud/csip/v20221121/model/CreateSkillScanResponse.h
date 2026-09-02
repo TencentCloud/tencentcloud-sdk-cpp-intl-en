@@ -44,9 +44,9 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取SHA256 Hash of the file, used for polling the DescribeSkillScanResult API
+                     * 获取SHA256 Hash of the file, used for polling the DescribeSkillScanResult API.
 Parameter format: sha256:<64-bit hex>
-                     * @return ContentHash SHA256 Hash of the file, used for polling the DescribeSkillScanResult API
+                     * @return ContentHash SHA256 Hash of the file, used for polling the DescribeSkillScanResult API.
 Parameter format: sha256:<64-bit hex>
                      * 
                      */
@@ -60,8 +60,8 @@ Parameter format: sha256:<64-bit hex>
                     bool ContentHashHasBeenSet() const;
 
                     /**
-                     * 获取Engine version number actually bound to the current request. The caller should save and explicitly input it in the follow-up DescribeSkillScanResult.
-                     * @return EngineVersion Engine version number actually bound to the current request. The caller should save and explicitly input it in the follow-up DescribeSkillScanResult.
+                     * 获取Engine version number actually bound to the current request. The caller should save it and explicitly input it in subsequent DescribeSkillScanResult calls.
+                     * @return EngineVersion Engine version number actually bound to the current request. The caller should save it and explicitly input it in subsequent DescribeSkillScanResult calls.
                      * 
                      */
                     int64_t GetEngineVersion() const;
@@ -74,8 +74,8 @@ Parameter format: sha256:<64-bit hex>
                     bool EngineVersionHasBeenSet() const;
 
                     /**
-                     * 获取Task status, fixed as SCANNING, indicates the task is received.
-                     * @return Status Task status, fixed as SCANNING, indicates the task is received.
+                     * 获取Task status, fixed as SCANNING, indicating the task has been received.
+                     * @return Status Task status, fixed as SCANNING, indicating the task has been received.
                      * 
                      */
                     std::string GetStatus() const;
@@ -104,20 +104,20 @@ Parameter format: sha256:<64-bit hex>
                 private:
 
                     /**
-                     * SHA256 Hash of the file, used for polling the DescribeSkillScanResult API
+                     * SHA256 Hash of the file, used for polling the DescribeSkillScanResult API.
 Parameter format: sha256:<64-bit hex>
                      */
                     std::string m_contentHash;
                     bool m_contentHashHasBeenSet;
 
                     /**
-                     * Engine version number actually bound to the current request. The caller should save and explicitly input it in the follow-up DescribeSkillScanResult.
+                     * Engine version number actually bound to the current request. The caller should save it and explicitly input it in subsequent DescribeSkillScanResult calls.
                      */
                     int64_t m_engineVersion;
                     bool m_engineVersionHasBeenSet;
 
                     /**
-                     * Task status, fixed as SCANNING, indicates the task is received.
+                     * Task status, fixed as SCANNING, indicating the task has been received.
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;

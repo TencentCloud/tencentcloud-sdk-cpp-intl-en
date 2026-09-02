@@ -66,15 +66,15 @@ namespace TencentCloud
                     bool MemberIdHasBeenSet() const;
 
                     /**
-                     * 获取Filter conditions
-                     * @return Filter Filter conditions
+                     * 获取Filtered Content
+                     * @return Filter Filtered Content
                      * 
                      */
                     Filter GetFilter() const;
 
                     /**
-                     * 设置Filter conditions
-                     * @param _filter Filter conditions
+                     * 设置Filtered Content
+                     * @param _filter Filtered Content
                      * 
                      */
                     void SetFilter(const Filter& _filter);
@@ -87,15 +87,15 @@ namespace TencentCloud
                     bool FilterHasBeenSet() const;
 
                     /**
-                     * 获取Tags
-                     * @return Tags Tags
+                     * 获取Tag.
+                     * @return Tags Tag.
                      * 
                      */
                     std::vector<Tags> GetTags() const;
 
                     /**
-                     * 设置Tags
-                     * @param _tags Tags
+                     * 设置Tag.
+                     * @param _tags Tag.
                      * 
                      */
                     void SetTags(const std::vector<Tags>& _tags);
@@ -116,13 +116,13 @@ namespace TencentCloud
                     bool m_memberIdHasBeenSet;
 
                     /**
-                     * Filter conditions
+                     * Filtered Content
                      */
                     Filter m_filter;
                     bool m_filterHasBeenSet;
 
                     /**
-                     * Tags
+                     * Tag.
                      */
                     std::vector<Tags> m_tags;
                     bool m_tagsHasBeenSet;

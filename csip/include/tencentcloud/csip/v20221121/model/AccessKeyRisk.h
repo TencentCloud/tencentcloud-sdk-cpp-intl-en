@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Access key risk record.
+                * Access key risk record
                 */
                 class AccessKeyRisk : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Risk name.
-                     * @return Name Risk name.
+                     * 获取Risk name
+                     * @return Name Risk name
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Risk name.
-                     * @param _name Risk name.
+                     * 设置Risk name
+                     * @param _name Risk name
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -69,19 +69,19 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Risk level.
-0 - unavailable 1 - Note 2 - low risk 3 - medium risk 4 - high risk 5 - critical.
-                     * @return Level Risk level.
-0 - unavailable 1 - Note 2 - low risk 3 - medium risk 4 - high risk 5 - critical.
+                     * 获取Risk level
+0 - Invalid, 1 - Notification, 2 - Low risk, 3 - Medium risk, 4 - High risk, 5 - Critical
+                     * @return Level Risk level
+0 - Invalid, 1 - Notification, 2 - Low risk, 3 - Medium risk, 4 - High risk, 5 - Critical
                      * 
                      */
                     int64_t GetLevel() const;
 
                     /**
-                     * 设置Risk level.
-0 - unavailable 1 - Note 2 - low risk 3 - medium risk 4 - high risk 5 - critical.
-                     * @param _level Risk level.
-0 - unavailable 1 - Note 2 - low risk 3 - medium risk 4 - high risk 5 - critical.
+                     * 设置Risk level
+0 - Invalid, 1 - Notification, 2 - Low risk, 3 - Medium risk, 4 - High risk, 5 - Critical
+                     * @param _level Risk level
+0 - Invalid, 1 - Notification, 2 - Low risk, 3 - Medium risk, 4 - High risk, 5 - Critical
                      * 
                      */
                     void SetLevel(const int64_t& _level);
@@ -94,15 +94,15 @@ namespace TencentCloud
                     bool LevelHasBeenSet() const;
 
                     /**
-                     * 获取Risk record ID.
-                     * @return ID Risk record ID.
+                     * 获取Risk record ID
+                     * @return ID Risk record ID
                      * 
                      */
                     int64_t GetID() const;
 
                     /**
-                     * 设置Risk record ID.
-                     * @param _iD Risk record ID.
+                     * 设置Risk record ID
+                     * @param _iD Risk record ID
                      * 
                      */
                     void SetID(const int64_t& _iD);
@@ -115,15 +115,15 @@ namespace TencentCloud
                     bool IDHasBeenSet() const;
 
                     /**
-                     * 获取Risk rule ID.
-                     * @return RiskRuleID Risk rule ID.
+                     * 获取Risk rule ID
+                     * @return RiskRuleID Risk rule ID
                      * 
                      */
                     int64_t GetRiskRuleID() const;
 
                     /**
-                     * 设置Risk rule ID.
-                     * @param _riskRuleID Risk rule ID.
+                     * 设置Risk rule ID
+                     * @param _riskRuleID Risk rule ID
                      * 
                      */
                     void SetRiskRuleID(const int64_t& _riskRuleID);
@@ -136,19 +136,19 @@ namespace TencentCloud
                     bool RiskRuleIDHasBeenSet() const;
 
                     /**
-                     * 获取Risk type.
-Configuration risk.
-                     * @return RiskType Risk type.
-Configuration risk.
+                     * 获取Risk type
+0 - Configuration risk
+                     * @return RiskType Risk type
+0 - Configuration risk
                      * 
                      */
                     int64_t GetRiskType() const;
 
                     /**
-                     * 设置Risk type.
-Configuration risk.
-                     * @param _riskType Risk type.
-Configuration risk.
+                     * 设置Risk type
+0 - Configuration risk
+                     * @param _riskType Risk type
+0 - Configuration risk
                      * 
                      */
                     void SetRiskType(const int64_t& _riskType);
@@ -161,15 +161,15 @@ Configuration risk.
                     bool RiskTypeHasBeenSet() const;
 
                     /**
-                     * 获取Access key.
-                     * @return AccessKey Access key.
+                     * 获取Access key
+                     * @return AccessKey Access key
                      * 
                      */
                     std::string GetAccessKey() const;
 
                     /**
-                     * 设置Access key.
-                     * @param _accessKey Access key.
+                     * 设置Access key
+                     * @param _accessKey Access key
                      * 
                      */
                     void SetAccessKey(const std::string& _accessKey);
@@ -182,15 +182,15 @@ Configuration risk.
                     bool AccessKeyHasBeenSet() const;
 
                     /**
-                     * 获取Access key ID.
-                     * @return AccessKeyID Access key ID.
+                     * 获取Access Key ID
+                     * @return AccessKeyID Access Key ID
                      * 
                      */
                     uint64_t GetAccessKeyID() const;
 
                     /**
-                     * 设置Access key ID.
-                     * @param _accessKeyID Access key ID.
+                     * 设置Access Key ID
+                     * @param _accessKeyID Access Key ID
                      * 
                      */
                     void SetAccessKeyID(const uint64_t& _accessKeyID);
@@ -203,15 +203,15 @@ Configuration risk.
                     bool AccessKeyIDHasBeenSet() const;
 
                     /**
-                     * 获取Access key remark.
-                     * @return AccessKeyRemark Access key remark.
+                     * 获取Access key remark
+                     * @return AccessKeyRemark Access key remark
                      * 
                      */
                     std::string GetAccessKeyRemark() const;
 
                     /**
-                     * 设置Access key remark.
-                     * @param _accessKeyRemark Access key remark.
+                     * 设置Access key remark
+                     * @param _accessKeyRemark Access key remark
                      * 
                      */
                     void SetAccessKeyRemark(const std::string& _accessKeyRemark);
@@ -224,15 +224,15 @@ Configuration risk.
                     bool AccessKeyRemarkHasBeenSet() const;
 
                     /**
-                     * 获取Detection time of risk.
-                     * @return RiskTime Detection time of risk.
+                     * 获取Risk detection time
+                     * @return RiskTime Risk detection time
                      * 
                      */
                     std::string GetRiskTime() const;
 
                     /**
-                     * 设置Detection time of risk.
-                     * @param _riskTime Detection time of risk.
+                     * 设置Risk detection time
+                     * @param _riskTime Risk detection time
                      * 
                      */
                     void SetRiskTime(const std::string& _riskTime);
@@ -245,19 +245,19 @@ Configuration risk.
                     bool RiskTimeHasBeenSet() const;
 
                     /**
-                     * 获取Risk status.
-0 - unprocessed 2 - ignored 3 - converged.
-                     * @return Status Risk status.
-0 - unprocessed 2 - ignored 3 - converged.
+                     * 获取Risk status
+0: unprocessed; 2: ignored; 3: converged
+                     * @return Status Risk status
+0: unprocessed; 2: ignored; 3: converged
                      * 
                      */
                     int64_t GetStatus() const;
 
                     /**
-                     * 设置Risk status.
-0 - unprocessed 2 - ignored 3 - converged.
-                     * @param _status Risk status.
-0 - unprocessed 2 - ignored 3 - converged.
+                     * 设置Risk status
+0: unprocessed; 2: ignored; 3: converged
+                     * @param _status Risk status
+0: unprocessed; 2: ignored; 3: converged
                      * 
                      */
                     void SetStatus(const int64_t& _status);
@@ -270,15 +270,15 @@ Configuration risk.
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Risk Tag.
-                     * @return Tag Risk Tag.
+                     * 获取Risk tag
+                     * @return Tag Risk tag
                      * 
                      */
                     std::vector<std::string> GetTag() const;
 
                     /**
-                     * 设置Risk Tag.
-                     * @param _tag Risk Tag.
+                     * 设置Risk tag
+                     * @param _tag Risk tag
                      * 
                      */
                     void SetTag(const std::vector<std::string>& _tag);
@@ -291,15 +291,15 @@ Configuration risk.
                     bool TagHasBeenSet() const;
 
                     /**
-                     * 获取Risk evidence.
-                     * @return Evidence Risk evidence.
+                     * 获取Risk evidence
+                     * @return Evidence Risk evidence
                      * 
                      */
                     std::string GetEvidence() const;
 
                     /**
-                     * 设置Risk evidence.
-                     * @param _evidence Risk evidence.
+                     * 设置Risk evidence
+                     * @param _evidence Risk evidence
                      * 
                      */
                     void SetEvidence(const std::string& _evidence);
@@ -333,15 +333,15 @@ Configuration risk.
                     bool DescriptionHasBeenSet() const;
 
                     /**
-                     * 获取Account associate Uin belonging to main account.
-                     * @return Uin Account associate Uin belonging to main account.
+                     * 获取Uin of the main account
+                     * @return Uin Uin of the main account
                      * 
                      */
                     std::string GetUin() const;
 
                     /**
-                     * 设置Account associate Uin belonging to main account.
-                     * @param _uin Account associate Uin belonging to main account.
+                     * 设置Uin of the main account
+                     * @param _uin Uin of the main account
                      * 
                      */
                     void SetUin(const std::string& _uin);
@@ -354,15 +354,15 @@ Configuration risk.
                     bool UinHasBeenSet() const;
 
                     /**
-                     * 获取Nickname of the main account.
-                     * @return Nickname Nickname of the main account.
+                     * 获取Nickname of the main account
+                     * @return Nickname Nickname of the main account
                      * 
                      */
                     std::string GetNickname() const;
 
                     /**
-                     * 设置Nickname of the main account.
-                     * @param _nickname Nickname of the main account.
+                     * 设置Nickname of the main account
+                     * @param _nickname Nickname of the main account
                      * 
                      */
                     void SetNickname(const std::string& _nickname);
@@ -375,15 +375,15 @@ Configuration risk.
                     bool NicknameHasBeenSet() const;
 
                     /**
-                     * 获取Sub-Account Uin belonging to.
-                     * @return SubUin Sub-Account Uin belonging to.
+                     * 获取Uin of the associated sub-account
+                     * @return SubUin Uin of the associated sub-account
                      * 
                      */
                     std::string GetSubUin() const;
 
                     /**
-                     * 设置Sub-Account Uin belonging to.
-                     * @param _subUin Sub-Account Uin belonging to.
+                     * 设置Uin of the associated sub-account
+                     * @param _subUin Uin of the associated sub-account
                      * 
                      */
                     void SetSubUin(const std::string& _subUin);
@@ -396,15 +396,15 @@ Configuration risk.
                     bool SubUinHasBeenSet() const;
 
                     /**
-                     * 获取Sub-Account nickname.
-                     * @return SubNickname Sub-Account nickname.
+                     * 获取Sub-account nickname
+                     * @return SubNickname Sub-account nickname
                      * 
                      */
                     std::string GetSubNickname() const;
 
                     /**
-                     * 设置Sub-Account nickname.
-                     * @param _subNickname Sub-Account nickname.
+                     * 设置Sub-account nickname
+                     * @param _subNickname Sub-account nickname
                      * 
                      */
                     void SetSubNickname(const std::string& _subNickname);
@@ -417,23 +417,23 @@ Configuration risk.
                     bool SubNicknameHasBeenSet() const;
 
                     /**
-                     * 获取Account type.
-0 root account AK 1 sub-account AK.
-2 temporary key.
-                     * @return Type Account type.
-0 root account AK 1 sub-account AK.
-2 temporary key.
+                     * 获取Account type
+0-Root Account AK, 1-Sub-account AK
+2 Temporary key
+                     * @return Type Account type
+0-Root Account AK, 1-Sub-account AK
+2 Temporary key
                      * 
                      */
                     int64_t GetType() const;
 
                     /**
-                     * 设置Account type.
-0 root account AK 1 sub-account AK.
-2 temporary key.
-                     * @param _type Account type.
-0 root account AK 1 sub-account AK.
-2 temporary key.
+                     * 设置Account type
+0-Root Account AK, 1-Sub-account AK
+2 Temporary key
+                     * @param _type Account type
+0-Root Account AK, 1-Sub-account AK
+2 Temporary key
                      * 
                      */
                     void SetType(const int64_t& _type);
@@ -447,22 +447,22 @@ Configuration risk.
 
                     /**
                      * 获取Detection status.
-0: detected.
-1 indicates detecting.
+0 means detected
+1: Indicates detection in progress
                      * @return CheckStatus Detection status.
-0: detected.
-1 indicates detecting.
+0 means detected
+1: Indicates detection in progress
                      * 
                      */
                     int64_t GetCheckStatus() const;
 
                     /**
                      * 设置Detection status.
-0: detected.
-1 indicates detecting.
+0 means detected
+1: Indicates detection in progress
                      * @param _checkStatus Detection status.
-0: detected.
-1 indicates detecting.
+0 means detected
+1: Indicates detection in progress
                      * 
                      */
                     void SetCheckStatus(const int64_t& _checkStatus);
@@ -496,15 +496,15 @@ Configuration risk.
                     bool AppIDHasBeenSet() const;
 
                     /**
-                     * 获取Query parameter corresponding to the risk.
-                     * @return QueryParam Query parameter corresponding to the risk.
+                     * 获取Query parameter corresponding to the risk
+                     * @return QueryParam Query parameter corresponding to the risk
                      * 
                      */
                     std::string GetQueryParam() const;
 
                     /**
-                     * 设置Query parameter corresponding to the risk.
-                     * @param _queryParam Query parameter corresponding to the risk.
+                     * 设置Query parameter corresponding to the risk
+                     * @param _queryParam Query parameter corresponding to the risk
                      * 
                      */
                     void SetQueryParam(const std::string& _queryParam);
@@ -517,15 +517,15 @@ Configuration risk.
                     bool QueryParamHasBeenSet() const;
 
                     /**
-                     * 获取Cloud type 0 for tencent cloud 4 for alibaba cloud.
-                     * @return CloudType Cloud type 0 for tencent cloud 4 for alibaba cloud.
+                     * 获取Cloud type. 0: Tencent Cloud; 4: Alibaba Cloud
+                     * @return CloudType Cloud type. 0: Tencent Cloud; 4: Alibaba Cloud
                      * 
                      */
                     int64_t GetCloudType() const;
 
                     /**
-                     * 设置Cloud type 0 for tencent cloud 4 for alibaba cloud.
-                     * @param _cloudType Cloud type 0 for tencent cloud 4 for alibaba cloud.
+                     * 设置Cloud type. 0: Tencent Cloud; 4: Alibaba Cloud
+                     * @param _cloudType Cloud type. 0: Tencent Cloud; 4: Alibaba Cloud
                      * 
                      */
                     void SetCloudType(const int64_t& _cloudType);
@@ -538,15 +538,15 @@ Configuration risk.
                     bool CloudTypeHasBeenSet() const;
 
                     /**
-                     * 获取Related AK list, including AK name and remark.
-                     * @return RelatedAK Related AK list, including AK name and remark.
+                     * 获取List of related AKs, including AK names and remarks
+                     * @return RelatedAK List of related AKs, including AK names and remarks
                      * 
                      */
                     std::vector<AKInfo> GetRelatedAK() const;
 
                     /**
-                     * 设置Related AK list, including AK name and remark.
-                     * @param _relatedAK Related AK list, including AK name and remark.
+                     * 设置List of related AKs, including AK names and remarks
+                     * @param _relatedAK List of related AKs, including AK names and remarks
                      * 
                      */
                     void SetRelatedAK(const std::vector<AKInfo>& _relatedAK);
@@ -561,76 +561,76 @@ Configuration risk.
                 private:
 
                     /**
-                     * Risk name.
+                     * Risk name
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Risk level.
-0 - unavailable 1 - Note 2 - low risk 3 - medium risk 4 - high risk 5 - critical.
+                     * Risk level
+0 - Invalid, 1 - Notification, 2 - Low risk, 3 - Medium risk, 4 - High risk, 5 - Critical
                      */
                     int64_t m_level;
                     bool m_levelHasBeenSet;
 
                     /**
-                     * Risk record ID.
+                     * Risk record ID
                      */
                     int64_t m_iD;
                     bool m_iDHasBeenSet;
 
                     /**
-                     * Risk rule ID.
+                     * Risk rule ID
                      */
                     int64_t m_riskRuleID;
                     bool m_riskRuleIDHasBeenSet;
 
                     /**
-                     * Risk type.
-Configuration risk.
+                     * Risk type
+0 - Configuration risk
                      */
                     int64_t m_riskType;
                     bool m_riskTypeHasBeenSet;
 
                     /**
-                     * Access key.
+                     * Access key
                      */
                     std::string m_accessKey;
                     bool m_accessKeyHasBeenSet;
 
                     /**
-                     * Access key ID.
+                     * Access Key ID
                      */
                     uint64_t m_accessKeyID;
                     bool m_accessKeyIDHasBeenSet;
 
                     /**
-                     * Access key remark.
+                     * Access key remark
                      */
                     std::string m_accessKeyRemark;
                     bool m_accessKeyRemarkHasBeenSet;
 
                     /**
-                     * Detection time of risk.
+                     * Risk detection time
                      */
                     std::string m_riskTime;
                     bool m_riskTimeHasBeenSet;
 
                     /**
-                     * Risk status.
-0 - unprocessed 2 - ignored 3 - converged.
+                     * Risk status
+0: unprocessed; 2: ignored; 3: converged
                      */
                     int64_t m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Risk Tag.
+                     * Risk tag
                      */
                     std::vector<std::string> m_tag;
                     bool m_tagHasBeenSet;
 
                     /**
-                     * Risk evidence.
+                     * Risk evidence
                      */
                     std::string m_evidence;
                     bool m_evidenceHasBeenSet;
@@ -642,41 +642,41 @@ Configuration risk.
                     bool m_descriptionHasBeenSet;
 
                     /**
-                     * Account associate Uin belonging to main account.
+                     * Uin of the main account
                      */
                     std::string m_uin;
                     bool m_uinHasBeenSet;
 
                     /**
-                     * Nickname of the main account.
+                     * Nickname of the main account
                      */
                     std::string m_nickname;
                     bool m_nicknameHasBeenSet;
 
                     /**
-                     * Sub-Account Uin belonging to.
+                     * Uin of the associated sub-account
                      */
                     std::string m_subUin;
                     bool m_subUinHasBeenSet;
 
                     /**
-                     * Sub-Account nickname.
+                     * Sub-account nickname
                      */
                     std::string m_subNickname;
                     bool m_subNicknameHasBeenSet;
 
                     /**
-                     * Account type.
-0 root account AK 1 sub-account AK.
-2 temporary key.
+                     * Account type
+0-Root Account AK, 1-Sub-account AK
+2 Temporary key
                      */
                     int64_t m_type;
                     bool m_typeHasBeenSet;
 
                     /**
                      * Detection status.
-0: detected.
-1 indicates detecting.
+0 means detected
+1: Indicates detection in progress
                      */
                     int64_t m_checkStatus;
                     bool m_checkStatusHasBeenSet;
@@ -688,19 +688,19 @@ Configuration risk.
                     bool m_appIDHasBeenSet;
 
                     /**
-                     * Query parameter corresponding to the risk.
+                     * Query parameter corresponding to the risk
                      */
                     std::string m_queryParam;
                     bool m_queryParamHasBeenSet;
 
                     /**
-                     * Cloud type 0 for tencent cloud 4 for alibaba cloud.
+                     * Cloud type. 0: Tencent Cloud; 4: Alibaba Cloud
                      */
                     int64_t m_cloudType;
                     bool m_cloudTypeHasBeenSet;
 
                     /**
-                     * Related AK list, including AK name and remark.
+                     * List of related AKs, including AK names and remarks
                      */
                     std::vector<AKInfo> m_relatedAK;
                     bool m_relatedAKHasBeenSet;

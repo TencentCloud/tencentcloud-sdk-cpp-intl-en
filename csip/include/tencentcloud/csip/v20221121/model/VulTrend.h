@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Vulnerability trends, attack trend, users affected, affect assets.
+                * Vulnerability trends - Attack trend, Users Affected, Affecting Assets
                 */
                 class VulTrend : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Number of affected assets.
-                     * @return AffectAssetCount Number of affected assets.
+                     * 获取Number of affected assets
+                     * @return AffectAssetCount Number of affected assets
                      * 
                      */
                     int64_t GetAffectAssetCount() const;
 
                     /**
-                     * 设置Number of affected assets.
-                     * @param _affectAssetCount Number of affected assets.
+                     * 设置Number of affected assets
+                     * @param _affectAssetCount Number of affected assets
                      * 
                      */
                     void SetAffectAssetCount(const int64_t& _affectAssetCount);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool AffectAssetCountHasBeenSet() const;
 
                     /**
-                     * 获取Number of users affected.
-                     * @return AffectUserCount Number of users affected.
+                     * 获取Number of impacted users
+                     * @return AffectUserCount Number of impacted users
                      * 
                      */
                     int64_t GetAffectUserCount() const;
 
                     /**
-                     * 设置Number of users affected.
-                     * @param _affectUserCount Number of users affected.
+                     * 设置Number of impacted users
+                     * @param _affectUserCount Number of impacted users
                      * 
                      */
                     void SetAffectUserCount(const int64_t& _affectUserCount);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool AffectUserCountHasBeenSet() const;
 
                     /**
-                     * 获取Number of attacks.
-                     * @return AttackCount Number of attacks.
+                     * 获取Number of attacks
+                     * @return AttackCount Number of attacks
                      * 
                      */
                     int64_t GetAttackCount() const;
 
                     /**
-                     * 设置Number of attacks.
-                     * @param _attackCount Number of attacks.
+                     * 设置Number of attacks
+                     * @param _attackCount Number of attacks
                      * 
                      */
                     void SetAttackCount(const int64_t& _attackCount);
@@ -133,19 +133,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Number of affected assets.
+                     * Number of affected assets
                      */
                     int64_t m_affectAssetCount;
                     bool m_affectAssetCountHasBeenSet;
 
                     /**
-                     * Number of users affected.
+                     * Number of impacted users
                      */
                     int64_t m_affectUserCount;
                     bool m_affectUserCountHasBeenSet;
 
                     /**
-                     * Number of attacks.
+                     * Number of attacks
                      */
                     int64_t m_attackCount;
                     bool m_attackCountHasBeenSet;

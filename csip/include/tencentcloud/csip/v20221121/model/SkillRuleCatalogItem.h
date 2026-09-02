@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Fusion rule directory item
+                * Fusion rule directory entry
                 */
                 class SkillRuleCatalogItem : public AbstractModel
                 {
@@ -47,15 +47,19 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Fusion rule ID (9xxxx)
-                     * @return RuleID Fusion rule ID (9xxxx)
+                     * 获取Fusion rule ID
+Parameter format: such as 9xxxx
+                     * @return RuleID Fusion rule ID
+Parameter format: such as 9xxxx
                      * 
                      */
                     std::string GetRuleID() const;
 
                     /**
-                     * 设置Fusion rule ID (9xxxx)
-                     * @param _ruleID Fusion rule ID (9xxxx)
+                     * 设置Fusion rule ID
+Parameter format: such as 9xxxx
+                     * @param _ruleID Fusion rule ID
+Parameter format: such as 9xxxx
                      * 
                      */
                     void SetRuleID(const std::string& _ruleID);
@@ -91,7 +95,8 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Fusion rule ID (9xxxx)
+                     * Fusion rule ID
+Parameter format: such as 9xxxx
                      */
                     std::string m_ruleID;
                     bool m_ruleIDHasBeenSet;

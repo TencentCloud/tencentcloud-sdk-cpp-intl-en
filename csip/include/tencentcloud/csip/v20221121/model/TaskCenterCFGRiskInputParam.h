@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Advanced configuration risk scan configuration
+                * Advanced Configuration of Configuration Risk
                 */
                 class TaskCenterCFGRiskInputParam : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Check item ID
-                     * @return ItemId Check item ID
+                     * 获取Detection Item ID
+                     * @return ItemId Detection Item ID
                      * 
                      */
                     std::string GetItemId() const;
 
                     /**
-                     * 设置Check item ID
-                     * @param _itemId Check item ID
+                     * 设置Detection Item ID
+                     * @param _itemId Detection Item ID
                      * 
                      */
                     void SetItemId(const std::string& _itemId);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool ItemIdHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable. `0`: no, `1`: yes.
-                     * @return Enable Whether to enable. `0`: no, `1`: yes.
+                     * 获取Whether to enable. 0-Not to Enable; 1-Enable.
+                     * @return Enable Whether to enable. 0-Not to Enable; 1-Enable.
                      * 
                      */
                     int64_t GetEnable() const;
 
                     /**
-                     * 设置Whether to enable. `0`: no, `1`: yes.
-                     * @param _enable Whether to enable. `0`: no, `1`: yes.
+                     * 设置Whether to enable. 0-Not to Enable; 1-Enable.
+                     * @param _enable Whether to enable. 0-Not to Enable; 1-Enable.
                      * 
                      */
                     void SetEnable(const int64_t& _enable);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool EnableHasBeenSet() const;
 
                     /**
-                     * 获取Resource type
-                     * @return ResourceType Resource type
+                     * 获取Resource type.
+                     * @return ResourceType Resource type.
                      * 
                      */
                     std::string GetResourceType() const;
 
                     /**
-                     * 设置Resource type
-                     * @param _resourceType Resource type
+                     * 设置Resource type.
+                     * @param _resourceType Resource type.
                      * 
                      */
                     void SetResourceType(const std::string& _resourceType);
@@ -112,19 +112,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Check item ID
+                     * Detection Item ID
                      */
                     std::string m_itemId;
                     bool m_itemIdHasBeenSet;
 
                     /**
-                     * Whether to enable. `0`: no, `1`: yes.
+                     * Whether to enable. 0-Not to Enable; 1-Enable.
                      */
                     int64_t m_enable;
                     bool m_enableHasBeenSet;
 
                     /**
-                     * Resource type
+                     * Resource type.
                      */
                     std::string m_resourceType;
                     bool m_resourceTypeHasBeenSet;

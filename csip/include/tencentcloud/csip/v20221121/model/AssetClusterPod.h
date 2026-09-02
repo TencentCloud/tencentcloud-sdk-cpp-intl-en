@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * This example shows you how to list the list of cluster pods. 
+                * Cluster Pod List
                 */
                 class AssetClusterPod : public AbstractModel
                 {
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool AppIdHasBeenSet() const;
 
                     /**
-                     * 获取Tenant UIN
-                     * @return Uin Tenant UIN
+                     * 获取Tenant uin
+                     * @return Uin Tenant uin
                      * 
                      */
                     std::string GetUin() const;
 
                     /**
-                     * 设置Tenant UIN
-                     * @param _uin Tenant UIN
+                     * 设置Tenant uin
+                     * @param _uin Tenant uin
                      * 
                      */
                     void SetUin(const std::string& _uin);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool UinHasBeenSet() const;
 
                     /**
-                     * 获取Tenant name
-                     * @return Nick Tenant name
+                     * 获取Tenant Nickname
+                     * @return Nick Tenant Nickname
                      * 
                      */
                     std::string GetNick() const;
 
                     /**
-                     * 设置Tenant name
-                     * @param _nick Tenant name
+                     * 设置Tenant Nickname
+                     * @param _nick Tenant Nickname
                      * 
                      */
                     void SetNick(const std::string& _nick);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool RegionHasBeenSet() const;
 
                     /**
-                     * 获取Pod ID
-                     * @return AssetId Pod ID
+                     * 获取pod id
+                     * @return AssetId pod id
                      * 
                      */
                     std::string GetAssetId() const;
 
                     /**
-                     * 设置Pod ID
-                     * @param _assetId Pod ID
+                     * 设置pod id
+                     * @param _assetId pod id
                      * 
                      */
                     void SetAssetId(const std::string& _assetId);
@@ -299,15 +299,15 @@ namespace TencentCloud
                     bool MachineIdHasBeenSet() const;
 
                     /**
-                     * 获取host name
-                     * @return MachineName host name
+                     * 获取MachineName
+                     * @return MachineName MachineName
                      * 
                      */
                     std::string GetMachineName() const;
 
                     /**
-                     * 设置host name
-                     * @param _machineName host name
+                     * 设置MachineName
+                     * @param _machineName MachineName
                      * 
                      */
                     void SetMachineName(const std::string& _machineName);
@@ -362,15 +362,15 @@ namespace TencentCloud
                     bool ServiceCountHasBeenSet() const;
 
                     /**
-                     * 获取Associated container number
-                     * @return ContainerCount Associated container number
+                     * 获取Number of associated containers
+                     * @return ContainerCount Number of associated containers
                      * 
                      */
                     int64_t GetContainerCount() const;
 
                     /**
-                     * 设置Associated container number
-                     * @param _containerCount Associated container number
+                     * 设置Number of associated containers
+                     * @param _containerCount Number of associated containers
                      * 
                      */
                     void SetContainerCount(const int64_t& _containerCount);
@@ -475,13 +475,13 @@ namespace TencentCloud
                     bool m_appIdHasBeenSet;
 
                     /**
-                     * Tenant UIN
+                     * Tenant uin
                      */
                     std::string m_uin;
                     bool m_uinHasBeenSet;
 
                     /**
-                     * Tenant name
+                     * Tenant Nickname
                      */
                     std::string m_nick;
                     bool m_nickHasBeenSet;
@@ -493,7 +493,7 @@ namespace TencentCloud
                     bool m_regionHasBeenSet;
 
                     /**
-                     * Pod ID
+                     * pod id
                      */
                     std::string m_assetId;
                     bool m_assetIdHasBeenSet;
@@ -541,7 +541,7 @@ namespace TencentCloud
                     bool m_machineIdHasBeenSet;
 
                     /**
-                     * host name
+                     * MachineName
                      */
                     std::string m_machineName;
                     bool m_machineNameHasBeenSet;
@@ -559,7 +559,7 @@ namespace TencentCloud
                     bool m_serviceCountHasBeenSet;
 
                     /**
-                     * Associated container number
+                     * Number of associated containers
                      */
                     int64_t m_containerCount;
                     bool m_containerCountHasBeenSet;

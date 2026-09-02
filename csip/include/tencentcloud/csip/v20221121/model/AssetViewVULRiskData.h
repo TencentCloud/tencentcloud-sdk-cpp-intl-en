@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Impact assets.
-                     * @return AffectAsset Impact assets.
+                     * 获取Affect assets
+                     * @return AffectAsset Affect assets
                      * 
                      */
                     std::string GetAffectAsset() const;
 
                     /**
-                     * 设置Impact assets.
-                     * @param _affectAsset Impact assets.
+                     * 设置Affect assets
+                     * @param _affectAsset Affect assets
                      * 
                      */
                     void SetAffectAsset(const std::string& _affectAsset);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool AffectAssetHasBeenSet() const;
 
                     /**
-                     * 获取Risk level: low - low risk, high - high risk, middle - medium risk, info - note, extreme - serious.
-                     * @return Level Risk level: low - low risk, high - high risk, middle - medium risk, info - note, extreme - serious.
+                     * 获取Risk level. low: low risk. high: high risk. middle: medium risk. info: notification. extreme: critical.
+                     * @return Level Risk level. low: low risk. high: high risk. middle: medium risk. info: notification. extreme: critical.
                      * 
                      */
                     std::string GetLevel() const;
 
                     /**
-                     * 设置Risk level: low - low risk, high - high risk, middle - medium risk, info - note, extreme - serious.
-                     * @param _level Risk level: low - low risk, high - high risk, middle - medium risk, info - note, extreme - serious.
+                     * 设置Risk level. low: low risk. high: high risk. middle: medium risk. info: notification. extreme: critical.
+                     * @param _level Risk level. low: low risk. high: high risk. middle: medium risk. info: notification. extreme: critical.
                      * 
                      */
                     void SetLevel(const std::string& _level);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool LevelHasBeenSet() const;
 
                     /**
-                     * 获取Asset type.
-                     * @return InstanceType Asset type.
+                     * 获取Asset type
+                     * @return InstanceType Asset type
                      * 
                      */
                     std::string GetInstanceType() const;
 
                     /**
-                     * 设置Asset type.
-                     * @param _instanceType Asset type.
+                     * 设置Asset type
+                     * @param _instanceType Asset type
                      * 
                      */
                     void SetInstanceType(const std::string& _instanceType);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool InstanceTypeHasBeenSet() const;
 
                     /**
-                     * 获取Component.
-                     * @return Component Component.
+                     * 获取Component
+                     * @return Component Component
                      * 
                      */
                     std::string GetComponent() const;
 
                     /**
-                     * 设置Component.
-                     * @param _component Component.
+                     * 设置Component
+                     * @param _component Component
                      * 
                      */
                     void SetComponent(const std::string& _component);
@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool FirstTimeHasBeenSet() const;
 
                     /**
-                     * 获取Status, 0 unprocessed, 1 tagged, 2 ignored, 3 processed, 4 under disposal, 5 detecting, 6 partially processed.
-                     * @return Status Status, 0 unprocessed, 1 tagged, 2 ignored, 3 processed, 4 under disposal, 5 detecting, 6 partially processed.
+                     * 获取Status. 0: unprocessed, 1: tagged processed, 2: ignored, 3: processed, 4: under disposal, 5: in-progress detection, 6: partially processed
+                     * @return Status Status. 0: unprocessed, 1: tagged processed, 2: ignored, 3: processed, 4: under disposal, 5: in-progress detection, 6: partially processed
                      * 
                      */
                     uint64_t GetStatus() const;
 
                     /**
-                     * 设置Status, 0 unprocessed, 1 tagged, 2 ignored, 3 processed, 4 under disposal, 5 detecting, 6 partially processed.
-                     * @param _status Status, 0 unprocessed, 1 tagged, 2 ignored, 3 processed, 4 under disposal, 5 detecting, 6 partially processed.
+                     * 设置Status. 0: unprocessed, 1: tagged processed, 2: ignored, 3: processed, 4: under disposal, 5: in-progress detection, 6: partially processed
+                     * @param _status Status. 0: unprocessed, 1: tagged processed, 2: ignored, 3: processed, 4: under disposal, 5: in-progress detection, 6: partially processed
                      * 
                      */
                     void SetStatus(const uint64_t& _status);
@@ -320,15 +320,15 @@ namespace TencentCloud
                     bool UinHasBeenSet() const;
 
                     /**
-                     * 获取Vulnerability type.
-                     * @return VULType Vulnerability type.
+                     * 获取Vulnerability type
+                     * @return VULType Vulnerability type
                      * 
                      */
                     std::string GetVULType() const;
 
                     /**
-                     * 设置Vulnerability type.
-                     * @param _vULType Vulnerability type.
+                     * 设置Vulnerability type
+                     * @param _vULType Vulnerability type
                      * 
                      */
                     void SetVULType(const std::string& _vULType);
@@ -362,15 +362,15 @@ namespace TencentCloud
                     bool PortHasBeenSet() const;
 
                     /**
-                     * 获取Vulnerability impact component.
-                     * @return AppName Vulnerability impact component.
+                     * 获取Vulnerability Impact component
+                     * @return AppName Vulnerability Impact component
                      * 
                      */
                     std::string GetAppName() const;
 
                     /**
-                     * 设置Vulnerability impact component.
-                     * @param _appName Vulnerability impact component.
+                     * 设置Vulnerability Impact component
+                     * @param _appName Vulnerability Impact component
                      * 
                      */
                     void SetAppName(const std::string& _appName);
@@ -383,15 +383,15 @@ namespace TencentCloud
                     bool AppNameHasBeenSet() const;
 
                     /**
-                     * 获取Vulnerability impact version.
-                     * @return AppVersion Vulnerability impact version.
+                     * 获取Vulnerability Impact version
+                     * @return AppVersion Vulnerability Impact version
                      * 
                      */
                     std::string GetAppVersion() const;
 
                     /**
-                     * 设置Vulnerability impact version.
-                     * @param _appVersion Vulnerability impact version.
+                     * 设置Vulnerability Impact version
+                     * @param _appVersion Vulnerability Impact version
                      * 
                      */
                     void SetAppVersion(const std::string& _appVersion);
@@ -404,15 +404,15 @@ namespace TencentCloud
                     bool AppVersionHasBeenSet() const;
 
                     /**
-                     * 获取Risks.
-                     * @return VULURL Risks.
+                     * 获取Risk point
+                     * @return VULURL Risk point
                      * 
                      */
                     std::string GetVULURL() const;
 
                     /**
-                     * 设置Risks.
-                     * @param _vULURL Risks.
+                     * 设置Risk point
+                     * @param _vULURL Risk point
                      * 
                      */
                     void SetVULURL(const std::string& _vULURL);
@@ -614,15 +614,15 @@ namespace TencentCloud
                     bool CVSSHasBeenSet() const;
 
                     /**
-                     * 获取Frontend index id.
-                     * @return Index Frontend index id.
+                     * 获取Frontend index id
+                     * @return Index Frontend index id
                      * 
                      */
                     std::string GetIndex() const;
 
                     /**
-                     * 设置Frontend index id.
-                     * @param _index Frontend index id.
+                     * 设置Frontend index id
+                     * @param _index Frontend index id
                      * 
                      */
                     void SetIndex(const std::string& _index);
@@ -698,15 +698,15 @@ namespace TencentCloud
                     bool TaskIdHasBeenSet() const;
 
                     /**
-                     * 获取Vulnerability Tag.
-                     * @return VulTag Vulnerability Tag.
+                     * 获取Vulnerability tag
+                     * @return VulTag Vulnerability tag
                      * 
                      */
                     std::vector<std::string> GetVulTag() const;
 
                     /**
-                     * 设置Vulnerability Tag.
-                     * @param _vulTag Vulnerability Tag.
+                     * 设置Vulnerability tag
+                     * @param _vulTag Vulnerability tag
                      * 
                      */
                     void SetVulTag(const std::vector<std::string>& _vulTag);
@@ -719,15 +719,15 @@ namespace TencentCloud
                     bool VulTagHasBeenSet() const;
 
                     /**
-                     * 获取Vulnerability disclosure time.
-                     * @return DisclosureTime Vulnerability disclosure time.
+                     * 获取Vulnerability disclosure time
+                     * @return DisclosureTime Vulnerability disclosure time
                      * 
                      */
                     std::string GetDisclosureTime() const;
 
                     /**
-                     * 设置Vulnerability disclosure time.
-                     * @param _disclosureTime Vulnerability disclosure time.
+                     * 设置Vulnerability disclosure time
+                     * @param _disclosureTime Vulnerability disclosure time
                      * 
                      */
                     void SetDisclosureTime(const std::string& _disclosureTime);
@@ -740,15 +740,15 @@ namespace TencentCloud
                     bool DisclosureTimeHasBeenSet() const;
 
                     /**
-                     * 获取Attack intensity.
-                     * @return AttackHeat Attack intensity.
+                     * 获取Attack level
+                     * @return AttackHeat Attack level
                      * 
                      */
                     uint64_t GetAttackHeat() const;
 
                     /**
-                     * 设置Attack intensity.
-                     * @param _attackHeat Attack intensity.
+                     * 设置Attack level
+                     * @param _attackHeat Attack level
                      * 
                      */
                     void SetAttackHeat(const uint64_t& _attackHeat);
@@ -761,15 +761,15 @@ namespace TencentCloud
                     bool AttackHeatHasBeenSet() const;
 
                     /**
-                     * 获取Whether the vulnerability is mandatory. 1 for yes, 0 for no.
-                     * @return IsSuggest Whether the vulnerability is mandatory. 1 for yes, 0 for no.
+                     * 获取Whether vulnerability 1 is mandatory. 0 indicates false.
+                     * @return IsSuggest Whether vulnerability 1 is mandatory. 0 indicates false.
                      * 
                      */
                     int64_t GetIsSuggest() const;
 
                     /**
-                     * 设置Whether the vulnerability is mandatory. 1 for yes, 0 for no.
-                     * @param _isSuggest Whether the vulnerability is mandatory. 1 for yes, 0 for no.
+                     * 设置Whether vulnerability 1 is mandatory. 0 indicates false.
+                     * @param _isSuggest Whether vulnerability 1 is mandatory. 0 indicates false.
                      * 
                      */
                     void SetIsSuggest(const int64_t& _isSuggest);
@@ -803,15 +803,15 @@ namespace TencentCloud
                     bool HandleTaskIdHasBeenSet() const;
 
                     /**
-                     * 获取Engine source.
-                     * @return EngineSource Engine source.
+                     * 获取Engine source
+                     * @return EngineSource Engine source
                      * 
                      */
                     std::string GetEngineSource() const;
 
                     /**
-                     * 设置Engine source.
-                     * @param _engineSource Engine source.
+                     * 设置Engine source
+                     * @param _engineSource Engine source
                      * 
                      */
                     void SetEngineSource(const std::string& _engineSource);
@@ -824,15 +824,15 @@ namespace TencentCloud
                     bool EngineSourceHasBeenSet() const;
 
                     /**
-                     * 获取New vulnerability risk id (same as RiskId in the network-wide vulnerabilities table).
-                     * @return VulRiskId New vulnerability risk id (same as RiskId in the network-wide vulnerabilities table).
+                     * 获取New vulnerability risk id (same as RiskId in the network-wide vulnerability table)
+                     * @return VulRiskId New vulnerability risk id (same as RiskId in the network-wide vulnerability table)
                      * 
                      */
                     std::string GetVulRiskId() const;
 
                     /**
-                     * 设置New vulnerability risk id (same as RiskId in the network-wide vulnerabilities table).
-                     * @param _vulRiskId New vulnerability risk id (same as RiskId in the network-wide vulnerabilities table).
+                     * 设置New vulnerability risk id (same as RiskId in the network-wide vulnerability table)
+                     * @param _vulRiskId New vulnerability risk id (same as RiskId in the network-wide vulnerability table)
                      * 
                      */
                     void SetVulRiskId(const std::string& _vulRiskId);
@@ -845,15 +845,15 @@ namespace TencentCloud
                     bool VulRiskIdHasBeenSet() const;
 
                     /**
-                     * 获取New version vulnerability id.
-                     * @return TvdID New version vulnerability id.
+                     * 获取Vulnerability id of the new version
+                     * @return TvdID Vulnerability id of the new version
                      * 
                      */
                     std::string GetTvdID() const;
 
                     /**
-                     * 设置New version vulnerability id.
-                     * @param _tvdID New version vulnerability id.
+                     * 设置Vulnerability id of the new version
+                     * @param _tvdID Vulnerability id of the new version
                      * 
                      */
                     void SetTvdID(const std::string& _tvdID);
@@ -866,15 +866,15 @@ namespace TencentCloud
                     bool TvdIDHasBeenSet() const;
 
                     /**
-                     * 获取Is it possible to perform a one-click physical examination, 1 - yes, 0 - not allowed.
-                     * @return IsOneClick Is it possible to perform a one-click physical examination, 1 - yes, 0 - not allowed.
+                     * 获取Whether to perform one-click physical examination. 1: yes, 0: no.
+                     * @return IsOneClick Whether to perform one-click physical examination. 1: yes, 0: no.
                      * 
                      */
                     uint64_t GetIsOneClick() const;
 
                     /**
-                     * 设置Is it possible to perform a one-click physical examination, 1 - yes, 0 - not allowed.
-                     * @param _isOneClick Is it possible to perform a one-click physical examination, 1 - yes, 0 - not allowed.
+                     * 设置Whether to perform one-click physical examination. 1: yes, 0: no.
+                     * @param _isOneClick Whether to perform one-click physical examination. 1: yes, 0: no.
                      * 
                      */
                     void SetIsOneClick(const uint64_t& _isOneClick);
@@ -887,15 +887,15 @@ namespace TencentCloud
                     bool IsOneClickHasBeenSet() const;
 
                     /**
-                     * 获取Whether to perform a POC scan. valid values: 0 (not a POC), 1 (POC).
-                     * @return IsPOC Whether to perform a POC scan. valid values: 0 (not a POC), 1 (POC).
+                     * 获取Whether it is a POC scan. 0: non-POC; 1: POC
+                     * @return IsPOC Whether it is a POC scan. 0: non-POC; 1: POC
                      * 
                      */
                     uint64_t GetIsPOC() const;
 
                     /**
-                     * 设置Whether to perform a POC scan. valid values: 0 (not a POC), 1 (POC).
-                     * @param _isPOC Whether to perform a POC scan. valid values: 0 (not a POC), 1 (POC).
+                     * 设置Whether it is a POC scan. 0: non-POC; 1: POC
+                     * @param _isPOC Whether it is a POC scan. 0: non-POC; 1: POC
                      * 
                      */
                     void SetIsPOC(const uint64_t& _isPOC);
@@ -910,25 +910,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Impact assets.
+                     * Affect assets
                      */
                     std::string m_affectAsset;
                     bool m_affectAssetHasBeenSet;
 
                     /**
-                     * Risk level: low - low risk, high - high risk, middle - medium risk, info - note, extreme - serious.
+                     * Risk level. low: low risk. high: high risk. middle: medium risk. info: notification. extreme: critical.
                      */
                     std::string m_level;
                     bool m_levelHasBeenSet;
 
                     /**
-                     * Asset type.
+                     * Asset type
                      */
                     std::string m_instanceType;
                     bool m_instanceTypeHasBeenSet;
 
                     /**
-                     * Component.
+                     * Component
                      */
                     std::string m_component;
                     bool m_componentHasBeenSet;
@@ -946,7 +946,7 @@ namespace TencentCloud
                     bool m_firstTimeHasBeenSet;
 
                     /**
-                     * Status, 0 unprocessed, 1 tagged, 2 ignored, 3 processed, 4 under disposal, 5 detecting, 6 partially processed.
+                     * Status. 0: unprocessed, 1: tagged processed, 2: ignored, 3: processed, 4: under disposal, 5: in-progress detection, 6: partially processed
                      */
                     uint64_t m_status;
                     bool m_statusHasBeenSet;
@@ -988,7 +988,7 @@ namespace TencentCloud
                     bool m_uinHasBeenSet;
 
                     /**
-                     * Vulnerability type.
+                     * Vulnerability type
                      */
                     std::string m_vULType;
                     bool m_vULTypeHasBeenSet;
@@ -1000,19 +1000,19 @@ namespace TencentCloud
                     bool m_portHasBeenSet;
 
                     /**
-                     * Vulnerability impact component.
+                     * Vulnerability Impact component
                      */
                     std::string m_appName;
                     bool m_appNameHasBeenSet;
 
                     /**
-                     * Vulnerability impact version.
+                     * Vulnerability Impact version
                      */
                     std::string m_appVersion;
                     bool m_appVersionHasBeenSet;
 
                     /**
-                     * Risks.
+                     * Risk point
                      */
                     std::string m_vULURL;
                     bool m_vULURLHasBeenSet;
@@ -1072,7 +1072,7 @@ namespace TencentCloud
                     bool m_cVSSHasBeenSet;
 
                     /**
-                     * Frontend index id.
+                     * Frontend index id
                      */
                     std::string m_index;
                     bool m_indexHasBeenSet;
@@ -1096,25 +1096,25 @@ namespace TencentCloud
                     bool m_taskIdHasBeenSet;
 
                     /**
-                     * Vulnerability Tag.
+                     * Vulnerability tag
                      */
                     std::vector<std::string> m_vulTag;
                     bool m_vulTagHasBeenSet;
 
                     /**
-                     * Vulnerability disclosure time.
+                     * Vulnerability disclosure time
                      */
                     std::string m_disclosureTime;
                     bool m_disclosureTimeHasBeenSet;
 
                     /**
-                     * Attack intensity.
+                     * Attack level
                      */
                     uint64_t m_attackHeat;
                     bool m_attackHeatHasBeenSet;
 
                     /**
-                     * Whether the vulnerability is mandatory. 1 for yes, 0 for no.
+                     * Whether vulnerability 1 is mandatory. 0 indicates false.
                      */
                     int64_t m_isSuggest;
                     bool m_isSuggestHasBeenSet;
@@ -1126,31 +1126,31 @@ namespace TencentCloud
                     bool m_handleTaskIdHasBeenSet;
 
                     /**
-                     * Engine source.
+                     * Engine source
                      */
                     std::string m_engineSource;
                     bool m_engineSourceHasBeenSet;
 
                     /**
-                     * New vulnerability risk id (same as RiskId in the network-wide vulnerabilities table).
+                     * New vulnerability risk id (same as RiskId in the network-wide vulnerability table)
                      */
                     std::string m_vulRiskId;
                     bool m_vulRiskIdHasBeenSet;
 
                     /**
-                     * New version vulnerability id.
+                     * Vulnerability id of the new version
                      */
                     std::string m_tvdID;
                     bool m_tvdIDHasBeenSet;
 
                     /**
-                     * Is it possible to perform a one-click physical examination, 1 - yes, 0 - not allowed.
+                     * Whether to perform one-click physical examination. 1: yes, 0: no.
                      */
                     uint64_t m_isOneClick;
                     bool m_isOneClickHasBeenSet;
 
                     /**
-                     * Whether to perform a POC scan. valid values: 0 (not a POC), 1 (POC).
+                     * Whether it is a POC scan. 0: non-POC; 1: POC
                      */
                     uint64_t m_isPOC;
                     bool m_isPOCHasBeenSet;

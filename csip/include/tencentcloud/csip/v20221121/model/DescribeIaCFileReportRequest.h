@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Asset ID</p>
-                     * @return AssetId <p>Asset ID</p>
+                     * 获取<p>Asset ID.</p>
+                     * @return AssetId <p>Asset ID.</p>
                      * 
                      */
                     uint64_t GetAssetId() const;
 
                     /**
-                     * 设置<p>Asset ID</p>
-                     * @param _assetId <p>Asset ID</p>
+                     * 设置<p>Asset ID.</p>
+                     * @param _assetId <p>Asset ID.</p>
                      * 
                      */
                     void SetAssetId(const uint64_t& _assetId);
@@ -87,7 +87,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Asset ID</p>
+                     * <p>Asset ID.</p>
                      */
                     uint64_t m_assetId;
                     bool m_assetIdHasBeenSet;

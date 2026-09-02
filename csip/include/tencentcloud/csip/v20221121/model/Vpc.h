@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * List of VPCs
+                * VPC List Data
                 */
                 class Vpc : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Subnet (32-bit mask)
-                     * @return Subnet Subnet (32-bit mask)
+                     * 获取Subnet (supports only 32-bit)
+                     * @return Subnet Subnet (supports only 32-bit)
                      * 
                      */
                     uint64_t GetSubnet() const;
 
                     /**
-                     * 设置Subnet (32-bit mask)
-                     * @param _subnet Subnet (32-bit mask)
+                     * 设置Subnet (supports only 32-bit)
+                     * @param _subnet Subnet (supports only 32-bit)
                      * 
                      */
                     void SetSubnet(const uint64_t& _subnet);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool SubnetHasBeenSet() const;
 
                     /**
-                     * 获取Connected VPC (32-bit mask)
-                     * @return ConnectedVpc Connected VPC (32-bit mask)
+                     * 获取Interconnected VPC (supports only 32-bit)
+                     * @return ConnectedVpc Interconnected VPC (supports only 32-bit)
                      * 
                      */
                     uint64_t GetConnectedVpc() const;
 
                     /**
-                     * 设置Connected VPC (32-bit mask)
-                     * @param _connectedVpc Connected VPC (32-bit mask)
+                     * 设置Interconnected VPC (supports only 32-bit)
+                     * @param _connectedVpc Interconnected VPC (supports only 32-bit)
                      * 
                      */
                     void SetConnectedVpc(const uint64_t& _connectedVpc);
@@ -111,15 +111,15 @@ namespace TencentCloud
                     bool AssetIdHasBeenSet() const;
 
                     /**
-                     * 获取Region
-                     * @return Region Region
+                     * 获取region
+                     * @return Region region
                      * 
                      */
                     std::string GetRegion() const;
 
                     /**
-                     * 设置Region
-                     * @param _region Region
+                     * 设置region
+                     * @param _region region
                      * 
                      */
                     void SetRegion(const std::string& _region);
@@ -132,15 +132,15 @@ namespace TencentCloud
                     bool RegionHasBeenSet() const;
 
                     /**
-                     * 获取CVM (only 32-bit)
-                     * @return CVM CVM (only 32-bit)
+                     * 获取CVM (supports only 32-bit)
+                     * @return CVM CVM (supports only 32-bit)
                      * 
                      */
                     uint64_t GetCVM() const;
 
                     /**
-                     * 设置CVM (only 32-bit)
-                     * @param _cVM CVM (only 32-bit)
+                     * 设置CVM (supports only 32-bit)
+                     * @param _cVM CVM (supports only 32-bit)
                      * 
                      */
                     void SetCVM(const uint64_t& _cVM);
@@ -216,15 +216,15 @@ namespace TencentCloud
                     bool AssetNameHasBeenSet() const;
 
                     /**
-                     * 获取CIDR block
-                     * @return CIDR CIDR block
+                     * 获取CIDR Network Segmentation
+                     * @return CIDR CIDR Network Segmentation
                      * 
                      */
                     std::string GetCIDR() const;
 
                     /**
-                     * 设置CIDR block
-                     * @param _cIDR CIDR block
+                     * 设置CIDR Network Segmentation
+                     * @param _cIDR CIDR Network Segmentation
                      * 
                      */
                     void SetCIDR(const std::string& _cIDR);
@@ -279,15 +279,15 @@ namespace TencentCloud
                     bool AppIdHasBeenSet() const;
 
                     /**
-                     * 获取UIN
-                     * @return Uin UIN
+                     * 获取uin
+                     * @return Uin uin
                      * 
                      */
                     std::string GetUin() const;
 
                     /**
-                     * 设置UIN
-                     * @param _uin UIN
+                     * 设置uin
+                     * @param _uin uin
                      * 
                      */
                     void SetUin(const std::string& _uin);
@@ -300,15 +300,15 @@ namespace TencentCloud
                     bool UinHasBeenSet() const;
 
                     /**
-                     * 获取User name
-                     * @return Nick User name
+                     * 获取Nickname
+                     * @return Nick Nickname
                      * 
                      */
                     std::string GetNick() const;
 
                     /**
-                     * 设置User name
-                     * @param _nick User name
+                     * 设置Nickname
+                     * @param _nick Nickname
                      * 
                      */
                     void SetNick(const std::string& _nick);
@@ -365,13 +365,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Subnet (32-bit mask)
+                     * Subnet (supports only 32-bit)
                      */
                     uint64_t m_subnet;
                     bool m_subnetHasBeenSet;
 
                     /**
-                     * Connected VPC (32-bit mask)
+                     * Interconnected VPC (supports only 32-bit)
                      */
                     uint64_t m_connectedVpc;
                     bool m_connectedVpcHasBeenSet;
@@ -383,13 +383,13 @@ namespace TencentCloud
                     bool m_assetIdHasBeenSet;
 
                     /**
-                     * Region
+                     * region
                      */
                     std::string m_region;
                     bool m_regionHasBeenSet;
 
                     /**
-                     * CVM (only 32-bit)
+                     * CVM (supports only 32-bit)
                      */
                     uint64_t m_cVM;
                     bool m_cVMHasBeenSet;
@@ -413,7 +413,7 @@ namespace TencentCloud
                     bool m_assetNameHasBeenSet;
 
                     /**
-                     * CIDR block
+                     * CIDR Network Segmentation
                      */
                     std::string m_cIDR;
                     bool m_cIDRHasBeenSet;
@@ -431,13 +431,13 @@ namespace TencentCloud
                     bool m_appIdHasBeenSet;
 
                     /**
-                     * UIN
+                     * uin
                      */
                     std::string m_uin;
                     bool m_uinHasBeenSet;
 
                     /**
-                     * User name
+                     * Nickname
                      */
                     std::string m_nick;
                     bool m_nickHasBeenSet;

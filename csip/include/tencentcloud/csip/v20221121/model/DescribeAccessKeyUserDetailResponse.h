@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Account detailed information.
-                     * @return User Account detailed information.
+                     * 获取Account details
+                     * @return User Account details
                      * 
                      */
                     AccessKeyUser GetUser() const;
@@ -61,7 +61,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Account detailed information.
+                     * Account details
                      */
                     AccessKeyUser m_user;
                     bool m_userHasBeenSet;

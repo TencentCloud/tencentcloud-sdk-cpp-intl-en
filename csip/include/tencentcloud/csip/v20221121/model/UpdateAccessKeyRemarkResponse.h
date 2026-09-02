@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取0: success; 1: failure.
-                     * @return Code 0: success; 1: failure.
+                     * 获取0: Success; 1: Failure
+                     * @return Code 0: Success; 1: Failure
                      * 
                      */
                     int64_t GetCode() const;
@@ -74,7 +74,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 0: success; 1: failure.
+                     * 0: Success; 1: Failure
                      */
                     int64_t m_code;
                     bool m_codeHasBeenSet;

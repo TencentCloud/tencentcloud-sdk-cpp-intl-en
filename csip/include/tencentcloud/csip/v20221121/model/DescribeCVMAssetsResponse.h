@@ -201,8 +201,8 @@ namespace TencentCloud
                     bool OsListHasBeenSet() const;
 
                     /**
-                     * 获取Mapping of asset type and instance type.
-                     * @return AssetMapInstanceTypeList Mapping of asset type and instance type.
+                     * 获取Mapping between asset types and instance types
+                     * @return AssetMapInstanceTypeList Mapping between asset types and instance types
                      * 
                      */
                     std::vector<AssetInstanceTypeMap> GetAssetMapInstanceTypeList() const;
@@ -215,8 +215,8 @@ namespace TencentCloud
                     bool AssetMapInstanceTypeListHasBeenSet() const;
 
                     /**
-                     * 获取Public network private network enumeration.
-                     * @return PublicPrivateAttr Public network private network enumeration.
+                     * 获取Public/private network enumeration
+                     * @return PublicPrivateAttr Public/private network enumeration
                      * 
                      */
                     std::vector<FilterDataObject> GetPublicPrivateAttr() const;
@@ -229,8 +229,8 @@ namespace TencentCloud
                     bool PublicPrivateAttrHasBeenSet() const;
 
                     /**
-                     * 获取Host protection status.
-                     * @return ProtectStatusList Host protection status.
+                     * 获取Host protection status
+                     * @return ProtectStatusList Host protection status
                      * 
                      */
                     std::vector<FilterDataObject> GetProtectStatusList() const;
@@ -311,19 +311,19 @@ namespace TencentCloud
                     bool m_osListHasBeenSet;
 
                     /**
-                     * Mapping of asset type and instance type.
+                     * Mapping between asset types and instance types
                      */
                     std::vector<AssetInstanceTypeMap> m_assetMapInstanceTypeList;
                     bool m_assetMapInstanceTypeListHasBeenSet;
 
                     /**
-                     * Public network private network enumeration.
+                     * Public/private network enumeration
                      */
                     std::vector<FilterDataObject> m_publicPrivateAttr;
                     bool m_publicPrivateAttrHasBeenSet;
 
                     /**
-                     * Host protection status.
+                     * Host protection status
                      */
                     std::vector<FilterDataObject> m_protectStatusList;
                     bool m_protectStatusListHasBeenSet;

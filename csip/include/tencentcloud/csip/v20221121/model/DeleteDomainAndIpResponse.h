@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Number of deleted assets
-                     * @return Data Number of deleted assets
+                     * 获取Number of Deleted Assets
+                     * @return Data Number of Deleted Assets
                      * 
                      */
                     int64_t GetData() const;
@@ -60,7 +60,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Number of deleted assets
+                     * Number of Deleted Assets
                      */
                     int64_t m_data;
                     bool m_dataHasBeenSet;

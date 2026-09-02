@@ -47,8 +47,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Security product support.
-                     * @return ServiceSupport Security product support.
+                     * 获取Security product support status
+                     * @return ServiceSupport Security product support status
                      * 
                      */
                     std::vector<ServiceSupport> GetServiceSupport() const;
@@ -61,8 +61,8 @@ namespace TencentCloud
                     bool ServiceSupportHasBeenSet() const;
 
                     /**
-                     * 获取Vulnerability trends.
-                     * @return VulTrend Vulnerability trends.
+                     * 获取Vulnerability trends
+                     * @return VulTrend Vulnerability trends
                      * 
                      */
                     std::vector<VulTrend> GetVulTrend() const;
@@ -75,8 +75,8 @@ namespace TencentCloud
                     bool VulTrendHasBeenSet() const;
 
                     /**
-                     * 获取Vulnerability supplementary information.
-                     * @return VulData Vulnerability supplementary information.
+                     * 获取Vulnerability supplementary information
+                     * @return VulData Vulnerability supplementary information
                      * 
                      */
                     VULRiskInfo GetVulData() const;
@@ -89,8 +89,8 @@ namespace TencentCloud
                     bool VulDataHasBeenSet() const;
 
                     /**
-                     * 获取Assistant q&a id.
-                     * @return QuestionId Assistant q&a id.
+                     * 获取Q&A id of the assistant
+                     * @return QuestionId Q&A id of the assistant
                      * 
                      */
                     std::string GetQuestionId() const;
@@ -119,25 +119,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Security product support.
+                     * Security product support status
                      */
                     std::vector<ServiceSupport> m_serviceSupport;
                     bool m_serviceSupportHasBeenSet;
 
                     /**
-                     * Vulnerability trends.
+                     * Vulnerability trends
                      */
                     std::vector<VulTrend> m_vulTrend;
                     bool m_vulTrendHasBeenSet;
 
                     /**
-                     * Vulnerability supplementary information.
+                     * Vulnerability supplementary information
                      */
                     VULRiskInfo m_vulData;
                     bool m_vulDataHasBeenSet;
 
                     /**
-                     * Assistant q&a id.
+                     * Q&A id of the assistant
                      */
                     std::string m_questionId;
                     bool m_questionIdHasBeenSet;

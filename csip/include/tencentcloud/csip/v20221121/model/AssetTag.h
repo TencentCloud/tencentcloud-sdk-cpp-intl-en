@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Asset tags
+                * Security Center Asset Tag
                 */
                 class AssetTag : public AbstractModel
                 {

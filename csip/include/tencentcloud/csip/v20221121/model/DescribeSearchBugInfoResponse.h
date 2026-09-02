@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool DataHasBeenSet() const;
 
                     /**
-                     * 获取Status code. Valid values: 0: successful; others: failed.
-                     * @return ReturnCode Status code. Valid values: 0: successful; others: failed.
+                     * 获取Status value. 0: query successful. Non-zero: query failed.
+                     * @return ReturnCode Status value. 0: query successful. Non-zero: query failed.
                      * 
                      */
                     int64_t GetReturnCode() const;
@@ -73,8 +73,8 @@ namespace TencentCloud
                     bool ReturnCodeHasBeenSet() const;
 
                     /**
-                     * 获取Status message. Valid values: success: successful query; fail: failed query.
-                     * @return ReturnMsg Status message. Valid values: success: successful query; fail: failed query.
+                     * 获取Status information. success: query succeeded. fail: query failed.
+                     * @return ReturnMsg Status information. success: query succeeded. fail: query failed.
                      * 
                      */
                     std::string GetReturnMsg() const;
@@ -95,13 +95,13 @@ namespace TencentCloud
                     bool m_dataHasBeenSet;
 
                     /**
-                     * Status code. Valid values: 0: successful; others: failed.
+                     * Status value. 0: query successful. Non-zero: query failed.
                      */
                     int64_t m_returnCode;
                     bool m_returnCodeHasBeenSet;
 
                     /**
-                     * Status message. Valid values: success: successful query; fail: failed query.
+                     * Status information. success: query succeeded. fail: query failed.
                      */
                     std::string m_returnMsg;
                     bool m_returnMsgHasBeenSet;

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Exposed assets.
+                * Exposed assets
                 */
                 class ExposesItem : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Cloud vendor</p>
-                     * @return Provider <p>Cloud vendor</p>
+                     * 获取<p>Cloud service provider.</p>
+                     * @return Provider <p>Cloud service provider.</p>
                      * 
                      */
                     std::string GetProvider() const;
 
                     /**
-                     * 设置<p>Cloud vendor</p>
-                     * @param _provider <p>Cloud vendor</p>
+                     * 设置<p>Cloud service provider.</p>
+                     * @param _provider <p>Cloud service provider.</p>
                      * 
                      */
                     void SetProvider(const std::string& _provider);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool CloudAccountNameHasBeenSet() const;
 
                     /**
-                     * 获取<p>Cloud Account</p>
-                     * @return CloudAccountId <p>Cloud Account</p>
+                     * 获取<p>Cloud account</p>
+                     * @return CloudAccountId <p>Cloud account</p>
                      * 
                      */
                     std::string GetCloudAccountId() const;
 
                     /**
-                     * 设置<p>Cloud Account</p>
-                     * @param _cloudAccountId <p>Cloud Account</p>
+                     * 设置<p>Cloud account</p>
+                     * @param _cloudAccountId <p>Cloud account</p>
                      * 
                      */
                     void SetCloudAccountId(const std::string& _cloudAccountId);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool CloudAccountIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>Domain name</p>
-                     * @return Domain <p>Domain name</p>
+                     * 获取<p>Domain Name.</p>
+                     * @return Domain <p>Domain Name.</p>
                      * 
                      */
                     std::string GetDomain() const;
 
                     /**
-                     * 设置<p>Domain name</p>
-                     * @param _domain <p>Domain name</p>
+                     * 设置<p>Domain Name.</p>
+                     * @param _domain <p>Domain Name.</p>
                      * 
                      */
                     void SetDomain(const std::string& _domain);
@@ -257,15 +257,15 @@ namespace TencentCloud
                     bool AclListHasBeenSet() const;
 
                     /**
-                     * 获取<p>Asset ID</p>
-                     * @return AssetId <p>Asset ID</p>
+                     * 获取<p>Asset ID.</p>
+                     * @return AssetId <p>Asset ID.</p>
                      * 
                      */
                     std::string GetAssetId() const;
 
                     /**
-                     * 设置<p>Asset ID</p>
-                     * @param _assetId <p>Asset ID</p>
+                     * 设置<p>Asset ID.</p>
+                     * @param _assetId <p>Asset ID.</p>
                      * 
                      */
                     void SetAssetId(const std::string& _assetId);
@@ -278,15 +278,15 @@ namespace TencentCloud
                     bool AssetIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>Instance name</p>
-                     * @return InstanceName <p>Instance name</p>
+                     * 获取<p>Instance name.</p>
+                     * @return InstanceName <p>Instance name.</p>
                      * 
                      */
                     std::string GetInstanceName() const;
 
                     /**
-                     * 设置<p>Instance name</p>
-                     * @param _instanceName <p>Instance name</p>
+                     * 设置<p>Instance name.</p>
+                     * @param _instanceName <p>Instance name.</p>
                      * 
                      */
                     void SetInstanceName(const std::string& _instanceName);
@@ -404,15 +404,15 @@ namespace TencentCloud
                     bool RiskWebAppCountHasBeenSet() const;
 
                     /**
-                     * 获取<p>Number of weak passwords.</p>
-                     * @return WeakPasswordCount <p>Number of weak passwords.</p>
+                     * 获取<p>Number of weak passwords</p>
+                     * @return WeakPasswordCount <p>Number of weak passwords</p>
                      * 
                      */
                     uint64_t GetWeakPasswordCount() const;
 
                     /**
-                     * 设置<p>Number of weak passwords.</p>
-                     * @param _weakPasswordCount <p>Number of weak passwords.</p>
+                     * 设置<p>Number of weak passwords</p>
+                     * @param _weakPasswordCount <p>Number of weak passwords</p>
                      * 
                      */
                     void SetWeakPasswordCount(const uint64_t& _weakPasswordCount);
@@ -425,15 +425,15 @@ namespace TencentCloud
                     bool WeakPasswordCountHasBeenSet() const;
 
                     /**
-                     * 获取<p>Vulnerability count</p>
-                     * @return VulCount <p>Vulnerability count</p>
+                     * 获取<p>Number of vulnerabilities</p>
+                     * @return VulCount <p>Number of vulnerabilities</p>
                      * 
                      */
                     uint64_t GetVulCount() const;
 
                     /**
-                     * 设置<p>Vulnerability count</p>
-                     * @param _vulCount <p>Vulnerability count</p>
+                     * 设置<p>Number of vulnerabilities</p>
+                     * @param _vulCount <p>Number of vulnerabilities</p>
                      * 
                      */
                     void SetVulCount(const uint64_t& _vulCount);
@@ -740,15 +740,15 @@ namespace TencentCloud
                     bool TagHasBeenSet() const;
 
                     /**
-                     * 获取<p>Remark</p>
-                     * @return Comment <p>Remark</p>
+                     * 获取<p>Remarks.</p>
+                     * @return Comment <p>Remarks.</p>
                      * 
                      */
                     std::string GetComment() const;
 
                     /**
-                     * 设置<p>Remark</p>
-                     * @param _comment <p>Remark</p>
+                     * 设置<p>Remarks.</p>
+                     * @param _comment <p>Remarks.</p>
                      * 
                      */
                     void SetComment(const std::string& _comment);
@@ -761,15 +761,15 @@ namespace TencentCloud
                     bool CommentHasBeenSet() const;
 
                     /**
-                     * 获取<p>Number of risks to be governed</p>
-                     * @return ToGovernedRiskCount <p>Number of risks to be governed</p>
+                     * 获取<p>Number of risks pending governance</p>
+                     * @return ToGovernedRiskCount <p>Number of risks pending governance</p>
                      * 
                      */
                     uint64_t GetToGovernedRiskCount() const;
 
                     /**
-                     * 设置<p>Number of risks to be governed</p>
-                     * @param _toGovernedRiskCount <p>Number of risks to be governed</p>
+                     * 设置<p>Number of risks pending governance</p>
+                     * @param _toGovernedRiskCount <p>Number of risks pending governance</p>
                      * 
                      */
                     void SetToGovernedRiskCount(const uint64_t& _toGovernedRiskCount);
@@ -782,15 +782,15 @@ namespace TencentCloud
                     bool ToGovernedRiskCountHasBeenSet() const;
 
                     /**
-                     * 获取<p>Risk content to be governed</p>
-                     * @return ToGovernedRiskContent <p>Risk content to be governed</p>
+                     * 获取<p>Risk content pending governance</p>
+                     * @return ToGovernedRiskContent <p>Risk content pending governance</p>
                      * 
                      */
                     std::string GetToGovernedRiskContent() const;
 
                     /**
-                     * 设置<p>Risk content to be governed</p>
-                     * @param _toGovernedRiskContent <p>Risk content to be governed</p>
+                     * 设置<p>Risk content pending governance</p>
+                     * @param _toGovernedRiskContent <p>Risk content pending governance</p>
                      * 
                      */
                     void SetToGovernedRiskContent(const std::string& _toGovernedRiskContent);
@@ -803,15 +803,15 @@ namespace TencentCloud
                     bool ToGovernedRiskContentHasBeenSet() const;
 
                     /**
-                     * 获取<p>Type icon of asset</p>
-                     * @return AssetTypeIconURL <p>Type icon of asset</p>
+                     * 获取<p>Asset type icon</p>
+                     * @return AssetTypeIconURL <p>Asset type icon</p>
                      * 
                      */
                     std::string GetAssetTypeIconURL() const;
 
                     /**
-                     * 设置<p>Type icon of asset</p>
-                     * @param _assetTypeIconURL <p>Type icon of asset</p>
+                     * 设置<p>Asset type icon</p>
+                     * @param _assetTypeIconURL <p>Asset type icon</p>
                      * 
                      */
                     void SetAssetTypeIconURL(const std::string& _assetTypeIconURL);
@@ -824,15 +824,15 @@ namespace TencentCloud
                     bool AssetTypeIconURLHasBeenSet() const;
 
                     /**
-                     * 获取<p>Asset type 3D icon</p>
-                     * @return AssetTypeIconSolidURL <p>Asset type 3D icon</p>
+                     * 获取<p>3D icon of asset type</p>
+                     * @return AssetTypeIconSolidURL <p>3D icon of asset type</p>
                      * 
                      */
                     std::string GetAssetTypeIconSolidURL() const;
 
                     /**
-                     * 设置<p>Asset type 3D icon</p>
-                     * @param _assetTypeIconSolidURL <p>Asset type 3D icon</p>
+                     * 设置<p>3D icon of asset type</p>
+                     * @param _assetTypeIconSolidURL <p>3D icon of asset type</p>
                      * 
                      */
                     void SetAssetTypeIconSolidURL(const std::string& _assetTypeIconSolidURL);
@@ -847,7 +847,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Cloud vendor</p>
+                     * <p>Cloud service provider.</p>
                      */
                     std::string m_provider;
                     bool m_providerHasBeenSet;
@@ -859,13 +859,13 @@ namespace TencentCloud
                     bool m_cloudAccountNameHasBeenSet;
 
                     /**
-                     * <p>Cloud Account</p>
+                     * <p>Cloud account</p>
                      */
                     std::string m_cloudAccountId;
                     bool m_cloudAccountIdHasBeenSet;
 
                     /**
-                     * <p>Domain name</p>
+                     * <p>Domain Name.</p>
                      */
                     std::string m_domain;
                     bool m_domainHasBeenSet;
@@ -907,13 +907,13 @@ namespace TencentCloud
                     bool m_aclListHasBeenSet;
 
                     /**
-                     * <p>Asset ID</p>
+                     * <p>Asset ID.</p>
                      */
                     std::string m_assetId;
                     bool m_assetIdHasBeenSet;
 
                     /**
-                     * <p>Instance name</p>
+                     * <p>Instance name.</p>
                      */
                     std::string m_instanceName;
                     bool m_instanceNameHasBeenSet;
@@ -949,13 +949,13 @@ namespace TencentCloud
                     bool m_riskWebAppCountHasBeenSet;
 
                     /**
-                     * <p>Number of weak passwords.</p>
+                     * <p>Number of weak passwords</p>
                      */
                     uint64_t m_weakPasswordCount;
                     bool m_weakPasswordCountHasBeenSet;
 
                     /**
-                     * <p>Vulnerability count</p>
+                     * <p>Number of vulnerabilities</p>
                      */
                     uint64_t m_vulCount;
                     bool m_vulCountHasBeenSet;
@@ -1045,31 +1045,31 @@ namespace TencentCloud
                     bool m_tagHasBeenSet;
 
                     /**
-                     * <p>Remark</p>
+                     * <p>Remarks.</p>
                      */
                     std::string m_comment;
                     bool m_commentHasBeenSet;
 
                     /**
-                     * <p>Number of risks to be governed</p>
+                     * <p>Number of risks pending governance</p>
                      */
                     uint64_t m_toGovernedRiskCount;
                     bool m_toGovernedRiskCountHasBeenSet;
 
                     /**
-                     * <p>Risk content to be governed</p>
+                     * <p>Risk content pending governance</p>
                      */
                     std::string m_toGovernedRiskContent;
                     bool m_toGovernedRiskContentHasBeenSet;
 
                     /**
-                     * <p>Type icon of asset</p>
+                     * <p>Asset type icon</p>
                      */
                     std::string m_assetTypeIconURL;
                     bool m_assetTypeIconURLHasBeenSet;
 
                     /**
-                     * <p>Asset type 3D icon</p>
+                     * <p>3D icon of asset type</p>
                      */
                     std::string m_assetTypeIconSolidURL;
                     bool m_assetTypeIconSolidURLHasBeenSet;

@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool MemberIdHasBeenSet() const;
 
                     /**
-                     * 获取Access key ID.
-                     * @return AccessKeyID Access key ID.
+                     * 获取Access key ID
+                     * @return AccessKeyID Access key ID
                      * 
                      */
                     uint64_t GetAccessKeyID() const;
 
                     /**
-                     * 设置Access key ID.
-                     * @param _accessKeyID Access key ID.
+                     * 设置Access key ID
+                     * @param _accessKeyID Access key ID
                      * 
                      */
                     void SetAccessKeyID(const uint64_t& _accessKeyID);
@@ -107,15 +107,15 @@ namespace TencentCloud
                     bool AccessKeyIDHasBeenSet() const;
 
                     /**
-                     * 获取ID of the source IP.
-                     * @return SourceIPID ID of the source IP.
+                     * 获取ID of the source IP
+                     * @return SourceIPID ID of the source IP
                      * 
                      */
                     uint64_t GetSourceIPID() const;
 
                     /**
-                     * 设置ID of the source IP.
-                     * @param _sourceIPID ID of the source IP.
+                     * 设置ID of the source IP
+                     * @param _sourceIPID ID of the source IP
                      * 
                      */
                     void SetSourceIPID(const uint64_t& _sourceIPID);
@@ -163,13 +163,13 @@ namespace TencentCloud
                     bool m_memberIdHasBeenSet;
 
                     /**
-                     * Access key ID.
+                     * Access key ID
                      */
                     uint64_t m_accessKeyID;
                     bool m_accessKeyIDHasBeenSet;
 
                     /**
-                     * ID of the source IP.
+                     * ID of the source IP
                      */
                     uint64_t m_sourceIPID;
                     bool m_sourceIPIDHasBeenSet;

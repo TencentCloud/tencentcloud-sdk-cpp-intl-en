@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Delete ID list</p>
-                     * @return Id <p>Delete ID list</p>
+                     * 获取<p>List of deleted IDs</p>
+                     * @return Id <p>List of deleted IDs</p>
                      * 
                      */
                     std::vector<uint64_t> GetId() const;
 
                     /**
-                     * 设置<p>Delete ID list</p>
-                     * @param _id <p>Delete ID list</p>
+                     * 设置<p>List of deleted IDs</p>
+                     * @param _id <p>List of deleted IDs</p>
                      * 
                      */
                     void SetId(const std::vector<uint64_t>& _id);
@@ -66,7 +66,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Delete ID list</p>
+                     * <p>List of deleted IDs</p>
                      */
                     std::vector<uint64_t> m_id;
                     bool m_idHasBeenSet;

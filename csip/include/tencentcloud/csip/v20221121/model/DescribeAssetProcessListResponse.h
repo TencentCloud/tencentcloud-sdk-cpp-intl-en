@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Process quantity.
-                     * @return TotalCount Process quantity.
+                     * 获取Process quantity
+                     * @return TotalCount Process quantity
                      * 
                      */
                     int64_t GetTotalCount() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取Process list.
-                     * @return AssetProcessList Process list.
+                     * 获取Process list
+                     * @return AssetProcessList Process list
                      * 
                      */
                     std::vector<AssetProcessItem> GetAssetProcessList() const;
@@ -75,13 +75,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Process quantity.
+                     * Process quantity
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * Process list.
+                     * Process list
                      */
                     std::vector<AssetProcessItem> m_assetProcessList;
                     bool m_assetProcessListHasBeenSet;

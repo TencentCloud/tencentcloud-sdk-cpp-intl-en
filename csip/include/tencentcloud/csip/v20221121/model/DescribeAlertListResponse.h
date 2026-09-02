@@ -46,8 +46,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取All alarms list
-                     * @return AlertList All alarms list
+                     * 获取All Alarm List
+                     * @return AlertList All Alarm List
                      * 
                      */
                     std::vector<AlertInfo> GetAlertList() const;
@@ -60,8 +60,8 @@ namespace TencentCloud
                     bool AlertListHasBeenSet() const;
 
                     /**
-                     * 获取Number of Major Categories of Alarm
-                     * @return AlertTypeCount Number of Major Categories of Alarm
+                     * 获取Number of major alarm categories
+                     * @return AlertTypeCount Number of major alarm categories
                      * 
                      */
                     std::vector<TagCount> GetAlertTypeCount() const;
@@ -102,8 +102,8 @@ namespace TencentCloud
                     bool ReturnCodeHasBeenSet() const;
 
                     /**
-                     * 获取Return status
-                     * @return ReturnMsg Return status
+                     * 获取Returned status information.
+                     * @return ReturnMsg Returned status information.
                      * 
                      */
                     std::string GetReturnMsg() const;
@@ -118,13 +118,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * All alarms list
+                     * All Alarm List
                      */
                     std::vector<AlertInfo> m_alertList;
                     bool m_alertListHasBeenSet;
 
                     /**
-                     * Number of Major Categories of Alarm
+                     * Number of major alarm categories
                      */
                     std::vector<TagCount> m_alertTypeCount;
                     bool m_alertTypeCountHasBeenSet;
@@ -142,7 +142,7 @@ namespace TencentCloud
                     bool m_returnCodeHasBeenSet;
 
                     /**
-                     * Return status
+                     * Returned status information.
                      */
                     std::string m_returnMsg;
                     bool m_returnMsgHasBeenSet;

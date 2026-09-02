@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * CSPM standard
+                * CSPM specification
                 */
                 class StandardItem : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Specification ID
-                     * @return ID Specification ID
+                     * 获取Regulation ID
+                     * @return ID Regulation ID
                      * 
                      */
                     uint64_t GetID() const;
 
                     /**
-                     * 设置Specification ID
-                     * @param _iD Specification ID
+                     * 设置Regulation ID
+                     * @param _iD Regulation ID
                      * 
                      */
                     void SetID(const uint64_t& _iD);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool IDHasBeenSet() const;
 
                     /**
-                     * 获取Standard name
-                     * @return Name Standard name
+                     * 获取Specification name
+                     * @return Name Specification name
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Standard name
-                     * @param _name Standard name
+                     * 设置Specification name
+                     * @param _name Specification name
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Specification ID
+                     * Regulation ID
                      */
                     uint64_t m_iD;
                     bool m_iDHasBeenSet;
 
                     /**
-                     * Standard name
+                     * Specification name
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;

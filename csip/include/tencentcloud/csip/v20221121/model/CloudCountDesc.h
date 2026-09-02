@@ -47,18 +47,18 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取0 means Tencent Cloud
+                     * 获取0 indicates Tencent Cloud
 1 indicates AWS
-                     * @return CloudType 0 means Tencent Cloud
+                     * @return CloudType 0 indicates Tencent Cloud
 1 indicates AWS
                      * 
                      */
                     int64_t GetCloudType() const;
 
                     /**
-                     * 设置0 means Tencent Cloud
+                     * 设置0 indicates Tencent Cloud
 1 indicates AWS
-                     * @param _cloudType 0 means Tencent Cloud
+                     * @param _cloudType 0 indicates Tencent Cloud
 1 indicates AWS
                      * 
                      */
@@ -116,7 +116,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 0 means Tencent Cloud
+                     * 0 indicates Tencent Cloud
 1 indicates AWS
                      */
                     int64_t m_cloudType;

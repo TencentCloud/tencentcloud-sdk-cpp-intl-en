@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Report item
+                * Report Item Key
                 */
                 class ReportItemKey : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取List of report IDs.
-                     * @return TaskLogList List of report IDs.
+                     * 获取Log ID List
+                     * @return TaskLogList Log ID List
                      * 
                      */
                     std::vector<std::string> GetTaskLogList() const;
 
                     /**
-                     * 设置List of report IDs.
-                     * @param _taskLogList List of report IDs.
+                     * 设置Log ID List
+                     * @param _taskLogList Log ID List
                      * 
                      */
                     void SetTaskLogList(const std::vector<std::string>& _taskLogList);
@@ -70,7 +70,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * List of report IDs.
+                     * Log ID List
                      */
                     std::vector<std::string> m_taskLogList;
                     bool m_taskLogListHasBeenSet;

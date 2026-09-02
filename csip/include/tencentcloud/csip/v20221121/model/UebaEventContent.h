@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * User behavior analysis Event structure
+                * Event structure of user behavior analysis
                 */
                 class UebaEventContent : public AbstractModel
                 {
@@ -51,10 +51,10 @@ namespace TencentCloud
                     /**
                      * 获取Event type
 1: Statement retrieval
-2: Filter search
+2: Filter retrieval
                      * @return EventType Event type
 1: Statement retrieval
-2: Filter search
+2: Filter retrieval
                      * 
                      */
                     int64_t GetEventType() const;
@@ -62,10 +62,10 @@ namespace TencentCloud
                     /**
                      * 设置Event type
 1: Statement retrieval
-2: Filter search
+2: Filter retrieval
                      * @param _eventType Event type
 1: Statement retrieval
-2: Filter search
+2: Filter retrieval
                      * 
                      */
                     void SetEventType(const int64_t& _eventType);
@@ -78,15 +78,15 @@ namespace TencentCloud
                     bool EventTypeHasBeenSet() const;
 
                     /**
-                     * 获取Statement retrieval content
-                     * @return Content Statement retrieval content
+                     * 获取Content for statement retrieval
+                     * @return Content Content for statement retrieval
                      * 
                      */
                     std::string GetContent() const;
 
                     /**
-                     * 设置Statement retrieval content
-                     * @param _content Statement retrieval content
+                     * 设置Content for statement retrieval
+                     * @param _content Content for statement retrieval
                      * 
                      */
                     void SetContent(const std::string& _content);
@@ -99,18 +99,18 @@ namespace TencentCloud
                     bool ContentHasBeenSet() const;
 
                     /**
-                     * 获取retrieval condition
+                     * 获取Retrieval criteria
 
-                     * @return Filters retrieval condition
+                     * @return Filters Retrieval criteria
 
                      * 
                      */
                     std::vector<WhereFilter> GetFilters() const;
 
                     /**
-                     * 设置retrieval condition
+                     * 设置Retrieval criteria
 
-                     * @param _filters retrieval condition
+                     * @param _filters Retrieval criteria
 
                      * 
                      */
@@ -149,19 +149,19 @@ namespace TencentCloud
                     /**
                      * Event type
 1: Statement retrieval
-2: Filter search
+2: Filter retrieval
                      */
                     int64_t m_eventType;
                     bool m_eventTypeHasBeenSet;
 
                     /**
-                     * Statement retrieval content
+                     * Content for statement retrieval
                      */
                     std::string m_content;
                     bool m_contentHasBeenSet;
 
                     /**
-                     * retrieval condition
+                     * Retrieval criteria
 
                      */
                     std::vector<WhereFilter> m_filters;

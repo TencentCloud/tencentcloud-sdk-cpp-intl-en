@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Advanced vulnerability scan configuration
+                * Vulnerability Risk Advanced Configuration
                 */
                 class TaskCenterVulRiskInputParam : public AbstractModel
                 {
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool RiskIdHasBeenSet() const;
 
                     /**
-                     * 获取Whether to enable. `0`: no, `1`: yes.
-                     * @return Enable Whether to enable. `0`: no, `1`: yes.
+                     * 获取Whether to enable. 0-Not to Enable; 1-Enable.
+                     * @return Enable Whether to enable. 0-Not to Enable; 1-Enable.
                      * 
                      */
                     int64_t GetEnable() const;
 
                     /**
-                     * 设置Whether to enable. `0`: no, `1`: yes.
-                     * @param _enable Whether to enable. `0`: no, `1`: yes.
+                     * 设置Whether to enable. 0-Not to Enable; 1-Enable.
+                     * @param _enable Whether to enable. 0-Not to Enable; 1-Enable.
                      * 
                      */
                     void SetEnable(const int64_t& _enable);
@@ -97,7 +97,7 @@ namespace TencentCloud
                     bool m_riskIdHasBeenSet;
 
                     /**
-                     * Whether to enable. `0`: no, `1`: yes.
+                     * Whether to enable. 0-Not to Enable; 1-Enable.
                      */
                     int64_t m_enable;
                     bool m_enableHasBeenSet;

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Server tag information
+                * Host Tag Information
                 */
                 class Tags : public AbstractModel
                 {

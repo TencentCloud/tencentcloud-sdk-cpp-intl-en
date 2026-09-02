@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>AppID of the associated tenant for the order</p>
-                     * @return AppID <p>AppID of the associated tenant for the order</p>
+                     * 获取<p>AppID of the associated tenant of the order</p>
+                     * @return AppID <p>AppID of the associated tenant of the order</p>
                      * 
                      */
                     uint64_t GetAppID() const;
@@ -58,8 +58,8 @@ namespace TencentCloud
                     bool AppIDHasBeenSet() const;
 
                     /**
-                     * 获取<p>Order status<br>Enumeration value:<br>0: Not purchased<br>1: Normal<br>2: Isolated<br>6: In trial<br>7: Expired<br>8: Trial expiration</p>
-                     * @return OrderStatus <p>Order status<br>Enumeration value:<br>0: Not purchased<br>1: Normal<br>2: Isolated<br>6: In trial<br>7: Expired<br>8: Trial expiration</p>
+                     * 获取<p>Order status<br>Enumeration values:<br>0: Not purchased<br>1: Normal<br>2: Isolated<br>6: In trial<br>7: Expired<br>8: Trial expiration</p>
+                     * @return OrderStatus <p>Order status<br>Enumeration values:<br>0: Not purchased<br>1: Normal<br>2: Isolated<br>6: In trial<br>7: Expired<br>8: Trial expiration</p>
                      * 
                      */
                     int64_t GetOrderStatus() const;
@@ -86,8 +86,8 @@ namespace TencentCloud
                     bool TotalQuotaHasBeenSet() const;
 
                     /**
-                     * 获取<p>Consumed quota.</p>
-                     * @return UsedCount <p>Consumed quota.</p>
+                     * 获取<p>Consumed quota</p>
+                     * @return UsedCount <p>Consumed quota</p>
                      * 
                      */
                     int64_t GetUsedCount() const;
@@ -100,8 +100,8 @@ namespace TencentCloud
                     bool UsedCountHasBeenSet() const;
 
                     /**
-                     * 获取<p>Payment mode<br>Enumeration value:<br>0: Postpaid<br>1: Prepaid</p>
-                     * @return PayMode <p>Payment mode<br>Enumeration value:<br>0: Postpaid<br>1: Prepaid</p>
+                     * 获取<p>Payment mode<br>Enumeration values:<br>0: postpaid<br>1: prepaid</p>
+                     * @return PayMode <p>Payment mode<br>Enumeration values:<br>0: postpaid<br>1: prepaid</p>
                      * 
                      */
                     int64_t GetPayMode() const;
@@ -114,8 +114,8 @@ namespace TencentCloud
                     bool PayModeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Auto-renewal flag<br>Enumeration value:<br>0: not set<br>1: auto-renewal<br>2: no auto-renewal</p>
-                     * @return AutoRenew <p>Auto-renewal flag<br>Enumeration value:<br>0: not set<br>1: auto-renewal<br>2: no auto-renewal</p>
+                     * 获取<p>Auto-renewal flag<br>Enumeration values:<br>0: Not set<br>1: Auto-renewal<br>2: No auto-renewal</p>
+                     * @return AutoRenew <p>Auto-renewal flag<br>Enumeration values:<br>0: Not set<br>1: Auto-renewal<br>2: No auto-renewal</p>
                      * 
                      */
                     uint64_t GetAutoRenew() const;
@@ -142,8 +142,8 @@ namespace TencentCloud
                     bool ResourceIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>Purchase period</p>
-                     * @return TimeSpan <p>Purchase period</p>
+                     * 获取<p>Purchase period.</p>
+                     * @return TimeSpan <p>Purchase period.</p>
                      * 
                      */
                     int64_t GetTimeSpan() const;
@@ -198,8 +198,8 @@ namespace TencentCloud
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Open beta end time is fixed as 2026-06-30 23:59:59</p>
-                     * @return BetaEndTime <p>Open beta end time is fixed as 2026-06-30 23:59:59</p>
+                     * 获取<p>Open beta end time, fixed as 2026-06-30 23:59:59</p>
+                     * @return BetaEndTime <p>Open beta end time, fixed as 2026-06-30 23:59:59</p>
                      * 
                      */
                     std::string GetBetaEndTime() const;
@@ -256,13 +256,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>AppID of the associated tenant for the order</p>
+                     * <p>AppID of the associated tenant of the order</p>
                      */
                     uint64_t m_appID;
                     bool m_appIDHasBeenSet;
 
                     /**
-                     * <p>Order status<br>Enumeration value:<br>0: Not purchased<br>1: Normal<br>2: Isolated<br>6: In trial<br>7: Expired<br>8: Trial expiration</p>
+                     * <p>Order status<br>Enumeration values:<br>0: Not purchased<br>1: Normal<br>2: Isolated<br>6: In trial<br>7: Expired<br>8: Trial expiration</p>
                      */
                     int64_t m_orderStatus;
                     bool m_orderStatusHasBeenSet;
@@ -274,19 +274,19 @@ namespace TencentCloud
                     bool m_totalQuotaHasBeenSet;
 
                     /**
-                     * <p>Consumed quota.</p>
+                     * <p>Consumed quota</p>
                      */
                     int64_t m_usedCount;
                     bool m_usedCountHasBeenSet;
 
                     /**
-                     * <p>Payment mode<br>Enumeration value:<br>0: Postpaid<br>1: Prepaid</p>
+                     * <p>Payment mode<br>Enumeration values:<br>0: postpaid<br>1: prepaid</p>
                      */
                     int64_t m_payMode;
                     bool m_payModeHasBeenSet;
 
                     /**
-                     * <p>Auto-renewal flag<br>Enumeration value:<br>0: not set<br>1: auto-renewal<br>2: no auto-renewal</p>
+                     * <p>Auto-renewal flag<br>Enumeration values:<br>0: Not set<br>1: Auto-renewal<br>2: No auto-renewal</p>
                      */
                     uint64_t m_autoRenew;
                     bool m_autoRenewHasBeenSet;
@@ -298,7 +298,7 @@ namespace TencentCloud
                     bool m_resourceIdHasBeenSet;
 
                     /**
-                     * <p>Purchase period</p>
+                     * <p>Purchase period.</p>
                      */
                     int64_t m_timeSpan;
                     bool m_timeSpanHasBeenSet;
@@ -322,7 +322,7 @@ namespace TencentCloud
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * <p>Open beta end time is fixed as 2026-06-30 23:59:59</p>
+                     * <p>Open beta end time, fixed as 2026-06-30 23:59:59</p>
                      */
                     std::string m_betaEndTime;
                     bool m_betaEndTimeHasBeenSet;

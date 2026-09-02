@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Gateway asset.
+                * Gateway asset
                 */
                 class GateWayAsset : public AbstractModel
                 {
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool UinHasBeenSet() const;
 
                     /**
-                     * 获取Asset ID.
-                     * @return AssetId Asset ID.
+                     * 获取Asset ID
+                     * @return AssetId Asset ID
                      * 
                      */
                     std::string GetAssetId() const;
 
                     /**
-                     * 设置Asset ID.
-                     * @param _assetId Asset ID.
+                     * 设置Asset ID
+                     * @param _assetId Asset ID
                      * 
                      */
                     void SetAssetId(const std::string& _assetId);
@@ -111,15 +111,15 @@ namespace TencentCloud
                     bool AssetIdHasBeenSet() const;
 
                     /**
-                     * 获取Asset name.
-                     * @return AssetName Asset name.
+                     * 获取Asset name
+                     * @return AssetName Asset name
                      * 
                      */
                     std::string GetAssetName() const;
 
                     /**
-                     * 设置Asset name.
-                     * @param _assetName Asset name.
+                     * 设置Asset name
+                     * @param _assetName Asset name
                      * 
                      */
                     void SetAssetName(const std::string& _assetName);
@@ -132,15 +132,15 @@ namespace TencentCloud
                     bool AssetNameHasBeenSet() const;
 
                     /**
-                     * 获取Asset type.
-                     * @return AssetType Asset type.
+                     * 获取Asset type
+                     * @return AssetType Asset type
                      * 
                      */
                     std::string GetAssetType() const;
 
                     /**
-                     * 设置Asset type.
-                     * @param _assetType Asset type.
+                     * 设置Asset type
+                     * @param _assetType Asset type
                      * 
                      */
                     void SetAssetType(const std::string& _assetType);
@@ -216,15 +216,15 @@ namespace TencentCloud
                     bool RegionHasBeenSet() const;
 
                     /**
-                     * 获取VPC id.
-                     * @return VpcId VPC id.
+                     * 获取VPC id
+                     * @return VpcId VPC id
                      * 
                      */
                     std::string GetVpcId() const;
 
                     /**
-                     * 设置VPC id.
-                     * @param _vpcId VPC id.
+                     * 设置VPC id
+                     * @param _vpcId VPC id
                      * 
                      */
                     void SetVpcId(const std::string& _vpcId);
@@ -279,15 +279,15 @@ namespace TencentCloud
                     bool TagHasBeenSet() const;
 
                     /**
-                     * 获取Outbound peak bandwidth.
-                     * @return OutboundPeakBandwidth Outbound peak bandwidth.
+                     * 获取Outbound peak bandwidth
+                     * @return OutboundPeakBandwidth Outbound peak bandwidth
                      * 
                      */
                     std::string GetOutboundPeakBandwidth() const;
 
                     /**
-                     * 设置Outbound peak bandwidth.
-                     * @param _outboundPeakBandwidth Outbound peak bandwidth.
+                     * 设置Outbound peak bandwidth
+                     * @param _outboundPeakBandwidth Outbound peak bandwidth
                      * 
                      */
                     void SetOutboundPeakBandwidth(const std::string& _outboundPeakBandwidth);
@@ -300,15 +300,15 @@ namespace TencentCloud
                     bool OutboundPeakBandwidthHasBeenSet() const;
 
                     /**
-                     * 获取Inbound peak bandwidth.
-                     * @return InboundPeakBandwidth Inbound peak bandwidth.
+                     * 获取Inbound peak bandwidth
+                     * @return InboundPeakBandwidth Inbound peak bandwidth
                      * 
                      */
                     std::string GetInboundPeakBandwidth() const;
 
                     /**
-                     * 设置Inbound peak bandwidth.
-                     * @param _inboundPeakBandwidth Inbound peak bandwidth.
+                     * 设置Inbound peak bandwidth
+                     * @param _inboundPeakBandwidth Inbound peak bandwidth
                      * 
                      */
                     void SetInboundPeakBandwidth(const std::string& _inboundPeakBandwidth);
@@ -363,15 +363,15 @@ namespace TencentCloud
                     bool InboundCumulativeFlowHasBeenSet() const;
 
                     /**
-                     * 获取Network attack.
-                     * @return NetworkAttack Network attack.
+                     * 获取Network attack
+                     * @return NetworkAttack Network attack
                      * 
                      */
                     int64_t GetNetworkAttack() const;
 
                     /**
-                     * 设置Network attack.
-                     * @param _networkAttack Network attack.
+                     * 设置Network attack
+                     * @param _networkAttack Network attack
                      * 
                      */
                     void SetNetworkAttack(const int64_t& _networkAttack);
@@ -384,15 +384,15 @@ namespace TencentCloud
                     bool NetworkAttackHasBeenSet() const;
 
                     /**
-                     * 获取Expose ports.
-                     * @return ExposedPort Expose ports.
+                     * 获取Exposed port
+                     * @return ExposedPort Exposed port
                      * 
                      */
                     int64_t GetExposedPort() const;
 
                     /**
-                     * 设置Expose ports.
-                     * @param _exposedPort Expose ports.
+                     * 设置Exposed port
+                     * @param _exposedPort Exposed port
                      * 
                      */
                     void SetExposedPort(const int64_t& _exposedPort);
@@ -405,15 +405,15 @@ namespace TencentCloud
                     bool ExposedPortHasBeenSet() const;
 
                     /**
-                     * 获取Exposed vulnerability.
-                     * @return ExposedVUL Exposed vulnerability.
+                     * 获取Exposed vulnerability
+                     * @return ExposedVUL Exposed vulnerability
                      * 
                      */
                     int64_t GetExposedVUL() const;
 
                     /**
-                     * 设置Exposed vulnerability.
-                     * @param _exposedVUL Exposed vulnerability.
+                     * 设置Exposed vulnerability
+                     * @param _exposedVUL Exposed vulnerability
                      * 
                      */
                     void SetExposedVUL(const int64_t& _exposedVUL);
@@ -426,15 +426,15 @@ namespace TencentCloud
                     bool ExposedVULHasBeenSet() const;
 
                     /**
-                     * 获取Configuration risk.
-                     * @return ConfigureRisk Configuration risk.
+                     * 获取Configuration risk
+                     * @return ConfigureRisk Configuration risk
                      * 
                      */
                     int64_t GetConfigureRisk() const;
 
                     /**
-                     * 设置Configuration risk.
-                     * @param _configureRisk Configuration risk.
+                     * 设置Configuration risk
+                     * @param _configureRisk Configuration risk
                      * 
                      */
                     void SetConfigureRisk(const int64_t& _configureRisk);
@@ -448,22 +448,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Creation time.
-
-
                      * @return CreateTime Creation time.
-
-
                      * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
                      * 设置Creation time.
-
-
                      * @param _createTime Creation time.
-
-
                      * 
                      */
                     void SetCreateTime(const std::string& _createTime);
@@ -476,15 +468,15 @@ namespace TencentCloud
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Number of tasks.
-                     * @return ScanTask Number of tasks.
+                     * 获取Number of tasks
+                     * @return ScanTask Number of tasks
                      * 
                      */
                     int64_t GetScanTask() const;
 
                     /**
-                     * 设置Number of tasks.
-                     * @param _scanTask Number of tasks.
+                     * 设置Number of tasks
+                     * @param _scanTask Number of tasks
                      * 
                      */
                     void SetScanTask(const int64_t& _scanTask);
@@ -518,15 +510,15 @@ namespace TencentCloud
                     bool LastScanTimeHasBeenSet() const;
 
                     /**
-                     * 获取Nickname.
-                     * @return Nick Nickname.
+                     * 获取Nickname
+                     * @return Nick Nickname
                      * 
                      */
                     std::string GetNick() const;
 
                     /**
-                     * 设置Nickname.
-                     * @param _nick Nickname.
+                     * 设置Nickname
+                     * @param _nick Nickname
                      * 
                      */
                     void SetNick(const std::string& _nick);
@@ -581,15 +573,15 @@ namespace TencentCloud
                     bool IsCoreHasBeenSet() const;
 
                     /**
-                     * 获取Risk service exposure.
-                     * @return RiskExposure Risk service exposure.
+                     * 获取Risk service exposure
+                     * @return RiskExposure Risk service exposure
                      * 
                      */
                     int64_t GetRiskExposure() const;
 
                     /**
-                     * 设置Risk service exposure.
-                     * @param _riskExposure Risk service exposure.
+                     * 设置Risk service exposure
+                     * @param _riskExposure Risk service exposure
                      * 
                      */
                     void SetRiskExposure(const int64_t& _riskExposure);
@@ -665,15 +657,15 @@ namespace TencentCloud
                     bool EngineRegionHasBeenSet() const;
 
                     /**
-                     * 获取Weak password risk.
-                     * @return WeakPasswordRisk Weak password risk.
+                     * 获取Weak password risk
+                     * @return WeakPasswordRisk Weak password risk
                      * 
                      */
                     uint64_t GetWeakPasswordRisk() const;
 
                     /**
-                     * 设置Weak password risk.
-                     * @param _weakPasswordRisk Weak password risk.
+                     * 设置Weak password risk
+                     * @param _weakPasswordRisk Weak password risk
                      * 
                      */
                     void SetWeakPasswordRisk(const uint64_t& _weakPasswordRisk);
@@ -700,19 +692,19 @@ namespace TencentCloud
                     bool m_uinHasBeenSet;
 
                     /**
-                     * Asset ID.
+                     * Asset ID
                      */
                     std::string m_assetId;
                     bool m_assetIdHasBeenSet;
 
                     /**
-                     * Asset name.
+                     * Asset name
                      */
                     std::string m_assetName;
                     bool m_assetNameHasBeenSet;
 
                     /**
-                     * Asset type.
+                     * Asset type
                      */
                     std::string m_assetType;
                     bool m_assetTypeHasBeenSet;
@@ -736,7 +728,7 @@ namespace TencentCloud
                     bool m_regionHasBeenSet;
 
                     /**
-                     * VPC id.
+                     * VPC id
                      */
                     std::string m_vpcId;
                     bool m_vpcIdHasBeenSet;
@@ -754,13 +746,13 @@ namespace TencentCloud
                     bool m_tagHasBeenSet;
 
                     /**
-                     * Outbound peak bandwidth.
+                     * Outbound peak bandwidth
                      */
                     std::string m_outboundPeakBandwidth;
                     bool m_outboundPeakBandwidthHasBeenSet;
 
                     /**
-                     * Inbound peak bandwidth.
+                     * Inbound peak bandwidth
                      */
                     std::string m_inboundPeakBandwidth;
                     bool m_inboundPeakBandwidthHasBeenSet;
@@ -778,39 +770,37 @@ namespace TencentCloud
                     bool m_inboundCumulativeFlowHasBeenSet;
 
                     /**
-                     * Network attack.
+                     * Network attack
                      */
                     int64_t m_networkAttack;
                     bool m_networkAttackHasBeenSet;
 
                     /**
-                     * Expose ports.
+                     * Exposed port
                      */
                     int64_t m_exposedPort;
                     bool m_exposedPortHasBeenSet;
 
                     /**
-                     * Exposed vulnerability.
+                     * Exposed vulnerability
                      */
                     int64_t m_exposedVUL;
                     bool m_exposedVULHasBeenSet;
 
                     /**
-                     * Configuration risk.
+                     * Configuration risk
                      */
                     int64_t m_configureRisk;
                     bool m_configureRiskHasBeenSet;
 
                     /**
                      * Creation time.
-
-
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * Number of tasks.
+                     * Number of tasks
                      */
                     int64_t m_scanTask;
                     bool m_scanTaskHasBeenSet;
@@ -822,7 +812,7 @@ namespace TencentCloud
                     bool m_lastScanTimeHasBeenSet;
 
                     /**
-                     * Nickname.
+                     * Nickname
                      */
                     std::string m_nick;
                     bool m_nickHasBeenSet;
@@ -840,7 +830,7 @@ namespace TencentCloud
                     bool m_isCoreHasBeenSet;
 
                     /**
-                     * Risk service exposure.
+                     * Risk service exposure
                      */
                     int64_t m_riskExposure;
                     bool m_riskExposureHasBeenSet;
@@ -864,7 +854,7 @@ namespace TencentCloud
                     bool m_engineRegionHasBeenSet;
 
                     /**
-                     * Weak password risk.
+                     * Weak password risk
                      */
                     uint64_t m_weakPasswordRisk;
                     bool m_weakPasswordRiskHasBeenSet;

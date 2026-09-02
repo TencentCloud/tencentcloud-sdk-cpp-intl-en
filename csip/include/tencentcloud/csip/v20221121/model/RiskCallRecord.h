@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Risk call record details.
+                * Risk call record details
                 */
                 class RiskCallRecord : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取API name.
-                     * @return EventName API name.
+                     * 获取API name
+                     * @return EventName API name
                      * 
                      */
                     std::string GetEventName() const;
 
                     /**
-                     * 设置API name.
-                     * @param _eventName API name.
+                     * 设置API name
+                     * @param _eventName API name
                      * 
                      */
                     void SetEventName(const std::string& _eventName);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool EventNameHasBeenSet() const;
 
                     /**
-                     * 获取Chinese description of the API.
-                     * @return EventDescCN Chinese description of the API.
+                     * 获取Chinese description of the api
+                     * @return EventDescCN Chinese description of the api
                      * 
                      */
                     std::string GetEventDescCN() const;
 
                     /**
-                     * 设置Chinese description of the API.
-                     * @param _eventDescCN Chinese description of the API.
+                     * 设置Chinese description of the api
+                     * @param _eventDescCN Chinese description of the api
                      * 
                      */
                     void SetEventDescCN(const std::string& _eventDescCN);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool EventDescCNHasBeenSet() const;
 
                     /**
-                     * 获取Interface description.
-                     * @return EventDescEN Interface description.
+                     * 获取Interface description
+                     * @return EventDescEN Interface description
                      * 
                      */
                     std::string GetEventDescEN() const;
 
                     /**
-                     * 设置Interface description.
-                     * @param _eventDescEN Interface description.
+                     * 设置Interface description
+                     * @param _eventDescEN Interface description
                      * 
                      */
                     void SetEventDescEN(const std::string& _eventDescEN);
@@ -175,19 +175,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * API name.
+                     * API name
                      */
                     std::string m_eventName;
                     bool m_eventNameHasBeenSet;
 
                     /**
-                     * Chinese description of the API.
+                     * Chinese description of the api
                      */
                     std::string m_eventDescCN;
                     bool m_eventDescCNHasBeenSet;
 
                     /**
-                     * Interface description.
+                     * Interface description
                      */
                     std::string m_eventDescEN;
                     bool m_eventDescENHasBeenSet;

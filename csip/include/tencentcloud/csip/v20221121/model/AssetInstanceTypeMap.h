@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Mapping of asset type and instance type.
+                * Mapping between asset types and instance types
                 */
                 class AssetInstanceTypeMap : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Asset type.
-                     * @return Text Asset type.
+                     * 获取Asset type
+                     * @return Text Asset type
                      * 
                      */
                     std::string GetText() const;
 
                     /**
-                     * 设置Asset type.
-                     * @param _text Asset type.
+                     * 设置Asset type
+                     * @param _text Asset type
                      * 
                      */
                     void SetText(const std::string& _text);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool TextHasBeenSet() const;
 
                     /**
-                     * 获取Asset type.
-                     * @return Value Asset type.
+                     * 获取Asset type
+                     * @return Value Asset type
                      * 
                      */
                     std::string GetValue() const;
 
                     /**
-                     * 设置Asset type.
-                     * @param _value Asset type.
+                     * 设置Asset type
+                     * @param _value Asset type
                      * 
                      */
                     void SetValue(const std::string& _value);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool ValueHasBeenSet() const;
 
                     /**
-                     * 获取Mapping of asset type and instance type.
-                     * @return InstanceTypeList Mapping of asset type and instance type.
+                     * 获取Asset type and instance type mapping relationship
+                     * @return InstanceTypeList Asset type and instance type mapping relationship
                      * 
                      */
                     std::vector<FilterDataObject> GetInstanceTypeList() const;
 
                     /**
-                     * 设置Mapping of asset type and instance type.
-                     * @param _instanceTypeList Mapping of asset type and instance type.
+                     * 设置Asset type and instance type mapping relationship
+                     * @param _instanceTypeList Asset type and instance type mapping relationship
                      * 
                      */
                     void SetInstanceTypeList(const std::vector<FilterDataObject>& _instanceTypeList);
@@ -113,19 +113,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Asset type.
+                     * Asset type
                      */
                     std::string m_text;
                     bool m_textHasBeenSet;
 
                     /**
-                     * Asset type.
+                     * Asset type
                      */
                     std::string m_value;
                     bool m_valueHasBeenSet;
 
                     /**
-                     * Mapping of asset type and instance type.
+                     * Asset type and instance type mapping relationship
                      */
                     std::vector<FilterDataObject> m_instanceTypeList;
                     bool m_instanceTypeListHasBeenSet;

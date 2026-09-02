@@ -37,16 +37,16 @@ namespace TencentCloud
                 /**
                 * This example shows you how to obtain the cluster list.
 
-Cluster protection status. enumerate on the left. display on the right.
-Cluster protection status. 
-Not connected.
-Unprotected. 
-2: partial protection. 
-3: under protection. 
-4: access exception. 
-5: accessing. 
-6: uninstalling. 
-7: uninstallation exception.
+Cluster protection status. Enumerations on the left and displays on the right.
+Cluster protection status 
+0: Not connected
+1: No protection 
+2: Partial protection 
+3: Under protection 
+4: Access exception 
+5: Accessing 
+6: Uninstalling 
+7: Uninstallation exception
                 */
                 class AssetCluster : public AbstractModel
                 {
@@ -79,15 +79,15 @@ Unprotected.
                     bool AppIdHasBeenSet() const;
 
                     /**
-                     * 获取Tenant uin.
-                     * @return Uin Tenant uin.
+                     * 获取Tenant uin
+                     * @return Uin Tenant uin
                      * 
                      */
                     std::string GetUin() const;
 
                     /**
-                     * 设置Tenant uin.
-                     * @param _uin Tenant uin.
+                     * 设置Tenant uin
+                     * @param _uin Tenant uin
                      * 
                      */
                     void SetUin(const std::string& _uin);
@@ -247,51 +247,51 @@ Unprotected.
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Cluster protection status, enumerate on the left, display on the right.
-Protection status of the cluster. 
-0: not connected.
-Unprotected. 
-2: partial protection. 
-3: under protection. 
-4: access exception. 
-5: accessing. 
-Uninstalling. 
-7: uninstallation exception.
-                     * @return ProtectStatus Cluster protection status, enumerate on the left, display on the right.
-Protection status of the cluster. 
-0: not connected.
-Unprotected. 
-2: partial protection. 
-3: under protection. 
-4: access exception. 
-5: accessing. 
-Uninstalling. 
-7: uninstallation exception.
+                     * 获取Cluster protection status. Enumerations on the left and displays on the right.
+Cluster protection status 
+0: Not connected
+1: No protection 
+2: Partial protection 
+3: Under protection 
+4: Access exception 
+5: Accessing 
+6: Uninstalling 
+7: Uninstallation exception
+                     * @return ProtectStatus Cluster protection status. Enumerations on the left and displays on the right.
+Cluster protection status 
+0: Not connected
+1: No protection 
+2: Partial protection 
+3: Under protection 
+4: Access exception 
+5: Accessing 
+6: Uninstalling 
+7: Uninstallation exception
                      * 
                      */
                     int64_t GetProtectStatus() const;
 
                     /**
-                     * 设置Cluster protection status, enumerate on the left, display on the right.
-Protection status of the cluster. 
-0: not connected.
-Unprotected. 
-2: partial protection. 
-3: under protection. 
-4: access exception. 
-5: accessing. 
-Uninstalling. 
-7: uninstallation exception.
-                     * @param _protectStatus Cluster protection status, enumerate on the left, display on the right.
-Protection status of the cluster. 
-0: not connected.
-Unprotected. 
-2: partial protection. 
-3: under protection. 
-4: access exception. 
-5: accessing. 
-Uninstalling. 
-7: uninstallation exception.
+                     * 设置Cluster protection status. Enumerations on the left and displays on the right.
+Cluster protection status 
+0: Not connected
+1: No protection 
+2: Partial protection 
+3: Under protection 
+4: Access exception 
+5: Accessing 
+6: Uninstalling 
+7: Uninstallation exception
+                     * @param _protectStatus Cluster protection status. Enumerations on the left and displays on the right.
+Cluster protection status 
+0: Not connected
+1: No protection 
+2: Partial protection 
+3: Under protection 
+4: Access exception 
+5: Accessing 
+6: Uninstalling 
+7: Uninstallation exception
                      * 
                      */
                     void SetProtectStatus(const int64_t& _protectStatus);
@@ -304,15 +304,15 @@ Uninstalling.
                     bool ProtectStatusHasBeenSet() const;
 
                     /**
-                     * 获取Access information, being empty indicates no access exception info.
-                     * @return ProtectInfo Access information, being empty indicates no access exception info.
+                     * 获取Access information. Being not empty indicates an access exception message.
+                     * @return ProtectInfo Access information. Being not empty indicates an access exception message.
                      * 
                      */
                     std::string GetProtectInfo() const;
 
                     /**
-                     * 设置Access information, being empty indicates no access exception info.
-                     * @param _protectInfo Access information, being empty indicates no access exception info.
+                     * 设置Access information. Being not empty indicates an access exception message.
+                     * @param _protectInfo Access information. Being not empty indicates an access exception message.
                      * 
                      */
                     void SetProtectInfo(const std::string& _protectInfo);
@@ -325,15 +325,15 @@ Uninstalling.
                     bool ProtectInfoHasBeenSet() const;
 
                     /**
-                     * 获取VPC id.
-                     * @return VpcId VPC id.
+                     * 获取VPC id
+                     * @return VpcId VPC id
                      * 
                      */
                     std::string GetVpcId() const;
 
                     /**
-                     * 设置VPC id.
-                     * @param _vpcId VPC id.
+                     * 设置VPC id
+                     * @param _vpcId VPC id
                      * 
                      */
                     void SetVpcId(const std::string& _vpcId);
@@ -346,15 +346,15 @@ Uninstalling.
                     bool VpcIdHasBeenSet() const;
 
                     /**
-                     * 获取VPC name.
-                     * @return VpcName VPC name.
+                     * 获取VPC name
+                     * @return VpcName VPC name
                      * 
                      */
                     std::string GetVpcName() const;
 
                     /**
-                     * 设置VPC name.
-                     * @param _vpcName VPC name.
+                     * 设置VPC name
+                     * @param _vpcName VPC name
                      * 
                      */
                     void SetVpcName(const std::string& _vpcName);
@@ -367,15 +367,15 @@ Uninstalling.
                     bool VpcNameHasBeenSet() const;
 
                     /**
-                     * 获取kubernetes version.
-                     * @return KubernetesVersion kubernetes version.
+                     * 获取kubernetes version
+                     * @return KubernetesVersion kubernetes version
                      * 
                      */
                     std::string GetKubernetesVersion() const;
 
                     /**
-                     * 设置kubernetes version.
-                     * @param _kubernetesVersion kubernetes version.
+                     * 设置kubernetes version
+                     * @param _kubernetesVersion kubernetes version
                      * 
                      */
                     void SetKubernetesVersion(const std::string& _kubernetesVersion);
@@ -388,15 +388,15 @@ Uninstalling.
                     bool KubernetesVersionHasBeenSet() const;
 
                     /**
-                     * 获取Runtime component.
-                     * @return Component Runtime component.
+                     * 获取Runtime component
+                     * @return Component Runtime component
                      * 
                      */
                     std::string GetComponent() const;
 
                     /**
-                     * 设置Runtime component.
-                     * @param _component Runtime component.
+                     * 设置Runtime component
+                     * @param _component Runtime component
                      * 
                      */
                     void SetComponent(const std::string& _component);
@@ -409,15 +409,15 @@ Uninstalling.
                     bool ComponentHasBeenSet() const;
 
                     /**
-                     * 获取Runtime component version.
-                     * @return ComponentVersion Runtime component version.
+                     * 获取Runtime component version
+                     * @return ComponentVersion Runtime component version
                      * 
                      */
                     std::string GetComponentVersion() const;
 
                     /**
-                     * 设置Runtime component version.
-                     * @param _componentVersion Runtime component version.
+                     * 设置Runtime component version
+                     * @param _componentVersion Runtime component version
                      * 
                      */
                     void SetComponentVersion(const std::string& _componentVersion);
@@ -430,15 +430,15 @@ Uninstalling.
                     bool ComponentVersionHasBeenSet() const;
 
                     /**
-                     * 获取Component status.
-                     * @return ComponentStatus Component status.
+                     * 获取Component status
+                     * @return ComponentStatus Component status
                      * 
                      */
                     std::string GetComponentStatus() const;
 
                     /**
-                     * 设置Component status.
-                     * @param _componentStatus Component status.
+                     * 设置Component status
+                     * @param _componentStatus Component status
                      * 
                      */
                     void SetComponentStatus(const std::string& _componentStatus);
@@ -472,15 +472,15 @@ Uninstalling.
                     bool CheckTimeHasBeenSet() const;
 
                     /**
-                     * 获取Associated hosts.
-                     * @return MachineCount Associated hosts.
+                     * 获取Number of associated hosts
+                     * @return MachineCount Number of associated hosts
                      * 
                      */
                     int64_t GetMachineCount() const;
 
                     /**
-                     * 设置Associated hosts.
-                     * @param _machineCount Associated hosts.
+                     * 设置Number of associated hosts
+                     * @param _machineCount Number of associated hosts
                      * 
                      */
                     void SetMachineCount(const int64_t& _machineCount);
@@ -535,15 +535,15 @@ Uninstalling.
                     bool ServiceCountHasBeenSet() const;
 
                     /**
-                     * 获取Vulnerability risk.
-                     * @return VulRisk Vulnerability risk.
+                     * 获取Vulnerability risk
+                     * @return VulRisk Vulnerability risk
                      * 
                      */
                     int64_t GetVulRisk() const;
 
                     /**
-                     * 设置Vulnerability risk.
-                     * @param _vulRisk Vulnerability risk.
+                     * 设置Vulnerability risk
+                     * @param _vulRisk Vulnerability risk
                      * 
                      */
                     void SetVulRisk(const int64_t& _vulRisk);
@@ -556,15 +556,15 @@ Uninstalling.
                     bool VulRiskHasBeenSet() const;
 
                     /**
-                     * 获取Configuration risk.
-                     * @return CFGRisk Configuration risk.
+                     * 获取Configuration risk
+                     * @return CFGRisk Configuration risk
                      * 
                      */
                     int64_t GetCFGRisk() const;
 
                     /**
-                     * 设置Configuration risk.
-                     * @param _cFGRisk Configuration risk.
+                     * 设置Configuration risk
+                     * @param _cFGRisk Configuration risk
                      * 
                      */
                     void SetCFGRisk(const int64_t& _cFGRisk);
@@ -640,15 +640,15 @@ Uninstalling.
                     bool IsNewAssetHasBeenSet() const;
 
                     /**
-                     * 获取Cloud asset type: 0: tencent cloud, 1: aws, 2: azure.
-                     * @return CloudType Cloud asset type: 0: tencent cloud, 1: aws, 2: azure.
+                     * 获取Cloud asset type: 0: Tencent Cloud, 1: aws, 2: azure
+                     * @return CloudType Cloud asset type: 0: Tencent Cloud, 1: aws, 2: azure
                      * 
                      */
                     int64_t GetCloudType() const;
 
                     /**
-                     * 设置Cloud asset type: 0: tencent cloud, 1: aws, 2: azure.
-                     * @param _cloudType Cloud asset type: 0: tencent cloud, 1: aws, 2: azure.
+                     * 设置Cloud asset type: 0: Tencent Cloud, 1: aws, 2: azure
+                     * @param _cloudType Cloud asset type: 0: Tencent Cloud, 1: aws, 2: azure
                      * 
                      */
                     void SetCloudType(const int64_t& _cloudType);
@@ -669,7 +669,7 @@ Uninstalling.
                     bool m_appIdHasBeenSet;
 
                     /**
-                     * Tenant uin.
+                     * Tenant uin
                      */
                     std::string m_uin;
                     bool m_uinHasBeenSet;
@@ -717,58 +717,58 @@ Uninstalling.
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Cluster protection status, enumerate on the left, display on the right.
-Protection status of the cluster. 
-0: not connected.
-Unprotected. 
-2: partial protection. 
-3: under protection. 
-4: access exception. 
-5: accessing. 
-Uninstalling. 
-7: uninstallation exception.
+                     * Cluster protection status. Enumerations on the left and displays on the right.
+Cluster protection status 
+0: Not connected
+1: No protection 
+2: Partial protection 
+3: Under protection 
+4: Access exception 
+5: Accessing 
+6: Uninstalling 
+7: Uninstallation exception
                      */
                     int64_t m_protectStatus;
                     bool m_protectStatusHasBeenSet;
 
                     /**
-                     * Access information, being empty indicates no access exception info.
+                     * Access information. Being not empty indicates an access exception message.
                      */
                     std::string m_protectInfo;
                     bool m_protectInfoHasBeenSet;
 
                     /**
-                     * VPC id.
+                     * VPC id
                      */
                     std::string m_vpcId;
                     bool m_vpcIdHasBeenSet;
 
                     /**
-                     * VPC name.
+                     * VPC name
                      */
                     std::string m_vpcName;
                     bool m_vpcNameHasBeenSet;
 
                     /**
-                     * kubernetes version.
+                     * kubernetes version
                      */
                     std::string m_kubernetesVersion;
                     bool m_kubernetesVersionHasBeenSet;
 
                     /**
-                     * Runtime component.
+                     * Runtime component
                      */
                     std::string m_component;
                     bool m_componentHasBeenSet;
 
                     /**
-                     * Runtime component version.
+                     * Runtime component version
                      */
                     std::string m_componentVersion;
                     bool m_componentVersionHasBeenSet;
 
                     /**
-                     * Component status.
+                     * Component status
                      */
                     std::string m_componentStatus;
                     bool m_componentStatusHasBeenSet;
@@ -780,7 +780,7 @@ Uninstalling.
                     bool m_checkTimeHasBeenSet;
 
                     /**
-                     * Associated hosts.
+                     * Number of associated hosts
                      */
                     int64_t m_machineCount;
                     bool m_machineCountHasBeenSet;
@@ -798,13 +798,13 @@ Uninstalling.
                     bool m_serviceCountHasBeenSet;
 
                     /**
-                     * Vulnerability risk.
+                     * Vulnerability risk
                      */
                     int64_t m_vulRisk;
                     bool m_vulRiskHasBeenSet;
 
                     /**
-                     * Configuration risk.
+                     * Configuration risk
                      */
                     int64_t m_cFGRisk;
                     bool m_cFGRiskHasBeenSet;
@@ -828,7 +828,7 @@ Uninstalling.
                     bool m_isNewAssetHasBeenSet;
 
                     /**
-                     * Cloud asset type: 0: tencent cloud, 1: aws, 2: azure.
+                     * Cloud asset type: 0: Tencent Cloud, 1: aws, 2: azure
                      */
                     int64_t m_cloudType;
                     bool m_cloudTypeHasBeenSet;

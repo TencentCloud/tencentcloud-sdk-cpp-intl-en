@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Alarm ID list
-                     * @return ID Alarm ID list
+                     * 获取List of alarm IDs
+                     * @return ID List of alarm IDs
                      * 
                      */
                     std::vector<NewAlertKey> GetID() const;
 
                     /**
-                     * 设置Alarm ID list
-                     * @param _iD Alarm ID list
+                     * 设置List of alarm IDs
+                     * @param _iD List of alarm IDs
                      * 
                      */
                     void SetID(const std::vector<NewAlertKey>& _iD);
@@ -66,34 +66,34 @@ namespace TencentCloud
 
                     /**
                      * 获取Operation type. 
-1: Revoke disposal 
-2: Marked with processed 
+1: Undo disposal 
+2: Marked as processed 
 3: Marked as ignored 
 4: Cancel tag disposal
-5: Unmark ignore
+5: Untag and ignore
                      * @return OperateType Operation type. 
-1: Revoke disposal 
-2: Marked with processed 
+1: Undo disposal 
+2: Marked as processed 
 3: Marked as ignored 
 4: Cancel tag disposal
-5: Unmark ignore
+5: Untag and ignore
                      * 
                      */
                     int64_t GetOperateType() const;
 
                     /**
                      * 设置Operation type. 
-1: Revoke disposal 
-2: Marked with processed 
+1: Undo disposal 
+2: Marked as processed 
 3: Marked as ignored 
 4: Cancel tag disposal
-5: Unmark ignore
+5: Untag and ignore
                      * @param _operateType Operation type. 
-1: Revoke disposal 
-2: Marked with processed 
+1: Undo disposal 
+2: Marked as processed 
 3: Marked as ignored 
 4: Cancel tag disposal
-5: Unmark ignore
+5: Untag and ignore
                      * 
                      */
                     void SetOperateType(const int64_t& _operateType);
@@ -150,18 +150,18 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Alarm ID list
+                     * List of alarm IDs
                      */
                     std::vector<NewAlertKey> m_iD;
                     bool m_iDHasBeenSet;
 
                     /**
                      * Operation type. 
-1: Revoke disposal 
-2: Marked with processed 
+1: Undo disposal 
+2: Marked as processed 
 3: Marked as ignored 
 4: Cancel tag disposal
-5: Unmark ignore
+5: Untag and ignore
                      */
                     int64_t m_operateType;
                     bool m_operateTypeHasBeenSet;

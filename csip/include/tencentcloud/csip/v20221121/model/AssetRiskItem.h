@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Risk information from asset perspective
+                * Risk information from the asset perspective
                 */
                 class AssetRiskItem : public AbstractModel
                 {
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool AppIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>Cloud vendor</p>
-                     * @return Provider <p>Cloud vendor</p>
+                     * 获取<p>Cloud service provider.</p>
+                     * @return Provider <p>Cloud service provider.</p>
                      * 
                      */
                     std::string GetProvider() const;
 
                     /**
-                     * 设置<p>Cloud vendor</p>
-                     * @param _provider <p>Cloud vendor</p>
+                     * 设置<p>Cloud service provider.</p>
+                     * @param _provider <p>Cloud service provider.</p>
                      * 
                      */
                     void SetProvider(const std::string& _provider);
@@ -153,15 +153,15 @@ namespace TencentCloud
                     bool CloudAccountIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>Instance name</p>
-                     * @return InstanceName <p>Instance name</p>
+                     * 获取<p>Instance name.</p>
+                     * @return InstanceName <p>Instance name.</p>
                      * 
                      */
                     std::string GetInstanceName() const;
 
                     /**
-                     * 设置<p>Instance name</p>
-                     * @param _instanceName <p>Instance name</p>
+                     * 设置<p>Instance name.</p>
+                     * @param _instanceName <p>Instance name.</p>
                      * 
                      */
                     void SetInstanceName(const std::string& _instanceName);
@@ -300,15 +300,15 @@ namespace TencentCloud
                     bool CheckTypeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Risk level</p>
-                     * @return Severity <p>Risk level</p>
+                     * 获取<p>Risk level.</p>
+                     * @return Severity <p>Risk level.</p>
                      * 
                      */
                     std::string GetSeverity() const;
 
                     /**
-                     * 设置<p>Risk level</p>
-                     * @param _severity <p>Risk level</p>
+                     * 设置<p>Risk level.</p>
+                     * @param _severity <p>Risk level.</p>
                      * 
                      */
                     void SetSeverity(const std::string& _severity);
@@ -342,15 +342,15 @@ namespace TencentCloud
                     bool RiskRuleIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>Disposal categorization</p>
-                     * @return Classify <p>Disposal categorization</p>
+                     * 获取<p>Handling category</p>
+                     * @return Classify <p>Handling category</p>
                      * 
                      */
                     std::string GetClassify() const;
 
                     /**
-                     * 设置<p>Disposal categorization</p>
-                     * @param _classify <p>Disposal categorization</p>
+                     * 设置<p>Handling category</p>
+                     * @param _classify <p>Handling category</p>
                      * 
                      */
                     void SetClassify(const std::string& _classify);
@@ -455,7 +455,7 @@ namespace TencentCloud
                     bool m_appIdHasBeenSet;
 
                     /**
-                     * <p>Cloud vendor</p>
+                     * <p>Cloud service provider.</p>
                      */
                     std::string m_provider;
                     bool m_providerHasBeenSet;
@@ -479,7 +479,7 @@ namespace TencentCloud
                     bool m_cloudAccountIdHasBeenSet;
 
                     /**
-                     * <p>Instance name</p>
+                     * <p>Instance name.</p>
                      */
                     std::string m_instanceName;
                     bool m_instanceNameHasBeenSet;
@@ -521,7 +521,7 @@ namespace TencentCloud
                     bool m_checkTypeHasBeenSet;
 
                     /**
-                     * <p>Risk level</p>
+                     * <p>Risk level.</p>
                      */
                     std::string m_severity;
                     bool m_severityHasBeenSet;
@@ -533,7 +533,7 @@ namespace TencentCloud
                     bool m_riskRuleIdHasBeenSet;
 
                     /**
-                     * <p>Disposal categorization</p>
+                     * <p>Handling category</p>
                      */
                     std::string m_classify;
                     bool m_classifyHasBeenSet;

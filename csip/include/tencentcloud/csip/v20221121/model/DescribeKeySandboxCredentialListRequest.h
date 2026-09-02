@@ -44,23 +44,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Filter criteria list: supported filter conditions as follows:
+                     * 获取Filter criteria list. Supported filter conditions are as follows:
 CredentialName - Credential name (fuzzy matching)
-CredentialType - Credential type (exact match). Parameter values: access, sts.
-                     * @return Filter Filter criteria list: supported filter conditions as follows:
+CredentialType - Credential type (exact match). Valid values: access, sts
+                     * @return Filter Filter criteria list. Supported filter conditions are as follows:
 CredentialName - Credential name (fuzzy matching)
-CredentialType - Credential type (exact match). Parameter values: access, sts.
+CredentialType - Credential type (exact match). Valid values: access, sts
                      * 
                      */
                     Filter GetFilter() const;
 
                     /**
-                     * 设置Filter criteria list: supported filter conditions as follows:
+                     * 设置Filter criteria list. Supported filter conditions are as follows:
 CredentialName - Credential name (fuzzy matching)
-CredentialType - Credential type (exact match). Parameter values: access, sts.
-                     * @param _filter Filter criteria list: supported filter conditions as follows:
+CredentialType - Credential type (exact match). Valid values: access, sts
+                     * @param _filter Filter criteria list. Supported filter conditions are as follows:
 CredentialName - Credential name (fuzzy matching)
-CredentialType - Credential type (exact match). Parameter values: access, sts.
+CredentialType - Credential type (exact match). Valid values: access, sts
                      * 
                      */
                     void SetFilter(const Filter& _filter);
@@ -96,9 +96,9 @@ CredentialType - Credential type (exact match). Parameter values: access, sts.
                 private:
 
                     /**
-                     * Filter criteria list: supported filter conditions as follows:
+                     * Filter criteria list. Supported filter conditions are as follows:
 CredentialName - Credential name (fuzzy matching)
-CredentialType - Credential type (exact match). Parameter values: access, sts.
+CredentialType - Credential type (exact match). Valid values: access, sts
                      */
                     Filter m_filter;
                     bool m_filterHasBeenSet;

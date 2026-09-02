@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Data of risk assets
-                     * @return RiskStatusKeys Data of risk assets
+                     * 获取Risky Asset Related Data
+                     * @return RiskStatusKeys Risky Asset Related Data
                      * 
                      */
                     std::vector<RiskCenterStatusKey> GetRiskStatusKeys() const;
 
                     /**
-                     * 设置Data of risk assets
-                     * @param _riskStatusKeys Data of risk assets
+                     * 设置Risky Asset Related Data
+                     * @param _riskStatusKeys Risky Asset Related Data
                      * 
                      */
                     void SetRiskStatusKeys(const std::vector<RiskCenterStatusKey>& _riskStatusKeys);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool RiskStatusKeysHasBeenSet() const;
 
                     /**
-                     * 获取Specify how you want to change the risk status. `1`: Change to Handled, `2`: Change to Ignored; `3`: Remove from Handled; `4`: Remove from Ignored
-                     * @return Status Specify how you want to change the risk status. `1`: Change to Handled, `2`: Change to Ignored; `3`: Remove from Handled; `4`: Remove from Ignored
+                     * 获取Disposition status. 1: Handled; 2: Ignored; 3: Cancel disposed; 4: Cancel ignored.
+                     * @return Status Disposition status. 1: Handled; 2: Ignored; 3: Cancel disposed; 4: Cancel ignored.
                      * 
                      */
                     uint64_t GetStatus() const;
 
                     /**
-                     * 设置Specify how you want to change the risk status. `1`: Change to Handled, `2`: Change to Ignored; `3`: Remove from Handled; `4`: Remove from Ignored
-                     * @param _status Specify how you want to change the risk status. `1`: Change to Handled, `2`: Change to Ignored; `3`: Remove from Handled; `4`: Remove from Ignored
+                     * 设置Disposition status. 1: Handled; 2: Ignored; 3: Cancel disposed; 4: Cancel ignored.
+                     * @param _status Disposition status. 1: Handled; 2: Ignored; 3: Cancel disposed; 4: Cancel ignored.
                      * 
                      */
                     void SetStatus(const uint64_t& _status);
@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Risk type. `0`: Port risk; `1`: Vulnerability; `2`: Weak password; `3`: Website content risk; `4`: Configuration risk; `5`: Risk services
-                     * @return Type Risk type. `0`: Port risk; `1`: Vulnerability; `2`: Weak password; `3`: Website content risk; `4`: Configuration risk; `5`: Risk services
+                     * 获取Risk Type. 0: Port Risk; 1: Vulnerability Risk; 2: Weak Password Risk; 3: Web Sites Content Risk; 4: Configuration Risk; 5: Exposed Risk Service
+                     * @return Type Risk Type. 0: Port Risk; 1: Vulnerability Risk; 2: Weak Password Risk; 3: Web Sites Content Risk; 4: Configuration Risk; 5: Exposed Risk Service
                      * 
                      */
                     uint64_t GetType() const;
 
                     /**
-                     * 设置Risk type. `0`: Port risk; `1`: Vulnerability; `2`: Weak password; `3`: Website content risk; `4`: Configuration risk; `5`: Risk services
-                     * @param _type Risk type. `0`: Port risk; `1`: Vulnerability; `2`: Weak password; `3`: Website content risk; `4`: Configuration risk; `5`: Risk services
+                     * 设置Risk Type. 0: Port Risk; 1: Vulnerability Risk; 2: Weak Password Risk; 3: Web Sites Content Risk; 4: Configuration Risk; 5: Exposed Risk Service
+                     * @param _type Risk Type. 0: Port Risk; 1: Vulnerability Risk; 2: Weak Password Risk; 3: Web Sites Content Risk; 4: Configuration Risk; 5: Exposed Risk Service
                      * 
                      */
                     void SetType(const uint64_t& _type);
@@ -130,19 +130,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Data of risk assets
+                     * Risky Asset Related Data
                      */
                     std::vector<RiskCenterStatusKey> m_riskStatusKeys;
                     bool m_riskStatusKeysHasBeenSet;
 
                     /**
-                     * Specify how you want to change the risk status. `1`: Change to Handled, `2`: Change to Ignored; `3`: Remove from Handled; `4`: Remove from Ignored
+                     * Disposition status. 1: Handled; 2: Ignored; 3: Cancel disposed; 4: Cancel ignored.
                      */
                     uint64_t m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Risk type. `0`: Port risk; `1`: Vulnerability; `2`: Weak password; `3`: Website content risk; `4`: Configuration risk; `5`: Risk services
+                     * Risk Type. 0: Port Risk; 1: Vulnerability Risk; 2: Weak Password Risk; 3: Web Sites Content Risk; 4: Configuration Risk; 5: Exposed Risk Service
                      */
                     uint64_t m_type;
                     bool m_typeHasBeenSet;

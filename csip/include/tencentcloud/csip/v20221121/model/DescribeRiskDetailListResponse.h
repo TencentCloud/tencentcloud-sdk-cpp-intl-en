@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Risk detail count from asset perspective
-                     * @return TotalCount Risk detail count from asset perspective
+                     * 获取Number of risk details from the asset's perspective
+                     * @return TotalCount Number of risk details from the asset's perspective
                      * 
                      */
                     int64_t GetTotalCount() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取Risk detail list from asset perspective
-                     * @return AssetRiskDetailList Risk detail list from asset perspective
+                     * 获取Risk Detail List from Asset's Perspective
+                     * @return AssetRiskDetailList Risk Detail List from Asset's Perspective
                      * 
                      */
                     std::vector<RiskDetailItem> GetAssetRiskDetailList() const;
@@ -75,13 +75,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Risk detail count from asset perspective
+                     * Number of risk details from the asset's perspective
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * Risk detail list from asset perspective
+                     * Risk Detail List from Asset's Perspective
                      */
                     std::vector<RiskDetailItem> m_assetRiskDetailList;
                     bool m_assetRiskDetailListHasBeenSet;

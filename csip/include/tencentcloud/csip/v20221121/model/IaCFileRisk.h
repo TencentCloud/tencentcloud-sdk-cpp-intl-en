@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * IaC detection file risk
+                * Risk of IaC detection files
                 */
                 class IaCFileRisk : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Risk level (0: low-risk, 1: medium-risk, 2: high-risk, 3: critical)</p>
-                     * @return Level <p>Risk level (0: low-risk, 1: medium-risk, 2: high-risk, 3: critical)</p>
+                     * 获取<p>Risk level (0: low risk, 1: medium risk, 2: high risk, 3: critical)</p>
+                     * @return Level <p>Risk level (0: low risk, 1: medium risk, 2: high risk, 3: critical)</p>
                      * 
                      */
                     int64_t GetLevel() const;
 
                     /**
-                     * 设置<p>Risk level (0: low-risk, 1: medium-risk, 2: high-risk, 3: critical)</p>
-                     * @param _level <p>Risk level (0: low-risk, 1: medium-risk, 2: high-risk, 3: critical)</p>
+                     * 设置<p>Risk level (0: low risk, 1: medium risk, 2: high risk, 3: critical)</p>
+                     * @param _level <p>Risk level (0: low risk, 1: medium risk, 2: high risk, 3: critical)</p>
                      * 
                      */
                     void SetLevel(const int64_t& _level);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool LevelHasBeenSet() const;
 
                     /**
-                     * 获取<p>Row count of risk location</p>
-                     * @return Line <p>Row count of risk location</p>
+                     * 获取<p>Line count where the risk resides</p>
+                     * @return Line <p>Line count where the risk resides</p>
                      * 
                      */
                     uint64_t GetLine() const;
 
                     /**
-                     * 设置<p>Row count of risk location</p>
-                     * @param _line <p>Row count of risk location</p>
+                     * 设置<p>Line count where the risk resides</p>
+                     * @param _line <p>Line count where the risk resides</p>
                      * 
                      */
                     void SetLine(const uint64_t& _line);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool RuleNameHasBeenSet() const;
 
                     /**
-                     * 获取<p>Problem description</p>
-                     * @return Description <p>Problem description</p>
+                     * 获取<p>Issue description</p>
+                     * @return Description <p>Issue description</p>
                      * 
                      */
                     std::string GetDescription() const;
 
                     /**
-                     * 设置<p>Problem description</p>
-                     * @param _description <p>Problem description</p>
+                     * 设置<p>Issue description</p>
+                     * @param _description <p>Issue description</p>
                      * 
                      */
                     void SetDescription(const std::string& _description);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool DescriptionHasBeenSet() const;
 
                     /**
-                     * 获取<p>Repair recommendation</p>
-                     * @return Suggestion <p>Repair recommendation</p>
+                     * 获取<p>Fixing suggestion</p>
+                     * @return Suggestion <p>Fixing suggestion</p>
                      * 
                      */
                     std::string GetSuggestion() const;
 
                     /**
-                     * 设置<p>Repair recommendation</p>
-                     * @param _suggestion <p>Repair recommendation</p>
+                     * 设置<p>Fixing suggestion</p>
+                     * @param _suggestion <p>Fixing suggestion</p>
                      * 
                      */
                     void SetSuggestion(const std::string& _suggestion);
@@ -154,13 +154,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Risk level (0: low-risk, 1: medium-risk, 2: high-risk, 3: critical)</p>
+                     * <p>Risk level (0: low risk, 1: medium risk, 2: high risk, 3: critical)</p>
                      */
                     int64_t m_level;
                     bool m_levelHasBeenSet;
 
                     /**
-                     * <p>Row count of risk location</p>
+                     * <p>Line count where the risk resides</p>
                      */
                     uint64_t m_line;
                     bool m_lineHasBeenSet;
@@ -172,13 +172,13 @@ namespace TencentCloud
                     bool m_ruleNameHasBeenSet;
 
                     /**
-                     * <p>Problem description</p>
+                     * <p>Issue description</p>
                      */
                     std::string m_description;
                     bool m_descriptionHasBeenSet;
 
                     /**
-                     * <p>Repair recommendation</p>
+                     * <p>Fixing suggestion</p>
                      */
                     std::string m_suggestion;
                     bool m_suggestionHasBeenSet;

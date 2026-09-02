@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Access key asset list.
-                     * @return Data Access key asset list.
+                     * 获取Access key asset list
+                     * @return Data Access key asset list
                      * 
                      */
                     std::vector<AccessKeyAsset> GetData() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool DataHasBeenSet() const;
 
                     /**
-                     * 获取Total quantity.
-                     * @return Total Total quantity.
+                     * 获取Total number
+                     * @return Total Total number
                      * 
                      */
                     int64_t GetTotal() const;
@@ -75,13 +75,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Access key asset list.
+                     * Access key asset list
                      */
                     std::vector<AccessKeyAsset> m_data;
                     bool m_dataHasBeenSet;
 
                     /**
-                     * Total quantity.
+                     * Total number
                      */
                     int64_t m_total;
                     bool m_totalHasBeenSet;

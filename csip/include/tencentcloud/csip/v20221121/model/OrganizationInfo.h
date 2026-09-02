@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取member account name
-                     * @return NickName member account name
+                     * 获取Member account name
+                     * @return NickName Member account name
                      * 
                      */
                     std::string GetNickName() const;
 
                     /**
-                     * 设置member account name
-                     * @param _nickName member account name
+                     * 设置Member account name
+                     * @param _nickName Member account name
                      * 
                      */
                     void SetNickName(const std::string& _nickName);
@@ -174,15 +174,15 @@ namespace TencentCloud
                     bool GroupNameHasBeenSet() const;
 
                     /**
-                     * 获取administrator account name
-                     * @return AdminName administrator account name
+                     * 获取Admin account name
+                     * @return AdminName Admin account name
                      * 
                      */
                     std::string GetAdminName() const;
 
                     /**
-                     * 设置administrator account name
-                     * @param _adminName administrator account name
+                     * 设置Admin account name
+                     * @param _adminName Admin account name
                      * 
                      */
                     void SetAdminName(const std::string& _adminName);
@@ -300,15 +300,15 @@ namespace TencentCloud
                     bool SubAccountCountHasBeenSet() const;
 
                     /**
-                     * 获取Number of abnormal sub-accounts
-                     * @return AbnormalSubUserCount Number of abnormal sub-accounts
+                     * 获取Number of exceptional sub-accounts
+                     * @return AbnormalSubUserCount Number of exceptional sub-accounts
                      * 
                      */
                     int64_t GetAbnormalSubUserCount() const;
 
                     /**
-                     * 设置Number of abnormal sub-accounts
-                     * @param _abnormalSubUserCount Number of abnormal sub-accounts
+                     * 设置Number of exceptional sub-accounts
+                     * @param _abnormalSubUserCount Number of exceptional sub-accounts
                      * 
                      */
                     void SetAbnormalSubUserCount(const int64_t& _abnormalSubUserCount);
@@ -552,15 +552,15 @@ namespace TencentCloud
                     bool QuotaConsumerHasBeenSet() const;
 
                     /**
-                     * 获取Number of activations by admin/delegated admin
-                     * @return EnableAdminCount Number of activations by admin/delegated admin
+                     * 获取Number of enabled admins/delegated admins
+                     * @return EnableAdminCount Number of enabled admins/delegated admins
                      * 
                      */
                     int64_t GetEnableAdminCount() const;
 
                     /**
-                     * 设置Number of activations by admin/delegated admin
-                     * @param _enableAdminCount Number of activations by admin/delegated admin
+                     * 设置Number of enabled admins/delegated admins
+                     * @param _enableAdminCount Number of enabled admins/delegated admins
                      * 
                      */
                     void SetEnableAdminCount(const int64_t& _enableAdminCount);
@@ -617,7 +617,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * member account name
+                     * Member account name
                      */
                     std::string m_nickName;
                     bool m_nickNameHasBeenSet;
@@ -653,7 +653,7 @@ namespace TencentCloud
                     bool m_groupNameHasBeenSet;
 
                     /**
-                     * administrator account name
+                     * Admin account name
                      */
                     std::string m_adminName;
                     bool m_adminNameHasBeenSet;
@@ -689,7 +689,7 @@ namespace TencentCloud
                     bool m_subAccountCountHasBeenSet;
 
                     /**
-                     * Number of abnormal sub-accounts
+                     * Number of exceptional sub-accounts
                      */
                     int64_t m_abnormalSubUserCount;
                     bool m_abnormalSubUserCountHasBeenSet;
@@ -761,7 +761,7 @@ namespace TencentCloud
                     bool m_quotaConsumerHasBeenSet;
 
                     /**
-                     * Number of activations by admin/delegated admin
+                     * Number of enabled admins/delegated admins
                      */
                     int64_t m_enableAdminCount;
                     bool m_enableAdminCountHasBeenSet;

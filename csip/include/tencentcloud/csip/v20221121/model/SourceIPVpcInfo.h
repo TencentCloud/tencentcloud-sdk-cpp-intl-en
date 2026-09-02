@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Source IP of the call public account information.
+                * Source IP of the call. External account info.
                 */
                 class SourceIPVpcInfo : public AbstractModel
                 {
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool VpcIDHasBeenSet() const;
 
                     /**
-                     * 获取vpc name.
-                     * @return VpcName vpc name.
+                     * 获取VPC name.
+                     * @return VpcName VPC name.
                      * 
                      */
                     std::string GetVpcName() const;
 
                     /**
-                     * 设置vpc name.
-                     * @param _vpcName vpc name.
+                     * 设置VPC name.
+                     * @param _vpcName VPC name.
                      * 
                      */
                     void SetVpcName(const std::string& _vpcName);
@@ -151,7 +151,7 @@ namespace TencentCloud
                     bool m_vpcIDHasBeenSet;
 
                     /**
-                     * vpc name.
+                     * VPC name.
                      */
                     std::string m_vpcName;
                     bool m_vpcNameHasBeenSet;

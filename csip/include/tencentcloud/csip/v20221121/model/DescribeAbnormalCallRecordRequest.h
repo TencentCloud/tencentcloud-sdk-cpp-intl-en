@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Alarm rule ID.
-                     * @return AlarmRuleID Alarm rule ID.
+                     * 获取Alarm rule ID
+                     * @return AlarmRuleID Alarm rule ID
                      * 
                      */
                     int64_t GetAlarmRuleID() const;
 
                     /**
-                     * 设置Alarm rule ID.
-                     * @param _alarmRuleID Alarm rule ID.
+                     * 设置Alarm rule ID
+                     * @param _alarmRuleID Alarm rule ID
                      * 
                      */
                     void SetAlarmRuleID(const int64_t& _alarmRuleID);
@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool MemberIdHasBeenSet() const;
 
                     /**
-                     * 获取Access key.
-                     * @return AccessKey Access key.
+                     * 获取Access key
+                     * @return AccessKey Access key
                      * 
                      */
                     std::string GetAccessKey() const;
 
                     /**
-                     * 设置Access key.
-                     * @param _accessKey Access key.
+                     * 设置Access key
+                     * @param _accessKey Access key
                      * 
                      */
                     void SetAccessKey(const std::string& _accessKey);
@@ -107,15 +107,15 @@ namespace TencentCloud
                     bool AccessKeyHasBeenSet() const;
 
                     /**
-                     * 获取Source IP of the call.
-                     * @return SourceIP Source IP of the call.
+                     * 获取Call source IP
+                     * @return SourceIP Call source IP
                      * 
                      */
                     std::string GetSourceIP() const;
 
                     /**
-                     * 设置Source IP of the call.
-                     * @param _sourceIP Source IP of the call.
+                     * 设置Call source IP
+                     * @param _sourceIP Call source IP
                      * 
                      */
                     void SetSourceIP(const std::string& _sourceIP);
@@ -151,7 +151,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Alarm rule ID.
+                     * Alarm rule ID
                      */
                     int64_t m_alarmRuleID;
                     bool m_alarmRuleIDHasBeenSet;
@@ -163,13 +163,13 @@ namespace TencentCloud
                     bool m_memberIdHasBeenSet;
 
                     /**
-                     * Access key.
+                     * Access key
                      */
                     std::string m_accessKey;
                     bool m_accessKeyHasBeenSet;
 
                     /**
-                     * Source IP of the call.
+                     * Call source IP
                      */
                     std::string m_sourceIP;
                     bool m_sourceIPHasBeenSet;

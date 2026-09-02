@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Access key asset Alarm information.
+                * Access key asset alarm information
                 */
                 class AccessKeyAlarmInfo : public AbstractModel
                 {
@@ -47,47 +47,47 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Alarm type/risktype.
-Alarm type:.
-Abnormal calls.
-Leakage detection.
-2 custom.
+                     * 获取Alarm type/Risk type
+Alarm type:
+0Abnormal calls
+1. Leakage detection
+Custom parameter 2.
 
-Risk type:.
-Configuration risk.
-Custom risk.
-                     * @return Type Alarm type/risktype.
-Alarm type:.
-Abnormal calls.
-Leakage detection.
-2 custom.
+Risk type:
+0: Configuration risk
+1: Custom risk
+                     * @return Type Alarm type/Risk type
+Alarm type:
+0Abnormal calls
+1. Leakage detection
+Custom parameter 2.
 
-Risk type:.
-Configuration risk.
-Custom risk.
+Risk type:
+0: Configuration risk
+1: Custom risk
                      * 
                      */
                     int64_t GetType() const;
 
                     /**
-                     * 设置Alarm type/risktype.
-Alarm type:.
-Abnormal calls.
-Leakage detection.
-2 custom.
+                     * 设置Alarm type/Risk type
+Alarm type:
+0Abnormal calls
+1. Leakage detection
+Custom parameter 2.
 
-Risk type:.
-Configuration risk.
-Custom risk.
-                     * @param _type Alarm type/risktype.
-Alarm type:.
-Abnormal calls.
-Leakage detection.
-2 custom.
+Risk type:
+0: Configuration risk
+1: Custom risk
+                     * @param _type Alarm type/Risk type
+Alarm type:
+0Abnormal calls
+1. Leakage detection
+Custom parameter 2.
 
-Risk type:.
-Configuration risk.
-Custom risk.
+Risk type:
+0: Configuration risk
+1: Custom risk
                      * 
                      */
                     void SetType(const int64_t& _type);
@@ -100,15 +100,15 @@ Custom risk.
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Alarm count/number of risks.
-                     * @return Count Alarm count/number of risks.
+                     * 获取Alarm count / risk quantity
+                     * @return Count Alarm count / risk quantity
                      * 
                      */
                     int64_t GetCount() const;
 
                     /**
-                     * 设置Alarm count/number of risks.
-                     * @param _count Alarm count/number of risks.
+                     * 设置Alarm count / risk quantity
+                     * @param _count Alarm count / risk quantity
                      * 
                      */
                     void SetCount(const int64_t& _count);
@@ -123,21 +123,21 @@ Custom risk.
                 private:
 
                     /**
-                     * Alarm type/risktype.
-Alarm type:.
-Abnormal calls.
-Leakage detection.
-2 custom.
+                     * Alarm type/Risk type
+Alarm type:
+0Abnormal calls
+1. Leakage detection
+Custom parameter 2.
 
-Risk type:.
-Configuration risk.
-Custom risk.
+Risk type:
+0: Configuration risk
+1: Custom risk
                      */
                     int64_t m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Alarm count/number of risks.
+                     * Alarm count / risk quantity
                      */
                     int64_t m_count;
                     bool m_countHasBeenSet;

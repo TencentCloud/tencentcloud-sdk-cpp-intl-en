@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * List of IPs
+                * IP List
                 */
                 class IpAssetListVO : public AbstractModel
                 {
@@ -153,15 +153,15 @@ namespace TencentCloud
                     bool CFWStatusHasBeenSet() const;
 
                     /**
-                     * 获取Asset creation time
-                     * @return AssetCreateTime Asset creation time
+                     * 获取Asset creation time.
+                     * @return AssetCreateTime Asset creation time.
                      * 
                      */
                     std::string GetAssetCreateTime() const;
 
                     /**
-                     * 设置Asset creation time
-                     * @param _assetCreateTime Asset creation time
+                     * 设置Asset creation time.
+                     * @param _assetCreateTime Asset creation time.
                      * 
                      */
                     void SetAssetCreateTime(const std::string& _assetCreateTime);
@@ -363,15 +363,15 @@ namespace TencentCloud
                     bool IsCloudHasBeenSet() const;
 
                     /**
-                     * 获取network attack
-                     * @return Attack network attack
+                     * 获取Network attack
+                     * @return Attack Network attack
                      * 
                      */
                     uint64_t GetAttack() const;
 
                     /**
-                     * 设置network attack
-                     * @param _attack network attack
+                     * 设置Network attack
+                     * @param _attack Network attack
                      * 
                      */
                     void SetAttack(const uint64_t& _attack);
@@ -489,15 +489,15 @@ namespace TencentCloud
                     bool InFlowHasBeenSet() const;
 
                     /**
-                     * 获取outbound traffic
-                     * @return OutFlow outbound traffic
+                     * 获取Outbound traffic
+                     * @return OutFlow Outbound traffic
                      * 
                      */
                     std::string GetOutFlow() const;
 
                     /**
-                     * 设置outbound traffic
-                     * @param _outFlow outbound traffic
+                     * 设置Outbound traffic
+                     * @param _outFlow Outbound traffic
                      * 
                      */
                     void SetOutFlow(const std::string& _outFlow);
@@ -615,15 +615,15 @@ namespace TencentCloud
                     bool ScanTaskHasBeenSet() const;
 
                     /**
-                     * 获取weak password
-                     * @return WeakPassword weak password
+                     * 获取Weak password
+                     * @return WeakPassword Weak password
                      * 
                      */
                     uint64_t GetWeakPassword() const;
 
                     /**
-                     * 设置weak password
-                     * @param _weakPassword weak password
+                     * 设置Weak password
+                     * @param _weakPassword Weak password
                      * 
                      */
                     void SetWeakPassword(const uint64_t& _weakPassword);
@@ -699,15 +699,15 @@ namespace TencentCloud
                     bool AddressIdHasBeenSet() const;
 
                     /**
-                     * 获取Member ID information
-                     * @return MemberId Member ID information
+                     * 获取MemberId information
+                     * @return MemberId MemberId information
                      * 
                      */
                     std::string GetMemberId() const;
 
                     /**
-                     * 设置Member ID information
-                     * @param _memberId Member ID information
+                     * 设置MemberId information
+                     * @param _memberId MemberId information
                      * 
                      */
                     void SetMemberId(const std::string& _memberId);
@@ -720,15 +720,15 @@ namespace TencentCloud
                     bool MemberIdHasBeenSet() const;
 
                     /**
-                     * 获取risk service exposure
-                     * @return RiskExposure risk service exposure
+                     * 获取Risk service exposure
+                     * @return RiskExposure Risk service exposure
                      * 
                      */
                     int64_t GetRiskExposure() const;
 
                     /**
-                     * 设置risk service exposure
-                     * @param _riskExposure risk service exposure
+                     * 设置Risk service exposure
+                     * @param _riskExposure Risk service exposure
                      * 
                      */
                     void SetRiskExposure(const int64_t& _riskExposure);
@@ -815,7 +815,7 @@ namespace TencentCloud
                     bool m_cFWStatusHasBeenSet;
 
                     /**
-                     * Asset creation time
+                     * Asset creation time.
                      */
                     std::string m_assetCreateTime;
                     bool m_assetCreateTimeHasBeenSet;
@@ -875,7 +875,7 @@ namespace TencentCloud
                     bool m_isCloudHasBeenSet;
 
                     /**
-                     * network attack
+                     * Network attack
                      */
                     uint64_t m_attack;
                     bool m_attackHasBeenSet;
@@ -911,7 +911,7 @@ namespace TencentCloud
                     bool m_inFlowHasBeenSet;
 
                     /**
-                     * outbound traffic
+                     * Outbound traffic
                      */
                     std::string m_outFlow;
                     bool m_outFlowHasBeenSet;
@@ -947,7 +947,7 @@ namespace TencentCloud
                     bool m_scanTaskHasBeenSet;
 
                     /**
-                     * weak password
+                     * Weak password
                      */
                     uint64_t m_weakPassword;
                     bool m_weakPasswordHasBeenSet;
@@ -971,13 +971,13 @@ namespace TencentCloud
                     bool m_addressIdHasBeenSet;
 
                     /**
-                     * Member ID information
+                     * MemberId information
                      */
                     std::string m_memberId;
                     bool m_memberIdHasBeenSet;
 
                     /**
-                     * risk service exposure
+                     * Risk service exposure
                      */
                     int64_t m_riskExposure;
                     bool m_riskExposureHasBeenSet;

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * List of task IDs
+                * Task ID List Key
                 */
                 class TaskIdListKey : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Task ID
-                     * @return TaskId Task ID
+                     * 获取Task ID.
+                     * @return TaskId Task ID.
                      * 
                      */
                     std::string GetTaskId() const;
 
                     /**
-                     * 设置Task ID
-                     * @param _taskId Task ID
+                     * 设置Task ID.
+                     * @param _taskId Task ID.
                      * 
                      */
                     void SetTaskId(const std::string& _taskId);
@@ -91,7 +91,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Task ID
+                     * Task ID.
                      */
                     std::string m_taskId;
                     bool m_taskIdHasBeenSet;

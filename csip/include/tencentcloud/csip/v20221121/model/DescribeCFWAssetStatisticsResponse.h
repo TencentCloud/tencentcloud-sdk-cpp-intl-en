@@ -114,8 +114,8 @@ namespace TencentCloud
                     bool CVMAssetTotalHasBeenSet() const;
 
                     /**
-                     * 获取Configuration risk.
-                     * @return CFGTotal Configuration risk.
+                     * 获取Configuration risk
+                     * @return CFGTotal Configuration risk
                      * 
                      */
                     int64_t GetCFGTotal() const;
@@ -128,8 +128,8 @@ namespace TencentCloud
                     bool CFGTotalHasBeenSet() const;
 
                     /**
-                     * 获取Port risk.
-                     * @return PortTotal Port risk.
+                     * 获取Port risk
+                     * @return PortTotal Port risk
                      * 
                      */
                     int64_t GetPortTotal() const;
@@ -142,8 +142,8 @@ namespace TencentCloud
                     bool PortTotalHasBeenSet() const;
 
                     /**
-                     * 获取Content risk.
-                     * @return WebsiteTotal Content risk.
+                     * 获取Content risk
+                     * @return WebsiteTotal Content risk
                      * 
                      */
                     int64_t GetWebsiteTotal() const;
@@ -156,8 +156,8 @@ namespace TencentCloud
                     bool WebsiteTotalHasBeenSet() const;
 
                     /**
-                     * 获取Risk service exposure.
-                     * @return ServerTotal Risk service exposure.
+                     * 获取Risk service exposure
+                     * @return ServerTotal Risk service exposure
                      * 
                      */
                     int64_t GetServerTotal() const;
@@ -170,8 +170,8 @@ namespace TencentCloud
                     bool ServerTotalHasBeenSet() const;
 
                     /**
-                     * 获取Weak password risk.
-                     * @return WeakPasswordTotal Weak password risk.
+                     * 获取Weak password risk
+                     * @return WeakPasswordTotal Weak password risk
                      * 
                      */
                     int64_t GetWeakPasswordTotal() const;
@@ -184,8 +184,8 @@ namespace TencentCloud
                     bool WeakPasswordTotalHasBeenSet() const;
 
                     /**
-                     * 获取Vulnerability risk.
-                     * @return VULTotal Vulnerability risk.
+                     * 获取Vulnerability risk
+                     * @return VULTotal Vulnerability risk
                      * 
                      */
                     int64_t GetVULTotal() const;
@@ -230,37 +230,37 @@ namespace TencentCloud
                     bool m_cVMAssetTotalHasBeenSet;
 
                     /**
-                     * Configuration risk.
+                     * Configuration risk
                      */
                     int64_t m_cFGTotal;
                     bool m_cFGTotalHasBeenSet;
 
                     /**
-                     * Port risk.
+                     * Port risk
                      */
                     int64_t m_portTotal;
                     bool m_portTotalHasBeenSet;
 
                     /**
-                     * Content risk.
+                     * Content risk
                      */
                     int64_t m_websiteTotal;
                     bool m_websiteTotalHasBeenSet;
 
                     /**
-                     * Risk service exposure.
+                     * Risk service exposure
                      */
                     int64_t m_serverTotal;
                     bool m_serverTotalHasBeenSet;
 
                     /**
-                     * Weak password risk.
+                     * Weak password risk
                      */
                     int64_t m_weakPasswordTotal;
                     bool m_weakPasswordTotalHasBeenSet;
 
                     /**
-                     * Vulnerability risk.
+                     * Vulnerability risk
                      */
                     int64_t m_vULTotal;
                     bool m_vULTotalHasBeenSet;
