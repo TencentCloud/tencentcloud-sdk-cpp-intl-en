@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Start time in the format of `yyyymmddhh` accurate to the hour, such as 2021050113 (13:00 on May 1, 2021).
-                     * @return BeginTime Start time in the format of `yyyymmddhh` accurate to the hour, such as 2021050113 (13:00 on May 1, 2021).
+                     * 获取Start time in the format of `yyyymmddhh` accurate to the hour, such as 2021050113 (13:00 on May 1, 2021).Note: the statistical range includes the current hour.
+                     * @return BeginTime Start time in the format of `yyyymmddhh` accurate to the hour, such as 2021050113 (13:00 on May 1, 2021).Note: the statistical range includes the current hour.
                      * 
                      */
                     std::string GetBeginTime() const;
 
                     /**
-                     * 设置Start time in the format of `yyyymmddhh` accurate to the hour, such as 2021050113 (13:00 on May 1, 2021).
-                     * @param _beginTime Start time in the format of `yyyymmddhh` accurate to the hour, such as 2021050113 (13:00 on May 1, 2021).
+                     * 设置Start time in the format of `yyyymmddhh` accurate to the hour, such as 2021050113 (13:00 on May 1, 2021).Note: the statistical range includes the current hour.
+                     * @param _beginTime Start time in the format of `yyyymmddhh` accurate to the hour, such as 2021050113 (13:00 on May 1, 2021).Note: the statistical range includes the current hour.
                      * 
                      */
                     void SetBeginTime(const std::string& _beginTime);
@@ -65,18 +65,18 @@ namespace TencentCloud
 
                     /**
                      * 获取End time in the format of `yyyymmddhh` accurate to the hour, such as 2021050118 (18:00 on May 1, 2021).
-Note: `EndTime` must be after `BeginTime`.
+Note: `EndTime` must be after `BeginTime`, and the statistical range includes the current hour.
                      * @return EndTime End time in the format of `yyyymmddhh` accurate to the hour, such as 2021050118 (18:00 on May 1, 2021).
-Note: `EndTime` must be after `BeginTime`.
+Note: `EndTime` must be after `BeginTime`, and the statistical range includes the current hour.
                      * 
                      */
                     std::string GetEndTime() const;
 
                     /**
                      * 设置End time in the format of `yyyymmddhh` accurate to the hour, such as 2021050118 (18:00 on May 1, 2021).
-Note: `EndTime` must be after `BeginTime`.
+Note: `EndTime` must be after `BeginTime`, and the statistical range includes the current hour.
                      * @param _endTime End time in the format of `yyyymmddhh` accurate to the hour, such as 2021050118 (18:00 on May 1, 2021).
-Note: `EndTime` must be after `BeginTime`.
+Note: `EndTime` must be after `BeginTime`, and the statistical range includes the current hour.
                      * 
                      */
                     void SetEndTime(const std::string& _endTime);
@@ -162,14 +162,14 @@ Note: this parameter is currently fixed at 0.
                 private:
 
                     /**
-                     * Start time in the format of `yyyymmddhh` accurate to the hour, such as 2021050113 (13:00 on May 1, 2021).
+                     * Start time in the format of `yyyymmddhh` accurate to the hour, such as 2021050113 (13:00 on May 1, 2021).Note: the statistical range includes the current hour.
                      */
                     std::string m_beginTime;
                     bool m_beginTimeHasBeenSet;
 
                     /**
                      * End time in the format of `yyyymmddhh` accurate to the hour, such as 2021050118 (18:00 on May 1, 2021).
-Note: `EndTime` must be after `BeginTime`.
+Note: `EndTime` must be after `BeginTime`, and the statistical range includes the current hour.
                      */
                     std::string m_endTime;
                     bool m_endTimeHasBeenSet;

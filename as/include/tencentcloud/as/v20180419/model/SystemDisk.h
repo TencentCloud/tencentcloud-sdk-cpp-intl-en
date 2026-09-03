@@ -47,51 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取System disk type. for restrictions on the system disk type, see [cloud block storage types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1). valid values:.
-<Li>LOCAL_BASIC: local hard disk.</li>.
-<Li>LOCAL_SSD: local ssd.</li>.
-<Li>CLOUD_BASIC: general cloud disk.</li>.
-<Li>CLOUD_PREMIUM: high-performance cloud block storage</li>.
-<Li>CLOUD_SSD: cloud ssd</li>.
-<Li>CLOUD_BSSD: universal ssd cloud disk</li>.
-<Li>CLOUD_HSSD: enhanced ssd cloud disk</li>.
-<Li>CLOUD_TSSD: ultra ssd.</li>.
-<li>Default value: CLOUD_PREMIUM.</li>
-                     * @return DiskType System disk type. for restrictions on the system disk type, see [cloud block storage types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1). valid values:.
-<Li>LOCAL_BASIC: local hard disk.</li>.
-<Li>LOCAL_SSD: local ssd.</li>.
-<Li>CLOUD_BASIC: general cloud disk.</li>.
-<Li>CLOUD_PREMIUM: high-performance cloud block storage</li>.
-<Li>CLOUD_SSD: cloud ssd</li>.
-<Li>CLOUD_BSSD: universal ssd cloud disk</li>.
-<Li>CLOUD_HSSD: enhanced ssd cloud disk</li>.
-<Li>CLOUD_TSSD: ultra ssd.</li>.
-<li>Default value: CLOUD_PREMIUM.</li>
+                     * 获取<p>System disk type. For restrictions on system disk types, see <a href="https://www.tencentcloud.com/document/product/362/2353?from_cn_redirect=1">Cloud Disk Types</a>. Value range:</p><li>LOCAL_BASIC: local hard disk</li><li>LOCAL_SSD: local SSD</li><li>CLOUD_BASIC: basic cloud disk</li><li>CLOUD_PREMIUM: high-performance cloud block storage</li><li>CLOUD_SSD: SSD cloud disk</li><li>CLOUD_BSSD: universal SSD cloud disk</li><li>CLOUD_HSSD: enhanced SSD cloud disk</li><li>CLOUD_TSSD: ultra-fast SSD CBS</li><li>Default value: CLOUD_PREMIUM.</li>
+                     * @return DiskType <p>System disk type. For restrictions on system disk types, see <a href="https://www.tencentcloud.com/document/product/362/2353?from_cn_redirect=1">Cloud Disk Types</a>. Value range:</p><li>LOCAL_BASIC: local hard disk</li><li>LOCAL_SSD: local SSD</li><li>CLOUD_BASIC: basic cloud disk</li><li>CLOUD_PREMIUM: high-performance cloud block storage</li><li>CLOUD_SSD: SSD cloud disk</li><li>CLOUD_BSSD: universal SSD cloud disk</li><li>CLOUD_HSSD: enhanced SSD cloud disk</li><li>CLOUD_TSSD: ultra-fast SSD CBS</li><li>Default value: CLOUD_PREMIUM.</li>
                      * 
                      */
                     std::string GetDiskType() const;
 
                     /**
-                     * 设置System disk type. for restrictions on the system disk type, see [cloud block storage types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1). valid values:.
-<Li>LOCAL_BASIC: local hard disk.</li>.
-<Li>LOCAL_SSD: local ssd.</li>.
-<Li>CLOUD_BASIC: general cloud disk.</li>.
-<Li>CLOUD_PREMIUM: high-performance cloud block storage</li>.
-<Li>CLOUD_SSD: cloud ssd</li>.
-<Li>CLOUD_BSSD: universal ssd cloud disk</li>.
-<Li>CLOUD_HSSD: enhanced ssd cloud disk</li>.
-<Li>CLOUD_TSSD: ultra ssd.</li>.
-<li>Default value: CLOUD_PREMIUM.</li>
-                     * @param _diskType System disk type. for restrictions on the system disk type, see [cloud block storage types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1). valid values:.
-<Li>LOCAL_BASIC: local hard disk.</li>.
-<Li>LOCAL_SSD: local ssd.</li>.
-<Li>CLOUD_BASIC: general cloud disk.</li>.
-<Li>CLOUD_PREMIUM: high-performance cloud block storage</li>.
-<Li>CLOUD_SSD: cloud ssd</li>.
-<Li>CLOUD_BSSD: universal ssd cloud disk</li>.
-<Li>CLOUD_HSSD: enhanced ssd cloud disk</li>.
-<Li>CLOUD_TSSD: ultra ssd.</li>.
-<li>Default value: CLOUD_PREMIUM.</li>
+                     * 设置<p>System disk type. For restrictions on system disk types, see <a href="https://www.tencentcloud.com/document/product/362/2353?from_cn_redirect=1">Cloud Disk Types</a>. Value range:</p><li>LOCAL_BASIC: local hard disk</li><li>LOCAL_SSD: local SSD</li><li>CLOUD_BASIC: basic cloud disk</li><li>CLOUD_PREMIUM: high-performance cloud block storage</li><li>CLOUD_SSD: SSD cloud disk</li><li>CLOUD_BSSD: universal SSD cloud disk</li><li>CLOUD_HSSD: enhanced SSD cloud disk</li><li>CLOUD_TSSD: ultra-fast SSD CBS</li><li>Default value: CLOUD_PREMIUM.</li>
+                     * @param _diskType <p>System disk type. For restrictions on system disk types, see <a href="https://www.tencentcloud.com/document/product/362/2353?from_cn_redirect=1">Cloud Disk Types</a>. Value range:</p><li>LOCAL_BASIC: local hard disk</li><li>LOCAL_SSD: local SSD</li><li>CLOUD_BASIC: basic cloud disk</li><li>CLOUD_PREMIUM: high-performance cloud block storage</li><li>CLOUD_SSD: SSD cloud disk</li><li>CLOUD_BSSD: universal SSD cloud disk</li><li>CLOUD_HSSD: enhanced SSD cloud disk</li><li>CLOUD_TSSD: ultra-fast SSD CBS</li><li>Default value: CLOUD_PREMIUM.</li>
                      * 
                      */
                     void SetDiskType(const std::string& _diskType);
@@ -104,15 +68,15 @@ namespace TencentCloud
                     bool DiskTypeHasBeenSet() const;
 
                     /**
-                     * 获取System disk size, in GB. Default value: 50.
-                     * @return DiskSize System disk size, in GB. Default value: 50.
+                     * 获取<p>System disk size (GB). Default value: 50</p>
+                     * @return DiskSize <p>System disk size (GB). Default value: 50</p>
                      * 
                      */
                     uint64_t GetDiskSize() const;
 
                     /**
-                     * 设置System disk size, in GB. Default value: 50.
-                     * @param _diskSize System disk size, in GB. Default value: 50.
+                     * 设置<p>System disk size (GB). Default value: 50</p>
+                     * @param _diskSize <p>System disk size (GB). Default value: 50</p>
                      * 
                      */
                     void SetDiskSize(const uint64_t& _diskSize);
@@ -124,28 +88,73 @@ namespace TencentCloud
                      */
                     bool DiskSizeHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Whether to encrypt the system disk. TRUE means encrypted, FALSE means not encrypted. The specific disk type, region, and KMS rules are validated by CVM.</p>
+                     * @return Encrypt <p>Whether to encrypt the system disk. TRUE means encrypted, FALSE means not encrypted. The specific disk type, region, and KMS rules are validated by CVM.</p>
+                     * 
+                     */
+                    bool GetEncrypt() const;
+
+                    /**
+                     * 设置<p>Whether to encrypt the system disk. TRUE means encrypted, FALSE means not encrypted. The specific disk type, region, and KMS rules are validated by CVM.</p>
+                     * @param _encrypt <p>Whether to encrypt the system disk. TRUE means encrypted, FALSE means not encrypted. The specific disk type, region, and KMS rules are validated by CVM.</p>
+                     * 
+                     */
+                    void SetEncrypt(const bool& _encrypt);
+
+                    /**
+                     * 判断参数 Encrypt 是否已赋值
+                     * @return Encrypt 是否已赋值
+                     * 
+                     */
+                    bool EncryptHasBeenSet() const;
+
+                    /**
+                     * 获取<p>KMS Key ID used for system disk encryption. The key validity, permission, as well as adaptability to disk type and region are validated by CVM.</p>
+                     * @return KmsKeyId <p>KMS Key ID used for system disk encryption. The key validity, permission, as well as adaptability to disk type and region are validated by CVM.</p>
+                     * 
+                     */
+                    std::string GetKmsKeyId() const;
+
+                    /**
+                     * 设置<p>KMS Key ID used for system disk encryption. The key validity, permission, as well as adaptability to disk type and region are validated by CVM.</p>
+                     * @param _kmsKeyId <p>KMS Key ID used for system disk encryption. The key validity, permission, as well as adaptability to disk type and region are validated by CVM.</p>
+                     * 
+                     */
+                    void SetKmsKeyId(const std::string& _kmsKeyId);
+
+                    /**
+                     * 判断参数 KmsKeyId 是否已赋值
+                     * @return KmsKeyId 是否已赋值
+                     * 
+                     */
+                    bool KmsKeyIdHasBeenSet() const;
+
                 private:
 
                     /**
-                     * System disk type. for restrictions on the system disk type, see [cloud block storage types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1). valid values:.
-<Li>LOCAL_BASIC: local hard disk.</li>.
-<Li>LOCAL_SSD: local ssd.</li>.
-<Li>CLOUD_BASIC: general cloud disk.</li>.
-<Li>CLOUD_PREMIUM: high-performance cloud block storage</li>.
-<Li>CLOUD_SSD: cloud ssd</li>.
-<Li>CLOUD_BSSD: universal ssd cloud disk</li>.
-<Li>CLOUD_HSSD: enhanced ssd cloud disk</li>.
-<Li>CLOUD_TSSD: ultra ssd.</li>.
-<li>Default value: CLOUD_PREMIUM.</li>
+                     * <p>System disk type. For restrictions on system disk types, see <a href="https://www.tencentcloud.com/document/product/362/2353?from_cn_redirect=1">Cloud Disk Types</a>. Value range:</p><li>LOCAL_BASIC: local hard disk</li><li>LOCAL_SSD: local SSD</li><li>CLOUD_BASIC: basic cloud disk</li><li>CLOUD_PREMIUM: high-performance cloud block storage</li><li>CLOUD_SSD: SSD cloud disk</li><li>CLOUD_BSSD: universal SSD cloud disk</li><li>CLOUD_HSSD: enhanced SSD cloud disk</li><li>CLOUD_TSSD: ultra-fast SSD CBS</li><li>Default value: CLOUD_PREMIUM.</li>
                      */
                     std::string m_diskType;
                     bool m_diskTypeHasBeenSet;
 
                     /**
-                     * System disk size, in GB. Default value: 50.
+                     * <p>System disk size (GB). Default value: 50</p>
                      */
                     uint64_t m_diskSize;
                     bool m_diskSizeHasBeenSet;
+
+                    /**
+                     * <p>Whether to encrypt the system disk. TRUE means encrypted, FALSE means not encrypted. The specific disk type, region, and KMS rules are validated by CVM.</p>
+                     */
+                    bool m_encrypt;
+                    bool m_encryptHasBeenSet;
+
+                    /**
+                     * <p>KMS Key ID used for system disk encryption. The key validity, permission, as well as adaptability to disk type and region are validated by CVM.</p>
+                     */
+                    std::string m_kmsKeyId;
+                    bool m_kmsKeyIdHasBeenSet;
 
                 };
             }

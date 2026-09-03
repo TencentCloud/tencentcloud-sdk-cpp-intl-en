@@ -176,15 +176,19 @@ namespace TencentCloud
                     bool CosPathInfoHasBeenSet() const;
 
                     /**
-                     * 获取GooseFSx configurations, and is valid when ModelSource is GooseFSx.
-                     * @return GooseFSx GooseFSx configurations, and is valid when ModelSource is GooseFSx.
+                     * 获取GooseFSx configuration. This parameter takes effect if ModelSource is GooseFSx.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return GooseFSx GooseFSx configuration. This parameter takes effect if ModelSource is GooseFSx.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     GooseFSx GetGooseFSx() const;
 
                     /**
-                     * 设置GooseFSx configurations, and is valid when ModelSource is GooseFSx.
-                     * @param _gooseFSx GooseFSx configurations, and is valid when ModelSource is GooseFSx.
+                     * 设置GooseFSx configuration. This parameter takes effect if ModelSource is GooseFSx.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _gooseFSx GooseFSx configuration. This parameter takes effect if ModelSource is GooseFSx.
+Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetGooseFSx(const GooseFSx& _gooseFSx);
@@ -361,7 +365,8 @@ namespace TencentCloud
                     bool m_cosPathInfoHasBeenSet;
 
                     /**
-                     * GooseFSx configurations, and is valid when ModelSource is GooseFSx.
+                     * GooseFSx configuration. This parameter takes effect if ModelSource is GooseFSx.
+Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     GooseFSx m_gooseFSx;
                     bool m_gooseFSxHasBeenSet;

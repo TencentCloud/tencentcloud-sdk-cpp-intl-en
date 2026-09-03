@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Tag key
-                     * @return Key Tag key
+                     * 获取Tag key.
+                     * @return Key Tag key.
                      * 
                      */
                     std::string GetKey() const;
 
                     /**
-                     * 设置Tag key
-                     * @param _key Tag key
+                     * 设置Tag key.
+                     * @param _key Tag key.
                      * 
                      */
                     void SetKey(const std::string& _key);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool KeyHasBeenSet() const;
 
                     /**
-                     * 获取Tag value
-                     * @return Value Tag value
+                     * 获取Tag value.
+                     * @return Value Tag value.
                      * 
                      */
                     std::string GetValue() const;
 
                     /**
-                     * 设置Tag value
-                     * @param _value Tag value
+                     * 设置Tag value.
+                     * @param _value Tag value.
                      * 
                      */
                     void SetValue(const std::string& _value);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool ValueHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the resource type bound to the tag. type currently supported: "auto-scaling-group", "launch-configuration". valid values: scaling group resources and launch configuration resources respectively.
-                     * @return ResourceType Specifies the resource type bound to the tag. type currently supported: "auto-scaling-group", "launch-configuration". valid values: scaling group resources and launch configuration resources respectively.
+                     * 获取Resource type bound to the tag. Type currently supported: "auto-scaling-group", "launch-configuration". They respectively represent scaling group resources and launch configuration resources.
+                     * @return ResourceType Resource type bound to the tag. Type currently supported: "auto-scaling-group", "launch-configuration". They respectively represent scaling group resources and launch configuration resources.
                      * 
                      */
                     std::string GetResourceType() const;
 
                     /**
-                     * 设置Specifies the resource type bound to the tag. type currently supported: "auto-scaling-group", "launch-configuration". valid values: scaling group resources and launch configuration resources respectively.
-                     * @param _resourceType Specifies the resource type bound to the tag. type currently supported: "auto-scaling-group", "launch-configuration". valid values: scaling group resources and launch configuration resources respectively.
+                     * 设置Resource type bound to the tag. Type currently supported: "auto-scaling-group", "launch-configuration". They respectively represent scaling group resources and launch configuration resources.
+                     * @param _resourceType Resource type bound to the tag. Type currently supported: "auto-scaling-group", "launch-configuration". They respectively represent scaling group resources and launch configuration resources.
                      * 
                      */
                     void SetResourceType(const std::string& _resourceType);
@@ -112,19 +112,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Tag key
+                     * Tag key.
                      */
                     std::string m_key;
                     bool m_keyHasBeenSet;
 
                     /**
-                     * Tag value
+                     * Tag value.
                      */
                     std::string m_value;
                     bool m_valueHasBeenSet;
 
                     /**
-                     * Specifies the resource type bound to the tag. type currently supported: "auto-scaling-group", "launch-configuration". valid values: scaling group resources and launch configuration resources respectively.
+                     * Resource type bound to the tag. Type currently supported: "auto-scaling-group", "launch-configuration". They respectively represent scaling group resources and launch configuration resources.
                      */
                     std::string m_resourceType;
                     bool m_resourceTypeHasBeenSet;

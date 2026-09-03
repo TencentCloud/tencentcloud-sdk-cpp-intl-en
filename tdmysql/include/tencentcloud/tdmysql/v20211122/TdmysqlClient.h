@@ -37,6 +37,8 @@
 #include <tencentcloud/tdmysql/v20211122/model/DeleteDBSBackupSetsResponse.h>
 #include <tencentcloud/tdmysql/v20211122/model/DeleteUsersRequest.h>
 #include <tencentcloud/tdmysql/v20211122/model/DeleteUsersResponse.h>
+#include <tencentcloud/tdmysql/v20211122/model/DescribeDBEnginesRequest.h>
+#include <tencentcloud/tdmysql/v20211122/model/DescribeDBEnginesResponse.h>
 #include <tencentcloud/tdmysql/v20211122/model/DescribeDBInstanceDetailRequest.h>
 #include <tencentcloud/tdmysql/v20211122/model/DescribeDBInstanceDetailResponse.h>
 #include <tencentcloud/tdmysql/v20211122/model/DescribeDBInstancesRequest.h>
@@ -107,8 +109,6 @@
 #include <tencentcloud/tdmysql/v20211122/model/ModifyMaintenanceWindowResponse.h>
 #include <tencentcloud/tdmysql/v20211122/model/ModifyUserPrivilegesRequest.h>
 #include <tencentcloud/tdmysql/v20211122/model/ModifyUserPrivilegesResponse.h>
-#include <tencentcloud/tdmysql/v20211122/model/ResetUserPasswordRequest.h>
-#include <tencentcloud/tdmysql/v20211122/model/ResetUserPasswordResponse.h>
 #include <tencentcloud/tdmysql/v20211122/model/ResetUsersPasswordRequest.h>
 #include <tencentcloud/tdmysql/v20211122/model/ResetUsersPasswordResponse.h>
 #include <tencentcloud/tdmysql/v20211122/model/RestartDBInstancesRequest.h>
@@ -150,6 +150,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DeleteUsersResponse> DeleteUsersOutcome;
                 typedef std::future<DeleteUsersOutcome> DeleteUsersOutcomeCallable;
                 typedef std::function<void(const TdmysqlClient*, const Model::DeleteUsersRequest&, DeleteUsersOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteUsersAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeDBEnginesResponse> DescribeDBEnginesOutcome;
+                typedef std::future<DescribeDBEnginesOutcome> DescribeDBEnginesOutcomeCallable;
+                typedef std::function<void(const TdmysqlClient*, const Model::DescribeDBEnginesRequest&, DescribeDBEnginesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDBEnginesAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeDBInstanceDetailResponse> DescribeDBInstanceDetailOutcome;
                 typedef std::future<DescribeDBInstanceDetailOutcome> DescribeDBInstanceDetailOutcomeCallable;
                 typedef std::function<void(const TdmysqlClient*, const Model::DescribeDBInstanceDetailRequest&, DescribeDBInstanceDetailOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDBInstanceDetailAsyncHandler;
@@ -255,9 +258,6 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyUserPrivilegesResponse> ModifyUserPrivilegesOutcome;
                 typedef std::future<ModifyUserPrivilegesOutcome> ModifyUserPrivilegesOutcomeCallable;
                 typedef std::function<void(const TdmysqlClient*, const Model::ModifyUserPrivilegesRequest&, ModifyUserPrivilegesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyUserPrivilegesAsyncHandler;
-                typedef Outcome<Core::Error, Model::ResetUserPasswordResponse> ResetUserPasswordOutcome;
-                typedef std::future<ResetUserPasswordOutcome> ResetUserPasswordOutcomeCallable;
-                typedef std::function<void(const TdmysqlClient*, const Model::ResetUserPasswordRequest&, ResetUserPasswordOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ResetUserPasswordAsyncHandler;
                 typedef Outcome<Core::Error, Model::ResetUsersPasswordResponse> ResetUsersPasswordOutcome;
                 typedef std::future<ResetUsersPasswordOutcome> ResetUsersPasswordOutcomeCallable;
                 typedef std::function<void(const TdmysqlClient*, const Model::ResetUsersPasswordRequest&, ResetUsersPasswordOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ResetUsersPasswordAsyncHandler;
@@ -332,6 +332,15 @@ namespace TencentCloud
                 DeleteUsersOutcome DeleteUsers(const Model::DeleteUsersRequest &request);
                 void DeleteUsersAsync(const Model::DeleteUsersRequest& request, const DeleteUsersAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DeleteUsersOutcomeCallable DeleteUsersCallable(const Model::DeleteUsersRequest& request);
+
+                /**
+                 *This API is used to obtain the DB engine version list.
+                 * @param req DescribeDBEnginesRequest
+                 * @return DescribeDBEnginesOutcome
+                 */
+                DescribeDBEnginesOutcome DescribeDBEngines(const Model::DescribeDBEnginesRequest &request);
+                void DescribeDBEnginesAsync(const Model::DescribeDBEnginesRequest& request, const DescribeDBEnginesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeDBEnginesOutcomeCallable DescribeDBEnginesCallable(const Model::DescribeDBEnginesRequest& request);
 
                 /**
                  *This API is used to query instance details.
@@ -647,15 +656,6 @@ namespace TencentCloud
                 ModifyUserPrivilegesOutcome ModifyUserPrivileges(const Model::ModifyUserPrivilegesRequest &request);
                 void ModifyUserPrivilegesAsync(const Model::ModifyUserPrivilegesRequest& request, const ModifyUserPrivilegesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ModifyUserPrivilegesOutcomeCallable ModifyUserPrivilegesCallable(const Model::ModifyUserPrivilegesRequest& request);
-
-                /**
-                 *This API is used to reset user password.
-                 * @param req ResetUserPasswordRequest
-                 * @return ResetUserPasswordOutcome
-                 */
-                ResetUserPasswordOutcome ResetUserPassword(const Model::ResetUserPasswordRequest &request);
-                void ResetUserPasswordAsync(const Model::ResetUserPasswordRequest& request, const ResetUserPasswordAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                ResetUserPasswordOutcomeCallable ResetUserPasswordCallable(const Model::ResetUserPasswordRequest& request);
 
                 /**
                  *This API is used to batch reset user password.

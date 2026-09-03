@@ -173,6 +173,73 @@ namespace TencentCloud
                      */
                     bool RealGpuDetailSetHasBeenSet() const;
 
+                    /**
+                     * 获取Indicates whether to enable RDMA.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @return EnableRDMA Indicates whether to enable RDMA.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    bool GetEnableRDMA() const;
+
+                    /**
+                     * 设置Indicates whether to enable RDMA.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * @param _enableRDMA Indicates whether to enable RDMA.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
+                     */
+                    void SetEnableRDMA(const bool& _enableRDMA);
+
+                    /**
+                     * 判断参数 EnableRDMA 是否已赋值
+                     * @return EnableRDMA 是否已赋值
+                     * 
+                     */
+                    bool EnableRDMAHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return RootDisk 
+                     * 
+                     */
+                    uint64_t GetRootDisk() const;
+
+                    /**
+                     * 设置
+                     * @param _rootDisk 
+                     * 
+                     */
+                    void SetRootDisk(const uint64_t& _rootDisk);
+
+                    /**
+                     * 判断参数 RootDisk 是否已赋值
+                     * @return RootDisk 是否已赋值
+                     * 
+                     */
+                    bool RootDiskHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return DataDisk 
+                     * 
+                     */
+                    uint64_t GetDataDisk() const;
+
+                    /**
+                     * 设置
+                     * @param _dataDisk 
+                     * 
+                     */
+                    void SetDataDisk(const uint64_t& _dataDisk);
+
+                    /**
+                     * 判断参数 DataDisk 是否已赋值
+                     * @return DataDisk 是否已赋值
+                     * 
+                     */
+                    bool DataDiskHasBeenSet() const;
+
                 private:
 
                     /**
@@ -210,6 +277,25 @@ namespace TencentCloud
                      */
                     std::vector<GpuDetail> m_realGpuDetailSet;
                     bool m_realGpuDetailSetHasBeenSet;
+
+                    /**
+                     * Indicates whether to enable RDMA.
+Note: This field may return null, indicating that no valid values can be obtained.
+                     */
+                    bool m_enableRDMA;
+                    bool m_enableRDMAHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    uint64_t m_rootDisk;
+                    bool m_rootDiskHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    uint64_t m_dataDisk;
+                    bool m_dataDiskHasBeenSet;
 
                 };
             }

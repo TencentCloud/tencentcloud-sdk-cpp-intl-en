@@ -23,6 +23,8 @@
 #include <tencentcloud/core/Credential.h>
 #include <tencentcloud/core/profile/ClientProfile.h>
 #include <tencentcloud/core/AsyncCallerContext.h>
+#include <tencentcloud/tione/v20211111/model/CreateTrainingTaskRequest.h>
+#include <tencentcloud/tione/v20211111/model/CreateTrainingTaskResponse.h>
 #include <tencentcloud/tione/v20211111/model/DescribeModelServiceGroupsRequest.h>
 #include <tencentcloud/tione/v20211111/model/DescribeModelServiceGroupsResponse.h>
 
@@ -39,11 +41,23 @@ namespace TencentCloud
                 TioneClient(const Credential &credential, const std::string &region);
                 TioneClient(const Credential &credential, const std::string &region, const ClientProfile &profile);
 
+                typedef Outcome<Core::Error, Model::CreateTrainingTaskResponse> CreateTrainingTaskOutcome;
+                typedef std::future<CreateTrainingTaskOutcome> CreateTrainingTaskOutcomeCallable;
+                typedef std::function<void(const TioneClient*, const Model::CreateTrainingTaskRequest&, CreateTrainingTaskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateTrainingTaskAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeModelServiceGroupsResponse> DescribeModelServiceGroupsOutcome;
                 typedef std::future<DescribeModelServiceGroupsOutcome> DescribeModelServiceGroupsOutcomeCallable;
                 typedef std::function<void(const TioneClient*, const Model::DescribeModelServiceGroupsRequest&, DescribeModelServiceGroupsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeModelServiceGroupsAsyncHandler;
 
 
+
+                /**
+                 *This API is used to create a model training task.
+                 * @param req CreateTrainingTaskRequest
+                 * @return CreateTrainingTaskOutcome
+                 */
+                CreateTrainingTaskOutcome CreateTrainingTask(const Model::CreateTrainingTaskRequest &request);
+                void CreateTrainingTaskAsync(const Model::CreateTrainingTaskRequest& request, const CreateTrainingTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateTrainingTaskOutcomeCallable CreateTrainingTaskCallable(const Model::CreateTrainingTaskRequest& request);
 
                 /**
                  *This API is used to list online inference service groups.

@@ -24,6 +24,7 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/tione/v20211111/model/ImageSecret.h>
 
 
 namespace TencentCloud
@@ -193,6 +194,27 @@ namespace TencentCloud
                      */
                     bool SupportDataPipelineHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return ImageSecret 
+                     * 
+                     */
+                    ImageSecret GetImageSecret() const;
+
+                    /**
+                     * 设置
+                     * @param _imageSecret 
+                     * 
+                     */
+                    void SetImageSecret(const ImageSecret& _imageSecret);
+
+                    /**
+                     * 判断参数 ImageSecret 是否已赋值
+                     * @return ImageSecret 是否已赋值
+                     * 
+                     */
+                    bool ImageSecretHasBeenSet() const;
+
                 private:
 
                     /**
@@ -236,6 +258,12 @@ namespace TencentCloud
                      */
                     bool m_supportDataPipeline;
                     bool m_supportDataPipelineHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    ImageSecret m_imageSecret;
+                    bool m_imageSecretHasBeenSet;
 
                 };
             }

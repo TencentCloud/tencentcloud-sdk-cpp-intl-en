@@ -37,6 +37,7 @@
 #include <tencentcloud/as/v20180419/model/InstanceNameSettings.h>
 #include <tencentcloud/as/v20180419/model/InstanceChargePrepaid.h>
 #include <tencentcloud/as/v20180419/model/IPv6InternetAccessible.h>
+#include <tencentcloud/as/v20180419/model/NetworkInterface.h>
 
 
 namespace TencentCloud
@@ -60,15 +61,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Project ID of the instance.
-                     * @return ProjectId Project ID of the instance.
+                     * 获取<p>Project ID of the instance.</p>
+                     * @return ProjectId <p>Project ID of the instance.</p>
                      * 
                      */
                     int64_t GetProjectId() const;
 
                     /**
-                     * 设置Project ID of the instance.
-                     * @param _projectId Project ID of the instance.
+                     * 设置<p>Project ID of the instance.</p>
+                     * @param _projectId <p>Project ID of the instance.</p>
                      * 
                      */
                     void SetProjectId(const int64_t& _projectId);
@@ -81,15 +82,15 @@ namespace TencentCloud
                     bool ProjectIdHasBeenSet() const;
 
                     /**
-                     * 获取Launch configuration ID
-                     * @return LaunchConfigurationId Launch configuration ID
+                     * 获取<p>Launch configuration ID.</p>
+                     * @return LaunchConfigurationId <p>Launch configuration ID.</p>
                      * 
                      */
                     std::string GetLaunchConfigurationId() const;
 
                     /**
-                     * 设置Launch configuration ID
-                     * @param _launchConfigurationId Launch configuration ID
+                     * 设置<p>Launch configuration ID.</p>
+                     * @param _launchConfigurationId <p>Launch configuration ID.</p>
                      * 
                      */
                     void SetLaunchConfigurationId(const std::string& _launchConfigurationId);
@@ -102,15 +103,15 @@ namespace TencentCloud
                     bool LaunchConfigurationIdHasBeenSet() const;
 
                     /**
-                     * 获取Launch configuration name.
-                     * @return LaunchConfigurationName Launch configuration name.
+                     * 获取<p>Startup configuration name.</p>
+                     * @return LaunchConfigurationName <p>Startup configuration name.</p>
                      * 
                      */
                     std::string GetLaunchConfigurationName() const;
 
                     /**
-                     * 设置Launch configuration name.
-                     * @param _launchConfigurationName Launch configuration name.
+                     * 设置<p>Startup configuration name.</p>
+                     * @param _launchConfigurationName <p>Startup configuration name.</p>
                      * 
                      */
                     void SetLaunchConfigurationName(const std::string& _launchConfigurationName);
@@ -123,15 +124,15 @@ namespace TencentCloud
                     bool LaunchConfigurationNameHasBeenSet() const;
 
                     /**
-                     * 获取Instance model.
-                     * @return InstanceType Instance model.
+                     * 获取<p>Instance model.</p>
+                     * @return InstanceType <p>Instance model.</p>
                      * 
                      */
                     std::string GetInstanceType() const;
 
                     /**
-                     * 设置Instance model.
-                     * @param _instanceType Instance model.
+                     * 设置<p>Instance model.</p>
+                     * @param _instanceType <p>Instance model.</p>
                      * 
                      */
                     void SetInstanceType(const std::string& _instanceType);
@@ -144,15 +145,15 @@ namespace TencentCloud
                     bool InstanceTypeHasBeenSet() const;
 
                     /**
-                     * 获取Information of the instance's system disk configuration.
-                     * @return SystemDisk Information of the instance's system disk configuration.
+                     * 获取<p>Instance system disk configuration information.</p>
+                     * @return SystemDisk <p>Instance system disk configuration information.</p>
                      * 
                      */
                     SystemDisk GetSystemDisk() const;
 
                     /**
-                     * 设置Information of the instance's system disk configuration.
-                     * @param _systemDisk Information of the instance's system disk configuration.
+                     * 设置<p>Instance system disk configuration information.</p>
+                     * @param _systemDisk <p>Instance system disk configuration information.</p>
                      * 
                      */
                     void SetSystemDisk(const SystemDisk& _systemDisk);
@@ -165,15 +166,15 @@ namespace TencentCloud
                     bool SystemDiskHasBeenSet() const;
 
                     /**
-                     * 获取Information of the instance's data disk configuration.
-                     * @return DataDisks Information of the instance's data disk configuration.
+                     * 获取<p>Instance data disk configuration information.</p>
+                     * @return DataDisks <p>Instance data disk configuration information.</p>
                      * 
                      */
                     std::vector<DataDisk> GetDataDisks() const;
 
                     /**
-                     * 设置Information of the instance's data disk configuration.
-                     * @param _dataDisks Information of the instance's data disk configuration.
+                     * 设置<p>Instance data disk configuration information.</p>
+                     * @param _dataDisks <p>Instance data disk configuration information.</p>
                      * 
                      */
                     void SetDataDisks(const std::vector<DataDisk>& _dataDisks);
@@ -186,15 +187,15 @@ namespace TencentCloud
                     bool DataDisksHasBeenSet() const;
 
                     /**
-                     * 获取Instance login settings.
-                     * @return LoginSettings Instance login settings.
+                     * 获取<p>Instance login settings.</p>
+                     * @return LoginSettings <p>Instance login settings.</p>
                      * 
                      */
                     LimitedLoginSettings GetLoginSettings() const;
 
                     /**
-                     * 设置Instance login settings.
-                     * @param _loginSettings Instance login settings.
+                     * 设置<p>Instance login settings.</p>
+                     * @param _loginSettings <p>Instance login settings.</p>
                      * 
                      */
                     void SetLoginSettings(const LimitedLoginSettings& _loginSettings);
@@ -207,15 +208,15 @@ namespace TencentCloud
                     bool LoginSettingsHasBeenSet() const;
 
                     /**
-                     * 获取Information of the public network bandwidth configuration.
-                     * @return InternetAccessible Information of the public network bandwidth configuration.
+                     * 获取<p>Public network bandwidth-related information settings.</p>
+                     * @return InternetAccessible <p>Public network bandwidth-related information settings.</p>
                      * 
                      */
                     InternetAccessible GetInternetAccessible() const;
 
                     /**
-                     * 设置Information of the public network bandwidth configuration.
-                     * @param _internetAccessible Information of the public network bandwidth configuration.
+                     * 设置<p>Public network bandwidth-related information settings.</p>
+                     * @param _internetAccessible <p>Public network bandwidth-related information settings.</p>
                      * 
                      */
                     void SetInternetAccessible(const InternetAccessible& _internetAccessible);
@@ -228,15 +229,15 @@ namespace TencentCloud
                     bool InternetAccessibleHasBeenSet() const;
 
                     /**
-                     * 获取Security group of the instance.
-                     * @return SecurityGroupIds Security group of the instance.
+                     * 获取<p>Security group to which an instance belongs.</p>
+                     * @return SecurityGroupIds <p>Security group to which an instance belongs.</p>
                      * 
                      */
                     std::vector<std::string> GetSecurityGroupIds() const;
 
                     /**
-                     * 设置Security group of the instance.
-                     * @param _securityGroupIds Security group of the instance.
+                     * 设置<p>Security group to which an instance belongs.</p>
+                     * @param _securityGroupIds <p>Security group to which an instance belongs.</p>
                      * 
                      */
                     void SetSecurityGroupIds(const std::vector<std::string>& _securityGroupIds);
@@ -249,15 +250,15 @@ namespace TencentCloud
                     bool SecurityGroupIdsHasBeenSet() const;
 
                     /**
-                     * 获取Auto scaling group associated with the launch configuration.
-                     * @return AutoScalingGroupAbstractSet Auto scaling group associated with the launch configuration.
+                     * 获取<p>The scaling group bound to the launch configuration.</p>
+                     * @return AutoScalingGroupAbstractSet <p>The scaling group bound to the launch configuration.</p>
                      * 
                      */
                     std::vector<AutoScalingGroupAbstract> GetAutoScalingGroupAbstractSet() const;
 
                     /**
-                     * 设置Auto scaling group associated with the launch configuration.
-                     * @param _autoScalingGroupAbstractSet Auto scaling group associated with the launch configuration.
+                     * 设置<p>The scaling group bound to the launch configuration.</p>
+                     * @param _autoScalingGroupAbstractSet <p>The scaling group bound to the launch configuration.</p>
                      * 
                      */
                     void SetAutoScalingGroupAbstractSet(const std::vector<AutoScalingGroupAbstract>& _autoScalingGroupAbstractSet);
@@ -270,19 +271,15 @@ namespace TencentCloud
                     bool AutoScalingGroupAbstractSetHasBeenSet() const;
 
                     /**
-                     * 获取Custom data.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return UserData Custom data.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Custom data.</p>
+                     * @return UserData <p>Custom data.</p>
                      * 
                      */
                     std::string GetUserData() const;
 
                     /**
-                     * 设置Custom data.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _userData Custom data.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Custom data.</p>
+                     * @param _userData <p>Custom data.</p>
                      * 
                      */
                     void SetUserData(const std::string& _userData);
@@ -295,15 +292,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool UserDataHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the startup configuration creation time. uses UTC standard time.
-                     * @return CreatedTime Specifies the startup configuration creation time. uses UTC standard time.
+                     * 获取<p>Launch configuration creation time, in standard <code>UTC</code> time.</p>
+                     * @return CreatedTime <p>Launch configuration creation time, in standard <code>UTC</code> time.</p>
                      * 
                      */
                     std::string GetCreatedTime() const;
 
                     /**
-                     * 设置Specifies the startup configuration creation time. uses UTC standard time.
-                     * @param _createdTime Specifies the startup configuration creation time. uses UTC standard time.
+                     * 设置<p>Launch configuration creation time, in standard <code>UTC</code> time.</p>
+                     * @param _createdTime <p>Launch configuration creation time, in standard <code>UTC</code> time.</p>
                      * 
                      */
                     void SetCreatedTime(const std::string& _createdTime);
@@ -316,15 +313,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CreatedTimeHasBeenSet() const;
 
                     /**
-                     * 获取Conditions of enhancement services for the instance and their settings.
-                     * @return EnhancedService Conditions of enhancement services for the instance and their settings.
+                     * 获取<p>Enhanced services enabling situation of the instance and its settings.</p>
+                     * @return EnhancedService <p>Enhanced services enabling situation of the instance and its settings.</p>
                      * 
                      */
                     EnhancedService GetEnhancedService() const;
 
                     /**
-                     * 设置Conditions of enhancement services for the instance and their settings.
-                     * @param _enhancedService Conditions of enhancement services for the instance and their settings.
+                     * 设置<p>Enhanced services enabling situation of the instance and its settings.</p>
+                     * @param _enhancedService <p>Enhanced services enabling situation of the instance and its settings.</p>
                      * 
                      */
                     void SetEnhancedService(const EnhancedService& _enhancedService);
@@ -337,15 +334,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool EnhancedServiceHasBeenSet() const;
 
                     /**
-                     * 获取Image ID.
-                     * @return ImageId Image ID.
+                     * 获取<p>Image ID.</p>
+                     * @return ImageId <p>Image ID.</p>
                      * 
                      */
                     std::string GetImageId() const;
 
                     /**
-                     * 设置Image ID.
-                     * @param _imageId Image ID.
+                     * 设置<p>Image ID.</p>
+                     * @param _imageId <p>Image ID.</p>
                      * 
                      */
                     void SetImageId(const std::string& _imageId);
@@ -358,15 +355,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ImageIdHasBeenSet() const;
 
                     /**
-                     * 获取Current status of the launch configuration. Valid values: <li>NORMAL: Normal.</li> <li>IMAGE_ABNORMAL: Image exception in the launch configuration.</li> <li>CBS_SNAP_ABNORMAL: Exception with data disk snapshot in the launch configuration.</li> <li>SECURITY_GROUP_ABNORMAL: Security group exception in the launch configuration.</li>
-                     * @return LaunchConfigurationStatus Current status of the launch configuration. Valid values: <li>NORMAL: Normal.</li> <li>IMAGE_ABNORMAL: Image exception in the launch configuration.</li> <li>CBS_SNAP_ABNORMAL: Exception with data disk snapshot in the launch configuration.</li> <li>SECURITY_GROUP_ABNORMAL: Security group exception in the launch configuration.</li>
+                     * 获取<p>Current status of the launch configuration. Value range: <li>NORMAL: Normal</li><li>IMAGE_ABNORMAL: The launch configuration image is exceptional</li><li>CBS_SNAP_ABNORMAL: The launch configuration data disk snapshot is exceptional</li><li>SECURITY_GROUP_ABNORMAL: The launch configuration security group is exceptional</li></p>
+                     * @return LaunchConfigurationStatus <p>Current status of the launch configuration. Value range: <li>NORMAL: Normal</li><li>IMAGE_ABNORMAL: The launch configuration image is exceptional</li><li>CBS_SNAP_ABNORMAL: The launch configuration data disk snapshot is exceptional</li><li>SECURITY_GROUP_ABNORMAL: The launch configuration security group is exceptional</li></p>
                      * 
                      */
                     std::string GetLaunchConfigurationStatus() const;
 
                     /**
-                     * 设置Current status of the launch configuration. Valid values: <li>NORMAL: Normal.</li> <li>IMAGE_ABNORMAL: Image exception in the launch configuration.</li> <li>CBS_SNAP_ABNORMAL: Exception with data disk snapshot in the launch configuration.</li> <li>SECURITY_GROUP_ABNORMAL: Security group exception in the launch configuration.</li>
-                     * @param _launchConfigurationStatus Current status of the launch configuration. Valid values: <li>NORMAL: Normal.</li> <li>IMAGE_ABNORMAL: Image exception in the launch configuration.</li> <li>CBS_SNAP_ABNORMAL: Exception with data disk snapshot in the launch configuration.</li> <li>SECURITY_GROUP_ABNORMAL: Security group exception in the launch configuration.</li>
+                     * 设置<p>Current status of the launch configuration. Value range: <li>NORMAL: Normal</li><li>IMAGE_ABNORMAL: The launch configuration image is exceptional</li><li>CBS_SNAP_ABNORMAL: The launch configuration data disk snapshot is exceptional</li><li>SECURITY_GROUP_ABNORMAL: The launch configuration security group is exceptional</li></p>
+                     * @param _launchConfigurationStatus <p>Current status of the launch configuration. Value range: <li>NORMAL: Normal</li><li>IMAGE_ABNORMAL: The launch configuration image is exceptional</li><li>CBS_SNAP_ABNORMAL: The launch configuration data disk snapshot is exceptional</li><li>SECURITY_GROUP_ABNORMAL: The launch configuration security group is exceptional</li></p>
                      * 
                      */
                     void SetLaunchConfigurationStatus(const std::string& _launchConfigurationStatus);
@@ -379,31 +376,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool LaunchConfigurationStatusHasBeenSet() const;
 
                     /**
-                     * 获取Instance billing type. valid values:.
-<Li>POSTPAID_BY_HOUR: pay-as-you-go hourly</li>.
-<Li>SPOTPAID: spot payment</li>.
-<Li>PREPAID: prepaid, i.e., monthly subscription</li>.
-<Li>CDCPAID: dedicated cluster payment</li>.
-                     * @return InstanceChargeType Instance billing type. valid values:.
-<Li>POSTPAID_BY_HOUR: pay-as-you-go hourly</li>.
-<Li>SPOTPAID: spot payment</li>.
-<Li>PREPAID: prepaid, i.e., monthly subscription</li>.
-<Li>CDCPAID: dedicated cluster payment</li>.
+                     * 获取<p>Instance billing type. The value range is as follows:</p><li>POSTPAID_BY_HOUR: hourly postpaid</li><li>SPOTPAID: spot payment</li><li>PREPAID: prepaid, i.e. monthly subscription</li><li>CDCPAID: dedicated cluster payment</li>
+                     * @return InstanceChargeType <p>Instance billing type. The value range is as follows:</p><li>POSTPAID_BY_HOUR: hourly postpaid</li><li>SPOTPAID: spot payment</li><li>PREPAID: prepaid, i.e. monthly subscription</li><li>CDCPAID: dedicated cluster payment</li>
                      * 
                      */
                     std::string GetInstanceChargeType() const;
 
                     /**
-                     * 设置Instance billing type. valid values:.
-<Li>POSTPAID_BY_HOUR: pay-as-you-go hourly</li>.
-<Li>SPOTPAID: spot payment</li>.
-<Li>PREPAID: prepaid, i.e., monthly subscription</li>.
-<Li>CDCPAID: dedicated cluster payment</li>.
-                     * @param _instanceChargeType Instance billing type. valid values:.
-<Li>POSTPAID_BY_HOUR: pay-as-you-go hourly</li>.
-<Li>SPOTPAID: spot payment</li>.
-<Li>PREPAID: prepaid, i.e., monthly subscription</li>.
-<Li>CDCPAID: dedicated cluster payment</li>.
+                     * 设置<p>Instance billing type. The value range is as follows:</p><li>POSTPAID_BY_HOUR: hourly postpaid</li><li>SPOTPAID: spot payment</li><li>PREPAID: prepaid, i.e. monthly subscription</li><li>CDCPAID: dedicated cluster payment</li>
+                     * @param _instanceChargeType <p>Instance billing type. The value range is as follows:</p><li>POSTPAID_BY_HOUR: hourly postpaid</li><li>SPOTPAID: spot payment</li><li>PREPAID: prepaid, i.e. monthly subscription</li><li>CDCPAID: dedicated cluster payment</li>
                      * 
                      */
                     void SetInstanceChargeType(const std::string& _instanceChargeType);
@@ -416,19 +397,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool InstanceChargeTypeHasBeenSet() const;
 
                     /**
-                     * 获取Market options of the instance, such as parameters related to spot instances. This parameter is required for spot instances.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return InstanceMarketOptions Market options of the instance, such as parameters related to spot instances. This parameter is required for spot instances.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Market-related options of the instance, such as spot instance parameters. If the payment mode of the specified instance is spot payment, this parameter is required.</p>
+                     * @return InstanceMarketOptions <p>Market-related options of the instance, such as spot instance parameters. If the payment mode of the specified instance is spot payment, this parameter is required.</p>
                      * 
                      */
                     InstanceMarketOptionsRequest GetInstanceMarketOptions() const;
 
                     /**
-                     * 设置Market options of the instance, such as parameters related to spot instances. This parameter is required for spot instances.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _instanceMarketOptions Market options of the instance, such as parameters related to spot instances. This parameter is required for spot instances.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置<p>Market-related options of the instance, such as spot instance parameters. If the payment mode of the specified instance is spot payment, this parameter is required.</p>
+                     * @param _instanceMarketOptions <p>Market-related options of the instance, such as spot instance parameters. If the payment mode of the specified instance is spot payment, this parameter is required.</p>
                      * 
                      */
                     void SetInstanceMarketOptions(const InstanceMarketOptionsRequest& _instanceMarketOptions);
@@ -441,15 +418,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool InstanceMarketOptionsHasBeenSet() const;
 
                     /**
-                     * 获取List of instance models.
-                     * @return InstanceTypes List of instance models.
+                     * 获取<p>Instance model list.</p>
+                     * @return InstanceTypes <p>Instance model list.</p>
                      * 
                      */
                     std::vector<std::string> GetInstanceTypes() const;
 
                     /**
-                     * 设置List of instance models.
-                     * @param _instanceTypes List of instance models.
+                     * 设置<p>Instance model list.</p>
+                     * @param _instanceTypes <p>Instance model list.</p>
                      * 
                      */
                     void SetInstanceTypes(const std::vector<std::string>& _instanceTypes);
@@ -462,15 +439,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool InstanceTypesHasBeenSet() const;
 
                     /**
-                     * 获取List of instance tags, which will be added to instances created by the scale-out activity. Up to 10 tags allowed.
-                     * @return InstanceTags List of instance tags, which will be added to instances created by the scale-out activity. Up to 10 tags allowed.
+                     * 获取<p>Instance tag list. Instances scaled out will automatically come with tags, supporting up to 10 tags.</p>
+                     * @return InstanceTags <p>Instance tag list. Instances scaled out will automatically come with tags, supporting up to 10 tags.</p>
                      * 
                      */
                     std::vector<InstanceTag> GetInstanceTags() const;
 
                     /**
-                     * 设置List of instance tags, which will be added to instances created by the scale-out activity. Up to 10 tags allowed.
-                     * @param _instanceTags List of instance tags, which will be added to instances created by the scale-out activity. Up to 10 tags allowed.
+                     * 设置<p>Instance tag list. Instances scaled out will automatically come with tags, supporting up to 10 tags.</p>
+                     * @param _instanceTags <p>Instance tag list. Instances scaled out will automatically come with tags, supporting up to 10 tags.</p>
                      * 
                      */
                     void SetInstanceTags(const std::vector<InstanceTag>& _instanceTags);
@@ -483,15 +460,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool InstanceTagsHasBeenSet() const;
 
                     /**
-                     * 获取Tag list. this parameter specifies tags only used for binding the launch configuration and will not be passed to CVM instances scaled out based on it.
-                     * @return Tags Tag list. this parameter specifies tags only used for binding the launch configuration and will not be passed to CVM instances scaled out based on it.
+                     * 获取<p>Tag list. The tags in this parameter are only used to bind launch configurations and will not be passed to CVM instances scaled out based on the launch configuration.</p>
+                     * @return Tags <p>Tag list. The tags in this parameter are only used to bind launch configurations and will not be passed to CVM instances scaled out based on the launch configuration.</p>
                      * 
                      */
                     std::vector<Tag> GetTags() const;
 
                     /**
-                     * 设置Tag list. this parameter specifies tags only used for binding the launch configuration and will not be passed to CVM instances scaled out based on it.
-                     * @param _tags Tag list. this parameter specifies tags only used for binding the launch configuration and will not be passed to CVM instances scaled out based on it.
+                     * 设置<p>Tag list. The tags in this parameter are only used to bind launch configurations and will not be passed to CVM instances scaled out based on the launch configuration.</p>
+                     * @param _tags <p>Tag list. The tags in this parameter are only used to bind launch configurations and will not be passed to CVM instances scaled out based on the launch configuration.</p>
                      * 
                      */
                     void SetTags(const std::vector<Tag>& _tags);
@@ -504,15 +481,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TagsHasBeenSet() const;
 
                     /**
-                     * 获取Version
-                     * @return VersionNumber Version
+                     * 获取<p>Version number.</p>
+                     * @return VersionNumber <p>Version number.</p>
                      * 
                      */
                     int64_t GetVersionNumber() const;
 
                     /**
-                     * 设置Version
-                     * @param _versionNumber Version
+                     * 设置<p>Version number.</p>
+                     * @param _versionNumber <p>Version number.</p>
                      * 
                      */
                     void SetVersionNumber(const int64_t& _versionNumber);
@@ -525,15 +502,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool VersionNumberHasBeenSet() const;
 
                     /**
-                     * 获取Last update time is in standard UTC time.
-                     * @return UpdatedTime Last update time is in standard UTC time.
+                     * 获取<p>Update time in standard <code>UTC</code> format.</p>
+                     * @return UpdatedTime <p>Update time in standard <code>UTC</code> format.</p>
                      * 
                      */
                     std::string GetUpdatedTime() const;
 
                     /**
-                     * 设置Last update time is in standard UTC time.
-                     * @param _updatedTime Last update time is in standard UTC time.
+                     * 设置<p>Update time in standard <code>UTC</code> format.</p>
+                     * @param _updatedTime <p>Update time in standard <code>UTC</code> format.</p>
                      * 
                      */
                     void SetUpdatedTime(const std::string& _updatedTime);
@@ -546,15 +523,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool UpdatedTimeHasBeenSet() const;
 
                     /**
-                     * 获取Role name of the CAM role. can be obtained from roleName in the return value from the [DescribeRoleList API](https://intl.cloud.tencent.com/document/product/598/36223?from_cn_redirect=1).
-                     * @return CamRoleName Role name of the CAM role. can be obtained from roleName in the return value from the [DescribeRoleList API](https://intl.cloud.tencent.com/document/product/598/36223?from_cn_redirect=1).
+                     * 获取<p>CAM role name, which can be obtained from the roleName in the return value from the <a href="https://www.tencentcloud.com/document/product/598/36223?from_cn_redirect=1">DescribeRoleList</a> API.</p>
+                     * @return CamRoleName <p>CAM role name, which can be obtained from the roleName in the return value from the <a href="https://www.tencentcloud.com/document/product/598/36223?from_cn_redirect=1">DescribeRoleList</a> API.</p>
                      * 
                      */
                     std::string GetCamRoleName() const;
 
                     /**
-                     * 设置Role name of the CAM role. can be obtained from roleName in the return value from the [DescribeRoleList API](https://intl.cloud.tencent.com/document/product/598/36223?from_cn_redirect=1).
-                     * @param _camRoleName Role name of the CAM role. can be obtained from roleName in the return value from the [DescribeRoleList API](https://intl.cloud.tencent.com/document/product/598/36223?from_cn_redirect=1).
+                     * 设置<p>CAM role name, which can be obtained from the roleName in the return value from the <a href="https://www.tencentcloud.com/document/product/598/36223?from_cn_redirect=1">DescribeRoleList</a> API.</p>
+                     * @param _camRoleName <p>CAM role name, which can be obtained from the roleName in the return value from the <a href="https://www.tencentcloud.com/document/product/598/36223?from_cn_redirect=1">DescribeRoleList</a> API.</p>
                      * 
                      */
                     void SetCamRoleName(const std::string& _camRoleName);
@@ -567,15 +544,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CamRoleNameHasBeenSet() const;
 
                     /**
-                     * 获取Value of InstanceTypesCheckPolicy upon the last operation.
-                     * @return LastOperationInstanceTypesCheckPolicy Value of InstanceTypesCheckPolicy upon the last operation.
+                     * 获取<p>The value of InstanceTypesCheckPolicy last time when operating.</p>
+                     * @return LastOperationInstanceTypesCheckPolicy <p>The value of InstanceTypesCheckPolicy last time when operating.</p>
                      * 
                      */
                     std::string GetLastOperationInstanceTypesCheckPolicy() const;
 
                     /**
-                     * 设置Value of InstanceTypesCheckPolicy upon the last operation.
-                     * @param _lastOperationInstanceTypesCheckPolicy Value of InstanceTypesCheckPolicy upon the last operation.
+                     * 设置<p>The value of InstanceTypesCheckPolicy last time when operating.</p>
+                     * @param _lastOperationInstanceTypesCheckPolicy <p>The value of InstanceTypesCheckPolicy last time when operating.</p>
                      * 
                      */
                     void SetLastOperationInstanceTypesCheckPolicy(const std::string& _lastOperationInstanceTypesCheckPolicy);
@@ -588,15 +565,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool LastOperationInstanceTypesCheckPolicyHasBeenSet() const;
 
                     /**
-                     * 获取CVM hostname settings.
-                     * @return HostNameSettings CVM hostname settings.
+                     * 获取<p>Related settings for the CVM host name (HostName).</p>
+                     * @return HostNameSettings <p>Related settings for the CVM host name (HostName).</p>
                      * 
                      */
                     HostNameSettings GetHostNameSettings() const;
 
                     /**
-                     * 设置CVM hostname settings.
-                     * @param _hostNameSettings CVM hostname settings.
+                     * 设置<p>Related settings for the CVM host name (HostName).</p>
+                     * @param _hostNameSettings <p>Related settings for the CVM host name (HostName).</p>
                      * 
                      */
                     void SetHostNameSettings(const HostNameSettings& _hostNameSettings);
@@ -609,15 +586,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool HostNameSettingsHasBeenSet() const;
 
                     /**
-                     * 获取Settings of CVM instance names
-                     * @return InstanceNameSettings Settings of CVM instance names
+                     * 获取<p>Related settings for the cloud server instance name (InstanceName).</p>
+                     * @return InstanceNameSettings <p>Related settings for the cloud server instance name (InstanceName).</p>
                      * 
                      */
                     InstanceNameSettings GetInstanceNameSettings() const;
 
                     /**
-                     * 设置Settings of CVM instance names
-                     * @param _instanceNameSettings Settings of CVM instance names
+                     * 设置<p>Related settings for the cloud server instance name (InstanceName).</p>
+                     * @param _instanceNameSettings <p>Related settings for the cloud server instance name (InstanceName).</p>
                      * 
                      */
                     void SetInstanceNameSettings(const InstanceNameSettings& _instanceNameSettings);
@@ -630,15 +607,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool InstanceNameSettingsHasBeenSet() const;
 
                     /**
-                     * 获取Details of the monthly subscription, including the purchase period, auto-renewal. It is required if the `InstanceChargeType` is `PREPAID`.
-                     * @return InstanceChargePrepaid Details of the monthly subscription, including the purchase period, auto-renewal. It is required if the `InstanceChargeType` is `PREPAID`.
+                     * 获取<p>Prepaid mode, i.e., parameter settings related to monthly/annual subscription. By specifying this parameter, you can specify the purchase duration of annual and monthly subscription instances, whether to enable auto-renewal, and other attributes. This parameter is required if the billing mode for the specified instance is prepaid.</p>
+                     * @return InstanceChargePrepaid <p>Prepaid mode, i.e., parameter settings related to monthly/annual subscription. By specifying this parameter, you can specify the purchase duration of annual and monthly subscription instances, whether to enable auto-renewal, and other attributes. This parameter is required if the billing mode for the specified instance is prepaid.</p>
                      * 
                      */
                     InstanceChargePrepaid GetInstanceChargePrepaid() const;
 
                     /**
-                     * 设置Details of the monthly subscription, including the purchase period, auto-renewal. It is required if the `InstanceChargeType` is `PREPAID`.
-                     * @param _instanceChargePrepaid Details of the monthly subscription, including the purchase period, auto-renewal. It is required if the `InstanceChargeType` is `PREPAID`.
+                     * 设置<p>Prepaid mode, i.e., parameter settings related to monthly/annual subscription. By specifying this parameter, you can specify the purchase duration of annual and monthly subscription instances, whether to enable auto-renewal, and other attributes. This parameter is required if the billing mode for the specified instance is prepaid.</p>
+                     * @param _instanceChargePrepaid <p>Prepaid mode, i.e., parameter settings related to monthly/annual subscription. By specifying this parameter, you can specify the purchase duration of annual and monthly subscription instances, whether to enable auto-renewal, and other attributes. This parameter is required if the billing mode for the specified instance is prepaid.</p>
                      * 
                      */
                     void SetInstanceChargePrepaid(const InstanceChargePrepaid& _instanceChargePrepaid);
@@ -651,15 +628,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool InstanceChargePrepaidHasBeenSet() const;
 
                     /**
-                     * 获取Cloud disk type selection policy. Valid values: <li>ORIGINAL: Use the set cloud disk type.</li> <li>AUTOMATIC: Automatically select available cloud disk types in the current availability zone.</li>
-                     * @return DiskTypePolicy Cloud disk type selection policy. Valid values: <li>ORIGINAL: Use the set cloud disk type.</li> <li>AUTOMATIC: Automatically select available cloud disk types in the current availability zone.</li>
+                     * 获取<p>Cloud disk type selection policy. Parameter value range: <li>ORIGINAL: use the set cloud disk type</li><li>AUTOMATIC: automatically select available cloud disk types in the current AZ</li></p>
+                     * @return DiskTypePolicy <p>Cloud disk type selection policy. Parameter value range: <li>ORIGINAL: use the set cloud disk type</li><li>AUTOMATIC: automatically select available cloud disk types in the current AZ</li></p>
                      * 
                      */
                     std::string GetDiskTypePolicy() const;
 
                     /**
-                     * 设置Cloud disk type selection policy. Valid values: <li>ORIGINAL: Use the set cloud disk type.</li> <li>AUTOMATIC: Automatically select available cloud disk types in the current availability zone.</li>
-                     * @param _diskTypePolicy Cloud disk type selection policy. Valid values: <li>ORIGINAL: Use the set cloud disk type.</li> <li>AUTOMATIC: Automatically select available cloud disk types in the current availability zone.</li>
+                     * 设置<p>Cloud disk type selection policy. Parameter value range: <li>ORIGINAL: use the set cloud disk type</li><li>AUTOMATIC: automatically select available cloud disk types in the current AZ</li></p>
+                     * @param _diskTypePolicy <p>Cloud disk type selection policy. Parameter value range: <li>ORIGINAL: use the set cloud disk type</li><li>AUTOMATIC: automatically select available cloud disk types in the current AZ</li></p>
                      * 
                      */
                     void SetDiskTypePolicy(const std::string& _diskTypePolicy);
@@ -672,19 +649,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DiskTypePolicyHasBeenSet() const;
 
                     /**
-                     * 获取HPC ID<br>
-Note: This field is default to empty
-                     * @return HpcClusterId HPC ID<br>
-Note: This field is default to empty
+                     * 获取<p>Hyper Computing Cluster ID.<br><br>Note: This field is empty by default.</p>
+                     * @return HpcClusterId <p>Hyper Computing Cluster ID.<br><br>Note: This field is empty by default.</p>
                      * 
                      */
                     std::string GetHpcClusterId() const;
 
                     /**
-                     * 设置HPC ID<br>
-Note: This field is default to empty
-                     * @param _hpcClusterId HPC ID<br>
-Note: This field is default to empty
+                     * 设置<p>Hyper Computing Cluster ID.<br><br>Note: This field is empty by default.</p>
+                     * @param _hpcClusterId <p>Hyper Computing Cluster ID.<br><br>Note: This field is empty by default.</p>
                      * 
                      */
                     void SetHpcClusterId(const std::string& _hpcClusterId);
@@ -697,15 +670,15 @@ Note: This field is default to empty
                     bool HpcClusterIdHasBeenSet() const;
 
                     /**
-                     * 获取IPv6 public network bandwidth configuration.
-                     * @return IPv6InternetAccessible IPv6 public network bandwidth configuration.
+                     * 获取<p>IPv6 public network bandwidth-related information settings.</p>
+                     * @return IPv6InternetAccessible <p>IPv6 public network bandwidth-related information settings.</p>
                      * 
                      */
                     IPv6InternetAccessible GetIPv6InternetAccessible() const;
 
                     /**
-                     * 设置IPv6 public network bandwidth configuration.
-                     * @param _iPv6InternetAccessible IPv6 public network bandwidth configuration.
+                     * 设置<p>IPv6 public network bandwidth-related information settings.</p>
+                     * @param _iPv6InternetAccessible <p>IPv6 public network bandwidth-related information settings.</p>
                      * 
                      */
                     void SetIPv6InternetAccessible(const IPv6InternetAccessible& _iPv6InternetAccessible);
@@ -718,15 +691,15 @@ Note: This field is default to empty
                     bool IPv6InternetAccessibleHasBeenSet() const;
 
                     /**
-                     * 获取Placement group ID, supporting specification of only one.
-                     * @return DisasterRecoverGroupIds Placement group ID, supporting specification of only one.
+                     * 获取<p>Placement Group id. Only one can be specified.</p>
+                     * @return DisasterRecoverGroupIds <p>Placement Group id. Only one can be specified.</p>
                      * 
                      */
                     std::vector<std::string> GetDisasterRecoverGroupIds() const;
 
                     /**
-                     * 设置Placement group ID, supporting specification of only one.
-                     * @param _disasterRecoverGroupIds Placement group ID, supporting specification of only one.
+                     * 设置<p>Placement Group id. Only one can be specified.</p>
+                     * @param _disasterRecoverGroupIds <p>Placement Group id. Only one can be specified.</p>
                      * 
                      */
                     void SetDisasterRecoverGroupIds(const std::vector<std::string>& _disasterRecoverGroupIds);
@@ -739,15 +712,15 @@ Note: This field is default to empty
                     bool DisasterRecoverGroupIdsHasBeenSet() const;
 
                     /**
-                     * 获取Image family name.
-                     * @return ImageFamily Image family name.
+                     * 获取<p>Image family name.</p>
+                     * @return ImageFamily <p>Image family name.</p>
                      * 
                      */
                     std::string GetImageFamily() const;
 
                     /**
-                     * 设置Image family name.
-                     * @param _imageFamily Image family name.
+                     * 设置<p>Image family name.</p>
+                     * @param _imageFamily <p>Image family name.</p>
                      * 
                      */
                     void SetImageFamily(const std::string& _imageFamily);
@@ -760,15 +733,15 @@ Note: This field is default to empty
                     bool ImageFamilyHasBeenSet() const;
 
                     /**
-                     * 获取CDC ID.
-                     * @return DedicatedClusterId CDC ID.
+                     * 获取<p>Local dedicated cluster ID.</p>
+                     * @return DedicatedClusterId <p>Local dedicated cluster ID.</p>
                      * 
                      */
                     std::string GetDedicatedClusterId() const;
 
                     /**
-                     * 设置CDC ID.
-                     * @param _dedicatedClusterId CDC ID.
+                     * 设置<p>Local dedicated cluster ID.</p>
+                     * @param _dedicatedClusterId <p>Local dedicated cluster ID.</p>
                      * 
                      */
                     void SetDedicatedClusterId(const std::string& _dedicatedClusterId);
@@ -780,212 +753,232 @@ Note: This field is default to empty
                      */
                     bool DedicatedClusterIdHasBeenSet() const;
 
+                    /**
+                     * 获取<p>ENI configuration of the launch configuration.</p>
+                     * @return NetworkInterfaces <p>ENI configuration of the launch configuration.</p>
+                     * 
+                     */
+                    std::vector<NetworkInterface> GetNetworkInterfaces() const;
+
+                    /**
+                     * 设置<p>ENI configuration of the launch configuration.</p>
+                     * @param _networkInterfaces <p>ENI configuration of the launch configuration.</p>
+                     * 
+                     */
+                    void SetNetworkInterfaces(const std::vector<NetworkInterface>& _networkInterfaces);
+
+                    /**
+                     * 判断参数 NetworkInterfaces 是否已赋值
+                     * @return NetworkInterfaces 是否已赋值
+                     * 
+                     */
+                    bool NetworkInterfacesHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Project ID of the instance.
+                     * <p>Project ID of the instance.</p>
                      */
                     int64_t m_projectId;
                     bool m_projectIdHasBeenSet;
 
                     /**
-                     * Launch configuration ID
+                     * <p>Launch configuration ID.</p>
                      */
                     std::string m_launchConfigurationId;
                     bool m_launchConfigurationIdHasBeenSet;
 
                     /**
-                     * Launch configuration name.
+                     * <p>Startup configuration name.</p>
                      */
                     std::string m_launchConfigurationName;
                     bool m_launchConfigurationNameHasBeenSet;
 
                     /**
-                     * Instance model.
+                     * <p>Instance model.</p>
                      */
                     std::string m_instanceType;
                     bool m_instanceTypeHasBeenSet;
 
                     /**
-                     * Information of the instance's system disk configuration.
+                     * <p>Instance system disk configuration information.</p>
                      */
                     SystemDisk m_systemDisk;
                     bool m_systemDiskHasBeenSet;
 
                     /**
-                     * Information of the instance's data disk configuration.
+                     * <p>Instance data disk configuration information.</p>
                      */
                     std::vector<DataDisk> m_dataDisks;
                     bool m_dataDisksHasBeenSet;
 
                     /**
-                     * Instance login settings.
+                     * <p>Instance login settings.</p>
                      */
                     LimitedLoginSettings m_loginSettings;
                     bool m_loginSettingsHasBeenSet;
 
                     /**
-                     * Information of the public network bandwidth configuration.
+                     * <p>Public network bandwidth-related information settings.</p>
                      */
                     InternetAccessible m_internetAccessible;
                     bool m_internetAccessibleHasBeenSet;
 
                     /**
-                     * Security group of the instance.
+                     * <p>Security group to which an instance belongs.</p>
                      */
                     std::vector<std::string> m_securityGroupIds;
                     bool m_securityGroupIdsHasBeenSet;
 
                     /**
-                     * Auto scaling group associated with the launch configuration.
+                     * <p>The scaling group bound to the launch configuration.</p>
                      */
                     std::vector<AutoScalingGroupAbstract> m_autoScalingGroupAbstractSet;
                     bool m_autoScalingGroupAbstractSetHasBeenSet;
 
                     /**
-                     * Custom data.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Custom data.</p>
                      */
                     std::string m_userData;
                     bool m_userDataHasBeenSet;
 
                     /**
-                     * Specifies the startup configuration creation time. uses UTC standard time.
+                     * <p>Launch configuration creation time, in standard <code>UTC</code> time.</p>
                      */
                     std::string m_createdTime;
                     bool m_createdTimeHasBeenSet;
 
                     /**
-                     * Conditions of enhancement services for the instance and their settings.
+                     * <p>Enhanced services enabling situation of the instance and its settings.</p>
                      */
                     EnhancedService m_enhancedService;
                     bool m_enhancedServiceHasBeenSet;
 
                     /**
-                     * Image ID.
+                     * <p>Image ID.</p>
                      */
                     std::string m_imageId;
                     bool m_imageIdHasBeenSet;
 
                     /**
-                     * Current status of the launch configuration. Valid values: <li>NORMAL: Normal.</li> <li>IMAGE_ABNORMAL: Image exception in the launch configuration.</li> <li>CBS_SNAP_ABNORMAL: Exception with data disk snapshot in the launch configuration.</li> <li>SECURITY_GROUP_ABNORMAL: Security group exception in the launch configuration.</li>
+                     * <p>Current status of the launch configuration. Value range: <li>NORMAL: Normal</li><li>IMAGE_ABNORMAL: The launch configuration image is exceptional</li><li>CBS_SNAP_ABNORMAL: The launch configuration data disk snapshot is exceptional</li><li>SECURITY_GROUP_ABNORMAL: The launch configuration security group is exceptional</li></p>
                      */
                     std::string m_launchConfigurationStatus;
                     bool m_launchConfigurationStatusHasBeenSet;
 
                     /**
-                     * Instance billing type. valid values:.
-<Li>POSTPAID_BY_HOUR: pay-as-you-go hourly</li>.
-<Li>SPOTPAID: spot payment</li>.
-<Li>PREPAID: prepaid, i.e., monthly subscription</li>.
-<Li>CDCPAID: dedicated cluster payment</li>.
+                     * <p>Instance billing type. The value range is as follows:</p><li>POSTPAID_BY_HOUR: hourly postpaid</li><li>SPOTPAID: spot payment</li><li>PREPAID: prepaid, i.e. monthly subscription</li><li>CDCPAID: dedicated cluster payment</li>
                      */
                     std::string m_instanceChargeType;
                     bool m_instanceChargeTypeHasBeenSet;
 
                     /**
-                     * Market options of the instance, such as parameters related to spot instances. This parameter is required for spot instances.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Market-related options of the instance, such as spot instance parameters. If the payment mode of the specified instance is spot payment, this parameter is required.</p>
                      */
                     InstanceMarketOptionsRequest m_instanceMarketOptions;
                     bool m_instanceMarketOptionsHasBeenSet;
 
                     /**
-                     * List of instance models.
+                     * <p>Instance model list.</p>
                      */
                     std::vector<std::string> m_instanceTypes;
                     bool m_instanceTypesHasBeenSet;
 
                     /**
-                     * List of instance tags, which will be added to instances created by the scale-out activity. Up to 10 tags allowed.
+                     * <p>Instance tag list. Instances scaled out will automatically come with tags, supporting up to 10 tags.</p>
                      */
                     std::vector<InstanceTag> m_instanceTags;
                     bool m_instanceTagsHasBeenSet;
 
                     /**
-                     * Tag list. this parameter specifies tags only used for binding the launch configuration and will not be passed to CVM instances scaled out based on it.
+                     * <p>Tag list. The tags in this parameter are only used to bind launch configurations and will not be passed to CVM instances scaled out based on the launch configuration.</p>
                      */
                     std::vector<Tag> m_tags;
                     bool m_tagsHasBeenSet;
 
                     /**
-                     * Version
+                     * <p>Version number.</p>
                      */
                     int64_t m_versionNumber;
                     bool m_versionNumberHasBeenSet;
 
                     /**
-                     * Last update time is in standard UTC time.
+                     * <p>Update time in standard <code>UTC</code> format.</p>
                      */
                     std::string m_updatedTime;
                     bool m_updatedTimeHasBeenSet;
 
                     /**
-                     * Role name of the CAM role. can be obtained from roleName in the return value from the [DescribeRoleList API](https://intl.cloud.tencent.com/document/product/598/36223?from_cn_redirect=1).
+                     * <p>CAM role name, which can be obtained from the roleName in the return value from the <a href="https://www.tencentcloud.com/document/product/598/36223?from_cn_redirect=1">DescribeRoleList</a> API.</p>
                      */
                     std::string m_camRoleName;
                     bool m_camRoleNameHasBeenSet;
 
                     /**
-                     * Value of InstanceTypesCheckPolicy upon the last operation.
+                     * <p>The value of InstanceTypesCheckPolicy last time when operating.</p>
                      */
                     std::string m_lastOperationInstanceTypesCheckPolicy;
                     bool m_lastOperationInstanceTypesCheckPolicyHasBeenSet;
 
                     /**
-                     * CVM hostname settings.
+                     * <p>Related settings for the CVM host name (HostName).</p>
                      */
                     HostNameSettings m_hostNameSettings;
                     bool m_hostNameSettingsHasBeenSet;
 
                     /**
-                     * Settings of CVM instance names
+                     * <p>Related settings for the cloud server instance name (InstanceName).</p>
                      */
                     InstanceNameSettings m_instanceNameSettings;
                     bool m_instanceNameSettingsHasBeenSet;
 
                     /**
-                     * Details of the monthly subscription, including the purchase period, auto-renewal. It is required if the `InstanceChargeType` is `PREPAID`.
+                     * <p>Prepaid mode, i.e., parameter settings related to monthly/annual subscription. By specifying this parameter, you can specify the purchase duration of annual and monthly subscription instances, whether to enable auto-renewal, and other attributes. This parameter is required if the billing mode for the specified instance is prepaid.</p>
                      */
                     InstanceChargePrepaid m_instanceChargePrepaid;
                     bool m_instanceChargePrepaidHasBeenSet;
 
                     /**
-                     * Cloud disk type selection policy. Valid values: <li>ORIGINAL: Use the set cloud disk type.</li> <li>AUTOMATIC: Automatically select available cloud disk types in the current availability zone.</li>
+                     * <p>Cloud disk type selection policy. Parameter value range: <li>ORIGINAL: use the set cloud disk type</li><li>AUTOMATIC: automatically select available cloud disk types in the current AZ</li></p>
                      */
                     std::string m_diskTypePolicy;
                     bool m_diskTypePolicyHasBeenSet;
 
                     /**
-                     * HPC ID<br>
-Note: This field is default to empty
+                     * <p>Hyper Computing Cluster ID.<br><br>Note: This field is empty by default.</p>
                      */
                     std::string m_hpcClusterId;
                     bool m_hpcClusterIdHasBeenSet;
 
                     /**
-                     * IPv6 public network bandwidth configuration.
+                     * <p>IPv6 public network bandwidth-related information settings.</p>
                      */
                     IPv6InternetAccessible m_iPv6InternetAccessible;
                     bool m_iPv6InternetAccessibleHasBeenSet;
 
                     /**
-                     * Placement group ID, supporting specification of only one.
+                     * <p>Placement Group id. Only one can be specified.</p>
                      */
                     std::vector<std::string> m_disasterRecoverGroupIds;
                     bool m_disasterRecoverGroupIdsHasBeenSet;
 
                     /**
-                     * Image family name.
+                     * <p>Image family name.</p>
                      */
                     std::string m_imageFamily;
                     bool m_imageFamilyHasBeenSet;
 
                     /**
-                     * CDC ID.
+                     * <p>Local dedicated cluster ID.</p>
                      */
                     std::string m_dedicatedClusterId;
                     bool m_dedicatedClusterIdHasBeenSet;
+
+                    /**
+                     * <p>ENI configuration of the launch configuration.</p>
+                     */
+                    std::vector<NetworkInterface> m_networkInterfaces;
+                    bool m_networkInterfacesHasBeenSet;
 
                 };
             }

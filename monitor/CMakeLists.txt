@@ -470,14 +470,77 @@ set(monitor_public_header_model
   include/tencentcloud/monitor/v20180724/model/UpdateAlertRuleStateRequest.h
   include/tencentcloud/monitor/v20180724/model/SetDefaultAlarmPolicyResponse.h
   include/tencentcloud/monitor/v20180724/model/BindingPolicyObjectResponse.h
-  include/tencentcloud/monitor/v20230616/model/PageByNoParams.h
   include/tencentcloud/monitor/v20230616/model/DescribeAlarmNotifyHistoriesRequest.h
-  include/tencentcloud/monitor/v20230616/model/PageByNoResult.h
-  include/tencentcloud/monitor/v20230616/model/DescribeAlarmNotifyHistoriesResponse.h
-  include/tencentcloud/monitor/v20230616/model/AlarmLable.h
+  include/tencentcloud/monitor/v20230616/model/ListAIWorkbenchArtifactsRequest.h
+  include/tencentcloud/monitor/v20230616/model/ListAIWorkbenchMCPsRequest.h
+  include/tencentcloud/monitor/v20230616/model/DescribeAIWorkbenchAgentResponse.h
+  include/tencentcloud/monitor/v20230616/model/CreateAIWorkbenchAgentResponse.h
+  include/tencentcloud/monitor/v20230616/model/PageByNoParams.h
+  include/tencentcloud/monitor/v20230616/model/DeleteAIWorkbenchAgentRequest.h
+  include/tencentcloud/monitor/v20230616/model/ListAIWorkbenchResourceInstancesRequest.h
   include/tencentcloud/monitor/v20230616/model/ChannelsReceivers.h
+  include/tencentcloud/monitor/v20230616/model/CreateAIWorkbenchTaskResponse.h
+  include/tencentcloud/monitor/v20230616/model/SessionInfo.h
+  include/tencentcloud/monitor/v20230616/model/DescribeAIWorkbenchExecutionRequest.h
+  include/tencentcloud/monitor/v20230616/model/ExecutionInfo.h
+  include/tencentcloud/monitor/v20230616/model/TriggerAIWorkbenchTaskResponse.h
+  include/tencentcloud/monitor/v20230616/model/PageByNoResult.h
+  include/tencentcloud/monitor/v20230616/model/GetAIWorkbenchArtifactDownloadURLResponse.h
+  include/tencentcloud/monitor/v20230616/model/ListAIWorkbenchResourceMapsRequest.h
+  include/tencentcloud/monitor/v20230616/model/ResourceMapInfo.h
+  include/tencentcloud/monitor/v20230616/model/AgentInfo.h
+  include/tencentcloud/monitor/v20230616/model/DescribeAIWorkbenchSkillResponse.h
+  include/tencentcloud/monitor/v20230616/model/AlarmLable.h
+  include/tencentcloud/monitor/v20230616/model/PageByNumResult.h
+  include/tencentcloud/monitor/v20230616/model/Tag.h
+  include/tencentcloud/monitor/v20230616/model/ListAIWorkbenchMCPsResponse.h
+  include/tencentcloud/monitor/v20230616/model/CreateAIWorkbenchAgentRequest.h
+  include/tencentcloud/monitor/v20230616/model/ListAIWorkbenchSkillsResponse.h
+  include/tencentcloud/monitor/v20230616/model/DeleteAIWorkbenchTaskRequest.h
+  include/tencentcloud/monitor/v20230616/model/CreateAIWorkbenchTaskRequest.h
+  include/tencentcloud/monitor/v20230616/model/DescribeAIWorkbenchArtifactRequest.h
+  include/tencentcloud/monitor/v20230616/model/ListAIWorkbenchSkillsRequest.h
+  include/tencentcloud/monitor/v20230616/model/ListAIWorkbenchResourceMapsResponse.h
+  include/tencentcloud/monitor/v20230616/model/ListAIWorkbenchSessionsRequest.h
+  include/tencentcloud/monitor/v20230616/model/DescribeAIWorkbenchArtifactResponse.h
+  include/tencentcloud/monitor/v20230616/model/CancelAIWorkbenchChatResponse.h
+  include/tencentcloud/monitor/v20230616/model/UpdateAIWorkbenchAgentRequest.h
+  include/tencentcloud/monitor/v20230616/model/ListAIWorkbenchArtifactsResponse.h
+  include/tencentcloud/monitor/v20230616/model/CancelAIWorkbenchChatRequest.h
+  include/tencentcloud/monitor/v20230616/model/ListAIWorkbenchMessagesRequest.h
+  include/tencentcloud/monitor/v20230616/model/ListAIWorkbenchAgentsResponse.h
+  include/tencentcloud/monitor/v20230616/model/ListAIWorkbenchExecutionsResponse.h
+  include/tencentcloud/monitor/v20230616/model/DescribeAIWorkbenchAgentRequest.h
+  include/tencentcloud/monitor/v20230616/model/DescribeAlarmNotifyHistoriesResponse.h
+  include/tencentcloud/monitor/v20230616/model/InstructionConfig.h
+  include/tencentcloud/monitor/v20230616/model/DeleteAIWorkbenchTaskResponse.h
+  include/tencentcloud/monitor/v20230616/model/ContentBlockInfo.h
+  include/tencentcloud/monitor/v20230616/model/ArtifactInfo.h
+  include/tencentcloud/monitor/v20230616/model/PageByNumParams.h
+  include/tencentcloud/monitor/v20230616/model/GetAIWorkbenchArtifactDownloadURLRequest.h
+  include/tencentcloud/monitor/v20230616/model/ListAIWorkbenchResourceInstancesResponse.h
+  include/tencentcloud/monitor/v20230616/model/ListAIWorkbenchExecutionsRequest.h
+  include/tencentcloud/monitor/v20230616/model/ListAIWorkbenchAgentsRequest.h
   include/tencentcloud/monitor/v20230616/model/NotifyRelatedNotice.h
+  include/tencentcloud/monitor/v20230616/model/SkillInfo.h
+  include/tencentcloud/monitor/v20230616/model/DescribeAIWorkbenchSkillRequest.h
   include/tencentcloud/monitor/v20230616/model/AlarmNotifyHistory.h
+  include/tencentcloud/monitor/v20230616/model/DescribeAIWorkbenchSessionResponse.h
+  include/tencentcloud/monitor/v20230616/model/TaskInfo.h
+  include/tencentcloud/monitor/v20230616/model/DescribeAIWorkbenchSessionRequest.h
+  include/tencentcloud/monitor/v20230616/model/EnvEntry.h
+  include/tencentcloud/monitor/v20230616/model/ListAIWorkbenchSessionsResponse.h
+  include/tencentcloud/monitor/v20230616/model/ListAIWorkbenchTasksResponse.h
+  include/tencentcloud/monitor/v20230616/model/MessageInfo.h
+  include/tencentcloud/monitor/v20230616/model/DescribeAIWorkbenchExecutionResponse.h
+  include/tencentcloud/monitor/v20230616/model/UpdateAIWorkbenchAgentResponse.h
+  include/tencentcloud/monitor/v20230616/model/MCPInfo.h
+  include/tencentcloud/monitor/v20230616/model/TriggerAIWorkbenchTaskRequest.h
+  include/tencentcloud/monitor/v20230616/model/ListAIWorkbenchMessagesResponse.h
+  include/tencentcloud/monitor/v20230616/model/DeleteAIWorkbenchAgentResponse.h
+  include/tencentcloud/monitor/v20230616/model/EnvVar.h
+  include/tencentcloud/monitor/v20230616/model/ListAIWorkbenchTasksRequest.h
+  include/tencentcloud/monitor/v20230616/model/ResourceInstance.h
   )
 
 set(monitor_src
@@ -933,14 +996,77 @@ set(monitor_src
   src/v20180724/model/UpdateAlertRuleStateRequest.cpp
   src/v20180724/model/SetDefaultAlarmPolicyResponse.cpp
   src/v20180724/model/BindingPolicyObjectResponse.cpp
-  src/v20230616/model/PageByNoParams.cpp
   src/v20230616/model/DescribeAlarmNotifyHistoriesRequest.cpp
-  src/v20230616/model/PageByNoResult.cpp
-  src/v20230616/model/DescribeAlarmNotifyHistoriesResponse.cpp
-  src/v20230616/model/AlarmLable.cpp
+  src/v20230616/model/ListAIWorkbenchArtifactsRequest.cpp
+  src/v20230616/model/ListAIWorkbenchMCPsRequest.cpp
+  src/v20230616/model/DescribeAIWorkbenchAgentResponse.cpp
+  src/v20230616/model/CreateAIWorkbenchAgentResponse.cpp
+  src/v20230616/model/PageByNoParams.cpp
+  src/v20230616/model/DeleteAIWorkbenchAgentRequest.cpp
+  src/v20230616/model/ListAIWorkbenchResourceInstancesRequest.cpp
   src/v20230616/model/ChannelsReceivers.cpp
+  src/v20230616/model/CreateAIWorkbenchTaskResponse.cpp
+  src/v20230616/model/SessionInfo.cpp
+  src/v20230616/model/DescribeAIWorkbenchExecutionRequest.cpp
+  src/v20230616/model/ExecutionInfo.cpp
+  src/v20230616/model/TriggerAIWorkbenchTaskResponse.cpp
+  src/v20230616/model/PageByNoResult.cpp
+  src/v20230616/model/GetAIWorkbenchArtifactDownloadURLResponse.cpp
+  src/v20230616/model/ListAIWorkbenchResourceMapsRequest.cpp
+  src/v20230616/model/ResourceMapInfo.cpp
+  src/v20230616/model/AgentInfo.cpp
+  src/v20230616/model/DescribeAIWorkbenchSkillResponse.cpp
+  src/v20230616/model/AlarmLable.cpp
+  src/v20230616/model/PageByNumResult.cpp
+  src/v20230616/model/Tag.cpp
+  src/v20230616/model/ListAIWorkbenchMCPsResponse.cpp
+  src/v20230616/model/CreateAIWorkbenchAgentRequest.cpp
+  src/v20230616/model/ListAIWorkbenchSkillsResponse.cpp
+  src/v20230616/model/DeleteAIWorkbenchTaskRequest.cpp
+  src/v20230616/model/CreateAIWorkbenchTaskRequest.cpp
+  src/v20230616/model/DescribeAIWorkbenchArtifactRequest.cpp
+  src/v20230616/model/ListAIWorkbenchSkillsRequest.cpp
+  src/v20230616/model/ListAIWorkbenchResourceMapsResponse.cpp
+  src/v20230616/model/ListAIWorkbenchSessionsRequest.cpp
+  src/v20230616/model/DescribeAIWorkbenchArtifactResponse.cpp
+  src/v20230616/model/CancelAIWorkbenchChatResponse.cpp
+  src/v20230616/model/UpdateAIWorkbenchAgentRequest.cpp
+  src/v20230616/model/ListAIWorkbenchArtifactsResponse.cpp
+  src/v20230616/model/CancelAIWorkbenchChatRequest.cpp
+  src/v20230616/model/ListAIWorkbenchMessagesRequest.cpp
+  src/v20230616/model/ListAIWorkbenchAgentsResponse.cpp
+  src/v20230616/model/ListAIWorkbenchExecutionsResponse.cpp
+  src/v20230616/model/DescribeAIWorkbenchAgentRequest.cpp
+  src/v20230616/model/DescribeAlarmNotifyHistoriesResponse.cpp
+  src/v20230616/model/InstructionConfig.cpp
+  src/v20230616/model/DeleteAIWorkbenchTaskResponse.cpp
+  src/v20230616/model/ContentBlockInfo.cpp
+  src/v20230616/model/ArtifactInfo.cpp
+  src/v20230616/model/PageByNumParams.cpp
+  src/v20230616/model/GetAIWorkbenchArtifactDownloadURLRequest.cpp
+  src/v20230616/model/ListAIWorkbenchResourceInstancesResponse.cpp
+  src/v20230616/model/ListAIWorkbenchExecutionsRequest.cpp
+  src/v20230616/model/ListAIWorkbenchAgentsRequest.cpp
   src/v20230616/model/NotifyRelatedNotice.cpp
+  src/v20230616/model/SkillInfo.cpp
+  src/v20230616/model/DescribeAIWorkbenchSkillRequest.cpp
   src/v20230616/model/AlarmNotifyHistory.cpp
+  src/v20230616/model/DescribeAIWorkbenchSessionResponse.cpp
+  src/v20230616/model/TaskInfo.cpp
+  src/v20230616/model/DescribeAIWorkbenchSessionRequest.cpp
+  src/v20230616/model/EnvEntry.cpp
+  src/v20230616/model/ListAIWorkbenchSessionsResponse.cpp
+  src/v20230616/model/ListAIWorkbenchTasksResponse.cpp
+  src/v20230616/model/MessageInfo.cpp
+  src/v20230616/model/DescribeAIWorkbenchExecutionResponse.cpp
+  src/v20230616/model/UpdateAIWorkbenchAgentResponse.cpp
+  src/v20230616/model/MCPInfo.cpp
+  src/v20230616/model/TriggerAIWorkbenchTaskRequest.cpp
+  src/v20230616/model/ListAIWorkbenchMessagesResponse.cpp
+  src/v20230616/model/DeleteAIWorkbenchAgentResponse.cpp
+  src/v20230616/model/EnvVar.cpp
+  src/v20230616/model/ListAIWorkbenchTasksRequest.cpp
+  src/v20230616/model/ResourceInstance.cpp
   )
 
 set(monitor_include

@@ -40,6 +40,56 @@ TioneClient::TioneClient(const Credential &credential, const string &region, con
 }
 
 
+TioneClient::CreateTrainingTaskOutcome TioneClient::CreateTrainingTask(const CreateTrainingTaskRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateTrainingTask");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateTrainingTaskResponse rsp = CreateTrainingTaskResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateTrainingTaskOutcome(rsp);
+        else
+            return CreateTrainingTaskOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateTrainingTaskOutcome(outcome.GetError());
+    }
+}
+
+void TioneClient::CreateTrainingTaskAsync(const CreateTrainingTaskRequest& request, const CreateTrainingTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const CreateTrainingTaskRequest&;
+    using Resp = CreateTrainingTaskResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "CreateTrainingTask", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TioneClient::CreateTrainingTaskOutcomeCallable TioneClient::CreateTrainingTaskCallable(const CreateTrainingTaskRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<CreateTrainingTaskOutcome>>();
+    CreateTrainingTaskAsync(
+    request,
+    [prom](
+        const TioneClient*,
+        const CreateTrainingTaskRequest&,
+        CreateTrainingTaskOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 TioneClient::DescribeModelServiceGroupsOutcome TioneClient::DescribeModelServiceGroups(const DescribeModelServiceGroupsRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeModelServiceGroups");

@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取This parameter is returned when a launch configuration is created through this API, indicating the launch configuration ID.
-                     * @return LaunchConfigurationId This parameter is returned when a launch configuration is created through this API, indicating the launch configuration ID.
+                     * 获取<p>When creating a launch configuration through this interface, this parameter will be returned, indicating the launch configuration ID.</p>
+                     * @return LaunchConfigurationId <p>When creating a launch configuration through this interface, this parameter will be returned, indicating the launch configuration ID.</p>
                      * 
                      */
                     std::string GetLaunchConfigurationId() const;
@@ -60,7 +60,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * This parameter is returned when a launch configuration is created through this API, indicating the launch configuration ID.
+                     * <p>When creating a launch configuration through this interface, this parameter will be returned, indicating the launch configuration ID.</p>
                      */
                     std::string m_launchConfigurationId;
                     bool m_launchConfigurationIdHasBeenSet;

@@ -173,21 +173,21 @@ namespace TencentCloud
                     /**
                      * 获取Service classification.
                      * @return ServiceCategory Service classification.
-                     * 
+                     * @deprecated
                      */
                     std::string GetServiceCategory() const;
 
                     /**
                      * 设置Service classification.
                      * @param _serviceCategory Service classification.
-                     * 
+                     * @deprecated
                      */
                     void SetServiceCategory(const std::string& _serviceCategory);
 
                     /**
                      * 判断参数 ServiceCategory 是否已赋值
                      * @return ServiceCategory 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool ServiceCategoryHasBeenSet() const;
 

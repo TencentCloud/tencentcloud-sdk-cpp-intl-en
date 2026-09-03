@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-#ifndef TENCENTCLOUD_TDMYSQL_V20211122_MODEL_RESETUSERPASSWORDRESPONSE_H_
-#define TENCENTCLOUD_TDMYSQL_V20211122_MODEL_RESETUSERPASSWORDRESPONSE_H_
+#ifndef TENCENTCLOUD_MONITOR_V20230616_MODEL_DELETEAIWORKBENCHAGENTRESPONSE_H_
+#define TENCENTCLOUD_MONITOR_V20230616_MODEL_DELETEAIWORKBENCHAGENTRESPONSE_H_
 
 #include <string>
 #include <vector>
@@ -25,20 +25,20 @@
 
 namespace TencentCloud
 {
-    namespace Tdmysql
+    namespace Monitor
     {
-        namespace V20211122
+        namespace V20230616
         {
             namespace Model
             {
                 /**
-                * ResetUserPassword response structure.
+                * DeleteAIWorkbenchAgent response structure.
                 */
-                class ResetUserPasswordResponse : public AbstractModel
+                class DeleteAIWorkbenchAgentResponse : public AbstractModel
                 {
                 public:
-                    ResetUserPasswordResponse();
-                    ~ResetUserPasswordResponse() = default;
+                    DeleteAIWorkbenchAgentResponse();
+                    ~DeleteAIWorkbenchAgentResponse() = default;
                     CoreInternalOutcome Deserialize(const std::string &payload);
                     std::string ToJsonString() const;
 
@@ -51,4 +51,4 @@ namespace TencentCloud
     }
 }
 
-#endif // !TENCENTCLOUD_TDMYSQL_V20211122_MODEL_RESETUSERPASSWORDRESPONSE_H_
+#endif // !TENCENTCLOUD_MONITOR_V20230616_MODEL_DELETEAIWORKBENCHAGENTRESPONSE_H_

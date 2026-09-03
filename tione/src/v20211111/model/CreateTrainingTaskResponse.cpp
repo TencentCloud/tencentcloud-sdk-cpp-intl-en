@@ -14,20 +14,21 @@
  * limitations under the License.
  */
 
-#include <tencentcloud/tdmysql/v20211122/model/ResetUserPasswordResponse.h>
+#include <tencentcloud/tione/v20211111/model/CreateTrainingTaskResponse.h>
 #include <tencentcloud/core/utils/rapidjson/document.h>
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 
 using TencentCloud::CoreInternalOutcome;
-using namespace TencentCloud::Tdmysql::V20211122::Model;
+using namespace TencentCloud::Tione::V20211111::Model;
 using namespace std;
 
-ResetUserPasswordResponse::ResetUserPasswordResponse()
+CreateTrainingTaskResponse::CreateTrainingTaskResponse() :
+    m_idHasBeenSet(false)
 {
 }
 
-CoreInternalOutcome ResetUserPasswordResponse::Deserialize(const string &payload)
+CoreInternalOutcome CreateTrainingTaskResponse::Deserialize(const string &payload)
 {
     rapidjson::Document d;
     d.Parse(payload.c_str());
@@ -61,15 +62,33 @@ CoreInternalOutcome ResetUserPasswordResponse::Deserialize(const string &payload
     }
 
 
+    if (rsp.HasMember("Id") && !rsp["Id"].IsNull())
+    {
+        if (!rsp["Id"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `Id` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_id = string(rsp["Id"].GetString());
+        m_idHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
 
-string ResetUserPasswordResponse::ToJsonString() const
+string CreateTrainingTaskResponse::ToJsonString() const
 {
     rapidjson::Document value;
     value.SetObject();
     rapidjson::Document::AllocatorType& allocator = value.GetAllocator();
+
+    if (m_idHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Id";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_id.c_str(), allocator).Move(), allocator);
+    }
 
     rapidjson::Value iKey(rapidjson::kStringType);
     string key = "RequestId";
@@ -82,5 +101,15 @@ string ResetUserPasswordResponse::ToJsonString() const
     return buffer.GetString();
 }
 
+
+string CreateTrainingTaskResponse::GetId() const
+{
+    return m_id;
+}
+
+bool CreateTrainingTaskResponse::IdHasBeenSet() const
+{
+    return m_idHasBeenSet;
+}
 
 
