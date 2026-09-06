@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool InstancesHasBeenSet() const;
 
                     /**
-                     * 获取<p>Total number of conditions met</p>
-                     * @return TotalCount <p>Total number of conditions met</p>
+                     * 获取<p>Total number of items that meet the conditions.</p>
+                     * @return TotalCount <p>Total number of items that meet the conditions.</p>
                      * 
                      */
                     int64_t GetTotalCount() const;
@@ -81,7 +81,7 @@ namespace TencentCloud
                     bool m_instancesHasBeenSet;
 
                     /**
-                     * <p>Total number of conditions met</p>
+                     * <p>Total number of items that meet the conditions.</p>
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;

@@ -190,6 +190,106 @@ VodClient::CloneCDNDomainOutcomeCallable VodClient::CloneCDNDomainCallable(const
     return prom->get_future();
 }
 
+VodClient::CloneVoiceAsyncOutcome VodClient::CloneVoiceAsync(const CloneVoiceAsyncRequest &request)
+{
+    auto outcome = MakeRequest(request, "CloneVoiceAsync");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CloneVoiceAsyncResponse rsp = CloneVoiceAsyncResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CloneVoiceAsyncOutcome(rsp);
+        else
+            return CloneVoiceAsyncOutcome(o.GetError());
+    }
+    else
+    {
+        return CloneVoiceAsyncOutcome(outcome.GetError());
+    }
+}
+
+void VodClient::CloneVoiceAsyncAsync(const CloneVoiceAsyncRequest& request, const CloneVoiceAsyncAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const CloneVoiceAsyncRequest&;
+    using Resp = CloneVoiceAsyncResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "CloneVoiceAsync", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+VodClient::CloneVoiceAsyncOutcomeCallable VodClient::CloneVoiceAsyncCallable(const CloneVoiceAsyncRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<CloneVoiceAsyncOutcome>>();
+    CloneVoiceAsyncAsync(
+    request,
+    [prom](
+        const VodClient*,
+        const CloneVoiceAsyncRequest&,
+        CloneVoiceAsyncOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+VodClient::CloneVoiceSyncOutcome VodClient::CloneVoiceSync(const CloneVoiceSyncRequest &request)
+{
+    auto outcome = MakeRequest(request, "CloneVoiceSync");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CloneVoiceSyncResponse rsp = CloneVoiceSyncResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CloneVoiceSyncOutcome(rsp);
+        else
+            return CloneVoiceSyncOutcome(o.GetError());
+    }
+    else
+    {
+        return CloneVoiceSyncOutcome(outcome.GetError());
+    }
+}
+
+void VodClient::CloneVoiceSyncAsync(const CloneVoiceSyncRequest& request, const CloneVoiceSyncAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const CloneVoiceSyncRequest&;
+    using Resp = CloneVoiceSyncResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "CloneVoiceSync", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+VodClient::CloneVoiceSyncOutcomeCallable VodClient::CloneVoiceSyncCallable(const CloneVoiceSyncRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<CloneVoiceSyncOutcome>>();
+    CloneVoiceSyncAsync(
+    request,
+    [prom](
+        const VodClient*,
+        const CloneVoiceSyncRequest&,
+        CloneVoiceSyncOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 VodClient::CommitUploadOutcome VodClient::CommitUpload(const CommitUploadRequest &request)
 {
     auto outcome = MakeRequest(request, "CommitUpload");
@@ -4340,6 +4440,56 @@ VodClient::DeleteVodDomainOutcomeCallable VodClient::DeleteVodDomainCallable(con
     return prom->get_future();
 }
 
+VodClient::DeleteVoiceOutcome VodClient::DeleteVoice(const DeleteVoiceRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteVoice");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteVoiceResponse rsp = DeleteVoiceResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteVoiceOutcome(rsp);
+        else
+            return DeleteVoiceOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteVoiceOutcome(outcome.GetError());
+    }
+}
+
+void VodClient::DeleteVoiceAsync(const DeleteVoiceRequest& request, const DeleteVoiceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DeleteVoiceRequest&;
+    using Resp = DeleteVoiceResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DeleteVoice", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+VodClient::DeleteVoiceOutcomeCallable VodClient::DeleteVoiceCallable(const DeleteVoiceRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DeleteVoiceOutcome>>();
+    DeleteVoiceAsync(
+    request,
+    [prom](
+        const VodClient*,
+        const DeleteVoiceRequest&,
+        DeleteVoiceOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 VodClient::DeleteWatermarkTemplateOutcome VodClient::DeleteWatermarkTemplate(const DeleteWatermarkTemplateRequest &request)
 {
     auto outcome = MakeRequest(request, "DeleteWatermarkTemplate");
@@ -7290,6 +7440,56 @@ VodClient::DescribeVodDomainsOutcomeCallable VodClient::DescribeVodDomainsCallab
     return prom->get_future();
 }
 
+VodClient::DescribeVoicesOutcome VodClient::DescribeVoices(const DescribeVoicesRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeVoices");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeVoicesResponse rsp = DescribeVoicesResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeVoicesOutcome(rsp);
+        else
+            return DescribeVoicesOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeVoicesOutcome(outcome.GetError());
+    }
+}
+
+void VodClient::DescribeVoicesAsync(const DescribeVoicesRequest& request, const DescribeVoicesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeVoicesRequest&;
+    using Resp = DescribeVoicesResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeVoices", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+VodClient::DescribeVoicesOutcomeCallable VodClient::DescribeVoicesCallable(const DescribeVoicesRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeVoicesOutcome>>();
+    DescribeVoicesAsync(
+    request,
+    [prom](
+        const VodClient*,
+        const DescribeVoicesRequest&,
+        DescribeVoicesOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 VodClient::DescribeWatermarkTemplatesOutcome VodClient::DescribeWatermarkTemplates(const DescribeWatermarkTemplatesRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeWatermarkTemplates");
@@ -7382,6 +7582,56 @@ VodClient::DescribeWordSamplesOutcomeCallable VodClient::DescribeWordSamplesCall
         const VodClient*,
         const DescribeWordSamplesRequest&,
         DescribeWordSamplesOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+VodClient::DesignVoiceAsyncOutcome VodClient::DesignVoiceAsync(const DesignVoiceAsyncRequest &request)
+{
+    auto outcome = MakeRequest(request, "DesignVoiceAsync");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DesignVoiceAsyncResponse rsp = DesignVoiceAsyncResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DesignVoiceAsyncOutcome(rsp);
+        else
+            return DesignVoiceAsyncOutcome(o.GetError());
+    }
+    else
+    {
+        return DesignVoiceAsyncOutcome(outcome.GetError());
+    }
+}
+
+void VodClient::DesignVoiceAsyncAsync(const DesignVoiceAsyncRequest& request, const DesignVoiceAsyncAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DesignVoiceAsyncRequest&;
+    using Resp = DesignVoiceAsyncResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DesignVoiceAsync", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+VodClient::DesignVoiceAsyncOutcomeCallable VodClient::DesignVoiceAsyncCallable(const DesignVoiceAsyncRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DesignVoiceAsyncOutcome>>();
+    DesignVoiceAsyncAsync(
+    request,
+    [prom](
+        const VodClient*,
+        const DesignVoiceAsyncRequest&,
+        DesignVoiceAsyncOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -11090,6 +11340,106 @@ VodClient::StartCDNDomainOutcomeCallable VodClient::StartCDNDomainCallable(const
     return prom->get_future();
 }
 
+VodClient::TextToSpeechAsyncOutcome VodClient::TextToSpeechAsync(const TextToSpeechAsyncRequest &request)
+{
+    auto outcome = MakeRequest(request, "TextToSpeechAsync");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        TextToSpeechAsyncResponse rsp = TextToSpeechAsyncResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return TextToSpeechAsyncOutcome(rsp);
+        else
+            return TextToSpeechAsyncOutcome(o.GetError());
+    }
+    else
+    {
+        return TextToSpeechAsyncOutcome(outcome.GetError());
+    }
+}
+
+void VodClient::TextToSpeechAsyncAsync(const TextToSpeechAsyncRequest& request, const TextToSpeechAsyncAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const TextToSpeechAsyncRequest&;
+    using Resp = TextToSpeechAsyncResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "TextToSpeechAsync", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+VodClient::TextToSpeechAsyncOutcomeCallable VodClient::TextToSpeechAsyncCallable(const TextToSpeechAsyncRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<TextToSpeechAsyncOutcome>>();
+    TextToSpeechAsyncAsync(
+    request,
+    [prom](
+        const VodClient*,
+        const TextToSpeechAsyncRequest&,
+        TextToSpeechAsyncOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+VodClient::TextToSpeechSyncOutcome VodClient::TextToSpeechSync(const TextToSpeechSyncRequest &request)
+{
+    auto outcome = MakeRequest(request, "TextToSpeechSync");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        TextToSpeechSyncResponse rsp = TextToSpeechSyncResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return TextToSpeechSyncOutcome(rsp);
+        else
+            return TextToSpeechSyncOutcome(o.GetError());
+    }
+    else
+    {
+        return TextToSpeechSyncOutcome(outcome.GetError());
+    }
+}
+
+void VodClient::TextToSpeechSyncAsync(const TextToSpeechSyncRequest& request, const TextToSpeechSyncAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const TextToSpeechSyncRequest&;
+    using Resp = TextToSpeechSyncResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "TextToSpeechSync", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+VodClient::TextToSpeechSyncOutcomeCallable VodClient::TextToSpeechSyncCallable(const TextToSpeechSyncRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<TextToSpeechSyncOutcome>>();
+    TextToSpeechSyncAsync(
+    request,
+    [prom](
+        const VodClient*,
+        const TextToSpeechSyncRequest&,
+        TextToSpeechSyncOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 VodClient::UpdateAigcApiTokenOutcome VodClient::UpdateAigcApiToken(const UpdateAigcApiTokenRequest &request)
 {
     auto outcome = MakeRequest(request, "UpdateAigcApiToken");
@@ -11132,6 +11482,56 @@ VodClient::UpdateAigcApiTokenOutcomeCallable VodClient::UpdateAigcApiTokenCallab
         const VodClient*,
         const UpdateAigcApiTokenRequest&,
         UpdateAigcApiTokenOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+VodClient::UpdateVoiceOutcome VodClient::UpdateVoice(const UpdateVoiceRequest &request)
+{
+    auto outcome = MakeRequest(request, "UpdateVoice");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        UpdateVoiceResponse rsp = UpdateVoiceResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return UpdateVoiceOutcome(rsp);
+        else
+            return UpdateVoiceOutcome(o.GetError());
+    }
+    else
+    {
+        return UpdateVoiceOutcome(outcome.GetError());
+    }
+}
+
+void VodClient::UpdateVoiceAsync(const UpdateVoiceRequest& request, const UpdateVoiceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const UpdateVoiceRequest&;
+    using Resp = UpdateVoiceResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "UpdateVoice", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+VodClient::UpdateVoiceOutcomeCallable VodClient::UpdateVoiceCallable(const UpdateVoiceRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<UpdateVoiceOutcome>>();
+    UpdateVoiceAsync(
+    request,
+    [prom](
+        const VodClient*,
+        const UpdateVoiceRequest&,
+        UpdateVoiceOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {

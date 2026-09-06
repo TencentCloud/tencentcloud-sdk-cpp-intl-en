@@ -107,15 +107,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取<p>Specified query engine type</p><p>Enumeration value:</p><ul><li>libra: Column storage engine</li></ul>
-                     * @return EngineType <p>Specified query engine type</p><p>Enumeration value:</p><ul><li>libra: Column storage engine</li></ul>
+                     * 获取<p>Specified query engine type</p><p>Enumeration value:</p><ul><li>libra: column storage engine</li></ul>
+                     * @return EngineType <p>Specified query engine type</p><p>Enumeration value:</p><ul><li>libra: column storage engine</li></ul>
                      * 
                      */
                     std::string GetEngineType() const;
 
                     /**
-                     * 设置<p>Specified query engine type</p><p>Enumeration value:</p><ul><li>libra: Column storage engine</li></ul>
-                     * @param _engineType <p>Specified query engine type</p><p>Enumeration value:</p><ul><li>libra: Column storage engine</li></ul>
+                     * 设置<p>Specified query engine type</p><p>Enumeration value:</p><ul><li>libra: column storage engine</li></ul>
+                     * @param _engineType <p>Specified query engine type</p><p>Enumeration value:</p><ul><li>libra: column storage engine</li></ul>
                      * 
                      */
                     void SetEngineType(const std::string& _engineType);
@@ -126,6 +126,48 @@ namespace TencentCloud
                      * 
                      */
                     bool EngineTypeHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return OrderBy 
+                     * 
+                     */
+                    std::string GetOrderBy() const;
+
+                    /**
+                     * 设置
+                     * @param _orderBy 
+                     * 
+                     */
+                    void SetOrderBy(const std::string& _orderBy);
+
+                    /**
+                     * 判断参数 OrderBy 是否已赋值
+                     * @return OrderBy 是否已赋值
+                     * 
+                     */
+                    bool OrderByHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return OrderDirection 
+                     * 
+                     */
+                    std::string GetOrderDirection() const;
+
+                    /**
+                     * 设置
+                     * @param _orderDirection 
+                     * 
+                     */
+                    void SetOrderDirection(const std::string& _orderDirection);
+
+                    /**
+                     * 判断参数 OrderDirection 是否已赋值
+                     * @return OrderDirection 是否已赋值
+                     * 
+                     */
+                    bool OrderDirectionHasBeenSet() const;
 
                 private:
 
@@ -148,10 +190,22 @@ namespace TencentCloud
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * <p>Specified query engine type</p><p>Enumeration value:</p><ul><li>libra: Column storage engine</li></ul>
+                     * <p>Specified query engine type</p><p>Enumeration value:</p><ul><li>libra: column storage engine</li></ul>
                      */
                     std::string m_engineType;
                     bool m_engineTypeHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_orderBy;
+                    bool m_orderByHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_orderDirection;
+                    bool m_orderDirectionHasBeenSet;
 
                 };
             }

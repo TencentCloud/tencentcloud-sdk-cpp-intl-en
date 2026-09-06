@@ -95,19 +95,15 @@ namespace TencentCloud
                     bool ZoneHasBeenSet() const;
 
                     /**
-                     * 获取<p>Creating an Instance Version</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return CreateVersion <p>Creating an Instance Version</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return CreateVersion 
                      * 
                      */
                     std::string GetCreateVersion() const;
 
                     /**
-                     * 设置<p>Creating an Instance Version</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _createVersion <p>Creating an Instance Version</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _createVersion 
                      * 
                      */
                     void SetCreateVersion(const std::string& _createVersion);
@@ -120,19 +116,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CreateVersionHasBeenSet() const;
 
                     /**
-                     * 获取<p>Initialize instance parameter</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return InitParams <p>Initialize instance parameter</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return InitParams 
                      * 
                      */
                     std::vector<InstanceParam> GetInitParams() const;
 
                     /**
-                     * 设置<p>Initialize instance parameter</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _initParams <p>Initialize instance parameter</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _initParams 
                      * 
                      */
                     void SetInitParams(const std::vector<InstanceParam>& _initParams);
@@ -208,19 +200,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool StorageNodeNumHasBeenSet() const;
 
                     /**
-                     * 获取<p>Instance tag information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ResourceTags <p>Instance tag information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return ResourceTags 
                      * 
                      */
                     std::vector<ResourceTag> GetResourceTags() const;
 
                     /**
-                     * 设置<p>Instance tag information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _resourceTags <p>Instance tag information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _resourceTags 
                      * 
                      */
                     void SetResourceTags(const std::vector<ResourceTag>& _resourceTags);
@@ -233,19 +221,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ResourceTagsHasBeenSet() const;
 
                     /**
-                     * 获取<p>Instance name</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return InstanceName <p>Instance name</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return InstanceName 
                      * 
                      */
                     std::string GetInstanceName() const;
 
                     /**
-                     * 设置<p>Instance name</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _instanceName <p>Instance name</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _instanceName 
                      * 
                      */
                     void SetInstanceName(const std::string& _instanceName);
@@ -468,19 +452,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool StatusDescHasBeenSet() const;
 
                     /**
-                     * 获取<p>CPU cores of the control node</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return MCCpu <p>CPU cores of the control node</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return MCCpu 
                      * @deprecated
                      */
                     int64_t GetMCCpu() const;
 
                     /**
-                     * 设置<p>CPU cores of the control node</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _mCCpu <p>CPU cores of the control node</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _mCCpu 
                      * @deprecated
                      */
                     void SetMCCpu(const int64_t& _mCCpu);
@@ -493,19 +473,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool MCCpuHasBeenSet() const;
 
                     /**
-                     * 获取<p>CPU size of the control node</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return MCMem <p>CPU size of the control node</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return MCMem 
                      * @deprecated
                      */
                     int64_t GetMCMem() const;
 
                     /**
-                     * 设置<p>CPU size of the control node</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _mCMem <p>CPU size of the control node</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _mCMem 
                      * @deprecated
                      */
                     void SetMCMem(const int64_t& _mCMem);
@@ -518,19 +494,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool MCMemHasBeenSet() const;
 
                     /**
-                     * 获取<p>CPU cores of the computing node</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ComputerNodeCpu <p>CPU cores of the computing node</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return ComputerNodeCpu 
                      * @deprecated
                      */
                     int64_t GetComputerNodeCpu() const;
 
                     /**
-                     * 设置<p>CPU cores of the computing node</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _computerNodeCpu <p>CPU cores of the computing node</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _computerNodeCpu 
                      * @deprecated
                      */
                     void SetComputerNodeCpu(const int64_t& _computerNodeCpu);
@@ -543,19 +515,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ComputerNodeCpuHasBeenSet() const;
 
                     /**
-                     * 获取<p>Compute node memory size</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ComputerNodeMem <p>Compute node memory size</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return ComputerNodeMem 
                      * @deprecated
                      */
                     int64_t GetComputerNodeMem() const;
 
                     /**
-                     * 设置<p>Compute node memory size</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _computerNodeMem <p>Compute node memory size</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _computerNodeMem 
                      * @deprecated
                      */
                     void SetComputerNodeMem(const int64_t& _computerNodeMem);
@@ -568,19 +536,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ComputerNodeMemHasBeenSet() const;
 
                     /**
-                     * 获取<p>CPU cores of the storage node</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return StorageNodeCpu <p>CPU cores of the storage node</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return StorageNodeCpu 
                      * 
                      */
                     int64_t GetStorageNodeCpu() const;
 
                     /**
-                     * 设置<p>CPU cores of the storage node</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _storageNodeCpu <p>CPU cores of the storage node</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _storageNodeCpu 
                      * 
                      */
                     void SetStorageNodeCpu(const int64_t& _storageNodeCpu);
@@ -593,19 +557,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool StorageNodeCpuHasBeenSet() const;
 
                     /**
-                     * 获取<p>Storage node memory size</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return StorageNodeMem <p>Storage node memory size</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return StorageNodeMem 
                      * 
                      */
                     int64_t GetStorageNodeMem() const;
 
                     /**
-                     * 设置<p>Storage node memory size</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _storageNodeMem <p>Storage node memory size</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _storageNodeMem 
                      * 
                      */
                     void SetStorageNodeMem(const int64_t& _storageNodeMem);
@@ -618,19 +578,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool StorageNodeMemHasBeenSet() const;
 
                     /**
-                     * 获取<p>Number of control nodes</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return MCNum <p>Number of control nodes</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return MCNum 
                      * @deprecated
                      */
                     int64_t GetMCNum() const;
 
                     /**
-                     * 设置<p>Number of control nodes</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _mCNum <p>Number of control nodes</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _mCNum 
                      * @deprecated
                      */
                     void SetMCNum(const int64_t& _mCNum);
@@ -643,19 +599,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool MCNumHasBeenSet() const;
 
                     /**
-                     * 获取<p>Renewal flag</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return RenewFlag <p>Renewal flag</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return RenewFlag 
                      * 
                      */
                     int64_t GetRenewFlag() const;
 
                     /**
-                     * 设置<p>Renewal flag</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _renewFlag <p>Renewal flag</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _renewFlag 
                      * 
                      */
                     void SetRenewFlag(const int64_t& _renewFlag);
@@ -689,19 +641,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool PayModeHasBeenSet() const;
 
                     /**
-                     * 获取<p>User tag, inner: internal user; external: external user</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return AccountTag <p>User tag, inner: internal user; external: external user</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return AccountTag 
                      * 
                      */
                     std::string GetAccountTag() const;
 
                     /**
-                     * 设置<p>User tag, inner: internal user; external: external user</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _accountTag <p>User tag, inner: internal user; external: external user</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _accountTag 
                      * 
                      */
                     void SetAccountTag(const std::string& _accountTag);
@@ -714,19 +662,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool AccountTagHasBeenSet() const;
 
                     /**
-                     * 获取<p>Instance Architecture Type, separate: decoupled architecture; hyper: peer-to-peer architecture</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return InstanceType <p>Instance Architecture Type, separate: decoupled architecture; hyper: peer-to-peer architecture</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return InstanceType 
                      * 
                      */
                     std::string GetInstanceType() const;
 
                     /**
-                     * 设置<p>Instance Architecture Type, separate: decoupled architecture; hyper: peer-to-peer architecture</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _instanceType <p>Instance Architecture Type, separate: decoupled architecture; hyper: peer-to-peer architecture</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _instanceType 
                      * 
                      */
                     void SetInstanceType(const std::string& _instanceType);
@@ -739,19 +683,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool InstanceTypeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Disk Type, CLOUD_HSSD enhanced SSD, CLOUD_TCS local SSD disk</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return StorageType <p>Disk Type, CLOUD_HSSD enhanced SSD, CLOUD_TCS local SSD disk</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return StorageType 
                      * 
                      */
                     std::string GetStorageType() const;
 
                     /**
-                     * 设置<p>Disk Type, CLOUD_HSSD enhanced SSD, CLOUD_TCS local SSD disk</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _storageType <p>Disk Type, CLOUD_HSSD enhanced SSD, CLOUD_TCS local SSD disk</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _storageType 
                      * 
                      */
                     void SetStorageType(const std::string& _storageType);
@@ -765,18 +705,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取<p>&quot;0000-00-00 00:00:00&quot;</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return DestroyedAt <p>&quot;0000-00-00 00:00:00&quot;</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetDestroyedAt() const;
 
                     /**
                      * 设置<p>&quot;0000-00-00 00:00:00&quot;</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _destroyedAt <p>&quot;0000-00-00 00:00:00&quot;</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetDestroyedAt(const std::string& _destroyedAt);
@@ -790,18 +726,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取<p>&quot;0000-00-00 00:00:00&quot;</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return ExpireAt <p>&quot;0000-00-00 00:00:00&quot;</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetExpireAt() const;
 
                     /**
                      * 设置<p>&quot;0000-00-00 00:00:00&quot;</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _expireAt <p>&quot;0000-00-00 00:00:00&quot;</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetExpireAt(const std::string& _expireAt);
@@ -815,18 +747,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取<p>&quot;0000-00-00 00:00:00&quot;</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return IsolatedAt <p>&quot;0000-00-00 00:00:00&quot;</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetIsolatedAt() const;
 
                     /**
                      * 设置<p>&quot;0000-00-00 00:00:00&quot;</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _isolatedAt <p>&quot;0000-00-00 00:00:00&quot;</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetIsolatedAt(const std::string& _isolatedAt);
@@ -840,18 +768,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取<p>&quot;0000-00-00 00:00:00&quot;</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return IsolatedFrom <p>&quot;0000-00-00 00:00:00&quot;</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetIsolatedFrom() const;
 
                     /**
                      * 设置<p>&quot;0000-00-00 00:00:00&quot;</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _isolatedFrom <p>&quot;0000-00-00 00:00:00&quot;</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetIsolatedFrom(const std::string& _isolatedFrom);
@@ -865,18 +789,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取<p>1</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Replications <p>1</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     int64_t GetReplications() const;
 
                     /**
                      * 设置<p>1</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _replications <p>1</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetReplications(const int64_t& _replications);
@@ -910,19 +830,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool FullReplicationsHasBeenSet() const;
 
                     /**
-                     * 获取<p>Account information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return AppId <p>Account information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return AppId 
                      * 
                      */
                     int64_t GetAppId() const;
 
                     /**
-                     * 设置<p>Account information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _appId <p>Account information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _appId 
                      * 
                      */
                     void SetAppId(const int64_t& _appId);
@@ -935,19 +851,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool AppIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>Account information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SubAccountUin <p>Account information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return SubAccountUin 
                      * 
                      */
                     std::string GetSubAccountUin() const;
 
                     /**
-                     * 设置<p>Account information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _subAccountUin <p>Account information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _subAccountUin 
                      * 
                      */
                     void SetSubAccountUin(const std::string& _subAccountUin);
@@ -960,19 +872,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool SubAccountUinHasBeenSet() const;
 
                     /**
-                     * 获取<p>Account information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Uin <p>Account information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return Uin 
                      * 
                      */
                     std::string GetUin() const;
 
                     /**
-                     * 设置<p>Account information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _uin <p>Account information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _uin 
                      * 
                      */
                     void SetUin(const std::string& _uin);
@@ -985,19 +893,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool UinHasBeenSet() const;
 
                     /**
-                     * 获取<p>AZ information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Zones <p>AZ information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return Zones 
                      * 
                      */
                     std::vector<std::string> GetZones() const;
 
                     /**
-                     * 设置<p>AZ information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _zones <p>AZ information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _zones 
                      * 
                      */
                     void SetZones(const std::vector<std::string>& _zones);
@@ -1010,19 +914,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ZonesHasBeenSet() const;
 
                     /**
-                     * 获取<p>Instance node</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Nodes <p>Instance node</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return Nodes 
                      * 
                      */
                     std::vector<InstanceNode> GetNodes() const;
 
                     /**
-                     * 设置<p>Instance node</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _nodes <p>Instance node</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _nodes 
                      * 
                      */
                     void SetNodes(const std::vector<InstanceNode>& _nodes);
@@ -1119,19 +1019,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CdcNodeNumHasBeenSet() const;
 
                     /**
-                     * 获取<p>az mode. 1: Single az, 2: Multi-az non-primary az mode, 3: Multi-az primary az mode</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return AZMode <p>az mode. 1: Single az, 2: Multi-az non-primary az mode, 3: Multi-az primary az mode</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return AZMode 
                      * 
                      */
                     int64_t GetAZMode() const;
 
                     /**
-                     * 设置<p>az mode. 1: Single az, 2: Multi-az non-primary az mode, 3: Multi-az primary az mode</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _aZMode <p>az mode. 1: Single az, 2: Multi-az non-primary az mode, 3: Multi-az primary az mode</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _aZMode 
                      * 
                      */
                     void SetAZMode(const int64_t& _aZMode);
@@ -1144,19 +1040,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool AZModeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Disaster recovery flag. 1: No disaster recovery relationship; 2: Primary instance for disaster recovery; 3: Disaster Recovery Standby Instance</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return StandbyFlag <p>Disaster recovery flag. 1: No disaster recovery relationship; 2: Primary instance for disaster recovery; 3: Disaster Recovery Standby Instance</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return StandbyFlag 
                      * 
                      */
                     int64_t GetStandbyFlag() const;
 
                     /**
-                     * 设置<p>Disaster recovery flag. 1: No disaster recovery relationship; 2: Primary instance for disaster recovery; 3: Disaster Recovery Standby Instance</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _standbyFlag <p>Disaster recovery flag. 1: No disaster recovery relationship; 2: Primary instance for disaster recovery; 3: Disaster Recovery Standby Instance</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _standbyFlag 
                      * 
                      */
                     void SetStandbyFlag(const int64_t& _standbyFlag);
@@ -1169,19 +1061,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool StandbyFlagHasBeenSet() const;
 
                     /**
-                     * 获取<p>Number of connected standby instances (Valid only when StandbyFlag == 2)</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return StandbySecondaryNum <p>Number of connected standby instances (Valid only when StandbyFlag == 2)</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return StandbySecondaryNum 
                      * 
                      */
                     int64_t GetStandbySecondaryNum() const;
 
                     /**
-                     * 设置<p>Number of connected standby instances (Valid only when StandbyFlag == 2)</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _standbySecondaryNum <p>Number of connected standby instances (Valid only when StandbyFlag == 2)</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _standbySecondaryNum 
                      * 
                      */
                     void SetStandbySecondaryNum(const int64_t& _standbySecondaryNum);
@@ -1467,15 +1355,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool AnalysisRelationInfosHasBeenSet() const;
 
                     /**
-                     * 获取<p>Analysis engine instance info</p>
-                     * @return AnalysisInstanceInfo <p>Analysis engine instance info</p>
+                     * 获取<p>Analysis engine instance information</p>
+                     * @return AnalysisInstanceInfo <p>Analysis engine instance information</p>
                      * 
                      */
                     AnalysisInstanceInfo GetAnalysisInstanceInfo() const;
 
                     /**
-                     * 设置<p>Analysis engine instance info</p>
-                     * @param _analysisInstanceInfo <p>Analysis engine instance info</p>
+                     * 设置<p>Analysis engine instance information</p>
+                     * @param _analysisInstanceInfo <p>Analysis engine instance information</p>
                      * 
                      */
                     void SetAnalysisInstanceInfo(const AnalysisInstanceInfo& _analysisInstanceInfo);
@@ -1486,6 +1374,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * 
                      */
                     bool AnalysisInstanceInfoHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return AutoScaleConfigs 
+                     * 
+                     */
+                    std::vector<AutoScalingConfig> GetAutoScaleConfigs() const;
+
+                    /**
+                     * 设置
+                     * @param _autoScaleConfigs 
+                     * 
+                     */
+                    void SetAutoScaleConfigs(const std::vector<AutoScalingConfig>& _autoScaleConfigs);
+
+                    /**
+                     * 判断参数 AutoScaleConfigs 是否已赋值
+                     * @return AutoScaleConfigs 是否已赋值
+                     * 
+                     */
+                    bool AutoScaleConfigsHasBeenSet() const;
 
                 private:
 
@@ -1502,15 +1411,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_zoneHasBeenSet;
 
                     /**
-                     * <p>Creating an Instance Version</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string m_createVersion;
                     bool m_createVersionHasBeenSet;
 
                     /**
-                     * <p>Initialize instance parameter</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<InstanceParam> m_initParams;
                     bool m_initParamsHasBeenSet;
@@ -1534,15 +1441,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_storageNodeNumHasBeenSet;
 
                     /**
-                     * <p>Instance tag information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<ResourceTag> m_resourceTags;
                     bool m_resourceTagsHasBeenSet;
 
                     /**
-                     * <p>Instance name</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string m_instanceName;
                     bool m_instanceNameHasBeenSet;
@@ -1608,57 +1513,49 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_statusDescHasBeenSet;
 
                     /**
-                     * <p>CPU cores of the control node</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t m_mCCpu;
                     bool m_mCCpuHasBeenSet;
 
                     /**
-                     * <p>CPU size of the control node</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t m_mCMem;
                     bool m_mCMemHasBeenSet;
 
                     /**
-                     * <p>CPU cores of the computing node</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t m_computerNodeCpu;
                     bool m_computerNodeCpuHasBeenSet;
 
                     /**
-                     * <p>Compute node memory size</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t m_computerNodeMem;
                     bool m_computerNodeMemHasBeenSet;
 
                     /**
-                     * <p>CPU cores of the storage node</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t m_storageNodeCpu;
                     bool m_storageNodeCpuHasBeenSet;
 
                     /**
-                     * <p>Storage node memory size</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t m_storageNodeMem;
                     bool m_storageNodeMemHasBeenSet;
 
                     /**
-                     * <p>Number of control nodes</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t m_mCNum;
                     bool m_mCNumHasBeenSet;
 
                     /**
-                     * <p>Renewal flag</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t m_renewFlag;
                     bool m_renewFlagHasBeenSet;
@@ -1670,57 +1567,49 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_payModeHasBeenSet;
 
                     /**
-                     * <p>User tag, inner: internal user; external: external user</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string m_accountTag;
                     bool m_accountTagHasBeenSet;
 
                     /**
-                     * <p>Instance Architecture Type, separate: decoupled architecture; hyper: peer-to-peer architecture</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string m_instanceType;
                     bool m_instanceTypeHasBeenSet;
 
                     /**
-                     * <p>Disk Type, CLOUD_HSSD enhanced SSD, CLOUD_TCS local SSD disk</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string m_storageType;
                     bool m_storageTypeHasBeenSet;
 
                     /**
                      * <p>&quot;0000-00-00 00:00:00&quot;</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_destroyedAt;
                     bool m_destroyedAtHasBeenSet;
 
                     /**
                      * <p>&quot;0000-00-00 00:00:00&quot;</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_expireAt;
                     bool m_expireAtHasBeenSet;
 
                     /**
                      * <p>&quot;0000-00-00 00:00:00&quot;</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_isolatedAt;
                     bool m_isolatedAtHasBeenSet;
 
                     /**
                      * <p>&quot;0000-00-00 00:00:00&quot;</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_isolatedFrom;
                     bool m_isolatedFromHasBeenSet;
 
                     /**
                      * <p>1</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     int64_t m_replications;
                     bool m_replicationsHasBeenSet;
@@ -1732,36 +1621,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_fullReplicationsHasBeenSet;
 
                     /**
-                     * <p>Account information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t m_appId;
                     bool m_appIdHasBeenSet;
 
                     /**
-                     * <p>Account information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string m_subAccountUin;
                     bool m_subAccountUinHasBeenSet;
 
                     /**
-                     * <p>Account information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string m_uin;
                     bool m_uinHasBeenSet;
 
                     /**
-                     * <p>AZ information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> m_zones;
                     bool m_zonesHasBeenSet;
 
                     /**
-                     * <p>Instance node</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<InstanceNode> m_nodes;
                     bool m_nodesHasBeenSet;
@@ -1791,22 +1675,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_cdcNodeNumHasBeenSet;
 
                     /**
-                     * <p>az mode. 1: Single az, 2: Multi-az non-primary az mode, 3: Multi-az primary az mode</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t m_aZMode;
                     bool m_aZModeHasBeenSet;
 
                     /**
-                     * <p>Disaster recovery flag. 1: No disaster recovery relationship; 2: Primary instance for disaster recovery; 3: Disaster Recovery Standby Instance</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t m_standbyFlag;
                     bool m_standbyFlagHasBeenSet;
 
                     /**
-                     * <p>Number of connected standby instances (Valid only when StandbyFlag == 2)</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t m_standbySecondaryNum;
                     bool m_standbySecondaryNumHasBeenSet;
@@ -1890,10 +1771,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_analysisRelationInfosHasBeenSet;
 
                     /**
-                     * <p>Analysis engine instance info</p>
+                     * <p>Analysis engine instance information</p>
                      */
                     AnalysisInstanceInfo m_analysisInstanceInfo;
                     bool m_analysisInstanceInfoHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::vector<AutoScalingConfig> m_autoScaleConfigs;
+                    bool m_autoScaleConfigsHasBeenSet;
 
                 };
             }

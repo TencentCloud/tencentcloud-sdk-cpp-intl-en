@@ -415,10 +415,8 @@ namespace TencentCloud
                     bool PayModeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Expiration time</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ExpireAt <p>Expiration time</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return ExpireAt 
                      * 
                      */
                     std::string GetExpireAt() const;
@@ -431,10 +429,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ExpireAtHasBeenSet() const;
 
                     /**
-                     * 获取<p>Isolation time</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return IsolatedAt <p>Isolation time</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return IsolatedAt 
                      * 
                      */
                     std::string GetIsolatedAt() const;
@@ -447,10 +443,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool IsolatedAtHasBeenSet() const;
 
                     /**
-                     * 获取<p>Instance Architecture Type, separate: decoupled architecture; hybrid: peer-to-peer architecture</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return InstanceType <p>Instance Architecture Type, separate: decoupled architecture; hybrid: peer-to-peer architecture</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return InstanceType 
                      * 
                      */
                     std::string GetInstanceType() const;
@@ -463,10 +457,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool InstanceTypeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Disk Type, CLOUD_HSSD enhanced SSD, CLOUD_TCS local SSD disk</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return StorageType <p>Disk Type, CLOUD_HSSD enhanced SSD, CLOUD_TCS local SSD disk</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return StorageType 
                      * 
                      */
                     std::string GetStorageType() const;
@@ -493,10 +485,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ZonesHasBeenSet() const;
 
                     /**
-                     * 获取<p>Disk usage of the largest node</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DiskUsage <p>Disk usage of the largest node</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return DiskUsage 
                      * 
                      */
                     int64_t GetDiskUsage() const;
@@ -887,8 +877,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool MaintenanceWindowHasBeenSet() const;
 
                     /**
-                     * 获取<p>Whether transparent data encryption is enabled. 0: not enabled; 1: enabled</p>
-                     * @return EncryptionEnable <p>Whether transparent data encryption is enabled. 0: not enabled; 1: enabled</p>
+                     * 获取<p>Whether transparent encryption is enabled. 0: not enabled; 1: enabled</p>
+                     * @return EncryptionEnable <p>Whether transparent encryption is enabled. 0: not enabled; 1: enabled</p>
                      * 
                      */
                     int64_t GetEncryptionEnable() const;
@@ -901,8 +891,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool EncryptionEnableHasBeenSet() const;
 
                     /**
-                     * 获取<p>Real-use kms region for subsequent call to kms service</p>
-                     * @return EncryptionKmsRegion <p>Real-use kms region for subsequent call to kms service</p>
+                     * 获取<p>Real use kms region for subsequent call to kms service</p>
+                     * @return EncryptionKmsRegion <p>Real use kms region for subsequent call to kms service</p>
                      * 
                      */
                     std::string GetEncryptionKmsRegion() const;
@@ -913,6 +903,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      * 
                      */
                     bool EncryptionKmsRegionHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return AutoScaleConfigs 
+                     * 
+                     */
+                    std::vector<AutoScalingConfig> GetAutoScaleConfigs() const;
+
+                    /**
+                     * 判断参数 AutoScaleConfigs 是否已赋值
+                     * @return AutoScaleConfigs 是否已赋值
+                     * 
+                     */
+                    bool AutoScaleConfigsHasBeenSet() const;
 
                 private:
 
@@ -1073,29 +1077,25 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_payModeHasBeenSet;
 
                     /**
-                     * <p>Expiration time</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string m_expireAt;
                     bool m_expireAtHasBeenSet;
 
                     /**
-                     * <p>Isolation time</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string m_isolatedAt;
                     bool m_isolatedAtHasBeenSet;
 
                     /**
-                     * <p>Instance Architecture Type, separate: decoupled architecture; hybrid: peer-to-peer architecture</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string m_instanceType;
                     bool m_instanceTypeHasBeenSet;
 
                     /**
-                     * <p>Disk Type, CLOUD_HSSD enhanced SSD, CLOUD_TCS local SSD disk</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string m_storageType;
                     bool m_storageTypeHasBeenSet;
@@ -1107,8 +1107,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_zonesHasBeenSet;
 
                     /**
-                     * <p>Disk usage of the largest node</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t m_diskUsage;
                     bool m_diskUsageHasBeenSet;
@@ -1276,16 +1275,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_maintenanceWindowHasBeenSet;
 
                     /**
-                     * <p>Whether transparent data encryption is enabled. 0: not enabled; 1: enabled</p>
+                     * <p>Whether transparent encryption is enabled. 0: not enabled; 1: enabled</p>
                      */
                     int64_t m_encryptionEnable;
                     bool m_encryptionEnableHasBeenSet;
 
                     /**
-                     * <p>Real-use kms region for subsequent call to kms service</p>
+                     * <p>Real use kms region for subsequent call to kms service</p>
                      */
                     std::string m_encryptionKmsRegion;
                     bool m_encryptionKmsRegionHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::vector<AutoScalingConfig> m_autoScaleConfigs;
+                    bool m_autoScaleConfigsHasBeenSet;
 
                 };
             }

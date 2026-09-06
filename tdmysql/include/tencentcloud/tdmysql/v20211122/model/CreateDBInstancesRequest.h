@@ -655,15 +655,15 @@ namespace TencentCloud
                     bool SQLModeHasBeenSet() const;
 
                     /**
-                     * 获取<p>ccu configuration of the svls instance</p>
-                     * @return AutoScaleConfig <p>ccu configuration of the svls instance</p>
+                     * 获取
+                     * @return AutoScaleConfig 
                      * 
                      */
                     AutoScalingConfig GetAutoScaleConfig() const;
 
                     /**
-                     * 设置<p>ccu configuration of the svls instance</p>
-                     * @param _autoScaleConfig <p>ccu configuration of the svls instance</p>
+                     * 设置
+                     * @param _autoScaleConfig 
                      * 
                      */
                     void SetAutoScaleConfig(const AutoScalingConfig& _autoScaleConfig);
@@ -676,15 +676,15 @@ namespace TencentCloud
                     bool AutoScaleConfigHasBeenSet() const;
 
                     /**
-                     * 获取<p>Bind to security group list</p>
-                     * @return SecurityGroupIds <p>Bind to security group list</p>
+                     * 获取<p>Security group binding list</p>
+                     * @return SecurityGroupIds <p>Security group binding list</p>
                      * 
                      */
                     std::vector<std::string> GetSecurityGroupIds() const;
 
                     /**
-                     * 设置<p>Bind to security group list</p>
-                     * @param _securityGroupIds <p>Bind to security group list</p>
+                     * 设置<p>Security group binding list</p>
+                     * @param _securityGroupIds <p>Security group binding list</p>
                      * 
                      */
                     void SetSecurityGroupIds(const std::vector<std::string>& _securityGroupIds);
@@ -697,15 +697,15 @@ namespace TencentCloud
                     bool SecurityGroupIdsHasBeenSet() const;
 
                     /**
-                     * 获取<p>root userName. The default is dbaadmin in the current version. It will reset to dbaadmin even if a value is passed.</p>
-                     * @return UserName <p>root userName. The default is dbaadmin in the current version. It will reset to dbaadmin even if a value is passed.</p>
+                     * 获取<p>root userName. It defaults to dbaadmin in the current version, and the passed value will be reset to dbaadmin</p>
+                     * @return UserName <p>root userName. It defaults to dbaadmin in the current version, and the passed value will be reset to dbaadmin</p>
                      * 
                      */
                     std::string GetUserName() const;
 
                     /**
-                     * 设置<p>root userName. The default is dbaadmin in the current version. It will reset to dbaadmin even if a value is passed.</p>
-                     * @param _userName <p>root userName. The default is dbaadmin in the current version. It will reset to dbaadmin even if a value is passed.</p>
+                     * 设置<p>root userName. It defaults to dbaadmin in the current version, and the passed value will be reset to dbaadmin</p>
+                     * @param _userName <p>root userName. It defaults to dbaadmin in the current version, and the passed value will be reset to dbaadmin</p>
                      * 
                      */
                     void SetUserName(const std::string& _userName);
@@ -739,15 +739,15 @@ namespace TencentCloud
                     bool PasswordHasBeenSet() const;
 
                     /**
-                     * 获取<p>Whether transparent data encryption is enabled. 0: not enabled; 1: enabled</p>
-                     * @return EncryptionEnable <p>Whether transparent data encryption is enabled. 0: not enabled; 1: enabled</p>
+                     * 获取<p>Whether transparent encryption is enabled. 0: not enabled. 1: enabled</p>
+                     * @return EncryptionEnable <p>Whether transparent encryption is enabled. 0: not enabled. 1: enabled</p>
                      * 
                      */
                     int64_t GetEncryptionEnable() const;
 
                     /**
-                     * 设置<p>Whether transparent data encryption is enabled. 0: not enabled; 1: enabled</p>
-                     * @param _encryptionEnable <p>Whether transparent data encryption is enabled. 0: not enabled; 1: enabled</p>
+                     * 设置<p>Whether transparent encryption is enabled. 0: not enabled. 1: enabled</p>
+                     * @param _encryptionEnable <p>Whether transparent encryption is enabled. 0: not enabled. 1: enabled</p>
                      * 
                      */
                     void SetEncryptionEnable(const int64_t& _encryptionEnable);
@@ -758,6 +758,27 @@ namespace TencentCloud
                      * 
                      */
                     bool EncryptionEnableHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return AutoScaleConfigs 
+                     * 
+                     */
+                    std::vector<AutoScalingConfig> GetAutoScaleConfigs() const;
+
+                    /**
+                     * 设置
+                     * @param _autoScaleConfigs 
+                     * 
+                     */
+                    void SetAutoScaleConfigs(const std::vector<AutoScalingConfig>& _autoScaleConfigs);
+
+                    /**
+                     * 判断参数 AutoScaleConfigs 是否已赋值
+                     * @return AutoScaleConfigs 是否已赋值
+                     * 
+                     */
+                    bool AutoScaleConfigsHasBeenSet() const;
 
                 private:
 
@@ -936,19 +957,19 @@ namespace TencentCloud
                     bool m_sQLModeHasBeenSet;
 
                     /**
-                     * <p>ccu configuration of the svls instance</p>
+                     * 
                      */
                     AutoScalingConfig m_autoScaleConfig;
                     bool m_autoScaleConfigHasBeenSet;
 
                     /**
-                     * <p>Bind to security group list</p>
+                     * <p>Security group binding list</p>
                      */
                     std::vector<std::string> m_securityGroupIds;
                     bool m_securityGroupIdsHasBeenSet;
 
                     /**
-                     * <p>root userName. The default is dbaadmin in the current version. It will reset to dbaadmin even if a value is passed.</p>
+                     * <p>root userName. It defaults to dbaadmin in the current version, and the passed value will be reset to dbaadmin</p>
                      */
                     std::string m_userName;
                     bool m_userNameHasBeenSet;
@@ -960,10 +981,16 @@ namespace TencentCloud
                     bool m_passwordHasBeenSet;
 
                     /**
-                     * <p>Whether transparent data encryption is enabled. 0: not enabled; 1: enabled</p>
+                     * <p>Whether transparent encryption is enabled. 0: not enabled. 1: enabled</p>
                      */
                     int64_t m_encryptionEnable;
                     bool m_encryptionEnableHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::vector<AutoScalingConfig> m_autoScaleConfigs;
+                    bool m_autoScaleConfigsHasBeenSet;
 
                 };
             }

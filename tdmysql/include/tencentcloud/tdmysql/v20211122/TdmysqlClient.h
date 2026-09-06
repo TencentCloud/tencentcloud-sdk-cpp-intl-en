@@ -23,6 +23,8 @@
 #include <tencentcloud/core/Credential.h>
 #include <tencentcloud/core/profile/ClientProfile.h>
 #include <tencentcloud/core/AsyncCallerContext.h>
+#include <tencentcloud/tdmysql/v20211122/model/BreakStandbyDBInstanceRelationRequest.h>
+#include <tencentcloud/tdmysql/v20211122/model/BreakStandbyDBInstanceRelationResponse.h>
 #include <tencentcloud/tdmysql/v20211122/model/CancelIsolateDBInstancesRequest.h>
 #include <tencentcloud/tdmysql/v20211122/model/CancelIsolateDBInstancesResponse.h>
 #include <tencentcloud/tdmysql/v20211122/model/CreateCloneInstanceRequest.h>
@@ -31,12 +33,16 @@
 #include <tencentcloud/tdmysql/v20211122/model/CreateDBInstancesResponse.h>
 #include <tencentcloud/tdmysql/v20211122/model/CreateDBSBackupRequest.h>
 #include <tencentcloud/tdmysql/v20211122/model/CreateDBSBackupResponse.h>
+#include <tencentcloud/tdmysql/v20211122/model/CreateStandbyDBInstanceRequest.h>
+#include <tencentcloud/tdmysql/v20211122/model/CreateStandbyDBInstanceResponse.h>
 #include <tencentcloud/tdmysql/v20211122/model/CreateUsersRequest.h>
 #include <tencentcloud/tdmysql/v20211122/model/CreateUsersResponse.h>
 #include <tencentcloud/tdmysql/v20211122/model/DeleteDBSBackupSetsRequest.h>
 #include <tencentcloud/tdmysql/v20211122/model/DeleteDBSBackupSetsResponse.h>
 #include <tencentcloud/tdmysql/v20211122/model/DeleteUsersRequest.h>
 #include <tencentcloud/tdmysql/v20211122/model/DeleteUsersResponse.h>
+#include <tencentcloud/tdmysql/v20211122/model/DescribeDBCharsetsRequest.h>
+#include <tencentcloud/tdmysql/v20211122/model/DescribeDBCharsetsResponse.h>
 #include <tencentcloud/tdmysql/v20211122/model/DescribeDBEnginesRequest.h>
 #include <tencentcloud/tdmysql/v20211122/model/DescribeDBEnginesResponse.h>
 #include <tencentcloud/tdmysql/v20211122/model/DescribeDBInstanceDetailRequest.h>
@@ -67,6 +73,10 @@
 #include <tencentcloud/tdmysql/v20211122/model/DescribeDatabasesResponse.h>
 #include <tencentcloud/tdmysql/v20211122/model/DescribeFlowRequest.h>
 #include <tencentcloud/tdmysql/v20211122/model/DescribeFlowResponse.h>
+#include <tencentcloud/tdmysql/v20211122/model/DescribeFlowTypesRequest.h>
+#include <tencentcloud/tdmysql/v20211122/model/DescribeFlowTypesResponse.h>
+#include <tencentcloud/tdmysql/v20211122/model/DescribeInstanceDataReservedSpaceRequest.h>
+#include <tencentcloud/tdmysql/v20211122/model/DescribeInstanceDataReservedSpaceResponse.h>
 #include <tencentcloud/tdmysql/v20211122/model/DescribeInstanceSSLStatusRequest.h>
 #include <tencentcloud/tdmysql/v20211122/model/DescribeInstanceSSLStatusResponse.h>
 #include <tencentcloud/tdmysql/v20211122/model/DescribeMaintenanceWindowRequest.h>
@@ -77,6 +87,8 @@
 #include <tencentcloud/tdmysql/v20211122/model/DescribeSlowLogsResponse.h>
 #include <tencentcloud/tdmysql/v20211122/model/DescribeSpecsRequest.h>
 #include <tencentcloud/tdmysql/v20211122/model/DescribeSpecsResponse.h>
+#include <tencentcloud/tdmysql/v20211122/model/DescribeStandbyDBInstanceRelationDetailRequest.h>
+#include <tencentcloud/tdmysql/v20211122/model/DescribeStandbyDBInstanceRelationDetailResponse.h>
 #include <tencentcloud/tdmysql/v20211122/model/DescribeUserPrivilegesRequest.h>
 #include <tencentcloud/tdmysql/v20211122/model/DescribeUserPrivilegesResponse.h>
 #include <tencentcloud/tdmysql/v20211122/model/DescribeUsersRequest.h>
@@ -99,6 +111,8 @@
 #include <tencentcloud/tdmysql/v20211122/model/ModifyDBSBackupPolicyResponse.h>
 #include <tencentcloud/tdmysql/v20211122/model/ModifyDBSBackupSetCommentRequest.h>
 #include <tencentcloud/tdmysql/v20211122/model/ModifyDBSBackupSetCommentResponse.h>
+#include <tencentcloud/tdmysql/v20211122/model/ModifyInstanceDataReservedSpaceRequest.h>
+#include <tencentcloud/tdmysql/v20211122/model/ModifyInstanceDataReservedSpaceResponse.h>
 #include <tencentcloud/tdmysql/v20211122/model/ModifyInstanceNameRequest.h>
 #include <tencentcloud/tdmysql/v20211122/model/ModifyInstanceNameResponse.h>
 #include <tencentcloud/tdmysql/v20211122/model/ModifyInstanceNetworkRequest.h>
@@ -109,6 +123,8 @@
 #include <tencentcloud/tdmysql/v20211122/model/ModifyMaintenanceWindowResponse.h>
 #include <tencentcloud/tdmysql/v20211122/model/ModifyUserPrivilegesRequest.h>
 #include <tencentcloud/tdmysql/v20211122/model/ModifyUserPrivilegesResponse.h>
+#include <tencentcloud/tdmysql/v20211122/model/ResetDbaAdminPrivilegesRequest.h>
+#include <tencentcloud/tdmysql/v20211122/model/ResetDbaAdminPrivilegesResponse.h>
 #include <tencentcloud/tdmysql/v20211122/model/ResetUsersPasswordRequest.h>
 #include <tencentcloud/tdmysql/v20211122/model/ResetUsersPasswordResponse.h>
 #include <tencentcloud/tdmysql/v20211122/model/RestartDBInstancesRequest.h>
@@ -129,6 +145,9 @@ namespace TencentCloud
                 TdmysqlClient(const Credential &credential, const std::string &region);
                 TdmysqlClient(const Credential &credential, const std::string &region, const ClientProfile &profile);
 
+                typedef Outcome<Core::Error, Model::BreakStandbyDBInstanceRelationResponse> BreakStandbyDBInstanceRelationOutcome;
+                typedef std::future<BreakStandbyDBInstanceRelationOutcome> BreakStandbyDBInstanceRelationOutcomeCallable;
+                typedef std::function<void(const TdmysqlClient*, const Model::BreakStandbyDBInstanceRelationRequest&, BreakStandbyDBInstanceRelationOutcome, const std::shared_ptr<const AsyncCallerContext>&)> BreakStandbyDBInstanceRelationAsyncHandler;
                 typedef Outcome<Core::Error, Model::CancelIsolateDBInstancesResponse> CancelIsolateDBInstancesOutcome;
                 typedef std::future<CancelIsolateDBInstancesOutcome> CancelIsolateDBInstancesOutcomeCallable;
                 typedef std::function<void(const TdmysqlClient*, const Model::CancelIsolateDBInstancesRequest&, CancelIsolateDBInstancesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CancelIsolateDBInstancesAsyncHandler;
@@ -141,6 +160,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CreateDBSBackupResponse> CreateDBSBackupOutcome;
                 typedef std::future<CreateDBSBackupOutcome> CreateDBSBackupOutcomeCallable;
                 typedef std::function<void(const TdmysqlClient*, const Model::CreateDBSBackupRequest&, CreateDBSBackupOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateDBSBackupAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateStandbyDBInstanceResponse> CreateStandbyDBInstanceOutcome;
+                typedef std::future<CreateStandbyDBInstanceOutcome> CreateStandbyDBInstanceOutcomeCallable;
+                typedef std::function<void(const TdmysqlClient*, const Model::CreateStandbyDBInstanceRequest&, CreateStandbyDBInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateStandbyDBInstanceAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateUsersResponse> CreateUsersOutcome;
                 typedef std::future<CreateUsersOutcome> CreateUsersOutcomeCallable;
                 typedef std::function<void(const TdmysqlClient*, const Model::CreateUsersRequest&, CreateUsersOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateUsersAsyncHandler;
@@ -150,6 +172,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DeleteUsersResponse> DeleteUsersOutcome;
                 typedef std::future<DeleteUsersOutcome> DeleteUsersOutcomeCallable;
                 typedef std::function<void(const TdmysqlClient*, const Model::DeleteUsersRequest&, DeleteUsersOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteUsersAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeDBCharsetsResponse> DescribeDBCharsetsOutcome;
+                typedef std::future<DescribeDBCharsetsOutcome> DescribeDBCharsetsOutcomeCallable;
+                typedef std::function<void(const TdmysqlClient*, const Model::DescribeDBCharsetsRequest&, DescribeDBCharsetsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDBCharsetsAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeDBEnginesResponse> DescribeDBEnginesOutcome;
                 typedef std::future<DescribeDBEnginesOutcome> DescribeDBEnginesOutcomeCallable;
                 typedef std::function<void(const TdmysqlClient*, const Model::DescribeDBEnginesRequest&, DescribeDBEnginesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeDBEnginesAsyncHandler;
@@ -195,6 +220,12 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeFlowResponse> DescribeFlowOutcome;
                 typedef std::future<DescribeFlowOutcome> DescribeFlowOutcomeCallable;
                 typedef std::function<void(const TdmysqlClient*, const Model::DescribeFlowRequest&, DescribeFlowOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeFlowAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeFlowTypesResponse> DescribeFlowTypesOutcome;
+                typedef std::future<DescribeFlowTypesOutcome> DescribeFlowTypesOutcomeCallable;
+                typedef std::function<void(const TdmysqlClient*, const Model::DescribeFlowTypesRequest&, DescribeFlowTypesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeFlowTypesAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeInstanceDataReservedSpaceResponse> DescribeInstanceDataReservedSpaceOutcome;
+                typedef std::future<DescribeInstanceDataReservedSpaceOutcome> DescribeInstanceDataReservedSpaceOutcomeCallable;
+                typedef std::function<void(const TdmysqlClient*, const Model::DescribeInstanceDataReservedSpaceRequest&, DescribeInstanceDataReservedSpaceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeInstanceDataReservedSpaceAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeInstanceSSLStatusResponse> DescribeInstanceSSLStatusOutcome;
                 typedef std::future<DescribeInstanceSSLStatusOutcome> DescribeInstanceSSLStatusOutcomeCallable;
                 typedef std::function<void(const TdmysqlClient*, const Model::DescribeInstanceSSLStatusRequest&, DescribeInstanceSSLStatusOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeInstanceSSLStatusAsyncHandler;
@@ -210,6 +241,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeSpecsResponse> DescribeSpecsOutcome;
                 typedef std::future<DescribeSpecsOutcome> DescribeSpecsOutcomeCallable;
                 typedef std::function<void(const TdmysqlClient*, const Model::DescribeSpecsRequest&, DescribeSpecsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeSpecsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeStandbyDBInstanceRelationDetailResponse> DescribeStandbyDBInstanceRelationDetailOutcome;
+                typedef std::future<DescribeStandbyDBInstanceRelationDetailOutcome> DescribeStandbyDBInstanceRelationDetailOutcomeCallable;
+                typedef std::function<void(const TdmysqlClient*, const Model::DescribeStandbyDBInstanceRelationDetailRequest&, DescribeStandbyDBInstanceRelationDetailOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeStandbyDBInstanceRelationDetailAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeUserPrivilegesResponse> DescribeUserPrivilegesOutcome;
                 typedef std::future<DescribeUserPrivilegesOutcome> DescribeUserPrivilegesOutcomeCallable;
                 typedef std::function<void(const TdmysqlClient*, const Model::DescribeUserPrivilegesRequest&, DescribeUserPrivilegesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeUserPrivilegesAsyncHandler;
@@ -243,6 +277,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyDBSBackupSetCommentResponse> ModifyDBSBackupSetCommentOutcome;
                 typedef std::future<ModifyDBSBackupSetCommentOutcome> ModifyDBSBackupSetCommentOutcomeCallable;
                 typedef std::function<void(const TdmysqlClient*, const Model::ModifyDBSBackupSetCommentRequest&, ModifyDBSBackupSetCommentOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyDBSBackupSetCommentAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyInstanceDataReservedSpaceResponse> ModifyInstanceDataReservedSpaceOutcome;
+                typedef std::future<ModifyInstanceDataReservedSpaceOutcome> ModifyInstanceDataReservedSpaceOutcomeCallable;
+                typedef std::function<void(const TdmysqlClient*, const Model::ModifyInstanceDataReservedSpaceRequest&, ModifyInstanceDataReservedSpaceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyInstanceDataReservedSpaceAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyInstanceNameResponse> ModifyInstanceNameOutcome;
                 typedef std::future<ModifyInstanceNameOutcome> ModifyInstanceNameOutcomeCallable;
                 typedef std::function<void(const TdmysqlClient*, const Model::ModifyInstanceNameRequest&, ModifyInstanceNameOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyInstanceNameAsyncHandler;
@@ -258,6 +295,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyUserPrivilegesResponse> ModifyUserPrivilegesOutcome;
                 typedef std::future<ModifyUserPrivilegesOutcome> ModifyUserPrivilegesOutcomeCallable;
                 typedef std::function<void(const TdmysqlClient*, const Model::ModifyUserPrivilegesRequest&, ModifyUserPrivilegesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyUserPrivilegesAsyncHandler;
+                typedef Outcome<Core::Error, Model::ResetDbaAdminPrivilegesResponse> ResetDbaAdminPrivilegesOutcome;
+                typedef std::future<ResetDbaAdminPrivilegesOutcome> ResetDbaAdminPrivilegesOutcomeCallable;
+                typedef std::function<void(const TdmysqlClient*, const Model::ResetDbaAdminPrivilegesRequest&, ResetDbaAdminPrivilegesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ResetDbaAdminPrivilegesAsyncHandler;
                 typedef Outcome<Core::Error, Model::ResetUsersPasswordResponse> ResetUsersPasswordOutcome;
                 typedef std::future<ResetUsersPasswordOutcome> ResetUsersPasswordOutcomeCallable;
                 typedef std::function<void(const TdmysqlClient*, const Model::ResetUsersPasswordRequest&, ResetUsersPasswordOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ResetUsersPasswordAsyncHandler;
@@ -269,6 +309,15 @@ namespace TencentCloud
                 typedef std::function<void(const TdmysqlClient*, const Model::UpgradeInstanceRequest&, UpgradeInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpgradeInstanceAsyncHandler;
 
 
+
+                /**
+                 *This API is used to terminate the replication between the primary instance and the disaster recovery instance.
+                 * @param req BreakStandbyDBInstanceRelationRequest
+                 * @return BreakStandbyDBInstanceRelationOutcome
+                 */
+                BreakStandbyDBInstanceRelationOutcome BreakStandbyDBInstanceRelation(const Model::BreakStandbyDBInstanceRelationRequest &request);
+                void BreakStandbyDBInstanceRelationAsync(const Model::BreakStandbyDBInstanceRelationRequest& request, const BreakStandbyDBInstanceRelationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                BreakStandbyDBInstanceRelationOutcomeCallable BreakStandbyDBInstanceRelationCallable(const Model::BreakStandbyDBInstanceRelationRequest& request);
 
                 /**
                  *This API is used to lift isolation for instances in batch.
@@ -307,6 +356,15 @@ namespace TencentCloud
                 CreateDBSBackupOutcomeCallable CreateDBSBackupCallable(const Model::CreateDBSBackupRequest& request);
 
                 /**
+                 *This API is used to create disaster recovery instances in batches.
+                 * @param req CreateStandbyDBInstanceRequest
+                 * @return CreateStandbyDBInstanceOutcome
+                 */
+                CreateStandbyDBInstanceOutcome CreateStandbyDBInstance(const Model::CreateStandbyDBInstanceRequest &request);
+                void CreateStandbyDBInstanceAsync(const Model::CreateStandbyDBInstanceRequest& request, const CreateStandbyDBInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateStandbyDBInstanceOutcomeCallable CreateStandbyDBInstanceCallable(const Model::CreateStandbyDBInstanceRequest& request);
+
+                /**
                  *This API is used to create users in batches.
                  * @param req CreateUsersRequest
                  * @return CreateUsersOutcome
@@ -332,6 +390,15 @@ namespace TencentCloud
                 DeleteUsersOutcome DeleteUsers(const Model::DeleteUsersRequest &request);
                 void DeleteUsersAsync(const Model::DeleteUsersRequest& request, const DeleteUsersAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DeleteUsersOutcomeCallable DeleteUsersCallable(const Model::DeleteUsersRequest& request);
+
+                /**
+                 *This API is used to query supported character sets.
+                 * @param req DescribeDBCharsetsRequest
+                 * @return DescribeDBCharsetsOutcome
+                 */
+                DescribeDBCharsetsOutcome DescribeDBCharsets(const Model::DescribeDBCharsetsRequest &request);
+                void DescribeDBCharsetsAsync(const Model::DescribeDBCharsetsRequest& request, const DescribeDBCharsetsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeDBCharsetsOutcomeCallable DescribeDBCharsetsCallable(const Model::DescribeDBCharsetsRequest& request);
 
                 /**
                  *This API is used to obtain the DB engine version list.
@@ -469,6 +536,24 @@ namespace TencentCloud
                 DescribeFlowOutcomeCallable DescribeFlowCallable(const Model::DescribeFlowRequest& request);
 
                 /**
+                 *This API is used to obtain all task types.
+                 * @param req DescribeFlowTypesRequest
+                 * @return DescribeFlowTypesOutcome
+                 */
+                DescribeFlowTypesOutcome DescribeFlowTypes(const Model::DescribeFlowTypesRequest &request);
+                void DescribeFlowTypesAsync(const Model::DescribeFlowTypesRequest& request, const DescribeFlowTypesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeFlowTypesOutcomeCallable DescribeFlowTypesCallable(const Model::DescribeFlowTypesRequest& request);
+
+                /**
+                 *This API is used to query the data retention space of an instance.
+                 * @param req DescribeInstanceDataReservedSpaceRequest
+                 * @return DescribeInstanceDataReservedSpaceOutcome
+                 */
+                DescribeInstanceDataReservedSpaceOutcome DescribeInstanceDataReservedSpace(const Model::DescribeInstanceDataReservedSpaceRequest &request);
+                void DescribeInstanceDataReservedSpaceAsync(const Model::DescribeInstanceDataReservedSpaceRequest& request, const DescribeInstanceDataReservedSpaceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeInstanceDataReservedSpaceOutcomeCallable DescribeInstanceDataReservedSpaceCallable(const Model::DescribeInstanceDataReservedSpaceRequest& request);
+
+                /**
                  *This API is used to query the SSL status of an instance.
                  * @param req DescribeInstanceSSLStatusRequest
                  * @return DescribeInstanceSSLStatusOutcome
@@ -505,13 +590,22 @@ namespace TencentCloud
                 DescribeSlowLogsOutcomeCallable DescribeSlowLogsCallable(const Model::DescribeSlowLogsRequest& request);
 
                 /**
-                 *This API is used to list available component specifications.
+                 *This API is used to query sales specifications.
                  * @param req DescribeSpecsRequest
                  * @return DescribeSpecsOutcome
                  */
                 DescribeSpecsOutcome DescribeSpecs(const Model::DescribeSpecsRequest &request);
                 void DescribeSpecsAsync(const Model::DescribeSpecsRequest& request, const DescribeSpecsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeSpecsOutcomeCallable DescribeSpecsCallable(const Model::DescribeSpecsRequest& request);
+
+                /**
+                 *This API is used to query disaster recovery connection relationships of an instance.
+                 * @param req DescribeStandbyDBInstanceRelationDetailRequest
+                 * @return DescribeStandbyDBInstanceRelationDetailOutcome
+                 */
+                DescribeStandbyDBInstanceRelationDetailOutcome DescribeStandbyDBInstanceRelationDetail(const Model::DescribeStandbyDBInstanceRelationDetailRequest &request);
+                void DescribeStandbyDBInstanceRelationDetailAsync(const Model::DescribeStandbyDBInstanceRelationDetailRequest& request, const DescribeStandbyDBInstanceRelationDetailAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeStandbyDBInstanceRelationDetailOutcomeCallable DescribeStandbyDBInstanceRelationDetailCallable(const Model::DescribeStandbyDBInstanceRelationDetailRequest& request);
 
                 /**
                  *This API is used to query user permissions.
@@ -613,6 +707,15 @@ namespace TencentCloud
                 ModifyDBSBackupSetCommentOutcomeCallable ModifyDBSBackupSetCommentCallable(const Model::ModifyDBSBackupSetCommentRequest& request);
 
                 /**
+                 *This API is used to modify the reserved space for instance data.
+                 * @param req ModifyInstanceDataReservedSpaceRequest
+                 * @return ModifyInstanceDataReservedSpaceOutcome
+                 */
+                ModifyInstanceDataReservedSpaceOutcome ModifyInstanceDataReservedSpace(const Model::ModifyInstanceDataReservedSpaceRequest &request);
+                void ModifyInstanceDataReservedSpaceAsync(const Model::ModifyInstanceDataReservedSpaceRequest& request, const ModifyInstanceDataReservedSpaceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyInstanceDataReservedSpaceOutcomeCallable ModifyInstanceDataReservedSpaceCallable(const Model::ModifyInstanceDataReservedSpaceRequest& request);
+
+                /**
                  *This API is used to modify instance name.
                  * @param req ModifyInstanceNameRequest
                  * @return ModifyInstanceNameOutcome
@@ -656,6 +759,15 @@ namespace TencentCloud
                 ModifyUserPrivilegesOutcome ModifyUserPrivileges(const Model::ModifyUserPrivilegesRequest &request);
                 void ModifyUserPrivilegesAsync(const Model::ModifyUserPrivilegesRequest& request, const ModifyUserPrivilegesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ModifyUserPrivilegesOutcomeCallable ModifyUserPrivilegesCallable(const Model::ModifyUserPrivilegesRequest& request);
+
+                /**
+                 *Reset the permissions of the dbaadmin account.
+                 * @param req ResetDbaAdminPrivilegesRequest
+                 * @return ResetDbaAdminPrivilegesOutcome
+                 */
+                ResetDbaAdminPrivilegesOutcome ResetDbaAdminPrivileges(const Model::ResetDbaAdminPrivilegesRequest &request);
+                void ResetDbaAdminPrivilegesAsync(const Model::ResetDbaAdminPrivilegesRequest& request, const ResetDbaAdminPrivilegesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ResetDbaAdminPrivilegesOutcomeCallable ResetDbaAdminPrivilegesCallable(const Model::ResetDbaAdminPrivilegesRequest& request);
 
                 /**
                  *This API is used to batch reset user password.

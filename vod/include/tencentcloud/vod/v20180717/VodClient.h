@@ -29,6 +29,10 @@
 #include <tencentcloud/vod/v20180717/model/AttachMediaSubtitlesResponse.h>
 #include <tencentcloud/vod/v20180717/model/CloneCDNDomainRequest.h>
 #include <tencentcloud/vod/v20180717/model/CloneCDNDomainResponse.h>
+#include <tencentcloud/vod/v20180717/model/CloneVoiceAsyncRequest.h>
+#include <tencentcloud/vod/v20180717/model/CloneVoiceAsyncResponse.h>
+#include <tencentcloud/vod/v20180717/model/CloneVoiceSyncRequest.h>
+#include <tencentcloud/vod/v20180717/model/CloneVoiceSyncResponse.h>
 #include <tencentcloud/vod/v20180717/model/CommitUploadRequest.h>
 #include <tencentcloud/vod/v20180717/model/CommitUploadResponse.h>
 #include <tencentcloud/vod/v20180717/model/ComposeMediaRequest.h>
@@ -195,6 +199,8 @@
 #include <tencentcloud/vod/v20180717/model/DeleteTranscodeTemplateResponse.h>
 #include <tencentcloud/vod/v20180717/model/DeleteVodDomainRequest.h>
 #include <tencentcloud/vod/v20180717/model/DeleteVodDomainResponse.h>
+#include <tencentcloud/vod/v20180717/model/DeleteVoiceRequest.h>
+#include <tencentcloud/vod/v20180717/model/DeleteVoiceResponse.h>
 #include <tencentcloud/vod/v20180717/model/DeleteWatermarkTemplateRequest.h>
 #include <tencentcloud/vod/v20180717/model/DeleteWatermarkTemplateResponse.h>
 #include <tencentcloud/vod/v20180717/model/DeleteWordSamplesRequest.h>
@@ -313,10 +319,14 @@
 #include <tencentcloud/vod/v20180717/model/DescribeTranscodeTemplatesResponse.h>
 #include <tencentcloud/vod/v20180717/model/DescribeVodDomainsRequest.h>
 #include <tencentcloud/vod/v20180717/model/DescribeVodDomainsResponse.h>
+#include <tencentcloud/vod/v20180717/model/DescribeVoicesRequest.h>
+#include <tencentcloud/vod/v20180717/model/DescribeVoicesResponse.h>
 #include <tencentcloud/vod/v20180717/model/DescribeWatermarkTemplatesRequest.h>
 #include <tencentcloud/vod/v20180717/model/DescribeWatermarkTemplatesResponse.h>
 #include <tencentcloud/vod/v20180717/model/DescribeWordSamplesRequest.h>
 #include <tencentcloud/vod/v20180717/model/DescribeWordSamplesResponse.h>
+#include <tencentcloud/vod/v20180717/model/DesignVoiceAsyncRequest.h>
+#include <tencentcloud/vod/v20180717/model/DesignVoiceAsyncResponse.h>
 #include <tencentcloud/vod/v20180717/model/EditMediaRequest.h>
 #include <tencentcloud/vod/v20180717/model/EditMediaResponse.h>
 #include <tencentcloud/vod/v20180717/model/EnhanceMediaByTemplateRequest.h>
@@ -465,8 +475,14 @@
 #include <tencentcloud/vod/v20180717/model/SplitMediaResponse.h>
 #include <tencentcloud/vod/v20180717/model/StartCDNDomainRequest.h>
 #include <tencentcloud/vod/v20180717/model/StartCDNDomainResponse.h>
+#include <tencentcloud/vod/v20180717/model/TextToSpeechAsyncRequest.h>
+#include <tencentcloud/vod/v20180717/model/TextToSpeechAsyncResponse.h>
+#include <tencentcloud/vod/v20180717/model/TextToSpeechSyncRequest.h>
+#include <tencentcloud/vod/v20180717/model/TextToSpeechSyncResponse.h>
 #include <tencentcloud/vod/v20180717/model/UpdateAigcApiTokenRequest.h>
 #include <tencentcloud/vod/v20180717/model/UpdateAigcApiTokenResponse.h>
+#include <tencentcloud/vod/v20180717/model/UpdateVoiceRequest.h>
+#include <tencentcloud/vod/v20180717/model/UpdateVoiceResponse.h>
 #include <tencentcloud/vod/v20180717/model/VerifyDomainRecordRequest.h>
 #include <tencentcloud/vod/v20180717/model/VerifyDomainRecordResponse.h>
 
@@ -492,6 +508,12 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CloneCDNDomainResponse> CloneCDNDomainOutcome;
                 typedef std::future<CloneCDNDomainOutcome> CloneCDNDomainOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::CloneCDNDomainRequest&, CloneCDNDomainOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CloneCDNDomainAsyncHandler;
+                typedef Outcome<Core::Error, Model::CloneVoiceAsyncResponse> CloneVoiceAsyncOutcome;
+                typedef std::future<CloneVoiceAsyncOutcome> CloneVoiceAsyncOutcomeCallable;
+                typedef std::function<void(const VodClient*, const Model::CloneVoiceAsyncRequest&, CloneVoiceAsyncOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CloneVoiceAsyncAsyncHandler;
+                typedef Outcome<Core::Error, Model::CloneVoiceSyncResponse> CloneVoiceSyncOutcome;
+                typedef std::future<CloneVoiceSyncOutcome> CloneVoiceSyncOutcomeCallable;
+                typedef std::function<void(const VodClient*, const Model::CloneVoiceSyncRequest&, CloneVoiceSyncOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CloneVoiceSyncAsyncHandler;
                 typedef Outcome<Core::Error, Model::CommitUploadResponse> CommitUploadOutcome;
                 typedef std::future<CommitUploadOutcome> CommitUploadOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::CommitUploadRequest&, CommitUploadOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CommitUploadAsyncHandler;
@@ -741,6 +763,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DeleteVodDomainResponse> DeleteVodDomainOutcome;
                 typedef std::future<DeleteVodDomainOutcome> DeleteVodDomainOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::DeleteVodDomainRequest&, DeleteVodDomainOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteVodDomainAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteVoiceResponse> DeleteVoiceOutcome;
+                typedef std::future<DeleteVoiceOutcome> DeleteVoiceOutcomeCallable;
+                typedef std::function<void(const VodClient*, const Model::DeleteVoiceRequest&, DeleteVoiceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteVoiceAsyncHandler;
                 typedef Outcome<Core::Error, Model::DeleteWatermarkTemplateResponse> DeleteWatermarkTemplateOutcome;
                 typedef std::future<DeleteWatermarkTemplateOutcome> DeleteWatermarkTemplateOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::DeleteWatermarkTemplateRequest&, DeleteWatermarkTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteWatermarkTemplateAsyncHandler;
@@ -918,12 +943,18 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeVodDomainsResponse> DescribeVodDomainsOutcome;
                 typedef std::future<DescribeVodDomainsOutcome> DescribeVodDomainsOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::DescribeVodDomainsRequest&, DescribeVodDomainsOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeVodDomainsAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeVoicesResponse> DescribeVoicesOutcome;
+                typedef std::future<DescribeVoicesOutcome> DescribeVoicesOutcomeCallable;
+                typedef std::function<void(const VodClient*, const Model::DescribeVoicesRequest&, DescribeVoicesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeVoicesAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeWatermarkTemplatesResponse> DescribeWatermarkTemplatesOutcome;
                 typedef std::future<DescribeWatermarkTemplatesOutcome> DescribeWatermarkTemplatesOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::DescribeWatermarkTemplatesRequest&, DescribeWatermarkTemplatesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeWatermarkTemplatesAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeWordSamplesResponse> DescribeWordSamplesOutcome;
                 typedef std::future<DescribeWordSamplesOutcome> DescribeWordSamplesOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::DescribeWordSamplesRequest&, DescribeWordSamplesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeWordSamplesAsyncHandler;
+                typedef Outcome<Core::Error, Model::DesignVoiceAsyncResponse> DesignVoiceAsyncOutcome;
+                typedef std::future<DesignVoiceAsyncOutcome> DesignVoiceAsyncOutcomeCallable;
+                typedef std::function<void(const VodClient*, const Model::DesignVoiceAsyncRequest&, DesignVoiceAsyncOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DesignVoiceAsyncAsyncHandler;
                 typedef Outcome<Core::Error, Model::EditMediaResponse> EditMediaOutcome;
                 typedef std::future<EditMediaOutcome> EditMediaOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::EditMediaRequest&, EditMediaOutcome, const std::shared_ptr<const AsyncCallerContext>&)> EditMediaAsyncHandler;
@@ -1146,9 +1177,18 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::StartCDNDomainResponse> StartCDNDomainOutcome;
                 typedef std::future<StartCDNDomainOutcome> StartCDNDomainOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::StartCDNDomainRequest&, StartCDNDomainOutcome, const std::shared_ptr<const AsyncCallerContext>&)> StartCDNDomainAsyncHandler;
+                typedef Outcome<Core::Error, Model::TextToSpeechAsyncResponse> TextToSpeechAsyncOutcome;
+                typedef std::future<TextToSpeechAsyncOutcome> TextToSpeechAsyncOutcomeCallable;
+                typedef std::function<void(const VodClient*, const Model::TextToSpeechAsyncRequest&, TextToSpeechAsyncOutcome, const std::shared_ptr<const AsyncCallerContext>&)> TextToSpeechAsyncAsyncHandler;
+                typedef Outcome<Core::Error, Model::TextToSpeechSyncResponse> TextToSpeechSyncOutcome;
+                typedef std::future<TextToSpeechSyncOutcome> TextToSpeechSyncOutcomeCallable;
+                typedef std::function<void(const VodClient*, const Model::TextToSpeechSyncRequest&, TextToSpeechSyncOutcome, const std::shared_ptr<const AsyncCallerContext>&)> TextToSpeechSyncAsyncHandler;
                 typedef Outcome<Core::Error, Model::UpdateAigcApiTokenResponse> UpdateAigcApiTokenOutcome;
                 typedef std::future<UpdateAigcApiTokenOutcome> UpdateAigcApiTokenOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::UpdateAigcApiTokenRequest&, UpdateAigcApiTokenOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpdateAigcApiTokenAsyncHandler;
+                typedef Outcome<Core::Error, Model::UpdateVoiceResponse> UpdateVoiceOutcome;
+                typedef std::future<UpdateVoiceOutcome> UpdateVoiceOutcomeCallable;
+                typedef std::function<void(const VodClient*, const Model::UpdateVoiceRequest&, UpdateVoiceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpdateVoiceAsyncHandler;
                 typedef Outcome<Core::Error, Model::VerifyDomainRecordResponse> VerifyDomainRecordOutcome;
                 typedef std::future<VerifyDomainRecordOutcome> VerifyDomainRecordOutcomeCallable;
                 typedef std::function<void(const VodClient*, const Model::VerifyDomainRecordRequest&, VerifyDomainRecordOutcome, const std::shared_ptr<const AsyncCallerContext>&)> VerifyDomainRecordAsyncHandler;
@@ -1182,6 +1222,24 @@ namespace TencentCloud
                 CloneCDNDomainOutcome CloneCDNDomain(const Model::CloneCDNDomainRequest &request);
                 void CloneCDNDomainAsync(const Model::CloneCDNDomainRequest& request, const CloneCDNDomainAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CloneCDNDomainOutcomeCallable CloneCDNDomainCallable(const Model::CloneCDNDomainRequest& request);
+
+                /**
+                 *This API is used to initiate a voice cloning task. It generates an exclusive voice based on reference audio. The generated voice can be used for subsequent text to speech. Voice cloning is an asynchronous task. The voice ID and audio audition are generated after task completion.
+                 * @param req CloneVoiceAsyncRequest
+                 * @return CloneVoiceAsyncOutcome
+                 */
+                CloneVoiceAsyncOutcome CloneVoiceAsync(const Model::CloneVoiceAsyncRequest &request);
+                void CloneVoiceAsyncAsync(const Model::CloneVoiceAsyncRequest& request, const CloneVoiceAsyncAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CloneVoiceAsyncOutcomeCallable CloneVoiceAsyncCallable(const Model::CloneVoiceAsyncRequest& request);
+
+                /**
+                 *This API is used to initiate a voice cloning task to clone an exclusive voice based on reference audio. The generated voice can be used for subsequent text to speech.
+                 * @param req CloneVoiceSyncRequest
+                 * @return CloneVoiceSyncOutcome
+                 */
+                CloneVoiceSyncOutcome CloneVoiceSync(const Model::CloneVoiceSyncRequest &request);
+                void CloneVoiceSyncAsync(const Model::CloneVoiceSyncRequest& request, const CloneVoiceSyncAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CloneVoiceSyncOutcomeCallable CloneVoiceSyncCallable(const Model::CloneVoiceSyncRequest& request);
 
                 /**
                  *This API is used to confirm the result of uploading a media file (and cover file) to VOD, store the media information, and return the playback address and ID of the file.
@@ -1995,6 +2053,17 @@ This API is used to delete a player configuration.
                 DeleteVodDomainOutcomeCallable DeleteVodDomainCallable(const Model::DeleteVodDomainRequest& request);
 
                 /**
+                 *This API is used to delete a specified voice by voice ID. Deletion is irreversible and the voice cannot be used for subsequent APIs. It only supports deletion of voices for this account. System preset voices cannot be deleted.
+
+Note: Newly designed or cloned voice types cannot be deleted before activation (not found means non-operational). They are activated only after the newly created voice type is used for TTS once.
+                 * @param req DeleteVoiceRequest
+                 * @return DeleteVoiceOutcome
+                 */
+                DeleteVoiceOutcome DeleteVoice(const Model::DeleteVoiceRequest &request);
+                void DeleteVoiceAsync(const Model::DeleteVoiceRequest& request, const DeleteVoiceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteVoiceOutcomeCallable DeleteVoiceCallable(const Model::DeleteVoiceRequest& request);
+
+                /**
                  *This API is used to delete a custom watermarking template.
                  * @param req DeleteWatermarkTemplateRequest
                  * @return DeleteWatermarkTemplateOutcome
@@ -2600,6 +2669,17 @@ This API is used to query player configurations. It supports pagination.
                 DescribeVodDomainsOutcomeCallable DescribeVodDomainsCallable(const Model::DescribeVodDomainsRequest& request);
 
                 /**
+                 *Query the available timbre list under the current account. It supports filtering by optional conditions such as voice ID, kind, name, gender, age, language, tag, and scenario.
+
+Note: Newly designed or cloned voice types cannot be queried before activation. They are activated only after the newly created voice type is used for TTS once.
+                 * @param req DescribeVoicesRequest
+                 * @return DescribeVoicesOutcome
+                 */
+                DescribeVoicesOutcome DescribeVoices(const Model::DescribeVoicesRequest &request);
+                void DescribeVoicesAsync(const Model::DescribeVoicesRequest& request, const DescribeVoicesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeVoicesOutcomeCallable DescribeVoicesCallable(const Model::DescribeVoicesRequest& request);
+
+                /**
                  *This API is used to query custom watermarking templates and supports paged queries by filters.
                  * @param req DescribeWatermarkTemplatesRequest
                  * @return DescribeWatermarkTemplatesOutcome
@@ -2616,6 +2696,15 @@ This API is used to query player configurations. It supports pagination.
                 DescribeWordSamplesOutcome DescribeWordSamples(const Model::DescribeWordSamplesRequest &request);
                 void DescribeWordSamplesAsync(const Model::DescribeWordSamplesRequest& request, const DescribeWordSamplesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeWordSamplesOutcomeCallable DescribeWordSamplesCallable(const Model::DescribeWordSamplesRequest& request);
+
+                /**
+                 *This API is used to initiate a voice design task. It generates a custom voice based on a natural language description. You can also specify a voice profile, such as name, gender, age, language, tag, and scenario. If trial text is attached upon submission, an audio audition is generated after task completion. Voice design is an asynchronous task, and the voice ID is generated after task completion.
+                 * @param req DesignVoiceAsyncRequest
+                 * @return DesignVoiceAsyncOutcome
+                 */
+                DesignVoiceAsyncOutcome DesignVoiceAsync(const Model::DesignVoiceAsyncRequest &request);
+                void DesignVoiceAsyncAsync(const Model::DesignVoiceAsyncRequest& request, const DesignVoiceAsyncAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DesignVoiceAsyncOutcomeCallable DesignVoiceAsyncCallable(const Model::DesignVoiceAsyncRequest& request);
 
                 /**
                  *Edit the video (cut, splice, etc.) to generate a new video. The editing functions include:
@@ -3458,6 +3547,24 @@ The advantage of editing not being solidified is that the editing operation is r
                 StartCDNDomainOutcomeCallable StartCDNDomainCallable(const Model::StartCDNDomainRequest& request);
 
                 /**
+                 *Initiate a speech synthesis task to convert text into speech, oriented towards long text scenarios (maximum 200,000 characters), supporting specified timbre and synthesis parameters such as speaking rate, volume, pitch, sampling rate, and output format. Speech synthesis is an asynchronous task, and audio results are generated upon completion.
+                 * @param req TextToSpeechAsyncRequest
+                 * @return TextToSpeechAsyncOutcome
+                 */
+                TextToSpeechAsyncOutcome TextToSpeechAsync(const Model::TextToSpeechAsyncRequest &request);
+                void TextToSpeechAsyncAsync(const Model::TextToSpeechAsyncRequest& request, const TextToSpeechAsyncAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                TextToSpeechAsyncOutcomeCallable TextToSpeechAsyncCallable(const Model::TextToSpeechAsyncRequest& request);
+
+                /**
+                 *Initiate a speech synthesis task to convert text into speech.
+                 * @param req TextToSpeechSyncRequest
+                 * @return TextToSpeechSyncOutcome
+                 */
+                TextToSpeechSyncOutcome TextToSpeechSync(const Model::TextToSpeechSyncRequest &request);
+                void TextToSpeechSyncAsync(const Model::TextToSpeechSyncRequest& request, const TextToSpeechSyncAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                TextToSpeechSyncOutcomeCallable TextToSpeechSyncCallable(const Model::TextToSpeechSyncRequest& request);
+
+                /**
                  *This API is used to create a Token for invoking the AIGC API. After creation, data sync has a delay. It becomes queryable or deletable after about 30 seconds.
                  * @param req UpdateAigcApiTokenRequest
                  * @return UpdateAigcApiTokenOutcome
@@ -3465,6 +3572,17 @@ The advantage of editing not being solidified is that the editing operation is r
                 UpdateAigcApiTokenOutcome UpdateAigcApiToken(const Model::UpdateAigcApiTokenRequest &request);
                 void UpdateAigcApiTokenAsync(const Model::UpdateAigcApiTokenRequest& request, const UpdateAigcApiTokenAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 UpdateAigcApiTokenOutcomeCallable UpdateAigcApiTokenCallable(const Model::UpdateAigcApiTokenRequest& request);
+
+                /**
+                 *This API is used to update the profile of a voice by voice ID, including its name, description, gender, age, language, tags, and scenarios, and returns the complete voice information after the update. Only voices under this account can be updated. System preset voices do not support update.
+
+Note: Newly designed or cloned voice types cannot be updated before activation. They are activated only after the newly created voice type is used for TTS once.
+                 * @param req UpdateVoiceRequest
+                 * @return UpdateVoiceOutcome
+                 */
+                UpdateVoiceOutcome UpdateVoice(const Model::UpdateVoiceRequest &request);
+                void UpdateVoiceAsync(const Model::UpdateVoiceRequest& request, const UpdateVoiceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                UpdateVoiceOutcomeCallable UpdateVoiceCallable(const Model::UpdateVoiceRequest& request);
 
                 /**
                  *This API is used to verify the domain name resolution value.

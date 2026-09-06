@@ -48,19 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Node IP information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return IP <p>Node IP information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return IP 
                      * 
                      */
                     std::string GetIP() const;
 
                     /**
-                     * 设置<p>Node IP information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _iP <p>Node IP information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _iP 
                      * 
                      */
                     void SetIP(const std::string& _iP);
@@ -73,19 +69,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool IPHasBeenSet() const;
 
                     /**
-                     * 获取<p>Node types, such as sqlengine, tdstore, mc</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Type <p>Node types, such as sqlengine, tdstore, mc</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return Type 
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置<p>Node types, such as sqlengine, tdstore, mc</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _type <p>Node types, such as sqlengine, tdstore, mc</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _type 
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -98,19 +90,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Unique identifier of the node</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return NodeId <p>Unique identifier of the node</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return NodeId 
                      * 
                      */
                     std::string GetNodeId() const;
 
                     /**
-                     * 设置<p>Unique identifier of the node</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _nodeId <p>Unique identifier of the node</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _nodeId 
                      * 
                      */
                     void SetNodeId(const std::string& _nodeId);
@@ -123,19 +111,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool NodeIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>Node port information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Port <p>Node port information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return Port 
                      * 
                      */
                     int64_t GetPort() const;
 
                     /**
-                     * 设置<p>Node port information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _port <p>Node port information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _port 
                      * 
                      */
                     void SetPort(const int64_t& _port);
@@ -148,19 +132,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool PortHasBeenSet() const;
 
                     /**
-                     * 获取<p>Availability zone of the node</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Zone <p>Availability zone of the node</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return Zone 
                      * 
                      */
                     std::string GetZone() const;
 
                     /**
-                     * 设置<p>Availability zone of the node</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _zone <p>Availability zone of the node</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _zone 
                      * 
                      */
                     void SetZone(const std::string& _zone);
@@ -173,19 +153,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ZoneHasBeenSet() const;
 
                     /**
-                     * 获取<p>Machine ip of the node</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Host <p>Machine ip of the node</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return Host 
                      * 
                      */
                     std::string GetHost() const;
 
                     /**
-                     * 设置<p>Machine ip of the node</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _host <p>Machine ip of the node</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _host 
                      * 
                      */
                     void SetHost(const std::string& _host);
@@ -284,43 +260,37 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * <p>Node IP information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string m_iP;
                     bool m_iPHasBeenSet;
 
                     /**
-                     * <p>Node types, such as sqlengine, tdstore, mc</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * <p>Unique identifier of the node</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string m_nodeId;
                     bool m_nodeIdHasBeenSet;
 
                     /**
-                     * <p>Node port information</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t m_port;
                     bool m_portHasBeenSet;
 
                     /**
-                     * <p>Availability zone of the node</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string m_zone;
                     bool m_zoneHasBeenSet;
 
                     /**
-                     * <p>Machine ip of the node</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string m_host;
                     bool m_hostHasBeenSet;

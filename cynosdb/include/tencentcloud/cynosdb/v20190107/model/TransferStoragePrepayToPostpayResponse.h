@@ -43,7 +43,87 @@ namespace TencentCloud
                     std::string ToJsonString() const;
 
 
+                    /**
+                     * 获取<p>Prepaid Total Order Number</p>
+                     * @return BigDealIds <p>Prepaid Total Order Number</p>
+                     * 
+                     */
+                    std::vector<std::string> GetBigDealIds() const;
+
+                    /**
+                     * 判断参数 BigDealIds 是否已赋值
+                     * @return BigDealIds 是否已赋值
+                     * 
+                     */
+                    bool BigDealIdsHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Order ID.</p>
+                     * @return DealNames <p>Order ID.</p>
+                     * 
+                     */
+                    std::vector<std::string> GetDealNames() const;
+
+                    /**
+                     * 判断参数 DealNames 是否已赋值
+                     * @return DealNames 是否已赋值
+                     * 
+                     */
+                    bool DealNamesHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Resource id</p>
+                     * @return ResourceIds <p>Resource id</p>
+                     * 
+                     */
+                    std::vector<std::string> GetResourceIds() const;
+
+                    /**
+                     * 判断参数 ResourceIds 是否已赋值
+                     * @return ResourceIds 是否已赋值
+                     * 
+                     */
+                    bool ResourceIdsHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Cluster ID.</p>
+                     * @return ClusterIds <p>Cluster ID.</p>
+                     * 
+                     */
+                    std::vector<std::string> GetClusterIds() const;
+
+                    /**
+                     * 判断参数 ClusterIds 是否已赋值
+                     * @return ClusterIds 是否已赋值
+                     * 
+                     */
+                    bool ClusterIdsHasBeenSet() const;
+
                 private:
+
+                    /**
+                     * <p>Prepaid Total Order Number</p>
+                     */
+                    std::vector<std::string> m_bigDealIds;
+                    bool m_bigDealIdsHasBeenSet;
+
+                    /**
+                     * <p>Order ID.</p>
+                     */
+                    std::vector<std::string> m_dealNames;
+                    bool m_dealNamesHasBeenSet;
+
+                    /**
+                     * <p>Resource id</p>
+                     */
+                    std::vector<std::string> m_resourceIds;
+                    bool m_resourceIdsHasBeenSet;
+
+                    /**
+                     * <p>Cluster ID.</p>
+                     */
+                    std::vector<std::string> m_clusterIds;
+                    bool m_clusterIdsHasBeenSet;
 
                 };
             }

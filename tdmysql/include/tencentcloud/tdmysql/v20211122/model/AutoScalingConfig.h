@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * ccu range of a serverless instance
+                * 
                 */
                 class AutoScalingConfig : public AbstractModel
                 {
@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Minimum value of ccu</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return RangeMin <p>Minimum value of ccu</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return RangeMin 
                      * 
                      */
                     double GetRangeMin() const;
 
                     /**
-                     * 设置<p>Minimum value of ccu</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _rangeMin <p>Minimum value of ccu</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _rangeMin 
                      * 
                      */
                     void SetRangeMin(const double& _rangeMin);
@@ -72,19 +68,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool RangeMinHasBeenSet() const;
 
                     /**
-                     * 获取<p>Maximum value of ccu</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return RangeMax <p>Maximum value of ccu</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return RangeMax 
                      * 
                      */
                     double GetRangeMax() const;
 
                     /**
-                     * 设置<p>Maximum value of ccu</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _rangeMax <p>Maximum value of ccu</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _rangeMax 
                      * 
                      */
                     void SetRangeMax(const double& _rangeMax);
@@ -96,21 +88,46 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool RangeMaxHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return ResourceType 
+                     * 
+                     */
+                    std::string GetResourceType() const;
+
+                    /**
+                     * 设置
+                     * @param _resourceType 
+                     * 
+                     */
+                    void SetResourceType(const std::string& _resourceType);
+
+                    /**
+                     * 判断参数 ResourceType 是否已赋值
+                     * @return ResourceType 是否已赋值
+                     * 
+                     */
+                    bool ResourceTypeHasBeenSet() const;
+
                 private:
 
                     /**
-                     * <p>Minimum value of ccu</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     double m_rangeMin;
                     bool m_rangeMinHasBeenSet;
 
                     /**
-                     * <p>Maximum value of ccu</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     double m_rangeMax;
                     bool m_rangeMaxHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_resourceType;
+                    bool m_resourceTypeHasBeenSet;
 
                 };
             }

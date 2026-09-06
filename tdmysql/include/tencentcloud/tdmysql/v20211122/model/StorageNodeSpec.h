@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Specification code</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SpecCode <p>Specification code</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return SpecCode 
                      * 
                      */
                     std::string GetSpecCode() const;
 
                     /**
-                     * 设置<p>Specification code</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _specCode <p>Specification code</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _specCode 
                      * 
                      */
                     void SetSpecCode(const std::string& _specCode);
@@ -198,19 +194,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool StorageNodeMinDiskHasBeenSet() const;
 
                     /**
-                     * 获取<p>Disk Type, CLOUD_HSSD enhanced SSD, CLOUD_TCS local SSD disk</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return StorageType <p>Disk Type, CLOUD_HSSD enhanced SSD, CLOUD_TCS local SSD disk</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return StorageType 
                      * 
                      */
                     std::string GetStorageType() const;
 
                     /**
-                     * 设置<p>Disk Type, CLOUD_HSSD enhanced SSD, CLOUD_TCS local SSD disk</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _storageType <p>Disk Type, CLOUD_HSSD enhanced SSD, CLOUD_TCS local SSD disk</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _storageType 
                      * 
                      */
                     void SetStorageType(const std::string& _storageType);
@@ -223,19 +215,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool StorageTypeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Default disk size of storage node for frontend display</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return StorageNodeDefaultDisk <p>Default disk size of storage node for frontend display</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return StorageNodeDefaultDisk 
                      * 
                      */
                     int64_t GetStorageNodeDefaultDisk() const;
 
                     /**
-                     * 设置<p>Default disk size of storage node for frontend display</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _storageNodeDefaultDisk <p>Default disk size of storage node for frontend display</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _storageNodeDefaultDisk 
                      * 
                      */
                     void SetStorageNodeDefaultDisk(const int64_t& _storageNodeDefaultDisk);
@@ -292,8 +280,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * <p>Specification code</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string m_specCode;
                     bool m_specCodeHasBeenSet;
@@ -335,15 +322,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_storageNodeMinDiskHasBeenSet;
 
                     /**
-                     * <p>Disk Type, CLOUD_HSSD enhanced SSD, CLOUD_TCS local SSD disk</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string m_storageType;
                     bool m_storageTypeHasBeenSet;
 
                     /**
-                     * <p>Default disk size of storage node for frontend display</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t m_storageNodeDefaultDisk;
                     bool m_storageNodeDefaultDiskHasBeenSet;

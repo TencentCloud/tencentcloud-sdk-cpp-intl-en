@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Primary key
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ID Primary key
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return ID 
                      * 
                      */
                     int64_t GetID() const;
 
                     /**
-                     * 设置Primary key
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _iD Primary key
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _iD 
                      * 
                      */
                     void SetID(const int64_t& _iD);
@@ -72,19 +68,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool IDHasBeenSet() const;
 
                     /**
-                     * 获取Instance ID.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return InstanceId Instance ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return InstanceId 
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _instanceId Instance ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _instanceId 
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -98,18 +90,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Node Id
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return NodeId Node Id
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetNodeId() const;
 
                     /**
                      * 设置Node Id
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _nodeId Node Id
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetNodeId(const std::string& _nodeId);
@@ -122,19 +110,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool NodeIdHasBeenSet() const;
 
                     /**
-                     * 获取Instance Ip
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Ip Instance Ip
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return Ip 
                      * 
                      */
                     std::string GetIp() const;
 
                     /**
-                     * 设置Instance Ip
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _ip Instance Ip
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _ip 
                      * 
                      */
                     void SetIp(const std::string& _ip);
@@ -147,19 +131,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool IpHasBeenSet() const;
 
                     /**
-                     * 获取Eni IP of the instance
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return EniIp Eni IP of the instance
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return EniIp 
                      * 
                      */
                     std::string GetEniIp() const;
 
                     /**
-                     * 设置Eni IP of the instance
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _eniIp Eni IP of the instance
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _eniIp 
                      * 
                      */
                     void SetEniIp(const std::string& _eniIp);
@@ -172,19 +152,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool EniIpHasBeenSet() const;
 
                     /**
-                     * 获取Instance Port
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Port Instance Port
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return Port 
                      * 
                      */
                     int64_t GetPort() const;
 
                     /**
-                     * 设置Instance Port
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _port Instance Port
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _port 
                      * 
                      */
                     void SetPort(const int64_t& _port);
@@ -197,19 +173,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool PortHasBeenSet() const;
 
                     /**
-                     * 获取Instance SpecCode
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SpecCode Instance SpecCode
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return SpecCode 
                      * 
                      */
                     std::string GetSpecCode() const;
 
                     /**
-                     * 设置Instance SpecCode
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _specCode Instance SpecCode
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _specCode 
                      * 
                      */
                     void SetSpecCode(const std::string& _specCode);
@@ -222,19 +194,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool SpecCodeHasBeenSet() const;
 
                     /**
-                     * 获取Instance NodeName
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return NodeName Instance NodeName
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return NodeName 
                      * 
                      */
                     std::string GetNodeName() const;
 
                     /**
-                     * 设置Instance NodeName
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _nodeName Instance NodeName
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _nodeName 
                      * 
                      */
                     void SetNodeName(const std::string& _nodeName);
@@ -247,19 +215,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool NodeNameHasBeenSet() const;
 
                     /**
-                     * 获取Instance Cpu
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Cpu Instance Cpu
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return Cpu 
                      * 
                      */
                     int64_t GetCpu() const;
 
                     /**
-                     * 设置Instance Cpu
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _cpu Instance Cpu
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _cpu 
                      * 
                      */
                     void SetCpu(const int64_t& _cpu);
@@ -272,19 +236,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CpuHasBeenSet() const;
 
                     /**
-                     * 获取Instance memory
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Mem Instance memory
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return Mem 
                      * 
                      */
                     int64_t GetMem() const;
 
                     /**
-                     * 设置Instance memory
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _mem Instance memory
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _mem 
                      * 
                      */
                     void SetMem(const int64_t& _mem);
@@ -297,19 +257,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool MemHasBeenSet() const;
 
                     /**
-                     * 获取Instance Disk
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Disk Instance Disk
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return Disk 
                      * 
                      */
                     int64_t GetDisk() const;
 
                     /**
-                     * 设置Instance Disk
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _disk Instance Disk
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _disk 
                      * 
                      */
                     void SetDisk(const int64_t& _disk);
@@ -322,19 +278,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DiskHasBeenSet() const;
 
                     /**
-                     * 获取Instance type
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Type Instance type
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return Type 
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Instance type
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _type Instance type
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _type 
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -347,19 +299,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Instance status
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Status Instance status
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return Status 
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置Instance status
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _status Instance status
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _status 
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -372,19 +320,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取instance version
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Version instance version
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return Version 
                      * 
                      */
                     std::string GetVersion() const;
 
                     /**
-                     * 设置instance version
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _version instance version
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _version 
                      * 
                      */
                     void SetVersion(const std::string& _version);
@@ -397,19 +341,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool VersionHasBeenSet() const;
 
                     /**
-                     * 获取Region
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Zone Region
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return Zone 
                      * 
                      */
                     std::string GetZone() const;
 
                     /**
-                     * 设置Region
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _zone Region
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _zone 
                      * 
                      */
                     void SetZone(const std::string& _zone);
@@ -422,19 +362,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ZoneHasBeenSet() const;
 
                     /**
-                     * 获取Instance LocalDNS
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return LocalDNS Instance LocalDNS
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return LocalDNS 
                      * 
                      */
                     std::string GetLocalDNS() const;
 
                     /**
-                     * 设置Instance LocalDNS
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _localDNS Instance LocalDNS
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _localDNS 
                      * 
                      */
                     void SetLocalDNS(const std::string& _localDNS);
@@ -447,19 +383,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool LocalDNSHasBeenSet() const;
 
                     /**
-                     * 获取Instance Region
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Region Instance Region
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return Region 
                      * 
                      */
                     std::string GetRegion() const;
 
                     /**
-                     * 设置Instance Region
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _region Instance Region
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _region 
                      * 
                      */
                     void SetRegion(const std::string& _region);
@@ -472,19 +404,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool RegionHasBeenSet() const;
 
                     /**
-                     * 获取Instance log disk
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return LogDisk Instance log disk
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return LogDisk 
                      * 
                      */
                     int64_t GetLogDisk() const;
 
                     /**
-                     * 设置Instance log disk
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _logDisk Instance log disk
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _logDisk 
                      * 
                      */
                     void SetLogDisk(const int64_t& _logDisk);
@@ -497,19 +425,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool LogDiskHasBeenSet() const;
 
                     /**
-                     * 获取Instance data disk
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DataDisk Instance data disk
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return DataDisk 
                      * 
                      */
                     int64_t GetDataDisk() const;
 
                     /**
-                     * 设置Instance data disk
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _dataDisk Instance data disk
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _dataDisk 
                      * 
                      */
                     void SetDataDisk(const int64_t& _dataDisk);
@@ -522,19 +446,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DataDiskHasBeenSet() const;
 
                     /**
-                     * 获取Zone ID of the instance
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ZoneID Zone ID of the instance
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return ZoneID 
                      * 
                      */
                     std::string GetZoneID() const;
 
                     /**
-                     * 设置Zone ID of the instance
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _zoneID Zone ID of the instance
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _zoneID 
                      * 
                      */
                     void SetZoneID(const std::string& _zoneID);
@@ -547,19 +467,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ZoneIDHasBeenSet() const;
 
                     /**
-                     * 获取Instance SpecName
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SpecName Instance SpecName
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return SpecName 
                      * 
                      */
                     std::string GetSpecName() const;
 
                     /**
-                     * 设置Instance SpecName
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _specName Instance SpecName
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _specName 
                      * 
                      */
                     void SetSpecName(const std::string& _specName);
@@ -572,19 +488,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool SpecNameHasBeenSet() const;
 
                     /**
-                     * 获取Instance Replicas
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Replicas Instance Replicas
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return Replicas 
                      * 
                      */
                     int64_t GetReplicas() const;
 
                     /**
-                     * 设置Instance Replicas
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _replicas Instance Replicas
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _replicas 
                      * 
                      */
                     void SetReplicas(const int64_t& _replicas);
@@ -597,19 +509,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ReplicasHasBeenSet() const;
 
                     /**
-                     * 获取Instance Shards
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Shards Instance Shards
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return Shards 
                      * 
                      */
                     int64_t GetShards() const;
 
                     /**
-                     * 设置Instance Shards
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _shards Instance Shards
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _shards 
                      * 
                      */
                     void SetShards(const int64_t& _shards);
@@ -622,19 +530,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ShardsHasBeenSet() const;
 
                     /**
-                     * 获取Instance data replica
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DataReplicas Instance data replica
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return DataReplicas 
                      * 
                      */
                     int64_t GetDataReplicas() const;
 
                     /**
-                     * 设置Instance data replica
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _dataReplicas Instance data replica
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _dataReplicas 
                      * 
                      */
                     void SetDataReplicas(const int64_t& _dataReplicas);
@@ -647,19 +551,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DataReplicasHasBeenSet() const;
 
                     /**
-                     * 获取Initialize parameter
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Params Initialize parameter
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return Params 
                      * 
                      */
                     std::string GetParams() const;
 
                     /**
-                     * 设置Initialize parameter
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _params Initialize parameter
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _params 
                      * 
                      */
                     void SetParams(const std::string& _params);
@@ -672,19 +572,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ParamsHasBeenSet() const;
 
                     /**
-                     * 获取Storage medium, CLOUD_PREMIUM: Premium Cloud Disk, CLOUD_SSD: SSD cloud disk, CLOUD_HSSD: HSSD cloud disk
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return StorageType Storage medium, CLOUD_PREMIUM: Premium Cloud Disk, CLOUD_SSD: SSD cloud disk, CLOUD_HSSD: HSSD cloud disk
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return StorageType 
                      * 
                      */
                     std::string GetStorageType() const;
 
                     /**
-                     * 设置Storage medium, CLOUD_PREMIUM: Premium Cloud Disk, CLOUD_SSD: SSD cloud disk, CLOUD_HSSD: HSSD cloud disk
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _storageType Storage medium, CLOUD_PREMIUM: Premium Cloud Disk, CLOUD_SSD: SSD cloud disk, CLOUD_HSSD: HSSD cloud disk
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _storageType 
                      * 
                      */
                     void SetStorageType(const std::string& _storageType);
@@ -699,183 +595,157 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Primary key
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t m_iD;
                     bool m_iDHasBeenSet;
 
                     /**
-                     * Instance ID.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
                      * Node Id
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_nodeId;
                     bool m_nodeIdHasBeenSet;
 
                     /**
-                     * Instance Ip
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string m_ip;
                     bool m_ipHasBeenSet;
 
                     /**
-                     * Eni IP of the instance
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string m_eniIp;
                     bool m_eniIpHasBeenSet;
 
                     /**
-                     * Instance Port
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t m_port;
                     bool m_portHasBeenSet;
 
                     /**
-                     * Instance SpecCode
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string m_specCode;
                     bool m_specCodeHasBeenSet;
 
                     /**
-                     * Instance NodeName
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string m_nodeName;
                     bool m_nodeNameHasBeenSet;
 
                     /**
-                     * Instance Cpu
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t m_cpu;
                     bool m_cpuHasBeenSet;
 
                     /**
-                     * Instance memory
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t m_mem;
                     bool m_memHasBeenSet;
 
                     /**
-                     * Instance Disk
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t m_disk;
                     bool m_diskHasBeenSet;
 
                     /**
-                     * Instance type
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Instance status
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * instance version
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string m_version;
                     bool m_versionHasBeenSet;
 
                     /**
-                     * Region
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string m_zone;
                     bool m_zoneHasBeenSet;
 
                     /**
-                     * Instance LocalDNS
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string m_localDNS;
                     bool m_localDNSHasBeenSet;
 
                     /**
-                     * Instance Region
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string m_region;
                     bool m_regionHasBeenSet;
 
                     /**
-                     * Instance log disk
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t m_logDisk;
                     bool m_logDiskHasBeenSet;
 
                     /**
-                     * Instance data disk
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t m_dataDisk;
                     bool m_dataDiskHasBeenSet;
 
                     /**
-                     * Zone ID of the instance
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string m_zoneID;
                     bool m_zoneIDHasBeenSet;
 
                     /**
-                     * Instance SpecName
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string m_specName;
                     bool m_specNameHasBeenSet;
 
                     /**
-                     * Instance Replicas
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t m_replicas;
                     bool m_replicasHasBeenSet;
 
                     /**
-                     * Instance Shards
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t m_shards;
                     bool m_shardsHasBeenSet;
 
                     /**
-                     * Instance data replica
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t m_dataReplicas;
                     bool m_dataReplicasHasBeenSet;
 
                     /**
-                     * Initialize parameter
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string m_params;
                     bool m_paramsHasBeenSet;
 
                     /**
-                     * Storage medium, CLOUD_PREMIUM: Premium Cloud Disk, CLOUD_SSD: SSD cloud disk, CLOUD_HSSD: HSSD cloud disk
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string m_storageType;
                     bool m_storageTypeHasBeenSet;

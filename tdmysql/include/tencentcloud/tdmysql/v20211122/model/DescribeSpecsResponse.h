@@ -23,6 +23,7 @@
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/tdmysql/v20211122/model/StorageNodeSpec.h>
 #include <tencentcloud/tdmysql/v20211122/model/ServerlessCcu.h>
+#include <tencentcloud/tdmysql/v20211122/model/ServerlessNodeNumSpec.h>
 
 
 namespace TencentCloud
@@ -46,10 +47,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Purchasable specification list of peer nodes</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return HybridNodeSpecs <p>Purchasable specification list of peer nodes</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return HybridNodeSpecs 
                      * 
                      */
                     std::vector<StorageNodeSpec> GetHybridNodeSpecs() const;
@@ -75,11 +74,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool ServerlessCcuSpecHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return ServerlessNodeNumSpec 
+                     * 
+                     */
+                    ServerlessNodeNumSpec GetServerlessNodeNumSpec() const;
+
+                    /**
+                     * 判断参数 ServerlessNodeNumSpec 是否已赋值
+                     * @return ServerlessNodeNumSpec 是否已赋值
+                     * 
+                     */
+                    bool ServerlessNodeNumSpecHasBeenSet() const;
+
                 private:
 
                     /**
-                     * <p>Purchasable specification list of peer nodes</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<StorageNodeSpec> m_hybridNodeSpecs;
                     bool m_hybridNodeSpecsHasBeenSet;
@@ -89,6 +101,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     std::vector<ServerlessCcu> m_serverlessCcuSpec;
                     bool m_serverlessCcuSpecHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    ServerlessNodeNumSpec m_serverlessNodeNumSpec;
+                    bool m_serverlessNodeNumSpecHasBeenSet;
 
                 };
             }
