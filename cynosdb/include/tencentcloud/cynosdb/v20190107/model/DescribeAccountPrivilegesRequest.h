@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool HostHasBeenSet() const;
 
                     /**
-                     * 获取When the database name is “*”, the value specified in `Type` and `TableName` will be ignored, indicating that the user's global permissions are being modified.
-                     * @return Db When the database name is “*”, the value specified in `Type` and `TableName` will be ignored, indicating that the user's global permissions are being modified.
+                     * 获取Database name. If it is `*`, Type/TableName are ignored, which means querying the user's global permission. If not passed, it defaults to `*`.
+                     * @return Db Database name. If it is `*`, Type/TableName are ignored, which means querying the user's global permission. If not passed, it defaults to `*`.
                      * 
                      */
                     std::string GetDb() const;
 
                     /**
-                     * 设置When the database name is “*”, the value specified in `Type` and `TableName` will be ignored, indicating that the user's global permissions are being modified.
-                     * @param _db When the database name is “*”, the value specified in `Type` and `TableName` will be ignored, indicating that the user's global permissions are being modified.
+                     * 设置Database name. If it is `*`, Type/TableName are ignored, which means querying the user's global permission. If not passed, it defaults to `*`.
+                     * @param _db Database name. If it is `*`, Type/TableName are ignored, which means querying the user's global permission. If not passed, it defaults to `*`.
                      * 
                      */
                     void SetDb(const std::string& _db);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool DbHasBeenSet() const;
 
                     /**
-                     * 获取Object type in a specified database. Valid values: `table`, `*`.
-                     * @return Type Object type in a specified database. Valid values: `table`, `*`.
+                     * 获取Specific object types under the designated database. Options: "table", "*". Defaults to * if not specified. TableName must be specified when Type is table.
+                     * @return Type Specific object types under the designated database. Options: "table", "*". Defaults to * if not specified. TableName must be specified when Type is table.
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Object type in a specified database. Valid values: `table`, `*`.
-                     * @param _type Object type in a specified database. Valid values: `table`, `*`.
+                     * 设置Specific object types under the designated database. Options: "table", "*". Defaults to * if not specified. TableName must be specified when Type is table.
+                     * @param _type Specific object types under the designated database. Options: "table", "*". Defaults to * if not specified. TableName must be specified when Type is table.
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -148,15 +148,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取The database name can be specified when `Type` is 'table'.
-                     * @return TableName The database name can be specified when `Type` is 'table'.
+                     * 获取When Type is "table", it is used to specify the table name. Required when Type is "table".
+                     * @return TableName When Type is "table", it is used to specify the table name. Required when Type is "table".
                      * 
                      */
                     std::string GetTableName() const;
 
                     /**
-                     * 设置The database name can be specified when `Type` is 'table'.
-                     * @param _tableName The database name can be specified when `Type` is 'table'.
+                     * 设置When Type is "table", it is used to specify the table name. Required when Type is "table".
+                     * @param _tableName When Type is "table", it is used to specify the table name. Required when Type is "table".
                      * 
                      */
                     void SetTableName(const std::string& _tableName);
@@ -189,19 +189,19 @@ namespace TencentCloud
                     bool m_hostHasBeenSet;
 
                     /**
-                     * When the database name is “*”, the value specified in `Type` and `TableName` will be ignored, indicating that the user's global permissions are being modified.
+                     * Database name. If it is `*`, Type/TableName are ignored, which means querying the user's global permission. If not passed, it defaults to `*`.
                      */
                     std::string m_db;
                     bool m_dbHasBeenSet;
 
                     /**
-                     * Object type in a specified database. Valid values: `table`, `*`.
+                     * Specific object types under the designated database. Options: "table", "*". Defaults to * if not specified. TableName must be specified when Type is table.
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * The database name can be specified when `Type` is 'table'.
+                     * When Type is "table", it is used to specify the table name. Required when Type is "table".
                      */
                     std::string m_tableName;
                     bool m_tableNameHasBeenSet;

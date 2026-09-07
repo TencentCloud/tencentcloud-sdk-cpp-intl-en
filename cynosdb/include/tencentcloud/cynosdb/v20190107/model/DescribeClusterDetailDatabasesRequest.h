@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Cluster ID
-                     * @return ClusterId Cluster ID
+                     * 获取<p>Cluster ID.</p>
+                     * @return ClusterId <p>Cluster ID.</p>
                      * 
                      */
                     std::string GetClusterId() const;
 
                     /**
-                     * 设置Cluster ID
-                     * @param _clusterId Cluster ID
+                     * 设置<p>Cluster ID.</p>
+                     * @param _clusterId <p>Cluster ID.</p>
                      * 
                      */
                     void SetClusterId(const std::string& _clusterId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool ClusterIdHasBeenSet() const;
 
                     /**
-                     * 获取Offset. Default value: `0`.
-                     * @return Offset Offset. Default value: `0`.
+                     * 获取<p>Offset. Default value: 0.</p>
+                     * @return Offset <p>Offset. Default value: 0.</p>
                      * 
                      */
                     int64_t GetOffset() const;
 
                     /**
-                     * 设置Offset. Default value: `0`.
-                     * @param _offset Offset. Default value: `0`.
+                     * 设置<p>Offset. Default value: 0.</p>
+                     * @param _offset <p>Offset. Default value: 0.</p>
                      * 
                      */
                     void SetOffset(const int64_t& _offset);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Number of returned results. Default value: `20`. Maximum value: `100`.
-                     * @return Limit Number of returned results. Default value: `20`. Maximum value: `100`.
+                     * 获取<p>Number of returned results. Default: 20; maximum: 100</p>
+                     * @return Limit <p>Number of returned results. Default: 20; maximum: 100</p>
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Number of returned results. Default value: `20`. Maximum value: `100`.
-                     * @param _limit Number of returned results. Default value: `20`. Maximum value: `100`.
+                     * 设置<p>Number of returned results. Default: 20; maximum: 100</p>
+                     * @param _limit <p>Number of returned results. Default: 20; maximum: 100</p>
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Database name
-                     * @return DbName Database name
+                     * 获取<p>Database name. Perform substring match by this field.</p>
+                     * @return DbName <p>Database name. Perform substring match by this field.</p>
                      * 
                      */
                     std::string GetDbName() const;
 
                     /**
-                     * 设置Database name
-                     * @param _dbName Database name
+                     * 设置<p>Database name. Perform substring match by this field.</p>
+                     * @param _dbName <p>Database name. Perform substring match by this field.</p>
                      * 
                      */
                     void SetDbName(const std::string& _dbName);
@@ -129,25 +129,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Cluster ID
+                     * <p>Cluster ID.</p>
                      */
                     std::string m_clusterId;
                     bool m_clusterIdHasBeenSet;
 
                     /**
-                     * Offset. Default value: `0`.
+                     * <p>Offset. Default value: 0.</p>
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Number of returned results. Default value: `20`. Maximum value: `100`.
+                     * <p>Number of returned results. Default: 20; maximum: 100</p>
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Database name
+                     * <p>Database name. Perform substring match by this field.</p>
                      */
                     std::string m_dbName;
                     bool m_dbNameHasBeenSet;

@@ -27,6 +27,8 @@
 #include <tencentcloud/antiddos/v20200309/model/AssociateDDoSEipAddressResponse.h>
 #include <tencentcloud/antiddos/v20200309/model/AssociateDDoSEipLoadBalancerRequest.h>
 #include <tencentcloud/antiddos/v20200309/model/AssociateDDoSEipLoadBalancerResponse.h>
+#include <tencentcloud/antiddos/v20200309/model/CreateBgpInstanceRequest.h>
+#include <tencentcloud/antiddos/v20200309/model/CreateBgpInstanceResponse.h>
 #include <tencentcloud/antiddos/v20200309/model/CreateBlackWhiteIpListRequest.h>
 #include <tencentcloud/antiddos/v20200309/model/CreateBlackWhiteIpListResponse.h>
 #include <tencentcloud/antiddos/v20200309/model/CreateBoundIPRequest.h>
@@ -183,6 +185,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::AssociateDDoSEipLoadBalancerResponse> AssociateDDoSEipLoadBalancerOutcome;
                 typedef std::future<AssociateDDoSEipLoadBalancerOutcome> AssociateDDoSEipLoadBalancerOutcomeCallable;
                 typedef std::function<void(const AntiddosClient*, const Model::AssociateDDoSEipLoadBalancerRequest&, AssociateDDoSEipLoadBalancerOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AssociateDDoSEipLoadBalancerAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateBgpInstanceResponse> CreateBgpInstanceOutcome;
+                typedef std::future<CreateBgpInstanceOutcome> CreateBgpInstanceOutcomeCallable;
+                typedef std::function<void(const AntiddosClient*, const Model::CreateBgpInstanceRequest&, CreateBgpInstanceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateBgpInstanceAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateBlackWhiteIpListResponse> CreateBlackWhiteIpListOutcome;
                 typedef std::future<CreateBlackWhiteIpListOutcome> CreateBlackWhiteIpListOutcomeCallable;
                 typedef std::function<void(const AntiddosClient*, const Model::CreateBlackWhiteIpListRequest&, CreateBlackWhiteIpListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateBlackWhiteIpListAsyncHandler;
@@ -407,6 +412,15 @@ namespace TencentCloud
                 AssociateDDoSEipLoadBalancerOutcome AssociateDDoSEipLoadBalancer(const Model::AssociateDDoSEipLoadBalancerRequest &request);
                 void AssociateDDoSEipLoadBalancerAsync(const Model::AssociateDDoSEipLoadBalancerRequest& request, const AssociateDDoSEipLoadBalancerAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 AssociateDDoSEipLoadBalancerOutcomeCallable AssociateDDoSEipLoadBalancerCallable(const Model::AssociateDDoSEipLoadBalancerRequest& request);
+
+                /**
+                 *This API is used to purchase Anti-DDoS packages.
+                 * @param req CreateBgpInstanceRequest
+                 * @return CreateBgpInstanceOutcome
+                 */
+                CreateBgpInstanceOutcome CreateBgpInstance(const Model::CreateBgpInstanceRequest &request);
+                void CreateBgpInstanceAsync(const Model::CreateBgpInstanceRequest& request, const CreateBgpInstanceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateBgpInstanceOutcomeCallable CreateBgpInstanceCallable(const Model::CreateBgpInstanceRequest& request);
 
                 /**
                  *This API is used to add an Anti-DDoS IP blocklist/allowlist.

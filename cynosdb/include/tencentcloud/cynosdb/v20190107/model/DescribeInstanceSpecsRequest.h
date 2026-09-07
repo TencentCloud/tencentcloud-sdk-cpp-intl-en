@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool DeviceTypeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Cluster level, optional. For example P0, P1</p>
-                     * @return ClusterLevel <p>Cluster level, optional. For example P0, P1</p>
+                     * 获取<p>Cluster level. For example, P0, P1. If no availability zone is specified, the query for non-affinity resources will be downgraded for availability zones that do not support affinity.</p>
+                     * @return ClusterLevel <p>Cluster level. For example, P0, P1. If no availability zone is specified, the query for non-affinity resources will be downgraded for availability zones that do not support affinity.</p>
                      * 
                      */
                     std::string GetClusterLevel() const;
 
                     /**
-                     * 设置<p>Cluster level, optional. For example P0, P1</p>
-                     * @param _clusterLevel <p>Cluster level, optional. For example P0, P1</p>
+                     * 设置<p>Cluster level. For example, P0, P1. If no availability zone is specified, the query for non-affinity resources will be downgraded for availability zones that do not support affinity.</p>
+                     * @param _clusterLevel <p>Cluster level. For example, P0, P1. If no availability zone is specified, the query for non-affinity resources will be downgraded for availability zones that do not support affinity.</p>
                      * 
                      */
                     void SetClusterLevel(const std::string& _clusterLevel);
@@ -147,7 +147,7 @@ namespace TencentCloud
                     bool m_deviceTypeHasBeenSet;
 
                     /**
-                     * <p>Cluster level, optional. For example P0, P1</p>
+                     * <p>Cluster level. For example, P0, P1. If no availability zone is specified, the query for non-affinity resources will be downgraded for availability zones that do not support affinity.</p>
                      */
                     std::string m_clusterLevel;
                     bool m_clusterLevelHasBeenSet;

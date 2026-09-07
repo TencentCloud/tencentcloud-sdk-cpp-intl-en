@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#include <tencentcloud/cynosdb/v20190107/model/TransferClusterPrepayToPostpayRequest.h>
+#include <tencentcloud/cynosdb/v20190107/model/ModifyClusterLevelRequest.h>
 #include <tencentcloud/core/utils/rapidjson/document.h>
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
@@ -22,12 +22,13 @@
 using namespace TencentCloud::Cynosdb::V20190107::Model;
 using namespace std;
 
-TransferClusterPrepayToPostpayRequest::TransferClusterPrepayToPostpayRequest() :
-    m_clusterIdHasBeenSet(false)
+ModifyClusterLevelRequest::ModifyClusterLevelRequest() :
+    m_clusterIdHasBeenSet(false),
+    m_clusterLevelHasBeenSet(false)
 {
 }
 
-string TransferClusterPrepayToPostpayRequest::ToJsonString() const
+string ModifyClusterLevelRequest::ToJsonString() const
 {
     rapidjson::Document d;
     d.SetObject();
@@ -42,6 +43,14 @@ string TransferClusterPrepayToPostpayRequest::ToJsonString() const
         d.AddMember(iKey, rapidjson::Value(m_clusterId.c_str(), allocator).Move(), allocator);
     }
 
+    if (m_clusterLevelHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ClusterLevel";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_clusterLevel.c_str(), allocator).Move(), allocator);
+    }
+
 
     rapidjson::StringBuffer buffer;
     rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
@@ -50,20 +59,36 @@ string TransferClusterPrepayToPostpayRequest::ToJsonString() const
 }
 
 
-string TransferClusterPrepayToPostpayRequest::GetClusterId() const
+string ModifyClusterLevelRequest::GetClusterId() const
 {
     return m_clusterId;
 }
 
-void TransferClusterPrepayToPostpayRequest::SetClusterId(const string& _clusterId)
+void ModifyClusterLevelRequest::SetClusterId(const string& _clusterId)
 {
     m_clusterId = _clusterId;
     m_clusterIdHasBeenSet = true;
 }
 
-bool TransferClusterPrepayToPostpayRequest::ClusterIdHasBeenSet() const
+bool ModifyClusterLevelRequest::ClusterIdHasBeenSet() const
 {
     return m_clusterIdHasBeenSet;
+}
+
+string ModifyClusterLevelRequest::GetClusterLevel() const
+{
+    return m_clusterLevel;
+}
+
+void ModifyClusterLevelRequest::SetClusterLevel(const string& _clusterLevel)
+{
+    m_clusterLevel = _clusterLevel;
+    m_clusterLevelHasBeenSet = true;
+}
+
+bool ModifyClusterLevelRequest::ClusterLevelHasBeenSet() const
+{
+    return m_clusterLevelHasBeenSet;
 }
 
 

@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Database information
-                     * @return DbInfos Database information
+                     * 获取<p>Database information.</p>
+                     * @return DbInfos <p>Database information.</p>
                      * 
                      */
                     std::vector<DbInfo> GetDbInfos() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool DbInfosHasBeenSet() const;
 
                     /**
-                     * 获取The total count
-                     * @return TotalCount The total count
+                     * 获取<p>Total.</p>
+                     * @return TotalCount <p>Total.</p>
                      * 
                      */
                     int64_t GetTotalCount() const;
@@ -75,13 +75,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Database information
+                     * <p>Database information.</p>
                      */
                     std::vector<DbInfo> m_dbInfos;
                     bool m_dbInfosHasBeenSet;
 
                     /**
-                     * The total count
+                     * <p>Total.</p>
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;

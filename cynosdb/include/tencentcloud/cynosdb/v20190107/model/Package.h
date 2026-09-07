@@ -136,6 +136,31 @@ CCU: compute resource package. DISK: storage resource package.
                     bool PackageTypeHasBeenSet() const;
 
                     /**
+                     * 获取Resource package edition
+base - basic, common - general, enterprise - business
+                     * @return PackageVersion Resource package edition
+base - basic, common - general, enterprise - business
+                     * 
+                     */
+                    std::string GetPackageVersion() const;
+
+                    /**
+                     * 设置Resource package edition
+base - basic, common - general, enterprise - business
+                     * @param _packageVersion Resource package edition
+base - basic, common - general, enterprise - business
+                     * 
+                     */
+                    void SetPackageVersion(const std::string& _packageVersion);
+
+                    /**
+                     * 判断参数 PackageVersion 是否已赋值
+                     * @return PackageVersion 是否已赋值
+                     * 
+                     */
+                    bool PackageVersionHasBeenSet() const;
+
+                    /**
                      * 获取Resource package region of use.
 China - common in the chinese mainland. overseas - universally applicable in hong kong (china), macao (china), taiwan (china), and overseas.
                      * @return PackageRegion Resource package region of use.
@@ -378,6 +403,13 @@ CCU: compute resource package. DISK: storage resource package.
                      */
                     std::string m_packageType;
                     bool m_packageTypeHasBeenSet;
+
+                    /**
+                     * Resource package edition
+base - basic, common - general, enterprise - business
+                     */
+                    std::string m_packageVersion;
+                    bool m_packageVersionHasBeenSet;
 
                     /**
                      * Resource package region of use.

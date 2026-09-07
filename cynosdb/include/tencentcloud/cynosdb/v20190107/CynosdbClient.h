@@ -167,6 +167,8 @@
 #include <tencentcloud/cynosdb/v20190107/model/DescribeClusterPasswordComplexityResponse.h>
 #include <tencentcloud/cynosdb/v20190107/model/DescribeClusterReadOnlyRequest.h>
 #include <tencentcloud/cynosdb/v20190107/model/DescribeClusterReadOnlyResponse.h>
+#include <tencentcloud/cynosdb/v20190107/model/DescribeClusterStorageAutoExpandRequest.h>
+#include <tencentcloud/cynosdb/v20190107/model/DescribeClusterStorageAutoExpandResponse.h>
 #include <tencentcloud/cynosdb/v20190107/model/DescribeClusterTransparentEncryptInfoRequest.h>
 #include <tencentcloud/cynosdb/v20190107/model/DescribeClusterTransparentEncryptInfoResponse.h>
 #include <tencentcloud/cynosdb/v20190107/model/DescribeClustersRequest.h>
@@ -327,6 +329,8 @@
 #include <tencentcloud/cynosdb/v20190107/model/ModifyClusterDatabaseResponse.h>
 #include <tencentcloud/cynosdb/v20190107/model/ModifyClusterGlobalEncryptionRequest.h>
 #include <tencentcloud/cynosdb/v20190107/model/ModifyClusterGlobalEncryptionResponse.h>
+#include <tencentcloud/cynosdb/v20190107/model/ModifyClusterLevelRequest.h>
+#include <tencentcloud/cynosdb/v20190107/model/ModifyClusterLevelResponse.h>
 #include <tencentcloud/cynosdb/v20190107/model/ModifyClusterNameRequest.h>
 #include <tencentcloud/cynosdb/v20190107/model/ModifyClusterNameResponse.h>
 #include <tencentcloud/cynosdb/v20190107/model/ModifyClusterParamRequest.h>
@@ -697,6 +701,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeClusterReadOnlyResponse> DescribeClusterReadOnlyOutcome;
                 typedef std::future<DescribeClusterReadOnlyOutcome> DescribeClusterReadOnlyOutcomeCallable;
                 typedef std::function<void(const CynosdbClient*, const Model::DescribeClusterReadOnlyRequest&, DescribeClusterReadOnlyOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeClusterReadOnlyAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeClusterStorageAutoExpandResponse> DescribeClusterStorageAutoExpandOutcome;
+                typedef std::future<DescribeClusterStorageAutoExpandOutcome> DescribeClusterStorageAutoExpandOutcomeCallable;
+                typedef std::function<void(const CynosdbClient*, const Model::DescribeClusterStorageAutoExpandRequest&, DescribeClusterStorageAutoExpandOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeClusterStorageAutoExpandAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeClusterTransparentEncryptInfoResponse> DescribeClusterTransparentEncryptInfoOutcome;
                 typedef std::future<DescribeClusterTransparentEncryptInfoOutcome> DescribeClusterTransparentEncryptInfoOutcomeCallable;
                 typedef std::function<void(const CynosdbClient*, const Model::DescribeClusterTransparentEncryptInfoRequest&, DescribeClusterTransparentEncryptInfoOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeClusterTransparentEncryptInfoAsyncHandler;
@@ -937,6 +944,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyClusterGlobalEncryptionResponse> ModifyClusterGlobalEncryptionOutcome;
                 typedef std::future<ModifyClusterGlobalEncryptionOutcome> ModifyClusterGlobalEncryptionOutcomeCallable;
                 typedef std::function<void(const CynosdbClient*, const Model::ModifyClusterGlobalEncryptionRequest&, ModifyClusterGlobalEncryptionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyClusterGlobalEncryptionAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyClusterLevelResponse> ModifyClusterLevelOutcome;
+                typedef std::future<ModifyClusterLevelOutcome> ModifyClusterLevelOutcomeCallable;
+                typedef std::function<void(const CynosdbClient*, const Model::ModifyClusterLevelRequest&, ModifyClusterLevelOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyClusterLevelAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyClusterNameResponse> ModifyClusterNameOutcome;
                 typedef std::future<ModifyClusterNameOutcome> ModifyClusterNameOutcomeCallable;
                 typedef std::function<void(const CynosdbClient*, const Model::ModifyClusterNameRequest&, ModifyClusterNameOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyClusterNameAsyncHandler;
@@ -1799,6 +1809,15 @@ namespace TencentCloud
                 DescribeClusterReadOnlyOutcomeCallable DescribeClusterReadOnlyCallable(const Model::DescribeClusterReadOnlyRequest& request);
 
                 /**
+                 *This API is used to query the automated storage expansion configuration.
+                 * @param req DescribeClusterStorageAutoExpandRequest
+                 * @return DescribeClusterStorageAutoExpandOutcome
+                 */
+                DescribeClusterStorageAutoExpandOutcome DescribeClusterStorageAutoExpand(const Model::DescribeClusterStorageAutoExpandRequest &request);
+                void DescribeClusterStorageAutoExpandAsync(const Model::DescribeClusterStorageAutoExpandRequest& request, const DescribeClusterStorageAutoExpandAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeClusterStorageAutoExpandOutcomeCallable DescribeClusterStorageAutoExpandCallable(const Model::DescribeClusterStorageAutoExpandRequest& request);
+
+                /**
                  *This API is used to query cluster transparent encryption information.
                  * @param req DescribeClusterTransparentEncryptInfoRequest
                  * @return DescribeClusterTransparentEncryptInfoOutcome
@@ -2517,6 +2536,15 @@ namespace TencentCloud
                 ModifyClusterGlobalEncryptionOutcome ModifyClusterGlobalEncryption(const Model::ModifyClusterGlobalEncryptionRequest &request);
                 void ModifyClusterGlobalEncryptionAsync(const Model::ModifyClusterGlobalEncryptionRequest& request, const ModifyClusterGlobalEncryptionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ModifyClusterGlobalEncryptionOutcomeCallable ModifyClusterGlobalEncryptionCallable(const Model::ModifyClusterGlobalEncryptionRequest& request);
+
+                /**
+                 *Modify cluster
+                 * @param req ModifyClusterLevelRequest
+                 * @return ModifyClusterLevelOutcome
+                 */
+                ModifyClusterLevelOutcome ModifyClusterLevel(const Model::ModifyClusterLevelRequest &request);
+                void ModifyClusterLevelAsync(const Model::ModifyClusterLevelRequest& request, const ModifyClusterLevelAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyClusterLevelOutcomeCallable ModifyClusterLevelCallable(const Model::ModifyClusterLevelRequest& request);
 
                 /**
                  *This API is used to modify cluster names.

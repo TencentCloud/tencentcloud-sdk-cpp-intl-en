@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-#ifndef TENCENTCLOUD_CYNOSDB_V20190107_MODEL_TRANSFERCLUSTERPREPAYTOPOSTPAYREQUEST_H_
-#define TENCENTCLOUD_CYNOSDB_V20190107_MODEL_TRANSFERCLUSTERPREPAYTOPOSTPAYREQUEST_H_
+#ifndef TENCENTCLOUD_CYNOSDB_V20190107_MODEL_MODIFYCLUSTERLEVELREQUEST_H_
+#define TENCENTCLOUD_CYNOSDB_V20190107_MODEL_MODIFYCLUSTERLEVELREQUEST_H_
 
 #include <string>
 #include <vector>
@@ -32,13 +32,13 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * TransferClusterPrepayToPostpay request structure.
+                * ModifyClusterLevel request structure.
                 */
-                class TransferClusterPrepayToPostpayRequest : public AbstractModel
+                class ModifyClusterLevelRequest : public AbstractModel
                 {
                 public:
-                    TransferClusterPrepayToPostpayRequest();
-                    ~TransferClusterPrepayToPostpayRequest() = default;
+                    ModifyClusterLevelRequest();
+                    ~ModifyClusterLevelRequest() = default;
                     std::string ToJsonString() const;
 
 
@@ -63,6 +63,27 @@ namespace TencentCloud
                      */
                     bool ClusterIdHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Cluster level</p>
+                     * @return ClusterLevel <p>Cluster level</p>
+                     * 
+                     */
+                    std::string GetClusterLevel() const;
+
+                    /**
+                     * 设置<p>Cluster level</p>
+                     * @param _clusterLevel <p>Cluster level</p>
+                     * 
+                     */
+                    void SetClusterLevel(const std::string& _clusterLevel);
+
+                    /**
+                     * 判断参数 ClusterLevel 是否已赋值
+                     * @return ClusterLevel 是否已赋值
+                     * 
+                     */
+                    bool ClusterLevelHasBeenSet() const;
+
                 private:
 
                     /**
@@ -71,10 +92,16 @@ namespace TencentCloud
                     std::string m_clusterId;
                     bool m_clusterIdHasBeenSet;
 
+                    /**
+                     * <p>Cluster level</p>
+                     */
+                    std::string m_clusterLevel;
+                    bool m_clusterLevelHasBeenSet;
+
                 };
             }
         }
     }
 }
 
-#endif // !TENCENTCLOUD_CYNOSDB_V20190107_MODEL_TRANSFERCLUSTERPREPAYTOPOSTPAYREQUEST_H_
+#endif // !TENCENTCLOUD_CYNOSDB_V20190107_MODEL_MODIFYCLUSTERLEVELREQUEST_H_

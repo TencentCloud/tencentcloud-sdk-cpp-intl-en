@@ -24,6 +24,7 @@
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/cynosdb/v20190107/model/BackupRegionAndIds.h>
 #include <tencentcloud/cynosdb/v20190107/model/VaultInfo.h>
 
 
@@ -300,6 +301,27 @@ namespace TencentCloud
                     bool BackupNameHasBeenSet() const;
 
                     /**
+                     * 获取<p>Region where backup files are located</p>
+                     * @return ExistRegions <p>Region where backup files are located</p>
+                     * 
+                     */
+                    std::vector<BackupRegionAndIds> GetExistRegions() const;
+
+                    /**
+                     * 设置<p>Region where backup files are located</p>
+                     * @param _existRegions <p>Region where backup files are located</p>
+                     * 
+                     */
+                    void SetExistRegions(const std::vector<BackupRegionAndIds>& _existRegions);
+
+                    /**
+                     * 判断参数 ExistRegions 是否已赋值
+                     * @return ExistRegions 是否已赋值
+                     * 
+                     */
+                    bool ExistRegionsHasBeenSet() const;
+
+                    /**
                      * 获取<p>Delivery status</p>
                      * @return CopyStatus <p>Delivery status</p>
                      * 
@@ -477,6 +499,12 @@ namespace TencentCloud
                      */
                     std::string m_backupName;
                     bool m_backupNameHasBeenSet;
+
+                    /**
+                     * <p>Region where backup files are located</p>
+                     */
+                    std::vector<BackupRegionAndIds> m_existRegions;
+                    bool m_existRegionsHasBeenSet;
 
                     /**
                      * <p>Delivery status</p>

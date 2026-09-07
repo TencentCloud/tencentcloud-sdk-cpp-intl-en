@@ -14,8 +14,8 @@
  * limitations under the License.
  */
 
-#ifndef TENCENTCLOUD_CYNOSDB_V20190107_MODEL_TRANSFERCLUSTERPREPAYTOPOSTPAYREQUEST_H_
-#define TENCENTCLOUD_CYNOSDB_V20190107_MODEL_TRANSFERCLUSTERPREPAYTOPOSTPAYREQUEST_H_
+#ifndef TENCENTCLOUD_CYNOSDB_V20190107_MODEL_DESCRIBECLUSTERSTORAGEAUTOEXPANDREQUEST_H_
+#define TENCENTCLOUD_CYNOSDB_V20190107_MODEL_DESCRIBECLUSTERSTORAGEAUTOEXPANDREQUEST_H_
 
 #include <string>
 #include <vector>
@@ -32,13 +32,13 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * TransferClusterPrepayToPostpay request structure.
+                * DescribeClusterStorageAutoExpand request structure.
                 */
-                class TransferClusterPrepayToPostpayRequest : public AbstractModel
+                class DescribeClusterStorageAutoExpandRequest : public AbstractModel
                 {
                 public:
-                    TransferClusterPrepayToPostpayRequest();
-                    ~TransferClusterPrepayToPostpayRequest() = default;
+                    DescribeClusterStorageAutoExpandRequest();
+                    ~DescribeClusterStorageAutoExpandRequest() = default;
                     std::string ToJsonString() const;
 
 
@@ -77,4 +77,4 @@ namespace TencentCloud
     }
 }
 
-#endif // !TENCENTCLOUD_CYNOSDB_V20190107_MODEL_TRANSFERCLUSTERPREPAYTOPOSTPAYREQUEST_H_
+#endif // !TENCENTCLOUD_CYNOSDB_V20190107_MODEL_DESCRIBECLUSTERSTORAGEAUTOEXPANDREQUEST_H_

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#include <tencentcloud/cynosdb/v20190107/model/TransferClusterPrepayToPostpayRequest.h>
+#include <tencentcloud/cynosdb/v20190107/model/DescribeClusterStorageAutoExpandRequest.h>
 #include <tencentcloud/core/utils/rapidjson/document.h>
 #include <tencentcloud/core/utils/rapidjson/writer.h>
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
@@ -22,12 +22,12 @@
 using namespace TencentCloud::Cynosdb::V20190107::Model;
 using namespace std;
 
-TransferClusterPrepayToPostpayRequest::TransferClusterPrepayToPostpayRequest() :
+DescribeClusterStorageAutoExpandRequest::DescribeClusterStorageAutoExpandRequest() :
     m_clusterIdHasBeenSet(false)
 {
 }
 
-string TransferClusterPrepayToPostpayRequest::ToJsonString() const
+string DescribeClusterStorageAutoExpandRequest::ToJsonString() const
 {
     rapidjson::Document d;
     d.SetObject();
@@ -50,18 +50,18 @@ string TransferClusterPrepayToPostpayRequest::ToJsonString() const
 }
 
 
-string TransferClusterPrepayToPostpayRequest::GetClusterId() const
+string DescribeClusterStorageAutoExpandRequest::GetClusterId() const
 {
     return m_clusterId;
 }
 
-void TransferClusterPrepayToPostpayRequest::SetClusterId(const string& _clusterId)
+void DescribeClusterStorageAutoExpandRequest::SetClusterId(const string& _clusterId)
 {
     m_clusterId = _clusterId;
     m_clusterIdHasBeenSet = true;
 }
 
-bool TransferClusterPrepayToPostpayRequest::ClusterIdHasBeenSet() const
+bool DescribeClusterStorageAutoExpandRequest::ClusterIdHasBeenSet() const
 {
     return m_clusterIdHasBeenSet;
 }

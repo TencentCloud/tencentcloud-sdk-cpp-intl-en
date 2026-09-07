@@ -150,15 +150,15 @@ namespace TencentCloud
                     bool DeviceTypeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Instance group ID, used when adding new instances to an existing RO group. If not passed, a new RO group will be created. The current version does not recommend transmitting this value.</p>
-                     * @return InstanceGrpId <p>Instance group ID, used when adding new instances to an existing RO group. If not passed, a new RO group will be created. The current version does not recommend transmitting this value.</p>
+                     * 获取<p>This field has been deprecated. The current version no longer transmits this value.</p>
+                     * @return InstanceGrpId <p>This field has been deprecated. The current version no longer transmits this value.</p>
                      * @deprecated
                      */
                     std::string GetInstanceGrpId() const;
 
                     /**
-                     * 设置<p>Instance group ID, used when adding new instances to an existing RO group. If not passed, a new RO group will be created. The current version does not recommend transmitting this value.</p>
-                     * @param _instanceGrpId <p>Instance group ID, used when adding new instances to an existing RO group. If not passed, a new RO group will be created. The current version does not recommend transmitting this value.</p>
+                     * 设置<p>This field has been deprecated. The current version no longer transmits this value.</p>
+                     * @param _instanceGrpId <p>This field has been deprecated. The current version no longer transmits this value.</p>
                      * @deprecated
                      */
                     void SetInstanceGrpId(const std::string& _instanceGrpId);
@@ -455,7 +455,7 @@ namespace TencentCloud
                     bool m_deviceTypeHasBeenSet;
 
                     /**
-                     * <p>Instance group ID, used when adding new instances to an existing RO group. If not passed, a new RO group will be created. The current version does not recommend transmitting this value.</p>
+                     * <p>This field has been deprecated. The current version no longer transmits this value.</p>
                      */
                     std::string m_instanceGrpId;
                     bool m_instanceGrpIdHasBeenSet;
