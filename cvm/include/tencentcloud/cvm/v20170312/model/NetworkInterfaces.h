@@ -35,7 +35,8 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Network interface configuration for instance creation, including VPCs, subnets, and IP address allocation for primary and secondary network interfaces. This feature is in beta test in selected regions. To use this feature, [submit a ticket](https://console.tencentcloud.com/workorder/category).
+                * Describes network interface configuration for instance creation, including networking parameters such as VPCs, subnets, and IP address allocation for primary and secondary network interfaces. Note that this parameter is mutually exclusive with `VirtualPrivateCloud`. If `NetworkInterfaces` is specified, do not specify `VirtualPrivateCloud`. 
+This feature is in beta test in selected regions. To use this feature, [submit a ticket](https://console.tencentcloud.com/workorder/category).
                 */
                 class NetworkInterfaces : public AbstractModel
                 {

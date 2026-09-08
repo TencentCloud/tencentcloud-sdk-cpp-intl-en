@@ -19,14 +19,56 @@ set(captcha_public_header
   )
 
 set(captcha_public_header_model
-  include/tencentcloud/captcha/v20190722/model/DescribeCaptchaResultResponse.h
+  include/tencentcloud/captcha/v20190722/model/ModifyCaptchaInfoInternationalRequest.h
+  include/tencentcloud/captcha/v20190722/model/DeleteIpWhiteListInternationalResponse.h
+  include/tencentcloud/captcha/v20190722/model/DescribeCaptchaConsoleDataInternational.h
+  include/tencentcloud/captcha/v20190722/model/RemoveCaptchaInfoInternationalRequest.h
+  include/tencentcloud/captcha/v20190722/model/CreateCaptchaInfoInternationalResponse.h
+  include/tencentcloud/captcha/v20190722/model/ModifyIpWhiteListInternationalResponse.h
+  include/tencentcloud/captcha/v20190722/model/ModifyIpWhiteListInternationalRequest.h
+  include/tencentcloud/captcha/v20190722/model/CreateIpWhiteListInternationalRequest.h
+  include/tencentcloud/captcha/v20190722/model/DescribeIpWhiteListInternationalRequest.h
+  include/tencentcloud/captcha/v20190722/model/ModifyCaptchaInfoInternationalResponse.h
+  include/tencentcloud/captcha/v20190722/model/DescribeCaptchaConsoleSubDataInternational.h
+  include/tencentcloud/captcha/v20190722/model/OrderByInternational.h
+  include/tencentcloud/captcha/v20190722/model/DescribeCaptchaInfoListInternationalRequest.h
+  include/tencentcloud/captcha/v20190722/model/DescribeCaptchaWhiteListItem.h
+  include/tencentcloud/captcha/v20190722/model/DescribeIpWhiteListInternationalResponse.h
+  include/tencentcloud/captcha/v20190722/model/CreateIpWhiteListInternationalResponse.h
+  include/tencentcloud/captcha/v20190722/model/DescribeCaptchaIpWhiteListDataNew.h
+  include/tencentcloud/captcha/v20190722/model/CreateCaptchaInfoInternationalRequest.h
   include/tencentcloud/captcha/v20190722/model/DescribeCaptchaResultRequest.h
+  include/tencentcloud/captcha/v20190722/model/DescribeCaptchaResultResponse.h
+  include/tencentcloud/captcha/v20190722/model/DescribeCaptchaInfoListInternationalResponse.h
+  include/tencentcloud/captcha/v20190722/model/DeleteIpWhiteListInternationalRequest.h
+  include/tencentcloud/captcha/v20190722/model/RemoveCaptchaInfoInternationalResponse.h
   )
 
 set(captcha_src
   src/v20190722/CaptchaClient.cpp
-  src/v20190722/model/DescribeCaptchaResultResponse.cpp
+  src/v20190722/model/ModifyCaptchaInfoInternationalRequest.cpp
+  src/v20190722/model/DeleteIpWhiteListInternationalResponse.cpp
+  src/v20190722/model/DescribeCaptchaConsoleDataInternational.cpp
+  src/v20190722/model/RemoveCaptchaInfoInternationalRequest.cpp
+  src/v20190722/model/CreateCaptchaInfoInternationalResponse.cpp
+  src/v20190722/model/ModifyIpWhiteListInternationalResponse.cpp
+  src/v20190722/model/ModifyIpWhiteListInternationalRequest.cpp
+  src/v20190722/model/CreateIpWhiteListInternationalRequest.cpp
+  src/v20190722/model/DescribeIpWhiteListInternationalRequest.cpp
+  src/v20190722/model/ModifyCaptchaInfoInternationalResponse.cpp
+  src/v20190722/model/DescribeCaptchaConsoleSubDataInternational.cpp
+  src/v20190722/model/OrderByInternational.cpp
+  src/v20190722/model/DescribeCaptchaInfoListInternationalRequest.cpp
+  src/v20190722/model/DescribeCaptchaWhiteListItem.cpp
+  src/v20190722/model/DescribeIpWhiteListInternationalResponse.cpp
+  src/v20190722/model/CreateIpWhiteListInternationalResponse.cpp
+  src/v20190722/model/DescribeCaptchaIpWhiteListDataNew.cpp
+  src/v20190722/model/CreateCaptchaInfoInternationalRequest.cpp
   src/v20190722/model/DescribeCaptchaResultRequest.cpp
+  src/v20190722/model/DescribeCaptchaResultResponse.cpp
+  src/v20190722/model/DescribeCaptchaInfoListInternationalResponse.cpp
+  src/v20190722/model/DeleteIpWhiteListInternationalRequest.cpp
+  src/v20190722/model/RemoveCaptchaInfoInternationalResponse.cpp
   )
 
 set(captcha_include

@@ -1,0 +1,94 @@
+/*
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+#include <tencentcloud/captcha/v20190722/model/DeleteIpWhiteListInternationalRequest.h>
+#include <tencentcloud/core/utils/rapidjson/document.h>
+#include <tencentcloud/core/utils/rapidjson/writer.h>
+#include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
+
+using namespace TencentCloud::Captcha::V20190722::Model;
+using namespace std;
+
+DeleteIpWhiteListInternationalRequest::DeleteIpWhiteListInternationalRequest() :
+    m_captchaAppidHasBeenSet(false),
+    m_idHasBeenSet(false)
+{
+}
+
+string DeleteIpWhiteListInternationalRequest::ToJsonString() const
+{
+    rapidjson::Document d;
+    d.SetObject();
+    rapidjson::Document::AllocatorType& allocator = d.GetAllocator();
+
+
+    if (m_captchaAppidHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CaptchaAppid";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_captchaAppid, allocator);
+    }
+
+    if (m_idHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Id";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_id, allocator);
+    }
+
+
+    rapidjson::StringBuffer buffer;
+    rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
+    d.Accept(writer);
+    return buffer.GetString();
+}
+
+
+int64_t DeleteIpWhiteListInternationalRequest::GetCaptchaAppid() const
+{
+    return m_captchaAppid;
+}
+
+void DeleteIpWhiteListInternationalRequest::SetCaptchaAppid(const int64_t& _captchaAppid)
+{
+    m_captchaAppid = _captchaAppid;
+    m_captchaAppidHasBeenSet = true;
+}
+
+bool DeleteIpWhiteListInternationalRequest::CaptchaAppidHasBeenSet() const
+{
+    return m_captchaAppidHasBeenSet;
+}
+
+int64_t DeleteIpWhiteListInternationalRequest::GetId() const
+{
+    return m_id;
+}
+
+void DeleteIpWhiteListInternationalRequest::SetId(const int64_t& _id)
+{
+    m_id = _id;
+    m_idHasBeenSet = true;
+}
+
+bool DeleteIpWhiteListInternationalRequest::IdHasBeenSet() const
+{
+    return m_idHasBeenSet;
+}
+
+

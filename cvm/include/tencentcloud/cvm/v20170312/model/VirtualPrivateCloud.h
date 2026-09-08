@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Describes information on VPC, including subnets, IP addresses, etc.
+                * Describes VPC information for the primary network interface, including subnet and IP address information.
                 */
                 class VirtualPrivateCloud : public AbstractModel
                 {
