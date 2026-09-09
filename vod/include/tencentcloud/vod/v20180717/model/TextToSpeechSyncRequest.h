@@ -128,15 +128,15 @@ namespace TencentCloud
                     bool LanguageBoostHasBeenSet() const;
 
                     /**
-                     * 获取<p>Output parameters.</p><p>Specifies the output format, etc. The default output audio format is base64.</p>
-                     * @return Output <p>Output parameters.</p><p>Specifies the output format, etc. The default output audio format is base64.</p>
+                     * 获取<p>Output parameters.</p><p>Specifies the output format, etc. The default output audio format is URL.</p>
+                     * @return Output <p>Output parameters.</p><p>Specifies the output format, etc. The default output audio format is URL.</p>
                      * 
                      */
                     TextToSpeechSyncOutputOption GetOutput() const;
 
                     /**
-                     * 设置<p>Output parameters.</p><p>Specifies the output format, etc. The default output audio format is base64.</p>
-                     * @param _output <p>Output parameters.</p><p>Specifies the output format, etc. The default output audio format is base64.</p>
+                     * 设置<p>Output parameters.</p><p>Specifies the output format, etc. The default output audio format is URL.</p>
+                     * @param _output <p>Output parameters.</p><p>Specifies the output format, etc. The default output audio format is URL.</p>
                      * 
                      */
                     void SetOutput(const TextToSpeechSyncOutputOption& _output);
@@ -196,7 +196,7 @@ namespace TencentCloud
                     bool m_languageBoostHasBeenSet;
 
                     /**
-                     * <p>Output parameters.</p><p>Specifies the output format, etc. The default output audio format is base64.</p>
+                     * <p>Output parameters.</p><p>Specifies the output format, etc. The default output audio format is URL.</p>
                      */
                     TextToSpeechSyncOutputOption m_output;
                     bool m_outputHasBeenSet;
