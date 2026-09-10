@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * AI crawler detection configuration.
+                * Specific configuration for AI crawler detection.
                 */
                 class AICrawlerDetection : public AbstractModel
                 {
@@ -48,11 +48,11 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether AI crawler detection is enabled. valid values:.
+                     * 获取Whether AI crawler detection is enabled. Valid values:
 <li>`on`: Enable;</li>
 <li>off: Disable.</li>
 
-                     * @return Enabled Whether AI crawler detection is enabled. valid values:.
+                     * @return Enabled Whether AI crawler detection is enabled. Valid values:
 <li>`on`: Enable;</li>
 <li>off: Disable.</li>
 
@@ -61,11 +61,11 @@ namespace TencentCloud
                     std::string GetEnabled() const;
 
                     /**
-                     * 设置Whether AI crawler detection is enabled. valid values:.
+                     * 设置Whether AI crawler detection is enabled. Valid values:
 <li>`on`: Enable;</li>
 <li>off: Disable.</li>
 
-                     * @param _enabled Whether AI crawler detection is enabled. valid values:.
+                     * @param _enabled Whether AI crawler detection is enabled. Valid values:
 <li>`on`: Enable;</li>
 <li>off: Disable.</li>
 
@@ -81,31 +81,31 @@ namespace TencentCloud
                     bool EnabledHasBeenSet() const;
 
                     /**
-                     * 获取AI crawler detection execution action. this field is required when Enabled is on. valid values for the Name parameter in SecurityAction:.
-<Li>Deny: block;</li>.
-<Li>Monitor: observation.</li>.
-<Li>Allow: pass;</li>.
-<li>Challenge: Challenge, where ChallengeOption in ChallengeActionParameters only supports JSChallenge and ManagedChallenge.</li>.
-                     * @return Action AI crawler detection execution action. this field is required when Enabled is on. valid values for the Name parameter in SecurityAction:.
-<Li>Deny: block;</li>.
-<Li>Monitor: observation.</li>.
-<Li>Allow: pass;</li>.
-<li>Challenge: Challenge, where ChallengeOption in ChallengeActionParameters only supports JSChallenge and ManagedChallenge.</li>.
+                     * 获取Execution action of AI crawler detection. Required if Enabled is on. Name of SecurityAction only supports:
+<li>Deny: block;</li>
+<li>Monitor: observation;</li>
+<li>Allow: allow;</li>
+<li>Challenge: Among them, ChallengeOption in ChallengeActionParameters only supports JSChallenge and ManagedChallenge.</li>
+                     * @return Action Execution action of AI crawler detection. Required if Enabled is on. Name of SecurityAction only supports:
+<li>Deny: block;</li>
+<li>Monitor: observation;</li>
+<li>Allow: allow;</li>
+<li>Challenge: Among them, ChallengeOption in ChallengeActionParameters only supports JSChallenge and ManagedChallenge.</li>
                      * 
                      */
                     SecurityAction GetAction() const;
 
                     /**
-                     * 设置AI crawler detection execution action. this field is required when Enabled is on. valid values for the Name parameter in SecurityAction:.
-<Li>Deny: block;</li>.
-<Li>Monitor: observation.</li>.
-<Li>Allow: pass;</li>.
-<li>Challenge: Challenge, where ChallengeOption in ChallengeActionParameters only supports JSChallenge and ManagedChallenge.</li>.
-                     * @param _action AI crawler detection execution action. this field is required when Enabled is on. valid values for the Name parameter in SecurityAction:.
-<Li>Deny: block;</li>.
-<Li>Monitor: observation.</li>.
-<Li>Allow: pass;</li>.
-<li>Challenge: Challenge, where ChallengeOption in ChallengeActionParameters only supports JSChallenge and ManagedChallenge.</li>.
+                     * 设置Execution action of AI crawler detection. Required if Enabled is on. Name of SecurityAction only supports:
+<li>Deny: block;</li>
+<li>Monitor: observation;</li>
+<li>Allow: allow;</li>
+<li>Challenge: Among them, ChallengeOption in ChallengeActionParameters only supports JSChallenge and ManagedChallenge.</li>
+                     * @param _action Execution action of AI crawler detection. Required if Enabled is on. Name of SecurityAction only supports:
+<li>Deny: block;</li>
+<li>Monitor: observation;</li>
+<li>Allow: allow;</li>
+<li>Challenge: Among them, ChallengeOption in ChallengeActionParameters only supports JSChallenge and ManagedChallenge.</li>
                      * 
                      */
                     void SetAction(const SecurityAction& _action);
@@ -120,7 +120,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Whether AI crawler detection is enabled. valid values:.
+                     * Whether AI crawler detection is enabled. Valid values:
 <li>`on`: Enable;</li>
 <li>off: Disable.</li>
 
@@ -129,11 +129,11 @@ namespace TencentCloud
                     bool m_enabledHasBeenSet;
 
                     /**
-                     * AI crawler detection execution action. this field is required when Enabled is on. valid values for the Name parameter in SecurityAction:.
-<Li>Deny: block;</li>.
-<Li>Monitor: observation.</li>.
-<Li>Allow: pass;</li>.
-<li>Challenge: Challenge, where ChallengeOption in ChallengeActionParameters only supports JSChallenge and ManagedChallenge.</li>.
+                     * Execution action of AI crawler detection. Required if Enabled is on. Name of SecurityAction only supports:
+<li>Deny: block;</li>
+<li>Monitor: observation;</li>
+<li>Allow: allow;</li>
+<li>Challenge: Among them, ChallengeOption in ChallengeActionParameters only supports JSChallenge and ManagedChallenge.</li>
                      */
                     SecurityAction m_action;
                     bool m_actionHasBeenSet;

@@ -23,6 +23,7 @@
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/trtc/v20190722/model/ServerPushText.h>
 #include <tencentcloud/trtc/v20190722/model/InvokeLLM.h>
+#include <tencentcloud/trtc/v20190722/model/TransparentData.h>
 
 
 namespace TencentCloud
@@ -128,6 +129,27 @@ namespace TencentCloud
                      */
                     bool InvokeLLMHasBeenSet() const;
 
+                    /**
+                     * 获取Information passed through to the client
+                     * @return TransparentData Information passed through to the client
+                     * 
+                     */
+                    TransparentData GetTransparentData() const;
+
+                    /**
+                     * 设置Information passed through to the client
+                     * @param _transparentData Information passed through to the client
+                     * 
+                     */
+                    void SetTransparentData(const TransparentData& _transparentData);
+
+                    /**
+                     * 判断参数 TransparentData 是否已赋值
+                     * @return TransparentData 是否已赋值
+                     * 
+                     */
+                    bool TransparentDataHasBeenSet() const;
+
                 private:
 
                     /**
@@ -153,6 +175,12 @@ namespace TencentCloud
                      */
                     InvokeLLM m_invokeLLM;
                     bool m_invokeLLMHasBeenSet;
+
+                    /**
+                     * Information passed through to the client
+                     */
+                    TransparentData m_transparentData;
+                    bool m_transparentDataHasBeenSet;
 
                 };
             }

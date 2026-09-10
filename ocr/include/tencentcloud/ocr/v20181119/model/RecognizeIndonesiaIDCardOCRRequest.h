@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The Base64 value of the image. Supported image formats: PNG, JPG, JPEG. GIF format is not currently supported. Supported image size: the downloaded image after Base64 encoding is no more than 7M. Image download time is not more than 3 seconds. Either ImageUrl or ImageBase64 must be provided. If both are provided, only use ImageUrl.
-                     * @return ImageBase64 The Base64 value of the image. Supported image formats: PNG, JPG, JPEG. GIF format is not currently supported. Supported image size: the downloaded image after Base64 encoding is no more than 7M. Image download time is not more than 3 seconds. Either ImageUrl or ImageBase64 must be provided. If both are provided, only use ImageUrl.
+                     * 获取The Base64 value of the image. Supported image formats: PNG, JPG, JPEG. GIF format is not currently supported. Supported image size: the downloaded image after Base64 encoding is no more than 2M. Image download time is not more than 3 seconds. Either ImageUrl or ImageBase64 must be provided. If both are provided, only use ImageUrl.
+                     * @return ImageBase64 The Base64 value of the image. Supported image formats: PNG, JPG, JPEG. GIF format is not currently supported. Supported image size: the downloaded image after Base64 encoding is no more than 2M. Image download time is not more than 3 seconds. Either ImageUrl or ImageBase64 must be provided. If both are provided, only use ImageUrl.
                      * 
                      */
                     std::string GetImageBase64() const;
 
                     /**
-                     * 设置The Base64 value of the image. Supported image formats: PNG, JPG, JPEG. GIF format is not currently supported. Supported image size: the downloaded image after Base64 encoding is no more than 7M. Image download time is not more than 3 seconds. Either ImageUrl or ImageBase64 must be provided. If both are provided, only use ImageUrl.
-                     * @param _imageBase64 The Base64 value of the image. Supported image formats: PNG, JPG, JPEG. GIF format is not currently supported. Supported image size: the downloaded image after Base64 encoding is no more than 7M. Image download time is not more than 3 seconds. Either ImageUrl or ImageBase64 must be provided. If both are provided, only use ImageUrl.
+                     * 设置The Base64 value of the image. Supported image formats: PNG, JPG, JPEG. GIF format is not currently supported. Supported image size: the downloaded image after Base64 encoding is no more than 2M. Image download time is not more than 3 seconds. Either ImageUrl or ImageBase64 must be provided. If both are provided, only use ImageUrl.
+                     * @param _imageBase64 The Base64 value of the image. Supported image formats: PNG, JPG, JPEG. GIF format is not currently supported. Supported image size: the downloaded image after Base64 encoding is no more than 2M. Image download time is not more than 3 seconds. Either ImageUrl or ImageBase64 must be provided. If both are provided, only use ImageUrl.
                      * 
                      */
                     void SetImageBase64(const std::string& _imageBase64);
@@ -66,12 +66,12 @@ namespace TencentCloud
                     /**
                      * 获取The Url address of the image. 
 Supported image formats: PNG, JPG, JPEG. GIF format is not currently supported. 
-Supported image size: the downloaded image after Base64 encoding is no more than 7M. Image download time is no more than 3 seconds. 
+Supported image size: the downloaded image after Base64 encoding is no more than 2M. Image download time is no more than 3 seconds. 
 We recommend that you store the image in Tencent Cloud for higher download speed and stability.
 For a non-Tencent Cloud URL, the download speed and stability may be affected.
                      * @return ImageUrl The Url address of the image. 
 Supported image formats: PNG, JPG, JPEG. GIF format is not currently supported. 
-Supported image size: the downloaded image after Base64 encoding is no more than 7M. Image download time is no more than 3 seconds. 
+Supported image size: the downloaded image after Base64 encoding is no more than 2M. Image download time is no more than 3 seconds. 
 We recommend that you store the image in Tencent Cloud for higher download speed and stability.
 For a non-Tencent Cloud URL, the download speed and stability may be affected.
                      * 
@@ -81,12 +81,12 @@ For a non-Tencent Cloud URL, the download speed and stability may be affected.
                     /**
                      * 设置The Url address of the image. 
 Supported image formats: PNG, JPG, JPEG. GIF format is not currently supported. 
-Supported image size: the downloaded image after Base64 encoding is no more than 7M. Image download time is no more than 3 seconds. 
+Supported image size: the downloaded image after Base64 encoding is no more than 2M. Image download time is no more than 3 seconds. 
 We recommend that you store the image in Tencent Cloud for higher download speed and stability.
 For a non-Tencent Cloud URL, the download speed and stability may be affected.
                      * @param _imageUrl The Url address of the image. 
 Supported image formats: PNG, JPG, JPEG. GIF format is not currently supported. 
-Supported image size: the downloaded image after Base64 encoding is no more than 7M. Image download time is no more than 3 seconds. 
+Supported image size: the downloaded image after Base64 encoding is no more than 2M. Image download time is no more than 3 seconds. 
 We recommend that you store the image in Tencent Cloud for higher download speed and stability.
 For a non-Tencent Cloud URL, the download speed and stability may be affected.
                      * 
@@ -102,11 +102,11 @@ For a non-Tencent Cloud URL, the download speed and stability may be affected.
 
                     /**
                      * 获取Whether to return the portrait photo.
-If selected true, image restrictions are: Image size after encoding must not exceed 5M, jpg format long side pixel cannot exceed 4000, other formats image long edge pixel maximum of 2000. Short side pixel of all format images not less than 64.
+If selected true, image restrictions are: Image size after encoding must not exceed 2M, jpg format long side pixel cannot exceed 4000, other formats image long edge pixel maximum of 2000. Short side pixel of all format images not less than 64.
 Support PNG, jpg, JPEG, BMP, no support for GIF images.
 If portrait matting fails, return an empty string.
                      * @return ReturnHeadImage Whether to return the portrait photo.
-If selected true, image restrictions are: Image size after encoding must not exceed 5M, jpg format long side pixel cannot exceed 4000, other formats image long edge pixel maximum of 2000. Short side pixel of all format images not less than 64.
+If selected true, image restrictions are: Image size after encoding must not exceed 2M, jpg format long side pixel cannot exceed 4000, other formats image long edge pixel maximum of 2000. Short side pixel of all format images not less than 64.
 Support PNG, jpg, JPEG, BMP, no support for GIF images.
 If portrait matting fails, return an empty string.
                      * 
@@ -115,11 +115,11 @@ If portrait matting fails, return an empty string.
 
                     /**
                      * 设置Whether to return the portrait photo.
-If selected true, image restrictions are: Image size after encoding must not exceed 5M, jpg format long side pixel cannot exceed 4000, other formats image long edge pixel maximum of 2000. Short side pixel of all format images not less than 64.
+If selected true, image restrictions are: Image size after encoding must not exceed 2M, jpg format long side pixel cannot exceed 4000, other formats image long edge pixel maximum of 2000. Short side pixel of all format images not less than 64.
 Support PNG, jpg, JPEG, BMP, no support for GIF images.
 If portrait matting fails, return an empty string.
                      * @param _returnHeadImage Whether to return the portrait photo.
-If selected true, image restrictions are: Image size after encoding must not exceed 5M, jpg format long side pixel cannot exceed 4000, other formats image long edge pixel maximum of 2000. Short side pixel of all format images not less than 64.
+If selected true, image restrictions are: Image size after encoding must not exceed 2M, jpg format long side pixel cannot exceed 4000, other formats image long edge pixel maximum of 2000. Short side pixel of all format images not less than 64.
 Support PNG, jpg, JPEG, BMP, no support for GIF images.
 If portrait matting fails, return an empty string.
                      * 
@@ -169,7 +169,7 @@ V2
                 private:
 
                     /**
-                     * The Base64 value of the image. Supported image formats: PNG, JPG, JPEG. GIF format is not currently supported. Supported image size: the downloaded image after Base64 encoding is no more than 7M. Image download time is not more than 3 seconds. Either ImageUrl or ImageBase64 must be provided. If both are provided, only use ImageUrl.
+                     * The Base64 value of the image. Supported image formats: PNG, JPG, JPEG. GIF format is not currently supported. Supported image size: the downloaded image after Base64 encoding is no more than 2M. Image download time is not more than 3 seconds. Either ImageUrl or ImageBase64 must be provided. If both are provided, only use ImageUrl.
                      */
                     std::string m_imageBase64;
                     bool m_imageBase64HasBeenSet;
@@ -177,7 +177,7 @@ V2
                     /**
                      * The Url address of the image. 
 Supported image formats: PNG, JPG, JPEG. GIF format is not currently supported. 
-Supported image size: the downloaded image after Base64 encoding is no more than 7M. Image download time is no more than 3 seconds. 
+Supported image size: the downloaded image after Base64 encoding is no more than 2M. Image download time is no more than 3 seconds. 
 We recommend that you store the image in Tencent Cloud for higher download speed and stability.
 For a non-Tencent Cloud URL, the download speed and stability may be affected.
                      */
@@ -186,7 +186,7 @@ For a non-Tencent Cloud URL, the download speed and stability may be affected.
 
                     /**
                      * Whether to return the portrait photo.
-If selected true, image restrictions are: Image size after encoding must not exceed 5M, jpg format long side pixel cannot exceed 4000, other formats image long edge pixel maximum of 2000. Short side pixel of all format images not less than 64.
+If selected true, image restrictions are: Image size after encoding must not exceed 2M, jpg format long side pixel cannot exceed 4000, other formats image long edge pixel maximum of 2000. Short side pixel of all format images not less than 64.
 Support PNG, jpg, JPEG, BMP, no support for GIF images.
 If portrait matting fails, return an empty string.
                      */
