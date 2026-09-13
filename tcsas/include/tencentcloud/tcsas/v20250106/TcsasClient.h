@@ -187,6 +187,10 @@
 #include <tencentcloud/tcsas/v20250106/model/DescribeMNGSubscribeMessageTemplateListResponse.h>
 #include <tencentcloud/tcsas/v20250106/model/DescribeMNGVersionRequest.h>
 #include <tencentcloud/tcsas/v20250106/model/DescribeMNGVersionResponse.h>
+#include <tencentcloud/tcsas/v20250106/model/DescribeMNGVersionAuditDetailRequest.h>
+#include <tencentcloud/tcsas/v20250106/model/DescribeMNGVersionAuditDetailResponse.h>
+#include <tencentcloud/tcsas/v20250106/model/DescribeMNGVersionAuditListRequest.h>
+#include <tencentcloud/tcsas/v20250106/model/DescribeMNGVersionAuditListResponse.h>
 #include <tencentcloud/tcsas/v20250106/model/DescribeMNPRequest.h>
 #include <tencentcloud/tcsas/v20250106/model/DescribeMNPResponse.h>
 #include <tencentcloud/tcsas/v20250106/model/DescribeMNPAccessAnalysisOverviewRequest.h>
@@ -245,6 +249,10 @@
 #include <tencentcloud/tcsas/v20250106/model/DescribeMNPSubscribeMessageTemplateListResponse.h>
 #include <tencentcloud/tcsas/v20250106/model/DescribeMNPVersionRequest.h>
 #include <tencentcloud/tcsas/v20250106/model/DescribeMNPVersionResponse.h>
+#include <tencentcloud/tcsas/v20250106/model/DescribeMNPVersionAuditDetailRequest.h>
+#include <tencentcloud/tcsas/v20250106/model/DescribeMNPVersionAuditDetailResponse.h>
+#include <tencentcloud/tcsas/v20250106/model/DescribeMNPVersionAuditListRequest.h>
+#include <tencentcloud/tcsas/v20250106/model/DescribeMNPVersionAuditListResponse.h>
 #include <tencentcloud/tcsas/v20250106/model/DescribePaymentDataDetailRequest.h>
 #include <tencentcloud/tcsas/v20250106/model/DescribePaymentDataDetailResponse.h>
 #include <tencentcloud/tcsas/v20250106/model/DescribePaymentDataLineChartRequest.h>
@@ -585,6 +593,12 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeMNGVersionResponse> DescribeMNGVersionOutcome;
                 typedef std::future<DescribeMNGVersionOutcome> DescribeMNGVersionOutcomeCallable;
                 typedef std::function<void(const TcsasClient*, const Model::DescribeMNGVersionRequest&, DescribeMNGVersionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMNGVersionAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeMNGVersionAuditDetailResponse> DescribeMNGVersionAuditDetailOutcome;
+                typedef std::future<DescribeMNGVersionAuditDetailOutcome> DescribeMNGVersionAuditDetailOutcomeCallable;
+                typedef std::function<void(const TcsasClient*, const Model::DescribeMNGVersionAuditDetailRequest&, DescribeMNGVersionAuditDetailOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMNGVersionAuditDetailAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeMNGVersionAuditListResponse> DescribeMNGVersionAuditListOutcome;
+                typedef std::future<DescribeMNGVersionAuditListOutcome> DescribeMNGVersionAuditListOutcomeCallable;
+                typedef std::function<void(const TcsasClient*, const Model::DescribeMNGVersionAuditListRequest&, DescribeMNGVersionAuditListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMNGVersionAuditListAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeMNPResponse> DescribeMNPOutcome;
                 typedef std::future<DescribeMNPOutcome> DescribeMNPOutcomeCallable;
                 typedef std::function<void(const TcsasClient*, const Model::DescribeMNPRequest&, DescribeMNPOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMNPAsyncHandler;
@@ -672,6 +686,12 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeMNPVersionResponse> DescribeMNPVersionOutcome;
                 typedef std::future<DescribeMNPVersionOutcome> DescribeMNPVersionOutcomeCallable;
                 typedef std::function<void(const TcsasClient*, const Model::DescribeMNPVersionRequest&, DescribeMNPVersionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMNPVersionAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeMNPVersionAuditDetailResponse> DescribeMNPVersionAuditDetailOutcome;
+                typedef std::future<DescribeMNPVersionAuditDetailOutcome> DescribeMNPVersionAuditDetailOutcomeCallable;
+                typedef std::function<void(const TcsasClient*, const Model::DescribeMNPVersionAuditDetailRequest&, DescribeMNPVersionAuditDetailOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMNPVersionAuditDetailAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeMNPVersionAuditListResponse> DescribeMNPVersionAuditListOutcome;
+                typedef std::future<DescribeMNPVersionAuditListOutcome> DescribeMNPVersionAuditListOutcomeCallable;
+                typedef std::function<void(const TcsasClient*, const Model::DescribeMNPVersionAuditListRequest&, DescribeMNPVersionAuditListOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeMNPVersionAuditListAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribePaymentDataDetailResponse> DescribePaymentDataDetailOutcome;
                 typedef std::future<DescribePaymentDataDetailOutcome> DescribePaymentDataDetailOutcomeCallable;
                 typedef std::function<void(const TcsasClient*, const Model::DescribePaymentDataDetailRequest&, DescribePaymentDataDetailOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribePaymentDataDetailAsyncHandler;
@@ -895,7 +915,7 @@ namespace TencentCloud
                 CreateMNGOutcomeCallable CreateMNGCallable(const Model::CreateMNGRequest& request);
 
                 /**
-                 *This API is used to generate a mini game secret key.
+                 *This API is used to create a mini game secret key.
                  * @param req CreateMNGAppSecretRequest
                  * @return CreateMNGAppSecretOutcome
                  */
@@ -1138,7 +1158,7 @@ namespace TencentCloud
                 DeleteUserOutcomeCallable DeleteUserCallable(const Model::DeleteUserRequest& request);
 
                 /**
-                 *This API is used to query the line chart data for selected superapp metrics.
+                 *This API is used to query the time-series data for selected superapp metrics.
                  * @param req DescribeAPPDataDetailLineChartRequest
                  * @return DescribeAPPDataDetailLineChartOutcome
                  */
@@ -1156,7 +1176,7 @@ namespace TencentCloud
                 DescribeAPPDataOverviewOutcomeCallable DescribeAPPDataOverviewCallable(const Model::DescribeAPPDataOverviewRequest& request);
 
                 /**
-                 *This API is used to query the advertising line chart data for a mini program within a specified date range.
+                 *This API is used to query the time-series advertising data for a mini program within a specified date range.
                  * @param req DescribeAdvertisingLineChartRequest
                  * @return DescribeAdvertisingLineChartOutcome
                  */
@@ -1273,7 +1293,7 @@ namespace TencentCloud
                 DescribeMNGAccessAnalysisDetailOutcomeCallable DescribeMNGAccessAnalysisDetailCallable(const Model::DescribeMNGAccessAnalysisDetailRequest& request);
 
                 /**
-                 *This API is used to query the mini game visit analysis line chart.
+                 *This API is used to query the time-series visit data of a mini game.
                  * @param req DescribeMNGAccessAnalysisLineChartRequest
                  * @return DescribeMNGAccessAnalysisLineChartOutcome
                  */
@@ -1309,7 +1329,7 @@ namespace TencentCloud
                 DescribeMNGAdvertisingDetailOutcomeCallable DescribeMNGAdvertisingDetailCallable(const Model::DescribeMNGAdvertisingDetailRequest& request);
 
                 /**
-                 *This API is used to query the mini game advertising data in a line chart format.
+                 *This API is used to query the time-series advertising data of a mini game.
                  * @param req DescribeMNGAdvertisingLineChartRequest
                  * @return DescribeMNGAdvertisingLineChartOutcome
                  */
@@ -1381,7 +1401,7 @@ namespace TencentCloud
                 DescribeMNGMAUDataDetailOutcomeCallable DescribeMNGMAUDataDetailCallable(const Model::DescribeMNGMAUDataDetailRequest& request);
 
                 /**
-                 *This API is used to query the mini game MAU line chart.
+                 *This API is used to query the time-series MAU data of a mini game.
                  * @param req DescribeMNGMAULineChartRequest
                  * @return DescribeMNGMAULineChartOutcome
                  */
@@ -1408,7 +1428,7 @@ namespace TencentCloud
                 DescribeMNGOfflinePackageURLOutcomeCallable DescribeMNGOfflinePackageURLCallable(const Model::DescribeMNGOfflinePackageURLRequest& request);
 
                 /**
-                 *This API is used to query the mini game payment line chart.
+                 *This API is used to query the time-series payment data of a mini game.
                  * @param req DescribeMNGPaymentLineChartRequest
                  * @return DescribeMNGPaymentLineChartOutcome
                  */
@@ -1534,6 +1554,24 @@ namespace TencentCloud
                 DescribeMNGVersionOutcomeCallable DescribeMNGVersionCallable(const Model::DescribeMNGVersionRequest& request);
 
                 /**
+                 *This API is used to query mini game version approval details.
+                 * @param req DescribeMNGVersionAuditDetailRequest
+                 * @return DescribeMNGVersionAuditDetailOutcome
+                 */
+                DescribeMNGVersionAuditDetailOutcome DescribeMNGVersionAuditDetail(const Model::DescribeMNGVersionAuditDetailRequest &request);
+                void DescribeMNGVersionAuditDetailAsync(const Model::DescribeMNGVersionAuditDetailRequest& request, const DescribeMNGVersionAuditDetailAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeMNGVersionAuditDetailOutcomeCallable DescribeMNGVersionAuditDetailCallable(const Model::DescribeMNGVersionAuditDetailRequest& request);
+
+                /**
+                 *This API is used to query mini game version approval records.
+                 * @param req DescribeMNGVersionAuditListRequest
+                 * @return DescribeMNGVersionAuditListOutcome
+                 */
+                DescribeMNGVersionAuditListOutcome DescribeMNGVersionAuditList(const Model::DescribeMNGVersionAuditListRequest &request);
+                void DescribeMNGVersionAuditListAsync(const Model::DescribeMNGVersionAuditListRequest& request, const DescribeMNGVersionAuditListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeMNGVersionAuditListOutcomeCallable DescribeMNGVersionAuditListCallable(const Model::DescribeMNGVersionAuditListRequest& request);
+
+                /**
                  *This API is used to query the mini program details.
                  * @param req DescribeMNPRequest
                  * @return DescribeMNPOutcome
@@ -1633,7 +1671,7 @@ namespace TencentCloud
                 DescribeMNPMAUDataDetailOutcomeCallable DescribeMNPMAUDataDetailCallable(const Model::DescribeMNPMAUDataDetailRequest& request);
 
                 /**
-                 *This API is used to query the mini program monthly active user data in a line chart format.
+                 *This API is used to query the time-series MAU data of a mini program.
                  * @param req DescribeMNPMAULineChartRequest
                  * @return DescribeMNPMAULineChartOutcome
                  */
@@ -1696,7 +1734,7 @@ namespace TencentCloud
                 DescribeMNPReleasedVersionHistoryOutcomeCallable DescribeMNPReleasedVersionHistoryCallable(const Model::DescribeMNPReleasedVersionHistoryRequest& request);
 
                 /**
-                 *This API is used to query the mini program visit analysis line chart within a given date range.
+                 *This API is used to query the time-series visit data of a mini program within a given date range.
                  * @param req DescribeMNPReportDataLineChartRequest
                  * @return DescribeMNPReportDataLineChartOutcome
                  */
@@ -1795,6 +1833,24 @@ namespace TencentCloud
                 DescribeMNPVersionOutcomeCallable DescribeMNPVersionCallable(const Model::DescribeMNPVersionRequest& request);
 
                 /**
+                 *This API is used to query mini program version approval details.
+                 * @param req DescribeMNPVersionAuditDetailRequest
+                 * @return DescribeMNPVersionAuditDetailOutcome
+                 */
+                DescribeMNPVersionAuditDetailOutcome DescribeMNPVersionAuditDetail(const Model::DescribeMNPVersionAuditDetailRequest &request);
+                void DescribeMNPVersionAuditDetailAsync(const Model::DescribeMNPVersionAuditDetailRequest& request, const DescribeMNPVersionAuditDetailAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeMNPVersionAuditDetailOutcomeCallable DescribeMNPVersionAuditDetailCallable(const Model::DescribeMNPVersionAuditDetailRequest& request);
+
+                /**
+                 *This API is used to query mini program version approval records.
+                 * @param req DescribeMNPVersionAuditListRequest
+                 * @return DescribeMNPVersionAuditListOutcome
+                 */
+                DescribeMNPVersionAuditListOutcome DescribeMNPVersionAuditList(const Model::DescribeMNPVersionAuditListRequest &request);
+                void DescribeMNPVersionAuditListAsync(const Model::DescribeMNPVersionAuditListRequest& request, const DescribeMNPVersionAuditListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeMNPVersionAuditListOutcomeCallable DescribeMNPVersionAuditListCallable(const Model::DescribeMNPVersionAuditListRequest& request);
+
+                /**
                  *This API is used to query the mini program payment data details within a specified date range.
                  * @param req DescribePaymentDataDetailRequest
                  * @return DescribePaymentDataDetailOutcome
@@ -1804,7 +1860,7 @@ namespace TencentCloud
                 DescribePaymentDataDetailOutcomeCallable DescribePaymentDataDetailCallable(const Model::DescribePaymentDataDetailRequest& request);
 
                 /**
-                 *This API is used to query the mini program payment line chart within a specified date range.
+                 *This API is used to query the time-series payment data of a mini program.
                  * @param req DescribePaymentDataLineChartRequest
                  * @return DescribePaymentDataLineChartOutcome
                  */
@@ -1840,7 +1896,7 @@ namespace TencentCloud
                 DescribeTeamOutcomeCallable DescribeTeamCallable(const Model::DescribeTeamRequest& request);
 
                 /**
-                 *This API is used to query a list of teams.
+                 *This API is used to query the teams.
                  * @param req DescribeTeamListRequest
                  * @return DescribeTeamListOutcome
                  */

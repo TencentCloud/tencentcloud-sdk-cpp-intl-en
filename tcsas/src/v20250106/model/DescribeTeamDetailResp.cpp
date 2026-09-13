@@ -32,7 +32,8 @@ DescribeTeamDetailResp::DescribeTeamDetailResp() :
     m_registerLinkHasBeenSet(false),
     m_applicationNameHasBeenSet(false),
     m_expireTimeHasBeenSet(false),
-    m_statusHasBeenSet(false)
+    m_statusHasBeenSet(false),
+    m_adminUserNameHasBeenSet(false)
 {
 }
 
@@ -161,6 +162,16 @@ CoreInternalOutcome DescribeTeamDetailResp::Deserialize(const rapidjson::Value &
         m_statusHasBeenSet = true;
     }
 
+    if (value.HasMember("AdminUserName") && !value["AdminUserName"].IsNull())
+    {
+        if (!value["AdminUserName"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `DescribeTeamDetailResp.AdminUserName` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_adminUserName = string(value["AdminUserName"].GetString());
+        m_adminUserNameHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -262,6 +273,14 @@ void DescribeTeamDetailResp::ToJsonObject(rapidjson::Value &value, rapidjson::Do
         string key = "Status";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_status, allocator);
+    }
+
+    if (m_adminUserNameHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AdminUserName";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_adminUserName.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -457,5 +476,21 @@ void DescribeTeamDetailResp::SetStatus(const int64_t& _status)
 bool DescribeTeamDetailResp::StatusHasBeenSet() const
 {
     return m_statusHasBeenSet;
+}
+
+string DescribeTeamDetailResp::GetAdminUserName() const
+{
+    return m_adminUserName;
+}
+
+void DescribeTeamDetailResp::SetAdminUserName(const string& _adminUserName)
+{
+    m_adminUserName = _adminUserName;
+    m_adminUserNameHasBeenSet = true;
+}
+
+bool DescribeTeamDetailResp::AdminUserNameHasBeenSet() const
+{
+    return m_adminUserNameHasBeenSet;
 }
 

@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Team name.
-                     * @return TeamName Team name.
+                     * 获取<p>Team name.</p>
+                     * @return TeamName <p>Team name.</p>
                      * 
                      */
                     std::string GetTeamName() const;
 
                     /**
-                     * 设置Team name.
-                     * @param _teamName Team name.
+                     * 设置<p>Team name.</p>
+                     * @param _teamName <p>Team name.</p>
                      * 
                      */
                     void SetTeamName(const std::string& _teamName);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool TeamNameHasBeenSet() const;
 
                     /**
-                     * 获取Admin name.
-                     * @return AdminUserId Admin name.
+                     * 获取<p>Administrator name.</p>
+                     * @return AdminUserId <p>Administrator name.</p>
                      * 
                      */
                     std::string GetAdminUserId() const;
 
                     /**
-                     * 设置Admin name.
-                     * @param _adminUserId Admin name.
+                     * 设置<p>Administrator name.</p>
+                     * @param _adminUserId <p>Administrator name.</p>
                      * 
                      */
                     void SetAdminUserId(const std::string& _adminUserId);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool AdminUserIdHasBeenSet() const;
 
                     /**
-                     * 获取Team role type. Valid values: 1: Mini program; 2: Superapp (only one type is currently supported).
-                     * @return TeamRoleTypeList Team role type. Valid values: 1: Mini program; 2: Superapp (only one type is currently supported).
+                     * 获取<p>Team role type. Valid values: 1: Mini program; 2: Superapp (only one type is currently supported).</p>
+                     * @return TeamRoleTypeList <p>Team role type. Valid values: 1: Mini program; 2: Superapp (only one type is currently supported).</p>
                      * 
                      */
                     std::vector<int64_t> GetTeamRoleTypeList() const;
 
                     /**
-                     * 设置Team role type. Valid values: 1: Mini program; 2: Superapp (only one type is currently supported).
-                     * @param _teamRoleTypeList Team role type. Valid values: 1: Mini program; 2: Superapp (only one type is currently supported).
+                     * 设置<p>Team role type. Valid values: 1: Mini program; 2: Superapp (only one type is currently supported).</p>
+                     * @param _teamRoleTypeList <p>Team role type. Valid values: 1: Mini program; 2: Superapp (only one type is currently supported).</p>
                      * 
                      */
                     void SetTeamRoleTypeList(const std::vector<int64_t>& _teamRoleTypeList);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool TeamRoleTypeListHasBeenSet() const;
 
                     /**
-                     * 获取Remark.
-                     * @return Remark Remark.
+                     * 获取<p>Remarks.</p>
+                     * @return Remark <p>Remarks.</p>
                      * 
                      */
                     std::string GetRemark() const;
 
                     /**
-                     * 设置Remark.
-                     * @param _remark Remark.
+                     * 设置<p>Remarks.</p>
+                     * @param _remark <p>Remarks.</p>
                      * 
                      */
                     void SetRemark(const std::string& _remark);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool RemarkHasBeenSet() const;
 
                     /**
-                     * 获取Platform ID, required for API call.
-                     * @return PlatformId Platform ID, required for API call.
+                     * 获取<p>Platform ID, required for API call.</p>
+                     * @return PlatformId <p>Platform ID, required for API call.</p>
                      * 
                      */
                     std::string GetPlatformId() const;
 
                     /**
-                     * 设置Platform ID, required for API call.
-                     * @param _platformId Platform ID, required for API call.
+                     * 设置<p>Platform ID, required for API call.</p>
+                     * @param _platformId <p>Platform ID, required for API call.</p>
                      * 
                      */
                     void SetPlatformId(const std::string& _platformId);
@@ -148,15 +148,15 @@ namespace TencentCloud
                     bool PlatformIdHasBeenSet() const;
 
                     /**
-                     * 获取Associated team ID.
-                     * @return RelatedTeamId Associated team ID.
+                     * 获取<p>Associated team ID.</p>
+                     * @return RelatedTeamId <p>Associated team ID.</p>
                      * 
                      */
                     std::string GetRelatedTeamId() const;
 
                     /**
-                     * 设置Associated team ID.
-                     * @param _relatedTeamId Associated team ID.
+                     * 设置<p>Associated team ID.</p>
+                     * @param _relatedTeamId <p>Associated team ID.</p>
                      * 
                      */
                     void SetRelatedTeamId(const std::string& _relatedTeamId);
@@ -168,43 +168,97 @@ namespace TencentCloud
                      */
                     bool RelatedTeamIdHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Team expiration time as a Unix timestamp in seconds. 0 indicates no expiration. This parameter takes effect only when creating a mini program team.</p>
+                     * @return ExpiryTime <p>Team expiration time as a Unix timestamp in seconds. 0 indicates no expiration. This parameter takes effect only when creating a mini program team.</p>
+                     * 
+                     */
+                    int64_t GetExpiryTime() const;
+
+                    /**
+                     * 设置<p>Team expiration time as a Unix timestamp in seconds. 0 indicates no expiration. This parameter takes effect only when creating a mini program team.</p>
+                     * @param _expiryTime <p>Team expiration time as a Unix timestamp in seconds. 0 indicates no expiration. This parameter takes effect only when creating a mini program team.</p>
+                     * 
+                     */
+                    void SetExpiryTime(const int64_t& _expiryTime);
+
+                    /**
+                     * 判断参数 ExpiryTime 是否已赋值
+                     * @return ExpiryTime 是否已赋值
+                     * 
+                     */
+                    bool ExpiryTimeHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Administrator user IDs.</p>
+                     * @return AdminUserIds <p>Administrator user IDs.</p>
+                     * 
+                     */
+                    std::vector<std::string> GetAdminUserIds() const;
+
+                    /**
+                     * 设置<p>Administrator user IDs.</p>
+                     * @param _adminUserIds <p>Administrator user IDs.</p>
+                     * 
+                     */
+                    void SetAdminUserIds(const std::vector<std::string>& _adminUserIds);
+
+                    /**
+                     * 判断参数 AdminUserIds 是否已赋值
+                     * @return AdminUserIds 是否已赋值
+                     * 
+                     */
+                    bool AdminUserIdsHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Team name.
+                     * <p>Team name.</p>
                      */
                     std::string m_teamName;
                     bool m_teamNameHasBeenSet;
 
                     /**
-                     * Admin name.
+                     * <p>Administrator name.</p>
                      */
                     std::string m_adminUserId;
                     bool m_adminUserIdHasBeenSet;
 
                     /**
-                     * Team role type. Valid values: 1: Mini program; 2: Superapp (only one type is currently supported).
+                     * <p>Team role type. Valid values: 1: Mini program; 2: Superapp (only one type is currently supported).</p>
                      */
                     std::vector<int64_t> m_teamRoleTypeList;
                     bool m_teamRoleTypeListHasBeenSet;
 
                     /**
-                     * Remark.
+                     * <p>Remarks.</p>
                      */
                     std::string m_remark;
                     bool m_remarkHasBeenSet;
 
                     /**
-                     * Platform ID, required for API call.
+                     * <p>Platform ID, required for API call.</p>
                      */
                     std::string m_platformId;
                     bool m_platformIdHasBeenSet;
 
                     /**
-                     * Associated team ID.
+                     * <p>Associated team ID.</p>
                      */
                     std::string m_relatedTeamId;
                     bool m_relatedTeamIdHasBeenSet;
+
+                    /**
+                     * <p>Team expiration time as a Unix timestamp in seconds. 0 indicates no expiration. This parameter takes effect only when creating a mini program team.</p>
+                     */
+                    int64_t m_expiryTime;
+                    bool m_expiryTimeHasBeenSet;
+
+                    /**
+                     * <p>Administrator user IDs.</p>
+                     */
+                    std::vector<std::string> m_adminUserIds;
+                    bool m_adminUserIdsHasBeenSet;
 
                 };
             }

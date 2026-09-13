@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Team name.
-                     * @return TeamName Team name.
+                     * 获取<p>Team name.</p>
+                     * @return TeamName <p>Team name.</p>
                      * 
                      */
                     std::string GetTeamName() const;
 
                     /**
-                     * 设置Team name.
-                     * @param _teamName Team name.
+                     * 设置<p>Team name.</p>
+                     * @param _teamName <p>Team name.</p>
                      * 
                      */
                     void SetTeamName(const std::string& _teamName);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool TeamNameHasBeenSet() const;
 
                     /**
-                     * 获取Team role type. Valid values: 1: Mini program team; 2: Superapp team.
-                     * @return TeamRoleType Team role type. Valid values: 1: Mini program team; 2: Superapp team.
+                     * 获取<p>Team role type. Valid values: 1: Mini program team; 2: Superapp team.</p>
+                     * @return TeamRoleType <p>Team role type. Valid values: 1: Mini program team; 2: Superapp team.</p>
                      * 
                      */
                     int64_t GetTeamRoleType() const;
 
                     /**
-                     * 设置Team role type. Valid values: 1: Mini program team; 2: Superapp team.
-                     * @param _teamRoleType Team role type. Valid values: 1: Mini program team; 2: Superapp team.
+                     * 设置<p>Team role type. Valid values: 1: Mini program team; 2: Superapp team.</p>
+                     * @param _teamRoleType <p>Team role type. Valid values: 1: Mini program team; 2: Superapp team.</p>
                      * 
                      */
                     void SetTeamRoleType(const int64_t& _teamRoleType);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool TeamRoleTypeHasBeenSet() const;
 
                     /**
-                     * 获取Admin account.
-                     * @return AdminUserAccount Admin account.
+                     * 获取<p>Administrator account.</p>
+                     * @return AdminUserAccount <p>Administrator account.</p>
                      * 
                      */
                     std::string GetAdminUserAccount() const;
 
                     /**
-                     * 设置Admin account.
-                     * @param _adminUserAccount Admin account.
+                     * 设置<p>Administrator account.</p>
+                     * @param _adminUserAccount <p>Administrator account.</p>
                      * 
                      */
                     void SetAdminUserAccount(const std::string& _adminUserAccount);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool AdminUserAccountHasBeenSet() const;
 
                     /**
-                     * 获取Creator.
-                     * @return CreateUser Creator.
+                     * 获取<p>Creator.</p>
+                     * @return CreateUser <p>Creator.</p>
                      * 
                      */
                     std::string GetCreateUser() const;
 
                     /**
-                     * 设置Creator.
-                     * @param _createUser Creator.
+                     * 设置<p>Creator.</p>
+                     * @param _createUser <p>Creator.</p>
                      * 
                      */
                     void SetCreateUser(const std::string& _createUser);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool CreateUserHasBeenSet() const;
 
                     /**
-                     * 获取Creation time.
-                     * @return CreateTime Creation time.
+                     * 获取<p>Creation time.</p>
+                     * @return CreateTime <p>Creation time.</p>
                      * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
-                     * 设置Creation time.
-                     * @param _createTime Creation time.
+                     * 设置<p>Creation time.</p>
+                     * @param _createTime <p>Creation time.</p>
                      * 
                      */
                     void SetCreateTime(const std::string& _createTime);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Number of team members.
-                     * @return MemberCount Number of team members.
+                     * 获取<p>Number of team members.</p>
+                     * @return MemberCount <p>Number of team members.</p>
                      * 
                      */
                     int64_t GetMemberCount() const;
 
                     /**
-                     * 设置Number of team members.
-                     * @param _memberCount Number of team members.
+                     * 设置<p>Number of team members.</p>
+                     * @param _memberCount <p>Number of team members.</p>
                      * 
                      */
                     void SetMemberCount(const int64_t& _memberCount);
@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool MemberCountHasBeenSet() const;
 
                     /**
-                     * 获取Number of bound mini program teams.
-                     * @return BindMiniTeamCount Number of bound mini program teams.
+                     * 获取<p>Number of bound mini program teams.</p>
+                     * @return BindMiniTeamCount <p>Number of bound mini program teams.</p>
                      * 
                      */
                     int64_t GetBindMiniTeamCount() const;
 
                     /**
-                     * 设置Number of bound mini program teams.
-                     * @param _bindMiniTeamCount Number of bound mini program teams.
+                     * 设置<p>Number of bound mini program teams.</p>
+                     * @param _bindMiniTeamCount <p>Number of bound mini program teams.</p>
                      * 
                      */
                     void SetBindMiniTeamCount(const int64_t& _bindMiniTeamCount);
@@ -194,15 +194,15 @@ namespace TencentCloud
                     bool BindMiniTeamCountHasBeenSet() const;
 
                     /**
-                     * 获取Name of the bound team.
-                     * @return BindTeamName Name of the bound team.
+                     * 获取<p>Team name.</p>
+                     * @return BindTeamName <p>Team name.</p>
                      * 
                      */
                     std::string GetBindTeamName() const;
 
                     /**
-                     * 设置Name of the bound team.
-                     * @param _bindTeamName Name of the bound team.
+                     * 设置<p>Team name.</p>
+                     * @param _bindTeamName <p>Team name.</p>
                      * 
                      */
                     void SetBindTeamName(const std::string& _bindTeamName);
@@ -215,15 +215,15 @@ namespace TencentCloud
                     bool BindTeamNameHasBeenSet() const;
 
                     /**
-                     * 获取Team registration link.
-                     * @return RegisterLink Team registration link.
+                     * 获取<p>Team registration link.</p>
+                     * @return RegisterLink <p>Team registration link.</p>
                      * 
                      */
                     std::string GetRegisterLink() const;
 
                     /**
-                     * 设置Team registration link.
-                     * @param _registerLink Team registration link.
+                     * 设置<p>Team registration link.</p>
+                     * @param _registerLink <p>Team registration link.</p>
                      * 
                      */
                     void SetRegisterLink(const std::string& _registerLink);
@@ -236,15 +236,15 @@ namespace TencentCloud
                     bool RegisterLinkHasBeenSet() const;
 
                     /**
-                     * 获取Superapp name. Only returned for mini program teams.
-                     * @return ApplicationName Superapp name. Only returned for mini program teams.
+                     * 获取<p>Superapp name. Only returned for querying details of mini program teams.</p>
+                     * @return ApplicationName <p>Superapp name. Only returned for querying details of mini program teams.</p>
                      * 
                      */
                     std::string GetApplicationName() const;
 
                     /**
-                     * 设置Superapp name. Only returned for mini program teams.
-                     * @param _applicationName Superapp name. Only returned for mini program teams.
+                     * 设置<p>Superapp name. Only returned for querying details of mini program teams.</p>
+                     * @param _applicationName <p>Superapp name. Only returned for querying details of mini program teams.</p>
                      * 
                      */
                     void SetApplicationName(const std::string& _applicationName);
@@ -257,15 +257,15 @@ namespace TencentCloud
                     bool ApplicationNameHasBeenSet() const;
 
                     /**
-                     * 获取Team expiration time. 0 indicates no expiration. 
-                     * @return ExpireTime Team expiration time. 0 indicates no expiration. 
+                     * 获取<p>Team expiration time. 0 indicates no expiration.</p>
+                     * @return ExpireTime <p>Team expiration time. 0 indicates no expiration.</p>
                      * 
                      */
                     int64_t GetExpireTime() const;
 
                     /**
-                     * 设置Team expiration time. 0 indicates no expiration. 
-                     * @param _expireTime Team expiration time. 0 indicates no expiration. 
+                     * 设置<p>Team expiration time. 0 indicates no expiration.</p>
+                     * @param _expireTime <p>Team expiration time. 0 indicates no expiration.</p>
                      * 
                      */
                     void SetExpireTime(const int64_t& _expireTime);
@@ -278,15 +278,15 @@ namespace TencentCloud
                     bool ExpireTimeHasBeenSet() const;
 
                     /**
-                     * 获取Team status. Valid values: 1: Active; 2: Disabled; 3: Expired. 
-                     * @return Status Team status. Valid values: 1: Active; 2: Disabled; 3: Expired. 
+                     * 获取<p>Team status. Valid values: 1: Active; 2: Disabled; 3: Expired.</p>
+                     * @return Status <p>Team status. Valid values: 1: Active; 2: Disabled; 3: Expired.</p>
                      * 
                      */
                     int64_t GetStatus() const;
 
                     /**
-                     * 设置Team status. Valid values: 1: Active; 2: Disabled; 3: Expired. 
-                     * @param _status Team status. Valid values: 1: Active; 2: Disabled; 3: Expired. 
+                     * 设置<p>Team status. Valid values: 1: Active; 2: Disabled; 3: Expired.</p>
+                     * @param _status <p>Team status. Valid values: 1: Active; 2: Disabled; 3: Expired.</p>
                      * 
                      */
                     void SetStatus(const int64_t& _status);
@@ -298,79 +298,106 @@ namespace TencentCloud
                      */
                     bool StatusHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Administrator name.</p>
+                     * @return AdminUserName <p>Administrator name.</p>
+                     * 
+                     */
+                    std::string GetAdminUserName() const;
+
+                    /**
+                     * 设置<p>Administrator name.</p>
+                     * @param _adminUserName <p>Administrator name.</p>
+                     * 
+                     */
+                    void SetAdminUserName(const std::string& _adminUserName);
+
+                    /**
+                     * 判断参数 AdminUserName 是否已赋值
+                     * @return AdminUserName 是否已赋值
+                     * 
+                     */
+                    bool AdminUserNameHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Team name.
+                     * <p>Team name.</p>
                      */
                     std::string m_teamName;
                     bool m_teamNameHasBeenSet;
 
                     /**
-                     * Team role type. Valid values: 1: Mini program team; 2: Superapp team.
+                     * <p>Team role type. Valid values: 1: Mini program team; 2: Superapp team.</p>
                      */
                     int64_t m_teamRoleType;
                     bool m_teamRoleTypeHasBeenSet;
 
                     /**
-                     * Admin account.
+                     * <p>Administrator account.</p>
                      */
                     std::string m_adminUserAccount;
                     bool m_adminUserAccountHasBeenSet;
 
                     /**
-                     * Creator.
+                     * <p>Creator.</p>
                      */
                     std::string m_createUser;
                     bool m_createUserHasBeenSet;
 
                     /**
-                     * Creation time.
+                     * <p>Creation time.</p>
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * Number of team members.
+                     * <p>Number of team members.</p>
                      */
                     int64_t m_memberCount;
                     bool m_memberCountHasBeenSet;
 
                     /**
-                     * Number of bound mini program teams.
+                     * <p>Number of bound mini program teams.</p>
                      */
                     int64_t m_bindMiniTeamCount;
                     bool m_bindMiniTeamCountHasBeenSet;
 
                     /**
-                     * Name of the bound team.
+                     * <p>Team name.</p>
                      */
                     std::string m_bindTeamName;
                     bool m_bindTeamNameHasBeenSet;
 
                     /**
-                     * Team registration link.
+                     * <p>Team registration link.</p>
                      */
                     std::string m_registerLink;
                     bool m_registerLinkHasBeenSet;
 
                     /**
-                     * Superapp name. Only returned for mini program teams.
+                     * <p>Superapp name. Only returned for querying details of mini program teams.</p>
                      */
                     std::string m_applicationName;
                     bool m_applicationNameHasBeenSet;
 
                     /**
-                     * Team expiration time. 0 indicates no expiration. 
+                     * <p>Team expiration time. 0 indicates no expiration.</p>
                      */
                     int64_t m_expireTime;
                     bool m_expireTimeHasBeenSet;
 
                     /**
-                     * Team status. Valid values: 1: Active; 2: Disabled; 3: Expired. 
+                     * <p>Team status. Valid values: 1: Active; 2: Disabled; 3: Expired.</p>
                      */
                     int64_t m_status;
                     bool m_statusHasBeenSet;
+
+                    /**
+                     * <p>Administrator name.</p>
+                     */
+                    std::string m_adminUserName;
+                    bool m_adminUserNameHasBeenSet;
 
                 };
             }

@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Response parameters structure for the application of a mini program team to bind a merchant ID.</p>
-                     * @return Data <p>Response parameters structure for the application of a mini program team to bind a merchant ID.</p>
+                     * 获取<p>Response parameters structure for requesting payment merchant binding by a mini program team.</p>
+                     * @return Data <p>Response parameters structure for requesting payment merchant binding by a mini program team.</p>
                      * 
                      */
                     MerchantBindApprovalResp GetData() const;
@@ -61,7 +61,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Response parameters structure for the application of a mini program team to bind a merchant ID.</p>
+                     * <p>Response parameters structure for requesting payment merchant binding by a mini program team.</p>
                      */
                     MerchantBindApprovalResp m_data;
                     bool m_dataHasBeenSet;

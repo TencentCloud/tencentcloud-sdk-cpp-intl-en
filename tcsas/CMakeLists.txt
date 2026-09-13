@@ -32,6 +32,7 @@ set(tcsas_public_header_model
   include/tencentcloud/tcsas/v20250106/model/ModifyTeamResponse.h
   include/tencentcloud/tcsas/v20250106/model/DescribeMNPSensitiveAPIPermissionApprovalRequest.h
   include/tencentcloud/tcsas/v20250106/model/ConfigureMNPPreviewResponse.h
+  include/tencentcloud/tcsas/v20250106/model/DescribeMNGVersionAuditInfoResp.h
   include/tencentcloud/tcsas/v20250106/model/DescribeMNGAppSecretRequest.h
   include/tencentcloud/tcsas/v20250106/model/DescribeMNPSensitiveAPIPermissionApprovalResponse.h
   include/tencentcloud/tcsas/v20250106/model/UnbindMNPPaymentMerchantResponse.h
@@ -60,6 +61,7 @@ set(tcsas_public_header_model
   include/tencentcloud/tcsas/v20250106/model/DescribeApplicationMNPListResponse.h
   include/tencentcloud/tcsas/v20250106/model/MNGTypeDefine.h
   include/tencentcloud/tcsas/v20250106/model/ModifyMNGDomainRequest.h
+  include/tencentcloud/tcsas/v20250106/model/DescribeMNGAuditListAppInfoResp.h
   include/tencentcloud/tcsas/v20250106/model/CreateGlobalDomainACLResponse.h
   include/tencentcloud/tcsas/v20250106/model/RollbackMNPVersionRequest.h
   include/tencentcloud/tcsas/v20250106/model/ProcessMNPSensitiveAPIPermissionApprovalRequest.h
@@ -75,12 +77,13 @@ set(tcsas_public_header_model
   include/tencentcloud/tcsas/v20250106/model/DescribeApplicationMNPListRequest.h
   include/tencentcloud/tcsas/v20250106/model/DescribeMNGReleasedVersionHistoryResponse.h
   include/tencentcloud/tcsas/v20250106/model/DescribeMNGAllStageVersionsRequest.h
+  include/tencentcloud/tcsas/v20250106/model/DescribeMNGVersionAuditDetailResponse.h
   include/tencentcloud/tcsas/v20250106/model/DescribeMNPSensitiveAPIPermissionListResp.h
   include/tencentcloud/tcsas/v20250106/model/ChangePaymentBoundMerchantResponse.h
   include/tencentcloud/tcsas/v20250106/model/DescribeMNPSubscribeMessageTemplateListResp.h
   include/tencentcloud/tcsas/v20250106/model/DescribeMNGVersionResponse.h
   include/tencentcloud/tcsas/v20250106/model/DescribeMNGSubscribeMessageTemplateLibraryListResponse.h
-  include/tencentcloud/tcsas/v20250106/model/DescribeMNGSensitiveAPIPermissionListData.h
+  include/tencentcloud/tcsas/v20250106/model/CreateDomainParam.h
   include/tencentcloud/tcsas/v20250106/model/DescribeMNPAdvertisingDetailResponse.h
   include/tencentcloud/tcsas/v20250106/model/CreateMNPSecretKeyRequest.h
   include/tencentcloud/tcsas/v20250106/model/ConfigureMNPPreviewRequest.h
@@ -90,6 +93,7 @@ set(tcsas_public_header_model
   include/tencentcloud/tcsas/v20250106/model/DescribeMNGSensitiveAPIPermissionApprovalRequest.h
   include/tencentcloud/tcsas/v20250106/model/CreateMNGApprovalResp.h
   include/tencentcloud/tcsas/v20250106/model/DescribeMNGOfflinePackageURLRequest.h
+  include/tencentcloud/tcsas/v20250106/model/DescribeMNGVersionAuditDetailRequest.h
   include/tencentcloud/tcsas/v20250106/model/CreateMNPApprovalResponse.h
   include/tencentcloud/tcsas/v20250106/model/DescribeUserListData.h
   include/tencentcloud/tcsas/v20250106/model/MNPSubscribeMessageTemplateDetailResp.h
@@ -97,7 +101,7 @@ set(tcsas_public_header_model
   include/tencentcloud/tcsas/v20250106/model/MNPI18NSyncDto.h
   include/tencentcloud/tcsas/v20250106/model/DescribeMNPSensitiveAPIPermissionListResponse.h
   include/tencentcloud/tcsas/v20250106/model/DescribePaymentDataDetailResponse.h
-  include/tencentcloud/tcsas/v20250106/model/CreateDomainParam.h
+  include/tencentcloud/tcsas/v20250106/model/DescribeMNPApprovalListResp.h
   include/tencentcloud/tcsas/v20250106/model/DescribeMNPAccessAnalysisOverviewResponse.h
   include/tencentcloud/tcsas/v20250106/model/ProcessMNPSensitiveAPIPermissionApprovalResponse.h
   include/tencentcloud/tcsas/v20250106/model/CreateMNPAppSecretResp.h
@@ -108,6 +112,7 @@ set(tcsas_public_header_model
   include/tencentcloud/tcsas/v20250106/model/DeleteMNGSubscribeMessageTemplateResponse.h
   include/tencentcloud/tcsas/v20250106/model/DescribeMNGAllStageVersionsResp.h
   include/tencentcloud/tcsas/v20250106/model/CreateMNPApprovalResp.h
+  include/tencentcloud/tcsas/v20250106/model/DescribeMNGVersionRequest.h
   include/tencentcloud/tcsas/v20250106/model/DescribeApplicationConfigInfo.h
   include/tencentcloud/tcsas/v20250106/model/DescribeMNGSubscribeMessageTemplateListResponse.h
   include/tencentcloud/tcsas/v20250106/model/AccessAnalysisDetail.h
@@ -121,6 +126,7 @@ set(tcsas_public_header_model
   include/tencentcloud/tcsas/v20250106/model/DescribeMNGMAUDataDetailResponse.h
   include/tencentcloud/tcsas/v20250106/model/CreateApplicationConfigResponse.h
   include/tencentcloud/tcsas/v20250106/model/DescribeTeamMemberListPageResp.h
+  include/tencentcloud/tcsas/v20250106/model/DescribeMNGVersionAuditListRequest.h
   include/tencentcloud/tcsas/v20250106/model/DescribePaymentDataOverviewResponse.h
   include/tencentcloud/tcsas/v20250106/model/DescribeApplicationResp.h
   include/tencentcloud/tcsas/v20250106/model/DescribeMNGAdvertisingOverviewResponse.h
@@ -181,7 +187,8 @@ set(tcsas_public_header_model
   include/tencentcloud/tcsas/v20250106/model/ResetMNPAppSecretRequest.h
   include/tencentcloud/tcsas/v20250106/model/DescribeMNPReportDataLineChartResponse.h
   include/tencentcloud/tcsas/v20250106/model/DescribeMNPSensitiveAPIPermissionListData.h
-  include/tencentcloud/tcsas/v20250106/model/DescribeMNGVersionRequest.h
+  include/tencentcloud/tcsas/v20250106/model/TeamAdminUserInfo.h
+  include/tencentcloud/tcsas/v20250106/model/DescribeMNGVersionAuditListResp.h
   include/tencentcloud/tcsas/v20250106/model/DescribeTempSecret4UploadFile2CosResponse.h
   include/tencentcloud/tcsas/v20250106/model/ApproveMNPPaymentEnableResponse.h
   include/tencentcloud/tcsas/v20250106/model/DescribeUserDetailResp.h
@@ -194,6 +201,7 @@ set(tcsas_public_header_model
   include/tencentcloud/tcsas/v20250106/model/DescribeRevertOnlineVersionPageResp.h
   include/tencentcloud/tcsas/v20250106/model/DescribeMNGAccessAnalysisDetailResponse.h
   include/tencentcloud/tcsas/v20250106/model/QueryMNGOnlineVersionResp.h
+  include/tencentcloud/tcsas/v20250106/model/DescribeMNGVersionAuditDetailResp.h
   include/tencentcloud/tcsas/v20250106/model/DescribeGlobalOverviewReportDetailRequest.h
   include/tencentcloud/tcsas/v20250106/model/DescribeApplicationListResp.h
   include/tencentcloud/tcsas/v20250106/model/ReleaseMNPVersionResponse.h
@@ -204,7 +212,8 @@ set(tcsas_public_header_model
   include/tencentcloud/tcsas/v20250106/model/DescribeMNGPaymentRetentionAnalysisResponse.h
   include/tencentcloud/tcsas/v20250106/model/DescribeGlobalDomainsListData.h
   include/tencentcloud/tcsas/v20250106/model/DescribeMNPManagerDetailData.h
-  include/tencentcloud/tcsas/v20250106/model/DescribeUserListRequest.h
+  include/tencentcloud/tcsas/v20250106/model/DescribeMNPPaymentApprovalInfoResponse.h
+  include/tencentcloud/tcsas/v20250106/model/UnbindMNPPaymentMerchantRequest.h
   include/tencentcloud/tcsas/v20250106/model/DescribeApplicationMNPListResp.h
   include/tencentcloud/tcsas/v20250106/model/DescribeMNGRevertOnlineVersionPageResp.h
   include/tencentcloud/tcsas/v20250106/model/DescribeMNPSubscribeMessageTemplateInfoResp.h
@@ -213,6 +222,7 @@ set(tcsas_public_header_model
   include/tencentcloud/tcsas/v20250106/model/QueryMNPMerchantInfoRequest.h
   include/tencentcloud/tcsas/v20250106/model/ModifyMNGDomainResponse.h
   include/tencentcloud/tcsas/v20250106/model/DescribeMNGPaymentReportDetailResponse.h
+  include/tencentcloud/tcsas/v20250106/model/DescribeMNPAuditListAppInfoResp.h
   include/tencentcloud/tcsas/v20250106/model/DescribeApplicationConfigFileResponse.h
   include/tencentcloud/tcsas/v20250106/model/DescribeMNGSubscribeMessageTemplateRequest.h
   include/tencentcloud/tcsas/v20250106/model/CreateMNPDomainACLResponse.h
@@ -228,10 +238,13 @@ set(tcsas_public_header_model
   include/tencentcloud/tcsas/v20250106/model/DeleteMNGRequest.h
   include/tencentcloud/tcsas/v20250106/model/ModifyApplicationConfigRequest.h
   include/tencentcloud/tcsas/v20250106/model/DescribeAPPDataOverviewResponse.h
+  include/tencentcloud/tcsas/v20250106/model/DescribeMNPVersionAuditListRequest.h
   include/tencentcloud/tcsas/v20250106/model/CreateMNGSensitiveAPIPermissionApprovalResponse.h
+  include/tencentcloud/tcsas/v20250106/model/DescribeMNPVersionAuditDetailResponse.h
   include/tencentcloud/tcsas/v20250106/model/MAUChartData.h
   include/tencentcloud/tcsas/v20250106/model/DescribeGlobalDomainACLResponse.h
   include/tencentcloud/tcsas/v20250106/model/CreateApplicationResponse.h
+  include/tencentcloud/tcsas/v20250106/model/DescribeMNPVersionAuditListResponse.h
   include/tencentcloud/tcsas/v20250106/model/DeleteGlobalDomainRequest.h
   include/tencentcloud/tcsas/v20250106/model/DescribeMNGSubscribeMessageTemplateLibraryResp.h
   include/tencentcloud/tcsas/v20250106/model/CreateGlobalDomainACLRequest.h
@@ -266,7 +279,7 @@ set(tcsas_public_header_model
   include/tencentcloud/tcsas/v20250106/model/DescribeMNPAllStageVersionsResponse.h
   include/tencentcloud/tcsas/v20250106/model/DescribeUserListResp.h
   include/tencentcloud/tcsas/v20250106/model/QueryOnlineVersionResp.h
-  include/tencentcloud/tcsas/v20250106/model/MNPTypeDefine.h
+  include/tencentcloud/tcsas/v20250106/model/DescribeMNPVersionAuditListResp.h
   include/tencentcloud/tcsas/v20250106/model/DescribeMNGCategoryRequest.h
   include/tencentcloud/tcsas/v20250106/model/DescribeSubscribeMessageTemplateLibraryResp.h
   include/tencentcloud/tcsas/v20250106/model/DescribeApplicationConfigInfosRequest.h
@@ -275,7 +288,7 @@ set(tcsas_public_header_model
   include/tencentcloud/tcsas/v20250106/model/CreateUserResponse.h
   include/tencentcloud/tcsas/v20250106/model/CreateMNPSecretKeyResponse.h
   include/tencentcloud/tcsas/v20250106/model/RemoveMNGResponse.h
-  include/tencentcloud/tcsas/v20250106/model/DescribeMNPPaymentApprovalInfoResponse.h
+  include/tencentcloud/tcsas/v20250106/model/DescribeUserListRequest.h
   include/tencentcloud/tcsas/v20250106/model/CategoryItem.h
   include/tencentcloud/tcsas/v20250106/model/DeleteMNPSubscribeMessageTemplateRequest.h
   include/tencentcloud/tcsas/v20250106/model/RequestPaymentEnableRequest.h
@@ -288,7 +301,7 @@ set(tcsas_public_header_model
   include/tencentcloud/tcsas/v20250106/model/DescribeMNGPaymentLineChartResponse.h
   include/tencentcloud/tcsas/v20250106/model/MerchantBindApprovalResp.h
   include/tencentcloud/tcsas/v20250106/model/DescribeMNGAccessAnalysisOverviewRequest.h
-  include/tencentcloud/tcsas/v20250106/model/DescribeUserResponse.h
+  include/tencentcloud/tcsas/v20250106/model/DescribeMNPVersionAuditDetailResp.h
   include/tencentcloud/tcsas/v20250106/model/DisableApplicationSensitiveAPIRequest.h
   include/tencentcloud/tcsas/v20250106/model/DeleteApplicationRequest.h
   include/tencentcloud/tcsas/v20250106/model/DescribeAdvertisingLineChartResponse.h
@@ -310,12 +323,14 @@ set(tcsas_public_header_model
   include/tencentcloud/tcsas/v20250106/model/CreateMNGDomainACLResponse.h
   include/tencentcloud/tcsas/v20250106/model/AnalysisAdvertOverview.h
   include/tencentcloud/tcsas/v20250106/model/AdTrendChart.h
+  include/tencentcloud/tcsas/v20250106/model/DescribeMNPVersionAuditDetailRequest.h
   include/tencentcloud/tcsas/v20250106/model/ApprovePaymentMerchantBindingResponse.h
   include/tencentcloud/tcsas/v20250106/model/DescribeMNGActiveUserRealTimeStatisticsResponse.h
   include/tencentcloud/tcsas/v20250106/model/ResetMNGAppSecretResponse.h
   include/tencentcloud/tcsas/v20250106/model/DescribeMNGSubscribeMessageTemplateLibraryListResp.h
   include/tencentcloud/tcsas/v20250106/model/CreateMNPVersionResponse.h
-  include/tencentcloud/tcsas/v20250106/model/DescribeMNPApprovalListResp.h
+  include/tencentcloud/tcsas/v20250106/model/DescribeMNGVersionAuditListResponse.h
+  include/tencentcloud/tcsas/v20250106/model/DescribeMNPAuditDetailAppAuditInfo.h
   include/tencentcloud/tcsas/v20250106/model/ApproveMNPPaymentOpenRes.h
   include/tencentcloud/tcsas/v20250106/model/DescribeMNPActiveUserRealTimeStatisticsResponse.h
   include/tencentcloud/tcsas/v20250106/model/ModifyMNPResponse.h
@@ -333,6 +348,7 @@ set(tcsas_public_header_model
   include/tencentcloud/tcsas/v20250106/model/DescribeMNGCategoryResponse.h
   include/tencentcloud/tcsas/v20250106/model/MNPAdOverview.h
   include/tencentcloud/tcsas/v20250106/model/DescribeMNGPaymentOverviewRequest.h
+  include/tencentcloud/tcsas/v20250106/model/DescribeUserResponse.h
   include/tencentcloud/tcsas/v20250106/model/DescribeApplicationSensitiveAPIListData.h
   include/tencentcloud/tcsas/v20250106/model/DescribeGlobalOverviewDataSummaryRequest.h
   include/tencentcloud/tcsas/v20250106/model/SubscribeMessageTemplateLibraryKeywordI18nInfoResp.h
@@ -367,6 +383,7 @@ set(tcsas_public_header_model
   include/tencentcloud/tcsas/v20250106/model/Overview.h
   include/tencentcloud/tcsas/v20250106/model/DeleteMNGSubscribeMessageTemplateRequest.h
   include/tencentcloud/tcsas/v20250106/model/DescribeApplicationListData.h
+  include/tencentcloud/tcsas/v20250106/model/DescribeMNGAuditDetailAppAuditInfo.h
   include/tencentcloud/tcsas/v20250106/model/DescribeApplicationMNPInfoResp.h
   include/tencentcloud/tcsas/v20250106/model/MNPPaymentOverview.h
   include/tencentcloud/tcsas/v20250106/model/DescribeMNPActiveUserRealTimeStatisticsRequest.h
@@ -403,6 +420,7 @@ set(tcsas_public_header_model
   include/tencentcloud/tcsas/v20250106/model/DescribeMNPMAUMetricCardRequest.h
   include/tencentcloud/tcsas/v20250106/model/MNPDetailI18nVO.h
   include/tencentcloud/tcsas/v20250106/model/ModifyMNPRequest.h
+  include/tencentcloud/tcsas/v20250106/model/MNPTypeDefine.h
   include/tencentcloud/tcsas/v20250106/model/MAUIndicatorCard.h
   include/tencentcloud/tcsas/v20250106/model/DescribeMNGDomainACLRequest.h
   include/tencentcloud/tcsas/v20250106/model/CreateApplicationSensitiveAPIRequest.h
@@ -421,7 +439,7 @@ set(tcsas_public_header_model
   include/tencentcloud/tcsas/v20250106/model/DescribeMNPSubscribeMessageTemplateDetailResp.h
   include/tencentcloud/tcsas/v20250106/model/CreateMNGRequest.h
   include/tencentcloud/tcsas/v20250106/model/DescribeTempSecret4UploadFile2CosRequest.h
-  include/tencentcloud/tcsas/v20250106/model/UnbindMNPPaymentMerchantRequest.h
+  include/tencentcloud/tcsas/v20250106/model/DescribeMNGSensitiveAPIPermissionListData.h
   include/tencentcloud/tcsas/v20250106/model/CreateMNGSubscribeMessageTemplateResponse.h
   include/tencentcloud/tcsas/v20250106/model/DescribeApplicationRequest.h
   include/tencentcloud/tcsas/v20250106/model/DescribeMNPDomainACLResponse.h
@@ -434,6 +452,7 @@ set(tcsas_public_header_model
   include/tencentcloud/tcsas/v20250106/model/ResetMNGAppSecretResp.h
   include/tencentcloud/tcsas/v20250106/model/DescribeMNPAppSecretResponse.h
   include/tencentcloud/tcsas/v20250106/model/StringData.h
+  include/tencentcloud/tcsas/v20250106/model/DescribeMNPVersionAuditInfoResp.h
   include/tencentcloud/tcsas/v20250106/model/MAULineChartData.h
   include/tencentcloud/tcsas/v20250106/model/AgeRatingItemReq.h
   include/tencentcloud/tcsas/v20250106/model/DescribeMNPReleasedVersionHistoryResponse.h
@@ -474,6 +493,7 @@ set(tcsas_src
   src/v20250106/model/ModifyTeamResponse.cpp
   src/v20250106/model/DescribeMNPSensitiveAPIPermissionApprovalRequest.cpp
   src/v20250106/model/ConfigureMNPPreviewResponse.cpp
+  src/v20250106/model/DescribeMNGVersionAuditInfoResp.cpp
   src/v20250106/model/DescribeMNGAppSecretRequest.cpp
   src/v20250106/model/DescribeMNPSensitiveAPIPermissionApprovalResponse.cpp
   src/v20250106/model/UnbindMNPPaymentMerchantResponse.cpp
@@ -502,6 +522,7 @@ set(tcsas_src
   src/v20250106/model/DescribeApplicationMNPListResponse.cpp
   src/v20250106/model/MNGTypeDefine.cpp
   src/v20250106/model/ModifyMNGDomainRequest.cpp
+  src/v20250106/model/DescribeMNGAuditListAppInfoResp.cpp
   src/v20250106/model/CreateGlobalDomainACLResponse.cpp
   src/v20250106/model/RollbackMNPVersionRequest.cpp
   src/v20250106/model/ProcessMNPSensitiveAPIPermissionApprovalRequest.cpp
@@ -517,12 +538,13 @@ set(tcsas_src
   src/v20250106/model/DescribeApplicationMNPListRequest.cpp
   src/v20250106/model/DescribeMNGReleasedVersionHistoryResponse.cpp
   src/v20250106/model/DescribeMNGAllStageVersionsRequest.cpp
+  src/v20250106/model/DescribeMNGVersionAuditDetailResponse.cpp
   src/v20250106/model/DescribeMNPSensitiveAPIPermissionListResp.cpp
   src/v20250106/model/ChangePaymentBoundMerchantResponse.cpp
   src/v20250106/model/DescribeMNPSubscribeMessageTemplateListResp.cpp
   src/v20250106/model/DescribeMNGVersionResponse.cpp
   src/v20250106/model/DescribeMNGSubscribeMessageTemplateLibraryListResponse.cpp
-  src/v20250106/model/DescribeMNGSensitiveAPIPermissionListData.cpp
+  src/v20250106/model/CreateDomainParam.cpp
   src/v20250106/model/DescribeMNPAdvertisingDetailResponse.cpp
   src/v20250106/model/CreateMNPSecretKeyRequest.cpp
   src/v20250106/model/ConfigureMNPPreviewRequest.cpp
@@ -532,6 +554,7 @@ set(tcsas_src
   src/v20250106/model/DescribeMNGSensitiveAPIPermissionApprovalRequest.cpp
   src/v20250106/model/CreateMNGApprovalResp.cpp
   src/v20250106/model/DescribeMNGOfflinePackageURLRequest.cpp
+  src/v20250106/model/DescribeMNGVersionAuditDetailRequest.cpp
   src/v20250106/model/CreateMNPApprovalResponse.cpp
   src/v20250106/model/DescribeUserListData.cpp
   src/v20250106/model/MNPSubscribeMessageTemplateDetailResp.cpp
@@ -539,7 +562,7 @@ set(tcsas_src
   src/v20250106/model/MNPI18NSyncDto.cpp
   src/v20250106/model/DescribeMNPSensitiveAPIPermissionListResponse.cpp
   src/v20250106/model/DescribePaymentDataDetailResponse.cpp
-  src/v20250106/model/CreateDomainParam.cpp
+  src/v20250106/model/DescribeMNPApprovalListResp.cpp
   src/v20250106/model/DescribeMNPAccessAnalysisOverviewResponse.cpp
   src/v20250106/model/ProcessMNPSensitiveAPIPermissionApprovalResponse.cpp
   src/v20250106/model/CreateMNPAppSecretResp.cpp
@@ -550,6 +573,7 @@ set(tcsas_src
   src/v20250106/model/DeleteMNGSubscribeMessageTemplateResponse.cpp
   src/v20250106/model/DescribeMNGAllStageVersionsResp.cpp
   src/v20250106/model/CreateMNPApprovalResp.cpp
+  src/v20250106/model/DescribeMNGVersionRequest.cpp
   src/v20250106/model/DescribeApplicationConfigInfo.cpp
   src/v20250106/model/DescribeMNGSubscribeMessageTemplateListResponse.cpp
   src/v20250106/model/AccessAnalysisDetail.cpp
@@ -563,6 +587,7 @@ set(tcsas_src
   src/v20250106/model/DescribeMNGMAUDataDetailResponse.cpp
   src/v20250106/model/CreateApplicationConfigResponse.cpp
   src/v20250106/model/DescribeTeamMemberListPageResp.cpp
+  src/v20250106/model/DescribeMNGVersionAuditListRequest.cpp
   src/v20250106/model/DescribePaymentDataOverviewResponse.cpp
   src/v20250106/model/DescribeApplicationResp.cpp
   src/v20250106/model/DescribeMNGAdvertisingOverviewResponse.cpp
@@ -623,7 +648,8 @@ set(tcsas_src
   src/v20250106/model/ResetMNPAppSecretRequest.cpp
   src/v20250106/model/DescribeMNPReportDataLineChartResponse.cpp
   src/v20250106/model/DescribeMNPSensitiveAPIPermissionListData.cpp
-  src/v20250106/model/DescribeMNGVersionRequest.cpp
+  src/v20250106/model/TeamAdminUserInfo.cpp
+  src/v20250106/model/DescribeMNGVersionAuditListResp.cpp
   src/v20250106/model/DescribeTempSecret4UploadFile2CosResponse.cpp
   src/v20250106/model/ApproveMNPPaymentEnableResponse.cpp
   src/v20250106/model/DescribeUserDetailResp.cpp
@@ -636,6 +662,7 @@ set(tcsas_src
   src/v20250106/model/DescribeRevertOnlineVersionPageResp.cpp
   src/v20250106/model/DescribeMNGAccessAnalysisDetailResponse.cpp
   src/v20250106/model/QueryMNGOnlineVersionResp.cpp
+  src/v20250106/model/DescribeMNGVersionAuditDetailResp.cpp
   src/v20250106/model/DescribeGlobalOverviewReportDetailRequest.cpp
   src/v20250106/model/DescribeApplicationListResp.cpp
   src/v20250106/model/ReleaseMNPVersionResponse.cpp
@@ -646,7 +673,8 @@ set(tcsas_src
   src/v20250106/model/DescribeMNGPaymentRetentionAnalysisResponse.cpp
   src/v20250106/model/DescribeGlobalDomainsListData.cpp
   src/v20250106/model/DescribeMNPManagerDetailData.cpp
-  src/v20250106/model/DescribeUserListRequest.cpp
+  src/v20250106/model/DescribeMNPPaymentApprovalInfoResponse.cpp
+  src/v20250106/model/UnbindMNPPaymentMerchantRequest.cpp
   src/v20250106/model/DescribeApplicationMNPListResp.cpp
   src/v20250106/model/DescribeMNGRevertOnlineVersionPageResp.cpp
   src/v20250106/model/DescribeMNPSubscribeMessageTemplateInfoResp.cpp
@@ -655,6 +683,7 @@ set(tcsas_src
   src/v20250106/model/QueryMNPMerchantInfoRequest.cpp
   src/v20250106/model/ModifyMNGDomainResponse.cpp
   src/v20250106/model/DescribeMNGPaymentReportDetailResponse.cpp
+  src/v20250106/model/DescribeMNPAuditListAppInfoResp.cpp
   src/v20250106/model/DescribeApplicationConfigFileResponse.cpp
   src/v20250106/model/DescribeMNGSubscribeMessageTemplateRequest.cpp
   src/v20250106/model/CreateMNPDomainACLResponse.cpp
@@ -670,10 +699,13 @@ set(tcsas_src
   src/v20250106/model/DeleteMNGRequest.cpp
   src/v20250106/model/ModifyApplicationConfigRequest.cpp
   src/v20250106/model/DescribeAPPDataOverviewResponse.cpp
+  src/v20250106/model/DescribeMNPVersionAuditListRequest.cpp
   src/v20250106/model/CreateMNGSensitiveAPIPermissionApprovalResponse.cpp
+  src/v20250106/model/DescribeMNPVersionAuditDetailResponse.cpp
   src/v20250106/model/MAUChartData.cpp
   src/v20250106/model/DescribeGlobalDomainACLResponse.cpp
   src/v20250106/model/CreateApplicationResponse.cpp
+  src/v20250106/model/DescribeMNPVersionAuditListResponse.cpp
   src/v20250106/model/DeleteGlobalDomainRequest.cpp
   src/v20250106/model/DescribeMNGSubscribeMessageTemplateLibraryResp.cpp
   src/v20250106/model/CreateGlobalDomainACLRequest.cpp
@@ -708,7 +740,7 @@ set(tcsas_src
   src/v20250106/model/DescribeMNPAllStageVersionsResponse.cpp
   src/v20250106/model/DescribeUserListResp.cpp
   src/v20250106/model/QueryOnlineVersionResp.cpp
-  src/v20250106/model/MNPTypeDefine.cpp
+  src/v20250106/model/DescribeMNPVersionAuditListResp.cpp
   src/v20250106/model/DescribeMNGCategoryRequest.cpp
   src/v20250106/model/DescribeSubscribeMessageTemplateLibraryResp.cpp
   src/v20250106/model/DescribeApplicationConfigInfosRequest.cpp
@@ -717,7 +749,7 @@ set(tcsas_src
   src/v20250106/model/CreateUserResponse.cpp
   src/v20250106/model/CreateMNPSecretKeyResponse.cpp
   src/v20250106/model/RemoveMNGResponse.cpp
-  src/v20250106/model/DescribeMNPPaymentApprovalInfoResponse.cpp
+  src/v20250106/model/DescribeUserListRequest.cpp
   src/v20250106/model/CategoryItem.cpp
   src/v20250106/model/DeleteMNPSubscribeMessageTemplateRequest.cpp
   src/v20250106/model/RequestPaymentEnableRequest.cpp
@@ -730,7 +762,7 @@ set(tcsas_src
   src/v20250106/model/DescribeMNGPaymentLineChartResponse.cpp
   src/v20250106/model/MerchantBindApprovalResp.cpp
   src/v20250106/model/DescribeMNGAccessAnalysisOverviewRequest.cpp
-  src/v20250106/model/DescribeUserResponse.cpp
+  src/v20250106/model/DescribeMNPVersionAuditDetailResp.cpp
   src/v20250106/model/DisableApplicationSensitiveAPIRequest.cpp
   src/v20250106/model/DeleteApplicationRequest.cpp
   src/v20250106/model/DescribeAdvertisingLineChartResponse.cpp
@@ -752,12 +784,14 @@ set(tcsas_src
   src/v20250106/model/CreateMNGDomainACLResponse.cpp
   src/v20250106/model/AnalysisAdvertOverview.cpp
   src/v20250106/model/AdTrendChart.cpp
+  src/v20250106/model/DescribeMNPVersionAuditDetailRequest.cpp
   src/v20250106/model/ApprovePaymentMerchantBindingResponse.cpp
   src/v20250106/model/DescribeMNGActiveUserRealTimeStatisticsResponse.cpp
   src/v20250106/model/ResetMNGAppSecretResponse.cpp
   src/v20250106/model/DescribeMNGSubscribeMessageTemplateLibraryListResp.cpp
   src/v20250106/model/CreateMNPVersionResponse.cpp
-  src/v20250106/model/DescribeMNPApprovalListResp.cpp
+  src/v20250106/model/DescribeMNGVersionAuditListResponse.cpp
+  src/v20250106/model/DescribeMNPAuditDetailAppAuditInfo.cpp
   src/v20250106/model/ApproveMNPPaymentOpenRes.cpp
   src/v20250106/model/DescribeMNPActiveUserRealTimeStatisticsResponse.cpp
   src/v20250106/model/ModifyMNPResponse.cpp
@@ -775,6 +809,7 @@ set(tcsas_src
   src/v20250106/model/DescribeMNGCategoryResponse.cpp
   src/v20250106/model/MNPAdOverview.cpp
   src/v20250106/model/DescribeMNGPaymentOverviewRequest.cpp
+  src/v20250106/model/DescribeUserResponse.cpp
   src/v20250106/model/DescribeApplicationSensitiveAPIListData.cpp
   src/v20250106/model/DescribeGlobalOverviewDataSummaryRequest.cpp
   src/v20250106/model/SubscribeMessageTemplateLibraryKeywordI18nInfoResp.cpp
@@ -809,6 +844,7 @@ set(tcsas_src
   src/v20250106/model/Overview.cpp
   src/v20250106/model/DeleteMNGSubscribeMessageTemplateRequest.cpp
   src/v20250106/model/DescribeApplicationListData.cpp
+  src/v20250106/model/DescribeMNGAuditDetailAppAuditInfo.cpp
   src/v20250106/model/DescribeApplicationMNPInfoResp.cpp
   src/v20250106/model/MNPPaymentOverview.cpp
   src/v20250106/model/DescribeMNPActiveUserRealTimeStatisticsRequest.cpp
@@ -845,6 +881,7 @@ set(tcsas_src
   src/v20250106/model/DescribeMNPMAUMetricCardRequest.cpp
   src/v20250106/model/MNPDetailI18nVO.cpp
   src/v20250106/model/ModifyMNPRequest.cpp
+  src/v20250106/model/MNPTypeDefine.cpp
   src/v20250106/model/MAUIndicatorCard.cpp
   src/v20250106/model/DescribeMNGDomainACLRequest.cpp
   src/v20250106/model/CreateApplicationSensitiveAPIRequest.cpp
@@ -863,7 +900,7 @@ set(tcsas_src
   src/v20250106/model/DescribeMNPSubscribeMessageTemplateDetailResp.cpp
   src/v20250106/model/CreateMNGRequest.cpp
   src/v20250106/model/DescribeTempSecret4UploadFile2CosRequest.cpp
-  src/v20250106/model/UnbindMNPPaymentMerchantRequest.cpp
+  src/v20250106/model/DescribeMNGSensitiveAPIPermissionListData.cpp
   src/v20250106/model/CreateMNGSubscribeMessageTemplateResponse.cpp
   src/v20250106/model/DescribeApplicationRequest.cpp
   src/v20250106/model/DescribeMNPDomainACLResponse.cpp
@@ -876,6 +913,7 @@ set(tcsas_src
   src/v20250106/model/ResetMNGAppSecretResp.cpp
   src/v20250106/model/DescribeMNPAppSecretResponse.cpp
   src/v20250106/model/StringData.cpp
+  src/v20250106/model/DescribeMNPVersionAuditInfoResp.cpp
   src/v20250106/model/MAULineChartData.cpp
   src/v20250106/model/AgeRatingItemReq.cpp
   src/v20250106/model/DescribeMNPReleasedVersionHistoryResponse.cpp

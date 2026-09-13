@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Mini game MAU line chart data.
+                * Time-series MAU data of a mini game.
                 */
                 class MNGMAULineChartData : public AbstractModel
                 {

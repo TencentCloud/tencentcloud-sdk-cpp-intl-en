@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Team ID.
-                     * @return TeamId Team ID.
+                     * 获取<p>Team ID.</p>
+                     * @return TeamId <p>Team ID.</p>
                      * 
                      */
                     std::string GetTeamId() const;
 
                     /**
-                     * 设置Team ID.
-                     * @param _teamId Team ID.
+                     * 设置<p>Team ID.</p>
+                     * @param _teamId <p>Team ID.</p>
                      * 
                      */
                     void SetTeamId(const std::string& _teamId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool TeamIdHasBeenSet() const;
 
                     /**
-                     * 获取Team name.
-                     * @return TeamName Team name.
+                     * 获取<p>Team name.</p>
+                     * @return TeamName <p>Team name.</p>
                      * 
                      */
                     std::string GetTeamName() const;
 
                     /**
-                     * 设置Team name.
-                     * @param _teamName Team name.
+                     * 设置<p>Team name.</p>
+                     * @param _teamName <p>Team name.</p>
                      * 
                      */
                     void SetTeamName(const std::string& _teamName);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool TeamNameHasBeenSet() const;
 
                     /**
-                     * 获取Platform ID.
-                     * @return PlatformId Platform ID.
+                     * 获取<p>Platform ID.</p>
+                     * @return PlatformId <p>Platform ID.</p>
                      * 
                      */
                     std::string GetPlatformId() const;
 
                     /**
-                     * 设置Platform ID.
-                     * @param _platformId Platform ID.
+                     * 设置<p>Platform ID.</p>
+                     * @param _platformId <p>Platform ID.</p>
                      * 
                      */
                     void SetPlatformId(const std::string& _platformId);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool PlatformIdHasBeenSet() const;
 
                     /**
-                     * 获取Team administrator.
-                     * @return AdminUserId Team administrator.
+                     * 获取<p>Team admin.</p>
+                     * @return AdminUserId <p>Team admin.</p>
                      * 
                      */
                     std::string GetAdminUserId() const;
 
                     /**
-                     * 设置Team administrator.
-                     * @param _adminUserId Team administrator.
+                     * 设置<p>Team admin.</p>
+                     * @param _adminUserId <p>Team admin.</p>
                      * 
                      */
                     void SetAdminUserId(const std::string& _adminUserId);
@@ -126,31 +126,58 @@ namespace TencentCloud
                      */
                     bool AdminUserIdHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Team admin user IDs.</p>
+                     * @return AdminUserIds <p>Team admin user IDs.</p>
+                     * 
+                     */
+                    std::vector<std::string> GetAdminUserIds() const;
+
+                    /**
+                     * 设置<p>Team admin user IDs.</p>
+                     * @param _adminUserIds <p>Team admin user IDs.</p>
+                     * 
+                     */
+                    void SetAdminUserIds(const std::vector<std::string>& _adminUserIds);
+
+                    /**
+                     * 判断参数 AdminUserIds 是否已赋值
+                     * @return AdminUserIds 是否已赋值
+                     * 
+                     */
+                    bool AdminUserIdsHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Team ID.
+                     * <p>Team ID.</p>
                      */
                     std::string m_teamId;
                     bool m_teamIdHasBeenSet;
 
                     /**
-                     * Team name.
+                     * <p>Team name.</p>
                      */
                     std::string m_teamName;
                     bool m_teamNameHasBeenSet;
 
                     /**
-                     * Platform ID.
+                     * <p>Platform ID.</p>
                      */
                     std::string m_platformId;
                     bool m_platformIdHasBeenSet;
 
                     /**
-                     * Team administrator.
+                     * <p>Team admin.</p>
                      */
                     std::string m_adminUserId;
                     bool m_adminUserIdHasBeenSet;
+
+                    /**
+                     * <p>Team admin user IDs.</p>
+                     */
+                    std::vector<std::string> m_adminUserIds;
+                    bool m_adminUserIdsHasBeenSet;
 
                 };
             }

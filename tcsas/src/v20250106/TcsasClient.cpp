@@ -4140,6 +4140,106 @@ TcsasClient::DescribeMNGVersionOutcomeCallable TcsasClient::DescribeMNGVersionCa
     return prom->get_future();
 }
 
+TcsasClient::DescribeMNGVersionAuditDetailOutcome TcsasClient::DescribeMNGVersionAuditDetail(const DescribeMNGVersionAuditDetailRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeMNGVersionAuditDetail");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeMNGVersionAuditDetailResponse rsp = DescribeMNGVersionAuditDetailResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeMNGVersionAuditDetailOutcome(rsp);
+        else
+            return DescribeMNGVersionAuditDetailOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeMNGVersionAuditDetailOutcome(outcome.GetError());
+    }
+}
+
+void TcsasClient::DescribeMNGVersionAuditDetailAsync(const DescribeMNGVersionAuditDetailRequest& request, const DescribeMNGVersionAuditDetailAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeMNGVersionAuditDetailRequest&;
+    using Resp = DescribeMNGVersionAuditDetailResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeMNGVersionAuditDetail", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TcsasClient::DescribeMNGVersionAuditDetailOutcomeCallable TcsasClient::DescribeMNGVersionAuditDetailCallable(const DescribeMNGVersionAuditDetailRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeMNGVersionAuditDetailOutcome>>();
+    DescribeMNGVersionAuditDetailAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const DescribeMNGVersionAuditDetailRequest&,
+        DescribeMNGVersionAuditDetailOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+TcsasClient::DescribeMNGVersionAuditListOutcome TcsasClient::DescribeMNGVersionAuditList(const DescribeMNGVersionAuditListRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeMNGVersionAuditList");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeMNGVersionAuditListResponse rsp = DescribeMNGVersionAuditListResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeMNGVersionAuditListOutcome(rsp);
+        else
+            return DescribeMNGVersionAuditListOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeMNGVersionAuditListOutcome(outcome.GetError());
+    }
+}
+
+void TcsasClient::DescribeMNGVersionAuditListAsync(const DescribeMNGVersionAuditListRequest& request, const DescribeMNGVersionAuditListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeMNGVersionAuditListRequest&;
+    using Resp = DescribeMNGVersionAuditListResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeMNGVersionAuditList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TcsasClient::DescribeMNGVersionAuditListOutcomeCallable TcsasClient::DescribeMNGVersionAuditListCallable(const DescribeMNGVersionAuditListRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeMNGVersionAuditListOutcome>>();
+    DescribeMNGVersionAuditListAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const DescribeMNGVersionAuditListRequest&,
+        DescribeMNGVersionAuditListOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 TcsasClient::DescribeMNPOutcome TcsasClient::DescribeMNP(const DescribeMNPRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeMNP");
@@ -5582,6 +5682,106 @@ TcsasClient::DescribeMNPVersionOutcomeCallable TcsasClient::DescribeMNPVersionCa
         const TcsasClient*,
         const DescribeMNPVersionRequest&,
         DescribeMNPVersionOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+TcsasClient::DescribeMNPVersionAuditDetailOutcome TcsasClient::DescribeMNPVersionAuditDetail(const DescribeMNPVersionAuditDetailRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeMNPVersionAuditDetail");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeMNPVersionAuditDetailResponse rsp = DescribeMNPVersionAuditDetailResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeMNPVersionAuditDetailOutcome(rsp);
+        else
+            return DescribeMNPVersionAuditDetailOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeMNPVersionAuditDetailOutcome(outcome.GetError());
+    }
+}
+
+void TcsasClient::DescribeMNPVersionAuditDetailAsync(const DescribeMNPVersionAuditDetailRequest& request, const DescribeMNPVersionAuditDetailAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeMNPVersionAuditDetailRequest&;
+    using Resp = DescribeMNPVersionAuditDetailResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeMNPVersionAuditDetail", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TcsasClient::DescribeMNPVersionAuditDetailOutcomeCallable TcsasClient::DescribeMNPVersionAuditDetailCallable(const DescribeMNPVersionAuditDetailRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeMNPVersionAuditDetailOutcome>>();
+    DescribeMNPVersionAuditDetailAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const DescribeMNPVersionAuditDetailRequest&,
+        DescribeMNPVersionAuditDetailOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+TcsasClient::DescribeMNPVersionAuditListOutcome TcsasClient::DescribeMNPVersionAuditList(const DescribeMNPVersionAuditListRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeMNPVersionAuditList");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeMNPVersionAuditListResponse rsp = DescribeMNPVersionAuditListResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeMNPVersionAuditListOutcome(rsp);
+        else
+            return DescribeMNPVersionAuditListOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeMNPVersionAuditListOutcome(outcome.GetError());
+    }
+}
+
+void TcsasClient::DescribeMNPVersionAuditListAsync(const DescribeMNPVersionAuditListRequest& request, const DescribeMNPVersionAuditListAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeMNPVersionAuditListRequest&;
+    using Resp = DescribeMNPVersionAuditListResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeMNPVersionAuditList", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+TcsasClient::DescribeMNPVersionAuditListOutcomeCallable TcsasClient::DescribeMNPVersionAuditListCallable(const DescribeMNPVersionAuditListRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeMNPVersionAuditListOutcome>>();
+    DescribeMNPVersionAuditListAsync(
+    request,
+    [prom](
+        const TcsasClient*,
+        const DescribeMNPVersionAuditListRequest&,
+        DescribeMNPVersionAuditListOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {

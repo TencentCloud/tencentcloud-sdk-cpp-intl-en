@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Paginated team list.
+                * Paged information of teams
                 */
                 class DescribeTeamPageResp : public AbstractModel
                 {

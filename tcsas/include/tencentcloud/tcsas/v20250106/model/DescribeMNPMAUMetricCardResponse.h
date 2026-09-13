@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Data display at the top of the page.
-                     * @return Data Data display at the top of the page.
+                     * 获取Response data.
+                     * @return Data Response data.
                      * 
                      */
                     MAUIndicatorCard GetData() const;
@@ -61,7 +61,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Data display at the top of the page.
+                     * Response data.
                      */
                     MAUIndicatorCard m_data;
                     bool m_dataHasBeenSet;

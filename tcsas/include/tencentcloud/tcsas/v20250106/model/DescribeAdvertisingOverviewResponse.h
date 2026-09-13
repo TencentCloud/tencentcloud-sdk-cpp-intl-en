@@ -45,9 +45,9 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Data display.
+                     * 获取Response data.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Data Data display.
+                     * @return Data Response data.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -63,7 +63,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Data display.
+                     * Response data.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     MNPAdvertisingOverview m_data;

@@ -28,7 +28,9 @@ CreateTeamRequest::CreateTeamRequest() :
     m_teamRoleTypeListHasBeenSet(false),
     m_remarkHasBeenSet(false),
     m_platformIdHasBeenSet(false),
-    m_relatedTeamIdHasBeenSet(false)
+    m_relatedTeamIdHasBeenSet(false),
+    m_expiryTimeHasBeenSet(false),
+    m_adminUserIdsHasBeenSet(false)
 {
 }
 
@@ -90,6 +92,27 @@ string CreateTeamRequest::ToJsonString() const
         string key = "RelatedTeamId";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, rapidjson::Value(m_relatedTeamId.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_expiryTimeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "ExpiryTime";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_expiryTime, allocator);
+    }
+
+    if (m_adminUserIdsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AdminUserIds";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        for (auto itr = m_adminUserIds.begin(); itr != m_adminUserIds.end(); ++itr)
+        {
+            d[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
+        }
     }
 
 
@@ -194,6 +217,38 @@ void CreateTeamRequest::SetRelatedTeamId(const string& _relatedTeamId)
 bool CreateTeamRequest::RelatedTeamIdHasBeenSet() const
 {
     return m_relatedTeamIdHasBeenSet;
+}
+
+int64_t CreateTeamRequest::GetExpiryTime() const
+{
+    return m_expiryTime;
+}
+
+void CreateTeamRequest::SetExpiryTime(const int64_t& _expiryTime)
+{
+    m_expiryTime = _expiryTime;
+    m_expiryTimeHasBeenSet = true;
+}
+
+bool CreateTeamRequest::ExpiryTimeHasBeenSet() const
+{
+    return m_expiryTimeHasBeenSet;
+}
+
+vector<string> CreateTeamRequest::GetAdminUserIds() const
+{
+    return m_adminUserIds;
+}
+
+void CreateTeamRequest::SetAdminUserIds(const vector<string>& _adminUserIds)
+{
+    m_adminUserIds = _adminUserIds;
+    m_adminUserIdsHasBeenSet = true;
+}
+
+bool CreateTeamRequest::AdminUserIdsHasBeenSet() const
+{
+    return m_adminUserIdsHasBeenSet;
 }
 
 

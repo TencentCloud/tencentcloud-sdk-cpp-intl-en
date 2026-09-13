@@ -35,6 +35,8 @@
 #include <tencentcloud/ocr/v20181119/model/GetCardVerificationExternalResultResponse.h>
 #include <tencentcloud/ocr/v20181119/model/HKIDCardOCRRequest.h>
 #include <tencentcloud/ocr/v20181119/model/HKIDCardOCRResponse.h>
+#include <tencentcloud/ocr/v20181119/model/HmtResidentPermitOCRRequest.h>
+#include <tencentcloud/ocr/v20181119/model/HmtResidentPermitOCRResponse.h>
 #include <tencentcloud/ocr/v20181119/model/MLIDCardOCRRequest.h>
 #include <tencentcloud/ocr/v20181119/model/MLIDCardOCRResponse.h>
 #include <tencentcloud/ocr/v20181119/model/MLIDPassportOCRRequest.h>
@@ -117,6 +119,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::HKIDCardOCRResponse> HKIDCardOCROutcome;
                 typedef std::future<HKIDCardOCROutcome> HKIDCardOCROutcomeCallable;
                 typedef std::function<void(const OcrClient*, const Model::HKIDCardOCRRequest&, HKIDCardOCROutcome, const std::shared_ptr<const AsyncCallerContext>&)> HKIDCardOCRAsyncHandler;
+                typedef Outcome<Core::Error, Model::HmtResidentPermitOCRResponse> HmtResidentPermitOCROutcome;
+                typedef std::future<HmtResidentPermitOCROutcome> HmtResidentPermitOCROutcomeCallable;
+                typedef std::function<void(const OcrClient*, const Model::HmtResidentPermitOCRRequest&, HmtResidentPermitOCROutcome, const std::shared_ptr<const AsyncCallerContext>&)> HmtResidentPermitOCRAsyncHandler;
                 typedef Outcome<Core::Error, Model::MLIDCardOCRResponse> MLIDCardOCROutcome;
                 typedef std::future<MLIDCardOCROutcome> MLIDCardOCROutcomeCallable;
                 typedef std::function<void(const OcrClient*, const Model::MLIDCardOCRRequest&, MLIDCardOCROutcome, const std::shared_ptr<const AsyncCallerContext>&)> MLIDCardOCRAsyncHandler;
@@ -264,6 +269,17 @@ This API is not fully available for the time being. For more information, please
                 HKIDCardOCROutcome HKIDCardOCR(const Model::HKIDCardOCRRequest &request);
                 void HKIDCardOCRAsync(const Model::HKIDCardOCRRequest& request, const HKIDCardOCRAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 HKIDCardOCROutcomeCallable HKIDCardOCRCallable(const Model::HKIDCardOCRRequest& request);
+
+                /**
+                 *This API recognizes the Residence Permit for Hong Kong, Macao, and Taiwan, China Residents. Its OCR feature supports content detection and recognition of all fields on both sides, including name, sex, date of birth, address, identity card number, issuing authority, validity period, number of issuances, and travel permit number (a key field). It can be applied to information recognition scenarios for Residence Permit for Hong Kong, Macao, and Taiwan, China Residents, such as bank account opening and user registration. 
+
+Default API request rate limit: 20 requests/second.
+                 * @param req HmtResidentPermitOCRRequest
+                 * @return HmtResidentPermitOCROutcome
+                 */
+                HmtResidentPermitOCROutcome HmtResidentPermitOCR(const Model::HmtResidentPermitOCRRequest &request);
+                void HmtResidentPermitOCRAsync(const Model::HmtResidentPermitOCRRequest& request, const HmtResidentPermitOCRAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                HmtResidentPermitOCROutcomeCallable HmtResidentPermitOCRCallable(const Model::HmtResidentPermitOCRRequest& request);
 
                 /**
                  *This API is used to recognize a Malaysian identity card, including identity card number, name, gender, and address. It is also used to crop identity photos and give alarms for photographed or photocopied certificates.

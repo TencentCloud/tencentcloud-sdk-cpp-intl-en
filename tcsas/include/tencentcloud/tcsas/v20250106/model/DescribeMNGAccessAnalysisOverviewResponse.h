@@ -45,9 +45,9 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Data display at the top of the page.
+                     * 获取Response data.
 Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Data Data display at the top of the page.
+                     * @return Data Response data.
 Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
@@ -63,7 +63,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Data display at the top of the page.
+                     * Response data.
 Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     AccessAnalysisOverview m_data;

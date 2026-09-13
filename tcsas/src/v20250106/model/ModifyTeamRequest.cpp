@@ -26,7 +26,8 @@ ModifyTeamRequest::ModifyTeamRequest() :
     m_teamIdHasBeenSet(false),
     m_teamNameHasBeenSet(false),
     m_platformIdHasBeenSet(false),
-    m_adminUserIdHasBeenSet(false)
+    m_adminUserIdHasBeenSet(false),
+    m_adminUserIdsHasBeenSet(false)
 {
 }
 
@@ -67,6 +68,19 @@ string ModifyTeamRequest::ToJsonString() const
         string key = "AdminUserId";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, rapidjson::Value(m_adminUserId.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_adminUserIdsHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "AdminUserIds";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(rapidjson::kArrayType).Move(), allocator);
+
+        for (auto itr = m_adminUserIds.begin(); itr != m_adminUserIds.end(); ++itr)
+        {
+            d[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
+        }
     }
 
 
@@ -139,6 +153,22 @@ void ModifyTeamRequest::SetAdminUserId(const string& _adminUserId)
 bool ModifyTeamRequest::AdminUserIdHasBeenSet() const
 {
     return m_adminUserIdHasBeenSet;
+}
+
+vector<string> ModifyTeamRequest::GetAdminUserIds() const
+{
+    return m_adminUserIds;
+}
+
+void ModifyTeamRequest::SetAdminUserIds(const vector<string>& _adminUserIds)
+{
+    m_adminUserIds = _adminUserIds;
+    m_adminUserIdsHasBeenSet = true;
+}
+
+bool ModifyTeamRequest::AdminUserIdsHasBeenSet() const
+{
+    return m_adminUserIdsHasBeenSet;
 }
 
 
