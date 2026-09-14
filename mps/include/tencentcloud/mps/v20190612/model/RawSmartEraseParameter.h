@@ -38,7 +38,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Custom parameters for smart erasing.
+                * 
                 */
                 class RawSmartEraseParameter : public AbstractModel
                 {
@@ -50,15 +50,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Removal Type</p><ul><li>subtitle removal</li><li>watermark removal</li><li>privacy protection</li></ul>
-                     * @return EraseType <p>Removal Type</p><ul><li>subtitle removal</li><li>watermark removal</li><li>privacy protection</li></ul>
+                     * 获取
+                     * @return EraseType 
                      * 
                      */
                     std::string GetEraseType() const;
 
                     /**
-                     * 设置<p>Removal Type</p><ul><li>subtitle removal</li><li>watermark removal</li><li>privacy protection</li></ul>
-                     * @param _eraseType <p>Removal Type</p><ul><li>subtitle removal</li><li>watermark removal</li><li>privacy protection</li></ul>
+                     * 设置
+                     * @param _eraseType 
                      * 
                      */
                     void SetEraseType(const std::string& _eraseType);
@@ -134,15 +134,15 @@ namespace TencentCloud
                     bool ErasePrivacyConfigHasBeenSet() const;
 
                     /**
-                     * 获取<p>id of the subtitle removal suppression template.</p>
-                     * @return SubtitleEmbedId <p>id of the subtitle removal suppression template.</p>
+                     * 获取
+                     * @return SubtitleEmbedId 
                      * 
                      */
                     int64_t GetSubtitleEmbedId() const;
 
                     /**
-                     * 设置<p>id of the subtitle removal suppression template.</p>
-                     * @param _subtitleEmbedId <p>id of the subtitle removal suppression template.</p>
+                     * 设置
+                     * @param _subtitleEmbedId 
                      * 
                      */
                     void SetSubtitleEmbedId(const int64_t& _subtitleEmbedId);
@@ -155,15 +155,15 @@ namespace TencentCloud
                     bool SubtitleEmbedIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>Suppression configuration, enabled by default, moves subtitles back to the original subtitle position.</p>
-                     * @return UseOriginalPos <p>Suppression configuration, enabled by default, moves subtitles back to the original subtitle position.</p>
+                     * 获取
+                     * @return UseOriginalPos 
                      * 
                      */
                     int64_t GetUseOriginalPos() const;
 
                     /**
-                     * 设置<p>Suppression configuration, enabled by default, moves subtitles back to the original subtitle position.</p>
-                     * @param _useOriginalPos <p>Suppression configuration, enabled by default, moves subtitles back to the original subtitle position.</p>
+                     * 设置
+                     * @param _useOriginalPos 
                      * 
                      */
                     void SetUseOriginalPos(const int64_t& _useOriginalPos);
@@ -176,15 +176,15 @@ namespace TencentCloud
                     bool UseOriginalPosHasBeenSet() const;
 
                     /**
-                     * 获取<p>Suppression configuration, enabled by default. When enabled, use the original subtitle font size.</p>
-                     * @return UseOriginalSize <p>Suppression configuration, enabled by default. When enabled, use the original subtitle font size.</p>
+                     * 获取
+                     * @return UseOriginalSize 
                      * 
                      */
                     int64_t GetUseOriginalSize() const;
 
                     /**
-                     * 设置<p>Suppression configuration, enabled by default. When enabled, use the original subtitle font size.</p>
-                     * @param _useOriginalSize <p>Suppression configuration, enabled by default. When enabled, use the original subtitle font size.</p>
+                     * 设置
+                     * @param _useOriginalSize 
                      * 
                      */
                     void SetUseOriginalSize(const int64_t& _useOriginalSize);
@@ -199,7 +199,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Removal Type</p><ul><li>subtitle removal</li><li>watermark removal</li><li>privacy protection</li></ul>
+                     * 
                      */
                     std::string m_eraseType;
                     bool m_eraseTypeHasBeenSet;
@@ -223,19 +223,19 @@ namespace TencentCloud
                     bool m_erasePrivacyConfigHasBeenSet;
 
                     /**
-                     * <p>id of the subtitle removal suppression template.</p>
+                     * 
                      */
                     int64_t m_subtitleEmbedId;
                     bool m_subtitleEmbedIdHasBeenSet;
 
                     /**
-                     * <p>Suppression configuration, enabled by default, moves subtitles back to the original subtitle position.</p>
+                     * 
                      */
                     int64_t m_useOriginalPos;
                     bool m_useOriginalPosHasBeenSet;
 
                     /**
-                     * <p>Suppression configuration, enabled by default. When enabled, use the original subtitle font size.</p>
+                     * 
                      */
                     int64_t m_useOriginalSize;
                     bool m_useOriginalSizeHasBeenSet;

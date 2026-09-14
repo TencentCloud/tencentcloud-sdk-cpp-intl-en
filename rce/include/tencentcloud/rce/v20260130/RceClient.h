@@ -29,6 +29,8 @@
 #include <tencentcloud/rce/v20260130/model/AssessDeviceRiskProResponse.h>
 #include <tencentcloud/rce/v20260130/model/AssessEnvironmentRiskRequest.h>
 #include <tencentcloud/rce/v20260130/model/AssessEnvironmentRiskResponse.h>
+#include <tencentcloud/rce/v20260130/model/AssessRiskRequest.h>
+#include <tencentcloud/rce/v20260130/model/AssessRiskResponse.h>
 #include <tencentcloud/rce/v20260130/model/ReportEventRequest.h>
 #include <tencentcloud/rce/v20260130/model/ReportEventResponse.h>
 
@@ -54,6 +56,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::AssessEnvironmentRiskResponse> AssessEnvironmentRiskOutcome;
                 typedef std::future<AssessEnvironmentRiskOutcome> AssessEnvironmentRiskOutcomeCallable;
                 typedef std::function<void(const RceClient*, const Model::AssessEnvironmentRiskRequest&, AssessEnvironmentRiskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AssessEnvironmentRiskAsyncHandler;
+                typedef Outcome<Core::Error, Model::AssessRiskResponse> AssessRiskOutcome;
+                typedef std::future<AssessRiskOutcome> AssessRiskOutcomeCallable;
+                typedef std::function<void(const RceClient*, const Model::AssessRiskRequest&, AssessRiskOutcome, const std::shared_ptr<const AsyncCallerContext>&)> AssessRiskAsyncHandler;
                 typedef Outcome<Core::Error, Model::ReportEventResponse> ReportEventOutcome;
                 typedef std::future<ReportEventOutcome> ReportEventOutcomeCallable;
                 typedef std::function<void(const RceClient*, const Model::ReportEventRequest&, ReportEventOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ReportEventAsyncHandler;
@@ -86,6 +91,15 @@ namespace TencentCloud
                 AssessEnvironmentRiskOutcome AssessEnvironmentRisk(const Model::AssessEnvironmentRiskRequest &request);
                 void AssessEnvironmentRiskAsync(const Model::AssessEnvironmentRiskRequest& request, const AssessEnvironmentRiskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 AssessEnvironmentRiskOutcomeCallable AssessEnvironmentRiskCallable(const Model::AssessEnvironmentRiskRequest& request);
+
+                /**
+                 *Used to obtain real-time risk information for events. It evaluates and returns risk decision results, risk scores, and risk tags based on device risk, environmental risk, account risk, behavioral risk, and historical reported event data for critical events in your business.
+                 * @param req AssessRiskRequest
+                 * @return AssessRiskOutcome
+                 */
+                AssessRiskOutcome AssessRisk(const Model::AssessRiskRequest &request);
+                void AssessRiskAsync(const Model::AssessRiskRequest& request, const AssessRiskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                AssessRiskOutcomeCallable AssessRiskCallable(const Model::AssessRiskRequest& request);
 
                 /**
                  *Used to report events that do not require real-time decision-making in your business. Our engine will perform computations and apply machine learning to mine risk features from these events, which are then used to support real-time event risk assessment.

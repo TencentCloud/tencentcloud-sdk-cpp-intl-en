@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Information required for uploading AIGC result files to COS. The MPS_QcsRole role needs to be created and authorized.
+                * 
                 */
                 class AigcStoreCosParam : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Name of the COS bucket to store to. This value is required if you need to store the results in COS. Example value: bucket.
-                     * @return CosBucketName Name of the COS bucket to store to. This value is required if you need to store the results in COS. Example value: bucket.
+                     * 获取
+                     * @return CosBucketName 
                      * 
                      */
                     std::string GetCosBucketName() const;
 
                     /**
-                     * 设置Name of the COS bucket to store to. This value is required if you need to store the results in COS. Example value: bucket.
-                     * @param _cosBucketName Name of the COS bucket to store to. This value is required if you need to store the results in COS. Example value: bucket.
+                     * 设置
+                     * @param _cosBucketName 
                      * 
                      */
                     void SetCosBucketName(const std::string& _cosBucketName);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool CosBucketNameHasBeenSet() const;
 
                     /**
-                     * 获取Region of the COS bucket to store to. This is required if you need to upload the results to COS. Example value: ap-guangzhou.
-                     * @return CosBucketRegion Region of the COS bucket to store to. This is required if you need to upload the results to COS. Example value: ap-guangzhou.
+                     * 获取
+                     * @return CosBucketRegion 
                      * 
                      */
                     std::string GetCosBucketRegion() const;
 
                     /**
-                     * 设置Region of the COS bucket to store to. This is required if you need to upload the results to COS. Example value: ap-guangzhou.
-                     * @param _cosBucketRegion Region of the COS bucket to store to. This is required if you need to upload the results to COS. Example value: ap-guangzhou.
+                     * 设置
+                     * @param _cosBucketRegion 
                      * 
                      */
                     void SetCosBucketRegion(const std::string& _cosBucketRegion);
@@ -89,23 +89,15 @@ namespace TencentCloud
                     bool CosBucketRegionHasBeenSet() const;
 
                     /**
-                     * 获取Store to the bucket path of cos.
-Option.
-Example value: my_file.
-                     * @return CosBucketPath Store to the bucket path of cos.
-Option.
-Example value: my_file.
+                     * 获取
+                     * @return CosBucketPath 
                      * 
                      */
                     std::string GetCosBucketPath() const;
 
                     /**
-                     * 设置Store to the bucket path of cos.
-Option.
-Example value: my_file.
-                     * @param _cosBucketPath Store to the bucket path of cos.
-Option.
-Example value: my_file.
+                     * 设置
+                     * @param _cosBucketPath 
                      * 
                      */
                     void SetCosBucketPath(const std::string& _cosBucketPath);
@@ -120,21 +112,19 @@ Example value: my_file.
                 private:
 
                     /**
-                     * Name of the COS bucket to store to. This value is required if you need to store the results in COS. Example value: bucket.
+                     * 
                      */
                     std::string m_cosBucketName;
                     bool m_cosBucketNameHasBeenSet;
 
                     /**
-                     * Region of the COS bucket to store to. This is required if you need to upload the results to COS. Example value: ap-guangzhou.
+                     * 
                      */
                     std::string m_cosBucketRegion;
                     bool m_cosBucketRegionHasBeenSet;
 
                     /**
-                     * Store to the bucket path of cos.
-Option.
-Example value: my_file.
+                     * 
                      */
                     std::string m_cosBucketPath;
                     bool m_cosBucketPathHasBeenSet;

@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Area configurations for the subtitle OCR extraction box.
+                * 
                 */
                 class SelectingSubtitleAreasConfig : public AbstractModel
                 {
@@ -48,19 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Automatically select a custom region.
-For the selected areas, the AI model is used to automatically detect and extract the target content.
-                     * @return AutoAreas Automatically select a custom region.
-For the selected areas, the AI model is used to automatically detect and extract the target content.
+                     * 获取
+                     * @return AutoAreas 
                      * 
                      */
                     std::vector<EraseArea> GetAutoAreas() const;
 
                     /**
-                     * 设置Automatically select a custom region.
-For the selected areas, the AI model is used to automatically detect and extract the target content.
-                     * @param _autoAreas Automatically select a custom region.
-For the selected areas, the AI model is used to automatically detect and extract the target content.
+                     * 设置
+                     * @param _autoAreas 
                      * 
                      */
                     void SetAutoAreas(const std::vector<EraseArea>& _autoAreas);
@@ -73,15 +69,15 @@ For the selected areas, the AI model is used to automatically detect and extract
                     bool AutoAreasHasBeenSet() const;
 
                     /**
-                     * 获取Width of the sample video or image, in pixels.
-                     * @return SampleWidth Width of the sample video or image, in pixels.
+                     * 获取
+                     * @return SampleWidth 
                      * 
                      */
                     uint64_t GetSampleWidth() const;
 
                     /**
-                     * 设置Width of the sample video or image, in pixels.
-                     * @param _sampleWidth Width of the sample video or image, in pixels.
+                     * 设置
+                     * @param _sampleWidth 
                      * 
                      */
                     void SetSampleWidth(const uint64_t& _sampleWidth);
@@ -94,15 +90,15 @@ For the selected areas, the AI model is used to automatically detect and extract
                     bool SampleWidthHasBeenSet() const;
 
                     /**
-                     * 获取Height of the sample video or image, in pixels.
-                     * @return SampleHeight Height of the sample video or image, in pixels.
+                     * 获取
+                     * @return SampleHeight 
                      * 
                      */
                     uint64_t GetSampleHeight() const;
 
                     /**
-                     * 设置Height of the sample video or image, in pixels.
-                     * @param _sampleHeight Height of the sample video or image, in pixels.
+                     * 设置
+                     * @param _sampleHeight 
                      * 
                      */
                     void SetSampleHeight(const uint64_t& _sampleHeight);
@@ -117,20 +113,19 @@ For the selected areas, the AI model is used to automatically detect and extract
                 private:
 
                     /**
-                     * Automatically select a custom region.
-For the selected areas, the AI model is used to automatically detect and extract the target content.
+                     * 
                      */
                     std::vector<EraseArea> m_autoAreas;
                     bool m_autoAreasHasBeenSet;
 
                     /**
-                     * Width of the sample video or image, in pixels.
+                     * 
                      */
                     uint64_t m_sampleWidth;
                     bool m_sampleWidthHasBeenSet;
 
                     /**
-                     * Height of the sample video or image, in pixels.
+                     * 
                      */
                     uint64_t m_sampleHeight;
                     bool m_sampleHeightHasBeenSet;

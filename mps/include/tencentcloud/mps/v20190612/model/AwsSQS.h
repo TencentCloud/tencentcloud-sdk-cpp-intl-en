@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * The information of an AWS SQS queue.
+                * Aws SQS queue information
                 */
                 class AwsSQS : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取SQS queue area.
-                     * @return SQSRegion SQS queue area.
+                     * 获取
+                     * @return SQSRegion 
                      * 
                      */
                     std::string GetSQSRegion() const;
 
                     /**
-                     * 设置SQS queue area.
-                     * @param _sQSRegion SQS queue area.
+                     * 设置
+                     * @param _sQSRegion 
                      * 
                      */
                     void SetSQSRegion(const std::string& _sQSRegion);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool SQSRegionHasBeenSet() const;
 
                     /**
-                     * 获取SQS queue name.
-                     * @return SQSQueueName SQS queue name.
+                     * 获取
+                     * @return SQSQueueName 
                      * 
                      */
                     std::string GetSQSQueueName() const;
 
                     /**
-                     * 设置SQS queue name.
-                     * @param _sQSQueueName SQS queue name.
+                     * 设置
+                     * @param _sQSQueueName 
                      * 
                      */
                     void SetSQSQueueName(const std::string& _sQSQueueName);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool SQSQueueNameHasBeenSet() const;
 
                     /**
-                     * 获取Secret id for read-write SQS.
-                     * @return S3SecretId Secret id for read-write SQS.
+                     * 获取
+                     * @return S3SecretId 
                      * 
                      */
                     std::string GetS3SecretId() const;
 
                     /**
-                     * 设置Secret id for read-write SQS.
-                     * @param _s3SecretId Secret id for read-write SQS.
+                     * 设置
+                     * @param _s3SecretId 
                      * 
                      */
                     void SetS3SecretId(const std::string& _s3SecretId);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool S3SecretIdHasBeenSet() const;
 
                     /**
-                     * 获取Read-write SQS secret key.
-                     * @return S3SecretKey Read-write SQS secret key.
+                     * 获取
+                     * @return S3SecretKey 
                      * 
                      */
                     std::string GetS3SecretKey() const;
 
                     /**
-                     * 设置Read-write SQS secret key.
-                     * @param _s3SecretKey Read-write SQS secret key.
+                     * 设置
+                     * @param _s3SecretKey 
                      * 
                      */
                     void SetS3SecretKey(const std::string& _s3SecretKey);
@@ -133,25 +133,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * SQS queue area.
+                     * 
                      */
                     std::string m_sQSRegion;
                     bool m_sQSRegionHasBeenSet;
 
                     /**
-                     * SQS queue name.
+                     * 
                      */
                     std::string m_sQSQueueName;
                     bool m_sQSQueueNameHasBeenSet;
 
                     /**
-                     * Secret id for read-write SQS.
+                     * 
                      */
                     std::string m_s3SecretId;
                     bool m_s3SecretIdHasBeenSet;
 
                     /**
-                     * Read-write SQS secret key.
+                     * 
                      */
                     std::string m_s3SecretKey;
                     bool m_s3SecretKeyHasBeenSet;

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Media processing VOD object information.
+                * 
                 */
                 class VODInputInfo : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p><em>Bucket ID</em> where the media processing object file resides</p>
-                     * @return Bucket <p><em>Bucket ID</em> where the media processing object file resides</p>
+                     * 获取
+                     * @return Bucket 
                      * 
                      */
                     std::string GetBucket() const;
 
                     /**
-                     * 设置<p><em>Bucket ID</em> where the media processing object file resides</p>
-                     * @param _bucket <p><em>Bucket ID</em> where the media processing object file resides</p>
+                     * 设置
+                     * @param _bucket 
                      * 
                      */
                     void SetBucket(const std::string& _bucket);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool BucketHasBeenSet() const;
 
                     /**
-                     * 获取<p>Region of the Bucket where the media processing object file resides</p>
-                     * @return Region <p>Region of the Bucket where the media processing object file resides</p>
+                     * 获取
+                     * @return Region 
                      * 
                      */
                     std::string GetRegion() const;
 
                     /**
-                     * 设置<p>Region of the Bucket where the media processing object file resides</p>
-                     * @param _region <p>Region of the Bucket where the media processing object file resides</p>
+                     * 设置
+                     * @param _region 
                      * 
                      */
                     void SetRegion(const std::string& _region);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool RegionHasBeenSet() const;
 
                     /**
-                     * 获取<p>Input path of the media processing object file</p>
-                     * @return Object <p>Input path of the media processing object file</p>
+                     * 获取
+                     * @return Object 
                      * 
                      */
                     std::string GetObject() const;
 
                     /**
-                     * 设置<p>Input path of the media processing object file</p>
-                     * @param _object <p>Input path of the media processing object file</p>
+                     * 设置
+                     * @param _object 
                      * 
                      */
                     void SetObject(const std::string& _object);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool ObjectHasBeenSet() const;
 
                     /**
-                     * 获取<p>VOD application ID.</p>
-                     * @return SubAppId <p>VOD application ID.</p>
+                     * 获取
+                     * @return SubAppId 
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置<p>VOD application ID.</p>
-                     * @param _subAppId <p>VOD application ID.</p>
+                     * 设置
+                     * @param _subAppId 
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool SubAppIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>Whether to use VOD Standard Edition.<br>Attention: If left empty, VOD Pro Edition is used.</p><p>Enumeration values: </p><ul><li>Use VOD Pro Edition</li><li>Use VOD Standard Edition, allowing tasks to be initiated with FileId</li></ul><p>Default value: 0</p>
-                     * @return VodBasic <p>Whether to use VOD Standard Edition.<br>Attention: If left empty, VOD Pro Edition is used.</p><p>Enumeration values: </p><ul><li>Use VOD Pro Edition</li><li>Use VOD Standard Edition, allowing tasks to be initiated with FileId</li></ul><p>Default value: 0</p>
+                     * 获取
+                     * @return VodBasic 
                      * 
                      */
                     int64_t GetVodBasic() const;
 
                     /**
-                     * 设置<p>Whether to use VOD Standard Edition.<br>Attention: If left empty, VOD Pro Edition is used.</p><p>Enumeration values: </p><ul><li>Use VOD Pro Edition</li><li>Use VOD Standard Edition, allowing tasks to be initiated with FileId</li></ul><p>Default value: 0</p>
-                     * @param _vodBasic <p>Whether to use VOD Standard Edition.<br>Attention: If left empty, VOD Pro Edition is used.</p><p>Enumeration values: </p><ul><li>Use VOD Pro Edition</li><li>Use VOD Standard Edition, allowing tasks to be initiated with FileId</li></ul><p>Default value: 0</p>
+                     * 设置
+                     * @param _vodBasic 
                      * 
                      */
                     void SetVodBasic(const int64_t& _vodBasic);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool VodBasicHasBeenSet() const;
 
                     /**
-                     * 获取<p>VOD Standard Edition FileId</p>
-                     * @return FileId <p>VOD Standard Edition FileId</p>
+                     * 获取
+                     * @return FileId 
                      * 
                      */
                     std::string GetFileId() const;
 
                     /**
-                     * 设置<p>VOD Standard Edition FileId</p>
-                     * @param _fileId <p>VOD Standard Edition FileId</p>
+                     * 设置
+                     * @param _fileId 
                      * 
                      */
                     void SetFileId(const std::string& _fileId);
@@ -175,37 +175,37 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p><em>Bucket ID</em> where the media processing object file resides</p>
+                     * 
                      */
                     std::string m_bucket;
                     bool m_bucketHasBeenSet;
 
                     /**
-                     * <p>Region of the Bucket where the media processing object file resides</p>
+                     * 
                      */
                     std::string m_region;
                     bool m_regionHasBeenSet;
 
                     /**
-                     * <p>Input path of the media processing object file</p>
+                     * 
                      */
                     std::string m_object;
                     bool m_objectHasBeenSet;
 
                     /**
-                     * <p>VOD application ID.</p>
+                     * 
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
 
                     /**
-                     * <p>Whether to use VOD Standard Edition.<br>Attention: If left empty, VOD Pro Edition is used.</p><p>Enumeration values: </p><ul><li>Use VOD Pro Edition</li><li>Use VOD Standard Edition, allowing tasks to be initiated with FileId</li></ul><p>Default value: 0</p>
+                     * 
                      */
                     int64_t m_vodBasic;
                     bool m_vodBasicHasBeenSet;
 
                     /**
-                     * <p>VOD Standard Edition FileId</p>
+                     * 
                      */
                     std::string m_fileId;
                     bool m_fileIdHasBeenSet;

@@ -90,6 +90,56 @@ MpsClient::BatchProcessMediaOutcomeCallable MpsClient::BatchProcessMediaCallable
     return prom->get_future();
 }
 
+MpsClient::ChangeVoiceOutcome MpsClient::ChangeVoice(const ChangeVoiceRequest &request)
+{
+    auto outcome = MakeRequest(request, "ChangeVoice");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ChangeVoiceResponse rsp = ChangeVoiceResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ChangeVoiceOutcome(rsp);
+        else
+            return ChangeVoiceOutcome(o.GetError());
+    }
+    else
+    {
+        return ChangeVoiceOutcome(outcome.GetError());
+    }
+}
+
+void MpsClient::ChangeVoiceAsync(const ChangeVoiceRequest& request, const ChangeVoiceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ChangeVoiceRequest&;
+    using Resp = ChangeVoiceResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ChangeVoice", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+MpsClient::ChangeVoiceOutcomeCallable MpsClient::ChangeVoiceCallable(const ChangeVoiceRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ChangeVoiceOutcome>>();
+    ChangeVoiceAsync(
+    request,
+    [prom](
+        const MpsClient*,
+        const ChangeVoiceRequest&,
+        ChangeVoiceOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 MpsClient::CloneViralOutcome MpsClient::CloneViral(const CloneViralRequest &request)
 {
     auto outcome = MakeRequest(request, "CloneViral");
@@ -5832,6 +5882,56 @@ MpsClient::ModifyContentReviewTemplateOutcomeCallable MpsClient::ModifyContentRe
         const MpsClient*,
         const ModifyContentReviewTemplateRequest&,
         ModifyContentReviewTemplateOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+MpsClient::ModifyDocToVideoTaskStatusOutcome MpsClient::ModifyDocToVideoTaskStatus(const ModifyDocToVideoTaskStatusRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyDocToVideoTaskStatus");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyDocToVideoTaskStatusResponse rsp = ModifyDocToVideoTaskStatusResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyDocToVideoTaskStatusOutcome(rsp);
+        else
+            return ModifyDocToVideoTaskStatusOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyDocToVideoTaskStatusOutcome(outcome.GetError());
+    }
+}
+
+void MpsClient::ModifyDocToVideoTaskStatusAsync(const ModifyDocToVideoTaskStatusRequest& request, const ModifyDocToVideoTaskStatusAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ModifyDocToVideoTaskStatusRequest&;
+    using Resp = ModifyDocToVideoTaskStatusResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ModifyDocToVideoTaskStatus", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+MpsClient::ModifyDocToVideoTaskStatusOutcomeCallable MpsClient::ModifyDocToVideoTaskStatusCallable(const ModifyDocToVideoTaskStatusRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ModifyDocToVideoTaskStatusOutcome>>();
+    ModifyDocToVideoTaskStatusAsync(
+    request,
+    [prom](
+        const MpsClient*,
+        const ModifyDocToVideoTaskStatusRequest&,
+        ModifyDocToVideoTaskStatusOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {

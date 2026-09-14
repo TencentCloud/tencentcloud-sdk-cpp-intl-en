@@ -43,7 +43,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Input parameter type of adaptive bitrate streaming
+                * Input parameter type for video to adaptive bitrate stream
                 */
                 class AdaptiveDynamicStreamingTaskInput : public AbstractModel
                 {
@@ -97,15 +97,15 @@ namespace TencentCloud
                     bool WatermarkSetHasBeenSet() const;
 
                     /**
-                     * 获取<p>Digital watermark parameter.</p>
-                     * @return BlindWatermark <p>Digital watermark parameter.</p>
+                     * 获取
+                     * @return BlindWatermark 
                      * 
                      */
                     BlindWatermarkInput GetBlindWatermark() const;
 
                     /**
-                     * 设置<p>Digital watermark parameter.</p>
-                     * @param _blindWatermark <p>Digital watermark parameter.</p>
+                     * 设置
+                     * @param _blindWatermark 
                      * 
                      */
                     void SetBlindWatermark(const BlindWatermarkInput& _blindWatermark);
@@ -118,15 +118,15 @@ namespace TencentCloud
                     bool BlindWatermarkHasBeenSet() const;
 
                     /**
-                     * 获取<p>Target storage for files after adaptive bitrate streaming. If left blank, it inherits the upper-level OutputStorage value.</p>
-                     * @return OutputStorage <p>Target storage for files after adaptive bitrate streaming. If left blank, it inherits the upper-level OutputStorage value.</p>
+                     * 获取
+                     * @return OutputStorage 
                      * 
                      */
                     TaskOutputStorage GetOutputStorage() const;
 
                     /**
-                     * 设置<p>Target storage for files after adaptive bitrate streaming. If left blank, it inherits the upper-level OutputStorage value.</p>
-                     * @param _outputStorage <p>Target storage for files after adaptive bitrate streaming. If left blank, it inherits the upper-level OutputStorage value.</p>
+                     * 设置
+                     * @param _outputStorage 
                      * 
                      */
                     void SetOutputStorage(const TaskOutputStorage& _outputStorage);
@@ -202,15 +202,15 @@ namespace TencentCloud
                     bool SegmentObjectNameHasBeenSet() const;
 
                     /**
-                     * 获取<p>External subtitle feature. Specifies the subtitle file to be inserted.</p>
-                     * @return AddOnSubtitles <p>External subtitle feature. Specifies the subtitle file to be inserted.</p>
+                     * 获取
+                     * @return AddOnSubtitles 
                      * 
                      */
                     std::vector<AddOnSubtitle> GetAddOnSubtitles() const;
 
                     /**
-                     * 设置<p>External subtitle feature. Specifies the subtitle file to be inserted.</p>
-                     * @param _addOnSubtitles <p>External subtitle feature. Specifies the subtitle file to be inserted.</p>
+                     * 设置
+                     * @param _addOnSubtitles 
                      * 
                      */
                     void SetAddOnSubtitles(const std::vector<AddOnSubtitle>& _addOnSubtitles);
@@ -223,15 +223,15 @@ namespace TencentCloud
                     bool AddOnSubtitlesHasBeenSet() const;
 
                     /**
-                     * 获取<p>Drm information.</p>
-                     * @return DrmInfo <p>Drm information.</p>
+                     * 获取
+                     * @return DrmInfo 
                      * 
                      */
                     DrmInfo GetDrmInfo() const;
 
                     /**
-                     * 设置<p>Drm information.</p>
-                     * @param _drmInfo <p>Drm information.</p>
+                     * 设置
+                     * @param _drmInfo 
                      * 
                      */
                     void SetDrmInfo(const DrmInfo& _drmInfo);
@@ -265,15 +265,15 @@ namespace TencentCloud
                     bool DefinitionTypeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Hard subtitle (burned-in subtitle) feature. Specifies the subtitle source, font size, location, and other subtitle parameters.</p>
-                     * @return SubtitleTemplate <p>Hard subtitle (burned-in subtitle) feature. Specifies the subtitle source, font size, location, and other subtitle parameters.</p>
+                     * 获取
+                     * @return SubtitleTemplate 
                      * 
                      */
                     SubtitleTemplate GetSubtitleTemplate() const;
 
                     /**
-                     * 设置<p>Hard subtitle (burned-in subtitle) feature. Specifies the subtitle source, font size, location, and other subtitle parameters.</p>
-                     * @param _subtitleTemplate <p>Hard subtitle (burned-in subtitle) feature. Specifies the subtitle source, font size, location, and other subtitle parameters.</p>
+                     * 设置
+                     * @param _subtitleTemplate 
                      * 
                      */
                     void SetSubtitleTemplate(const SubtitleTemplate& _subtitleTemplate);
@@ -307,15 +307,15 @@ namespace TencentCloud
                     bool StdExtInfoHasBeenSet() const;
 
                     /**
-                     * 获取<p>Set the frame at the specified pts time as a key frame and segment it. Unit: milliseconds (relative deviation <=1ms is allowed). When both gop and segment duration are specified simultaneously, they function together. Note that RawPts must be enabled, keep the frame rate following the source, and ensure the passed-in pts time corresponds to a frame in the source.</p>
-                     * @return KeyPTSList <p>Set the frame at the specified pts time as a key frame and segment it. Unit: milliseconds (relative deviation <=1ms is allowed). When both gop and segment duration are specified simultaneously, they function together. Note that RawPts must be enabled, keep the frame rate following the source, and ensure the passed-in pts time corresponds to a frame in the source.</p>
+                     * 获取
+                     * @return KeyPTSList 
                      * 
                      */
                     std::vector<int64_t> GetKeyPTSList() const;
 
                     /**
-                     * 设置<p>Set the frame at the specified pts time as a key frame and segment it. Unit: milliseconds (relative deviation <=1ms is allowed). When both gop and segment duration are specified simultaneously, they function together. Note that RawPts must be enabled, keep the frame rate following the source, and ensure the passed-in pts time corresponds to a frame in the source.</p>
-                     * @param _keyPTSList <p>Set the frame at the specified pts time as a key frame and segment it. Unit: milliseconds (relative deviation <=1ms is allowed). When both gop and segment duration are specified simultaneously, they function together. Note that RawPts must be enabled, keep the frame rate following the source, and ensure the passed-in pts time corresponds to a frame in the source.</p>
+                     * 设置
+                     * @param _keyPTSList 
                      * 
                      */
                     void SetKeyPTSList(const std::vector<int64_t>& _keyPTSList);
@@ -384,13 +384,13 @@ namespace TencentCloud
                     bool m_watermarkSetHasBeenSet;
 
                     /**
-                     * <p>Digital watermark parameter.</p>
+                     * 
                      */
                     BlindWatermarkInput m_blindWatermark;
                     bool m_blindWatermarkHasBeenSet;
 
                     /**
-                     * <p>Target storage for files after adaptive bitrate streaming. If left blank, it inherits the upper-level OutputStorage value.</p>
+                     * 
                      */
                     TaskOutputStorage m_outputStorage;
                     bool m_outputStorageHasBeenSet;
@@ -414,13 +414,13 @@ namespace TencentCloud
                     bool m_segmentObjectNameHasBeenSet;
 
                     /**
-                     * <p>External subtitle feature. Specifies the subtitle file to be inserted.</p>
+                     * 
                      */
                     std::vector<AddOnSubtitle> m_addOnSubtitles;
                     bool m_addOnSubtitlesHasBeenSet;
 
                     /**
-                     * <p>Drm information.</p>
+                     * 
                      */
                     DrmInfo m_drmInfo;
                     bool m_drmInfoHasBeenSet;
@@ -432,7 +432,7 @@ namespace TencentCloud
                     bool m_definitionTypeHasBeenSet;
 
                     /**
-                     * <p>Hard subtitle (burned-in subtitle) feature. Specifies the subtitle source, font size, location, and other subtitle parameters.</p>
+                     * 
                      */
                     SubtitleTemplate m_subtitleTemplate;
                     bool m_subtitleTemplateHasBeenSet;
@@ -444,7 +444,7 @@ namespace TencentCloud
                     bool m_stdExtInfoHasBeenSet;
 
                     /**
-                     * <p>Set the frame at the specified pts time as a key frame and segment it. Unit: milliseconds (relative deviation <=1ms is allowed). When both gop and segment duration are specified simultaneously, they function together. Note that RawPts must be enabled, keep the frame rate following the source, and ensure the passed-in pts time corresponds to a frame in the source.</p>
+                     * 
                      */
                     std::vector<int64_t> m_keyPTSList;
                     bool m_keyPTSListHasBeenSet;

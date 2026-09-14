@@ -24,7 +24,8 @@ DescribeMNPTeamMerchantInfoRes::DescribeMNPTeamMerchantInfoRes() :
     m_merchantIDHasBeenSet(false),
     m_approvalStatusHasBeenSet(false),
     m_iDHasBeenSet(false),
-    m_merchantNameHasBeenSet(false)
+    m_merchantNameHasBeenSet(false),
+    m_currencyHasBeenSet(false)
 {
 }
 
@@ -73,6 +74,16 @@ CoreInternalOutcome DescribeMNPTeamMerchantInfoRes::Deserialize(const rapidjson:
         m_merchantNameHasBeenSet = true;
     }
 
+    if (value.HasMember("Currency") && !value["Currency"].IsNull())
+    {
+        if (!value["Currency"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `DescribeMNPTeamMerchantInfoRes.Currency` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_currency = string(value["Currency"].GetString());
+        m_currencyHasBeenSet = true;
+    }
+
 
     return CoreInternalOutcome(true);
 }
@@ -110,6 +121,14 @@ void DescribeMNPTeamMerchantInfoRes::ToJsonObject(rapidjson::Value &value, rapid
         string key = "MerchantName";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(m_merchantName.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_currencyHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Currency";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_currency.c_str(), allocator).Move(), allocator);
     }
 
 }
@@ -177,5 +196,21 @@ void DescribeMNPTeamMerchantInfoRes::SetMerchantName(const string& _merchantName
 bool DescribeMNPTeamMerchantInfoRes::MerchantNameHasBeenSet() const
 {
     return m_merchantNameHasBeenSet;
+}
+
+string DescribeMNPTeamMerchantInfoRes::GetCurrency() const
+{
+    return m_currency;
+}
+
+void DescribeMNPTeamMerchantInfoRes::SetCurrency(const string& _currency)
+{
+    m_currency = _currency;
+    m_currencyHasBeenSet = true;
+}
+
+bool DescribeMNPTeamMerchantInfoRes::CurrencyHasBeenSet() const
+{
+    return m_currencyHasBeenSet;
 }
 

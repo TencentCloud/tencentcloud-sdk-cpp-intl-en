@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Extended parameters used for AIGC video generation.
+                * 
                 */
                 class AigcVideoExtraParam : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Resolution of the generated video. The resolution is related to the selected model and set video duration.</p><p>Supported resolution options for different models:</p><ol><li>Kling: 720P (default) and 1080P. Kling 3.0 and Kling 3.0-Omni support 4K.</li><li>Hailuo: 768P (default) and 1080P.</li><li>Vidu: 540P, 720P (default), and 1080P.</li><li>PixVerse: 540P, 720P (default), and 1080P.</li><li>H2: 720P and 1080P (default).</li></ol><p>Note: In addition to the resolution supported by the model, 2K and 4K resolutions are also available.</p>
-                     * @return Resolution <p>Resolution of the generated video. The resolution is related to the selected model and set video duration.</p><p>Supported resolution options for different models:</p><ol><li>Kling: 720P (default) and 1080P. Kling 3.0 and Kling 3.0-Omni support 4K.</li><li>Hailuo: 768P (default) and 1080P.</li><li>Vidu: 540P, 720P (default), and 1080P.</li><li>PixVerse: 540P, 720P (default), and 1080P.</li><li>H2: 720P and 1080P (default).</li></ol><p>Note: In addition to the resolution supported by the model, 2K and 4K resolutions are also available.</p>
+                     * 获取
+                     * @return Resolution 
                      * 
                      */
                     std::string GetResolution() const;
 
                     /**
-                     * 设置<p>Resolution of the generated video. The resolution is related to the selected model and set video duration.</p><p>Supported resolution options for different models:</p><ol><li>Kling: 720P (default) and 1080P. Kling 3.0 and Kling 3.0-Omni support 4K.</li><li>Hailuo: 768P (default) and 1080P.</li><li>Vidu: 540P, 720P (default), and 1080P.</li><li>PixVerse: 540P, 720P (default), and 1080P.</li><li>H2: 720P and 1080P (default).</li></ol><p>Note: In addition to the resolution supported by the model, 2K and 4K resolutions are also available.</p>
-                     * @param _resolution <p>Resolution of the generated video. The resolution is related to the selected model and set video duration.</p><p>Supported resolution options for different models:</p><ol><li>Kling: 720P (default) and 1080P. Kling 3.0 and Kling 3.0-Omni support 4K.</li><li>Hailuo: 768P (default) and 1080P.</li><li>Vidu: 540P, 720P (default), and 1080P.</li><li>PixVerse: 540P, 720P (default), and 1080P.</li><li>H2: 720P and 1080P (default).</li></ol><p>Note: In addition to the resolution supported by the model, 2K and 4K resolutions are also available.</p>
+                     * 设置
+                     * @param _resolution 
                      * 
                      */
                     void SetResolution(const std::string& _resolution);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool ResolutionHasBeenSet() const;
 
                     /**
-                     * 获取<p>Aspect ratio of the generated video.</p><p>Support for this parameter by different models:</p><ol><li>Kling only supports this parameter for text-to-video, with aspect ratios of 16:9 (default), 9:16, and 1:1.</li><li>Hailuo does not support this parameter.</li><li>Vidu supports [16:9, 9:16, 4:3, 3:4, 1:1] for text-to-video and reference image-to-video only. Only q2 supports 4:3 and 3:4.</li><li>PixVerse supports [16:9, 9:16, 4:3, 3:4, 1:1, 2:3, 3:2, 21:9] for text-to-video and reference image-to-video only. Only v6 and c1 support 2:3, 3:2, and 21:9.</li><li>H2 supports [16:9, 9:16, 4:3, 3:4, 4:5, 5:4, 1:1, 21:9, 9:21] for text-to-video and reference image-to-video only.</li></ol><p>Note: For more information about the supported aspect ratios of specific models, see the model website.</p>
-                     * @return AspectRatio <p>Aspect ratio of the generated video.</p><p>Support for this parameter by different models:</p><ol><li>Kling only supports this parameter for text-to-video, with aspect ratios of 16:9 (default), 9:16, and 1:1.</li><li>Hailuo does not support this parameter.</li><li>Vidu supports [16:9, 9:16, 4:3, 3:4, 1:1] for text-to-video and reference image-to-video only. Only q2 supports 4:3 and 3:4.</li><li>PixVerse supports [16:9, 9:16, 4:3, 3:4, 1:1, 2:3, 3:2, 21:9] for text-to-video and reference image-to-video only. Only v6 and c1 support 2:3, 3:2, and 21:9.</li><li>H2 supports [16:9, 9:16, 4:3, 3:4, 4:5, 5:4, 1:1, 21:9, 9:21] for text-to-video and reference image-to-video only.</li></ol><p>Note: For more information about the supported aspect ratios of specific models, see the model website.</p>
+                     * 获取
+                     * @return AspectRatio 
                      * 
                      */
                     std::string GetAspectRatio() const;
 
                     /**
-                     * 设置<p>Aspect ratio of the generated video.</p><p>Support for this parameter by different models:</p><ol><li>Kling only supports this parameter for text-to-video, with aspect ratios of 16:9 (default), 9:16, and 1:1.</li><li>Hailuo does not support this parameter.</li><li>Vidu supports [16:9, 9:16, 4:3, 3:4, 1:1] for text-to-video and reference image-to-video only. Only q2 supports 4:3 and 3:4.</li><li>PixVerse supports [16:9, 9:16, 4:3, 3:4, 1:1, 2:3, 3:2, 21:9] for text-to-video and reference image-to-video only. Only v6 and c1 support 2:3, 3:2, and 21:9.</li><li>H2 supports [16:9, 9:16, 4:3, 3:4, 4:5, 5:4, 1:1, 21:9, 9:21] for text-to-video and reference image-to-video only.</li></ol><p>Note: For more information about the supported aspect ratios of specific models, see the model website.</p>
-                     * @param _aspectRatio <p>Aspect ratio of the generated video.</p><p>Support for this parameter by different models:</p><ol><li>Kling only supports this parameter for text-to-video, with aspect ratios of 16:9 (default), 9:16, and 1:1.</li><li>Hailuo does not support this parameter.</li><li>Vidu supports [16:9, 9:16, 4:3, 3:4, 1:1] for text-to-video and reference image-to-video only. Only q2 supports 4:3 and 3:4.</li><li>PixVerse supports [16:9, 9:16, 4:3, 3:4, 1:1, 2:3, 3:2, 21:9] for text-to-video and reference image-to-video only. Only v6 and c1 support 2:3, 3:2, and 21:9.</li><li>H2 supports [16:9, 9:16, 4:3, 3:4, 4:5, 5:4, 1:1, 21:9, 9:21] for text-to-video and reference image-to-video only.</li></ol><p>Note: For more information about the supported aspect ratios of specific models, see the model website.</p>
+                     * 设置
+                     * @param _aspectRatio 
                      * 
                      */
                     void SetAspectRatio(const std::string& _aspectRatio);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool AspectRatioHasBeenSet() const;
 
                     /**
-                     * 获取<p>Indicates whether to add a logo watermark.</p><ol><li>Hailuo supports this parameter.</li><li>Kling supports this parameter.</li><li>Vidu supports this parameter.</li><li>H2 supports this parameter.</li></ol>
-                     * @return LogoAdd <p>Indicates whether to add a logo watermark.</p><ol><li>Hailuo supports this parameter.</li><li>Kling supports this parameter.</li><li>Vidu supports this parameter.</li><li>H2 supports this parameter.</li></ol>
+                     * 获取
+                     * @return LogoAdd 
                      * 
                      */
                     int64_t GetLogoAdd() const;
 
                     /**
-                     * 设置<p>Indicates whether to add a logo watermark.</p><ol><li>Hailuo supports this parameter.</li><li>Kling supports this parameter.</li><li>Vidu supports this parameter.</li><li>H2 supports this parameter.</li></ol>
-                     * @param _logoAdd <p>Indicates whether to add a logo watermark.</p><ol><li>Hailuo supports this parameter.</li><li>Kling supports this parameter.</li><li>Vidu supports this parameter.</li><li>H2 supports this parameter.</li></ol>
+                     * 设置
+                     * @param _logoAdd 
                      * 
                      */
                     void SetLogoAdd(const int64_t& _logoAdd);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool LogoAddHasBeenSet() const;
 
                     /**
-                     * 获取<p>Indicates whether to generate audio for the video. Valid values: true or false.</p><p>Models that support this parameter:</p><ol><li>Vidu. Only q3 series models support this parameter. Default value: false.</li><li>PixVerse. Default value: false.</li><li>Kling. Default value: false.</li></ol>
-                     * @return EnableAudio <p>Indicates whether to generate audio for the video. Valid values: true or false.</p><p>Models that support this parameter:</p><ol><li>Vidu. Only q3 series models support this parameter. Default value: false.</li><li>PixVerse. Default value: false.</li><li>Kling. Default value: false.</li></ol>
+                     * 获取
+                     * @return EnableAudio 
                      * 
                      */
                     bool GetEnableAudio() const;
 
                     /**
-                     * 设置<p>Indicates whether to generate audio for the video. Valid values: true or false.</p><p>Models that support this parameter:</p><ol><li>Vidu. Only q3 series models support this parameter. Default value: false.</li><li>PixVerse. Default value: false.</li><li>Kling. Default value: false.</li></ol>
-                     * @param _enableAudio <p>Indicates whether to generate audio for the video. Valid values: true or false.</p><p>Models that support this parameter:</p><ol><li>Vidu. Only q3 series models support this parameter. Default value: false.</li><li>PixVerse. Default value: false.</li><li>Kling. Default value: false.</li></ol>
+                     * 设置
+                     * @param _enableAudio 
                      * 
                      */
                     void SetEnableAudio(const bool& _enableAudio);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool EnableAudioHasBeenSet() const;
 
                     /**
-                     * 获取<p>Indicates whether to use the off-peak scheduling mode. Only Vidu supports this parameter.<br>Tasks submitted in off-peak mode will be processed within 48 hours. Uncompleted tasks will be canceled.</p>
-                     * @return OffPeak <p>Indicates whether to use the off-peak scheduling mode. Only Vidu supports this parameter.<br>Tasks submitted in off-peak mode will be processed within 48 hours. Uncompleted tasks will be canceled.</p>
+                     * 获取
+                     * @return OffPeak 
                      * 
                      */
                     bool GetOffPeak() const;
 
                     /**
-                     * 设置<p>Indicates whether to use the off-peak scheduling mode. Only Vidu supports this parameter.<br>Tasks submitted in off-peak mode will be processed within 48 hours. Uncompleted tasks will be canceled.</p>
-                     * @param _offPeak <p>Indicates whether to use the off-peak scheduling mode. Only Vidu supports this parameter.<br>Tasks submitted in off-peak mode will be processed within 48 hours. Uncompleted tasks will be canceled.</p>
+                     * 设置
+                     * @param _offPeak 
                      * 
                      */
                     void SetOffPeak(const bool& _offPeak);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool OffPeakHasBeenSet() const;
 
                     /**
-                     * 获取<p>Indicates whether to add background music to the generated video. Default value: false. Valid values: true or false.<br>Note: Only some model versions support this.</p>
-                     * @return EnableBgm <p>Indicates whether to add background music to the generated video. Default value: false. Valid values: true or false.<br>Note: Only some model versions support this.</p>
+                     * 获取
+                     * @return EnableBgm 
                      * 
                      */
                     bool GetEnableBgm() const;
 
                     /**
-                     * 设置<p>Indicates whether to add background music to the generated video. Default value: false. Valid values: true or false.<br>Note: Only some model versions support this.</p>
-                     * @param _enableBgm <p>Indicates whether to add background music to the generated video. Default value: false. Valid values: true or false.<br>Note: Only some model versions support this.</p>
+                     * 设置
+                     * @param _enableBgm 
                      * 
                      */
                     void SetEnableBgm(const bool& _enableBgm);
@@ -175,37 +175,37 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Resolution of the generated video. The resolution is related to the selected model and set video duration.</p><p>Supported resolution options for different models:</p><ol><li>Kling: 720P (default) and 1080P. Kling 3.0 and Kling 3.0-Omni support 4K.</li><li>Hailuo: 768P (default) and 1080P.</li><li>Vidu: 540P, 720P (default), and 1080P.</li><li>PixVerse: 540P, 720P (default), and 1080P.</li><li>H2: 720P and 1080P (default).</li></ol><p>Note: In addition to the resolution supported by the model, 2K and 4K resolutions are also available.</p>
+                     * 
                      */
                     std::string m_resolution;
                     bool m_resolutionHasBeenSet;
 
                     /**
-                     * <p>Aspect ratio of the generated video.</p><p>Support for this parameter by different models:</p><ol><li>Kling only supports this parameter for text-to-video, with aspect ratios of 16:9 (default), 9:16, and 1:1.</li><li>Hailuo does not support this parameter.</li><li>Vidu supports [16:9, 9:16, 4:3, 3:4, 1:1] for text-to-video and reference image-to-video only. Only q2 supports 4:3 and 3:4.</li><li>PixVerse supports [16:9, 9:16, 4:3, 3:4, 1:1, 2:3, 3:2, 21:9] for text-to-video and reference image-to-video only. Only v6 and c1 support 2:3, 3:2, and 21:9.</li><li>H2 supports [16:9, 9:16, 4:3, 3:4, 4:5, 5:4, 1:1, 21:9, 9:21] for text-to-video and reference image-to-video only.</li></ol><p>Note: For more information about the supported aspect ratios of specific models, see the model website.</p>
+                     * 
                      */
                     std::string m_aspectRatio;
                     bool m_aspectRatioHasBeenSet;
 
                     /**
-                     * <p>Indicates whether to add a logo watermark.</p><ol><li>Hailuo supports this parameter.</li><li>Kling supports this parameter.</li><li>Vidu supports this parameter.</li><li>H2 supports this parameter.</li></ol>
+                     * 
                      */
                     int64_t m_logoAdd;
                     bool m_logoAddHasBeenSet;
 
                     /**
-                     * <p>Indicates whether to generate audio for the video. Valid values: true or false.</p><p>Models that support this parameter:</p><ol><li>Vidu. Only q3 series models support this parameter. Default value: false.</li><li>PixVerse. Default value: false.</li><li>Kling. Default value: false.</li></ol>
+                     * 
                      */
                     bool m_enableAudio;
                     bool m_enableAudioHasBeenSet;
 
                     /**
-                     * <p>Indicates whether to use the off-peak scheduling mode. Only Vidu supports this parameter.<br>Tasks submitted in off-peak mode will be processed within 48 hours. Uncompleted tasks will be canceled.</p>
+                     * 
                      */
                     bool m_offPeak;
                     bool m_offPeakHasBeenSet;
 
                     /**
-                     * <p>Indicates whether to add background music to the generated video. Default value: false. Valid values: true or false.<br>Note: Only some model versions support this.</p>
+                     * 
                      */
                     bool m_enableBgm;
                     bool m_enableBgmHasBeenSet;

@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Type of an animated image generating task.
+                * Type of rotating image tasks.
                 */
                 class AnimatedGraphicTaskInput : public AbstractModel
                 {
@@ -111,15 +111,15 @@ namespace TencentCloud
                     bool EndTimeOffsetHasBeenSet() const;
 
                     /**
-                     * 获取<p>Target storage for the file after animated image conversion. If left blank, it inherits the upper-level OutputStorage value.</p>
-                     * @return OutputStorage <p>Target storage for the file after animated image conversion. If left blank, it inherits the upper-level OutputStorage value.</p>
+                     * 获取
+                     * @return OutputStorage 
                      * 
                      */
                     TaskOutputStorage GetOutputStorage() const;
 
                     /**
-                     * 设置<p>Target storage for the file after animated image conversion. If left blank, it inherits the upper-level OutputStorage value.</p>
-                     * @param _outputStorage <p>Target storage for the file after animated image conversion. If left blank, it inherits the upper-level OutputStorage value.</p>
+                     * 设置
+                     * @param _outputStorage 
                      * 
                      */
                     void SetOutputStorage(const TaskOutputStorage& _outputStorage);
@@ -194,7 +194,7 @@ namespace TencentCloud
                     bool m_endTimeOffsetHasBeenSet;
 
                     /**
-                     * <p>Target storage for the file after animated image conversion. If left blank, it inherits the upper-level OutputStorage value.</p>
+                     * 
                      */
                     TaskOutputStorage m_outputStorage;
                     bool m_outputStorageHasBeenSet;

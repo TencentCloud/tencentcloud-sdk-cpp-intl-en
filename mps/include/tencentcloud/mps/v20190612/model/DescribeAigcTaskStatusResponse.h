@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Task ID.</p>
-                     * @return TaskId <p>Task ID.</p>
+                     * 获取
+                     * @return TaskId 
                      * 
                      */
                     std::string GetTaskId() const;
@@ -58,8 +58,8 @@ namespace TencentCloud
                     bool TaskIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>Task status description</p><p>Enumeration values: </p><ul><li>PENDING: Task waiting for scheduling</li><li>RUNNING: Task running</li><li>FINISHED: Task executed successfully</li><li>STOP: Task termination</li><li>FAILED: Task failure</li><li>TIMEOUT: Task timeout</li></ul>
-                     * @return TaskStatus <p>Task status description</p><p>Enumeration values: </p><ul><li>PENDING: Task waiting for scheduling</li><li>RUNNING: Task running</li><li>FINISHED: Task executed successfully</li><li>STOP: Task termination</li><li>FAILED: Task failure</li><li>TIMEOUT: Task timeout</li></ul>
+                     * 获取
+                     * @return TaskStatus 
                      * 
                      */
                     std::string GetTaskStatus() const;
@@ -86,8 +86,8 @@ namespace TencentCloud
                     bool OutputUrlHasBeenSet() const;
 
                     /**
-                     * 获取<p>Task creation time</p>
-                     * @return CreateTime <p>Task creation time</p>
+                     * 获取
+                     * @return CreateTime 
                      * 
                      */
                     std::string GetCreateTime() const;
@@ -100,8 +100,8 @@ namespace TencentCloud
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Task scheduling time</p>
-                     * @return ScheduledTime <p>Task scheduling time</p>
+                     * 获取
+                     * @return ScheduledTime 
                      * 
                      */
                     std::string GetScheduledTime() const;
@@ -114,8 +114,8 @@ namespace TencentCloud
                     bool ScheduledTimeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Task completion time</p>
-                     * @return FinishedTime <p>Task completion time</p>
+                     * 获取
+                     * @return FinishedTime 
                      * 
                      */
                     std::string GetFinishedTime() const;
@@ -128,8 +128,8 @@ namespace TencentCloud
                     bool FinishedTimeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Task error code</p>
-                     * @return TaskResultCode <p>Task error code</p>
+                     * 获取
+                     * @return TaskResultCode 
                      * 
                      */
                     int64_t GetTaskResultCode() const;
@@ -142,8 +142,8 @@ namespace TencentCloud
                     bool TaskResultCodeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Task returned error message</p>
-                     * @return TaskResultMsg <p>Task returned error message</p>
+                     * 获取
+                     * @return TaskResultMsg 
                      * 
                      */
                     std::string GetTaskResultMsg() const;
@@ -156,8 +156,8 @@ namespace TencentCloud
                     bool TaskResultMsgHasBeenSet() const;
 
                     /**
-                     * 获取<p>Request structure</p>
-                     * @return RequestBody <p>Request structure</p>
+                     * 获取
+                     * @return RequestBody 
                      * 
                      */
                     std::string GetRequestBody() const;
@@ -170,8 +170,8 @@ namespace TencentCloud
                     bool RequestBodyHasBeenSet() const;
 
                     /**
-                     * 获取<p>Task type</p>
-                     * @return TaskType <p>Task type</p>
+                     * 获取
+                     * @return TaskType 
                      * 
                      */
                     std::string GetTaskType() const;
@@ -183,16 +183,44 @@ namespace TencentCloud
                      */
                     bool TaskTypeHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Other job information</p>
+                     * @return TaskInfo <p>Other job information</p>
+                     * 
+                     */
+                    std::string GetTaskInfo() const;
+
+                    /**
+                     * 判断参数 TaskInfo 是否已赋值
+                     * @return TaskInfo 是否已赋值
+                     * 
+                     */
+                    bool TaskInfoHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Task sub-status</p>
+                     * @return Stage <p>Task sub-status</p>
+                     * 
+                     */
+                    std::string GetStage() const;
+
+                    /**
+                     * 判断参数 Stage 是否已赋值
+                     * @return Stage 是否已赋值
+                     * 
+                     */
+                    bool StageHasBeenSet() const;
+
                 private:
 
                     /**
-                     * <p>Task ID.</p>
+                     * 
                      */
                     std::string m_taskId;
                     bool m_taskIdHasBeenSet;
 
                     /**
-                     * <p>Task status description</p><p>Enumeration values: </p><ul><li>PENDING: Task waiting for scheduling</li><li>RUNNING: Task running</li><li>FINISHED: Task executed successfully</li><li>STOP: Task termination</li><li>FAILED: Task failure</li><li>TIMEOUT: Task timeout</li></ul>
+                     * 
                      */
                     std::string m_taskStatus;
                     bool m_taskStatusHasBeenSet;
@@ -204,46 +232,58 @@ namespace TencentCloud
                     bool m_outputUrlHasBeenSet;
 
                     /**
-                     * <p>Task creation time</p>
+                     * 
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * <p>Task scheduling time</p>
+                     * 
                      */
                     std::string m_scheduledTime;
                     bool m_scheduledTimeHasBeenSet;
 
                     /**
-                     * <p>Task completion time</p>
+                     * 
                      */
                     std::string m_finishedTime;
                     bool m_finishedTimeHasBeenSet;
 
                     /**
-                     * <p>Task error code</p>
+                     * 
                      */
                     int64_t m_taskResultCode;
                     bool m_taskResultCodeHasBeenSet;
 
                     /**
-                     * <p>Task returned error message</p>
+                     * 
                      */
                     std::string m_taskResultMsg;
                     bool m_taskResultMsgHasBeenSet;
 
                     /**
-                     * <p>Request structure</p>
+                     * 
                      */
                     std::string m_requestBody;
                     bool m_requestBodyHasBeenSet;
 
                     /**
-                     * <p>Task type</p>
+                     * 
                      */
                     std::string m_taskType;
                     bool m_taskTypeHasBeenSet;
+
+                    /**
+                     * <p>Other job information</p>
+                     */
+                    std::string m_taskInfo;
+                    bool m_taskInfoHasBeenSet;
+
+                    /**
+                     * <p>Task sub-status</p>
+                     */
+                    std::string m_stage;
+                    bool m_stageHasBeenSet;
 
                 };
             }

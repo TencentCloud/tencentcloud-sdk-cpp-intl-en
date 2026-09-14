@@ -48,10 +48,12 @@ namespace TencentCloud
 
                     /**
                      * 获取Capability configuration switch. Valid values:
+
 ON: enabled.
 OFF: disabled.
 Default value: OFF.
                      * @return Switch Capability configuration switch. Valid values:
+
 ON: enabled.
 OFF: disabled.
 Default value: OFF.
@@ -61,10 +63,12 @@ Default value: OFF.
 
                     /**
                      * 设置Capability configuration switch. Valid values:
+
 ON: enabled.
 OFF: disabled.
 Default value: OFF.
                      * @param _switch Capability configuration switch. Valid values:
+
 ON: enabled.
 OFF: disabled.
 Default value: OFF.
@@ -80,35 +84,15 @@ Default value: OFF.
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取Strength type, available values:
-
-weak
-normal
-strong
-Default value: normal.
-                     * @return Type Strength type, available values:
-
-weak
-normal
-strong
-Default value: normal.
+                     * 获取
+                     * @return Type 
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Strength type, available values:
-
-weak
-normal
-strong
-Default value: normal.
-                     * @param _type Strength type, available values:
-
-weak
-normal
-strong
-Default value: normal.
+                     * 设置
+                     * @param _type 
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -124,6 +108,7 @@ Default value: normal.
 
                     /**
                      * Capability configuration switch. Valid values:
+
 ON: enabled.
 OFF: disabled.
 Default value: OFF.
@@ -132,12 +117,7 @@ Default value: OFF.
                     bool m_switchHasBeenSet;
 
                     /**
-                     * Strength type, available values:
-
-weak
-normal
-strong
-Default value: normal.
+                     * 
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;

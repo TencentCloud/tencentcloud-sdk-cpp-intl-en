@@ -48,27 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether audio mixing is enabled. Value range:
-0: Disable audio mixing
-1: Enable audio mixing
-Default value: 0
-                     * @return ChannelsRemix Whether audio mixing is enabled. Value range:
-0: Disable audio mixing
-1: Enable audio mixing
-Default value: 0
+                     * 获取
+                     * @return ChannelsRemix 
                      * 
                      */
                     int64_t GetChannelsRemix() const;
 
                     /**
-                     * 设置Whether audio mixing is enabled. Value range:
-0: Disable audio mixing
-1: Enable audio mixing
-Default value: 0
-                     * @param _channelsRemix Whether audio mixing is enabled. Value range:
-0: Disable audio mixing
-1: Enable audio mixing
-Default value: 0
+                     * 设置
+                     * @param _channelsRemix 
                      * 
                      */
                     void SetChannelsRemix(const int64_t& _channelsRemix);
@@ -81,31 +69,15 @@ Default value: 0
                     bool ChannelsRemixHasBeenSet() const;
 
                     /**
-                     * 获取Merge audio track input type, available values:
-track: Indicates usage of the audio track id.
-track_channel: Indicates usage of audio track id and sound channel id.
-Default: track.
-Note: If the original video is multichannel, recommend using track_channel.
-                     * @return SelectType Merge audio track input type, available values:
-track: Indicates usage of the audio track id.
-track_channel: Indicates usage of audio track id and sound channel id.
-Default: track.
-Note: If the original video is multichannel, recommend using track_channel.
+                     * 获取
+                     * @return SelectType 
                      * 
                      */
                     std::string GetSelectType() const;
 
                     /**
-                     * 设置Merge audio track input type, available values:
-track: Indicates usage of the audio track id.
-track_channel: Indicates usage of audio track id and sound channel id.
-Default: track.
-Note: If the original video is multichannel, recommend using track_channel.
-                     * @param _selectType Merge audio track input type, available values:
-track: Indicates usage of the audio track id.
-track_channel: Indicates usage of audio track id and sound channel id.
-Default: track.
-Note: If the original video is multichannel, recommend using track_channel.
+                     * 设置
+                     * @param _selectType 
                      * 
                      */
                     void SetSelectType(const std::string& _selectType);
@@ -118,15 +90,15 @@ Note: If the original video is multichannel, recommend using track_channel.
                     bool SelectTypeHasBeenSet() const;
 
                     /**
-                     * 获取Audio track info
-                     * @return InputTrackInfo Audio track info
+                     * 获取
+                     * @return InputTrackInfo 
                      * 
                      */
                     std::vector<TrackInfo> GetInputTrackInfo() const;
 
                     /**
-                     * 设置Audio track info
-                     * @param _inputTrackInfo Audio track info
+                     * 设置
+                     * @param _inputTrackInfo 
                      * 
                      */
                     void SetInputTrackInfo(const std::vector<TrackInfo>& _inputTrackInfo);
@@ -141,26 +113,19 @@ Note: If the original video is multichannel, recommend using track_channel.
                 private:
 
                     /**
-                     * Whether audio mixing is enabled. Value range:
-0: Disable audio mixing
-1: Enable audio mixing
-Default value: 0
+                     * 
                      */
                     int64_t m_channelsRemix;
                     bool m_channelsRemixHasBeenSet;
 
                     /**
-                     * Merge audio track input type, available values:
-track: Indicates usage of the audio track id.
-track_channel: Indicates usage of audio track id and sound channel id.
-Default: track.
-Note: If the original video is multichannel, recommend using track_channel.
+                     * 
                      */
                     std::string m_selectType;
                     bool m_selectTypeHasBeenSet;
 
                     /**
-                     * Audio track info
+                     * 
                      */
                     std::vector<TrackInfo> m_inputTrackInfo;
                     bool m_inputTrackInfoHasBeenSet;

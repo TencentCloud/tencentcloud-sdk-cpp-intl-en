@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Input parameter type for media quality inspection.
+                * 
                 */
                 class AiQualityControlTaskInput : public AbstractModel
                 {

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Information of the audio stream in a VOD file
+                * Audio stream information of VOD files
                 */
                 class MediaAudioStreamItem : public AbstractModel
                 {
@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Bitrate of an audio stream in bps.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Bitrate Bitrate of an audio stream in bps.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Bitrate of the audio stream. Unit: bps.
+                     * @return Bitrate Bitrate of the audio stream. Unit: bps.
                      * 
                      */
                     int64_t GetBitrate() const;
 
                     /**
-                     * 设置Bitrate of an audio stream in bps.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _bitrate Bitrate of an audio stream in bps.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Bitrate of the audio stream. Unit: bps.
+                     * @param _bitrate Bitrate of the audio stream. Unit: bps.
                      * 
                      */
                     void SetBitrate(const int64_t& _bitrate);
@@ -72,19 +68,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool BitrateHasBeenSet() const;
 
                     /**
-                     * 获取Sample rate of an audio stream in Hz.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SamplingRate Sample rate of an audio stream in Hz.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Sampling rate of the audio stream. Unit: hz.
+                     * @return SamplingRate Sampling rate of the audio stream. Unit: hz.
                      * 
                      */
                     int64_t GetSamplingRate() const;
 
                     /**
-                     * 设置Sample rate of an audio stream in Hz.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _samplingRate Sample rate of an audio stream in Hz.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Sampling rate of the audio stream. Unit: hz.
+                     * @param _samplingRate Sampling rate of the audio stream. Unit: hz.
                      * 
                      */
                     void SetSamplingRate(const int64_t& _samplingRate);
@@ -97,19 +89,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool SamplingRateHasBeenSet() const;
 
                     /**
-                     * 获取Audio stream codec, such as aac.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Codec Audio stream codec, such as aac.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Audio stream encoding format, for example, aac.
+                     * @return Codec Audio stream encoding format, for example, aac.
                      * 
                      */
                     std::string GetCodec() const;
 
                     /**
-                     * 设置Audio stream codec, such as aac.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _codec Audio stream codec, such as aac.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Audio stream encoding format, for example, aac.
+                     * @param _codec Audio stream encoding format, for example, aac.
                      * 
                      */
                     void SetCodec(const std::string& _codec);
@@ -122,15 +110,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CodecHasBeenSet() const;
 
                     /**
-                     * 获取Number of audio channels, for example 2.
-                     * @return Channel Number of audio channels, for example 2.
+                     * 获取
+                     * @return Channel 
                      * 
                      */
                     int64_t GetChannel() const;
 
                     /**
-                     * 设置Number of audio channels, for example 2.
-                     * @param _channel Number of audio channels, for example 2.
+                     * 设置
+                     * @param _channel 
                      * 
                      */
                     void SetChannel(const int64_t& _channel);
@@ -143,15 +131,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ChannelHasBeenSet() const;
 
                     /**
-                     * 获取Audio Codecs.
-                     * @return Codecs Audio Codecs.
+                     * 获取
+                     * @return Codecs 
                      * 
                      */
                     std::string GetCodecs() const;
 
                     /**
-                     * 设置Audio Codecs.
-                     * @param _codecs Audio Codecs.
+                     * 设置
+                     * @param _codecs 
                      * 
                      */
                     void SetCodecs(const std::string& _codecs);
@@ -164,15 +152,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CodecsHasBeenSet() const;
 
                     /**
-                     * 获取Audio loudness.
-                     * @return Loudness Audio loudness.
+                     * 获取
+                     * @return Loudness 
                      * 
                      */
                     double GetLoudness() const;
 
                     /**
-                     * 设置Audio loudness.
-                     * @param _loudness Audio loudness.
+                     * 设置
+                     * @param _loudness 
                      * 
                      */
                     void SetLoudness(const double& _loudness);
@@ -187,40 +175,37 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Bitrate of an audio stream in bps.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Bitrate of the audio stream. Unit: bps.
                      */
                     int64_t m_bitrate;
                     bool m_bitrateHasBeenSet;
 
                     /**
-                     * Sample rate of an audio stream in Hz.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Sampling rate of the audio stream. Unit: hz.
                      */
                     int64_t m_samplingRate;
                     bool m_samplingRateHasBeenSet;
 
                     /**
-                     * Audio stream codec, such as aac.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Audio stream encoding format, for example, aac.
                      */
                     std::string m_codec;
                     bool m_codecHasBeenSet;
 
                     /**
-                     * Number of audio channels, for example 2.
+                     * 
                      */
                     int64_t m_channel;
                     bool m_channelHasBeenSet;
 
                     /**
-                     * Audio Codecs.
+                     * 
                      */
                     std::string m_codecs;
                     bool m_codecsHasBeenSet;
 
                     /**
-                     * Audio loudness.
+                     * 
                      */
                     double m_loudness;
                     bool m_loudnessHasBeenSet;

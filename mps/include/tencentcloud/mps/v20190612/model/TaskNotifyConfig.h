@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Event notification configuration of a task.
+                * Event notification configuration of the task.
                 */
                 class TaskNotifyConfig : public AbstractModel
                 {
@@ -195,15 +195,15 @@ namespace TencentCloud
                     bool QueueNameHasBeenSet() const;
 
                     /**
-                     * 获取<p>AWS SQS callback. This is required if NotifyType is AWS-SQS.</p>
-                     * @return AwsSQS <p>AWS SQS callback. This is required if NotifyType is AWS-SQS.</p>
+                     * 获取
+                     * @return AwsSQS 
                      * 
                      */
                     AwsSQS GetAwsSQS() const;
 
                     /**
-                     * 设置<p>AWS SQS callback. This is required if NotifyType is AWS-SQS.</p>
-                     * @param _awsSQS <p>AWS SQS callback. This is required if NotifyType is AWS-SQS.</p>
+                     * 设置
+                     * @param _awsSQS 
                      * 
                      */
                     void SetAwsSQS(const AwsSQS& _awsSQS);
@@ -281,7 +281,7 @@ namespace TencentCloud
                     bool m_queueNameHasBeenSet;
 
                     /**
-                     * <p>AWS SQS callback. This is required if NotifyType is AWS-SQS.</p>
+                     * 
                      */
                     AwsSQS m_awsSQS;
                     bool m_awsSQSHasBeenSet;

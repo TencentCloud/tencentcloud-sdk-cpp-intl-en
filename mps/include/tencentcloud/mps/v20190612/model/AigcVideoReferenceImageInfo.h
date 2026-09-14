@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Reference image information for AIGC video generation.
+                * 
                 */
                 class AigcVideoReferenceImageInfo : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Image URL for video generation. The URL must be accessible from the public network and must be accessible to crawlers.
-                     * @return ImageUrl Image URL for video generation. The URL must be accessible from the public network and must be accessible to crawlers.
+                     * 获取
+                     * @return ImageUrl 
                      * 
                      */
                     std::string GetImageUrl() const;
 
                     /**
-                     * 设置Image URL for video generation. The URL must be accessible from the public network and must be accessible to crawlers.
-                     * @param _imageUrl Image URL for video generation. The URL must be accessible from the public network and must be accessible to crawlers.
+                     * 设置
+                     * @param _imageUrl 
                      * 
                      */
                     void SetImageUrl(const std::string& _imageUrl);
@@ -68,23 +68,15 @@ namespace TencentCloud
                     bool ImageUrlHasBeenSet() const;
 
                     /**
-                     * 获取Reference Type.
-Note:
-1. If the GV model is used, this serves as the reference method. Valid values are asset and style.
-                     * @return ReferenceType Reference Type.
-Note:
-1. If the GV model is used, this serves as the reference method. Valid values are asset and style.
+                     * 获取
+                     * @return ReferenceType 
                      * 
                      */
                     std::string GetReferenceType() const;
 
                     /**
-                     * 设置Reference Type.
-Note:
-1. If the GV model is used, this serves as the reference method. Valid values are asset and style.
-                     * @param _referenceType Reference Type.
-Note:
-1. If the GV model is used, this serves as the reference method. Valid values are asset and style.
+                     * 设置
+                     * @param _referenceType 
                      * 
                      */
                     void SetReferenceType(const std::string& _referenceType);
@@ -99,15 +91,13 @@ Note:
                 private:
 
                     /**
-                     * Image URL for video generation. The URL must be accessible from the public network and must be accessible to crawlers.
+                     * 
                      */
                     std::string m_imageUrl;
                     bool m_imageUrlHasBeenSet;
 
                     /**
-                     * Reference Type.
-Note:
-1. If the GV model is used, this serves as the reference method. Valid values are asset and style.
+                     * 
                      */
                     std::string m_referenceType;
                     bool m_referenceTypeHasBeenSet;

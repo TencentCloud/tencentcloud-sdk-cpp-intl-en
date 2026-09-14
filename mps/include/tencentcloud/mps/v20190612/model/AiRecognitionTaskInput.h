@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Input parameter type of video content recognition
+                * Input parameter type for video content recognition
                 */
                 class AiRecognitionTaskInput : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Intelligent video recognition template ID.
-                     * @return Definition Intelligent video recognition template ID.
+                     * 获取Intelligent video identification template ID.
+                     * @return Definition Intelligent video identification template ID.
                      * 
                      */
                     uint64_t GetDefinition() const;
 
                     /**
-                     * 设置Intelligent video recognition template ID.
-                     * @param _definition Intelligent video recognition template ID.
+                     * 设置Intelligent video identification template ID.
+                     * @param _definition Intelligent video identification template ID.
                      * 
                      */
                     void SetDefinition(const uint64_t& _definition);
@@ -91,7 +91,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Intelligent video recognition template ID.
+                     * Intelligent video identification template ID.
                      */
                     uint64_t m_definition;
                     bool m_definitionHasBeenSet;

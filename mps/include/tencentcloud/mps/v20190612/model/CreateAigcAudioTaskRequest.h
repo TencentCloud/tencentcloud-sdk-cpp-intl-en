@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Model name. Supported models for music generation: GL and MiniMaxMusic.</p>
-                     * @return ModelName <p>Model name. Supported models for music generation: GL and MiniMaxMusic.</p>
+                     * 获取<p>Model name. Supported models for music generation: GL, MiniMaxMusic, EL, and Mureka.</p>
+                     * @return ModelName <p>Model name. Supported models for music generation: GL, MiniMaxMusic, EL, and Mureka.</p>
                      * 
                      */
                     std::string GetModelName() const;
 
                     /**
-                     * 设置<p>Model name. Supported models for music generation: GL and MiniMaxMusic.</p>
-                     * @param _modelName <p>Model name. Supported models for music generation: GL and MiniMaxMusic.</p>
+                     * 设置<p>Model name. Supported models for music generation: GL, MiniMaxMusic, EL, and Mureka.</p>
+                     * @param _modelName <p>Model name. Supported models for music generation: GL, MiniMaxMusic, EL, and Mureka.</p>
                      * 
                      */
                     void SetModelName(const std::string& _modelName);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool ModelNameHasBeenSet() const;
 
                     /**
-                     * 获取<p>Specifies the model version. By default, the system uses the supported stable version of the model.<br>Supported versions for GL: 3.0-clip and 3.0-pro.<br>Supported versions for MiniMaxMusic: 2.0, 2.5, and 2.6.</p>
-                     * @return ModelVersion <p>Specifies the model version. By default, the system uses the supported stable version of the model.<br>Supported versions for GL: 3.0-clip and 3.0-pro.<br>Supported versions for MiniMaxMusic: 2.0, 2.5, and 2.6.</p>
+                     * 获取<p>Specifies the model version. By default, the system uses the supported stable version of the model. Supported versions for GL: 3.0-clip and 3.0-pro. Supported versions for MiniMaxMusic: 2.0, 2.5, 2.6, and 3.0. Supported versions for EL: compose_v2 and sound_t2s_v2. Supported versions for Mureka: song_8, song_9, song_9.5, instrumental_8, instrumental_9, and instrumental_9.5.</p>
+                     * @return ModelVersion <p>Specifies the model version. By default, the system uses the supported stable version of the model. Supported versions for GL: 3.0-clip and 3.0-pro. Supported versions for MiniMaxMusic: 2.0, 2.5, 2.6, and 3.0. Supported versions for EL: compose_v2 and sound_t2s_v2. Supported versions for Mureka: song_8, song_9, song_9.5, instrumental_8, instrumental_9, and instrumental_9.5.</p>
                      * 
                      */
                     std::string GetModelVersion() const;
 
                     /**
-                     * 设置<p>Specifies the model version. By default, the system uses the supported stable version of the model.<br>Supported versions for GL: 3.0-clip and 3.0-pro.<br>Supported versions for MiniMaxMusic: 2.0, 2.5, and 2.6.</p>
-                     * @param _modelVersion <p>Specifies the model version. By default, the system uses the supported stable version of the model.<br>Supported versions for GL: 3.0-clip and 3.0-pro.<br>Supported versions for MiniMaxMusic: 2.0, 2.5, and 2.6.</p>
+                     * 设置<p>Specifies the model version. By default, the system uses the supported stable version of the model. Supported versions for GL: 3.0-clip and 3.0-pro. Supported versions for MiniMaxMusic: 2.0, 2.5, 2.6, and 3.0. Supported versions for EL: compose_v2 and sound_t2s_v2. Supported versions for Mureka: song_8, song_9, song_9.5, instrumental_8, instrumental_9, and instrumental_9.5.</p>
+                     * @param _modelVersion <p>Specifies the model version. By default, the system uses the supported stable version of the model. Supported versions for GL: 3.0-clip and 3.0-pro. Supported versions for MiniMaxMusic: 2.0, 2.5, 2.6, and 3.0. Supported versions for EL: compose_v2 and sound_t2s_v2. Supported versions for Mureka: song_8, song_9, song_9.5, instrumental_8, instrumental_9, and instrumental_9.5.</p>
                      * 
                      */
                     void SetModelVersion(const std::string& _modelVersion);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool ModelVersionHasBeenSet() const;
 
                     /**
-                     * 获取<p>Specifies the scenario for audio generation. Music: music.</p>
-                     * @return SceneType <p>Specifies the scenario for audio generation. Music: music.</p>
+                     * 获取
+                     * @return SceneType 
                      * 
                      */
                     std::string GetSceneType() const;
 
                     /**
-                     * 设置<p>Specifies the scenario for audio generation. Music: music.</p>
-                     * @param _sceneType <p>Specifies the scenario for audio generation. Music: music.</p>
+                     * 设置
+                     * @param _sceneType 
                      * 
                      */
                     void SetSceneType(const std::string& _sceneType);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool SceneTypeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Description of the generated video. (Note: A maximum of 2000 characters is supported.) This parameter is required when no reference image is specified.</p>
-                     * @return Prompt <p>Description of the generated video. (Note: A maximum of 2000 characters is supported.) This parameter is required when no reference image is specified.</p>
+                     * 获取<p>Description of the generated music. (Note: supports up to 2,000 characters).</p>
+                     * @return Prompt <p>Description of the generated music. (Note: supports up to 2,000 characters).</p>
                      * 
                      */
                     std::string GetPrompt() const;
 
                     /**
-                     * 设置<p>Description of the generated video. (Note: A maximum of 2000 characters is supported.) This parameter is required when no reference image is specified.</p>
-                     * @param _prompt <p>Description of the generated video. (Note: A maximum of 2000 characters is supported.) This parameter is required when no reference image is specified.</p>
+                     * 设置<p>Description of the generated music. (Note: supports up to 2,000 characters).</p>
+                     * @param _prompt <p>Description of the generated music. (Note: supports up to 2,000 characters).</p>
                      * 
                      */
                     void SetPrompt(const std::string& _prompt);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool PromptHasBeenSet() const;
 
                     /**
-                     * 获取<p>Reference video information, which is supported by some models.</p>
-                     * @return VideoInfos <p>Reference video information, which is supported by some models.</p>
+                     * 获取<p>Reference video information. Only partially supported by some models.</p><ol><li>Kling generates sound effects for videos.</li><li>EL adds background music to videos.</li></ol>
+                     * @return VideoInfos <p>Reference video information. Only partially supported by some models.</p><ol><li>Kling generates sound effects for videos.</li><li>EL adds background music to videos.</li></ol>
                      * 
                      */
                     std::vector<AigcAudioReferenceVideoInfo> GetVideoInfos() const;
 
                     /**
-                     * 设置<p>Reference video information, which is supported by some models.</p>
-                     * @param _videoInfos <p>Reference video information, which is supported by some models.</p>
+                     * 设置<p>Reference video information. Only partially supported by some models.</p><ol><li>Kling generates sound effects for videos.</li><li>EL adds background music to videos.</li></ol>
+                     * @param _videoInfos <p>Reference video information. Only partially supported by some models.</p><ol><li>Kling generates sound effects for videos.</li><li>EL adds background music to videos.</li></ol>
                      * 
                      */
                     void SetVideoInfos(const std::vector<AigcAudioReferenceVideoInfo>& _videoInfos);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool VideoInfosHasBeenSet() const;
 
                     /**
-                     * 获取<p>Specify the reference audio information.</p><p>For example, this is required for music generation.</p>
-                     * @return AudioInfos <p>Specify the reference audio information.</p><p>For example, this is required for music generation.</p>
+                     * 获取<p>Specify the reference audio information.</p><ol><li>Use of the cover feature in MiniMaxMusic.</li></ol><p>For example, this is required for music generation.</p>
+                     * @return AudioInfos <p>Specify the reference audio information.</p><ol><li>Use of the cover feature in MiniMaxMusic.</li></ol><p>For example, this is required for music generation.</p>
                      * 
                      */
                     std::vector<AigcAudioReferenceAudioInfo> GetAudioInfos() const;
 
                     /**
-                     * 设置<p>Specify the reference audio information.</p><p>For example, this is required for music generation.</p>
-                     * @param _audioInfos <p>Specify the reference audio information.</p><p>For example, this is required for music generation.</p>
+                     * 设置<p>Specify the reference audio information.</p><ol><li>Use of the cover feature in MiniMaxMusic.</li></ol><p>For example, this is required for music generation.</p>
+                     * @param _audioInfos <p>Specify the reference audio information.</p><ol><li>Use of the cover feature in MiniMaxMusic.</li></ol><p>For example, this is required for music generation.</p>
                      * 
                      */
                     void SetAudioInfos(const std::vector<AigcAudioReferenceAudioInfo>& _audioInfos);
@@ -173,36 +173,15 @@ namespace TencentCloud
                     bool AudioInfosHasBeenSet() const;
 
                     /**
-                     * 获取<p>Output audio format. By default, this is not specified. Valid values: mp3 and wav.</p>
-                     * @return OutputAudioFormat <p>Output audio format. By default, this is not specified. Valid values: mp3 and wav.</p>
-                     * 
-                     */
-                    std::string GetOutputAudioFormat() const;
-
-                    /**
-                     * 设置<p>Output audio format. By default, this is not specified. Valid values: mp3 and wav.</p>
-                     * @param _outputAudioFormat <p>Output audio format. By default, this is not specified. Valid values: mp3 and wav.</p>
-                     * 
-                     */
-                    void SetOutputAudioFormat(const std::string& _outputAudioFormat);
-
-                    /**
-                     * 判断参数 OutputAudioFormat 是否已赋值
-                     * @return OutputAudioFormat 是否已赋值
-                     * 
-                     */
-                    bool OutputAudioFormatHasBeenSet() const;
-
-                    /**
-                     * 获取<p>COS bucket information for the file result. Note: COS is required and the MPS_QcsRole role needs to be created and authorized.</p>
-                     * @return StoreCosParam <p>COS bucket information for the file result. Note: COS is required and the MPS_QcsRole role needs to be created and authorized.</p>
+                     * 获取
+                     * @return StoreCosParam 
                      * 
                      */
                     AigcStoreCosParam GetStoreCosParam() const;
 
                     /**
-                     * 设置<p>COS bucket information for the file result. Note: COS is required and the MPS_QcsRole role needs to be created and authorized.</p>
-                     * @param _storeCosParam <p>COS bucket information for the file result. Note: COS is required and the MPS_QcsRole role needs to be created and authorized.</p>
+                     * 设置
+                     * @param _storeCosParam 
                      * 
                      */
                     void SetStoreCosParam(const AigcStoreCosParam& _storeCosParam);
@@ -215,15 +194,15 @@ namespace TencentCloud
                     bool StoreCosParamHasBeenSet() const;
 
                     /**
-                     * 获取<p>Additional parameters required.</p>
-                     * @return ExtraParameters <p>Additional parameters required.</p>
+                     * 获取
+                     * @return ExtraParameters 
                      * 
                      */
                     AigcAudioExtraParam GetExtraParameters() const;
 
                     /**
-                     * 设置<p>Additional parameters required.</p>
-                     * @param _extraParameters <p>Additional parameters required.</p>
+                     * 设置
+                     * @param _extraParameters 
                      * 
                      */
                     void SetExtraParameters(const AigcAudioExtraParam& _extraParameters);
@@ -236,15 +215,15 @@ namespace TencentCloud
                     bool ExtraParametersHasBeenSet() const;
 
                     /**
-                     * 获取<p>This is used to specify special scenario parameters required by the model, in the format of a serialized JSON string.<br>Example to specify lyrics for the MinimaxMusic model:<br>{"lyric":{"The pony is running with joy. The flowers are blooming."}}</p><ol><li>Example for MiniMaxMusic instrumental music: &quot;AdditionalParameters&quot;:&quot;{"is_instrumental":true}&quot;</li></ol>
-                     * @return AdditionalParameters <p>This is used to specify special scenario parameters required by the model, in the format of a serialized JSON string.<br>Example to specify lyrics for the MinimaxMusic model:<br>{"lyric":{"The pony is running with joy. The flowers are blooming."}}</p><ol><li>Example for MiniMaxMusic instrumental music: &quot;AdditionalParameters&quot;:&quot;{"is_instrumental":true}&quot;</li></ol>
+                     * 获取<p>Used to pass in some special scene parameters required by the model, serialized into strings in Json format. <br>Example MinimaxMusic model When lyrics are passed in:<br> {"lyric":{"ponies are running happily, flowers are blooming"}}</p><ol><li>MiniMaxMusic raw pure music parameters use example:&quot; AdditionalParameters&quot;:&quot; {"is_instrumental":true}&quot;. <br>Supported transparent transmission parameters are: lyrics, is_instrumental, aigc_watermark, sample_rate, bitrate. </li><li>EL Health Music supports transparent transmission parameters:<br> PromptInfluence, WithTimestamps, CompositionPlan, ForceInstrumental and other parameters. </li></ol>
+                     * @return AdditionalParameters <p>Used to pass in some special scene parameters required by the model, serialized into strings in Json format. <br>Example MinimaxMusic model When lyrics are passed in:<br> {"lyric":{"ponies are running happily, flowers are blooming"}}</p><ol><li>MiniMaxMusic raw pure music parameters use example:&quot; AdditionalParameters&quot;:&quot; {"is_instrumental":true}&quot;. <br>Supported transparent transmission parameters are: lyrics, is_instrumental, aigc_watermark, sample_rate, bitrate. </li><li>EL Health Music supports transparent transmission parameters:<br> PromptInfluence, WithTimestamps, CompositionPlan, ForceInstrumental and other parameters. </li></ol>
                      * 
                      */
                     std::string GetAdditionalParameters() const;
 
                     /**
-                     * 设置<p>This is used to specify special scenario parameters required by the model, in the format of a serialized JSON string.<br>Example to specify lyrics for the MinimaxMusic model:<br>{"lyric":{"The pony is running with joy. The flowers are blooming."}}</p><ol><li>Example for MiniMaxMusic instrumental music: &quot;AdditionalParameters&quot;:&quot;{"is_instrumental":true}&quot;</li></ol>
-                     * @param _additionalParameters <p>This is used to specify special scenario parameters required by the model, in the format of a serialized JSON string.<br>Example to specify lyrics for the MinimaxMusic model:<br>{"lyric":{"The pony is running with joy. The flowers are blooming."}}</p><ol><li>Example for MiniMaxMusic instrumental music: &quot;AdditionalParameters&quot;:&quot;{"is_instrumental":true}&quot;</li></ol>
+                     * 设置<p>Used to pass in some special scene parameters required by the model, serialized into strings in Json format. <br>Example MinimaxMusic model When lyrics are passed in:<br> {"lyric":{"ponies are running happily, flowers are blooming"}}</p><ol><li>MiniMaxMusic raw pure music parameters use example:&quot; AdditionalParameters&quot;:&quot; {"is_instrumental":true}&quot;. <br>Supported transparent transmission parameters are: lyrics, is_instrumental, aigc_watermark, sample_rate, bitrate. </li><li>EL Health Music supports transparent transmission parameters:<br> PromptInfluence, WithTimestamps, CompositionPlan, ForceInstrumental and other parameters. </li></ol>
+                     * @param _additionalParameters <p>Used to pass in some special scene parameters required by the model, serialized into strings in Json format. <br>Example MinimaxMusic model When lyrics are passed in:<br> {"lyric":{"ponies are running happily, flowers are blooming"}}</p><ol><li>MiniMaxMusic raw pure music parameters use example:&quot; AdditionalParameters&quot;:&quot; {"is_instrumental":true}&quot;. <br>Supported transparent transmission parameters are: lyrics, is_instrumental, aigc_watermark, sample_rate, bitrate. </li><li>EL Health Music supports transparent transmission parameters:<br> PromptInfluence, WithTimestamps, CompositionPlan, ForceInstrumental and other parameters. </li></ol>
                      * 
                      */
                     void SetAdditionalParameters(const std::string& _additionalParameters);
@@ -257,15 +236,15 @@ namespace TencentCloud
                     bool AdditionalParametersHasBeenSet() const;
 
                     /**
-                     * 获取<p>API operator name.</p>
-                     * @return Operator <p>API operator name.</p>
+                     * 获取
+                     * @return Operator 
                      * 
                      */
                     std::string GetOperator() const;
 
                     /**
-                     * 设置<p>API operator name.</p>
-                     * @param _operator <p>API operator name.</p>
+                     * 设置
+                     * @param _operator 
                      * 
                      */
                     void SetOperator(const std::string& _operator);
@@ -280,67 +259,61 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Model name. Supported models for music generation: GL and MiniMaxMusic.</p>
+                     * <p>Model name. Supported models for music generation: GL, MiniMaxMusic, EL, and Mureka.</p>
                      */
                     std::string m_modelName;
                     bool m_modelNameHasBeenSet;
 
                     /**
-                     * <p>Specifies the model version. By default, the system uses the supported stable version of the model.<br>Supported versions for GL: 3.0-clip and 3.0-pro.<br>Supported versions for MiniMaxMusic: 2.0, 2.5, and 2.6.</p>
+                     * <p>Specifies the model version. By default, the system uses the supported stable version of the model. Supported versions for GL: 3.0-clip and 3.0-pro. Supported versions for MiniMaxMusic: 2.0, 2.5, 2.6, and 3.0. Supported versions for EL: compose_v2 and sound_t2s_v2. Supported versions for Mureka: song_8, song_9, song_9.5, instrumental_8, instrumental_9, and instrumental_9.5.</p>
                      */
                     std::string m_modelVersion;
                     bool m_modelVersionHasBeenSet;
 
                     /**
-                     * <p>Specifies the scenario for audio generation. Music: music.</p>
+                     * 
                      */
                     std::string m_sceneType;
                     bool m_sceneTypeHasBeenSet;
 
                     /**
-                     * <p>Description of the generated video. (Note: A maximum of 2000 characters is supported.) This parameter is required when no reference image is specified.</p>
+                     * <p>Description of the generated music. (Note: supports up to 2,000 characters).</p>
                      */
                     std::string m_prompt;
                     bool m_promptHasBeenSet;
 
                     /**
-                     * <p>Reference video information, which is supported by some models.</p>
+                     * <p>Reference video information. Only partially supported by some models.</p><ol><li>Kling generates sound effects for videos.</li><li>EL adds background music to videos.</li></ol>
                      */
                     std::vector<AigcAudioReferenceVideoInfo> m_videoInfos;
                     bool m_videoInfosHasBeenSet;
 
                     /**
-                     * <p>Specify the reference audio information.</p><p>For example, this is required for music generation.</p>
+                     * <p>Specify the reference audio information.</p><ol><li>Use of the cover feature in MiniMaxMusic.</li></ol><p>For example, this is required for music generation.</p>
                      */
                     std::vector<AigcAudioReferenceAudioInfo> m_audioInfos;
                     bool m_audioInfosHasBeenSet;
 
                     /**
-                     * <p>Output audio format. By default, this is not specified. Valid values: mp3 and wav.</p>
-                     */
-                    std::string m_outputAudioFormat;
-                    bool m_outputAudioFormatHasBeenSet;
-
-                    /**
-                     * <p>COS bucket information for the file result. Note: COS is required and the MPS_QcsRole role needs to be created and authorized.</p>
+                     * 
                      */
                     AigcStoreCosParam m_storeCosParam;
                     bool m_storeCosParamHasBeenSet;
 
                     /**
-                     * <p>Additional parameters required.</p>
+                     * 
                      */
                     AigcAudioExtraParam m_extraParameters;
                     bool m_extraParametersHasBeenSet;
 
                     /**
-                     * <p>This is used to specify special scenario parameters required by the model, in the format of a serialized JSON string.<br>Example to specify lyrics for the MinimaxMusic model:<br>{"lyric":{"The pony is running with joy. The flowers are blooming."}}</p><ol><li>Example for MiniMaxMusic instrumental music: &quot;AdditionalParameters&quot;:&quot;{"is_instrumental":true}&quot;</li></ol>
+                     * <p>Used to pass in some special scene parameters required by the model, serialized into strings in Json format. <br>Example MinimaxMusic model When lyrics are passed in:<br> {"lyric":{"ponies are running happily, flowers are blooming"}}</p><ol><li>MiniMaxMusic raw pure music parameters use example:&quot; AdditionalParameters&quot;:&quot; {"is_instrumental":true}&quot;. <br>Supported transparent transmission parameters are: lyrics, is_instrumental, aigc_watermark, sample_rate, bitrate. </li><li>EL Health Music supports transparent transmission parameters:<br> PromptInfluence, WithTimestamps, CompositionPlan, ForceInstrumental and other parameters. </li></ol>
                      */
                     std::string m_additionalParameters;
                     bool m_additionalParametersHasBeenSet;
 
                     /**
-                     * <p>API operator name.</p>
+                     * 
                      */
                     std::string m_operator;
                     bool m_operatorHasBeenSet;

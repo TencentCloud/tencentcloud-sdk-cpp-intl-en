@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Adaptive bitrate streaming parameter template
+                * Adaptive transcoding stream parameter template
                 */
                 class AdaptiveStreamTemplate : public AbstractModel
                 {
@@ -91,22 +91,22 @@ namespace TencentCloud
                     bool VideoHasBeenSet() const;
 
                     /**
-                     * 获取Whether to remove audio stream. Valid values:
-<li>0: no,</li>
+                     * 获取Whether to remove the audio stream. Value range:
+<li>`0`: no,</li>
 <li>1: yes.</li>
-                     * @return RemoveAudio Whether to remove audio stream. Valid values:
-<li>0: no,</li>
+                     * @return RemoveAudio Whether to remove the audio stream. Value range:
+<li>`0`: no,</li>
 <li>1: yes.</li>
                      * 
                      */
                     uint64_t GetRemoveAudio() const;
 
                     /**
-                     * 设置Whether to remove audio stream. Valid values:
-<li>0: no,</li>
+                     * 设置Whether to remove the audio stream. Value range:
+<li>`0`: no,</li>
 <li>1: yes.</li>
-                     * @param _removeAudio Whether to remove audio stream. Valid values:
-<li>0: no,</li>
+                     * @param _removeAudio Whether to remove the audio stream. Value range:
+<li>`0`: no,</li>
 <li>1: yes.</li>
                      * 
                      */
@@ -120,22 +120,22 @@ namespace TencentCloud
                     bool RemoveAudioHasBeenSet() const;
 
                     /**
-                     * 获取Whether to remove video stream. Valid values:
-<li>0: no,</li>
+                     * 获取Whether to remove the video stream. Value range:
+<li>`0`: no,</li>
 <li>1: yes.</li>
-                     * @return RemoveVideo Whether to remove video stream. Valid values:
-<li>0: no,</li>
+                     * @return RemoveVideo Whether to remove the video stream. Value range:
+<li>`0`: no,</li>
 <li>1: yes.</li>
                      * 
                      */
                     uint64_t GetRemoveVideo() const;
 
                     /**
-                     * 设置Whether to remove video stream. Valid values:
-<li>0: no,</li>
+                     * 设置Whether to remove the video stream. Value range:
+<li>`0`: no,</li>
 <li>1: yes.</li>
-                     * @param _removeVideo Whether to remove video stream. Valid values:
-<li>0: no,</li>
+                     * @param _removeVideo Whether to remove the video stream. Value range:
+<li>`0`: no,</li>
 <li>1: yes.</li>
                      * 
                      */
@@ -149,19 +149,15 @@ namespace TencentCloud
                     bool RemoveVideoHasBeenSet() const;
 
                     /**
-                     * 获取Audio parameter information list.
-Note: This parameter is used when self-adaptive transcoding uses audio track merging for multiple audio tracks. The maximum length of the parameter array is 64.
-                     * @return AudioList Audio parameter information list.
-Note: This parameter is used when self-adaptive transcoding uses audio track merging for multiple audio tracks. The maximum length of the parameter array is 64.
+                     * 获取
+                     * @return AudioList 
                      * 
                      */
                     std::vector<AudioTemplateInfo> GetAudioList() const;
 
                     /**
-                     * 设置Audio parameter information list.
-Note: This parameter is used when self-adaptive transcoding uses audio track merging for multiple audio tracks. The maximum length of the parameter array is 64.
-                     * @param _audioList Audio parameter information list.
-Note: This parameter is used when self-adaptive transcoding uses audio track merging for multiple audio tracks. The maximum length of the parameter array is 64.
+                     * 设置
+                     * @param _audioList 
                      * 
                      */
                     void SetAudioList(const std::vector<AudioTemplateInfo>& _audioList);
@@ -188,24 +184,23 @@ Note: This parameter is used when self-adaptive transcoding uses audio track mer
                     bool m_videoHasBeenSet;
 
                     /**
-                     * Whether to remove audio stream. Valid values:
-<li>0: no,</li>
+                     * Whether to remove the audio stream. Value range:
+<li>`0`: no,</li>
 <li>1: yes.</li>
                      */
                     uint64_t m_removeAudio;
                     bool m_removeAudioHasBeenSet;
 
                     /**
-                     * Whether to remove video stream. Valid values:
-<li>0: no,</li>
+                     * Whether to remove the video stream. Value range:
+<li>`0`: no,</li>
 <li>1: yes.</li>
                      */
                     uint64_t m_removeVideo;
                     bool m_removeVideoHasBeenSet;
 
                     /**
-                     * Audio parameter information list.
-Note: This parameter is used when self-adaptive transcoding uses audio track merging for multiple audio tracks. The maximum length of the parameter array is 64.
+                     * 
                      */
                     std::vector<AudioTemplateInfo> m_audioList;
                     bool m_audioListHasBeenSet;

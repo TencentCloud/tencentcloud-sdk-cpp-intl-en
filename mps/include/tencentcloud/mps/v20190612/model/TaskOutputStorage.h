@@ -38,7 +38,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * The information of the media processing output object.
+                * Media processing output object information.
                 */
                 class TaskOutputStorage : public AbstractModel
                 {
@@ -50,27 +50,27 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Specifies the type of storage location for the media processing service output object. valid values:.
-<Li>COS: cos storage.</li>.
-<Li>AWS-S3: aws storage, suitable for aws tasks only and requires the same region.</li>.
-<Li>VOD: video-on-demand (vod) pro edition</li>.
-                     * @return Type Specifies the type of storage location for the media processing service output object. valid values:.
-<Li>COS: cos storage.</li>.
-<Li>AWS-S3: aws storage, suitable for aws tasks only and requires the same region.</li>.
-<Li>VOD: video-on-demand (vod) pro edition</li>.
+                     * 获取Type of the media processing output object storage location. Supported values:
+<li>COS: COS storage</li>
+<li>AWS-S3: AWS storage, suitable for AWS tasks only and requires the same region</li>
+<li> VOD: VOD Pro Edition </li>
+                     * @return Type Type of the media processing output object storage location. Supported values:
+<li>COS: COS storage</li>
+<li>AWS-S3: AWS storage, suitable for AWS tasks only and requires the same region</li>
+<li> VOD: VOD Pro Edition </li>
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Specifies the type of storage location for the media processing service output object. valid values:.
-<Li>COS: cos storage.</li>.
-<Li>AWS-S3: aws storage, suitable for aws tasks only and requires the same region.</li>.
-<Li>VOD: video-on-demand (vod) pro edition</li>.
-                     * @param _type Specifies the type of storage location for the media processing service output object. valid values:.
-<Li>COS: cos storage.</li>.
-<Li>AWS-S3: aws storage, suitable for aws tasks only and requires the same region.</li>.
-<Li>VOD: video-on-demand (vod) pro edition</li>.
+                     * 设置Type of the media processing output object storage location. Supported values:
+<li>COS: COS storage</li>
+<li>AWS-S3: AWS storage, suitable for AWS tasks only and requires the same region</li>
+<li> VOD: VOD Pro Edition </li>
+                     * @param _type Type of the media processing output object storage location. Supported values:
+<li>COS: COS storage</li>
+<li>AWS-S3: AWS storage, suitable for AWS tasks only and requires the same region</li>
+<li> VOD: VOD Pro Edition </li>
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -83,15 +83,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Valid when Type is COS. This item is required and indicates the Media Processing Service COS output location.
-                     * @return CosOutputStorage Valid when Type is COS. This item is required and indicates the Media Processing Service COS output location.
+                     * 获取
+                     * @return CosOutputStorage 
                      * 
                      */
                     CosOutputStorage GetCosOutputStorage() const;
 
                     /**
-                     * 设置Valid when Type is COS. This item is required and indicates the Media Processing Service COS output location.
-                     * @param _cosOutputStorage Valid when Type is COS. This item is required and indicates the Media Processing Service COS output location.
+                     * 设置
+                     * @param _cosOutputStorage 
                      * 
                      */
                     void SetCosOutputStorage(const CosOutputStorage& _cosOutputStorage);
@@ -104,15 +104,15 @@ namespace TencentCloud
                     bool CosOutputStorageHasBeenSet() const;
 
                     /**
-                     * 获取Valid when Type is AWS-S3. This item is required and indicates the AWS S3 output location for media processing.
-                     * @return S3OutputStorage Valid when Type is AWS-S3. This item is required and indicates the AWS S3 output location for media processing.
+                     * 获取
+                     * @return S3OutputStorage 
                      * 
                      */
                     S3OutputStorage GetS3OutputStorage() const;
 
                     /**
-                     * 设置Valid when Type is AWS-S3. This item is required and indicates the AWS S3 output location for media processing.
-                     * @param _s3OutputStorage Valid when Type is AWS-S3. This item is required and indicates the AWS S3 output location for media processing.
+                     * 设置
+                     * @param _s3OutputStorage 
                      * 
                      */
                     void SetS3OutputStorage(const S3OutputStorage& _s3OutputStorage);
@@ -125,15 +125,15 @@ namespace TencentCloud
                     bool S3OutputStorageHasBeenSet() const;
 
                     /**
-                     * 获取Valid at that time when Type is VOD. This item is required and represents the Media Processing Service (MPS) video-on-demand (VOD) pro edition output location.
-                     * @return VODOutputStorage Valid at that time when Type is VOD. This item is required and represents the Media Processing Service (MPS) video-on-demand (VOD) pro edition output location.
+                     * 获取
+                     * @return VODOutputStorage 
                      * 
                      */
                     VODOutputStorage GetVODOutputStorage() const;
 
                     /**
-                     * 设置Valid at that time when Type is VOD. This item is required and represents the Media Processing Service (MPS) video-on-demand (VOD) pro edition output location.
-                     * @param _vODOutputStorage Valid at that time when Type is VOD. This item is required and represents the Media Processing Service (MPS) video-on-demand (VOD) pro edition output location.
+                     * 设置
+                     * @param _vODOutputStorage 
                      * 
                      */
                     void SetVODOutputStorage(const VODOutputStorage& _vODOutputStorage);
@@ -148,28 +148,28 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Specifies the type of storage location for the media processing service output object. valid values:.
-<Li>COS: cos storage.</li>.
-<Li>AWS-S3: aws storage, suitable for aws tasks only and requires the same region.</li>.
-<Li>VOD: video-on-demand (vod) pro edition</li>.
+                     * Type of the media processing output object storage location. Supported values:
+<li>COS: COS storage</li>
+<li>AWS-S3: AWS storage, suitable for AWS tasks only and requires the same region</li>
+<li> VOD: VOD Pro Edition </li>
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Valid when Type is COS. This item is required and indicates the Media Processing Service COS output location.
+                     * 
                      */
                     CosOutputStorage m_cosOutputStorage;
                     bool m_cosOutputStorageHasBeenSet;
 
                     /**
-                     * Valid when Type is AWS-S3. This item is required and indicates the AWS S3 output location for media processing.
+                     * 
                      */
                     S3OutputStorage m_s3OutputStorage;
                     bool m_s3OutputStorageHasBeenSet;
 
                     /**
-                     * Valid at that time when Type is VOD. This item is required and represents the Media Processing Service (MPS) video-on-demand (VOD) pro edition output location.
+                     * 
                      */
                     VODOutputStorage m_vODOutputStorage;
                     bool m_vODOutputStorageHasBeenSet;

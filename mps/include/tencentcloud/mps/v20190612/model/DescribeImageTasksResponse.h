@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Total number of records that meet filter conditions.</p><p>Unit: entries</p>
-                     * @return TotalCount <p>Total number of records that meet filter conditions.</p><p>Unit: entries</p>
+                     * 获取
+                     * @return TotalCount 
                      * 
                      */
                     int64_t GetTotalCount() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取<p>Scrolling identifier. If a request does not return all the data entries, this field indicates the ID of the next entry. If this field is an empty string, there is no more data.</p>
-                     * @return ScrollToken <p>Scrolling identifier. If a request does not return all the data entries, this field indicates the ID of the next entry. If this field is an empty string, there is no more data.</p>
+                     * 获取
+                     * @return ScrollToken 
                      * 
                      */
                     std::string GetScrollToken() const;
@@ -73,8 +73,8 @@ namespace TencentCloud
                     bool ScrollTokenHasBeenSet() const;
 
                     /**
-                     * 获取<p>Image task summary list.</p>
-                     * @return TaskSet <p>Image task summary list.</p>
+                     * 获取
+                     * @return TaskSet 
                      * 
                      */
                     std::vector<ImageTaskInfo> GetTaskSet() const;
@@ -89,19 +89,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Total number of records that meet filter conditions.</p><p>Unit: entries</p>
+                     * 
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * <p>Scrolling identifier. If a request does not return all the data entries, this field indicates the ID of the next entry. If this field is an empty string, there is no more data.</p>
+                     * 
                      */
                     std::string m_scrollToken;
                     bool m_scrollTokenHasBeenSet;
 
                     /**
-                     * <p>Image task summary list.</p>
+                     * 
                      */
                     std::vector<ImageTaskInfo> m_taskSet;
                     bool m_taskSetHasBeenSet;

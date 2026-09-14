@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Live stream smart subtitle input struct
+                * 
                 */
                 class LiveSmartSubtitlesTaskInput : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Smart subtitle template ID.	
-                     * @return Definition Smart subtitle template ID.	
+                     * 获取
+                     * @return Definition 
                      * 
                      */
                     uint64_t GetDefinition() const;
 
                     /**
-                     * 设置Smart subtitle template ID.	
-                     * @param _definition Smart subtitle template ID.	
+                     * 设置
+                     * @param _definition 
                      * 
                      */
                     void SetDefinition(const uint64_t& _definition);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool DefinitionHasBeenSet() const;
 
                     /**
-                     * 获取User extension field, which does not need to be filled in for general scenarios.
-                     * @return UserExtPara User extension field, which does not need to be filled in for general scenarios.
+                     * 获取
+                     * @return UserExtPara 
                      * 
                      */
                     std::string GetUserExtPara() const;
 
                     /**
-                     * 设置User extension field, which does not need to be filled in for general scenarios.
-                     * @param _userExtPara User extension field, which does not need to be filled in for general scenarios.
+                     * 设置
+                     * @param _userExtPara 
                      * 
                      */
                     void SetUserExtPara(const std::string& _userExtPara);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Smart subtitle template ID.	
+                     * 
                      */
                     uint64_t m_definition;
                     bool m_definitionHasBeenSet;
 
                     /**
-                     * User extension field, which does not need to be filled in for general scenarios.
+                     * 
                      */
                     std::string m_userExtPara;
                     bool m_userExtParaHasBeenSet;

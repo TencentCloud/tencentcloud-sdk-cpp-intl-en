@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Rule of the `{number}` variable in the output file name.
+                * Rules for the `{number}` variable in the output filename.
                 */
                 class NumberFormat : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Start value of the `{number}` variable. Default value: 0.
-                     * @return InitialValue Start value of the `{number}` variable. Default value: 0.
+                     * 获取The starting value of the `{number}` variable. Default value: 0.
+                     * @return InitialValue The starting value of the `{number}` variable. Default value: 0.
                      * 
                      */
                     uint64_t GetInitialValue() const;
 
                     /**
-                     * 设置Start value of the `{number}` variable. Default value: 0.
-                     * @param _initialValue Start value of the `{number}` variable. Default value: 0.
+                     * 设置The starting value of the `{number}` variable. Default value: 0.
+                     * @param _initialValue The starting value of the `{number}` variable. Default value: 0.
                      * 
                      */
                     void SetInitialValue(const uint64_t& _initialValue);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool InitialValueHasBeenSet() const;
 
                     /**
-                     * 获取Increment of the `{number}` variable. Default value: 1.
-                     * @return Increment Increment of the `{number}` variable. Default value: 1.
+                     * 获取The growth step length of the `{number}` variable, with a default value of 1.
+                     * @return Increment The growth step length of the `{number}` variable, with a default value of 1.
                      * 
                      */
                     uint64_t GetIncrement() const;
 
                     /**
-                     * 设置Increment of the `{number}` variable. Default value: 1.
-                     * @param _increment Increment of the `{number}` variable. Default value: 1.
+                     * 设置The growth step length of the `{number}` variable, with a default value of 1.
+                     * @param _increment The growth step length of the `{number}` variable, with a default value of 1.
                      * 
                      */
                     void SetIncrement(const uint64_t& _increment);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool IncrementHasBeenSet() const;
 
                     /**
-                     * 获取Minimum length of the `{number}` variable. A placeholder will be used if the variable length is below the minimum requirement. Default value: 1.
-                     * @return MinLength Minimum length of the `{number}` variable. A placeholder will be used if the variable length is below the minimum requirement. Default value: 1.
+                     * 获取Minimum length of the `{number}` variable. Placeholder is used if the length is not sufficient. Default value: 1.
+                     * @return MinLength Minimum length of the `{number}` variable. Placeholder is used if the length is not sufficient. Default value: 1.
                      * 
                      */
                     uint64_t GetMinLength() const;
 
                     /**
-                     * 设置Minimum length of the `{number}` variable. A placeholder will be used if the variable length is below the minimum requirement. Default value: 1.
-                     * @param _minLength Minimum length of the `{number}` variable. A placeholder will be used if the variable length is below the minimum requirement. Default value: 1.
+                     * 设置Minimum length of the `{number}` variable. Placeholder is used if the length is not sufficient. Default value: 1.
+                     * @param _minLength Minimum length of the `{number}` variable. Placeholder is used if the length is not sufficient. Default value: 1.
                      * 
                      */
                     void SetMinLength(const uint64_t& _minLength);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool MinLengthHasBeenSet() const;
 
                     /**
-                     * 获取Placeholder used when the `{number}` variable length is below the minimum requirement. Default value: 0.
-                     * @return PlaceHolder Placeholder used when the `{number}` variable length is below the minimum requirement. Default value: 0.
+                     * 获取Placeholder to add when the length of the `{number}` variable is not sufficient. Default value: "0".
+                     * @return PlaceHolder Placeholder to add when the length of the `{number}` variable is not sufficient. Default value: "0".
                      * 
                      */
                     std::string GetPlaceHolder() const;
 
                     /**
-                     * 设置Placeholder used when the `{number}` variable length is below the minimum requirement. Default value: 0.
-                     * @param _placeHolder Placeholder used when the `{number}` variable length is below the minimum requirement. Default value: 0.
+                     * 设置Placeholder to add when the length of the `{number}` variable is not sufficient. Default value: "0".
+                     * @param _placeHolder Placeholder to add when the length of the `{number}` variable is not sufficient. Default value: "0".
                      * 
                      */
                     void SetPlaceHolder(const std::string& _placeHolder);
@@ -133,25 +133,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Start value of the `{number}` variable. Default value: 0.
+                     * The starting value of the `{number}` variable. Default value: 0.
                      */
                     uint64_t m_initialValue;
                     bool m_initialValueHasBeenSet;
 
                     /**
-                     * Increment of the `{number}` variable. Default value: 1.
+                     * The growth step length of the `{number}` variable, with a default value of 1.
                      */
                     uint64_t m_increment;
                     bool m_incrementHasBeenSet;
 
                     /**
-                     * Minimum length of the `{number}` variable. A placeholder will be used if the variable length is below the minimum requirement. Default value: 1.
+                     * Minimum length of the `{number}` variable. Placeholder is used if the length is not sufficient. Default value: 1.
                      */
                     uint64_t m_minLength;
                     bool m_minLengthHasBeenSet;
 
                     /**
-                     * Placeholder used when the `{number}` variable length is below the minimum requirement. Default value: 0.
+                     * Placeholder to add when the length of the `{number}` variable is not sufficient. Default value: "0".
                      */
                     std::string m_placeHolder;
                     bool m_placeHolderHasBeenSet;

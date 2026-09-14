@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * The URL of the object to process.
+                * Media processing URL object information.
                 */
                 class UrlInputInfo : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取URL of a video.
-                     * @return Url URL of a video.
+                     * 获取Video URL.
+                     * @return Url Video URL.
                      * 
                      */
                     std::string GetUrl() const;
 
                     /**
-                     * 设置URL of a video.
-                     * @param _url URL of a video.
+                     * 设置Video URL.
+                     * @param _url Video URL.
                      * 
                      */
                     void SetUrl(const std::string& _url);
@@ -70,7 +70,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * URL of a video.
+                     * Video URL.
                      */
                     std::string m_url;
                     bool m_urlHasBeenSet;

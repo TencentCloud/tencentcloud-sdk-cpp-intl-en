@@ -33,10 +33,12 @@ set(rce_public_header_model
   include/tencentcloud/rce/v20260130/model/Person.h
   include/tencentcloud/rce/v20260130/model/Environment.h
   include/tencentcloud/rce/v20260130/model/Wallet.h
+  include/tencentcloud/rce/v20260130/model/Score.h
   include/tencentcloud/rce/v20260130/model/ClaimRedPacketEvent.h
   include/tencentcloud/rce/v20260130/model/PromotionCode.h
   include/tencentcloud/rce/v20260130/model/ChargeBackEvent.h
   include/tencentcloud/rce/v20260130/model/ReportEventRequest.h
+  include/tencentcloud/rce/v20260130/model/WithdrawEvent.h
   include/tencentcloud/rce/v20260130/model/Merchant.h
   include/tencentcloud/rce/v20260130/model/Delivery.h
   include/tencentcloud/rce/v20260130/model/Cust.h
@@ -65,6 +67,7 @@ set(rce_public_header_model
   include/tencentcloud/rce/v20260130/model/Item.h
   include/tencentcloud/rce/v20260130/model/Amount.h
   include/tencentcloud/rce/v20260130/model/SMSEvent.h
+  include/tencentcloud/rce/v20260130/model/AssessRiskResponse.h
   include/tencentcloud/rce/v20260130/model/AssessEnvironmentRiskRequest.h
   include/tencentcloud/rce/v20260130/model/AddPromotionEvent.h
   include/tencentcloud/rce/v20260130/model/Promotion.h
@@ -74,6 +77,7 @@ set(rce_public_header_model
   include/tencentcloud/rce/v20260130/model/Browser.h
   include/tencentcloud/rce/v20260130/model/PaymentResult.h
   include/tencentcloud/rce/v20260130/model/TransactionEvent.h
+  include/tencentcloud/rce/v20260130/model/AssessRiskRsp.h
   include/tencentcloud/rce/v20260130/model/ModifyPasswordEvent.h
   include/tencentcloud/rce/v20260130/model/AssessDeviceRiskRsp.h
   include/tencentcloud/rce/v20260130/model/Coupon.h
@@ -86,7 +90,7 @@ set(rce_public_header_model
   include/tencentcloud/rce/v20260130/model/AssessDeviceRiskPremiumRsp.h
   include/tencentcloud/rce/v20260130/model/RedeemEvent.h
   include/tencentcloud/rce/v20260130/model/InvitationEvent.h
-  include/tencentcloud/rce/v20260130/model/WithdrawEvent.h
+  include/tencentcloud/rce/v20260130/model/AssessRiskRequest.h
   include/tencentcloud/rce/v20260130/model/ScanCodeEvent.h
   )
 
@@ -106,10 +110,12 @@ set(rce_src
   src/v20260130/model/Person.cpp
   src/v20260130/model/Environment.cpp
   src/v20260130/model/Wallet.cpp
+  src/v20260130/model/Score.cpp
   src/v20260130/model/ClaimRedPacketEvent.cpp
   src/v20260130/model/PromotionCode.cpp
   src/v20260130/model/ChargeBackEvent.cpp
   src/v20260130/model/ReportEventRequest.cpp
+  src/v20260130/model/WithdrawEvent.cpp
   src/v20260130/model/Merchant.cpp
   src/v20260130/model/Delivery.cpp
   src/v20260130/model/Cust.cpp
@@ -138,6 +144,7 @@ set(rce_src
   src/v20260130/model/Item.cpp
   src/v20260130/model/Amount.cpp
   src/v20260130/model/SMSEvent.cpp
+  src/v20260130/model/AssessRiskResponse.cpp
   src/v20260130/model/AssessEnvironmentRiskRequest.cpp
   src/v20260130/model/AddPromotionEvent.cpp
   src/v20260130/model/Promotion.cpp
@@ -147,6 +154,7 @@ set(rce_src
   src/v20260130/model/Browser.cpp
   src/v20260130/model/PaymentResult.cpp
   src/v20260130/model/TransactionEvent.cpp
+  src/v20260130/model/AssessRiskRsp.cpp
   src/v20260130/model/ModifyPasswordEvent.cpp
   src/v20260130/model/AssessDeviceRiskRsp.cpp
   src/v20260130/model/Coupon.cpp
@@ -159,7 +167,7 @@ set(rce_src
   src/v20260130/model/AssessDeviceRiskPremiumRsp.cpp
   src/v20260130/model/RedeemEvent.cpp
   src/v20260130/model/InvitationEvent.cpp
-  src/v20260130/model/WithdrawEvent.cpp
+  src/v20260130/model/AssessRiskRequest.cpp
   src/v20260130/model/ScanCodeEvent.cpp
   )
 

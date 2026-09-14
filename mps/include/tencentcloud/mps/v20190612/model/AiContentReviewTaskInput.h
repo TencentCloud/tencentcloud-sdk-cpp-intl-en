@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Task type of intelligent content audit
+                * Task type for intelligent content moderation
                 */
                 class AiContentReviewTaskInput : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Video content audit template ID.
-                     * @return Definition Video content audit template ID.
+                     * 获取Video content review template ID.
+                     * @return Definition Video content review template ID.
                      * 
                      */
                     uint64_t GetDefinition() const;
 
                     /**
-                     * 设置Video content audit template ID.
-                     * @param _definition Video content audit template ID.
+                     * 设置Video content review template ID.
+                     * @param _definition Video content review template ID.
                      * 
                      */
                     void SetDefinition(const uint64_t& _definition);
@@ -70,7 +70,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Video content audit template ID.
+                     * Video content review template ID.
                      */
                     uint64_t m_definition;
                     bool m_definitionHasBeenSet;

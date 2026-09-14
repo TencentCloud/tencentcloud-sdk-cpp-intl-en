@@ -38,7 +38,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Intelligent erasure task
+                * 
                 */
                 class SmartEraseTaskInput : public AbstractModel
                 {
@@ -50,15 +50,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Smart erasing template id.
-                     * @return Definition Smart erasing template id.
+                     * 获取
+                     * @return Definition 
                      * 
                      */
                     int64_t GetDefinition() const;
 
                     /**
-                     * 设置Smart erasing template id.
-                     * @param _definition Smart erasing template id.
+                     * 设置
+                     * @param _definition 
                      * 
                      */
                     void SetDefinition(const int64_t& _definition);
@@ -92,15 +92,15 @@ namespace TencentCloud
                     bool RawParameterHasBeenSet() const;
 
                     /**
-                     * 获取Custom parameters for smart erasing. When the value of Definition is not 0, this parameter is valid. When certain erasing parameters in this structure are specified, the specified parameters will be used to overwrite those in the smart erasing template. This parameter is used in highly customized scenarios. It is recommended to use only Definition to specify smart erasing parameters.
-                     * @return OverrideParameter Custom parameters for smart erasing. When the value of Definition is not 0, this parameter is valid. When certain erasing parameters in this structure are specified, the specified parameters will be used to overwrite those in the smart erasing template. This parameter is used in highly customized scenarios. It is recommended to use only Definition to specify smart erasing parameters.
+                     * 获取
+                     * @return OverrideParameter 
                      * 
                      */
                     OverrideEraseParameter GetOverrideParameter() const;
 
                     /**
-                     * 设置Custom parameters for smart erasing. When the value of Definition is not 0, this parameter is valid. When certain erasing parameters in this structure are specified, the specified parameters will be used to overwrite those in the smart erasing template. This parameter is used in highly customized scenarios. It is recommended to use only Definition to specify smart erasing parameters.
-                     * @param _overrideParameter Custom parameters for smart erasing. When the value of Definition is not 0, this parameter is valid. When certain erasing parameters in this structure are specified, the specified parameters will be used to overwrite those in the smart erasing template. This parameter is used in highly customized scenarios. It is recommended to use only Definition to specify smart erasing parameters.
+                     * 设置
+                     * @param _overrideParameter 
                      * 
                      */
                     void SetOverrideParameter(const OverrideEraseParameter& _overrideParameter);
@@ -134,47 +134,15 @@ namespace TencentCloud
                     bool OutputStorageHasBeenSet() const;
 
                     /**
-                     * 获取Output path of the file, which can be a relative or absolute path.
-To define the output path, the path must end with `.{format}`. For variable names, please refer to the Filename Variable Explanation (https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1).
-Relative path example:
-<li>Filename_{Variable name}.{format}</li>
-<li>Filename.{format}</li>
-Absolute path example:
-<li>/Custom path/Filename_{Variable name}.{format}</li>
-
-**Note**: Currently does not support the `BatchProcessMedia` API.
-                     * @return OutputObjectPath Output path of the file, which can be a relative or absolute path.
-To define the output path, the path must end with `.{format}`. For variable names, please refer to the Filename Variable Explanation (https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1).
-Relative path example:
-<li>Filename_{Variable name}.{format}</li>
-<li>Filename.{format}</li>
-Absolute path example:
-<li>/Custom path/Filename_{Variable name}.{format}</li>
-
-**Note**: Currently does not support the `BatchProcessMedia` API.
+                     * 获取
+                     * @return OutputObjectPath 
                      * 
                      */
                     std::string GetOutputObjectPath() const;
 
                     /**
-                     * 设置Output path of the file, which can be a relative or absolute path.
-To define the output path, the path must end with `.{format}`. For variable names, please refer to the Filename Variable Explanation (https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1).
-Relative path example:
-<li>Filename_{Variable name}.{format}</li>
-<li>Filename.{format}</li>
-Absolute path example:
-<li>/Custom path/Filename_{Variable name}.{format}</li>
-
-**Note**: Currently does not support the `BatchProcessMedia` API.
-                     * @param _outputObjectPath Output path of the file, which can be a relative or absolute path.
-To define the output path, the path must end with `.{format}`. For variable names, please refer to the Filename Variable Explanation (https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1).
-Relative path example:
-<li>Filename_{Variable name}.{format}</li>
-<li>Filename.{format}</li>
-Absolute path example:
-<li>/Custom path/Filename_{Variable name}.{format}</li>
-
-**Note**: Currently does not support the `BatchProcessMedia` API.
+                     * 设置
+                     * @param _outputObjectPath 
                      * 
                      */
                     void SetOutputObjectPath(const std::string& _outputObjectPath);
@@ -189,7 +157,7 @@ Absolute path example:
                 private:
 
                     /**
-                     * Smart erasing template id.
+                     * 
                      */
                     int64_t m_definition;
                     bool m_definitionHasBeenSet;
@@ -201,7 +169,7 @@ Absolute path example:
                     bool m_rawParameterHasBeenSet;
 
                     /**
-                     * Custom parameters for smart erasing. When the value of Definition is not 0, this parameter is valid. When certain erasing parameters in this structure are specified, the specified parameters will be used to overwrite those in the smart erasing template. This parameter is used in highly customized scenarios. It is recommended to use only Definition to specify smart erasing parameters.
+                     * 
                      */
                     OverrideEraseParameter m_overrideParameter;
                     bool m_overrideParameterHasBeenSet;
@@ -213,15 +181,7 @@ Absolute path example:
                     bool m_outputStorageHasBeenSet;
 
                     /**
-                     * Output path of the file, which can be a relative or absolute path.
-To define the output path, the path must end with `.{format}`. For variable names, please refer to the Filename Variable Explanation (https://www.tencentcloud.com/document/product/862/37039?from_cn_redirect=1).
-Relative path example:
-<li>Filename_{Variable name}.{format}</li>
-<li>Filename.{format}</li>
-Absolute path example:
-<li>/Custom path/Filename_{Variable name}.{format}</li>
-
-**Note**: Currently does not support the `BatchProcessMedia` API.
+                     * 
                      */
                     std::string m_outputObjectPath;
                     bool m_outputObjectPathHasBeenSet;

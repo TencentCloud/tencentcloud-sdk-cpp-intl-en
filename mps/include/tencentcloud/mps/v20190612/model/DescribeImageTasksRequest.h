@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Task status filter condition.</p>
-                     * @return Status <p>Task status filter condition.</p>
+                     * 获取
+                     * @return Status 
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置<p>Task status filter condition.</p>
-                     * @param _status <p>Task status filter condition.</p>
+                     * 设置
+                     * @param _status 
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取<p>Number of returned records.</p>
-                     * @return Limit <p>Number of returned records.</p>
+                     * 获取
+                     * @return Limit 
                      * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
-                     * 设置<p>Number of returned records.</p>
-                     * @param _limit <p>Number of returned records.</p>
+                     * 设置
+                     * @param _limit 
                      * 
                      */
                     void SetLimit(const uint64_t& _limit);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取<p>Scrolling identifier which is used for pulling in batches. If a single request cannot pull all the data entries, the API will return `ScrollToken`, and if the next request carries it, the next pull will start from the next entry.</p>
-                     * @return ScrollToken <p>Scrolling identifier which is used for pulling in batches. If a single request cannot pull all the data entries, the API will return `ScrollToken`, and if the next request carries it, the next pull will start from the next entry.</p>
+                     * 获取
+                     * @return ScrollToken 
                      * 
                      */
                     std::string GetScrollToken() const;
 
                     /**
-                     * 设置<p>Scrolling identifier which is used for pulling in batches. If a single request cannot pull all the data entries, the API will return `ScrollToken`, and if the next request carries it, the next pull will start from the next entry.</p>
-                     * @param _scrollToken <p>Scrolling identifier which is used for pulling in batches. If a single request cannot pull all the data entries, the API will return `ScrollToken`, and if the next request carries it, the next pull will start from the next entry.</p>
+                     * 设置
+                     * @param _scrollToken 
                      * 
                      */
                     void SetScrollToken(const std::string& _scrollToken);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool ScrollTokenHasBeenSet() const;
 
                     /**
-                     * 获取<p>Task start time.</p><p>Parameter format: YYYY-MM-DDThh:mm:ssZ</p>
-                     * @return StartTime <p>Task start time.</p><p>Parameter format: YYYY-MM-DDThh:mm:ssZ</p>
+                     * 获取
+                     * @return StartTime 
                      * 
                      */
                     std::string GetStartTime() const;
 
                     /**
-                     * 设置<p>Task start time.</p><p>Parameter format: YYYY-MM-DDThh:mm:ssZ</p>
-                     * @param _startTime <p>Task start time.</p><p>Parameter format: YYYY-MM-DDThh:mm:ssZ</p>
+                     * 设置
+                     * @param _startTime 
                      * 
                      */
                     void SetStartTime(const std::string& _startTime);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Task end time.</p><p>Parameter format: YYYY-MM-DDThh:mm:ssZ</p>
-                     * @return EndTime <p>Task end time.</p><p>Parameter format: YYYY-MM-DDThh:mm:ssZ</p>
+                     * 获取
+                     * @return EndTime 
                      * 
                      */
                     std::string GetEndTime() const;
 
                     /**
-                     * 设置<p>Task end time.</p><p>Parameter format: YYYY-MM-DDThh:mm:ssZ</p>
-                     * @param _endTime <p>Task end time.</p><p>Parameter format: YYYY-MM-DDThh:mm:ssZ</p>
+                     * 设置
+                     * @param _endTime 
                      * 
                      */
                     void SetEndTime(const std::string& _endTime);
@@ -148,15 +148,15 @@ namespace TencentCloud
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Filter subtask status.</p>
-                     * @return SubTaskHasFailed <p>Filter subtask status.</p>
+                     * 获取
+                     * @return SubTaskHasFailed 
                      * 
                      */
                     bool GetSubTaskHasFailed() const;
 
                     /**
-                     * 设置<p>Filter subtask status.</p>
-                     * @param _subTaskHasFailed <p>Filter subtask status.</p>
+                     * 设置
+                     * @param _subTaskHasFailed 
                      * 
                      */
                     void SetSubTaskHasFailed(const bool& _subTaskHasFailed);
@@ -171,37 +171,37 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Task status filter condition.</p>
+                     * 
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * <p>Number of returned records.</p>
+                     * 
                      */
                     uint64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * <p>Scrolling identifier which is used for pulling in batches. If a single request cannot pull all the data entries, the API will return `ScrollToken`, and if the next request carries it, the next pull will start from the next entry.</p>
+                     * 
                      */
                     std::string m_scrollToken;
                     bool m_scrollTokenHasBeenSet;
 
                     /**
-                     * <p>Task start time.</p><p>Parameter format: YYYY-MM-DDThh:mm:ssZ</p>
+                     * 
                      */
                     std::string m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * <p>Task end time.</p><p>Parameter format: YYYY-MM-DDThh:mm:ssZ</p>
+                     * 
                      */
                     std::string m_endTime;
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * <p>Filter subtask status.</p>
+                     * 
                      */
                     bool m_subTaskHasFailed;
                     bool m_subTaskHasFailedHasBeenSet;

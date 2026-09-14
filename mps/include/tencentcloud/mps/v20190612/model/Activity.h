@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Orchestrate atomic tasks
+                * 
                 */
                 class Activity : public AbstractModel
                 {
@@ -48,87 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Atomic task type.
-<li>input: start node.</li>
-<li>output: termination node.</li>
-<li>action-trans: transcoding.</li>
-<li>action-samplesnapshot: sampled screenshot taking.</li>
-<li>action-AIAnalysis: analysis</li>
-<li>action-AIRecognition: recognition.</li>
-<li>action-aiReview: review</li>
-<li>action-animated-graphics: animated image</li>
-<li>action-image-sprite: sprite sheet</li>
-<li>action-snapshotByTimeOffset: time point screenshot taking</li>
-<li>action-adaptive-substream: adaptive bitrate streaming.</li>
-<li>action-AIQualityControl: media quality inspection.</li>
-<li>action-SmartSubtitles: smart subtitle</li>
-<li>action-exec-rules: judgment rule</li>
-<li>action-SmartErase: intelligent removal.</li>
-
-
-
-                     * @return ActivityType Atomic task type.
-<li>input: start node.</li>
-<li>output: termination node.</li>
-<li>action-trans: transcoding.</li>
-<li>action-samplesnapshot: sampled screenshot taking.</li>
-<li>action-AIAnalysis: analysis</li>
-<li>action-AIRecognition: recognition.</li>
-<li>action-aiReview: review</li>
-<li>action-animated-graphics: animated image</li>
-<li>action-image-sprite: sprite sheet</li>
-<li>action-snapshotByTimeOffset: time point screenshot taking</li>
-<li>action-adaptive-substream: adaptive bitrate streaming.</li>
-<li>action-AIQualityControl: media quality inspection.</li>
-<li>action-SmartSubtitles: smart subtitle</li>
-<li>action-exec-rules: judgment rule</li>
-<li>action-SmartErase: intelligent removal.</li>
-
-
-
+                     * 获取<p>Atomic task type:</p><li>input: starting node</li><li>output: termination node</li><li>action-trans: transcode</li><li>action-samplesnapshot: sampled screenshot</li><li>action-AIAnalysis: analysis</li><li>action-AIRecognition: recognition</li><li>action-aiReview: review</li><li>action-animated-graphics: animated image</li><li>action-image-sprite: sprite sheet</li><li>action-snapshotByTimeOffset: time point screenshot</li><li>action-adaptive-substream: adaptive bitrate stream</li><li>action-AIQualityControl: media quality inspection</li><li>action-SmartSubtitles: smart subtitling</li><li>action-exec-rules: judgment rule</li><li>action-SmartErase: intelligent erasure</li>
+                     * @return ActivityType <p>Atomic task type:</p><li>input: starting node</li><li>output: termination node</li><li>action-trans: transcode</li><li>action-samplesnapshot: sampled screenshot</li><li>action-AIAnalysis: analysis</li><li>action-AIRecognition: recognition</li><li>action-aiReview: review</li><li>action-animated-graphics: animated image</li><li>action-image-sprite: sprite sheet</li><li>action-snapshotByTimeOffset: time point screenshot</li><li>action-adaptive-substream: adaptive bitrate stream</li><li>action-AIQualityControl: media quality inspection</li><li>action-SmartSubtitles: smart subtitling</li><li>action-exec-rules: judgment rule</li><li>action-SmartErase: intelligent erasure</li>
                      * 
                      */
                     std::string GetActivityType() const;
 
                     /**
-                     * 设置Atomic task type.
-<li>input: start node.</li>
-<li>output: termination node.</li>
-<li>action-trans: transcoding.</li>
-<li>action-samplesnapshot: sampled screenshot taking.</li>
-<li>action-AIAnalysis: analysis</li>
-<li>action-AIRecognition: recognition.</li>
-<li>action-aiReview: review</li>
-<li>action-animated-graphics: animated image</li>
-<li>action-image-sprite: sprite sheet</li>
-<li>action-snapshotByTimeOffset: time point screenshot taking</li>
-<li>action-adaptive-substream: adaptive bitrate streaming.</li>
-<li>action-AIQualityControl: media quality inspection.</li>
-<li>action-SmartSubtitles: smart subtitle</li>
-<li>action-exec-rules: judgment rule</li>
-<li>action-SmartErase: intelligent removal.</li>
-
-
-
-                     * @param _activityType Atomic task type.
-<li>input: start node.</li>
-<li>output: termination node.</li>
-<li>action-trans: transcoding.</li>
-<li>action-samplesnapshot: sampled screenshot taking.</li>
-<li>action-AIAnalysis: analysis</li>
-<li>action-AIRecognition: recognition.</li>
-<li>action-aiReview: review</li>
-<li>action-animated-graphics: animated image</li>
-<li>action-image-sprite: sprite sheet</li>
-<li>action-snapshotByTimeOffset: time point screenshot taking</li>
-<li>action-adaptive-substream: adaptive bitrate streaming.</li>
-<li>action-AIQualityControl: media quality inspection.</li>
-<li>action-SmartSubtitles: smart subtitle</li>
-<li>action-exec-rules: judgment rule</li>
-<li>action-SmartErase: intelligent removal.</li>
-
-
-
+                     * 设置<p>Atomic task type:</p><li>input: starting node</li><li>output: termination node</li><li>action-trans: transcode</li><li>action-samplesnapshot: sampled screenshot</li><li>action-AIAnalysis: analysis</li><li>action-AIRecognition: recognition</li><li>action-aiReview: review</li><li>action-animated-graphics: animated image</li><li>action-image-sprite: sprite sheet</li><li>action-snapshotByTimeOffset: time point screenshot</li><li>action-adaptive-substream: adaptive bitrate stream</li><li>action-AIQualityControl: media quality inspection</li><li>action-SmartSubtitles: smart subtitling</li><li>action-exec-rules: judgment rule</li><li>action-SmartErase: intelligent erasure</li>
+                     * @param _activityType <p>Atomic task type:</p><li>input: starting node</li><li>output: termination node</li><li>action-trans: transcode</li><li>action-samplesnapshot: sampled screenshot</li><li>action-AIAnalysis: analysis</li><li>action-AIRecognition: recognition</li><li>action-aiReview: review</li><li>action-animated-graphics: animated image</li><li>action-image-sprite: sprite sheet</li><li>action-snapshotByTimeOffset: time point screenshot</li><li>action-adaptive-substream: adaptive bitrate stream</li><li>action-AIQualityControl: media quality inspection</li><li>action-SmartSubtitles: smart subtitling</li><li>action-exec-rules: judgment rule</li><li>action-SmartErase: intelligent erasure</li>
                      * 
                      */
                     void SetActivityType(const std::string& _activityType);
@@ -141,15 +69,36 @@ namespace TencentCloud
                     bool ActivityTypeHasBeenSet() const;
 
                     /**
-                     * 获取Rear drive node index array
-                     * @return ReardriveIndex Rear drive node index array
+                     * 获取<p>Index array of predecessor nodes.<br>Note: This parameter is invalid when creating or modifying an orchestration. It is automatically generated by the server.</p>
+                     * @return PredriveIndex <p>Index array of predecessor nodes.<br>Note: This parameter is invalid when creating or modifying an orchestration. It is automatically generated by the server.</p>
+                     * 
+                     */
+                    std::vector<int64_t> GetPredriveIndex() const;
+
+                    /**
+                     * 设置<p>Index array of predecessor nodes.<br>Note: This parameter is invalid when creating or modifying an orchestration. It is automatically generated by the server.</p>
+                     * @param _predriveIndex <p>Index array of predecessor nodes.<br>Note: This parameter is invalid when creating or modifying an orchestration. It is automatically generated by the server.</p>
+                     * 
+                     */
+                    void SetPredriveIndex(const std::vector<int64_t>& _predriveIndex);
+
+                    /**
+                     * 判断参数 PredriveIndex 是否已赋值
+                     * @return PredriveIndex 是否已赋值
+                     * 
+                     */
+                    bool PredriveIndexHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Array of successor node indexes</p>
+                     * @return ReardriveIndex <p>Array of successor node indexes</p>
                      * 
                      */
                     std::vector<int64_t> GetReardriveIndex() const;
 
                     /**
-                     * 设置Rear drive node index array
-                     * @param _reardriveIndex Rear drive node index array
+                     * 设置<p>Array of successor node indexes</p>
+                     * @param _reardriveIndex <p>Array of successor node indexes</p>
                      * 
                      */
                     void SetReardriveIndex(const std::vector<int64_t>& _reardriveIndex);
@@ -162,15 +111,15 @@ namespace TencentCloud
                     bool ReardriveIndexHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ActivityPara 
+                     * 获取<p>Atomic task parameter</p>
+                     * @return ActivityPara <p>Atomic task parameter</p>
                      * 
                      */
                     ActivityPara GetActivityPara() const;
 
                     /**
-                     * 设置
-                     * @param _activityPara 
+                     * 设置<p>Atomic task parameter</p>
+                     * @param _activityPara <p>Atomic task parameter</p>
                      * 
                      */
                     void SetActivityPara(const ActivityPara& _activityPara);
@@ -185,37 +134,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Atomic task type.
-<li>input: start node.</li>
-<li>output: termination node.</li>
-<li>action-trans: transcoding.</li>
-<li>action-samplesnapshot: sampled screenshot taking.</li>
-<li>action-AIAnalysis: analysis</li>
-<li>action-AIRecognition: recognition.</li>
-<li>action-aiReview: review</li>
-<li>action-animated-graphics: animated image</li>
-<li>action-image-sprite: sprite sheet</li>
-<li>action-snapshotByTimeOffset: time point screenshot taking</li>
-<li>action-adaptive-substream: adaptive bitrate streaming.</li>
-<li>action-AIQualityControl: media quality inspection.</li>
-<li>action-SmartSubtitles: smart subtitle</li>
-<li>action-exec-rules: judgment rule</li>
-<li>action-SmartErase: intelligent removal.</li>
-
-
-
+                     * <p>Atomic task type:</p><li>input: starting node</li><li>output: termination node</li><li>action-trans: transcode</li><li>action-samplesnapshot: sampled screenshot</li><li>action-AIAnalysis: analysis</li><li>action-AIRecognition: recognition</li><li>action-aiReview: review</li><li>action-animated-graphics: animated image</li><li>action-image-sprite: sprite sheet</li><li>action-snapshotByTimeOffset: time point screenshot</li><li>action-adaptive-substream: adaptive bitrate stream</li><li>action-AIQualityControl: media quality inspection</li><li>action-SmartSubtitles: smart subtitling</li><li>action-exec-rules: judgment rule</li><li>action-SmartErase: intelligent erasure</li>
                      */
                     std::string m_activityType;
                     bool m_activityTypeHasBeenSet;
 
                     /**
-                     * Rear drive node index array
+                     * <p>Index array of predecessor nodes.<br>Note: This parameter is invalid when creating or modifying an orchestration. It is automatically generated by the server.</p>
+                     */
+                    std::vector<int64_t> m_predriveIndex;
+                    bool m_predriveIndexHasBeenSet;
+
+                    /**
+                     * <p>Array of successor node indexes</p>
                      */
                     std::vector<int64_t> m_reardriveIndex;
                     bool m_reardriveIndexHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Atomic task parameter</p>
                      */
                     ActivityPara m_activityPara;
                     bool m_activityParaHasBeenSet;

@@ -47,27 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Switch for segment duration at startup. Optional values:
-on: Turn on
-off: Turn off the switch
-Default value: off
-                     * @return Switch Switch for segment duration at startup. Optional values:
-on: Turn on
-off: Turn off the switch
-Default value: off
+                     * 获取
+                     * @return Switch 
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Switch for segment duration at startup. Optional values:
-on: Turn on
-off: Turn off the switch
-Default value: off
-                     * @param _switch Switch for segment duration at startup. Optional values:
-on: Turn on
-off: Turn off the switch
-Default value: off
+                     * 设置
+                     * @param _switch 
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -80,15 +68,15 @@ Default value: off
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取Segment duration at startup. Unit: second
-                     * @return FragmentTime Segment duration at startup. Unit: second
+                     * 获取
+                     * @return FragmentTime 
                      * 
                      */
                     int64_t GetFragmentTime() const;
 
                     /**
-                     * 设置Segment duration at startup. Unit: second
-                     * @param _fragmentTime Segment duration at startup. Unit: second
+                     * 设置
+                     * @param _fragmentTime 
                      * 
                      */
                     void SetFragmentTime(const int64_t& _fragmentTime);
@@ -101,15 +89,15 @@ Default value: off
                     bool FragmentTimeHasBeenSet() const;
 
                     /**
-                     * 获取Number of effective segments, indicating the first FragmentEndNum segments with FragmentTime. Value range: >=1
-                     * @return FragmentEndNum Number of effective segments, indicating the first FragmentEndNum segments with FragmentTime. Value range: >=1
+                     * 获取
+                     * @return FragmentEndNum 
                      * 
                      */
                     int64_t GetFragmentEndNum() const;
 
                     /**
-                     * 设置Number of effective segments, indicating the first FragmentEndNum segments with FragmentTime. Value range: >=1
-                     * @param _fragmentEndNum Number of effective segments, indicating the first FragmentEndNum segments with FragmentTime. Value range: >=1
+                     * 设置
+                     * @param _fragmentEndNum 
                      * 
                      */
                     void SetFragmentEndNum(const int64_t& _fragmentEndNum);
@@ -124,22 +112,19 @@ Default value: off
                 private:
 
                     /**
-                     * Switch for segment duration at startup. Optional values:
-on: Turn on
-off: Turn off the switch
-Default value: off
+                     * 
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * Segment duration at startup. Unit: second
+                     * 
                      */
                     int64_t m_fragmentTime;
                     bool m_fragmentTimeHasBeenSet;
 
                     /**
-                     * Number of effective segments, indicating the first FragmentEndNum segments with FragmentTime. Value range: >=1
+                     * 
                      */
                     int64_t m_fragmentEndNum;
                     bool m_fragmentEndNumHasBeenSet;

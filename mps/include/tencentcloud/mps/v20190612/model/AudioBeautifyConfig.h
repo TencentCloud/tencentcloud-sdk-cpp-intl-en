@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * The audio improvement configuration.
+                * Volume beautification configuration
                 */
                 class AudioBeautifyConfig : public AbstractModel
                 {
@@ -47,27 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether to enable the feature. Valid values:
-<li>`ON`</li>
-<li>`OFF` </li>
-Default value: `ON`.
-                     * @return Switch Whether to enable the feature. Valid values:
-<li>`ON`</li>
-<li>`OFF` </li>
-Default value: `ON`.
+                     * 获取<p>Capability configuration switch. Available values: </p><li>ON: Enable;</li><li>OFF: Disable.</li>Default value: ON.
+                     * @return Switch <p>Capability configuration switch. Available values: </p><li>ON: Enable;</li><li>OFF: Disable.</li>Default value: ON.
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Whether to enable the feature. Valid values:
-<li>`ON`</li>
-<li>`OFF` </li>
-Default value: `ON`.
-                     * @param _switch Whether to enable the feature. Valid values:
-<li>`ON`</li>
-<li>`OFF` </li>
-Default value: `ON`.
+                     * 设置<p>Capability configuration switch. Available values: </p><li>ON: Enable;</li><li>OFF: Disable.</li>Default value: ON.
+                     * @param _switch <p>Capability configuration switch. Available values: </p><li>ON: Enable;</li><li>OFF: Disable.</li>Default value: ON.
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -80,27 +68,15 @@ Default value: `ON`.
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取Type. Multiple selections allowed. Valid values:
-<li>declick: noise removal</li>
-<li>deesser: Dental Click Suppression</li>
-Default value: declick.
-                     * @return Types Type. Multiple selections allowed. Valid values:
-<li>declick: noise removal</li>
-<li>deesser: Dental Click Suppression</li>
-Default value: declick.
+                     * 获取<p>Type. Multiple selections allowed. Available values:</p><li>declick: noise removal</li><li>deesser: de-ess</li>Default value: declick.
+                     * @return Types <p>Type. Multiple selections allowed. Available values:</p><li>declick: noise removal</li><li>deesser: de-ess</li>Default value: declick.
                      * 
                      */
                     std::vector<std::string> GetTypes() const;
 
                     /**
-                     * 设置Type. Multiple selections allowed. Valid values:
-<li>declick: noise removal</li>
-<li>deesser: Dental Click Suppression</li>
-Default value: declick.
-                     * @param _types Type. Multiple selections allowed. Valid values:
-<li>declick: noise removal</li>
-<li>deesser: Dental Click Suppression</li>
-Default value: declick.
+                     * 设置<p>Type. Multiple selections allowed. Available values:</p><li>declick: noise removal</li><li>deesser: de-ess</li>Default value: declick.
+                     * @param _types <p>Type. Multiple selections allowed. Available values:</p><li>declick: noise removal</li><li>deesser: de-ess</li>Default value: declick.
                      * 
                      */
                     void SetTypes(const std::vector<std::string>& _types);
@@ -115,19 +91,13 @@ Default value: declick.
                 private:
 
                     /**
-                     * Whether to enable the feature. Valid values:
-<li>`ON`</li>
-<li>`OFF` </li>
-Default value: `ON`.
+                     * <p>Capability configuration switch. Available values: </p><li>ON: Enable;</li><li>OFF: Disable.</li>Default value: ON.
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * Type. Multiple selections allowed. Valid values:
-<li>declick: noise removal</li>
-<li>deesser: Dental Click Suppression</li>
-Default value: declick.
+                     * <p>Type. Multiple selections allowed. Available values:</p><li>declick: noise removal</li><li>deesser: de-ess</li>Default value: declick.
                      */
                     std::vector<std::string> m_types;
                     bool m_typesHasBeenSet;

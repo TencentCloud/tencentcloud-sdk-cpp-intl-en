@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Reference video asset for AIGC video generation.
+                * 
                 */
                 class AigcAudioReferenceVideoInfo : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Reference video URL, which must be accessible from the public network.</p>
-                     * @return VideoUrl <p>Reference video URL, which must be accessible from the public network.</p>
+                     * 获取
+                     * @return VideoUrl 
                      * 
                      */
                     std::string GetVideoUrl() const;
 
                     /**
-                     * 设置<p>Reference video URL, which must be accessible from the public network.</p>
-                     * @param _videoUrl <p>Reference video URL, which must be accessible from the public network.</p>
+                     * 设置
+                     * @param _videoUrl 
                      * 
                      */
                     void SetVideoUrl(const std::string& _videoUrl);
@@ -70,7 +70,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Reference video URL, which must be accessible from the public network.</p>
+                     * 
                      */
                     std::string m_videoUrl;
                     bool m_videoUrlHasBeenSet;

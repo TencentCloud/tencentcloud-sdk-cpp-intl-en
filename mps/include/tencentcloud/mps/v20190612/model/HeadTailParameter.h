@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Opening and closing credits parameters
+                * Opening and ending segments parameter.
                 */
                 class HeadTailParameter : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Opening scene list.
-                     * @return HeadSet Opening scene list.
+                     * 获取
+                     * @return HeadSet 
                      * 
                      */
                     std::vector<MediaInputInfo> GetHeadSet() const;
 
                     /**
-                     * 设置Opening scene list.
-                     * @param _headSet Opening scene list.
+                     * 设置
+                     * @param _headSet 
                      * 
                      */
                     void SetHeadSet(const std::vector<MediaInputInfo>& _headSet);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool HeadSetHasBeenSet() const;
 
                     /**
-                     * 获取Ending list.
-                     * @return TailSet Ending list.
+                     * 获取
+                     * @return TailSet 
                      * 
                      */
                     std::vector<MediaInputInfo> GetTailSet() const;
 
                     /**
-                     * 设置Ending list.
-                     * @param _tailSet Ending list.
+                     * 设置
+                     * @param _tailSet 
                      * 
                      */
                     void SetTailSet(const std::vector<MediaInputInfo>& _tailSet);
@@ -92,13 +92,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Opening scene list.
+                     * 
                      */
                     std::vector<MediaInputInfo> m_headSet;
                     bool m_headSetHasBeenSet;
 
                     /**
-                     * Ending list.
+                     * 
                      */
                     std::vector<MediaInputInfo> m_tailSet;
                     bool m_tailSetHasBeenSet;

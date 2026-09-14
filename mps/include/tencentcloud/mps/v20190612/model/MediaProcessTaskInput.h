@@ -41,7 +41,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * The type of media processing task.
+                * Media processing task type
                 */
                 class MediaProcessTaskInput : public AbstractModel
                 {
@@ -53,15 +53,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取List of transcoding tasks.
-                     * @return TranscodeTaskSet List of transcoding tasks.
+                     * 获取Video transcoding task list.
+                     * @return TranscodeTaskSet Video transcoding task list.
                      * 
                      */
                     std::vector<TranscodeTaskInput> GetTranscodeTaskSet() const;
 
                     /**
-                     * 设置List of transcoding tasks.
-                     * @param _transcodeTaskSet List of transcoding tasks.
+                     * 设置Video transcoding task list.
+                     * @param _transcodeTaskSet Video transcoding task list.
                      * 
                      */
                     void SetTranscodeTaskSet(const std::vector<TranscodeTaskInput>& _transcodeTaskSet);
@@ -74,15 +74,15 @@ namespace TencentCloud
                     bool TranscodeTaskSetHasBeenSet() const;
 
                     /**
-                     * 获取List of animated image screenshot tasks.
-                     * @return AnimatedGraphicTaskSet List of animated image screenshot tasks.
+                     * 获取List of video-to-GIF tasks.
+                     * @return AnimatedGraphicTaskSet List of video-to-GIF tasks.
                      * 
                      */
                     std::vector<AnimatedGraphicTaskInput> GetAnimatedGraphicTaskSet() const;
 
                     /**
-                     * 设置List of animated image screenshot tasks.
-                     * @param _animatedGraphicTaskSet List of animated image screenshot tasks.
+                     * 设置List of video-to-GIF tasks.
+                     * @param _animatedGraphicTaskSet List of video-to-GIF tasks.
                      * 
                      */
                     void SetAnimatedGraphicTaskSet(const std::vector<AnimatedGraphicTaskInput>& _animatedGraphicTaskSet);
@@ -95,15 +95,15 @@ namespace TencentCloud
                     bool AnimatedGraphicTaskSetHasBeenSet() const;
 
                     /**
-                     * 获取List of time point screenshot tasks.
-                     * @return SnapshotByTimeOffsetTaskSet List of time point screenshot tasks.
+                     * 获取List of time point screenshot tasks for videos.
+                     * @return SnapshotByTimeOffsetTaskSet List of time point screenshot tasks for videos.
                      * 
                      */
                     std::vector<SnapshotByTimeOffsetTaskInput> GetSnapshotByTimeOffsetTaskSet() const;
 
                     /**
-                     * 设置List of time point screenshot tasks.
-                     * @param _snapshotByTimeOffsetTaskSet List of time point screenshot tasks.
+                     * 设置List of time point screenshot tasks for videos.
+                     * @param _snapshotByTimeOffsetTaskSet List of time point screenshot tasks for videos.
                      * 
                      */
                     void SetSnapshotByTimeOffsetTaskSet(const std::vector<SnapshotByTimeOffsetTaskInput>& _snapshotByTimeOffsetTaskSet);
@@ -116,15 +116,15 @@ namespace TencentCloud
                     bool SnapshotByTimeOffsetTaskSetHasBeenSet() const;
 
                     /**
-                     * 获取List of sampled screenshot tasks.
-                     * @return SampleSnapshotTaskSet List of sampled screenshot tasks.
+                     * 获取List of sampled screenshot tasks for videos.
+                     * @return SampleSnapshotTaskSet List of sampled screenshot tasks for videos.
                      * 
                      */
                     std::vector<SampleSnapshotTaskInput> GetSampleSnapshotTaskSet() const;
 
                     /**
-                     * 设置List of sampled screenshot tasks.
-                     * @param _sampleSnapshotTaskSet List of sampled screenshot tasks.
+                     * 设置List of sampled screenshot tasks for videos.
+                     * @param _sampleSnapshotTaskSet List of sampled screenshot tasks for videos.
                      * 
                      */
                     void SetSampleSnapshotTaskSet(const std::vector<SampleSnapshotTaskInput>& _sampleSnapshotTaskSet);
@@ -137,15 +137,15 @@ namespace TencentCloud
                     bool SampleSnapshotTaskSetHasBeenSet() const;
 
                     /**
-                     * 获取List of image sprite screenshot tasks.
-                     * @return ImageSpriteTaskSet List of image sprite screenshot tasks.
+                     * 获取List of image sprite tasks for videos.
+                     * @return ImageSpriteTaskSet List of image sprite tasks for videos.
                      * 
                      */
                     std::vector<ImageSpriteTaskInput> GetImageSpriteTaskSet() const;
 
                     /**
-                     * 设置List of image sprite screenshot tasks.
-                     * @param _imageSpriteTaskSet List of image sprite screenshot tasks.
+                     * 设置List of image sprite tasks for videos.
+                     * @param _imageSpriteTaskSet List of image sprite tasks for videos.
                      * 
                      */
                     void SetImageSpriteTaskSet(const std::vector<ImageSpriteTaskInput>& _imageSpriteTaskSet);
@@ -181,31 +181,31 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * List of transcoding tasks.
+                     * Video transcoding task list.
                      */
                     std::vector<TranscodeTaskInput> m_transcodeTaskSet;
                     bool m_transcodeTaskSetHasBeenSet;
 
                     /**
-                     * List of animated image screenshot tasks.
+                     * List of video-to-GIF tasks.
                      */
                     std::vector<AnimatedGraphicTaskInput> m_animatedGraphicTaskSet;
                     bool m_animatedGraphicTaskSetHasBeenSet;
 
                     /**
-                     * List of time point screenshot tasks.
+                     * List of time point screenshot tasks for videos.
                      */
                     std::vector<SnapshotByTimeOffsetTaskInput> m_snapshotByTimeOffsetTaskSet;
                     bool m_snapshotByTimeOffsetTaskSetHasBeenSet;
 
                     /**
-                     * List of sampled screenshot tasks.
+                     * List of sampled screenshot tasks for videos.
                      */
                     std::vector<SampleSnapshotTaskInput> m_sampleSnapshotTaskSet;
                     bool m_sampleSnapshotTaskSetHasBeenSet;
 
                     /**
-                     * List of image sprite screenshot tasks.
+                     * List of image sprite tasks for videos.
                      */
                     std::vector<ImageSpriteTaskInput> m_imageSpriteTaskSet;
                     bool m_imageSpriteTaskSetHasBeenSet;

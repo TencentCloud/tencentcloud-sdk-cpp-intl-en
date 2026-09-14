@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * The subtitle settings.
+                * Subtitle stream configuration parameters.
                 */
                 class SubtitleTemplate : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Subtitle file URL to be suppressed in the video.
-                     * @return Path Subtitle file URL to be suppressed in the video.
+                     * 获取
+                     * @return Path 
                      * 
                      */
                     std::string GetPath() const;
 
                     /**
-                     * 设置Subtitle file URL to be suppressed in the video.
-                     * @param _path Subtitle file URL to be suppressed in the video.
+                     * 设置
+                     * @param _path 
                      * 
                      */
                     void SetPath(const std::string& _path);
@@ -69,31 +69,15 @@ namespace TencentCloud
                     bool PathHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the subtitle track for embedding subtitles into the video. The Streamindex value starts from 0, where 0 indicates usage of the first subtitle track in the source video. If Path is specified, use Path preferentially. Specify at least one of Path or Streamindex.
-
--Note: StreamIndex must be consistent with the subtitle track index in the source file. For example, if the subtitle track in the source file is stream#0:3, StreamIndex should be 3. Otherwise, task processing may fail.
-
-
-                     * @return StreamIndex Specifies the subtitle track for embedding subtitles into the video. The Streamindex value starts from 0, where 0 indicates usage of the first subtitle track in the source video. If Path is specified, use Path preferentially. Specify at least one of Path or Streamindex.
-
--Note: StreamIndex must be consistent with the subtitle track index in the source file. For example, if the subtitle track in the source file is stream#0:3, StreamIndex should be 3. Otherwise, task processing may fail.
-
-
+                     * 获取
+                     * @return StreamIndex 
                      * 
                      */
                     int64_t GetStreamIndex() const;
 
                     /**
-                     * 设置Specifies the subtitle track for embedding subtitles into the video. The Streamindex value starts from 0, where 0 indicates usage of the first subtitle track in the source video. If Path is specified, use Path preferentially. Specify at least one of Path or Streamindex.
-
--Note: StreamIndex must be consistent with the subtitle track index in the source file. For example, if the subtitle track in the source file is stream#0:3, StreamIndex should be 3. Otherwise, task processing may fail.
-
-
-                     * @param _streamIndex Specifies the subtitle track for embedding subtitles into the video. The Streamindex value starts from 0, where 0 indicates usage of the first subtitle track in the source video. If Path is specified, use Path preferentially. Specify at least one of Path or Streamindex.
-
--Note: StreamIndex must be consistent with the subtitle track index in the source file. For example, if the subtitle track in the source file is stream#0:3, StreamIndex should be 3. Otherwise, task processing may fail.
-
-
+                     * 设置
+                     * @param _streamIndex 
                      * 
                      */
                     void SetStreamIndex(const int64_t& _streamIndex);
@@ -106,15 +90,15 @@ namespace TencentCloud
                     bool StreamIndexHasBeenSet() const;
 
                     /**
-                     * 获取Input information on the subtitle file to be embedded in the video. Currently, only subtitle files stored in COS are supported.
-                     * @return SubtitleFileInput Input information on the subtitle file to be embedded in the video. Currently, only subtitle files stored in COS are supported.
+                     * 获取
+                     * @return SubtitleFileInput 
                      * 
                      */
                     MediaInputInfo GetSubtitleFileInput() const;
 
                     /**
-                     * 设置Input information on the subtitle file to be embedded in the video. Currently, only subtitle files stored in COS are supported.
-                     * @param _subtitleFileInput Input information on the subtitle file to be embedded in the video. Currently, only subtitle files stored in COS are supported.
+                     * 设置
+                     * @param _subtitleFileInput 
                      * 
                      */
                     void SetSubtitleFileInput(const MediaInputInfo& _subtitleFileInput);
@@ -127,18 +111,18 @@ namespace TencentCloud
                     bool SubtitleFileInputHasBeenSet() const;
 
                     /**
-                     * 获取Input information of the font file of the burned-in subtitle. URL and COS are supported. If both are specified, the URL information is used. If FontFileInput is specified, FontFileInput takes precedence over FontType.
+                     * 获取Input information for the subtitle font file to be suppressed. Currently only support url and cos. If both are filled, url takes precedence over cos. If FontFileInput is filled, FontFileInput takes precedence over FontType.
 
-                     * @return FontFileInput Input information of the font file of the burned-in subtitle. URL and COS are supported. If both are specified, the URL information is used. If FontFileInput is specified, FontFileInput takes precedence over FontType.
+                     * @return FontFileInput Input information for the subtitle font file to be suppressed. Currently only support url and cos. If both are filled, url takes precedence over cos. If FontFileInput is filled, FontFileInput takes precedence over FontType.
 
                      * 
                      */
                     MediaInputInfo GetFontFileInput() const;
 
                     /**
-                     * 设置Input information of the font file of the burned-in subtitle. URL and COS are supported. If both are specified, the URL information is used. If FontFileInput is specified, FontFileInput takes precedence over FontType.
+                     * 设置Input information for the subtitle font file to be suppressed. Currently only support url and cos. If both are filled, url takes precedence over cos. If FontFileInput is filled, FontFileInput takes precedence over FontType.
 
-                     * @param _fontFileInput Input information of the font file of the burned-in subtitle. URL and COS are supported. If both are specified, the URL information is used. If FontFileInput is specified, FontFileInput takes precedence over FontType.
+                     * @param _fontFileInput Input information for the subtitle font file to be suppressed. Currently only support url and cos. If both are filled, url takes precedence over cos. If FontFileInput is filled, FontFileInput takes precedence over FontType.
 
                      * 
                      */
@@ -152,163 +136,15 @@ namespace TencentCloud
                     bool FontFileInputHasBeenSet() const;
 
                     /**
-                     * 获取Font type. Valid values:
-<li>hei.ttf: SimHei</li>
-<li>song.ttf: Song Typeface.</li>
-<li>kai.ttf (recommend) or simkai.ttf: KaiTi.</li>
-<li>msyh.ttf: Microsoft YaHei.</li>
-<li>msyhbd.ttf: Microsoft YaHei Bold.</li>
-<li>hkjgt.ttf: DynaFont King Gothic.</li>
-<li>dhttx.ttf: DianHei Extra Light.</li>
-<li>xqgdzt.ttf: XiQue GuZiDian.</li>
-<li>qpcyt.ttf: Smart Splice Super Round Body</li>
-<li>arial.ttf: English only.</li>
-<li>dinalternate.ttf:DIN Alternate Bold</li>
-<li>helveticalt.ttf:Helvetica</li>
-<li>helveticains.ttf:Helvetica Inserat</li>
-<li>trajanpro.ttf:TrajanPro-Bold</li>
-<li>korean.ttf: Korean.</li>
-<li>japanese.ttf: Japanese.</li>
-<li>thai.ttf: Thai.</li>
-<li>roboto.ttf:Roboto</li>
-<li>notosans.ttf:NotoSans</li>
-<li>notosansthai.ttf: Thai NotoSansThai</li>
-<li>sarabun.ttf: Thai Sarabun</li>
-<li>kanit.ttf: Thai Kanit</li>
-<li>charmonman.ttf: Thai Charmonman.</li>
-<li>notonaskharabic.ttf: Arabic NotoNaskhArabic.</li>
-<li>notosansdevanagari.ttf: NotoSansDevanagari for India.</li>
-<li>notosanstc.ttf: Cantonese Source Han Sans NotoSansTC</li>
-<li>notosanskr.ttf: Korean NotoSansKR.</li>
-<li>gothica1.ttf: Korean GothicA1.</li>
-<li>nanummyeongjo.ttf: Korean NanumMyeongjo.</li>
-<li>notosansjp.ttf: Japanese NotoSansJP.</li>
-<li>notoserifjp.ttf: Japanese NotoSerifJP.</li>
-<li>shipporimincho.ttf: Japanese ShipporiMincho.</li>
-Default value: hei.ttf.
-<br>Note:
-<li>kai.ttf is recommended for SimKai.</li>
-<li>FontFileInput takes precedence when specified.</li>
-
-                     * @return FontType Font type. Valid values:
-<li>hei.ttf: SimHei</li>
-<li>song.ttf: Song Typeface.</li>
-<li>kai.ttf (recommend) or simkai.ttf: KaiTi.</li>
-<li>msyh.ttf: Microsoft YaHei.</li>
-<li>msyhbd.ttf: Microsoft YaHei Bold.</li>
-<li>hkjgt.ttf: DynaFont King Gothic.</li>
-<li>dhttx.ttf: DianHei Extra Light.</li>
-<li>xqgdzt.ttf: XiQue GuZiDian.</li>
-<li>qpcyt.ttf: Smart Splice Super Round Body</li>
-<li>arial.ttf: English only.</li>
-<li>dinalternate.ttf:DIN Alternate Bold</li>
-<li>helveticalt.ttf:Helvetica</li>
-<li>helveticains.ttf:Helvetica Inserat</li>
-<li>trajanpro.ttf:TrajanPro-Bold</li>
-<li>korean.ttf: Korean.</li>
-<li>japanese.ttf: Japanese.</li>
-<li>thai.ttf: Thai.</li>
-<li>roboto.ttf:Roboto</li>
-<li>notosans.ttf:NotoSans</li>
-<li>notosansthai.ttf: Thai NotoSansThai</li>
-<li>sarabun.ttf: Thai Sarabun</li>
-<li>kanit.ttf: Thai Kanit</li>
-<li>charmonman.ttf: Thai Charmonman.</li>
-<li>notonaskharabic.ttf: Arabic NotoNaskhArabic.</li>
-<li>notosansdevanagari.ttf: NotoSansDevanagari for India.</li>
-<li>notosanstc.ttf: Cantonese Source Han Sans NotoSansTC</li>
-<li>notosanskr.ttf: Korean NotoSansKR.</li>
-<li>gothica1.ttf: Korean GothicA1.</li>
-<li>nanummyeongjo.ttf: Korean NanumMyeongjo.</li>
-<li>notosansjp.ttf: Japanese NotoSansJP.</li>
-<li>notoserifjp.ttf: Japanese NotoSerifJP.</li>
-<li>shipporimincho.ttf: Japanese ShipporiMincho.</li>
-Default value: hei.ttf.
-<br>Note:
-<li>kai.ttf is recommended for SimKai.</li>
-<li>FontFileInput takes precedence when specified.</li>
-
+                     * 获取
+                     * @return FontType 
                      * 
                      */
                     std::string GetFontType() const;
 
                     /**
-                     * 设置Font type. Valid values:
-<li>hei.ttf: SimHei</li>
-<li>song.ttf: Song Typeface.</li>
-<li>kai.ttf (recommend) or simkai.ttf: KaiTi.</li>
-<li>msyh.ttf: Microsoft YaHei.</li>
-<li>msyhbd.ttf: Microsoft YaHei Bold.</li>
-<li>hkjgt.ttf: DynaFont King Gothic.</li>
-<li>dhttx.ttf: DianHei Extra Light.</li>
-<li>xqgdzt.ttf: XiQue GuZiDian.</li>
-<li>qpcyt.ttf: Smart Splice Super Round Body</li>
-<li>arial.ttf: English only.</li>
-<li>dinalternate.ttf:DIN Alternate Bold</li>
-<li>helveticalt.ttf:Helvetica</li>
-<li>helveticains.ttf:Helvetica Inserat</li>
-<li>trajanpro.ttf:TrajanPro-Bold</li>
-<li>korean.ttf: Korean.</li>
-<li>japanese.ttf: Japanese.</li>
-<li>thai.ttf: Thai.</li>
-<li>roboto.ttf:Roboto</li>
-<li>notosans.ttf:NotoSans</li>
-<li>notosansthai.ttf: Thai NotoSansThai</li>
-<li>sarabun.ttf: Thai Sarabun</li>
-<li>kanit.ttf: Thai Kanit</li>
-<li>charmonman.ttf: Thai Charmonman.</li>
-<li>notonaskharabic.ttf: Arabic NotoNaskhArabic.</li>
-<li>notosansdevanagari.ttf: NotoSansDevanagari for India.</li>
-<li>notosanstc.ttf: Cantonese Source Han Sans NotoSansTC</li>
-<li>notosanskr.ttf: Korean NotoSansKR.</li>
-<li>gothica1.ttf: Korean GothicA1.</li>
-<li>nanummyeongjo.ttf: Korean NanumMyeongjo.</li>
-<li>notosansjp.ttf: Japanese NotoSansJP.</li>
-<li>notoserifjp.ttf: Japanese NotoSerifJP.</li>
-<li>shipporimincho.ttf: Japanese ShipporiMincho.</li>
-Default value: hei.ttf.
-<br>Note:
-<li>kai.ttf is recommended for SimKai.</li>
-<li>FontFileInput takes precedence when specified.</li>
-
-                     * @param _fontType Font type. Valid values:
-<li>hei.ttf: SimHei</li>
-<li>song.ttf: Song Typeface.</li>
-<li>kai.ttf (recommend) or simkai.ttf: KaiTi.</li>
-<li>msyh.ttf: Microsoft YaHei.</li>
-<li>msyhbd.ttf: Microsoft YaHei Bold.</li>
-<li>hkjgt.ttf: DynaFont King Gothic.</li>
-<li>dhttx.ttf: DianHei Extra Light.</li>
-<li>xqgdzt.ttf: XiQue GuZiDian.</li>
-<li>qpcyt.ttf: Smart Splice Super Round Body</li>
-<li>arial.ttf: English only.</li>
-<li>dinalternate.ttf:DIN Alternate Bold</li>
-<li>helveticalt.ttf:Helvetica</li>
-<li>helveticains.ttf:Helvetica Inserat</li>
-<li>trajanpro.ttf:TrajanPro-Bold</li>
-<li>korean.ttf: Korean.</li>
-<li>japanese.ttf: Japanese.</li>
-<li>thai.ttf: Thai.</li>
-<li>roboto.ttf:Roboto</li>
-<li>notosans.ttf:NotoSans</li>
-<li>notosansthai.ttf: Thai NotoSansThai</li>
-<li>sarabun.ttf: Thai Sarabun</li>
-<li>kanit.ttf: Thai Kanit</li>
-<li>charmonman.ttf: Thai Charmonman.</li>
-<li>notonaskharabic.ttf: Arabic NotoNaskhArabic.</li>
-<li>notosansdevanagari.ttf: NotoSansDevanagari for India.</li>
-<li>notosanstc.ttf: Cantonese Source Han Sans NotoSansTC</li>
-<li>notosanskr.ttf: Korean NotoSansKR.</li>
-<li>gothica1.ttf: Korean GothicA1.</li>
-<li>nanummyeongjo.ttf: Korean NanumMyeongjo.</li>
-<li>notosansjp.ttf: Japanese NotoSansJP.</li>
-<li>notoserifjp.ttf: Japanese NotoSerifJP.</li>
-<li>shipporimincho.ttf: Japanese ShipporiMincho.</li>
-Default value: hei.ttf.
-<br>Note:
-<li>kai.ttf is recommended for SimKai.</li>
-<li>FontFileInput takes precedence when specified.</li>
-
+                     * 设置
+                     * @param _fontType 
                      * 
                      */
                     void SetFontType(const std::string& _fontType);
@@ -321,39 +157,15 @@ Default value: hei.ttf.
                     bool FontTypeHasBeenSet() const;
 
                     /**
-                     * 获取Font size. If not specified, the font size of the subtitle file applies. Pixel and percentage formats are supported.
-
--.
-- Percentage: N%. Value range of N: (0,100]. For example, 10% means the subtitle font size is 10% of the source video height.
-
-The default size is 5% of the source video height if this parameter is not specified or the font size is not configured in the subtitle file.
-
-                     * @return FontSize Font size. If not specified, the font size of the subtitle file applies. Pixel and percentage formats are supported.
-
--.
-- Percentage: N%. Value range of N: (0,100]. For example, 10% means the subtitle font size is 10% of the source video height.
-
-The default size is 5% of the source video height if this parameter is not specified or the font size is not configured in the subtitle file.
-
+                     * 获取
+                     * @return FontSize 
                      * 
                      */
                     std::string GetFontSize() const;
 
                     /**
-                     * 设置Font size. If not specified, the font size of the subtitle file applies. Pixel and percentage formats are supported.
-
--.
-- Percentage: N%. Value range of N: (0,100]. For example, 10% means the subtitle font size is 10% of the source video height.
-
-The default size is 5% of the source video height if this parameter is not specified or the font size is not configured in the subtitle file.
-
-                     * @param _fontSize Font size. If not specified, the font size of the subtitle file applies. Pixel and percentage formats are supported.
-
--.
-- Percentage: N%. Value range of N: (0,100]. For example, 10% means the subtitle font size is 10% of the source video height.
-
-The default size is 5% of the source video height if this parameter is not specified or the font size is not configured in the subtitle file.
-
+                     * 设置
+                     * @param _fontSize 
                      * 
                      */
                     void SetFontSize(const std::string& _fontSize);
@@ -366,15 +178,15 @@ The default size is 5% of the source video height if this parameter is not speci
                     bool FontSizeHasBeenSet() const;
 
                     /**
-                     * 获取Font color. Format: 0xRRGGBB. Default value: 0xFFFFFF (white).
-                     * @return FontColor Font color. Format: 0xRRGGBB. Default value: 0xFFFFFF (white).
+                     * 获取
+                     * @return FontColor 
                      * 
                      */
                     std::string GetFontColor() const;
 
                     /**
-                     * 设置Font color. Format: 0xRRGGBB. Default value: 0xFFFFFF (white).
-                     * @param _fontColor Font color. Format: 0xRRGGBB. Default value: 0xFFFFFF (white).
+                     * 设置
+                     * @param _fontColor 
                      * 
                      */
                     void SetFontColor(const std::string& _fontColor);
@@ -387,27 +199,15 @@ The default size is 5% of the source video height if this parameter is not speci
                     bool FontColorHasBeenSet() const;
 
                     /**
-                     * 获取Text opacity, value ranges from 0 to 1.
-<li>0: completely transparent.</li>
-<li>1: completely opaque.</li>
-Default value: 1.
-                     * @return FontAlpha Text opacity, value ranges from 0 to 1.
-<li>0: completely transparent.</li>
-<li>1: completely opaque.</li>
-Default value: 1.
+                     * 获取
+                     * @return FontAlpha 
                      * 
                      */
                     double GetFontAlpha() const;
 
                     /**
-                     * 设置Text opacity, value ranges from 0 to 1.
-<li>0: completely transparent.</li>
-<li>1: completely opaque.</li>
-Default value: 1.
-                     * @param _fontAlpha Text opacity, value ranges from 0 to 1.
-<li>0: completely transparent.</li>
-<li>1: completely opaque.</li>
-Default value: 1.
+                     * 设置
+                     * @param _fontAlpha 
                      * 
                      */
                     void SetFontAlpha(const double& _fontAlpha);
@@ -420,47 +220,15 @@ Default value: 1.
                     bool FontAlphaHasBeenSet() const;
 
                     /**
-                     * 获取Subtitle y-axis coordinate position. Specify this parameter to ignore the built-in coordinates of the subtitle file. Support pixel and percentage format.
-
--.
--Percentage: N%, N range: [0,100]; for example, 10% means subtitle y-coordinate = 10% * source video height.
-
-By default, the position is 4% of the source video height.
-Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the subtitle reference position is at the bottom of the central axis of the subtitles, see the following diagram.
-![image](https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png)
-
-                     * @return YPos Subtitle y-axis coordinate position. Specify this parameter to ignore the built-in coordinates of the subtitle file. Support pixel and percentage format.
-
--.
--Percentage: N%, N range: [0,100]; for example, 10% means subtitle y-coordinate = 10% * source video height.
-
-By default, the position is 4% of the source video height.
-Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the subtitle reference position is at the bottom of the central axis of the subtitles, see the following diagram.
-![image](https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png)
-
+                     * 获取
+                     * @return YPos 
                      * 
                      */
                     std::string GetYPos() const;
 
                     /**
-                     * 设置Subtitle y-axis coordinate position. Specify this parameter to ignore the built-in coordinates of the subtitle file. Support pixel and percentage format.
-
--.
--Percentage: N%, N range: [0,100]; for example, 10% means subtitle y-coordinate = 10% * source video height.
-
-By default, the position is 4% of the source video height.
-Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the subtitle reference position is at the bottom of the central axis of the subtitles, see the following diagram.
-![image](https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png)
-
-                     * @param _yPos Subtitle y-axis coordinate position. Specify this parameter to ignore the built-in coordinates of the subtitle file. Support pixel and percentage format.
-
--.
--Percentage: N%, N range: [0,100]; for example, 10% means subtitle y-coordinate = 10% * source video height.
-
-By default, the position is 4% of the source video height.
-Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the subtitle reference position is at the bottom of the central axis of the subtitles, see the following diagram.
-![image](https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png)
-
+                     * 设置
+                     * @param _yPos 
                      * 
                      */
                     void SetYPos(const std::string& _yPos);
@@ -473,47 +241,15 @@ Note: The origin of the coordinate axes is at the bottom of the central axis of 
                     bool YPosHasBeenSet() const;
 
                     /**
-                     * 获取y-axis coordinate position of the subtitle background base plate; Support pixel and percentage format:
-
--.
--Percentage: N%, N range: [0,100]; for example, 10% means the y-coordinate of the subtitle background base plate = 10% * video height.
-
-If this parameter is not specified, the subtitle background is disabled.
-Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the reference point of the subtitle background base plate is at the bottom of its central axis. Refer to the figure below.
-![image](https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png)
-
-                     * @return BoardY y-axis coordinate position of the subtitle background base plate; Support pixel and percentage format:
-
--.
--Percentage: N%, N range: [0,100]; for example, 10% means the y-coordinate of the subtitle background base plate = 10% * video height.
-
-If this parameter is not specified, the subtitle background is disabled.
-Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the reference point of the subtitle background base plate is at the bottom of its central axis. Refer to the figure below.
-![image](https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png)
-
+                     * 获取
+                     * @return BoardY 
                      * 
                      */
                     std::string GetBoardY() const;
 
                     /**
-                     * 设置y-axis coordinate position of the subtitle background base plate; Support pixel and percentage format:
-
--.
--Percentage: N%, N range: [0,100]; for example, 10% means the y-coordinate of the subtitle background base plate = 10% * video height.
-
-If this parameter is not specified, the subtitle background is disabled.
-Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the reference point of the subtitle background base plate is at the bottom of its central axis. Refer to the figure below.
-![image](https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png)
-
-                     * @param _boardY y-axis coordinate position of the subtitle background base plate; Support pixel and percentage format:
-
--.
--Percentage: N%, N range: [0,100]; for example, 10% means the y-coordinate of the subtitle background base plate = 10% * video height.
-
-If this parameter is not specified, the subtitle background is disabled.
-Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the reference point of the subtitle background base plate is at the bottom of its central axis. Refer to the figure below.
-![image](https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png)
-
+                     * 设置
+                     * @param _boardY 
                      * 
                      */
                     void SetBoardY(const std::string& _boardY);
@@ -526,31 +262,15 @@ Note: The origin of the coordinate axes is at the bottom of the central axis of 
                     bool BoardYHasBeenSet() const;
 
                     /**
-                     * 获取Background width. The value should be a positive integer.
-- Value range for pixels: [0,4096].
-- Value range for percentages: [0, 100].
-If background is enabled and this parameter is not specified, the default width is 90% of the source video width.
-
-                     * @return BoardWidth Background width. The value should be a positive integer.
-- Value range for pixels: [0,4096].
-- Value range for percentages: [0, 100].
-If background is enabled and this parameter is not specified, the default width is 90% of the source video width.
-
+                     * 获取
+                     * @return BoardWidth 
                      * 
                      */
                     int64_t GetBoardWidth() const;
 
                     /**
-                     * 设置Background width. The value should be a positive integer.
-- Value range for pixels: [0,4096].
-- Value range for percentages: [0, 100].
-If background is enabled and this parameter is not specified, the default width is 90% of the source video width.
-
-                     * @param _boardWidth Background width. The value should be a positive integer.
-- Value range for pixels: [0,4096].
-- Value range for percentages: [0, 100].
-If background is enabled and this parameter is not specified, the default width is 90% of the source video width.
-
+                     * 设置
+                     * @param _boardWidth 
                      * 
                      */
                     void SetBoardWidth(const int64_t& _boardWidth);
@@ -563,31 +283,15 @@ If background is enabled and this parameter is not specified, the default width 
                     bool BoardWidthHasBeenSet() const;
 
                     /**
-                     * 获取Background height. The value should be a positive integer.
-- Value range for pixels: [0,4096].
-- Value range for percentages: [0, 100].
-If background is enabled and this parameter is not specified, the default height is 15% of the source video height.
-
-                     * @return BoardHeight Background height. The value should be a positive integer.
-- Value range for pixels: [0,4096].
-- Value range for percentages: [0, 100].
-If background is enabled and this parameter is not specified, the default height is 15% of the source video height.
-
+                     * 获取
+                     * @return BoardHeight 
                      * 
                      */
                     int64_t GetBoardHeight() const;
 
                     /**
-                     * 设置Background height. The value should be a positive integer.
-- Value range for pixels: [0,4096].
-- Value range for percentages: [0, 100].
-If background is enabled and this parameter is not specified, the default height is 15% of the source video height.
-
-                     * @param _boardHeight Background height. The value should be a positive integer.
-- Value range for pixels: [0,4096].
-- Value range for percentages: [0, 100].
-If background is enabled and this parameter is not specified, the default height is 15% of the source video height.
-
+                     * 设置
+                     * @param _boardHeight 
                      * 
                      */
                     void SetBoardHeight(const int64_t& _boardHeight);
@@ -600,19 +304,15 @@ If background is enabled and this parameter is not specified, the default height
                     bool BoardHeightHasBeenSet() const;
 
                     /**
-                     * 获取Board color. Format: 0xRRGGBB.
-Default value: 0x000000 (black).
-                     * @return BoardColor Board color. Format: 0xRRGGBB.
-Default value: 0x000000 (black).
+                     * 获取
+                     * @return BoardColor 
                      * 
                      */
                     std::string GetBoardColor() const;
 
                     /**
-                     * 设置Board color. Format: 0xRRGGBB.
-Default value: 0x000000 (black).
-                     * @param _boardColor Board color. Format: 0xRRGGBB.
-Default value: 0x000000 (black).
+                     * 设置
+                     * @param _boardColor 
                      * 
                      */
                     void SetBoardColor(const std::string& _boardColor);
@@ -625,27 +325,15 @@ Default value: 0x000000 (black).
                     bool BoardColorHasBeenSet() const;
 
                     /**
-                     * 获取Subtitle background transparency. Value range: [0, 1].
-<li>0: completely transparent.</li>
-<li>1: completely opaque.</li>
-Default value: 0.8.
-                     * @return BoardAlpha Subtitle background transparency. Value range: [0, 1].
-<li>0: completely transparent.</li>
-<li>1: completely opaque.</li>
-Default value: 0.8.
+                     * 获取
+                     * @return BoardAlpha 
                      * 
                      */
                     double GetBoardAlpha() const;
 
                     /**
-                     * 设置Subtitle background transparency. Value range: [0, 1].
-<li>0: completely transparent.</li>
-<li>1: completely opaque.</li>
-Default value: 0.8.
-                     * @param _boardAlpha Subtitle background transparency. Value range: [0, 1].
-<li>0: completely transparent.</li>
-<li>1: completely opaque.</li>
-Default value: 0.8.
+                     * 设置
+                     * @param _boardAlpha 
                      * 
                      */
                     void SetBoardAlpha(const double& _boardAlpha);
@@ -661,12 +349,12 @@ Default value: 0.8.
                      * 获取Stroke width. The value should be a floating-point number.
 - Value range for pixels: [0, 1000].
 - Value range for percentages: [0, 100].
-If this is not specified, the default width is 0.3% of the source video height.
+0.3% of the source video height by default if left blank.
 
                      * @return OutlineWidth Stroke width. The value should be a floating-point number.
 - Value range for pixels: [0, 1000].
 - Value range for percentages: [0, 100].
-If this is not specified, the default width is 0.3% of the source video height.
+0.3% of the source video height by default if left blank.
 
                      * 
                      */
@@ -676,12 +364,12 @@ If this is not specified, the default width is 0.3% of the source video height.
                      * 设置Stroke width. The value should be a floating-point number.
 - Value range for pixels: [0, 1000].
 - Value range for percentages: [0, 100].
-If this is not specified, the default width is 0.3% of the source video height.
+0.3% of the source video height by default if left blank.
 
                      * @param _outlineWidth Stroke width. The value should be a floating-point number.
 - Value range for pixels: [0, 1000].
 - Value range for percentages: [0, 100].
-If this is not specified, the default width is 0.3% of the source video height.
+0.3% of the source video height by default if left blank.
 
                      * 
                      */
@@ -695,18 +383,18 @@ If this is not specified, the default width is 0.3% of the source video height.
                     bool OutlineWidthHasBeenSet() const;
 
                     /**
-                     * 获取Stroke color. The value should be a 6-digit hexadecimal RGB value. If this is not specified, the default color is black.
+                     * 获取Border color. 6-digit hexadecimal RGB. Black by default if left blank.
 
-                     * @return OutlineColor Stroke color. The value should be a 6-digit hexadecimal RGB value. If this is not specified, the default color is black.
+                     * @return OutlineColor Border color. 6-digit hexadecimal RGB. Black by default if left blank.
 
                      * 
                      */
                     std::string GetOutlineColor() const;
 
                     /**
-                     * 设置Stroke color. The value should be a 6-digit hexadecimal RGB value. If this is not specified, the default color is black.
+                     * 设置Border color. 6-digit hexadecimal RGB. Black by default if left blank.
 
-                     * @param _outlineColor Stroke color. The value should be a 6-digit hexadecimal RGB value. If this is not specified, the default color is black.
+                     * @param _outlineColor Border color. 6-digit hexadecimal RGB. Black by default if left blank.
 
                      * 
                      */
@@ -745,30 +433,30 @@ If this is not specified, the default width is 0.3% of the source video height.
                     bool OutlineAlphaHasBeenSet() const;
 
                     /**
-                     * 获取Shadow width. The value should be a floating-point number.
+                     * 获取Shadow width. Floating-point number.
 - Value range for pixels: [0, 1000].
 - Value range for percentages: [0, 100].
-If this is not specified, no shadow is applied by default.
+No shading by default if left blank.
 
-                     * @return ShadowWidth Shadow width. The value should be a floating-point number.
+                     * @return ShadowWidth Shadow width. Floating-point number.
 - Value range for pixels: [0, 1000].
 - Value range for percentages: [0, 100].
-If this is not specified, no shadow is applied by default.
+No shading by default if left blank.
 
                      * 
                      */
                     double GetShadowWidth() const;
 
                     /**
-                     * 设置Shadow width. The value should be a floating-point number.
+                     * 设置Shadow width. Floating-point number.
 - Value range for pixels: [0, 1000].
 - Value range for percentages: [0, 100].
-If this is not specified, no shadow is applied by default.
+No shading by default if left blank.
 
-                     * @param _shadowWidth Shadow width. The value should be a floating-point number.
+                     * @param _shadowWidth Shadow width. Floating-point number.
 - Value range for pixels: [0, 1000].
 - Value range for percentages: [0, 100].
-If this is not specified, no shadow is applied by default.
+No shading by default if left blank.
 
                      * 
                      */
@@ -782,18 +470,18 @@ If this is not specified, no shadow is applied by default.
                     bool ShadowWidthHasBeenSet() const;
 
                     /**
-                     * 获取Shadow color. The value should be a 6-digit hexadecimal RGB value. If this is not specified, the default color is black (with shadow configured).
+                     * 获取Shadow color. 6-bit base RGB. Black by default if left blank (when shadow has set).
 
-                     * @return ShadowColor Shadow color. The value should be a 6-digit hexadecimal RGB value. If this is not specified, the default color is black (with shadow configured).
+                     * @return ShadowColor Shadow color. 6-bit base RGB. Black by default if left blank (when shadow has set).
 
                      * 
                      */
                     std::string GetShadowColor() const;
 
                     /**
-                     * 设置Shadow color. The value should be a 6-digit hexadecimal RGB value. If this is not specified, the default color is black (with shadow configured).
+                     * 设置Shadow color. 6-bit base RGB. Black by default if left blank (when shadow has set).
 
-                     * @param _shadowColor Shadow color. The value should be a 6-digit hexadecimal RGB value. If this is not specified, the default color is black (with shadow configured).
+                     * @param _shadowColor Shadow color. 6-bit base RGB. Black by default if left blank (when shadow has set).
 
                      * 
                      */
@@ -990,18 +678,18 @@ If this is not specified, no shadow is applied by default.
                     bool ShadowWidthUnitHasBeenSet() const;
 
                     /**
-                     * 获取Default value is 0. If this is set to 1, the value of LineSpacing is a percentage based on the video height.
+                     * 获取Default value: 0. If this is set to 1, the value of LineSpacing is a percentage based on the video height.
 
-                     * @return LineSpacingUnit Default value is 0. If this is set to 1, the value of LineSpacing is a percentage based on the video height.
+                     * @return LineSpacingUnit Default value: 0. If this is set to 1, the value of LineSpacing is a percentage based on the video height.
 
                      * 
                      */
                     int64_t GetLineSpacingUnit() const;
 
                     /**
-                     * 设置Default value is 0. If this is set to 1, the value of LineSpacing is a percentage based on the video height.
+                     * 设置Default value: 0. If this is set to 1, the value of LineSpacing is a percentage based on the video height.
 
-                     * @param _lineSpacingUnit Default value is 0. If this is set to 1, the value of LineSpacing is a percentage based on the video height.
+                     * @param _lineSpacingUnit Default value: 0. If this is set to 1, the value of LineSpacing is a percentage based on the video height.
 
                      * 
                      */
@@ -1017,164 +705,86 @@ If this is not specified, no shadow is applied by default.
                 private:
 
                     /**
-                     * Subtitle file URL to be suppressed in the video.
+                     * 
                      */
                     std::string m_path;
                     bool m_pathHasBeenSet;
 
                     /**
-                     * Specifies the subtitle track for embedding subtitles into the video. The Streamindex value starts from 0, where 0 indicates usage of the first subtitle track in the source video. If Path is specified, use Path preferentially. Specify at least one of Path or Streamindex.
-
--Note: StreamIndex must be consistent with the subtitle track index in the source file. For example, if the subtitle track in the source file is stream#0:3, StreamIndex should be 3. Otherwise, task processing may fail.
-
-
+                     * 
                      */
                     int64_t m_streamIndex;
                     bool m_streamIndexHasBeenSet;
 
                     /**
-                     * Input information on the subtitle file to be embedded in the video. Currently, only subtitle files stored in COS are supported.
+                     * 
                      */
                     MediaInputInfo m_subtitleFileInput;
                     bool m_subtitleFileInputHasBeenSet;
 
                     /**
-                     * Input information of the font file of the burned-in subtitle. URL and COS are supported. If both are specified, the URL information is used. If FontFileInput is specified, FontFileInput takes precedence over FontType.
+                     * Input information for the subtitle font file to be suppressed. Currently only support url and cos. If both are filled, url takes precedence over cos. If FontFileInput is filled, FontFileInput takes precedence over FontType.
 
                      */
                     MediaInputInfo m_fontFileInput;
                     bool m_fontFileInputHasBeenSet;
 
                     /**
-                     * Font type. Valid values:
-<li>hei.ttf: SimHei</li>
-<li>song.ttf: Song Typeface.</li>
-<li>kai.ttf (recommend) or simkai.ttf: KaiTi.</li>
-<li>msyh.ttf: Microsoft YaHei.</li>
-<li>msyhbd.ttf: Microsoft YaHei Bold.</li>
-<li>hkjgt.ttf: DynaFont King Gothic.</li>
-<li>dhttx.ttf: DianHei Extra Light.</li>
-<li>xqgdzt.ttf: XiQue GuZiDian.</li>
-<li>qpcyt.ttf: Smart Splice Super Round Body</li>
-<li>arial.ttf: English only.</li>
-<li>dinalternate.ttf:DIN Alternate Bold</li>
-<li>helveticalt.ttf:Helvetica</li>
-<li>helveticains.ttf:Helvetica Inserat</li>
-<li>trajanpro.ttf:TrajanPro-Bold</li>
-<li>korean.ttf: Korean.</li>
-<li>japanese.ttf: Japanese.</li>
-<li>thai.ttf: Thai.</li>
-<li>roboto.ttf:Roboto</li>
-<li>notosans.ttf:NotoSans</li>
-<li>notosansthai.ttf: Thai NotoSansThai</li>
-<li>sarabun.ttf: Thai Sarabun</li>
-<li>kanit.ttf: Thai Kanit</li>
-<li>charmonman.ttf: Thai Charmonman.</li>
-<li>notonaskharabic.ttf: Arabic NotoNaskhArabic.</li>
-<li>notosansdevanagari.ttf: NotoSansDevanagari for India.</li>
-<li>notosanstc.ttf: Cantonese Source Han Sans NotoSansTC</li>
-<li>notosanskr.ttf: Korean NotoSansKR.</li>
-<li>gothica1.ttf: Korean GothicA1.</li>
-<li>nanummyeongjo.ttf: Korean NanumMyeongjo.</li>
-<li>notosansjp.ttf: Japanese NotoSansJP.</li>
-<li>notoserifjp.ttf: Japanese NotoSerifJP.</li>
-<li>shipporimincho.ttf: Japanese ShipporiMincho.</li>
-Default value: hei.ttf.
-<br>Note:
-<li>kai.ttf is recommended for SimKai.</li>
-<li>FontFileInput takes precedence when specified.</li>
-
+                     * 
                      */
                     std::string m_fontType;
                     bool m_fontTypeHasBeenSet;
 
                     /**
-                     * Font size. If not specified, the font size of the subtitle file applies. Pixel and percentage formats are supported.
-
--.
-- Percentage: N%. Value range of N: (0,100]. For example, 10% means the subtitle font size is 10% of the source video height.
-
-The default size is 5% of the source video height if this parameter is not specified or the font size is not configured in the subtitle file.
-
+                     * 
                      */
                     std::string m_fontSize;
                     bool m_fontSizeHasBeenSet;
 
                     /**
-                     * Font color. Format: 0xRRGGBB. Default value: 0xFFFFFF (white).
+                     * 
                      */
                     std::string m_fontColor;
                     bool m_fontColorHasBeenSet;
 
                     /**
-                     * Text opacity, value ranges from 0 to 1.
-<li>0: completely transparent.</li>
-<li>1: completely opaque.</li>
-Default value: 1.
+                     * 
                      */
                     double m_fontAlpha;
                     bool m_fontAlphaHasBeenSet;
 
                     /**
-                     * Subtitle y-axis coordinate position. Specify this parameter to ignore the built-in coordinates of the subtitle file. Support pixel and percentage format.
-
--.
--Percentage: N%, N range: [0,100]; for example, 10% means subtitle y-coordinate = 10% * source video height.
-
-By default, the position is 4% of the source video height.
-Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the subtitle reference position is at the bottom of the central axis of the subtitles, see the following diagram.
-![image](https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png)
-
+                     * 
                      */
                     std::string m_yPos;
                     bool m_yPosHasBeenSet;
 
                     /**
-                     * y-axis coordinate position of the subtitle background base plate; Support pixel and percentage format:
-
--.
--Percentage: N%, N range: [0,100]; for example, 10% means the y-coordinate of the subtitle background base plate = 10% * video height.
-
-If this parameter is not specified, the subtitle background is disabled.
-Note: The origin of the coordinate axes is at the bottom of the central axis of the source video, and the reference point of the subtitle background base plate is at the bottom of its central axis. Refer to the figure below.
-![image](https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png)
-
+                     * 
                      */
                     std::string m_boardY;
                     bool m_boardYHasBeenSet;
 
                     /**
-                     * Background width. The value should be a positive integer.
-- Value range for pixels: [0,4096].
-- Value range for percentages: [0, 100].
-If background is enabled and this parameter is not specified, the default width is 90% of the source video width.
-
+                     * 
                      */
                     int64_t m_boardWidth;
                     bool m_boardWidthHasBeenSet;
 
                     /**
-                     * Background height. The value should be a positive integer.
-- Value range for pixels: [0,4096].
-- Value range for percentages: [0, 100].
-If background is enabled and this parameter is not specified, the default height is 15% of the source video height.
-
+                     * 
                      */
                     int64_t m_boardHeight;
                     bool m_boardHeightHasBeenSet;
 
                     /**
-                     * Board color. Format: 0xRRGGBB.
-Default value: 0x000000 (black).
+                     * 
                      */
                     std::string m_boardColor;
                     bool m_boardColorHasBeenSet;
 
                     /**
-                     * Subtitle background transparency. Value range: [0, 1].
-<li>0: completely transparent.</li>
-<li>1: completely opaque.</li>
-Default value: 0.8.
+                     * 
                      */
                     double m_boardAlpha;
                     bool m_boardAlphaHasBeenSet;
@@ -1183,14 +793,14 @@ Default value: 0.8.
                      * Stroke width. The value should be a floating-point number.
 - Value range for pixels: [0, 1000].
 - Value range for percentages: [0, 100].
-If this is not specified, the default width is 0.3% of the source video height.
+0.3% of the source video height by default if left blank.
 
                      */
                     double m_outlineWidth;
                     bool m_outlineWidthHasBeenSet;
 
                     /**
-                     * Stroke color. The value should be a 6-digit hexadecimal RGB value. If this is not specified, the default color is black.
+                     * Border color. 6-digit hexadecimal RGB. Black by default if left blank.
 
                      */
                     std::string m_outlineColor;
@@ -1204,17 +814,17 @@ If this is not specified, the default width is 0.3% of the source video height.
                     bool m_outlineAlphaHasBeenSet;
 
                     /**
-                     * Shadow width. The value should be a floating-point number.
+                     * Shadow width. Floating-point number.
 - Value range for pixels: [0, 1000].
 - Value range for percentages: [0, 100].
-If this is not specified, no shadow is applied by default.
+No shading by default if left blank.
 
                      */
                     double m_shadowWidth;
                     bool m_shadowWidthHasBeenSet;
 
                     /**
-                     * Shadow color. The value should be a 6-digit hexadecimal RGB value. If this is not specified, the default color is black (with shadow configured).
+                     * Shadow color. 6-bit base RGB. Black by default if left blank (when shadow has set).
 
                      */
                     std::string m_shadowColor;
@@ -1272,7 +882,7 @@ If this is not specified, no shadow is applied by default.
                     bool m_shadowWidthUnitHasBeenSet;
 
                     /**
-                     * Default value is 0. If this is set to 1, the value of LineSpacing is a percentage based on the video height.
+                     * Default value: 0. If this is set to 1, the value of LineSpacing is a percentage based on the video height.
 
                      */
                     int64_t m_lineSpacingUnit;

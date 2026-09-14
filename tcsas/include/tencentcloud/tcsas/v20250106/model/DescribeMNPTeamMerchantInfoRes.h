@@ -130,6 +130,27 @@ namespace TencentCloud
                      */
                     bool MerchantNameHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Payment currency.</p>
+                     * @return Currency <p>Payment currency.</p>
+                     * 
+                     */
+                    std::string GetCurrency() const;
+
+                    /**
+                     * 设置<p>Payment currency.</p>
+                     * @param _currency <p>Payment currency.</p>
+                     * 
+                     */
+                    void SetCurrency(const std::string& _currency);
+
+                    /**
+                     * 判断参数 Currency 是否已赋值
+                     * @return Currency 是否已赋值
+                     * 
+                     */
+                    bool CurrencyHasBeenSet() const;
+
                 private:
 
                     /**
@@ -155,6 +176,12 @@ namespace TencentCloud
                      */
                     std::string m_merchantName;
                     bool m_merchantNameHasBeenSet;
+
+                    /**
+                     * <p>Payment currency.</p>
+                     */
+                    std::string m_currency;
+                    bool m_currencyHasBeenSet;
 
                 };
             }

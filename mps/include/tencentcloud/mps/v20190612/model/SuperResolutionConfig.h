@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Super resolution configuration.
+                * Super-resolution configuration.
                 */
                 class SuperResolutionConfig : public AbstractModel
                 {
@@ -47,26 +47,26 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether to enable the feature. Valid values:
-<li>ON</li>
-<li>OFF</li>
+                     * 获取Capability configuration switch. Available values:
+<li>ON: enabled;</li>
+<li>OFF: disabled</li>
 Default value: ON.
-                     * @return Switch Whether to enable the feature. Valid values:
-<li>ON</li>
-<li>OFF</li>
+                     * @return Switch Capability configuration switch. Available values:
+<li>ON: enabled;</li>
+<li>OFF: disabled</li>
 Default value: ON.
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Whether to enable the feature. Valid values:
-<li>ON</li>
-<li>OFF</li>
+                     * 设置Capability configuration switch. Available values:
+<li>ON: enabled;</li>
+<li>OFF: disabled</li>
 Default value: ON.
-                     * @param _switch Whether to enable the feature. Valid values:
-<li>ON</li>
-<li>OFF</li>
+                     * @param _switch Capability configuration switch. Available values:
+<li>ON: enabled;</li>
+<li>OFF: disabled</li>
 Default value: ON.
                      * 
                      */
@@ -80,27 +80,15 @@ Default value: ON.
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取Type, available values:
-<li>lq: Super-resolution for low-resolution videos with considerable noise;</li>
-<li>hq: Targeting high-resolution video super-resolution.</li>
-Default value: lq.
-                     * @return Type Type, available values:
-<li>lq: Super-resolution for low-resolution videos with considerable noise;</li>
-<li>hq: Targeting high-resolution video super-resolution.</li>
-Default value: lq.
+                     * 获取
+                     * @return Type 
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Type, available values:
-<li>lq: Super-resolution for low-resolution videos with considerable noise;</li>
-<li>hq: Targeting high-resolution video super-resolution.</li>
-Default value: lq.
-                     * @param _type Type, available values:
-<li>lq: Super-resolution for low-resolution videos with considerable noise;</li>
-<li>hq: Targeting high-resolution video super-resolution.</li>
-Default value: lq.
+                     * 设置
+                     * @param _type 
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -113,23 +101,15 @@ Default value: lq.
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Super-resolution multiple, optional value:
-<li>2: Currently only support 2x super resolution.</li>
-Default value: 2.
-                     * @return Size Super-resolution multiple, optional value:
-<li>2: Currently only support 2x super resolution.</li>
-Default value: 2.
+                     * 获取
+                     * @return Size 
                      * 
                      */
                     int64_t GetSize() const;
 
                     /**
-                     * 设置Super-resolution multiple, optional value:
-<li>2: Currently only support 2x super resolution.</li>
-Default value: 2.
-                     * @param _size Super-resolution multiple, optional value:
-<li>2: Currently only support 2x super resolution.</li>
-Default value: 2.
+                     * 设置
+                     * @param _size 
                      * 
                      */
                     void SetSize(const int64_t& _size);
@@ -144,27 +124,22 @@ Default value: 2.
                 private:
 
                     /**
-                     * Whether to enable the feature. Valid values:
-<li>ON</li>
-<li>OFF</li>
+                     * Capability configuration switch. Available values:
+<li>ON: enabled;</li>
+<li>OFF: disabled</li>
 Default value: ON.
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * Type, available values:
-<li>lq: Super-resolution for low-resolution videos with considerable noise;</li>
-<li>hq: Targeting high-resolution video super-resolution.</li>
-Default value: lq.
+                     * 
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Super-resolution multiple, optional value:
-<li>2: Currently only support 2x super resolution.</li>
-Default value: 2.
+                     * 
                      */
                     int64_t m_size;
                     bool m_sizeHasBeenSet;

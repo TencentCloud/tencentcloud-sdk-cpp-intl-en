@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Metadata of a VOD media file
+                * Meta-information of on-demand media files
                 */
                 class MediaMetaData : public AbstractModel
                 {
@@ -49,19 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Size of an uploaded media file in bytes (which is the sum of size of m3u8 and ts files if the video is in HLS format).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Size Size of an uploaded media file in bytes (which is the sum of size of m3u8 and ts files if the video is in HLS format).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Size of the uploaded media file (for HLS videos, the size is the total of the m3u8 and ts file sizes), unit: byte.
+                     * @return Size Size of the uploaded media file (for HLS videos, the size is the total of the m3u8 and ts file sizes), unit: byte.
                      * 
                      */
                     int64_t GetSize() const;
 
                     /**
-                     * 设置Size of an uploaded media file in bytes (which is the sum of size of m3u8 and ts files if the video is in HLS format).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _size Size of an uploaded media file in bytes (which is the sum of size of m3u8 and ts files if the video is in HLS format).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Size of the uploaded media file (for HLS videos, the size is the total of the m3u8 and ts file sizes), unit: byte.
+                     * @param _size Size of the uploaded media file (for HLS videos, the size is the total of the m3u8 and ts file sizes), unit: byte.
                      * 
                      */
                     void SetSize(const int64_t& _size);
@@ -74,19 +70,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool SizeHasBeenSet() const;
 
                     /**
-                     * 获取Container, such as m4a and mp4.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Container Container, such as m4a and mp4.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Container type, for example, m4a and mp4.
+                     * @return Container Container type, for example, m4a and mp4.
                      * 
                      */
                     std::string GetContainer() const;
 
                     /**
-                     * 设置Container, such as m4a and mp4.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _container Container, such as m4a and mp4.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Container type, for example, m4a and mp4.
+                     * @param _container Container type, for example, m4a and mp4.
                      * 
                      */
                     void SetContainer(const std::string& _container);
@@ -99,19 +91,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ContainerHasBeenSet() const;
 
                     /**
-                     * 获取Sum of the average bitrate of a video stream and that of an audio stream in bps.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Bitrate Sum of the average bitrate of a video stream and that of an audio stream in bps.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Sum of the average video stream bitrate and average audio stream bitrate. Unit: bps.
+                     * @return Bitrate Sum of the average video stream bitrate and average audio stream bitrate. Unit: bps.
                      * 
                      */
                     int64_t GetBitrate() const;
 
                     /**
-                     * 设置Sum of the average bitrate of a video stream and that of an audio stream in bps.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _bitrate Sum of the average bitrate of a video stream and that of an audio stream in bps.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Sum of the average video stream bitrate and average audio stream bitrate. Unit: bps.
+                     * @param _bitrate Sum of the average video stream bitrate and average audio stream bitrate. Unit: bps.
                      * 
                      */
                     void SetBitrate(const int64_t& _bitrate);
@@ -124,19 +112,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool BitrateHasBeenSet() const;
 
                     /**
-                     * 获取Maximum value of the height of a video stream in px.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Height Maximum value of the height of a video stream in px.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Maximum height of a video stream. Unit: px.
+                     * @return Height Maximum height of a video stream. Unit: px.
                      * 
                      */
                     int64_t GetHeight() const;
 
                     /**
-                     * 设置Maximum value of the height of a video stream in px.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _height Maximum value of the height of a video stream in px.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Maximum height of a video stream. Unit: px.
+                     * @param _height Maximum height of a video stream. Unit: px.
                      * 
                      */
                     void SetHeight(const int64_t& _height);
@@ -149,19 +133,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool HeightHasBeenSet() const;
 
                     /**
-                     * 获取Maximum value of the width of a video stream in px.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Width Maximum value of the width of a video stream in px.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Maximum video stream width in px.
+                     * @return Width Maximum video stream width in px.
                      * 
                      */
                     int64_t GetWidth() const;
 
                     /**
-                     * 设置Maximum value of the width of a video stream in px.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _width Maximum value of the width of a video stream in px.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Maximum video stream width in px.
+                     * @param _width Maximum video stream width in px.
                      * 
                      */
                     void SetWidth(const int64_t& _width);
@@ -174,19 +154,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool WidthHasBeenSet() const;
 
                     /**
-                     * 获取Video duration in seconds.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Duration Video duration in seconds.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Video duration, unit: seconds.
+                     * @return Duration Video duration, unit: seconds.
                      * 
                      */
                     double GetDuration() const;
 
                     /**
-                     * 设置Video duration in seconds.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _duration Video duration in seconds.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Video duration, unit: seconds.
+                     * @param _duration Video duration, unit: seconds.
                      * 
                      */
                     void SetDuration(const double& _duration);
@@ -199,19 +175,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DurationHasBeenSet() const;
 
                     /**
-                     * 获取Selected angle during video recording in degrees.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Rotate Selected angle during video recording in degrees.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Selection angle during video shooting. Unit: degree.
+                     * @return Rotate Selection angle during video shooting. Unit: degree.
                      * 
                      */
                     int64_t GetRotate() const;
 
                     /**
-                     * 设置Selected angle during video recording in degrees.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _rotate Selected angle during video recording in degrees.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Selection angle during video shooting. Unit: degree.
+                     * @param _rotate Selection angle during video shooting. Unit: degree.
                      * 
                      */
                     void SetRotate(const int64_t& _rotate);
@@ -225,18 +197,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Video stream information.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return VideoStreamSet Video stream information.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<MediaVideoStreamItem> GetVideoStreamSet() const;
 
                     /**
                      * 设置Video stream information.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _videoStreamSet Video stream information.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetVideoStreamSet(const std::vector<MediaVideoStreamItem>& _videoStreamSet);
@@ -250,18 +218,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Audio stream information.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return AudioStreamSet Audio stream information.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<MediaAudioStreamItem> GetAudioStreamSet() const;
 
                     /**
                      * 设置Audio stream information.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _audioStreamSet Audio stream information.
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetAudioStreamSet(const std::vector<MediaAudioStreamItem>& _audioStreamSet);
@@ -274,19 +238,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool AudioStreamSetHasBeenSet() const;
 
                     /**
-                     * 获取Video duration in seconds.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return VideoDuration Video duration in seconds.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Video duration, unit: seconds.
+                     * @return VideoDuration Video duration, unit: seconds.
                      * 
                      */
                     double GetVideoDuration() const;
 
                     /**
-                     * 设置Video duration in seconds.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _videoDuration Video duration in seconds.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Video duration, unit: seconds.
+                     * @param _videoDuration Video duration, unit: seconds.
                      * 
                      */
                     void SetVideoDuration(const double& _videoDuration);
@@ -299,19 +259,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool VideoDurationHasBeenSet() const;
 
                     /**
-                     * 获取Audio duration in seconds.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return AudioDuration Audio duration in seconds.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Audio duration, in seconds.
+                     * @return AudioDuration Audio duration, in seconds.
                      * 
                      */
                     double GetAudioDuration() const;
 
                     /**
-                     * 设置Audio duration in seconds.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _audioDuration Audio duration in seconds.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Audio duration, in seconds.
+                     * @param _audioDuration Audio duration, in seconds.
                      * 
                      */
                     void SetAudioDuration(const double& _audioDuration);
@@ -326,78 +282,67 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Size of an uploaded media file in bytes (which is the sum of size of m3u8 and ts files if the video is in HLS format).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Size of the uploaded media file (for HLS videos, the size is the total of the m3u8 and ts file sizes), unit: byte.
                      */
                     int64_t m_size;
                     bool m_sizeHasBeenSet;
 
                     /**
-                     * Container, such as m4a and mp4.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Container type, for example, m4a and mp4.
                      */
                     std::string m_container;
                     bool m_containerHasBeenSet;
 
                     /**
-                     * Sum of the average bitrate of a video stream and that of an audio stream in bps.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Sum of the average video stream bitrate and average audio stream bitrate. Unit: bps.
                      */
                     int64_t m_bitrate;
                     bool m_bitrateHasBeenSet;
 
                     /**
-                     * Maximum value of the height of a video stream in px.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Maximum height of a video stream. Unit: px.
                      */
                     int64_t m_height;
                     bool m_heightHasBeenSet;
 
                     /**
-                     * Maximum value of the width of a video stream in px.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Maximum video stream width in px.
                      */
                     int64_t m_width;
                     bool m_widthHasBeenSet;
 
                     /**
-                     * Video duration in seconds.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Video duration, unit: seconds.
                      */
                     double m_duration;
                     bool m_durationHasBeenSet;
 
                     /**
-                     * Selected angle during video recording in degrees.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Selection angle during video shooting. Unit: degree.
                      */
                     int64_t m_rotate;
                     bool m_rotateHasBeenSet;
 
                     /**
                      * Video stream information.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<MediaVideoStreamItem> m_videoStreamSet;
                     bool m_videoStreamSetHasBeenSet;
 
                     /**
                      * Audio stream information.
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<MediaAudioStreamItem> m_audioStreamSet;
                     bool m_audioStreamSetHasBeenSet;
 
                     /**
-                     * Video duration in seconds.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Video duration, unit: seconds.
                      */
                     double m_videoDuration;
                     bool m_videoDurationHasBeenSet;
 
                     /**
-                     * Audio duration in seconds.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Audio duration, in seconds.
                      */
                     double m_audioDuration;
                     bool m_audioDurationHasBeenSet;

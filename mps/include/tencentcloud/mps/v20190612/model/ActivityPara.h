@@ -37,6 +37,7 @@
 #include <tencentcloud/mps/v20190612/model/ExecRulesTask.h>
 #include <tencentcloud/mps/v20190612/model/SmartSubtitlesTaskInput.h>
 #include <tencentcloud/mps/v20190612/model/SmartEraseTaskInput.h>
+#include <tencentcloud/mps/v20190612/model/AIDubbingTaskInput.h>
 
 
 namespace TencentCloud
@@ -48,7 +49,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Orchestrate atomic tasks
+                * 
                 */
                 class ActivityPara : public AbstractModel
                 {
@@ -60,15 +61,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return TranscodeTask 
+                     * 获取<p>Video transcoding task</p>
+                     * @return TranscodeTask <p>Video transcoding task</p>
                      * 
                      */
                     TranscodeTaskInput GetTranscodeTask() const;
 
                     /**
-                     * 设置
-                     * @param _transcodeTask 
+                     * 设置<p>Video transcoding task</p>
+                     * @param _transcodeTask <p>Video transcoding task</p>
                      * 
                      */
                     void SetTranscodeTask(const TranscodeTaskInput& _transcodeTask);
@@ -81,15 +82,15 @@ namespace TencentCloud
                     bool TranscodeTaskHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AnimatedGraphicTask 
+                     * 获取<p>Video-to-GIF task</p>
+                     * @return AnimatedGraphicTask <p>Video-to-GIF task</p>
                      * 
                      */
                     AnimatedGraphicTaskInput GetAnimatedGraphicTask() const;
 
                     /**
-                     * 设置
-                     * @param _animatedGraphicTask 
+                     * 设置<p>Video-to-GIF task</p>
+                     * @param _animatedGraphicTask <p>Video-to-GIF task</p>
                      * 
                      */
                     void SetAnimatedGraphicTask(const AnimatedGraphicTaskInput& _animatedGraphicTask);
@@ -102,15 +103,15 @@ namespace TencentCloud
                     bool AnimatedGraphicTaskHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SnapshotByTimeOffsetTask 
+                     * 获取<p>Video time point screenshot task</p>
+                     * @return SnapshotByTimeOffsetTask <p>Video time point screenshot task</p>
                      * 
                      */
                     SnapshotByTimeOffsetTaskInput GetSnapshotByTimeOffsetTask() const;
 
                     /**
-                     * 设置
-                     * @param _snapshotByTimeOffsetTask 
+                     * 设置<p>Video time point screenshot task</p>
+                     * @param _snapshotByTimeOffsetTask <p>Video time point screenshot task</p>
                      * 
                      */
                     void SetSnapshotByTimeOffsetTask(const SnapshotByTimeOffsetTaskInput& _snapshotByTimeOffsetTask);
@@ -123,15 +124,15 @@ namespace TencentCloud
                     bool SnapshotByTimeOffsetTaskHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SampleSnapshotTask 
+                     * 获取<p>Video sampling screenshot task</p>
+                     * @return SampleSnapshotTask <p>Video sampling screenshot task</p>
                      * 
                      */
                     SampleSnapshotTaskInput GetSampleSnapshotTask() const;
 
                     /**
-                     * 设置
-                     * @param _sampleSnapshotTask 
+                     * 设置<p>Video sampling screenshot task</p>
+                     * @param _sampleSnapshotTask <p>Video sampling screenshot task</p>
                      * 
                      */
                     void SetSampleSnapshotTask(const SampleSnapshotTaskInput& _sampleSnapshotTask);
@@ -144,15 +145,15 @@ namespace TencentCloud
                     bool SampleSnapshotTaskHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ImageSpriteTask 
+                     * 获取<p>Video image sprite task</p>
+                     * @return ImageSpriteTask <p>Video image sprite task</p>
                      * 
                      */
                     ImageSpriteTaskInput GetImageSpriteTask() const;
 
                     /**
-                     * 设置
-                     * @param _imageSpriteTask 
+                     * 设置<p>Video image sprite task</p>
+                     * @param _imageSpriteTask <p>Video image sprite task</p>
                      * 
                      */
                     void SetImageSpriteTask(const ImageSpriteTaskInput& _imageSpriteTask);
@@ -165,15 +166,15 @@ namespace TencentCloud
                     bool ImageSpriteTaskHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AdaptiveDynamicStreamingTask 
+                     * 获取<p>Adaptive bitrate streaming task</p>
+                     * @return AdaptiveDynamicStreamingTask <p>Adaptive bitrate streaming task</p>
                      * 
                      */
                     AdaptiveDynamicStreamingTaskInput GetAdaptiveDynamicStreamingTask() const;
 
                     /**
-                     * 设置
-                     * @param _adaptiveDynamicStreamingTask 
+                     * 设置<p>Adaptive bitrate streaming task</p>
+                     * @param _adaptiveDynamicStreamingTask <p>Adaptive bitrate streaming task</p>
                      * 
                      */
                     void SetAdaptiveDynamicStreamingTask(const AdaptiveDynamicStreamingTaskInput& _adaptiveDynamicStreamingTask);
@@ -186,15 +187,15 @@ namespace TencentCloud
                     bool AdaptiveDynamicStreamingTaskHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AiContentReviewTask 
+                     * 获取<p>Video content review task</p>
+                     * @return AiContentReviewTask <p>Video content review task</p>
                      * 
                      */
                     AiContentReviewTaskInput GetAiContentReviewTask() const;
 
                     /**
-                     * 设置
-                     * @param _aiContentReviewTask 
+                     * 设置<p>Video content review task</p>
+                     * @param _aiContentReviewTask <p>Video content review task</p>
                      * 
                      */
                     void SetAiContentReviewTask(const AiContentReviewTaskInput& _aiContentReviewTask);
@@ -207,15 +208,15 @@ namespace TencentCloud
                     bool AiContentReviewTaskHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AiAnalysisTask 
+                     * 获取<p>Video content analysis task</p>
+                     * @return AiAnalysisTask <p>Video content analysis task</p>
                      * 
                      */
                     AiAnalysisTaskInput GetAiAnalysisTask() const;
 
                     /**
-                     * 设置
-                     * @param _aiAnalysisTask 
+                     * 设置<p>Video content analysis task</p>
+                     * @param _aiAnalysisTask <p>Video content analysis task</p>
                      * 
                      */
                     void SetAiAnalysisTask(const AiAnalysisTaskInput& _aiAnalysisTask);
@@ -228,15 +229,15 @@ namespace TencentCloud
                     bool AiAnalysisTaskHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AiRecognitionTask 
+                     * 获取<p>Video content recognition task</p>
+                     * @return AiRecognitionTask <p>Video content recognition task</p>
                      * 
                      */
                     AiRecognitionTaskInput GetAiRecognitionTask() const;
 
                     /**
-                     * 设置
-                     * @param _aiRecognitionTask 
+                     * 设置<p>Video content recognition task</p>
+                     * @param _aiRecognitionTask <p>Video content recognition task</p>
                      * 
                      */
                     void SetAiRecognitionTask(const AiRecognitionTaskInput& _aiRecognitionTask);
@@ -249,15 +250,15 @@ namespace TencentCloud
                     bool AiRecognitionTaskHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return QualityControlTask 
+                     * 获取<p>Media quality inspection task</p>
+                     * @return QualityControlTask <p>Media quality inspection task</p>
                      * 
                      */
                     AiQualityControlTaskInput GetQualityControlTask() const;
 
                     /**
-                     * 设置
-                     * @param _qualityControlTask 
+                     * 设置<p>Media quality inspection task</p>
+                     * @param _qualityControlTask <p>Media quality inspection task</p>
                      * 
                      */
                     void SetQualityControlTask(const AiQualityControlTaskInput& _qualityControlTask);
@@ -270,15 +271,15 @@ namespace TencentCloud
                     bool QualityControlTaskHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ExecRulesTask 
+                     * 获取<p>Conditional judgment of the task.</p>
+                     * @return ExecRulesTask <p>Conditional judgment of the task.</p>
                      * 
                      */
                     ExecRulesTask GetExecRulesTask() const;
 
                     /**
-                     * 设置
-                     * @param _execRulesTask 
+                     * 设置<p>Conditional judgment of the task.</p>
+                     * @param _execRulesTask <p>Conditional judgment of the task.</p>
                      * 
                      */
                     void SetExecRulesTask(const ExecRulesTask& _execRulesTask);
@@ -291,15 +292,15 @@ namespace TencentCloud
                     bool ExecRulesTaskHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SmartSubtitlesTask 
+                     * 获取<p>Smart subtitle task.</p>
+                     * @return SmartSubtitlesTask <p>Smart subtitle task.</p>
                      * 
                      */
                     SmartSubtitlesTaskInput GetSmartSubtitlesTask() const;
 
                     /**
-                     * 设置
-                     * @param _smartSubtitlesTask 
+                     * 设置<p>Smart subtitle task.</p>
+                     * @param _smartSubtitlesTask <p>Smart subtitle task.</p>
                      * 
                      */
                     void SetSmartSubtitlesTask(const SmartSubtitlesTaskInput& _smartSubtitlesTask);
@@ -312,15 +313,15 @@ namespace TencentCloud
                     bool SmartSubtitlesTaskHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SmartEraseTask 
+                     * 获取<p>Intelligent erasure task</p>
+                     * @return SmartEraseTask <p>Intelligent erasure task</p>
                      * 
                      */
                     SmartEraseTaskInput GetSmartEraseTask() const;
 
                     /**
-                     * 设置
-                     * @param _smartEraseTask 
+                     * 设置<p>Intelligent erasure task</p>
+                     * @param _smartEraseTask <p>Intelligent erasure task</p>
                      * 
                      */
                     void SetSmartEraseTask(const SmartEraseTaskInput& _smartEraseTask);
@@ -332,85 +333,112 @@ namespace TencentCloud
                      */
                     bool SmartEraseTaskHasBeenSet() const;
 
+                    /**
+                     * 获取<p>AI Dubbing task.</p>
+                     * @return AIDubbingTask <p>AI Dubbing task.</p>
+                     * 
+                     */
+                    AIDubbingTaskInput GetAIDubbingTask() const;
+
+                    /**
+                     * 设置<p>AI Dubbing task.</p>
+                     * @param _aIDubbingTask <p>AI Dubbing task.</p>
+                     * 
+                     */
+                    void SetAIDubbingTask(const AIDubbingTaskInput& _aIDubbingTask);
+
+                    /**
+                     * 判断参数 AIDubbingTask 是否已赋值
+                     * @return AIDubbingTask 是否已赋值
+                     * 
+                     */
+                    bool AIDubbingTaskHasBeenSet() const;
+
                 private:
 
                     /**
-                     * 
+                     * <p>Video transcoding task</p>
                      */
                     TranscodeTaskInput m_transcodeTask;
                     bool m_transcodeTaskHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Video-to-GIF task</p>
                      */
                     AnimatedGraphicTaskInput m_animatedGraphicTask;
                     bool m_animatedGraphicTaskHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Video time point screenshot task</p>
                      */
                     SnapshotByTimeOffsetTaskInput m_snapshotByTimeOffsetTask;
                     bool m_snapshotByTimeOffsetTaskHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Video sampling screenshot task</p>
                      */
                     SampleSnapshotTaskInput m_sampleSnapshotTask;
                     bool m_sampleSnapshotTaskHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Video image sprite task</p>
                      */
                     ImageSpriteTaskInput m_imageSpriteTask;
                     bool m_imageSpriteTaskHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Adaptive bitrate streaming task</p>
                      */
                     AdaptiveDynamicStreamingTaskInput m_adaptiveDynamicStreamingTask;
                     bool m_adaptiveDynamicStreamingTaskHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Video content review task</p>
                      */
                     AiContentReviewTaskInput m_aiContentReviewTask;
                     bool m_aiContentReviewTaskHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Video content analysis task</p>
                      */
                     AiAnalysisTaskInput m_aiAnalysisTask;
                     bool m_aiAnalysisTaskHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Video content recognition task</p>
                      */
                     AiRecognitionTaskInput m_aiRecognitionTask;
                     bool m_aiRecognitionTaskHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Media quality inspection task</p>
                      */
                     AiQualityControlTaskInput m_qualityControlTask;
                     bool m_qualityControlTaskHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Conditional judgment of the task.</p>
                      */
                     ExecRulesTask m_execRulesTask;
                     bool m_execRulesTaskHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Smart subtitle task.</p>
                      */
                     SmartSubtitlesTaskInput m_smartSubtitlesTask;
                     bool m_smartSubtitlesTaskHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Intelligent erasure task</p>
                      */
                     SmartEraseTaskInput m_smartEraseTask;
                     bool m_smartEraseTaskHasBeenSet;
+
+                    /**
+                     * <p>AI Dubbing task.</p>
+                     */
+                    AIDubbingTaskInput m_aIDubbingTask;
+                    bool m_aIDubbingTaskHasBeenSet;
 
                 };
             }

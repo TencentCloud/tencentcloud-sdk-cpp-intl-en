@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Input information of the file that needs to get meta information.
-                     * @return InputInfo Input information of the file that needs to get meta information.
+                     * 获取<p>Input information of the file that needs to get meta information.</p>
+                     * @return InputInfo <p>Input information of the file that needs to get meta information.</p>
                      * 
                      */
                     MediaInputInfo GetInputInfo() const;
 
                     /**
-                     * 设置Input information of the file that needs to get meta information.
-                     * @param _inputInfo Input information of the file that needs to get meta information.
+                     * 设置<p>Input information of the file that needs to get meta information.</p>
+                     * @param _inputInfo <p>Input information of the file that needs to get meta information.</p>
                      * 
                      */
                     void SetInputInfo(const MediaInputInfo& _inputInfo);
@@ -64,13 +64,40 @@ namespace TencentCloud
                      */
                     bool InputInfoHasBeenSet() const;
 
+                    /**
+                     * 获取<p>When set to slow, expand the API timeout duration</p><p>Enumeration values:</p><ul><li>slow: expand the API timeout duration</li></ul>
+                     * @return Mode <p>When set to slow, expand the API timeout duration</p><p>Enumeration values:</p><ul><li>slow: expand the API timeout duration</li></ul>
+                     * 
+                     */
+                    std::string GetMode() const;
+
+                    /**
+                     * 设置<p>When set to slow, expand the API timeout duration</p><p>Enumeration values:</p><ul><li>slow: expand the API timeout duration</li></ul>
+                     * @param _mode <p>When set to slow, expand the API timeout duration</p><p>Enumeration values:</p><ul><li>slow: expand the API timeout duration</li></ul>
+                     * 
+                     */
+                    void SetMode(const std::string& _mode);
+
+                    /**
+                     * 判断参数 Mode 是否已赋值
+                     * @return Mode 是否已赋值
+                     * 
+                     */
+                    bool ModeHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Input information of the file that needs to get meta information.
+                     * <p>Input information of the file that needs to get meta information.</p>
                      */
                     MediaInputInfo m_inputInfo;
                     bool m_inputInfoHasBeenSet;
+
+                    /**
+                     * <p>When set to slow, expand the API timeout duration</p><p>Enumeration values:</p><ul><li>slow: expand the API timeout duration</li></ul>
+                     */
+                    std::string m_mode;
+                    bool m_modeHasBeenSet;
 
                 };
             }

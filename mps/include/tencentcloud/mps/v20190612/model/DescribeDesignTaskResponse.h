@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Error code. 0 is returned if the request is successful.</p>
-                     * @return ErrorCode <p>Error code. 0 is returned if the request is successful.</p>
+                     * 获取<p>Error code. 0 is returned if the request is successful, and 100 is returned if it is being processed.</p>
+                     * @return ErrorCode <p>Error code. 0 is returned if the request is successful, and 100 is returned if it is being processed.</p>
                      * 
                      */
                     int64_t GetErrorCode() const;
@@ -58,8 +58,8 @@ namespace TencentCloud
                     bool ErrorCodeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Error message. success is returned if the request is successful.</p>
-                     * @return Msg <p>Error message. success is returned if the request is successful.</p>
+                     * 获取
+                     * @return Msg 
                      * 
                      */
                     std::string GetMsg() const;
@@ -72,8 +72,8 @@ namespace TencentCloud
                     bool MsgHasBeenSet() const;
 
                     /**
-                     * 获取<p>Task status.</p><p>Enumeration values: </p><ul><li>success: Success, </li><li>fail: Failure, </li><li>processing: Processing.</li></ul>
-                     * @return Status <p>Task status.</p><p>Enumeration values: </p><ul><li>success: Success, </li><li>fail: Failure, </li><li>processing: Processing.</li></ul>
+                     * 获取
+                     * @return Status 
                      * 
                      */
                     std::string GetStatus() const;
@@ -100,8 +100,8 @@ namespace TencentCloud
                     bool VoiceIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>Audition audio URL.</p>
-                     * @return AudioUrl <p>Audition audio URL.</p>
+                     * 获取
+                     * @return AudioUrl 
                      * 
                      */
                     std::string GetAudioUrl() const;
@@ -130,19 +130,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Error code. 0 is returned if the request is successful.</p>
+                     * <p>Error code. 0 is returned if the request is successful, and 100 is returned if it is being processed.</p>
                      */
                     int64_t m_errorCode;
                     bool m_errorCodeHasBeenSet;
 
                     /**
-                     * <p>Error message. success is returned if the request is successful.</p>
+                     * 
                      */
                     std::string m_msg;
                     bool m_msgHasBeenSet;
 
                     /**
-                     * <p>Task status.</p><p>Enumeration values: </p><ul><li>success: Success, </li><li>fail: Failure, </li><li>processing: Processing.</li></ul>
+                     * 
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
@@ -154,7 +154,7 @@ namespace TencentCloud
                     bool m_voiceIdHasBeenSet;
 
                     /**
-                     * <p>Audition audio URL.</p>
+                     * 
                      */
                     std::string m_audioUrl;
                     bool m_audioUrlHasBeenSet;

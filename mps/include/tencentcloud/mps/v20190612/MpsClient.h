@@ -25,6 +25,8 @@
 #include <tencentcloud/core/AsyncCallerContext.h>
 #include <tencentcloud/mps/v20190612/model/BatchProcessMediaRequest.h>
 #include <tencentcloud/mps/v20190612/model/BatchProcessMediaResponse.h>
+#include <tencentcloud/mps/v20190612/model/ChangeVoiceRequest.h>
+#include <tencentcloud/mps/v20190612/model/ChangeVoiceResponse.h>
 #include <tencentcloud/mps/v20190612/model/CloneViralRequest.h>
 #include <tencentcloud/mps/v20190612/model/CloneViralResponse.h>
 #include <tencentcloud/mps/v20190612/model/CloneVoiceRequest.h>
@@ -255,6 +257,8 @@
 #include <tencentcloud/mps/v20190612/model/ModifyBlindWatermarkTemplateResponse.h>
 #include <tencentcloud/mps/v20190612/model/ModifyContentReviewTemplateRequest.h>
 #include <tencentcloud/mps/v20190612/model/ModifyContentReviewTemplateResponse.h>
+#include <tencentcloud/mps/v20190612/model/ModifyDocToVideoTaskStatusRequest.h>
+#include <tencentcloud/mps/v20190612/model/ModifyDocToVideoTaskStatusResponse.h>
 #include <tencentcloud/mps/v20190612/model/ModifyImageSpriteTemplateRequest.h>
 #include <tencentcloud/mps/v20190612/model/ModifyImageSpriteTemplateResponse.h>
 #include <tencentcloud/mps/v20190612/model/ModifyLiveRecordTemplateRequest.h>
@@ -332,6 +336,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::BatchProcessMediaResponse> BatchProcessMediaOutcome;
                 typedef std::future<BatchProcessMediaOutcome> BatchProcessMediaOutcomeCallable;
                 typedef std::function<void(const MpsClient*, const Model::BatchProcessMediaRequest&, BatchProcessMediaOutcome, const std::shared_ptr<const AsyncCallerContext>&)> BatchProcessMediaAsyncHandler;
+                typedef Outcome<Core::Error, Model::ChangeVoiceResponse> ChangeVoiceOutcome;
+                typedef std::future<ChangeVoiceOutcome> ChangeVoiceOutcomeCallable;
+                typedef std::function<void(const MpsClient*, const Model::ChangeVoiceRequest&, ChangeVoiceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ChangeVoiceAsyncHandler;
                 typedef Outcome<Core::Error, Model::CloneViralResponse> CloneViralOutcome;
                 typedef std::future<CloneViralOutcome> CloneViralOutcomeCallable;
                 typedef std::function<void(const MpsClient*, const Model::CloneViralRequest&, CloneViralOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CloneViralAsyncHandler;
@@ -677,6 +684,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ModifyContentReviewTemplateResponse> ModifyContentReviewTemplateOutcome;
                 typedef std::future<ModifyContentReviewTemplateOutcome> ModifyContentReviewTemplateOutcomeCallable;
                 typedef std::function<void(const MpsClient*, const Model::ModifyContentReviewTemplateRequest&, ModifyContentReviewTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyContentReviewTemplateAsyncHandler;
+                typedef Outcome<Core::Error, Model::ModifyDocToVideoTaskStatusResponse> ModifyDocToVideoTaskStatusOutcome;
+                typedef std::future<ModifyDocToVideoTaskStatusOutcome> ModifyDocToVideoTaskStatusOutcomeCallable;
+                typedef std::function<void(const MpsClient*, const Model::ModifyDocToVideoTaskStatusRequest&, ModifyDocToVideoTaskStatusOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyDocToVideoTaskStatusAsyncHandler;
                 typedef Outcome<Core::Error, Model::ModifyImageSpriteTemplateResponse> ModifyImageSpriteTemplateOutcome;
                 typedef std::future<ModifyImageSpriteTemplateOutcome> ModifyImageSpriteTemplateOutcomeCallable;
                 typedef std::function<void(const MpsClient*, const Model::ModifyImageSpriteTemplateRequest&, ModifyImageSpriteTemplateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ModifyImageSpriteTemplateAsyncHandler;
@@ -779,6 +789,15 @@ Smart subtitle (full speech, speech hotword, and speech translation)
                 BatchProcessMediaOutcome BatchProcessMedia(const Model::BatchProcessMediaRequest &request);
                 void BatchProcessMediaAsync(const Model::BatchProcessMediaRequest& request, const BatchProcessMediaAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 BatchProcessMediaOutcomeCallable BatchProcessMediaCallable(const Model::BatchProcessMediaRequest& request);
+
+                /**
+                 *Synchronize tone conversion to convert the input audio into the specified timbre based on the input audio and specified timbre.
+                 * @param req ChangeVoiceRequest
+                 * @return ChangeVoiceOutcome
+                 */
+                ChangeVoiceOutcome ChangeVoice(const Model::ChangeVoiceRequest &request);
+                void ChangeVoiceAsync(const Model::ChangeVoiceRequest& request, const ChangeVoiceAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ChangeVoiceOutcomeCallable ChangeVoiceCallable(const Model::ChangeVoiceRequest& request);
 
                 /**
                  *Clone a hit product. Input a reference video of a hit product and a product image to generate a video with aligned style and pace.
@@ -907,7 +926,7 @@ Smart subtitle (full speech, speech hotword, and speech translation)
                 CreateContentReviewTemplateOutcomeCallable CreateContentReviewTemplateCallable(const Model::CreateContentReviewTemplateRequest& request);
 
                 /**
-                 *This API is used to create an AIGC documentation generation video task.
+                 *Creates an AIGC document-to-video task.
 This API is used to query tasks.
                  * @param req CreateDocToVideoTaskRequest
                  * @return CreateDocToVideoTaskOutcome
@@ -1862,6 +1881,17 @@ Note: templates with an ID below 10000 are preset and cannot be modified.
                 ModifyContentReviewTemplateOutcomeCallable ModifyContentReviewTemplateCallable(const Model::ModifyContentReviewTemplateRequest& request);
 
                 /**
+                 *Modify the status of an AIGC document-to-video task.
+
+Contains two actions: confirm and regenerate.
+                 * @param req ModifyDocToVideoTaskStatusRequest
+                 * @return ModifyDocToVideoTaskStatusOutcome
+                 */
+                ModifyDocToVideoTaskStatusOutcome ModifyDocToVideoTaskStatus(const Model::ModifyDocToVideoTaskStatusRequest &request);
+                void ModifyDocToVideoTaskStatusAsync(const Model::ModifyDocToVideoTaskStatusRequest& request, const ModifyDocToVideoTaskStatusAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ModifyDocToVideoTaskStatusOutcomeCallable ModifyDocToVideoTaskStatusCallable(const Model::ModifyDocToVideoTaskStatusRequest& request);
+
+                /**
                  *This API is used to modify a custom image sprite generating template.
                  * @param req ModifyImageSpriteTemplateRequest
                  * @return ModifyImageSpriteTemplateOutcome
@@ -2038,18 +2068,18 @@ Live stream processing event notification supports HTTP callbacks and also suppo
                 ProcessLiveStreamOutcomeCallable ProcessLiveStreamCallable(const Model::ProcessLiveStreamRequest& request);
 
                 /**
-                 *This API is used to initiate a processing task for video URLs or media files in Cloud Object Storage (COS). Features include:
-- Audio/Video transcoding (such as standard transcoding, top speed codec (TSC) transcoding, audio/video enhancement, visible watermark addition, and digital watermark addition).
+                 *This API is used to initiate a processing task for URL video links or media files in COS. Features include:
+- Audio/Video transcoding (such as standard transcoding, Top Speed Codec (TSC) transcoding, audio/video enhancement, visible watermark addition, and digital watermark addition).
 - Adaptive bitrate streaming conversion for audios/videos.
 - Video-to-GIF conversion.
-- Time point screenshot of videos.
+- Screenshot taking at specified time points.
 - Sampled screenshot of videos.
 - Image sprite of video screenshots.
-- Media quality inspection (such as media format diagnosis, audio/video content detection, and scoring without reference, where audio/video content detection mainly covers jitter, blur, low light, overexposure, screen glitches, noise, mosaic, QR code, and other issues).
+- Media quality inspection (such as media format diagnosis, audio/video content detection, and no-reference scoring, where audio/video content detection mainly covers jitter, blur, low light, overexposure, screen glitches, noise, mosaic, QR code, and other issues).
 - Smart subtitle (such as subtitle generation and translation).
 - Smart erasing (such as watermark removal, subtitle removal, and privacy protection).
-- Smart content moderation (such as pornography detection and sensitive information detection).
-- Smart content analysis (such as tags, classifications, covers, frame tags, video splitting, highlights, opening and ending clips, and marking points for games).
+- Intelligent content moderation (such as pornography detection and sensitive information detection).
+-.
 - Smart content recognition (such as human faces, full texts, text keywords, full speech, speech keywords, speech translation, and object recognition).
                  * @param req ProcessMediaRequest
                  * @return ProcessMediaOutcome

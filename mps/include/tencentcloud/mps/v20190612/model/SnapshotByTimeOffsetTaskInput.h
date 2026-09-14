@@ -38,7 +38,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Input parameter type of a time point screenshot task
+                * Screenshot taking at specified time points task input parameter type
                 */
                 class SnapshotByTimeOffsetTaskInput : public AbstractModel
                 {
@@ -134,15 +134,15 @@ namespace TencentCloud
                     bool WatermarkSetHasBeenSet() const;
 
                     /**
-                     * 获取<p>Target storage for the file after time point screenshot taking. If not specified, it inherits the upper-level OutputStorage value.</p>
-                     * @return OutputStorage <p>Target storage for the file after time point screenshot taking. If not specified, it inherits the upper-level OutputStorage value.</p>
+                     * 获取
+                     * @return OutputStorage 
                      * 
                      */
                     TaskOutputStorage GetOutputStorage() const;
 
                     /**
-                     * 设置<p>Target storage for the file after time point screenshot taking. If not specified, it inherits the upper-level OutputStorage value.</p>
-                     * @param _outputStorage <p>Target storage for the file after time point screenshot taking. If not specified, it inherits the upper-level OutputStorage value.</p>
+                     * 设置
+                     * @param _outputStorage 
                      * 
                      */
                     void SetOutputStorage(const TaskOutputStorage& _outputStorage);
@@ -176,15 +176,15 @@ namespace TencentCloud
                     bool OutputObjectPathHasBeenSet() const;
 
                     /**
-                     * 获取<p>Rule of the <code>{number}</code> variable in the output path after time point screenshot taking.</p>
-                     * @return ObjectNumberFormat <p>Rule of the <code>{number}</code> variable in the output path after time point screenshot taking.</p>
+                     * 获取
+                     * @return ObjectNumberFormat 
                      * 
                      */
                     NumberFormat GetObjectNumberFormat() const;
 
                     /**
-                     * 设置<p>Rule of the <code>{number}</code> variable in the output path after time point screenshot taking.</p>
-                     * @param _objectNumberFormat <p>Rule of the <code>{number}</code> variable in the output path after time point screenshot taking.</p>
+                     * 设置
+                     * @param _objectNumberFormat 
                      * 
                      */
                     void SetObjectNumberFormat(const NumberFormat& _objectNumberFormat);
@@ -244,7 +244,7 @@ namespace TencentCloud
                     bool m_watermarkSetHasBeenSet;
 
                     /**
-                     * <p>Target storage for the file after time point screenshot taking. If not specified, it inherits the upper-level OutputStorage value.</p>
+                     * 
                      */
                     TaskOutputStorage m_outputStorage;
                     bool m_outputStorageHasBeenSet;
@@ -256,7 +256,7 @@ namespace TencentCloud
                     bool m_outputObjectPathHasBeenSet;
 
                     /**
-                     * <p>Rule of the <code>{number}</code> variable in the output path after time point screenshot taking.</p>
+                     * 
                      */
                     NumberFormat m_objectNumberFormat;
                     bool m_objectNumberFormatHasBeenSet;

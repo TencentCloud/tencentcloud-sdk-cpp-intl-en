@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * HDR configuration.
+                * HDR configuration
                 */
                 class HdrConfig : public AbstractModel
                 {
@@ -47,26 +47,26 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether to enable the feature. Valid values:
-<li>ON</li>
-<li>OFF</li>
+                     * 获取Capability configuration switch. Valid values:
+<li>ON: enabled;</li>
+<li>OFF: disabled</li>
 Default value: ON.
-                     * @return Switch Whether to enable the feature. Valid values:
-<li>ON</li>
-<li>OFF</li>
+                     * @return Switch Capability configuration switch. Valid values:
+<li>ON: enabled;</li>
+<li>OFF: disabled</li>
 Default value: ON.
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Whether to enable the feature. Valid values:
-<li>ON</li>
-<li>OFF</li>
+                     * 设置Capability configuration switch. Valid values:
+<li>ON: enabled;</li>
+<li>OFF: disabled</li>
 Default value: ON.
-                     * @param _switch Whether to enable the feature. Valid values:
-<li>ON</li>
-<li>OFF</li>
+                     * @param _switch Capability configuration switch. Valid values:
+<li>ON: enabled;</li>
+<li>OFF: disabled</li>
 Default value: ON.
                      * 
                      */
@@ -80,35 +80,15 @@ Default value: ON.
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取Type, available values:
-<li>HDR10</li>
-<li>HLG</li>
-Default Value: HDR10.
-Note: The video encoding method should be h264 or h265.
-Note: The video encoding bit depth is 10.
-                     * @return Type Type, available values:
-<li>HDR10</li>
-<li>HLG</li>
-Default Value: HDR10.
-Note: The video encoding method should be h264 or h265.
-Note: The video encoding bit depth is 10.
+                     * 获取
+                     * @return Type 
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Type, available values:
-<li>HDR10</li>
-<li>HLG</li>
-Default Value: HDR10.
-Note: The video encoding method should be h264 or h265.
-Note: The video encoding bit depth is 10.
-                     * @param _type Type, available values:
-<li>HDR10</li>
-<li>HLG</li>
-Default Value: HDR10.
-Note: The video encoding method should be h264 or h265.
-Note: The video encoding bit depth is 10.
+                     * 设置
+                     * @param _type 
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -123,21 +103,16 @@ Note: The video encoding bit depth is 10.
                 private:
 
                     /**
-                     * Whether to enable the feature. Valid values:
-<li>ON</li>
-<li>OFF</li>
+                     * Capability configuration switch. Valid values:
+<li>ON: enabled;</li>
+<li>OFF: disabled</li>
 Default value: ON.
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * Type, available values:
-<li>HDR10</li>
-<li>HLG</li>
-Default Value: HDR10.
-Note: The video encoding method should be h264 or h265.
-Note: The video encoding bit depth is 10.
+                     * 
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;

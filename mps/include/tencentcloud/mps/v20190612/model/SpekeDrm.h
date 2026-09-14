@@ -47,12 +47,12 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Resource ID. The field content is user-defined.
-It supports 1 to 128 characters consisting of digits, letters, underscores (_), and hyphens (-).
+                     * 获取Resource tagging. The field content is user-customized;
+Supports 1 to 128 characters consisting of digits, letters, underscores (_), and hyphens (-).
 This field corresponds to the cid field in the Speke request.
 Note: Different DRM vendors have different restrictions on this field (for example, SDMC Technology Co., Ltd. does not support this field containing underscores). For specific rules, check with the vendors.
-                     * @return ResourceId Resource ID. The field content is user-defined.
-It supports 1 to 128 characters consisting of digits, letters, underscores (_), and hyphens (-).
+                     * @return ResourceId Resource tagging. The field content is user-customized;
+Supports 1 to 128 characters consisting of digits, letters, underscores (_), and hyphens (-).
 This field corresponds to the cid field in the Speke request.
 Note: Different DRM vendors have different restrictions on this field (for example, SDMC Technology Co., Ltd. does not support this field containing underscores). For specific rules, check with the vendors.
                      * 
@@ -60,12 +60,12 @@ Note: Different DRM vendors have different restrictions on this field (for examp
                     std::string GetResourceId() const;
 
                     /**
-                     * 设置Resource ID. The field content is user-defined.
-It supports 1 to 128 characters consisting of digits, letters, underscores (_), and hyphens (-).
+                     * 设置Resource tagging. The field content is user-customized;
+Supports 1 to 128 characters consisting of digits, letters, underscores (_), and hyphens (-).
 This field corresponds to the cid field in the Speke request.
 Note: Different DRM vendors have different restrictions on this field (for example, SDMC Technology Co., Ltd. does not support this field containing underscores). For specific rules, check with the vendors.
-                     * @param _resourceId Resource ID. The field content is user-defined.
-It supports 1 to 128 characters consisting of digits, letters, underscores (_), and hyphens (-).
+                     * @param _resourceId Resource tagging. The field content is user-customized;
+Supports 1 to 128 characters consisting of digits, letters, underscores (_), and hyphens (-).
 This field corresponds to the cid field in the Speke request.
 Note: Different DRM vendors have different restrictions on this field (for example, SDMC Technology Co., Ltd. does not support this field containing underscores). For specific rules, check with the vendors.
                      * 
@@ -80,23 +80,23 @@ Note: Different DRM vendors have different restrictions on this field (for examp
                     bool ResourceIdHasBeenSet() const;
 
                     /**
-                     * 获取DRM manufacturer access address. the field content is obtained from the drm manufacturer.
+                     * 获取DRM manufacturer access address. This field content is obtained from the DRM manufacturer.
 
-Note: different DRM manufacturers have different limitations on the number of substreams. for example, PallyCon limits the number of substreams to no more than 5, and DRMtoday only supports encryption of up to 9 substreams.
-                     * @return KeyServerUrl DRM manufacturer access address. the field content is obtained from the drm manufacturer.
+Note: Different DRM manufacturers have different limits on the number of substreams. For example, PallyCon limits the number to 5 substreams, while DRMtoday supports stream encryption for a maximum of 9 substreams.
+                     * @return KeyServerUrl DRM manufacturer access address. This field content is obtained from the DRM manufacturer.
 
-Note: different DRM manufacturers have different limitations on the number of substreams. for example, PallyCon limits the number of substreams to no more than 5, and DRMtoday only supports encryption of up to 9 substreams.
+Note: Different DRM manufacturers have different limits on the number of substreams. For example, PallyCon limits the number to 5 substreams, while DRMtoday supports stream encryption for a maximum of 9 substreams.
                      * 
                      */
                     std::string GetKeyServerUrl() const;
 
                     /**
-                     * 设置DRM manufacturer access address. the field content is obtained from the drm manufacturer.
+                     * 设置DRM manufacturer access address. This field content is obtained from the DRM manufacturer.
 
-Note: different DRM manufacturers have different limitations on the number of substreams. for example, PallyCon limits the number of substreams to no more than 5, and DRMtoday only supports encryption of up to 9 substreams.
-                     * @param _keyServerUrl DRM manufacturer access address. the field content is obtained from the drm manufacturer.
+Note: Different DRM manufacturers have different limits on the number of substreams. For example, PallyCon limits the number to 5 substreams, while DRMtoday supports stream encryption for a maximum of 9 substreams.
+                     * @param _keyServerUrl DRM manufacturer access address. This field content is obtained from the DRM manufacturer.
 
-Note: different DRM manufacturers have different limitations on the number of substreams. for example, PallyCon limits the number of substreams to no more than 5, and DRMtoday only supports encryption of up to 9 substreams.
+Note: Different DRM manufacturers have different limits on the number of substreams. For example, PallyCon limits the number to 5 substreams, while DRMtoday supports stream encryption for a maximum of 9 substreams.
                      * 
                      */
                     void SetKeyServerUrl(const std::string& _keyServerUrl);
@@ -109,15 +109,15 @@ Note: different DRM manufacturers have different limitations on the number of su
                     bool KeyServerUrlHasBeenSet() const;
 
                     /**
-                     * 获取Initialization vector for encryption (32-byte hexadecimal string). the field content is user-customized.
-                     * @return Vector Initialization vector for encryption (32-byte hexadecimal string). the field content is user-customized.
+                     * 获取Encryption initialization vector (32-byte hexadecimal string). This field content is user-customized.
+                     * @return Vector Encryption initialization vector (32-byte hexadecimal string). This field content is user-customized.
                      * 
                      */
                     std::string GetVector() const;
 
                     /**
-                     * 设置Initialization vector for encryption (32-byte hexadecimal string). the field content is user-customized.
-                     * @param _vector Initialization vector for encryption (32-byte hexadecimal string). the field content is user-customized.
+                     * 设置Encryption initialization vector (32-byte hexadecimal string). This field content is user-customized.
+                     * @param _vector Encryption initialization vector (32-byte hexadecimal string). This field content is user-customized.
                      * 
                      */
                     void SetVector(const std::string& _vector);
@@ -131,20 +131,22 @@ Note: different DRM manufacturers have different limitations on the number of su
 
                     /**
                      * 获取Encryption method. Valid values:
-cbcs: supported by PlayReady, Widevine, FairPlay, Widevine+FairPlay, Widevine+PlayReady, PlayReady+FairPlay, and Widevine+PlayReady+FairPlay.
-cenc: supported by PlayReady, Widevine, and Widevine+PlayReady.
+cbcs: PlayReady, Widevine, FairPlay, WideVine+FairPlay, Widevine+Playready, Playready+Fairplay, Widevine+Playready+Fairplay are supported.
+cenc: PlayReady, Widevine, and Widevine+PlayReady are supported.
+
 If it is left unspecified:
 Use cbcs for FairPlay by default.
 Use cenc for PlayReady and Widevine by default.
-Use cbcs for Widevine+FairPlay, PlayReady+FairPlay, and Widevine+PlayReady+FairPlay by default.
+WideVine+FairPlay, Playready+Fairplay, Widevine+Playready+Fairplay default to cbcs.
 Use cenc for Widevine+PlayReady by default.
                      * @return EncryptionMethod Encryption method. Valid values:
-cbcs: supported by PlayReady, Widevine, FairPlay, Widevine+FairPlay, Widevine+PlayReady, PlayReady+FairPlay, and Widevine+PlayReady+FairPlay.
-cenc: supported by PlayReady, Widevine, and Widevine+PlayReady.
+cbcs: PlayReady, Widevine, FairPlay, WideVine+FairPlay, Widevine+Playready, Playready+Fairplay, Widevine+Playready+Fairplay are supported.
+cenc: PlayReady, Widevine, and Widevine+PlayReady are supported.
+
 If it is left unspecified:
 Use cbcs for FairPlay by default.
 Use cenc for PlayReady and Widevine by default.
-Use cbcs for Widevine+FairPlay, PlayReady+FairPlay, and Widevine+PlayReady+FairPlay by default.
+WideVine+FairPlay, Playready+Fairplay, Widevine+Playready+Fairplay default to cbcs.
 Use cenc for Widevine+PlayReady by default.
                      * 
                      */
@@ -152,20 +154,22 @@ Use cenc for Widevine+PlayReady by default.
 
                     /**
                      * 设置Encryption method. Valid values:
-cbcs: supported by PlayReady, Widevine, FairPlay, Widevine+FairPlay, Widevine+PlayReady, PlayReady+FairPlay, and Widevine+PlayReady+FairPlay.
-cenc: supported by PlayReady, Widevine, and Widevine+PlayReady.
+cbcs: PlayReady, Widevine, FairPlay, WideVine+FairPlay, Widevine+Playready, Playready+Fairplay, Widevine+Playready+Fairplay are supported.
+cenc: PlayReady, Widevine, and Widevine+PlayReady are supported.
+
 If it is left unspecified:
 Use cbcs for FairPlay by default.
 Use cenc for PlayReady and Widevine by default.
-Use cbcs for Widevine+FairPlay, PlayReady+FairPlay, and Widevine+PlayReady+FairPlay by default.
+WideVine+FairPlay, Playready+Fairplay, Widevine+Playready+Fairplay default to cbcs.
 Use cenc for Widevine+PlayReady by default.
                      * @param _encryptionMethod Encryption method. Valid values:
-cbcs: supported by PlayReady, Widevine, FairPlay, Widevine+FairPlay, Widevine+PlayReady, PlayReady+FairPlay, and Widevine+PlayReady+FairPlay.
-cenc: supported by PlayReady, Widevine, and Widevine+PlayReady.
+cbcs: PlayReady, Widevine, FairPlay, WideVine+FairPlay, Widevine+Playready, Playready+Fairplay, Widevine+Playready+Fairplay are supported.
+cenc: PlayReady, Widevine, and Widevine+PlayReady are supported.
+
 If it is left unspecified:
 Use cbcs for FairPlay by default.
 Use cenc for PlayReady and Widevine by default.
-Use cbcs for Widevine+FairPlay, PlayReady+FairPlay, and Widevine+PlayReady+FairPlay by default.
+WideVine+FairPlay, Playready+Fairplay, Widevine+Playready+Fairplay default to cbcs.
 Use cenc for Widevine+PlayReady by default.
                      * 
                      */
@@ -180,11 +184,11 @@ Use cenc for Widevine+PlayReady by default.
 
                     /**
                      * 获取Substream encryption rule. Default value: preset0.
-preset 0: use the same key to encrypt all substreams
+preset 0: use the same key to encrypt all substreams;
 preset1: use different keys for each substream
 
                      * @return EncryptionPreset Substream encryption rule. Default value: preset0.
-preset 0: use the same key to encrypt all substreams
+preset 0: use the same key to encrypt all substreams;
 preset1: use different keys for each substream
 
                      * 
@@ -193,11 +197,11 @@ preset1: use different keys for each substream
 
                     /**
                      * 设置Substream encryption rule. Default value: preset0.
-preset 0: use the same key to encrypt all substreams
+preset 0: use the same key to encrypt all substreams;
 preset1: use different keys for each substream
 
                      * @param _encryptionPreset Substream encryption rule. Default value: preset0.
-preset 0: use the same key to encrypt all substreams
+preset 0: use the same key to encrypt all substreams;
 preset1: use different keys for each substream
 
                      * 
@@ -214,8 +218,8 @@ preset1: use different keys for each substream
                 private:
 
                     /**
-                     * Resource ID. The field content is user-defined.
-It supports 1 to 128 characters consisting of digits, letters, underscores (_), and hyphens (-).
+                     * Resource tagging. The field content is user-customized;
+Supports 1 to 128 characters consisting of digits, letters, underscores (_), and hyphens (-).
 This field corresponds to the cid field in the Speke request.
 Note: Different DRM vendors have different restrictions on this field (for example, SDMC Technology Co., Ltd. does not support this field containing underscores). For specific rules, check with the vendors.
                      */
@@ -223,27 +227,28 @@ Note: Different DRM vendors have different restrictions on this field (for examp
                     bool m_resourceIdHasBeenSet;
 
                     /**
-                     * DRM manufacturer access address. the field content is obtained from the drm manufacturer.
+                     * DRM manufacturer access address. This field content is obtained from the DRM manufacturer.
 
-Note: different DRM manufacturers have different limitations on the number of substreams. for example, PallyCon limits the number of substreams to no more than 5, and DRMtoday only supports encryption of up to 9 substreams.
+Note: Different DRM manufacturers have different limits on the number of substreams. For example, PallyCon limits the number to 5 substreams, while DRMtoday supports stream encryption for a maximum of 9 substreams.
                      */
                     std::string m_keyServerUrl;
                     bool m_keyServerUrlHasBeenSet;
 
                     /**
-                     * Initialization vector for encryption (32-byte hexadecimal string). the field content is user-customized.
+                     * Encryption initialization vector (32-byte hexadecimal string). This field content is user-customized.
                      */
                     std::string m_vector;
                     bool m_vectorHasBeenSet;
 
                     /**
                      * Encryption method. Valid values:
-cbcs: supported by PlayReady, Widevine, FairPlay, Widevine+FairPlay, Widevine+PlayReady, PlayReady+FairPlay, and Widevine+PlayReady+FairPlay.
-cenc: supported by PlayReady, Widevine, and Widevine+PlayReady.
+cbcs: PlayReady, Widevine, FairPlay, WideVine+FairPlay, Widevine+Playready, Playready+Fairplay, Widevine+Playready+Fairplay are supported.
+cenc: PlayReady, Widevine, and Widevine+PlayReady are supported.
+
 If it is left unspecified:
 Use cbcs for FairPlay by default.
 Use cenc for PlayReady and Widevine by default.
-Use cbcs for Widevine+FairPlay, PlayReady+FairPlay, and Widevine+PlayReady+FairPlay by default.
+WideVine+FairPlay, Playready+Fairplay, Widevine+Playready+Fairplay default to cbcs.
 Use cenc for Widevine+PlayReady by default.
                      */
                     std::string m_encryptionMethod;
@@ -251,7 +256,7 @@ Use cenc for Widevine+PlayReady by default.
 
                     /**
                      * Substream encryption rule. Default value: preset0.
-preset 0: use the same key to encrypt all substreams
+preset 0: use the same key to encrypt all substreams;
 preset1: use different keys for each substream
 
                      */

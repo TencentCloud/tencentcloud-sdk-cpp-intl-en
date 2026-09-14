@@ -1,0 +1,138 @@
+/*
+ * Copyright (c) 2017-2025 Tencent. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+#ifndef TENCENTCLOUD_GA2_V20250115_MODEL_IPADDRESSINFOSET_H_
+#define TENCENTCLOUD_GA2_V20250115_MODEL_IPADDRESSINFOSET_H_
+
+#include <string>
+#include <vector>
+#include <map>
+#include <tencentcloud/core/utils/rapidjson/document.h>
+#include <tencentcloud/core/utils/rapidjson/writer.h>
+#include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
+#include <tencentcloud/core/AbstractModel.h>
+
+
+namespace TencentCloud
+{
+    namespace Ga2
+    {
+        namespace V20250115
+        {
+            namespace Model
+            {
+                /**
+                * Public IP information in the acceleration region
+                */
+                class IpAddressInfoSet : public AbstractModel
+                {
+                public:
+                    IpAddressInfoSet();
+                    ~IpAddressInfoSet() = default;
+                    void ToJsonObject(rapidjson::Value &value, rapidjson::Document::AllocatorType& allocator) const;
+                    CoreInternalOutcome Deserialize(const rapidjson::Value &value);
+
+
+                    /**
+                     * 获取<p>IP address.</p>
+                     * @return IpAddress <p>IP address.</p>
+                     * 
+                     */
+                    std::string GetIpAddress() const;
+
+                    /**
+                     * 设置<p>IP address.</p>
+                     * @param _ipAddress <p>IP address.</p>
+                     * 
+                     */
+                    void SetIpAddress(const std::string& _ipAddress);
+
+                    /**
+                     * 判断参数 IpAddress 是否已赋值
+                     * @return IpAddress 是否已赋值
+                     * 
+                     */
+                    bool IpAddressHasBeenSet() const;
+
+                    /**
+                     * 获取<p>IP type.</p>
+                     * @return IspType <p>IP type.</p>
+                     * 
+                     */
+                    std::string GetIspType() const;
+
+                    /**
+                     * 设置<p>IP type.</p>
+                     * @param _ispType <p>IP type.</p>
+                     * 
+                     */
+                    void SetIspType(const std::string& _ispType);
+
+                    /**
+                     * 判断参数 IspType 是否已赋值
+                     * @return IspType 是否已赋值
+                     * 
+                     */
+                    bool IspTypeHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Ddos type</p>
+                     * @return DdosProtectionType <p>Ddos type</p>
+                     * 
+                     */
+                    std::string GetDdosProtectionType() const;
+
+                    /**
+                     * 设置<p>Ddos type</p>
+                     * @param _ddosProtectionType <p>Ddos type</p>
+                     * 
+                     */
+                    void SetDdosProtectionType(const std::string& _ddosProtectionType);
+
+                    /**
+                     * 判断参数 DdosProtectionType 是否已赋值
+                     * @return DdosProtectionType 是否已赋值
+                     * 
+                     */
+                    bool DdosProtectionTypeHasBeenSet() const;
+
+                private:
+
+                    /**
+                     * <p>IP address.</p>
+                     */
+                    std::string m_ipAddress;
+                    bool m_ipAddressHasBeenSet;
+
+                    /**
+                     * <p>IP type.</p>
+                     */
+                    std::string m_ispType;
+                    bool m_ispTypeHasBeenSet;
+
+                    /**
+                     * <p>Ddos type</p>
+                     */
+                    std::string m_ddosProtectionType;
+                    bool m_ddosProtectionTypeHasBeenSet;
+
+                };
+            }
+        }
+    }
+}
+
+#endif // !TENCENTCLOUD_GA2_V20250115_MODEL_IPADDRESSINFOSET_H_

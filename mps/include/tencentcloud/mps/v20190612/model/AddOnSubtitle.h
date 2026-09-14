@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * The information of the subtitles to add.
+                * External subtitle.
                 */
                 class AddOnSubtitle : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Insertion method. Valid values:</p><li>subtitle-stream: Inserts a subtitle track.</li><li>close-caption-708: Encodes CEA-708 subtitles into SEI frames.</li><li>close-caption-608: Encodes CEA-608 subtitles into SEI frames.</li>
-                     * @return Type <p>Insertion method. Valid values:</p><li>subtitle-stream: Inserts a subtitle track.</li><li>close-caption-708: Encodes CEA-708 subtitles into SEI frames.</li><li>close-caption-608: Encodes CEA-608 subtitles into SEI frames.</li>
+                     * 获取
+                     * @return Type 
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置<p>Insertion method. Valid values:</p><li>subtitle-stream: Inserts a subtitle track.</li><li>close-caption-708: Encodes CEA-708 subtitles into SEI frames.</li><li>close-caption-608: Encodes CEA-608 subtitles into SEI frames.</li>
-                     * @param _type <p>Insertion method. Valid values:</p><li>subtitle-stream: Inserts a subtitle track.</li><li>close-caption-708: Encodes CEA-708 subtitles into SEI frames.</li><li>close-caption-608: Encodes CEA-608 subtitles into SEI frames.</li>
+                     * 设置
+                     * @param _type 
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Subtitle file.</p>
-                     * @return Subtitle <p>Subtitle file.</p>
+                     * 获取
+                     * @return Subtitle 
                      * 
                      */
                     MediaInputInfo GetSubtitle() const;
 
                     /**
-                     * 设置<p>Subtitle file.</p>
-                     * @param _subtitle <p>Subtitle file.</p>
+                     * 设置
+                     * @param _subtitle 
                      * 
                      */
                     void SetSubtitle(const MediaInputInfo& _subtitle);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool SubtitleHasBeenSet() const;
 
                     /**
-                     * 获取<p>Subtitle name.<br>Note: Only Chinese characters, letters, digits, spaces, underscores (_), hyphens (-), periods (.), and brackets are supported. The length cannot exceed 64 characters.</p>
-                     * @return SubtitleName <p>Subtitle name.<br>Note: Only Chinese characters, letters, digits, spaces, underscores (_), hyphens (-), periods (.), and brackets are supported. The length cannot exceed 64 characters.</p>
+                     * 获取
+                     * @return SubtitleName 
                      * 
                      */
                     std::string GetSubtitleName() const;
 
                     /**
-                     * 设置<p>Subtitle name.<br>Note: Only Chinese characters, letters, digits, spaces, underscores (_), hyphens (-), periods (.), and brackets are supported. The length cannot exceed 64 characters.</p>
-                     * @param _subtitleName <p>Subtitle name.<br>Note: Only Chinese characters, letters, digits, spaces, underscores (_), hyphens (-), periods (.), and brackets are supported. The length cannot exceed 64 characters.</p>
+                     * 设置
+                     * @param _subtitleName 
                      * 
                      */
                     void SetSubtitleName(const std::string& _subtitleName);
@@ -176,19 +176,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Insertion method. Valid values:</p><li>subtitle-stream: Inserts a subtitle track.</li><li>close-caption-708: Encodes CEA-708 subtitles into SEI frames.</li><li>close-caption-608: Encodes CEA-608 subtitles into SEI frames.</li>
+                     * 
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * <p>Subtitle file.</p>
+                     * 
                      */
                     MediaInputInfo m_subtitle;
                     bool m_subtitleHasBeenSet;
 
                     /**
-                     * <p>Subtitle name.<br>Note: Only Chinese characters, letters, digits, spaces, underscores (_), hyphens (-), periods (.), and brackets are supported. The length cannot exceed 64 characters.</p>
+                     * 
                      */
                     std::string m_subtitleName;
                     bool m_subtitleNameHasBeenSet;

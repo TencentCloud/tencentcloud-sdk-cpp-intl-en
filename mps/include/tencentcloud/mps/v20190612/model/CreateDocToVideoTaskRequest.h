@@ -87,15 +87,15 @@ namespace TencentCloud
                     bool CosInfoHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ResourceId 
+                     * 获取<p>Resource ID. The resource needs to be enabled. The default value is the account's primary resource ID.</p>
+                     * @return ResourceId <p>Resource ID. The resource needs to be enabled. The default value is the account's primary resource ID.</p>
                      * 
                      */
                     std::string GetResourceId() const;
 
                     /**
-                     * 设置
-                     * @param _resourceId 
+                     * 设置<p>Resource ID. The resource needs to be enabled. The default value is the account's primary resource ID.</p>
+                     * @param _resourceId <p>Resource ID. The resource needs to be enabled. The default value is the account's primary resource ID.</p>
                      * 
                      */
                     void SetResourceId(const std::string& _resourceId);
@@ -122,7 +122,7 @@ namespace TencentCloud
                     bool m_cosInfoHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Resource ID. The resource needs to be enabled. The default value is the account's primary resource ID.</p>
                      */
                     std::string m_resourceId;
                     bool m_resourceIdHasBeenSet;

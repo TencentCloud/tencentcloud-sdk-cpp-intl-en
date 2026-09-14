@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Audio stream configuration parameter
+                * Audio stream configuration parameters.
                 */
                 class AudioTemplateInfo : public AbstractModel
                 {
@@ -132,15 +132,15 @@ namespace TencentCloud
                     bool AudioChannelHasBeenSet() const;
 
                     /**
-                     * 获取<p>Audio track merging information.<br>Note: This field only takes effect for adaptive transcoding.</p>
-                     * @return TrackChannelInfo <p>Audio track merging information.<br>Note: This field only takes effect for adaptive transcoding.</p>
+                     * 获取
+                     * @return TrackChannelInfo 
                      * 
                      */
                     AudioTrackChannelInfo GetTrackChannelInfo() const;
 
                     /**
-                     * 设置<p>Audio track merging information.<br>Note: This field only takes effect for adaptive transcoding.</p>
-                     * @param _trackChannelInfo <p>Audio track merging information.<br>Note: This field only takes effect for adaptive transcoding.</p>
+                     * 设置
+                     * @param _trackChannelInfo 
                      * 
                      */
                     void SetTrackChannelInfo(const AudioTrackChannelInfo& _trackChannelInfo);
@@ -242,7 +242,7 @@ namespace TencentCloud
                     bool m_audioChannelHasBeenSet;
 
                     /**
-                     * <p>Audio track merging information.<br>Note: This field only takes effect for adaptive transcoding.</p>
+                     * 
                      */
                     AudioTrackChannelInfo m_trackChannelInfo;
                     bool m_trackChannelInfoHasBeenSet;

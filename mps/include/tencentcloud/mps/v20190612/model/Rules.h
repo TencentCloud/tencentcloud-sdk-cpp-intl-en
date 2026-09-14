@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Task judgment conditions.
+                * 
                 */
                 class Rules : public AbstractModel
                 {
@@ -90,27 +90,15 @@ namespace TencentCloud
                     bool ConditionsHasBeenSet() const;
 
                     /**
-                     * 获取Logical operator for the list of conditions. Valid values:
-
-- &&: logical AND
-- ||: logical OR
-                     * @return Linker Logical operator for the list of conditions. Valid values:
-
-- &&: logical AND
-- ||: logical OR
+                     * 获取
+                     * @return Linker 
                      * 
                      */
                     std::string GetLinker() const;
 
                     /**
-                     * 设置Logical operator for the list of conditions. Valid values:
-
-- &&: logical AND
-- ||: logical OR
-                     * @param _linker Logical operator for the list of conditions. Valid values:
-
-- &&: logical AND
-- ||: logical OR
+                     * 设置
+                     * @param _linker 
                      * 
                      */
                     void SetLinker(const std::string& _linker);
@@ -158,10 +146,7 @@ namespace TencentCloud
                     bool m_conditionsHasBeenSet;
 
                     /**
-                     * Logical operator for the list of conditions. Valid values:
-
-- &&: logical AND
-- ||: logical OR
+                     * 
                      */
                     std::string m_linker;
                     bool m_linkerHasBeenSet;

@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Task judgment conditions.
+                * 
                 */
                 class ExecRulesTask : public AbstractModel
                 {

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Rule condition configuration.
+                * 
                 */
                 class RuleConditionItem : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Key of the quality inspection item condition.
-                     * @return Key Key of the quality inspection item condition.
+                     * 获取
+                     * @return Key 
                      * 
                      */
                     std::string GetKey() const;
 
                     /**
-                     * 设置Key of the quality inspection item condition.
-                     * @param _key Key of the quality inspection item condition.
+                     * 设置
+                     * @param _key 
                      * 
                      */
                     void SetKey(const std::string& _key);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool KeyHasBeenSet() const;
 
                     /**
-                     * 获取Value corresponding to the condition.
-                     * @return Value Value corresponding to the condition.
+                     * 获取
+                     * @return Value 
                      * 
                      */
                     std::string GetValue() const;
 
                     /**
-                     * 设置Value corresponding to the condition.
-                     * @param _value Value corresponding to the condition.
+                     * 设置
+                     * @param _value 
                      * 
                      */
                     void SetValue(const std::string& _value);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Key of the quality inspection item condition.
+                     * 
                      */
                     std::string m_key;
                     bool m_keyHasBeenSet;
 
                     /**
-                     * Value corresponding to the condition.
+                     * 
                      */
                     std::string m_value;
                     bool m_valueHasBeenSet;

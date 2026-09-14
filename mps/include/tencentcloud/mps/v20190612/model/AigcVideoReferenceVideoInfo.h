@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Reference video asset for AIGC video generation.
+                * 
                 */
                 class AigcVideoReferenceVideoInfo : public AbstractModel
                 {
@@ -47,27 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Reference video url. Must be external network accessible.
-This can be used as a feature reference video or a video for editing. The default type is video for editing. You can choose to keep the original sound of the video.
-The ReferType parameter specifies the reference video type: feature indicates feature reference video, and base indicates video for editing.
-If the reference video is a video for editing, the first and last frames cannot be defined.
-                     * @return VideoUrl Reference video url. Must be external network accessible.
-This can be used as a feature reference video or a video for editing. The default type is video for editing. You can choose to keep the original sound of the video.
-The ReferType parameter specifies the reference video type: feature indicates feature reference video, and base indicates video for editing.
-If the reference video is a video for editing, the first and last frames cannot be defined.
+                     * 获取<p>url of the reference video. It must be accessible from the external network.<br>It can be used as a feature reference video or a video for editing. By default, it is a video for editing. You can selectively retain the original sound of the video.<br>The ReferType parameter specifies the reference video type: feature indicates feature reference video, and base indicates video for editing.<br>When the reference video is a video for editing, you cannot define the first and last frame of the video.</p>
+                     * @return VideoUrl <p>url of the reference video. It must be accessible from the external network.<br>It can be used as a feature reference video or a video for editing. By default, it is a video for editing. You can selectively retain the original sound of the video.<br>The ReferType parameter specifies the reference video type: feature indicates feature reference video, and base indicates video for editing.<br>When the reference video is a video for editing, you cannot define the first and last frame of the video.</p>
                      * 
                      */
                     std::string GetVideoUrl() const;
 
                     /**
-                     * 设置Reference video url. Must be external network accessible.
-This can be used as a feature reference video or a video for editing. The default type is video for editing. You can choose to keep the original sound of the video.
-The ReferType parameter specifies the reference video type: feature indicates feature reference video, and base indicates video for editing.
-If the reference video is a video for editing, the first and last frames cannot be defined.
-                     * @param _videoUrl Reference video url. Must be external network accessible.
-This can be used as a feature reference video or a video for editing. The default type is video for editing. You can choose to keep the original sound of the video.
-The ReferType parameter specifies the reference video type: feature indicates feature reference video, and base indicates video for editing.
-If the reference video is a video for editing, the first and last frames cannot be defined.
+                     * 设置<p>url of the reference video. It must be accessible from the external network.<br>It can be used as a feature reference video or a video for editing. By default, it is a video for editing. You can selectively retain the original sound of the video.<br>The ReferType parameter specifies the reference video type: feature indicates feature reference video, and base indicates video for editing.<br>When the reference video is a video for editing, you cannot define the first and last frame of the video.</p>
+                     * @param _videoUrl <p>url of the reference video. It must be accessible from the external network.<br>It can be used as a feature reference video or a video for editing. By default, it is a video for editing. You can selectively retain the original sound of the video.<br>The ReferType parameter specifies the reference video type: feature indicates feature reference video, and base indicates video for editing.<br>When the reference video is a video for editing, you cannot define the first and last frame of the video.</p>
                      * 
                      */
                     void SetVideoUrl(const std::string& _videoUrl);
@@ -80,15 +68,15 @@ If the reference video is a video for editing, the first and last frames cannot 
                     bool VideoUrlHasBeenSet() const;
 
                     /**
-                     * 获取The ReferType parameter specifies the reference video type: feature indicates feature reference video, and base indicates video for editing.
-                     * @return ReferType The ReferType parameter specifies the reference video type: feature indicates feature reference video, and base indicates video for editing.
+                     * 获取<p>The ReferType parameter specifies the reference video type: feature indicates feature reference video, and base indicates video for editing.</p>
+                     * @return ReferType <p>The ReferType parameter specifies the reference video type: feature indicates feature reference video, and base indicates video for editing.</p>
                      * 
                      */
                     std::string GetReferType() const;
 
                     /**
-                     * 设置The ReferType parameter specifies the reference video type: feature indicates feature reference video, and base indicates video for editing.
-                     * @param _referType The ReferType parameter specifies the reference video type: feature indicates feature reference video, and base indicates video for editing.
+                     * 设置<p>The ReferType parameter specifies the reference video type: feature indicates feature reference video, and base indicates video for editing.</p>
+                     * @param _referType <p>The ReferType parameter specifies the reference video type: feature indicates feature reference video, and base indicates video for editing.</p>
                      * 
                      */
                     void SetReferType(const std::string& _referType);
@@ -101,15 +89,15 @@ If the reference video is a video for editing, the first and last frames cannot 
                     bool ReferTypeHasBeenSet() const;
 
                     /**
-                     * 获取The KeepOriginalSound parameter specifies whether to keep the original sound of the video. Valid values: yes (keep the original sound); no (remove the original sound). This parameter also applies to feature reference videos (feature).
-                     * @return KeepOriginalSound The KeepOriginalSound parameter specifies whether to keep the original sound of the video. Valid values: yes (keep the original sound); no (remove the original sound). This parameter also applies to feature reference videos (feature).
+                     * 获取<p>The KeepOriginalSound parameter specifies whether to keep the original sound of the video. Valid values: yes (keep the original sound); no (remove the original sound). This parameter also applies to feature reference videos (feature).</p>
+                     * @return KeepOriginalSound <p>The KeepOriginalSound parameter specifies whether to keep the original sound of the video. Valid values: yes (keep the original sound); no (remove the original sound). This parameter also applies to feature reference videos (feature).</p>
                      * 
                      */
                     std::string GetKeepOriginalSound() const;
 
                     /**
-                     * 设置The KeepOriginalSound parameter specifies whether to keep the original sound of the video. Valid values: yes (keep the original sound); no (remove the original sound). This parameter also applies to feature reference videos (feature).
-                     * @param _keepOriginalSound The KeepOriginalSound parameter specifies whether to keep the original sound of the video. Valid values: yes (keep the original sound); no (remove the original sound). This parameter also applies to feature reference videos (feature).
+                     * 设置<p>The KeepOriginalSound parameter specifies whether to keep the original sound of the video. Valid values: yes (keep the original sound); no (remove the original sound). This parameter also applies to feature reference videos (feature).</p>
+                     * @param _keepOriginalSound <p>The KeepOriginalSound parameter specifies whether to keep the original sound of the video. Valid values: yes (keep the original sound); no (remove the original sound). This parameter also applies to feature reference videos (feature).</p>
                      * 
                      */
                     void SetKeepOriginalSound(const std::string& _keepOriginalSound);
@@ -124,22 +112,19 @@ If the reference video is a video for editing, the first and last frames cannot 
                 private:
 
                     /**
-                     * Reference video url. Must be external network accessible.
-This can be used as a feature reference video or a video for editing. The default type is video for editing. You can choose to keep the original sound of the video.
-The ReferType parameter specifies the reference video type: feature indicates feature reference video, and base indicates video for editing.
-If the reference video is a video for editing, the first and last frames cannot be defined.
+                     * <p>url of the reference video. It must be accessible from the external network.<br>It can be used as a feature reference video or a video for editing. By default, it is a video for editing. You can selectively retain the original sound of the video.<br>The ReferType parameter specifies the reference video type: feature indicates feature reference video, and base indicates video for editing.<br>When the reference video is a video for editing, you cannot define the first and last frame of the video.</p>
                      */
                     std::string m_videoUrl;
                     bool m_videoUrlHasBeenSet;
 
                     /**
-                     * The ReferType parameter specifies the reference video type: feature indicates feature reference video, and base indicates video for editing.
+                     * <p>The ReferType parameter specifies the reference video type: feature indicates feature reference video, and base indicates video for editing.</p>
                      */
                     std::string m_referType;
                     bool m_referTypeHasBeenSet;
 
                     /**
-                     * The KeepOriginalSound parameter specifies whether to keep the original sound of the video. Valid values: yes (keep the original sound); no (remove the original sound). This parameter also applies to feature reference videos (feature).
+                     * <p>The KeepOriginalSound parameter specifies whether to keep the original sound of the video. Valid values: yes (keep the original sound); no (remove the original sound). This parameter also applies to feature reference videos (feature).</p>
                      */
                     std::string m_keepOriginalSound;
                     bool m_keepOriginalSoundHasBeenSet;

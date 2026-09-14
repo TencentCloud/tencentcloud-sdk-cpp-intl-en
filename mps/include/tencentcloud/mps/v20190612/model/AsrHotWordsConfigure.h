@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Smart subtitle hotword parameter.
+                * 
                 */
                 class AsrHotWordsConfigure : public AbstractModel
                 {

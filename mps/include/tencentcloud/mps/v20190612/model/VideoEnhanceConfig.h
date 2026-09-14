@@ -47,7 +47,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Video enhancement configuration.
+                * Video enhancement configuration
                 */
                 class VideoEnhanceConfig : public AbstractModel
                 {
@@ -59,15 +59,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Frame rate configuration (old) for the frame interpolation. New users are recommended to use FrameRateWithDen for configuring the frame rate of frame interpolation, which supports fractions and provides better results. Note that FrameRate and FrameRateWithDen are mutually exclusive; configuring both simultaneously may cause task failures. The configuration does not take effect if the source frame rate is greater than or equal to the target frame rate.</p>
-                     * @return FrameRate <p>Frame rate configuration (old) for the frame interpolation. New users are recommended to use FrameRateWithDen for configuring the frame rate of frame interpolation, which supports fractions and provides better results. Note that FrameRate and FrameRateWithDen are mutually exclusive; configuring both simultaneously may cause task failures. The configuration does not take effect if the source frame rate is greater than or equal to the target frame rate.</p>
+                     * 获取
+                     * @return FrameRate 
                      * 
                      */
                     FrameRateConfig GetFrameRate() const;
 
                     /**
-                     * 设置<p>Frame rate configuration (old) for the frame interpolation. New users are recommended to use FrameRateWithDen for configuring the frame rate of frame interpolation, which supports fractions and provides better results. Note that FrameRate and FrameRateWithDen are mutually exclusive; configuring both simultaneously may cause task failures. The configuration does not take effect if the source frame rate is greater than or equal to the target frame rate.</p>
-                     * @param _frameRate <p>Frame rate configuration (old) for the frame interpolation. New users are recommended to use FrameRateWithDen for configuring the frame rate of frame interpolation, which supports fractions and provides better results. Note that FrameRate and FrameRateWithDen are mutually exclusive; configuring both simultaneously may cause task failures. The configuration does not take effect if the source frame rate is greater than or equal to the target frame rate.</p>
+                     * 设置
+                     * @param _frameRate 
                      * 
                      */
                     void SetFrameRate(const FrameRateConfig& _frameRate);
@@ -80,15 +80,15 @@ namespace TencentCloud
                     bool FrameRateHasBeenSet() const;
 
                     /**
-                     * 获取<p>Super-resolution configuration. The video is not processed when the source resolution is higher than the target resolution. Note that it cannot be enabled simultaneously with LLM enhancement.</p>
-                     * @return SuperResolution <p>Super-resolution configuration. The video is not processed when the source resolution is higher than the target resolution. Note that it cannot be enabled simultaneously with LLM enhancement.</p>
+                     * 获取
+                     * @return SuperResolution 
                      * 
                      */
                     SuperResolutionConfig GetSuperResolution() const;
 
                     /**
-                     * 设置<p>Super-resolution configuration. The video is not processed when the source resolution is higher than the target resolution. Note that it cannot be enabled simultaneously with LLM enhancement.</p>
-                     * @param _superResolution <p>Super-resolution configuration. The video is not processed when the source resolution is higher than the target resolution. Note that it cannot be enabled simultaneously with LLM enhancement.</p>
+                     * 设置
+                     * @param _superResolution 
                      * 
                      */
                     void SetSuperResolution(const SuperResolutionConfig& _superResolution);
@@ -101,15 +101,15 @@ namespace TencentCloud
                     bool SuperResolutionHasBeenSet() const;
 
                     /**
-                     * 获取<p>HDR configuration.</p>
-                     * @return Hdr <p>HDR configuration.</p>
+                     * 获取
+                     * @return Hdr 
                      * 
                      */
                     HdrConfig GetHdr() const;
 
                     /**
-                     * 设置<p>HDR configuration.</p>
-                     * @param _hdr <p>HDR configuration.</p>
+                     * 设置
+                     * @param _hdr 
                      * 
                      */
                     void SetHdr(const HdrConfig& _hdr);
@@ -122,15 +122,15 @@ namespace TencentCloud
                     bool HdrHasBeenSet() const;
 
                     /**
-                     * 获取<p>Video noise reduction configuration. Note that it cannot be enabled simultaneously with LLM enhancement.</p>
-                     * @return Denoise <p>Video noise reduction configuration. Note that it cannot be enabled simultaneously with LLM enhancement.</p>
+                     * 获取
+                     * @return Denoise 
                      * 
                      */
                     VideoDenoiseConfig GetDenoise() const;
 
                     /**
-                     * 设置<p>Video noise reduction configuration. Note that it cannot be enabled simultaneously with LLM enhancement.</p>
-                     * @param _denoise <p>Video noise reduction configuration. Note that it cannot be enabled simultaneously with LLM enhancement.</p>
+                     * 设置
+                     * @param _denoise 
                      * 
                      */
                     void SetDenoise(const VideoDenoiseConfig& _denoise);
@@ -143,15 +143,15 @@ namespace TencentCloud
                     bool DenoiseHasBeenSet() const;
 
                     /**
-                     * 获取<p>Comprehensive enhancement configuration. Note that only one of the three items, LLM enhancement, comprehensive enhancement, and artifacts removal, can be configured.</p>
-                     * @return ImageQualityEnhance <p>Comprehensive enhancement configuration. Note that only one of the three items, LLM enhancement, comprehensive enhancement, and artifacts removal, can be configured.</p>
+                     * 获取
+                     * @return ImageQualityEnhance 
                      * 
                      */
                     ImageQualityEnhanceConfig GetImageQualityEnhance() const;
 
                     /**
-                     * 设置<p>Comprehensive enhancement configuration. Note that only one of the three items, LLM enhancement, comprehensive enhancement, and artifacts removal, can be configured.</p>
-                     * @param _imageQualityEnhance <p>Comprehensive enhancement configuration. Note that only one of the three items, LLM enhancement, comprehensive enhancement, and artifacts removal, can be configured.</p>
+                     * 设置
+                     * @param _imageQualityEnhance 
                      * 
                      */
                     void SetImageQualityEnhance(const ImageQualityEnhanceConfig& _imageQualityEnhance);
@@ -164,15 +164,15 @@ namespace TencentCloud
                     bool ImageQualityEnhanceHasBeenSet() const;
 
                     /**
-                     * 获取<p>Color enhancement configuration.</p>
-                     * @return ColorEnhance <p>Color enhancement configuration.</p>
+                     * 获取
+                     * @return ColorEnhance 
                      * 
                      */
                     ColorEnhanceConfig GetColorEnhance() const;
 
                     /**
-                     * 设置<p>Color enhancement configuration.</p>
-                     * @param _colorEnhance <p>Color enhancement configuration.</p>
+                     * 设置
+                     * @param _colorEnhance 
                      * 
                      */
                     void SetColorEnhance(const ColorEnhanceConfig& _colorEnhance);
@@ -185,15 +185,15 @@ namespace TencentCloud
                     bool ColorEnhanceHasBeenSet() const;
 
                     /**
-                     * 获取<p>Low-light enhancement configuration.</p>
-                     * @return LowLightEnhance <p>Low-light enhancement configuration.</p>
+                     * 获取
+                     * @return LowLightEnhance 
                      * 
                      */
                     LowLightEnhanceConfig GetLowLightEnhance() const;
 
                     /**
-                     * 设置<p>Low-light enhancement configuration.</p>
-                     * @param _lowLightEnhance <p>Low-light enhancement configuration.</p>
+                     * 设置
+                     * @param _lowLightEnhance 
                      * 
                      */
                     void SetLowLightEnhance(const LowLightEnhanceConfig& _lowLightEnhance);
@@ -206,15 +206,15 @@ namespace TencentCloud
                     bool LowLightEnhanceHasBeenSet() const;
 
                     /**
-                     * 获取<p>Scratches removal configuration.</p>
-                     * @return ScratchRepair <p>Scratches removal configuration.</p>
+                     * 获取
+                     * @return ScratchRepair 
                      * 
                      */
                     ScratchRepairConfig GetScratchRepair() const;
 
                     /**
-                     * 设置<p>Scratches removal configuration.</p>
-                     * @param _scratchRepair <p>Scratches removal configuration.</p>
+                     * 设置
+                     * @param _scratchRepair 
                      * 
                      */
                     void SetScratchRepair(const ScratchRepairConfig& _scratchRepair);
@@ -227,15 +227,15 @@ namespace TencentCloud
                     bool ScratchRepairHasBeenSet() const;
 
                     /**
-                     * 获取<p>Artifacts removal configuration. Note that only one of the three items, LLM enhancement, comprehensive enhancement, and artifacts removal, can be configured.</p>
-                     * @return ArtifactRepair <p>Artifacts removal configuration. Note that only one of the three items, LLM enhancement, comprehensive enhancement, and artifacts removal, can be configured.</p>
+                     * 获取
+                     * @return ArtifactRepair 
                      * 
                      */
                     ArtifactRepairConfig GetArtifactRepair() const;
 
                     /**
-                     * 设置<p>Artifacts removal configuration. Note that only one of the three items, LLM enhancement, comprehensive enhancement, and artifacts removal, can be configured.</p>
-                     * @param _artifactRepair <p>Artifacts removal configuration. Note that only one of the three items, LLM enhancement, comprehensive enhancement, and artifacts removal, can be configured.</p>
+                     * 设置
+                     * @param _artifactRepair 
                      * 
                      */
                     void SetArtifactRepair(const ArtifactRepairConfig& _artifactRepair);
@@ -248,15 +248,15 @@ namespace TencentCloud
                     bool ArtifactRepairHasBeenSet() const;
 
                     /**
-                     * 获取<p>Enhanced scenario configuration, available values:</p><li>common (General), general enhancement parameter, suitable for various video types, foundation optimization parameters, enhance overall video quality.</li><li>AIGC, overall resolution enhancement, use AI technology to enhance video overall resolution, improve image definition.</li><li>short_play (Mini-drama & AI simulation drama), enhance face and subtitle details, highlight facial expression details and subtitle clarity, improve viewing experience.</li><li>AI_comic (AI comic drama), enhance comic style image detail.</li><li>short_video (short video), optimize complex and diverse image quality issues, target complex scenarios in short videos, optimize video quality, address multiple visual issues.</li><li>game (Gaming video), restore motion blur, enhance details, focus on enhancing the clarity of game details, restore motion blur areas, make the game screen content clearer and more various.</li><li>HD_movie_series (Ultra-high-definition TV shows and movies), obtain ultra-high-definition smooth effect, target the demand for broadcasting/OTT ultra-high-definition video, generate 4K 60fps HDR Ultra-High-Definition Standard video. Support broadcasting scenario format standards.</li><li>LQ_material (Low-quality material/Classic film restoration), overall resolution enhancement, target old video with insufficient resolution, blur distortion, scratch damage and color temperature issues due to older shooting era for specialized optimization.</li><li>lecture (Showroom/E-commerce/Conference/lecture), beautify and enhance face effect, target scenarios where people explain in showroom/e-commerce/conference/lecture, perform specialized optimization for face region, noise reduction, burr processing.</li><li>Fill-in string represents non-use of enhanced scenario.</li>
-                     * @return EnhanceSceneType <p>Enhanced scenario configuration, available values:</p><li>common (General), general enhancement parameter, suitable for various video types, foundation optimization parameters, enhance overall video quality.</li><li>AIGC, overall resolution enhancement, use AI technology to enhance video overall resolution, improve image definition.</li><li>short_play (Mini-drama & AI simulation drama), enhance face and subtitle details, highlight facial expression details and subtitle clarity, improve viewing experience.</li><li>AI_comic (AI comic drama), enhance comic style image detail.</li><li>short_video (short video), optimize complex and diverse image quality issues, target complex scenarios in short videos, optimize video quality, address multiple visual issues.</li><li>game (Gaming video), restore motion blur, enhance details, focus on enhancing the clarity of game details, restore motion blur areas, make the game screen content clearer and more various.</li><li>HD_movie_series (Ultra-high-definition TV shows and movies), obtain ultra-high-definition smooth effect, target the demand for broadcasting/OTT ultra-high-definition video, generate 4K 60fps HDR Ultra-High-Definition Standard video. Support broadcasting scenario format standards.</li><li>LQ_material (Low-quality material/Classic film restoration), overall resolution enhancement, target old video with insufficient resolution, blur distortion, scratch damage and color temperature issues due to older shooting era for specialized optimization.</li><li>lecture (Showroom/E-commerce/Conference/lecture), beautify and enhance face effect, target scenarios where people explain in showroom/e-commerce/conference/lecture, perform specialized optimization for face region, noise reduction, burr processing.</li><li>Fill-in string represents non-use of enhanced scenario.</li>
+                     * 获取
+                     * @return EnhanceSceneType 
                      * 
                      */
                     std::string GetEnhanceSceneType() const;
 
                     /**
-                     * 设置<p>Enhanced scenario configuration, available values:</p><li>common (General), general enhancement parameter, suitable for various video types, foundation optimization parameters, enhance overall video quality.</li><li>AIGC, overall resolution enhancement, use AI technology to enhance video overall resolution, improve image definition.</li><li>short_play (Mini-drama & AI simulation drama), enhance face and subtitle details, highlight facial expression details and subtitle clarity, improve viewing experience.</li><li>AI_comic (AI comic drama), enhance comic style image detail.</li><li>short_video (short video), optimize complex and diverse image quality issues, target complex scenarios in short videos, optimize video quality, address multiple visual issues.</li><li>game (Gaming video), restore motion blur, enhance details, focus on enhancing the clarity of game details, restore motion blur areas, make the game screen content clearer and more various.</li><li>HD_movie_series (Ultra-high-definition TV shows and movies), obtain ultra-high-definition smooth effect, target the demand for broadcasting/OTT ultra-high-definition video, generate 4K 60fps HDR Ultra-High-Definition Standard video. Support broadcasting scenario format standards.</li><li>LQ_material (Low-quality material/Classic film restoration), overall resolution enhancement, target old video with insufficient resolution, blur distortion, scratch damage and color temperature issues due to older shooting era for specialized optimization.</li><li>lecture (Showroom/E-commerce/Conference/lecture), beautify and enhance face effect, target scenarios where people explain in showroom/e-commerce/conference/lecture, perform specialized optimization for face region, noise reduction, burr processing.</li><li>Fill-in string represents non-use of enhanced scenario.</li>
-                     * @param _enhanceSceneType <p>Enhanced scenario configuration, available values:</p><li>common (General), general enhancement parameter, suitable for various video types, foundation optimization parameters, enhance overall video quality.</li><li>AIGC, overall resolution enhancement, use AI technology to enhance video overall resolution, improve image definition.</li><li>short_play (Mini-drama & AI simulation drama), enhance face and subtitle details, highlight facial expression details and subtitle clarity, improve viewing experience.</li><li>AI_comic (AI comic drama), enhance comic style image detail.</li><li>short_video (short video), optimize complex and diverse image quality issues, target complex scenarios in short videos, optimize video quality, address multiple visual issues.</li><li>game (Gaming video), restore motion blur, enhance details, focus on enhancing the clarity of game details, restore motion blur areas, make the game screen content clearer and more various.</li><li>HD_movie_series (Ultra-high-definition TV shows and movies), obtain ultra-high-definition smooth effect, target the demand for broadcasting/OTT ultra-high-definition video, generate 4K 60fps HDR Ultra-High-Definition Standard video. Support broadcasting scenario format standards.</li><li>LQ_material (Low-quality material/Classic film restoration), overall resolution enhancement, target old video with insufficient resolution, blur distortion, scratch damage and color temperature issues due to older shooting era for specialized optimization.</li><li>lecture (Showroom/E-commerce/Conference/lecture), beautify and enhance face effect, target scenarios where people explain in showroom/e-commerce/conference/lecture, perform specialized optimization for face region, noise reduction, burr processing.</li><li>Fill-in string represents non-use of enhanced scenario.</li>
+                     * 设置
+                     * @param _enhanceSceneType 
                      * 
                      */
                     void SetEnhanceSceneType(const std::string& _enhanceSceneType);
@@ -269,15 +269,15 @@ namespace TencentCloud
                     bool EnhanceSceneTypeHasBeenSet() const;
 
                     /**
-                     * 获取<p>LLM enhancement configuration. Note that only one of the three items, LLM enhancement, comprehensive enhancement, and artifacts removal, can be configured. It cannot intersect with super-resolution and noise reduction.</p>
-                     * @return DiffusionEnhance <p>LLM enhancement configuration. Note that only one of the three items, LLM enhancement, comprehensive enhancement, and artifacts removal, can be configured. It cannot intersect with super-resolution and noise reduction.</p>
+                     * 获取
+                     * @return DiffusionEnhance 
                      * 
                      */
                     DiffusionEnhanceConfig GetDiffusionEnhance() const;
 
                     /**
-                     * 设置<p>LLM enhancement configuration. Note that only one of the three items, LLM enhancement, comprehensive enhancement, and artifacts removal, can be configured. It cannot intersect with super-resolution and noise reduction.</p>
-                     * @param _diffusionEnhance <p>LLM enhancement configuration. Note that only one of the three items, LLM enhancement, comprehensive enhancement, and artifacts removal, can be configured. It cannot intersect with super-resolution and noise reduction.</p>
+                     * 设置
+                     * @param _diffusionEnhance 
                      * 
                      */
                     void SetDiffusionEnhance(const DiffusionEnhanceConfig& _diffusionEnhance);
@@ -290,15 +290,15 @@ namespace TencentCloud
                     bool DiffusionEnhanceHasBeenSet() const;
 
                     /**
-                     * 获取<p>The new frame interpolation frame rate configuration supports fractions. Note that you must choose between this and FrameRate. The capacity will not take effect when the source frame rate is equal to or greater than the target frame rate.</p>
-                     * @return FrameRateWithDen <p>The new frame interpolation frame rate configuration supports fractions. Note that you must choose between this and FrameRate. The capacity will not take effect when the source frame rate is equal to or greater than the target frame rate.</p>
+                     * 获取
+                     * @return FrameRateWithDen 
                      * 
                      */
                     FrameRateWithDenConfig GetFrameRateWithDen() const;
 
                     /**
-                     * 设置<p>The new frame interpolation frame rate configuration supports fractions. Note that you must choose between this and FrameRate. The capacity will not take effect when the source frame rate is equal to or greater than the target frame rate.</p>
-                     * @param _frameRateWithDen <p>The new frame interpolation frame rate configuration supports fractions. Note that you must choose between this and FrameRate. The capacity will not take effect when the source frame rate is equal to or greater than the target frame rate.</p>
+                     * 设置
+                     * @param _frameRateWithDen 
                      * 
                      */
                     void SetFrameRateWithDen(const FrameRateWithDenConfig& _frameRateWithDen);
@@ -311,15 +311,15 @@ namespace TencentCloud
                     bool FrameRateWithDenHasBeenSet() const;
 
                     /**
-                     * 获取<p>Large model repair configuration. Note that you can configure at most one of large model, comprehensive enhancement, and artifacts removal. It cannot intersect with super-resolution and noise reduction.</p>
-                     * @return AiRestoration <p>Large model repair configuration. Note that you can configure at most one of large model, comprehensive enhancement, and artifacts removal. It cannot intersect with super-resolution and noise reduction.</p>
+                     * 获取
+                     * @return AiRestoration 
                      * 
                      */
                     AiRestorationConfig GetAiRestoration() const;
 
                     /**
-                     * 设置<p>Large model repair configuration. Note that you can configure at most one of large model, comprehensive enhancement, and artifacts removal. It cannot intersect with super-resolution and noise reduction.</p>
-                     * @param _aiRestoration <p>Large model repair configuration. Note that you can configure at most one of large model, comprehensive enhancement, and artifacts removal. It cannot intersect with super-resolution and noise reduction.</p>
+                     * 设置
+                     * @param _aiRestoration 
                      * 
                      */
                     void SetAiRestoration(const AiRestorationConfig& _aiRestoration);
@@ -334,79 +334,79 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Frame rate configuration (old) for the frame interpolation. New users are recommended to use FrameRateWithDen for configuring the frame rate of frame interpolation, which supports fractions and provides better results. Note that FrameRate and FrameRateWithDen are mutually exclusive; configuring both simultaneously may cause task failures. The configuration does not take effect if the source frame rate is greater than or equal to the target frame rate.</p>
+                     * 
                      */
                     FrameRateConfig m_frameRate;
                     bool m_frameRateHasBeenSet;
 
                     /**
-                     * <p>Super-resolution configuration. The video is not processed when the source resolution is higher than the target resolution. Note that it cannot be enabled simultaneously with LLM enhancement.</p>
+                     * 
                      */
                     SuperResolutionConfig m_superResolution;
                     bool m_superResolutionHasBeenSet;
 
                     /**
-                     * <p>HDR configuration.</p>
+                     * 
                      */
                     HdrConfig m_hdr;
                     bool m_hdrHasBeenSet;
 
                     /**
-                     * <p>Video noise reduction configuration. Note that it cannot be enabled simultaneously with LLM enhancement.</p>
+                     * 
                      */
                     VideoDenoiseConfig m_denoise;
                     bool m_denoiseHasBeenSet;
 
                     /**
-                     * <p>Comprehensive enhancement configuration. Note that only one of the three items, LLM enhancement, comprehensive enhancement, and artifacts removal, can be configured.</p>
+                     * 
                      */
                     ImageQualityEnhanceConfig m_imageQualityEnhance;
                     bool m_imageQualityEnhanceHasBeenSet;
 
                     /**
-                     * <p>Color enhancement configuration.</p>
+                     * 
                      */
                     ColorEnhanceConfig m_colorEnhance;
                     bool m_colorEnhanceHasBeenSet;
 
                     /**
-                     * <p>Low-light enhancement configuration.</p>
+                     * 
                      */
                     LowLightEnhanceConfig m_lowLightEnhance;
                     bool m_lowLightEnhanceHasBeenSet;
 
                     /**
-                     * <p>Scratches removal configuration.</p>
+                     * 
                      */
                     ScratchRepairConfig m_scratchRepair;
                     bool m_scratchRepairHasBeenSet;
 
                     /**
-                     * <p>Artifacts removal configuration. Note that only one of the three items, LLM enhancement, comprehensive enhancement, and artifacts removal, can be configured.</p>
+                     * 
                      */
                     ArtifactRepairConfig m_artifactRepair;
                     bool m_artifactRepairHasBeenSet;
 
                     /**
-                     * <p>Enhanced scenario configuration, available values:</p><li>common (General), general enhancement parameter, suitable for various video types, foundation optimization parameters, enhance overall video quality.</li><li>AIGC, overall resolution enhancement, use AI technology to enhance video overall resolution, improve image definition.</li><li>short_play (Mini-drama & AI simulation drama), enhance face and subtitle details, highlight facial expression details and subtitle clarity, improve viewing experience.</li><li>AI_comic (AI comic drama), enhance comic style image detail.</li><li>short_video (short video), optimize complex and diverse image quality issues, target complex scenarios in short videos, optimize video quality, address multiple visual issues.</li><li>game (Gaming video), restore motion blur, enhance details, focus on enhancing the clarity of game details, restore motion blur areas, make the game screen content clearer and more various.</li><li>HD_movie_series (Ultra-high-definition TV shows and movies), obtain ultra-high-definition smooth effect, target the demand for broadcasting/OTT ultra-high-definition video, generate 4K 60fps HDR Ultra-High-Definition Standard video. Support broadcasting scenario format standards.</li><li>LQ_material (Low-quality material/Classic film restoration), overall resolution enhancement, target old video with insufficient resolution, blur distortion, scratch damage and color temperature issues due to older shooting era for specialized optimization.</li><li>lecture (Showroom/E-commerce/Conference/lecture), beautify and enhance face effect, target scenarios where people explain in showroom/e-commerce/conference/lecture, perform specialized optimization for face region, noise reduction, burr processing.</li><li>Fill-in string represents non-use of enhanced scenario.</li>
+                     * 
                      */
                     std::string m_enhanceSceneType;
                     bool m_enhanceSceneTypeHasBeenSet;
 
                     /**
-                     * <p>LLM enhancement configuration. Note that only one of the three items, LLM enhancement, comprehensive enhancement, and artifacts removal, can be configured. It cannot intersect with super-resolution and noise reduction.</p>
+                     * 
                      */
                     DiffusionEnhanceConfig m_diffusionEnhance;
                     bool m_diffusionEnhanceHasBeenSet;
 
                     /**
-                     * <p>The new frame interpolation frame rate configuration supports fractions. Note that you must choose between this and FrameRate. The capacity will not take effect when the source frame rate is equal to or greater than the target frame rate.</p>
+                     * 
                      */
                     FrameRateWithDenConfig m_frameRateWithDen;
                     bool m_frameRateWithDenHasBeenSet;
 
                     /**
-                     * <p>Large model repair configuration. Note that you can configure at most one of large model, comprehensive enhancement, and artifacts removal. It cannot intersect with super-resolution and noise reduction.</p>
+                     * 
                      */
                     AiRestorationConfig m_aiRestoration;
                     bool m_aiRestorationHasBeenSet;
