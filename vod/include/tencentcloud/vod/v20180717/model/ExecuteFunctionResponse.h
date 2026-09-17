@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The string after packaging the processing result, specifically coordinated with the backend altogether.
-                     * @return Result The string after packaging the processing result, specifically coordinated with the backend altogether.
+                     * 获取
+                     * @return Result 
                      * 
                      */
                     std::string GetResult() const;
@@ -60,7 +60,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The string after packaging the processing result, specifically coordinated with the backend altogether.
+                     * 
                      */
                     std::string m_result;
                     bool m_resultHasBeenSet;

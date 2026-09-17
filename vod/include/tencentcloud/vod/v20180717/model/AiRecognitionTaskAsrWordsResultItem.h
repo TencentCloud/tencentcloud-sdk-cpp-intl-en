@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Speech keyword recognition result.
+                * 
                 */
                 class AiRecognitionTaskAsrWordsResultItem : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Speech keyword.
-                     * @return Word Speech keyword.
+                     * 获取
+                     * @return Word 
                      * 
                      */
                     std::string GetWord() const;
 
                     /**
-                     * 设置Speech keyword.
-                     * @param _word Speech keyword.
+                     * 设置
+                     * @param _word 
                      * 
                      */
                     void SetWord(const std::string& _word);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool WordHasBeenSet() const;
 
                     /**
-                     * 获取List of time segments that contain the speech keyword.
-                     * @return SegmentSet List of time segments that contain the speech keyword.
+                     * 获取
+                     * @return SegmentSet 
                      * 
                      */
                     std::vector<AiRecognitionTaskAsrWordsSegmentItem> GetSegmentSet() const;
 
                     /**
-                     * 设置List of time segments that contain the speech keyword.
-                     * @param _segmentSet List of time segments that contain the speech keyword.
+                     * 设置
+                     * @param _segmentSet 
                      * 
                      */
                     void SetSegmentSet(const std::vector<AiRecognitionTaskAsrWordsSegmentItem>& _segmentSet);
@@ -92,13 +92,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Speech keyword.
+                     * 
                      */
                     std::string m_word;
                     bool m_wordHasBeenSet;
 
                     /**
-                     * List of time segments that contain the speech keyword.
+                     * 
                      */
                     std::vector<AiRecognitionTaskAsrWordsSegmentItem> m_segmentSet;
                     bool m_segmentSetHasBeenSet;

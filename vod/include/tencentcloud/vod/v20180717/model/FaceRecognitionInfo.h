@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Face recognition media information
+                * 
                 */
                 class FaceRecognitionInfo : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Face recognition task list</p>
-                     * @return FaceRecognitionTasks <p>Face recognition task list</p>
+                     * 获取
+                     * @return FaceRecognitionTasks 
                      * 
                      */
                     std::vector<FaceRecognitionTask> GetFaceRecognitionTasks() const;
 
                     /**
-                     * 设置<p>Face recognition task list</p>
-                     * @param _faceRecognitionTasks <p>Face recognition task list</p>
+                     * 设置
+                     * @param _faceRecognitionTasks 
                      * 
                      */
                     void SetFaceRecognitionTasks(const std::vector<FaceRecognitionTask>& _faceRecognitionTasks);
@@ -71,7 +71,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Face recognition task list</p>
+                     * 
                      */
                     std::vector<FaceRecognitionTask> m_faceRecognitionTasks;
                     bool m_faceRecognitionTasksHasBeenSet;

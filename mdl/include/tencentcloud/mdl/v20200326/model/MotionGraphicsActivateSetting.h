@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Dynamic graphic information.
                 */
                 class MotionGraphicsActivateSetting : public AbstractModel
                 {

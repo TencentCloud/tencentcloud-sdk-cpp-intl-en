@@ -39,7 +39,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * The result for intelligent image moderation.
+                * 
                 */
                 class ContentReviewResult : public AbstractModel
                 {
@@ -51,39 +51,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The result type. Valid values:
-<li>Porn.Image: Pornographic content in the image</li>
-<li>Terrorism.Image: Terrorist content in the image</li>
-<li>Political.Image: Politically sensitive content in the image</li>
-<li>Porn.Ocr: Pornographic content in the image based on OCR</li>
-<li>Terrorism.Ocr: Terrorist content in the image based on OCR</li>
-<li>Political.Ocr: Politically sensitive content in the image based on OCR</li>
-                     * @return Type The result type. Valid values:
-<li>Porn.Image: Pornographic content in the image</li>
-<li>Terrorism.Image: Terrorist content in the image</li>
-<li>Political.Image: Politically sensitive content in the image</li>
-<li>Porn.Ocr: Pornographic content in the image based on OCR</li>
-<li>Terrorism.Ocr: Terrorist content in the image based on OCR</li>
-<li>Political.Ocr: Politically sensitive content in the image based on OCR</li>
+                     * 获取
+                     * @return Type 
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置The result type. Valid values:
-<li>Porn.Image: Pornographic content in the image</li>
-<li>Terrorism.Image: Terrorist content in the image</li>
-<li>Political.Image: Politically sensitive content in the image</li>
-<li>Porn.Ocr: Pornographic content in the image based on OCR</li>
-<li>Terrorism.Ocr: Terrorist content in the image based on OCR</li>
-<li>Political.Ocr: Politically sensitive content in the image based on OCR</li>
-                     * @param _type The result type. Valid values:
-<li>Porn.Image: Pornographic content in the image</li>
-<li>Terrorism.Image: Terrorist content in the image</li>
-<li>Political.Image: Politically sensitive content in the image</li>
-<li>Porn.Ocr: Pornographic content in the image based on OCR</li>
-<li>Terrorism.Ocr: Terrorist content in the image based on OCR</li>
-<li>Political.Ocr: Politically sensitive content in the image based on OCR</li>
+                     * 设置
+                     * @param _type 
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -96,19 +72,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取The pornographic content detected in the image. This parameter is valid if `Type` is `Porn.Image`.
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @return PornImageResult The pornographic content detected in the image. This parameter is valid if `Type` is `Porn.Image`.
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 获取
+                     * @return PornImageResult 
                      * 
                      */
                     PornImageResult GetPornImageResult() const;
 
                     /**
-                     * 设置The pornographic content detected in the image. This parameter is valid if `Type` is `Porn.Image`.
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @param _pornImageResult The pornographic content detected in the image. This parameter is valid if `Type` is `Porn.Image`.
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 设置
+                     * @param _pornImageResult 
                      * 
                      */
                     void SetPornImageResult(const PornImageResult& _pornImageResult);
@@ -121,19 +93,15 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool PornImageResultHasBeenSet() const;
 
                     /**
-                     * 获取The terrorist content detected in the image. This parameter is valid if `Type` is `Terrorism.Image`.
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @return TerrorismImageResult The terrorist content detected in the image. This parameter is valid if `Type` is `Terrorism.Image`.
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 获取
+                     * @return TerrorismImageResult 
                      * 
                      */
                     TerrorismImageResult GetTerrorismImageResult() const;
 
                     /**
-                     * 设置The terrorist content detected in the image. This parameter is valid if `Type` is `Terrorism.Image`.
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @param _terrorismImageResult The terrorist content detected in the image. This parameter is valid if `Type` is `Terrorism.Image`.
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 设置
+                     * @param _terrorismImageResult 
                      * 
                      */
                     void SetTerrorismImageResult(const TerrorismImageResult& _terrorismImageResult);
@@ -146,19 +114,15 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool TerrorismImageResultHasBeenSet() const;
 
                     /**
-                     * 获取The politically sensitive content detected in the image. This parameter is valid if `Type` is `Political.Image`.
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @return PoliticalImageResult The politically sensitive content detected in the image. This parameter is valid if `Type` is `Political.Image`.
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 获取
+                     * @return PoliticalImageResult 
                      * 
                      */
                     PoliticalImageResult GetPoliticalImageResult() const;
 
                     /**
-                     * 设置The politically sensitive content detected in the image. This parameter is valid if `Type` is `Political.Image`.
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @param _politicalImageResult The politically sensitive content detected in the image. This parameter is valid if `Type` is `Political.Image`.
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 设置
+                     * @param _politicalImageResult 
                      * 
                      */
                     void SetPoliticalImageResult(const PoliticalImageResult& _politicalImageResult);
@@ -171,19 +135,15 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool PoliticalImageResultHasBeenSet() const;
 
                     /**
-                     * 获取The pornographic content detected in the image based on OCR. This parameter is valid if `Type` is `Porn.Ocr`.
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @return PornOcrResult The pornographic content detected in the image based on OCR. This parameter is valid if `Type` is `Porn.Ocr`.
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 获取
+                     * @return PornOcrResult 
                      * 
                      */
                     ContentReviewOcrResult GetPornOcrResult() const;
 
                     /**
-                     * 设置The pornographic content detected in the image based on OCR. This parameter is valid if `Type` is `Porn.Ocr`.
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @param _pornOcrResult The pornographic content detected in the image based on OCR. This parameter is valid if `Type` is `Porn.Ocr`.
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 设置
+                     * @param _pornOcrResult 
                      * 
                      */
                     void SetPornOcrResult(const ContentReviewOcrResult& _pornOcrResult);
@@ -196,19 +156,15 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool PornOcrResultHasBeenSet() const;
 
                     /**
-                     * 获取The terrorist content detected in the image based on OCR. This parameter is valid if `Type` is `Terrorism.Ocr`.
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @return TerrorismOcrResult The terrorist content detected in the image based on OCR. This parameter is valid if `Type` is `Terrorism.Ocr`.
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 获取
+                     * @return TerrorismOcrResult 
                      * 
                      */
                     ContentReviewOcrResult GetTerrorismOcrResult() const;
 
                     /**
-                     * 设置The terrorist content detected in the image based on OCR. This parameter is valid if `Type` is `Terrorism.Ocr`.
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @param _terrorismOcrResult The terrorist content detected in the image based on OCR. This parameter is valid if `Type` is `Terrorism.Ocr`.
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 设置
+                     * @param _terrorismOcrResult 
                      * 
                      */
                     void SetTerrorismOcrResult(const ContentReviewOcrResult& _terrorismOcrResult);
@@ -221,19 +177,15 @@ Note: This field may return `null`, indicating that no valid value was found.
                     bool TerrorismOcrResultHasBeenSet() const;
 
                     /**
-                     * 获取The politically sensitive content detected in the image based on OCR. This parameter is valid if `Type` is `Political.Ocr`.
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @return PoliticalOcrResult The politically sensitive content detected in the image based on OCR. This parameter is valid if `Type` is `Political.Ocr`.
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 获取
+                     * @return PoliticalOcrResult 
                      * 
                      */
                     ContentReviewOcrResult GetPoliticalOcrResult() const;
 
                     /**
-                     * 设置The politically sensitive content detected in the image based on OCR. This parameter is valid if `Type` is `Political.Ocr`.
-Note: This field may return `null`, indicating that no valid value was found.
-                     * @param _politicalOcrResult The politically sensitive content detected in the image based on OCR. This parameter is valid if `Type` is `Political.Ocr`.
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 设置
+                     * @param _politicalOcrResult 
                      * 
                      */
                     void SetPoliticalOcrResult(const ContentReviewOcrResult& _politicalOcrResult);
@@ -248,55 +200,43 @@ Note: This field may return `null`, indicating that no valid value was found.
                 private:
 
                     /**
-                     * The result type. Valid values:
-<li>Porn.Image: Pornographic content in the image</li>
-<li>Terrorism.Image: Terrorist content in the image</li>
-<li>Political.Image: Politically sensitive content in the image</li>
-<li>Porn.Ocr: Pornographic content in the image based on OCR</li>
-<li>Terrorism.Ocr: Terrorist content in the image based on OCR</li>
-<li>Political.Ocr: Politically sensitive content in the image based on OCR</li>
+                     * 
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * The pornographic content detected in the image. This parameter is valid if `Type` is `Porn.Image`.
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     PornImageResult m_pornImageResult;
                     bool m_pornImageResultHasBeenSet;
 
                     /**
-                     * The terrorist content detected in the image. This parameter is valid if `Type` is `Terrorism.Image`.
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     TerrorismImageResult m_terrorismImageResult;
                     bool m_terrorismImageResultHasBeenSet;
 
                     /**
-                     * The politically sensitive content detected in the image. This parameter is valid if `Type` is `Political.Image`.
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     PoliticalImageResult m_politicalImageResult;
                     bool m_politicalImageResultHasBeenSet;
 
                     /**
-                     * The pornographic content detected in the image based on OCR. This parameter is valid if `Type` is `Porn.Ocr`.
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     ContentReviewOcrResult m_pornOcrResult;
                     bool m_pornOcrResultHasBeenSet;
 
                     /**
-                     * The terrorist content detected in the image based on OCR. This parameter is valid if `Type` is `Terrorism.Ocr`.
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     ContentReviewOcrResult m_terrorismOcrResult;
                     bool m_terrorismOcrResultHasBeenSet;
 
                     /**
-                     * The politically sensitive content detected in the image based on OCR. This parameter is valid if `Type` is `Political.Ocr`.
-Note: This field may return `null`, indicating that no valid value was found.
+                     * 
                      */
                     ContentReviewOcrResult m_politicalOcrResult;
                     bool m_politicalOcrResultHasBeenSet;

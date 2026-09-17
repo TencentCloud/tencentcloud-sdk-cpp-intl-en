@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * AI-based sample management - face information.
+                * 
                 */
                 class AiSampleFaceInfo : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Face image ID.
-                     * @return FaceId Face image ID.
+                     * 获取
+                     * @return FaceId 
                      * 
                      */
                     std::string GetFaceId() const;
 
                     /**
-                     * 设置Face image ID.
-                     * @param _faceId Face image ID.
+                     * 设置
+                     * @param _faceId 
                      * 
                      */
                     void SetFaceId(const std::string& _faceId);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool FaceIdHasBeenSet() const;
 
                     /**
-                     * 获取Face image address.
-                     * @return Url Face image address.
+                     * 获取
+                     * @return Url 
                      * 
                      */
                     std::string GetUrl() const;
 
                     /**
-                     * 设置Face image address.
-                     * @param _url Face image address.
+                     * 设置
+                     * @param _url 
                      * 
                      */
                     void SetUrl(const std::string& _url);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Face image ID.
+                     * 
                      */
                     std::string m_faceId;
                     bool m_faceIdHasBeenSet;
 
                     /**
-                     * Face image address.
+                     * 
                      */
                     std::string m_url;
                     bool m_urlHasBeenSet;

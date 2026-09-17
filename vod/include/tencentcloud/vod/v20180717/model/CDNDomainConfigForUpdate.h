@@ -53,7 +53,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * CDN domain config for update
+                * 
                 */
                 class CDNDomainConfigForUpdate : public AbstractModel
                 {
@@ -65,15 +65,27 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Domain name acceleration areas: <li>mainland: acceleration within China; </li> <li>overseas: acceleration outside China; </li> <li>global: global acceleration. </li>
-                     * @return Area Domain name acceleration areas: <li>mainland: acceleration within China; </li> <li>overseas: acceleration outside China; </li> <li>global: global acceleration. </li>
+                     * 获取Domain acceleration region:
+<li>mainland: domestic acceleration in China;</li>
+<li>overseas: acceleration outside China;</li>
+<li>global: global acceleration.</li>
+                     * @return Area Domain acceleration region:
+<li>mainland: domestic acceleration in China;</li>
+<li>overseas: acceleration outside China;</li>
+<li>global: global acceleration.</li>
                      * 
                      */
                     std::string GetArea() const;
 
                     /**
-                     * 设置Domain name acceleration areas: <li>mainland: acceleration within China; </li> <li>overseas: acceleration outside China; </li> <li>global: global acceleration. </li>
-                     * @param _area Domain name acceleration areas: <li>mainland: acceleration within China; </li> <li>overseas: acceleration outside China; </li> <li>global: global acceleration. </li>
+                     * 设置Domain acceleration region:
+<li>mainland: domestic acceleration in China;</li>
+<li>overseas: acceleration outside China;</li>
+<li>global: global acceleration.</li>
+                     * @param _area Domain acceleration region:
+<li>mainland: domestic acceleration in China;</li>
+<li>overseas: acceleration outside China;</li>
+<li>global: global acceleration.</li>
                      * 
                      */
                     void SetArea(const std::string& _area);
@@ -86,15 +98,15 @@ namespace TencentCloud
                     bool AreaHasBeenSet() const;
 
                     /**
-                     * 获取Origin Server Configuration.
-                     * @return Origin Origin Server Configuration.
+                     * 获取
+                     * @return Origin 
                      * 
                      */
                     Origin GetOrigin() const;
 
                     /**
-                     * 设置Origin Server Configuration.
-                     * @param _origin Origin Server Configuration.
+                     * 设置
+                     * @param _origin 
                      * 
                      */
                     void SetOrigin(const Origin& _origin);
@@ -107,15 +119,15 @@ namespace TencentCloud
                     bool OriginHasBeenSet() const;
 
                     /**
-                     * 获取IP blocklist/allowlist configuration. This is disabled by default.
-                     * @return IpFilter IP blocklist/allowlist configuration. This is disabled by default.
+                     * 获取
+                     * @return IpFilter 
                      * 
                      */
                     IpFilter GetIpFilter() const;
 
                     /**
-                     * 设置IP blocklist/allowlist configuration. This is disabled by default.
-                     * @param _ipFilter IP blocklist/allowlist configuration. This is disabled by default.
+                     * 设置
+                     * @param _ipFilter 
                      * 
                      */
                     void SetIpFilter(const IpFilter& _ipFilter);
@@ -128,15 +140,15 @@ namespace TencentCloud
                     bool IpFilterHasBeenSet() const;
 
                     /**
-                     * 获取UserAgent:blacklist/whitelist configuration.
-                     * @return UserAgentFilter UserAgent:blacklist/whitelist configuration.
+                     * 获取
+                     * @return UserAgentFilter 
                      * 
                      */
                     UserAgentFilter GetUserAgentFilter() const;
 
                     /**
-                     * 设置UserAgent:blacklist/whitelist configuration.
-                     * @param _userAgentFilter UserAgent:blacklist/whitelist configuration.
+                     * 设置
+                     * @param _userAgentFilter 
                      * 
                      */
                     void SetUserAgentFilter(const UserAgentFilter& _userAgentFilter);
@@ -149,15 +161,15 @@ namespace TencentCloud
                     bool UserAgentFilterHasBeenSet() const;
 
                     /**
-                     * 获取Back to the source 301/302 status code automatically follows the configuration, the default is off
-                     * @return FollowRedirect Back to the source 301/302 status code automatically follows the configuration, the default is off
+                     * 获取
+                     * @return FollowRedirect 
                      * 
                      */
                     FollowRedirect GetFollowRedirect() const;
 
                     /**
-                     * 设置Back to the source 301/302 status code automatically follows the configuration, the default is off
-                     * @param _followRedirect Back to the source 301/302 status code automatically follows the configuration, the default is off
+                     * 设置
+                     * @param _followRedirect 
                      * 
                      */
                     void SetFollowRedirect(const FollowRedirect& _followRedirect);
@@ -170,15 +182,15 @@ namespace TencentCloud
                     bool FollowRedirectHasBeenSet() const;
 
                     /**
-                     * 获取Custom request header configuration. This is disabled by default.
-                     * @return RequestHeader Custom request header configuration. This is disabled by default.
+                     * 获取
+                     * @return RequestHeader 
                      * 
                      */
                     RequestHeader GetRequestHeader() const;
 
                     /**
-                     * 设置Custom request header configuration. This is disabled by default.
-                     * @param _requestHeader Custom request header configuration. This is disabled by default.
+                     * 设置
+                     * @param _requestHeader 
                      * 
                      */
                     void SetRequestHeader(const RequestHeader& _requestHeader);
@@ -191,15 +203,15 @@ namespace TencentCloud
                     bool RequestHeaderHasBeenSet() const;
 
                     /**
-                     * 获取Custom response header configuration. This is disabled by default.
-                     * @return ResponseHeader Custom response header configuration. This is disabled by default.
+                     * 获取
+                     * @return ResponseHeader 
                      * 
                      */
                     ResponseHeader GetResponseHeader() const;
 
                     /**
-                     * 设置Custom response header configuration. This is disabled by default.
-                     * @param _responseHeader Custom response header configuration. This is disabled by default.
+                     * 设置
+                     * @param _responseHeader 
                      * 
                      */
                     void SetResponseHeader(const ResponseHeader& _responseHeader);
@@ -212,15 +224,15 @@ namespace TencentCloud
                     bool ResponseHeaderHasBeenSet() const;
 
                     /**
-                     * 获取Node cache expiration time configuration.
-                     * @return Cache Node cache expiration time configuration.
+                     * 获取
+                     * @return Cache 
                      * 
                      */
                     Cache GetCache() const;
 
                     /**
-                     * 设置Node cache expiration time configuration.
-                     * @param _cache Node cache expiration time configuration.
+                     * 设置
+                     * @param _cache 
                      * 
                      */
                     void SetCache(const Cache& _cache);
@@ -233,15 +245,15 @@ namespace TencentCloud
                     bool CacheHasBeenSet() const;
 
                     /**
-                     * 获取Domain name HTTPS acceleration configuration. This is disabled by default.
-                     * @return Https Domain name HTTPS acceleration configuration. This is disabled by default.
+                     * 获取
+                     * @return Https 
                      * 
                      */
                     Https GetHttps() const;
 
                     /**
-                     * 设置Domain name HTTPS acceleration configuration. This is disabled by default.
-                     * @param _https Domain name HTTPS acceleration configuration. This is disabled by default.
+                     * 设置
+                     * @param _https 
                      * 
                      */
                     void SetHttps(const Https& _https);
@@ -254,15 +266,15 @@ namespace TencentCloud
                     bool HttpsHasBeenSet() const;
 
                     /**
-                     * 获取Timestamp hotlink protection configuration.
-                     * @return Authentication Timestamp hotlink protection configuration.
+                     * 获取
+                     * @return Authentication 
                      * 
                      */
                     Authentication GetAuthentication() const;
 
                     /**
-                     * 设置Timestamp hotlink protection configuration.
-                     * @param _authentication Timestamp hotlink protection configuration.
+                     * 设置
+                     * @param _authentication 
                      * 
                      */
                     void SetAuthentication(const Authentication& _authentication);
@@ -275,15 +287,15 @@ namespace TencentCloud
                     bool AuthenticationHasBeenSet() const;
 
                     /**
-                     * 获取Access protocol forced redirect configuration. This is disabled by default.
-                     * @return ForceRedirect Access protocol forced redirect configuration. This is disabled by default.
+                     * 获取
+                     * @return ForceRedirect 
                      * 
                      */
                     ForceRedirect GetForceRedirect() const;
 
                     /**
-                     * 设置Access protocol forced redirect configuration. This is disabled by default.
-                     * @param _forceRedirect Access protocol forced redirect configuration. This is disabled by default.
+                     * 设置
+                     * @param _forceRedirect 
                      * 
                      */
                     void SetForceRedirect(const ForceRedirect& _forceRedirect);
@@ -296,15 +308,15 @@ namespace TencentCloud
                     bool ForceRedirectHasBeenSet() const;
 
                     /**
-                     * 获取Referer blacklist/whitelist configuration. This is disabled by default.
-                     * @return Referer Referer blacklist/whitelist configuration. This is disabled by default.
+                     * 获取
+                     * @return Referer 
                      * 
                      */
                     Referer GetReferer() const;
 
                     /**
-                     * 设置Referer blacklist/whitelist configuration. This is disabled by default.
-                     * @param _referer Referer blacklist/whitelist configuration. This is disabled by default.
+                     * 设置
+                     * @param _referer 
                      * 
                      */
                     void SetReferer(const Referer& _referer);
@@ -317,15 +329,15 @@ namespace TencentCloud
                     bool RefererHasBeenSet() const;
 
                     /**
-                     * 获取Browser cache rule configuration, which is used to set the default value of MaxAge and is disabled by default.
-                     * @return MaxAge Browser cache rule configuration, which is used to set the default value of MaxAge and is disabled by default.
+                     * 获取
+                     * @return MaxAge 
                      * 
                      */
                     MaxAge GetMaxAge() const;
 
                     /**
-                     * 设置Browser cache rule configuration, which is used to set the default value of MaxAge and is disabled by default.
-                     * @param _maxAge Browser cache rule configuration, which is used to set the default value of MaxAge and is disabled by default.
+                     * 设置
+                     * @param _maxAge 
                      * 
                      */
                     void SetMaxAge(const MaxAge& _maxAge);
@@ -338,15 +350,15 @@ namespace TencentCloud
                     bool MaxAgeHasBeenSet() const;
 
                     /**
-                     * 获取IPv6 access configuration.
-                     * @return Ipv6Access IPv6 access configuration.
+                     * 获取
+                     * @return Ipv6Access 
                      * 
                      */
                     Ipv6Access GetIpv6Access() const;
 
                     /**
-                     * 设置IPv6 access configuration.
-                     * @param _ipv6Access IPv6 access configuration.
+                     * 设置
+                     * @param _ipv6Access 
                      * 
                      */
                     void SetIpv6Access(const Ipv6Access& _ipv6Access);
@@ -359,15 +371,15 @@ namespace TencentCloud
                     bool Ipv6AccessHasBeenSet() const;
 
                     /**
-                     * 获取QUIC configuration item.
-                     * @return Quic QUIC configuration item.
+                     * 获取
+                     * @return Quic 
                      * 
                      */
                     Quic GetQuic() const;
 
                     /**
-                     * 设置QUIC configuration item.
-                     * @param _quic QUIC configuration item.
+                     * 设置
+                     * @param _quic 
                      * 
                      */
                     void SetQuic(const Quic& _quic);
@@ -380,15 +392,15 @@ namespace TencentCloud
                     bool QuicHasBeenSet() const;
 
                     /**
-                     * 获取Origin access authentication for S3 bucket.
-                     * @return AwsPrivateAccess Origin access authentication for S3 bucket.
+                     * 获取
+                     * @return AwsPrivateAccess 
                      * 
                      */
                     AwsPrivateAccess GetAwsPrivateAccess() const;
 
                     /**
-                     * 设置Origin access authentication for S3 bucket.
-                     * @param _awsPrivateAccess Origin access authentication for S3 bucket.
+                     * 设置
+                     * @param _awsPrivateAccess 
                      * 
                      */
                     void SetAwsPrivateAccess(const AwsPrivateAccess& _awsPrivateAccess);
@@ -401,15 +413,15 @@ namespace TencentCloud
                     bool AwsPrivateAccessHasBeenSet() const;
 
                     /**
-                     * 获取Access authentication configuration for OSS origin.
-                     * @return OssPrivateAccess Access authentication configuration for OSS origin.
+                     * 获取
+                     * @return OssPrivateAccess 
                      * 
                      */
                     OssPrivateAccess GetOssPrivateAccess() const;
 
                     /**
-                     * 设置Access authentication configuration for OSS origin.
-                     * @param _ossPrivateAccess Access authentication configuration for OSS origin.
+                     * 设置
+                     * @param _ossPrivateAccess 
                      * 
                      */
                     void SetOssPrivateAccess(const OssPrivateAccess& _ossPrivateAccess);
@@ -422,15 +434,15 @@ namespace TencentCloud
                     bool OssPrivateAccessHasBeenSet() const;
 
                     /**
-                     * 获取Access authentication for Huawei Cloud OBS origin
-                     * @return HwPrivateAccess Access authentication for Huawei Cloud OBS origin
+                     * 获取
+                     * @return HwPrivateAccess 
                      * 
                      */
                     HwPrivateAccess GetHwPrivateAccess() const;
 
                     /**
-                     * 设置Access authentication for Huawei Cloud OBS origin
-                     * @param _hwPrivateAccess Access authentication for Huawei Cloud OBS origin
+                     * 设置
+                     * @param _hwPrivateAccess 
                      * 
                      */
                     void SetHwPrivateAccess(const HwPrivateAccess& _hwPrivateAccess);
@@ -443,15 +455,15 @@ namespace TencentCloud
                     bool HwPrivateAccessHasBeenSet() const;
 
                     /**
-                     * 获取Origin-pull authentication for other origins.
-                     * @return OthersPrivateAccess Origin-pull authentication for other origins.
+                     * 获取
+                     * @return OthersPrivateAccess 
                      * 
                      */
                     OthersPrivateAccess GetOthersPrivateAccess() const;
 
                     /**
-                     * 设置Origin-pull authentication for other origins.
-                     * @param _othersPrivateAccess Origin-pull authentication for other origins.
+                     * 设置
+                     * @param _othersPrivateAccess 
                      * 
                      */
                     void SetOthersPrivateAccess(const OthersPrivateAccess& _othersPrivateAccess);
@@ -466,115 +478,118 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Domain name acceleration areas: <li>mainland: acceleration within China; </li> <li>overseas: acceleration outside China; </li> <li>global: global acceleration. </li>
+                     * Domain acceleration region:
+<li>mainland: domestic acceleration in China;</li>
+<li>overseas: acceleration outside China;</li>
+<li>global: global acceleration.</li>
                      */
                     std::string m_area;
                     bool m_areaHasBeenSet;
 
                     /**
-                     * Origin Server Configuration.
+                     * 
                      */
                     Origin m_origin;
                     bool m_originHasBeenSet;
 
                     /**
-                     * IP blocklist/allowlist configuration. This is disabled by default.
+                     * 
                      */
                     IpFilter m_ipFilter;
                     bool m_ipFilterHasBeenSet;
 
                     /**
-                     * UserAgent:blacklist/whitelist configuration.
+                     * 
                      */
                     UserAgentFilter m_userAgentFilter;
                     bool m_userAgentFilterHasBeenSet;
 
                     /**
-                     * Back to the source 301/302 status code automatically follows the configuration, the default is off
+                     * 
                      */
                     FollowRedirect m_followRedirect;
                     bool m_followRedirectHasBeenSet;
 
                     /**
-                     * Custom request header configuration. This is disabled by default.
+                     * 
                      */
                     RequestHeader m_requestHeader;
                     bool m_requestHeaderHasBeenSet;
 
                     /**
-                     * Custom response header configuration. This is disabled by default.
+                     * 
                      */
                     ResponseHeader m_responseHeader;
                     bool m_responseHeaderHasBeenSet;
 
                     /**
-                     * Node cache expiration time configuration.
+                     * 
                      */
                     Cache m_cache;
                     bool m_cacheHasBeenSet;
 
                     /**
-                     * Domain name HTTPS acceleration configuration. This is disabled by default.
+                     * 
                      */
                     Https m_https;
                     bool m_httpsHasBeenSet;
 
                     /**
-                     * Timestamp hotlink protection configuration.
+                     * 
                      */
                     Authentication m_authentication;
                     bool m_authenticationHasBeenSet;
 
                     /**
-                     * Access protocol forced redirect configuration. This is disabled by default.
+                     * 
                      */
                     ForceRedirect m_forceRedirect;
                     bool m_forceRedirectHasBeenSet;
 
                     /**
-                     * Referer blacklist/whitelist configuration. This is disabled by default.
+                     * 
                      */
                     Referer m_referer;
                     bool m_refererHasBeenSet;
 
                     /**
-                     * Browser cache rule configuration, which is used to set the default value of MaxAge and is disabled by default.
+                     * 
                      */
                     MaxAge m_maxAge;
                     bool m_maxAgeHasBeenSet;
 
                     /**
-                     * IPv6 access configuration.
+                     * 
                      */
                     Ipv6Access m_ipv6Access;
                     bool m_ipv6AccessHasBeenSet;
 
                     /**
-                     * QUIC configuration item.
+                     * 
                      */
                     Quic m_quic;
                     bool m_quicHasBeenSet;
 
                     /**
-                     * Origin access authentication for S3 bucket.
+                     * 
                      */
                     AwsPrivateAccess m_awsPrivateAccess;
                     bool m_awsPrivateAccessHasBeenSet;
 
                     /**
-                     * Access authentication configuration for OSS origin.
+                     * 
                      */
                     OssPrivateAccess m_ossPrivateAccess;
                     bool m_ossPrivateAccessHasBeenSet;
 
                     /**
-                     * Access authentication for Huawei Cloud OBS origin
+                     * 
                      */
                     HwPrivateAccess m_hwPrivateAccess;
                     bool m_hwPrivateAccessHasBeenSet;
 
                     /**
-                     * Origin-pull authentication for other origins.
+                     * 
                      */
                     OthersPrivateAccess m_othersPrivateAccess;
                     bool m_othersPrivateAccessHasBeenSet;

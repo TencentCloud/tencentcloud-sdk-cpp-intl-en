@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取VPC ID
-                     * @return VpcId VPC ID
+                     * 获取VPC ID.
+                     * @return VpcId VPC ID.
                      * 
                      */
                     std::string GetVpcId() const;
 
                     /**
-                     * 设置VPC ID
-                     * @param _vpcId VPC ID
+                     * 设置VPC ID.
+                     * @param _vpcId VPC ID.
                      * 
                      */
                     void SetVpcId(const std::string& _vpcId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool VpcIdHasBeenSet() const;
 
                     /**
-                     * 获取The NAT gateway ID.
-                     * @return NatGatewayId The NAT gateway ID.
+                     * 获取NAT gateway ID.
+                     * @return NatGatewayId NAT gateway ID.
                      * 
                      */
                     std::string GetNatGatewayId() const;
 
                     /**
-                     * 设置The NAT gateway ID.
-                     * @param _natGatewayId The NAT gateway ID.
+                     * 设置NAT gateway ID.
+                     * @param _natGatewayId NAT gateway ID.
                      * 
                      */
                     void SetNatGatewayId(const std::string& _natGatewayId);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool NatGatewayIdHasBeenSet() const;
 
                     /**
-                     * 获取Whether it is pre-refresh. Valid values: `True` (yes) and `False` (no)
-                     * @return DryRun Whether it is pre-refresh. Valid values: `True` (yes) and `False` (no)
+                     * 获取Whether it is pre-refresh. Valid values: true (yes) and false (no).
+                     * @return DryRun Whether it is pre-refresh. Valid values: true (yes) and false (no).
                      * 
                      */
                     bool GetDryRun() const;
 
                     /**
-                     * 设置Whether it is pre-refresh. Valid values: `True` (yes) and `False` (no)
-                     * @param _dryRun Whether it is pre-refresh. Valid values: `True` (yes) and `False` (no)
+                     * 设置Whether it is pre-refresh. Valid values: true (yes) and false (no).
+                     * @param _dryRun Whether it is pre-refresh. Valid values: true (yes) and false (no).
                      * 
                      */
                     void SetDryRun(const bool& _dryRun);
@@ -108,19 +108,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * VPC ID
+                     * VPC ID.
                      */
                     std::string m_vpcId;
                     bool m_vpcIdHasBeenSet;
 
                     /**
-                     * The NAT gateway ID.
+                     * NAT gateway ID.
                      */
                     std::string m_natGatewayId;
                     bool m_natGatewayIdHasBeenSet;
 
                     /**
-                     * Whether it is pre-refresh. Valid values: `True` (yes) and `False` (no)
+                     * Whether it is pre-refresh. Valid values: true (yes) and false (no).
                      */
                     bool m_dryRun;
                     bool m_dryRunHasBeenSet;

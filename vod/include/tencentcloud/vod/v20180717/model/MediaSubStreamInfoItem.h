@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * The stream information of adaptive bitrate streaming.
+                * 
                 */
                 class MediaSubStreamInfoItem : public AbstractModel
                 {
@@ -47,23 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The stream type. Valid values:
-<li>`audio`: Audio only</li>
-<li>`video`: Video (may include audio)</li>
-                     * @return Type The stream type. Valid values:
-<li>`audio`: Audio only</li>
-<li>`video`: Video (may include audio)</li>
+                     * 获取
+                     * @return Type 
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置The stream type. Valid values:
-<li>`audio`: Audio only</li>
-<li>`video`: Video (may include audio)</li>
-                     * @param _type The stream type. Valid values:
-<li>`audio`: Audio only</li>
-<li>`video`: Video (may include audio)</li>
+                     * 设置
+                     * @param _type 
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -76,15 +68,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取The video width (px) if `Type` is `video`.
-                     * @return Width The video width (px) if `Type` is `video`.
+                     * 获取
+                     * @return Width 
                      * 
                      */
                     uint64_t GetWidth() const;
 
                     /**
-                     * 设置The video width (px) if `Type` is `video`.
-                     * @param _width The video width (px) if `Type` is `video`.
+                     * 设置
+                     * @param _width 
                      * 
                      */
                     void SetWidth(const uint64_t& _width);
@@ -97,15 +89,15 @@ namespace TencentCloud
                     bool WidthHasBeenSet() const;
 
                     /**
-                     * 获取The video height (px) if `Type` is `video`.
-                     * @return Height The video height (px) if `Type` is `video`.
+                     * 获取
+                     * @return Height 
                      * 
                      */
                     uint64_t GetHeight() const;
 
                     /**
-                     * 设置The video height (px) if `Type` is `video`.
-                     * @param _height The video height (px) if `Type` is `video`.
+                     * 设置
+                     * @param _height 
                      * 
                      */
                     void SetHeight(const uint64_t& _height);
@@ -118,19 +110,15 @@ namespace TencentCloud
                     bool HeightHasBeenSet() const;
 
                     /**
-                     * 获取The file size (bytes).
-<font color=red>Note:</font>For adaptive bitrate streaming files generated before 2023-02-09T16:00:00Z, the value of this parameter is `0`.
-                     * @return Size The file size (bytes).
-<font color=red>Note:</font>For adaptive bitrate streaming files generated before 2023-02-09T16:00:00Z, the value of this parameter is `0`.
+                     * 获取
+                     * @return Size 
                      * 
                      */
                     uint64_t GetSize() const;
 
                     /**
-                     * 设置The file size (bytes).
-<font color=red>Note:</font>For adaptive bitrate streaming files generated before 2023-02-09T16:00:00Z, the value of this parameter is `0`.
-                     * @param _size The file size (bytes).
-<font color=red>Note:</font>For adaptive bitrate streaming files generated before 2023-02-09T16:00:00Z, the value of this parameter is `0`.
+                     * 设置
+                     * @param _size 
                      * 
                      */
                     void SetSize(const uint64_t& _size);
@@ -145,28 +133,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The stream type. Valid values:
-<li>`audio`: Audio only</li>
-<li>`video`: Video (may include audio)</li>
+                     * 
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * The video width (px) if `Type` is `video`.
+                     * 
                      */
                     uint64_t m_width;
                     bool m_widthHasBeenSet;
 
                     /**
-                     * The video height (px) if `Type` is `video`.
+                     * 
                      */
                     uint64_t m_height;
                     bool m_heightHasBeenSet;
 
                     /**
-                     * The file size (bytes).
-<font color=red>Note:</font>For adaptive bitrate streaming files generated before 2023-02-09T16:00:00Z, the value of this parameter is `0`.
+                     * 
                      */
                     uint64_t m_size;
                     bool m_sizeHasBeenSet;

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * AIGC voice clone input file information
+                * 
                 */
                 class AigcAudioCloneInputFileInfo : public AbstractModel
                 {
@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Input video file type. Valid values: <li>File: On-demand media file;</li> <li>Url: Accessible URL;</li></p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Type <p>Input video file type. Valid values: <li>File: On-demand media file;</li> <li>Url: Accessible URL;</li></p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return Type 
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置<p>Input video file type. Valid values: <li>File: On-demand media file;</li> <li>Url: Accessible URL;</li></p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _type <p>Input video file type. Valid values: <li>File: On-demand media file;</li> <li>Url: Accessible URL;</li></p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _type 
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -72,19 +68,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Media file ID, the globally unique identifier of the file in VOD, is assigned by the VOD backend after successful upload. You can get this field in the <a href="/document/product/266/7830?from_cn_redirect=1">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when Type value is File. Description: 1. Image less than 10M is recommended. 2. Image format values: jpeg, jpg, png.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return FileId <p>Media file ID, the globally unique identifier of the file in VOD, is assigned by the VOD backend after successful upload. You can get this field in the <a href="/document/product/266/7830?from_cn_redirect=1">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when Type value is File. Description: 1. Image less than 10M is recommended. 2. Image format values: jpeg, jpg, png.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return FileId 
                      * 
                      */
                     std::string GetFileId() const;
 
                     /**
-                     * 设置<p>Media file ID, the globally unique identifier of the file in VOD, is assigned by the VOD backend after successful upload. You can get this field in the <a href="/document/product/266/7830?from_cn_redirect=1">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when Type value is File. Description: 1. Image less than 10M is recommended. 2. Image format values: jpeg, jpg, png.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _fileId <p>Media file ID, the globally unique identifier of the file in VOD, is assigned by the VOD backend after successful upload. You can get this field in the <a href="/document/product/266/7830?from_cn_redirect=1">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when Type value is File. Description: 1. Image less than 10M is recommended. 2. Image format values: jpeg, jpg, png.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _fileId 
                      * 
                      */
                     void SetFileId(const std::string& _fileId);
@@ -97,19 +89,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool FileIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>Accessible file URL. This parameter is valid when Type value is Url. Description: 1. Recommended for use with images less than 10M; 2. Image format value: jpeg, jpg, png.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Url <p>Accessible file URL. This parameter is valid when Type value is Url. Description: 1. Recommended for use with images less than 10M; 2. Image format value: jpeg, jpg, png.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return Url 
                      * 
                      */
                     std::string GetUrl() const;
 
                     /**
-                     * 设置<p>Accessible file URL. This parameter is valid when Type value is Url. Description: 1. Recommended for use with images less than 10M; 2. Image format value: jpeg, jpg, png.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _url <p>Accessible file URL. This parameter is valid when Type value is Url. Description: 1. Recommended for use with images less than 10M; 2. Image format value: jpeg, jpg, png.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _url 
                      * 
                      */
                     void SetUrl(const std::string& _url);
@@ -124,22 +112,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * <p>Input video file type. Valid values: <li>File: On-demand media file;</li> <li>Url: Accessible URL;</li></p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * <p>Media file ID, the globally unique identifier of the file in VOD, is assigned by the VOD backend after successful upload. You can get this field in the <a href="/document/product/266/7830?from_cn_redirect=1">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when Type value is File. Description: 1. Image less than 10M is recommended. 2. Image format values: jpeg, jpg, png.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string m_fileId;
                     bool m_fileIdHasBeenSet;
 
                     /**
-                     * <p>Accessible file URL. This parameter is valid when Type value is Url. Description: 1. Recommended for use with images less than 10M; 2. Image format value: jpeg, jpg, png.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string m_url;
                     bool m_urlHasBeenSet;

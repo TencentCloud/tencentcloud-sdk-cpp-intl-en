@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * The audio remaster parameters.
+                * 
                 */
                 class RebuildAudioInfo : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Audio noise reduction control parameters.
-                     * @return AudioDenoiseInfo Audio noise reduction control parameters.
+                     * 获取
+                     * @return AudioDenoiseInfo 
                      * 
                      */
                     AudioDenoiseInfo GetAudioDenoiseInfo() const;
 
                     /**
-                     * 设置Audio noise reduction control parameters.
-                     * @param _audioDenoiseInfo Audio noise reduction control parameters.
+                     * 设置
+                     * @param _audioDenoiseInfo 
                      * 
                      */
                     void SetAudioDenoiseInfo(const AudioDenoiseInfo& _audioDenoiseInfo);
@@ -71,7 +71,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Audio noise reduction control parameters.
+                     * 
                      */
                     AudioDenoiseInfo m_audioDenoiseInfo;
                     bool m_audioDenoiseInfoHasBeenSet;

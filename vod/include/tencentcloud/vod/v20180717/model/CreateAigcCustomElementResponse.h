@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Subject ID. Need to record the returned subject ID yourself.
-                     * @return ElementId Subject ID. Need to record the returned subject ID yourself.
+                     * 获取
+                     * @return ElementId 
                      * 
                      */
                     std::string GetElementId() const;
@@ -60,7 +60,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Subject ID. Need to record the returned subject ID yourself.
+                     * 
                      */
                     std::string m_elementId;
                     bool m_elementIdHasBeenSet;

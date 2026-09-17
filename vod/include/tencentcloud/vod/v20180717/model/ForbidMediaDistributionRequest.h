@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Media file list, up to 20 entries are submittable each time.
-                     * @return FileIds Media file list, up to 20 entries are submittable each time.
+                     * 获取
+                     * @return FileIds 
                      * 
                      */
                     std::vector<std::string> GetFileIds() const;
 
                     /**
-                     * 设置Media file list, up to 20 entries are submittable each time.
-                     * @param _fileIds Media file list, up to 20 entries are submittable each time.
+                     * 设置
+                     * @param _fileIds 
                      * 
                      */
                     void SetFileIds(const std::vector<std::string>& _fileIds);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool FileIdsHasBeenSet() const;
 
                     /**
-                     * 获取forbid: block, recover: unblock.
-                     * @return Operation forbid: block, recover: unblock.
+                     * 获取
+                     * @return Operation 
                      * 
                      */
                     std::string GetOperation() const;
 
                     /**
-                     * 设置forbid: block, recover: unblock.
-                     * @param _operation forbid: block, recover: unblock.
+                     * 设置
+                     * @param _operation 
                      * 
                      */
                     void SetOperation(const std::string& _operation);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool OperationHasBeenSet() const;
 
                     /**
-                     * 获取<b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
-                     * @return SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+                     * 获取
+                     * @return SubAppId 
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置<b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
-                     * @param _subAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+                     * 设置
+                     * @param _subAppId 
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -108,19 +108,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Media file list, up to 20 entries are submittable each time.
+                     * 
                      */
                     std::vector<std::string> m_fileIds;
                     bool m_fileIdsHasBeenSet;
 
                     /**
-                     * forbid: block, recover: unblock.
+                     * 
                      */
                     std::string m_operation;
                     bool m_operationHasBeenSet;
 
                     /**
-                     * <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+                     * 
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;

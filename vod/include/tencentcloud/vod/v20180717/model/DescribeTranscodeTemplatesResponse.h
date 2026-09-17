@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Total number of records that meet the filtering conditions.
-                     * @return TotalCount Total number of records that meet the filtering conditions.
+                     * 获取
+                     * @return TotalCount 
                      * 
                      */
                     uint64_t GetTotalCount() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取Transcoding template detail list.
-                     * @return TranscodeTemplateSet Transcoding template detail list.
+                     * 获取
+                     * @return TranscodeTemplateSet 
                      * 
                      */
                     std::vector<TranscodeTemplate> GetTranscodeTemplateSet() const;
@@ -75,13 +75,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Total number of records that meet the filtering conditions.
+                     * 
                      */
                     uint64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * Transcoding template detail list.
+                     * 
                      */
                     std::vector<TranscodeTemplate> m_transcodeTemplateSet;
                     bool m_transcodeTemplateSetHasBeenSet;

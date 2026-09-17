@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Control parameters for QR code detection in video.
+                * 
                 */
                 class QRCodeConfigureInfoForUpdate : public AbstractModel
                 {
@@ -47,23 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取QR code inspection switch, optional values:
-<li>ON: enabled;</li>
-<li>OFF: disabled.</li>
-                     * @return Switch QR code inspection switch, optional values:
-<li>ON: enabled;</li>
-<li>OFF: disabled.</li>
+                     * 获取
+                     * @return Switch 
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置QR code inspection switch, optional values:
-<li>ON: enabled;</li>
-<li>OFF: disabled.</li>
-                     * @param _switch QR code inspection switch, optional values:
-<li>ON: enabled;</li>
-<li>OFF: disabled.</li>
+                     * 设置
+                     * @param _switch 
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -78,9 +70,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * QR code inspection switch, optional values:
-<li>ON: enabled;</li>
-<li>OFF: disabled.</li>
+                     * 
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;

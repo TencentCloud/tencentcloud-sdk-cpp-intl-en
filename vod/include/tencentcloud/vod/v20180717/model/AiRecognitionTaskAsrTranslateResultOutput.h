@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Voice translation result.
+                * 
                 */
                 class AiRecognitionTaskAsrTranslateResultOutput : public AbstractModel
                 {
@@ -49,19 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Voice translation clip list.
-<font color=red>Note</font>: The list only displays the first 100 elements. To obtain the complete result, refer to the corresponding file in SegmentSetFileUrl.
-                     * @return SegmentSet Voice translation clip list.
-<font color=red>Note</font>: The list only displays the first 100 elements. To obtain the complete result, refer to the corresponding file in SegmentSetFileUrl.
+                     * 获取
+                     * @return SegmentSet 
                      * 
                      */
                     std::vector<AiRecognitionTaskAsrTranslateSegmentItem> GetSegmentSet() const;
 
                     /**
-                     * 设置Voice translation clip list.
-<font color=red>Note</font>: The list only displays the first 100 elements. To obtain the complete result, refer to the corresponding file in SegmentSetFileUrl.
-                     * @param _segmentSet Voice translation clip list.
-<font color=red>Note</font>: The list only displays the first 100 elements. To obtain the complete result, refer to the corresponding file in SegmentSetFileUrl.
+                     * 设置
+                     * @param _segmentSet 
                      * 
                      */
                     void SetSegmentSet(const std::vector<AiRecognitionTaskAsrTranslateSegmentItem>& _segmentSet);
@@ -74,15 +70,15 @@ namespace TencentCloud
                     bool SegmentSetHasBeenSet() const;
 
                     /**
-                     * 获取URL of Speech Translation Clip List File. The content of the file is JSON, consistent with the fields of SegmentSet. (The file will not be retained permanently and will be deleted when reaching SegmentSetFileUrlExpireTime.)
-                     * @return SegmentSetFileUrl URL of Speech Translation Clip List File. The content of the file is JSON, consistent with the fields of SegmentSet. (The file will not be retained permanently and will be deleted when reaching SegmentSetFileUrlExpireTime.)
+                     * 获取
+                     * @return SegmentSetFileUrl 
                      * 
                      */
                     std::string GetSegmentSetFileUrl() const;
 
                     /**
-                     * 设置URL of Speech Translation Clip List File. The content of the file is JSON, consistent with the fields of SegmentSet. (The file will not be retained permanently and will be deleted when reaching SegmentSetFileUrlExpireTime.)
-                     * @param _segmentSetFileUrl URL of Speech Translation Clip List File. The content of the file is JSON, consistent with the fields of SegmentSet. (The file will not be retained permanently and will be deleted when reaching SegmentSetFileUrlExpireTime.)
+                     * 设置
+                     * @param _segmentSetFileUrl 
                      * 
                      */
                     void SetSegmentSetFileUrl(const std::string& _segmentSetFileUrl);
@@ -95,15 +91,15 @@ namespace TencentCloud
                     bool SegmentSetFileUrlHasBeenSet() const;
 
                     /**
-                     * 获取Expiration time of the URL for the speech translation clip list file, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-                     * @return SegmentSetFileUrlExpireTime Expiration time of the URL for the speech translation clip list file, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 获取
+                     * @return SegmentSetFileUrlExpireTime 
                      * 
                      */
                     std::string GetSegmentSetFileUrlExpireTime() const;
 
                     /**
-                     * 设置Expiration time of the URL for the speech translation clip list file, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-                     * @param _segmentSetFileUrlExpireTime Expiration time of the URL for the speech translation clip list file, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 设置
+                     * @param _segmentSetFileUrlExpireTime 
                      * 
                      */
                     void SetSegmentSetFileUrlExpireTime(const std::string& _segmentSetFileUrlExpireTime);
@@ -116,15 +112,15 @@ namespace TencentCloud
                     bool SegmentSetFileUrlExpireTimeHasBeenSet() const;
 
                     /**
-                     * 获取Generated subtitle list.
-                     * @return SubtitleSet Generated subtitle list.
+                     * 获取
+                     * @return SubtitleSet 
                      * 
                      */
                     std::vector<AiRecognitionTaskAsrFullTextResultOutputSubtitleItem> GetSubtitleSet() const;
 
                     /**
-                     * 设置Generated subtitle list.
-                     * @param _subtitleSet Generated subtitle list.
+                     * 设置
+                     * @param _subtitleSet 
                      * 
                      */
                     void SetSubtitleSet(const std::vector<AiRecognitionTaskAsrFullTextResultOutputSubtitleItem>& _subtitleSet);
@@ -139,26 +135,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Voice translation clip list.
-<font color=red>Note</font>: The list only displays the first 100 elements. To obtain the complete result, refer to the corresponding file in SegmentSetFileUrl.
+                     * 
                      */
                     std::vector<AiRecognitionTaskAsrTranslateSegmentItem> m_segmentSet;
                     bool m_segmentSetHasBeenSet;
 
                     /**
-                     * URL of Speech Translation Clip List File. The content of the file is JSON, consistent with the fields of SegmentSet. (The file will not be retained permanently and will be deleted when reaching SegmentSetFileUrlExpireTime.)
+                     * 
                      */
                     std::string m_segmentSetFileUrl;
                     bool m_segmentSetFileUrlHasBeenSet;
 
                     /**
-                     * Expiration time of the URL for the speech translation clip list file, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 
                      */
                     std::string m_segmentSetFileUrlExpireTime;
                     bool m_segmentSetFileUrlExpireTimeHasBeenSet;
 
                     /**
-                     * Generated subtitle list.
+                     * 
                      */
                     std::vector<AiRecognitionTaskAsrFullTextResultOutputSubtitleItem> m_subtitleSet;
                     bool m_subtitleSetHasBeenSet;

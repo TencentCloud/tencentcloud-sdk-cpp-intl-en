@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * MPS AI media task item
+                * 
                 */
                 class MPSAiMediaItem : public AbstractModel
                 {
@@ -48,79 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取MPS intelligent processing task type. Valid values:
-<li>AiAnalysis.ClassificationTask: intelligent classification task.</li>
-<li>AiAnalysis.CoverTask: intelligent thumbnail generating.</li>
-<li>AiAnalysis.TagTask: intelligent tag task.</li>
-<li>AiAnalysis.FrameTagTask: intelligent frame-by-frame tagging task.</li>
-<li>AiAnalysis.HighlightTask: Intelligent highlight task.</li>
-<li>AiAnalysis.SegmentTask: Intelligent video splitting task.</li>
-<li>AiAnalysis.HeadTailTask: Intelligent opening and closing credits task.</li>
-<li>AiAnalysis.DescriptionTask: Intelligent summary task.</li>
-<li>AiAnalysis.HorizontalToVerticalTask: Intelligent Landscape to Portrait Task.</li>
-<li>AiAnalysis.DubbingTask: Intelligent dubbing task.</li>
-<li>AiAnalysis.VideoRemakeTask: Intelligent deduplication task.</li>
-<li>AiAnalysis.VideoComprehensionTask: Video understanding task.</li>
-<li>SmartSubtitle.AsrFullTextTask: Intelligent speech full-text recognition task.</li>
-<li>SmartSubtitle.TransTextTask: Translation result.</li>
-<li>SmartSubtitle.PureSubtitleTransTask: Returns the pure subtitle file translation result.</li>
-<li>SmartSubtitle.OcrFullTextTask: Intelligent text extraction subtitle task.</li>
-                     * @return TaskType MPS intelligent processing task type. Valid values:
-<li>AiAnalysis.ClassificationTask: intelligent classification task.</li>
-<li>AiAnalysis.CoverTask: intelligent thumbnail generating.</li>
-<li>AiAnalysis.TagTask: intelligent tag task.</li>
-<li>AiAnalysis.FrameTagTask: intelligent frame-by-frame tagging task.</li>
-<li>AiAnalysis.HighlightTask: Intelligent highlight task.</li>
-<li>AiAnalysis.SegmentTask: Intelligent video splitting task.</li>
-<li>AiAnalysis.HeadTailTask: Intelligent opening and closing credits task.</li>
-<li>AiAnalysis.DescriptionTask: Intelligent summary task.</li>
-<li>AiAnalysis.HorizontalToVerticalTask: Intelligent Landscape to Portrait Task.</li>
-<li>AiAnalysis.DubbingTask: Intelligent dubbing task.</li>
-<li>AiAnalysis.VideoRemakeTask: Intelligent deduplication task.</li>
-<li>AiAnalysis.VideoComprehensionTask: Video understanding task.</li>
-<li>SmartSubtitle.AsrFullTextTask: Intelligent speech full-text recognition task.</li>
-<li>SmartSubtitle.TransTextTask: Translation result.</li>
-<li>SmartSubtitle.PureSubtitleTransTask: Returns the pure subtitle file translation result.</li>
-<li>SmartSubtitle.OcrFullTextTask: Intelligent text extraction subtitle task.</li>
+                     * 获取
+                     * @return TaskType 
                      * 
                      */
                     std::string GetTaskType() const;
 
                     /**
-                     * 设置MPS intelligent processing task type. Valid values:
-<li>AiAnalysis.ClassificationTask: intelligent classification task.</li>
-<li>AiAnalysis.CoverTask: intelligent thumbnail generating.</li>
-<li>AiAnalysis.TagTask: intelligent tag task.</li>
-<li>AiAnalysis.FrameTagTask: intelligent frame-by-frame tagging task.</li>
-<li>AiAnalysis.HighlightTask: Intelligent highlight task.</li>
-<li>AiAnalysis.SegmentTask: Intelligent video splitting task.</li>
-<li>AiAnalysis.HeadTailTask: Intelligent opening and closing credits task.</li>
-<li>AiAnalysis.DescriptionTask: Intelligent summary task.</li>
-<li>AiAnalysis.HorizontalToVerticalTask: Intelligent Landscape to Portrait Task.</li>
-<li>AiAnalysis.DubbingTask: Intelligent dubbing task.</li>
-<li>AiAnalysis.VideoRemakeTask: Intelligent deduplication task.</li>
-<li>AiAnalysis.VideoComprehensionTask: Video understanding task.</li>
-<li>SmartSubtitle.AsrFullTextTask: Intelligent speech full-text recognition task.</li>
-<li>SmartSubtitle.TransTextTask: Translation result.</li>
-<li>SmartSubtitle.PureSubtitleTransTask: Returns the pure subtitle file translation result.</li>
-<li>SmartSubtitle.OcrFullTextTask: Intelligent text extraction subtitle task.</li>
-                     * @param _taskType MPS intelligent processing task type. Valid values:
-<li>AiAnalysis.ClassificationTask: intelligent classification task.</li>
-<li>AiAnalysis.CoverTask: intelligent thumbnail generating.</li>
-<li>AiAnalysis.TagTask: intelligent tag task.</li>
-<li>AiAnalysis.FrameTagTask: intelligent frame-by-frame tagging task.</li>
-<li>AiAnalysis.HighlightTask: Intelligent highlight task.</li>
-<li>AiAnalysis.SegmentTask: Intelligent video splitting task.</li>
-<li>AiAnalysis.HeadTailTask: Intelligent opening and closing credits task.</li>
-<li>AiAnalysis.DescriptionTask: Intelligent summary task.</li>
-<li>AiAnalysis.HorizontalToVerticalTask: Intelligent Landscape to Portrait Task.</li>
-<li>AiAnalysis.DubbingTask: Intelligent dubbing task.</li>
-<li>AiAnalysis.VideoRemakeTask: Intelligent deduplication task.</li>
-<li>AiAnalysis.VideoComprehensionTask: Video understanding task.</li>
-<li>SmartSubtitle.AsrFullTextTask: Intelligent speech full-text recognition task.</li>
-<li>SmartSubtitle.TransTextTask: Translation result.</li>
-<li>SmartSubtitle.PureSubtitleTransTask: Returns the pure subtitle file translation result.</li>
-<li>SmartSubtitle.OcrFullTextTask: Intelligent text extraction subtitle task.</li>
+                     * 设置
+                     * @param _taskType 
                      * 
                      */
                     void SetTaskType(const std::string& _taskType);
@@ -133,15 +69,15 @@ namespace TencentCloud
                     bool TaskTypeHasBeenSet() const;
 
                     /**
-                     * 获取MPS intelligent processing task result set
-                     * @return AiMediaTasks MPS intelligent processing task result set
+                     * 获取
+                     * @return AiMediaTasks 
                      * 
                      */
                     std::vector<MPSAiMediaTask> GetAiMediaTasks() const;
 
                     /**
-                     * 设置MPS intelligent processing task result set
-                     * @param _aiMediaTasks MPS intelligent processing task result set
+                     * 设置
+                     * @param _aiMediaTasks 
                      * 
                      */
                     void SetAiMediaTasks(const std::vector<MPSAiMediaTask>& _aiMediaTasks);
@@ -156,29 +92,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * MPS intelligent processing task type. Valid values:
-<li>AiAnalysis.ClassificationTask: intelligent classification task.</li>
-<li>AiAnalysis.CoverTask: intelligent thumbnail generating.</li>
-<li>AiAnalysis.TagTask: intelligent tag task.</li>
-<li>AiAnalysis.FrameTagTask: intelligent frame-by-frame tagging task.</li>
-<li>AiAnalysis.HighlightTask: Intelligent highlight task.</li>
-<li>AiAnalysis.SegmentTask: Intelligent video splitting task.</li>
-<li>AiAnalysis.HeadTailTask: Intelligent opening and closing credits task.</li>
-<li>AiAnalysis.DescriptionTask: Intelligent summary task.</li>
-<li>AiAnalysis.HorizontalToVerticalTask: Intelligent Landscape to Portrait Task.</li>
-<li>AiAnalysis.DubbingTask: Intelligent dubbing task.</li>
-<li>AiAnalysis.VideoRemakeTask: Intelligent deduplication task.</li>
-<li>AiAnalysis.VideoComprehensionTask: Video understanding task.</li>
-<li>SmartSubtitle.AsrFullTextTask: Intelligent speech full-text recognition task.</li>
-<li>SmartSubtitle.TransTextTask: Translation result.</li>
-<li>SmartSubtitle.PureSubtitleTransTask: Returns the pure subtitle file translation result.</li>
-<li>SmartSubtitle.OcrFullTextTask: Intelligent text extraction subtitle task.</li>
+                     * 
                      */
                     std::string m_taskType;
                     bool m_taskTypeHasBeenSet;
 
                     /**
-                     * MPS intelligent processing task result set
+                     * 
                      */
                     std::vector<MPSAiMediaTask> m_aiMediaTasks;
                     bool m_aiMediaTasksHasBeenSet;

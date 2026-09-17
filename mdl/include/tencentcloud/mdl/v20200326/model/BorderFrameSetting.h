@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return LiveSourceLayout 
+                     * 获取Live streaming source layout configuration
+                     * @return LiveSourceLayout Live streaming source layout configuration
                      * 
                      */
                     SourceLayout GetLiveSourceLayout() const;
 
                     /**
-                     * 设置
-                     * @param _liveSourceLayout 
+                     * 设置Live streaming source layout configuration
+                     * @param _liveSourceLayout Live streaming source layout configuration
                      * 
                      */
                     void SetLiveSourceLayout(const SourceLayout& _liveSourceLayout);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool LiveSourceLayoutHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return BackgroundImgUrl 
+                     * 获取Background image URL, starting with http/https and ending in jpg/jpeg/png, (only required for UPLOAD_CREATIVES)
+                     * @return BackgroundImgUrl Background image URL, starting with http/https and ending in jpg/jpeg/png, (only required for UPLOAD_CREATIVES)
                      * 
                      */
                     std::string GetBackgroundImgUrl() const;
 
                     /**
-                     * 设置
-                     * @param _backgroundImgUrl 
+                     * 设置Background image URL, starting with http/https and ending in jpg/jpeg/png, (only required for UPLOAD_CREATIVES)
+                     * @param _backgroundImgUrl Background image URL, starting with http/https and ending in jpg/jpeg/png, (only required for UPLOAD_CREATIVES)
                      * 
                      */
                     void SetBackgroundImgUrl(const std::string& _backgroundImgUrl);
@@ -92,13 +92,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Live streaming source layout configuration
                      */
                     SourceLayout m_liveSourceLayout;
                     bool m_liveSourceLayoutHasBeenSet;
 
                     /**
-                     * 
+                     * Background image URL, starting with http/https and ending in jpg/jpeg/png, (only required for UPLOAD_CREATIVES)
                      */
                     std::string m_backgroundImgUrl;
                     bool m_backgroundImgUrlHasBeenSet;

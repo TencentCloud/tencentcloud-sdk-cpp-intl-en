@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Head Tail Template Details
+                * 
                 */
                 class HeadTailTemplate : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Head Tail Template Number.
-                     * @return Definition Head Tail Template Number.
+                     * 获取
+                     * @return Definition 
                      * 
                      */
                     int64_t GetDefinition() const;
 
                     /**
-                     * 设置Head Tail Template Number.
-                     * @param _definition Head Tail Template Number.
+                     * 设置
+                     * @param _definition 
                      * 
                      */
                     void SetDefinition(const int64_t& _definition);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool DefinitionHasBeenSet() const;
 
                     /**
-                     * 获取Template name, supports up to 64 characters.
-                     * @return Name Template name, supports up to 64 characters.
+                     * 获取
+                     * @return Name 
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Template name, supports up to 64 characters.
-                     * @param _name Template name, supports up to 64 characters.
+                     * 设置
+                     * @param _name 
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Template description, up to 256 characters.
-                     * @return Comment Template description, up to 256 characters.
+                     * 获取
+                     * @return Comment 
                      * 
                      */
                     std::string GetComment() const;
 
                     /**
-                     * 设置Template description, up to 256 characters.
-                     * @param _comment Template description, up to 256 characters.
+                     * 设置
+                     * @param _comment 
                      * 
                      */
                     void SetComment(const std::string& _comment);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool CommentHasBeenSet() const;
 
                     /**
-                     * 获取Title candidate list. When using it, the one closest to the resolution of the feature film will be selected. When the same candidate exists, the first one will be selected. A maximum of 5 are supported.
-                     * @return HeadCandidateSet Title candidate list. When using it, the one closest to the resolution of the feature film will be selected. When the same candidate exists, the first one will be selected. A maximum of 5 are supported.
+                     * 获取
+                     * @return HeadCandidateSet 
                      * 
                      */
                     std::vector<std::string> GetHeadCandidateSet() const;
 
                     /**
-                     * 设置Title candidate list. When using it, the one closest to the resolution of the feature film will be selected. When the same candidate exists, the first one will be selected. A maximum of 5 are supported.
-                     * @param _headCandidateSet Title candidate list. When using it, the one closest to the resolution of the feature film will be selected. When the same candidate exists, the first one will be selected. A maximum of 5 are supported.
+                     * 设置
+                     * @param _headCandidateSet 
                      * 
                      */
                     void SetHeadCandidateSet(const std::vector<std::string>& _headCandidateSet);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool HeadCandidateSetHasBeenSet() const;
 
                     /**
-                     * 获取Ending candidate list. When using it, the one closest to the resolution of the feature film will be selected. When the same candidate exists, the first one will be selected. A maximum of 5 are supported.
-                     * @return TailCandidateSet Ending candidate list. When using it, the one closest to the resolution of the feature film will be selected. When the same candidate exists, the first one will be selected. A maximum of 5 are supported.
+                     * 获取
+                     * @return TailCandidateSet 
                      * 
                      */
                     std::vector<std::string> GetTailCandidateSet() const;
 
                     /**
-                     * 设置Ending candidate list. When using it, the one closest to the resolution of the feature film will be selected. When the same candidate exists, the first one will be selected. A maximum of 5 are supported.
-                     * @param _tailCandidateSet Ending candidate list. When using it, the one closest to the resolution of the feature film will be selected. When the same candidate exists, the first one will be selected. A maximum of 5 are supported.
+                     * 设置
+                     * @param _tailCandidateSet 
                      * 
                      */
                     void SetTailCandidateSet(const std::vector<std::string>& _tailCandidateSet);
@@ -152,35 +152,15 @@ namespace TencentCloud
                     bool TailCandidateSetHasBeenSet() const;
 
                     /**
-                     * 获取Padding method. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the transcoding processing method is "padding". Optional filling method:
-<li> stretch: stretch, stretch each frame to fill the entire screen, which may cause the transcoded video to be "squashed" or "stretched";</li> 
-<li> gauss: Gaussian blur, keep the video aspect ratio unchanged, use Gaussian blur for the remaining edges; </li>
-<li> white: leave blank, keep the video aspect ratio unchanged, use the remaining edges for the edge Use white filling; </li>
-<li> black: Leave black, keep the video aspect ratio unchanged, and fill the remaining edges with black. </li>
-Default value: stretch.
-                     * @return FillType Padding method. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the transcoding processing method is "padding". Optional filling method:
-<li> stretch: stretch, stretch each frame to fill the entire screen, which may cause the transcoded video to be "squashed" or "stretched";</li> 
-<li> gauss: Gaussian blur, keep the video aspect ratio unchanged, use Gaussian blur for the remaining edges; </li>
-<li> white: leave blank, keep the video aspect ratio unchanged, use the remaining edges for the edge Use white filling; </li>
-<li> black: Leave black, keep the video aspect ratio unchanged, and fill the remaining edges with black. </li>
-Default value: stretch.
+                     * 获取
+                     * @return FillType 
                      * 
                      */
                     std::string GetFillType() const;
 
                     /**
-                     * 设置Padding method. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the transcoding processing method is "padding". Optional filling method:
-<li> stretch: stretch, stretch each frame to fill the entire screen, which may cause the transcoded video to be "squashed" or "stretched";</li> 
-<li> gauss: Gaussian blur, keep the video aspect ratio unchanged, use Gaussian blur for the remaining edges; </li>
-<li> white: leave blank, keep the video aspect ratio unchanged, use the remaining edges for the edge Use white filling; </li>
-<li> black: Leave black, keep the video aspect ratio unchanged, and fill the remaining edges with black. </li>
-Default value: stretch.
-                     * @param _fillType Padding method. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the transcoding processing method is "padding". Optional filling method:
-<li> stretch: stretch, stretch each frame to fill the entire screen, which may cause the transcoded video to be "squashed" or "stretched";</li> 
-<li> gauss: Gaussian blur, keep the video aspect ratio unchanged, use Gaussian blur for the remaining edges; </li>
-<li> white: leave blank, keep the video aspect ratio unchanged, use the remaining edges for the edge Use white filling; </li>
-<li> black: Leave black, keep the video aspect ratio unchanged, and fill the remaining edges with black. </li>
-Default value: stretch.
+                     * 设置
+                     * @param _fillType 
                      * 
                      */
                     void SetFillType(const std::string& _fillType);
@@ -193,15 +173,15 @@ Default value: stretch.
                     bool FillTypeHasBeenSet() const;
 
                     /**
-                     * 获取Template creation time, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
-                     * @return CreateTime Template creation time, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+                     * 获取
+                     * @return CreateTime 
                      * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
-                     * 设置Template creation time, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
-                     * @param _createTime Template creation time, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+                     * 设置
+                     * @param _createTime 
                      * 
                      */
                     void SetCreateTime(const std::string& _createTime);
@@ -214,15 +194,15 @@ Default value: stretch.
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取The last modification time of the template, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
-                     * @return UpdateTime The last modification time of the template, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+                     * 获取
+                     * @return UpdateTime 
                      * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
-                     * 设置The last modification time of the template, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
-                     * @param _updateTime The last modification time of the template, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+                     * 设置
+                     * @param _updateTime 
                      * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
@@ -237,54 +217,49 @@ Default value: stretch.
                 private:
 
                     /**
-                     * Head Tail Template Number.
+                     * 
                      */
                     int64_t m_definition;
                     bool m_definitionHasBeenSet;
 
                     /**
-                     * Template name, supports up to 64 characters.
+                     * 
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Template description, up to 256 characters.
+                     * 
                      */
                     std::string m_comment;
                     bool m_commentHasBeenSet;
 
                     /**
-                     * Title candidate list. When using it, the one closest to the resolution of the feature film will be selected. When the same candidate exists, the first one will be selected. A maximum of 5 are supported.
+                     * 
                      */
                     std::vector<std::string> m_headCandidateSet;
                     bool m_headCandidateSetHasBeenSet;
 
                     /**
-                     * Ending candidate list. When using it, the one closest to the resolution of the feature film will be selected. When the same candidate exists, the first one will be selected. A maximum of 5 are supported.
+                     * 
                      */
                     std::vector<std::string> m_tailCandidateSet;
                     bool m_tailCandidateSetHasBeenSet;
 
                     /**
-                     * Padding method. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the transcoding processing method is "padding". Optional filling method:
-<li> stretch: stretch, stretch each frame to fill the entire screen, which may cause the transcoded video to be "squashed" or "stretched";</li> 
-<li> gauss: Gaussian blur, keep the video aspect ratio unchanged, use Gaussian blur for the remaining edges; </li>
-<li> white: leave blank, keep the video aspect ratio unchanged, use the remaining edges for the edge Use white filling; </li>
-<li> black: Leave black, keep the video aspect ratio unchanged, and fill the remaining edges with black. </li>
-Default value: stretch.
+                     * 
                      */
                     std::string m_fillType;
                     bool m_fillTypeHasBeenSet;
 
                     /**
-                     * Template creation time, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+                     * 
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * The last modification time of the template, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+                     * 
                      */
                     std::string m_updateTime;
                     bool m_updateTimeHasBeenSet;

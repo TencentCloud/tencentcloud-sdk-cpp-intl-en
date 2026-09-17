@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Asynchronous task processing info for images
+                * 
                 */
                 class ProcessImageAsync : public AbstractModel
                 {
@@ -49,15 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Task ID.
-                     * @return TaskId Task ID.
+                     * 获取
+                     * @return TaskId 
                      * 
                      */
                     std::string GetTaskId() const;
 
                     /**
-                     * 设置Task ID.
-                     * @param _taskId Task ID.
+                     * 设置
+                     * @param _taskId 
                      * 
                      */
                     void SetTaskId(const std::string& _taskId);
@@ -70,15 +70,15 @@ namespace TencentCloud
                     bool TaskIdHasBeenSet() const;
 
                     /**
-                     * 获取Task status. Value: <li>PROCESSING: Processing;</li><li>FINISH: Completed.</li>
-                     * @return Status Task status. Value: <li>PROCESSING: Processing;</li><li>FINISH: Completed.</li>
+                     * 获取
+                     * @return Status 
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置Task status. Value: <li>PROCESSING: Processing;</li><li>FINISH: Completed.</li>
-                     * @param _status Task status. Value: <li>PROCESSING: Processing;</li><li>FINISH: Completed.</li>
+                     * 设置
+                     * @param _status 
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -91,15 +91,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Error code. Returns a non-zero error code for source error. For 0, please use the ErrCode of each specific task.
-                     * @return ErrCode Error code. Returns a non-zero error code for source error. For 0, please use the ErrCode of each specific task.
+                     * 获取
+                     * @return ErrCode 
                      * 
                      */
                     int64_t GetErrCode() const;
 
                     /**
-                     * 设置Error code. Returns a non-zero error code for source error. For 0, please use the ErrCode of each specific task.
-                     * @param _errCode Error code. Returns a non-zero error code for source error. For 0, please use the ErrCode of each specific task.
+                     * 设置
+                     * @param _errCode 
                      * 
                      */
                     void SetErrCode(const int64_t& _errCode);
@@ -112,15 +112,15 @@ namespace TencentCloud
                     bool ErrCodeHasBeenSet() const;
 
                     /**
-                     * 获取Error message.
-                     * @return Message Error message.
+                     * 获取
+                     * @return Message 
                      * 
                      */
                     std::string GetMessage() const;
 
                     /**
-                     * 设置Error message.
-                     * @param _message Error message.
+                     * 设置
+                     * @param _message 
                      * 
                      */
                     void SetMessage(const std::string& _message);
@@ -133,15 +133,15 @@ namespace TencentCloud
                     bool MessageHasBeenSet() const;
 
                     /**
-                     * 获取Task progress, with a value range of [0-100].
-                     * @return Progress Task progress, with a value range of [0-100].
+                     * 获取
+                     * @return Progress 
                      * 
                      */
                     int64_t GetProgress() const;
 
                     /**
-                     * 设置Task progress, with a value range of [0-100].
-                     * @param _progress Task progress, with a value range of [0-100].
+                     * 设置
+                     * @param _progress 
                      * 
                      */
                     void SetProgress(const int64_t& _progress);
@@ -154,15 +154,15 @@ namespace TencentCloud
                     bool ProgressHasBeenSet() const;
 
                     /**
-                     * 获取Input information for asynchronous task processing of images.
-                     * @return Input Input information for asynchronous task processing of images.
+                     * 获取
+                     * @return Input 
                      * 
                      */
                     ProcessImageAsyncInput GetInput() const;
 
                     /**
-                     * 设置Input information for asynchronous task processing of images.
-                     * @param _input Input information for asynchronous task processing of images.
+                     * 设置
+                     * @param _input 
                      * 
                      */
                     void SetInput(const ProcessImageAsyncInput& _input);
@@ -175,15 +175,15 @@ namespace TencentCloud
                     bool InputHasBeenSet() const;
 
                     /**
-                     * 获取Output information of asynchronous image processing tasks.
-                     * @return Output Output information of asynchronous image processing tasks.
+                     * 获取
+                     * @return Output 
                      * 
                      */
                     ProcessImageAsyncOutput GetOutput() const;
 
                     /**
-                     * 设置Output information of asynchronous image processing tasks.
-                     * @param _output Output information of asynchronous image processing tasks.
+                     * 设置
+                     * @param _output 
                      * 
                      */
                     void SetOutput(const ProcessImageAsyncOutput& _output);
@@ -196,15 +196,15 @@ namespace TencentCloud
                     bool OutputHasBeenSet() const;
 
                     /**
-                     * 获取Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
-                     * @return SessionId Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
+                     * 获取
+                     * @return SessionId 
                      * 
                      */
                     std::string GetSessionId() const;
 
                     /**
-                     * 设置Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
-                     * @param _sessionId Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
+                     * 设置
+                     * @param _sessionId 
                      * 
                      */
                     void SetSessionId(const std::string& _sessionId);
@@ -217,15 +217,15 @@ namespace TencentCloud
                     bool SessionIdHasBeenSet() const;
 
                     /**
-                     * 获取Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
-                     * @return SessionContext Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
+                     * 获取
+                     * @return SessionContext 
                      * 
                      */
                     std::string GetSessionContext() const;
 
                     /**
-                     * 设置Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
-                     * @param _sessionContext Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
+                     * 设置
+                     * @param _sessionContext 
                      * 
                      */
                     void SetSessionContext(const std::string& _sessionContext);
@@ -240,55 +240,55 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Task ID.
+                     * 
                      */
                     std::string m_taskId;
                     bool m_taskIdHasBeenSet;
 
                     /**
-                     * Task status. Value: <li>PROCESSING: Processing;</li><li>FINISH: Completed.</li>
+                     * 
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Error code. Returns a non-zero error code for source error. For 0, please use the ErrCode of each specific task.
+                     * 
                      */
                     int64_t m_errCode;
                     bool m_errCodeHasBeenSet;
 
                     /**
-                     * Error message.
+                     * 
                      */
                     std::string m_message;
                     bool m_messageHasBeenSet;
 
                     /**
-                     * Task progress, with a value range of [0-100].
+                     * 
                      */
                     int64_t m_progress;
                     bool m_progressHasBeenSet;
 
                     /**
-                     * Input information for asynchronous task processing of images.
+                     * 
                      */
                     ProcessImageAsyncInput m_input;
                     bool m_inputHasBeenSet;
 
                     /**
-                     * Output information of asynchronous image processing tasks.
+                     * 
                      */
                     ProcessImageAsyncOutput m_output;
                     bool m_outputHasBeenSet;
 
                     /**
-                     * Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
+                     * 
                      */
                     std::string m_sessionId;
                     bool m_sessionIdHasBeenSet;
 
                     /**
-                     * Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
+                     * 
                      */
                     std::string m_sessionContext;
                     bool m_sessionContextHasBeenSet;

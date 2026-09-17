@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Task ID of the video processing task.
-                     * @return TaskId Task ID of the video processing task.
+                     * 获取
+                     * @return TaskId 
                      * 
                      */
                     std::string GetTaskId() const;
 
                     /**
-                     * 设置Task ID of the video processing task.
-                     * @param _taskId Task ID of the video processing task.
+                     * 设置
+                     * @param _taskId 
                      * 
                      */
                     void SetTaskId(const std::string& _taskId);
@@ -64,19 +64,15 @@ namespace TencentCloud
                     bool TaskIdHasBeenSet() const;
 
                     /**
-                     * 获取Operation type. Value ranges from...to...
-<li>Abort: Terminate task. Only terminate initiated and pending tasks (WAITING).</li>
-                     * @return OperationType Operation type. Value ranges from...to...
-<li>Abort: Terminate task. Only terminate initiated and pending tasks (WAITING).</li>
+                     * 获取
+                     * @return OperationType 
                      * 
                      */
                     std::string GetOperationType() const;
 
                     /**
-                     * 设置Operation type. Value ranges from...to...
-<li>Abort: Terminate task. Only terminate initiated and pending tasks (WAITING).</li>
-                     * @param _operationType Operation type. Value ranges from...to...
-<li>Abort: Terminate task. Only terminate initiated and pending tasks (WAITING).</li>
+                     * 设置
+                     * @param _operationType 
                      * 
                      */
                     void SetOperationType(const std::string& _operationType);
@@ -89,15 +85,15 @@ namespace TencentCloud
                     bool OperationTypeHasBeenSet() const;
 
                     /**
-                     * 获取<b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
-                     * @return SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+                     * 获取
+                     * @return SubAppId 
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置<b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
-                     * @param _subAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+                     * 设置
+                     * @param _subAppId 
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -112,20 +108,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Task ID of the video processing task.
+                     * 
                      */
                     std::string m_taskId;
                     bool m_taskIdHasBeenSet;
 
                     /**
-                     * Operation type. Value ranges from...to...
-<li>Abort: Terminate task. Only terminate initiated and pending tasks (WAITING).</li>
+                     * 
                      */
                     std::string m_operationType;
                     bool m_operationTypeHasBeenSet;
 
                     /**
-                     * <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+                     * 
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;

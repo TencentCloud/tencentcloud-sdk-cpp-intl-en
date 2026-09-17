@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Reserved field, used for special purpose.
-                     * @return ExtInfo Reserved field, used for special purpose.
+                     * 获取
+                     * @return ExtInfo 
                      * 
                      */
                     std::string GetExtInfo() const;
 
                     /**
-                     * 设置Reserved field, used for special purpose.
-                     * @param _extInfo Reserved field, used for special purpose.
+                     * 设置
+                     * @param _extInfo 
                      * 
                      */
                     void SetExtInfo(const std::string& _extInfo);
@@ -64,19 +64,15 @@ namespace TencentCloud
                     bool ExtInfoHasBeenSet() const;
 
                     /**
-                     * 获取<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created applications).</b>
-
-                     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created applications).</b>
-
+                     * 获取
+                     * @return SubAppId 
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created applications).</b>
-
-                     * @param _subAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created applications).</b>
-
+                     * 设置
+                     * @param _subAppId 
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -91,14 +87,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Reserved field, used for special purpose.
+                     * 
                      */
                     std::string m_extInfo;
                     bool m_extInfoHasBeenSet;
 
                     /**
-                     * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created applications).</b>
-
+                     * 
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;

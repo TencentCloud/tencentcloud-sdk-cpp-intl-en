@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return LeftOffset 
+                     * 获取Left margin offset percentage, picture in picture range 0-99, left offset+right offset<100; Return range 0-50, left offset+right offset<100
+                     * @return LeftOffset Left margin offset percentage, picture in picture range 0-99, left offset+right offset<100; Return range 0-50, left offset+right offset<100
                      * 
                      */
                     uint64_t GetLeftOffset() const;
 
                     /**
-                     * 设置
-                     * @param _leftOffset 
+                     * 设置Left margin offset percentage, picture in picture range 0-99, left offset+right offset<100; Return range 0-50, left offset+right offset<100
+                     * @param _leftOffset Left margin offset percentage, picture in picture range 0-99, left offset+right offset<100; Return range 0-50, left offset+right offset<100
                      * 
                      */
                     void SetLeftOffset(const uint64_t& _leftOffset);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool LeftOffsetHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return RightOffset 
+                     * 获取The offset percentage of the right margin, picture in picture range 0-99, left offset+right offset<100; Return range 0-50, left offset+right offset<100
+                     * @return RightOffset The offset percentage of the right margin, picture in picture range 0-99, left offset+right offset<100; Return range 0-50, left offset+right offset<100
                      * 
                      */
                     uint64_t GetRightOffset() const;
 
                     /**
-                     * 设置
-                     * @param _rightOffset 
+                     * 设置The offset percentage of the right margin, picture in picture range 0-99, left offset+right offset<100; Return range 0-50, left offset+right offset<100
+                     * @param _rightOffset The offset percentage of the right margin, picture in picture range 0-99, left offset+right offset<100; Return range 0-50, left offset+right offset<100
                      * 
                      */
                     void SetRightOffset(const uint64_t& _rightOffset);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool RightOffsetHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return BottomOffset 
+                     * 获取Offset percentage of bottom margin, range 0-50
+                     * @return BottomOffset Offset percentage of bottom margin, range 0-50
                      * 
                      */
                     uint64_t GetBottomOffset() const;
 
                     /**
-                     * 设置
-                     * @param _bottomOffset 
+                     * 设置Offset percentage of bottom margin, range 0-50
+                     * @param _bottomOffset Offset percentage of bottom margin, range 0-50
                      * 
                      */
                     void SetBottomOffset(const uint64_t& _bottomOffset);
@@ -112,19 +112,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Left margin offset percentage, picture in picture range 0-99, left offset+right offset<100; Return range 0-50, left offset+right offset<100
                      */
                     uint64_t m_leftOffset;
                     bool m_leftOffsetHasBeenSet;
 
                     /**
-                     * 
+                     * The offset percentage of the right margin, picture in picture range 0-99, left offset+right offset<100; Return range 0-50, left offset+right offset<100
                      */
                     uint64_t m_rightOffset;
                     bool m_rightOffsetHasBeenSet;
 
                     /**
-                     * 
+                     * Offset percentage of bottom margin, range 0-50
                      */
                     uint64_t m_bottomOffset;
                     bool m_bottomOffsetHasBeenSet;

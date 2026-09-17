@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * High dynamic range (HDR) configuration.
+                * 
                 */
                 class HDRInfo : public AbstractModel
                 {
@@ -47,27 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether to enable HDR. Valid values:
-<li>`ON`</li>
-<li>`OFF`</li>
-Default value: `OFF`.
-                     * @return Switch Whether to enable HDR. Valid values:
-<li>`ON`</li>
-<li>`OFF`</li>
-Default value: `OFF`.
+                     * 获取
+                     * @return Switch 
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Whether to enable HDR. Valid values:
-<li>`ON`</li>
-<li>`OFF`</li>
-Default value: `OFF`.
-                     * @param _switch Whether to enable HDR. Valid values:
-<li>`ON`</li>
-<li>`OFF`</li>
-Default value: `OFF`.
+                     * 设置
+                     * @param _switch 
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -80,39 +68,15 @@ Default value: `OFF`.
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取High dynamic range type. Valid values:
-<li>hdr10: means the hdr10 standard;</li>
-<li>hlg: refers to the hlg standard.</li>
-
-Note:
-<li>Valid only when the high dynamic range type control switch is ON.</li>
-<li>Valid when the video stream encoding format Codec of the video output parameter specified in the target parameter is libx264 or libx265.</li>
-                     * @return Type High dynamic range type. Valid values:
-<li>hdr10: means the hdr10 standard;</li>
-<li>hlg: refers to the hlg standard.</li>
-
-Note:
-<li>Valid only when the high dynamic range type control switch is ON.</li>
-<li>Valid when the video stream encoding format Codec of the video output parameter specified in the target parameter is libx264 or libx265.</li>
+                     * 获取
+                     * @return Type 
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置High dynamic range type. Valid values:
-<li>hdr10: means the hdr10 standard;</li>
-<li>hlg: refers to the hlg standard.</li>
-
-Note:
-<li>Valid only when the high dynamic range type control switch is ON.</li>
-<li>Valid when the video stream encoding format Codec of the video output parameter specified in the target parameter is libx264 or libx265.</li>
-                     * @param _type High dynamic range type. Valid values:
-<li>hdr10: means the hdr10 standard;</li>
-<li>hlg: refers to the hlg standard.</li>
-
-Note:
-<li>Valid only when the high dynamic range type control switch is ON.</li>
-<li>Valid when the video stream encoding format Codec of the video output parameter specified in the target parameter is libx264 or libx265.</li>
+                     * 设置
+                     * @param _type 
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -127,22 +91,13 @@ Note:
                 private:
 
                     /**
-                     * Whether to enable HDR. Valid values:
-<li>`ON`</li>
-<li>`OFF`</li>
-Default value: `OFF`.
+                     * 
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * High dynamic range type. Valid values:
-<li>hdr10: means the hdr10 standard;</li>
-<li>hlg: refers to the hlg standard.</li>
-
-Note:
-<li>Valid only when the high dynamic range type control switch is ON.</li>
-<li>Valid when the video stream encoding format Codec of the video output parameter specified in the target parameter is libx264 or libx265.</li>
+                     * 
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;

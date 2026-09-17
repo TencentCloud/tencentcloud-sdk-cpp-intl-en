@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Trimmed video address.</p>
-                     * @return Url <p>Trimmed video address.</p>
+                     * 获取
+                     * @return Url 
                      * 
                      */
                     std::string GetUrl() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool UrlHasBeenSet() const;
 
                     /**
-                     * 获取<p>Cropped video metadata. Currently, the <code>Size</code>, <code>Rotate</code>, <code>VideoDuration</code>, and <code>AudioDuration</code> fields are temporarily default with no real data.</p>
-                     * @return MetaData <p>Cropped video metadata. Currently, the <code>Size</code>, <code>Rotate</code>, <code>VideoDuration</code>, and <code>AudioDuration</code> fields are temporarily default with no real data.</p>
+                     * 获取
+                     * @return MetaData 
                      * 
                      */
                     MediaMetaData GetMetaData() const;
@@ -73,8 +73,8 @@ namespace TencentCloud
                     bool MetaDataHasBeenSet() const;
 
                     /**
-                     * 获取<p>Unique identifier of media file for post-editing solidified video.</p>
-                     * @return FileId <p>Unique identifier of media file for post-editing solidified video.</p>
+                     * 获取
+                     * @return FileId 
                      * 
                      */
                     std::string GetFileId() const;
@@ -87,8 +87,8 @@ namespace TencentCloud
                     bool FileIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>ID of the edited video task flow after solidification.</p>
-                     * @return TaskId <p>ID of the edited video task flow after solidification.</p>
+                     * 获取
+                     * @return TaskId 
                      * 
                      */
                     std::string GetTaskId() const;
@@ -103,25 +103,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Trimmed video address.</p>
+                     * 
                      */
                     std::string m_url;
                     bool m_urlHasBeenSet;
 
                     /**
-                     * <p>Cropped video metadata. Currently, the <code>Size</code>, <code>Rotate</code>, <code>VideoDuration</code>, and <code>AudioDuration</code> fields are temporarily default with no real data.</p>
+                     * 
                      */
                     MediaMetaData m_metaData;
                     bool m_metaDataHasBeenSet;
 
                     /**
-                     * <p>Unique identifier of media file for post-editing solidified video.</p>
+                     * 
                      */
                     std::string m_fileId;
                     bool m_fileIdHasBeenSet;
 
                     /**
-                     * <p>ID of the edited video task flow after solidification.</p>
+                     * 
                      */
                     std::string m_taskId;
                     bool m_taskIdHasBeenSet;

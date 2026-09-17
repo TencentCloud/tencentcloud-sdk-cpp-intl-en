@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Video segment containing OCR-detected suspicious content
+                * 
                 */
                 class MediaContentReviewOcrTextSegmentItem : public AbstractModel
                 {
@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Start time offset of suspected segment in seconds.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return StartTimeOffset Start time offset of suspected segment in seconds.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return StartTimeOffset 
                      * 
                      */
                     double GetStartTimeOffset() const;
 
                     /**
-                     * 设置Start time offset of suspected segment in seconds.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _startTimeOffset Start time offset of suspected segment in seconds.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _startTimeOffset 
                      * 
                      */
                     void SetStartTimeOffset(const double& _startTimeOffset);
@@ -72,19 +68,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool StartTimeOffsetHasBeenSet() const;
 
                     /**
-                     * 获取End time offset of suspected segment in seconds.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return EndTimeOffset End time offset of suspected segment in seconds.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return EndTimeOffset 
                      * 
                      */
                     double GetEndTimeOffset() const;
 
                     /**
-                     * 设置End time offset of suspected segment in seconds.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _endTimeOffset End time offset of suspected segment in seconds.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _endTimeOffset 
                      * 
                      */
                     void SetEndTimeOffset(const double& _endTimeOffset);
@@ -97,19 +89,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool EndTimeOffsetHasBeenSet() const;
 
                     /**
-                     * 获取Confidence of suspected segment.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Confidence Confidence of suspected segment.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return Confidence 
                      * 
                      */
                     double GetConfidence() const;
 
                     /**
-                     * 设置Confidence of suspected segment.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _confidence Confidence of suspected segment.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _confidence 
                      * 
                      */
                     void SetConfidence(const double& _confidence);
@@ -122,27 +110,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool ConfidenceHasBeenSet() const;
 
                     /**
-                     * 获取Processing suggestion for the detected suspicious content. Valid values:
-<li>pass</li>
-<li>review</li>
-<li>block</li>
-                     * @return Suggestion Processing suggestion for the detected suspicious content. Valid values:
-<li>pass</li>
-<li>review</li>
-<li>block</li>
+                     * 获取
+                     * @return Suggestion 
                      * 
                      */
                     std::string GetSuggestion() const;
 
                     /**
-                     * 设置Processing suggestion for the detected suspicious content. Valid values:
-<li>pass</li>
-<li>review</li>
-<li>block</li>
-                     * @param _suggestion Processing suggestion for the detected suspicious content. Valid values:
-<li>pass</li>
-<li>review</li>
-<li>block</li>
+                     * 设置
+                     * @param _suggestion 
                      * 
                      */
                     void SetSuggestion(const std::string& _suggestion);
@@ -155,19 +131,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool SuggestionHasBeenSet() const;
 
                     /**
-                     * 获取List of suspected keywords.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return KeywordSet List of suspected keywords.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return KeywordSet 
                      * 
                      */
                     std::vector<std::string> GetKeywordSet() const;
 
                     /**
-                     * 设置List of suspected keywords.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _keywordSet List of suspected keywords.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _keywordSet 
                      * 
                      */
                     void SetKeywordSet(const std::vector<std::string>& _keywordSet);
@@ -180,19 +152,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool KeywordSetHasBeenSet() const;
 
                     /**
-                     * 获取Zone coordinates (at the pixel level) of suspected text: [x1, y1, x2, y2], i.e., the coordinates of the top-left and bottom-right corners.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return AreaCoordSet Zone coordinates (at the pixel level) of suspected text: [x1, y1, x2, y2], i.e., the coordinates of the top-left and bottom-right corners.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return AreaCoordSet 
                      * 
                      */
                     std::vector<int64_t> GetAreaCoordSet() const;
 
                     /**
-                     * 设置Zone coordinates (at the pixel level) of suspected text: [x1, y1, x2, y2], i.e., the coordinates of the top-left and bottom-right corners.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _areaCoordSet Zone coordinates (at the pixel level) of suspected text: [x1, y1, x2, y2], i.e., the coordinates of the top-left and bottom-right corners.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _areaCoordSet 
                      * 
                      */
                     void SetAreaCoordSet(const std::vector<int64_t>& _areaCoordSet);
@@ -205,19 +173,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool AreaCoordSetHasBeenSet() const;
 
                     /**
-                     * 获取URL of a suspected image (which will not be permanently stored
-and will be deleted after `PicUrlExpireTime`).
-                     * @return Url URL of a suspected image (which will not be permanently stored
-and will be deleted after `PicUrlExpireTime`).
+                     * 获取
+                     * @return Url 
                      * 
                      */
                     std::string GetUrl() const;
 
                     /**
-                     * 设置URL of a suspected image (which will not be permanently stored
-and will be deleted after `PicUrlExpireTime`).
-                     * @param _url URL of a suspected image (which will not be permanently stored
-and will be deleted after `PicUrlExpireTime`).
+                     * 设置
+                     * @param _url 
                      * 
                      */
                     void SetUrl(const std::string& _url);
@@ -230,15 +194,15 @@ and will be deleted after `PicUrlExpireTime`).
                     bool UrlHasBeenSet() const;
 
                     /**
-                     * 获取Expiration time of suspected image URL in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
-                     * @return PicUrlExpireTime Expiration time of suspected image URL in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 获取
+                     * @return PicUrlExpireTime 
                      * 
                      */
                     std::string GetPicUrlExpireTime() const;
 
                     /**
-                     * 设置Expiration time of suspected image URL in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
-                     * @param _picUrlExpireTime Expiration time of suspected image URL in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 设置
+                     * @param _picUrlExpireTime 
                      * 
                      */
                     void SetPicUrlExpireTime(const std::string& _picUrlExpireTime);
@@ -253,58 +217,49 @@ and will be deleted after `PicUrlExpireTime`).
                 private:
 
                     /**
-                     * Start time offset of suspected segment in seconds.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     double m_startTimeOffset;
                     bool m_startTimeOffsetHasBeenSet;
 
                     /**
-                     * End time offset of suspected segment in seconds.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     double m_endTimeOffset;
                     bool m_endTimeOffsetHasBeenSet;
 
                     /**
-                     * Confidence of suspected segment.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     double m_confidence;
                     bool m_confidenceHasBeenSet;
 
                     /**
-                     * Processing suggestion for the detected suspicious content. Valid values:
-<li>pass</li>
-<li>review</li>
-<li>block</li>
+                     * 
                      */
                     std::string m_suggestion;
                     bool m_suggestionHasBeenSet;
 
                     /**
-                     * List of suspected keywords.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> m_keywordSet;
                     bool m_keywordSetHasBeenSet;
 
                     /**
-                     * Zone coordinates (at the pixel level) of suspected text: [x1, y1, x2, y2], i.e., the coordinates of the top-left and bottom-right corners.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<int64_t> m_areaCoordSet;
                     bool m_areaCoordSetHasBeenSet;
 
                     /**
-                     * URL of a suspected image (which will not be permanently stored
-and will be deleted after `PicUrlExpireTime`).
+                     * 
                      */
                     std::string m_url;
                     bool m_urlHasBeenSet;
 
                     /**
-                     * Expiration time of suspected image URL in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 
                      */
                     std::string m_picUrlExpireTime;
                     bool m_picUrlExpireTimeHasBeenSet;

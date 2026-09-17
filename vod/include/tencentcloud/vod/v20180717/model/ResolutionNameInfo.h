@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Player substream name information
+                * 
                 */
                 class ResolutionNameInfo : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Length of video short side in px.
-                     * @return MinEdgeLength Length of video short side in px.
+                     * 获取
+                     * @return MinEdgeLength 
                      * 
                      */
                     uint64_t GetMinEdgeLength() const;
 
                     /**
-                     * 设置Length of video short side in px.
-                     * @param _minEdgeLength Length of video short side in px.
+                     * 设置
+                     * @param _minEdgeLength 
                      * 
                      */
                     void SetMinEdgeLength(const uint64_t& _minEdgeLength);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool MinEdgeLengthHasBeenSet() const;
 
                     /**
-                     * 获取Display name.
-                     * @return Name Display name.
+                     * 获取
+                     * @return Name 
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Display name.
-                     * @param _name Display name.
+                     * 设置
+                     * @param _name 
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Length of video short side in px.
+                     * 
                      */
                     uint64_t m_minEdgeLength;
                     bool m_minEdgeLengthHasBeenSet;
 
                     /**
-                     * Display name.
+                     * 
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;

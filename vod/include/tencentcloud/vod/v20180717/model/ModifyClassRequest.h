@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Category ID
-                     * @return ClassId Category ID
+                     * 获取
+                     * @return ClassId 
                      * 
                      */
                     uint64_t GetClassId() const;
 
                     /**
-                     * 设置Category ID
-                     * @param _classId Category ID
+                     * 设置
+                     * @param _classId 
                      * 
                      */
                     void SetClassId(const uint64_t& _classId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool ClassIdHasBeenSet() const;
 
                     /**
-                     * 获取Category name. Length limit: 1-64 characters.
-                     * @return ClassName Category name. Length limit: 1-64 characters.
+                     * 获取
+                     * @return ClassName 
                      * 
                      */
                     std::string GetClassName() const;
 
                     /**
-                     * 设置Category name. Length limit: 1-64 characters.
-                     * @param _className Category name. Length limit: 1-64 characters.
+                     * 设置
+                     * @param _className 
                      * 
                      */
                     void SetClassName(const std::string& _className);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool ClassNameHasBeenSet() const;
 
                     /**
-                     * 获取<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
-                     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+                     * 获取
+                     * @return SubAppId 
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
-                     * @param _subAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+                     * 设置
+                     * @param _subAppId 
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -108,19 +108,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Category ID
+                     * 
                      */
                     uint64_t m_classId;
                     bool m_classIdHasBeenSet;
 
                     /**
-                     * Category name. Length limit: 1-64 characters.
+                     * 
                      */
                     std::string m_className;
                     bool m_classNameHasBeenSet;
 
                     /**
-                     * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+                     * 
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;

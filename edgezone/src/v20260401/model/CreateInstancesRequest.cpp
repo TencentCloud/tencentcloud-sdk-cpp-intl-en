@@ -25,11 +25,13 @@ using namespace std;
 CreateInstancesRequest::CreateInstancesRequest() :
     m_zoneHasBeenSet(false),
     m_instanceTypeHasBeenSet(false),
-    m_instanceNameHasBeenSet(false),
     m_privateNetworkIdHasBeenSet(false),
     m_publicNetworkIdHasBeenSet(false),
+    m_instanceNameHasBeenSet(false),
     m_imageIdHasBeenSet(false),
     m_instanceCountHasBeenSet(false),
+    m_passwordHasBeenSet(false),
+    m_sSHKeyHasBeenSet(false),
     m_versionNumberHasBeenSet(false),
     m_enableIpv6HasBeenSet(false)
 {
@@ -58,14 +60,6 @@ string CreateInstancesRequest::ToJsonString() const
         d.AddMember(iKey, rapidjson::Value(m_instanceType.c_str(), allocator).Move(), allocator);
     }
 
-    if (m_instanceNameHasBeenSet)
-    {
-        rapidjson::Value iKey(rapidjson::kStringType);
-        string key = "InstanceName";
-        iKey.SetString(key.c_str(), allocator);
-        d.AddMember(iKey, rapidjson::Value(m_instanceName.c_str(), allocator).Move(), allocator);
-    }
-
     if (m_privateNetworkIdHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
@@ -82,6 +76,14 @@ string CreateInstancesRequest::ToJsonString() const
         d.AddMember(iKey, rapidjson::Value(m_publicNetworkId.c_str(), allocator).Move(), allocator);
     }
 
+    if (m_instanceNameHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "InstanceName";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_instanceName.c_str(), allocator).Move(), allocator);
+    }
+
     if (m_imageIdHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
@@ -96,6 +98,22 @@ string CreateInstancesRequest::ToJsonString() const
         string key = "InstanceCount";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, m_instanceCount, allocator);
+    }
+
+    if (m_passwordHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Password";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_password.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_sSHKeyHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SSHKey";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_sSHKey.c_str(), allocator).Move(), allocator);
     }
 
     if (m_versionNumberHasBeenSet)
@@ -154,22 +172,6 @@ bool CreateInstancesRequest::InstanceTypeHasBeenSet() const
     return m_instanceTypeHasBeenSet;
 }
 
-string CreateInstancesRequest::GetInstanceName() const
-{
-    return m_instanceName;
-}
-
-void CreateInstancesRequest::SetInstanceName(const string& _instanceName)
-{
-    m_instanceName = _instanceName;
-    m_instanceNameHasBeenSet = true;
-}
-
-bool CreateInstancesRequest::InstanceNameHasBeenSet() const
-{
-    return m_instanceNameHasBeenSet;
-}
-
 string CreateInstancesRequest::GetPrivateNetworkId() const
 {
     return m_privateNetworkId;
@@ -202,6 +204,22 @@ bool CreateInstancesRequest::PublicNetworkIdHasBeenSet() const
     return m_publicNetworkIdHasBeenSet;
 }
 
+string CreateInstancesRequest::GetInstanceName() const
+{
+    return m_instanceName;
+}
+
+void CreateInstancesRequest::SetInstanceName(const string& _instanceName)
+{
+    m_instanceName = _instanceName;
+    m_instanceNameHasBeenSet = true;
+}
+
+bool CreateInstancesRequest::InstanceNameHasBeenSet() const
+{
+    return m_instanceNameHasBeenSet;
+}
+
 string CreateInstancesRequest::GetImageId() const
 {
     return m_imageId;
@@ -232,6 +250,38 @@ void CreateInstancesRequest::SetInstanceCount(const uint64_t& _instanceCount)
 bool CreateInstancesRequest::InstanceCountHasBeenSet() const
 {
     return m_instanceCountHasBeenSet;
+}
+
+string CreateInstancesRequest::GetPassword() const
+{
+    return m_password;
+}
+
+void CreateInstancesRequest::SetPassword(const string& _password)
+{
+    m_password = _password;
+    m_passwordHasBeenSet = true;
+}
+
+bool CreateInstancesRequest::PasswordHasBeenSet() const
+{
+    return m_passwordHasBeenSet;
+}
+
+string CreateInstancesRequest::GetSSHKey() const
+{
+    return m_sSHKey;
+}
+
+void CreateInstancesRequest::SetSSHKey(const string& _sSHKey)
+{
+    m_sSHKey = _sSHKey;
+    m_sSHKeyHasBeenSet = true;
+}
+
+bool CreateInstancesRequest::SSHKeyHasBeenSet() const
+{
+    return m_sSHKeyHasBeenSet;
 }
 
 string CreateInstancesRequest::GetVersionNumber() const

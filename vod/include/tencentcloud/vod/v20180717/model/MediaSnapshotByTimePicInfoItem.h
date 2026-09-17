@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Time point screenshot information
+                * 
                 */
                 class MediaSnapshotByTimePicInfoItem : public AbstractModel
                 {
@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Time offset corresponding to the screenshot in the video in <font color=red>milliseconds</font>.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return TimeOffset Time offset corresponding to the screenshot in the video in <font color=red>milliseconds</font>.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return TimeOffset 
                      * 
                      */
                     double GetTimeOffset() const;
 
                     /**
-                     * 设置Time offset corresponding to the screenshot in the video in <font color=red>milliseconds</font>.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _timeOffset Time offset corresponding to the screenshot in the video in <font color=red>milliseconds</font>.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _timeOffset 
                      * 
                      */
                     void SetTimeOffset(const double& _timeOffset);
@@ -72,19 +68,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool TimeOffsetHasBeenSet() const;
 
                     /**
-                     * 获取Screenshot URL.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Url Screenshot URL.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return Url 
                      * 
                      */
                     std::string GetUrl() const;
 
                     /**
-                     * 设置Screenshot URL.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _url Screenshot URL.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _url 
                      * 
                      */
                     void SetUrl(const std::string& _url);
@@ -97,19 +89,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool UrlHasBeenSet() const;
 
                     /**
-                     * 获取List of watermarking template IDs if the screenshots are watermarked.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return WaterMarkDefinition List of watermarking template IDs if the screenshots are watermarked.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return WaterMarkDefinition 
                      * 
                      */
                     std::vector<int64_t> GetWaterMarkDefinition() const;
 
                     /**
-                     * 设置List of watermarking template IDs if the screenshots are watermarked.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _waterMarkDefinition List of watermarking template IDs if the screenshots are watermarked.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _waterMarkDefinition 
                      * 
                      */
                     void SetWaterMarkDefinition(const std::vector<int64_t>& _waterMarkDefinition);
@@ -124,22 +112,19 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Time offset corresponding to the screenshot in the video in <font color=red>milliseconds</font>.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     double m_timeOffset;
                     bool m_timeOffsetHasBeenSet;
 
                     /**
-                     * Screenshot URL.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string m_url;
                     bool m_urlHasBeenSet;
 
                     /**
-                     * List of watermarking template IDs if the screenshots are watermarked.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<int64_t> m_waterMarkDefinition;
                     bool m_waterMarkDefinitionHasBeenSet;

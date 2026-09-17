@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * IP access restriction rules currently support configuring IP blocklist and allowlist.
+                * 
                 */
                 class IPFilterPolicy : public AbstractModel
                 {
@@ -47,23 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取IP access restriction status. Available values:
-<li>Enabled: enabled;</li>
-<li>Disabled: Disabled.</li>
-                     * @return Status IP access restriction status. Available values:
-<li>Enabled: enabled;</li>
-<li>Disabled: Disabled.</li>
+                     * 获取
+                     * @return Status 
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置IP access restriction status. Available values:
-<li>Enabled: enabled;</li>
-<li>Disabled: Disabled.</li>
-                     * @param _status IP access restriction status. Available values:
-<li>Enabled: enabled;</li>
-<li>Disabled: Disabled.</li>
+                     * 设置
+                     * @param _status 
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -76,19 +68,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取IP access restriction Type: <li>Black: blocklist method verification. Only IP requests that come from IPList in the list be intercepted.</li>
-<li>White: Whitelist method verification. Only IP requests from the IPList are allowed.</li>When the Status value is Enabled, the FilterType must be assigned a value.
-                     * @return FilterType IP access restriction Type: <li>Black: blocklist method verification. Only IP requests that come from IPList in the list be intercepted.</li>
-<li>White: Whitelist method verification. Only IP requests from the IPList are allowed.</li>When the Status value is Enabled, the FilterType must be assigned a value.
+                     * 获取
+                     * @return FilterType 
                      * 
                      */
                     std::string GetFilterType() const;
 
                     /**
-                     * 设置IP access restriction Type: <li>Black: blocklist method verification. Only IP requests that come from IPList in the list be intercepted.</li>
-<li>White: Whitelist method verification. Only IP requests from the IPList are allowed.</li>When the Status value is Enabled, the FilterType must be assigned a value.
-                     * @param _filterType IP access restriction Type: <li>Black: blocklist method verification. Only IP requests that come from IPList in the list be intercepted.</li>
-<li>White: Whitelist method verification. Only IP requests from the IPList are allowed.</li>When the Status value is Enabled, the FilterType must be assigned a value.
+                     * 设置
+                     * @param _filterType 
                      * 
                      */
                     void SetFilterType(const std::string& _filterType);
@@ -101,15 +89,15 @@ namespace TencentCloud
                     bool FilterTypeHasBeenSet() const;
 
                     /**
-                     * 获取IP list, supports IPV4 addresses in X.X.X.X format, IPV6 addresses in X:X:X:X:X:X:X:X format, or ranges in /N format (IPV4:1≤N≤32; IPV6:1≤N≤128). Up to 200 IPs or ranges can be filled. When Status value is Enabled, IPList must assign value.
-                     * @return IPList IP list, supports IPV4 addresses in X.X.X.X format, IPV6 addresses in X:X:X:X:X:X:X:X format, or ranges in /N format (IPV4:1≤N≤32; IPV6:1≤N≤128). Up to 200 IPs or ranges can be filled. When Status value is Enabled, IPList must assign value.
+                     * 获取
+                     * @return IPList 
                      * 
                      */
                     std::vector<std::string> GetIPList() const;
 
                     /**
-                     * 设置IP list, supports IPV4 addresses in X.X.X.X format, IPV6 addresses in X:X:X:X:X:X:X:X format, or ranges in /N format (IPV4:1≤N≤32; IPV6:1≤N≤128). Up to 200 IPs or ranges can be filled. When Status value is Enabled, IPList must assign value.
-                     * @param _iPList IP list, supports IPV4 addresses in X.X.X.X format, IPV6 addresses in X:X:X:X:X:X:X:X format, or ranges in /N format (IPV4:1≤N≤32; IPV6:1≤N≤128). Up to 200 IPs or ranges can be filled. When Status value is Enabled, IPList must assign value.
+                     * 设置
+                     * @param _iPList 
                      * 
                      */
                     void SetIPList(const std::vector<std::string>& _iPList);
@@ -124,22 +112,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * IP access restriction status. Available values:
-<li>Enabled: enabled;</li>
-<li>Disabled: Disabled.</li>
+                     * 
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * IP access restriction Type: <li>Black: blocklist method verification. Only IP requests that come from IPList in the list be intercepted.</li>
-<li>White: Whitelist method verification. Only IP requests from the IPList are allowed.</li>When the Status value is Enabled, the FilterType must be assigned a value.
+                     * 
                      */
                     std::string m_filterType;
                     bool m_filterTypeHasBeenSet;
 
                     /**
-                     * IP list, supports IPV4 addresses in X.X.X.X format, IPV6 addresses in X:X:X:X:X:X:X:X format, or ranges in /N format (IPV4:1≤N≤32; IPV6:1≤N≤128). Up to 200 IPs or ranges can be filled. When Status value is Enabled, IPList must assign value.
+                     * 
                      */
                     std::vector<std::string> m_iPList;
                     bool m_iPListHasBeenSet;

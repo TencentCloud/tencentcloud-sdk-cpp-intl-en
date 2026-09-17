@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Smart frame interpolation configuration.
+                * 
                 */
                 class VideoFrameInterpolationInfo : public AbstractModel
                 {
@@ -47,23 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether to enable smart frame interpolation. Valid values:
-<li>`ON`</li>
-<li>`OFF`</li>
-                     * @return Switch Whether to enable smart frame interpolation. Valid values:
-<li>`ON`</li>
-<li>`OFF`</li>
+                     * 获取
+                     * @return Switch 
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Whether to enable smart frame interpolation. Valid values:
-<li>`ON`</li>
-<li>`OFF`</li>
-                     * @param _switch Whether to enable smart frame interpolation. Valid values:
-<li>`ON`</li>
-<li>`OFF`</li>
+                     * 设置
+                     * @param _switch 
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -76,15 +68,15 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取The frame rate. Value range: (0, 100]. This parameter is valid only if `Switch` is `ON`. By default, the original frame rate will be used.
-                     * @return Fps The frame rate. Value range: (0, 100]. This parameter is valid only if `Switch` is `ON`. By default, the original frame rate will be used.
+                     * 获取
+                     * @return Fps 
                      * 
                      */
                     int64_t GetFps() const;
 
                     /**
-                     * 设置The frame rate. Value range: (0, 100]. This parameter is valid only if `Switch` is `ON`. By default, the original frame rate will be used.
-                     * @param _fps The frame rate. Value range: (0, 100]. This parameter is valid only if `Switch` is `ON`. By default, the original frame rate will be used.
+                     * 设置
+                     * @param _fps 
                      * 
                      */
                     void SetFps(const int64_t& _fps);
@@ -99,15 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Whether to enable smart frame interpolation. Valid values:
-<li>`ON`</li>
-<li>`OFF`</li>
+                     * 
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * The frame rate. Value range: (0, 100]. This parameter is valid only if `Switch` is `ON`. By default, the original frame rate will be used.
+                     * 
                      */
                     int64_t m_fps;
                     bool m_fpsHasBeenSet;

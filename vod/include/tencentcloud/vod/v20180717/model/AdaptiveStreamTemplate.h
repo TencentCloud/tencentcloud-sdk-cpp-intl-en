@@ -39,7 +39,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Adaptive bitrate streaming parameter template
+                * 
                 */
                 class AdaptiveStreamTemplate : public AbstractModel
                 {
@@ -51,15 +51,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Video parameter information.</p>
-                     * @return Video <p>Video parameter information.</p>
+                     * 获取
+                     * @return Video 
                      * 
                      */
                     VideoTemplateInfo GetVideo() const;
 
                     /**
-                     * 设置<p>Video parameter information.</p>
-                     * @param _video <p>Video parameter information.</p>
+                     * 设置
+                     * @param _video 
                      * 
                      */
                     void SetVideo(const VideoTemplateInfo& _video);
@@ -72,15 +72,15 @@ namespace TencentCloud
                     bool VideoHasBeenSet() const;
 
                     /**
-                     * 获取<p>Audio parameter info.</p>
-                     * @return Audio <p>Audio parameter info.</p>
+                     * 获取
+                     * @return Audio 
                      * 
                      */
                     AudioTemplateInfo GetAudio() const;
 
                     /**
-                     * 设置<p>Audio parameter info.</p>
-                     * @param _audio <p>Audio parameter info.</p>
+                     * 设置
+                     * @param _audio 
                      * 
                      */
                     void SetAudio(const AudioTemplateInfo& _audio);
@@ -93,15 +93,15 @@ namespace TencentCloud
                     bool AudioHasBeenSet() const;
 
                     /**
-                     * 获取<p>Remove audio stream. Parameter value range:</p><li>0: no,</li><li>1: yes.</li>
-                     * @return RemoveAudio <p>Remove audio stream. Parameter value range:</p><li>0: no,</li><li>1: yes.</li>
+                     * 获取
+                     * @return RemoveAudio 
                      * 
                      */
                     uint64_t GetRemoveAudio() const;
 
                     /**
-                     * 设置<p>Remove audio stream. Parameter value range:</p><li>0: no,</li><li>1: yes.</li>
-                     * @param _removeAudio <p>Remove audio stream. Parameter value range:</p><li>0: no,</li><li>1: yes.</li>
+                     * 设置
+                     * @param _removeAudio 
                      * 
                      */
                     void SetRemoveAudio(const uint64_t& _removeAudio);
@@ -114,15 +114,15 @@ namespace TencentCloud
                     bool RemoveAudioHasBeenSet() const;
 
                     /**
-                     * 获取<p>Remove video stream. Parameter value range:</p><li>0: no,</li><li>1: yes.</li>
-                     * @return RemoveVideo <p>Remove video stream. Parameter value range:</p><li>0: no,</li><li>1: yes.</li>
+                     * 获取
+                     * @return RemoveVideo 
                      * 
                      */
                     uint64_t GetRemoveVideo() const;
 
                     /**
-                     * 设置<p>Remove video stream. Parameter value range:</p><li>0: no,</li><li>1: yes.</li>
-                     * @param _removeVideo <p>Remove video stream. Parameter value range:</p><li>0: no,</li><li>1: yes.</li>
+                     * 设置
+                     * @param _removeVideo 
                      * 
                      */
                     void SetRemoveVideo(const uint64_t& _removeVideo);
@@ -135,19 +135,15 @@ namespace TencentCloud
                     bool RemoveVideoHasBeenSet() const;
 
                     /**
-                     * 获取<p>TSC transcoding parameter.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TEHDConfig <p>TSC transcoding parameter.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return TEHDConfig 
                      * 
                      */
                     TEHDConfig GetTEHDConfig() const;
 
                     /**
-                     * 设置<p>TSC transcoding parameter.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _tEHDConfig <p>TSC transcoding parameter.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _tEHDConfig 
                      * 
                      */
                     void SetTEHDConfig(const TEHDConfig& _tEHDConfig);
@@ -160,19 +156,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TEHDConfigHasBeenSet() const;
 
                     /**
-                     * 获取<p>Audio/Video enhancement configuration.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return EnhanceConfig <p>Audio/Video enhancement configuration.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return EnhanceConfig 
                      * 
                      */
                     EnhanceConfig GetEnhanceConfig() const;
 
                     /**
-                     * 设置<p>Audio/Video enhancement configuration.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _enhanceConfig <p>Audio/Video enhancement configuration.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _enhanceConfig 
                      * 
                      */
                     void SetEnhanceConfig(const EnhanceConfig& _enhanceConfig);
@@ -185,15 +177,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool EnhanceConfigHasBeenSet() const;
 
                     /**
-                     * 获取<p>Extended parameter.</p>
-                     * @return StdExtInfo <p>Extended parameter.</p>
+                     * 获取
+                     * @return StdExtInfo 
                      * 
                      */
                     std::string GetStdExtInfo() const;
 
                     /**
-                     * 设置<p>Extended parameter.</p>
-                     * @param _stdExtInfo <p>Extended parameter.</p>
+                     * 设置
+                     * @param _stdExtInfo 
                      * 
                      */
                     void SetStdExtInfo(const std::string& _stdExtInfo);
@@ -208,45 +200,43 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * <p>Video parameter information.</p>
+                     * 
                      */
                     VideoTemplateInfo m_video;
                     bool m_videoHasBeenSet;
 
                     /**
-                     * <p>Audio parameter info.</p>
+                     * 
                      */
                     AudioTemplateInfo m_audio;
                     bool m_audioHasBeenSet;
 
                     /**
-                     * <p>Remove audio stream. Parameter value range:</p><li>0: no,</li><li>1: yes.</li>
+                     * 
                      */
                     uint64_t m_removeAudio;
                     bool m_removeAudioHasBeenSet;
 
                     /**
-                     * <p>Remove video stream. Parameter value range:</p><li>0: no,</li><li>1: yes.</li>
+                     * 
                      */
                     uint64_t m_removeVideo;
                     bool m_removeVideoHasBeenSet;
 
                     /**
-                     * <p>TSC transcoding parameter.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     TEHDConfig m_tEHDConfig;
                     bool m_tEHDConfigHasBeenSet;
 
                     /**
-                     * <p>Audio/Video enhancement configuration.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     EnhanceConfig m_enhanceConfig;
                     bool m_enhanceConfigHasBeenSet;
 
                     /**
-                     * <p>Extended parameter.</p>
+                     * 
                      */
                     std::string m_stdExtInfo;
                     bool m_stdExtInfoHasBeenSet;

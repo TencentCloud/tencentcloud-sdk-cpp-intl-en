@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Super resolution configuration.
+                * 
                 */
                 class SuperResolutionInfo : public AbstractModel
                 {
@@ -47,23 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Super resolution control switch. Optional values:
-<li>ON: Enable super resolution;</li>
-<li>OFF: Disable screen super resolution.</li>
-                     * @return Switch Super resolution control switch. Optional values:
-<li>ON: Enable super resolution;</li>
-<li>OFF: Disable screen super resolution.</li>
+                     * 获取
+                     * @return Switch 
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Super resolution control switch. Optional values:
-<li>ON: Enable super resolution;</li>
-<li>OFF: Disable screen super resolution.</li>
-                     * @param _switch Super resolution control switch. Optional values:
-<li>ON: Enable super resolution;</li>
-<li>OFF: Disable screen super resolution.</li>
+                     * 设置
+                     * @param _switch 
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -76,27 +68,15 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取The super resolution type. This parameter is valid only if `Switch` is `ON`. Valid values:
-<li>`lq`: For low-resolution videos with obvious noise</li>
-<li>`hq`: For high-resolution videos</li>
-Default value: `lq`.
-                     * @return Type The super resolution type. This parameter is valid only if `Switch` is `ON`. Valid values:
-<li>`lq`: For low-resolution videos with obvious noise</li>
-<li>`hq`: For high-resolution videos</li>
-Default value: `lq`.
+                     * 获取
+                     * @return Type 
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置The super resolution type. This parameter is valid only if `Switch` is `ON`. Valid values:
-<li>`lq`: For low-resolution videos with obvious noise</li>
-<li>`hq`: For high-resolution videos</li>
-Default value: `lq`.
-                     * @param _type The super resolution type. This parameter is valid only if `Switch` is `ON`. Valid values:
-<li>`lq`: For low-resolution videos with obvious noise</li>
-<li>`hq`: For high-resolution videos</li>
-Default value: `lq`.
+                     * 设置
+                     * @param _type 
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -109,19 +89,15 @@ Default value: `lq`.
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取The ratio of the target resolution to the original resolution. Valid values: `2`.
-Default value: `2`.
-                     * @return Size The ratio of the target resolution to the original resolution. Valid values: `2`.
-Default value: `2`.
+                     * 获取
+                     * @return Size 
                      * 
                      */
                     int64_t GetSize() const;
 
                     /**
-                     * 设置The ratio of the target resolution to the original resolution. Valid values: `2`.
-Default value: `2`.
-                     * @param _size The ratio of the target resolution to the original resolution. Valid values: `2`.
-Default value: `2`.
+                     * 设置
+                     * @param _size 
                      * 
                      */
                     void SetSize(const int64_t& _size);
@@ -136,25 +112,19 @@ Default value: `2`.
                 private:
 
                     /**
-                     * Super resolution control switch. Optional values:
-<li>ON: Enable super resolution;</li>
-<li>OFF: Disable screen super resolution.</li>
+                     * 
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * The super resolution type. This parameter is valid only if `Switch` is `ON`. Valid values:
-<li>`lq`: For low-resolution videos with obvious noise</li>
-<li>`hq`: For high-resolution videos</li>
-Default value: `lq`.
+                     * 
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * The ratio of the target resolution to the original resolution. Valid values: `2`.
-Default value: `2`.
+                     * 
                      */
                     int64_t m_size;
                     bool m_sizeHasBeenSet;

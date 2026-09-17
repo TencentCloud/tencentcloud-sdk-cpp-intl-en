@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Adaptive bitrate task information.
+                * 
                 */
                 class ComplexAdaptiveDynamicStreamingTaskResult : public AbstractModel
                 {
@@ -49,27 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Task status. Valid values:
-<li>PROCESSING: Processing;</li>
-<li>SUCCESS: Completed;</li>
-<li>FAIL: Failed.</li>
-                     * @return Status Task status. Valid values:
-<li>PROCESSING: Processing;</li>
-<li>SUCCESS: Completed;</li>
-<li>FAIL: Failed.</li>
+                     * 获取
+                     * @return Status 
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置Task status. Valid values:
-<li>PROCESSING: Processing;</li>
-<li>SUCCESS: Completed;</li>
-<li>FAIL: Failed.</li>
-                     * @param _status Task status. Valid values:
-<li>PROCESSING: Processing;</li>
-<li>SUCCESS: Completed;</li>
-<li>FAIL: Failed.</li>
+                     * 设置
+                     * @param _status 
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -82,15 +70,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Error code. An empty string indicates success, and additional values indicate failure. For values, see the video processing error code list (https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
-                     * @return ErrCodeExt Error code. An empty string indicates success, and additional values indicate failure. For values, see the video processing error code list (https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+                     * 获取
+                     * @return ErrCodeExt 
                      * 
                      */
                     std::string GetErrCodeExt() const;
 
                     /**
-                     * 设置Error code. An empty string indicates success, and additional values indicate failure. For values, see the video processing error code list (https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
-                     * @param _errCodeExt Error code. An empty string indicates success, and additional values indicate failure. For values, see the video processing error code list (https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+                     * 设置
+                     * @param _errCodeExt 
                      * 
                      */
                     void SetErrCodeExt(const std::string& _errCodeExt);
@@ -103,15 +91,15 @@ namespace TencentCloud
                     bool ErrCodeExtHasBeenSet() const;
 
                     /**
-                     * 获取Error message.
-                     * @return Message Error message.
+                     * 获取
+                     * @return Message 
                      * 
                      */
                     std::string GetMessage() const;
 
                     /**
-                     * 设置Error message.
-                     * @param _message Error message.
+                     * 设置
+                     * @param _message 
                      * 
                      */
                     void SetMessage(const std::string& _message);
@@ -124,15 +112,15 @@ namespace TencentCloud
                     bool MessageHasBeenSet() const;
 
                     /**
-                     * 获取Transcoding progress, with a value range of [0-100].
-                     * @return Progress Transcoding progress, with a value range of [0-100].
+                     * 获取
+                     * @return Progress 
                      * 
                      */
                     int64_t GetProgress() const;
 
                     /**
-                     * 设置Transcoding progress, with a value range of [0-100].
-                     * @param _progress Transcoding progress, with a value range of [0-100].
+                     * 设置
+                     * @param _progress 
                      * 
                      */
                     void SetProgress(const int64_t& _progress);
@@ -145,15 +133,15 @@ namespace TencentCloud
                     bool ProgressHasBeenSet() const;
 
                     /**
-                     * 获取Input of adaptive bitrate streaming.
-                     * @return Input Input of adaptive bitrate streaming.
+                     * 获取
+                     * @return Input 
                      * 
                      */
                     ComplexAdaptiveDynamicStreamingTaskInput GetInput() const;
 
                     /**
-                     * 设置Input of adaptive bitrate streaming.
-                     * @param _input Input of adaptive bitrate streaming.
+                     * 设置
+                     * @param _input 
                      * 
                      */
                     void SetInput(const ComplexAdaptiveDynamicStreamingTaskInput& _input);
@@ -166,15 +154,15 @@ namespace TencentCloud
                     bool InputHasBeenSet() const;
 
                     /**
-                     * 获取Output of adaptive bitrate streaming.
-                     * @return Output Output of adaptive bitrate streaming.
+                     * 获取
+                     * @return Output 
                      * 
                      */
                     ComplexAdaptiveDynamicStreamingTaskOutput GetOutput() const;
 
                     /**
-                     * 设置Output of adaptive bitrate streaming.
-                     * @param _output Output of adaptive bitrate streaming.
+                     * 设置
+                     * @param _output 
                      * 
                      */
                     void SetOutput(const ComplexAdaptiveDynamicStreamingTaskOutput& _output);
@@ -189,40 +177,37 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Task status. Valid values:
-<li>PROCESSING: Processing;</li>
-<li>SUCCESS: Completed;</li>
-<li>FAIL: Failed.</li>
+                     * 
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Error code. An empty string indicates success, and additional values indicate failure. For values, see the video processing error code list (https://www.tencentcloud.com/document/product/266/50368?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
+                     * 
                      */
                     std::string m_errCodeExt;
                     bool m_errCodeExtHasBeenSet;
 
                     /**
-                     * Error message.
+                     * 
                      */
                     std::string m_message;
                     bool m_messageHasBeenSet;
 
                     /**
-                     * Transcoding progress, with a value range of [0-100].
+                     * 
                      */
                     int64_t m_progress;
                     bool m_progressHasBeenSet;
 
                     /**
-                     * Input of adaptive bitrate streaming.
+                     * 
                      */
                     ComplexAdaptiveDynamicStreamingTaskInput m_input;
                     bool m_inputHasBeenSet;
 
                     /**
-                     * Output of adaptive bitrate streaming.
+                     * 
                      */
                     ComplexAdaptiveDynamicStreamingTaskOutput m_output;
                     bool m_outputHasBeenSet;

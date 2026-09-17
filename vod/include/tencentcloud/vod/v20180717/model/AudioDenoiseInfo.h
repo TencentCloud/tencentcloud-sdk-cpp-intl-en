@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Noise removal configuration.
+                * 
                 */
                 class AudioDenoiseInfo : public AbstractModel
                 {
@@ -47,27 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether to enable noise removal. Valid values:
-<li>`ON`</li>
-<li>`OFF`</li>
-Default value: `OFF`.
-                     * @return Switch Whether to enable noise removal. Valid values:
-<li>`ON`</li>
-<li>`OFF`</li>
-Default value: `OFF`.
+                     * 获取
+                     * @return Switch 
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Whether to enable noise removal. Valid values:
-<li>`ON`</li>
-<li>`OFF`</li>
-Default value: `OFF`.
-                     * @param _switch Whether to enable noise removal. Valid values:
-<li>`ON`</li>
-<li>`OFF`</li>
-Default value: `OFF`.
+                     * 设置
+                     * @param _switch 
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -80,23 +68,15 @@ Default value: `OFF`.
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取Audio noise reduction type. Valid only when the audio noise reduction control switch is ON. Available values:
-<li>normal: normal audio noise reduction.</li>
-Default value: normal.
-                     * @return Type Audio noise reduction type. Valid only when the audio noise reduction control switch is ON. Available values:
-<li>normal: normal audio noise reduction.</li>
-Default value: normal.
+                     * 获取
+                     * @return Type 
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Audio noise reduction type. Valid only when the audio noise reduction control switch is ON. Available values:
-<li>normal: normal audio noise reduction.</li>
-Default value: normal.
-                     * @param _type Audio noise reduction type. Valid only when the audio noise reduction control switch is ON. Available values:
-<li>normal: normal audio noise reduction.</li>
-Default value: normal.
+                     * 设置
+                     * @param _type 
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -111,18 +91,13 @@ Default value: normal.
                 private:
 
                     /**
-                     * Whether to enable noise removal. Valid values:
-<li>`ON`</li>
-<li>`OFF`</li>
-Default value: `OFF`.
+                     * 
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * Audio noise reduction type. Valid only when the audio noise reduction control switch is ON. Available values:
-<li>normal: normal audio noise reduction.</li>
-Default value: normal.
+                     * 
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;

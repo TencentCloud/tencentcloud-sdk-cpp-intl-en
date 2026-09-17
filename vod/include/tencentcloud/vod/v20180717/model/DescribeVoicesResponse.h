@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Available timbre list.</p>
-                     * @return Voices <p>Available timbre list.</p>
+                     * 获取
+                     * @return Voices 
                      * 
                      */
                     std::vector<VoiceInfo> GetVoices() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool VoicesHasBeenSet() const;
 
                     /**
-                     * 获取<p>Total number of available voices</p>
-                     * @return TotalCount <p>Total number of available voices</p>
+                     * 获取
+                     * @return TotalCount 
                      * 
                      */
                     int64_t GetTotalCount() const;
@@ -75,13 +75,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Available timbre list.</p>
+                     * 
                      */
                     std::vector<VoiceInfo> m_voices;
                     bool m_voicesHasBeenSet;
 
                     /**
-                     * <p>Total number of available voices</p>
+                     * 
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;

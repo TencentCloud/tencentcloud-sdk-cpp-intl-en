@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Video segment containing detected politically sensitive content
+                * 
                 */
                 class MediaContentReviewPoliticalSegmentItem : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Start time offset of a suspected segment in seconds.
-                     * @return StartTimeOffset Start time offset of a suspected segment in seconds.
+                     * 获取
+                     * @return StartTimeOffset 
                      * 
                      */
                     double GetStartTimeOffset() const;
 
                     /**
-                     * 设置Start time offset of a suspected segment in seconds.
-                     * @param _startTimeOffset Start time offset of a suspected segment in seconds.
+                     * 设置
+                     * @param _startTimeOffset 
                      * 
                      */
                     void SetStartTimeOffset(const double& _startTimeOffset);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool StartTimeOffsetHasBeenSet() const;
 
                     /**
-                     * 获取End time offset of a suspected segment in seconds.
-                     * @return EndTimeOffset End time offset of a suspected segment in seconds.
+                     * 获取
+                     * @return EndTimeOffset 
                      * 
                      */
                     double GetEndTimeOffset() const;
 
                     /**
-                     * 设置End time offset of a suspected segment in seconds.
-                     * @param _endTimeOffset End time offset of a suspected segment in seconds.
+                     * 设置
+                     * @param _endTimeOffset 
                      * 
                      */
                     void SetEndTimeOffset(const double& _endTimeOffset);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool EndTimeOffsetHasBeenSet() const;
 
                     /**
-                     * 获取Confidence score for the detected politically sensitive content
-                     * @return Confidence Confidence score for the detected politically sensitive content
+                     * 获取
+                     * @return Confidence 
                      * 
                      */
                     double GetConfidence() const;
 
                     /**
-                     * 设置Confidence score for the detected politically sensitive content
-                     * @param _confidence Confidence score for the detected politically sensitive content
+                     * 设置
+                     * @param _confidence 
                      * 
                      */
                     void SetConfidence(const double& _confidence);
@@ -110,27 +110,15 @@ namespace TencentCloud
                     bool ConfidenceHasBeenSet() const;
 
                     /**
-                     * 获取Processing suggestion for the detected politically sensitive content. Valid values:
-<li>pass</li>
-<li>review</li>
-<li>block</li>
-                     * @return Suggestion Processing suggestion for the detected politically sensitive content. Valid values:
-<li>pass</li>
-<li>review</li>
-<li>block</li>
+                     * 获取
+                     * @return Suggestion 
                      * 
                      */
                     std::string GetSuggestion() const;
 
                     /**
-                     * 设置Processing suggestion for the detected politically sensitive content. Valid values:
-<li>pass</li>
-<li>review</li>
-<li>block</li>
-                     * @param _suggestion Processing suggestion for the detected politically sensitive content. Valid values:
-<li>pass</li>
-<li>review</li>
-<li>block</li>
+                     * 设置
+                     * @param _suggestion 
                      * 
                      */
                     void SetSuggestion(const std::string& _suggestion);
@@ -143,15 +131,15 @@ namespace TencentCloud
                     bool SuggestionHasBeenSet() const;
 
                     /**
-                     * 获取Name of the politically sensitive content or banned images
-                     * @return Name Name of the politically sensitive content or banned images
+                     * 获取
+                     * @return Name 
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Name of the politically sensitive content or banned images
-                     * @param _name Name of the politically sensitive content or banned images
+                     * 设置
+                     * @param _name 
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -164,107 +152,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Labels for the detected politically sensitive content. The relationship between the values of this parameter and those of the `LabelSet` parameter in [PoliticalImgReviewTemplateInfo](https://intl.cloud.tencent.com/document/api/266/31773?from_cn_redirect=1#PoliticalImgReviewTemplateInfo) is as follows:
-violation_photo:
-<li>`violation_photo`: banned images</li>
-politician:
-<li>`nation_politician`: state leader of China</li>
-<li>`province_politician`: provincial officials</li>
-<li>`bureau_politician`: bureau-level officials</li>
-<li>`county_politician`: county-level officials</li>
-<li>`rural_politician`: township-level officials</li>
-<li>`sensitive_politician`: politically sensitive people</li>
-<li>`foreign_politician`: state leaders of other countries</li>
-entertainment:
-<li>`sensitive_entertainment`: banned people in the entertainment industry</li>
-sport:
-<li>`sensitive_sport`: banned sports celebrities</li>
-entrepreneur:
-<li>`sensitive_entrepreneur`: banned businesspeople</li>
-scholar:
-<li>sensitive_scholar: banned scholars</li>
-celebrity:
-<li>sensitive_celebrity: banned celebrities</li>
-<li>historical_celebrity: banned historical figures</li>
-military:
-<li>sensitive_military: banned people in military</li>
-                     * @return Label Labels for the detected politically sensitive content. The relationship between the values of this parameter and those of the `LabelSet` parameter in [PoliticalImgReviewTemplateInfo](https://intl.cloud.tencent.com/document/api/266/31773?from_cn_redirect=1#PoliticalImgReviewTemplateInfo) is as follows:
-violation_photo:
-<li>`violation_photo`: banned images</li>
-politician:
-<li>`nation_politician`: state leader of China</li>
-<li>`province_politician`: provincial officials</li>
-<li>`bureau_politician`: bureau-level officials</li>
-<li>`county_politician`: county-level officials</li>
-<li>`rural_politician`: township-level officials</li>
-<li>`sensitive_politician`: politically sensitive people</li>
-<li>`foreign_politician`: state leaders of other countries</li>
-entertainment:
-<li>`sensitive_entertainment`: banned people in the entertainment industry</li>
-sport:
-<li>`sensitive_sport`: banned sports celebrities</li>
-entrepreneur:
-<li>`sensitive_entrepreneur`: banned businesspeople</li>
-scholar:
-<li>sensitive_scholar: banned scholars</li>
-celebrity:
-<li>sensitive_celebrity: banned celebrities</li>
-<li>historical_celebrity: banned historical figures</li>
-military:
-<li>sensitive_military: banned people in military</li>
+                     * 获取
+                     * @return Label 
                      * 
                      */
                     std::string GetLabel() const;
 
                     /**
-                     * 设置Labels for the detected politically sensitive content. The relationship between the values of this parameter and those of the `LabelSet` parameter in [PoliticalImgReviewTemplateInfo](https://intl.cloud.tencent.com/document/api/266/31773?from_cn_redirect=1#PoliticalImgReviewTemplateInfo) is as follows:
-violation_photo:
-<li>`violation_photo`: banned images</li>
-politician:
-<li>`nation_politician`: state leader of China</li>
-<li>`province_politician`: provincial officials</li>
-<li>`bureau_politician`: bureau-level officials</li>
-<li>`county_politician`: county-level officials</li>
-<li>`rural_politician`: township-level officials</li>
-<li>`sensitive_politician`: politically sensitive people</li>
-<li>`foreign_politician`: state leaders of other countries</li>
-entertainment:
-<li>`sensitive_entertainment`: banned people in the entertainment industry</li>
-sport:
-<li>`sensitive_sport`: banned sports celebrities</li>
-entrepreneur:
-<li>`sensitive_entrepreneur`: banned businesspeople</li>
-scholar:
-<li>sensitive_scholar: banned scholars</li>
-celebrity:
-<li>sensitive_celebrity: banned celebrities</li>
-<li>historical_celebrity: banned historical figures</li>
-military:
-<li>sensitive_military: banned people in military</li>
-                     * @param _label Labels for the detected politically sensitive content. The relationship between the values of this parameter and those of the `LabelSet` parameter in [PoliticalImgReviewTemplateInfo](https://intl.cloud.tencent.com/document/api/266/31773?from_cn_redirect=1#PoliticalImgReviewTemplateInfo) is as follows:
-violation_photo:
-<li>`violation_photo`: banned images</li>
-politician:
-<li>`nation_politician`: state leader of China</li>
-<li>`province_politician`: provincial officials</li>
-<li>`bureau_politician`: bureau-level officials</li>
-<li>`county_politician`: county-level officials</li>
-<li>`rural_politician`: township-level officials</li>
-<li>`sensitive_politician`: politically sensitive people</li>
-<li>`foreign_politician`: state leaders of other countries</li>
-entertainment:
-<li>`sensitive_entertainment`: banned people in the entertainment industry</li>
-sport:
-<li>`sensitive_sport`: banned sports celebrities</li>
-entrepreneur:
-<li>`sensitive_entrepreneur`: banned businesspeople</li>
-scholar:
-<li>sensitive_scholar: banned scholars</li>
-celebrity:
-<li>sensitive_celebrity: banned celebrities</li>
-<li>historical_celebrity: banned historical figures</li>
-military:
-<li>sensitive_military: banned people in military</li>
+                     * 设置
+                     * @param _label 
                      * 
                      */
                     void SetLabel(const std::string& _label);
@@ -277,19 +173,15 @@ military:
                     bool LabelHasBeenSet() const;
 
                     /**
-                     * 获取URL of a suspected image (which will not be permanently stored
- and will be deleted after `PicUrlExpireTime`).
-                     * @return Url URL of a suspected image (which will not be permanently stored
- and will be deleted after `PicUrlExpireTime`).
+                     * 获取
+                     * @return Url 
                      * 
                      */
                     std::string GetUrl() const;
 
                     /**
-                     * 设置URL of a suspected image (which will not be permanently stored
- and will be deleted after `PicUrlExpireTime`).
-                     * @param _url URL of a suspected image (which will not be permanently stored
- and will be deleted after `PicUrlExpireTime`).
+                     * 设置
+                     * @param _url 
                      * 
                      */
                     void SetUrl(const std::string& _url);
@@ -302,15 +194,15 @@ military:
                     bool UrlHasBeenSet() const;
 
                     /**
-                     * 获取Coordinates (pixel) of the detected politically sensitive content or banned icons. The format is [x1, y1, x2, y2], which indicates the coordinates of the top-left and bottom-right corners.
-                     * @return AreaCoordSet Coordinates (pixel) of the detected politically sensitive content or banned icons. The format is [x1, y1, x2, y2], which indicates the coordinates of the top-left and bottom-right corners.
+                     * 获取
+                     * @return AreaCoordSet 
                      * 
                      */
                     std::vector<int64_t> GetAreaCoordSet() const;
 
                     /**
-                     * 设置Coordinates (pixel) of the detected politically sensitive content or banned icons. The format is [x1, y1, x2, y2], which indicates the coordinates of the top-left and bottom-right corners.
-                     * @param _areaCoordSet Coordinates (pixel) of the detected politically sensitive content or banned icons. The format is [x1, y1, x2, y2], which indicates the coordinates of the top-left and bottom-right corners.
+                     * 设置
+                     * @param _areaCoordSet 
                      * 
                      */
                     void SetAreaCoordSet(const std::vector<int64_t>& _areaCoordSet);
@@ -323,15 +215,15 @@ military:
                     bool AreaCoordSetHasBeenSet() const;
 
                     /**
-                     * 获取This field has been disused. Please use `PicUrlExpireTime`.
-                     * @return PicUrlExpireTimeStamp This field has been disused. Please use `PicUrlExpireTime`.
+                     * 获取
+                     * @return PicUrlExpireTimeStamp 
                      * @deprecated
                      */
                     int64_t GetPicUrlExpireTimeStamp() const;
 
                     /**
-                     * 设置This field has been disused. Please use `PicUrlExpireTime`.
-                     * @param _picUrlExpireTimeStamp This field has been disused. Please use `PicUrlExpireTime`.
+                     * 设置
+                     * @param _picUrlExpireTimeStamp 
                      * @deprecated
                      */
                     void SetPicUrlExpireTimeStamp(const int64_t& _picUrlExpireTimeStamp);
@@ -344,15 +236,15 @@ military:
                     bool PicUrlExpireTimeStampHasBeenSet() const;
 
                     /**
-                     * 获取Expiration time of suspected image URL in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
-                     * @return PicUrlExpireTime Expiration time of suspected image URL in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 获取
+                     * @return PicUrlExpireTime 
                      * 
                      */
                     std::string GetPicUrlExpireTime() const;
 
                     /**
-                     * 设置Expiration time of suspected image URL in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
-                     * @param _picUrlExpireTime Expiration time of suspected image URL in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 设置
+                     * @param _picUrlExpireTime 
                      * 
                      */
                     void SetPicUrlExpireTime(const std::string& _picUrlExpireTime);
@@ -367,88 +259,61 @@ military:
                 private:
 
                     /**
-                     * Start time offset of a suspected segment in seconds.
+                     * 
                      */
                     double m_startTimeOffset;
                     bool m_startTimeOffsetHasBeenSet;
 
                     /**
-                     * End time offset of a suspected segment in seconds.
+                     * 
                      */
                     double m_endTimeOffset;
                     bool m_endTimeOffsetHasBeenSet;
 
                     /**
-                     * Confidence score for the detected politically sensitive content
+                     * 
                      */
                     double m_confidence;
                     bool m_confidenceHasBeenSet;
 
                     /**
-                     * Processing suggestion for the detected politically sensitive content. Valid values:
-<li>pass</li>
-<li>review</li>
-<li>block</li>
+                     * 
                      */
                     std::string m_suggestion;
                     bool m_suggestionHasBeenSet;
 
                     /**
-                     * Name of the politically sensitive content or banned images
+                     * 
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Labels for the detected politically sensitive content. The relationship between the values of this parameter and those of the `LabelSet` parameter in [PoliticalImgReviewTemplateInfo](https://intl.cloud.tencent.com/document/api/266/31773?from_cn_redirect=1#PoliticalImgReviewTemplateInfo) is as follows:
-violation_photo:
-<li>`violation_photo`: banned images</li>
-politician:
-<li>`nation_politician`: state leader of China</li>
-<li>`province_politician`: provincial officials</li>
-<li>`bureau_politician`: bureau-level officials</li>
-<li>`county_politician`: county-level officials</li>
-<li>`rural_politician`: township-level officials</li>
-<li>`sensitive_politician`: politically sensitive people</li>
-<li>`foreign_politician`: state leaders of other countries</li>
-entertainment:
-<li>`sensitive_entertainment`: banned people in the entertainment industry</li>
-sport:
-<li>`sensitive_sport`: banned sports celebrities</li>
-entrepreneur:
-<li>`sensitive_entrepreneur`: banned businesspeople</li>
-scholar:
-<li>sensitive_scholar: banned scholars</li>
-celebrity:
-<li>sensitive_celebrity: banned celebrities</li>
-<li>historical_celebrity: banned historical figures</li>
-military:
-<li>sensitive_military: banned people in military</li>
+                     * 
                      */
                     std::string m_label;
                     bool m_labelHasBeenSet;
 
                     /**
-                     * URL of a suspected image (which will not be permanently stored
- and will be deleted after `PicUrlExpireTime`).
+                     * 
                      */
                     std::string m_url;
                     bool m_urlHasBeenSet;
 
                     /**
-                     * Coordinates (pixel) of the detected politically sensitive content or banned icons. The format is [x1, y1, x2, y2], which indicates the coordinates of the top-left and bottom-right corners.
+                     * 
                      */
                     std::vector<int64_t> m_areaCoordSet;
                     bool m_areaCoordSetHasBeenSet;
 
                     /**
-                     * This field has been disused. Please use `PicUrlExpireTime`.
+                     * 
                      */
                     int64_t m_picUrlExpireTimeStamp;
                     bool m_picUrlExpireTimeStampHasBeenSet;
 
                     /**
-                     * Expiration time of suspected image URL in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 
                      */
                     std::string m_picUrlExpireTime;
                     bool m_picUrlExpireTimeHasBeenSet;

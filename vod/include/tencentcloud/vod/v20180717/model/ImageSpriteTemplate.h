@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Details of an image sprite generating template
+                * 
                 */
                 class ImageSpriteTemplate : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Unique ID of an image sprite generating template.
-                     * @return Definition Unique ID of an image sprite generating template.
+                     * 获取
+                     * @return Definition 
                      * 
                      */
                     uint64_t GetDefinition() const;
 
                     /**
-                     * 设置Unique ID of an image sprite generating template.
-                     * @param _definition Unique ID of an image sprite generating template.
+                     * 设置
+                     * @param _definition 
                      * 
                      */
                     void SetDefinition(const uint64_t& _definition);
@@ -68,23 +68,15 @@ namespace TencentCloud
                     bool DefinitionHasBeenSet() const;
 
                     /**
-                     * 获取Template type. Valid values:
-<li>Preset: preset template;</li>
-<li>Custom: custom template.</li>
-                     * @return Type Template type. Valid values:
-<li>Preset: preset template;</li>
-<li>Custom: custom template.</li>
+                     * 获取
+                     * @return Type 
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Template type. Valid values:
-<li>Preset: preset template;</li>
-<li>Custom: custom template.</li>
-                     * @param _type Template type. Valid values:
-<li>Preset: preset template;</li>
-<li>Custom: custom template.</li>
+                     * 设置
+                     * @param _type 
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -97,15 +89,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Name of an image sprite generating template.
-                     * @return Name Name of an image sprite generating template.
+                     * 获取
+                     * @return Name 
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Name of an image sprite generating template.
-                     * @param _name Name of an image sprite generating template.
+                     * 设置
+                     * @param _name 
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -118,35 +110,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Maximum value of the width (or long side) of a subimage in an image sprite in px. Value range: 0 and [128, 4,096].
-<li>If both `Width` and `Height` are 0, the resolution will be the same as that of the source video;</li>
-<li>If `Width` is 0, but `Height` is not 0, `Width` will be proportionally scaled;</li>
-<li>If `Width` is not 0, but `Height` is 0, `Height` will be proportionally scaled;</li>
-<li>If both `Width` and `Height` are not 0, the custom resolution will be used.</li>
-Default value: 0.
-                     * @return Width Maximum value of the width (or long side) of a subimage in an image sprite in px. Value range: 0 and [128, 4,096].
-<li>If both `Width` and `Height` are 0, the resolution will be the same as that of the source video;</li>
-<li>If `Width` is 0, but `Height` is not 0, `Width` will be proportionally scaled;</li>
-<li>If `Width` is not 0, but `Height` is 0, `Height` will be proportionally scaled;</li>
-<li>If both `Width` and `Height` are not 0, the custom resolution will be used.</li>
-Default value: 0.
+                     * 获取
+                     * @return Width 
                      * 
                      */
                     uint64_t GetWidth() const;
 
                     /**
-                     * 设置Maximum value of the width (or long side) of a subimage in an image sprite in px. Value range: 0 and [128, 4,096].
-<li>If both `Width` and `Height` are 0, the resolution will be the same as that of the source video;</li>
-<li>If `Width` is 0, but `Height` is not 0, `Width` will be proportionally scaled;</li>
-<li>If `Width` is not 0, but `Height` is 0, `Height` will be proportionally scaled;</li>
-<li>If both `Width` and `Height` are not 0, the custom resolution will be used.</li>
-Default value: 0.
-                     * @param _width Maximum value of the width (or long side) of a subimage in an image sprite in px. Value range: 0 and [128, 4,096].
-<li>If both `Width` and `Height` are 0, the resolution will be the same as that of the source video;</li>
-<li>If `Width` is 0, but `Height` is not 0, `Width` will be proportionally scaled;</li>
-<li>If `Width` is not 0, but `Height` is 0, `Height` will be proportionally scaled;</li>
-<li>If both `Width` and `Height` are not 0, the custom resolution will be used.</li>
-Default value: 0.
+                     * 设置
+                     * @param _width 
                      * 
                      */
                     void SetWidth(const uint64_t& _width);
@@ -159,35 +131,15 @@ Default value: 0.
                     bool WidthHasBeenSet() const;
 
                     /**
-                     * 获取Maximum value of the height (or short side) of a subimage in an image sprite in px. Value range: 0 and [128, 4,096].
-<li>If both `Width` and `Height` are 0, the resolution will be the same as that of the source video;</li>
-<li>If `Width` is 0, but `Height` is not 0, `Width` will be proportionally scaled;</li>
-<li>If `Width` is not 0, but `Height` is 0, `Height` will be proportionally scaled;</li>
-<li>If both `Width` and `Height` are not 0, the custom resolution will be used.</li>
-Default value: 0.
-                     * @return Height Maximum value of the height (or short side) of a subimage in an image sprite in px. Value range: 0 and [128, 4,096].
-<li>If both `Width` and `Height` are 0, the resolution will be the same as that of the source video;</li>
-<li>If `Width` is 0, but `Height` is not 0, `Width` will be proportionally scaled;</li>
-<li>If `Width` is not 0, but `Height` is 0, `Height` will be proportionally scaled;</li>
-<li>If both `Width` and `Height` are not 0, the custom resolution will be used.</li>
-Default value: 0.
+                     * 获取
+                     * @return Height 
                      * 
                      */
                     uint64_t GetHeight() const;
 
                     /**
-                     * 设置Maximum value of the height (or short side) of a subimage in an image sprite in px. Value range: 0 and [128, 4,096].
-<li>If both `Width` and `Height` are 0, the resolution will be the same as that of the source video;</li>
-<li>If `Width` is 0, but `Height` is not 0, `Width` will be proportionally scaled;</li>
-<li>If `Width` is not 0, but `Height` is 0, `Height` will be proportionally scaled;</li>
-<li>If both `Width` and `Height` are not 0, the custom resolution will be used.</li>
-Default value: 0.
-                     * @param _height Maximum value of the height (or short side) of a subimage in an image sprite in px. Value range: 0 and [128, 4,096].
-<li>If both `Width` and `Height` are 0, the resolution will be the same as that of the source video;</li>
-<li>If `Width` is 0, but `Height` is not 0, `Width` will be proportionally scaled;</li>
-<li>If `Width` is not 0, but `Height` is 0, `Height` will be proportionally scaled;</li>
-<li>If both `Width` and `Height` are not 0, the custom resolution will be used.</li>
-Default value: 0.
+                     * 设置
+                     * @param _height 
                      * 
                      */
                     void SetHeight(const uint64_t& _height);
@@ -200,27 +152,15 @@ Default value: 0.
                     bool HeightHasBeenSet() const;
 
                     /**
-                     * 获取Resolution adaption. Valid values:
-<li>open: enabled. In this case, `Width` represents the long side of a video, while `Height` the short side;</li>
-<li>close: disabled. In this case, `Width` represents the width of a video, while `Height` the height.</li>
-Default value: open.
-                     * @return ResolutionAdaptive Resolution adaption. Valid values:
-<li>open: enabled. In this case, `Width` represents the long side of a video, while `Height` the short side;</li>
-<li>close: disabled. In this case, `Width` represents the width of a video, while `Height` the height.</li>
-Default value: open.
+                     * 获取
+                     * @return ResolutionAdaptive 
                      * 
                      */
                     std::string GetResolutionAdaptive() const;
 
                     /**
-                     * 设置Resolution adaption. Valid values:
-<li>open: enabled. In this case, `Width` represents the long side of a video, while `Height` the short side;</li>
-<li>close: disabled. In this case, `Width` represents the width of a video, while `Height` the height.</li>
-Default value: open.
-                     * @param _resolutionAdaptive Resolution adaption. Valid values:
-<li>open: enabled. In this case, `Width` represents the long side of a video, while `Height` the short side;</li>
-<li>close: disabled. In this case, `Width` represents the width of a video, while `Height` the height.</li>
-Default value: open.
+                     * 设置
+                     * @param _resolutionAdaptive 
                      * 
                      */
                     void SetResolutionAdaptive(const std::string& _resolutionAdaptive);
@@ -233,15 +173,15 @@ Default value: open.
                     bool ResolutionAdaptiveHasBeenSet() const;
 
                     /**
-                     * 获取Sampling type.
-                     * @return SampleType Sampling type.
+                     * 获取
+                     * @return SampleType 
                      * 
                      */
                     std::string GetSampleType() const;
 
                     /**
-                     * 设置Sampling type.
-                     * @param _sampleType Sampling type.
+                     * 设置
+                     * @param _sampleType 
                      * 
                      */
                     void SetSampleType(const std::string& _sampleType);
@@ -254,15 +194,15 @@ Default value: open.
                     bool SampleTypeHasBeenSet() const;
 
                     /**
-                     * 获取Sampling interval.
-                     * @return SampleInterval Sampling interval.
+                     * 获取
+                     * @return SampleInterval 
                      * 
                      */
                     uint64_t GetSampleInterval() const;
 
                     /**
-                     * 设置Sampling interval.
-                     * @param _sampleInterval Sampling interval.
+                     * 设置
+                     * @param _sampleInterval 
                      * 
                      */
                     void SetSampleInterval(const uint64_t& _sampleInterval);
@@ -275,15 +215,15 @@ Default value: open.
                     bool SampleIntervalHasBeenSet() const;
 
                     /**
-                     * 获取Subimage row count of an image sprite.
-                     * @return RowCount Subimage row count of an image sprite.
+                     * 获取
+                     * @return RowCount 
                      * 
                      */
                     uint64_t GetRowCount() const;
 
                     /**
-                     * 设置Subimage row count of an image sprite.
-                     * @param _rowCount Subimage row count of an image sprite.
+                     * 设置
+                     * @param _rowCount 
                      * 
                      */
                     void SetRowCount(const uint64_t& _rowCount);
@@ -296,15 +236,15 @@ Default value: open.
                     bool RowCountHasBeenSet() const;
 
                     /**
-                     * 获取Subimage column count of an image sprite.
-                     * @return ColumnCount Subimage column count of an image sprite.
+                     * 获取
+                     * @return ColumnCount 
                      * 
                      */
                     uint64_t GetColumnCount() const;
 
                     /**
-                     * 设置Subimage column count of an image sprite.
-                     * @param _columnCount Subimage column count of an image sprite.
+                     * 设置
+                     * @param _columnCount 
                      * 
                      */
                     void SetColumnCount(const uint64_t& _columnCount);
@@ -317,15 +257,15 @@ Default value: open.
                     bool ColumnCountHasBeenSet() const;
 
                     /**
-                     * 获取Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
-                     * @return CreateTime Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 获取
+                     * @return CreateTime 
                      * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
-                     * 设置Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
-                     * @param _createTime Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 设置
+                     * @param _createTime 
                      * 
                      */
                     void SetCreateTime(const std::string& _createTime);
@@ -338,15 +278,15 @@ Default value: open.
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Last modified time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
-                     * @return UpdateTime Last modified time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 获取
+                     * @return UpdateTime 
                      * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
-                     * 设置Last modified time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
-                     * @param _updateTime Last modified time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 设置
+                     * @param _updateTime 
                      * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
@@ -359,27 +299,15 @@ Default value: open.
                     bool UpdateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. The following fill types are supported:
-<li> stretch: stretch. The screenshot will be stretched frame by frame to match the aspect ratio of the source video, which may make the screenshot "shorter" or "longer";</li>
-<li>black: fill with black. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with black color blocks.</li>
-Default value: black.
-                     * @return FillType Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. The following fill types are supported:
-<li> stretch: stretch. The screenshot will be stretched frame by frame to match the aspect ratio of the source video, which may make the screenshot "shorter" or "longer";</li>
-<li>black: fill with black. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with black color blocks.</li>
-Default value: black.
+                     * 获取
+                     * @return FillType 
                      * 
                      */
                     std::string GetFillType() const;
 
                     /**
-                     * 设置Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. The following fill types are supported:
-<li> stretch: stretch. The screenshot will be stretched frame by frame to match the aspect ratio of the source video, which may make the screenshot "shorter" or "longer";</li>
-<li>black: fill with black. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with black color blocks.</li>
-Default value: black.
-                     * @param _fillType Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. The following fill types are supported:
-<li> stretch: stretch. The screenshot will be stretched frame by frame to match the aspect ratio of the source video, which may make the screenshot "shorter" or "longer";</li>
-<li>black: fill with black. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with black color blocks.</li>
-Default value: black.
+                     * 设置
+                     * @param _fillType 
                      * 
                      */
                     void SetFillType(const std::string& _fillType);
@@ -392,15 +320,15 @@ Default value: black.
                     bool FillTypeHasBeenSet() const;
 
                     /**
-                     * 获取Template description.
-                     * @return Comment Template description.
+                     * 获取
+                     * @return Comment 
                      * 
                      */
                     std::string GetComment() const;
 
                     /**
-                     * 设置Template description.
-                     * @param _comment Template description.
+                     * 设置
+                     * @param _comment 
                      * 
                      */
                     void SetComment(const std::string& _comment);
@@ -413,15 +341,15 @@ Default value: black.
                     bool CommentHasBeenSet() const;
 
                     /**
-                     * 获取The image format.
-                     * @return Format The image format.
+                     * 获取
+                     * @return Format 
                      * 
                      */
                     std::string GetFormat() const;
 
                     /**
-                     * 设置The image format.
-                     * @param _format The image format.
+                     * 设置
+                     * @param _format 
                      * 
                      */
                     void SetFormat(const std::string& _format);
@@ -436,109 +364,91 @@ Default value: black.
                 private:
 
                     /**
-                     * Unique ID of an image sprite generating template.
+                     * 
                      */
                     uint64_t m_definition;
                     bool m_definitionHasBeenSet;
 
                     /**
-                     * Template type. Valid values:
-<li>Preset: preset template;</li>
-<li>Custom: custom template.</li>
+                     * 
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Name of an image sprite generating template.
+                     * 
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Maximum value of the width (or long side) of a subimage in an image sprite in px. Value range: 0 and [128, 4,096].
-<li>If both `Width` and `Height` are 0, the resolution will be the same as that of the source video;</li>
-<li>If `Width` is 0, but `Height` is not 0, `Width` will be proportionally scaled;</li>
-<li>If `Width` is not 0, but `Height` is 0, `Height` will be proportionally scaled;</li>
-<li>If both `Width` and `Height` are not 0, the custom resolution will be used.</li>
-Default value: 0.
+                     * 
                      */
                     uint64_t m_width;
                     bool m_widthHasBeenSet;
 
                     /**
-                     * Maximum value of the height (or short side) of a subimage in an image sprite in px. Value range: 0 and [128, 4,096].
-<li>If both `Width` and `Height` are 0, the resolution will be the same as that of the source video;</li>
-<li>If `Width` is 0, but `Height` is not 0, `Width` will be proportionally scaled;</li>
-<li>If `Width` is not 0, but `Height` is 0, `Height` will be proportionally scaled;</li>
-<li>If both `Width` and `Height` are not 0, the custom resolution will be used.</li>
-Default value: 0.
+                     * 
                      */
                     uint64_t m_height;
                     bool m_heightHasBeenSet;
 
                     /**
-                     * Resolution adaption. Valid values:
-<li>open: enabled. In this case, `Width` represents the long side of a video, while `Height` the short side;</li>
-<li>close: disabled. In this case, `Width` represents the width of a video, while `Height` the height.</li>
-Default value: open.
+                     * 
                      */
                     std::string m_resolutionAdaptive;
                     bool m_resolutionAdaptiveHasBeenSet;
 
                     /**
-                     * Sampling type.
+                     * 
                      */
                     std::string m_sampleType;
                     bool m_sampleTypeHasBeenSet;
 
                     /**
-                     * Sampling interval.
+                     * 
                      */
                     uint64_t m_sampleInterval;
                     bool m_sampleIntervalHasBeenSet;
 
                     /**
-                     * Subimage row count of an image sprite.
+                     * 
                      */
                     uint64_t m_rowCount;
                     bool m_rowCountHasBeenSet;
 
                     /**
-                     * Subimage column count of an image sprite.
+                     * 
                      */
                     uint64_t m_columnCount;
                     bool m_columnCountHasBeenSet;
 
                     /**
-                     * Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * Last modified time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 
                      */
                     std::string m_updateTime;
                     bool m_updateTimeHasBeenSet;
 
                     /**
-                     * Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. The following fill types are supported:
-<li> stretch: stretch. The screenshot will be stretched frame by frame to match the aspect ratio of the source video, which may make the screenshot "shorter" or "longer";</li>
-<li>black: fill with black. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with black color blocks.</li>
-Default value: black.
+                     * 
                      */
                     std::string m_fillType;
                     bool m_fillTypeHasBeenSet;
 
                     /**
-                     * Template description.
+                     * 
                      */
                     std::string m_comment;
                     bool m_commentHasBeenSet;
 
                     /**
-                     * The image format.
+                     * 
                      */
                     std::string m_format;
                     bool m_formatHasBeenSet;

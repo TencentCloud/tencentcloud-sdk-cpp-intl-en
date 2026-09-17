@@ -21,6 +21,7 @@
 #include <vector>
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
+#include <tencentcloud/vod/v20180717/model/SortBy.h>
 
 
 namespace TencentCloud
@@ -43,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p><b>VOD <a href="https://www.tencentcloud.com/document/product/266/33987?from_cn_redirect=1">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b></p>
-                     * @return SubAppId <p><b>VOD <a href="https://www.tencentcloud.com/document/product/266/33987?from_cn_redirect=1">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b></p>
+                     * 获取
+                     * @return SubAppId 
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置<p><b>VOD <a href="https://www.tencentcloud.com/document/product/266/33987?from_cn_redirect=1">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b></p>
-                     * @param _subAppId <p><b>VOD <a href="https://www.tencentcloud.com/document/product/266/33987?from_cn_redirect=1">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b></p>
+                     * 设置
+                     * @param _subAppId 
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -64,15 +65,15 @@ namespace TencentCloud
                     bool SubAppIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>Filter condition for the unique identifier of the large model parsing template. The maximum array length is 100.</p>
-                     * @return Definitions <p>Filter condition for the unique identifier of the large model parsing template. The maximum array length is 100.</p>
+                     * 获取
+                     * @return Definitions 
                      * 
                      */
                     std::vector<int64_t> GetDefinitions() const;
 
                     /**
-                     * 设置<p>Filter condition for the unique identifier of the large model parsing template. The maximum array length is 100.</p>
-                     * @param _definitions <p>Filter condition for the unique identifier of the large model parsing template. The maximum array length is 100.</p>
+                     * 设置
+                     * @param _definitions 
                      * 
                      */
                     void SetDefinitions(const std::vector<int64_t>& _definitions);
@@ -85,15 +86,36 @@ namespace TencentCloud
                     bool DefinitionsHasBeenSet() const;
 
                     /**
-                     * 获取<p>Paging offset. Default value: 0.</p>
-                     * @return Offset <p>Paging offset. Default value: 0.</p>
+                     * 获取
+                     * @return Sort 
+                     * 
+                     */
+                    SortBy GetSort() const;
+
+                    /**
+                     * 设置
+                     * @param _sort 
+                     * 
+                     */
+                    void SetSort(const SortBy& _sort);
+
+                    /**
+                     * 判断参数 Sort 是否已赋值
+                     * @return Sort 是否已赋值
+                     * 
+                     */
+                    bool SortHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return Offset 
                      * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
-                     * 设置<p>Paging offset. Default value: 0.</p>
-                     * @param _offset <p>Paging offset. Default value: 0.</p>
+                     * 设置
+                     * @param _offset 
                      * 
                      */
                     void SetOffset(const uint64_t& _offset);
@@ -106,15 +128,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取<p>Number of returned entries. Default value: 10. Maximum value: 100.</p>
-                     * @return Limit <p>Number of returned entries. Default value: 10. Maximum value: 100.</p>
+                     * 获取
+                     * @return Limit 
                      * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
-                     * 设置<p>Number of returned entries. Default value: 10. Maximum value: 100.</p>
-                     * @param _limit <p>Number of returned entries. Default value: 10. Maximum value: 100.</p>
+                     * 设置
+                     * @param _limit 
                      * 
                      */
                     void SetLimit(const uint64_t& _limit);
@@ -129,25 +151,31 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p><b>VOD <a href="https://www.tencentcloud.com/document/product/266/33987?from_cn_redirect=1">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b></p>
+                     * 
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
 
                     /**
-                     * <p>Filter condition for the unique identifier of the large model parsing template. The maximum array length is 100.</p>
+                     * 
                      */
                     std::vector<int64_t> m_definitions;
                     bool m_definitionsHasBeenSet;
 
                     /**
-                     * <p>Paging offset. Default value: 0.</p>
+                     * 
+                     */
+                    SortBy m_sort;
+                    bool m_sortHasBeenSet;
+
+                    /**
+                     * 
                      */
                     uint64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * <p>Number of returned entries. Default value: 10. Maximum value: 100.</p>
+                     * 
                      */
                     uint64_t m_limit;
                     bool m_limitHasBeenSet;

@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether the response entry is truncated.
-                     * @return IsTruncated Whether the response entry is truncated.
+                     * 获取
+                     * @return IsTruncated 
                      * 
                      */
                     bool GetIsTruncated() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool IsTruncatedHasBeenSet() const;
 
                     /**
-                     * 获取This node will be returned only when the response entries are truncated (IsTruncated is true). Its value is the last object key in the current response entries. When follow-up entries are required, input the value of this node as the marker parameter in the next request.
-                     * @return NextMarker This node will be returned only when the response entries are truncated (IsTruncated is true). Its value is the last object key in the current response entries. When follow-up entries are required, input the value of this node as the marker parameter in the next request.
+                     * 获取
+                     * @return NextMarker 
                      * 
                      */
                     std::string GetNextMarker() const;
@@ -73,8 +73,8 @@ namespace TencentCloud
                     bool NextMarkerHasBeenSet() const;
 
                     /**
-                     * 获取The same part between the prefix or the start (if not specified) and the first delimiter is defined as Common Prefix. The node may return only if the delimiter parameter is specified in the request.
-                     * @return CommonPrefixes The same part between the prefix or the start (if not specified) and the first delimiter is defined as Common Prefix. The node may return only if the delimiter parameter is specified in the request.
+                     * 获取
+                     * @return CommonPrefixes 
                      * 
                      */
                     std::vector<std::string> GetCommonPrefixes() const;
@@ -87,8 +87,8 @@ namespace TencentCloud
                     bool CommonPrefixesHasBeenSet() const;
 
                     /**
-                     * 获取Object entry.
-                     * @return Contents Object entry.
+                     * 获取
+                     * @return Contents 
                      * 
                      */
                     std::vector<FileContent> GetContents() const;
@@ -103,25 +103,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Whether the response entry is truncated.
+                     * 
                      */
                     bool m_isTruncated;
                     bool m_isTruncatedHasBeenSet;
 
                     /**
-                     * This node will be returned only when the response entries are truncated (IsTruncated is true). Its value is the last object key in the current response entries. When follow-up entries are required, input the value of this node as the marker parameter in the next request.
+                     * 
                      */
                     std::string m_nextMarker;
                     bool m_nextMarkerHasBeenSet;
 
                     /**
-                     * The same part between the prefix or the start (if not specified) and the first delimiter is defined as Common Prefix. The node may return only if the delimiter parameter is specified in the request.
+                     * 
                      */
                     std::vector<std::string> m_commonPrefixes;
                     bool m_commonPrefixesHasBeenSet;
 
                     /**
-                     * Object entry.
+                     * 
                      */
                     std::vector<FileContent> m_contents;
                     bool m_contentsHasBeenSet;

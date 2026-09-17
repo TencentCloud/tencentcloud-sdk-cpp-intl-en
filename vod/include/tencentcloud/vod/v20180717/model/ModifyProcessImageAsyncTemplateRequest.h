@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Unique identifier of the image asynchronous processing template.
-                     * @return Definition Unique identifier of the image asynchronous processing template.
+                     * 获取
+                     * @return Definition 
                      * 
                      */
                     int64_t GetDefinition() const;
 
                     /**
-                     * 设置Unique identifier of the image asynchronous processing template.
-                     * @param _definition Unique identifier of the image asynchronous processing template.
+                     * 设置
+                     * @param _definition 
                      * 
                      */
                     void SetDefinition(const int64_t& _definition);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool DefinitionHasBeenSet() const;
 
                     /**
-                     * 获取<b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
-                     * @return SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+                     * 获取
+                     * @return SubAppId 
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置<b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
-                     * @param _subAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+                     * 设置
+                     * @param _subAppId 
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool SubAppIdHasBeenSet() const;
 
                     /**
-                     * 获取Image async processing template name. The length cannot exceed 64 characters.
-                     * @return Name Image async processing template name. The length cannot exceed 64 characters.
+                     * 获取
+                     * @return Name 
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Image async processing template name. The length cannot exceed 64 characters.
-                     * @param _name Image async processing template name. The length cannot exceed 64 characters.
+                     * 设置
+                     * @param _name 
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -107,15 +107,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Description information of the image asynchronous processing template. The length cannot exceed 256 characters.
-                     * @return Comment Description information of the image asynchronous processing template. The length cannot exceed 256 characters.
+                     * 获取
+                     * @return Comment 
                      * 
                      */
                     std::string GetComment() const;
 
                     /**
-                     * 设置Description information of the image asynchronous processing template. The length cannot exceed 256 characters.
-                     * @param _comment Description information of the image asynchronous processing template. The length cannot exceed 256 characters.
+                     * 设置
+                     * @param _comment 
                      * 
                      */
                     void SetComment(const std::string& _comment);
@@ -128,15 +128,15 @@ namespace TencentCloud
                     bool CommentHasBeenSet() const;
 
                     /**
-                     * 获取Image asynchronous processing configuration.
-                     * @return ProcessImageConfigure Image asynchronous processing configuration.
+                     * 获取
+                     * @return ProcessImageConfigure 
                      * 
                      */
                     ProcessImageAsyncTask GetProcessImageConfigure() const;
 
                     /**
-                     * 设置Image asynchronous processing configuration.
-                     * @param _processImageConfigure Image asynchronous processing configuration.
+                     * 设置
+                     * @param _processImageConfigure 
                      * 
                      */
                     void SetProcessImageConfigure(const ProcessImageAsyncTask& _processImageConfigure);
@@ -151,31 +151,31 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Unique identifier of the image asynchronous processing template.
+                     * 
                      */
                     int64_t m_definition;
                     bool m_definitionHasBeenSet;
 
                     /**
-                     * <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+                     * 
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
 
                     /**
-                     * Image async processing template name. The length cannot exceed 64 characters.
+                     * 
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Description information of the image asynchronous processing template. The length cannot exceed 256 characters.
+                     * 
                      */
                     std::string m_comment;
                     bool m_commentHasBeenSet;
 
                     /**
-                     * Image asynchronous processing configuration.
+                     * 
                      */
                     ProcessImageAsyncTask m_processImageConfigure;
                     bool m_processImageConfigureHasBeenSet;

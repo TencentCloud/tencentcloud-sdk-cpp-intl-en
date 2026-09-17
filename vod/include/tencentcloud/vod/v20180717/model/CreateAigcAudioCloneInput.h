@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Create AIGC voice clone input.
+                * 
                 */
                 class CreateAigcAudioCloneInput : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>The original audio file. The model will clone the voice type based on the audio timbre passed in this parameter as an example.</p>
-                     * @return AudioFileInfo <p>The original audio file. The model will clone the voice type based on the audio timbre passed in this parameter as an example.</p>
+                     * 获取
+                     * @return AudioFileInfo 
                      * 
                      */
                     AigcAudioCloneInputFileInfo GetAudioFileInfo() const;
 
                     /**
-                     * 设置<p>The original audio file. The model will clone the voice type based on the audio timbre passed in this parameter as an example.</p>
-                     * @param _audioFileInfo <p>The original audio file. The model will clone the voice type based on the audio timbre passed in this parameter as an example.</p>
+                     * 设置
+                     * @param _audioFileInfo 
                      * 
                      */
                     void SetAudioFileInfo(const AigcAudioCloneInputFileInfo& _audioFileInfo);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool AudioFileInfoHasBeenSet() const;
 
                     /**
-                     * 获取<p>Custom voice ID.</p>
-                     * @return VoiceId <p>Custom voice ID.</p>
+                     * 获取
+                     * @return VoiceId 
                      * 
                      */
                     std::string GetVoiceId() const;
 
                     /**
-                     * 设置<p>Custom voice ID.</p>
-                     * @param _voiceId <p>Custom voice ID.</p>
+                     * 设置
+                     * @param _voiceId 
                      * 
                      */
                     void SetVoiceId(const std::string& _voiceId);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool VoiceIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>Clone audition parameters.</p>
-                     * @return Text <p>Clone audition parameters.</p>
+                     * 获取
+                     * @return Text 
                      * 
                      */
                     std::string GetText() const;
 
                     /**
-                     * 设置<p>Clone audition parameters.</p>
-                     * @param _text <p>Clone audition parameters.</p>
+                     * 设置
+                     * @param _text 
                      * 
                      */
                     void SetText(const std::string& _text);
@@ -111,15 +111,15 @@ namespace TencentCloud
                     bool TextHasBeenSet() const;
 
                     /**
-                     * 获取<p>Example audio for voice replication.</p>
-                     * @return PromptAudioFileInfo <p>Example audio for voice replication.</p>
+                     * 获取
+                     * @return PromptAudioFileInfo 
                      * 
                      */
                     AigcAudioCloneInputFileInfo GetPromptAudioFileInfo() const;
 
                     /**
-                     * 设置<p>Example audio for voice replication.</p>
-                     * @param _promptAudioFileInfo <p>Example audio for voice replication.</p>
+                     * 设置
+                     * @param _promptAudioFileInfo 
                      * 
                      */
                     void SetPromptAudioFileInfo(const AigcAudioCloneInputFileInfo& _promptAudioFileInfo);
@@ -132,15 +132,15 @@ namespace TencentCloud
                     bool PromptAudioFileInfoHasBeenSet() const;
 
                     /**
-                     * 获取<p>Text content of the sample audio.</p>
-                     * @return PromptText <p>Text content of the sample audio.</p>
+                     * 获取
+                     * @return PromptText 
                      * 
                      */
                     std::string GetPromptText() const;
 
                     /**
-                     * 设置<p>Text content of the sample audio.</p>
-                     * @param _promptText <p>Text content of the sample audio.</p>
+                     * 设置
+                     * @param _promptText 
                      * 
                      */
                     void SetPromptText(const std::string& _promptText);
@@ -153,15 +153,15 @@ namespace TencentCloud
                     bool PromptTextHasBeenSet() const;
 
                     /**
-                     * 获取<p>Pass-through parameter.</p>
-                     * @return Payload <p>Pass-through parameter.</p>
+                     * 获取
+                     * @return Payload 
                      * 
                      */
                     std::string GetPayload() const;
 
                     /**
-                     * 设置<p>Pass-through parameter.</p>
-                     * @param _payload <p>Pass-through parameter.</p>
+                     * 设置
+                     * @param _payload 
                      * 
                      */
                     void SetPayload(const std::string& _payload);
@@ -176,37 +176,37 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>The original audio file. The model will clone the voice type based on the audio timbre passed in this parameter as an example.</p>
+                     * 
                      */
                     AigcAudioCloneInputFileInfo m_audioFileInfo;
                     bool m_audioFileInfoHasBeenSet;
 
                     /**
-                     * <p>Custom voice ID.</p>
+                     * 
                      */
                     std::string m_voiceId;
                     bool m_voiceIdHasBeenSet;
 
                     /**
-                     * <p>Clone audition parameters.</p>
+                     * 
                      */
                     std::string m_text;
                     bool m_textHasBeenSet;
 
                     /**
-                     * <p>Example audio for voice replication.</p>
+                     * 
                      */
                     AigcAudioCloneInputFileInfo m_promptAudioFileInfo;
                     bool m_promptAudioFileInfoHasBeenSet;
 
                     /**
-                     * <p>Text content of the sample audio.</p>
+                     * 
                      */
                     std::string m_promptText;
                     bool m_promptTextHasBeenSet;
 
                     /**
-                     * <p>Pass-through parameter.</p>
+                     * 
                      */
                     std::string m_payload;
                     bool m_payloadHasBeenSet;

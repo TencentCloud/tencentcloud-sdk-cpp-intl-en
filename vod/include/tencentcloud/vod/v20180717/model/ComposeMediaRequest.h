@@ -46,15 +46,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The input media track list includes multiple track information composed of materials such as video, audio, and images. Among them:<li>The input multiple tracks are aligned with the output media file timeline on the timeline.</li><li>Overlap materials on different tracks at the same time point on the timeline. Perform image overlay of videos or images in track order, with materials of higher track order overlaid on top. Mix audio materials.</li><li>Each type of track supports up to 10 video, audio, or image tracks.</li><li>The total number of media segments placed on all types of tracks supports up to 500.</li>
-                     * @return Tracks The input media track list includes multiple track information composed of materials such as video, audio, and images. Among them:<li>The input multiple tracks are aligned with the output media file timeline on the timeline.</li><li>Overlap materials on different tracks at the same time point on the timeline. Perform image overlay of videos or images in track order, with materials of higher track order overlaid on top. Mix audio materials.</li><li>Each type of track supports up to 10 video, audio, or image tracks.</li><li>The total number of media segments placed on all types of tracks supports up to 500.</li>
+                     * 获取
+                     * @return Tracks 
                      * 
                      */
                     std::vector<MediaTrack> GetTracks() const;
 
                     /**
-                     * 设置The input media track list includes multiple track information composed of materials such as video, audio, and images. Among them:<li>The input multiple tracks are aligned with the output media file timeline on the timeline.</li><li>Overlap materials on different tracks at the same time point on the timeline. Perform image overlay of videos or images in track order, with materials of higher track order overlaid on top. Mix audio materials.</li><li>Each type of track supports up to 10 video, audio, or image tracks.</li><li>The total number of media segments placed on all types of tracks supports up to 500.</li>
-                     * @param _tracks The input media track list includes multiple track information composed of materials such as video, audio, and images. Among them:<li>The input multiple tracks are aligned with the output media file timeline on the timeline.</li><li>Overlap materials on different tracks at the same time point on the timeline. Perform image overlay of videos or images in track order, with materials of higher track order overlaid on top. Mix audio materials.</li><li>Each type of track supports up to 10 video, audio, or image tracks.</li><li>The total number of media segments placed on all types of tracks supports up to 500.</li>
+                     * 设置
+                     * @param _tracks 
                      * 
                      */
                     void SetTracks(const std::vector<MediaTrack>& _tracks);
@@ -67,15 +67,15 @@ namespace TencentCloud
                     bool TracksHasBeenSet() const;
 
                     /**
-                     * 获取Output media file information.
-                     * @return Output Output media file information.
+                     * 获取
+                     * @return Output 
                      * 
                      */
                     ComposeMediaOutput GetOutput() const;
 
                     /**
-                     * 设置Output media file information.
-                     * @param _output Output media file information.
+                     * 设置
+                     * @param _output 
                      * 
                      */
                     void SetOutput(const ComposeMediaOutput& _output);
@@ -88,15 +88,15 @@ namespace TencentCloud
                     bool OutputHasBeenSet() const;
 
                     /**
-                     * 获取<b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
-                     * @return SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+                     * 获取
+                     * @return SubAppId 
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置<b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
-                     * @param _subAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+                     * 设置
+                     * @param _subAppId 
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -109,15 +109,15 @@ namespace TencentCloud
                     bool SubAppIdHasBeenSet() const;
 
                     /**
-                     * 获取Canvas used when making video files.
-                     * @return Canvas Canvas used when making video files.
+                     * 获取
+                     * @return Canvas 
                      * 
                      */
                     Canvas GetCanvas() const;
 
                     /**
-                     * 设置Canvas used when making video files.
-                     * @param _canvas Canvas used when making video files.
+                     * 设置
+                     * @param _canvas 
                      * 
                      */
                     void SetCanvas(const Canvas& _canvas);
@@ -130,15 +130,15 @@ namespace TencentCloud
                     bool CanvasHasBeenSet() const;
 
                     /**
-                     * 获取Identify source context. This is used to pass through user request information. The ComposeMediaComplete callback returns the value of this field. The maximum length is 1000 characters.
-                     * @return SessionContext Identify source context. This is used to pass through user request information. The ComposeMediaComplete callback returns the value of this field. The maximum length is 1000 characters.
+                     * 获取
+                     * @return SessionContext 
                      * 
                      */
                     std::string GetSessionContext() const;
 
                     /**
-                     * 设置Identify source context. This is used to pass through user request information. The ComposeMediaComplete callback returns the value of this field. The maximum length is 1000 characters.
-                     * @param _sessionContext Identify source context. This is used to pass through user request information. The ComposeMediaComplete callback returns the value of this field. The maximum length is 1000 characters.
+                     * 设置
+                     * @param _sessionContext 
                      * 
                      */
                     void SetSessionContext(const std::string& _sessionContext);
@@ -151,15 +151,15 @@ namespace TencentCloud
                     bool SessionContextHasBeenSet() const;
 
                     /**
-                     * 获取Identifier for task deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
-                     * @return SessionId Identifier for task deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
+                     * 获取
+                     * @return SessionId 
                      * 
                      */
                     std::string GetSessionId() const;
 
                     /**
-                     * 设置Identifier for task deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
-                     * @param _sessionId Identifier for task deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
+                     * 设置
+                     * @param _sessionId 
                      * 
                      */
                     void SetSessionId(const std::string& _sessionId);
@@ -174,37 +174,37 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The input media track list includes multiple track information composed of materials such as video, audio, and images. Among them:<li>The input multiple tracks are aligned with the output media file timeline on the timeline.</li><li>Overlap materials on different tracks at the same time point on the timeline. Perform image overlay of videos or images in track order, with materials of higher track order overlaid on top. Mix audio materials.</li><li>Each type of track supports up to 10 video, audio, or image tracks.</li><li>The total number of media segments placed on all types of tracks supports up to 500.</li>
+                     * 
                      */
                     std::vector<MediaTrack> m_tracks;
                     bool m_tracksHasBeenSet;
 
                     /**
-                     * Output media file information.
+                     * 
                      */
                     ComposeMediaOutput m_output;
                     bool m_outputHasBeenSet;
 
                     /**
-                     * <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+                     * 
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
 
                     /**
-                     * Canvas used when making video files.
+                     * 
                      */
                     Canvas m_canvas;
                     bool m_canvasHasBeenSet;
 
                     /**
-                     * Identify source context. This is used to pass through user request information. The ComposeMediaComplete callback returns the value of this field. The maximum length is 1000 characters.
+                     * 
                      */
                     std::string m_sessionContext;
                     bool m_sessionContextHasBeenSet;
 
                     /**
-                     * Identifier for task deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
+                     * 
                      */
                     std::string m_sessionId;
                     bool m_sessionIdHasBeenSet;

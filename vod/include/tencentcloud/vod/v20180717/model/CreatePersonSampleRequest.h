@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Material name, length limited to 20 characters.
-                     * @return Name Material name, length limited to 20 characters.
+                     * 获取
+                     * @return Name 
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Material name, length limited to 20 characters.
-                     * @param _name Material name, length limited to 20 characters.
+                     * 设置
+                     * @param _name 
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -64,27 +64,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Material application scenario. Available values:
-1. Recognition: Used for content recognition, equivalent to Recognition.Face.
-2. Review: For inappropriate content, equivalent to Review.Face.
-3. All: Include all of the above, equivalent to 1+2.
-                     * @return Usages Material application scenario. Available values:
-1. Recognition: Used for content recognition, equivalent to Recognition.Face.
-2. Review: For inappropriate content, equivalent to Review.Face.
-3. All: Include all of the above, equivalent to 1+2.
+                     * 获取
+                     * @return Usages 
                      * 
                      */
                     std::vector<std::string> GetUsages() const;
 
                     /**
-                     * 设置Material application scenario. Available values:
-1. Recognition: Used for content recognition, equivalent to Recognition.Face.
-2. Review: For inappropriate content, equivalent to Review.Face.
-3. All: Include all of the above, equivalent to 1+2.
-                     * @param _usages Material application scenario. Available values:
-1. Recognition: Used for content recognition, equivalent to Recognition.Face.
-2. Review: For inappropriate content, equivalent to Review.Face.
-3. All: Include all of the above, equivalent to 1+2.
+                     * 设置
+                     * @param _usages 
                      * 
                      */
                     void SetUsages(const std::vector<std::string>& _usages);
@@ -97,15 +85,15 @@ namespace TencentCloud
                     bool UsagesHasBeenSet() const;
 
                     /**
-                     * 获取<b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
-                     * @return SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+                     * 获取
+                     * @return SubAppId 
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置<b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
-                     * @param _subAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+                     * 设置
+                     * @param _subAppId 
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -118,15 +106,15 @@ namespace TencentCloud
                     bool SubAppIdHasBeenSet() const;
 
                     /**
-                     * 获取Material description, with a length limit of 1024 characters.
-                     * @return Description Material description, with a length limit of 1024 characters.
+                     * 获取
+                     * @return Description 
                      * 
                      */
                     std::string GetDescription() const;
 
                     /**
-                     * 设置Material description, with a length limit of 1024 characters.
-                     * @param _description Material description, with a length limit of 1024 characters.
+                     * 设置
+                     * @param _description 
                      * 
                      */
                     void SetDescription(const std::string& _description);
@@ -139,19 +127,15 @@ namespace TencentCloud
                     bool DescriptionHasBeenSet() const;
 
                     /**
-                     * 获取The material image [Base64](https://tools.ietf.org/html/rfc4648) encoded string only supports jpeg and png image formats. Array length limit: 5 images.
-Note: The image must be a single portrait with clear facial features and not less than 200×200 pixels.
-                     * @return FaceContents The material image [Base64](https://tools.ietf.org/html/rfc4648) encoded string only supports jpeg and png image formats. Array length limit: 5 images.
-Note: The image must be a single portrait with clear facial features and not less than 200×200 pixels.
+                     * 获取
+                     * @return FaceContents 
                      * 
                      */
                     std::vector<std::string> GetFaceContents() const;
 
                     /**
-                     * 设置The material image [Base64](https://tools.ietf.org/html/rfc4648) encoded string only supports jpeg and png image formats. Array length limit: 5 images.
-Note: The image must be a single portrait with clear facial features and not less than 200×200 pixels.
-                     * @param _faceContents The material image [Base64](https://tools.ietf.org/html/rfc4648) encoded string only supports jpeg and png image formats. Array length limit: 5 images.
-Note: The image must be a single portrait with clear facial features and not less than 200×200 pixels.
+                     * 设置
+                     * @param _faceContents 
                      * 
                      */
                     void SetFaceContents(const std::vector<std::string>& _faceContents);
@@ -164,23 +148,15 @@ Note: The image must be a single portrait with clear facial features and not les
                     bool FaceContentsHasBeenSet() const;
 
                     /**
-                     * 获取material tag
-<li>Array length limit: 20 tags;</li>
-<li>Length limit for a single tag: 128 characters.</li>
-                     * @return Tags material tag
-<li>Array length limit: 20 tags;</li>
-<li>Length limit for a single tag: 128 characters.</li>
+                     * 获取
+                     * @return Tags 
                      * 
                      */
                     std::vector<std::string> GetTags() const;
 
                     /**
-                     * 设置material tag
-<li>Array length limit: 20 tags;</li>
-<li>Length limit for a single tag: 128 characters.</li>
-                     * @param _tags material tag
-<li>Array length limit: 20 tags;</li>
-<li>Length limit for a single tag: 128 characters.</li>
+                     * 设置
+                     * @param _tags 
                      * 
                      */
                     void SetTags(const std::vector<std::string>& _tags);
@@ -195,43 +171,37 @@ Note: The image must be a single portrait with clear facial features and not les
                 private:
 
                     /**
-                     * Material name, length limited to 20 characters.
+                     * 
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Material application scenario. Available values:
-1. Recognition: Used for content recognition, equivalent to Recognition.Face.
-2. Review: For inappropriate content, equivalent to Review.Face.
-3. All: Include all of the above, equivalent to 1+2.
+                     * 
                      */
                     std::vector<std::string> m_usages;
                     bool m_usagesHasBeenSet;
 
                     /**
-                     * <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+                     * 
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
 
                     /**
-                     * Material description, with a length limit of 1024 characters.
+                     * 
                      */
                     std::string m_description;
                     bool m_descriptionHasBeenSet;
 
                     /**
-                     * The material image [Base64](https://tools.ietf.org/html/rfc4648) encoded string only supports jpeg and png image formats. Array length limit: 5 images.
-Note: The image must be a single portrait with clear facial features and not less than 200×200 pixels.
+                     * 
                      */
                     std::vector<std::string> m_faceContents;
                     bool m_faceContentsHasBeenSet;
 
                     /**
-                     * material tag
-<li>Array length limit: 20 tags;</li>
-<li>Length limit for a single tag: 128 characters.</li>
+                     * 
                      */
                     std::vector<std::string> m_tags;
                     bool m_tagsHasBeenSet;

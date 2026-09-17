@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * The information of the live stream to clip.
+                * Live streaming Instant Editing stream information
                 */
                 class LiveRealTimeClipStreamInfo : public AbstractModel
                 {
@@ -47,23 +47,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The type of live stream to clip. Valid values:
-<li>Original (<b>default</b>)</li>
-<li>Transcoding</li>
-                     * @return Type The type of live stream to clip. Valid values:
-<li>Original (<b>default</b>)</li>
-<li>Transcoding</li>
+                     * 获取Live stream type. Valid values:
+<li>Original (original stream, <b>default value</b>).</li>
+<li>Transcoding (transcoding stream).</li>
+                     * @return Type Live stream type. Valid values:
+<li>Original (original stream, <b>default value</b>).</li>
+<li>Transcoding (transcoding stream).</li>
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置The type of live stream to clip. Valid values:
-<li>Original (<b>default</b>)</li>
-<li>Transcoding</li>
-                     * @param _type The type of live stream to clip. Valid values:
-<li>Original (<b>default</b>)</li>
-<li>Transcoding</li>
+                     * 设置Live stream type. Valid values:
+<li>Original (original stream, <b>default value</b>).</li>
+<li>Transcoding (transcoding stream).</li>
+                     * @param _type Live stream type. Valid values:
+<li>Original (original stream, <b>default value</b>).</li>
+<li>Transcoding (transcoding stream).</li>
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -76,19 +76,19 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取The transcoding template ID.
-<b>This is required if `Type` is `Transcoding`.</b>
-                     * @return TemplateId The transcoding template ID.
-<b>This is required if `Type` is `Transcoding`.</b>
+                     * 获取Live streaming transcoding template ID.
+<b>Required when Type is "Transcoding".</b>
+                     * @return TemplateId Live streaming transcoding template ID.
+<b>Required when Type is "Transcoding".</b>
                      * 
                      */
                     uint64_t GetTemplateId() const;
 
                     /**
-                     * 设置The transcoding template ID.
-<b>This is required if `Type` is `Transcoding`.</b>
-                     * @param _templateId The transcoding template ID.
-<b>This is required if `Type` is `Transcoding`.</b>
+                     * 设置Live streaming transcoding template ID.
+<b>Required when Type is "Transcoding".</b>
+                     * @param _templateId Live streaming transcoding template ID.
+<b>Required when Type is "Transcoding".</b>
                      * 
                      */
                     void SetTemplateId(const uint64_t& _templateId);
@@ -103,16 +103,16 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The type of live stream to clip. Valid values:
-<li>Original (<b>default</b>)</li>
-<li>Transcoding</li>
+                     * Live stream type. Valid values:
+<li>Original (original stream, <b>default value</b>).</li>
+<li>Transcoding (transcoding stream).</li>
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * The transcoding template ID.
-<b>This is required if `Type` is `Transcoding`.</b>
+                     * Live streaming transcoding template ID.
+<b>Required when Type is "Transcoding".</b>
                      */
                     uint64_t m_templateId;
                     bool m_templateIdHasBeenSet;

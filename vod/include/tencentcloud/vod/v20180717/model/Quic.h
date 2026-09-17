@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * QUIC configuration item
+                * 
                 */
                 class Quic : public AbstractModel
                 {
@@ -47,15 +47,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Quic function configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
-                     * @return Switch Quic function configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
+                     * 获取Quic configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
+                     * @return Switch Quic configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Quic function configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
-                     * @param _switch Quic function configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
+                     * 设置Quic configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
+                     * @param _switch Quic configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -70,7 +78,9 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Quic function configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
+                     * Quic configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;

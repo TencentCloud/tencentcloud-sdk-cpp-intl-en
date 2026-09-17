@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<B>VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) id. starting from december 25, 2023, if you want to access resources in the vod application (whether it is the default application or a newly created application), you must enter the application id in this field.</b>.
-                     * @return SubAppId <B>VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) id. starting from december 25, 2023, if you want to access resources in the vod application (whether it is the default application or a newly created application), you must enter the application id in this field.</b>.
+                     * 获取
+                     * @return SubAppId 
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置<B>VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) id. starting from december 25, 2023, if you want to access resources in the vod application (whether it is the default application or a newly created application), you must enter the application id in this field.</b>.
-                     * @param _subAppId <B>VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) id. starting from december 25, 2023, if you want to access resources in the vod application (whether it is the default application or a newly created application), you must enter the application id in this field.</b>.
+                     * 设置
+                     * @param _subAppId 
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool SubAppIdHasBeenSet() const;
 
                     /**
-                     * 获取Unique id filter of transcoding to adaptive bitrate streaming templates. array length limit: 100.
-                     * @return Definitions Unique id filter of transcoding to adaptive bitrate streaming templates. array length limit: 100.
+                     * 获取
+                     * @return Definitions 
                      * 
                      */
                     std::vector<uint64_t> GetDefinitions() const;
 
                     /**
-                     * 设置Unique id filter of transcoding to adaptive bitrate streaming templates. array length limit: 100.
-                     * @param _definitions Unique id filter of transcoding to adaptive bitrate streaming templates. array length limit: 100.
+                     * 设置
+                     * @param _definitions 
                      * 
                      */
                     void SetDefinitions(const std::vector<uint64_t>& _definitions);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool DefinitionsHasBeenSet() const;
 
                     /**
-                     * 获取Pagination offset. default value: 0.
-                     * @return Offset Pagination offset. default value: 0.
+                     * 获取
+                     * @return Offset 
                      * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
-                     * 设置Pagination offset. default value: 0.
-                     * @param _offset Pagination offset. default value: 0.
+                     * 设置
+                     * @param _offset 
                      * 
                      */
                     void SetOffset(const uint64_t& _offset);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Number of returned entries. default value: 10. maximum value: 100.
-                     * @return Limit Number of returned entries. default value: 10. maximum value: 100.
+                     * 获取
+                     * @return Limit 
                      * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
-                     * 设置Number of returned entries. default value: 10. maximum value: 100.
-                     * @param _limit Number of returned entries. default value: 10. maximum value: 100.
+                     * 设置
+                     * @param _limit 
                      * 
                      */
                     void SetLimit(const uint64_t& _limit);
@@ -127,23 +127,15 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Template type filter. valid values:.
-<Li>Preset: system preset template;</li>.
-<Li>Custom: user-defined template.</li>.
-                     * @return Type Template type filter. valid values:.
-<Li>Preset: system preset template;</li>.
-<Li>Custom: user-defined template.</li>.
+                     * 获取
+                     * @return Type 
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Template type filter. valid values:.
-<Li>Preset: system preset template;</li>.
-<Li>Custom: user-defined template.</li>.
-                     * @param _type Template type filter. valid values:.
-<Li>Preset: system preset template;</li>.
-<Li>Custom: user-defined template.</li>.
+                     * 设置
+                     * @param _type 
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -158,33 +150,31 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <B>VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) id. starting from december 25, 2023, if you want to access resources in the vod application (whether it is the default application or a newly created application), you must enter the application id in this field.</b>.
+                     * 
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
 
                     /**
-                     * Unique id filter of transcoding to adaptive bitrate streaming templates. array length limit: 100.
+                     * 
                      */
                     std::vector<uint64_t> m_definitions;
                     bool m_definitionsHasBeenSet;
 
                     /**
-                     * Pagination offset. default value: 0.
+                     * 
                      */
                     uint64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Number of returned entries. default value: 10. maximum value: 100.
+                     * 
                      */
                     uint64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Template type filter. valid values:.
-<Li>Preset: system preset template;</li>.
-<Li>Custom: user-defined template.</li>.
+                     * 
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;

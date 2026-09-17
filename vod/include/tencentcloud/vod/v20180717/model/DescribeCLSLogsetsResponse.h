@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Queried logset list.
-                     * @return Logsets Queried logset list.
+                     * 获取
+                     * @return Logsets 
                      * 
                      */
                     std::vector<CLSLogsetInfo> GetLogsets() const;
@@ -61,7 +61,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Queried logset list.
+                     * 
                      */
                     std::vector<CLSLogsetInfo> m_logsets;
                     bool m_logsetsHasBeenSet;

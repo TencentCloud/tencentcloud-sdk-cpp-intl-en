@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<b>Specifies the VOD application ID.</b>
-                     * @return SubAppId <b>Specifies the VOD application ID.</b>
+                     * 获取<p><b>VOD <a href="/document/product/266/14574">application</a> ID.</b></p>
+                     * @return SubAppId <p><b>VOD <a href="/document/product/266/14574">application</a> ID.</b></p>
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置<b>Specifies the VOD application ID.</b>
-                     * @param _subAppId <b>Specifies the VOD application ID.</b>
+                     * 设置<p><b>VOD <a href="/document/product/266/14574">application</a> ID.</b></p>
+                     * @param _subAppId <p><b>VOD <a href="/document/product/266/14574">application</a> ID.</b></p>
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool SubAppIdHasBeenSet() const;
 
                     /**
-                     * 获取media file ID, the globally unique identifier of the file in vod, is assigned by the vod backend after successful upload. can be obtained from the [video upload completion event notification](https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1) or [vod console](https://console.tencentcloud.com//vod/media).
-                     * @return FileId media file ID, the globally unique identifier of the file in vod, is assigned by the vod backend after successful upload. can be obtained from the [video upload completion event notification](https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1) or [vod console](https://console.tencentcloud.com//vod/media).
+                     * 获取<p>Media file ID, the globally unique identifier of the file in VOD, is assigned by the VOD backend after successful upload. You can get this field in the <a href="/document/product/266/7830">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>.</p>
+                     * @return FileId <p>Media file ID, the globally unique identifier of the file in VOD, is assigned by the VOD backend after successful upload. You can get this field in the <a href="/document/product/266/7830">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>.</p>
                      * 
                      */
                     std::string GetFileId() const;
 
                     /**
-                     * 设置media file ID, the globally unique identifier of the file in vod, is assigned by the vod backend after successful upload. can be obtained from the [video upload completion event notification](https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1) or [vod console](https://console.tencentcloud.com//vod/media).
-                     * @param _fileId media file ID, the globally unique identifier of the file in vod, is assigned by the vod backend after successful upload. can be obtained from the [video upload completion event notification](https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1) or [vod console](https://console.tencentcloud.com//vod/media).
+                     * 设置<p>Media file ID, the globally unique identifier of the file in VOD, is assigned by the VOD backend after successful upload. You can get this field in the <a href="/document/product/266/7830">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>.</p>
+                     * @param _fileId <p>Media file ID, the globally unique identifier of the file in VOD, is assigned by the VOD backend after successful upload. You can get this field in the <a href="/document/product/266/7830">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>.</p>
                      * 
                      */
                     void SetFileId(const std::string& _fileId);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool FileIdHasBeenSet() const;
 
                     /**
-                     * 获取Unique identifier of the Large Model Comprehend Template
-                     * @return Definition Unique identifier of the Large Model Comprehend Template
+                     * 获取<p>Unique identifier of the Large Model Understanding Template</p>
+                     * @return Definition <p>Unique identifier of the Large Model Understanding Template</p>
                      * 
                      */
                     int64_t GetDefinition() const;
 
                     /**
-                     * 设置Unique identifier of the Large Model Comprehend Template
-                     * @param _definition Unique identifier of the Large Model Comprehend Template
+                     * 设置<p>Unique identifier of the Large Model Understanding Template</p>
+                     * @param _definition <p>Unique identifier of the Large Model Understanding Template</p>
                      * 
                      */
                     void SetDefinition(const int64_t& _definition);
@@ -106,23 +106,36 @@ namespace TencentCloud
                     bool DefinitionHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the task type for importing the knowledge base. valid values:.
-- AiAnalysis.DescriptionTask
-- SmartSubtitle.AsrFullTextTask
-                     * @return ImportTasks Specifies the task type for importing the knowledge base. valid values:.
-- AiAnalysis.DescriptionTask
-- SmartSubtitle.AsrFullTextTask
+                     * 获取<p>List of knowledge base IDs. If left blank, the default knowledge base will be used.</p>
+                     * @return KnowledgeBaseIds <p>List of knowledge base IDs. If left blank, the default knowledge base will be used.</p>
+                     * 
+                     */
+                    std::vector<std::string> GetKnowledgeBaseIds() const;
+
+                    /**
+                     * 设置<p>List of knowledge base IDs. If left blank, the default knowledge base will be used.</p>
+                     * @param _knowledgeBaseIds <p>List of knowledge base IDs. If left blank, the default knowledge base will be used.</p>
+                     * 
+                     */
+                    void SetKnowledgeBaseIds(const std::vector<std::string>& _knowledgeBaseIds);
+
+                    /**
+                     * 判断参数 KnowledgeBaseIds 是否已赋值
+                     * @return KnowledgeBaseIds 是否已赋值
+                     * 
+                     */
+                    bool KnowledgeBaseIdsHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Task type required to import knowledge base. Optional values:</p><ul><li>AiAnalysis.DescriptionTask</li><li>SmartSubtitle.AsrFullTextTask</li></ul>
+                     * @return ImportTasks <p>Task type required to import knowledge base. Optional values:</p><ul><li>AiAnalysis.DescriptionTask</li><li>SmartSubtitle.AsrFullTextTask</li></ul>
                      * @deprecated
                      */
                     std::vector<std::string> GetImportTasks() const;
 
                     /**
-                     * 设置Specifies the task type for importing the knowledge base. valid values:.
-- AiAnalysis.DescriptionTask
-- SmartSubtitle.AsrFullTextTask
-                     * @param _importTasks Specifies the task type for importing the knowledge base. valid values:.
-- AiAnalysis.DescriptionTask
-- SmartSubtitle.AsrFullTextTask
+                     * 设置<p>Task type required to import knowledge base. Optional values:</p><ul><li>AiAnalysis.DescriptionTask</li><li>SmartSubtitle.AsrFullTextTask</li></ul>
+                     * @param _importTasks <p>Task type required to import knowledge base. Optional values:</p><ul><li>AiAnalysis.DescriptionTask</li><li>SmartSubtitle.AsrFullTextTask</li></ul>
                      * @deprecated
                      */
                     void SetImportTasks(const std::vector<std::string>& _importTasks);
@@ -137,27 +150,31 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <b>Specifies the VOD application ID.</b>
+                     * <p><b>VOD <a href="/document/product/266/14574">application</a> ID.</b></p>
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
 
                     /**
-                     * media file ID, the globally unique identifier of the file in vod, is assigned by the vod backend after successful upload. can be obtained from the [video upload completion event notification](https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1) or [vod console](https://console.tencentcloud.com//vod/media).
+                     * <p>Media file ID, the globally unique identifier of the file in VOD, is assigned by the VOD backend after successful upload. You can get this field in the <a href="/document/product/266/7830">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>.</p>
                      */
                     std::string m_fileId;
                     bool m_fileIdHasBeenSet;
 
                     /**
-                     * Unique identifier of the Large Model Comprehend Template
+                     * <p>Unique identifier of the Large Model Understanding Template</p>
                      */
                     int64_t m_definition;
                     bool m_definitionHasBeenSet;
 
                     /**
-                     * Specifies the task type for importing the knowledge base. valid values:.
-- AiAnalysis.DescriptionTask
-- SmartSubtitle.AsrFullTextTask
+                     * <p>List of knowledge base IDs. If left blank, the default knowledge base will be used.</p>
+                     */
+                    std::vector<std::string> m_knowledgeBaseIds;
+                    bool m_knowledgeBaseIdsHasBeenSet;
+
+                    /**
+                     * <p>Task type required to import knowledge base. Optional values:</p><ul><li>AiAnalysis.DescriptionTask</li><li>SmartSubtitle.AsrFullTextTask</li></ul>
                      */
                     std::vector<std::string> m_importTasks;
                     bool m_importTasksHasBeenSet;

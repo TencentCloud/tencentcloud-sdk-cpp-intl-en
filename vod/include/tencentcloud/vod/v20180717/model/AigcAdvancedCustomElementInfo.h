@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Advanced AIGC Custom Entity Information
+                * 
                 */
                 class AigcAdvancedCustomElementInfo : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Subject ID.</p>
-                     * @return Id <p>Subject ID.</p>
+                     * 获取
+                     * @return Id 
                      * 
                      */
                     std::string GetId() const;
 
                     /**
-                     * 设置<p>Subject ID.</p>
-                     * @param _id <p>Subject ID.</p>
+                     * 设置
+                     * @param _id 
                      * 
                      */
                     void SetId(const std::string& _id);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool IdHasBeenSet() const;
 
                     /**
-                     * 获取<p>Subject name.</p>
-                     * @return Name <p>Subject name.</p>
+                     * 获取
+                     * @return Name 
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置<p>Subject name.</p>
-                     * @param _name <p>Subject name.</p>
+                     * 设置
+                     * @param _name 
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取<p>Voice ID.</p>
-                     * @return VoiceId <p>Voice ID.</p>
+                     * 获取
+                     * @return VoiceId 
                      * 
                      */
                     std::string GetVoiceId() const;
 
                     /**
-                     * 设置<p>Voice ID.</p>
-                     * @param _voiceId <p>Voice ID.</p>
+                     * 设置
+                     * @param _voiceId 
                      * 
                      */
                     void SetVoiceId(const std::string& _voiceId);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool VoiceIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>Subject description.</p>
-                     * @return Description <p>Subject description.</p>
+                     * 获取
+                     * @return Description 
                      * 
                      */
                     std::string GetDescription() const;
 
                     /**
-                     * 设置<p>Subject description.</p>
-                     * @param _description <p>Subject description.</p>
+                     * 设置
+                     * @param _description 
                      * 
                      */
                     void SetDescription(const std::string& _description);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool DescriptionHasBeenSet() const;
 
                     /**
-                     * 获取<p>Subject creation time. Format according to ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
-                     * @return CreateTime <p>Subject creation time. Format according to ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
+                     * 获取
+                     * @return CreateTime 
                      * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
-                     * 设置<p>Subject creation time. Format according to ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
-                     * @param _createTime <p>Subject creation time. Format according to ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
+                     * 设置
+                     * @param _createTime 
                      * 
                      */
                     void SetCreateTime(const std::string& _createTime);
@@ -154,31 +154,31 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Subject ID.</p>
+                     * 
                      */
                     std::string m_id;
                     bool m_idHasBeenSet;
 
                     /**
-                     * <p>Subject name.</p>
+                     * 
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * <p>Voice ID.</p>
+                     * 
                      */
                     std::string m_voiceId;
                     bool m_voiceIdHasBeenSet;
 
                     /**
-                     * <p>Subject description.</p>
+                     * 
                      */
                     std::string m_description;
                     bool m_descriptionHasBeenSet;
 
                     /**
-                     * <p>Subject creation time. Format according to ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
+                     * 
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;

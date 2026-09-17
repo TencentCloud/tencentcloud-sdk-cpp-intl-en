@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Control parameter of prohibited information detection task
+                * 
                 */
                 class ProhibitedConfigureInfo : public AbstractModel
                 {
@@ -49,15 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Voice prohibition control parameter.
-                     * @return AsrReviewInfo Voice prohibition control parameter.
+                     * 获取
+                     * @return AsrReviewInfo 
                      * 
                      */
                     ProhibitedAsrReviewTemplateInfo GetAsrReviewInfo() const;
 
                     /**
-                     * 设置Voice prohibition control parameter.
-                     * @param _asrReviewInfo Voice prohibition control parameter.
+                     * 设置
+                     * @param _asrReviewInfo 
                      * 
                      */
                     void SetAsrReviewInfo(const ProhibitedAsrReviewTemplateInfo& _asrReviewInfo);
@@ -70,15 +70,15 @@ namespace TencentCloud
                     bool AsrReviewInfoHasBeenSet() const;
 
                     /**
-                     * 获取Text prohibited control parameters.
-                     * @return OcrReviewInfo Text prohibited control parameters.
+                     * 获取
+                     * @return OcrReviewInfo 
                      * 
                      */
                     ProhibitedOcrReviewTemplateInfo GetOcrReviewInfo() const;
 
                     /**
-                     * 设置Text prohibited control parameters.
-                     * @param _ocrReviewInfo Text prohibited control parameters.
+                     * 设置
+                     * @param _ocrReviewInfo 
                      * 
                      */
                     void SetOcrReviewInfo(const ProhibitedOcrReviewTemplateInfo& _ocrReviewInfo);
@@ -93,13 +93,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Voice prohibition control parameter.
+                     * 
                      */
                     ProhibitedAsrReviewTemplateInfo m_asrReviewInfo;
                     bool m_asrReviewInfoHasBeenSet;
 
                     /**
-                     * Text prohibited control parameters.
+                     * 
                      */
                     ProhibitedOcrReviewTemplateInfo m_ocrReviewInfo;
                     bool m_ocrReviewInfoHasBeenSet;

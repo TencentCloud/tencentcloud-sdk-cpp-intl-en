@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Asynchronously fetch AIGC human face information output
+                * 
                 */
                 class DescribeAigcFaceInfoAsyncOutput : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Face information.</p>
-                     * @return FaceInfoSet <p>Face information.</p>
+                     * 获取
+                     * @return FaceInfoSet 
                      * 
                      */
                     std::vector<AigcFaceInfo> GetFaceInfoSet() const;
 
                     /**
-                     * 设置<p>Face information.</p>
-                     * @param _faceInfoSet <p>Face information.</p>
+                     * 设置
+                     * @param _faceInfoSet 
                      * 
                      */
                     void SetFaceInfoSet(const std::vector<AigcFaceInfo>& _faceInfoSet);
@@ -71,7 +71,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Face information.</p>
+                     * 
                      */
                     std::vector<AigcFaceInfo> m_faceInfoSet;
                     bool m_faceInfoSetHasBeenSet;

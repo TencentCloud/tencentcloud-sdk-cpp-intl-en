@@ -27,6 +27,7 @@ set(cls_public_header_model
   include/tencentcloud/cls/v20201016/model/DeleteConsoleResponse.h
   include/tencentcloud/cls/v20201016/model/DynamicIndex.h
   include/tencentcloud/cls/v20201016/model/CreateRebuildIndexTaskResponse.h
+  include/tencentcloud/cls/v20201016/model/DeleteCLSDeliverTaskRequest.h
   include/tencentcloud/cls/v20201016/model/CreateSearchViewRequest.h
   include/tencentcloud/cls/v20201016/model/CheckFunctionRequest.h
   include/tencentcloud/cls/v20201016/model/ModifyNetworkApplicationResponse.h
@@ -76,7 +77,7 @@ set(cls_public_header_model
   include/tencentcloud/cls/v20201016/model/DeleteAlarmShieldResponse.h
   include/tencentcloud/cls/v20201016/model/TopicExtendInfo.h
   include/tencentcloud/cls/v20201016/model/CreateIndexRequest.h
-  include/tencentcloud/cls/v20201016/model/CreateConsoleResponse.h
+  include/tencentcloud/cls/v20201016/model/EsImportInfo.h
   include/tencentcloud/cls/v20201016/model/CreateTopicRequest.h
   include/tencentcloud/cls/v20201016/model/ModifyDataTransformRequest.h
   include/tencentcloud/cls/v20201016/model/CreateDlcDeliverRequest.h
@@ -88,8 +89,9 @@ set(cls_public_header_model
   include/tencentcloud/cls/v20201016/model/ModifyDashboardResponse.h
   include/tencentcloud/cls/v20201016/model/DescribeMetricSubscribesResponse.h
   include/tencentcloud/cls/v20201016/model/CreateWebCallbackRequest.h
+  include/tencentcloud/cls/v20201016/model/DeleteCLSDeliverTaskResponse.h
   include/tencentcloud/cls/v20201016/model/DescribeClusterMetricConfigsRequest.h
-  include/tencentcloud/cls/v20201016/model/DescribeConfigsRequest.h
+  include/tencentcloud/cls/v20201016/model/DescribeCLSDeliverTasksRequest.h
   include/tencentcloud/cls/v20201016/model/DlcPartitionExtra.h
   include/tencentcloud/cls/v20201016/model/DescribeKafkaConsumerTopicsResponse.h
   include/tencentcloud/cls/v20201016/model/DashboardTopicInfo.h
@@ -101,6 +103,7 @@ set(cls_public_header_model
   include/tencentcloud/cls/v20201016/model/DescribeRemoteWriteTasksResponse.h
   include/tencentcloud/cls/v20201016/model/AddMachineGroupInfoRequest.h
   include/tencentcloud/cls/v20201016/model/DescribeKafkaConsumerGroupListResponse.h
+  include/tencentcloud/cls/v20201016/model/DescribeCLSDeliverTasksResponse.h
   include/tencentcloud/cls/v20201016/model/CreateHostMetricConfigResponse.h
   include/tencentcloud/cls/v20201016/model/ModifyConsumerGroupRequest.h
   include/tencentcloud/cls/v20201016/model/CreateTopicResponse.h
@@ -223,6 +226,7 @@ set(cls_public_header_model
   include/tencentcloud/cls/v20201016/model/DescribeLogHistogramResponse.h
   include/tencentcloud/cls/v20201016/model/DescribeConsumerGroupsRequest.h
   include/tencentcloud/cls/v20201016/model/ConsoleAccount.h
+  include/tencentcloud/cls/v20201016/model/DlcTableInfo.h
   include/tencentcloud/cls/v20201016/model/CreateWebCallbackResponse.h
   include/tencentcloud/cls/v20201016/model/DeleteConsumerGroupRequest.h
   include/tencentcloud/cls/v20201016/model/OpenKafkaConsumerRequest.h
@@ -235,6 +239,7 @@ set(cls_public_header_model
   include/tencentcloud/cls/v20201016/model/EstimateRebuildIndexTaskRequest.h
   include/tencentcloud/cls/v20201016/model/EsTimeInfo.h
   include/tencentcloud/cls/v20201016/model/DescribeClusterBaseMetricConfigsResponse.h
+  include/tencentcloud/cls/v20201016/model/TargetTopicConfig.h
   include/tencentcloud/cls/v20201016/model/ModifyKafkaRechargeRequest.h
   include/tencentcloud/cls/v20201016/model/CreateIndexResponse.h
   include/tencentcloud/cls/v20201016/model/ModifyDashboardSubscribeResponse.h
@@ -257,6 +262,7 @@ set(cls_public_header_model
   include/tencentcloud/cls/v20201016/model/DescribeConsumerGroupsResponse.h
   include/tencentcloud/cls/v20201016/model/NoticeContent.h
   include/tencentcloud/cls/v20201016/model/CreateDataTransformResponse.h
+  include/tencentcloud/cls/v20201016/model/SourceTopicConfig.h
   include/tencentcloud/cls/v20201016/model/DescribeKafkaConsumerTopicsRequest.h
   include/tencentcloud/cls/v20201016/model/CreateConsumerRequest.h
   include/tencentcloud/cls/v20201016/model/DeleteHostMetricConfigRequest.h
@@ -269,6 +275,7 @@ set(cls_public_header_model
   include/tencentcloud/cls/v20201016/model/ApplyConfigToMachineGroupResponse.h
   include/tencentcloud/cls/v20201016/model/AlertHistoryNotice.h
   include/tencentcloud/cls/v20201016/model/DeleteAlarmRequest.h
+  include/tencentcloud/cls/v20201016/model/CLSDeliverTaskInfo.h
   include/tencentcloud/cls/v20201016/model/DescribeLogContextResponse.h
   include/tencentcloud/cls/v20201016/model/EstimateRebuildIndexTaskResponse.h
   include/tencentcloud/cls/v20201016/model/DeleteDashboardRequest.h
@@ -349,6 +356,7 @@ set(cls_public_header_model
   include/tencentcloud/cls/v20201016/model/CreateMetricSubscribeRequest.h
   include/tencentcloud/cls/v20201016/model/NoticeContentTemplate.h
   include/tencentcloud/cls/v20201016/model/LogItem.h
+  include/tencentcloud/cls/v20201016/model/DeliverRule.h
   include/tencentcloud/cls/v20201016/model/DescribeConfigMachineGroupsRequest.h
   include/tencentcloud/cls/v20201016/model/DescribeMetricSubscribePreviewRequest.h
   include/tencentcloud/cls/v20201016/model/DeleteConsumerResponse.h
@@ -373,6 +381,7 @@ set(cls_public_header_model
   include/tencentcloud/cls/v20201016/model/DashboardTemplateVariable.h
   include/tencentcloud/cls/v20201016/model/CancelRebuildIndexTaskRequest.h
   include/tencentcloud/cls/v20201016/model/DescribeLogsetsResponse.h
+  include/tencentcloud/cls/v20201016/model/ModifyCLSDeliverTaskResponse.h
   include/tencentcloud/cls/v20201016/model/DescribeKafkaConsumerPreviewResponse.h
   include/tencentcloud/cls/v20201016/model/RemoteWriteAuthInfo.h
   include/tencentcloud/cls/v20201016/model/NetworkApplicationInfo.h
@@ -397,7 +406,7 @@ set(cls_public_header_model
   include/tencentcloud/cls/v20201016/model/ModifyRemoteWriteTaskRequest.h
   include/tencentcloud/cls/v20201016/model/DescribeConsolesRequest.h
   include/tencentcloud/cls/v20201016/model/AlarmShieldInfo.h
-  include/tencentcloud/cls/v20201016/model/EsImportInfo.h
+  include/tencentcloud/cls/v20201016/model/CreateConsoleResponse.h
   include/tencentcloud/cls/v20201016/model/ModifyConfigResponse.h
   include/tencentcloud/cls/v20201016/model/MetricConfig.h
   include/tencentcloud/cls/v20201016/model/ModifyConsoleRequest.h
@@ -407,6 +416,7 @@ set(cls_public_header_model
   include/tencentcloud/cls/v20201016/model/SearchLogInfos.h
   include/tencentcloud/cls/v20201016/model/EnvInfo.h
   include/tencentcloud/cls/v20201016/model/ModifyKafkaConsumerResponse.h
+  include/tencentcloud/cls/v20201016/model/CreateCLSDeliverTaskRequest.h
   include/tencentcloud/cls/v20201016/model/MachineGroupTypeInfo.h
   include/tencentcloud/cls/v20201016/model/ShipperInfo.h
   include/tencentcloud/cls/v20201016/model/DescribeAlertRecordHistoryResponse.h
@@ -494,10 +504,11 @@ set(cls_public_header_model
   include/tencentcloud/cls/v20201016/model/DeleteWebCallbackRequest.h
   include/tencentcloud/cls/v20201016/model/LogRechargeRuleInfo.h
   include/tencentcloud/cls/v20201016/model/CloseKafkaConsumerRequest.h
+  include/tencentcloud/cls/v20201016/model/SourceTopicInfo.h
   include/tencentcloud/cls/v20201016/model/ModifyAlarmShieldRequest.h
   include/tencentcloud/cls/v20201016/model/AlarmNoticeDeliverConfig.h
   include/tencentcloud/cls/v20201016/model/DescribeConsumersResponse.h
-  include/tencentcloud/cls/v20201016/model/DlcTableInfo.h
+  include/tencentcloud/cls/v20201016/model/CreateCLSDeliverTaskResponse.h
   include/tencentcloud/cls/v20201016/model/DeleteRemoteWriteTaskRequest.h
   include/tencentcloud/cls/v20201016/model/ModifyKafkaConsumerGroupOffsetResponse.h
   include/tencentcloud/cls/v20201016/model/CreateShipperRequest.h
@@ -521,6 +532,7 @@ set(cls_public_header_model
   include/tencentcloud/cls/v20201016/model/DeleteKafkaRechargeRequest.h
   include/tencentcloud/cls/v20201016/model/DlcInfo.h
   include/tencentcloud/cls/v20201016/model/ModifyDataTransformResponse.h
+  include/tencentcloud/cls/v20201016/model/DescribeConfigsRequest.h
   include/tencentcloud/cls/v20201016/model/AlertHistoryRecord.h
   include/tencentcloud/cls/v20201016/model/MultiTopicSearchInformation.h
   include/tencentcloud/cls/v20201016/model/AlarmNotice.h
@@ -556,6 +568,7 @@ set(cls_public_header_model
   include/tencentcloud/cls/v20201016/model/DescribeConsolesResponse.h
   include/tencentcloud/cls/v20201016/model/SendConsumerHeartbeatRequest.h
   include/tencentcloud/cls/v20201016/model/CommitConsumerOffsetsResponse.h
+  include/tencentcloud/cls/v20201016/model/ModifyCLSDeliverTaskRequest.h
   include/tencentcloud/cls/v20201016/model/DescribeSplunkPreviewResponse.h
   )
 
@@ -569,6 +582,7 @@ set(cls_src
   src/v20201016/model/DeleteConsoleResponse.cpp
   src/v20201016/model/DynamicIndex.cpp
   src/v20201016/model/CreateRebuildIndexTaskResponse.cpp
+  src/v20201016/model/DeleteCLSDeliverTaskRequest.cpp
   src/v20201016/model/CreateSearchViewRequest.cpp
   src/v20201016/model/CheckFunctionRequest.cpp
   src/v20201016/model/ModifyNetworkApplicationResponse.cpp
@@ -618,7 +632,7 @@ set(cls_src
   src/v20201016/model/DeleteAlarmShieldResponse.cpp
   src/v20201016/model/TopicExtendInfo.cpp
   src/v20201016/model/CreateIndexRequest.cpp
-  src/v20201016/model/CreateConsoleResponse.cpp
+  src/v20201016/model/EsImportInfo.cpp
   src/v20201016/model/CreateTopicRequest.cpp
   src/v20201016/model/ModifyDataTransformRequest.cpp
   src/v20201016/model/CreateDlcDeliverRequest.cpp
@@ -630,8 +644,9 @@ set(cls_src
   src/v20201016/model/ModifyDashboardResponse.cpp
   src/v20201016/model/DescribeMetricSubscribesResponse.cpp
   src/v20201016/model/CreateWebCallbackRequest.cpp
+  src/v20201016/model/DeleteCLSDeliverTaskResponse.cpp
   src/v20201016/model/DescribeClusterMetricConfigsRequest.cpp
-  src/v20201016/model/DescribeConfigsRequest.cpp
+  src/v20201016/model/DescribeCLSDeliverTasksRequest.cpp
   src/v20201016/model/DlcPartitionExtra.cpp
   src/v20201016/model/DescribeKafkaConsumerTopicsResponse.cpp
   src/v20201016/model/DashboardTopicInfo.cpp
@@ -643,6 +658,7 @@ set(cls_src
   src/v20201016/model/DescribeRemoteWriteTasksResponse.cpp
   src/v20201016/model/AddMachineGroupInfoRequest.cpp
   src/v20201016/model/DescribeKafkaConsumerGroupListResponse.cpp
+  src/v20201016/model/DescribeCLSDeliverTasksResponse.cpp
   src/v20201016/model/CreateHostMetricConfigResponse.cpp
   src/v20201016/model/ModifyConsumerGroupRequest.cpp
   src/v20201016/model/CreateTopicResponse.cpp
@@ -765,6 +781,7 @@ set(cls_src
   src/v20201016/model/DescribeLogHistogramResponse.cpp
   src/v20201016/model/DescribeConsumerGroupsRequest.cpp
   src/v20201016/model/ConsoleAccount.cpp
+  src/v20201016/model/DlcTableInfo.cpp
   src/v20201016/model/CreateWebCallbackResponse.cpp
   src/v20201016/model/DeleteConsumerGroupRequest.cpp
   src/v20201016/model/OpenKafkaConsumerRequest.cpp
@@ -777,6 +794,7 @@ set(cls_src
   src/v20201016/model/EstimateRebuildIndexTaskRequest.cpp
   src/v20201016/model/EsTimeInfo.cpp
   src/v20201016/model/DescribeClusterBaseMetricConfigsResponse.cpp
+  src/v20201016/model/TargetTopicConfig.cpp
   src/v20201016/model/ModifyKafkaRechargeRequest.cpp
   src/v20201016/model/CreateIndexResponse.cpp
   src/v20201016/model/ModifyDashboardSubscribeResponse.cpp
@@ -799,6 +817,7 @@ set(cls_src
   src/v20201016/model/DescribeConsumerGroupsResponse.cpp
   src/v20201016/model/NoticeContent.cpp
   src/v20201016/model/CreateDataTransformResponse.cpp
+  src/v20201016/model/SourceTopicConfig.cpp
   src/v20201016/model/DescribeKafkaConsumerTopicsRequest.cpp
   src/v20201016/model/CreateConsumerRequest.cpp
   src/v20201016/model/DeleteHostMetricConfigRequest.cpp
@@ -811,6 +830,7 @@ set(cls_src
   src/v20201016/model/ApplyConfigToMachineGroupResponse.cpp
   src/v20201016/model/AlertHistoryNotice.cpp
   src/v20201016/model/DeleteAlarmRequest.cpp
+  src/v20201016/model/CLSDeliverTaskInfo.cpp
   src/v20201016/model/DescribeLogContextResponse.cpp
   src/v20201016/model/EstimateRebuildIndexTaskResponse.cpp
   src/v20201016/model/DeleteDashboardRequest.cpp
@@ -891,6 +911,7 @@ set(cls_src
   src/v20201016/model/CreateMetricSubscribeRequest.cpp
   src/v20201016/model/NoticeContentTemplate.cpp
   src/v20201016/model/LogItem.cpp
+  src/v20201016/model/DeliverRule.cpp
   src/v20201016/model/DescribeConfigMachineGroupsRequest.cpp
   src/v20201016/model/DescribeMetricSubscribePreviewRequest.cpp
   src/v20201016/model/DeleteConsumerResponse.cpp
@@ -915,6 +936,7 @@ set(cls_src
   src/v20201016/model/DashboardTemplateVariable.cpp
   src/v20201016/model/CancelRebuildIndexTaskRequest.cpp
   src/v20201016/model/DescribeLogsetsResponse.cpp
+  src/v20201016/model/ModifyCLSDeliverTaskResponse.cpp
   src/v20201016/model/DescribeKafkaConsumerPreviewResponse.cpp
   src/v20201016/model/RemoteWriteAuthInfo.cpp
   src/v20201016/model/NetworkApplicationInfo.cpp
@@ -939,7 +961,7 @@ set(cls_src
   src/v20201016/model/ModifyRemoteWriteTaskRequest.cpp
   src/v20201016/model/DescribeConsolesRequest.cpp
   src/v20201016/model/AlarmShieldInfo.cpp
-  src/v20201016/model/EsImportInfo.cpp
+  src/v20201016/model/CreateConsoleResponse.cpp
   src/v20201016/model/ModifyConfigResponse.cpp
   src/v20201016/model/MetricConfig.cpp
   src/v20201016/model/ModifyConsoleRequest.cpp
@@ -949,6 +971,7 @@ set(cls_src
   src/v20201016/model/SearchLogInfos.cpp
   src/v20201016/model/EnvInfo.cpp
   src/v20201016/model/ModifyKafkaConsumerResponse.cpp
+  src/v20201016/model/CreateCLSDeliverTaskRequest.cpp
   src/v20201016/model/MachineGroupTypeInfo.cpp
   src/v20201016/model/ShipperInfo.cpp
   src/v20201016/model/DescribeAlertRecordHistoryResponse.cpp
@@ -1036,10 +1059,11 @@ set(cls_src
   src/v20201016/model/DeleteWebCallbackRequest.cpp
   src/v20201016/model/LogRechargeRuleInfo.cpp
   src/v20201016/model/CloseKafkaConsumerRequest.cpp
+  src/v20201016/model/SourceTopicInfo.cpp
   src/v20201016/model/ModifyAlarmShieldRequest.cpp
   src/v20201016/model/AlarmNoticeDeliverConfig.cpp
   src/v20201016/model/DescribeConsumersResponse.cpp
-  src/v20201016/model/DlcTableInfo.cpp
+  src/v20201016/model/CreateCLSDeliverTaskResponse.cpp
   src/v20201016/model/DeleteRemoteWriteTaskRequest.cpp
   src/v20201016/model/ModifyKafkaConsumerGroupOffsetResponse.cpp
   src/v20201016/model/CreateShipperRequest.cpp
@@ -1063,6 +1087,7 @@ set(cls_src
   src/v20201016/model/DeleteKafkaRechargeRequest.cpp
   src/v20201016/model/DlcInfo.cpp
   src/v20201016/model/ModifyDataTransformResponse.cpp
+  src/v20201016/model/DescribeConfigsRequest.cpp
   src/v20201016/model/AlertHistoryRecord.cpp
   src/v20201016/model/MultiTopicSearchInformation.cpp
   src/v20201016/model/AlarmNotice.cpp
@@ -1098,6 +1123,7 @@ set(cls_src
   src/v20201016/model/DescribeConsolesResponse.cpp
   src/v20201016/model/SendConsumerHeartbeatRequest.cpp
   src/v20201016/model/CommitConsumerOffsetsResponse.cpp
+  src/v20201016/model/ModifyCLSDeliverTaskRequest.cpp
   src/v20201016/model/DescribeSplunkPreviewResponse.cpp
   )
 

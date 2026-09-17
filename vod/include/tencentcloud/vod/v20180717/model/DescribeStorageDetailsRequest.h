@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Start time. Format according to ISO 8601. For details, see the [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
-                     * @return StartTime Start time. Format according to ISO 8601. For details, see the [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
+                     * 获取
+                     * @return StartTime 
                      * 
                      */
                     std::string GetStartTime() const;
 
                     /**
-                     * 设置Start time. Format according to ISO 8601. For details, see the [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
-                     * @param _startTime Start time. Format according to ISO 8601. For details, see the [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
+                     * 设置
+                     * @param _startTime 
                      * 
                      */
                     void SetStartTime(const std::string& _startTime);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取End time, which must be greater than the start date. Format according to ISO 8601. For details, see the [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
-                     * @return EndTime End time, which must be greater than the start date. Format according to ISO 8601. For details, see the [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
+                     * 获取
+                     * @return EndTime 
                      * 
                      */
                     std::string GetEndTime() const;
 
                     /**
-                     * 设置End time, which must be greater than the start date. Format according to ISO 8601. For details, see the [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
-                     * @param _endTime End time, which must be greater than the start date. Format according to ISO 8601. For details, see the [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
+                     * 设置
+                     * @param _endTime 
                      * 
                      */
                     void SetEndTime(const std::string& _endTime);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
-                     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+                     * 获取
+                     * @return SubAppId 
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
-                     * @param _subAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+                     * 设置
+                     * @param _subAppId 
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -106,27 +106,15 @@ namespace TencentCloud
                     bool SubAppIdHasBeenSet() const;
 
                     /**
-                     * 获取Statistical time granularity. Valid values:
-<li>Minute: 5 minutes.</li>
-<li>Day: day.</li>
-By default, the granularity is determined by the time span. It is 5 minutes for a duration of up to 1 day and day for over 1 day.
-                     * @return Interval Statistical time granularity. Valid values:
-<li>Minute: 5 minutes.</li>
-<li>Day: day.</li>
-By default, the granularity is determined by the time span. It is 5 minutes for a duration of up to 1 day and day for over 1 day.
+                     * 获取
+                     * @return Interval 
                      * 
                      */
                     std::string GetInterval() const;
 
                     /**
-                     * 设置Statistical time granularity. Valid values:
-<li>Minute: 5 minutes.</li>
-<li>Day: day.</li>
-By default, the granularity is determined by the time span. It is 5 minutes for a duration of up to 1 day and day for over 1 day.
-                     * @param _interval Statistical time granularity. Valid values:
-<li>Minute: 5 minutes.</li>
-<li>Day: day.</li>
-By default, the granularity is determined by the time span. It is 5 minutes for a duration of up to 1 day and day for over 1 day.
+                     * 设置
+                     * @param _interval 
                      * 
                      */
                     void SetInterval(const std::string& _interval);
@@ -139,75 +127,15 @@ By default, the granularity is determined by the time span. It is 5 minutes for 
                     bool IntervalHasBeenSet() const;
 
                     /**
-                     * 获取Storage type for query. Valid values:
-<li>TotalStorage: Total stored amount, sum of standard, infrequent, archive, and deep archive storage capacity, excluding early deletion amount.</li>
-<li>StandardStorage: Standard storage.</li>
-<li>InfrequentStorage: Infrequent storage.</li>
-<li>ArchiveStorage: Archive storage.</li>
-<li>DeepArchiveStorage: deep archive storage.</li>
-<li>DeletedInfrequentStorage: Early deletion amount of infrequent storage.</li>
-<li>DeletedArchiveStorage: Early deletion amount of archive.</li>
-<li>DeletedDeepArchiveStorage: Early deletion amount of deep archive.</li>
-<li>ArchiveStandardRetrieval: Standard retrieval volume of archive.</li>
-<li>ArchiveExpeditedRetrieval: Quick retrieval volume of archive.</li>
-<li>ArchiveBulkRetrieval: Archive batch retrieval amount.</li>
-<li>DeepArchiveStandardRetrieval: Deep archive standard retrieval.</li>
-<li>DeepArchiveBulkRetrieval: Deep archive batch retrieval amount.</li>
-<li>InfrequentRetrieval: Retrieval volume of infrequent storage.</li>
-Default value: TotalStorage.
-                     * @return StorageType Storage type for query. Valid values:
-<li>TotalStorage: Total stored amount, sum of standard, infrequent, archive, and deep archive storage capacity, excluding early deletion amount.</li>
-<li>StandardStorage: Standard storage.</li>
-<li>InfrequentStorage: Infrequent storage.</li>
-<li>ArchiveStorage: Archive storage.</li>
-<li>DeepArchiveStorage: deep archive storage.</li>
-<li>DeletedInfrequentStorage: Early deletion amount of infrequent storage.</li>
-<li>DeletedArchiveStorage: Early deletion amount of archive.</li>
-<li>DeletedDeepArchiveStorage: Early deletion amount of deep archive.</li>
-<li>ArchiveStandardRetrieval: Standard retrieval volume of archive.</li>
-<li>ArchiveExpeditedRetrieval: Quick retrieval volume of archive.</li>
-<li>ArchiveBulkRetrieval: Archive batch retrieval amount.</li>
-<li>DeepArchiveStandardRetrieval: Deep archive standard retrieval.</li>
-<li>DeepArchiveBulkRetrieval: Deep archive batch retrieval amount.</li>
-<li>InfrequentRetrieval: Retrieval volume of infrequent storage.</li>
-Default value: TotalStorage.
+                     * 获取
+                     * @return StorageType 
                      * 
                      */
                     std::string GetStorageType() const;
 
                     /**
-                     * 设置Storage type for query. Valid values:
-<li>TotalStorage: Total stored amount, sum of standard, infrequent, archive, and deep archive storage capacity, excluding early deletion amount.</li>
-<li>StandardStorage: Standard storage.</li>
-<li>InfrequentStorage: Infrequent storage.</li>
-<li>ArchiveStorage: Archive storage.</li>
-<li>DeepArchiveStorage: deep archive storage.</li>
-<li>DeletedInfrequentStorage: Early deletion amount of infrequent storage.</li>
-<li>DeletedArchiveStorage: Early deletion amount of archive.</li>
-<li>DeletedDeepArchiveStorage: Early deletion amount of deep archive.</li>
-<li>ArchiveStandardRetrieval: Standard retrieval volume of archive.</li>
-<li>ArchiveExpeditedRetrieval: Quick retrieval volume of archive.</li>
-<li>ArchiveBulkRetrieval: Archive batch retrieval amount.</li>
-<li>DeepArchiveStandardRetrieval: Deep archive standard retrieval.</li>
-<li>DeepArchiveBulkRetrieval: Deep archive batch retrieval amount.</li>
-<li>InfrequentRetrieval: Retrieval volume of infrequent storage.</li>
-Default value: TotalStorage.
-                     * @param _storageType Storage type for query. Valid values:
-<li>TotalStorage: Total stored amount, sum of standard, infrequent, archive, and deep archive storage capacity, excluding early deletion amount.</li>
-<li>StandardStorage: Standard storage.</li>
-<li>InfrequentStorage: Infrequent storage.</li>
-<li>ArchiveStorage: Archive storage.</li>
-<li>DeepArchiveStorage: deep archive storage.</li>
-<li>DeletedInfrequentStorage: Early deletion amount of infrequent storage.</li>
-<li>DeletedArchiveStorage: Early deletion amount of archive.</li>
-<li>DeletedDeepArchiveStorage: Early deletion amount of deep archive.</li>
-<li>ArchiveStandardRetrieval: Standard retrieval volume of archive.</li>
-<li>ArchiveExpeditedRetrieval: Quick retrieval volume of archive.</li>
-<li>ArchiveBulkRetrieval: Archive batch retrieval amount.</li>
-<li>DeepArchiveStandardRetrieval: Deep archive standard retrieval.</li>
-<li>DeepArchiveBulkRetrieval: Deep archive batch retrieval amount.</li>
-<li>InfrequentRetrieval: Retrieval volume of infrequent storage.</li>
-Default value: TotalStorage.
+                     * 设置
+                     * @param _storageType 
                      * 
                      */
                     void SetStorageType(const std::string& _storageType);
@@ -220,27 +148,15 @@ Default value: TotalStorage.
                     bool StorageTypeHasBeenSet() const;
 
                     /**
-                     * 获取Storage region for query. Valid value:
-<li>Chinese Mainland: within the Chinese mainland (excluding Hong Kong (China), Macao (China) and Taiwan (China)).</li>
-<li>Outside Chinese Mainland: outside the Chinese mainland.</li>
-Default value is Chinese Mainland.
-                     * @return Area Storage region for query. Valid value:
-<li>Chinese Mainland: within the Chinese mainland (excluding Hong Kong (China), Macao (China) and Taiwan (China)).</li>
-<li>Outside Chinese Mainland: outside the Chinese mainland.</li>
-Default value is Chinese Mainland.
+                     * 获取
+                     * @return Area 
                      * 
                      */
                     std::string GetArea() const;
 
                     /**
-                     * 设置Storage region for query. Valid value:
-<li>Chinese Mainland: within the Chinese mainland (excluding Hong Kong (China), Macao (China) and Taiwan (China)).</li>
-<li>Outside Chinese Mainland: outside the Chinese mainland.</li>
-Default value is Chinese Mainland.
-                     * @param _area Storage region for query. Valid value:
-<li>Chinese Mainland: within the Chinese mainland (excluding Hong Kong (China), Macao (China) and Taiwan (China)).</li>
-<li>Outside Chinese Mainland: outside the Chinese mainland.</li>
-Default value is Chinese Mainland.
+                     * 设置
+                     * @param _area 
                      * 
                      */
                     void SetArea(const std::string& _area);
@@ -255,58 +171,37 @@ Default value is Chinese Mainland.
                 private:
 
                     /**
-                     * Start time. Format according to ISO 8601. For details, see the [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
+                     * 
                      */
                     std::string m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * End time, which must be greater than the start date. Format according to ISO 8601. For details, see the [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
+                     * 
                      */
                     std::string m_endTime;
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+                     * 
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
 
                     /**
-                     * Statistical time granularity. Valid values:
-<li>Minute: 5 minutes.</li>
-<li>Day: day.</li>
-By default, the granularity is determined by the time span. It is 5 minutes for a duration of up to 1 day and day for over 1 day.
+                     * 
                      */
                     std::string m_interval;
                     bool m_intervalHasBeenSet;
 
                     /**
-                     * Storage type for query. Valid values:
-<li>TotalStorage: Total stored amount, sum of standard, infrequent, archive, and deep archive storage capacity, excluding early deletion amount.</li>
-<li>StandardStorage: Standard storage.</li>
-<li>InfrequentStorage: Infrequent storage.</li>
-<li>ArchiveStorage: Archive storage.</li>
-<li>DeepArchiveStorage: deep archive storage.</li>
-<li>DeletedInfrequentStorage: Early deletion amount of infrequent storage.</li>
-<li>DeletedArchiveStorage: Early deletion amount of archive.</li>
-<li>DeletedDeepArchiveStorage: Early deletion amount of deep archive.</li>
-<li>ArchiveStandardRetrieval: Standard retrieval volume of archive.</li>
-<li>ArchiveExpeditedRetrieval: Quick retrieval volume of archive.</li>
-<li>ArchiveBulkRetrieval: Archive batch retrieval amount.</li>
-<li>DeepArchiveStandardRetrieval: Deep archive standard retrieval.</li>
-<li>DeepArchiveBulkRetrieval: Deep archive batch retrieval amount.</li>
-<li>InfrequentRetrieval: Retrieval volume of infrequent storage.</li>
-Default value: TotalStorage.
+                     * 
                      */
                     std::string m_storageType;
                     bool m_storageTypeHasBeenSet;
 
                     /**
-                     * Storage region for query. Valid value:
-<li>Chinese Mainland: within the Chinese mainland (excluding Hong Kong (China), Macao (China) and Taiwan (China)).</li>
-<li>Outside Chinese Mainland: outside the Chinese mainland.</li>
-Default value is Chinese Mainland.
+                     * 
                      */
                     std::string m_area;
                     bool m_areaHasBeenSet;

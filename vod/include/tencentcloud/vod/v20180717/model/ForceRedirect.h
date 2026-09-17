@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Access protocol forced redirect configuration. This is disabled by default.
+                * 
                 */
                 class ForceRedirect : public AbstractModel
                 {
@@ -47,15 +47,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Access forced jump configuration switch, value: <li>on: on; </li> <li>off: off. </li>
-                     * @return Switch Access forced jump configuration switch, value: <li>on: on; </li> <li>off: off. </li>
+                     * 获取Access the forced redirect configuration switch. Value:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
+                     * @return Switch Access the forced redirect configuration switch. Value:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Access forced jump configuration switch, value: <li>on: on; </li> <li>off: off. </li>
-                     * @param _switch Access forced jump configuration switch, value: <li>on: on; </li> <li>off: off. </li>
+                     * 设置Access the forced redirect configuration switch. Value:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
+                     * @param _switch Access the forced redirect configuration switch. Value:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -68,15 +76,23 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取Access forced jump type: <li>http: forced http jump</li> <li>https: forced https jump</li>
-                     * @return RedirectType Access forced jump type: <li>http: forced http jump</li> <li>https: forced https jump</li>
+                     * 获取Access forced redirect type:
+<li>http: Force HTTP redirect</li>
+<li>https: Force HTTPS redirection</li>
+                     * @return RedirectType Access forced redirect type:
+<li>http: Force HTTP redirect</li>
+<li>https: Force HTTPS redirection</li>
                      * 
                      */
                     std::string GetRedirectType() const;
 
                     /**
-                     * 设置Access forced jump type: <li>http: forced http jump</li> <li>https: forced https jump</li>
-                     * @param _redirectType Access forced jump type: <li>http: forced http jump</li> <li>https: forced https jump</li>
+                     * 设置Access forced redirect type:
+<li>http: Force HTTP redirect</li>
+<li>https: Force HTTPS redirection</li>
+                     * @param _redirectType Access forced redirect type:
+<li>http: Force HTTP redirect</li>
+<li>https: Force HTTPS redirection</li>
                      * 
                      */
                     void SetRedirectType(const std::string& _redirectType);
@@ -89,15 +105,15 @@ namespace TencentCloud
                     bool RedirectTypeHasBeenSet() const;
 
                     /**
-                     * 获取Status code returned for forced redirect Supports 301, 302.
-                     * @return RedirectStatusCode Status code returned for forced redirect Supports 301, 302.
+                     * 获取
+                     * @return RedirectStatusCode 
                      * 
                      */
                     uint64_t GetRedirectStatusCode() const;
 
                     /**
-                     * 设置Status code returned for forced redirect Supports 301, 302.
-                     * @param _redirectStatusCode Status code returned for forced redirect Supports 301, 302.
+                     * 设置
+                     * @param _redirectStatusCode 
                      * 
                      */
                     void SetRedirectStatusCode(const uint64_t& _redirectStatusCode);
@@ -110,15 +126,15 @@ namespace TencentCloud
                     bool RedirectStatusCodeHasBeenSet() const;
 
                     /**
-                     * 获取Whether to return the newly added header during force redirection.
-                     * @return CarryHeaders Whether to return the newly added header during force redirection.
+                     * 获取
+                     * @return CarryHeaders 
                      * 
                      */
                     std::string GetCarryHeaders() const;
 
                     /**
-                     * 设置Whether to return the newly added header during force redirection.
-                     * @param _carryHeaders Whether to return the newly added header during force redirection.
+                     * 设置
+                     * @param _carryHeaders 
                      * 
                      */
                     void SetCarryHeaders(const std::string& _carryHeaders);
@@ -133,25 +149,29 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Access forced jump configuration switch, value: <li>on: on; </li> <li>off: off. </li>
+                     * Access the forced redirect configuration switch. Value:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * Access forced jump type: <li>http: forced http jump</li> <li>https: forced https jump</li>
+                     * Access forced redirect type:
+<li>http: Force HTTP redirect</li>
+<li>https: Force HTTPS redirection</li>
                      */
                     std::string m_redirectType;
                     bool m_redirectTypeHasBeenSet;
 
                     /**
-                     * Status code returned for forced redirect Supports 301, 302.
+                     * 
                      */
                     uint64_t m_redirectStatusCode;
                     bool m_redirectStatusCodeHasBeenSet;
 
                     /**
-                     * Whether to return the newly added header during force redirection.
+                     * 
                      */
                     std::string m_carryHeaders;
                     bool m_carryHeadersHasBeenSet;

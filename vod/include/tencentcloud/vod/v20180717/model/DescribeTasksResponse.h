@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Task summary list.
-                     * @return TaskSet Task summary list.
+                     * 获取
+                     * @return TaskSet 
                      * 
                      */
                     std::vector<TaskSimpleInfo> GetTaskSet() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TaskSetHasBeenSet() const;
 
                     /**
-                     * 获取Pagination identifier. When the request did not return all data, this field represents the next record ID. When this field is empty, it indicates that there is no more data.
-                     * @return ScrollToken Pagination identifier. When the request did not return all data, this field represents the next record ID. When this field is empty, it indicates that there is no more data.
+                     * 获取
+                     * @return ScrollToken 
                      * 
                      */
                     std::string GetScrollToken() const;
@@ -75,13 +75,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Task summary list.
+                     * 
                      */
                     std::vector<TaskSimpleInfo> m_taskSet;
                     bool m_taskSetHasBeenSet;
 
                     /**
-                     * Pagination identifier. When the request did not return all data, this field represents the next record ID. When this field is empty, it indicates that there is no more data.
+                     * 
                      */
                     std::string m_scrollToken;
                     bool m_scrollTokenHasBeenSet;

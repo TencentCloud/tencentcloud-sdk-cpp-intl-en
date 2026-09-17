@@ -30,6 +30,7 @@
 #include <tencentcloud/vod/v20180717/model/AiRecognitionTaskInput.h>
 #include <tencentcloud/vod/v20180717/model/WechatMiniProgramPublishTaskInput.h>
 #include <tencentcloud/vod/v20180717/model/ProcedureReviewAudioVideoTaskInput.h>
+#include <tencentcloud/vod/v20180717/model/ImportMediaKnowledgeTaskInput.h>
 
 
 namespace TencentCloud
@@ -41,7 +42,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Task flow template details
+                * 
                 */
                 class ProcedureTemplate : public AbstractModel
                 {
@@ -53,15 +54,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Task flow name.
-                     * @return Name Task flow name.
+                     * 获取
+                     * @return Name 
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Task flow name.
-                     * @param _name Task flow name.
+                     * 设置
+                     * @param _name 
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -74,23 +75,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Type of a task flow template. Valid values:
-<li>Preset: preset task flow template;</li>
-<li>Custom: custom task flow template.</li>
-                     * @return Type Type of a task flow template. Valid values:
-<li>Preset: preset task flow template;</li>
-<li>Custom: custom task flow template.</li>
+                     * 获取
+                     * @return Type 
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Type of a task flow template. Valid values:
-<li>Preset: preset task flow template;</li>
-<li>Custom: custom task flow template.</li>
-                     * @param _type Type of a task flow template. Valid values:
-<li>Preset: preset task flow template;</li>
-<li>Custom: custom task flow template.</li>
+                     * 设置
+                     * @param _type 
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -103,15 +96,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Template description. Length limit: 256 characters.
-                     * @return Comment Template description. Length limit: 256 characters.
+                     * 获取
+                     * @return Comment 
                      * 
                      */
                     std::string GetComment() const;
 
                     /**
-                     * 设置Template description. Length limit: 256 characters.
-                     * @param _comment Template description. Length limit: 256 characters.
+                     * 设置
+                     * @param _comment 
                      * 
                      */
                     void SetComment(const std::string& _comment);
@@ -124,19 +117,15 @@ namespace TencentCloud
                     bool CommentHasBeenSet() const;
 
                     /**
-                     * 获取Parameter of video processing task.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return MediaProcessTask Parameter of video processing task.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return MediaProcessTask 
                      * 
                      */
                     MediaProcessTaskInput GetMediaProcessTask() const;
 
                     /**
-                     * 设置Parameter of video processing task.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _mediaProcessTask Parameter of video processing task.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _mediaProcessTask 
                      * 
                      */
                     void SetMediaProcessTask(const MediaProcessTaskInput& _mediaProcessTask);
@@ -149,23 +138,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool MediaProcessTaskHasBeenSet() const;
 
                     /**
-                     * 获取The information of the intelligent moderation task\*.
-<font color=red>\*: This parameter is used by our old moderation templates and is not recommended. Please use `ReviewAudioVideoTask` instead.</font> 
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return AiContentReviewTask The information of the intelligent moderation task\*.
-<font color=red>\*: This parameter is used by our old moderation templates and is not recommended. Please use `ReviewAudioVideoTask` instead.</font> 
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return AiContentReviewTask 
                      * 
                      */
                     AiContentReviewTaskInput GetAiContentReviewTask() const;
 
                     /**
-                     * 设置The information of the intelligent moderation task\*.
-<font color=red>\*: This parameter is used by our old moderation templates and is not recommended. Please use `ReviewAudioVideoTask` instead.</font> 
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _aiContentReviewTask The information of the intelligent moderation task\*.
-<font color=red>\*: This parameter is used by our old moderation templates and is not recommended. Please use `ReviewAudioVideoTask` instead.</font> 
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _aiContentReviewTask 
                      * 
                      */
                     void SetAiContentReviewTask(const AiContentReviewTaskInput& _aiContentReviewTask);
@@ -178,19 +159,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool AiContentReviewTaskHasBeenSet() const;
 
                     /**
-                     * 获取Parameter of AI-based content analysis task.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return AiAnalysisTask Parameter of AI-based content analysis task.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return AiAnalysisTask 
                      * 
                      */
                     AiAnalysisTaskInput GetAiAnalysisTask() const;
 
                     /**
-                     * 设置Parameter of AI-based content analysis task.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _aiAnalysisTask Parameter of AI-based content analysis task.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _aiAnalysisTask 
                      * 
                      */
                     void SetAiAnalysisTask(const AiAnalysisTaskInput& _aiAnalysisTask);
@@ -203,15 +180,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool AiAnalysisTaskHasBeenSet() const;
 
                     /**
-                     * 获取Parameters for the AI content recognition task.
-                     * @return AiRecognitionTaskSet Parameters for the AI content recognition task.
+                     * 获取
+                     * @return AiRecognitionTaskSet 
                      * 
                      */
                     std::vector<AiRecognitionTaskInput> GetAiRecognitionTaskSet() const;
 
                     /**
-                     * 设置Parameters for the AI content recognition task.
-                     * @param _aiRecognitionTaskSet Parameters for the AI content recognition task.
+                     * 设置
+                     * @param _aiRecognitionTaskSet 
                      * 
                      */
                     void SetAiRecognitionTaskSet(const std::vector<AiRecognitionTaskInput>& _aiRecognitionTaskSet);
@@ -224,19 +201,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool AiRecognitionTaskSetHasBeenSet() const;
 
                     /**
-                     * 获取This parameter is not recommended. Recommend using AiRecognitionTaskSet.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return AiRecognitionTask This parameter is not recommended. Recommend using AiRecognitionTaskSet.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return AiRecognitionTask 
                      * @deprecated
                      */
                     AiRecognitionTaskInput GetAiRecognitionTask() const;
 
                     /**
-                     * 设置This parameter is not recommended. Recommend using AiRecognitionTaskSet.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _aiRecognitionTask This parameter is not recommended. Recommend using AiRecognitionTaskSet.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _aiRecognitionTask 
                      * @deprecated
                      */
                     void SetAiRecognitionTask(const AiRecognitionTaskInput& _aiRecognitionTask);
@@ -249,19 +222,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool AiRecognitionTaskHasBeenSet() const;
 
                     /**
-                     * 获取Parameter of a release on WeChat Mini Program task.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return MiniProgramPublishTask Parameter of a release on WeChat Mini Program task.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return MiniProgramPublishTask 
                      * 
                      */
                     WechatMiniProgramPublishTaskInput GetMiniProgramPublishTask() const;
 
                     /**
-                     * 设置Parameter of a release on WeChat Mini Program task.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _miniProgramPublishTask Parameter of a release on WeChat Mini Program task.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _miniProgramPublishTask 
                      * 
                      */
                     void SetMiniProgramPublishTask(const WechatMiniProgramPublishTaskInput& _miniProgramPublishTask);
@@ -274,19 +243,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool MiniProgramPublishTaskHasBeenSet() const;
 
                     /**
-                     * 获取The information of the moderation task.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ReviewAudioVideoTask The information of the moderation task.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return ReviewAudioVideoTask 
                      * 
                      */
                     ProcedureReviewAudioVideoTaskInput GetReviewAudioVideoTask() const;
 
                     /**
-                     * 设置The information of the moderation task.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _reviewAudioVideoTask The information of the moderation task.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _reviewAudioVideoTask 
                      * 
                      */
                     void SetReviewAudioVideoTask(const ProcedureReviewAudioVideoTaskInput& _reviewAudioVideoTask);
@@ -299,15 +264,36 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ReviewAudioVideoTaskHasBeenSet() const;
 
                     /**
-                     * 获取Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
-                     * @return CreateTime Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 获取
+                     * @return ImportMediaKnowledgeTaskSet 
+                     * 
+                     */
+                    std::vector<ImportMediaKnowledgeTaskInput> GetImportMediaKnowledgeTaskSet() const;
+
+                    /**
+                     * 设置
+                     * @param _importMediaKnowledgeTaskSet 
+                     * 
+                     */
+                    void SetImportMediaKnowledgeTaskSet(const std::vector<ImportMediaKnowledgeTaskInput>& _importMediaKnowledgeTaskSet);
+
+                    /**
+                     * 判断参数 ImportMediaKnowledgeTaskSet 是否已赋值
+                     * @return ImportMediaKnowledgeTaskSet 是否已赋值
+                     * 
+                     */
+                    bool ImportMediaKnowledgeTaskSetHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return CreateTime 
                      * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
-                     * 设置Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
-                     * @param _createTime Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 设置
+                     * @param _createTime 
                      * 
                      */
                     void SetCreateTime(const std::string& _createTime);
@@ -320,15 +306,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Last modified time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
-                     * @return UpdateTime Last modified time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 获取
+                     * @return UpdateTime 
                      * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
-                     * 设置Last modified time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
-                     * @param _updateTime Last modified time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 设置
+                     * @param _updateTime 
                      * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
@@ -343,82 +329,79 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Task flow name.
+                     * 
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Type of a task flow template. Valid values:
-<li>Preset: preset task flow template;</li>
-<li>Custom: custom task flow template.</li>
+                     * 
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Template description. Length limit: 256 characters.
+                     * 
                      */
                     std::string m_comment;
                     bool m_commentHasBeenSet;
 
                     /**
-                     * Parameter of video processing task.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     MediaProcessTaskInput m_mediaProcessTask;
                     bool m_mediaProcessTaskHasBeenSet;
 
                     /**
-                     * The information of the intelligent moderation task\*.
-<font color=red>\*: This parameter is used by our old moderation templates and is not recommended. Please use `ReviewAudioVideoTask` instead.</font> 
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     AiContentReviewTaskInput m_aiContentReviewTask;
                     bool m_aiContentReviewTaskHasBeenSet;
 
                     /**
-                     * Parameter of AI-based content analysis task.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     AiAnalysisTaskInput m_aiAnalysisTask;
                     bool m_aiAnalysisTaskHasBeenSet;
 
                     /**
-                     * Parameters for the AI content recognition task.
+                     * 
                      */
                     std::vector<AiRecognitionTaskInput> m_aiRecognitionTaskSet;
                     bool m_aiRecognitionTaskSetHasBeenSet;
 
                     /**
-                     * This parameter is not recommended. Recommend using AiRecognitionTaskSet.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     AiRecognitionTaskInput m_aiRecognitionTask;
                     bool m_aiRecognitionTaskHasBeenSet;
 
                     /**
-                     * Parameter of a release on WeChat Mini Program task.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     WechatMiniProgramPublishTaskInput m_miniProgramPublishTask;
                     bool m_miniProgramPublishTaskHasBeenSet;
 
                     /**
-                     * The information of the moderation task.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     ProcedureReviewAudioVideoTaskInput m_reviewAudioVideoTask;
                     bool m_reviewAudioVideoTaskHasBeenSet;
 
                     /**
-                     * Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 
+                     */
+                    std::vector<ImportMediaKnowledgeTaskInput> m_importMediaKnowledgeTaskSet;
+                    bool m_importMediaKnowledgeTaskSetHasBeenSet;
+
+                    /**
+                     * 
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * Last modified time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 
                      */
                     std::string m_updateTime;
                     bool m_updateTimeHasBeenSet;

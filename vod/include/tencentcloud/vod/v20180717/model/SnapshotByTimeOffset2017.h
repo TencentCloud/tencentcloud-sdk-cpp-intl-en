@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Screencapturing output information (v2017)
+                * 
                 */
                 class SnapshotByTimeOffset2017 : public AbstractModel
                 {
@@ -47,27 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Error code
-<li>0: success;</li>
-<li>Other values: failure.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return ErrCode Error code
-<li>0: success;</li>
-<li>Other values: failure.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return ErrCode 
                      * 
                      */
                     int64_t GetErrCode() const;
 
                     /**
-                     * 设置Error code
-<li>0: success;</li>
-<li>Other values: failure.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _errCode Error code
-<li>0: success;</li>
-<li>Other values: failure.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _errCode 
                      * 
                      */
                     void SetErrCode(const int64_t& _errCode);
@@ -80,19 +68,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool ErrCodeHasBeenSet() const;
 
                     /**
-                     * 获取Specific time point of screenshot in milliseconds.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return TimeOffset Specific time point of screenshot in milliseconds.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return TimeOffset 
                      * 
                      */
                     uint64_t GetTimeOffset() const;
 
                     /**
-                     * 设置Specific time point of screenshot in milliseconds.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _timeOffset Specific time point of screenshot in milliseconds.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _timeOffset 
                      * 
                      */
                     void SetTimeOffset(const uint64_t& _timeOffset);
@@ -105,19 +89,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool TimeOffsetHasBeenSet() const;
 
                     /**
-                     * 获取Address of output screenshot file.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Url Address of output screenshot file.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return Url 
                      * 
                      */
                     std::string GetUrl() const;
 
                     /**
-                     * 设置Address of output screenshot file.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _url Address of output screenshot file.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _url 
                      * 
                      */
                     void SetUrl(const std::string& _url);
@@ -132,24 +112,19 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Error code
-<li>0: success;</li>
-<li>Other values: failure.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t m_errCode;
                     bool m_errCodeHasBeenSet;
 
                     /**
-                     * Specific time point of screenshot in milliseconds.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t m_timeOffset;
                     bool m_timeOffsetHasBeenSet;
 
                     /**
-                     * Address of output screenshot file.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string m_url;
                     bool m_urlHasBeenSet;

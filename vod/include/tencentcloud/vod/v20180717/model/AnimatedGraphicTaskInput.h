@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Animated image generating task type
+                * 
                 */
                 class AnimatedGraphicTaskInput : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Animated image generating template ID
-                     * @return Definition Animated image generating template ID
+                     * 获取
+                     * @return Definition 
                      * 
                      */
                     uint64_t GetDefinition() const;
 
                     /**
-                     * 设置Animated image generating template ID
-                     * @param _definition Animated image generating template ID
+                     * 设置
+                     * @param _definition 
                      * 
                      */
                     void SetDefinition(const uint64_t& _definition);
@@ -68,27 +68,15 @@ namespace TencentCloud
                     bool DefinitionHasBeenSet() const;
 
                     /**
-                     * 获取Start time offset of an animated image in the video, in seconds.
-<li>If this parameter is left empty or set to 0, the animated image will start at the same time as the video.</li>
-<li>If this parameter is set to a positive number (n for example), the animated image will start at the nth second of the video.</li>
-<li>If this parameter is set to a negative number (-n for example), the animated image will start at the nth second before the end of the video.</li>
-                     * @return StartTimeOffset Start time offset of an animated image in the video, in seconds.
-<li>If this parameter is left empty or set to 0, the animated image will start at the same time as the video.</li>
-<li>If this parameter is set to a positive number (n for example), the animated image will start at the nth second of the video.</li>
-<li>If this parameter is set to a negative number (-n for example), the animated image will start at the nth second before the end of the video.</li>
+                     * 获取
+                     * @return StartTimeOffset 
                      * 
                      */
                     double GetStartTimeOffset() const;
 
                     /**
-                     * 设置Start time offset of an animated image in the video, in seconds.
-<li>If this parameter is left empty or set to 0, the animated image will start at the same time as the video.</li>
-<li>If this parameter is set to a positive number (n for example), the animated image will start at the nth second of the video.</li>
-<li>If this parameter is set to a negative number (-n for example), the animated image will start at the nth second before the end of the video.</li>
-                     * @param _startTimeOffset Start time offset of an animated image in the video, in seconds.
-<li>If this parameter is left empty or set to 0, the animated image will start at the same time as the video.</li>
-<li>If this parameter is set to a positive number (n for example), the animated image will start at the nth second of the video.</li>
-<li>If this parameter is set to a negative number (-n for example), the animated image will start at the nth second before the end of the video.</li>
+                     * 设置
+                     * @param _startTimeOffset 
                      * 
                      */
                     void SetStartTimeOffset(const double& _startTimeOffset);
@@ -101,27 +89,15 @@ namespace TencentCloud
                     bool StartTimeOffsetHasBeenSet() const;
 
                     /**
-                     * 获取End time offset of an animated image in the video, in seconds.
-<li>If this parameter is left empty or set to 0, the animated image will end at the same time as the video.</li>
-<li>If this parameter is set to a positive number (n for example), the animated image will end at the nth second of the video.</li>
-<li>If this parameter is set to a negative number (-n for example), the animated image will end at the nth second before the end of the video.</li>
-                     * @return EndTimeOffset End time offset of an animated image in the video, in seconds.
-<li>If this parameter is left empty or set to 0, the animated image will end at the same time as the video.</li>
-<li>If this parameter is set to a positive number (n for example), the animated image will end at the nth second of the video.</li>
-<li>If this parameter is set to a negative number (-n for example), the animated image will end at the nth second before the end of the video.</li>
+                     * 获取
+                     * @return EndTimeOffset 
                      * 
                      */
                     double GetEndTimeOffset() const;
 
                     /**
-                     * 设置End time offset of an animated image in the video, in seconds.
-<li>If this parameter is left empty or set to 0, the animated image will end at the same time as the video.</li>
-<li>If this parameter is set to a positive number (n for example), the animated image will end at the nth second of the video.</li>
-<li>If this parameter is set to a negative number (-n for example), the animated image will end at the nth second before the end of the video.</li>
-                     * @param _endTimeOffset End time offset of an animated image in the video, in seconds.
-<li>If this parameter is left empty or set to 0, the animated image will end at the same time as the video.</li>
-<li>If this parameter is set to a positive number (n for example), the animated image will end at the nth second of the video.</li>
-<li>If this parameter is set to a negative number (-n for example), the animated image will end at the nth second before the end of the video.</li>
+                     * 设置
+                     * @param _endTimeOffset 
                      * 
                      */
                     void SetEndTimeOffset(const double& _endTimeOffset);
@@ -136,25 +112,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Animated image generating template ID
+                     * 
                      */
                     uint64_t m_definition;
                     bool m_definitionHasBeenSet;
 
                     /**
-                     * Start time offset of an animated image in the video, in seconds.
-<li>If this parameter is left empty or set to 0, the animated image will start at the same time as the video.</li>
-<li>If this parameter is set to a positive number (n for example), the animated image will start at the nth second of the video.</li>
-<li>If this parameter is set to a negative number (-n for example), the animated image will start at the nth second before the end of the video.</li>
+                     * 
                      */
                     double m_startTimeOffset;
                     bool m_startTimeOffsetHasBeenSet;
 
                     /**
-                     * End time offset of an animated image in the video, in seconds.
-<li>If this parameter is left empty or set to 0, the animated image will end at the same time as the video.</li>
-<li>If this parameter is set to a positive number (n for example), the animated image will end at the nth second of the video.</li>
-<li>If this parameter is set to a negative number (-n for example), the animated image will end at the nth second before the end of the video.</li>
+                     * 
                      */
                     double m_endTimeOffset;
                     bool m_endTimeOffsetHasBeenSet;

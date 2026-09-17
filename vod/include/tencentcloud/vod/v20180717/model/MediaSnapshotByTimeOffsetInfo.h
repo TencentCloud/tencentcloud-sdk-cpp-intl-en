@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Information of time point screenshot in VOD file
+                * 
                 */
                 class MediaSnapshotByTimeOffsetInfo : public AbstractModel
                 {
@@ -48,19 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Information set of time point screenshots with a specified specification. Currently, there can be only one set of screenshots for each specification.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return SnapshotByTimeOffsetSet Information set of time point screenshots with a specified specification. Currently, there can be only one set of screenshots for each specification.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return SnapshotByTimeOffsetSet 
                      * 
                      */
                     std::vector<MediaSnapshotByTimeOffsetItem> GetSnapshotByTimeOffsetSet() const;
 
                     /**
-                     * 设置Information set of time point screenshots with a specified specification. Currently, there can be only one set of screenshots for each specification.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _snapshotByTimeOffsetSet Information set of time point screenshots with a specified specification. Currently, there can be only one set of screenshots for each specification.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _snapshotByTimeOffsetSet 
                      * 
                      */
                     void SetSnapshotByTimeOffsetSet(const std::vector<MediaSnapshotByTimeOffsetItem>& _snapshotByTimeOffsetSet);
@@ -75,8 +71,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Information set of time point screenshots with a specified specification. Currently, there can be only one set of screenshots for each specification.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<MediaSnapshotByTimeOffsetItem> m_snapshotByTimeOffsetSet;
                     bool m_snapshotByTimeOffsetSetHasBeenSet;

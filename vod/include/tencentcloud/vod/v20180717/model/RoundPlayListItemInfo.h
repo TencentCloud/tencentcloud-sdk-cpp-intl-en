@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Carousel program information
+                * 
                 */
                 class RoundPlayListItemInfo : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The file ID.
-                     * @return FileId The file ID.
+                     * 获取
+                     * @return FileId 
                      * 
                      */
                     std::string GetFileId() const;
 
                     /**
-                     * 设置The file ID.
-                     * @param _fileId The file ID.
+                     * 设置
+                     * @param _fileId 
                      * 
                      */
                     void SetFileId(const std::string& _fileId);
@@ -68,27 +68,15 @@ namespace TencentCloud
                     bool FileIdHasBeenSet() const;
 
                     /**
-                     * 获取The type of the media played. Valid values:
-<li>`Transcode`: A transcoding output. Because a file may be bound to multiple transcoding templates, you need to specify `Definition` if the type is `Transcode`.</li>
-<li>`Original`: The original file.</li>
-The file must be in HLS format.
-                     * @return AudioVideoType The type of the media played. Valid values:
-<li>`Transcode`: A transcoding output. Because a file may be bound to multiple transcoding templates, you need to specify `Definition` if the type is `Transcode`.</li>
-<li>`Original`: The original file.</li>
-The file must be in HLS format.
+                     * 获取
+                     * @return AudioVideoType 
                      * 
                      */
                     std::string GetAudioVideoType() const;
 
                     /**
-                     * 设置The type of the media played. Valid values:
-<li>`Transcode`: A transcoding output. Because a file may be bound to multiple transcoding templates, you need to specify `Definition` if the type is `Transcode`.</li>
-<li>`Original`: The original file.</li>
-The file must be in HLS format.
-                     * @param _audioVideoType The type of the media played. Valid values:
-<li>`Transcode`: A transcoding output. Because a file may be bound to multiple transcoding templates, you need to specify `Definition` if the type is `Transcode`.</li>
-<li>`Original`: The original file.</li>
-The file must be in HLS format.
+                     * 设置
+                     * @param _audioVideoType 
                      * 
                      */
                     void SetAudioVideoType(const std::string& _audioVideoType);
@@ -101,15 +89,15 @@ The file must be in HLS format.
                     bool AudioVideoTypeHasBeenSet() const;
 
                     /**
-                     * 获取ID of the program to be played, assigned by the system.
-                     * @return ItemId ID of the program to be played, assigned by the system.
+                     * 获取
+                     * @return ItemId 
                      * 
                      */
                     std::string GetItemId() const;
 
                     /**
-                     * 设置ID of the program to be played, assigned by the system.
-                     * @param _itemId ID of the program to be played, assigned by the system.
+                     * 设置
+                     * @param _itemId 
                      * 
                      */
                     void SetItemId(const std::string& _itemId);
@@ -122,15 +110,15 @@ The file must be in HLS format.
                     bool ItemIdHasBeenSet() const;
 
                     /**
-                     * 获取The transcoding template to be played is specified. this parameter is required if `audiovideotype` is `transcode`.
-                     * @return Definition The transcoding template to be played is specified. this parameter is required if `audiovideotype` is `transcode`.
+                     * 获取
+                     * @return Definition 
                      * 
                      */
                     int64_t GetDefinition() const;
 
                     /**
-                     * 设置The transcoding template to be played is specified. this parameter is required if `audiovideotype` is `transcode`.
-                     * @param _definition The transcoding template to be played is specified. this parameter is required if `audiovideotype` is `transcode`.
+                     * 设置
+                     * @param _definition 
                      * 
                      */
                     void SetDefinition(const int64_t& _definition);
@@ -145,28 +133,25 @@ The file must be in HLS format.
                 private:
 
                     /**
-                     * The file ID.
+                     * 
                      */
                     std::string m_fileId;
                     bool m_fileIdHasBeenSet;
 
                     /**
-                     * The type of the media played. Valid values:
-<li>`Transcode`: A transcoding output. Because a file may be bound to multiple transcoding templates, you need to specify `Definition` if the type is `Transcode`.</li>
-<li>`Original`: The original file.</li>
-The file must be in HLS format.
+                     * 
                      */
                     std::string m_audioVideoType;
                     bool m_audioVideoTypeHasBeenSet;
 
                     /**
-                     * ID of the program to be played, assigned by the system.
+                     * 
                      */
                     std::string m_itemId;
                     bool m_itemIdHasBeenSet;
 
                     /**
-                     * The transcoding template to be played is specified. this parameter is required if `audiovideotype` is `transcode`.
+                     * 
                      */
                     int64_t m_definition;
                     bool m_definitionHasBeenSet;

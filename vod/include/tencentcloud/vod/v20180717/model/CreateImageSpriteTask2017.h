@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * The details of an image sprite task. This parameter is only valid for tasks initiated by the v2017 image sprite API.
+                * 
                 */
                 class CreateImageSpriteTask2017 : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Image sprite generating task ID.
-                     * @return TaskId Image sprite generating task ID.
+                     * 获取
+                     * @return TaskId 
                      * 
                      */
                     std::string GetTaskId() const;
 
                     /**
-                     * 设置Image sprite generating task ID.
-                     * @param _taskId Image sprite generating task ID.
+                     * 设置
+                     * @param _taskId 
                      * 
                      */
                     void SetTaskId(const std::string& _taskId);
@@ -68,27 +68,15 @@ namespace TencentCloud
                     bool TaskIdHasBeenSet() const;
 
                     /**
-                     * 获取Error code
-<li>0: success;</li>
-<li>Other values: failure.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return ErrCode Error code
-<li>0: success;</li>
-<li>Other values: failure.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return ErrCode 
                      * 
                      */
                     int64_t GetErrCode() const;
 
                     /**
-                     * 设置Error code
-<li>0: success;</li>
-<li>Other values: failure.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _errCode Error code
-<li>0: success;</li>
-<li>Other values: failure.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _errCode 
                      * 
                      */
                     void SetErrCode(const int64_t& _errCode);
@@ -101,19 +89,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool ErrCodeHasBeenSet() const;
 
                     /**
-                     * 获取Error message.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Message Error message.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return Message 
                      * 
                      */
                     std::string GetMessage() const;
 
                     /**
-                     * 设置Error message.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _message Error message.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _message 
                      * 
                      */
                     void SetMessage(const std::string& _message);
@@ -126,19 +110,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool MessageHasBeenSet() const;
 
                     /**
-                     * 获取ID of generated image sprite file.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return FileId ID of generated image sprite file.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return FileId 
                      * 
                      */
                     std::string GetFileId() const;
 
                     /**
-                     * 设置ID of generated image sprite file.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _fileId ID of generated image sprite file.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _fileId 
                      * 
                      */
                     void SetFileId(const std::string& _fileId);
@@ -151,19 +131,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool FileIdHasBeenSet() const;
 
                     /**
-                     * 获取Image sprite specification. For more information, please see [Image Sprite Generating Template](https://intl.cloud.tencent.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF).
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Definition Image sprite specification. For more information, please see [Image Sprite Generating Template](https://intl.cloud.tencent.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF).
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return Definition 
                      * 
                      */
                     int64_t GetDefinition() const;
 
                     /**
-                     * 设置Image sprite specification. For more information, please see [Image Sprite Generating Template](https://intl.cloud.tencent.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF).
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _definition Image sprite specification. For more information, please see [Image Sprite Generating Template](https://intl.cloud.tencent.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF).
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _definition 
                      * 
                      */
                     void SetDefinition(const int64_t& _definition);
@@ -176,19 +152,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool DefinitionHasBeenSet() const;
 
                     /**
-                     * 获取Total number of subimages in image sprite.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return TotalCount Total number of subimages in image sprite.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return TotalCount 
                      * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
-                     * 设置Total number of subimages in image sprite.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _totalCount Total number of subimages in image sprite.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _totalCount 
                      * 
                      */
                     void SetTotalCount(const uint64_t& _totalCount);
@@ -201,19 +173,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取Address of output image sprite.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return ImageSpriteUrlSet Address of output image sprite.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return ImageSpriteUrlSet 
                      * 
                      */
                     std::vector<std::string> GetImageSpriteUrlSet() const;
 
                     /**
-                     * 设置Address of output image sprite.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _imageSpriteUrlSet Address of output image sprite.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _imageSpriteUrlSet 
                      * 
                      */
                     void SetImageSpriteUrlSet(const std::vector<std::string>& _imageSpriteUrlSet);
@@ -226,19 +194,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool ImageSpriteUrlSetHasBeenSet() const;
 
                     /**
-                     * 获取Address of WebVtt file for the position-time relationship among subimages in an image sprite.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return WebVttUrl Address of WebVtt file for the position-time relationship among subimages in an image sprite.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return WebVttUrl 
                      * 
                      */
                     std::string GetWebVttUrl() const;
 
                     /**
-                     * 设置Address of WebVtt file for the position-time relationship among subimages in an image sprite.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _webVttUrl Address of WebVtt file for the position-time relationship among subimages in an image sprite.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _webVttUrl 
                      * 
                      */
                     void SetWebVttUrl(const std::string& _webVttUrl);
@@ -253,58 +217,49 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Image sprite generating task ID.
+                     * 
                      */
                     std::string m_taskId;
                     bool m_taskIdHasBeenSet;
 
                     /**
-                     * Error code
-<li>0: success;</li>
-<li>Other values: failure.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t m_errCode;
                     bool m_errCodeHasBeenSet;
 
                     /**
-                     * Error message.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string m_message;
                     bool m_messageHasBeenSet;
 
                     /**
-                     * ID of generated image sprite file.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string m_fileId;
                     bool m_fileIdHasBeenSet;
 
                     /**
-                     * Image sprite specification. For more information, please see [Image Sprite Generating Template](https://intl.cloud.tencent.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF).
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t m_definition;
                     bool m_definitionHasBeenSet;
 
                     /**
-                     * Total number of subimages in image sprite.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * Address of output image sprite.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> m_imageSpriteUrlSet;
                     bool m_imageSpriteUrlSetHasBeenSet;
 
                     /**
-                     * Address of WebVtt file for the position-time relationship among subimages in an image sprite.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string m_webVttUrl;
                     bool m_webVttUrlHasBeenSet;

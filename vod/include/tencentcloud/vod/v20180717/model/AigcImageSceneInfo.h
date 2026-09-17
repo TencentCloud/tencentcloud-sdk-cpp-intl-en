@@ -38,7 +38,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Scenario-Based AIGC image generation configuration.
+                * 
                 */
                 class AigcImageSceneInfo : public AbstractModel
                 {
@@ -50,15 +50,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>AI image generation scenario type, available values:</p><ul><li><code>ai_try_on</code>: AI dress up.</li><li><code>product_image</code>: AI product image.</li><li><code>outpainting</code>: AI outpainting.</li></ul><p>The following <code>Type</code> are abandoned and no longer updated subsequently:</p><ul><li><code>change_clothes</code></li><li><code>change_clothes_under</code></li><li><code>change_clothes_top_wear</code></li><li><code>change_clothes_bottom_wear</code></li><li><code>change_clothes_full_wear</code></li></ul>
-                     * @return Type <p>AI image generation scenario type, available values:</p><ul><li><code>ai_try_on</code>: AI dress up.</li><li><code>product_image</code>: AI product image.</li><li><code>outpainting</code>: AI outpainting.</li></ul><p>The following <code>Type</code> are abandoned and no longer updated subsequently:</p><ul><li><code>change_clothes</code></li><li><code>change_clothes_under</code></li><li><code>change_clothes_top_wear</code></li><li><code>change_clothes_bottom_wear</code></li><li><code>change_clothes_full_wear</code></li></ul>
+                     * 获取
+                     * @return Type 
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置<p>AI image generation scenario type, available values:</p><ul><li><code>ai_try_on</code>: AI dress up.</li><li><code>product_image</code>: AI product image.</li><li><code>outpainting</code>: AI outpainting.</li></ul><p>The following <code>Type</code> are abandoned and no longer updated subsequently:</p><ul><li><code>change_clothes</code></li><li><code>change_clothes_under</code></li><li><code>change_clothes_top_wear</code></li><li><code>change_clothes_bottom_wear</code></li><li><code>change_clothes_full_wear</code></li></ul>
-                     * @param _type <p>AI image generation scenario type, available values:</p><ul><li><code>ai_try_on</code>: AI dress up.</li><li><code>product_image</code>: AI product image.</li><li><code>outpainting</code>: AI outpainting.</li></ul><p>The following <code>Type</code> are abandoned and no longer updated subsequently:</p><ul><li><code>change_clothes</code></li><li><code>change_clothes_under</code></li><li><code>change_clothes_top_wear</code></li><li><code>change_clothes_bottom_wear</code></li><li><code>change_clothes_full_wear</code></li></ul>
+                     * 设置
+                     * @param _type 
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -71,15 +71,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Required when Type is ai_try_on. Represents AI dress up config.</p>
-                     * @return AiTryOnConfig <p>Required when Type is ai_try_on. Represents AI dress up config.</p>
+                     * 获取
+                     * @return AiTryOnConfig 
                      * 
                      */
                     AiTryOnConfig GetAiTryOnConfig() const;
 
                     /**
-                     * 设置<p>Required when Type is ai_try_on. Represents AI dress up config.</p>
-                     * @param _aiTryOnConfig <p>Required when Type is ai_try_on. Represents AI dress up config.</p>
+                     * 设置
+                     * @param _aiTryOnConfig 
                      * 
                      */
                     void SetAiTryOnConfig(const AiTryOnConfig& _aiTryOnConfig);
@@ -92,15 +92,15 @@ namespace TencentCloud
                     bool AiTryOnConfigHasBeenSet() const;
 
                     /**
-                     * 获取<p><strong>Abandoned, please use AiTryOnConfig.</strong> When Type is one of the following column types, this item is required and represents AI try-on image generation configuration parameters:</p><ul><li>change_clothes</li><li>change_clothes_under</li></ul>
-                     * @return ChangeClothesConfig <p><strong>Abandoned, please use AiTryOnConfig.</strong> When Type is one of the following column types, this item is required and represents AI try-on image generation configuration parameters:</p><ul><li>change_clothes</li><li>change_clothes_under</li></ul>
+                     * 获取
+                     * @return ChangeClothesConfig 
                      * 
                      */
                     ChangeClothesConfig GetChangeClothesConfig() const;
 
                     /**
-                     * 设置<p><strong>Abandoned, please use AiTryOnConfig.</strong> When Type is one of the following column types, this item is required and represents AI try-on image generation configuration parameters:</p><ul><li>change_clothes</li><li>change_clothes_under</li></ul>
-                     * @param _changeClothesConfig <p><strong>Abandoned, please use AiTryOnConfig.</strong> When Type is one of the following column types, this item is required and represents AI try-on image generation configuration parameters:</p><ul><li>change_clothes</li><li>change_clothes_under</li></ul>
+                     * 设置
+                     * @param _changeClothesConfig 
                      * 
                      */
                     void SetChangeClothesConfig(const ChangeClothesConfig& _changeClothesConfig);
@@ -113,15 +113,15 @@ namespace TencentCloud
                     bool ChangeClothesConfigHasBeenSet() const;
 
                     /**
-                     * 获取<p>Required when Type is product_image. It represents the AI product image config.</p>
-                     * @return ProductImageConfig <p>Required when Type is product_image. It represents the AI product image config.</p>
+                     * 获取
+                     * @return ProductImageConfig 
                      * 
                      */
                     ProductImageConfig GetProductImageConfig() const;
 
                     /**
-                     * 设置<p>Required when Type is product_image. It represents the AI product image config.</p>
-                     * @param _productImageConfig <p>Required when Type is product_image. It represents the AI product image config.</p>
+                     * 设置
+                     * @param _productImageConfig 
                      * 
                      */
                     void SetProductImageConfig(const ProductImageConfig& _productImageConfig);
@@ -136,25 +136,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>AI image generation scenario type, available values:</p><ul><li><code>ai_try_on</code>: AI dress up.</li><li><code>product_image</code>: AI product image.</li><li><code>outpainting</code>: AI outpainting.</li></ul><p>The following <code>Type</code> are abandoned and no longer updated subsequently:</p><ul><li><code>change_clothes</code></li><li><code>change_clothes_under</code></li><li><code>change_clothes_top_wear</code></li><li><code>change_clothes_bottom_wear</code></li><li><code>change_clothes_full_wear</code></li></ul>
+                     * 
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * <p>Required when Type is ai_try_on. Represents AI dress up config.</p>
+                     * 
                      */
                     AiTryOnConfig m_aiTryOnConfig;
                     bool m_aiTryOnConfigHasBeenSet;
 
                     /**
-                     * <p><strong>Abandoned, please use AiTryOnConfig.</strong> When Type is one of the following column types, this item is required and represents AI try-on image generation configuration parameters:</p><ul><li>change_clothes</li><li>change_clothes_under</li></ul>
+                     * 
                      */
                     ChangeClothesConfig m_changeClothesConfig;
                     bool m_changeClothesConfigHasBeenSet;
 
                     /**
-                     * <p>Required when Type is product_image. It represents the AI product image config.</p>
+                     * 
                      */
                     ProductImageConfig m_productImageConfig;
                     bool m_productImageConfigHasBeenSet;

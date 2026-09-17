@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Unique identifier of the screenshot template at specified time point.
-                     * @return Definition Unique identifier of the screenshot template at specified time point.
+                     * 获取
+                     * @return Definition 
                      * 
                      */
                     uint64_t GetDefinition() const;
 
                     /**
-                     * 设置Unique identifier of the screenshot template at specified time point.
-                     * @param _definition Unique identifier of the screenshot template at specified time point.
+                     * 设置
+                     * @param _definition 
                      * 
                      */
                     void SetDefinition(const uint64_t& _definition);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool DefinitionHasBeenSet() const;
 
                     /**
-                     * 获取<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
-                     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+                     * 获取
+                     * @return SubAppId 
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
-                     * @param _subAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+                     * 设置
+                     * @param _subAppId 
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool SubAppIdHasBeenSet() const;
 
                     /**
-                     * 获取Screenshot template name at specified time point. Length limit: 64 characters.
-                     * @return Name Screenshot template name at specified time point. Length limit: 64 characters.
+                     * 获取
+                     * @return Name 
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Screenshot template name at specified time point. Length limit: 64 characters.
-                     * @param _name Screenshot template name at specified time point. Length limit: 64 characters.
+                     * 设置
+                     * @param _name 
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取The maximum screenshot width (or long edge), value ranges from 0 to [32, 4096], measurement unit: px.<li>When both Width and Height are 0, the resolution is Same Resolution Source.</li><li>When Width is 0 and Height is not 0, Width is proportionally scaled.</li><li>When Width is not 0 and Height is 0, Height is proportionally scaled.</li><li>When both Width and Height are not 0, the resolution is specified by user.</li>Default value: 0.
-                     * @return Width The maximum screenshot width (or long edge), value ranges from 0 to [32, 4096], measurement unit: px.<li>When both Width and Height are 0, the resolution is Same Resolution Source.</li><li>When Width is 0 and Height is not 0, Width is proportionally scaled.</li><li>When Width is not 0 and Height is 0, Height is proportionally scaled.</li><li>When both Width and Height are not 0, the resolution is specified by user.</li>Default value: 0.
+                     * 获取
+                     * @return Width 
                      * 
                      */
                     uint64_t GetWidth() const;
 
                     /**
-                     * 设置The maximum screenshot width (or long edge), value ranges from 0 to [32, 4096], measurement unit: px.<li>When both Width and Height are 0, the resolution is Same Resolution Source.</li><li>When Width is 0 and Height is not 0, Width is proportionally scaled.</li><li>When Width is not 0 and Height is 0, Height is proportionally scaled.</li><li>When both Width and Height are not 0, the resolution is specified by user.</li>Default value: 0.
-                     * @param _width The maximum screenshot width (or long edge), value ranges from 0 to [32, 4096], measurement unit: px.<li>When both Width and Height are 0, the resolution is Same Resolution Source.</li><li>When Width is 0 and Height is not 0, Width is proportionally scaled.</li><li>When Width is not 0 and Height is 0, Height is proportionally scaled.</li><li>When both Width and Height are not 0, the resolution is specified by user.</li>Default value: 0.
+                     * 设置
+                     * @param _width 
                      * 
                      */
                     void SetWidth(const uint64_t& _width);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool WidthHasBeenSet() const;
 
                     /**
-                     * 获取Maximum value of screenshot height (or short edge), value ranges from 0 to [32, 4096], measurement unit: px. <li>When both Width and Height are 0, resolution is Same Resolution Source.</li> <li>When Width is 0 and Height is not 0, Width is proportionally scaled.</li> <li>When Width is not 0 and Height is 0, Height is proportionally scaled.</li> <li>When both Width and Height are not 0, resolution is specified by user.</li> Default value: 0.
-                     * @return Height Maximum value of screenshot height (or short edge), value ranges from 0 to [32, 4096], measurement unit: px. <li>When both Width and Height are 0, resolution is Same Resolution Source.</li> <li>When Width is 0 and Height is not 0, Width is proportionally scaled.</li> <li>When Width is not 0 and Height is 0, Height is proportionally scaled.</li> <li>When both Width and Height are not 0, resolution is specified by user.</li> Default value: 0.
+                     * 获取
+                     * @return Height 
                      * 
                      */
                     uint64_t GetHeight() const;
 
                     /**
-                     * 设置Maximum value of screenshot height (or short edge), value ranges from 0 to [32, 4096], measurement unit: px. <li>When both Width and Height are 0, resolution is Same Resolution Source.</li> <li>When Width is 0 and Height is not 0, Width is proportionally scaled.</li> <li>When Width is not 0 and Height is 0, Height is proportionally scaled.</li> <li>When both Width and Height are not 0, resolution is specified by user.</li> Default value: 0.
-                     * @param _height Maximum value of screenshot height (or short edge), value ranges from 0 to [32, 4096], measurement unit: px. <li>When both Width and Height are 0, resolution is Same Resolution Source.</li> <li>When Width is 0 and Height is not 0, Width is proportionally scaled.</li> <li>When Width is not 0 and Height is 0, Height is proportionally scaled.</li> <li>When both Width and Height are not 0, resolution is specified by user.</li> Default value: 0.
+                     * 设置
+                     * @param _height 
                      * 
                      */
                     void SetHeight(const uint64_t& _height);
@@ -148,27 +148,15 @@ namespace TencentCloud
                     bool HeightHasBeenSet() const;
 
                     /**
-                     * 获取Resolution adaptation, available values:
-<li>open: start. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
-<li>close: Close. At this point, Width represents the width of the video, and Height indicates the height of the video.</li>
-Default value: open.
-                     * @return ResolutionAdaptive Resolution adaptation, available values:
-<li>open: start. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
-<li>close: Close. At this point, Width represents the width of the video, and Height indicates the height of the video.</li>
-Default value: open.
+                     * 获取
+                     * @return ResolutionAdaptive 
                      * 
                      */
                     std::string GetResolutionAdaptive() const;
 
                     /**
-                     * 设置Resolution adaptation, available values:
-<li>open: start. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
-<li>close: Close. At this point, Width represents the width of the video, and Height indicates the height of the video.</li>
-Default value: open.
-                     * @param _resolutionAdaptive Resolution adaptation, available values:
-<li>open: start. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
-<li>close: Close. At this point, Width represents the width of the video, and Height indicates the height of the video.</li>
-Default value: open.
+                     * 设置
+                     * @param _resolutionAdaptive 
                      * 
                      */
                     void SetResolutionAdaptive(const std::string& _resolutionAdaptive);
@@ -181,15 +169,15 @@ Default value: open.
                     bool ResolutionAdaptiveHasBeenSet() const;
 
                     /**
-                     * 获取Image format. Value can be jpg and png.
-                     * @return Format Image format. Value can be jpg and png.
+                     * 获取
+                     * @return Format 
                      * 
                      */
                     std::string GetFormat() const;
 
                     /**
-                     * 设置Image format. Value can be jpg and png.
-                     * @param _format Image format. Value can be jpg and png.
+                     * 设置
+                     * @param _format 
                      * 
                      */
                     void SetFormat(const std::string& _format);
@@ -202,15 +190,15 @@ Default value: open.
                     bool FormatHasBeenSet() const;
 
                     /**
-                     * 获取Template description, with a length limit of 256 characters.
-                     * @return Comment Template description, with a length limit of 256 characters.
+                     * 获取
+                     * @return Comment 
                      * 
                      */
                     std::string GetComment() const;
 
                     /**
-                     * 设置Template description, with a length limit of 256 characters.
-                     * @param _comment Template description, with a length limit of 256 characters.
+                     * 设置
+                     * @param _comment 
                      * 
                      */
                     void SetComment(const std::string& _comment);
@@ -223,35 +211,15 @@ Default value: open.
                     bool CommentHasBeenSet() const;
 
                     /**
-                     * 获取Filling method. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "padding". Optional filling mode:
-<li> stretch: Stretch each frame to fill the entire screen, possibly causing the transcoded video to be "squashed" or "stretched";</li>
-<li>black: Keep black, maintain video aspect ratio, edges filled with black.</li>
-<li>white: Leave blank, maintain video aspect ratio, edge remainder filled with white.</li>
-<li>gauss: Gaussian blur, maintain video aspect ratio, and use Gaussian blur for the remaining edge part.</li>
-Default value: black.
-                     * @return FillType Filling method. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "padding". Optional filling mode:
-<li> stretch: Stretch each frame to fill the entire screen, possibly causing the transcoded video to be "squashed" or "stretched";</li>
-<li>black: Keep black, maintain video aspect ratio, edges filled with black.</li>
-<li>white: Leave blank, maintain video aspect ratio, edge remainder filled with white.</li>
-<li>gauss: Gaussian blur, maintain video aspect ratio, and use Gaussian blur for the remaining edge part.</li>
-Default value: black.
+                     * 获取
+                     * @return FillType 
                      * 
                      */
                     std::string GetFillType() const;
 
                     /**
-                     * 设置Filling method. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "padding". Optional filling mode:
-<li> stretch: Stretch each frame to fill the entire screen, possibly causing the transcoded video to be "squashed" or "stretched";</li>
-<li>black: Keep black, maintain video aspect ratio, edges filled with black.</li>
-<li>white: Leave blank, maintain video aspect ratio, edge remainder filled with white.</li>
-<li>gauss: Gaussian blur, maintain video aspect ratio, and use Gaussian blur for the remaining edge part.</li>
-Default value: black.
-                     * @param _fillType Filling method. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "padding". Optional filling mode:
-<li> stretch: Stretch each frame to fill the entire screen, possibly causing the transcoded video to be "squashed" or "stretched";</li>
-<li>black: Keep black, maintain video aspect ratio, edges filled with black.</li>
-<li>white: Leave blank, maintain video aspect ratio, edge remainder filled with white.</li>
-<li>gauss: Gaussian blur, maintain video aspect ratio, and use Gaussian blur for the remaining edge part.</li>
-Default value: black.
+                     * 设置
+                     * @param _fillType 
                      * 
                      */
                     void SetFillType(const std::string& _fillType);
@@ -266,63 +234,55 @@ Default value: black.
                 private:
 
                     /**
-                     * Unique identifier of the screenshot template at specified time point.
+                     * 
                      */
                     uint64_t m_definition;
                     bool m_definitionHasBeenSet;
 
                     /**
-                     * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+                     * 
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
 
                     /**
-                     * Screenshot template name at specified time point. Length limit: 64 characters.
+                     * 
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * The maximum screenshot width (or long edge), value ranges from 0 to [32, 4096], measurement unit: px.<li>When both Width and Height are 0, the resolution is Same Resolution Source.</li><li>When Width is 0 and Height is not 0, Width is proportionally scaled.</li><li>When Width is not 0 and Height is 0, Height is proportionally scaled.</li><li>When both Width and Height are not 0, the resolution is specified by user.</li>Default value: 0.
+                     * 
                      */
                     uint64_t m_width;
                     bool m_widthHasBeenSet;
 
                     /**
-                     * Maximum value of screenshot height (or short edge), value ranges from 0 to [32, 4096], measurement unit: px. <li>When both Width and Height are 0, resolution is Same Resolution Source.</li> <li>When Width is 0 and Height is not 0, Width is proportionally scaled.</li> <li>When Width is not 0 and Height is 0, Height is proportionally scaled.</li> <li>When both Width and Height are not 0, resolution is specified by user.</li> Default value: 0.
+                     * 
                      */
                     uint64_t m_height;
                     bool m_heightHasBeenSet;
 
                     /**
-                     * Resolution adaptation, available values:
-<li>open: start. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
-<li>close: Close. At this point, Width represents the width of the video, and Height indicates the height of the video.</li>
-Default value: open.
+                     * 
                      */
                     std::string m_resolutionAdaptive;
                     bool m_resolutionAdaptiveHasBeenSet;
 
                     /**
-                     * Image format. Value can be jpg and png.
+                     * 
                      */
                     std::string m_format;
                     bool m_formatHasBeenSet;
 
                     /**
-                     * Template description, with a length limit of 256 characters.
+                     * 
                      */
                     std::string m_comment;
                     bool m_commentHasBeenSet;
 
                     /**
-                     * Filling method. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "padding". Optional filling mode:
-<li> stretch: Stretch each frame to fill the entire screen, possibly causing the transcoded video to be "squashed" or "stretched";</li>
-<li>black: Keep black, maintain video aspect ratio, edges filled with black.</li>
-<li>white: Leave blank, maintain video aspect ratio, edge remainder filled with white.</li>
-<li>gauss: Gaussian blur, maintain video aspect ratio, and use Gaussian blur for the remaining edge part.</li>
-Default value: black.
+                     * 
                      */
                     std::string m_fillType;
                     bool m_fillTypeHasBeenSet;

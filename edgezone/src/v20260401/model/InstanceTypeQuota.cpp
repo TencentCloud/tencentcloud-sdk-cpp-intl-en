@@ -24,6 +24,7 @@ InstanceTypeQuota::InstanceTypeQuota() :
     m_zoneHasBeenSet(false),
     m_instanceTypeHasBeenSet(false),
     m_instanceFamilyHasBeenSet(false),
+    m_instanceFamilyNameHasBeenSet(false),
     m_cpuCoresHasBeenSet(false),
     m_cpuTypeHasBeenSet(false),
     m_memoryGbHasBeenSet(false),
@@ -33,6 +34,9 @@ InstanceTypeQuota::InstanceTypeQuota() :
     m_dataDiskTypeHasBeenSet(false),
     m_dataDiskSizeHasBeenSet(false),
     m_dataDiskCountHasBeenSet(false),
+    m_secondaryDataDiskTypeHasBeenSet(false),
+    m_secondaryDataDiskSizeHasBeenSet(false),
+    m_secondaryDataDiskCountHasBeenSet(false),
     m_diskTypeHasBeenSet(false),
     m_networkInterfaceTypeHasBeenSet(false),
     m_gpuTypeHasBeenSet(false),
@@ -73,6 +77,16 @@ CoreInternalOutcome InstanceTypeQuota::Deserialize(const rapidjson::Value &value
         }
         m_instanceFamily = string(value["InstanceFamily"].GetString());
         m_instanceFamilyHasBeenSet = true;
+    }
+
+    if (value.HasMember("InstanceFamilyName") && !value["InstanceFamilyName"].IsNull())
+    {
+        if (!value["InstanceFamilyName"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `InstanceTypeQuota.InstanceFamilyName` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_instanceFamilyName = string(value["InstanceFamilyName"].GetString());
+        m_instanceFamilyNameHasBeenSet = true;
     }
 
     if (value.HasMember("CpuCores") && !value["CpuCores"].IsNull())
@@ -165,6 +179,36 @@ CoreInternalOutcome InstanceTypeQuota::Deserialize(const rapidjson::Value &value
         m_dataDiskCountHasBeenSet = true;
     }
 
+    if (value.HasMember("SecondaryDataDiskType") && !value["SecondaryDataDiskType"].IsNull())
+    {
+        if (!value["SecondaryDataDiskType"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `InstanceTypeQuota.SecondaryDataDiskType` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_secondaryDataDiskType = string(value["SecondaryDataDiskType"].GetString());
+        m_secondaryDataDiskTypeHasBeenSet = true;
+    }
+
+    if (value.HasMember("SecondaryDataDiskSize") && !value["SecondaryDataDiskSize"].IsNull())
+    {
+        if (!value["SecondaryDataDiskSize"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `InstanceTypeQuota.SecondaryDataDiskSize` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_secondaryDataDiskSize = value["SecondaryDataDiskSize"].GetInt64();
+        m_secondaryDataDiskSizeHasBeenSet = true;
+    }
+
+    if (value.HasMember("SecondaryDataDiskCount") && !value["SecondaryDataDiskCount"].IsNull())
+    {
+        if (!value["SecondaryDataDiskCount"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `InstanceTypeQuota.SecondaryDataDiskCount` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_secondaryDataDiskCount = value["SecondaryDataDiskCount"].GetInt64();
+        m_secondaryDataDiskCountHasBeenSet = true;
+    }
+
     if (value.HasMember("DiskType") && !value["DiskType"].IsNull())
     {
         if (!value["DiskType"].IsString())
@@ -234,6 +278,14 @@ void InstanceTypeQuota::ToJsonObject(rapidjson::Value &value, rapidjson::Documen
         string key = "InstanceFamily";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(m_instanceFamily.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_instanceFamilyNameHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "InstanceFamilyName";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_instanceFamilyName.c_str(), allocator).Move(), allocator);
     }
 
     if (m_cpuCoresHasBeenSet)
@@ -306,6 +358,30 @@ void InstanceTypeQuota::ToJsonObject(rapidjson::Value &value, rapidjson::Documen
         string key = "DataDiskCount";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, m_dataDiskCount, allocator);
+    }
+
+    if (m_secondaryDataDiskTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SecondaryDataDiskType";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_secondaryDataDiskType.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_secondaryDataDiskSizeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SecondaryDataDiskSize";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_secondaryDataDiskSize, allocator);
+    }
+
+    if (m_secondaryDataDiskCountHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "SecondaryDataDiskCount";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_secondaryDataDiskCount, allocator);
     }
 
     if (m_diskTypeHasBeenSet)
@@ -389,6 +465,22 @@ void InstanceTypeQuota::SetInstanceFamily(const string& _instanceFamily)
 bool InstanceTypeQuota::InstanceFamilyHasBeenSet() const
 {
     return m_instanceFamilyHasBeenSet;
+}
+
+string InstanceTypeQuota::GetInstanceFamilyName() const
+{
+    return m_instanceFamilyName;
+}
+
+void InstanceTypeQuota::SetInstanceFamilyName(const string& _instanceFamilyName)
+{
+    m_instanceFamilyName = _instanceFamilyName;
+    m_instanceFamilyNameHasBeenSet = true;
+}
+
+bool InstanceTypeQuota::InstanceFamilyNameHasBeenSet() const
+{
+    return m_instanceFamilyNameHasBeenSet;
 }
 
 int64_t InstanceTypeQuota::GetCpuCores() const
@@ -533,6 +625,54 @@ void InstanceTypeQuota::SetDataDiskCount(const uint64_t& _dataDiskCount)
 bool InstanceTypeQuota::DataDiskCountHasBeenSet() const
 {
     return m_dataDiskCountHasBeenSet;
+}
+
+string InstanceTypeQuota::GetSecondaryDataDiskType() const
+{
+    return m_secondaryDataDiskType;
+}
+
+void InstanceTypeQuota::SetSecondaryDataDiskType(const string& _secondaryDataDiskType)
+{
+    m_secondaryDataDiskType = _secondaryDataDiskType;
+    m_secondaryDataDiskTypeHasBeenSet = true;
+}
+
+bool InstanceTypeQuota::SecondaryDataDiskTypeHasBeenSet() const
+{
+    return m_secondaryDataDiskTypeHasBeenSet;
+}
+
+int64_t InstanceTypeQuota::GetSecondaryDataDiskSize() const
+{
+    return m_secondaryDataDiskSize;
+}
+
+void InstanceTypeQuota::SetSecondaryDataDiskSize(const int64_t& _secondaryDataDiskSize)
+{
+    m_secondaryDataDiskSize = _secondaryDataDiskSize;
+    m_secondaryDataDiskSizeHasBeenSet = true;
+}
+
+bool InstanceTypeQuota::SecondaryDataDiskSizeHasBeenSet() const
+{
+    return m_secondaryDataDiskSizeHasBeenSet;
+}
+
+int64_t InstanceTypeQuota::GetSecondaryDataDiskCount() const
+{
+    return m_secondaryDataDiskCount;
+}
+
+void InstanceTypeQuota::SetSecondaryDataDiskCount(const int64_t& _secondaryDataDiskCount)
+{
+    m_secondaryDataDiskCount = _secondaryDataDiskCount;
+    m_secondaryDataDiskCountHasBeenSet = true;
+}
+
+bool InstanceTypeQuota::SecondaryDataDiskCountHasBeenSet() const
+{
+    return m_secondaryDataDiskCountHasBeenSet;
 }
 
 string InstanceTypeQuota::GetDiskType() const

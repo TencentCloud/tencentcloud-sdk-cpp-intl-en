@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Beauty filter item.
+                * 
                 */
                 class BeautyFilterItem : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Whether to enable filters.</p><p>Enumeration value:</p><ul><li>ON: On</li><li>OFF: Off</li></ul>
-                     * @return Switch <p>Whether to enable filters.</p><p>Enumeration value:</p><ul><li>ON: On</li><li>OFF: Off</li></ul>
+                     * 获取
+                     * @return Switch 
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置<p>Whether to enable filters.</p><p>Enumeration value:</p><ul><li>ON: On</li><li>OFF: Off</li></ul>
-                     * @param _switch <p>Whether to enable filters.</p><p>Enumeration value:</p><ul><li>ON: On</li><li>OFF: Off</li></ul>
+                     * 设置
+                     * @param _switch 
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取<p>Filter item.</p>
-                     * @return Type <p>Filter item.</p>
+                     * 获取
+                     * @return Type 
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置<p>Filter item.</p>
-                     * @param _type <p>Filter item.</p>
+                     * 设置
+                     * @param _type 
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Filter strength.</p>
-                     * @return Value <p>Filter strength.</p>
+                     * 获取
+                     * @return Value 
                      * 
                      */
                     int64_t GetValue() const;
 
                     /**
-                     * 设置<p>Filter strength.</p>
-                     * @param _value <p>Filter strength.</p>
+                     * 设置
+                     * @param _value 
                      * 
                      */
                     void SetValue(const int64_t& _value);
@@ -112,19 +112,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Whether to enable filters.</p><p>Enumeration value:</p><ul><li>ON: On</li><li>OFF: Off</li></ul>
+                     * 
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * <p>Filter item.</p>
+                     * 
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * <p>Filter strength.</p>
+                     * 
                      */
                     int64_t m_value;
                     bool m_valueHasBeenSet;

@@ -35,15 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Intelligent erasure. Coordinate configuration of the erasure area.
-The region is determined by the coordinates of the top-left and bottom-right corners.
-The coordinate origin is the top-left corner of the image. Coordinate points can be specified using pixel values or percentage units.
-For auto-erase areas:
-When the unit is %, the coordinate range is [0,1].
-When the unit is px, the X range is [0, video image width], and the Y range is [0, screen height].
-For the designated erase area:
-When the unit is %, the coordinate range is [0,1).
-When the unit is px, the X range is [0, video image width], and the Y range is [0, video image height].
+                * 
                 */
                 class MPSEraseArea : public AbstractModel
                 {
@@ -55,15 +47,15 @@ When the unit is px, the X range is [0, video image width], and the Y range is [
 
 
                     /**
-                     * 获取<p>Top-left X-axis coordinate of the region. When Unit is set to 1 (using percentage unit), 0.05 means the horizontal distance from the top-left corner of the region to the top-left corner of the entire image is 5% of the image width.</p>
-                     * @return LeftTopX <p>Top-left X-axis coordinate of the region. When Unit is set to 1 (using percentage unit), 0.05 means the horizontal distance from the top-left corner of the region to the top-left corner of the entire image is 5% of the image width.</p>
+                     * 获取
+                     * @return LeftTopX 
                      * 
                      */
                     double GetLeftTopX() const;
 
                     /**
-                     * 设置<p>Top-left X-axis coordinate of the region. When Unit is set to 1 (using percentage unit), 0.05 means the horizontal distance from the top-left corner of the region to the top-left corner of the entire image is 5% of the image width.</p>
-                     * @param _leftTopX <p>Top-left X-axis coordinate of the region. When Unit is set to 1 (using percentage unit), 0.05 means the horizontal distance from the top-left corner of the region to the top-left corner of the entire image is 5% of the image width.</p>
+                     * 设置
+                     * @param _leftTopX 
                      * 
                      */
                     void SetLeftTopX(const double& _leftTopX);
@@ -76,15 +68,15 @@ When the unit is px, the X range is [0, video image width], and the Y range is [
                     bool LeftTopXHasBeenSet() const;
 
                     /**
-                     * 获取<p>Y-axis coordinate of the top-left corner. For example, when Unit is set to 1 (using percentage), 0.1 means the vertical distance from the top-left corner of the region to the top-left corner of the entire frame is 10% of the screen height.</p>
-                     * @return LeftTopY <p>Y-axis coordinate of the top-left corner. For example, when Unit is set to 1 (using percentage), 0.1 means the vertical distance from the top-left corner of the region to the top-left corner of the entire frame is 10% of the screen height.</p>
+                     * 获取
+                     * @return LeftTopY 
                      * 
                      */
                     double GetLeftTopY() const;
 
                     /**
-                     * 设置<p>Y-axis coordinate of the top-left corner. For example, when Unit is set to 1 (using percentage), 0.1 means the vertical distance from the top-left corner of the region to the top-left corner of the entire frame is 10% of the screen height.</p>
-                     * @param _leftTopY <p>Y-axis coordinate of the top-left corner. For example, when Unit is set to 1 (using percentage), 0.1 means the vertical distance from the top-left corner of the region to the top-left corner of the entire frame is 10% of the screen height.</p>
+                     * 设置
+                     * @param _leftTopY 
                      * 
                      */
                     void SetLeftTopY(const double& _leftTopY);
@@ -97,15 +89,15 @@ When the unit is px, the X range is [0, video image width], and the Y range is [
                     bool LeftTopYHasBeenSet() const;
 
                     /**
-                     * 获取<p>X coordinate of the bottom-right corner of the region. For example, when Unit is 1 (using percentage as the measurement unit), 0.75 means the horizontal distance from the bottom-right corner of the region to the top-left corner of the entire frame is 75% of the frame width.</p>
-                     * @return RightBottomX <p>X coordinate of the bottom-right corner of the region. For example, when Unit is 1 (using percentage as the measurement unit), 0.75 means the horizontal distance from the bottom-right corner of the region to the top-left corner of the entire frame is 75% of the frame width.</p>
+                     * 获取
+                     * @return RightBottomX 
                      * 
                      */
                     double GetRightBottomX() const;
 
                     /**
-                     * 设置<p>X coordinate of the bottom-right corner of the region. For example, when Unit is 1 (using percentage as the measurement unit), 0.75 means the horizontal distance from the bottom-right corner of the region to the top-left corner of the entire frame is 75% of the frame width.</p>
-                     * @param _rightBottomX <p>X coordinate of the bottom-right corner of the region. For example, when Unit is 1 (using percentage as the measurement unit), 0.75 means the horizontal distance from the bottom-right corner of the region to the top-left corner of the entire frame is 75% of the frame width.</p>
+                     * 设置
+                     * @param _rightBottomX 
                      * 
                      */
                     void SetRightBottomX(const double& _rightBottomX);
@@ -118,15 +110,15 @@ When the unit is px, the X range is [0, video image width], and the Y range is [
                     bool RightBottomXHasBeenSet() const;
 
                     /**
-                     * 获取<p>Y-axis coordinate of the bottom-right corner. For example, when Unit is 1 (using percentage), 0.9 means the vertical distance from the top-left corner to the bottom-right corner is 90% of the screen height.</p>
-                     * @return RightBottomY <p>Y-axis coordinate of the bottom-right corner. For example, when Unit is 1 (using percentage), 0.9 means the vertical distance from the top-left corner to the bottom-right corner is 90% of the screen height.</p>
+                     * 获取
+                     * @return RightBottomY 
                      * 
                      */
                     double GetRightBottomY() const;
 
                     /**
-                     * 设置<p>Y-axis coordinate of the bottom-right corner. For example, when Unit is 1 (using percentage), 0.9 means the vertical distance from the top-left corner to the bottom-right corner is 90% of the screen height.</p>
-                     * @param _rightBottomY <p>Y-axis coordinate of the bottom-right corner. For example, when Unit is 1 (using percentage), 0.9 means the vertical distance from the top-left corner to the bottom-right corner is 90% of the screen height.</p>
+                     * 设置
+                     * @param _rightBottomY 
                      * 
                      */
                     void SetRightBottomY(const double& _rightBottomY);
@@ -139,15 +131,15 @@ When the unit is px, the X range is [0, video image width], and the Y range is [
                     bool RightBottomYHasBeenSet() const;
 
                     /**
-                     * 获取<p>Coordinate unit - 1 percentage - 2 pixel value</p>
-                     * @return Unit <p>Coordinate unit - 1 percentage - 2 pixel value</p>
+                     * 获取
+                     * @return Unit 
                      * 
                      */
                     uint64_t GetUnit() const;
 
                     /**
-                     * 设置<p>Coordinate unit - 1 percentage - 2 pixel value</p>
-                     * @param _unit <p>Coordinate unit - 1 percentage - 2 pixel value</p>
+                     * 设置
+                     * @param _unit 
                      * 
                      */
                     void SetUnit(const uint64_t& _unit);
@@ -162,31 +154,31 @@ When the unit is px, the X range is [0, video image width], and the Y range is [
                 private:
 
                     /**
-                     * <p>Top-left X-axis coordinate of the region. When Unit is set to 1 (using percentage unit), 0.05 means the horizontal distance from the top-left corner of the region to the top-left corner of the entire image is 5% of the image width.</p>
+                     * 
                      */
                     double m_leftTopX;
                     bool m_leftTopXHasBeenSet;
 
                     /**
-                     * <p>Y-axis coordinate of the top-left corner. For example, when Unit is set to 1 (using percentage), 0.1 means the vertical distance from the top-left corner of the region to the top-left corner of the entire frame is 10% of the screen height.</p>
+                     * 
                      */
                     double m_leftTopY;
                     bool m_leftTopYHasBeenSet;
 
                     /**
-                     * <p>X coordinate of the bottom-right corner of the region. For example, when Unit is 1 (using percentage as the measurement unit), 0.75 means the horizontal distance from the bottom-right corner of the region to the top-left corner of the entire frame is 75% of the frame width.</p>
+                     * 
                      */
                     double m_rightBottomX;
                     bool m_rightBottomXHasBeenSet;
 
                     /**
-                     * <p>Y-axis coordinate of the bottom-right corner. For example, when Unit is 1 (using percentage), 0.9 means the vertical distance from the top-left corner to the bottom-right corner is 90% of the screen height.</p>
+                     * 
                      */
                     double m_rightBottomY;
                     bool m_rightBottomYHasBeenSet;
 
                     /**
-                     * <p>Coordinate unit - 1 percentage - 2 pixel value</p>
+                     * 
                      */
                     uint64_t m_unit;
                     bool m_unitHasBeenSet;

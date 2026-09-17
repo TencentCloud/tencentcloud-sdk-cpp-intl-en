@@ -46,8 +46,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The image moderation result. <font color=red>Note: This parameter is no longer used. Please use `MediaReviewResult` instead.</font>
-                     * @return ReviewResultSet The image moderation result. <font color=red>Note: This parameter is no longer used. Please use `MediaReviewResult` instead.</font>
+                     * 获取
+                     * @return ReviewResultSet 
                      * @deprecated
                      */
                     std::vector<ContentReviewResult> GetReviewResultSet() const;
@@ -60,10 +60,8 @@ namespace TencentCloud
                     bool ReviewResultSetHasBeenSet() const;
 
                     /**
-                     * 获取The image moderation result.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return MediaReviewResult The image moderation result.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return MediaReviewResult 
                      * 
                      */
                     ReviewImageResult GetMediaReviewResult() const;
@@ -78,14 +76,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * The image moderation result. <font color=red>Note: This parameter is no longer used. Please use `MediaReviewResult` instead.</font>
+                     * 
                      */
                     std::vector<ContentReviewResult> m_reviewResultSet;
                     bool m_reviewResultSetHasBeenSet;
 
                     /**
-                     * The image moderation result.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     ReviewImageResult m_mediaReviewResult;
                     bool m_mediaReviewResultHasBeenSet;

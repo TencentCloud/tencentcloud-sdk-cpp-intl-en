@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool RegionHasBeenSet() const;
 
                     /**
-                     * 获取Area code
-                     * @return Location Area code
+                     * 获取Area code.
+                     * @return Location Area code.
                      * 
                      */
                     std::string GetLocation() const;
 
                     /**
-                     * 设置Area code
-                     * @param _location Area code
+                     * 设置Area code.
+                     * @param _location Area code.
                      * 
                      */
                     void SetLocation(const std::string& _location);
@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool LocationHasBeenSet() const;
 
                     /**
-                     * 获取Zone Name
-                     * @return LocationName Zone Name
+                     * 获取Region name.
+                     * @return LocationName Region name.
                      * 
                      */
                     std::string GetLocationName() const;
 
                     /**
-                     * 设置Zone Name
-                     * @param _locationName Zone Name
+                     * 设置Region name.
+                     * @param _locationName Region name.
                      * 
                      */
                     void SetLocationName(const std::string& _locationName);
@@ -226,13 +226,13 @@ namespace TencentCloud
                     bool m_regionHasBeenSet;
 
                     /**
-                     * Area code
+                     * Area code.
                      */
                     std::string m_location;
                     bool m_locationHasBeenSet;
 
                     /**
-                     * Zone Name
+                     * Region name.
                      */
                     std::string m_locationName;
                     bool m_locationNameHasBeenSet;

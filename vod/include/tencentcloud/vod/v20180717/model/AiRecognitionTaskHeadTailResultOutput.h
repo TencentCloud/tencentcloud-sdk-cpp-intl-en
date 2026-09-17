@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Output of video opening and ending credits recognition.
+                * 
                 */
                 class AiRecognitionTaskHeadTailResultOutput : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Confidence of recognized opening credits. Value range: 0-100.
-                     * @return HeadConfidence Confidence of recognized opening credits. Value range: 0-100.
+                     * 获取
+                     * @return HeadConfidence 
                      * 
                      */
                     double GetHeadConfidence() const;
 
                     /**
-                     * 设置Confidence of recognized opening credits. Value range: 0-100.
-                     * @param _headConfidence Confidence of recognized opening credits. Value range: 0-100.
+                     * 设置
+                     * @param _headConfidence 
                      * 
                      */
                     void SetHeadConfidence(const double& _headConfidence);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool HeadConfidenceHasBeenSet() const;
 
                     /**
-                     * 获取End time point of video opening credits in seconds.
-                     * @return HeadTimeOffset End time point of video opening credits in seconds.
+                     * 获取
+                     * @return HeadTimeOffset 
                      * 
                      */
                     double GetHeadTimeOffset() const;
 
                     /**
-                     * 设置End time point of video opening credits in seconds.
-                     * @param _headTimeOffset End time point of video opening credits in seconds.
+                     * 设置
+                     * @param _headTimeOffset 
                      * 
                      */
                     void SetHeadTimeOffset(const double& _headTimeOffset);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool HeadTimeOffsetHasBeenSet() const;
 
                     /**
-                     * 获取Confidence of recognized closing credits. Value range: 0-100.
-                     * @return TailConfidence Confidence of recognized closing credits. Value range: 0-100.
+                     * 获取
+                     * @return TailConfidence 
                      * 
                      */
                     double GetTailConfidence() const;
 
                     /**
-                     * 设置Confidence of recognized closing credits. Value range: 0-100.
-                     * @param _tailConfidence Confidence of recognized closing credits. Value range: 0-100.
+                     * 设置
+                     * @param _tailConfidence 
                      * 
                      */
                     void SetTailConfidence(const double& _tailConfidence);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool TailConfidenceHasBeenSet() const;
 
                     /**
-                     * 获取Start time point of video closing credits in seconds.
-                     * @return TailTimeOffset Start time point of video closing credits in seconds.
+                     * 获取
+                     * @return TailTimeOffset 
                      * 
                      */
                     double GetTailTimeOffset() const;
 
                     /**
-                     * 设置Start time point of video closing credits in seconds.
-                     * @param _tailTimeOffset Start time point of video closing credits in seconds.
+                     * 设置
+                     * @param _tailTimeOffset 
                      * 
                      */
                     void SetTailTimeOffset(const double& _tailTimeOffset);
@@ -133,25 +133,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Confidence of recognized opening credits. Value range: 0-100.
+                     * 
                      */
                     double m_headConfidence;
                     bool m_headConfidenceHasBeenSet;
 
                     /**
-                     * End time point of video opening credits in seconds.
+                     * 
                      */
                     double m_headTimeOffset;
                     bool m_headTimeOffsetHasBeenSet;
 
                     /**
-                     * Confidence of recognized closing credits. Value range: 0-100.
+                     * 
                      */
                     double m_tailConfidence;
                     bool m_tailConfidenceHasBeenSet;
 
                     /**
-                     * Start time point of video closing credits in seconds.
+                     * 
                      */
                     double m_tailTimeOffset;
                     bool m_tailTimeOffsetHasBeenSet;

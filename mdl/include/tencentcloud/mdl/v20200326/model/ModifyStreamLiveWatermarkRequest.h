@@ -130,15 +130,15 @@ namespace TencentCloud
                     bool TextSettingsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AbWatermarkSettings 
+                     * 获取AB watermark configuration.
+                     * @return AbWatermarkSettings AB watermark configuration.
                      * 
                      */
                     AbWatermarkSettingsReq GetAbWatermarkSettings() const;
 
                     /**
-                     * 设置
-                     * @param _abWatermarkSettings 
+                     * 设置AB watermark configuration.
+                     * @param _abWatermarkSettings AB watermark configuration.
                      * 
                      */
                     void SetAbWatermarkSettings(const AbWatermarkSettingsReq& _abWatermarkSettings);
@@ -177,7 +177,7 @@ namespace TencentCloud
                     bool m_textSettingsHasBeenSet;
 
                     /**
-                     * 
+                     * AB watermark configuration.
                      */
                     AbWatermarkSettingsReq m_abWatermarkSettings;
                     bool m_abWatermarkSettingsHasBeenSet;

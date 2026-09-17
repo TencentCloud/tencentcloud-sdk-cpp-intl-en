@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Video retrieval task information
+                * 
                 */
                 class RestoreMediaTask : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取File ID
-                     * @return FileId File ID
+                     * 获取
+                     * @return FileId 
                      * 
                      */
                     std::string GetFileId() const;
 
                     /**
-                     * 设置File ID
-                     * @param _fileId File ID
+                     * 设置
+                     * @param _fileId 
                      * 
                      */
                     void SetFileId(const std::string& _fileId);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool FileIdHasBeenSet() const;
 
                     /**
-                     * 获取Original storage class
-                     * @return OriginalStorageClass Original storage class
+                     * 获取
+                     * @return OriginalStorageClass 
                      * 
                      */
                     std::string GetOriginalStorageClass() const;
 
                     /**
-                     * 设置Original storage class
-                     * @param _originalStorageClass Original storage class
+                     * 设置
+                     * @param _originalStorageClass 
                      * 
                      */
                     void SetOriginalStorageClass(const std::string& _originalStorageClass);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool OriginalStorageClassHasBeenSet() const;
 
                     /**
-                     * 获取Target storage class. For temporary retrieval, the target storage class is the same as the original.
-                     * @return TargetStorageClass Target storage class. For temporary retrieval, the target storage class is the same as the original.
+                     * 获取
+                     * @return TargetStorageClass 
                      * 
                      */
                     std::string GetTargetStorageClass() const;
 
                     /**
-                     * 设置Target storage class. For temporary retrieval, the target storage class is the same as the original.
-                     * @param _targetStorageClass Target storage class. For temporary retrieval, the target storage class is the same as the original.
+                     * 设置
+                     * @param _targetStorageClass 
                      * 
                      */
                     void SetTargetStorageClass(const std::string& _targetStorageClass);
@@ -110,27 +110,15 @@ namespace TencentCloud
                     bool TargetStorageClassHasBeenSet() const;
 
                     /**
-                     * 获取Retrieval mode. Valid values:
-<li>Expedited</li>
-<li>Standard</li>
-<li>Bulk</li>
-                     * @return RestoreTier Retrieval mode. Valid values:
-<li>Expedited</li>
-<li>Standard</li>
-<li>Bulk</li>
+                     * 获取
+                     * @return RestoreTier 
                      * 
                      */
                     std::string GetRestoreTier() const;
 
                     /**
-                     * 设置Retrieval mode. Valid values:
-<li>Expedited</li>
-<li>Standard</li>
-<li>Bulk</li>
-                     * @param _restoreTier Retrieval mode. Valid values:
-<li>Expedited</li>
-<li>Standard</li>
-<li>Bulk</li>
+                     * 设置
+                     * @param _restoreTier 
                      * 
                      */
                     void SetRestoreTier(const std::string& _restoreTier);
@@ -143,15 +131,15 @@ namespace TencentCloud
                     bool RestoreTierHasBeenSet() const;
 
                     /**
-                     * 获取Validity period (days) for a temporary copy. `0` indicates permanent retrieval.
-                     * @return RestoreDay Validity period (days) for a temporary copy. `0` indicates permanent retrieval.
+                     * 获取
+                     * @return RestoreDay 
                      * 
                      */
                     int64_t GetRestoreDay() const;
 
                     /**
-                     * 设置Validity period (days) for a temporary copy. `0` indicates permanent retrieval.
-                     * @param _restoreDay Validity period (days) for a temporary copy. `0` indicates permanent retrieval.
+                     * 设置
+                     * @param _restoreDay 
                      * 
                      */
                     void SetRestoreDay(const int64_t& _restoreDay);
@@ -164,15 +152,15 @@ namespace TencentCloud
                     bool RestoreDayHasBeenSet() const;
 
                     /**
-                     * 获取This field has been disused.
-                     * @return Status This field has been disused.
+                     * 获取
+                     * @return Status 
                      * @deprecated
                      */
                     int64_t GetStatus() const;
 
                     /**
-                     * 设置This field has been disused.
-                     * @param _status This field has been disused.
+                     * 设置
+                     * @param _status 
                      * @deprecated
                      */
                     void SetStatus(const int64_t& _status);
@@ -185,15 +173,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取This field has been disused.
-                     * @return Message This field has been disused.
+                     * 获取
+                     * @return Message 
                      * @deprecated
                      */
                     std::string GetMessage() const;
 
                     /**
-                     * 设置This field has been disused.
-                     * @param _message This field has been disused.
+                     * 设置
+                     * @param _message 
                      * @deprecated
                      */
                     void SetMessage(const std::string& _message);
@@ -208,46 +196,43 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * File ID
+                     * 
                      */
                     std::string m_fileId;
                     bool m_fileIdHasBeenSet;
 
                     /**
-                     * Original storage class
+                     * 
                      */
                     std::string m_originalStorageClass;
                     bool m_originalStorageClassHasBeenSet;
 
                     /**
-                     * Target storage class. For temporary retrieval, the target storage class is the same as the original.
+                     * 
                      */
                     std::string m_targetStorageClass;
                     bool m_targetStorageClassHasBeenSet;
 
                     /**
-                     * Retrieval mode. Valid values:
-<li>Expedited</li>
-<li>Standard</li>
-<li>Bulk</li>
+                     * 
                      */
                     std::string m_restoreTier;
                     bool m_restoreTierHasBeenSet;
 
                     /**
-                     * Validity period (days) for a temporary copy. `0` indicates permanent retrieval.
+                     * 
                      */
                     int64_t m_restoreDay;
                     bool m_restoreDayHasBeenSet;
 
                     /**
-                     * This field has been disused.
+                     * 
                      */
                     int64_t m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * This field has been disused.
+                     * 
                      */
                     std::string m_message;
                     bool m_messageHasBeenSet;

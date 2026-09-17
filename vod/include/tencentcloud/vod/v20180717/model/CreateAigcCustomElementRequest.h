@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Subject name cannot exceed 20 characters.
-                     * @return ElementName Subject name cannot exceed 20 characters.
+                     * 获取
+                     * @return ElementName 
                      * 
                      */
                     std::string GetElementName() const;
 
                     /**
-                     * 设置Subject name cannot exceed 20 characters.
-                     * @param _elementName Subject name cannot exceed 20 characters.
+                     * 设置
+                     * @param _elementName 
                      * 
                      */
                     void SetElementName(const std::string& _elementName);
@@ -65,23 +65,15 @@ namespace TencentCloud
                     bool ElementNameHasBeenSet() const;
 
                     /**
-                     * 获取Subject description.
-
-Up to 100 characters.
-                     * @return ElementDescription Subject description.
-
-Up to 100 characters.
+                     * 获取
+                     * @return ElementDescription 
                      * 
                      */
                     std::string GetElementDescription() const;
 
                     /**
-                     * 设置Subject description.
-
-Up to 100 characters.
-                     * @param _elementDescription Subject description.
-
-Up to 100 characters.
+                     * 设置
+                     * @param _elementDescription 
                      * 
                      */
                     void SetElementDescription(const std::string& _elementDescription);
@@ -94,27 +86,15 @@ Up to 100 characters.
                     bool ElementDescriptionHasBeenSet() const;
 
                     /**
-                     * 获取Front reference image of the subject.
-Support input image URL (underwrite accessible).
-Image format. Valid values: .jpg, .jpeg, and .png.
-The image file size must not exceed 10MB, with image width and height not less than 300px and image aspect ratio between 1:2.5 and 2.5:1.
-                     * @return ElementFrontalImage Front reference image of the subject.
-Support input image URL (underwrite accessible).
-Image format. Valid values: .jpg, .jpeg, and .png.
-The image file size must not exceed 10MB, with image width and height not less than 300px and image aspect ratio between 1:2.5 and 2.5:1.
+                     * 获取
+                     * @return ElementFrontalImage 
                      * 
                      */
                     std::string GetElementFrontalImage() const;
 
                     /**
-                     * 设置Front reference image of the subject.
-Support input image URL (underwrite accessible).
-Image format. Valid values: .jpg, .jpeg, and .png.
-The image file size must not exceed 10MB, with image width and height not less than 300px and image aspect ratio between 1:2.5 and 2.5:1.
-                     * @param _elementFrontalImage Front reference image of the subject.
-Support input image URL (underwrite accessible).
-Image format. Valid values: .jpg, .jpeg, and .png.
-The image file size must not exceed 10MB, with image width and height not less than 300px and image aspect ratio between 1:2.5 and 2.5:1.
+                     * 设置
+                     * @param _elementFrontalImage 
                      * 
                      */
                     void SetElementFrontalImage(const std::string& _elementFrontalImage);
@@ -127,15 +107,15 @@ The image file size must not exceed 10MB, with image width and height not less t
                     bool ElementFrontalImageHasBeenSet() const;
 
                     /**
-                     * 获取Reference list of other subjects. Upload multiple subject reference images from different angles to define the subject appearance. Upload at least 1 reference image, up to 3 reference images.
-                     * @return ElementReferList Reference list of other subjects. Upload multiple subject reference images from different angles to define the subject appearance. Upload at least 1 reference image, up to 3 reference images.
+                     * 获取
+                     * @return ElementReferList 
                      * 
                      */
                     std::vector<ElementReferInfo> GetElementReferList() const;
 
                     /**
-                     * 设置Reference list of other subjects. Upload multiple subject reference images from different angles to define the subject appearance. Upload at least 1 reference image, up to 3 reference images.
-                     * @param _elementReferList Reference list of other subjects. Upload multiple subject reference images from different angles to define the subject appearance. Upload at least 1 reference image, up to 3 reference images.
+                     * 设置
+                     * @param _elementReferList 
                      * 
                      */
                     void SetElementReferList(const std::vector<ElementReferInfo>& _elementReferList);
@@ -150,30 +130,25 @@ The image file size must not exceed 10MB, with image width and height not less t
                 private:
 
                     /**
-                     * Subject name cannot exceed 20 characters.
+                     * 
                      */
                     std::string m_elementName;
                     bool m_elementNameHasBeenSet;
 
                     /**
-                     * Subject description.
-
-Up to 100 characters.
+                     * 
                      */
                     std::string m_elementDescription;
                     bool m_elementDescriptionHasBeenSet;
 
                     /**
-                     * Front reference image of the subject.
-Support input image URL (underwrite accessible).
-Image format. Valid values: .jpg, .jpeg, and .png.
-The image file size must not exceed 10MB, with image width and height not less than 300px and image aspect ratio between 1:2.5 and 2.5:1.
+                     * 
                      */
                     std::string m_elementFrontalImage;
                     bool m_elementFrontalImageHasBeenSet;
 
                     /**
-                     * Reference list of other subjects. Upload multiple subject reference images from different angles to define the subject appearance. Upload at least 1 reference image, up to 3 reference images.
+                     * 
                      */
                     std::vector<ElementReferInfo> m_elementReferList;
                     bool m_elementReferListHasBeenSet;

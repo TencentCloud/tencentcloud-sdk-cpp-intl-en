@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * See audio content.
+                * 
                 */
                 class AigcAudioReferenceAudioInfo : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Accessible file URL. This parameter is valid when Type value is Url. Description: 1. Recommended image less than 7M; 2. Image format value: jpeg, jpg, png, webp.</p>
-                     * @return Type <p>Accessible file URL. This parameter is valid when Type value is Url. Description: 1. Recommended image less than 7M; 2. Image format value: jpeg, jpg, png, webp.</p>
+                     * 获取
+                     * @return Type 
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置<p>Accessible file URL. This parameter is valid when Type value is Url. Description: 1. Recommended image less than 7M; 2. Image format value: jpeg, jpg, png, webp.</p>
-                     * @param _type <p>Accessible file URL. This parameter is valid when Type value is Url. Description: 1. Recommended image less than 7M; 2. Image format value: jpeg, jpg, png, webp.</p>
+                     * 设置
+                     * @param _type 
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取<p>The media file ID of the audio file, which is the globally unique identifier of this file on VOD, is assigned by the VOD backend after a successful upload. You can retrieve this field in the <a href="/document/product/266/7830?from_cn_redirect=1">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when the Type value is File.</p>
-                     * @return FileId <p>The media file ID of the audio file, which is the globally unique identifier of this file on VOD, is assigned by the VOD backend after a successful upload. You can retrieve this field in the <a href="/document/product/266/7830?from_cn_redirect=1">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when the Type value is File.</p>
+                     * 获取
+                     * @return FileId 
                      * 
                      */
                     std::string GetFileId() const;
 
                     /**
-                     * 设置<p>The media file ID of the audio file, which is the globally unique identifier of this file on VOD, is assigned by the VOD backend after a successful upload. You can retrieve this field in the <a href="/document/product/266/7830?from_cn_redirect=1">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when the Type value is File.</p>
-                     * @param _fileId <p>The media file ID of the audio file, which is the globally unique identifier of this file on VOD, is assigned by the VOD backend after a successful upload. You can retrieve this field in the <a href="/document/product/266/7830?from_cn_redirect=1">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when the Type value is File.</p>
+                     * 设置
+                     * @param _fileId 
                      * 
                      */
                     void SetFileId(const std::string& _fileId);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool FileIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>Audio file URL, which must be external network accessible. This parameter is valid when the Type value is Url.</p>
-                     * @return Url <p>Audio file URL, which must be external network accessible. This parameter is valid when the Type value is Url.</p>
+                     * 获取
+                     * @return Url 
                      * 
                      */
                     std::string GetUrl() const;
 
                     /**
-                     * 设置<p>Audio file URL, which must be external network accessible. This parameter is valid when the Type value is Url.</p>
-                     * @param _url <p>Audio file URL, which must be external network accessible. This parameter is valid when the Type value is Url.</p>
+                     * 设置
+                     * @param _url 
                      * 
                      */
                     void SetUrl(const std::string& _url);
@@ -112,19 +112,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Accessible file URL. This parameter is valid when Type value is Url. Description: 1. Recommended image less than 7M; 2. Image format value: jpeg, jpg, png, webp.</p>
+                     * 
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * <p>The media file ID of the audio file, which is the globally unique identifier of this file on VOD, is assigned by the VOD backend after a successful upload. You can retrieve this field in the <a href="/document/product/266/7830?from_cn_redirect=1">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when the Type value is File.</p>
+                     * 
                      */
                     std::string m_fileId;
                     bool m_fileIdHasBeenSet;
 
                     /**
-                     * <p>Audio file URL, which must be external network accessible. This parameter is valid when the Type value is Url.</p>
+                     * 
                      */
                     std::string m_url;
                     bool m_urlHasBeenSet;

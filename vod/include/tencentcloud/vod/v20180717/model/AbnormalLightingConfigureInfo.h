@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Control parameters for detecting low brightness and overexposure of video.
+                * 
                 */
                 class AbnormalLightingConfigureInfo : public AbstractModel
                 {
@@ -47,23 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取low brightness and overexposure inspection switch, optional values: 
-<li>ON: enabled;</li> 
-<li>OFF: disabled.</li>
-                     * @return Switch low brightness and overexposure inspection switch, optional values: 
-<li>ON: enabled;</li> 
-<li>OFF: disabled.</li>
+                     * 获取
+                     * @return Switch 
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置low brightness and overexposure inspection switch, optional values: 
-<li>ON: enabled;</li> 
-<li>OFF: disabled.</li>
-                     * @param _switch low brightness and overexposure inspection switch, optional values: 
-<li>ON: enabled;</li> 
-<li>OFF: disabled.</li>
+                     * 设置
+                     * @param _switch 
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -78,9 +70,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * low brightness and overexposure inspection switch, optional values: 
-<li>ON: enabled;</li> 
-<li>OFF: disabled.</li>
+                     * 
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;

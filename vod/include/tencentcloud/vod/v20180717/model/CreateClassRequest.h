@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Parent category ID. Fill in -1 for the first-level category.
-                     * @return ParentId Parent category ID. Fill in -1 for the first-level category.
+                     * 获取
+                     * @return ParentId 
                      * 
                      */
                     int64_t GetParentId() const;
 
                     /**
-                     * 设置Parent category ID. Fill in -1 for the first-level category.
-                     * @param _parentId Parent category ID. Fill in -1 for the first-level category.
+                     * 设置
+                     * @param _parentId 
                      * 
                      */
                     void SetParentId(const int64_t& _parentId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool ParentIdHasBeenSet() const;
 
                     /**
-                     * 获取Category name. Length limit: 1-64 characters.
-                     * @return ClassName Category name. Length limit: 1-64 characters.
+                     * 获取
+                     * @return ClassName 
                      * 
                      */
                     std::string GetClassName() const;
 
                     /**
-                     * 设置Category name. Length limit: 1-64 characters.
-                     * @param _className Category name. Length limit: 1-64 characters.
+                     * 设置
+                     * @param _className 
                      * 
                      */
                     void SetClassName(const std::string& _className);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool ClassNameHasBeenSet() const;
 
                     /**
-                     * 获取<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
-                     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+                     * 获取
+                     * @return SubAppId 
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
-                     * @param _subAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+                     * 设置
+                     * @param _subAppId 
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -108,19 +108,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Parent category ID. Fill in -1 for the first-level category.
+                     * 
                      */
                     int64_t m_parentId;
                     bool m_parentIdHasBeenSet;
 
                     /**
-                     * Category name. Length limit: 1-64 characters.
+                     * 
                      */
                     std::string m_className;
                     bool m_classNameHasBeenSet;
 
                     /**
-                     * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+                     * 
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Speech recognition segment.
+                * 
                 */
                 class AiRecognitionTaskAsrWordsSegmentItem : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Start time offset of recognized segment in seconds.
-                     * @return StartTimeOffset Start time offset of recognized segment in seconds.
+                     * 获取
+                     * @return StartTimeOffset 
                      * 
                      */
                     double GetStartTimeOffset() const;
 
                     /**
-                     * 设置Start time offset of recognized segment in seconds.
-                     * @param _startTimeOffset Start time offset of recognized segment in seconds.
+                     * 设置
+                     * @param _startTimeOffset 
                      * 
                      */
                     void SetStartTimeOffset(const double& _startTimeOffset);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool StartTimeOffsetHasBeenSet() const;
 
                     /**
-                     * 获取End time offset of recognition segment in seconds.
-                     * @return EndTimeOffset End time offset of recognition segment in seconds.
+                     * 获取
+                     * @return EndTimeOffset 
                      * 
                      */
                     double GetEndTimeOffset() const;
 
                     /**
-                     * 设置End time offset of recognition segment in seconds.
-                     * @param _endTimeOffset End time offset of recognition segment in seconds.
+                     * 设置
+                     * @param _endTimeOffset 
                      * 
                      */
                     void SetEndTimeOffset(const double& _endTimeOffset);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool EndTimeOffsetHasBeenSet() const;
 
                     /**
-                     * 获取Confidence of recognized segment. Value range: 0-100.
-                     * @return Confidence Confidence of recognized segment. Value range: 0-100.
+                     * 获取
+                     * @return Confidence 
                      * 
                      */
                     double GetConfidence() const;
 
                     /**
-                     * 设置Confidence of recognized segment. Value range: 0-100.
-                     * @param _confidence Confidence of recognized segment. Value range: 0-100.
+                     * 设置
+                     * @param _confidence 
                      * 
                      */
                     void SetConfidence(const double& _confidence);
@@ -112,19 +112,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Start time offset of recognized segment in seconds.
+                     * 
                      */
                     double m_startTimeOffset;
                     bool m_startTimeOffsetHasBeenSet;
 
                     /**
-                     * End time offset of recognition segment in seconds.
+                     * 
                      */
                     double m_endTimeOffset;
                     bool m_endTimeOffsetHasBeenSet;
 
                     /**
-                     * Confidence of recognized segment. Value range: 0-100.
+                     * 
                      */
                     double m_confidence;
                     bool m_confidenceHasBeenSet;

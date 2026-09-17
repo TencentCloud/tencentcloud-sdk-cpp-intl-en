@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Origin Server Configuration
+                * 
                 */
                 class Origin : public AbstractModel
                 {
@@ -47,15 +47,19 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取List of main origin sites. When modifying the main origin site, the corresponding OriginType needs to be filled in at the same time.
-                     * @return Origins List of main origin sites. When modifying the main origin site, the corresponding OriginType needs to be filled in at the same time.
+                     * 获取Primary origin server list.
+When modifying the primary origin server, fill in the corresponding OriginType at the same time.
+                     * @return Origins Primary origin server list.
+When modifying the primary origin server, fill in the corresponding OriginType at the same time.
                      * 
                      */
                     std::vector<std::string> GetOrigins() const;
 
                     /**
-                     * 设置List of main origin sites. When modifying the main origin site, the corresponding OriginType needs to be filled in at the same time.
-                     * @param _origins List of main origin sites. When modifying the main origin site, the corresponding OriginType needs to be filled in at the same time.
+                     * 设置Primary origin server list.
+When modifying the primary origin server, fill in the corresponding OriginType at the same time.
+                     * @param _origins Primary origin server list.
+When modifying the primary origin server, fill in the corresponding OriginType at the same time.
                      * 
                      */
                     void SetOrigins(const std::vector<std::string>& _origins);
@@ -68,15 +72,27 @@ namespace TencentCloud
                     bool OriginsHasBeenSet() const;
 
                     /**
-                     * 获取Main origin site type, input parameters support the following types: <li>domain: domain name type;</li> <li>ip: IP list as the origin site;</li> <li>third_party: third-party storage origin site . </li>
-                     * @return OriginType Main origin site type, input parameters support the following types: <li>domain: domain name type;</li> <li>ip: IP list as the origin site;</li> <li>third_party: third-party storage origin site . </li>
+                     * 获取Primary origin server type. The input parameter supports the following types:
+<li>domain: Domain type;</li>
+<li>ip: IP list as the origin server;</li>
+<li>third_party: third-party object storage origin.</li>
+                     * @return OriginType Primary origin server type. The input parameter supports the following types:
+<li>domain: Domain type;</li>
+<li>ip: IP list as the origin server;</li>
+<li>third_party: third-party object storage origin.</li>
                      * 
                      */
                     std::string GetOriginType() const;
 
                     /**
-                     * 设置Main origin site type, input parameters support the following types: <li>domain: domain name type;</li> <li>ip: IP list as the origin site;</li> <li>third_party: third-party storage origin site . </li>
-                     * @param _originType Main origin site type, input parameters support the following types: <li>domain: domain name type;</li> <li>ip: IP list as the origin site;</li> <li>third_party: third-party storage origin site . </li>
+                     * 设置Primary origin server type. The input parameter supports the following types:
+<li>domain: Domain type;</li>
+<li>ip: IP list as the origin server;</li>
+<li>third_party: third-party object storage origin.</li>
+                     * @param _originType Primary origin server type. The input parameter supports the following types:
+<li>domain: Domain type;</li>
+<li>ip: IP list as the origin server;</li>
+<li>third_party: third-party object storage origin.</li>
                      * 
                      */
                     void SetOriginType(const std::string& _originType);
@@ -89,15 +105,19 @@ namespace TencentCloud
                     bool OriginTypeHasBeenSet() const;
 
                     /**
-                     * 获取When returning to the main origin server, the Host header will default to the accelerated domain name if it is not filled in. When the origin server type is object storage, the ServerName field is required.
-                     * @return ServerName When returning to the main origin server, the Host header will default to the accelerated domain name if it is not filled in. When the origin server type is object storage, the ServerName field is required.
+                     * 获取Host header when accessing the primary origin server. If not filled in, it defaults to the acceleration domain name.
+When the origin server type is COS, the ServerName field is required.
+                     * @return ServerName Host header when accessing the primary origin server. If not filled in, it defaults to the acceleration domain name.
+When the origin server type is COS, the ServerName field is required.
                      * 
                      */
                     std::string GetServerName() const;
 
                     /**
-                     * 设置When returning to the main origin server, the Host header will default to the accelerated domain name if it is not filled in. When the origin server type is object storage, the ServerName field is required.
-                     * @param _serverName When returning to the main origin server, the Host header will default to the accelerated domain name if it is not filled in. When the origin server type is object storage, the ServerName field is required.
+                     * 设置Host header when accessing the primary origin server. If not filled in, it defaults to the acceleration domain name.
+When the origin server type is COS, the ServerName field is required.
+                     * @param _serverName Host header when accessing the primary origin server. If not filled in, it defaults to the acceleration domain name.
+When the origin server type is COS, the ServerName field is required.
                      * 
                      */
                     void SetServerName(const std::string& _serverName);
@@ -110,15 +130,27 @@ namespace TencentCloud
                     bool ServerNameHasBeenSet() const;
 
                     /**
-                     * 获取Back-to-origin protocol configuration: <li>http: Forces HTTP back-to-origin;</li> <li>follow: The protocol follows back-to-origin;</li> <li>https: Forces https back-to-origin, and https back-to-origin only supports origin. Station port 443. </li>
-                     * @return OriginPullProtocol Back-to-origin protocol configuration: <li>http: Forces HTTP back-to-origin;</li> <li>follow: The protocol follows back-to-origin;</li> <li>https: Forces https back-to-origin, and https back-to-origin only supports origin. Station port 443. </li>
+                     * 获取Origin-pull protocol configuration:
+<li>http: Force HTTP origin-pull.</li>
+<li>follow: follow protocol for origin-pull;</li>
+<li>`https`: Switch HTTP requests to HTTPS. This only supports port 443 on the origin server.</li>
+                     * @return OriginPullProtocol Origin-pull protocol configuration:
+<li>http: Force HTTP origin-pull.</li>
+<li>follow: follow protocol for origin-pull;</li>
+<li>`https`: Switch HTTP requests to HTTPS. This only supports port 443 on the origin server.</li>
                      * 
                      */
                     std::string GetOriginPullProtocol() const;
 
                     /**
-                     * 设置Back-to-origin protocol configuration: <li>http: Forces HTTP back-to-origin;</li> <li>follow: The protocol follows back-to-origin;</li> <li>https: Forces https back-to-origin, and https back-to-origin only supports origin. Station port 443. </li>
-                     * @param _originPullProtocol Back-to-origin protocol configuration: <li>http: Forces HTTP back-to-origin;</li> <li>follow: The protocol follows back-to-origin;</li> <li>https: Forces https back-to-origin, and https back-to-origin only supports origin. Station port 443. </li>
+                     * 设置Origin-pull protocol configuration:
+<li>http: Force HTTP origin-pull.</li>
+<li>follow: follow protocol for origin-pull;</li>
+<li>`https`: Switch HTTP requests to HTTPS. This only supports port 443 on the origin server.</li>
+                     * @param _originPullProtocol Origin-pull protocol configuration:
+<li>http: Force HTTP origin-pull.</li>
+<li>follow: follow protocol for origin-pull;</li>
+<li>`https`: Switch HTTP requests to HTTPS. This only supports port 443 on the origin server.</li>
                      * 
                      */
                     void SetOriginPullProtocol(const std::string& _originPullProtocol);
@@ -131,15 +163,19 @@ namespace TencentCloud
                     bool OriginPullProtocolHasBeenSet() const;
 
                     /**
-                     * 获取Backup source site list. When modifying the backup origin site, the corresponding OriginType needs to be filled in at the same time.
-                     * @return BackupOrigins Backup source site list. When modifying the backup origin site, the corresponding OriginType needs to be filled in at the same time.
+                     * 获取Backup origin list.
+When modifying the standby origin server, fill in the corresponding OriginType at the same time.
+                     * @return BackupOrigins Backup origin list.
+When modifying the standby origin server, fill in the corresponding OriginType at the same time.
                      * 
                      */
                     std::vector<std::string> GetBackupOrigins() const;
 
                     /**
-                     * 设置Backup source site list. When modifying the backup origin site, the corresponding OriginType needs to be filled in at the same time.
-                     * @param _backupOrigins Backup source site list. When modifying the backup origin site, the corresponding OriginType needs to be filled in at the same time.
+                     * 设置Backup origin list.
+When modifying the standby origin server, fill in the corresponding OriginType at the same time.
+                     * @param _backupOrigins Backup origin list.
+When modifying the standby origin server, fill in the corresponding OriginType at the same time.
                      * 
                      */
                     void SetBackupOrigins(const std::vector<std::string>& _backupOrigins);
@@ -152,15 +188,27 @@ namespace TencentCloud
                     bool BackupOriginsHasBeenSet() const;
 
                     /**
-                     * 获取Backup origin site type, input parameters support the following types: <li>domain: domain name type;</li> <li>ip: IP list as the origin site;</li> <li>third_party: third-party storage origin site . </li>
-                     * @return BackupOriginType Backup origin site type, input parameters support the following types: <li>domain: domain name type;</li> <li>ip: IP list as the origin site;</li> <li>third_party: third-party storage origin site . </li>
+                     * 获取Secondary origin type. Input supports the following types:
+<li>domain: Domain type;</li>
+<li>ip: IP list as the origin server;</li>
+<li>third_party: third-party object storage origin.</li>
+                     * @return BackupOriginType Secondary origin type. Input supports the following types:
+<li>domain: Domain type;</li>
+<li>ip: IP list as the origin server;</li>
+<li>third_party: third-party object storage origin.</li>
                      * 
                      */
                     std::string GetBackupOriginType() const;
 
                     /**
-                     * 设置Backup origin site type, input parameters support the following types: <li>domain: domain name type;</li> <li>ip: IP list as the origin site;</li> <li>third_party: third-party storage origin site . </li>
-                     * @param _backupOriginType Backup origin site type, input parameters support the following types: <li>domain: domain name type;</li> <li>ip: IP list as the origin site;</li> <li>third_party: third-party storage origin site . </li>
+                     * 设置Secondary origin type. Input supports the following types:
+<li>domain: Domain type;</li>
+<li>ip: IP list as the origin server;</li>
+<li>third_party: third-party object storage origin.</li>
+                     * @param _backupOriginType Secondary origin type. Input supports the following types:
+<li>domain: Domain type;</li>
+<li>ip: IP list as the origin server;</li>
+<li>third_party: third-party object storage origin.</li>
                      * 
                      */
                     void SetBackupOriginType(const std::string& _backupOriginType);
@@ -173,15 +221,15 @@ namespace TencentCloud
                     bool BackupOriginTypeHasBeenSet() const;
 
                     /**
-                     * 获取Host header used when accessing the backup origin server. If it is left empty, the ServerName of primary origin server will be used by default. Note: This field may return null, indicating that no valid value can be obtained.
-                     * @return BackupServerName Host header used when accessing the backup origin server. If it is left empty, the ServerName of primary origin server will be used by default. Note: This field may return null, indicating that no valid value can be obtained.
+                     * 获取
+                     * @return BackupServerName 
                      * 
                      */
                     std::string GetBackupServerName() const;
 
                     /**
-                     * 设置Host header used when accessing the backup origin server. If it is left empty, the ServerName of primary origin server will be used by default. Note: This field may return null, indicating that no valid value can be obtained.
-                     * @param _backupServerName Host header used when accessing the backup origin server. If it is left empty, the ServerName of primary origin server will be used by default. Note: This field may return null, indicating that no valid value can be obtained.
+                     * 设置
+                     * @param _backupServerName 
                      * 
                      */
                     void SetBackupServerName(const std::string& _backupServerName);
@@ -194,15 +242,31 @@ namespace TencentCloud
                     bool BackupServerNameHasBeenSet() const;
 
                     /**
-                     * 获取Object storage back to the origin vendor. Required when the origin site type is a third-party storage origin site (third_party). Optional values u200bu200binclude the following: <li>aws_s3: AWS S3;</li> <li>ali_oss: Alibaba Cloud OSS; </li> <li>hw_obs: Huawei OBS;</li> <li>others: object storage from other manufacturers, only supports object storage compatible with AWS signature algorithm, such as Tencent Cloud COS. </li>
-                     * @return OriginCompany Object storage back to the origin vendor. Required when the origin site type is a third-party storage origin site (third_party). Optional values u200bu200binclude the following: <li>aws_s3: AWS S3;</li> <li>ali_oss: Alibaba Cloud OSS; </li> <li>hw_obs: Huawei OBS;</li> <li>others: object storage from other manufacturers, only supports object storage compatible with AWS signature algorithm, such as Tencent Cloud COS. </li>
+                     * 获取Object storage origin service vendor. Required when the origin server type is third-party object storage origin (third_party). Optional values include:
+<li>aws_s3:AWS S3;</li>
+<li>ali_oss: Alibaba Cloud OSS;</li>
+<li>hw_obs: Huawei OBS;</li>
+<li>others: other vendor's object storage. Only object storage compatible with the AWS signature algorithm is supported, such as Tencent Cloud COS.</li>
+                     * @return OriginCompany Object storage origin service vendor. Required when the origin server type is third-party object storage origin (third_party). Optional values include:
+<li>aws_s3:AWS S3;</li>
+<li>ali_oss: Alibaba Cloud OSS;</li>
+<li>hw_obs: Huawei OBS;</li>
+<li>others: other vendor's object storage. Only object storage compatible with the AWS signature algorithm is supported, such as Tencent Cloud COS.</li>
                      * 
                      */
                     std::string GetOriginCompany() const;
 
                     /**
-                     * 设置Object storage back to the origin vendor. Required when the origin site type is a third-party storage origin site (third_party). Optional values u200bu200binclude the following: <li>aws_s3: AWS S3;</li> <li>ali_oss: Alibaba Cloud OSS; </li> <li>hw_obs: Huawei OBS;</li> <li>others: object storage from other manufacturers, only supports object storage compatible with AWS signature algorithm, such as Tencent Cloud COS. </li>
-                     * @param _originCompany Object storage back to the origin vendor. Required when the origin site type is a third-party storage origin site (third_party). Optional values u200bu200binclude the following: <li>aws_s3: AWS S3;</li> <li>ali_oss: Alibaba Cloud OSS; </li> <li>hw_obs: Huawei OBS;</li> <li>others: object storage from other manufacturers, only supports object storage compatible with AWS signature algorithm, such as Tencent Cloud COS. </li>
+                     * 设置Object storage origin service vendor. Required when the origin server type is third-party object storage origin (third_party). Optional values include:
+<li>aws_s3:AWS S3;</li>
+<li>ali_oss: Alibaba Cloud OSS;</li>
+<li>hw_obs: Huawei OBS;</li>
+<li>others: other vendor's object storage. Only object storage compatible with the AWS signature algorithm is supported, such as Tencent Cloud COS.</li>
+                     * @param _originCompany Object storage origin service vendor. Required when the origin server type is third-party object storage origin (third_party). Optional values include:
+<li>aws_s3:AWS S3;</li>
+<li>ali_oss: Alibaba Cloud OSS;</li>
+<li>hw_obs: Huawei OBS;</li>
+<li>others: other vendor's object storage. Only object storage compatible with the AWS signature algorithm is supported, such as Tencent Cloud COS.</li>
                      * 
                      */
                     void SetOriginCompany(const std::string& _originCompany);
@@ -217,49 +281,65 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * List of main origin sites. When modifying the main origin site, the corresponding OriginType needs to be filled in at the same time.
+                     * Primary origin server list.
+When modifying the primary origin server, fill in the corresponding OriginType at the same time.
                      */
                     std::vector<std::string> m_origins;
                     bool m_originsHasBeenSet;
 
                     /**
-                     * Main origin site type, input parameters support the following types: <li>domain: domain name type;</li> <li>ip: IP list as the origin site;</li> <li>third_party: third-party storage origin site . </li>
+                     * Primary origin server type. The input parameter supports the following types:
+<li>domain: Domain type;</li>
+<li>ip: IP list as the origin server;</li>
+<li>third_party: third-party object storage origin.</li>
                      */
                     std::string m_originType;
                     bool m_originTypeHasBeenSet;
 
                     /**
-                     * When returning to the main origin server, the Host header will default to the accelerated domain name if it is not filled in. When the origin server type is object storage, the ServerName field is required.
+                     * Host header when accessing the primary origin server. If not filled in, it defaults to the acceleration domain name.
+When the origin server type is COS, the ServerName field is required.
                      */
                     std::string m_serverName;
                     bool m_serverNameHasBeenSet;
 
                     /**
-                     * Back-to-origin protocol configuration: <li>http: Forces HTTP back-to-origin;</li> <li>follow: The protocol follows back-to-origin;</li> <li>https: Forces https back-to-origin, and https back-to-origin only supports origin. Station port 443. </li>
+                     * Origin-pull protocol configuration:
+<li>http: Force HTTP origin-pull.</li>
+<li>follow: follow protocol for origin-pull;</li>
+<li>`https`: Switch HTTP requests to HTTPS. This only supports port 443 on the origin server.</li>
                      */
                     std::string m_originPullProtocol;
                     bool m_originPullProtocolHasBeenSet;
 
                     /**
-                     * Backup source site list. When modifying the backup origin site, the corresponding OriginType needs to be filled in at the same time.
+                     * Backup origin list.
+When modifying the standby origin server, fill in the corresponding OriginType at the same time.
                      */
                     std::vector<std::string> m_backupOrigins;
                     bool m_backupOriginsHasBeenSet;
 
                     /**
-                     * Backup origin site type, input parameters support the following types: <li>domain: domain name type;</li> <li>ip: IP list as the origin site;</li> <li>third_party: third-party storage origin site . </li>
+                     * Secondary origin type. Input supports the following types:
+<li>domain: Domain type;</li>
+<li>ip: IP list as the origin server;</li>
+<li>third_party: third-party object storage origin.</li>
                      */
                     std::string m_backupOriginType;
                     bool m_backupOriginTypeHasBeenSet;
 
                     /**
-                     * Host header used when accessing the backup origin server. If it is left empty, the ServerName of primary origin server will be used by default. Note: This field may return null, indicating that no valid value can be obtained.
+                     * 
                      */
                     std::string m_backupServerName;
                     bool m_backupServerNameHasBeenSet;
 
                     /**
-                     * Object storage back to the origin vendor. Required when the origin site type is a third-party storage origin site (third_party). Optional values u200bu200binclude the following: <li>aws_s3: AWS S3;</li> <li>ali_oss: Alibaba Cloud OSS; </li> <li>hw_obs: Huawei OBS;</li> <li>others: object storage from other manufacturers, only supports object storage compatible with AWS signature algorithm, such as Tencent Cloud COS. </li>
+                     * Object storage origin service vendor. Required when the origin server type is third-party object storage origin (third_party). Optional values include:
+<li>aws_s3:AWS S3;</li>
+<li>ali_oss: Alibaba Cloud OSS;</li>
+<li>hw_obs: Huawei OBS;</li>
+<li>others: other vendor's object storage. Only object storage compatible with the AWS signature algorithm is supported, such as Tencent Cloud COS.</li>
                      */
                     std::string m_originCompany;
                     bool m_originCompanyHasBeenSet;

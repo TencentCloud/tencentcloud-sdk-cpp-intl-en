@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Face recognition output file information
+                * 
                 */
                 class FaceRecognitionOutputFileInfo : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Face recognition output file type</p><p>Enumeration value:</p><ul><li>Output: Result output of task generation. The file corresponds to the result in the face recognition task return and is generated in JSON format.</li></ul>
-                     * @return FileType <p>Face recognition output file type</p><p>Enumeration value:</p><ul><li>Output: Result output of task generation. The file corresponds to the result in the face recognition task return and is generated in JSON format.</li></ul>
+                     * 获取
+                     * @return FileType 
                      * 
                      */
                     std::string GetFileType() const;
 
                     /**
-                     * 设置<p>Face recognition output file type</p><p>Enumeration value:</p><ul><li>Output: Result output of task generation. The file corresponds to the result in the face recognition task return and is generated in JSON format.</li></ul>
-                     * @param _fileType <p>Face recognition output file type</p><p>Enumeration value:</p><ul><li>Output: Result output of task generation. The file corresponds to the result in the face recognition task return and is generated in JSON format.</li></ul>
+                     * 设置
+                     * @param _fileType 
                      * 
                      */
                     void SetFileType(const std::string& _fileType);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool FileTypeHasBeenSet() const;
 
                     /**
-                     * 获取<p>File URL of face recognition output</p>
-                     * @return Url <p>File URL of face recognition output</p>
+                     * 获取
+                     * @return Url 
                      * 
                      */
                     std::string GetUrl() const;
 
                     /**
-                     * 设置<p>File URL of face recognition output</p>
-                     * @param _url <p>File URL of face recognition output</p>
+                     * 设置
+                     * @param _url 
                      * 
                      */
                     void SetUrl(const std::string& _url);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Face recognition output file type</p><p>Enumeration value:</p><ul><li>Output: Result output of task generation. The file corresponds to the result in the face recognition task return and is generated in JSON format.</li></ul>
+                     * 
                      */
                     std::string m_fileType;
                     bool m_fileTypeHasBeenSet;
 
                     /**
-                     * <p>File URL of face recognition output</p>
+                     * 
                      */
                     std::string m_url;
                     bool m_urlHasBeenSet;

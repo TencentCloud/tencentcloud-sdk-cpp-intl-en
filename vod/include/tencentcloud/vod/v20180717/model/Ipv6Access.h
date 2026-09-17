@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * IPv6 access configuration
+                * 
                 */
                 class Ipv6Access : public AbstractModel
                 {
@@ -47,15 +47,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Domain name enables ipv6 access configuration switch. The value is: <li>on: on; </li> <li>off: off. </li>
-                     * @return Switch Domain name enables ipv6 access configuration switch. The value is: <li>on: on; </li> <li>off: off. </li>
+                     * 获取Switch for enabling ipv6 access configuration for the domain. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
+                     * @return Switch Switch for enabling ipv6 access configuration for the domain. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Domain name enables ipv6 access configuration switch. The value is: <li>on: on; </li> <li>off: off. </li>
-                     * @param _switch Domain name enables ipv6 access configuration switch. The value is: <li>on: on; </li> <li>off: off. </li>
+                     * 设置Switch for enabling ipv6 access configuration for the domain. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
+                     * @param _switch Switch for enabling ipv6 access configuration for the domain. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -70,7 +78,9 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Domain name enables ipv6 access configuration switch. The value is: <li>on: on; </li> <li>off: off. </li>
+                     * Switch for enabling ipv6 access configuration for the domain. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;

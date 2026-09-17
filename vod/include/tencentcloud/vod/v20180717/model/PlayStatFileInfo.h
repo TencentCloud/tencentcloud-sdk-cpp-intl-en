@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Information of a playback statistics file
+                * 
                 */
                 class PlayStatFileInfo : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Date of playback statistics in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=).
-                     * @return Date Date of playback statistics in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=).
+                     * 获取
+                     * @return Date 
                      * 
                      */
                     std::string GetDate() const;
 
                     /**
-                     * 设置Date of playback statistics in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=).
-                     * @param _date Date of playback statistics in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=).
+                     * 设置
+                     * @param _date 
                      * 
                      */
                     void SetDate(const std::string& _date);
@@ -68,55 +68,15 @@ namespace TencentCloud
                     bool DateHasBeenSet() const;
 
                     /**
-                     * 获取URL of a playback statistics file, including the following contents:
-<li> date: playback date</li>
-<li> file_id: video file ID</li>
-<li> ip_count: number of client IPs after deduplication</li>
-<li> flux: playback traffic in bytes</li>
-<li> play_times: total playback times</li>
-<li> pc_play_times: playback times on PC clients</li>
-<li> mobile_play_times: playback times on mobile clients</li>
-<li> iphone_play_times: playback times on iPhone</li>
-<li> android_play_times: playback times on Android</li>
-<li> host_name: domain name</li>
-                     * @return Url URL of a playback statistics file, including the following contents:
-<li> date: playback date</li>
-<li> file_id: video file ID</li>
-<li> ip_count: number of client IPs after deduplication</li>
-<li> flux: playback traffic in bytes</li>
-<li> play_times: total playback times</li>
-<li> pc_play_times: playback times on PC clients</li>
-<li> mobile_play_times: playback times on mobile clients</li>
-<li> iphone_play_times: playback times on iPhone</li>
-<li> android_play_times: playback times on Android</li>
-<li> host_name: domain name</li>
+                     * 获取
+                     * @return Url 
                      * 
                      */
                     std::string GetUrl() const;
 
                     /**
-                     * 设置URL of a playback statistics file, including the following contents:
-<li> date: playback date</li>
-<li> file_id: video file ID</li>
-<li> ip_count: number of client IPs after deduplication</li>
-<li> flux: playback traffic in bytes</li>
-<li> play_times: total playback times</li>
-<li> pc_play_times: playback times on PC clients</li>
-<li> mobile_play_times: playback times on mobile clients</li>
-<li> iphone_play_times: playback times on iPhone</li>
-<li> android_play_times: playback times on Android</li>
-<li> host_name: domain name</li>
-                     * @param _url URL of a playback statistics file, including the following contents:
-<li> date: playback date</li>
-<li> file_id: video file ID</li>
-<li> ip_count: number of client IPs after deduplication</li>
-<li> flux: playback traffic in bytes</li>
-<li> play_times: total playback times</li>
-<li> pc_play_times: playback times on PC clients</li>
-<li> mobile_play_times: playback times on mobile clients</li>
-<li> iphone_play_times: playback times on iPhone</li>
-<li> android_play_times: playback times on Android</li>
-<li> host_name: domain name</li>
+                     * 设置
+                     * @param _url 
                      * 
                      */
                     void SetUrl(const std::string& _url);
@@ -131,23 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Date of playback statistics in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=).
+                     * 
                      */
                     std::string m_date;
                     bool m_dateHasBeenSet;
 
                     /**
-                     * URL of a playback statistics file, including the following contents:
-<li> date: playback date</li>
-<li> file_id: video file ID</li>
-<li> ip_count: number of client IPs after deduplication</li>
-<li> flux: playback traffic in bytes</li>
-<li> play_times: total playback times</li>
-<li> pc_play_times: playback times on PC clients</li>
-<li> mobile_play_times: playback times on mobile clients</li>
-<li> iphone_play_times: playback times on iPhone</li>
-<li> android_play_times: playback times on Android</li>
-<li> host_name: domain name</li>
+                     * 
                      */
                     std::string m_url;
                     bool m_urlHasBeenSet;

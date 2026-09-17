@@ -46,8 +46,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Material information.
-                     * @return Person Material information.
+                     * 获取
+                     * @return Person 
                      * 
                      */
                     AiSamplePerson GetPerson() const;
@@ -60,8 +60,8 @@ namespace TencentCloud
                     bool PersonHasBeenSet() const;
 
                     /**
-                     * 获取Failed processing of facial feature positioning information.
-                     * @return FailFaceInfoSet Failed processing of facial feature positioning information.
+                     * 获取
+                     * @return FailFaceInfoSet 
                      * 
                      */
                     std::vector<AiSampleFailFaceInfo> GetFailFaceInfoSet() const;
@@ -76,13 +76,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Material information.
+                     * 
                      */
                     AiSamplePerson m_person;
                     bool m_personHasBeenSet;
 
                     /**
-                     * Failed processing of facial feature positioning information.
+                     * 
                      */
                     std::vector<AiSampleFailFaceInfo> m_failFaceInfoSet;
                     bool m_failFaceInfoSetHasBeenSet;

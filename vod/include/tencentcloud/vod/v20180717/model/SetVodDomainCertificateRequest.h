@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Domain name.
-                     * @return Domain Domain name.
+                     * 获取
+                     * @return Domain 
                      * 
                      */
                     std::string GetDomain() const;
 
                     /**
-                     * 设置Domain name.
-                     * @param _domain Domain name.
+                     * 设置
+                     * @param _domain 
                      * 
                      */
                     void SetDomain(const std::string& _domain);
@@ -64,23 +64,15 @@ namespace TencentCloud
                     bool DomainHasBeenSet() const;
 
                     /**
-                     * 获取Operation type of this API call. Valid values:
-<li>Set: Certificate required for setting domain HTTPS.</li>
-<li>Clear: Clear domain HTTPS configuration. After clearance, the domain cannot support HTTPS access.</li>
-                     * @return Operation Operation type of this API call. Valid values:
-<li>Set: Certificate required for setting domain HTTPS.</li>
-<li>Clear: Clear domain HTTPS configuration. After clearance, the domain cannot support HTTPS access.</li>
+                     * 获取
+                     * @return Operation 
                      * 
                      */
                     std::string GetOperation() const;
 
                     /**
-                     * 设置Operation type of this API call. Valid values:
-<li>Set: Certificate required for setting domain HTTPS.</li>
-<li>Clear: Clear domain HTTPS configuration. After clearance, the domain cannot support HTTPS access.</li>
-                     * @param _operation Operation type of this API call. Valid values:
-<li>Set: Certificate required for setting domain HTTPS.</li>
-<li>Clear: Clear domain HTTPS configuration. After clearance, the domain cannot support HTTPS access.</li>
+                     * 设置
+                     * @param _operation 
                      * 
                      */
                     void SetOperation(const std::string& _operation);
@@ -93,15 +85,15 @@ namespace TencentCloud
                     bool OperationHasBeenSet() const;
 
                     /**
-                     * 获取<b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
-                     * @return SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+                     * 获取
+                     * @return SubAppId 
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置<b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
-                     * @param _subAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+                     * 设置
+                     * @param _subAppId 
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -114,15 +106,15 @@ namespace TencentCloud
                     bool SubAppIdHasBeenSet() const;
 
                     /**
-                     * 获取[Tencent Cloud SSL](https://www.tencentcloud.com/document/product/400/7572?from_cn_redirect=1) Uploaded certificate ID. No need to specify this field when clearing domain HTTPS configuration.
-                     * @return CertID [Tencent Cloud SSL](https://www.tencentcloud.com/document/product/400/7572?from_cn_redirect=1) Uploaded certificate ID. No need to specify this field when clearing domain HTTPS configuration.
+                     * 获取
+                     * @return CertID 
                      * 
                      */
                     std::string GetCertID() const;
 
                     /**
-                     * 设置[Tencent Cloud SSL](https://www.tencentcloud.com/document/product/400/7572?from_cn_redirect=1) Uploaded certificate ID. No need to specify this field when clearing domain HTTPS configuration.
-                     * @param _certID [Tencent Cloud SSL](https://www.tencentcloud.com/document/product/400/7572?from_cn_redirect=1) Uploaded certificate ID. No need to specify this field when clearing domain HTTPS configuration.
+                     * 设置
+                     * @param _certID 
                      * 
                      */
                     void SetCertID(const std::string& _certID);
@@ -137,27 +129,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Domain name.
+                     * 
                      */
                     std::string m_domain;
                     bool m_domainHasBeenSet;
 
                     /**
-                     * Operation type of this API call. Valid values:
-<li>Set: Certificate required for setting domain HTTPS.</li>
-<li>Clear: Clear domain HTTPS configuration. After clearance, the domain cannot support HTTPS access.</li>
+                     * 
                      */
                     std::string m_operation;
                     bool m_operationHasBeenSet;
 
                     /**
-                     * <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+                     * 
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
 
                     /**
-                     * [Tencent Cloud SSL](https://www.tencentcloud.com/document/product/400/7572?from_cn_redirect=1) Uploaded certificate ID. No need to specify this field when clearing domain HTTPS configuration.
+                     * 
                      */
                     std::string m_certID;
                     bool m_certIDHasBeenSet;

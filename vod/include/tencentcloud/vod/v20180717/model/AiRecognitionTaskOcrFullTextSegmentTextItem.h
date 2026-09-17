@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Full text recognition segment.
+                * 
                 */
                 class AiRecognitionTaskOcrFullTextSegmentTextItem : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Confidence of recognized segment. Value range: 0-100.
-                     * @return Confidence Confidence of recognized segment. Value range: 0-100.
+                     * 获取
+                     * @return Confidence 
                      * 
                      */
                     double GetConfidence() const;
 
                     /**
-                     * 设置Confidence of recognized segment. Value range: 0-100.
-                     * @param _confidence Confidence of recognized segment. Value range: 0-100.
+                     * 设置
+                     * @param _confidence 
                      * 
                      */
                     void SetConfidence(const double& _confidence);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool ConfidenceHasBeenSet() const;
 
                     /**
-                     * 获取Zone coordinates of recognition result. The array contains four elements: [x1,y1,x2,y2], i.e., the horizontal and vertical coordinates of the top-left and bottom-right corners.
-                     * @return AreaCoordSet Zone coordinates of recognition result. The array contains four elements: [x1,y1,x2,y2], i.e., the horizontal and vertical coordinates of the top-left and bottom-right corners.
+                     * 获取
+                     * @return AreaCoordSet 
                      * 
                      */
                     std::vector<int64_t> GetAreaCoordSet() const;
 
                     /**
-                     * 设置Zone coordinates of recognition result. The array contains four elements: [x1,y1,x2,y2], i.e., the horizontal and vertical coordinates of the top-left and bottom-right corners.
-                     * @param _areaCoordSet Zone coordinates of recognition result. The array contains four elements: [x1,y1,x2,y2], i.e., the horizontal and vertical coordinates of the top-left and bottom-right corners.
+                     * 设置
+                     * @param _areaCoordSet 
                      * 
                      */
                     void SetAreaCoordSet(const std::vector<int64_t>& _areaCoordSet);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool AreaCoordSetHasBeenSet() const;
 
                     /**
-                     * 获取Recognized text.
-                     * @return Text Recognized text.
+                     * 获取
+                     * @return Text 
                      * 
                      */
                     std::string GetText() const;
 
                     /**
-                     * 设置Recognized text.
-                     * @param _text Recognized text.
+                     * 设置
+                     * @param _text 
                      * 
                      */
                     void SetText(const std::string& _text);
@@ -112,19 +112,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Confidence of recognized segment. Value range: 0-100.
+                     * 
                      */
                     double m_confidence;
                     bool m_confidenceHasBeenSet;
 
                     /**
-                     * Zone coordinates of recognition result. The array contains four elements: [x1,y1,x2,y2], i.e., the horizontal and vertical coordinates of the top-left and bottom-right corners.
+                     * 
                      */
                     std::vector<int64_t> m_areaCoordSet;
                     bool m_areaCoordSetHasBeenSet;
 
                     /**
-                     * Recognized text.
+                     * 
                      */
                     std::string m_text;
                     bool m_textHasBeenSet;

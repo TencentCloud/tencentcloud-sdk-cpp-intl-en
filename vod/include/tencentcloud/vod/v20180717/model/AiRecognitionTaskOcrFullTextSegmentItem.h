@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Full text recognition segment.
+                * 
                 */
                 class AiRecognitionTaskOcrFullTextSegmentItem : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Start time offset of recognized segment in seconds.
-                     * @return StartTimeOffset Start time offset of recognized segment in seconds.
+                     * 获取
+                     * @return StartTimeOffset 
                      * 
                      */
                     double GetStartTimeOffset() const;
 
                     /**
-                     * 设置Start time offset of recognized segment in seconds.
-                     * @param _startTimeOffset Start time offset of recognized segment in seconds.
+                     * 设置
+                     * @param _startTimeOffset 
                      * 
                      */
                     void SetStartTimeOffset(const double& _startTimeOffset);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool StartTimeOffsetHasBeenSet() const;
 
                     /**
-                     * 获取End time offset of recognition segment in seconds.
-                     * @return EndTimeOffset End time offset of recognition segment in seconds.
+                     * 获取
+                     * @return EndTimeOffset 
                      * 
                      */
                     double GetEndTimeOffset() const;
 
                     /**
-                     * 设置End time offset of recognition segment in seconds.
-                     * @param _endTimeOffset End time offset of recognition segment in seconds.
+                     * 设置
+                     * @param _endTimeOffset 
                      * 
                      */
                     void SetEndTimeOffset(const double& _endTimeOffset);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool EndTimeOffsetHasBeenSet() const;
 
                     /**
-                     * 获取Recognition segment result set.
-                     * @return TextSet Recognition segment result set.
+                     * 获取
+                     * @return TextSet 
                      * 
                      */
                     std::vector<AiRecognitionTaskOcrFullTextSegmentTextItem> GetTextSet() const;
 
                     /**
-                     * 设置Recognition segment result set.
-                     * @param _textSet Recognition segment result set.
+                     * 设置
+                     * @param _textSet 
                      * 
                      */
                     void SetTextSet(const std::vector<AiRecognitionTaskOcrFullTextSegmentTextItem>& _textSet);
@@ -113,19 +113,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Start time offset of recognized segment in seconds.
+                     * 
                      */
                     double m_startTimeOffset;
                     bool m_startTimeOffsetHasBeenSet;
 
                     /**
-                     * End time offset of recognition segment in seconds.
+                     * 
                      */
                     double m_endTimeOffset;
                     bool m_endTimeOffsetHasBeenSet;
 
                     /**
-                     * Recognition segment result set.
+                     * 
                      */
                     std::vector<AiRecognitionTaskOcrFullTextSegmentTextItem> m_textSet;
                     bool m_textSetHasBeenSet;

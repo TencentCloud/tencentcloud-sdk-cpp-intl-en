@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * MaxAge rules configuration
+                * 
                 */
                 class MaxAgeRule : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Rule type: <li>all: valid for all files;</li> <li>file: valid for specified file suffix;</li> <li>directory: valid for specified path;</li> <li>path: specified absolute The path takes effect. </li>
-                     * @return MaxAgeType Rule type: <li>all: valid for all files;</li> <li>file: valid for specified file suffix;</li> <li>directory: valid for specified path;</li> <li>path: specified absolute The path takes effect. </li>
+                     * 获取<p>Rule type:</p><li>all: takes effect for all files;</li><li>file: takes effect for a specified file suffix;</li><li>directory: takes effect for a specified path;</li><li>path: takes effect for an absolute path.</li>
+                     * @return MaxAgeType <p>Rule type:</p><li>all: takes effect for all files;</li><li>file: takes effect for a specified file suffix;</li><li>directory: takes effect for a specified path;</li><li>path: takes effect for an absolute path.</li>
                      * 
                      */
                     std::string GetMaxAgeType() const;
 
                     /**
-                     * 设置Rule type: <li>all: valid for all files;</li> <li>file: valid for specified file suffix;</li> <li>directory: valid for specified path;</li> <li>path: specified absolute The path takes effect. </li>
-                     * @param _maxAgeType Rule type: <li>all: valid for all files;</li> <li>file: valid for specified file suffix;</li> <li>directory: valid for specified path;</li> <li>path: specified absolute The path takes effect. </li>
+                     * 设置<p>Rule type:</p><li>all: takes effect for all files;</li><li>file: takes effect for a specified file suffix;</li><li>directory: takes effect for a specified path;</li><li>path: takes effect for an absolute path.</li>
+                     * @param _maxAgeType <p>Rule type:</p><li>all: takes effect for all files;</li><li>file: takes effect for a specified file suffix;</li><li>directory: takes effect for a specified path;</li><li>path: takes effect for an absolute path.</li>
                      * 
                      */
                     void SetMaxAgeType(const std::string& _maxAgeType);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool MaxAgeTypeHasBeenSet() const;
 
                     /**
-                     * 获取Matching content under the corresponding type of MaxAgeType: <li>Fill in * when all is used; </li> <li> Fill in suffix name when file is used, such as jpg, txt; </li> <li> Fill in path when directory is used, such as /xxx/ test/;</li> <li>Fill in the absolute path when path is specified, such as /xxx/test.html. </li> <b>Note: all rules cannot be deleted. They follow the origin site by default and can be modified. </b>
-                     * @return MaxAgeContents Matching content under the corresponding type of MaxAgeType: <li>Fill in * when all is used; </li> <li> Fill in suffix name when file is used, such as jpg, txt; </li> <li> Fill in path when directory is used, such as /xxx/ test/;</li> <li>Fill in the absolute path when path is specified, such as /xxx/test.html. </li> <b>Note: all rules cannot be deleted. They follow the origin site by default and can be modified. </b>
+                     * 获取<p>Match content for the corresponding MaxAgeType:</p><li>For all, fill in *;</li><li>For file, fill in the extension, such as jpg, txt;</li><li>For directory, fill in the path, such as /xxx/test/;</li><li>For path, fill in the absolute path, such as /xxx/test.html.</li><b>Note: The all rule is non-deletable, follows the origin site by default, and is modifiable.</b>
+                     * @return MaxAgeContents <p>Match content for the corresponding MaxAgeType:</p><li>For all, fill in *;</li><li>For file, fill in the extension, such as jpg, txt;</li><li>For directory, fill in the path, such as /xxx/test/;</li><li>For path, fill in the absolute path, such as /xxx/test.html.</li><b>Note: The all rule is non-deletable, follows the origin site by default, and is modifiable.</b>
                      * 
                      */
                     std::vector<std::string> GetMaxAgeContents() const;
 
                     /**
-                     * 设置Matching content under the corresponding type of MaxAgeType: <li>Fill in * when all is used; </li> <li> Fill in suffix name when file is used, such as jpg, txt; </li> <li> Fill in path when directory is used, such as /xxx/ test/;</li> <li>Fill in the absolute path when path is specified, such as /xxx/test.html. </li> <b>Note: all rules cannot be deleted. They follow the origin site by default and can be modified. </b>
-                     * @param _maxAgeContents Matching content under the corresponding type of MaxAgeType: <li>Fill in * when all is used; </li> <li> Fill in suffix name when file is used, such as jpg, txt; </li> <li> Fill in path when directory is used, such as /xxx/ test/;</li> <li>Fill in the absolute path when path is specified, such as /xxx/test.html. </li> <b>Note: all rules cannot be deleted. They follow the origin site by default and can be modified. </b>
+                     * 设置<p>Match content for the corresponding MaxAgeType:</p><li>For all, fill in *;</li><li>For file, fill in the extension, such as jpg, txt;</li><li>For directory, fill in the path, such as /xxx/test/;</li><li>For path, fill in the absolute path, such as /xxx/test.html.</li><b>Note: The all rule is non-deletable, follows the origin site by default, and is modifiable.</b>
+                     * @param _maxAgeContents <p>Match content for the corresponding MaxAgeType:</p><li>For all, fill in *;</li><li>For file, fill in the extension, such as jpg, txt;</li><li>For directory, fill in the path, such as /xxx/test/;</li><li>For path, fill in the absolute path, such as /xxx/test.html.</li><b>Note: The all rule is non-deletable, follows the origin site by default, and is modifiable.</b>
                      * 
                      */
                     void SetMaxAgeContents(const std::vector<std::string>& _maxAgeContents);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool MaxAgeContentsHasBeenSet() const;
 
                     /**
-                     * 获取MaxAge time setting, unit second; <b>Note: The time is 0, which means no caching. </b>
-                     * @return MaxAgeTime MaxAge time setting, unit second; <b>Note: The time is 0, which means no caching. </b>
+                     * 获取<p>MaxAge time setting, in seconds; <br><b>Note: A time of 0 means no cache.</b></p>
+                     * @return MaxAgeTime <p>MaxAge time setting, in seconds; <br><b>Note: A time of 0 means no cache.</b></p>
                      * 
                      */
                     uint64_t GetMaxAgeTime() const;
 
                     /**
-                     * 设置MaxAge time setting, unit second; <b>Note: The time is 0, which means no caching. </b>
-                     * @param _maxAgeTime MaxAge time setting, unit second; <b>Note: The time is 0, which means no caching. </b>
+                     * 设置<p>MaxAge time setting, in seconds; <br><b>Note: A time of 0 means no cache.</b></p>
+                     * @param _maxAgeTime <p>MaxAge time setting, in seconds; <br><b>Note: A time of 0 means no cache.</b></p>
                      * 
                      */
                     void SetMaxAgeTime(const uint64_t& _maxAgeTime);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool MaxAgeTimeHasBeenSet() const;
 
                     /**
-                     * 获取Whether to follow the origin server. Valid values: on and off. If it's on, MaxAgeTime is ignored.
-                     * @return FollowOrigin Whether to follow the origin server. Valid values: on and off. If it's on, MaxAgeTime is ignored.
+                     * 获取<p>Whether to follow the origin site. Valid values: on, off. When enabled, ignore timing.</p>
+                     * @return FollowOrigin <p>Whether to follow the origin site. Valid values: on, off. When enabled, ignore timing.</p>
                      * 
                      */
                     std::string GetFollowOrigin() const;
 
                     /**
-                     * 设置Whether to follow the origin server. Valid values: on and off. If it's on, MaxAgeTime is ignored.
-                     * @param _followOrigin Whether to follow the origin server. Valid values: on and off. If it's on, MaxAgeTime is ignored.
+                     * 设置<p>Whether to follow the origin site. Valid values: on, off. When enabled, ignore timing.</p>
+                     * @param _followOrigin <p>Whether to follow the origin site. Valid values: on, off. When enabled, ignore timing.</p>
                      * 
                      */
                     void SetFollowOrigin(const std::string& _followOrigin);
@@ -133,25 +133,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Rule type: <li>all: valid for all files;</li> <li>file: valid for specified file suffix;</li> <li>directory: valid for specified path;</li> <li>path: specified absolute The path takes effect. </li>
+                     * <p>Rule type:</p><li>all: takes effect for all files;</li><li>file: takes effect for a specified file suffix;</li><li>directory: takes effect for a specified path;</li><li>path: takes effect for an absolute path.</li>
                      */
                     std::string m_maxAgeType;
                     bool m_maxAgeTypeHasBeenSet;
 
                     /**
-                     * Matching content under the corresponding type of MaxAgeType: <li>Fill in * when all is used; </li> <li> Fill in suffix name when file is used, such as jpg, txt; </li> <li> Fill in path when directory is used, such as /xxx/ test/;</li> <li>Fill in the absolute path when path is specified, such as /xxx/test.html. </li> <b>Note: all rules cannot be deleted. They follow the origin site by default and can be modified. </b>
+                     * <p>Match content for the corresponding MaxAgeType:</p><li>For all, fill in *;</li><li>For file, fill in the extension, such as jpg, txt;</li><li>For directory, fill in the path, such as /xxx/test/;</li><li>For path, fill in the absolute path, such as /xxx/test.html.</li><b>Note: The all rule is non-deletable, follows the origin site by default, and is modifiable.</b>
                      */
                     std::vector<std::string> m_maxAgeContents;
                     bool m_maxAgeContentsHasBeenSet;
 
                     /**
-                     * MaxAge time setting, unit second; <b>Note: The time is 0, which means no caching. </b>
+                     * <p>MaxAge time setting, in seconds; <br><b>Note: A time of 0 means no cache.</b></p>
                      */
                     uint64_t m_maxAgeTime;
                     bool m_maxAgeTimeHasBeenSet;
 
                     /**
-                     * Whether to follow the origin server. Valid values: on and off. If it's on, MaxAgeTime is ignored.
+                     * <p>Whether to follow the origin site. Valid values: on, off. When enabled, ignore timing.</p>
                      */
                     std::string m_followOrigin;
                     bool m_followOriginHasBeenSet;

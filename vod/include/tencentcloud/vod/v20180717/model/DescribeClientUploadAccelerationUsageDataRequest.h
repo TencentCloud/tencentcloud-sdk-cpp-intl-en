@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Start date. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
-                     * @return StartTime Start date. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
+                     * 获取
+                     * @return StartTime 
                      * 
                      */
                     std::string GetStartTime() const;
 
                     /**
-                     * 设置Start date. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
-                     * @param _startTime Start date. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
+                     * 设置
+                     * @param _startTime 
                      * 
                      */
                     void SetStartTime(const std::string& _startTime);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取End date, which must be greater than or equal to the start date. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
-                     * @return EndTime End date, which must be greater than or equal to the start date. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
+                     * 获取
+                     * @return EndTime 
                      * 
                      */
                     std::string GetEndTime() const;
 
                     /**
-                     * 设置End date, which must be greater than or equal to the start date. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
-                     * @param _endTime End date, which must be greater than or equal to the start date. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
+                     * 设置
+                     * @param _endTime 
                      * 
                      */
                     void SetEndTime(const std::string& _endTime);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取<b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
-                     * @return SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+                     * 获取
+                     * @return SubAppId 
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置<b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
-                     * @param _subAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+                     * 设置
+                     * @param _subAppId 
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -106,27 +106,15 @@ namespace TencentCloud
                     bool SubAppIdHasBeenSet() const;
 
                     /**
-                     * 获取Client upload acceleration type. Valid values:
-<li>AccelerationWithHTTP: Upload acceleration with HTTP transfer method.</li>
-<li>AccelerationWithQUIC: Upload acceleration with QUIC transmission method.</li>
-Default query for all acceleration types amount.
-                     * @return Type Client upload acceleration type. Valid values:
-<li>AccelerationWithHTTP: Upload acceleration with HTTP transfer method.</li>
-<li>AccelerationWithQUIC: Upload acceleration with QUIC transmission method.</li>
-Default query for all acceleration types amount.
+                     * 获取
+                     * @return Type 
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Client upload acceleration type. Valid values:
-<li>AccelerationWithHTTP: Upload acceleration with HTTP transfer method.</li>
-<li>AccelerationWithQUIC: Upload acceleration with QUIC transmission method.</li>
-Default query for all acceleration types amount.
-                     * @param _type Client upload acceleration type. Valid values:
-<li>AccelerationWithHTTP: Upload acceleration with HTTP transfer method.</li>
-<li>AccelerationWithQUIC: Upload acceleration with QUIC transmission method.</li>
-Default query for all acceleration types amount.
+                     * 设置
+                     * @param _type 
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -141,28 +129,25 @@ Default query for all acceleration types amount.
                 private:
 
                     /**
-                     * Start date. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
+                     * 
                      */
                     std::string m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * End date, which must be greater than or equal to the start date. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
+                     * 
                      */
                     std::string m_endTime;
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+                     * 
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
 
                     /**
-                     * Client upload acceleration type. Valid values:
-<li>AccelerationWithHTTP: Upload acceleration with HTTP transfer method.</li>
-<li>AccelerationWithQUIC: Upload acceleration with QUIC transmission method.</li>
-Default query for all acceleration types amount.
+                     * 
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;

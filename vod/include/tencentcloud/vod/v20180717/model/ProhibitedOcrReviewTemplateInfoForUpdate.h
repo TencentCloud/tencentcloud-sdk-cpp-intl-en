@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Control parameter of prohibited information detection in text task
+                * 
                 */
                 class ProhibitedOcrReviewTemplateInfoForUpdate : public AbstractModel
                 {
@@ -47,23 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Switch of prohibited information detection in text task. Valid values:
-<li>ON: enables prohibited information detection in text task;</li>
-<li>OFF: disables prohibited information detection in text task.</li>
-                     * @return Switch Switch of prohibited information detection in text task. Valid values:
-<li>ON: enables prohibited information detection in text task;</li>
-<li>OFF: disables prohibited information detection in text task.</li>
+                     * 获取
+                     * @return Switch 
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Switch of prohibited information detection in text task. Valid values:
-<li>ON: enables prohibited information detection in text task;</li>
-<li>OFF: disables prohibited information detection in text task.</li>
-                     * @param _switch Switch of prohibited information detection in text task. Valid values:
-<li>ON: enables prohibited information detection in text task;</li>
-<li>OFF: disables prohibited information detection in text task.</li>
+                     * 设置
+                     * @param _switch 
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -76,15 +68,15 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取Confidence score threshold for determining that something should be blocked. If this threshold is reached, VOD will suggest that the content be blocked. If this parameter is left empty, `100` will be used by default. Value range: 0-100
-                     * @return BlockConfidence Confidence score threshold for determining that something should be blocked. If this threshold is reached, VOD will suggest that the content be blocked. If this parameter is left empty, `100` will be used by default. Value range: 0-100
+                     * 获取
+                     * @return BlockConfidence 
                      * 
                      */
                     int64_t GetBlockConfidence() const;
 
                     /**
-                     * 设置Confidence score threshold for determining that something should be blocked. If this threshold is reached, VOD will suggest that the content be blocked. If this parameter is left empty, `100` will be used by default. Value range: 0-100
-                     * @param _blockConfidence Confidence score threshold for determining that something should be blocked. If this threshold is reached, VOD will suggest that the content be blocked. If this parameter is left empty, `100` will be used by default. Value range: 0-100
+                     * 设置
+                     * @param _blockConfidence 
                      * 
                      */
                     void SetBlockConfidence(const int64_t& _blockConfidence);
@@ -97,15 +89,15 @@ namespace TencentCloud
                     bool BlockConfidenceHasBeenSet() const;
 
                     /**
-                     * 获取Confidence score threshold for human review. If this threshold is reached, human review is needed. If this parameter is left empty, `75` will be used by default. Value range: 0-100
-                     * @return ReviewConfidence Confidence score threshold for human review. If this threshold is reached, human review is needed. If this parameter is left empty, `75` will be used by default. Value range: 0-100
+                     * 获取
+                     * @return ReviewConfidence 
                      * 
                      */
                     int64_t GetReviewConfidence() const;
 
                     /**
-                     * 设置Confidence score threshold for human review. If this threshold is reached, human review is needed. If this parameter is left empty, `75` will be used by default. Value range: 0-100
-                     * @param _reviewConfidence Confidence score threshold for human review. If this threshold is reached, human review is needed. If this parameter is left empty, `75` will be used by default. Value range: 0-100
+                     * 设置
+                     * @param _reviewConfidence 
                      * 
                      */
                     void SetReviewConfidence(const int64_t& _reviewConfidence);
@@ -120,21 +112,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Switch of prohibited information detection in text task. Valid values:
-<li>ON: enables prohibited information detection in text task;</li>
-<li>OFF: disables prohibited information detection in text task.</li>
+                     * 
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * Confidence score threshold for determining that something should be blocked. If this threshold is reached, VOD will suggest that the content be blocked. If this parameter is left empty, `100` will be used by default. Value range: 0-100
+                     * 
                      */
                     int64_t m_blockConfidence;
                     bool m_blockConfidenceHasBeenSet;
 
                     /**
-                     * Confidence score threshold for human review. If this threshold is reached, human review is needed. If this parameter is left empty, `75` will be used by default. Value range: 0-100
+                     * 
                      */
                     int64_t m_reviewConfidence;
                     bool m_reviewConfidenceHasBeenSet;

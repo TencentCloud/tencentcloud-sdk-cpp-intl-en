@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Output of asynchronous task processing for images.
+                * 
                 */
                 class ProcessImageAsyncOutput : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Output file information of asynchronous image processing tasks.
-                     * @return FileInfo Output file information of asynchronous image processing tasks.
+                     * 获取
+                     * @return FileInfo 
                      * 
                      */
                     ProcessImageAsyncOutputFileInfo GetFileInfo() const;
 
                     /**
-                     * 设置Output file information of asynchronous image processing tasks.
-                     * @param _fileInfo Output file information of asynchronous image processing tasks.
+                     * 设置
+                     * @param _fileInfo 
                      * 
                      */
                     void SetFileInfo(const ProcessImageAsyncOutputFileInfo& _fileInfo);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool FileInfoHasBeenSet() const;
 
                     /**
-                     * 获取Image understanding result.
-                     * @return OutputText Image understanding result.
+                     * 获取
+                     * @return OutputText 
                      * 
                      */
                     std::string GetOutputText() const;
 
                     /**
-                     * 设置Image understanding result.
-                     * @param _outputText Image understanding result.
+                     * 设置
+                     * @param _outputText 
                      * 
                      */
                     void SetOutputText(const std::string& _outputText);
@@ -92,13 +92,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Output file information of asynchronous image processing tasks.
+                     * 
                      */
                     ProcessImageAsyncOutputFileInfo m_fileInfo;
                     bool m_fileInfoHasBeenSet;
 
                     /**
-                     * Image understanding result.
+                     * 
                      */
                     std::string m_outputText;
                     bool m_outputTextHasBeenSet;

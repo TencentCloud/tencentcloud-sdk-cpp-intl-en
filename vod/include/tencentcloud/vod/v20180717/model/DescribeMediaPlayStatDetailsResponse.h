@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Playback statistics.
-                     * @return PlayStatInfoSet Playback statistics.
+                     * 获取
+                     * @return PlayStatInfoSet 
                      * 
                      */
                     std::vector<PlayStatInfo> GetPlayStatInfoSet() const;
@@ -61,7 +61,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Playback statistics.
+                     * 
                      */
                     std::vector<PlayStatInfo> m_playStatInfoSet;
                     bool m_playStatInfoSetHasBeenSet;

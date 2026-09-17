@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Control parameter of an intelligent highlight generating task
+                * 
                 */
                 class HighlightsConfigureInfoForUpdate : public AbstractModel
                 {
@@ -47,23 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Switch of an intelligent highlight generating task. Valid values:
-<li>ON: enable an intelligent highlight generating task;</li>
-<li>OFF: disable an intelligent highlight generating task.</li>
-                     * @return Switch Switch of an intelligent highlight generating task. Valid values:
-<li>ON: enable an intelligent highlight generating task;</li>
-<li>OFF: disable an intelligent highlight generating task.</li>
+                     * 获取
+                     * @return Switch 
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Switch of an intelligent highlight generating task. Valid values:
-<li>ON: enable an intelligent highlight generating task;</li>
-<li>OFF: disable an intelligent highlight generating task.</li>
-                     * @param _switch Switch of an intelligent highlight generating task. Valid values:
-<li>ON: enable an intelligent highlight generating task;</li>
-<li>OFF: disable an intelligent highlight generating task.</li>
+                     * 设置
+                     * @param _switch 
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -78,9 +70,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Switch of an intelligent highlight generating task. Valid values:
-<li>ON: enable an intelligent highlight generating task;</li>
-<li>OFF: disable an intelligent highlight generating task.</li>
+                     * 
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;

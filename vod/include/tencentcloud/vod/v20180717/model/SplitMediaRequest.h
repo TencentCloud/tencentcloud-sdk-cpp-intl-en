@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Video ID.
-                     * @return FileId Video ID.
+                     * 获取
+                     * @return FileId 
                      * 
                      */
                     std::string GetFileId() const;
 
                     /**
-                     * 设置Video ID.
-                     * @param _fileId Video ID.
+                     * 设置
+                     * @param _fileId 
                      * 
                      */
                     void SetFileId(const std::string& _fileId);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool FileIdHasBeenSet() const;
 
                     /**
-                     * 获取Video split task information list, simultaneously support up to 100 split information.
-                     * @return Segments Video split task information list, simultaneously support up to 100 split information.
+                     * 获取
+                     * @return Segments 
                      * 
                      */
                     std::vector<SplitMediaTaskConfig> GetSegments() const;
 
                     /**
-                     * 设置Video split task information list, simultaneously support up to 100 split information.
-                     * @param _segments Video split task information list, simultaneously support up to 100 split information.
+                     * 设置
+                     * @param _segments 
                      * 
                      */
                     void SetSegments(const std::vector<SplitMediaTaskConfig>& _segments);
@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool SegmentsHasBeenSet() const;
 
                     /**
-                     * 获取<b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
-                     * @return SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+                     * 获取
+                     * @return SubAppId 
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置<b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
-                     * @param _subAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+                     * 设置
+                     * @param _subAppId 
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -107,15 +107,15 @@ namespace TencentCloud
                     bool SubAppIdHasBeenSet() const;
 
                     /**
-                     * 获取Identify source context, pass through user request information, return the value of this field in SplitMediaComplete callback and task flow status change callback, longest 1000 character.
-                     * @return SessionContext Identify source context, pass through user request information, return the value of this field in SplitMediaComplete callback and task flow status change callback, longest 1000 character.
+                     * 获取
+                     * @return SessionContext 
                      * 
                      */
                     std::string GetSessionContext() const;
 
                     /**
-                     * 设置Identify source context, pass through user request information, return the value of this field in SplitMediaComplete callback and task flow status change callback, longest 1000 character.
-                     * @param _sessionContext Identify source context, pass through user request information, return the value of this field in SplitMediaComplete callback and task flow status change callback, longest 1000 character.
+                     * 设置
+                     * @param _sessionContext 
                      * 
                      */
                     void SetSessionContext(const std::string& _sessionContext);
@@ -128,15 +128,15 @@ namespace TencentCloud
                     bool SessionContextHasBeenSet() const;
 
                     /**
-                     * 获取Identifier for task deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
-                     * @return SessionId Identifier for task deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
+                     * 获取
+                     * @return SessionId 
                      * 
                      */
                     std::string GetSessionId() const;
 
                     /**
-                     * 设置Identifier for task deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
-                     * @param _sessionId Identifier for task deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
+                     * 设置
+                     * @param _sessionId 
                      * 
                      */
                     void SetSessionId(const std::string& _sessionId);
@@ -149,15 +149,15 @@ namespace TencentCloud
                     bool SessionIdHasBeenSet() const;
 
                     /**
-                     * 获取Task priority. The higher the value, the higher the priority. The value ranges from -10 to 10. If left blank, the default value is 0.
-                     * @return TasksPriority Task priority. The higher the value, the higher the priority. The value ranges from -10 to 10. If left blank, the default value is 0.
+                     * 获取
+                     * @return TasksPriority 
                      * 
                      */
                     int64_t GetTasksPriority() const;
 
                     /**
-                     * 设置Task priority. The higher the value, the higher the priority. The value ranges from -10 to 10. If left blank, the default value is 0.
-                     * @param _tasksPriority Task priority. The higher the value, the higher the priority. The value ranges from -10 to 10. If left blank, the default value is 0.
+                     * 设置
+                     * @param _tasksPriority 
                      * 
                      */
                     void SetTasksPriority(const int64_t& _tasksPriority);
@@ -172,37 +172,37 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Video ID.
+                     * 
                      */
                     std::string m_fileId;
                     bool m_fileIdHasBeenSet;
 
                     /**
-                     * Video split task information list, simultaneously support up to 100 split information.
+                     * 
                      */
                     std::vector<SplitMediaTaskConfig> m_segments;
                     bool m_segmentsHasBeenSet;
 
                     /**
-                     * <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+                     * 
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
 
                     /**
-                     * Identify source context, pass through user request information, return the value of this field in SplitMediaComplete callback and task flow status change callback, longest 1000 character.
+                     * 
                      */
                     std::string m_sessionContext;
                     bool m_sessionContextHasBeenSet;
 
                     /**
-                     * Identifier for task deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
+                     * 
                      */
                     std::string m_sessionId;
                     bool m_sessionIdHasBeenSet;
 
                     /**
-                     * Task priority. The higher the value, the higher the priority. The value ranges from -10 to 10. If left blank, the default value is 0.
+                     * 
                      */
                     int64_t m_tasksPriority;
                     bool m_tasksPriorityHasBeenSet;

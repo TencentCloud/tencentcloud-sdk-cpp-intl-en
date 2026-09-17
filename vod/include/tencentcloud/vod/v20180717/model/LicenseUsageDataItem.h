@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * The license request statistics.
+                * 
                 */
                 class LicenseUsageDataItem : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The start time (in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)) of the data returned. For example, if the granularity is a day, `2018-12-01T00:00:00+08:00` indicates that the data is for the whole day of December 1, 2018.
-                     * @return Time The start time (in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)) of the data returned. For example, if the granularity is a day, `2018-12-01T00:00:00+08:00` indicates that the data is for the whole day of December 1, 2018.
+                     * 获取
+                     * @return Time 
                      * 
                      */
                     std::string GetTime() const;
 
                     /**
-                     * 设置The start time (in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)) of the data returned. For example, if the granularity is a day, `2018-12-01T00:00:00+08:00` indicates that the data is for the whole day of December 1, 2018.
-                     * @param _time The start time (in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)) of the data returned. For example, if the granularity is a day, `2018-12-01T00:00:00+08:00` indicates that the data is for the whole day of December 1, 2018.
+                     * 设置
+                     * @param _time 
                      * 
                      */
                     void SetTime(const std::string& _time);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool TimeHasBeenSet() const;
 
                     /**
-                     * 获取The number of license requests.
-                     * @return Count The number of license requests.
+                     * 获取
+                     * @return Count 
                      * 
                      */
                     int64_t GetCount() const;
 
                     /**
-                     * 设置The number of license requests.
-                     * @param _count The number of license requests.
+                     * 设置
+                     * @param _count 
                      * 
                      */
                     void SetCount(const int64_t& _count);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The start time (in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)) of the data returned. For example, if the granularity is a day, `2018-12-01T00:00:00+08:00` indicates that the data is for the whole day of December 1, 2018.
+                     * 
                      */
                     std::string m_time;
                     bool m_timeHasBeenSet;
 
                     /**
-                     * The number of license requests.
+                     * 
                      */
                     int64_t m_count;
                     bool m_countHasBeenSet;

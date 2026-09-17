@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Information of audio stream in VOD file
+                * Audio stream information of VOD files
                 */
                 class MediaAudioStreamItem : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Bitrate of the audio stream. Measurement unit: bps.</p>
-                     * @return Bitrate <p>Bitrate of the audio stream. Measurement unit: bps.</p>
+                     * 获取<p>Audio stream bitrate, in bps.</p>
+                     * @return Bitrate <p>Audio stream bitrate, in bps.</p>
                      * 
                      */
                     int64_t GetBitrate() const;
 
                     /**
-                     * 设置<p>Bitrate of the audio stream. Measurement unit: bps.</p>
-                     * @param _bitrate <p>Bitrate of the audio stream. Measurement unit: bps.</p>
+                     * 设置<p>Audio stream bitrate, in bps.</p>
+                     * @param _bitrate <p>Audio stream bitrate, in bps.</p>
                      * 
                      */
                     void SetBitrate(const int64_t& _bitrate);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool BitrateHasBeenSet() const;
 
                     /**
-                     * 获取<p>Sampling rate of the audio stream, unit: hz.</p>
-                     * @return SamplingRate <p>Sampling rate of the audio stream, unit: hz.</p>
+                     * 获取<p>Sampling rate of the audio stream. Unit: hz.</p>
+                     * @return SamplingRate <p>Sampling rate of the audio stream. Unit: hz.</p>
                      * 
                      */
                     int64_t GetSamplingRate() const;
 
                     /**
-                     * 设置<p>Sampling rate of the audio stream, unit: hz.</p>
-                     * @param _samplingRate <p>Sampling rate of the audio stream, unit: hz.</p>
+                     * 设置<p>Sampling rate of the audio stream. Unit: hz.</p>
+                     * @param _samplingRate <p>Sampling rate of the audio stream. Unit: hz.</p>
                      * 
                      */
                     void SetSamplingRate(const int64_t& _samplingRate);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool SamplingRateHasBeenSet() const;
 
                     /**
-                     * 获取<p>Audio stream encoding format, such as aac.</p>
-                     * @return Codec <p>Audio stream encoding format, such as aac.</p>
+                     * 获取<p>Audio stream encoding format, for example, aac.</p>
+                     * @return Codec <p>Audio stream encoding format, for example, aac.</p>
                      * 
                      */
                     std::string GetCodec() const;
 
                     /**
-                     * 设置<p>Audio stream encoding format, such as aac.</p>
-                     * @param _codec <p>Audio stream encoding format, such as aac.</p>
+                     * 设置<p>Audio stream encoding format, for example, aac.</p>
+                     * @param _codec <p>Audio stream encoding format, for example, aac.</p>
                      * 
                      */
                     void SetCodec(const std::string& _codec);
@@ -112,19 +112,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Bitrate of the audio stream. Measurement unit: bps.</p>
+                     * <p>Audio stream bitrate, in bps.</p>
                      */
                     int64_t m_bitrate;
                     bool m_bitrateHasBeenSet;
 
                     /**
-                     * <p>Sampling rate of the audio stream, unit: hz.</p>
+                     * <p>Sampling rate of the audio stream. Unit: hz.</p>
                      */
                     int64_t m_samplingRate;
                     bool m_samplingRateHasBeenSet;
 
                     /**
-                     * <p>Audio stream encoding format, such as aac.</p>
+                     * <p>Audio stream encoding format, for example, aac.</p>
                      */
                     std::string m_codec;
                     bool m_codecHasBeenSet;

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Extract blind watermark input
+                * 
                 */
                 class ExtractBlindWatermarkInputInfo : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Extract digital watermark input type, value range: <li>FILEID: File media asset ID;</li><li>URL: File URL;</li>
-                     * @return Type Extract digital watermark input type, value range: <li>FILEID: File media asset ID;</li><li>URL: File URL;</li>
+                     * 获取
+                     * @return Type 
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Extract digital watermark input type, value range: <li>FILEID: File media asset ID;</li><li>URL: File URL;</li>
-                     * @param _type Extract digital watermark input type, value range: <li>FILEID: File media asset ID;</li><li>URL: File URL;</li>
+                     * 设置
+                     * @param _type 
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Media file ID to extract
-                     * @return FileId Media file ID to extract
+                     * 获取
+                     * @return FileId 
                      * 
                      */
                     std::string GetFileId() const;
 
                     /**
-                     * 设置Media file ID to extract
-                     * @param _fileId Media file ID to extract
+                     * 设置
+                     * @param _fileId 
                      * 
                      */
                     void SetFileId(const std::string& _fileId);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool FileIdHasBeenSet() const;
 
                     /**
-                     * 获取Video file url to extract
-                     * @return Url Video file url to extract
+                     * 获取
+                     * @return Url 
                      * 
                      */
                     std::string GetUrl() const;
 
                     /**
-                     * 设置Video file url to extract
-                     * @param _url Video file url to extract
+                     * 设置
+                     * @param _url 
                      * 
                      */
                     void SetUrl(const std::string& _url);
@@ -112,19 +112,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Extract digital watermark input type, value range: <li>FILEID: File media asset ID;</li><li>URL: File URL;</li>
+                     * 
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Media file ID to extract
+                     * 
                      */
                     std::string m_fileId;
                     bool m_fileIdHasBeenSet;
 
                     /**
-                     * Video file url to extract
+                     * 
                      */
                     std::string m_url;
                     bool m_urlHasBeenSet;

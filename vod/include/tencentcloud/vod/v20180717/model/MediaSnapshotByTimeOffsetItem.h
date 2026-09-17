@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Information of time point screenshot in VOD file
+                * 
                 */
                 class MediaSnapshotByTimeOffsetItem : public AbstractModel
                 {
@@ -48,19 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Specification of a time point screenshot. For more information, please see [Parameter Template for Time Point Screencapturing](https://intl.cloud.tencent.com/document/product/266/33480?from_cn_redirect=1#.E6.97.B6.E9.97.B4.E7.82.B9.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Definition Specification of a time point screenshot. For more information, please see [Parameter Template for Time Point Screencapturing](https://intl.cloud.tencent.com/document/product/266/33480?from_cn_redirect=1#.E6.97.B6.E9.97.B4.E7.82.B9.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return Definition 
                      * 
                      */
                     int64_t GetDefinition() const;
 
                     /**
-                     * 设置Specification of a time point screenshot. For more information, please see [Parameter Template for Time Point Screencapturing](https://intl.cloud.tencent.com/document/product/266/33480?from_cn_redirect=1#.E6.97.B6.E9.97.B4.E7.82.B9.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _definition Specification of a time point screenshot. For more information, please see [Parameter Template for Time Point Screencapturing](https://intl.cloud.tencent.com/document/product/266/33480?from_cn_redirect=1#.E6.97.B6.E9.97.B4.E7.82.B9.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _definition 
                      * 
                      */
                     void SetDefinition(const int64_t& _definition);
@@ -73,19 +69,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool DefinitionHasBeenSet() const;
 
                     /**
-                     * 获取Information set of screenshots of the same specification. Each element represents a screenshot.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return PicInfoSet Information set of screenshots of the same specification. Each element represents a screenshot.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return PicInfoSet 
                      * 
                      */
                     std::vector<MediaSnapshotByTimePicInfoItem> GetPicInfoSet() const;
 
                     /**
-                     * 设置Information set of screenshots of the same specification. Each element represents a screenshot.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _picInfoSet Information set of screenshots of the same specification. Each element represents a screenshot.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _picInfoSet 
                      * 
                      */
                     void SetPicInfoSet(const std::vector<MediaSnapshotByTimePicInfoItem>& _picInfoSet);
@@ -100,15 +92,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Specification of a time point screenshot. For more information, please see [Parameter Template for Time Point Screencapturing](https://intl.cloud.tencent.com/document/product/266/33480?from_cn_redirect=1#.E6.97.B6.E9.97.B4.E7.82.B9.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t m_definition;
                     bool m_definitionHasBeenSet;
 
                     /**
-                     * Information set of screenshots of the same specification. Each element represents a screenshot.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<MediaSnapshotByTimePicInfoItem> m_picInfoSet;
                     bool m_picInfoSetHasBeenSet;

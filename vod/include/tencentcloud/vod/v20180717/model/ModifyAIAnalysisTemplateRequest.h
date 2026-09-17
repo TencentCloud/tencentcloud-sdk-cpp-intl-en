@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Unique identifier of an audio and video content analysis template.
-                     * @return Definition Unique identifier of an audio and video content analysis template.
+                     * 获取
+                     * @return Definition 
                      * 
                      */
                     int64_t GetDefinition() const;
 
                     /**
-                     * 设置Unique identifier of an audio and video content analysis template.
-                     * @param _definition Unique identifier of an audio and video content analysis template.
+                     * 设置
+                     * @param _definition 
                      * 
                      */
                     void SetDefinition(const int64_t& _definition);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool DefinitionHasBeenSet() const;
 
                     /**
-                     * 获取<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
-                     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+                     * 获取
+                     * @return SubAppId 
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
-                     * @param _subAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+                     * 设置
+                     * @param _subAppId 
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool SubAppIdHasBeenSet() const;
 
                     /**
-                     * 获取Audio and video content analysis template name. Length limit: 64 characters.
-                     * @return Name Audio and video content analysis template name. Length limit: 64 characters.
+                     * 获取
+                     * @return Name 
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Audio and video content analysis template name. Length limit: 64 characters.
-                     * @param _name Audio and video content analysis template name. Length limit: 64 characters.
+                     * 设置
+                     * @param _name 
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -111,15 +111,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Audio/video content analysis template description. Length limit: 256 characters.
-                     * @return Comment Audio/video content analysis template description. Length limit: 256 characters.
+                     * 获取
+                     * @return Comment 
                      * 
                      */
                     std::string GetComment() const;
 
                     /**
-                     * 设置Audio/video content analysis template description. Length limit: 256 characters.
-                     * @param _comment Audio/video content analysis template description. Length limit: 256 characters.
+                     * 设置
+                     * @param _comment 
                      * 
                      */
                     void SetComment(const std::string& _comment);
@@ -132,15 +132,15 @@ namespace TencentCloud
                     bool CommentHasBeenSet() const;
 
                     /**
-                     * 获取Intelligent classification task control parameters.
-                     * @return ClassificationConfigure Intelligent classification task control parameters.
+                     * 获取
+                     * @return ClassificationConfigure 
                      * 
                      */
                     ClassificationConfigureInfoForUpdate GetClassificationConfigure() const;
 
                     /**
-                     * 设置Intelligent classification task control parameters.
-                     * @param _classificationConfigure Intelligent classification task control parameters.
+                     * 设置
+                     * @param _classificationConfigure 
                      * 
                      */
                     void SetClassificationConfigure(const ClassificationConfigureInfoForUpdate& _classificationConfigure);
@@ -153,15 +153,15 @@ namespace TencentCloud
                     bool ClassificationConfigureHasBeenSet() const;
 
                     /**
-                     * 获取Intelligent tag task control parameter.
-                     * @return TagConfigure Intelligent tag task control parameter.
+                     * 获取
+                     * @return TagConfigure 
                      * 
                      */
                     TagConfigureInfoForUpdate GetTagConfigure() const;
 
                     /**
-                     * 设置Intelligent tag task control parameter.
-                     * @param _tagConfigure Intelligent tag task control parameter.
+                     * 设置
+                     * @param _tagConfigure 
                      * 
                      */
                     void SetTagConfigure(const TagConfigureInfoForUpdate& _tagConfigure);
@@ -174,15 +174,15 @@ namespace TencentCloud
                     bool TagConfigureHasBeenSet() const;
 
                     /**
-                     * 获取Intelligent Cover Task Control Parameters.
-                     * @return CoverConfigure Intelligent Cover Task Control Parameters.
+                     * 获取
+                     * @return CoverConfigure 
                      * 
                      */
                     CoverConfigureInfoForUpdate GetCoverConfigure() const;
 
                     /**
-                     * 设置Intelligent Cover Task Control Parameters.
-                     * @param _coverConfigure Intelligent Cover Task Control Parameters.
+                     * 设置
+                     * @param _coverConfigure 
                      * 
                      */
                     void SetCoverConfigure(const CoverConfigureInfoForUpdate& _coverConfigure);
@@ -195,15 +195,15 @@ namespace TencentCloud
                     bool CoverConfigureHasBeenSet() const;
 
                     /**
-                     * 获取Intelligent frame tagging task control parameter.
-                     * @return FrameTagConfigure Intelligent frame tagging task control parameter.
+                     * 获取
+                     * @return FrameTagConfigure 
                      * 
                      */
                     FrameTagConfigureInfoForUpdate GetFrameTagConfigure() const;
 
                     /**
-                     * 设置Intelligent frame tagging task control parameter.
-                     * @param _frameTagConfigure Intelligent frame tagging task control parameter.
+                     * 设置
+                     * @param _frameTagConfigure 
                      * 
                      */
                     void SetFrameTagConfigure(const FrameTagConfigureInfoForUpdate& _frameTagConfigure);
@@ -216,15 +216,15 @@ namespace TencentCloud
                     bool FrameTagConfigureHasBeenSet() const;
 
                     /**
-                     * 获取Intelligent Highlights Compilation Task Control Parameters.
-                     * @return HighlightConfigure Intelligent Highlights Compilation Task Control Parameters.
+                     * 获取
+                     * @return HighlightConfigure 
                      * 
                      */
                     HighlightsConfigureInfoForUpdate GetHighlightConfigure() const;
 
                     /**
-                     * 设置Intelligent Highlights Compilation Task Control Parameters.
-                     * @param _highlightConfigure Intelligent Highlights Compilation Task Control Parameters.
+                     * 设置
+                     * @param _highlightConfigure 
                      * 
                      */
                     void SetHighlightConfigure(const HighlightsConfigureInfoForUpdate& _highlightConfigure);
@@ -239,55 +239,55 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Unique identifier of an audio and video content analysis template.
+                     * 
                      */
                     int64_t m_definition;
                     bool m_definitionHasBeenSet;
 
                     /**
-                     * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+                     * 
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
 
                     /**
-                     * Audio and video content analysis template name. Length limit: 64 characters.
+                     * 
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Audio/video content analysis template description. Length limit: 256 characters.
+                     * 
                      */
                     std::string m_comment;
                     bool m_commentHasBeenSet;
 
                     /**
-                     * Intelligent classification task control parameters.
+                     * 
                      */
                     ClassificationConfigureInfoForUpdate m_classificationConfigure;
                     bool m_classificationConfigureHasBeenSet;
 
                     /**
-                     * Intelligent tag task control parameter.
+                     * 
                      */
                     TagConfigureInfoForUpdate m_tagConfigure;
                     bool m_tagConfigureHasBeenSet;
 
                     /**
-                     * Intelligent Cover Task Control Parameters.
+                     * 
                      */
                     CoverConfigureInfoForUpdate m_coverConfigure;
                     bool m_coverConfigureHasBeenSet;
 
                     /**
-                     * Intelligent frame tagging task control parameter.
+                     * 
                      */
                     FrameTagConfigureInfoForUpdate m_frameTagConfigure;
                     bool m_frameTagConfigureHasBeenSet;
 
                     /**
-                     * Intelligent Highlights Compilation Task Control Parameters.
+                     * 
                      */
                     HighlightsConfigureInfoForUpdate m_highlightConfigure;
                     bool m_highlightConfigureHasBeenSet;

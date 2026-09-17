@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Voice information after the update.</p>
-                     * @return Voice <p>Voice information after the update.</p>
+                     * 获取
+                     * @return Voice 
                      * 
                      */
                     VoiceInfo GetVoice() const;
@@ -61,7 +61,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Voice information after the update.</p>
+                     * 
                      */
                     VoiceInfo m_voice;
                     bool m_voiceHasBeenSet;

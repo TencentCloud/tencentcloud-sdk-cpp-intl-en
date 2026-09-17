@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Detail enhancement configuration.
+                * 
                 */
                 class SharpEnhanceInfo : public AbstractModel
                 {
@@ -47,23 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether to enable detail enhancement. Valid values:
-<li>`ON`</li>
-<li>`OFF`</li>
-                     * @return Switch Whether to enable detail enhancement. Valid values:
-<li>`ON`</li>
-<li>`OFF`</li>
+                     * 获取
+                     * @return Switch 
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Whether to enable detail enhancement. Valid values:
-<li>`ON`</li>
-<li>`OFF`</li>
-                     * @param _switch Whether to enable detail enhancement. Valid values:
-<li>`ON`</li>
-<li>`OFF`</li>
+                     * 设置
+                     * @param _switch 
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -76,19 +68,15 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取The detail enhancement strength. Value range: 0.0 – 1.0. This parameter is valid only if `Switch` is `ON`.
-Default value: `0.0`.
-                     * @return Intensity The detail enhancement strength. Value range: 0.0 – 1.0. This parameter is valid only if `Switch` is `ON`.
-Default value: `0.0`.
+                     * 获取
+                     * @return Intensity 
                      * 
                      */
                     double GetIntensity() const;
 
                     /**
-                     * 设置The detail enhancement strength. Value range: 0.0 – 1.0. This parameter is valid only if `Switch` is `ON`.
-Default value: `0.0`.
-                     * @param _intensity The detail enhancement strength. Value range: 0.0 – 1.0. This parameter is valid only if `Switch` is `ON`.
-Default value: `0.0`.
+                     * 设置
+                     * @param _intensity 
                      * 
                      */
                     void SetIntensity(const double& _intensity);
@@ -103,16 +91,13 @@ Default value: `0.0`.
                 private:
 
                     /**
-                     * Whether to enable detail enhancement. Valid values:
-<li>`ON`</li>
-<li>`OFF`</li>
+                     * 
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * The detail enhancement strength. Value range: 0.0 – 1.0. This parameter is valid only if `Switch` is `ON`.
-Default value: `0.0`.
+                     * 
                      */
                     double m_intensity;
                     bool m_intensityHasBeenSet;

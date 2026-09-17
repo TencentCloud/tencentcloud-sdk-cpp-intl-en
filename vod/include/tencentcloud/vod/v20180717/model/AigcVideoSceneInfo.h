@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Scenario-based AIGC image generation configuration.
+                * 
                 */
                 class AigcVideoSceneInfo : public AbstractModel
                 {
@@ -48,19 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取AI video scenario type. Optional values:
--product_showcase: Show the product in 360 degrees.
-                     * @return Type AI video scenario type. Optional values:
--product_showcase: Show the product in 360 degrees.
+                     * 获取
+                     * @return Type 
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置AI video scenario type. Optional values:
--product_showcase: Show the product in 360 degrees.
-                     * @param _type AI video scenario type. Optional values:
--product_showcase: Show the product in 360 degrees.
+                     * 设置
+                     * @param _type 
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -73,15 +69,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Product display parameter
-                     * @return ProductShowcaseConfig Product display parameter
+                     * 获取
+                     * @return ProductShowcaseConfig 
                      * 
                      */
                     ProductShowcaseConfig GetProductShowcaseConfig() const;
 
                     /**
-                     * 设置Product display parameter
-                     * @param _productShowcaseConfig Product display parameter
+                     * 设置
+                     * @param _productShowcaseConfig 
                      * 
                      */
                     void SetProductShowcaseConfig(const ProductShowcaseConfig& _productShowcaseConfig);
@@ -96,14 +92,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * AI video scenario type. Optional values:
--product_showcase: Show the product in 360 degrees.
+                     * 
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Product display parameter
+                     * 
                      */
                     ProductShowcaseConfig m_productShowcaseConfig;
                     bool m_productShowcaseConfigHasBeenSet;

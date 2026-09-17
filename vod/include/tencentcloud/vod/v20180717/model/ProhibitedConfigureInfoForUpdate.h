@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Control parameter of prohibited information detection task
+                * 
                 */
                 class ProhibitedConfigureInfoForUpdate : public AbstractModel
                 {
@@ -49,15 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Control parameter of prohibited information detection in speech.
-                     * @return AsrReviewInfo Control parameter of prohibited information detection in speech.
+                     * 获取
+                     * @return AsrReviewInfo 
                      * 
                      */
                     ProhibitedAsrReviewTemplateInfoForUpdate GetAsrReviewInfo() const;
 
                     /**
-                     * 设置Control parameter of prohibited information detection in speech.
-                     * @param _asrReviewInfo Control parameter of prohibited information detection in speech.
+                     * 设置
+                     * @param _asrReviewInfo 
                      * 
                      */
                     void SetAsrReviewInfo(const ProhibitedAsrReviewTemplateInfoForUpdate& _asrReviewInfo);
@@ -70,15 +70,15 @@ namespace TencentCloud
                     bool AsrReviewInfoHasBeenSet() const;
 
                     /**
-                     * 获取Control parameter of prohibited information detection in text.
-                     * @return OcrReviewInfo Control parameter of prohibited information detection in text.
+                     * 获取
+                     * @return OcrReviewInfo 
                      * 
                      */
                     ProhibitedOcrReviewTemplateInfoForUpdate GetOcrReviewInfo() const;
 
                     /**
-                     * 设置Control parameter of prohibited information detection in text.
-                     * @param _ocrReviewInfo Control parameter of prohibited information detection in text.
+                     * 设置
+                     * @param _ocrReviewInfo 
                      * 
                      */
                     void SetOcrReviewInfo(const ProhibitedOcrReviewTemplateInfoForUpdate& _ocrReviewInfo);
@@ -93,13 +93,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Control parameter of prohibited information detection in speech.
+                     * 
                      */
                     ProhibitedAsrReviewTemplateInfoForUpdate m_asrReviewInfo;
                     bool m_asrReviewInfoHasBeenSet;
 
                     /**
-                     * Control parameter of prohibited information detection in text.
+                     * 
                      */
                     ProhibitedOcrReviewTemplateInfoForUpdate m_ocrReviewInfo;
                     bool m_ocrReviewInfoHasBeenSet;

@@ -45,15 +45,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p><b>Video-on-demand (VOD) <a href="/document/product/266/14574?from_cn_redirect=1">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID to access resources in on-demand applications (whether default or newly created application).</b></p>
-                     * @return SubAppId <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574?from_cn_redirect=1">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID to access resources in on-demand applications (whether default or newly created application).</b></p>
+                     * 获取
+                     * @return SubAppId 
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置<p><b>Video-on-demand (VOD) <a href="/document/product/266/14574?from_cn_redirect=1">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID to access resources in on-demand applications (whether default or newly created application).</b></p>
-                     * @param _subAppId <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574?from_cn_redirect=1">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID to access resources in on-demand applications (whether default or newly created application).</b></p>
+                     * 设置
+                     * @param _subAppId 
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -66,15 +66,15 @@ namespace TencentCloud
                     bool SubAppIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>FileId that needs image processing. Cannot be used with Url simultaneously.</p>
-                     * @return FileId <p>FileId that needs image processing. Cannot be used with Url simultaneously.</p>
+                     * 获取
+                     * @return FileId 
                      * 
                      */
                     std::string GetFileId() const;
 
                     /**
-                     * 设置<p>FileId that needs image processing. Cannot be used with Url simultaneously.</p>
-                     * @param _fileId <p>FileId that needs image processing. Cannot be used with Url simultaneously.</p>
+                     * 设置
+                     * @param _fileId 
                      * 
                      */
                     void SetFileId(const std::string& _fileId);
@@ -87,15 +87,15 @@ namespace TencentCloud
                     bool FileIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>Url for image processing. Cannot be used with FileId.</p>
-                     * @return Url <p>Url for image processing. Cannot be used with FileId.</p>
+                     * 获取
+                     * @return Url 
                      * 
                      */
                     std::string GetUrl() const;
 
                     /**
-                     * 设置<p>Url for image processing. Cannot be used with FileId.</p>
-                     * @param _url <p>Url for image processing. Cannot be used with FileId.</p>
+                     * 设置
+                     * @param _url 
                      * 
                      */
                     void SetUrl(const std::string& _url);
@@ -108,15 +108,15 @@ namespace TencentCloud
                     bool UrlHasBeenSet() const;
 
                     /**
-                     * 获取<p>The Base64 that needs image processing requires the image file to be less than 4MB. When using Base64, do not add any prefix such as <code>data:image/png;base64,</code>, just provide the Base64 encoded string itself.</p>
-                     * @return Base64 <p>The Base64 that needs image processing requires the image file to be less than 4MB. When using Base64, do not add any prefix such as <code>data:image/png;base64,</code>, just provide the Base64 encoded string itself.</p>
+                     * 获取
+                     * @return Base64 
                      * 
                      */
                     std::string GetBase64() const;
 
                     /**
-                     * 设置<p>The Base64 that needs image processing requires the image file to be less than 4MB. When using Base64, do not add any prefix such as <code>data:image/png;base64,</code>, just provide the Base64 encoded string itself.</p>
-                     * @param _base64 <p>The Base64 that needs image processing requires the image file to be less than 4MB. When using Base64, do not add any prefix such as <code>data:image/png;base64,</code>, just provide the Base64 encoded string itself.</p>
+                     * 设置
+                     * @param _base64 
                      * 
                      */
                     void SetBase64(const std::string& _base64);
@@ -129,15 +129,15 @@ namespace TencentCloud
                     bool Base64HasBeenSet() const;
 
                     /**
-                     * 获取<p>Image processing parameter.</p>
-                     * @return ImageTaskInput <p>Image processing parameter.</p>
+                     * 获取
+                     * @return ImageTaskInput 
                      * 
                      */
                     ProcessImageAsyncTaskInput GetImageTaskInput() const;
 
                     /**
-                     * 设置<p>Image processing parameter.</p>
-                     * @param _imageTaskInput <p>Image processing parameter.</p>
+                     * 设置
+                     * @param _imageTaskInput 
                      * 
                      */
                     void SetImageTaskInput(const ProcessImageAsyncTaskInput& _imageTaskInput);
@@ -150,15 +150,15 @@ namespace TencentCloud
                     bool ImageTaskInputHasBeenSet() const;
 
                     /**
-                     * 获取<p>Output media file configuration for the image processing task.</p>
-                     * @return OutputConfig <p>Output media file configuration for the image processing task.</p>
+                     * 获取
+                     * @return OutputConfig 
                      * 
                      */
                     ProcessImageAsyncOutputConfig GetOutputConfig() const;
 
                     /**
-                     * 设置<p>Output media file configuration for the image processing task.</p>
-                     * @param _outputConfig <p>Output media file configuration for the image processing task.</p>
+                     * 设置
+                     * @param _outputConfig 
                      * 
                      */
                     void SetOutputConfig(const ProcessImageAsyncOutputConfig& _outputConfig);
@@ -171,15 +171,15 @@ namespace TencentCloud
                     bool OutputConfigHasBeenSet() const;
 
                     /**
-                     * 获取<p>Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
-                     * @return SessionId <p>Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
+                     * 获取
+                     * @return SessionId 
                      * 
                      */
                     std::string GetSessionId() const;
 
                     /**
-                     * 设置<p>Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
-                     * @param _sessionId <p>Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
+                     * 设置
+                     * @param _sessionId 
                      * 
                      */
                     void SetSessionId(const std::string& _sessionId);
@@ -192,15 +192,15 @@ namespace TencentCloud
                     bool SessionIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>Source context. This is used to pass through user request information. The audio and video quality revival complete callback returns the value of this field. The maximum length is 1000 characters.</p>
-                     * @return SessionContext <p>Source context. This is used to pass through user request information. The audio and video quality revival complete callback returns the value of this field. The maximum length is 1000 characters.</p>
+                     * 获取
+                     * @return SessionContext 
                      * 
                      */
                     std::string GetSessionContext() const;
 
                     /**
-                     * 设置<p>Source context. This is used to pass through user request information. The audio and video quality revival complete callback returns the value of this field. The maximum length is 1000 characters.</p>
-                     * @param _sessionContext <p>Source context. This is used to pass through user request information. The audio and video quality revival complete callback returns the value of this field. The maximum length is 1000 characters.</p>
+                     * 设置
+                     * @param _sessionContext 
                      * 
                      */
                     void SetSessionContext(const std::string& _sessionContext);
@@ -213,15 +213,15 @@ namespace TencentCloud
                     bool SessionContextHasBeenSet() const;
 
                     /**
-                     * 获取<p>Task priority. The higher the value, the higher the priority. The value ranges from -10 to 10. If this is not specified, it represents 0.</p>
-                     * @return TasksPriority <p>Task priority. The higher the value, the higher the priority. The value ranges from -10 to 10. If this is not specified, it represents 0.</p>
+                     * 获取
+                     * @return TasksPriority 
                      * 
                      */
                     int64_t GetTasksPriority() const;
 
                     /**
-                     * 设置<p>Task priority. The higher the value, the higher the priority. The value ranges from -10 to 10. If this is not specified, it represents 0.</p>
-                     * @param _tasksPriority <p>Task priority. The higher the value, the higher the priority. The value ranges from -10 to 10. If this is not specified, it represents 0.</p>
+                     * 设置
+                     * @param _tasksPriority 
                      * 
                      */
                     void SetTasksPriority(const int64_t& _tasksPriority);
@@ -234,15 +234,15 @@ namespace TencentCloud
                     bool TasksPriorityHasBeenSet() const;
 
                     /**
-                     * 获取<p>Reserved field, used when special purpose.</p>
-                     * @return ExtInfo <p>Reserved field, used when special purpose.</p>
+                     * 获取
+                     * @return ExtInfo 
                      * 
                      */
                     std::string GetExtInfo() const;
 
                     /**
-                     * 设置<p>Reserved field, used when special purpose.</p>
-                     * @param _extInfo <p>Reserved field, used when special purpose.</p>
+                     * 设置
+                     * @param _extInfo 
                      * 
                      */
                     void SetExtInfo(const std::string& _extInfo);
@@ -257,61 +257,61 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574?from_cn_redirect=1">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID to access resources in on-demand applications (whether default or newly created application).</b></p>
+                     * 
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
 
                     /**
-                     * <p>FileId that needs image processing. Cannot be used with Url simultaneously.</p>
+                     * 
                      */
                     std::string m_fileId;
                     bool m_fileIdHasBeenSet;
 
                     /**
-                     * <p>Url for image processing. Cannot be used with FileId.</p>
+                     * 
                      */
                     std::string m_url;
                     bool m_urlHasBeenSet;
 
                     /**
-                     * <p>The Base64 that needs image processing requires the image file to be less than 4MB. When using Base64, do not add any prefix such as <code>data:image/png;base64,</code>, just provide the Base64 encoded string itself.</p>
+                     * 
                      */
                     std::string m_base64;
                     bool m_base64HasBeenSet;
 
                     /**
-                     * <p>Image processing parameter.</p>
+                     * 
                      */
                     ProcessImageAsyncTaskInput m_imageTaskInput;
                     bool m_imageTaskInputHasBeenSet;
 
                     /**
-                     * <p>Output media file configuration for the image processing task.</p>
+                     * 
                      */
                     ProcessImageAsyncOutputConfig m_outputConfig;
                     bool m_outputConfigHasBeenSet;
 
                     /**
-                     * <p>Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
+                     * 
                      */
                     std::string m_sessionId;
                     bool m_sessionIdHasBeenSet;
 
                     /**
-                     * <p>Source context. This is used to pass through user request information. The audio and video quality revival complete callback returns the value of this field. The maximum length is 1000 characters.</p>
+                     * 
                      */
                     std::string m_sessionContext;
                     bool m_sessionContextHasBeenSet;
 
                     /**
-                     * <p>Task priority. The higher the value, the higher the priority. The value ranges from -10 to 10. If this is not specified, it represents 0.</p>
+                     * 
                      */
                     int64_t m_tasksPriority;
                     bool m_tasksPriorityHasBeenSet;
 
                     /**
-                     * <p>Reserved field, used when special purpose.</p>
+                     * 
                      */
                     std::string m_extInfo;
                     bool m_extInfoHasBeenSet;

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * The suspicious segment detected.
+                * 
                 */
                 class ReviewAudioVideoSegmentItem : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The start time offset (seconds) of the segment.
-                     * @return StartTimeOffset The start time offset (seconds) of the segment.
+                     * 获取
+                     * @return StartTimeOffset 
                      * 
                      */
                     double GetStartTimeOffset() const;
 
                     /**
-                     * 设置The start time offset (seconds) of the segment.
-                     * @param _startTimeOffset The start time offset (seconds) of the segment.
+                     * 设置
+                     * @param _startTimeOffset 
                      * 
                      */
                     void SetStartTimeOffset(const double& _startTimeOffset);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool StartTimeOffsetHasBeenSet() const;
 
                     /**
-                     * 获取The end time offset (seconds) of the segment.
-                     * @return EndTimeOffset The end time offset (seconds) of the segment.
+                     * 获取
+                     * @return EndTimeOffset 
                      * 
                      */
                     double GetEndTimeOffset() const;
 
                     /**
-                     * 设置The end time offset (seconds) of the segment.
-                     * @param _endTimeOffset The end time offset (seconds) of the segment.
+                     * 设置
+                     * @param _endTimeOffset 
                      * 
                      */
                     void SetEndTimeOffset(const double& _endTimeOffset);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool EndTimeOffsetHasBeenSet() const;
 
                     /**
-                     * 获取The confidence score of the segment.
-                     * @return Confidence The confidence score of the segment.
+                     * 获取
+                     * @return Confidence 
                      * 
                      */
                     double GetConfidence() const;
 
                     /**
-                     * 设置The confidence score of the segment.
-                     * @param _confidence The confidence score of the segment.
+                     * 设置
+                     * @param _confidence 
                      * 
                      */
                     void SetConfidence(const double& _confidence);
@@ -110,23 +110,15 @@ namespace TencentCloud
                     bool ConfidenceHasBeenSet() const;
 
                     /**
-                     * 获取The processing suggestion for the segment. Valid values:
-<li>review: The content may be non-compliant. Please review it.</li>
-<li>block: The content is non-compliant. We recommend you block it.</li>
-                     * @return Suggestion The processing suggestion for the segment. Valid values:
-<li>review: The content may be non-compliant. Please review it.</li>
-<li>block: The content is non-compliant. We recommend you block it.</li>
+                     * 获取
+                     * @return Suggestion 
                      * 
                      */
                     std::string GetSuggestion() const;
 
                     /**
-                     * 设置The processing suggestion for the segment. Valid values:
-<li>review: The content may be non-compliant. Please review it.</li>
-<li>block: The content is non-compliant. We recommend you block it.</li>
-                     * @param _suggestion The processing suggestion for the segment. Valid values:
-<li>review: The content may be non-compliant. Please review it.</li>
-<li>block: The content is non-compliant. We recommend you block it.</li>
+                     * 设置
+                     * @param _suggestion 
                      * 
                      */
                     void SetSuggestion(const std::string& _suggestion);
@@ -139,23 +131,15 @@ namespace TencentCloud
                     bool SuggestionHasBeenSet() const;
 
                     /**
-                     * 获取The most likely label for the segment. Valid values:
-<li>Porn</li>
-<li>Terrorism</li>
-                     * @return Label The most likely label for the segment. Valid values:
-<li>Porn</li>
-<li>Terrorism</li>
+                     * 获取
+                     * @return Label 
                      * 
                      */
                     std::string GetLabel() const;
 
                     /**
-                     * 设置The most likely label for the segment. Valid values:
-<li>Porn</li>
-<li>Terrorism</li>
-                     * @param _label The most likely label for the segment. Valid values:
-<li>Porn</li>
-<li>Terrorism</li>
+                     * 设置
+                     * @param _label 
                      * 
                      */
                     void SetLabel(const std::string& _label);
@@ -168,67 +152,15 @@ namespace TencentCloud
                     bool LabelHasBeenSet() const;
 
                     /**
-                     * 获取The sublabel for the segment. This parameter is valid only if `Form` is `Image` or `Voice`.
-Valid values when `Form` is `Image` and `Label` is `Porn`:
-<li>porn</li>
-<li>vulgar</li>
-
-Valid values when `Form` is `Image` and `Label` is `Terrorism`:
-<li>guns</li>
-<li>bloody</li>
-<li>banners</li>
-<li>scenario (terrorist scenes)</li>
-<li>explosion</li>
-
-Valid values when `Form` is `Voice` and `Label` is `Porn`:
-<li>moan</li>
-                     * @return SubLabel The sublabel for the segment. This parameter is valid only if `Form` is `Image` or `Voice`.
-Valid values when `Form` is `Image` and `Label` is `Porn`:
-<li>porn</li>
-<li>vulgar</li>
-
-Valid values when `Form` is `Image` and `Label` is `Terrorism`:
-<li>guns</li>
-<li>bloody</li>
-<li>banners</li>
-<li>scenario (terrorist scenes)</li>
-<li>explosion</li>
-
-Valid values when `Form` is `Voice` and `Label` is `Porn`:
-<li>moan</li>
+                     * 获取
+                     * @return SubLabel 
                      * 
                      */
                     std::string GetSubLabel() const;
 
                     /**
-                     * 设置The sublabel for the segment. This parameter is valid only if `Form` is `Image` or `Voice`.
-Valid values when `Form` is `Image` and `Label` is `Porn`:
-<li>porn</li>
-<li>vulgar</li>
-
-Valid values when `Form` is `Image` and `Label` is `Terrorism`:
-<li>guns</li>
-<li>bloody</li>
-<li>banners</li>
-<li>scenario (terrorist scenes)</li>
-<li>explosion</li>
-
-Valid values when `Form` is `Voice` and `Label` is `Porn`:
-<li>moan</li>
-                     * @param _subLabel The sublabel for the segment. This parameter is valid only if `Form` is `Image` or `Voice`.
-Valid values when `Form` is `Image` and `Label` is `Porn`:
-<li>porn</li>
-<li>vulgar</li>
-
-Valid values when `Form` is `Image` and `Label` is `Terrorism`:
-<li>guns</li>
-<li>bloody</li>
-<li>banners</li>
-<li>scenario (terrorist scenes)</li>
-<li>explosion</li>
-
-Valid values when `Form` is `Voice` and `Label` is `Porn`:
-<li>moan</li>
+                     * 设置
+                     * @param _subLabel 
                      * 
                      */
                     void SetSubLabel(const std::string& _subLabel);
@@ -241,31 +173,15 @@ Valid values when `Form` is `Voice` and `Label` is `Porn`:
                     bool SubLabelHasBeenSet() const;
 
                     /**
-                     * 获取The format of the suspicious segment detected. Valid values:
-<li>Image</li>
-<li>OCR</li>
-<li>ASR</li>
-<li>Voice</li>
-                     * @return Form The format of the suspicious segment detected. Valid values:
-<li>Image</li>
-<li>OCR</li>
-<li>ASR</li>
-<li>Voice</li>
+                     * 获取
+                     * @return Form 
                      * 
                      */
                     std::string GetForm() const;
 
                     /**
-                     * 设置The format of the suspicious segment detected. Valid values:
-<li>Image</li>
-<li>OCR</li>
-<li>ASR</li>
-<li>Voice</li>
-                     * @param _form The format of the suspicious segment detected. Valid values:
-<li>Image</li>
-<li>OCR</li>
-<li>ASR</li>
-<li>Voice</li>
+                     * 设置
+                     * @param _form 
                      * 
                      */
                     void SetForm(const std::string& _form);
@@ -278,19 +194,15 @@ Valid values when `Form` is `Voice` and `Label` is `Porn`:
                     bool FormHasBeenSet() const;
 
                     /**
-                     * 获取The pixel coordinates ([x1, y1, x2, y2]) of the top-left corner and bottom-right corner of the suspicious text. This parameter is valid only if `Form` is `OCR`.
-<font color=red>Note</font>: This parameter is not supported currently.
-                     * @return AreaCoordSet The pixel coordinates ([x1, y1, x2, y2]) of the top-left corner and bottom-right corner of the suspicious text. This parameter is valid only if `Form` is `OCR`.
-<font color=red>Note</font>: This parameter is not supported currently.
+                     * 获取
+                     * @return AreaCoordSet 
                      * 
                      */
                     std::vector<int64_t> GetAreaCoordSet() const;
 
                     /**
-                     * 设置The pixel coordinates ([x1, y1, x2, y2]) of the top-left corner and bottom-right corner of the suspicious text. This parameter is valid only if `Form` is `OCR`.
-<font color=red>Note</font>: This parameter is not supported currently.
-                     * @param _areaCoordSet The pixel coordinates ([x1, y1, x2, y2]) of the top-left corner and bottom-right corner of the suspicious text. This parameter is valid only if `Form` is `OCR`.
-<font color=red>Note</font>: This parameter is not supported currently.
+                     * 设置
+                     * @param _areaCoordSet 
                      * 
                      */
                     void SetAreaCoordSet(const std::vector<int64_t>& _areaCoordSet);
@@ -303,15 +215,15 @@ Valid values when `Form` is `Voice` and `Label` is `Porn`:
                     bool AreaCoordSetHasBeenSet() const;
 
                     /**
-                     * 获取The content of the suspicious text detected. This parameter is valid only if `Form` is `OCR` or `ASR`.
-                     * @return Text The content of the suspicious text detected. This parameter is valid only if `Form` is `OCR` or `ASR`.
+                     * 获取
+                     * @return Text 
                      * 
                      */
                     std::string GetText() const;
 
                     /**
-                     * 设置The content of the suspicious text detected. This parameter is valid only if `Form` is `OCR` or `ASR`.
-                     * @param _text The content of the suspicious text detected. This parameter is valid only if `Form` is `OCR` or `ASR`.
+                     * 设置
+                     * @param _text 
                      * 
                      */
                     void SetText(const std::string& _text);
@@ -324,15 +236,15 @@ Valid values when `Form` is `Voice` and `Label` is `Porn`:
                     bool TextHasBeenSet() const;
 
                     /**
-                     * 获取The keywords that match the suspicious text. This parameter is valid only if `Form` is `OCR` or `ASR`.
-                     * @return KeywordSet The keywords that match the suspicious text. This parameter is valid only if `Form` is `OCR` or `ASR`.
+                     * 获取
+                     * @return KeywordSet 
                      * 
                      */
                     std::vector<std::string> GetKeywordSet() const;
 
                     /**
-                     * 设置The keywords that match the suspicious text. This parameter is valid only if `Form` is `OCR` or `ASR`.
-                     * @param _keywordSet The keywords that match the suspicious text. This parameter is valid only if `Form` is `OCR` or `ASR`.
+                     * 设置
+                     * @param _keywordSet 
                      * 
                      */
                     void SetKeywordSet(const std::vector<std::string>& _keywordSet);
@@ -345,19 +257,15 @@ Valid values when `Form` is `Voice` and `Label` is `Porn`:
                     bool KeywordSetHasBeenSet() const;
 
                     /**
-                     * 获取The URL of a suspected image (which will be deleted
- after `PicUrlExpireTime`).
-                     * @return Url The URL of a suspected image (which will be deleted
- after `PicUrlExpireTime`).
+                     * 获取
+                     * @return Url 
                      * 
                      */
                     std::string GetUrl() const;
 
                     /**
-                     * 设置The URL of a suspected image (which will be deleted
- after `PicUrlExpireTime`).
-                     * @param _url The URL of a suspected image (which will be deleted
- after `PicUrlExpireTime`).
+                     * 设置
+                     * @param _url 
                      * 
                      */
                     void SetUrl(const std::string& _url);
@@ -370,15 +278,15 @@ Valid values when `Form` is `Voice` and `Label` is `Porn`:
                     bool UrlHasBeenSet() const;
 
                     /**
-                     * 获取The expiration time of the suspected image URL in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
-                     * @return PicUrlExpireTime The expiration time of the suspected image URL in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 获取
+                     * @return PicUrlExpireTime 
                      * 
                      */
                     std::string GetPicUrlExpireTime() const;
 
                     /**
-                     * 设置The expiration time of the suspected image URL in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
-                     * @param _picUrlExpireTime The expiration time of the suspected image URL in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 设置
+                     * @param _picUrlExpireTime 
                      * 
                      */
                     void SetPicUrlExpireTime(const std::string& _picUrlExpireTime);
@@ -393,96 +301,73 @@ Valid values when `Form` is `Voice` and `Label` is `Porn`:
                 private:
 
                     /**
-                     * The start time offset (seconds) of the segment.
+                     * 
                      */
                     double m_startTimeOffset;
                     bool m_startTimeOffsetHasBeenSet;
 
                     /**
-                     * The end time offset (seconds) of the segment.
+                     * 
                      */
                     double m_endTimeOffset;
                     bool m_endTimeOffsetHasBeenSet;
 
                     /**
-                     * The confidence score of the segment.
+                     * 
                      */
                     double m_confidence;
                     bool m_confidenceHasBeenSet;
 
                     /**
-                     * The processing suggestion for the segment. Valid values:
-<li>review: The content may be non-compliant. Please review it.</li>
-<li>block: The content is non-compliant. We recommend you block it.</li>
+                     * 
                      */
                     std::string m_suggestion;
                     bool m_suggestionHasBeenSet;
 
                     /**
-                     * The most likely label for the segment. Valid values:
-<li>Porn</li>
-<li>Terrorism</li>
+                     * 
                      */
                     std::string m_label;
                     bool m_labelHasBeenSet;
 
                     /**
-                     * The sublabel for the segment. This parameter is valid only if `Form` is `Image` or `Voice`.
-Valid values when `Form` is `Image` and `Label` is `Porn`:
-<li>porn</li>
-<li>vulgar</li>
-
-Valid values when `Form` is `Image` and `Label` is `Terrorism`:
-<li>guns</li>
-<li>bloody</li>
-<li>banners</li>
-<li>scenario (terrorist scenes)</li>
-<li>explosion</li>
-
-Valid values when `Form` is `Voice` and `Label` is `Porn`:
-<li>moan</li>
+                     * 
                      */
                     std::string m_subLabel;
                     bool m_subLabelHasBeenSet;
 
                     /**
-                     * The format of the suspicious segment detected. Valid values:
-<li>Image</li>
-<li>OCR</li>
-<li>ASR</li>
-<li>Voice</li>
+                     * 
                      */
                     std::string m_form;
                     bool m_formHasBeenSet;
 
                     /**
-                     * The pixel coordinates ([x1, y1, x2, y2]) of the top-left corner and bottom-right corner of the suspicious text. This parameter is valid only if `Form` is `OCR`.
-<font color=red>Note</font>: This parameter is not supported currently.
+                     * 
                      */
                     std::vector<int64_t> m_areaCoordSet;
                     bool m_areaCoordSetHasBeenSet;
 
                     /**
-                     * The content of the suspicious text detected. This parameter is valid only if `Form` is `OCR` or `ASR`.
+                     * 
                      */
                     std::string m_text;
                     bool m_textHasBeenSet;
 
                     /**
-                     * The keywords that match the suspicious text. This parameter is valid only if `Form` is `OCR` or `ASR`.
+                     * 
                      */
                     std::vector<std::string> m_keywordSet;
                     bool m_keywordSetHasBeenSet;
 
                     /**
-                     * The URL of a suspected image (which will be deleted
- after `PicUrlExpireTime`).
+                     * 
                      */
                     std::string m_url;
                     bool m_urlHasBeenSet;
 
                     /**
-                     * The expiration time of the suspected image URL in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 
                      */
                     std::string m_picUrlExpireTime;
                     bool m_picUrlExpireTimeHasBeenSet;

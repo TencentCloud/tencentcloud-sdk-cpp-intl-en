@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Face recognition result
+                * 
                 */
                 class AiRecognitionTaskFaceResultItem : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Unique ID of figure.
-                     * @return Id Unique ID of figure.
+                     * 获取
+                     * @return Id 
                      * 
                      */
                     std::string GetId() const;
 
                     /**
-                     * 设置Unique ID of figure.
-                     * @param _id Unique ID of figure.
+                     * 设置
+                     * @param _id 
                      * 
                      */
                     void SetId(const std::string& _id);
@@ -69,23 +69,15 @@ namespace TencentCloud
                     bool IdHasBeenSet() const;
 
                     /**
-                     * 获取Figure library type, indicating to which figure library the recognized figure belongs:
-<li>Default: default figure library;</li>
-<li>UserDefine: custom figure library.</li>
-                     * @return Type Figure library type, indicating to which figure library the recognized figure belongs:
-<li>Default: default figure library;</li>
-<li>UserDefine: custom figure library.</li>
+                     * 获取
+                     * @return Type 
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Figure library type, indicating to which figure library the recognized figure belongs:
-<li>Default: default figure library;</li>
-<li>UserDefine: custom figure library.</li>
-                     * @param _type Figure library type, indicating to which figure library the recognized figure belongs:
-<li>Default: default figure library;</li>
-<li>UserDefine: custom figure library.</li>
+                     * 设置
+                     * @param _type 
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -98,15 +90,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Figure name.
-                     * @return Name Figure name.
+                     * 获取
+                     * @return Name 
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Figure name.
-                     * @param _name Figure name.
+                     * 设置
+                     * @param _name 
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -119,15 +111,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Result set of segments that contain a figure.
-                     * @return SegmentSet Result set of segments that contain a figure.
+                     * 获取
+                     * @return SegmentSet 
                      * 
                      */
                     std::vector<AiRecognitionTaskFaceSegmentItem> GetSegmentSet() const;
 
                     /**
-                     * 设置Result set of segments that contain a figure.
-                     * @param _segmentSet Result set of segments that contain a figure.
+                     * 设置
+                     * @param _segmentSet 
                      * 
                      */
                     void SetSegmentSet(const std::vector<AiRecognitionTaskFaceSegmentItem>& _segmentSet);
@@ -142,27 +134,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Unique ID of figure.
+                     * 
                      */
                     std::string m_id;
                     bool m_idHasBeenSet;
 
                     /**
-                     * Figure library type, indicating to which figure library the recognized figure belongs:
-<li>Default: default figure library;</li>
-<li>UserDefine: custom figure library.</li>
+                     * 
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Figure name.
+                     * 
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Result set of segments that contain a figure.
+                     * 
                      */
                     std::vector<AiRecognitionTaskFaceSegmentItem> m_segmentSet;
                     bool m_segmentSetHasBeenSet;

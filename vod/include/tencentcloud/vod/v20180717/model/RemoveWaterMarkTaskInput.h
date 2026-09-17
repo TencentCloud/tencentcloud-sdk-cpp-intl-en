@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * The input of a watermark removal task.
+                * 
                 */
                 class RemoveWaterMarkTaskInput : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The ID of the media file.
-                     * @return FileId The ID of the media file.
+                     * 获取
+                     * @return FileId 
                      * 
                      */
                     std::string GetFileId() const;
 
                     /**
-                     * 设置The ID of the media file.
-                     * @param _fileId The ID of the media file.
+                     * 设置
+                     * @param _fileId 
                      * 
                      */
                     void SetFileId(const std::string& _fileId);
@@ -70,7 +70,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The ID of the media file.
+                     * 
                      */
                     std::string m_fileId;
                     bool m_fileIdHasBeenSet;

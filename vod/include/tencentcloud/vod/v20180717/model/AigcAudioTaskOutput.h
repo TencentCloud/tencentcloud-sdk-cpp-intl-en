@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Output message of the AIGC sound effect task.
+                * 
                 */
                 class AigcAudioTaskOutput : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Output audio content</p>
-                     * @return AudioInfos <p>Output audio content</p>
+                     * 获取
+                     * @return AudioInfos 
                      * 
                      */
                     std::vector<AigcAudioTaskOutputFileInfo> GetAudioInfos() const;
 
                     /**
-                     * 设置<p>Output audio content</p>
-                     * @param _audioInfos <p>Output audio content</p>
+                     * 设置
+                     * @param _audioInfos 
                      * 
                      */
                     void SetAudioInfos(const std::vector<AigcAudioTaskOutputFileInfo>& _audioInfos);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool AudioInfosHasBeenSet() const;
 
                     /**
-                     * 获取<p>Output video information.</p>
-                     * @return VideoInfos <p>Output video information.</p>
+                     * 获取
+                     * @return VideoInfos 
                      * 
                      */
                     std::vector<AigcAudioTaskOutputFileInfo> GetVideoInfos() const;
 
                     /**
-                     * 设置<p>Output video information.</p>
-                     * @param _videoInfos <p>Output video information.</p>
+                     * 设置
+                     * @param _videoInfos 
                      * 
                      */
                     void SetVideoInfos(const std::vector<AigcAudioTaskOutputFileInfo>& _videoInfos);
@@ -92,13 +92,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Output audio content</p>
+                     * 
                      */
                     std::vector<AigcAudioTaskOutputFileInfo> m_audioInfos;
                     bool m_audioInfosHasBeenSet;
 
                     /**
-                     * <p>Output video information.</p>
+                     * 
                      */
                     std::vector<AigcAudioTaskOutputFileInfo> m_videoInfos;
                     bool m_videoInfosHasBeenSet;

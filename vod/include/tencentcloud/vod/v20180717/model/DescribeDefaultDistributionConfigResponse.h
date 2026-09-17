@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Distribute the configured domain name (abandoned).
-                     * @return DomainName Distribute the configured domain name (abandoned).
+                     * 获取
+                     * @return DomainName 
                      * @deprecated
                      */
                     std::string GetDomainName() const;
@@ -58,8 +58,8 @@ namespace TencentCloud
                     bool DomainNameHasBeenSet() const;
 
                     /**
-                     * 获取Distribute the configured domain name.
-                     * @return Domain Distribute the configured domain name.
+                     * 获取
+                     * @return Domain 
                      * 
                      */
                     std::string GetDomain() const;
@@ -72,8 +72,8 @@ namespace TencentCloud
                     bool DomainHasBeenSet() const;
 
                     /**
-                     * 获取The protocol of the distribution configuration is HTTP or HTTPS.
-                     * @return Scheme The protocol of the distribution configuration is HTTP or HTTPS.
+                     * 获取
+                     * @return Scheme 
                      * 
                      */
                     std::string GetScheme() const;
@@ -86,8 +86,8 @@ namespace TencentCloud
                     bool SchemeHasBeenSet() const;
 
                     /**
-                     * 获取The playback key consists of uppercase and lowercase letters (a - Z) or numbers (0 - 9) with a length between 8 and 20 characters.
-                     * @return PlayKey The playback key consists of uppercase and lowercase letters (a - Z) or numbers (0 - 9) with a length between 8 and 20 characters.
+                     * 获取
+                     * @return PlayKey 
                      * 
                      */
                     std::string GetPlayKey() const;
@@ -102,25 +102,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Distribute the configured domain name (abandoned).
+                     * 
                      */
                     std::string m_domainName;
                     bool m_domainNameHasBeenSet;
 
                     /**
-                     * Distribute the configured domain name.
+                     * 
                      */
                     std::string m_domain;
                     bool m_domainHasBeenSet;
 
                     /**
-                     * The protocol of the distribution configuration is HTTP or HTTPS.
+                     * 
                      */
                     std::string m_scheme;
                     bool m_schemeHasBeenSet;
 
                     /**
-                     * The playback key consists of uppercase and lowercase letters (a - Z) or numbers (0 - 9) with a length between 8 and 20 characters.
+                     * 
                      */
                     std::string m_playKey;
                     bool m_playKeyHasBeenSet;

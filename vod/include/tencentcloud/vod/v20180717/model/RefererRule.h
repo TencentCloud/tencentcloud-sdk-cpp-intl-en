@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Referer blacklist/whitelist configuration rules, which is effective for specific resources.
+                * 
                 */
                 class RefererRule : public AbstractModel
                 {
@@ -47,15 +47,31 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Rule type: <li>all: valid for all files;</li> <li>file: valid for specified file suffix;</li> <li>directory: valid for specified path;</li> <li>path: specified absolute The path takes effect. </li>
-                     * @return RuleType Rule type: <li>all: valid for all files;</li> <li>file: valid for specified file suffix;</li> <li>directory: valid for specified path;</li> <li>path: specified absolute The path takes effect. </li>
+                     * 获取Rule type:
+<li>all: take effect for all files;</li>
+<li>file: The specified file suffix takes effect;</li>
+<li>directory: specify the path to take effect;</li>
+<li>path: The absolute path takes effect.</li>
+                     * @return RuleType Rule type:
+<li>all: take effect for all files;</li>
+<li>file: The specified file suffix takes effect;</li>
+<li>directory: specify the path to take effect;</li>
+<li>path: The absolute path takes effect.</li>
                      * 
                      */
                     std::string GetRuleType() const;
 
                     /**
-                     * 设置Rule type: <li>all: valid for all files;</li> <li>file: valid for specified file suffix;</li> <li>directory: valid for specified path;</li> <li>path: specified absolute The path takes effect. </li>
-                     * @param _ruleType Rule type: <li>all: valid for all files;</li> <li>file: valid for specified file suffix;</li> <li>directory: valid for specified path;</li> <li>path: specified absolute The path takes effect. </li>
+                     * 设置Rule type:
+<li>all: take effect for all files;</li>
+<li>file: The specified file suffix takes effect;</li>
+<li>directory: specify the path to take effect;</li>
+<li>path: The absolute path takes effect.</li>
+                     * @param _ruleType Rule type:
+<li>all: take effect for all files;</li>
+<li>file: The specified file suffix takes effect;</li>
+<li>directory: specify the path to take effect;</li>
+<li>path: The absolute path takes effect.</li>
                      * 
                      */
                     void SetRuleType(const std::string& _ruleType);
@@ -68,15 +84,31 @@ namespace TencentCloud
                     bool RuleTypeHasBeenSet() const;
 
                     /**
-                     * 获取Matching content under the corresponding type of RuleType: <li>Fill in * when all is used;</li> <li>Fill in suffix name when file is used, such as jpg, txt;</li> <li>Fill in path when directory is used, such as /xxx/ test/;</li> <li>Fill in the absolute path when path is specified, such as /xxx/test.html. </li>
-                     * @return RulePaths Matching content under the corresponding type of RuleType: <li>Fill in * when all is used;</li> <li>Fill in suffix name when file is used, such as jpg, txt;</li> <li>Fill in path when directory is used, such as /xxx/ test/;</li> <li>Fill in the absolute path when path is specified, such as /xxx/test.html. </li>
+                     * 获取Matching content under the corresponding type of RuleType:
+<li>Fill with * when set to all;</li>
+<li>For file, fill in the extension, such as jpg or txt;</li>
+<li>For directory, fill in the path, such as /xxx/test/;</li>
+<li>For path, fill in the absolute path, such as /xxx/test.html.</li>
+                     * @return RulePaths Matching content under the corresponding type of RuleType:
+<li>Fill with * when set to all;</li>
+<li>For file, fill in the extension, such as jpg or txt;</li>
+<li>For directory, fill in the path, such as /xxx/test/;</li>
+<li>For path, fill in the absolute path, such as /xxx/test.html.</li>
                      * 
                      */
                     std::vector<std::string> GetRulePaths() const;
 
                     /**
-                     * 设置Matching content under the corresponding type of RuleType: <li>Fill in * when all is used;</li> <li>Fill in suffix name when file is used, such as jpg, txt;</li> <li>Fill in path when directory is used, such as /xxx/ test/;</li> <li>Fill in the absolute path when path is specified, such as /xxx/test.html. </li>
-                     * @param _rulePaths Matching content under the corresponding type of RuleType: <li>Fill in * when all is used;</li> <li>Fill in suffix name when file is used, such as jpg, txt;</li> <li>Fill in path when directory is used, such as /xxx/ test/;</li> <li>Fill in the absolute path when path is specified, such as /xxx/test.html. </li>
+                     * 设置Matching content under the corresponding type of RuleType:
+<li>Fill with * when set to all;</li>
+<li>For file, fill in the extension, such as jpg or txt;</li>
+<li>For directory, fill in the path, such as /xxx/test/;</li>
+<li>For path, fill in the absolute path, such as /xxx/test.html.</li>
+                     * @param _rulePaths Matching content under the corresponding type of RuleType:
+<li>Fill with * when set to all;</li>
+<li>For file, fill in the extension, such as jpg or txt;</li>
+<li>For directory, fill in the path, such as /xxx/test/;</li>
+<li>For path, fill in the absolute path, such as /xxx/test.html.</li>
                      * 
                      */
                     void SetRulePaths(const std::vector<std::string>& _rulePaths);
@@ -89,15 +121,23 @@ namespace TencentCloud
                     bool RulePathsHasBeenSet() const;
 
                     /**
-                     * 获取rferer configuration type, value: <li>whitelist: whitelist;</li> <li>blacklist: blacklist. </li>
-                     * @return RefererType rferer configuration type, value: <li>whitelist: whitelist;</li> <li>blacklist: blacklist. </li>
+                     * 获取referer configuration type. Value:
+<li>whitelist: allowlist;</li>
+<li>blocklist: Blocklist.</li>
+                     * @return RefererType referer configuration type. Value:
+<li>whitelist: allowlist;</li>
+<li>blocklist: Blocklist.</li>
                      * 
                      */
                     std::string GetRefererType() const;
 
                     /**
-                     * 设置rferer configuration type, value: <li>whitelist: whitelist;</li> <li>blacklist: blacklist. </li>
-                     * @param _refererType rferer configuration type, value: <li>whitelist: whitelist;</li> <li>blacklist: blacklist. </li>
+                     * 设置referer configuration type. Value:
+<li>whitelist: allowlist;</li>
+<li>blocklist: Blocklist.</li>
+                     * @param _refererType referer configuration type. Value:
+<li>whitelist: allowlist;</li>
+<li>blocklist: Blocklist.</li>
                      * 
                      */
                     void SetRefererType(const std::string& _refererType);
@@ -110,15 +150,15 @@ namespace TencentCloud
                     bool RefererTypeHasBeenSet() const;
 
                     /**
-                     * 获取Referer content list
-                     * @return Referers Referer content list
+                     * 获取
+                     * @return Referers 
                      * 
                      */
                     std::vector<std::string> GetReferers() const;
 
                     /**
-                     * 设置Referer content list
-                     * @param _referers Referer content list
+                     * 设置
+                     * @param _referers 
                      * 
                      */
                     void SetReferers(const std::vector<std::string>& _referers);
@@ -131,15 +171,23 @@ namespace TencentCloud
                     bool ReferersHasBeenSet() const;
 
                     /**
-                     * 获取Whether to allow empty referers: When the anti-hotlinking type is whitelist, true means that empty referers are allowed, false means that empty referers are not allowed; when the anti-hotlinking type is blacklist, true means that empty referers are rejected, and false means that empty referers are not rejected.
-                     * @return AllowEmpty Whether to allow empty referers: When the anti-hotlinking type is whitelist, true means that empty referers are allowed, false means that empty referers are not allowed; when the anti-hotlinking type is blacklist, true means that empty referers are rejected, and false means that empty referers are not rejected.
+                     * 获取Whether to allow empty referer:
+When the anti-hotlinking type is allowlist, true indicates that empty referer is allowed, and false indicates that it is not allowed;
+If the anti-hotlinking type is a blocklist, true indicates that empty referers are denied, and false indicates that empty referers are not denied.
+                     * @return AllowEmpty Whether to allow empty referer:
+When the anti-hotlinking type is allowlist, true indicates that empty referer is allowed, and false indicates that it is not allowed;
+If the anti-hotlinking type is a blocklist, true indicates that empty referers are denied, and false indicates that empty referers are not denied.
                      * 
                      */
                     bool GetAllowEmpty() const;
 
                     /**
-                     * 设置Whether to allow empty referers: When the anti-hotlinking type is whitelist, true means that empty referers are allowed, false means that empty referers are not allowed; when the anti-hotlinking type is blacklist, true means that empty referers are rejected, and false means that empty referers are not rejected.
-                     * @param _allowEmpty Whether to allow empty referers: When the anti-hotlinking type is whitelist, true means that empty referers are allowed, false means that empty referers are not allowed; when the anti-hotlinking type is blacklist, true means that empty referers are rejected, and false means that empty referers are not rejected.
+                     * 设置Whether to allow empty referer:
+When the anti-hotlinking type is allowlist, true indicates that empty referer is allowed, and false indicates that it is not allowed;
+If the anti-hotlinking type is a blocklist, true indicates that empty referers are denied, and false indicates that empty referers are not denied.
+                     * @param _allowEmpty Whether to allow empty referer:
+When the anti-hotlinking type is allowlist, true indicates that empty referer is allowed, and false indicates that it is not allowed;
+If the anti-hotlinking type is a blocklist, true indicates that empty referers are denied, and false indicates that empty referers are not denied.
                      * 
                      */
                     void SetAllowEmpty(const bool& _allowEmpty);
@@ -154,31 +202,43 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Rule type: <li>all: valid for all files;</li> <li>file: valid for specified file suffix;</li> <li>directory: valid for specified path;</li> <li>path: specified absolute The path takes effect. </li>
+                     * Rule type:
+<li>all: take effect for all files;</li>
+<li>file: The specified file suffix takes effect;</li>
+<li>directory: specify the path to take effect;</li>
+<li>path: The absolute path takes effect.</li>
                      */
                     std::string m_ruleType;
                     bool m_ruleTypeHasBeenSet;
 
                     /**
-                     * Matching content under the corresponding type of RuleType: <li>Fill in * when all is used;</li> <li>Fill in suffix name when file is used, such as jpg, txt;</li> <li>Fill in path when directory is used, such as /xxx/ test/;</li> <li>Fill in the absolute path when path is specified, such as /xxx/test.html. </li>
+                     * Matching content under the corresponding type of RuleType:
+<li>Fill with * when set to all;</li>
+<li>For file, fill in the extension, such as jpg or txt;</li>
+<li>For directory, fill in the path, such as /xxx/test/;</li>
+<li>For path, fill in the absolute path, such as /xxx/test.html.</li>
                      */
                     std::vector<std::string> m_rulePaths;
                     bool m_rulePathsHasBeenSet;
 
                     /**
-                     * rferer configuration type, value: <li>whitelist: whitelist;</li> <li>blacklist: blacklist. </li>
+                     * referer configuration type. Value:
+<li>whitelist: allowlist;</li>
+<li>blocklist: Blocklist.</li>
                      */
                     std::string m_refererType;
                     bool m_refererTypeHasBeenSet;
 
                     /**
-                     * Referer content list
+                     * 
                      */
                     std::vector<std::string> m_referers;
                     bool m_referersHasBeenSet;
 
                     /**
-                     * Whether to allow empty referers: When the anti-hotlinking type is whitelist, true means that empty referers are allowed, false means that empty referers are not allowed; when the anti-hotlinking type is blacklist, true means that empty referers are rejected, and false means that empty referers are not rejected.
+                     * Whether to allow empty referer:
+When the anti-hotlinking type is allowlist, true indicates that empty referer is allowed, and false indicates that it is not allowed;
+If the anti-hotlinking type is a blocklist, true indicates that empty referers are denied, and false indicates that empty referers are not denied.
                      */
                     bool m_allowEmpty;
                     bool m_allowEmptyHasBeenSet;

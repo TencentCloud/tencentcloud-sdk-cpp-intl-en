@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID.
-                     * @return SubAppId VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID.
+                     * 获取
+                     * @return SubAppId 
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID.
-                     * @param _subAppId VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID.
+                     * 设置
+                     * @param _subAppId 
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool SubAppIdHasBeenSet() const;
 
                     /**
-                     * 获取Object key prefix matching, limited to object keys whose names contain the specified prefix in response.
-                     * @return Prefix Object key prefix matching, limited to object keys whose names contain the specified prefix in response.
+                     * 获取
+                     * @return Prefix 
                      * 
                      */
                     std::string GetPrefix() const;
 
                     /**
-                     * 设置Object key prefix matching, limited to object keys whose names contain the specified prefix in response.
-                     * @param _prefix Object key prefix matching, limited to object keys whose names contain the specified prefix in response.
+                     * 设置
+                     * @param _prefix 
                      * 
                      */
                     void SetPrefix(const std::string& _prefix);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool PrefixHasBeenSet() const;
 
                     /**
-                     * 获取A character separator used for grouping object keys. All object keys with the same part between the prefix or the start (if no prefix is specified) and the first delimiter are grouped as a prefix node under CommonPrefixes. Grouped object keys no longer appear in the subsequent object list.
-                     * @return Delimiter A character separator used for grouping object keys. All object keys with the same part between the prefix or the start (if no prefix is specified) and the first delimiter are grouped as a prefix node under CommonPrefixes. Grouped object keys no longer appear in the subsequent object list.
+                     * 获取
+                     * @return Delimiter 
                      * 
                      */
                     std::string GetDelimiter() const;
 
                     /**
-                     * 设置A character separator used for grouping object keys. All object keys with the same part between the prefix or the start (if no prefix is specified) and the first delimiter are grouped as a prefix node under CommonPrefixes. Grouped object keys no longer appear in the subsequent object list.
-                     * @param _delimiter A character separator used for grouping object keys. All object keys with the same part between the prefix or the start (if no prefix is specified) and the first delimiter are grouped as a prefix node under CommonPrefixes. Grouped object keys no longer appear in the subsequent object list.
+                     * 设置
+                     * @param _delimiter 
                      * 
                      */
                     void SetDelimiter(const std::string& _delimiter);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool DelimiterHasBeenSet() const;
 
                     /**
-                     * 获取ys  Maximum number of entries returned at a time. Default value: 100. Minimum: 1. Maximum: 100.
-                     * @return MaxKeys ys  Maximum number of entries returned at a time. Default value: 100. Minimum: 1. Maximum: 100.
+                     * 获取
+                     * @return MaxKeys 
                      * 
                      */
                     int64_t GetMaxKeys() const;
 
                     /**
-                     * 设置ys  Maximum number of entries returned at a time. Default value: 100. Minimum: 1. Maximum: 100.
-                     * @param _maxKeys ys  Maximum number of entries returned at a time. Default value: 100. Minimum: 1. Maximum: 100.
+                     * 设置
+                     * @param _maxKeys 
                      * 
                      */
                     void SetMaxKeys(const int64_t& _maxKeys);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool MaxKeysHasBeenSet() const;
 
                     /**
-                     * 获取Starting object key marker
-                     * @return Marker Starting object key marker
+                     * 获取
+                     * @return Marker 
                      * 
                      */
                     std::string GetMarker() const;
 
                     /**
-                     * 设置Starting object key marker
-                     * @param _marker Starting object key marker
+                     * 设置
+                     * @param _marker 
                      * 
                      */
                     void SetMarker(const std::string& _marker);
@@ -148,15 +148,15 @@ namespace TencentCloud
                     bool MarkerHasBeenSet() const;
 
                     /**
-                     * 获取File type. Match any element in the collection: <li>Video: video file</li> <li>Audio: audio file</li> <li>Image: image file</li>
-                     * @return Categories File type. Match any element in the collection: <li>Video: video file</li> <li>Audio: audio file</li> <li>Image: image file</li>
+                     * 获取
+                     * @return Categories 
                      * 
                      */
                     std::vector<std::string> GetCategories() const;
 
                     /**
-                     * 设置File type. Match any element in the collection: <li>Video: video file</li> <li>Audio: audio file</li> <li>Image: image file</li>
-                     * @param _categories File type. Match any element in the collection: <li>Video: video file</li> <li>Audio: audio file</li> <li>Image: image file</li>
+                     * 设置
+                     * @param _categories 
                      * 
                      */
                     void SetCategories(const std::vector<std::string>& _categories);
@@ -171,37 +171,37 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID.
+                     * 
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
 
                     /**
-                     * Object key prefix matching, limited to object keys whose names contain the specified prefix in response.
+                     * 
                      */
                     std::string m_prefix;
                     bool m_prefixHasBeenSet;
 
                     /**
-                     * A character separator used for grouping object keys. All object keys with the same part between the prefix or the start (if no prefix is specified) and the first delimiter are grouped as a prefix node under CommonPrefixes. Grouped object keys no longer appear in the subsequent object list.
+                     * 
                      */
                     std::string m_delimiter;
                     bool m_delimiterHasBeenSet;
 
                     /**
-                     * ys  Maximum number of entries returned at a time. Default value: 100. Minimum: 1. Maximum: 100.
+                     * 
                      */
                     int64_t m_maxKeys;
                     bool m_maxKeysHasBeenSet;
 
                     /**
-                     * Starting object key marker
+                     * 
                      */
                     std::string m_marker;
                     bool m_markerHasBeenSet;
 
                     /**
-                     * File type. Match any element in the collection: <li>Video: video file</li> <li>Audio: audio file</li> <li>Image: image file</li>
+                     * 
                      */
                     std::vector<std::string> m_categories;
                     bool m_categoriesHasBeenSet;

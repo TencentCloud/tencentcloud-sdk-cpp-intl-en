@@ -23,7 +23,9 @@ using namespace TencentCloud::Edgezone::V20260401::Model;
 using namespace std;
 
 DescribeInstanceTypesRequest::DescribeInstanceTypesRequest() :
-    m_zoneHasBeenSet(false)
+    m_zoneHasBeenSet(false),
+    m_offsetHasBeenSet(false),
+    m_limitHasBeenSet(false)
 {
 }
 
@@ -40,6 +42,22 @@ string DescribeInstanceTypesRequest::ToJsonString() const
         string key = "Zone";
         iKey.SetString(key.c_str(), allocator);
         d.AddMember(iKey, rapidjson::Value(m_zone.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_offsetHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Offset";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_offset, allocator);
+    }
+
+    if (m_limitHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Limit";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, m_limit, allocator);
     }
 
 
@@ -64,6 +82,38 @@ void DescribeInstanceTypesRequest::SetZone(const string& _zone)
 bool DescribeInstanceTypesRequest::ZoneHasBeenSet() const
 {
     return m_zoneHasBeenSet;
+}
+
+int64_t DescribeInstanceTypesRequest::GetOffset() const
+{
+    return m_offset;
+}
+
+void DescribeInstanceTypesRequest::SetOffset(const int64_t& _offset)
+{
+    m_offset = _offset;
+    m_offsetHasBeenSet = true;
+}
+
+bool DescribeInstanceTypesRequest::OffsetHasBeenSet() const
+{
+    return m_offsetHasBeenSet;
+}
+
+int64_t DescribeInstanceTypesRequest::GetLimit() const
+{
+    return m_limit;
+}
+
+void DescribeInstanceTypesRequest::SetLimit(const int64_t& _limit)
+{
+    m_limit = _limit;
+    m_limitHasBeenSet = true;
+}
+
+bool DescribeInstanceTypesRequest::LimitHasBeenSet() const
+{
+    return m_limitHasBeenSet;
 }
 
 

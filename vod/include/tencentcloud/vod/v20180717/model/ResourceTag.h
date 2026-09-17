@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Tag key value. For details, see [Tags](https://intl.cloud.tencent.com/document/product/651?from_cn_redirect=1).
+                * 
                 */
                 class ResourceTag : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Tag key.
-                     * @return TagKey Tag key.
+                     * 获取
+                     * @return TagKey 
                      * 
                      */
                     std::string GetTagKey() const;
 
                     /**
-                     * 设置Tag key.
-                     * @param _tagKey Tag key.
+                     * 设置
+                     * @param _tagKey 
                      * 
                      */
                     void SetTagKey(const std::string& _tagKey);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool TagKeyHasBeenSet() const;
 
                     /**
-                     * 获取Tag value.
-                     * @return TagValue Tag value.
+                     * 获取
+                     * @return TagValue 
                      * 
                      */
                     std::string GetTagValue() const;
 
                     /**
-                     * 设置Tag value.
-                     * @param _tagValue Tag value.
+                     * 设置
+                     * @param _tagValue 
                      * 
                      */
                     void SetTagValue(const std::string& _tagValue);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Tag key.
+                     * 
                      */
                     std::string m_tagKey;
                     bool m_tagKeyHasBeenSet;
 
                     /**
-                     * Tag value.
+                     * 
                      */
                     std::string m_tagValue;
                     bool m_tagValueHasBeenSet;

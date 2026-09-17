@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Image understanding information item.
+                * 
                 */
                 class ImageUnderstandingItem : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Template id.
-                     * @return Definition Template id.
+                     * 获取
+                     * @return Definition 
                      * 
                      */
                     uint64_t GetDefinition() const;
 
                     /**
-                     * 设置Template id.
-                     * @param _definition Template id.
+                     * 设置
+                     * @param _definition 
                      * 
                      */
                     void SetDefinition(const uint64_t& _definition);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool DefinitionHasBeenSet() const;
 
                     /**
-                     * 获取Task output file.
-                     * @return OutputFile Task output file.
+                     * 获取
+                     * @return OutputFile 
                      * 
                      */
                     std::vector<MPSOutputFileInfo> GetOutputFile() const;
 
                     /**
-                     * 设置Task output file.
-                     * @param _outputFile Task output file.
+                     * 设置
+                     * @param _outputFile 
                      * 
                      */
                     void SetOutputFile(const std::vector<MPSOutputFileInfo>& _outputFile);
@@ -92,13 +92,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Template id.
+                     * 
                      */
                     uint64_t m_definition;
                     bool m_definitionHasBeenSet;
 
                     /**
-                     * Task output file.
+                     * 
                      */
                     std::vector<MPSOutputFileInfo> m_outputFile;
                     bool m_outputFileHasBeenSet;

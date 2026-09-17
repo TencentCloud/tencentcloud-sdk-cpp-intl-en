@@ -44,19 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Image processing operation array. Operations are performed in the order they appear in the array.
-<li>Length limit: 10.</li>
-                     * @return Operations Image processing operation array. Operations are performed in the order they appear in the array.
-<li>Length limit: 10.</li>
+                     * 获取
+                     * @return Operations 
                      * 
                      */
                     std::vector<ImageOperation> GetOperations() const;
 
                     /**
-                     * 设置Image processing operation array. Operations are performed in the order they appear in the array.
-<li>Length limit: 10.</li>
-                     * @param _operations Image processing operation array. Operations are performed in the order they appear in the array.
-<li>Length limit: 10.</li>
+                     * 设置
+                     * @param _operations 
                      * 
                      */
                     void SetOperations(const std::vector<ImageOperation>& _operations);
@@ -69,15 +65,15 @@ namespace TencentCloud
                     bool OperationsHasBeenSet() const;
 
                     /**
-                     * 获取<b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
-                     * @return SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+                     * 获取
+                     * @return SubAppId 
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置<b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
-                     * @param _subAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+                     * 设置
+                     * @param _subAppId 
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -90,15 +86,15 @@ namespace TencentCloud
                     bool SubAppIdHasBeenSet() const;
 
                     /**
-                     * 获取Image processing template name. The length cannot exceed 64 characters.
-                     * @return Name Image processing template name. The length cannot exceed 64 characters.
+                     * 获取
+                     * @return Name 
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Image processing template name. The length cannot exceed 64 characters.
-                     * @param _name Image processing template name. The length cannot exceed 64 characters.
+                     * 设置
+                     * @param _name 
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -111,15 +107,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Template description, with a length limit of 256 characters.
-                     * @return Comment Template description, with a length limit of 256 characters.
+                     * 获取
+                     * @return Comment 
                      * 
                      */
                     std::string GetComment() const;
 
                     /**
-                     * 设置Template description, with a length limit of 256 characters.
-                     * @param _comment Template description, with a length limit of 256 characters.
+                     * 设置
+                     * @param _comment 
                      * 
                      */
                     void SetComment(const std::string& _comment);
@@ -134,26 +130,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Image processing operation array. Operations are performed in the order they appear in the array.
-<li>Length limit: 10.</li>
+                     * 
                      */
                     std::vector<ImageOperation> m_operations;
                     bool m_operationsHasBeenSet;
 
                     /**
-                     * <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+                     * 
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
 
                     /**
-                     * Image processing template name. The length cannot exceed 64 characters.
+                     * 
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Template description, with a length limit of 256 characters.
+                     * 
                      */
                     std::string m_comment;
                     bool m_commentHasBeenSet;

@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Unique identifier of the media file.
-                     * @return FileId Unique identifier of the media file.
+                     * 获取
+                     * @return FileId 
                      * 
                      */
                     std::string GetFileId() const;
 
                     /**
-                     * 设置Unique identifier of the media file.
-                     * @param _fileId Unique identifier of the media file.
+                     * 设置
+                     * @param _fileId 
                      * 
                      */
                     void SetFileId(const std::string& _fileId);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool FileIdHasBeenSet() const;
 
                     /**
-                     * 获取<b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
-                     * @return SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+                     * 获取
+                     * @return SubAppId 
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置<b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
-                     * @param _subAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+                     * 设置
+                     * @param _subAppId 
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool SubAppIdHasBeenSet() const;
 
                     /**
-                     * 获取Specify the part that needs to be deleted this time. Default value is "[]", which means delete media and all its corresponding video processing files.
-                     * @return DeleteParts Specify the part that needs to be deleted this time. Default value is "[]", which means delete media and all its corresponding video processing files.
+                     * 获取
+                     * @return DeleteParts 
                      * 
                      */
                     std::vector<MediaDeleteItem> GetDeleteParts() const;
 
                     /**
-                     * 设置Specify the part that needs to be deleted this time. Default value is "[]", which means delete media and all its corresponding video processing files.
-                     * @param _deleteParts Specify the part that needs to be deleted this time. Default value is "[]", which means delete media and all its corresponding video processing files.
+                     * 设置
+                     * @param _deleteParts 
                      * 
                      */
                     void SetDeleteParts(const std::vector<MediaDeleteItem>& _deleteParts);
@@ -109,19 +109,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Unique identifier of the media file.
+                     * 
                      */
                     std::string m_fileId;
                     bool m_fileIdHasBeenSet;
 
                     /**
-                     * <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+                     * 
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
 
                     /**
-                     * Specify the part that needs to be deleted this time. Default value is "[]", which means delete media and all its corresponding video processing files.
+                     * 
                      */
                     std::vector<MediaDeleteItem> m_deleteParts;
                     bool m_deletePartsHasBeenSet;

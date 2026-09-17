@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * IDC subnet information
+                * IDC subnet information.
                 */
                 class DirectConnectSubnet : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The direct connect gateway ID.
-                     * @return DirectConnectGatewayId The direct connect gateway ID.
+                     * 获取Direct Connect gateway ID.
+                     * @return DirectConnectGatewayId Direct Connect gateway ID.
                      * 
                      */
                     std::string GetDirectConnectGatewayId() const;
 
                     /**
-                     * 设置The direct connect gateway ID.
-                     * @param _directConnectGatewayId The direct connect gateway ID.
+                     * 设置Direct Connect gateway ID.
+                     * @param _directConnectGatewayId Direct Connect gateway ID.
                      * 
                      */
                     void SetDirectConnectGatewayId(const std::string& _directConnectGatewayId);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool DirectConnectGatewayIdHasBeenSet() const;
 
                     /**
-                     * 获取IDC subnet IP range
-                     * @return CidrBlock IDC subnet IP range
+                     * 获取IDC subnet CIDR block.
+                     * @return CidrBlock IDC subnet CIDR block.
                      * 
                      */
                     std::string GetCidrBlock() const;
 
                     /**
-                     * 设置IDC subnet IP range
-                     * @param _cidrBlock IDC subnet IP range
+                     * 设置IDC subnet CIDR block.
+                     * @param _cidrBlock IDC subnet CIDR block.
                      * 
                      */
                     void SetCidrBlock(const std::string& _cidrBlock);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The direct connect gateway ID.
+                     * Direct Connect gateway ID.
                      */
                     std::string m_directConnectGatewayId;
                     bool m_directConnectGatewayIdHasBeenSet;
 
                     /**
-                     * IDC subnet IP range
+                     * IDC subnet CIDR block.
                      */
                     std::string m_cidrBlock;
                     bool m_cidrBlockHasBeenSet;

@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Cloned timbre</p>
-                     * @return VoiceId <p>Cloned timbre</p>
+                     * 获取
+                     * @return VoiceId 
                      * 
                      */
                     std::string GetVoiceId() const;
@@ -58,8 +58,8 @@ namespace TencentCloud
                     bool VoiceIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>Audition audio.</p>
-                     * @return DemoAudio <p>Audition audio.</p>
+                     * 获取
+                     * @return DemoAudio 
                      * 
                      */
                     std::string GetDemoAudio() const;
@@ -72,8 +72,8 @@ namespace TencentCloud
                     bool DemoAudioHasBeenSet() const;
 
                     /**
-                     * 获取<p>Extended information.</p>
-                     * @return ExtInfo <p>Extended information.</p>
+                     * 获取
+                     * @return ExtInfo 
                      * 
                      */
                     std::string GetExtInfo() const;
@@ -88,19 +88,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Cloned timbre</p>
+                     * 
                      */
                     std::string m_voiceId;
                     bool m_voiceIdHasBeenSet;
 
                     /**
-                     * <p>Audition audio.</p>
+                     * 
                      */
                     std::string m_demoAudio;
                     bool m_demoAudioHasBeenSet;
 
                     /**
-                     * <p>Extended information.</p>
+                     * 
                      */
                     std::string m_extInfo;
                     bool m_extInfoHasBeenSet;

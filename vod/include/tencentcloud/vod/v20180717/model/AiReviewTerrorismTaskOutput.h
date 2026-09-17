@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Terrorism information
+                * 
                 */
                 class AiReviewTerrorismTaskOutput : public AbstractModel
                 {
@@ -48,19 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Score of detected terrorism information in a video between 0 and 100.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Confidence Score of detected terrorism information in a video between 0 and 100.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return Confidence 
                      * 
                      */
                     double GetConfidence() const;
 
                     /**
-                     * 设置Score of detected terrorism information in a video between 0 and 100.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _confidence Score of detected terrorism information in a video between 0 and 100.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _confidence 
                      * 
                      */
                     void SetConfidence(const double& _confidence);
@@ -73,31 +69,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool ConfidenceHasBeenSet() const;
 
                     /**
-                     * 获取Suggestion for detected terrorism information. Valid values:
-<li>pass.</li>
-<li>review.</li>
-<li>block.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Suggestion Suggestion for detected terrorism information. Valid values:
-<li>pass.</li>
-<li>review.</li>
-<li>block.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return Suggestion 
                      * 
                      */
                     std::string GetSuggestion() const;
 
                     /**
-                     * 设置Suggestion for detected terrorism information. Valid values:
-<li>pass.</li>
-<li>review.</li>
-<li>block.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _suggestion Suggestion for detected terrorism information. Valid values:
-<li>pass.</li>
-<li>review.</li>
-<li>block.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _suggestion 
                      * 
                      */
                     void SetSuggestion(const std::string& _suggestion);
@@ -110,51 +90,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool SuggestionHasBeenSet() const;
 
                     /**
-                     * 获取Tag of the detected terrorism information in a video. Valid values:
-<li>`guns`: weapons and guns</li>
-<li>`crowd`: crowds</li>
-<li>`police`: police forces</li>
-<li>`bloody`: bloody images</li>
-<li>`banners`: terrorism flags</li>
-<li>`militant`: militants</li>
-<li>`explosion`: explosions and fires</li>
-<li>`terrorists`: terrorists</li>
-<li>`scenario`: terrorism images</li>
-                     * @return Label Tag of the detected terrorism information in a video. Valid values:
-<li>`guns`: weapons and guns</li>
-<li>`crowd`: crowds</li>
-<li>`police`: police forces</li>
-<li>`bloody`: bloody images</li>
-<li>`banners`: terrorism flags</li>
-<li>`militant`: militants</li>
-<li>`explosion`: explosions and fires</li>
-<li>`terrorists`: terrorists</li>
-<li>`scenario`: terrorism images</li>
+                     * 获取
+                     * @return Label 
                      * 
                      */
                     std::string GetLabel() const;
 
                     /**
-                     * 设置Tag of the detected terrorism information in a video. Valid values:
-<li>`guns`: weapons and guns</li>
-<li>`crowd`: crowds</li>
-<li>`police`: police forces</li>
-<li>`bloody`: bloody images</li>
-<li>`banners`: terrorism flags</li>
-<li>`militant`: militants</li>
-<li>`explosion`: explosions and fires</li>
-<li>`terrorists`: terrorists</li>
-<li>`scenario`: terrorism images</li>
-                     * @param _label Tag of the detected terrorism information in a video. Valid values:
-<li>`guns`: weapons and guns</li>
-<li>`crowd`: crowds</li>
-<li>`police`: police forces</li>
-<li>`bloody`: bloody images</li>
-<li>`banners`: terrorism flags</li>
-<li>`militant`: militants</li>
-<li>`explosion`: explosions and fires</li>
-<li>`terrorists`: terrorists</li>
-<li>`scenario`: terrorism images</li>
+                     * 设置
+                     * @param _label 
                      * 
                      */
                     void SetLabel(const std::string& _label);
@@ -167,19 +111,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool LabelHasBeenSet() const;
 
                     /**
-                     * 获取List of video segments that contain terrorism information
-<font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `SegmentSetFileUrl`.
-                     * @return SegmentSet List of video segments that contain terrorism information
-<font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `SegmentSetFileUrl`.
+                     * 获取
+                     * @return SegmentSet 
                      * 
                      */
                     std::vector<MediaContentReviewSegmentItem> GetSegmentSet() const;
 
                     /**
-                     * 设置List of video segments that contain terrorism information
-<font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `SegmentSetFileUrl`.
-                     * @param _segmentSet List of video segments that contain terrorism information
-<font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `SegmentSetFileUrl`.
+                     * 设置
+                     * @param _segmentSet 
                      * 
                      */
                     void SetSegmentSet(const std::vector<MediaContentReviewSegmentItem>& _segmentSet);
@@ -192,15 +132,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool SegmentSetHasBeenSet() const;
 
                     /**
-                     * 获取URL to the file for video segments that contain terrorism information. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `SegmentSetFileUrlExpireTime`.
-                     * @return SegmentSetFileUrl URL to the file for video segments that contain terrorism information. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `SegmentSetFileUrlExpireTime`.
+                     * 获取
+                     * @return SegmentSetFileUrl 
                      * 
                      */
                     std::string GetSegmentSetFileUrl() const;
 
                     /**
-                     * 设置URL to the file for video segments that contain terrorism information. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `SegmentSetFileUrlExpireTime`.
-                     * @param _segmentSetFileUrl URL to the file for video segments that contain terrorism information. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `SegmentSetFileUrlExpireTime`.
+                     * 设置
+                     * @param _segmentSetFileUrl 
                      * 
                      */
                     void SetSegmentSetFileUrl(const std::string& _segmentSetFileUrl);
@@ -213,15 +153,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool SegmentSetFileUrlHasBeenSet() const;
 
                     /**
-                     * 获取Expiration time of the URL to the file for video segments that contain terrorism information, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
-                     * @return SegmentSetFileUrlExpireTime Expiration time of the URL to the file for video segments that contain terrorism information, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
+                     * 获取
+                     * @return SegmentSetFileUrlExpireTime 
                      * 
                      */
                     std::string GetSegmentSetFileUrlExpireTime() const;
 
                     /**
-                     * 设置Expiration time of the URL to the file for video segments that contain terrorism information, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
-                     * @param _segmentSetFileUrlExpireTime Expiration time of the URL to the file for video segments that contain terrorism information, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
+                     * 设置
+                     * @param _segmentSetFileUrlExpireTime 
                      * 
                      */
                     void SetSegmentSetFileUrlExpireTime(const std::string& _segmentSetFileUrlExpireTime);
@@ -236,52 +176,37 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Score of detected terrorism information in a video between 0 and 100.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     double m_confidence;
                     bool m_confidenceHasBeenSet;
 
                     /**
-                     * Suggestion for detected terrorism information. Valid values:
-<li>pass.</li>
-<li>review.</li>
-<li>block.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string m_suggestion;
                     bool m_suggestionHasBeenSet;
 
                     /**
-                     * Tag of the detected terrorism information in a video. Valid values:
-<li>`guns`: weapons and guns</li>
-<li>`crowd`: crowds</li>
-<li>`police`: police forces</li>
-<li>`bloody`: bloody images</li>
-<li>`banners`: terrorism flags</li>
-<li>`militant`: militants</li>
-<li>`explosion`: explosions and fires</li>
-<li>`terrorists`: terrorists</li>
-<li>`scenario`: terrorism images</li>
+                     * 
                      */
                     std::string m_label;
                     bool m_labelHasBeenSet;
 
                     /**
-                     * List of video segments that contain terrorism information
-<font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `SegmentSetFileUrl`.
+                     * 
                      */
                     std::vector<MediaContentReviewSegmentItem> m_segmentSet;
                     bool m_segmentSetHasBeenSet;
 
                     /**
-                     * URL to the file for video segments that contain terrorism information. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `SegmentSetFileUrlExpireTime`.
+                     * 
                      */
                     std::string m_segmentSetFileUrl;
                     bool m_segmentSetFileUrlHasBeenSet;
 
                     /**
-                     * Expiration time of the URL to the file for video segments that contain terrorism information, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
+                     * 
                      */
                     std::string m_segmentSetFileUrlExpireTime;
                     bool m_segmentSetFileUrlExpireTimeHasBeenSet;

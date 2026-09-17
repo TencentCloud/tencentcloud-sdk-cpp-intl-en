@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID list. Maximum number of IDs: 100.
-                     * @return InstanceIds Instance ID list. Maximum number of IDs: 100.
+                     * 获取<p>Instance ID list. Maximum number of IDs: 100.</p>
+                     * @return InstanceIds <p>Instance ID list. Maximum number of IDs: 100.</p>
                      * 
                      */
                     std::vector<std::string> GetInstanceIds() const;
 
                     /**
-                     * 设置Instance ID list. Maximum number of IDs: 100.
-                     * @param _instanceIds Instance ID list. Maximum number of IDs: 100.
+                     * 设置<p>Instance ID list. Maximum number of IDs: 100.</p>
+                     * @param _instanceIds <p>Instance ID list. Maximum number of IDs: 100.</p>
                      * 
                      */
                     void SetInstanceIds(const std::vector<std::string>& _instanceIds);
@@ -66,7 +66,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Instance ID list. Maximum number of IDs: 100.
+                     * <p>Instance ID list. Maximum number of IDs: 100.</p>
                      */
                     std::vector<std::string> m_instanceIds;
                     bool m_instanceIdsHasBeenSet;

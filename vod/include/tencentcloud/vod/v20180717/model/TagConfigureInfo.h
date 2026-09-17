@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Control parameter of intelligent tagging task
+                * 
                 */
                 class TagConfigureInfo : public AbstractModel
                 {
@@ -47,23 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Switch of intelligent tagging task. Valid values:
-<li>ON: enables intelligent tagging task;</li>
-<li>OFF: disables intelligent tagging task.</li>
-                     * @return Switch Switch of intelligent tagging task. Valid values:
-<li>ON: enables intelligent tagging task;</li>
-<li>OFF: disables intelligent tagging task.</li>
+                     * 获取
+                     * @return Switch 
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Switch of intelligent tagging task. Valid values:
-<li>ON: enables intelligent tagging task;</li>
-<li>OFF: disables intelligent tagging task.</li>
-                     * @param _switch Switch of intelligent tagging task. Valid values:
-<li>ON: enables intelligent tagging task;</li>
-<li>OFF: disables intelligent tagging task.</li>
+                     * 设置
+                     * @param _switch 
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -78,9 +70,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Switch of intelligent tagging task. Valid values:
-<li>ON: enables intelligent tagging task;</li>
-<li>OFF: disables intelligent tagging task.</li>
+                     * 
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;

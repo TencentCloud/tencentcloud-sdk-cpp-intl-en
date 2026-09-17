@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * The result of file deletion.
+                * 
                 */
                 class FileDeleteResultItem : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The ID of the file deleted.
-                     * @return FileId The ID of the file deleted.
+                     * 获取
+                     * @return FileId 
                      * 
                      */
                     std::string GetFileId() const;
 
                     /**
-                     * 设置The ID of the file deleted.
-                     * @param _fileId The ID of the file deleted.
+                     * 设置
+                     * @param _fileId 
                      * 
                      */
                     void SetFileId(const std::string& _fileId);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool FileIdHasBeenSet() const;
 
                     /**
-                     * 获取Part of the file deleted this time.
-                     * @return DeleteParts Part of the file deleted this time.
+                     * 获取
+                     * @return DeleteParts 
                      * 
                      */
                     std::vector<MediaDeleteItem> GetDeleteParts() const;
 
                     /**
-                     * 设置Part of the file deleted this time.
-                     * @param _deleteParts Part of the file deleted this time.
+                     * 设置
+                     * @param _deleteParts 
                      * 
                      */
                     void SetDeleteParts(const std::vector<MediaDeleteItem>& _deleteParts);
@@ -92,13 +92,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The ID of the file deleted.
+                     * 
                      */
                     std::string m_fileId;
                     bool m_fileIdHasBeenSet;
 
                     /**
-                     * Part of the file deleted this time.
+                     * 
                      */
                     std::vector<MediaDeleteItem> m_deleteParts;
                     bool m_deletePartsHasBeenSet;

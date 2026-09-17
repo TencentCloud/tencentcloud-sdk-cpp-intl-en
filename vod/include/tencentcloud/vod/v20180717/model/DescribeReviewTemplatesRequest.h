@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
-                     * @return SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+                     * 获取
+                     * @return SubAppId 
                      * 
                      */
                     int64_t GetSubAppId() const;
 
                     /**
-                     * 设置<b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
-                     * @param _subAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+                     * 设置
+                     * @param _subAppId 
                      * 
                      */
                     void SetSubAppId(const int64_t& _subAppId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool SubAppIdHasBeenSet() const;
 
                     /**
-                     * 获取Filter condition for the audit template unique identifier. The array length cannot exceed 100.
-                     * @return Definitions Filter condition for the audit template unique identifier. The array length cannot exceed 100.
+                     * 获取
+                     * @return Definitions 
                      * 
                      */
                     std::vector<int64_t> GetDefinitions() const;
 
                     /**
-                     * 设置Filter condition for the audit template unique identifier. The array length cannot exceed 100.
-                     * @param _definitions Filter condition for the audit template unique identifier. The array length cannot exceed 100.
+                     * 设置
+                     * @param _definitions 
                      * 
                      */
                     void SetDefinitions(const std::vector<int64_t>& _definitions);
@@ -85,23 +85,15 @@ namespace TencentCloud
                     bool DefinitionsHasBeenSet() const;
 
                     /**
-                     * 获取Condition for filtering templates by type. Valid values:
-<li>Preset: system preset template;</li>
-<li>Custom: User-defined template.</li>
-                     * @return Type Condition for filtering templates by type. Valid values:
-<li>Preset: system preset template;</li>
-<li>Custom: User-defined template.</li>
+                     * 获取
+                     * @return Type 
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Condition for filtering templates by type. Valid values:
-<li>Preset: system preset template;</li>
-<li>Custom: User-defined template.</li>
-                     * @param _type Condition for filtering templates by type. Valid values:
-<li>Preset: system preset template;</li>
-<li>Custom: User-defined template.</li>
+                     * 设置
+                     * @param _type 
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -114,15 +106,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Pagination offset. Default value: 0.
-                     * @return Offset Pagination offset. Default value: 0.
+                     * 获取
+                     * @return Offset 
                      * 
                      */
                     int64_t GetOffset() const;
 
                     /**
-                     * 设置Pagination offset. Default value: 0.
-                     * @param _offset Pagination offset. Default value: 0.
+                     * 设置
+                     * @param _offset 
                      * 
                      */
                     void SetOffset(const int64_t& _offset);
@@ -135,15 +127,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Number of returned entries. Default value: 10. Maximum value: 100.
-                     * @return Limit Number of returned entries. Default value: 10. Maximum value: 100.
+                     * 获取
+                     * @return Limit 
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Number of returned entries. Default value: 10. Maximum value: 100.
-                     * @param _limit Number of returned entries. Default value: 10. Maximum value: 100.
+                     * 设置
+                     * @param _limit 
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -158,33 +150,31 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+                     * 
                      */
                     int64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
 
                     /**
-                     * Filter condition for the audit template unique identifier. The array length cannot exceed 100.
+                     * 
                      */
                     std::vector<int64_t> m_definitions;
                     bool m_definitionsHasBeenSet;
 
                     /**
-                     * Condition for filtering templates by type. Valid values:
-<li>Preset: system preset template;</li>
-<li>Custom: User-defined template.</li>
+                     * 
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Pagination offset. Default value: 0.
+                     * 
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Number of returned entries. Default value: 10. Maximum value: 100.
+                     * 
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;

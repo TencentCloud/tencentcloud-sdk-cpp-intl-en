@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Output media file information of a video processing task.
+                * 
                 */
                 class TaskOutputMediaInfo : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Media file ID.
-                     * @return FileId Media file ID.
+                     * 获取
+                     * @return FileId 
                      * 
                      */
                     std::string GetFileId() const;
 
                     /**
-                     * 设置Media file ID.
-                     * @param _fileId Media file ID.
+                     * 设置
+                     * @param _fileId 
                      * 
                      */
                     void SetFileId(const std::string& _fileId);
@@ -92,7 +92,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Media file ID.
+                     * 
                      */
                     std::string m_fileId;
                     bool m_fileIdHasBeenSet;

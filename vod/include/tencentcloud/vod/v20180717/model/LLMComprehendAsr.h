@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Large model parse text transcribe parse configuration
+                * 
                 */
                 class LLMComprehendAsr : public AbstractModel
                 {
@@ -47,23 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Text transcription task switch. Available values:
--ON: Enable the transcription task.
--OFF: Disable text transcription task.
-                     * @return Switch Text transcription task switch. Available values:
--ON: Enable the transcription task.
--OFF: Disable text transcription task.
+                     * 获取
+                     * @return Switch 
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Text transcription task switch. Available values:
--ON: Enable the transcription task.
--OFF: Disable text transcription task.
-                     * @param _switch Text transcription task switch. Available values:
--ON: Enable the transcription task.
--OFF: Disable text transcription task.
+                     * 设置
+                     * @param _switch 
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -78,9 +70,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Text transcription task switch. Available values:
--ON: Enable the transcription task.
--OFF: Disable text transcription task.
+                     * 
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;

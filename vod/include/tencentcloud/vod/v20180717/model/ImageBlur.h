@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Image blurring parameters.
+                * 
                 */
                 class ImageBlur : public AbstractModel
                 {
@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The blur type. Valid values:
-<li>`Gaussian`</li>
-                     * @return Type The blur type. Valid values:
-<li>`Gaussian`</li>
+                     * 获取
+                     * @return Type 
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置The blur type. Valid values:
-<li>`Gaussian`</li>
-                     * @param _type The blur type. Valid values:
-<li>`Gaussian`</li>
+                     * 设置
+                     * @param _type 
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -72,15 +68,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取The radius of the blur. Value range: 1-50. This parameter is valid if `Type` is `Gaussian`.
-                     * @return Radius The radius of the blur. Value range: 1-50. This parameter is valid if `Type` is `Gaussian`.
+                     * 获取
+                     * @return Radius 
                      * 
                      */
                     int64_t GetRadius() const;
 
                     /**
-                     * 设置The radius of the blur. Value range: 1-50. This parameter is valid if `Type` is `Gaussian`.
-                     * @param _radius The radius of the blur. Value range: 1-50. This parameter is valid if `Type` is `Gaussian`.
+                     * 设置
+                     * @param _radius 
                      * 
                      */
                     void SetRadius(const int64_t& _radius);
@@ -93,15 +89,15 @@ namespace TencentCloud
                     bool RadiusHasBeenSet() const;
 
                     /**
-                     * 获取The standard deviation of the Gaussian distribution, which must be greater than 0. This parameter is valid if `Type` is `Gaussian`.
-                     * @return Sigma The standard deviation of the Gaussian distribution, which must be greater than 0. This parameter is valid if `Type` is `Gaussian`.
+                     * 获取
+                     * @return Sigma 
                      * 
                      */
                     int64_t GetSigma() const;
 
                     /**
-                     * 设置The standard deviation of the Gaussian distribution, which must be greater than 0. This parameter is valid if `Type` is `Gaussian`.
-                     * @param _sigma The standard deviation of the Gaussian distribution, which must be greater than 0. This parameter is valid if `Type` is `Gaussian`.
+                     * 设置
+                     * @param _sigma 
                      * 
                      */
                     void SetSigma(const int64_t& _sigma);
@@ -116,20 +112,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The blur type. Valid values:
-<li>`Gaussian`</li>
+                     * 
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * The radius of the blur. Value range: 1-50. This parameter is valid if `Type` is `Gaussian`.
+                     * 
                      */
                     int64_t m_radius;
                     bool m_radiusHasBeenSet;
 
                     /**
-                     * The standard deviation of the Gaussian distribution, which must be greater than 0. This parameter is valid if `Type` is `Gaussian`.
+                     * 
                      */
                     int64_t m_sigma;
                     bool m_sigmaHasBeenSet;

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Input type of an intelligent highlight generating task
+                * 
                 */
                 class AiAnalysisTaskHighlightInput : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取ID of an intelligent highlight generating template.
-                     * @return Definition ID of an intelligent highlight generating template.
+                     * 获取
+                     * @return Definition 
                      * 
                      */
                     uint64_t GetDefinition() const;
 
                     /**
-                     * 设置ID of an intelligent highlight generating template.
-                     * @param _definition ID of an intelligent highlight generating template.
+                     * 设置
+                     * @param _definition 
                      * 
                      */
                     void SetDefinition(const uint64_t& _definition);
@@ -70,7 +70,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * ID of an intelligent highlight generating template.
+                     * 
                      */
                     uint64_t m_definition;
                     bool m_definitionHasBeenSet;

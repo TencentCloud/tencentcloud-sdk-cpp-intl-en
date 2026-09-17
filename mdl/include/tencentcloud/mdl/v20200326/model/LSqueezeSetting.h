@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Compression Recovery Configuration
                 */
                 class LSqueezeSetting : public AbstractModel
                 {

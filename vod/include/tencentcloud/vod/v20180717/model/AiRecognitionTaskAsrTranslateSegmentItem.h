@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Speech translation recognition clip.
+                * 
                 */
                 class AiRecognitionTaskAsrTranslateSegmentItem : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Confidence of a speech translation segment. Value range: 0-100.
-                     * @return Confidence Confidence of a speech translation segment. Value range: 0-100.
+                     * 获取
+                     * @return Confidence 
                      * 
                      */
                     double GetConfidence() const;
 
                     /**
-                     * 设置Confidence of a speech translation segment. Value range: 0-100.
-                     * @param _confidence Confidence of a speech translation segment. Value range: 0-100.
+                     * 设置
+                     * @param _confidence 
                      * 
                      */
                     void SetConfidence(const double& _confidence);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool ConfidenceHasBeenSet() const;
 
                     /**
-                     * 获取Start time offset of a recognized segment in speech translation, in seconds.
-                     * @return StartTimeOffset Start time offset of a recognized segment in speech translation, in seconds.
+                     * 获取
+                     * @return StartTimeOffset 
                      * 
                      */
                     double GetStartTimeOffset() const;
 
                     /**
-                     * 设置Start time offset of a recognized segment in speech translation, in seconds.
-                     * @param _startTimeOffset Start time offset of a recognized segment in speech translation, in seconds.
+                     * 设置
+                     * @param _startTimeOffset 
                      * 
                      */
                     void SetStartTimeOffset(const double& _startTimeOffset);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool StartTimeOffsetHasBeenSet() const;
 
                     /**
-                     * 获取End time offset of a recognized segment in speech translation, in seconds.
-                     * @return EndTimeOffset End time offset of a recognized segment in speech translation, in seconds.
+                     * 获取
+                     * @return EndTimeOffset 
                      * 
                      */
                     double GetEndTimeOffset() const;
 
                     /**
-                     * 设置End time offset of a recognized segment in speech translation, in seconds.
-                     * @param _endTimeOffset End time offset of a recognized segment in speech translation, in seconds.
+                     * 设置
+                     * @param _endTimeOffset 
                      * 
                      */
                     void SetEndTimeOffset(const double& _endTimeOffset);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool EndTimeOffsetHasBeenSet() const;
 
                     /**
-                     * 获取Recognized text.
-                     * @return Text Recognized text.
+                     * 获取
+                     * @return Text 
                      * 
                      */
                     std::string GetText() const;
 
                     /**
-                     * 设置Recognized text.
-                     * @param _text Recognized text.
+                     * 设置
+                     * @param _text 
                      * 
                      */
                     void SetText(const std::string& _text);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool TextHasBeenSet() const;
 
                     /**
-                     * 获取Translated text.
-                     * @return Translation Translated text.
+                     * 获取
+                     * @return Translation 
                      * 
                      */
                     std::string GetTranslation() const;
 
                     /**
-                     * 设置Translated text.
-                     * @param _translation Translated text.
+                     * 设置
+                     * @param _translation 
                      * 
                      */
                     void SetTranslation(const std::string& _translation);
@@ -154,31 +154,31 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Confidence of a speech translation segment. Value range: 0-100.
+                     * 
                      */
                     double m_confidence;
                     bool m_confidenceHasBeenSet;
 
                     /**
-                     * Start time offset of a recognized segment in speech translation, in seconds.
+                     * 
                      */
                     double m_startTimeOffset;
                     bool m_startTimeOffsetHasBeenSet;
 
                     /**
-                     * End time offset of a recognized segment in speech translation, in seconds.
+                     * 
                      */
                     double m_endTimeOffset;
                     bool m_endTimeOffsetHasBeenSet;
 
                     /**
-                     * Recognized text.
+                     * 
                      */
                     std::string m_text;
                     bool m_textHasBeenSet;
 
                     /**
-                     * Translated text.
+                     * 
                      */
                     std::string m_translation;
                     bool m_translationHasBeenSet;

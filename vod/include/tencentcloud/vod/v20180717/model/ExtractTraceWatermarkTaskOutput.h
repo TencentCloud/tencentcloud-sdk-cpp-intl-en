@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * The output of digital watermark extraction.
+                * 
                 */
                 class ExtractTraceWatermarkTaskOutput : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Player's ID, represented in hexadecimal, 6 digits in total.
-                     * @return Uv Player's ID, represented in hexadecimal, 6 digits in total.
+                     * 获取
+                     * @return Uv 
                      * 
                      */
                     std::string GetUv() const;
 
                     /**
-                     * 设置Player's ID, represented in hexadecimal, 6 digits in total.
-                     * @param _uv Player's ID, represented in hexadecimal, 6 digits in total.
+                     * 设置
+                     * @param _uv 
                      * 
                      */
                     void SetUv(const std::string& _uv);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool UvHasBeenSet() const;
 
                     /**
-                     * 获取This parameter has been deprecated.
-                     * @return Uid This parameter has been deprecated.
+                     * 获取
+                     * @return Uid 
                      * @deprecated
                      */
                     std::string GetUid() const;
 
                     /**
-                     * 设置This parameter has been deprecated.
-                     * @param _uid This parameter has been deprecated.
+                     * 设置
+                     * @param _uid 
                      * @deprecated
                      */
                     void SetUid(const std::string& _uid);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Player's ID, represented in hexadecimal, 6 digits in total.
+                     * 
                      */
                     std::string m_uv;
                     bool m_uvHasBeenSet;
 
                     /**
-                     * This parameter has been deprecated.
+                     * 
                      */
                     std::string m_uid;
                     bool m_uidHasBeenSet;

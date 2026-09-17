@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Result information of animated image generating task
+                * 
                 */
                 class MediaAnimatedGraphicsItem : public AbstractModel
                 {
@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Address of generated animated image.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Url Address of generated animated image.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return Url 
                      * 
                      */
                     std::string GetUrl() const;
 
                     /**
-                     * 设置Address of generated animated image.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _url Address of generated animated image.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _url 
                      * 
                      */
                     void SetUrl(const std::string& _url);
@@ -72,19 +68,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool UrlHasBeenSet() const;
 
                     /**
-                     * 获取Animated image generating template ID. For more information, please see [Animated Image Generating Parameter Template](https://intl.cloud.tencent.com/document/product/266/33481?from_cn_redirect=1#.3Cspan-id-.3D-.22zdt.22.3E.3C.2Fspan.3E.E8.BD.AC.E5.8A.A8.E5.9B.BE.E6.A8.A1.E6.9D.BF).
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Definition Animated image generating template ID. For more information, please see [Animated Image Generating Parameter Template](https://intl.cloud.tencent.com/document/product/266/33481?from_cn_redirect=1#.3Cspan-id-.3D-.22zdt.22.3E.3C.2Fspan.3E.E8.BD.AC.E5.8A.A8.E5.9B.BE.E6.A8.A1.E6.9D.BF).
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return Definition 
                      * 
                      */
                     int64_t GetDefinition() const;
 
                     /**
-                     * 设置Animated image generating template ID. For more information, please see [Animated Image Generating Parameter Template](https://intl.cloud.tencent.com/document/product/266/33481?from_cn_redirect=1#.3Cspan-id-.3D-.22zdt.22.3E.3C.2Fspan.3E.E8.BD.AC.E5.8A.A8.E5.9B.BE.E6.A8.A1.E6.9D.BF).
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _definition Animated image generating template ID. For more information, please see [Animated Image Generating Parameter Template](https://intl.cloud.tencent.com/document/product/266/33481?from_cn_redirect=1#.3Cspan-id-.3D-.22zdt.22.3E.3C.2Fspan.3E.E8.BD.AC.E5.8A.A8.E5.9B.BE.E6.A8.A1.E6.9D.BF).
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _definition 
                      * 
                      */
                     void SetDefinition(const int64_t& _definition);
@@ -97,19 +89,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool DefinitionHasBeenSet() const;
 
                     /**
-                     * 获取Animated image format, such as gif.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Container Animated image format, such as gif.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return Container 
                      * 
                      */
                     std::string GetContainer() const;
 
                     /**
-                     * 设置Animated image format, such as gif.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _container Animated image format, such as gif.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _container 
                      * 
                      */
                     void SetContainer(const std::string& _container);
@@ -122,19 +110,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool ContainerHasBeenSet() const;
 
                     /**
-                     * 获取Height of animated image in px.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Height Height of animated image in px.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return Height 
                      * 
                      */
                     int64_t GetHeight() const;
 
                     /**
-                     * 设置Height of animated image in px.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _height Height of animated image in px.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _height 
                      * 
                      */
                     void SetHeight(const int64_t& _height);
@@ -147,19 +131,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool HeightHasBeenSet() const;
 
                     /**
-                     * 获取Width of animated image in px.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Width Width of animated image in px.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return Width 
                      * 
                      */
                     int64_t GetWidth() const;
 
                     /**
-                     * 设置Width of animated image in px.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _width Width of animated image in px.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _width 
                      * 
                      */
                     void SetWidth(const int64_t& _width);
@@ -172,19 +152,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool WidthHasBeenSet() const;
 
                     /**
-                     * 获取Bitrate of animated image in bps.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Bitrate Bitrate of animated image in bps.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return Bitrate 
                      * 
                      */
                     int64_t GetBitrate() const;
 
                     /**
-                     * 设置Bitrate of animated image in bps.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _bitrate Bitrate of animated image in bps.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _bitrate 
                      * 
                      */
                     void SetBitrate(const int64_t& _bitrate);
@@ -197,19 +173,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool BitrateHasBeenSet() const;
 
                     /**
-                     * 获取Size of animated image in bytes.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Size Size of animated image in bytes.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return Size 
                      * 
                      */
                     int64_t GetSize() const;
 
                     /**
-                     * 设置Size of animated image in bytes.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _size Size of animated image in bytes.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _size 
                      * 
                      */
                     void SetSize(const int64_t& _size);
@@ -222,19 +194,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool SizeHasBeenSet() const;
 
                     /**
-                     * 获取MD5 value of an animated image.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Md5 MD5 value of an animated image.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return Md5 
                      * 
                      */
                     std::string GetMd5() const;
 
                     /**
-                     * 设置MD5 value of an animated image.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _md5 MD5 value of an animated image.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _md5 
                      * 
                      */
                     void SetMd5(const std::string& _md5);
@@ -247,19 +215,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool Md5HasBeenSet() const;
 
                     /**
-                     * 获取Start time offset of animated image in video in seconds.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return StartTimeOffset Start time offset of animated image in video in seconds.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return StartTimeOffset 
                      * 
                      */
                     double GetStartTimeOffset() const;
 
                     /**
-                     * 设置Start time offset of animated image in video in seconds.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _startTimeOffset Start time offset of animated image in video in seconds.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _startTimeOffset 
                      * 
                      */
                     void SetStartTimeOffset(const double& _startTimeOffset);
@@ -272,19 +236,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool StartTimeOffsetHasBeenSet() const;
 
                     /**
-                     * 获取End time offset of animated image in video in seconds.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return EndTimeOffset End time offset of animated image in video in seconds.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return EndTimeOffset 
                      * 
                      */
                     double GetEndTimeOffset() const;
 
                     /**
-                     * 设置End time offset of animated image in video in seconds.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _endTimeOffset End time offset of animated image in video in seconds.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _endTimeOffset 
                      * 
                      */
                     void SetEndTimeOffset(const double& _endTimeOffset);
@@ -299,71 +259,61 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Address of generated animated image.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string m_url;
                     bool m_urlHasBeenSet;
 
                     /**
-                     * Animated image generating template ID. For more information, please see [Animated Image Generating Parameter Template](https://intl.cloud.tencent.com/document/product/266/33481?from_cn_redirect=1#.3Cspan-id-.3D-.22zdt.22.3E.3C.2Fspan.3E.E8.BD.AC.E5.8A.A8.E5.9B.BE.E6.A8.A1.E6.9D.BF).
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t m_definition;
                     bool m_definitionHasBeenSet;
 
                     /**
-                     * Animated image format, such as gif.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string m_container;
                     bool m_containerHasBeenSet;
 
                     /**
-                     * Height of animated image in px.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t m_height;
                     bool m_heightHasBeenSet;
 
                     /**
-                     * Width of animated image in px.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t m_width;
                     bool m_widthHasBeenSet;
 
                     /**
-                     * Bitrate of animated image in bps.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t m_bitrate;
                     bool m_bitrateHasBeenSet;
 
                     /**
-                     * Size of animated image in bytes.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t m_size;
                     bool m_sizeHasBeenSet;
 
                     /**
-                     * MD5 value of an animated image.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string m_md5;
                     bool m_md5HasBeenSet;
 
                     /**
-                     * Start time offset of animated image in video in seconds.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     double m_startTimeOffset;
                     bool m_startTimeOffsetHasBeenSet;
 
                     /**
-                     * End time offset of animated image in video in seconds.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     double m_endTimeOffset;
                     bool m_endTimeOffsetHasBeenSet;

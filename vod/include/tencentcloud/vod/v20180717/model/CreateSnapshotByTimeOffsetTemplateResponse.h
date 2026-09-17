@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Unique identifier of the time point screenshot template.
-                     * @return Definition Unique identifier of the time point screenshot template.
+                     * 获取
+                     * @return Definition 
                      * 
                      */
                     uint64_t GetDefinition() const;
@@ -60,7 +60,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Unique identifier of the time point screenshot template.
+                     * 
                      */
                     uint64_t m_definition;
                     bool m_definitionHasBeenSet;

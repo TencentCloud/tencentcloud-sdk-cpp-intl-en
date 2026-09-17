@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Semantic search result.
+                * 
                 */
                 class SemanticsSearchResult : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Specifies the unique identifier of the media file.
-                     * @return FileId Specifies the unique identifier of the media file.
+                     * 获取
+                     * @return FileId 
                      * 
                      */
                     std::string GetFileId() const;
 
                     /**
-                     * 设置Specifies the unique identifier of the media file.
-                     * @param _fileId Specifies the unique identifier of the media file.
+                     * 设置
+                     * @param _fileId 
                      * 
                      */
                     void SetFileId(const std::string& _fileId);
@@ -68,15 +68,36 @@ namespace TencentCloud
                     bool FileIdHasBeenSet() const;
 
                     /**
-                     * 获取Score of the video in this retrieval. higher score indicates greater similarity to the retrieval value. value ranges from 0 to 1.
-                     * @return Score Score of the video in this retrieval. higher score indicates greater similarity to the retrieval value. value ranges from 0 to 1.
+                     * 获取
+                     * @return Title 
+                     * 
+                     */
+                    std::string GetTitle() const;
+
+                    /**
+                     * 设置
+                     * @param _title 
+                     * 
+                     */
+                    void SetTitle(const std::string& _title);
+
+                    /**
+                     * 判断参数 Title 是否已赋值
+                     * @return Title 是否已赋值
+                     * 
+                     */
+                    bool TitleHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return Score 
                      * 
                      */
                     double GetScore() const;
 
                     /**
-                     * 设置Score of the video in this retrieval. higher score indicates greater similarity to the retrieval value. value ranges from 0 to 1.
-                     * @param _score Score of the video in this retrieval. higher score indicates greater similarity to the retrieval value. value ranges from 0 to 1.
+                     * 设置
+                     * @param _score 
                      * 
                      */
                     void SetScore(const double& _score);
@@ -89,15 +110,15 @@ namespace TencentCloud
                     bool ScoreHasBeenSet() const;
 
                     /**
-                     * 获取Specifies the start time of the video clip, in seconds.
-                     * @return StartTimeOffset Specifies the start time of the video clip, in seconds.
+                     * 获取
+                     * @return StartTimeOffset 
                      * 
                      */
                     double GetStartTimeOffset() const;
 
                     /**
-                     * 设置Specifies the start time of the video clip, in seconds.
-                     * @param _startTimeOffset Specifies the start time of the video clip, in seconds.
+                     * 设置
+                     * @param _startTimeOffset 
                      * 
                      */
                     void SetStartTimeOffset(const double& _startTimeOffset);
@@ -110,15 +131,15 @@ namespace TencentCloud
                     bool StartTimeOffsetHasBeenSet() const;
 
                     /**
-                     * 获取Segment end time of the video, in seconds.
-                     * @return EndTimeOffset Segment end time of the video, in seconds.
+                     * 获取
+                     * @return EndTimeOffset 
                      * 
                      */
                     double GetEndTimeOffset() const;
 
                     /**
-                     * 设置Segment end time of the video, in seconds.
-                     * @param _endTimeOffset Segment end time of the video, in seconds.
+                     * 设置
+                     * @param _endTimeOffset 
                      * 
                      */
                     void SetEndTimeOffset(const double& _endTimeOffset);
@@ -133,25 +154,31 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Specifies the unique identifier of the media file.
+                     * 
                      */
                     std::string m_fileId;
                     bool m_fileIdHasBeenSet;
 
                     /**
-                     * Score of the video in this retrieval. higher score indicates greater similarity to the retrieval value. value ranges from 0 to 1.
+                     * 
+                     */
+                    std::string m_title;
+                    bool m_titleHasBeenSet;
+
+                    /**
+                     * 
                      */
                     double m_score;
                     bool m_scoreHasBeenSet;
 
                     /**
-                     * Specifies the start time of the video clip, in seconds.
+                     * 
                      */
                     double m_startTimeOffset;
                     bool m_startTimeOffsetHasBeenSet;
 
                     /**
-                     * Segment end time of the video, in seconds.
+                     * 
                      */
                     double m_endTimeOffset;
                     bool m_endTimeOffsetHasBeenSet;

@@ -63,6 +63,48 @@ namespace TencentCloud
                      */
                     bool ZoneHasBeenSet() const;
 
+                    /**
+                     * 获取Pagination offset. Default value: 0.
+                     * @return Offset Pagination offset. Default value: 0.
+                     * 
+                     */
+                    int64_t GetOffset() const;
+
+                    /**
+                     * 设置Pagination offset. Default value: 0.
+                     * @param _offset Pagination offset. Default value: 0.
+                     * 
+                     */
+                    void SetOffset(const int64_t& _offset);
+
+                    /**
+                     * 判断参数 Offset 是否已赋值
+                     * @return Offset 是否已赋值
+                     * 
+                     */
+                    bool OffsetHasBeenSet() const;
+
+                    /**
+                     * 获取Pagination size. Default value: 20. Maximum value: 100.
+                     * @return Limit Pagination size. Default value: 20. Maximum value: 100.
+                     * 
+                     */
+                    int64_t GetLimit() const;
+
+                    /**
+                     * 设置Pagination size. Default value: 20. Maximum value: 100.
+                     * @param _limit Pagination size. Default value: 20. Maximum value: 100.
+                     * 
+                     */
+                    void SetLimit(const int64_t& _limit);
+
+                    /**
+                     * 判断参数 Limit 是否已赋值
+                     * @return Limit 是否已赋值
+                     * 
+                     */
+                    bool LimitHasBeenSet() const;
+
                 private:
 
                     /**
@@ -70,6 +112,18 @@ namespace TencentCloud
                      */
                     std::string m_zone;
                     bool m_zoneHasBeenSet;
+
+                    /**
+                     * Pagination offset. Default value: 0.
+                     */
+                    int64_t m_offset;
+                    bool m_offsetHasBeenSet;
+
+                    /**
+                     * Pagination size. Default value: 20. Maximum value: 100.
+                     */
+                    int64_t m_limit;
+                    bool m_limitHasBeenSet;
 
                 };
             }

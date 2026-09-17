@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Audio operation
+                * 
                 */
                 class AudioTransform : public AbstractModel
                 {
@@ -48,19 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Audio operation type. Valid values:
-<li>Volume: volume adjustment.</li>
-                     * @return Type Audio operation type. Valid values:
-<li>Volume: volume adjustment.</li>
+                     * 获取
+                     * @return Type 
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Audio operation type. Valid values:
-<li>Volume: volume adjustment.</li>
-                     * @param _type Audio operation type. Valid values:
-<li>Volume: volume adjustment.</li>
+                     * 设置
+                     * @param _type 
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -73,15 +69,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Audio volume adjustment parameter. Valid when Type = Volume.
-                     * @return VolumeParam Audio volume adjustment parameter. Valid when Type = Volume.
+                     * 获取
+                     * @return VolumeParam 
                      * 
                      */
                     AudioVolumeParam GetVolumeParam() const;
 
                     /**
-                     * 设置Audio volume adjustment parameter. Valid when Type = Volume.
-                     * @param _volumeParam Audio volume adjustment parameter. Valid when Type = Volume.
+                     * 设置
+                     * @param _volumeParam 
                      * 
                      */
                     void SetVolumeParam(const AudioVolumeParam& _volumeParam);
@@ -96,14 +92,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Audio operation type. Valid values:
-<li>Volume: volume adjustment.</li>
+                     * 
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Audio volume adjustment parameter. Valid when Type = Volume.
+                     * 
                      */
                     AudioVolumeParam m_volumeParam;
                     bool m_volumeParamHasBeenSet;

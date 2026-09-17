@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Subtitle information
+                * 
                 */
                 class MediaSubtitleInfo : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Subtitle information list
-                     * @return SubtitleSet Subtitle information list
+                     * 获取
+                     * @return SubtitleSet 
                      * 
                      */
                     std::vector<MediaSubtitleItem> GetSubtitleSet() const;
 
                     /**
-                     * 设置Subtitle information list
-                     * @param _subtitleSet Subtitle information list
+                     * 设置
+                     * @param _subtitleSet 
                      * 
                      */
                     void SetSubtitleSet(const std::vector<MediaSubtitleItem>& _subtitleSet);
@@ -71,7 +71,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Subtitle information list
+                     * 
                      */
                     std::vector<MediaSubtitleItem> m_subtitleSet;
                     bool m_subtitleSetHasBeenSet;

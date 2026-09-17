@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Abnormal result Information of media quality inspection.
+                * 
                 */
                 class QualityInspectResultItem : public AbstractModel
                 {
@@ -48,79 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Exception type. Valid values:
-<li>Jitter: jitter.</li>
-<li>Blur: blurry;</li>
-<li>LowLighting: low light;</li>
-<li>HighLighting: overexposure.</li>
-<li>CrashScreen: screen glitch;</li>
-<li>BlackWhiteEdge: black and white edges.</li>
-<li>SolidColorScreen: solid color screen.</li>
-<li>Noise: noise.</li>
-<li>Mosaic: mosaic.</li>
-<li>QRCode: QR code.</li>
-<li>AppletCode: mini program code.</li>
-<li>BarCode: barcode;</li>
-<li>LowVoice: bass;</li>
-<li>HighVoice: high voice;</li>
-<li>NoVoice: mute;</li>
-<li>LowEvaluation: no-reference scoring below threshold.</li>
-                     * @return Type Exception type. Valid values:
-<li>Jitter: jitter.</li>
-<li>Blur: blurry;</li>
-<li>LowLighting: low light;</li>
-<li>HighLighting: overexposure.</li>
-<li>CrashScreen: screen glitch;</li>
-<li>BlackWhiteEdge: black and white edges.</li>
-<li>SolidColorScreen: solid color screen.</li>
-<li>Noise: noise.</li>
-<li>Mosaic: mosaic.</li>
-<li>QRCode: QR code.</li>
-<li>AppletCode: mini program code.</li>
-<li>BarCode: barcode;</li>
-<li>LowVoice: bass;</li>
-<li>HighVoice: high voice;</li>
-<li>NoVoice: mute;</li>
-<li>LowEvaluation: no-reference scoring below threshold.</li>
+                     * 获取
+                     * @return Type 
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Exception type. Valid values:
-<li>Jitter: jitter.</li>
-<li>Blur: blurry;</li>
-<li>LowLighting: low light;</li>
-<li>HighLighting: overexposure.</li>
-<li>CrashScreen: screen glitch;</li>
-<li>BlackWhiteEdge: black and white edges.</li>
-<li>SolidColorScreen: solid color screen.</li>
-<li>Noise: noise.</li>
-<li>Mosaic: mosaic.</li>
-<li>QRCode: QR code.</li>
-<li>AppletCode: mini program code.</li>
-<li>BarCode: barcode;</li>
-<li>LowVoice: bass;</li>
-<li>HighVoice: high voice;</li>
-<li>NoVoice: mute;</li>
-<li>LowEvaluation: no-reference scoring below threshold.</li>
-                     * @param _type Exception type. Valid values:
-<li>Jitter: jitter.</li>
-<li>Blur: blurry;</li>
-<li>LowLighting: low light;</li>
-<li>HighLighting: overexposure.</li>
-<li>CrashScreen: screen glitch;</li>
-<li>BlackWhiteEdge: black and white edges.</li>
-<li>SolidColorScreen: solid color screen.</li>
-<li>Noise: noise.</li>
-<li>Mosaic: mosaic.</li>
-<li>QRCode: QR code.</li>
-<li>AppletCode: mini program code.</li>
-<li>BarCode: barcode;</li>
-<li>LowVoice: bass;</li>
-<li>HighVoice: high voice;</li>
-<li>NoVoice: mute;</li>
-<li>LowEvaluation: no-reference scoring below threshold.</li>
+                     * 设置
+                     * @param _type 
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -133,19 +69,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Abnormal fragment list.
-<font color=red>Note:</font> The list only displays the first 100 elements. To obtain the complete result, refer to the corresponding file in SegmentSetFileUrl.
-                     * @return SegmentSet Abnormal fragment list.
-<font color=red>Note:</font> The list only displays the first 100 elements. To obtain the complete result, refer to the corresponding file in SegmentSetFileUrl.
+                     * 获取
+                     * @return SegmentSet 
                      * 
                      */
                     std::vector<QualityInspectItem> GetSegmentSet() const;
 
                     /**
-                     * 设置Abnormal fragment list.
-<font color=red>Note:</font> The list only displays the first 100 elements. To obtain the complete result, refer to the corresponding file in SegmentSetFileUrl.
-                     * @param _segmentSet Abnormal fragment list.
-<font color=red>Note:</font> The list only displays the first 100 elements. To obtain the complete result, refer to the corresponding file in SegmentSetFileUrl.
+                     * 设置
+                     * @param _segmentSet 
                      * 
                      */
                     void SetSegmentSet(const std::vector<QualityInspectItem>& _segmentSet);
@@ -158,15 +90,15 @@ namespace TencentCloud
                     bool SegmentSetHasBeenSet() const;
 
                     /**
-                     * 获取URL of Abnormal Fragment List File. The content of the file is JSON, consistent with the fields of SegmentSet. (The file will not be retained permanently and will be deleted when reaching SegmentSetFileUrlExpireTime.)
-                     * @return SegmentSetFileUrl URL of Abnormal Fragment List File. The content of the file is JSON, consistent with the fields of SegmentSet. (The file will not be retained permanently and will be deleted when reaching SegmentSetFileUrlExpireTime.)
+                     * 获取
+                     * @return SegmentSetFileUrl 
                      * 
                      */
                     std::string GetSegmentSetFileUrl() const;
 
                     /**
-                     * 设置URL of Abnormal Fragment List File. The content of the file is JSON, consistent with the fields of SegmentSet. (The file will not be retained permanently and will be deleted when reaching SegmentSetFileUrlExpireTime.)
-                     * @param _segmentSetFileUrl URL of Abnormal Fragment List File. The content of the file is JSON, consistent with the fields of SegmentSet. (The file will not be retained permanently and will be deleted when reaching SegmentSetFileUrlExpireTime.)
+                     * 设置
+                     * @param _segmentSetFileUrl 
                      * 
                      */
                     void SetSegmentSetFileUrl(const std::string& _segmentSetFileUrl);
@@ -179,15 +111,15 @@ namespace TencentCloud
                     bool SegmentSetFileUrlHasBeenSet() const;
 
                     /**
-                     * 获取Expiration time of the Segment List File URL for anomalies, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-                     * @return SegmentSetFileUrlExpireTime Expiration time of the Segment List File URL for anomalies, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 获取
+                     * @return SegmentSetFileUrlExpireTime 
                      * 
                      */
                     std::string GetSegmentSetFileUrlExpireTime() const;
 
                     /**
-                     * 设置Expiration time of the Segment List File URL for anomalies, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-                     * @param _segmentSetFileUrlExpireTime Expiration time of the Segment List File URL for anomalies, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 设置
+                     * @param _segmentSetFileUrlExpireTime 
                      * 
                      */
                     void SetSegmentSetFileUrlExpireTime(const std::string& _segmentSetFileUrlExpireTime);
@@ -202,42 +134,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Exception type. Valid values:
-<li>Jitter: jitter.</li>
-<li>Blur: blurry;</li>
-<li>LowLighting: low light;</li>
-<li>HighLighting: overexposure.</li>
-<li>CrashScreen: screen glitch;</li>
-<li>BlackWhiteEdge: black and white edges.</li>
-<li>SolidColorScreen: solid color screen.</li>
-<li>Noise: noise.</li>
-<li>Mosaic: mosaic.</li>
-<li>QRCode: QR code.</li>
-<li>AppletCode: mini program code.</li>
-<li>BarCode: barcode;</li>
-<li>LowVoice: bass;</li>
-<li>HighVoice: high voice;</li>
-<li>NoVoice: mute;</li>
-<li>LowEvaluation: no-reference scoring below threshold.</li>
+                     * 
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Abnormal fragment list.
-<font color=red>Note:</font> The list only displays the first 100 elements. To obtain the complete result, refer to the corresponding file in SegmentSetFileUrl.
+                     * 
                      */
                     std::vector<QualityInspectItem> m_segmentSet;
                     bool m_segmentSetHasBeenSet;
 
                     /**
-                     * URL of Abnormal Fragment List File. The content of the file is JSON, consistent with the fields of SegmentSet. (The file will not be retained permanently and will be deleted when reaching SegmentSetFileUrlExpireTime.)
+                     * 
                      */
                     std::string m_segmentSetFileUrl;
                     bool m_segmentSetFileUrlHasBeenSet;
 
                     /**
-                     * Expiration time of the Segment List File URL for anomalies, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 
                      */
                     std::string m_segmentSetFileUrlExpireTime;
                     bool m_segmentSetFileUrlExpireTimeHasBeenSet;

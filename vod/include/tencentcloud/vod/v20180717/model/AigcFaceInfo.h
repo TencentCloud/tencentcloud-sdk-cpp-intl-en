@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * AIGC human face information
+                * 
                 */
                 class AigcFaceInfo : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Principal ID. Need to do it yourself to record the returned principal ID.
-                     * @return SessionId Principal ID. Need to do it yourself to record the returned principal ID.
+                     * 获取
+                     * @return SessionId 
                      * 
                      */
                     std::string GetSessionId() const;
 
                     /**
-                     * 设置Principal ID. Need to do it yourself to record the returned principal ID.
-                     * @param _sessionId Principal ID. Need to do it yourself to record the returned principal ID.
+                     * 设置
+                     * @param _sessionId 
                      * 
                      */
                     void SetSessionId(const std::string& _sessionId);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool SessionIdHasBeenSet() const;
 
                     /**
-                     * 获取Face information list.
-                     * @return FaceInfoList Face information list.
+                     * 获取
+                     * @return FaceInfoList 
                      * 
                      */
                     std::vector<AigcFaceIdentityInfo> GetFaceInfoList() const;
 
                     /**
-                     * 设置Face information list.
-                     * @param _faceInfoList Face information list.
+                     * 设置
+                     * @param _faceInfoList 
                      * 
                      */
                     void SetFaceInfoList(const std::vector<AigcFaceIdentityInfo>& _faceInfoList);
@@ -92,13 +92,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Principal ID. Need to do it yourself to record the returned principal ID.
+                     * 
                      */
                     std::string m_sessionId;
                     bool m_sessionIdHasBeenSet;
 
                     /**
-                     * Face information list.
+                     * 
                      */
                     std::vector<AigcFaceIdentityInfo> m_faceInfoList;
                     bool m_faceInfoListHasBeenSet;

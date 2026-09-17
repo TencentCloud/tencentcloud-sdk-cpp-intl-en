@@ -38,7 +38,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Parameters for recognition of pornographic content
+                * 
                 */
                 class PornConfigureInfoForUpdate : public AbstractModel
                 {
@@ -50,15 +50,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Parameters for recognition of pornographic content in images
-                     * @return ImgReviewInfo Parameters for recognition of pornographic content in images
+                     * 获取
+                     * @return ImgReviewInfo 
                      * 
                      */
                     PornImgReviewTemplateInfoForUpdate GetImgReviewInfo() const;
 
                     /**
-                     * 设置Parameters for recognition of pornographic content in images
-                     * @param _imgReviewInfo Parameters for recognition of pornographic content in images
+                     * 设置
+                     * @param _imgReviewInfo 
                      * 
                      */
                     void SetImgReviewInfo(const PornImgReviewTemplateInfoForUpdate& _imgReviewInfo);
@@ -71,15 +71,15 @@ namespace TencentCloud
                     bool ImgReviewInfoHasBeenSet() const;
 
                     /**
-                     * 获取Parameters for ASR-based recognition of pornographic content
-                     * @return AsrReviewInfo Parameters for ASR-based recognition of pornographic content
+                     * 获取
+                     * @return AsrReviewInfo 
                      * 
                      */
                     PornAsrReviewTemplateInfoForUpdate GetAsrReviewInfo() const;
 
                     /**
-                     * 设置Parameters for ASR-based recognition of pornographic content
-                     * @param _asrReviewInfo Parameters for ASR-based recognition of pornographic content
+                     * 设置
+                     * @param _asrReviewInfo 
                      * 
                      */
                     void SetAsrReviewInfo(const PornAsrReviewTemplateInfoForUpdate& _asrReviewInfo);
@@ -92,15 +92,15 @@ namespace TencentCloud
                     bool AsrReviewInfoHasBeenSet() const;
 
                     /**
-                     * 获取Parameters for OCR-based recognition of pornographic content
-                     * @return OcrReviewInfo Parameters for OCR-based recognition of pornographic content
+                     * 获取
+                     * @return OcrReviewInfo 
                      * 
                      */
                     PornOcrReviewTemplateInfoForUpdate GetOcrReviewInfo() const;
 
                     /**
-                     * 设置Parameters for OCR-based recognition of pornographic content
-                     * @param _ocrReviewInfo Parameters for OCR-based recognition of pornographic content
+                     * 设置
+                     * @param _ocrReviewInfo 
                      * 
                      */
                     void SetOcrReviewInfo(const PornOcrReviewTemplateInfoForUpdate& _ocrReviewInfo);
@@ -115,19 +115,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Parameters for recognition of pornographic content in images
+                     * 
                      */
                     PornImgReviewTemplateInfoForUpdate m_imgReviewInfo;
                     bool m_imgReviewInfoHasBeenSet;
 
                     /**
-                     * Parameters for ASR-based recognition of pornographic content
+                     * 
                      */
                     PornAsrReviewTemplateInfoForUpdate m_asrReviewInfo;
                     bool m_asrReviewInfoHasBeenSet;
 
                     /**
-                     * Parameters for OCR-based recognition of pornographic content
+                     * 
                      */
                     PornOcrReviewTemplateInfoForUpdate m_ocrReviewInfo;
                     bool m_ocrReviewInfoHasBeenSet;

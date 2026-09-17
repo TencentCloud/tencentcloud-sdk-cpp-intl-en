@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Privacy protection configuration for the smart erasing template.
+                * 
                 */
                 class MPSSmartErasePrivacyConfig : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Privacy protection removal method.</p><p>Enumeration value:</p><ul><li>blur: Blurry</li><li>mosaic: Mosaic</li></ul>
-                     * @return PrivacyModel <p>Privacy protection removal method.</p><p>Enumeration value:</p><ul><li>blur: Blurry</li><li>mosaic: Mosaic</li></ul>
+                     * 获取
+                     * @return PrivacyModel 
                      * 
                      */
                     std::string GetPrivacyModel() const;
 
                     /**
-                     * 设置<p>Privacy protection removal method.</p><p>Enumeration value:</p><ul><li>blur: Blurry</li><li>mosaic: Mosaic</li></ul>
-                     * @param _privacyModel <p>Privacy protection removal method.</p><p>Enumeration value:</p><ul><li>blur: Blurry</li><li>mosaic: Mosaic</li></ul>
+                     * 设置
+                     * @param _privacyModel 
                      * 
                      */
                     void SetPrivacyModel(const std::string& _privacyModel);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool PrivacyModelHasBeenSet() const;
 
                     /**
-                     * 获取<p>Privacy protection objective (no need to input an array when in use on API Explorer, just add the corresponding item and fill in the value).</p><p>Enumeration value:</p><ul><li>face: human face</li><li>plate: license plate</li></ul>
-                     * @return PrivacyTargets <p>Privacy protection objective (no need to input an array when in use on API Explorer, just add the corresponding item and fill in the value).</p><p>Enumeration value:</p><ul><li>face: human face</li><li>plate: license plate</li></ul>
+                     * 获取
+                     * @return PrivacyTargets 
                      * 
                      */
                     std::vector<std::string> GetPrivacyTargets() const;
 
                     /**
-                     * 设置<p>Privacy protection objective (no need to input an array when in use on API Explorer, just add the corresponding item and fill in the value).</p><p>Enumeration value:</p><ul><li>face: human face</li><li>plate: license plate</li></ul>
-                     * @param _privacyTargets <p>Privacy protection objective (no need to input an array when in use on API Explorer, just add the corresponding item and fill in the value).</p><p>Enumeration value:</p><ul><li>face: human face</li><li>plate: license plate</li></ul>
+                     * 设置
+                     * @param _privacyTargets 
                      * 
                      */
                     void SetPrivacyTargets(const std::vector<std::string>& _privacyTargets);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Privacy protection removal method.</p><p>Enumeration value:</p><ul><li>blur: Blurry</li><li>mosaic: Mosaic</li></ul>
+                     * 
                      */
                     std::string m_privacyModel;
                     bool m_privacyModelHasBeenSet;
 
                     /**
-                     * <p>Privacy protection objective (no need to input an array when in use on API Explorer, just add the corresponding item and fill in the value).</p><p>Enumeration value:</p><ul><li>face: human face</li><li>plate: license plate</li></ul>
+                     * 
                      */
                     std::vector<std::string> m_privacyTargets;
                     bool m_privacyTargetsHasBeenSet;

@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * The information of an adaptive bitrate (bitrate reduction) task.
+                * 
                 */
                 class ReduceMediaBitrateAdaptiveDynamicStreamingResult : public AbstractModel
                 {
@@ -49,15 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The task status. Valid values: PROCESSING, SUCCESS, FAIL.
-                     * @return Status The task status. Valid values: PROCESSING, SUCCESS, FAIL.
+                     * 获取
+                     * @return Status 
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置The task status. Valid values: PROCESSING, SUCCESS, FAIL.
-                     * @param _status The task status. Valid values: PROCESSING, SUCCESS, FAIL.
+                     * 设置
+                     * @param _status 
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -70,15 +70,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取The error code. An empty string indicates the task is successful; other values indicate that the task failed. For details, see [Video processing error codes](https://intl.cloud.tencent.com/document/product/266/39145?lang=en&pg=#video-processing).
-                     * @return ErrCodeExt The error code. An empty string indicates the task is successful; other values indicate that the task failed. For details, see [Video processing error codes](https://intl.cloud.tencent.com/document/product/266/39145?lang=en&pg=#video-processing).
+                     * 获取
+                     * @return ErrCodeExt 
                      * 
                      */
                     std::string GetErrCodeExt() const;
 
                     /**
-                     * 设置The error code. An empty string indicates the task is successful; other values indicate that the task failed. For details, see [Video processing error codes](https://intl.cloud.tencent.com/document/product/266/39145?lang=en&pg=#video-processing).
-                     * @param _errCodeExt The error code. An empty string indicates the task is successful; other values indicate that the task failed. For details, see [Video processing error codes](https://intl.cloud.tencent.com/document/product/266/39145?lang=en&pg=#video-processing).
+                     * 设置
+                     * @param _errCodeExt 
                      * 
                      */
                     void SetErrCodeExt(const std::string& _errCodeExt);
@@ -91,15 +91,15 @@ namespace TencentCloud
                     bool ErrCodeExtHasBeenSet() const;
 
                     /**
-                     * 获取The error message.
-                     * @return Message The error message.
+                     * 获取
+                     * @return Message 
                      * 
                      */
                     std::string GetMessage() const;
 
                     /**
-                     * 设置The error message.
-                     * @param _message The error message.
+                     * 设置
+                     * @param _message 
                      * 
                      */
                     void SetMessage(const std::string& _message);
@@ -112,15 +112,15 @@ namespace TencentCloud
                     bool MessageHasBeenSet() const;
 
                     /**
-                     * 获取The input of an adaptive bitrate task.
-                     * @return Input The input of an adaptive bitrate task.
+                     * 获取
+                     * @return Input 
                      * 
                      */
                     AdaptiveDynamicStreamingTaskInput GetInput() const;
 
                     /**
-                     * 设置The input of an adaptive bitrate task.
-                     * @param _input The input of an adaptive bitrate task.
+                     * 设置
+                     * @param _input 
                      * 
                      */
                     void SetInput(const AdaptiveDynamicStreamingTaskInput& _input);
@@ -133,15 +133,15 @@ namespace TencentCloud
                     bool InputHasBeenSet() const;
 
                     /**
-                     * 获取The output of an adaptive bitrate task.
-                     * @return Output The output of an adaptive bitrate task.
+                     * 获取
+                     * @return Output 
                      * 
                      */
                     AdaptiveDynamicStreamingInfoItem GetOutput() const;
 
                     /**
-                     * 设置The output of an adaptive bitrate task.
-                     * @param _output The output of an adaptive bitrate task.
+                     * 设置
+                     * @param _output 
                      * 
                      */
                     void SetOutput(const AdaptiveDynamicStreamingInfoItem& _output);
@@ -156,31 +156,31 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The task status. Valid values: PROCESSING, SUCCESS, FAIL.
+                     * 
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * The error code. An empty string indicates the task is successful; other values indicate that the task failed. For details, see [Video processing error codes](https://intl.cloud.tencent.com/document/product/266/39145?lang=en&pg=#video-processing).
+                     * 
                      */
                     std::string m_errCodeExt;
                     bool m_errCodeExtHasBeenSet;
 
                     /**
-                     * The error message.
+                     * 
                      */
                     std::string m_message;
                     bool m_messageHasBeenSet;
 
                     /**
-                     * The input of an adaptive bitrate task.
+                     * 
                      */
                     AdaptiveDynamicStreamingTaskInput m_input;
                     bool m_inputHasBeenSet;
 
                     /**
-                     * The output of an adaptive bitrate task.
+                     * 
                      */
                     AdaptiveDynamicStreamingInfoItem m_output;
                     bool m_outputHasBeenSet;

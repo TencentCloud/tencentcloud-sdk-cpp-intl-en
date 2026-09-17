@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * CDN log information
+                * 
                 */
                 class CdnLogInfo : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Date the log belongs to, format: yyyy-MM-dd, for example 2018-03-01.</p>
-                     * @return Date <p>Date the log belongs to, format: yyyy-MM-dd, for example 2018-03-01.</p>
+                     * 获取
+                     * @return Date 
                      * 
                      */
                     std::string GetDate() const;
 
                     /**
-                     * 设置<p>Date the log belongs to, format: yyyy-MM-dd, for example 2018-03-01.</p>
-                     * @param _date <p>Date the log belongs to, format: yyyy-MM-dd, for example 2018-03-01.</p>
+                     * 设置
+                     * @param _date 
                      * 
                      */
                     void SetDate(const std::string& _date);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool DateHasBeenSet() const;
 
                     /**
-                     * 获取<p>Log name, format: date hr-domain name<br>For example, example.com.</p>
-                     * @return Name <p>Log name, format: date hr-domain name<br>For example, example.com.</p>
+                     * 获取
+                     * @return Name 
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置<p>Log name, format: date hr-domain name<br>For example, example.com.</p>
-                     * @param _name <p>Log name, format: date hr-domain name<br>For example, example.com.</p>
+                     * 设置
+                     * @param _name 
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取<p>Log download link, valid for 24 hours.</p>
-                     * @return Url <p>Log download link, valid for 24 hours.</p>
+                     * 获取
+                     * @return Url 
                      * 
                      */
                     std::string GetUrl() const;
 
                     /**
-                     * 设置<p>Log download link, valid for 24 hours.</p>
-                     * @param _url <p>Log download link, valid for 24 hours.</p>
+                     * 设置
+                     * @param _url 
                      * 
                      */
                     void SetUrl(const std::string& _url);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool UrlHasBeenSet() const;
 
                     /**
-                     * 获取<p>Log start time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
-                     * @return StartTime <p>Log start time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+                     * 获取
+                     * @return StartTime 
                      * 
                      */
                     std::string GetStartTime() const;
 
                     /**
-                     * 设置<p>Log start time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
-                     * @param _startTime <p>Log start time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+                     * 设置
+                     * @param _startTime 
                      * 
                      */
                     void SetStartTime(const std::string& _startTime);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Log end time. Use the <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
-                     * @return EndTime <p>Log end time. Use the <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+                     * 获取
+                     * @return EndTime 
                      * 
                      */
                     std::string GetEndTime() const;
 
                     /**
-                     * 设置<p>Log end time. Use the <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
-                     * @param _endTime <p>Log end time. Use the <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+                     * 设置
+                     * @param _endTime 
                      * 
                      */
                     void SetEndTime(const std::string& _endTime);
@@ -154,31 +154,31 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Date the log belongs to, format: yyyy-MM-dd, for example 2018-03-01.</p>
+                     * 
                      */
                     std::string m_date;
                     bool m_dateHasBeenSet;
 
                     /**
-                     * <p>Log name, format: date hr-domain name<br>For example, example.com.</p>
+                     * 
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * <p>Log download link, valid for 24 hours.</p>
+                     * 
                      */
                     std::string m_url;
                     bool m_urlHasBeenSet;
 
                     /**
-                     * <p>Log start time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+                     * 
                      */
                     std::string m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * <p>Log end time. Use the <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+                     * 
                      */
                     std::string m_endTime;
                     bool m_endTimeHasBeenSet;

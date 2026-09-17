@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * MPS intelligent analysis template configuration options
+                * 
                 */
                 class MPSAIAnalysisConfigureInfo : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Task switch for intelligent classification. Available values: <li>ON: Enable intelligent classification task;</li> <li>OFF: Disable intelligent classification task.</li></p>
-                     * @return Switch <p>Task switch for intelligent classification. Available values: <li>ON: Enable intelligent classification task;</li> <li>OFF: Disable intelligent classification task.</li></p>
+                     * 获取
+                     * @return Switch 
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置<p>Task switch for intelligent classification. Available values: <li>ON: Enable intelligent classification task;</li> <li>OFF: Disable intelligent classification task.</li></p>
-                     * @param _switch <p>Task switch for intelligent classification. Available values: <li>ON: Enable intelligent classification task;</li> <li>OFF: Disable intelligent classification task.</li></p>
+                     * 设置
+                     * @param _switch 
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -70,7 +70,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Task switch for intelligent classification. Available values: <li>ON: Enable intelligent classification task;</li> <li>OFF: Disable intelligent classification task.</li></p>
+                     * 
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;

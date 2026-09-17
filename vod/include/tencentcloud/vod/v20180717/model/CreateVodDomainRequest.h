@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Domain name for on-demand acceleration. Note: Filling in wildcard domains is not supported.
-                     * @return Domain Domain name for on-demand acceleration. Note: Filling in wildcard domains is not supported.
+                     * 获取
+                     * @return Domain 
                      * 
                      */
                     std::string GetDomain() const;
 
                     /**
-                     * 设置Domain name for on-demand acceleration. Note: Filling in wildcard domains is not supported.
-                     * @param _domain Domain name for on-demand acceleration. Note: Filling in wildcard domains is not supported.
+                     * 设置
+                     * @param _domain 
                      * 
                      */
                     void SetDomain(const std::string& _domain);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool DomainHasBeenSet() const;
 
                     /**
-                     * 获取<b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
-                     * @return SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+                     * 获取
+                     * @return SubAppId 
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置<b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
-                     * @param _subAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+                     * 设置
+                     * @param _subAppId 
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -85,31 +85,15 @@ namespace TencentCloud
                     bool SubAppIdHasBeenSet() const;
 
                     /**
-                     * 获取Region to enable acceleration. Valid values:
-<li>`Chinese Mainland`</li>
-<li>`Outside Chinese Mainland`</li>
-<li>`Global`</li>
-If `AccelerateArea` is not specified, VOD will enable acceleration in or outside Chinese mainland based on the regional information a user has configured with Tencent Cloud.
-                     * @return AccelerateArea Region to enable acceleration. Valid values:
-<li>`Chinese Mainland`</li>
-<li>`Outside Chinese Mainland`</li>
-<li>`Global`</li>
-If `AccelerateArea` is not specified, VOD will enable acceleration in or outside Chinese mainland based on the regional information a user has configured with Tencent Cloud.
+                     * 获取
+                     * @return AccelerateArea 
                      * 
                      */
                     std::string GetAccelerateArea() const;
 
                     /**
-                     * 设置Region to enable acceleration. Valid values:
-<li>`Chinese Mainland`</li>
-<li>`Outside Chinese Mainland`</li>
-<li>`Global`</li>
-If `AccelerateArea` is not specified, VOD will enable acceleration in or outside Chinese mainland based on the regional information a user has configured with Tencent Cloud.
-                     * @param _accelerateArea Region to enable acceleration. Valid values:
-<li>`Chinese Mainland`</li>
-<li>`Outside Chinese Mainland`</li>
-<li>`Global`</li>
-If `AccelerateArea` is not specified, VOD will enable acceleration in or outside Chinese mainland based on the regional information a user has configured with Tencent Cloud.
+                     * 设置
+                     * @param _accelerateArea 
                      * 
                      */
                     void SetAccelerateArea(const std::string& _accelerateArea);
@@ -122,15 +106,15 @@ If `AccelerateArea` is not specified, VOD will enable acceleration in or outside
                     bool AccelerateAreaHasBeenSet() const;
 
                     /**
-                     * 获取Domain type. Valid values: <li>VOD: domain name distributed by the VOD product;</li> <li>EdgeOne: domain name distributed by the EdgeOne product.</li> The default value is VOD.
-                     * @return Type Domain type. Valid values: <li>VOD: domain name distributed by the VOD product;</li> <li>EdgeOne: domain name distributed by the EdgeOne product.</li> The default value is VOD.
+                     * 获取
+                     * @return Type 
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Domain type. Valid values: <li>VOD: domain name distributed by the VOD product;</li> <li>EdgeOne: domain name distributed by the EdgeOne product.</li> The default value is VOD.
-                     * @param _type Domain type. Valid values: <li>VOD: domain name distributed by the VOD product;</li> <li>EdgeOne: domain name distributed by the EdgeOne product.</li> The default value is VOD.
+                     * 设置
+                     * @param _type 
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -145,29 +129,25 @@ If `AccelerateArea` is not specified, VOD will enable acceleration in or outside
                 private:
 
                     /**
-                     * Domain name for on-demand acceleration. Note: Filling in wildcard domains is not supported.
+                     * 
                      */
                     std::string m_domain;
                     bool m_domainHasBeenSet;
 
                     /**
-                     * <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+                     * 
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
 
                     /**
-                     * Region to enable acceleration. Valid values:
-<li>`Chinese Mainland`</li>
-<li>`Outside Chinese Mainland`</li>
-<li>`Global`</li>
-If `AccelerateArea` is not specified, VOD will enable acceleration in or outside Chinese mainland based on the regional information a user has configured with Tencent Cloud.
+                     * 
                      */
                     std::string m_accelerateArea;
                     bool m_accelerateAreaHasBeenSet;
 
                     /**
-                     * Domain type. Valid values: <li>VOD: domain name distributed by the VOD product;</li> <li>EdgeOne: domain name distributed by the EdgeOne product.</li> The default value is VOD.
+                     * 
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;

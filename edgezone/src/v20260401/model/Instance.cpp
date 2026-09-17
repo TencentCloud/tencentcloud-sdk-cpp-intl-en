@@ -36,7 +36,13 @@ Instance::Instance() :
     m_publicNetworkIdHasBeenSet(false),
     m_publicIpHasBeenSet(false),
     m_publicIpV6HasBeenSet(false),
-    m_createdTimeHasBeenSet(false)
+    m_fileSystemTypeHasBeenSet(false),
+    m_createdTimeHasBeenSet(false),
+    m_instanceFamilyHasBeenSet(false),
+    m_instanceFamilyNameHasBeenSet(false),
+    m_cpuTypeHasBeenSet(false),
+    m_cpuHasBeenSet(false),
+    m_memoryHasBeenSet(false)
 {
 }
 
@@ -195,6 +201,16 @@ CoreInternalOutcome Instance::Deserialize(const rapidjson::Value &value)
         m_publicIpV6HasBeenSet = true;
     }
 
+    if (value.HasMember("FileSystemType") && !value["FileSystemType"].IsNull())
+    {
+        if (!value["FileSystemType"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `Instance.FileSystemType` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_fileSystemType = string(value["FileSystemType"].GetString());
+        m_fileSystemTypeHasBeenSet = true;
+    }
+
     if (value.HasMember("CreatedTime") && !value["CreatedTime"].IsNull())
     {
         if (!value["CreatedTime"].IsString())
@@ -203,6 +219,56 @@ CoreInternalOutcome Instance::Deserialize(const rapidjson::Value &value)
         }
         m_createdTime = string(value["CreatedTime"].GetString());
         m_createdTimeHasBeenSet = true;
+    }
+
+    if (value.HasMember("InstanceFamily") && !value["InstanceFamily"].IsNull())
+    {
+        if (!value["InstanceFamily"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `Instance.InstanceFamily` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_instanceFamily = string(value["InstanceFamily"].GetString());
+        m_instanceFamilyHasBeenSet = true;
+    }
+
+    if (value.HasMember("InstanceFamilyName") && !value["InstanceFamilyName"].IsNull())
+    {
+        if (!value["InstanceFamilyName"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `Instance.InstanceFamilyName` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_instanceFamilyName = string(value["InstanceFamilyName"].GetString());
+        m_instanceFamilyNameHasBeenSet = true;
+    }
+
+    if (value.HasMember("CpuType") && !value["CpuType"].IsNull())
+    {
+        if (!value["CpuType"].IsString())
+        {
+            return CoreInternalOutcome(Core::Error("response `Instance.CpuType` IsString=false incorrectly").SetRequestId(requestId));
+        }
+        m_cpuType = string(value["CpuType"].GetString());
+        m_cpuTypeHasBeenSet = true;
+    }
+
+    if (value.HasMember("Cpu") && !value["Cpu"].IsNull())
+    {
+        if (!value["Cpu"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `Instance.Cpu` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_cpu = value["Cpu"].GetInt64();
+        m_cpuHasBeenSet = true;
+    }
+
+    if (value.HasMember("Memory") && !value["Memory"].IsNull())
+    {
+        if (!value["Memory"].IsInt64())
+        {
+            return CoreInternalOutcome(Core::Error("response `Instance.Memory` IsInt64=false incorrectly").SetRequestId(requestId));
+        }
+        m_memory = value["Memory"].GetInt64();
+        m_memoryHasBeenSet = true;
     }
 
 
@@ -332,12 +398,60 @@ void Instance::ToJsonObject(rapidjson::Value &value, rapidjson::Document::Alloca
         value.AddMember(iKey, rapidjson::Value(m_publicIpV6.c_str(), allocator).Move(), allocator);
     }
 
+    if (m_fileSystemTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "FileSystemType";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_fileSystemType.c_str(), allocator).Move(), allocator);
+    }
+
     if (m_createdTimeHasBeenSet)
     {
         rapidjson::Value iKey(rapidjson::kStringType);
         string key = "CreatedTime";
         iKey.SetString(key.c_str(), allocator);
         value.AddMember(iKey, rapidjson::Value(m_createdTime.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_instanceFamilyHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "InstanceFamily";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_instanceFamily.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_instanceFamilyNameHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "InstanceFamilyName";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_instanceFamilyName.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_cpuTypeHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "CpuType";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, rapidjson::Value(m_cpuType.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_cpuHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Cpu";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_cpu, allocator);
+    }
+
+    if (m_memoryHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "Memory";
+        iKey.SetString(key.c_str(), allocator);
+        value.AddMember(iKey, m_memory, allocator);
     }
 
 }
@@ -583,6 +697,22 @@ bool Instance::PublicIpV6HasBeenSet() const
     return m_publicIpV6HasBeenSet;
 }
 
+string Instance::GetFileSystemType() const
+{
+    return m_fileSystemType;
+}
+
+void Instance::SetFileSystemType(const string& _fileSystemType)
+{
+    m_fileSystemType = _fileSystemType;
+    m_fileSystemTypeHasBeenSet = true;
+}
+
+bool Instance::FileSystemTypeHasBeenSet() const
+{
+    return m_fileSystemTypeHasBeenSet;
+}
+
 string Instance::GetCreatedTime() const
 {
     return m_createdTime;
@@ -597,5 +727,85 @@ void Instance::SetCreatedTime(const string& _createdTime)
 bool Instance::CreatedTimeHasBeenSet() const
 {
     return m_createdTimeHasBeenSet;
+}
+
+string Instance::GetInstanceFamily() const
+{
+    return m_instanceFamily;
+}
+
+void Instance::SetInstanceFamily(const string& _instanceFamily)
+{
+    m_instanceFamily = _instanceFamily;
+    m_instanceFamilyHasBeenSet = true;
+}
+
+bool Instance::InstanceFamilyHasBeenSet() const
+{
+    return m_instanceFamilyHasBeenSet;
+}
+
+string Instance::GetInstanceFamilyName() const
+{
+    return m_instanceFamilyName;
+}
+
+void Instance::SetInstanceFamilyName(const string& _instanceFamilyName)
+{
+    m_instanceFamilyName = _instanceFamilyName;
+    m_instanceFamilyNameHasBeenSet = true;
+}
+
+bool Instance::InstanceFamilyNameHasBeenSet() const
+{
+    return m_instanceFamilyNameHasBeenSet;
+}
+
+string Instance::GetCpuType() const
+{
+    return m_cpuType;
+}
+
+void Instance::SetCpuType(const string& _cpuType)
+{
+    m_cpuType = _cpuType;
+    m_cpuTypeHasBeenSet = true;
+}
+
+bool Instance::CpuTypeHasBeenSet() const
+{
+    return m_cpuTypeHasBeenSet;
+}
+
+int64_t Instance::GetCpu() const
+{
+    return m_cpu;
+}
+
+void Instance::SetCpu(const int64_t& _cpu)
+{
+    m_cpu = _cpu;
+    m_cpuHasBeenSet = true;
+}
+
+bool Instance::CpuHasBeenSet() const
+{
+    return m_cpuHasBeenSet;
+}
+
+int64_t Instance::GetMemory() const
+{
+    return m_memory;
+}
+
+void Instance::SetMemory(const int64_t& _memory)
+{
+    m_memory = _memory;
+    m_memoryHasBeenSet = true;
+}
+
+bool Instance::MemoryHasBeenSet() const
+{
+    return m_memoryHasBeenSet;
 }
 

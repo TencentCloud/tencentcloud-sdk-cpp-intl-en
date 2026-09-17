@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Task ID of the task type Procedure. Initiate the task when the task flow template specification corresponding to the input parameter ProcedureName includes one or more of MediaProcessTask, AiAnalysisTask, or AiRecognitionTask.
-                     * @return TaskId Task ID of the task type Procedure. Initiate the task when the task flow template specification corresponding to the input parameter ProcedureName includes one or more of MediaProcessTask, AiAnalysisTask, or AiRecognitionTask.
+                     * 获取
+                     * @return TaskId 
                      * 
                      */
                     std::string GetTaskId() const;
@@ -58,8 +58,8 @@ namespace TencentCloud
                     bool TaskIdHasBeenSet() const;
 
                     /**
-                     * 获取Task ID of the task with the ReviewAudioVideo task type. The task is initiated when the task flow template specified by the ProcedureName input parameter includes the ReviewAudioVideoTask.
-                     * @return ReviewAudioVideoTaskId Task ID of the task with the ReviewAudioVideo task type. The task is initiated when the task flow template specified by the ProcedureName input parameter includes the ReviewAudioVideoTask.
+                     * 获取
+                     * @return ReviewAudioVideoTaskId 
                      * 
                      */
                     std::string GetReviewAudioVideoTaskId() const;
@@ -71,19 +71,39 @@ namespace TencentCloud
                      */
                     bool ReviewAudioVideoTaskIdHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return ImportMediaKnowledgeTaskIdSet 
+                     * 
+                     */
+                    std::vector<std::string> GetImportMediaKnowledgeTaskIdSet() const;
+
+                    /**
+                     * 判断参数 ImportMediaKnowledgeTaskIdSet 是否已赋值
+                     * @return ImportMediaKnowledgeTaskIdSet 是否已赋值
+                     * 
+                     */
+                    bool ImportMediaKnowledgeTaskIdSetHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Task ID of the task type Procedure. Initiate the task when the task flow template specification corresponding to the input parameter ProcedureName includes one or more of MediaProcessTask, AiAnalysisTask, or AiRecognitionTask.
+                     * 
                      */
                     std::string m_taskId;
                     bool m_taskIdHasBeenSet;
 
                     /**
-                     * Task ID of the task with the ReviewAudioVideo task type. The task is initiated when the task flow template specified by the ProcedureName input parameter includes the ReviewAudioVideoTask.
+                     * 
                      */
                     std::string m_reviewAudioVideoTaskId;
                     bool m_reviewAudioVideoTaskIdHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::vector<std::string> m_importMediaKnowledgeTaskIdSet;
+                    bool m_importMediaKnowledgeTaskIdSetHasBeenSet;
 
                 };
             }

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * The moderation result for pornographic content in an image.
+                * 
                 */
                 class PornImageResult : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The confidence score for the moderation result. Value range: 0-100.
-                     * @return Confidence The confidence score for the moderation result. Value range: 0-100.
+                     * 获取
+                     * @return Confidence 
                      * 
                      */
                     double GetConfidence() const;
 
                     /**
-                     * 设置The confidence score for the moderation result. Value range: 0-100.
-                     * @param _confidence The confidence score for the moderation result. Value range: 0-100.
+                     * 设置
+                     * @param _confidence 
                      * 
                      */
                     void SetConfidence(const double& _confidence);
@@ -68,27 +68,15 @@ namespace TencentCloud
                     bool ConfidenceHasBeenSet() const;
 
                     /**
-                     * 获取The suggestion for handling the detected pornographic content. Valid values:
-<li>pass/li>
-<li>review</li>
-<li>block</li>
-                     * @return Suggestion The suggestion for handling the detected pornographic content. Valid values:
-<li>pass/li>
-<li>review</li>
-<li>block</li>
+                     * 获取
+                     * @return Suggestion 
                      * 
                      */
                     std::string GetSuggestion() const;
 
                     /**
-                     * 设置The suggestion for handling the detected pornographic content. Valid values:
-<li>pass/li>
-<li>review</li>
-<li>block</li>
-                     * @param _suggestion The suggestion for handling the detected pornographic content. Valid values:
-<li>pass/li>
-<li>review</li>
-<li>block</li>
+                     * 设置
+                     * @param _suggestion 
                      * 
                      */
                     void SetSuggestion(const std::string& _suggestion);
@@ -101,31 +89,15 @@ namespace TencentCloud
                     bool SuggestionHasBeenSet() const;
 
                     /**
-                     * 获取The label for the detected pornographic content. Valid values:
-<li>porn</li>
-<li>sexy</li>
-<li>vulgar</li>
-<li>intimacy</li>
-                     * @return Label The label for the detected pornographic content. Valid values:
-<li>porn</li>
-<li>sexy</li>
-<li>vulgar</li>
-<li>intimacy</li>
+                     * 获取
+                     * @return Label 
                      * 
                      */
                     std::string GetLabel() const;
 
                     /**
-                     * 设置The label for the detected pornographic content. Valid values:
-<li>porn</li>
-<li>sexy</li>
-<li>vulgar</li>
-<li>intimacy</li>
-                     * @param _label The label for the detected pornographic content. Valid values:
-<li>porn</li>
-<li>sexy</li>
-<li>vulgar</li>
-<li>intimacy</li>
+                     * 设置
+                     * @param _label 
                      * 
                      */
                     void SetLabel(const std::string& _label);
@@ -140,26 +112,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The confidence score for the moderation result. Value range: 0-100.
+                     * 
                      */
                     double m_confidence;
                     bool m_confidenceHasBeenSet;
 
                     /**
-                     * The suggestion for handling the detected pornographic content. Valid values:
-<li>pass/li>
-<li>review</li>
-<li>block</li>
+                     * 
                      */
                     std::string m_suggestion;
                     bool m_suggestionHasBeenSet;
 
                     /**
-                     * The label for the detected pornographic content. Valid values:
-<li>porn</li>
-<li>sexy</li>
-<li>vulgar</li>
-<li>intimacy</li>
+                     * 
                      */
                     std::string m_label;
                     bool m_labelHasBeenSet;

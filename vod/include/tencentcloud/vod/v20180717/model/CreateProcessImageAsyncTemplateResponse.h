@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Unique identifier of the image asynchronous processing template.
-                     * @return Definition Unique identifier of the image asynchronous processing template.
+                     * 获取
+                     * @return Definition 
                      * 
                      */
                     int64_t GetDefinition() const;
@@ -60,7 +60,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Unique identifier of the image asynchronous processing template.
+                     * 
                      */
                     int64_t m_definition;
                     bool m_definitionHasBeenSet;

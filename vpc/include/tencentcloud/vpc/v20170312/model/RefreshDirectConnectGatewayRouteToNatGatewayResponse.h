@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取IDC subnet information
-                     * @return DirectConnectSubnetSet IDC subnet information
+                     * 获取IDC subnet information.
+                     * @return DirectConnectSubnetSet IDC subnet information.
                      * 
                      */
                     std::vector<DirectConnectSubnet> GetDirectConnectSubnetSet() const;
@@ -61,7 +61,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * IDC subnet information
+                     * IDC subnet information.
                      */
                     std::vector<DirectConnectSubnet> m_directConnectSubnetSet;
                     bool m_directConnectSubnetSetHasBeenSet;

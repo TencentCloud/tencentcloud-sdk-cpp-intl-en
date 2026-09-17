@@ -68,31 +68,15 @@ namespace TencentCloud
                     bool CastIdHasBeenSet() const;
 
                     /**
-                     * 获取Retweet status. Valid values:
-<li>Working: running.</li>
-<li>Scheduled: start up after reaching the scheduled time;</li>
-<li>Stopped: relay has been stopped;</li>
-<li>Idle: idle.</li>
-                     * @return Status Retweet status. Valid values:
-<li>Working: running.</li>
-<li>Scheduled: start up after reaching the scheduled time;</li>
-<li>Stopped: relay has been stopped;</li>
-<li>Idle: idle.</li>
+                     * 获取
+                     * @return Status 
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置Retweet status. Valid values:
-<li>Working: running.</li>
-<li>Scheduled: start up after reaching the scheduled time;</li>
-<li>Stopped: relay has been stopped;</li>
-<li>Idle: idle.</li>
-                     * @param _status Retweet status. Valid values:
-<li>Working: running.</li>
-<li>Scheduled: start up after reaching the scheduled time;</li>
-<li>Stopped: relay has been stopped;</li>
-<li>Idle: idle.</li>
+                     * 设置
+                     * @param _status 
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -113,11 +97,7 @@ namespace TencentCloud
                     bool m_castIdHasBeenSet;
 
                     /**
-                     * Retweet status. Valid values:
-<li>Working: running.</li>
-<li>Scheduled: start up after reaching the scheduled time;</li>
-<li>Stopped: relay has been stopped;</li>
-<li>Idle: idle.</li>
+                     * 
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;

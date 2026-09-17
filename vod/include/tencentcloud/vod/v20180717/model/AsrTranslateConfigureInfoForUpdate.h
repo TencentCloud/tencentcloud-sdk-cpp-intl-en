@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Voice Translation Recognition Control Parameter
+                * 
                 */
                 class AsrTranslateConfigureInfoForUpdate : public AbstractModel
                 {
@@ -48,23 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Voice translation recognition task switch. Available values:
-<li>ON: enabled;</li>
-<li>OFF: Disabled.</li><font color=red>Note:</font> The speech translation recognition task itself will return ASR full text recognition results. To avoid duplicate charges, it is forbidden to enable both speech translation recognition and ASR full text recognition feature items simultaneously.</li>
-                     * @return Switch Voice translation recognition task switch. Available values:
-<li>ON: enabled;</li>
-<li>OFF: Disabled.</li><font color=red>Note:</font> The speech translation recognition task itself will return ASR full text recognition results. To avoid duplicate charges, it is forbidden to enable both speech translation recognition and ASR full text recognition feature items simultaneously.</li>
+                     * 获取
+                     * @return Switch 
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Voice translation recognition task switch. Available values:
-<li>ON: enabled;</li>
-<li>OFF: Disabled.</li><font color=red>Note:</font> The speech translation recognition task itself will return ASR full text recognition results. To avoid duplicate charges, it is forbidden to enable both speech translation recognition and ASR full text recognition feature items simultaneously.</li>
-                     * @param _switch Voice translation recognition task switch. Available values:
-<li>ON: enabled;</li>
-<li>OFF: Disabled.</li><font color=red>Note:</font> The speech translation recognition task itself will return ASR full text recognition results. To avoid duplicate charges, it is forbidden to enable both speech translation recognition and ASR full text recognition feature items simultaneously.</li>
+                     * 设置
+                     * @param _switch 
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -77,67 +69,15 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取Media source language. Valid values:
-<li>zh: Chinese.</li>
-<li>en: English;</li>
-<li>ja: Japanese;</li>
-<li>ko: Korean;</li>
-<li>vi: Vietnamese;</li>
-<li>ms: Malay;</li>
-<li>th: Thai;</li>
-<li>pt: Portuguese;</li>
-<li>tr: Turkish;</li>
-<li>ar: Arabic;</li>
-<li>es: Spanish;</li>
-<li>hi: Hindi;</li>
-<li>fr: French.</li>
-                     * @return SrcLanguage Media source language. Valid values:
-<li>zh: Chinese.</li>
-<li>en: English;</li>
-<li>ja: Japanese;</li>
-<li>ko: Korean;</li>
-<li>vi: Vietnamese;</li>
-<li>ms: Malay;</li>
-<li>th: Thai;</li>
-<li>pt: Portuguese;</li>
-<li>tr: Turkish;</li>
-<li>ar: Arabic;</li>
-<li>es: Spanish;</li>
-<li>hi: Hindi;</li>
-<li>fr: French.</li>
+                     * 获取
+                     * @return SrcLanguage 
                      * 
                      */
                     std::string GetSrcLanguage() const;
 
                     /**
-                     * 设置Media source language. Valid values:
-<li>zh: Chinese.</li>
-<li>en: English;</li>
-<li>ja: Japanese;</li>
-<li>ko: Korean;</li>
-<li>vi: Vietnamese;</li>
-<li>ms: Malay;</li>
-<li>th: Thai;</li>
-<li>pt: Portuguese;</li>
-<li>tr: Turkish;</li>
-<li>ar: Arabic;</li>
-<li>es: Spanish;</li>
-<li>hi: Hindi;</li>
-<li>fr: French.</li>
-                     * @param _srcLanguage Media source language. Valid values:
-<li>zh: Chinese.</li>
-<li>en: English;</li>
-<li>ja: Japanese;</li>
-<li>ko: Korean;</li>
-<li>vi: Vietnamese;</li>
-<li>ms: Malay;</li>
-<li>th: Thai;</li>
-<li>pt: Portuguese;</li>
-<li>tr: Turkish;</li>
-<li>ar: Arabic;</li>
-<li>es: Spanish;</li>
-<li>hi: Hindi;</li>
-<li>fr: French.</li>
+                     * 设置
+                     * @param _srcLanguage 
                      * 
                      */
                     void SetSrcLanguage(const std::string& _srcLanguage);
@@ -150,347 +90,15 @@ namespace TencentCloud
                     bool SrcLanguageHasBeenSet() const;
 
                     /**
-                     * 获取Target language.
-If this parameter is filled in with an empty string, it means that only full speech recognition is performed without translation (the billing item is the same as AsrFullTextConfigure full speech recognition).
-Otherwise, the parameter value range is divided into the following cases:
-When SrcLanguage is zh (Chinese), the value ranges from...to...
-<li>en: English;</li>
-<li>ja: Japanese;</li>
-<li>ko: Korean;</li>
-<li>fr: French;</li>
-<li>es: Spanish;</li>
-<li>it: Italian.</li>
-<li>de: German;</li>
-<li>tr: Turkish;</li>
-<li>ru: Russian;</li>
-<li>pt: Portuguese;</li>
-<li>vi: Vietnamese;</li>
-<li>id: Indonesian;</li>
-<li>th: Thai;</li>
-<li>ms: Malay.</li>
-When SrcLanguage is en (English), the value ranges from...to...
-<li>zh: Chinese.</li>
-<li>ja: Japanese;</li>
-<li>ko: Korean;</li>
-<li>fr: French;</li>
-<li>es: Spanish;</li>
-<li>it: Italian.</li>
-<li>de: German;</li>
-<li>tr: Turkish;</li>
-<li>ru: Russian;</li>
-<li>pt: Portuguese;</li>
-<li>vi: Vietnamese;</li>
-<li>id: Indonesian;</li>
-<li>th: Thai;</li>
-<li>ms: Malay;</li>
-<li>ar: Arabic;</li>
-<li>hi: Hindi.</li>
-When SrcLanguage is ja (Japanese), the parameter value range is
-<li>zh: Chinese.</li>
-<li>en: English;</li>
-<li>ko: Korean.</li>
-When SrcLanguage is ko (Korean), the value ranges from...to...
-<li>zh: Chinese.</li>
-<li>en: English;</li>
-<li>ja: Japanese.</li>
-When SrcLanguage is vi (Vietnamese), ms (Malay), or th (Thai), the value ranges from...to...
-<li>zh: Chinese.</li>
-<li>en: English.</li>
-When SrcLanguage is pt (Portuguese), the value ranges from...to...
-<li>zh: Chinese.</li>
-<li>en: English;</li>
-<li>fr: French;</li>
-<li>es: Spanish;</li>
-<li>it: Italian.</li>
-<li>de: German;</li>
-<li>tr: Turkish;</li>
-<li>ru: Russian.</li>
-When SrcLanguage is tr (Turkish), the value ranges from...to...
-<li>zh: Chinese.</li>
-<li>en: English;</li>
-<li>fr: French;</li>
-<li>es: Spanish;</li>
-<li>it: Italian.</li>
-<li>de: German;</li>
-<li>ru: Russian;</li>
-<li>pt: Portuguese.</li>
-When SrcLanguage is es (Spanish), the parameter value range is
-<li>zh: Chinese.</li>
-<li>en: English;</li>
-<li>fr: French;</li>
-<li>it: Italian.</li>
-<li>de: German;</li>
-<li>tr: Turkish;</li>
-<li>ru: Russian;</li>
-<li>pt: Portuguese.</li>
-When SrcLanguage is ar (Arabic) or hi (Hindi), the value ranges from...to...
-<li>en: English.</li>
-When SrcLanguage is fr (French), the value ranges from...to...
-<li>zh: Chinese.</li>
-<li>en: English;</li>
-<li>es: Spanish;</li>
-<li>it: Italian.</li>
-<li>de: German;</li>
-<li>tr: Turkish;</li>
-<li>ru: Russian;</li>
-<li>pt: Portuguese.</li>
-                     * @return DstLanguage Target language.
-If this parameter is filled in with an empty string, it means that only full speech recognition is performed without translation (the billing item is the same as AsrFullTextConfigure full speech recognition).
-Otherwise, the parameter value range is divided into the following cases:
-When SrcLanguage is zh (Chinese), the value ranges from...to...
-<li>en: English;</li>
-<li>ja: Japanese;</li>
-<li>ko: Korean;</li>
-<li>fr: French;</li>
-<li>es: Spanish;</li>
-<li>it: Italian.</li>
-<li>de: German;</li>
-<li>tr: Turkish;</li>
-<li>ru: Russian;</li>
-<li>pt: Portuguese;</li>
-<li>vi: Vietnamese;</li>
-<li>id: Indonesian;</li>
-<li>th: Thai;</li>
-<li>ms: Malay.</li>
-When SrcLanguage is en (English), the value ranges from...to...
-<li>zh: Chinese.</li>
-<li>ja: Japanese;</li>
-<li>ko: Korean;</li>
-<li>fr: French;</li>
-<li>es: Spanish;</li>
-<li>it: Italian.</li>
-<li>de: German;</li>
-<li>tr: Turkish;</li>
-<li>ru: Russian;</li>
-<li>pt: Portuguese;</li>
-<li>vi: Vietnamese;</li>
-<li>id: Indonesian;</li>
-<li>th: Thai;</li>
-<li>ms: Malay;</li>
-<li>ar: Arabic;</li>
-<li>hi: Hindi.</li>
-When SrcLanguage is ja (Japanese), the parameter value range is
-<li>zh: Chinese.</li>
-<li>en: English;</li>
-<li>ko: Korean.</li>
-When SrcLanguage is ko (Korean), the value ranges from...to...
-<li>zh: Chinese.</li>
-<li>en: English;</li>
-<li>ja: Japanese.</li>
-When SrcLanguage is vi (Vietnamese), ms (Malay), or th (Thai), the value ranges from...to...
-<li>zh: Chinese.</li>
-<li>en: English.</li>
-When SrcLanguage is pt (Portuguese), the value ranges from...to...
-<li>zh: Chinese.</li>
-<li>en: English;</li>
-<li>fr: French;</li>
-<li>es: Spanish;</li>
-<li>it: Italian.</li>
-<li>de: German;</li>
-<li>tr: Turkish;</li>
-<li>ru: Russian.</li>
-When SrcLanguage is tr (Turkish), the value ranges from...to...
-<li>zh: Chinese.</li>
-<li>en: English;</li>
-<li>fr: French;</li>
-<li>es: Spanish;</li>
-<li>it: Italian.</li>
-<li>de: German;</li>
-<li>ru: Russian;</li>
-<li>pt: Portuguese.</li>
-When SrcLanguage is es (Spanish), the parameter value range is
-<li>zh: Chinese.</li>
-<li>en: English;</li>
-<li>fr: French;</li>
-<li>it: Italian.</li>
-<li>de: German;</li>
-<li>tr: Turkish;</li>
-<li>ru: Russian;</li>
-<li>pt: Portuguese.</li>
-When SrcLanguage is ar (Arabic) or hi (Hindi), the value ranges from...to...
-<li>en: English.</li>
-When SrcLanguage is fr (French), the value ranges from...to...
-<li>zh: Chinese.</li>
-<li>en: English;</li>
-<li>es: Spanish;</li>
-<li>it: Italian.</li>
-<li>de: German;</li>
-<li>tr: Turkish;</li>
-<li>ru: Russian;</li>
-<li>pt: Portuguese.</li>
+                     * 获取
+                     * @return DstLanguage 
                      * 
                      */
                     std::string GetDstLanguage() const;
 
                     /**
-                     * 设置Target language.
-If this parameter is filled in with an empty string, it means that only full speech recognition is performed without translation (the billing item is the same as AsrFullTextConfigure full speech recognition).
-Otherwise, the parameter value range is divided into the following cases:
-When SrcLanguage is zh (Chinese), the value ranges from...to...
-<li>en: English;</li>
-<li>ja: Japanese;</li>
-<li>ko: Korean;</li>
-<li>fr: French;</li>
-<li>es: Spanish;</li>
-<li>it: Italian.</li>
-<li>de: German;</li>
-<li>tr: Turkish;</li>
-<li>ru: Russian;</li>
-<li>pt: Portuguese;</li>
-<li>vi: Vietnamese;</li>
-<li>id: Indonesian;</li>
-<li>th: Thai;</li>
-<li>ms: Malay.</li>
-When SrcLanguage is en (English), the value ranges from...to...
-<li>zh: Chinese.</li>
-<li>ja: Japanese;</li>
-<li>ko: Korean;</li>
-<li>fr: French;</li>
-<li>es: Spanish;</li>
-<li>it: Italian.</li>
-<li>de: German;</li>
-<li>tr: Turkish;</li>
-<li>ru: Russian;</li>
-<li>pt: Portuguese;</li>
-<li>vi: Vietnamese;</li>
-<li>id: Indonesian;</li>
-<li>th: Thai;</li>
-<li>ms: Malay;</li>
-<li>ar: Arabic;</li>
-<li>hi: Hindi.</li>
-When SrcLanguage is ja (Japanese), the parameter value range is
-<li>zh: Chinese.</li>
-<li>en: English;</li>
-<li>ko: Korean.</li>
-When SrcLanguage is ko (Korean), the value ranges from...to...
-<li>zh: Chinese.</li>
-<li>en: English;</li>
-<li>ja: Japanese.</li>
-When SrcLanguage is vi (Vietnamese), ms (Malay), or th (Thai), the value ranges from...to...
-<li>zh: Chinese.</li>
-<li>en: English.</li>
-When SrcLanguage is pt (Portuguese), the value ranges from...to...
-<li>zh: Chinese.</li>
-<li>en: English;</li>
-<li>fr: French;</li>
-<li>es: Spanish;</li>
-<li>it: Italian.</li>
-<li>de: German;</li>
-<li>tr: Turkish;</li>
-<li>ru: Russian.</li>
-When SrcLanguage is tr (Turkish), the value ranges from...to...
-<li>zh: Chinese.</li>
-<li>en: English;</li>
-<li>fr: French;</li>
-<li>es: Spanish;</li>
-<li>it: Italian.</li>
-<li>de: German;</li>
-<li>ru: Russian;</li>
-<li>pt: Portuguese.</li>
-When SrcLanguage is es (Spanish), the parameter value range is
-<li>zh: Chinese.</li>
-<li>en: English;</li>
-<li>fr: French;</li>
-<li>it: Italian.</li>
-<li>de: German;</li>
-<li>tr: Turkish;</li>
-<li>ru: Russian;</li>
-<li>pt: Portuguese.</li>
-When SrcLanguage is ar (Arabic) or hi (Hindi), the value ranges from...to...
-<li>en: English.</li>
-When SrcLanguage is fr (French), the value ranges from...to...
-<li>zh: Chinese.</li>
-<li>en: English;</li>
-<li>es: Spanish;</li>
-<li>it: Italian.</li>
-<li>de: German;</li>
-<li>tr: Turkish;</li>
-<li>ru: Russian;</li>
-<li>pt: Portuguese.</li>
-                     * @param _dstLanguage Target language.
-If this parameter is filled in with an empty string, it means that only full speech recognition is performed without translation (the billing item is the same as AsrFullTextConfigure full speech recognition).
-Otherwise, the parameter value range is divided into the following cases:
-When SrcLanguage is zh (Chinese), the value ranges from...to...
-<li>en: English;</li>
-<li>ja: Japanese;</li>
-<li>ko: Korean;</li>
-<li>fr: French;</li>
-<li>es: Spanish;</li>
-<li>it: Italian.</li>
-<li>de: German;</li>
-<li>tr: Turkish;</li>
-<li>ru: Russian;</li>
-<li>pt: Portuguese;</li>
-<li>vi: Vietnamese;</li>
-<li>id: Indonesian;</li>
-<li>th: Thai;</li>
-<li>ms: Malay.</li>
-When SrcLanguage is en (English), the value ranges from...to...
-<li>zh: Chinese.</li>
-<li>ja: Japanese;</li>
-<li>ko: Korean;</li>
-<li>fr: French;</li>
-<li>es: Spanish;</li>
-<li>it: Italian.</li>
-<li>de: German;</li>
-<li>tr: Turkish;</li>
-<li>ru: Russian;</li>
-<li>pt: Portuguese;</li>
-<li>vi: Vietnamese;</li>
-<li>id: Indonesian;</li>
-<li>th: Thai;</li>
-<li>ms: Malay;</li>
-<li>ar: Arabic;</li>
-<li>hi: Hindi.</li>
-When SrcLanguage is ja (Japanese), the parameter value range is
-<li>zh: Chinese.</li>
-<li>en: English;</li>
-<li>ko: Korean.</li>
-When SrcLanguage is ko (Korean), the value ranges from...to...
-<li>zh: Chinese.</li>
-<li>en: English;</li>
-<li>ja: Japanese.</li>
-When SrcLanguage is vi (Vietnamese), ms (Malay), or th (Thai), the value ranges from...to...
-<li>zh: Chinese.</li>
-<li>en: English.</li>
-When SrcLanguage is pt (Portuguese), the value ranges from...to...
-<li>zh: Chinese.</li>
-<li>en: English;</li>
-<li>fr: French;</li>
-<li>es: Spanish;</li>
-<li>it: Italian.</li>
-<li>de: German;</li>
-<li>tr: Turkish;</li>
-<li>ru: Russian.</li>
-When SrcLanguage is tr (Turkish), the value ranges from...to...
-<li>zh: Chinese.</li>
-<li>en: English;</li>
-<li>fr: French;</li>
-<li>es: Spanish;</li>
-<li>it: Italian.</li>
-<li>de: German;</li>
-<li>ru: Russian;</li>
-<li>pt: Portuguese.</li>
-When SrcLanguage is es (Spanish), the parameter value range is
-<li>zh: Chinese.</li>
-<li>en: English;</li>
-<li>fr: French;</li>
-<li>it: Italian.</li>
-<li>de: German;</li>
-<li>tr: Turkish;</li>
-<li>ru: Russian;</li>
-<li>pt: Portuguese.</li>
-When SrcLanguage is ar (Arabic) or hi (Hindi), the value ranges from...to...
-<li>en: English.</li>
-When SrcLanguage is fr (French), the value ranges from...to...
-<li>zh: Chinese.</li>
-<li>en: English;</li>
-<li>es: Spanish;</li>
-<li>it: Italian.</li>
-<li>de: German;</li>
-<li>tr: Turkish;</li>
-<li>ru: Russian;</li>
-<li>pt: Portuguese.</li>
+                     * 设置
+                     * @param _dstLanguage 
                      * 
                      */
                     void SetDstLanguage(const std::string& _dstLanguage);
@@ -503,15 +111,15 @@ When SrcLanguage is fr (French), the value ranges from...to...
                     bool DstLanguageHasBeenSet() const;
 
                     /**
-                     * 获取Subtitle format list operation information.
-                     * @return SubtitleFormatsOperation Subtitle format list operation information.
+                     * 获取
+                     * @return SubtitleFormatsOperation 
                      * 
                      */
                     SubtitleFormatsOperation GetSubtitleFormatsOperation() const;
 
                     /**
-                     * 设置Subtitle format list operation information.
-                     * @param _subtitleFormatsOperation Subtitle format list operation information.
+                     * 设置
+                     * @param _subtitleFormatsOperation 
                      * 
                      */
                     void SetSubtitleFormatsOperation(const SubtitleFormatsOperation& _subtitleFormatsOperation);
@@ -524,15 +132,15 @@ When SrcLanguage is fr (French), the value ranges from...to...
                     bool SubtitleFormatsOperationHasBeenSet() const;
 
                     /**
-                     * 获取Specify subtitle name. Length limit: 64 characters. This value will be used for player display.
-                     * @return SubtitleName Specify subtitle name. Length limit: 64 characters. This value will be used for player display.
+                     * 获取
+                     * @return SubtitleName 
                      * 
                      */
                     std::string GetSubtitleName() const;
 
                     /**
-                     * 设置Specify subtitle name. Length limit: 64 characters. This value will be used for player display.
-                     * @param _subtitleName Specify subtitle name. Length limit: 64 characters. This value will be used for player display.
+                     * 设置
+                     * @param _subtitleName 
                      * 
                      */
                     void SetSubtitleName(const std::string& _subtitleName);
@@ -547,129 +155,31 @@ When SrcLanguage is fr (French), the value ranges from...to...
                 private:
 
                     /**
-                     * Voice translation recognition task switch. Available values:
-<li>ON: enabled;</li>
-<li>OFF: Disabled.</li><font color=red>Note:</font> The speech translation recognition task itself will return ASR full text recognition results. To avoid duplicate charges, it is forbidden to enable both speech translation recognition and ASR full text recognition feature items simultaneously.</li>
+                     * 
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * Media source language. Valid values:
-<li>zh: Chinese.</li>
-<li>en: English;</li>
-<li>ja: Japanese;</li>
-<li>ko: Korean;</li>
-<li>vi: Vietnamese;</li>
-<li>ms: Malay;</li>
-<li>th: Thai;</li>
-<li>pt: Portuguese;</li>
-<li>tr: Turkish;</li>
-<li>ar: Arabic;</li>
-<li>es: Spanish;</li>
-<li>hi: Hindi;</li>
-<li>fr: French.</li>
+                     * 
                      */
                     std::string m_srcLanguage;
                     bool m_srcLanguageHasBeenSet;
 
                     /**
-                     * Target language.
-If this parameter is filled in with an empty string, it means that only full speech recognition is performed without translation (the billing item is the same as AsrFullTextConfigure full speech recognition).
-Otherwise, the parameter value range is divided into the following cases:
-When SrcLanguage is zh (Chinese), the value ranges from...to...
-<li>en: English;</li>
-<li>ja: Japanese;</li>
-<li>ko: Korean;</li>
-<li>fr: French;</li>
-<li>es: Spanish;</li>
-<li>it: Italian.</li>
-<li>de: German;</li>
-<li>tr: Turkish;</li>
-<li>ru: Russian;</li>
-<li>pt: Portuguese;</li>
-<li>vi: Vietnamese;</li>
-<li>id: Indonesian;</li>
-<li>th: Thai;</li>
-<li>ms: Malay.</li>
-When SrcLanguage is en (English), the value ranges from...to...
-<li>zh: Chinese.</li>
-<li>ja: Japanese;</li>
-<li>ko: Korean;</li>
-<li>fr: French;</li>
-<li>es: Spanish;</li>
-<li>it: Italian.</li>
-<li>de: German;</li>
-<li>tr: Turkish;</li>
-<li>ru: Russian;</li>
-<li>pt: Portuguese;</li>
-<li>vi: Vietnamese;</li>
-<li>id: Indonesian;</li>
-<li>th: Thai;</li>
-<li>ms: Malay;</li>
-<li>ar: Arabic;</li>
-<li>hi: Hindi.</li>
-When SrcLanguage is ja (Japanese), the parameter value range is
-<li>zh: Chinese.</li>
-<li>en: English;</li>
-<li>ko: Korean.</li>
-When SrcLanguage is ko (Korean), the value ranges from...to...
-<li>zh: Chinese.</li>
-<li>en: English;</li>
-<li>ja: Japanese.</li>
-When SrcLanguage is vi (Vietnamese), ms (Malay), or th (Thai), the value ranges from...to...
-<li>zh: Chinese.</li>
-<li>en: English.</li>
-When SrcLanguage is pt (Portuguese), the value ranges from...to...
-<li>zh: Chinese.</li>
-<li>en: English;</li>
-<li>fr: French;</li>
-<li>es: Spanish;</li>
-<li>it: Italian.</li>
-<li>de: German;</li>
-<li>tr: Turkish;</li>
-<li>ru: Russian.</li>
-When SrcLanguage is tr (Turkish), the value ranges from...to...
-<li>zh: Chinese.</li>
-<li>en: English;</li>
-<li>fr: French;</li>
-<li>es: Spanish;</li>
-<li>it: Italian.</li>
-<li>de: German;</li>
-<li>ru: Russian;</li>
-<li>pt: Portuguese.</li>
-When SrcLanguage is es (Spanish), the parameter value range is
-<li>zh: Chinese.</li>
-<li>en: English;</li>
-<li>fr: French;</li>
-<li>it: Italian.</li>
-<li>de: German;</li>
-<li>tr: Turkish;</li>
-<li>ru: Russian;</li>
-<li>pt: Portuguese.</li>
-When SrcLanguage is ar (Arabic) or hi (Hindi), the value ranges from...to...
-<li>en: English.</li>
-When SrcLanguage is fr (French), the value ranges from...to...
-<li>zh: Chinese.</li>
-<li>en: English;</li>
-<li>es: Spanish;</li>
-<li>it: Italian.</li>
-<li>de: German;</li>
-<li>tr: Turkish;</li>
-<li>ru: Russian;</li>
-<li>pt: Portuguese.</li>
+                     * 
                      */
                     std::string m_dstLanguage;
                     bool m_dstLanguageHasBeenSet;
 
                     /**
-                     * Subtitle format list operation information.
+                     * 
                      */
                     SubtitleFormatsOperation m_subtitleFormatsOperation;
                     bool m_subtitleFormatsOperationHasBeenSet;
 
                     /**
-                     * Specify subtitle name. Length limit: 64 characters. This value will be used for player display.
+                     * 
                      */
                     std::string m_subtitleName;
                     bool m_subtitleNameHasBeenSet;

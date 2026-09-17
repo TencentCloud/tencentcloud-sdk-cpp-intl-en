@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Just In Time transcoding template details.
+                * 
                 */
                 class JustInTimeTranscodeTemplate : public AbstractModel
                 {
@@ -49,15 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Template type.
-                     * @return Type Template type.
+                     * 获取
+                     * @return Type 
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Template type.
-                     * @param _type Template type.
+                     * 设置
+                     * @param _type 
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -70,15 +70,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Template name.
-                     * @return Name Template name.
+                     * 获取
+                     * @return Name 
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Template name.
-                     * @param _name Template name.
+                     * 设置
+                     * @param _name 
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -91,15 +91,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Template description.
-                     * @return Comment Template description.
+                     * 获取
+                     * @return Comment 
                      * 
                      */
                     std::string GetComment() const;
 
                     /**
-                     * 设置Template description.
-                     * @param _comment Template description.
+                     * 设置
+                     * @param _comment 
                      * 
                      */
                     void SetComment(const std::string& _comment);
@@ -112,15 +112,15 @@ namespace TencentCloud
                     bool CommentHasBeenSet() const;
 
                     /**
-                     * 获取Video parameter configuration.
-                     * @return VideoConfigure Video parameter configuration.
+                     * 获取
+                     * @return VideoConfigure 
                      * 
                      */
                     VideoConfigureInfo GetVideoConfigure() const;
 
                     /**
-                     * 设置Video parameter configuration.
-                     * @param _videoConfigure Video parameter configuration.
+                     * 设置
+                     * @param _videoConfigure 
                      * 
                      */
                     void SetVideoConfigure(const VideoConfigureInfo& _videoConfigure);
@@ -133,15 +133,15 @@ namespace TencentCloud
                     bool VideoConfigureHasBeenSet() const;
 
                     /**
-                     * 获取Watermark parameter configuration.
-                     * @return WatermarkConfigure Watermark parameter configuration.
+                     * 获取
+                     * @return WatermarkConfigure 
                      * 
                      */
                     WatermarkConfigureData GetWatermarkConfigure() const;
 
                     /**
-                     * 设置Watermark parameter configuration.
-                     * @param _watermarkConfigure Watermark parameter configuration.
+                     * 设置
+                     * @param _watermarkConfigure 
                      * 
                      */
                     void SetWatermarkConfigure(const WatermarkConfigureData& _watermarkConfigure);
@@ -156,31 +156,31 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Template type.
+                     * 
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Template name.
+                     * 
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Template description.
+                     * 
                      */
                     std::string m_comment;
                     bool m_commentHasBeenSet;
 
                     /**
-                     * Video parameter configuration.
+                     * 
                      */
                     VideoConfigureInfo m_videoConfigure;
                     bool m_videoConfigureHasBeenSet;
 
                     /**
-                     * Watermark parameter configuration.
+                     * 
                      */
                     WatermarkConfigureData m_watermarkConfigure;
                     bool m_watermarkConfigureHasBeenSet;

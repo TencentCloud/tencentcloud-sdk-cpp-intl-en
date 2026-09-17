@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Subapplication information.
+                * 
                 */
                 class SubAppIdInfo : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Subapplication ID.
-                     * @return SubAppId Subapplication ID.
+                     * 获取
+                     * @return SubAppId 
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置Subapplication ID.
-                     * @param _subAppId Subapplication ID.
+                     * 设置
+                     * @param _subAppId 
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool SubAppIdHasBeenSet() const;
 
                     /**
-                     * 获取The subapplication name.
-                     * @return SubAppIdName The subapplication name.
+                     * 获取
+                     * @return SubAppIdName 
                      * 
                      */
                     std::string GetSubAppIdName() const;
 
                     /**
-                     * 设置The subapplication name.
-                     * @param _subAppIdName The subapplication name.
+                     * 设置
+                     * @param _subAppIdName 
                      * 
                      */
                     void SetSubAppIdName(const std::string& _subAppIdName);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool SubAppIdNameHasBeenSet() const;
 
                     /**
-                     * 获取Subapplication overview.
-                     * @return Description Subapplication overview.
+                     * 获取
+                     * @return Description 
                      * 
                      */
                     std::string GetDescription() const;
 
                     /**
-                     * 设置Subapplication overview.
-                     * @param _description Subapplication overview.
+                     * 设置
+                     * @param _description 
                      * 
                      */
                     void SetDescription(const std::string& _description);
@@ -111,15 +111,15 @@ namespace TencentCloud
                     bool DescriptionHasBeenSet() const;
 
                     /**
-                     * 获取Subapplication creation time of task in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
-                     * @return CreateTime Subapplication creation time of task in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 获取
+                     * @return CreateTime 
                      * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
-                     * 设置Subapplication creation time of task in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
-                     * @param _createTime Subapplication creation time of task in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 设置
+                     * @param _createTime 
                      * 
                      */
                     void SetCreateTime(const std::string& _createTime);
@@ -132,31 +132,15 @@ namespace TencentCloud
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Subapplication status. Valid values:
-<li>On: enabled</li>
-<li>Off: disabled</li>
-<li>Destroying: terminating</li>
-<li>Destroyed: terminated</li>
-                     * @return Status Subapplication status. Valid values:
-<li>On: enabled</li>
-<li>Off: disabled</li>
-<li>Destroying: terminating</li>
-<li>Destroyed: terminated</li>
+                     * 获取
+                     * @return Status 
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置Subapplication status. Valid values:
-<li>On: enabled</li>
-<li>Off: disabled</li>
-<li>Destroying: terminating</li>
-<li>Destroyed: terminated</li>
-                     * @param _status Subapplication status. Valid values:
-<li>On: enabled</li>
-<li>Off: disabled</li>
-<li>Destroying: terminating</li>
-<li>Destroyed: terminated</li>
+                     * 设置
+                     * @param _status 
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -169,15 +153,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取The subapplication name. This parameter is not recommended. Please use `SubAppIdName` instead.
-                     * @return Name The subapplication name. This parameter is not recommended. Please use `SubAppIdName` instead.
+                     * 获取
+                     * @return Name 
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置The subapplication name. This parameter is not recommended. Please use `SubAppIdName` instead.
-                     * @param _name The subapplication name. This parameter is not recommended. Please use `SubAppIdName` instead.
+                     * 设置
+                     * @param _name 
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -190,27 +174,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Mode of this application. Valid values:
--fileid: Only in fileid mode
--fileid+path: FileID & Path mode
-Leave empty to select FileID mode by default
-                     * @return Mode Mode of this application. Valid values:
--fileid: Only in fileid mode
--fileid+path: FileID & Path mode
-Leave empty to select FileID mode by default
+                     * 获取
+                     * @return Mode 
                      * 
                      */
                     std::string GetMode() const;
 
                     /**
-                     * 设置Mode of this application. Valid values:
--fileid: Only in fileid mode
--fileid+path: FileID & Path mode
-Leave empty to select FileID mode by default
-                     * @param _mode Mode of this application. Valid values:
--fileid: Only in fileid mode
--fileid+path: FileID & Path mode
-Leave empty to select FileID mode by default
+                     * 设置
+                     * @param _mode 
                      * 
                      */
                     void SetMode(const std::string& _mode);
@@ -223,15 +195,15 @@ Leave empty to select FileID mode by default
                     bool ModeHasBeenSet() const;
 
                     /**
-                     * 获取Storage regions enabled for the sub-app.
-                     * @return StorageRegions Storage regions enabled for the sub-app.
+                     * 获取
+                     * @return StorageRegions 
                      * 
                      */
                     std::vector<std::string> GetStorageRegions() const;
 
                     /**
-                     * 设置Storage regions enabled for the sub-app.
-                     * @param _storageRegions Storage regions enabled for the sub-app.
+                     * 设置
+                     * @param _storageRegions 
                      * 
                      */
                     void SetStorageRegions(const std::vector<std::string>& _storageRegions);
@@ -244,15 +216,15 @@ Leave empty to select FileID mode by default
                     bool StorageRegionsHasBeenSet() const;
 
                     /**
-                     * 获取tag bound to the sub-application.
-                     * @return Tags tag bound to the sub-application.
+                     * 获取
+                     * @return Tags 
                      * 
                      */
                     std::vector<ResourceTag> GetTags() const;
 
                     /**
-                     * 设置tag bound to the sub-application.
-                     * @param _tags tag bound to the sub-application.
+                     * 设置
+                     * @param _tags 
                      * 
                      */
                     void SetTags(const std::vector<ResourceTag>& _tags);
@@ -267,62 +239,55 @@ Leave empty to select FileID mode by default
                 private:
 
                     /**
-                     * Subapplication ID.
+                     * 
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
 
                     /**
-                     * The subapplication name.
+                     * 
                      */
                     std::string m_subAppIdName;
                     bool m_subAppIdNameHasBeenSet;
 
                     /**
-                     * Subapplication overview.
+                     * 
                      */
                     std::string m_description;
                     bool m_descriptionHasBeenSet;
 
                     /**
-                     * Subapplication creation time of task in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * Subapplication status. Valid values:
-<li>On: enabled</li>
-<li>Off: disabled</li>
-<li>Destroying: terminating</li>
-<li>Destroyed: terminated</li>
+                     * 
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * The subapplication name. This parameter is not recommended. Please use `SubAppIdName` instead.
+                     * 
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Mode of this application. Valid values:
--fileid: Only in fileid mode
--fileid+path: FileID & Path mode
-Leave empty to select FileID mode by default
+                     * 
                      */
                     std::string m_mode;
                     bool m_modeHasBeenSet;
 
                     /**
-                     * Storage regions enabled for the sub-app.
+                     * 
                      */
                     std::vector<std::string> m_storageRegions;
                     bool m_storageRegionsHasBeenSet;
 
                     /**
-                     * tag bound to the sub-application.
+                     * 
                      */
                     std::vector<ResourceTag> m_tags;
                     bool m_tagsHasBeenSet;

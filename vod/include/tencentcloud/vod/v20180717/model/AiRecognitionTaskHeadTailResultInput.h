@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Input of video opening and ending credits recognition.
+                * 
                 */
                 class AiRecognitionTaskHeadTailResultInput : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Video opening and ending credits recognition template ID.
-                     * @return Definition Video opening and ending credits recognition template ID.
+                     * 获取
+                     * @return Definition 
                      * 
                      */
                     int64_t GetDefinition() const;
 
                     /**
-                     * 设置Video opening and ending credits recognition template ID.
-                     * @param _definition Video opening and ending credits recognition template ID.
+                     * 设置
+                     * @param _definition 
                      * 
                      */
                     void SetDefinition(const int64_t& _definition);
@@ -70,7 +70,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Video opening and ending credits recognition template ID.
+                     * 
                      */
                     int64_t m_definition;
                     bool m_definitionHasBeenSet;

@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Statistics of task with specified specification.
+                * 
                 */
                 class SpecificationDataItem : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Task specification.
-                     * @return Specification Task specification.
+                     * 获取
+                     * @return Specification 
                      * 
                      */
                     std::string GetSpecification() const;
 
                     /**
-                     * 设置Task specification.
-                     * @param _specification Task specification.
+                     * 设置
+                     * @param _specification 
                      * 
                      */
                     void SetSpecification(const std::string& _specification);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool SpecificationHasBeenSet() const;
 
                     /**
-                     * 获取Statistics.
-                     * @return Data Statistics.
+                     * 获取
+                     * @return Data 
                      * 
                      */
                     std::vector<TaskStatDataItem> GetData() const;
 
                     /**
-                     * 设置Statistics.
-                     * @param _data Statistics.
+                     * 设置
+                     * @param _data 
                      * 
                      */
                     void SetData(const std::vector<TaskStatDataItem>& _data);
@@ -92,13 +92,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Task specification.
+                     * 
                      */
                     std::string m_specification;
                     bool m_specificationHasBeenSet;
 
                     /**
-                     * Statistics.
+                     * 
                      */
                     std::vector<TaskStatDataItem> m_data;
                     bool m_dataHasBeenSet;

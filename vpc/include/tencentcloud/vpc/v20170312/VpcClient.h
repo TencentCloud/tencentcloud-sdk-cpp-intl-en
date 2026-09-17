@@ -69,6 +69,8 @@
 #include <tencentcloud/vpc/v20170312/model/AuditCrossBorderComplianceResponse.h>
 #include <tencentcloud/vpc/v20170312/model/CheckAssistantCidrRequest.h>
 #include <tencentcloud/vpc/v20170312/model/CheckAssistantCidrResponse.h>
+#include <tencentcloud/vpc/v20170312/model/CheckGatewayFlowMonitorRequest.h>
+#include <tencentcloud/vpc/v20170312/model/CheckGatewayFlowMonitorResponse.h>
 #include <tencentcloud/vpc/v20170312/model/CheckNetDetectStateRequest.h>
 #include <tencentcloud/vpc/v20170312/model/CheckNetDetectStateResponse.h>
 #include <tencentcloud/vpc/v20170312/model/CheckTrafficMirrorRequest.h>
@@ -305,8 +307,12 @@
 #include <tencentcloud/vpc/v20170312/model/DescribeNatGatewayDestinationIpPortTranslationNatRulesResponse.h>
 #include <tencentcloud/vpc/v20170312/model/DescribeNatGatewayDirectConnectGatewayRouteRequest.h>
 #include <tencentcloud/vpc/v20170312/model/DescribeNatGatewayDirectConnectGatewayRouteResponse.h>
+#include <tencentcloud/vpc/v20170312/model/DescribeNatGatewayFlowMonitorDetailRequest.h>
+#include <tencentcloud/vpc/v20170312/model/DescribeNatGatewayFlowMonitorDetailResponse.h>
 #include <tencentcloud/vpc/v20170312/model/DescribeNatGatewaySourceIpTranslationNatRulesRequest.h>
 #include <tencentcloud/vpc/v20170312/model/DescribeNatGatewaySourceIpTranslationNatRulesResponse.h>
+#include <tencentcloud/vpc/v20170312/model/DescribeNatGatewayZonesRequest.h>
+#include <tencentcloud/vpc/v20170312/model/DescribeNatGatewayZonesResponse.h>
 #include <tencentcloud/vpc/v20170312/model/DescribeNatGatewaysRequest.h>
 #include <tencentcloud/vpc/v20170312/model/DescribeNatGatewaysResponse.h>
 #include <tencentcloud/vpc/v20170312/model/DescribeNetDetectStatesRequest.h>
@@ -718,6 +724,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CheckAssistantCidrResponse> CheckAssistantCidrOutcome;
                 typedef std::future<CheckAssistantCidrOutcome> CheckAssistantCidrOutcomeCallable;
                 typedef std::function<void(const VpcClient*, const Model::CheckAssistantCidrRequest&, CheckAssistantCidrOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CheckAssistantCidrAsyncHandler;
+                typedef Outcome<Core::Error, Model::CheckGatewayFlowMonitorResponse> CheckGatewayFlowMonitorOutcome;
+                typedef std::future<CheckGatewayFlowMonitorOutcome> CheckGatewayFlowMonitorOutcomeCallable;
+                typedef std::function<void(const VpcClient*, const Model::CheckGatewayFlowMonitorRequest&, CheckGatewayFlowMonitorOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CheckGatewayFlowMonitorAsyncHandler;
                 typedef Outcome<Core::Error, Model::CheckNetDetectStateResponse> CheckNetDetectStateOutcome;
                 typedef std::future<CheckNetDetectStateOutcome> CheckNetDetectStateOutcomeCallable;
                 typedef std::function<void(const VpcClient*, const Model::CheckNetDetectStateRequest&, CheckNetDetectStateOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CheckNetDetectStateAsyncHandler;
@@ -1072,9 +1081,15 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::DescribeNatGatewayDirectConnectGatewayRouteResponse> DescribeNatGatewayDirectConnectGatewayRouteOutcome;
                 typedef std::future<DescribeNatGatewayDirectConnectGatewayRouteOutcome> DescribeNatGatewayDirectConnectGatewayRouteOutcomeCallable;
                 typedef std::function<void(const VpcClient*, const Model::DescribeNatGatewayDirectConnectGatewayRouteRequest&, DescribeNatGatewayDirectConnectGatewayRouteOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeNatGatewayDirectConnectGatewayRouteAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeNatGatewayFlowMonitorDetailResponse> DescribeNatGatewayFlowMonitorDetailOutcome;
+                typedef std::future<DescribeNatGatewayFlowMonitorDetailOutcome> DescribeNatGatewayFlowMonitorDetailOutcomeCallable;
+                typedef std::function<void(const VpcClient*, const Model::DescribeNatGatewayFlowMonitorDetailRequest&, DescribeNatGatewayFlowMonitorDetailOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeNatGatewayFlowMonitorDetailAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeNatGatewaySourceIpTranslationNatRulesResponse> DescribeNatGatewaySourceIpTranslationNatRulesOutcome;
                 typedef std::future<DescribeNatGatewaySourceIpTranslationNatRulesOutcome> DescribeNatGatewaySourceIpTranslationNatRulesOutcomeCallable;
                 typedef std::function<void(const VpcClient*, const Model::DescribeNatGatewaySourceIpTranslationNatRulesRequest&, DescribeNatGatewaySourceIpTranslationNatRulesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeNatGatewaySourceIpTranslationNatRulesAsyncHandler;
+                typedef Outcome<Core::Error, Model::DescribeNatGatewayZonesResponse> DescribeNatGatewayZonesOutcome;
+                typedef std::future<DescribeNatGatewayZonesOutcome> DescribeNatGatewayZonesOutcomeCallable;
+                typedef std::function<void(const VpcClient*, const Model::DescribeNatGatewayZonesRequest&, DescribeNatGatewayZonesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeNatGatewayZonesAsyncHandler;
                 typedef Outcome<Core::Error, Model::DescribeNatGatewaysResponse> DescribeNatGatewaysOutcome;
                 typedef std::future<DescribeNatGatewaysOutcome> DescribeNatGatewaysOutcomeCallable;
                 typedef std::function<void(const VpcClient*, const Model::DescribeNatGatewaysRequest&, DescribeNatGatewaysOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DescribeNatGatewaysAsyncHandler;
@@ -1828,6 +1843,15 @@ This API is completed asynchronously. If you need to query the execution result 
                 CheckAssistantCidrOutcomeCallable CheckAssistantCidrCallable(const Model::CheckAssistantCidrRequest& request);
 
                 /**
+                 *This API is used to query whether the gateway traffic monitoring is enabled.
+                 * @param req CheckGatewayFlowMonitorRequest
+                 * @return CheckGatewayFlowMonitorOutcome
+                 */
+                CheckGatewayFlowMonitorOutcome CheckGatewayFlowMonitor(const Model::CheckGatewayFlowMonitorRequest &request);
+                void CheckGatewayFlowMonitorAsync(const Model::CheckGatewayFlowMonitorRequest& request, const CheckGatewayFlowMonitorAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CheckGatewayFlowMonitorOutcomeCallable CheckGatewayFlowMonitorCallable(const Model::CheckGatewayFlowMonitorRequest& request);
+
+                /**
                  *This API is used to verify the network detection status.
                  * @param req CheckNetDetectStateRequest
                  * @return CheckNetDetectStateOutcome
@@ -2417,7 +2441,7 @@ This API is completed asynchronously. If you need to query the execution result 
 
                 /**
                  *This API is used to delete a NAT gateway.
-When a NAT gateway is deleted, all routes containing this gateway are deleted automatically, and the elastic IP is unbound.
+When a NAT gateway is deleted, all routes containing this gateway are deleted automatically, and associated EIPs are unbound.When deleting a NAT gateway, you need to unbind the associated EIPs. Therefore, the caller must have CAM permissions for vpc:DisassociateAddress and vpc:ModifyAddressesBandwidth.
                  * @param req DeleteNatGatewayRequest
                  * @return DeleteNatGatewayOutcome
                  */
@@ -3000,6 +3024,17 @@ This API is used to check the jumbo frame status before and after instance migra
                 DescribeNatGatewayDirectConnectGatewayRouteOutcomeCallable DescribeNatGatewayDirectConnectGatewayRouteCallable(const Model::DescribeNatGatewayDirectConnectGatewayRouteRequest& request);
 
                 /**
+                 *This API is used to query the traffic monitoring details of a NAT gateway.
+
+- You can only use this API to query a single gateway instance. The input parameter `NatGatewayId` supports at most one value, and it must be passed.- If the gateway has traffic, but no data is returned when this API is called, please check whether gateway traffic monitoring is enabled in the corresponding gateway details page in the console.
+                 * @param req DescribeNatGatewayFlowMonitorDetailRequest
+                 * @return DescribeNatGatewayFlowMonitorDetailOutcome
+                 */
+                DescribeNatGatewayFlowMonitorDetailOutcome DescribeNatGatewayFlowMonitorDetail(const Model::DescribeNatGatewayFlowMonitorDetailRequest &request);
+                void DescribeNatGatewayFlowMonitorDetailAsync(const Model::DescribeNatGatewayFlowMonitorDetailRequest& request, const DescribeNatGatewayFlowMonitorDetailAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeNatGatewayFlowMonitorDetailOutcomeCallable DescribeNatGatewayFlowMonitorDetailCallable(const Model::DescribeNatGatewayFlowMonitorDetailRequest& request);
+
+                /**
                  *This API is used to query the NAT gateway's SNAT forwarding rules.
                  * @param req DescribeNatGatewaySourceIpTranslationNatRulesRequest
                  * @return DescribeNatGatewaySourceIpTranslationNatRulesOutcome
@@ -3007,6 +3042,15 @@ This API is used to check the jumbo frame status before and after instance migra
                 DescribeNatGatewaySourceIpTranslationNatRulesOutcome DescribeNatGatewaySourceIpTranslationNatRules(const Model::DescribeNatGatewaySourceIpTranslationNatRulesRequest &request);
                 void DescribeNatGatewaySourceIpTranslationNatRulesAsync(const Model::DescribeNatGatewaySourceIpTranslationNatRulesRequest& request, const DescribeNatGatewaySourceIpTranslationNatRulesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 DescribeNatGatewaySourceIpTranslationNatRulesOutcomeCallable DescribeNatGatewaySourceIpTranslationNatRulesCallable(const Model::DescribeNatGatewaySourceIpTranslationNatRulesRequest& request);
+
+                /**
+                 *This API is used to query the information of saleable availability zones (AZs) for NAT gateways.
+                 * @param req DescribeNatGatewayZonesRequest
+                 * @return DescribeNatGatewayZonesOutcome
+                 */
+                DescribeNatGatewayZonesOutcome DescribeNatGatewayZones(const Model::DescribeNatGatewayZonesRequest &request);
+                void DescribeNatGatewayZonesAsync(const Model::DescribeNatGatewayZonesRequest& request, const DescribeNatGatewayZonesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DescribeNatGatewayZonesOutcomeCallable DescribeNatGatewayZonesCallable(const Model::DescribeNatGatewayZonesRequest& request);
 
                 /**
                  *This API is used to query NAT gateways.
@@ -4185,7 +4229,7 @@ Note: Only the name and description can be modified.
                 NotifyRoutesOutcomeCallable NotifyRoutesCallable(const Model::NotifyRoutesRequest& request);
 
                 /**
-                 *This API is used to refresh the route between a NAT gateway and  Direct Connect and update the associated route table.
+                 *This API is used to refresh the route between a NAT gateway and Direct Connect and update the associated route table.
                  * @param req RefreshDirectConnectGatewayRouteToNatGatewayRequest
                  * @return RefreshDirectConnectGatewayRouteToNatGatewayOutcome
                  */

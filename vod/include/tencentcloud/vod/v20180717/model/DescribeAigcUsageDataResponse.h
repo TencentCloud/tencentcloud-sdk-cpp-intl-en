@@ -46,8 +46,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>AIGC stats.</p>
-                     * @return AigcUsageDataSet <p>AIGC stats.</p>
+                     * 获取
+                     * @return AigcUsageDataSet 
                      * 
                      */
                     std::vector<AigcUsageDataItem> GetAigcUsageDataSet() const;
@@ -60,10 +60,8 @@ namespace TencentCloud
                     bool AigcUsageDataSetHasBeenSet() const;
 
                     /**
-                     * 获取<p>Detailed log</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return AigcTextDetails <p>Detailed log</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return AigcTextDetails 
                      * 
                      */
                     AigcTextDetail GetAigcTextDetails() const;
@@ -78,14 +76,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * <p>AIGC stats.</p>
+                     * 
                      */
                     std::vector<AigcUsageDataItem> m_aigcUsageDataSet;
                     bool m_aigcUsageDataSetHasBeenSet;
 
                     /**
-                     * <p>Detailed log</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     AigcTextDetail m_aigcTextDetails;
                     bool m_aigcTextDetailsHasBeenSet;

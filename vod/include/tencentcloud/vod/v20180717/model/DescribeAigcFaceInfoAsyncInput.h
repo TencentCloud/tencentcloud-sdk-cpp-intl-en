@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Asynchronously fetch AIGC face information input.
+                * 
                 */
                 class DescribeAigcFaceInfoAsyncInput : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Input video information that needs to get face information.</p>
-                     * @return FileInfos <p>Input video information that needs to get face information.</p>
+                     * 获取
+                     * @return FileInfos 
                      * 
                      */
                     std::vector<AigcFaceInputFileInfo> GetFileInfos() const;
 
                     /**
-                     * 设置<p>Input video information that needs to get face information.</p>
-                     * @param _fileInfos <p>Input video information that needs to get face information.</p>
+                     * 设置
+                     * @param _fileInfos 
                      * 
                      */
                     void SetFileInfos(const std::vector<AigcFaceInputFileInfo>& _fileInfos);
@@ -71,7 +71,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Input video information that needs to get face information.</p>
+                     * 
                      */
                     std::vector<AigcFaceInputFileInfo> m_fileInfos;
                     bool m_fileInfosHasBeenSet;

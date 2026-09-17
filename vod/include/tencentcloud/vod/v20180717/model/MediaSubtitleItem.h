@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Subtitle information
+                * 
                 */
                 class MediaSubtitleItem : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Unique subtitle ID
-                     * @return Id Unique subtitle ID
+                     * 获取
+                     * @return Id 
                      * 
                      */
                     std::string GetId() const;
 
                     /**
-                     * 设置Unique subtitle ID
-                     * @param _id Unique subtitle ID
+                     * 设置
+                     * @param _id 
                      * 
                      */
                     void SetId(const std::string& _id);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool IdHasBeenSet() const;
 
                     /**
-                     * 获取Subtitle name
-                     * @return Name Subtitle name
+                     * 获取
+                     * @return Name 
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Subtitle name
-                     * @param _name Subtitle name
+                     * 设置
+                     * @param _name 
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -89,71 +89,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Subtitle language. Common values are as follows:
-<li>zh: Chinese;</li>
-<li>en: English;</li>
-<li>ja: Japanese;</li>
-<li>ko: Korean;</li>
-<li>vi: Vietnamese.</li>
-<li>ms: Malay;</li>
-<li>th: Thai;</li>
-<li>pt: Portuguese;</li>
-<li>tr: Turkish;</li>
-<li>ar: Arabic;</li>
-<li>es: Spanish;</li>
-<li>hi: Hindi;</li>
-<li>fr: French.</li>
-For other values, see [RFC5646](https://tools.ietf.org/html/rfc5646)
-                     * @return Language Subtitle language. Common values are as follows:
-<li>zh: Chinese;</li>
-<li>en: English;</li>
-<li>ja: Japanese;</li>
-<li>ko: Korean;</li>
-<li>vi: Vietnamese.</li>
-<li>ms: Malay;</li>
-<li>th: Thai;</li>
-<li>pt: Portuguese;</li>
-<li>tr: Turkish;</li>
-<li>ar: Arabic;</li>
-<li>es: Spanish;</li>
-<li>hi: Hindi;</li>
-<li>fr: French.</li>
-For other values, see [RFC5646](https://tools.ietf.org/html/rfc5646)
+                     * 获取
+                     * @return Language 
                      * 
                      */
                     std::string GetLanguage() const;
 
                     /**
-                     * 设置Subtitle language. Common values are as follows:
-<li>zh: Chinese;</li>
-<li>en: English;</li>
-<li>ja: Japanese;</li>
-<li>ko: Korean;</li>
-<li>vi: Vietnamese.</li>
-<li>ms: Malay;</li>
-<li>th: Thai;</li>
-<li>pt: Portuguese;</li>
-<li>tr: Turkish;</li>
-<li>ar: Arabic;</li>
-<li>es: Spanish;</li>
-<li>hi: Hindi;</li>
-<li>fr: French.</li>
-For other values, see [RFC5646](https://tools.ietf.org/html/rfc5646)
-                     * @param _language Subtitle language. Common values are as follows:
-<li>zh: Chinese;</li>
-<li>en: English;</li>
-<li>ja: Japanese;</li>
-<li>ko: Korean;</li>
-<li>vi: Vietnamese.</li>
-<li>ms: Malay;</li>
-<li>th: Thai;</li>
-<li>pt: Portuguese;</li>
-<li>tr: Turkish;</li>
-<li>ar: Arabic;</li>
-<li>es: Spanish;</li>
-<li>hi: Hindi;</li>
-<li>fr: French.</li>
-For other values, see [RFC5646](https://tools.ietf.org/html/rfc5646)
+                     * 设置
+                     * @param _language 
                      * 
                      */
                     void SetLanguage(const std::string& _language);
@@ -166,19 +110,15 @@ For other values, see [RFC5646](https://tools.ietf.org/html/rfc5646)
                     bool LanguageHasBeenSet() const;
 
                     /**
-                     * 获取Subtitle format. Valid value:
-<li>vtt</li>
-                     * @return Format Subtitle format. Valid value:
-<li>vtt</li>
+                     * 获取
+                     * @return Format 
                      * 
                      */
                     std::string GetFormat() const;
 
                     /**
-                     * 设置Subtitle format. Valid value:
-<li>vtt</li>
-                     * @param _format Subtitle format. Valid value:
-<li>vtt</li>
+                     * 设置
+                     * @param _format 
                      * 
                      */
                     void SetFormat(const std::string& _format);
@@ -191,15 +131,15 @@ For other values, see [RFC5646](https://tools.ietf.org/html/rfc5646)
                     bool FormatHasBeenSet() const;
 
                     /**
-                     * 获取Subtitle URL
-                     * @return Url Subtitle URL
+                     * 获取
+                     * @return Url 
                      * 
                      */
                     std::string GetUrl() const;
 
                     /**
-                     * 设置Subtitle URL
-                     * @param _url Subtitle URL
+                     * 设置
+                     * @param _url 
                      * 
                      */
                     void SetUrl(const std::string& _url);
@@ -212,23 +152,15 @@ For other values, see [RFC5646](https://tools.ietf.org/html/rfc5646)
                     bool UrlHasBeenSet() const;
 
                     /**
-                     * 获取Subtitle source. Value ranges from...to...
-<li>UserUploaded: User upload.</li>
-<li>AIRecognition: AI recognition, generated through speech recognition or speech translation generation.</li>
-                     * @return Source Subtitle source. Value ranges from...to...
-<li>UserUploaded: User upload.</li>
-<li>AIRecognition: AI recognition, generated through speech recognition or speech translation generation.</li>
+                     * 获取
+                     * @return Source 
                      * 
                      */
                     std::string GetSource() const;
 
                     /**
-                     * 设置Subtitle source. Value ranges from...to...
-<li>UserUploaded: User upload.</li>
-<li>AIRecognition: AI recognition, generated through speech recognition or speech translation generation.</li>
-                     * @param _source Subtitle source. Value ranges from...to...
-<li>UserUploaded: User upload.</li>
-<li>AIRecognition: AI recognition, generated through speech recognition or speech translation generation.</li>
+                     * 设置
+                     * @param _source 
                      * 
                      */
                     void SetSource(const std::string& _source);
@@ -243,54 +175,37 @@ For other values, see [RFC5646](https://tools.ietf.org/html/rfc5646)
                 private:
 
                     /**
-                     * Unique subtitle ID
+                     * 
                      */
                     std::string m_id;
                     bool m_idHasBeenSet;
 
                     /**
-                     * Subtitle name
+                     * 
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Subtitle language. Common values are as follows:
-<li>zh: Chinese;</li>
-<li>en: English;</li>
-<li>ja: Japanese;</li>
-<li>ko: Korean;</li>
-<li>vi: Vietnamese.</li>
-<li>ms: Malay;</li>
-<li>th: Thai;</li>
-<li>pt: Portuguese;</li>
-<li>tr: Turkish;</li>
-<li>ar: Arabic;</li>
-<li>es: Spanish;</li>
-<li>hi: Hindi;</li>
-<li>fr: French.</li>
-For other values, see [RFC5646](https://tools.ietf.org/html/rfc5646)
+                     * 
                      */
                     std::string m_language;
                     bool m_languageHasBeenSet;
 
                     /**
-                     * Subtitle format. Valid value:
-<li>vtt</li>
+                     * 
                      */
                     std::string m_format;
                     bool m_formatHasBeenSet;
 
                     /**
-                     * Subtitle URL
+                     * 
                      */
                     std::string m_url;
                     bool m_urlHasBeenSet;
 
                     /**
-                     * Subtitle source. Value ranges from...to...
-<li>UserUploaded: User upload.</li>
-<li>AIRecognition: AI recognition, generated through speech recognition or speech translation generation.</li>
+                     * 
                      */
                     std::string m_source;
                     bool m_sourceHasBeenSet;

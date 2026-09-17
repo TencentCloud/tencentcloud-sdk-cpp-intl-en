@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取List of domain. If this field is left blank, all domain information will be listed by default.
-                     * @return Domains List of domain. If this field is left blank, all domain information will be listed by default.
+                     * 获取
+                     * @return Domains 
                      * 
                      */
                     std::vector<std::string> GetDomains() const;
 
                     /**
-                     * 设置List of domain. If this field is left blank, all domain information will be listed by default.
-                     * @param _domains List of domain. If this field is left blank, all domain information will be listed by default.
+                     * 设置
+                     * @param _domains 
                      * 
                      */
                     void SetDomains(const std::vector<std::string>& _domains);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool DomainsHasBeenSet() const;
 
                     /**
-                     * 获取The maximum number of returned results for pagination fetching. Default value: 20.
-                     * @return Limit The maximum number of returned results for pagination fetching. Default value: 20.
+                     * 获取
+                     * @return Limit 
                      * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
-                     * 设置The maximum number of returned results for pagination fetching. Default value: 20.
-                     * @param _limit The maximum number of returned results for pagination fetching. Default value: 20.
+                     * 设置
+                     * @param _limit 
                      * 
                      */
                     void SetLimit(const uint64_t& _limit);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取The starting offset of paged pull. Default value: 0.
-                     * @return Offset The starting offset of paged pull. Default value: 0.
+                     * 获取Starting offset for pagination pull. Default value: 0.	
+                     * @return Offset Starting offset for pagination pull. Default value: 0.	
                      * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
-                     * 设置The starting offset of paged pull. Default value: 0.
-                     * @param _offset The starting offset of paged pull. Default value: 0.
+                     * 设置Starting offset for pagination pull. Default value: 0.	
+                     * @param _offset Starting offset for pagination pull. Default value: 0.	
                      * 
                      */
                     void SetOffset(const uint64_t& _offset);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取<b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-                     * @return SubAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+                     * 获取<b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
+                     * @return SubAppId <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置<b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
-                     * @param _subAppId <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+                     * 设置<b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
+                     * @param _subAppId <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -129,25 +129,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * List of domain. If this field is left blank, all domain information will be listed by default.
+                     * 
                      */
                     std::vector<std::string> m_domains;
                     bool m_domainsHasBeenSet;
 
                     /**
-                     * The maximum number of returned results for pagination fetching. Default value: 20.
+                     * 
                      */
                     uint64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * The starting offset of paged pull. Default value: 0.
+                     * Starting offset for pagination pull. Default value: 0.	
                      */
                     uint64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * <b>The VOD [application](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD service from December 25, 2023, if they want to access resources in a VOD application (whether it's the default application or a newly created one), they must fill in this field with the application ID.</b>
+                     * <b>ID of the on-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1). For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b>
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;

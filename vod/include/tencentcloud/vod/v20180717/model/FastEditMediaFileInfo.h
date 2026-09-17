@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * VOD  fast media editing information
+                * 
                 */
                 class FastEditMediaFileInfo : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Media ID.
-                     * @return FileId Media ID.
+                     * 获取
+                     * @return FileId 
                      * 
                      */
                     std::string GetFileId() const;
 
                     /**
-                     * 设置Media ID.
-                     * @param _fileId Media ID.
+                     * 设置
+                     * @param _fileId 
                      * 
                      */
                     void SetFileId(const std::string& _fileId);
@@ -68,27 +68,15 @@ namespace TencentCloud
                     bool FileIdHasBeenSet() const;
 
                     /**
-                     * 获取Audio and video type for operation. Valid values:
-<li>Transcode: transcoding output;</li>
-<li>Original: original audio/video.</li>
-Note: The audio and video to operate must be in HLS format.
-                     * @return AudioVideoType Audio and video type for operation. Valid values:
-<li>Transcode: transcoding output;</li>
-<li>Original: original audio/video.</li>
-Note: The audio and video to operate must be in HLS format.
+                     * 获取
+                     * @return AudioVideoType 
                      * 
                      */
                     std::string GetAudioVideoType() const;
 
                     /**
-                     * 设置Audio and video type for operation. Valid values:
-<li>Transcode: transcoding output;</li>
-<li>Original: original audio/video.</li>
-Note: The audio and video to operate must be in HLS format.
-                     * @param _audioVideoType Audio and video type for operation. Valid values:
-<li>Transcode: transcoding output;</li>
-<li>Original: original audio/video.</li>
-Note: The audio and video to operate must be in HLS format.
+                     * 设置
+                     * @param _audioVideoType 
                      * 
                      */
                     void SetAudioVideoType(const std::string& _audioVideoType);
@@ -101,15 +89,15 @@ Note: The audio and video to operate must be in HLS format.
                     bool AudioVideoTypeHasBeenSet() const;
 
                     /**
-                     * 获取Valid when AudioVideoType is Transcode. Represents the transcoding template ID for media operation.
-                     * @return TranscodeDefinition Valid when AudioVideoType is Transcode. Represents the transcoding template ID for media operation.
+                     * 获取
+                     * @return TranscodeDefinition 
                      * 
                      */
                     int64_t GetTranscodeDefinition() const;
 
                     /**
-                     * 设置Valid when AudioVideoType is Transcode. Represents the transcoding template ID for media operation.
-                     * @param _transcodeDefinition Valid when AudioVideoType is Transcode. Represents the transcoding template ID for media operation.
+                     * 设置
+                     * @param _transcodeDefinition 
                      * 
                      */
                     void SetTranscodeDefinition(const int64_t& _transcodeDefinition);
@@ -122,15 +110,15 @@ Note: The audio and video to operate must be in HLS format.
                     bool TranscodeDefinitionHasBeenSet() const;
 
                     /**
-                     * 获取Start time offset of media editing, in seconds.
-                     * @return StartTimeOffset Start time offset of media editing, in seconds.
+                     * 获取
+                     * @return StartTimeOffset 
                      * 
                      */
                     double GetStartTimeOffset() const;
 
                     /**
-                     * 设置Start time offset of media editing, in seconds.
-                     * @param _startTimeOffset Start time offset of media editing, in seconds.
+                     * 设置
+                     * @param _startTimeOffset 
                      * 
                      */
                     void SetStartTimeOffset(const double& _startTimeOffset);
@@ -143,15 +131,15 @@ Note: The audio and video to operate must be in HLS format.
                     bool StartTimeOffsetHasBeenSet() const;
 
                     /**
-                     * 获取End time offset of media editing, in seconds.
-                     * @return EndTimeOffset End time offset of media editing, in seconds.
+                     * 获取
+                     * @return EndTimeOffset 
                      * 
                      */
                     double GetEndTimeOffset() const;
 
                     /**
-                     * 设置End time offset of media editing, in seconds.
-                     * @param _endTimeOffset End time offset of media editing, in seconds.
+                     * 设置
+                     * @param _endTimeOffset 
                      * 
                      */
                     void SetEndTimeOffset(const double& _endTimeOffset);
@@ -166,34 +154,31 @@ Note: The audio and video to operate must be in HLS format.
                 private:
 
                     /**
-                     * Media ID.
+                     * 
                      */
                     std::string m_fileId;
                     bool m_fileIdHasBeenSet;
 
                     /**
-                     * Audio and video type for operation. Valid values:
-<li>Transcode: transcoding output;</li>
-<li>Original: original audio/video.</li>
-Note: The audio and video to operate must be in HLS format.
+                     * 
                      */
                     std::string m_audioVideoType;
                     bool m_audioVideoTypeHasBeenSet;
 
                     /**
-                     * Valid when AudioVideoType is Transcode. Represents the transcoding template ID for media operation.
+                     * 
                      */
                     int64_t m_transcodeDefinition;
                     bool m_transcodeDefinitionHasBeenSet;
 
                     /**
-                     * Start time offset of media editing, in seconds.
+                     * 
                      */
                     double m_startTimeOffset;
                     bool m_startTimeOffsetHasBeenSet;
 
                     /**
-                     * End time offset of media editing, in seconds.
+                     * 
                      */
                     double m_endTimeOffset;
                     bool m_endTimeOffsetHasBeenSet;

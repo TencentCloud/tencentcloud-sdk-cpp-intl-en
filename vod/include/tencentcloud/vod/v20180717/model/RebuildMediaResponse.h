@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Task ID for Audio and Video Quality Regeneration. The state of the audio and video quality regeneration task can be queried through this ID.
-                     * @return TaskId Task ID for Audio and Video Quality Regeneration. The state of the audio and video quality regeneration task can be queried through this ID.
+                     * 获取
+                     * @return TaskId 
                      * 
                      */
                     std::string GetTaskId() const;
@@ -60,7 +60,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Task ID for Audio and Video Quality Regeneration. The state of the audio and video quality regeneration task can be queried through this ID.
+                     * 
                      */
                     std::string m_taskId;
                     bool m_taskIdHasBeenSet;

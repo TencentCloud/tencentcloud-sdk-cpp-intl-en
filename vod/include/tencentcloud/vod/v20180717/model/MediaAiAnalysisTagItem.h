@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Result information of intelligent tagging
+                * 
                 */
                 class MediaAiAnalysisTagItem : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Tag name.
-                     * @return Tag Tag name.
+                     * 获取
+                     * @return Tag 
                      * 
                      */
                     std::string GetTag() const;
 
                     /**
-                     * 设置Tag name.
-                     * @param _tag Tag name.
+                     * 设置
+                     * @param _tag 
                      * 
                      */
                     void SetTag(const std::string& _tag);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool TagHasBeenSet() const;
 
                     /**
-                     * 获取Confidence of tag between 0 and 100.
-                     * @return Confidence Confidence of tag between 0 and 100.
+                     * 获取
+                     * @return Confidence 
                      * 
                      */
                     double GetConfidence() const;
 
                     /**
-                     * 设置Confidence of tag between 0 and 100.
-                     * @param _confidence Confidence of tag between 0 and 100.
+                     * 设置
+                     * @param _confidence 
                      * 
                      */
                     void SetConfidence(const double& _confidence);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Tag name.
+                     * 
                      */
                     std::string m_tag;
                     bool m_tagHasBeenSet;
 
                     /**
-                     * Confidence of tag between 0 and 100.
+                     * 
                      */
                     double m_confidence;
                     bool m_confidenceHasBeenSet;

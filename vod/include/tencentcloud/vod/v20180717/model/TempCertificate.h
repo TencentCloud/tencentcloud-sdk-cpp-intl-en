@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Temporary credential
+                * 
                 */
                 class TempCertificate : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Temporary security certificate ID.
-                     * @return SecretId Temporary security certificate ID.
+                     * 获取
+                     * @return SecretId 
                      * 
                      */
                     std::string GetSecretId() const;
 
                     /**
-                     * 设置Temporary security certificate ID.
-                     * @param _secretId Temporary security certificate ID.
+                     * 设置
+                     * @param _secretId 
                      * 
                      */
                     void SetSecretId(const std::string& _secretId);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool SecretIdHasBeenSet() const;
 
                     /**
-                     * 获取Temporary security certificate `Key`.
-                     * @return SecretKey Temporary security certificate `Key`.
+                     * 获取
+                     * @return SecretKey 
                      * 
                      */
                     std::string GetSecretKey() const;
 
                     /**
-                     * 设置Temporary security certificate `Key`.
-                     * @param _secretKey Temporary security certificate `Key`.
+                     * 设置
+                     * @param _secretKey 
                      * 
                      */
                     void SetSecretKey(const std::string& _secretKey);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool SecretKeyHasBeenSet() const;
 
                     /**
-                     * 获取Token value.
-                     * @return Token Token value.
+                     * 获取
+                     * @return Token 
                      * 
                      */
                     std::string GetToken() const;
 
                     /**
-                     * 设置Token value.
-                     * @param _token Token value.
+                     * 设置
+                     * @param _token 
                      * 
                      */
                     void SetToken(const std::string& _token);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool TokenHasBeenSet() const;
 
                     /**
-                     * 获取Certificate expiration time. A Unix timestamp will be returned which is accurate down to the second.
-                     * @return ExpiredTime Certificate expiration time. A Unix timestamp will be returned which is accurate down to the second.
+                     * 获取
+                     * @return ExpiredTime 
                      * 
                      */
                     uint64_t GetExpiredTime() const;
 
                     /**
-                     * 设置Certificate expiration time. A Unix timestamp will be returned which is accurate down to the second.
-                     * @param _expiredTime Certificate expiration time. A Unix timestamp will be returned which is accurate down to the second.
+                     * 设置
+                     * @param _expiredTime 
                      * 
                      */
                     void SetExpiredTime(const uint64_t& _expiredTime);
@@ -133,25 +133,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Temporary security certificate ID.
+                     * 
                      */
                     std::string m_secretId;
                     bool m_secretIdHasBeenSet;
 
                     /**
-                     * Temporary security certificate `Key`.
+                     * 
                      */
                     std::string m_secretKey;
                     bool m_secretKeyHasBeenSet;
 
                     /**
-                     * Token value.
+                     * 
                      */
                     std::string m_token;
                     bool m_tokenHasBeenSet;
 
                     /**
-                     * Certificate expiration time. A Unix timestamp will be returned which is accurate down to the second.
+                     * 
                      */
                     uint64_t m_expiredTime;
                     bool m_expiredTimeHasBeenSet;

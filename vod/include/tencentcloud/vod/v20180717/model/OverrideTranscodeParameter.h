@@ -38,7 +38,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Custom video transcoding parameters.
+                * 
                 */
                 class OverrideTranscodeParameter : public AbstractModel
                 {
@@ -50,15 +50,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Container format. Valid values: mp4, flv, hls, mp3, flac, ogg, m4a, and wav. Among them, mp3, flac, ogg, m4a, and wav are for audio-only files.
-                     * @return Container Container format. Valid values: mp4, flv, hls, mp3, flac, ogg, m4a, and wav. Among them, mp3, flac, ogg, m4a, and wav are for audio-only files.
+                     * 获取
+                     * @return Container 
                      * 
                      */
                     std::string GetContainer() const;
 
                     /**
-                     * 设置Container format. Valid values: mp4, flv, hls, mp3, flac, ogg, m4a, and wav. Among them, mp3, flac, ogg, m4a, and wav are for audio-only files.
-                     * @param _container Container format. Valid values: mp4, flv, hls, mp3, flac, ogg, m4a, and wav. Among them, mp3, flac, ogg, m4a, and wav are for audio-only files.
+                     * 设置
+                     * @param _container 
                      * 
                      */
                     void SetContainer(const std::string& _container);
@@ -71,23 +71,15 @@ namespace TencentCloud
                     bool ContainerHasBeenSet() const;
 
                     /**
-                     * 获取Indicates whether to remove video data. Valid values:
-<li>`0`: reserved;</li>
-<li>1: Remove.</li>
-                     * @return RemoveVideo Indicates whether to remove video data. Valid values:
-<li>`0`: reserved;</li>
-<li>1: Remove.</li>
+                     * 获取
+                     * @return RemoveVideo 
                      * 
                      */
                     uint64_t GetRemoveVideo() const;
 
                     /**
-                     * 设置Indicates whether to remove video data. Valid values:
-<li>`0`: reserved;</li>
-<li>1: Remove.</li>
-                     * @param _removeVideo Indicates whether to remove video data. Valid values:
-<li>`0`: reserved;</li>
-<li>1: Remove.</li>
+                     * 设置
+                     * @param _removeVideo 
                      * 
                      */
                     void SetRemoveVideo(const uint64_t& _removeVideo);
@@ -100,23 +92,15 @@ namespace TencentCloud
                     bool RemoveVideoHasBeenSet() const;
 
                     /**
-                     * 获取Indicates whether to remove audio data. Valid values:
-<li>`0`: reserved;</li>
-<li>1: Remove.</li>
-                     * @return RemoveAudio Indicates whether to remove audio data. Valid values:
-<li>`0`: reserved;</li>
-<li>1: Remove.</li>
+                     * 获取
+                     * @return RemoveAudio 
                      * 
                      */
                     uint64_t GetRemoveAudio() const;
 
                     /**
-                     * 设置Indicates whether to remove audio data. Valid values:
-<li>`0`: reserved;</li>
-<li>1: Remove.</li>
-                     * @param _removeAudio Indicates whether to remove audio data. Valid values:
-<li>`0`: reserved;</li>
-<li>1: Remove.</li>
+                     * 设置
+                     * @param _removeAudio 
                      * 
                      */
                     void SetRemoveAudio(const uint64_t& _removeAudio);
@@ -129,19 +113,15 @@ namespace TencentCloud
                     bool RemoveAudioHasBeenSet() const;
 
                     /**
-                     * 获取Video stream configuration parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return VideoTemplate Video stream configuration parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return VideoTemplate 
                      * 
                      */
                     VideoTemplateInfoForUpdate GetVideoTemplate() const;
 
                     /**
-                     * 设置Video stream configuration parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _videoTemplate Video stream configuration parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _videoTemplate 
                      * 
                      */
                     void SetVideoTemplate(const VideoTemplateInfoForUpdate& _videoTemplate);
@@ -154,19 +134,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool VideoTemplateHasBeenSet() const;
 
                     /**
-                     * 获取Audio stream configuration parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return AudioTemplate Audio stream configuration parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return AudioTemplate 
                      * 
                      */
                     AudioTemplateInfoForUpdate GetAudioTemplate() const;
 
                     /**
-                     * 设置Audio stream configuration parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _audioTemplate Audio stream configuration parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _audioTemplate 
                      * 
                      */
                     void SetAudioTemplate(const AudioTemplateInfoForUpdate& _audioTemplate);
@@ -179,19 +155,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool AudioTemplateHasBeenSet() const;
 
                     /**
-                     * 获取Top Speed Codec transcoding configuration parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TEHDConfig Top Speed Codec transcoding configuration parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return TEHDConfig 
                      * 
                      */
                     TEHDConfigForUpdate GetTEHDConfig() const;
 
                     /**
-                     * 设置Top Speed Codec transcoding configuration parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _tEHDConfig Top Speed Codec transcoding configuration parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _tEHDConfig 
                      * 
                      */
                     void SetTEHDConfig(const TEHDConfigForUpdate& _tEHDConfig);
@@ -203,50 +175,70 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool TEHDConfigHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return StdExtInfo 
+                     * 
+                     */
+                    std::string GetStdExtInfo() const;
+
+                    /**
+                     * 设置
+                     * @param _stdExtInfo 
+                     * 
+                     */
+                    void SetStdExtInfo(const std::string& _stdExtInfo);
+
+                    /**
+                     * 判断参数 StdExtInfo 是否已赋值
+                     * @return StdExtInfo 是否已赋值
+                     * 
+                     */
+                    bool StdExtInfoHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Container format. Valid values: mp4, flv, hls, mp3, flac, ogg, m4a, and wav. Among them, mp3, flac, ogg, m4a, and wav are for audio-only files.
+                     * 
                      */
                     std::string m_container;
                     bool m_containerHasBeenSet;
 
                     /**
-                     * Indicates whether to remove video data. Valid values:
-<li>`0`: reserved;</li>
-<li>1: Remove.</li>
+                     * 
                      */
                     uint64_t m_removeVideo;
                     bool m_removeVideoHasBeenSet;
 
                     /**
-                     * Indicates whether to remove audio data. Valid values:
-<li>`0`: reserved;</li>
-<li>1: Remove.</li>
+                     * 
                      */
                     uint64_t m_removeAudio;
                     bool m_removeAudioHasBeenSet;
 
                     /**
-                     * Video stream configuration parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     VideoTemplateInfoForUpdate m_videoTemplate;
                     bool m_videoTemplateHasBeenSet;
 
                     /**
-                     * Audio stream configuration parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     AudioTemplateInfoForUpdate m_audioTemplate;
                     bool m_audioTemplateHasBeenSet;
 
                     /**
-                     * Top Speed Codec transcoding configuration parameters.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     TEHDConfigForUpdate m_tEHDConfig;
                     bool m_tEHDConfigHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_stdExtInfo;
+                    bool m_stdExtInfoHasBeenSet;
 
                 };
             }

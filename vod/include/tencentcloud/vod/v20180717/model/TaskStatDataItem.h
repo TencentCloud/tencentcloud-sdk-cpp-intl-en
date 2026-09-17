@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Task statistics, including number of tasks and usage.
+                * 
                 */
                 class TaskStatDataItem : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Start time of data time range in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F). For example, if the time granularity is 1-day, `2018-12-01T00:00:00+08:00` represents the time range between December 1, 2018 (inclusive) and December 2, 2018 (not inclusive).
-                     * @return Time Start time of data time range in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F). For example, if the time granularity is 1-day, `2018-12-01T00:00:00+08:00` represents the time range between December 1, 2018 (inclusive) and December 2, 2018 (not inclusive).
+                     * 获取
+                     * @return Time 
                      * 
                      */
                     std::string GetTime() const;
 
                     /**
-                     * 设置Start time of data time range in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F). For example, if the time granularity is 1-day, `2018-12-01T00:00:00+08:00` represents the time range between December 1, 2018 (inclusive) and December 2, 2018 (not inclusive).
-                     * @param _time Start time of data time range in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F). For example, if the time granularity is 1-day, `2018-12-01T00:00:00+08:00` represents the time range between December 1, 2018 (inclusive) and December 2, 2018 (not inclusive).
+                     * 设置
+                     * @param _time 
                      * 
                      */
                     void SetTime(const std::string& _time);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool TimeHasBeenSet() const;
 
                     /**
-                     * 获取Number of tasks.
-                     * @return Count Number of tasks.
+                     * 获取
+                     * @return Count 
                      * 
                      */
                     int64_t GetCount() const;
 
                     /**
-                     * 设置Number of tasks.
-                     * @param _count Number of tasks.
+                     * 设置
+                     * @param _count 
                      * 
                      */
                     void SetCount(const int64_t& _count);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool CountHasBeenSet() const;
 
                     /**
-                     * 获取Task usage.
-                     * @return Usage Task usage.
+                     * 获取
+                     * @return Usage 
                      * 
                      */
                     int64_t GetUsage() const;
 
                     /**
-                     * 设置Task usage.
-                     * @param _usage Task usage.
+                     * 设置
+                     * @param _usage 
                      * 
                      */
                     void SetUsage(const int64_t& _usage);
@@ -112,19 +112,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Start time of data time range in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F). For example, if the time granularity is 1-day, `2018-12-01T00:00:00+08:00` represents the time range between December 1, 2018 (inclusive) and December 2, 2018 (not inclusive).
+                     * 
                      */
                     std::string m_time;
                     bool m_timeHasBeenSet;
 
                     /**
-                     * Number of tasks.
+                     * 
                      */
                     int64_t m_count;
                     bool m_countHasBeenSet;
 
                     /**
-                     * Task usage.
+                     * 
                      */
                     int64_t m_usage;
                     bool m_usageHasBeenSet;

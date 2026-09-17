@@ -45,15 +45,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Template name. The length cannot exceed 64 characters.
-                     * @return Name Template name. The length cannot exceed 64 characters.
+                     * 获取
+                     * @return Name 
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Template name. The length cannot exceed 64 characters.
-                     * @param _name Template name. The length cannot exceed 64 characters.
+                     * 设置
+                     * @param _name 
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -66,15 +66,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Video parameter configuration.
-                     * @return VideoConfigure Video parameter configuration.
+                     * 获取
+                     * @return VideoConfigure 
                      * 
                      */
                     VideoConfigureInfo GetVideoConfigure() const;
 
                     /**
-                     * 设置Video parameter configuration.
-                     * @param _videoConfigure Video parameter configuration.
+                     * 设置
+                     * @param _videoConfigure 
                      * 
                      */
                     void SetVideoConfigure(const VideoConfigureInfo& _videoConfigure);
@@ -87,15 +87,15 @@ namespace TencentCloud
                     bool VideoConfigureHasBeenSet() const;
 
                     /**
-                     * 获取<b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
-                     * @return SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+                     * 获取
+                     * @return SubAppId 
                      * 
                      */
                     int64_t GetSubAppId() const;
 
                     /**
-                     * 设置<b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
-                     * @param _subAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+                     * 设置
+                     * @param _subAppId 
                      * 
                      */
                     void SetSubAppId(const int64_t& _subAppId);
@@ -108,15 +108,15 @@ namespace TencentCloud
                     bool SubAppIdHasBeenSet() const;
 
                     /**
-                     * 获取Watermark parameter configuration.
-                     * @return WatermarkConfigure Watermark parameter configuration.
+                     * 获取
+                     * @return WatermarkConfigure 
                      * 
                      */
                     WatermarkConfigureInfo GetWatermarkConfigure() const;
 
                     /**
-                     * 设置Watermark parameter configuration.
-                     * @param _watermarkConfigure Watermark parameter configuration.
+                     * 设置
+                     * @param _watermarkConfigure 
                      * 
                      */
                     void SetWatermarkConfigure(const WatermarkConfigureInfo& _watermarkConfigure);
@@ -129,15 +129,15 @@ namespace TencentCloud
                     bool WatermarkConfigureHasBeenSet() const;
 
                     /**
-                     * 获取Template description. The length cannot exceed 256 characters.
-                     * @return Comment Template description. The length cannot exceed 256 characters.
+                     * 获取
+                     * @return Comment 
                      * 
                      */
                     std::string GetComment() const;
 
                     /**
-                     * 设置Template description. The length cannot exceed 256 characters.
-                     * @param _comment Template description. The length cannot exceed 256 characters.
+                     * 设置
+                     * @param _comment 
                      * 
                      */
                     void SetComment(const std::string& _comment);
@@ -152,31 +152,31 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Template name. The length cannot exceed 64 characters.
+                     * 
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Video parameter configuration.
+                     * 
                      */
                     VideoConfigureInfo m_videoConfigure;
                     bool m_videoConfigureHasBeenSet;
 
                     /**
-                     * <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+                     * 
                      */
                     int64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
 
                     /**
-                     * Watermark parameter configuration.
+                     * 
                      */
                     WatermarkConfigureInfo m_watermarkConfigure;
                     bool m_watermarkConfigureHasBeenSet;
 
                     /**
-                     * Template description. The length cannot exceed 256 characters.
+                     * 
                      */
                     std::string m_comment;
                     bool m_commentHasBeenSet;

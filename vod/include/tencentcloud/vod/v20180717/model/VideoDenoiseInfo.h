@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Image noise removal configuration.
+                * 
                 */
                 class VideoDenoiseInfo : public AbstractModel
                 {
@@ -47,23 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether to enable image noise removal. Valid values:
-<li>`ON`</li>
-<li>`OFF`</li>
-                     * @return Switch Whether to enable image noise removal. Valid values:
-<li>`ON`</li>
-<li>`OFF`</li>
+                     * 获取
+                     * @return Switch 
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Whether to enable image noise removal. Valid values:
-<li>`ON`</li>
-<li>`OFF`</li>
-                     * @param _switch Whether to enable image noise removal. Valid values:
-<li>`ON`</li>
-<li>`OFF`</li>
+                     * 设置
+                     * @param _switch 
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -76,27 +68,15 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取The image noise removal type. This parameter is valid only if `Switch` is `ON`. Valid values:
-<li>`weak`</li>
-<li>`strong`</li>
-Default value: `weak`.
-                     * @return Type The image noise removal type. This parameter is valid only if `Switch` is `ON`. Valid values:
-<li>`weak`</li>
-<li>`strong`</li>
-Default value: `weak`.
+                     * 获取
+                     * @return Type 
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置The image noise removal type. This parameter is valid only if `Switch` is `ON`. Valid values:
-<li>`weak`</li>
-<li>`strong`</li>
-Default value: `weak`.
-                     * @param _type The image noise removal type. This parameter is valid only if `Switch` is `ON`. Valid values:
-<li>`weak`</li>
-<li>`strong`</li>
-Default value: `weak`.
+                     * 设置
+                     * @param _type 
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -111,18 +91,13 @@ Default value: `weak`.
                 private:
 
                     /**
-                     * Whether to enable image noise removal. Valid values:
-<li>`ON`</li>
-<li>`OFF`</li>
+                     * 
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * The image noise removal type. This parameter is valid only if `Switch` is `ON`. Valid values:
-<li>`weak`</li>
-<li>`strong`</li>
-Default value: `weak`.
+                     * 
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;

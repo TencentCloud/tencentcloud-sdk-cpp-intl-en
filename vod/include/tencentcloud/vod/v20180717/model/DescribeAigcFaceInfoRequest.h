@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
-                     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+                     * 获取
+                     * @return SubAppId 
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
-                     * @param _subAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+                     * 设置
+                     * @param _subAppId 
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool SubAppIdHasBeenSet() const;
 
                     /**
-                     * 获取Need to get the input video information for face information, containing at most one file.
-                     * @return FileInfos Need to get the input video information for face information, containing at most one file.
+                     * 获取
+                     * @return FileInfos 
                      * 
                      */
                     std::vector<AigcFaceInputFileInfo> GetFileInfos() const;
 
                     /**
-                     * 设置Need to get the input video information for face information, containing at most one file.
-                     * @param _fileInfos Need to get the input video information for face information, containing at most one file.
+                     * 设置
+                     * @param _fileInfos 
                      * 
                      */
                     void SetFileInfos(const std::vector<AigcFaceInputFileInfo>& _fileInfos);
@@ -88,13 +88,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+                     * 
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
 
                     /**
-                     * Need to get the input video information for face information, containing at most one file.
+                     * 
                      */
                     std::vector<AigcFaceInputFileInfo> m_fileInfos;
                     bool m_fileInfosHasBeenSet;

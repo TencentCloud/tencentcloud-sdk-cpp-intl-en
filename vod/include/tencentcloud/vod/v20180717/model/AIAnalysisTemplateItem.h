@@ -40,7 +40,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * AI-based intelligent analysis template details
+                * 
                 */
                 class AIAnalysisTemplateItem : public AbstractModel
                 {
@@ -52,15 +52,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Unique ID of intelligent analysis template.
-                     * @return Definition Unique ID of intelligent analysis template.
+                     * 获取
+                     * @return Definition 
                      * 
                      */
                     int64_t GetDefinition() const;
 
                     /**
-                     * 设置Unique ID of intelligent analysis template.
-                     * @param _definition Unique ID of intelligent analysis template.
+                     * 设置
+                     * @param _definition 
                      * 
                      */
                     void SetDefinition(const int64_t& _definition);
@@ -73,15 +73,15 @@ namespace TencentCloud
                     bool DefinitionHasBeenSet() const;
 
                     /**
-                     * 获取Intelligent analysis template name.
-                     * @return Name Intelligent analysis template name.
+                     * 获取
+                     * @return Name 
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Intelligent analysis template name.
-                     * @param _name Intelligent analysis template name.
+                     * 设置
+                     * @param _name 
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -94,15 +94,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Intelligent analysis template description.
-                     * @return Comment Intelligent analysis template description.
+                     * 获取
+                     * @return Comment 
                      * 
                      */
                     std::string GetComment() const;
 
                     /**
-                     * 设置Intelligent analysis template description.
-                     * @param _comment Intelligent analysis template description.
+                     * 设置
+                     * @param _comment 
                      * 
                      */
                     void SetComment(const std::string& _comment);
@@ -115,15 +115,15 @@ namespace TencentCloud
                     bool CommentHasBeenSet() const;
 
                     /**
-                     * 获取Intelligent Classification Task Control Parameters.
-                     * @return ClassificationConfigure Intelligent Classification Task Control Parameters.
+                     * 获取
+                     * @return ClassificationConfigure 
                      * 
                      */
                     ClassificationConfigureInfo GetClassificationConfigure() const;
 
                     /**
-                     * 设置Intelligent Classification Task Control Parameters.
-                     * @param _classificationConfigure Intelligent Classification Task Control Parameters.
+                     * 设置
+                     * @param _classificationConfigure 
                      * 
                      */
                     void SetClassificationConfigure(const ClassificationConfigureInfo& _classificationConfigure);
@@ -136,15 +136,15 @@ namespace TencentCloud
                     bool ClassificationConfigureHasBeenSet() const;
 
                     /**
-                     * 获取Intelligent tag task control parameter.
-                     * @return TagConfigure Intelligent tag task control parameter.
+                     * 获取
+                     * @return TagConfigure 
                      * 
                      */
                     TagConfigureInfo GetTagConfigure() const;
 
                     /**
-                     * 设置Intelligent tag task control parameter.
-                     * @param _tagConfigure Intelligent tag task control parameter.
+                     * 设置
+                     * @param _tagConfigure 
                      * 
                      */
                     void SetTagConfigure(const TagConfigureInfo& _tagConfigure);
@@ -157,15 +157,15 @@ namespace TencentCloud
                     bool TagConfigureHasBeenSet() const;
 
                     /**
-                     * 获取Intelligent Cover Task Control Parameters.
-                     * @return CoverConfigure Intelligent Cover Task Control Parameters.
+                     * 获取
+                     * @return CoverConfigure 
                      * 
                      */
                     CoverConfigureInfo GetCoverConfigure() const;
 
                     /**
-                     * 设置Intelligent Cover Task Control Parameters.
-                     * @param _coverConfigure Intelligent Cover Task Control Parameters.
+                     * 设置
+                     * @param _coverConfigure 
                      * 
                      */
                     void SetCoverConfigure(const CoverConfigureInfo& _coverConfigure);
@@ -178,15 +178,15 @@ namespace TencentCloud
                     bool CoverConfigureHasBeenSet() const;
 
                     /**
-                     * 获取Intelligent frame tagging task control parameter.
-                     * @return FrameTagConfigure Intelligent frame tagging task control parameter.
+                     * 获取
+                     * @return FrameTagConfigure 
                      * 
                      */
                     FrameTagConfigureInfo GetFrameTagConfigure() const;
 
                     /**
-                     * 设置Intelligent frame tagging task control parameter.
-                     * @param _frameTagConfigure Intelligent frame tagging task control parameter.
+                     * 设置
+                     * @param _frameTagConfigure 
                      * 
                      */
                     void SetFrameTagConfigure(const FrameTagConfigureInfo& _frameTagConfigure);
@@ -199,15 +199,15 @@ namespace TencentCloud
                     bool FrameTagConfigureHasBeenSet() const;
 
                     /**
-                     * 获取Control parameter of an intelligent highlight generating task.
-                     * @return HighlightConfigure Control parameter of an intelligent highlight generating task.
+                     * 获取
+                     * @return HighlightConfigure 
                      * 
                      */
                     HighlightsConfigureInfo GetHighlightConfigure() const;
 
                     /**
-                     * 设置Control parameter of an intelligent highlight generating task.
-                     * @param _highlightConfigure Control parameter of an intelligent highlight generating task.
+                     * 设置
+                     * @param _highlightConfigure 
                      * 
                      */
                     void SetHighlightConfigure(const HighlightsConfigureInfo& _highlightConfigure);
@@ -220,15 +220,15 @@ namespace TencentCloud
                     bool HighlightConfigureHasBeenSet() const;
 
                     /**
-                     * 获取Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
-                     * @return CreateTime Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 获取
+                     * @return CreateTime 
                      * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
-                     * 设置Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
-                     * @param _createTime Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 设置
+                     * @param _createTime 
                      * 
                      */
                     void SetCreateTime(const std::string& _createTime);
@@ -241,15 +241,15 @@ namespace TencentCloud
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Last modified time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
-                     * @return UpdateTime Last modified time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 获取
+                     * @return UpdateTime 
                      * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
-                     * 设置Last modified time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
-                     * @param _updateTime Last modified time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 设置
+                     * @param _updateTime 
                      * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
@@ -264,61 +264,61 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Unique ID of intelligent analysis template.
+                     * 
                      */
                     int64_t m_definition;
                     bool m_definitionHasBeenSet;
 
                     /**
-                     * Intelligent analysis template name.
+                     * 
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Intelligent analysis template description.
+                     * 
                      */
                     std::string m_comment;
                     bool m_commentHasBeenSet;
 
                     /**
-                     * Intelligent Classification Task Control Parameters.
+                     * 
                      */
                     ClassificationConfigureInfo m_classificationConfigure;
                     bool m_classificationConfigureHasBeenSet;
 
                     /**
-                     * Intelligent tag task control parameter.
+                     * 
                      */
                     TagConfigureInfo m_tagConfigure;
                     bool m_tagConfigureHasBeenSet;
 
                     /**
-                     * Intelligent Cover Task Control Parameters.
+                     * 
                      */
                     CoverConfigureInfo m_coverConfigure;
                     bool m_coverConfigureHasBeenSet;
 
                     /**
-                     * Intelligent frame tagging task control parameter.
+                     * 
                      */
                     FrameTagConfigureInfo m_frameTagConfigure;
                     bool m_frameTagConfigureHasBeenSet;
 
                     /**
-                     * Control parameter of an intelligent highlight generating task.
+                     * 
                      */
                     HighlightsConfigureInfo m_highlightConfigure;
                     bool m_highlightConfigureHasBeenSet;
 
                     /**
-                     * Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * Last modified time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 
                      */
                     std::string m_updateTime;
                     bool m_updateTimeHasBeenSet;

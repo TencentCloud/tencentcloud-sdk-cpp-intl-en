@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Statistics
+                * 
                 */
                 class StatDataItem : public AbstractModel
                 {
@@ -47,23 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Start time of data time range in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). For example, if the time granularity is 1-day, `2018-12-01T00:00:00+08:00` represents the time range between December 1, 2018 (inclusive) and December 2, 2018 (not inclusive).
-<li>For data at hourly level, `2019-08-22T00:00:00+08:00` indicates the statistics between 00:00 and 01:00 AM on August 22, 2019.</li>
-<li>For data at daily level, `2019-08-22T00:00:00+08:00` indicates statistics on August 22, 2019.</li>
-                     * @return Time Start time of data time range in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). For example, if the time granularity is 1-day, `2018-12-01T00:00:00+08:00` represents the time range between December 1, 2018 (inclusive) and December 2, 2018 (not inclusive).
-<li>For data at hourly level, `2019-08-22T00:00:00+08:00` indicates the statistics between 00:00 and 01:00 AM on August 22, 2019.</li>
-<li>For data at daily level, `2019-08-22T00:00:00+08:00` indicates statistics on August 22, 2019.</li>
+                     * 获取
+                     * @return Time 
                      * 
                      */
                     std::string GetTime() const;
 
                     /**
-                     * 设置Start time of data time range in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). For example, if the time granularity is 1-day, `2018-12-01T00:00:00+08:00` represents the time range between December 1, 2018 (inclusive) and December 2, 2018 (not inclusive).
-<li>For data at hourly level, `2019-08-22T00:00:00+08:00` indicates the statistics between 00:00 and 01:00 AM on August 22, 2019.</li>
-<li>For data at daily level, `2019-08-22T00:00:00+08:00` indicates statistics on August 22, 2019.</li>
-                     * @param _time Start time of data time range in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). For example, if the time granularity is 1-day, `2018-12-01T00:00:00+08:00` represents the time range between December 1, 2018 (inclusive) and December 2, 2018 (not inclusive).
-<li>For data at hourly level, `2019-08-22T00:00:00+08:00` indicates the statistics between 00:00 and 01:00 AM on August 22, 2019.</li>
-<li>For data at daily level, `2019-08-22T00:00:00+08:00` indicates statistics on August 22, 2019.</li>
+                     * 设置
+                     * @param _time 
                      * 
                      */
                     void SetTime(const std::string& _time);
@@ -76,43 +68,15 @@ namespace TencentCloud
                     bool TimeHasBeenSet() const;
 
                     /**
-                     * 获取Data size. 
-<li>The data of the storage space, the unit is bytes. </li>
-<li>Transcoding duration data, unit is seconds. </li>
-<li>Traffic data, unit is bytes. </li>
-<li>Bandwidth data, unit is bits per second. </li>
-<li>Live broadcast clip data, the unit is seconds. </li>
-<li>Carousel data, unit is seconds. </li>
-<li>The number of sub-applications, the unit is one. </li>
-                     * @return Value Data size. 
-<li>The data of the storage space, the unit is bytes. </li>
-<li>Transcoding duration data, unit is seconds. </li>
-<li>Traffic data, unit is bytes. </li>
-<li>Bandwidth data, unit is bits per second. </li>
-<li>Live broadcast clip data, the unit is seconds. </li>
-<li>Carousel data, unit is seconds. </li>
-<li>The number of sub-applications, the unit is one. </li>
+                     * 获取
+                     * @return Value 
                      * 
                      */
                     int64_t GetValue() const;
 
                     /**
-                     * 设置Data size. 
-<li>The data of the storage space, the unit is bytes. </li>
-<li>Transcoding duration data, unit is seconds. </li>
-<li>Traffic data, unit is bytes. </li>
-<li>Bandwidth data, unit is bits per second. </li>
-<li>Live broadcast clip data, the unit is seconds. </li>
-<li>Carousel data, unit is seconds. </li>
-<li>The number of sub-applications, the unit is one. </li>
-                     * @param _value Data size. 
-<li>The data of the storage space, the unit is bytes. </li>
-<li>Transcoding duration data, unit is seconds. </li>
-<li>Traffic data, unit is bytes. </li>
-<li>Bandwidth data, unit is bits per second. </li>
-<li>Live broadcast clip data, the unit is seconds. </li>
-<li>Carousel data, unit is seconds. </li>
-<li>The number of sub-applications, the unit is one. </li>
+                     * 设置
+                     * @param _value 
                      * 
                      */
                     void SetValue(const int64_t& _value);
@@ -127,22 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Start time of data time range in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). For example, if the time granularity is 1-day, `2018-12-01T00:00:00+08:00` represents the time range between December 1, 2018 (inclusive) and December 2, 2018 (not inclusive).
-<li>For data at hourly level, `2019-08-22T00:00:00+08:00` indicates the statistics between 00:00 and 01:00 AM on August 22, 2019.</li>
-<li>For data at daily level, `2019-08-22T00:00:00+08:00` indicates statistics on August 22, 2019.</li>
+                     * 
                      */
                     std::string m_time;
                     bool m_timeHasBeenSet;
 
                     /**
-                     * Data size. 
-<li>The data of the storage space, the unit is bytes. </li>
-<li>Transcoding duration data, unit is seconds. </li>
-<li>Traffic data, unit is bytes. </li>
-<li>Bandwidth data, unit is bits per second. </li>
-<li>Live broadcast clip data, the unit is seconds. </li>
-<li>Carousel data, unit is seconds. </li>
-<li>The number of sub-applications, the unit is one. </li>
+                     * 
                      */
                     int64_t m_value;
                     bool m_valueHasBeenSet;

@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Face information.
-                     * @return FaceInfoSet Face information.
+                     * 获取
+                     * @return FaceInfoSet 
                      * 
                      */
                     std::vector<AigcFaceInfo> GetFaceInfoSet() const;
@@ -61,7 +61,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Face information.
+                     * 
                      */
                     std::vector<AigcFaceInfo> m_faceInfoSet;
                     bool m_faceInfoSetHasBeenSet;

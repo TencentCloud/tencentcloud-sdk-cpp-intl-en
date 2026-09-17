@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * The information of a playlist.
+                * 
                 */
                 class RoundPlayInfo : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The playlist ID.
-                     * @return RoundPlayId The playlist ID.
+                     * 获取
+                     * @return RoundPlayId 
                      * 
                      */
                     std::string GetRoundPlayId() const;
 
                     /**
-                     * 设置The playlist ID.
-                     * @param _roundPlayId The playlist ID.
+                     * 设置
+                     * @param _roundPlayId 
                      * 
                      */
                     void SetRoundPlayId(const std::string& _roundPlayId);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool RoundPlayIdHasBeenSet() const;
 
                     /**
-                     * 获取The playback start time, in [ISO 8601 date format](https://www.tencentcloud.com/document/product/266/11732?has_map=2#iso-date-format).
-                     * @return StartTime The playback start time, in [ISO 8601 date format](https://www.tencentcloud.com/document/product/266/11732?has_map=2#iso-date-format).
+                     * 获取
+                     * @return StartTime 
                      * 
                      */
                     std::string GetStartTime() const;
 
                     /**
-                     * 设置The playback start time, in [ISO 8601 date format](https://www.tencentcloud.com/document/product/266/11732?has_map=2#iso-date-format).
-                     * @param _startTime The playback start time, in [ISO 8601 date format](https://www.tencentcloud.com/document/product/266/11732?has_map=2#iso-date-format).
+                     * 设置
+                     * @param _startTime 
                      * 
                      */
                     void SetStartTime(const std::string& _startTime);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取The files on the list.
-                     * @return RoundPlaylist The files on the list.
+                     * 获取
+                     * @return RoundPlaylist 
                      * 
                      */
                     std::vector<RoundPlayListItemInfo> GetRoundPlaylist() const;
 
                     /**
-                     * 设置The files on the list.
-                     * @param _roundPlaylist The files on the list.
+                     * 设置
+                     * @param _roundPlaylist 
                      * 
                      */
                     void SetRoundPlaylist(const std::vector<RoundPlayListItemInfo>& _roundPlaylist);
@@ -111,15 +111,15 @@ namespace TencentCloud
                     bool RoundPlaylistHasBeenSet() const;
 
                     /**
-                     * 获取The playlist name (not longer than 64 characters).
-                     * @return Name The playlist name (not longer than 64 characters).
+                     * 获取
+                     * @return Name 
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置The playlist name (not longer than 64 characters).
-                     * @param _name The playlist name (not longer than 64 characters).
+                     * 设置
+                     * @param _name 
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -132,15 +132,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取The playlist description (not longer than 256 characters).
-                     * @return Desc The playlist description (not longer than 256 characters).
+                     * 获取
+                     * @return Desc 
                      * 
                      */
                     std::string GetDesc() const;
 
                     /**
-                     * 设置The playlist description (not longer than 256 characters).
-                     * @param _desc The playlist description (not longer than 256 characters).
+                     * 设置
+                     * @param _desc 
                      * 
                      */
                     void SetDesc(const std::string& _desc);
@@ -153,27 +153,15 @@ namespace TencentCloud
                     bool DescHasBeenSet() const;
 
                     /**
-                     * 获取Playback status, optional values:
-<li>Enabled: startup status;</li>
-<li>Disabled: stop status. </li>
-Default value: Enabled.
-                     * @return Status Playback status, optional values:
-<li>Enabled: startup status;</li>
-<li>Disabled: stop status. </li>
-Default value: Enabled.
+                     * 获取
+                     * @return Status 
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置Playback status, optional values:
-<li>Enabled: startup status;</li>
-<li>Disabled: stop status. </li>
-Default value: Enabled.
-                     * @param _status Playback status, optional values:
-<li>Enabled: startup status;</li>
-<li>Disabled: stop status. </li>
-Default value: Enabled.
+                     * 设置
+                     * @param _status 
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -186,27 +174,15 @@ Default value: Enabled.
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Play mode, optional values:
-<li>Loop: Play the playlist in a loop;</li>
-<li>Linear: Play once, stop playing after the playlist is played. </li>
-Default value: Loop.
-                     * @return PlayBackMode Play mode, optional values:
-<li>Loop: Play the playlist in a loop;</li>
-<li>Linear: Play once, stop playing after the playlist is played. </li>
-Default value: Loop.
+                     * 获取
+                     * @return PlayBackMode 
                      * 
                      */
                     std::string GetPlayBackMode() const;
 
                     /**
-                     * 设置Play mode, optional values:
-<li>Loop: Play the playlist in a loop;</li>
-<li>Linear: Play once, stop playing after the playlist is played. </li>
-Default value: Loop.
-                     * @param _playBackMode Play mode, optional values:
-<li>Loop: Play the playlist in a loop;</li>
-<li>Linear: Play once, stop playing after the playlist is played. </li>
-Default value: Loop.
+                     * 设置
+                     * @param _playBackMode 
                      * 
                      */
                     void SetPlayBackMode(const std::string& _playBackMode);
@@ -219,15 +195,15 @@ Default value: Loop.
                     bool PlayBackModeHasBeenSet() const;
 
                     /**
-                     * 获取Carousel playback address.
-                     * @return Url Carousel playback address.
+                     * 获取
+                     * @return Url 
                      * 
                      */
                     std::string GetUrl() const;
 
                     /**
-                     * 设置Carousel playback address.
-                     * @param _url Carousel playback address.
+                     * 设置
+                     * @param _url 
                      * 
                      */
                     void SetUrl(const std::string& _url);
@@ -240,15 +216,15 @@ Default value: Loop.
                     bool UrlHasBeenSet() const;
 
                     /**
-                     * 获取Creation time in [ISO 8601 format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
-                     * @return CreateTime Creation time in [ISO 8601 format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
+                     * 获取
+                     * @return CreateTime 
                      * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
-                     * 设置Creation time in [ISO 8601 format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
-                     * @param _createTime Creation time in [ISO 8601 format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
+                     * 设置
+                     * @param _createTime 
                      * 
                      */
                     void SetCreateTime(const std::string& _createTime);
@@ -261,15 +237,15 @@ Default value: Loop.
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Update time, format according to ISO 8601. See [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
-                     * @return UpdateTime Update time, format according to ISO 8601. See [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
+                     * 获取
+                     * @return UpdateTime 
                      * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
-                     * 设置Update time, format according to ISO 8601. See [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
-                     * @param _updateTime Update time, format according to ISO 8601. See [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
+                     * 设置
+                     * @param _updateTime 
                      * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
@@ -282,15 +258,15 @@ Default value: Loop.
                     bool UpdateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Expiration time, in iso 8601 format. for details, see [iso date format](https://www.tencentcloud.com/document/product/266/11732?has_map=2#iso-date-format). the playback of the playlist will stop after expiration. "9999-12-31t23:59:59+08:00" means never expire.
-                     * @return ExpiredTime Expiration time, in iso 8601 format. for details, see [iso date format](https://www.tencentcloud.com/document/product/266/11732?has_map=2#iso-date-format). the playback of the playlist will stop after expiration. "9999-12-31t23:59:59+08:00" means never expire.
+                     * 获取
+                     * @return ExpiredTime 
                      * 
                      */
                     std::string GetExpiredTime() const;
 
                     /**
-                     * 设置Expiration time, in iso 8601 format. for details, see [iso date format](https://www.tencentcloud.com/document/product/266/11732?has_map=2#iso-date-format). the playback of the playlist will stop after expiration. "9999-12-31t23:59:59+08:00" means never expire.
-                     * @param _expiredTime Expiration time, in iso 8601 format. for details, see [iso date format](https://www.tencentcloud.com/document/product/266/11732?has_map=2#iso-date-format). the playback of the playlist will stop after expiration. "9999-12-31t23:59:59+08:00" means never expire.
+                     * 设置
+                     * @param _expiredTime 
                      * 
                      */
                     void SetExpiredTime(const std::string& _expiredTime);
@@ -305,73 +281,67 @@ Default value: Loop.
                 private:
 
                     /**
-                     * The playlist ID.
+                     * 
                      */
                     std::string m_roundPlayId;
                     bool m_roundPlayIdHasBeenSet;
 
                     /**
-                     * The playback start time, in [ISO 8601 date format](https://www.tencentcloud.com/document/product/266/11732?has_map=2#iso-date-format).
+                     * 
                      */
                     std::string m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * The files on the list.
+                     * 
                      */
                     std::vector<RoundPlayListItemInfo> m_roundPlaylist;
                     bool m_roundPlaylistHasBeenSet;
 
                     /**
-                     * The playlist name (not longer than 64 characters).
+                     * 
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * The playlist description (not longer than 256 characters).
+                     * 
                      */
                     std::string m_desc;
                     bool m_descHasBeenSet;
 
                     /**
-                     * Playback status, optional values:
-<li>Enabled: startup status;</li>
-<li>Disabled: stop status. </li>
-Default value: Enabled.
+                     * 
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Play mode, optional values:
-<li>Loop: Play the playlist in a loop;</li>
-<li>Linear: Play once, stop playing after the playlist is played. </li>
-Default value: Loop.
+                     * 
                      */
                     std::string m_playBackMode;
                     bool m_playBackModeHasBeenSet;
 
                     /**
-                     * Carousel playback address.
+                     * 
                      */
                     std::string m_url;
                     bool m_urlHasBeenSet;
 
                     /**
-                     * Creation time in [ISO 8601 format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
+                     * 
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * Update time, format according to ISO 8601. See [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
+                     * 
                      */
                     std::string m_updateTime;
                     bool m_updateTimeHasBeenSet;
 
                     /**
-                     * Expiration time, in iso 8601 format. for details, see [iso date format](https://www.tencentcloud.com/document/product/266/11732?has_map=2#iso-date-format). the playback of the playlist will stop after expiration. "9999-12-31t23:59:59+08:00" means never expire.
+                     * 
                      */
                     std::string m_expiredTime;
                     bool m_expiredTimeHasBeenSet;

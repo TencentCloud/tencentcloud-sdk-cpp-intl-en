@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * AI-based sample management - keyword output information.
+                * 
                 */
                 class AiSampleWord : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Keyword.
-                     * @return Keyword Keyword.
+                     * 获取
+                     * @return Keyword 
                      * 
                      */
                     std::string GetKeyword() const;
 
                     /**
-                     * 设置Keyword.
-                     * @param _keyword Keyword.
+                     * 设置
+                     * @param _keyword 
                      * 
                      */
                     void SetKeyword(const std::string& _keyword);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool KeywordHasBeenSet() const;
 
                     /**
-                     * 获取Keyword tag.
-                     * @return TagSet Keyword tag.
+                     * 获取
+                     * @return TagSet 
                      * 
                      */
                     std::vector<std::string> GetTagSet() const;
 
                     /**
-                     * 设置Keyword tag.
-                     * @param _tagSet Keyword tag.
+                     * 设置
+                     * @param _tagSet 
                      * 
                      */
                     void SetTagSet(const std::vector<std::string>& _tagSet);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool TagSetHasBeenSet() const;
 
                     /**
-                     * 获取Keyword use case.
-                     * @return UsageSet Keyword use case.
+                     * 获取
+                     * @return UsageSet 
                      * 
                      */
                     std::vector<std::string> GetUsageSet() const;
 
                     /**
-                     * 设置Keyword use case.
-                     * @param _usageSet Keyword use case.
+                     * 设置
+                     * @param _usageSet 
                      * 
                      */
                     void SetUsageSet(const std::vector<std::string>& _usageSet);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool UsageSetHasBeenSet() const;
 
                     /**
-                     * 获取Creation time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
-                     * @return CreateTime Creation time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 获取
+                     * @return CreateTime 
                      * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
-                     * 设置Creation time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
-                     * @param _createTime Creation time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 设置
+                     * @param _createTime 
                      * 
                      */
                     void SetCreateTime(const std::string& _createTime);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取Last modified time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
-                     * @return UpdateTime Last modified time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 获取
+                     * @return UpdateTime 
                      * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
-                     * 设置Last modified time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
-                     * @param _updateTime Last modified time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 设置
+                     * @param _updateTime 
                      * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
@@ -154,31 +154,31 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Keyword.
+                     * 
                      */
                     std::string m_keyword;
                     bool m_keywordHasBeenSet;
 
                     /**
-                     * Keyword tag.
+                     * 
                      */
                     std::vector<std::string> m_tagSet;
                     bool m_tagSetHasBeenSet;
 
                     /**
-                     * Keyword use case.
+                     * 
                      */
                     std::vector<std::string> m_usageSet;
                     bool m_usageSetHasBeenSet;
 
                     /**
-                     * Creation time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * Last modified time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 
                      */
                     std::string m_updateTime;
                     bool m_updateTimeHasBeenSet;

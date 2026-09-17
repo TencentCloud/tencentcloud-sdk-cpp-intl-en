@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Storage statistics data, one record every 5 minutes or daily.
-                     * @return Data Storage statistics data, one record every 5 minutes or daily.
+                     * 获取
+                     * @return Data 
                      * 
                      */
                     std::vector<StatDataItem> GetData() const;
@@ -61,7 +61,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Storage statistics data, one record every 5 minutes or daily.
+                     * 
                      */
                     std::vector<StatDataItem> m_data;
                     bool m_dataHasBeenSet;

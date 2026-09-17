@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Information of intelligently generated cover
+                * 
                 */
                 class MediaAiAnalysisCoverItem : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Address of intelligently generated cover.
-                     * @return CoverUrl Address of intelligently generated cover.
+                     * 获取
+                     * @return CoverUrl 
                      * 
                      */
                     std::string GetCoverUrl() const;
 
                     /**
-                     * 设置Address of intelligently generated cover.
-                     * @param _coverUrl Address of intelligently generated cover.
+                     * 设置
+                     * @param _coverUrl 
                      * 
                      */
                     void SetCoverUrl(const std::string& _coverUrl);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool CoverUrlHasBeenSet() const;
 
                     /**
-                     * 获取Confidence of intelligently generated cover between 0 and 100.
-                     * @return Confidence Confidence of intelligently generated cover between 0 and 100.
+                     * 获取
+                     * @return Confidence 
                      * 
                      */
                     double GetConfidence() const;
 
                     /**
-                     * 设置Confidence of intelligently generated cover between 0 and 100.
-                     * @param _confidence Confidence of intelligently generated cover between 0 and 100.
+                     * 设置
+                     * @param _confidence 
                      * 
                      */
                     void SetConfidence(const double& _confidence);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Address of intelligently generated cover.
+                     * 
                      */
                     std::string m_coverUrl;
                     bool m_coverUrlHasBeenSet;
 
                     /**
-                     * Confidence of intelligently generated cover between 0 and 100.
+                     * 
                      */
                     double m_confidence;
                     bool m_confidenceHasBeenSet;

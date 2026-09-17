@@ -25,6 +25,7 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/vod/v20180717/model/KnowledgeAnalysisInfo.h>
+#include <tencentcloud/vod/v20180717/model/KnowledgeBaseDetail.h>
 
 
 namespace TencentCloud
@@ -36,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Intelligent knowledge base info for media assets
+                * 
                 */
                 class KnowledgeBasesInfo : public AbstractModel
                 {
@@ -48,15 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Current library list of media assets to import</p>
-                     * @return Bases <p>Current library list of media assets to import</p>
+                     * 获取
+                     * @return Bases 
                      * 
                      */
                     std::vector<std::string> GetBases() const;
 
                     /**
-                     * 设置<p>Current library list of media assets to import</p>
-                     * @param _bases <p>Current library list of media assets to import</p>
+                     * 设置
+                     * @param _bases 
                      * 
                      */
                     void SetBases(const std::vector<std::string>& _bases);
@@ -69,15 +70,15 @@ namespace TencentCloud
                     bool BasesHasBeenSet() const;
 
                     /**
-                     * 获取<p>Media analysis information in the knowledge base</p>
-                     * @return KnowledgeAnalysisInfos <p>Media analysis information in the knowledge base</p>
+                     * 获取
+                     * @return KnowledgeAnalysisInfos 
                      * 
                      */
                     std::vector<KnowledgeAnalysisInfo> GetKnowledgeAnalysisInfos() const;
 
                     /**
-                     * 设置<p>Media analysis information in the knowledge base</p>
-                     * @param _knowledgeAnalysisInfos <p>Media analysis information in the knowledge base</p>
+                     * 设置
+                     * @param _knowledgeAnalysisInfos 
                      * 
                      */
                     void SetKnowledgeAnalysisInfos(const std::vector<KnowledgeAnalysisInfo>& _knowledgeAnalysisInfos);
@@ -89,19 +90,46 @@ namespace TencentCloud
                      */
                     bool KnowledgeAnalysisInfosHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return KnowledgeBaseDetails 
+                     * 
+                     */
+                    std::vector<KnowledgeBaseDetail> GetKnowledgeBaseDetails() const;
+
+                    /**
+                     * 设置
+                     * @param _knowledgeBaseDetails 
+                     * 
+                     */
+                    void SetKnowledgeBaseDetails(const std::vector<KnowledgeBaseDetail>& _knowledgeBaseDetails);
+
+                    /**
+                     * 判断参数 KnowledgeBaseDetails 是否已赋值
+                     * @return KnowledgeBaseDetails 是否已赋值
+                     * 
+                     */
+                    bool KnowledgeBaseDetailsHasBeenSet() const;
+
                 private:
 
                     /**
-                     * <p>Current library list of media assets to import</p>
+                     * 
                      */
                     std::vector<std::string> m_bases;
                     bool m_basesHasBeenSet;
 
                     /**
-                     * <p>Media analysis information in the knowledge base</p>
+                     * 
                      */
                     std::vector<KnowledgeAnalysisInfo> m_knowledgeAnalysisInfos;
                     bool m_knowledgeAnalysisInfosHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::vector<KnowledgeBaseDetail> m_knowledgeBaseDetails;
+                    bool m_knowledgeBaseDetailsHasBeenSet;
 
                 };
             }

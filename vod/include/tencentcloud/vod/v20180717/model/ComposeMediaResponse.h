@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Task ID for media file production. The state of the production task (task type is MakeMedia) can be queried through this ID.
-                     * @return TaskId Task ID for media file production. The state of the production task (task type is MakeMedia) can be queried through this ID.
+                     * 获取
+                     * @return TaskId 
                      * 
                      */
                     std::string GetTaskId() const;
@@ -60,7 +60,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Task ID for media file production. The state of the production task (task type is MakeMedia) can be queried through this ID.
+                     * 
                      */
                     std::string m_taskId;
                     bool m_taskIdHasBeenSet;

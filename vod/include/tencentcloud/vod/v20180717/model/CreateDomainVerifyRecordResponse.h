@@ -46,8 +46,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取DNS Verify Information
-                     * @return DNSVerifyInfo DNS Verify Information
+                     * 获取
+                     * @return DNSVerifyInfo 
                      * 
                      */
                     DNSVerifyInfo GetDNSVerifyInfo() const;
@@ -60,8 +60,8 @@ namespace TencentCloud
                     bool DNSVerifyInfoHasBeenSet() const;
 
                     /**
-                     * 获取File Verify Information
-                     * @return FileVerifyInfo File Verify Information
+                     * 获取
+                     * @return FileVerifyInfo 
                      * 
                      */
                     FileVerifyInfo GetFileVerifyInfo() const;
@@ -76,13 +76,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * DNS Verify Information
+                     * 
                      */
                     DNSVerifyInfo m_dNSVerifyInfo;
                     bool m_dNSVerifyInfoHasBeenSet;
 
                     /**
-                     * File Verify Information
+                     * 
                      */
                     FileVerifyInfo m_fileVerifyInfo;
                     bool m_fileVerifyInfoHasBeenSet;

@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Non-existent file ID list.
-                     * @return NotExistFileIdSet Non-existent file ID list.
+                     * 获取
+                     * @return NotExistFileIdSet 
                      * 
                      */
                     std::vector<std::string> GetNotExistFileIdSet() const;
@@ -60,7 +60,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Non-existent file ID list.
+                     * 
                      */
                     std::vector<std::string> m_notExistFileIdSet;
                     bool m_notExistFileIdSetHasBeenSet;

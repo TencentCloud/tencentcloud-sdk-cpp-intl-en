@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Scenario-based output media file configuration for the AIGC video generation task.
+                * 
                 */
                 class SceneAigcVideoOutputConfig : public AbstractModel
                 {
@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Storage mode. Valid values: <li>Permanent: Permanent storage. The generated image file will be stored in VOD, and the FileId can be obtained in the event notification.</li> <li>Temporary: Temporary storage. The generated image file will not be stored in VOD, and the URL for temporary access can be obtained in the event notification.</li>
-Default value: Temporary
-                     * @return StorageMode Storage mode. Valid values: <li>Permanent: Permanent storage. The generated image file will be stored in VOD, and the FileId can be obtained in the event notification.</li> <li>Temporary: Temporary storage. The generated image file will not be stored in VOD, and the URL for temporary access can be obtained in the event notification.</li>
-Default value: Temporary
+                     * 获取
+                     * @return StorageMode 
                      * 
                      */
                     std::string GetStorageMode() const;
 
                     /**
-                     * 设置Storage mode. Valid values: <li>Permanent: Permanent storage. The generated image file will be stored in VOD, and the FileId can be obtained in the event notification.</li> <li>Temporary: Temporary storage. The generated image file will not be stored in VOD, and the URL for temporary access can be obtained in the event notification.</li>
-Default value: Temporary
-                     * @param _storageMode Storage mode. Valid values: <li>Permanent: Permanent storage. The generated image file will be stored in VOD, and the FileId can be obtained in the event notification.</li> <li>Temporary: Temporary storage. The generated image file will not be stored in VOD, and the URL for temporary access can be obtained in the event notification.</li>
-Default value: Temporary
+                     * 设置
+                     * @param _storageMode 
                      * 
                      */
                     void SetStorageMode(const std::string& _storageMode);
@@ -72,15 +68,15 @@ Default value: Temporary
                     bool StorageModeHasBeenSet() const;
 
                     /**
-                     * 获取Output filename, up to 64 characters. Default filename is specified generation by system.
-                     * @return MediaName Output filename, up to 64 characters. Default filename is specified generation by system.
+                     * 获取
+                     * @return MediaName 
                      * 
                      */
                     std::string GetMediaName() const;
 
                     /**
-                     * 设置Output filename, up to 64 characters. Default filename is specified generation by system.
-                     * @param _mediaName Output filename, up to 64 characters. Default filename is specified generation by system.
+                     * 设置
+                     * @param _mediaName 
                      * 
                      */
                     void SetMediaName(const std::string& _mediaName);
@@ -93,19 +89,15 @@ Default value: Temporary
                     bool MediaNameHasBeenSet() const;
 
                     /**
-                     * 获取Category ID, used to categorize and manage media. You can create a category and obtain the category ID via the [create category](https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1) API.
-<li>Default value: 0, indicating other categories.</li>
-                     * @return ClassId Category ID, used to categorize and manage media. You can create a category and obtain the category ID via the [create category](https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1) API.
-<li>Default value: 0, indicating other categories.</li>
+                     * 获取
+                     * @return ClassId 
                      * 
                      */
                     int64_t GetClassId() const;
 
                     /**
-                     * 设置Category ID, used to categorize and manage media. You can create a category and obtain the category ID via the [create category](https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1) API.
-<li>Default value: 0, indicating other categories.</li>
-                     * @param _classId Category ID, used to categorize and manage media. You can create a category and obtain the category ID via the [create category](https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1) API.
-<li>Default value: 0, indicating other categories.</li>
+                     * 设置
+                     * @param _classId 
                      * 
                      */
                     void SetClassId(const int64_t& _classId);
@@ -118,15 +110,15 @@ Default value: Temporary
                     bool ClassIdHasBeenSet() const;
 
                     /**
-                     * 获取Expiry date of the output file. Files will be deleted longer than this time. Default is no expiration. Format according to ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-                     * @return ExpireTime Expiry date of the output file. Files will be deleted longer than this time. Default is no expiration. Format according to ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 获取
+                     * @return ExpireTime 
                      * 
                      */
                     std::string GetExpireTime() const;
 
                     /**
-                     * 设置Expiry date of the output file. Files will be deleted longer than this time. Default is no expiration. Format according to ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
-                     * @param _expireTime Expiry date of the output file. Files will be deleted longer than this time. Default is no expiration. Format according to ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 设置
+                     * @param _expireTime 
                      * 
                      */
                     void SetExpireTime(const std::string& _expireTime);
@@ -139,15 +131,15 @@ Default value: Temporary
                     bool ExpireTimeHasBeenSet() const;
 
                     /**
-                     * 获取Specify the aspect ratio of the generated video. Input format is W:H. Valid only for product image scenarios. Options: 16:9, 9:16.
-                     * @return AspectRatio Specify the aspect ratio of the generated video. Input format is W:H. Valid only for product image scenarios. Options: 16:9, 9:16.
+                     * 获取
+                     * @return AspectRatio 
                      * 
                      */
                     std::string GetAspectRatio() const;
 
                     /**
-                     * 设置Specify the aspect ratio of the generated video. Input format is W:H. Valid only for product image scenarios. Options: 16:9, 9:16.
-                     * @param _aspectRatio Specify the aspect ratio of the generated video. Input format is W:H. Valid only for product image scenarios. Options: 16:9, 9:16.
+                     * 设置
+                     * @param _aspectRatio 
                      * 
                      */
                     void SetAspectRatio(const std::string& _aspectRatio);
@@ -160,15 +152,15 @@ Default value: Temporary
                     bool AspectRatioHasBeenSet() const;
 
                     /**
-                     * 获取Generate video duration. Available values: 4, 6, 8 seconds.
-                     * @return Duration Generate video duration. Available values: 4, 6, 8 seconds.
+                     * 获取
+                     * @return Duration 
                      * 
                      */
                     double GetDuration() const;
 
                     /**
-                     * 设置Generate video duration. Available values: 4, 6, 8 seconds.
-                     * @param _duration Generate video duration. Available values: 4, 6, 8 seconds.
+                     * 设置
+                     * @param _duration 
                      * 
                      */
                     void SetDuration(const double& _duration);
@@ -183,39 +175,37 @@ Default value: Temporary
                 private:
 
                     /**
-                     * Storage mode. Valid values: <li>Permanent: Permanent storage. The generated image file will be stored in VOD, and the FileId can be obtained in the event notification.</li> <li>Temporary: Temporary storage. The generated image file will not be stored in VOD, and the URL for temporary access can be obtained in the event notification.</li>
-Default value: Temporary
+                     * 
                      */
                     std::string m_storageMode;
                     bool m_storageModeHasBeenSet;
 
                     /**
-                     * Output filename, up to 64 characters. Default filename is specified generation by system.
+                     * 
                      */
                     std::string m_mediaName;
                     bool m_mediaNameHasBeenSet;
 
                     /**
-                     * Category ID, used to categorize and manage media. You can create a category and obtain the category ID via the [create category](https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1) API.
-<li>Default value: 0, indicating other categories.</li>
+                     * 
                      */
                     int64_t m_classId;
                     bool m_classIdHasBeenSet;
 
                     /**
-                     * Expiry date of the output file. Files will be deleted longer than this time. Default is no expiration. Format according to ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * 
                      */
                     std::string m_expireTime;
                     bool m_expireTimeHasBeenSet;
 
                     /**
-                     * Specify the aspect ratio of the generated video. Input format is W:H. Valid only for product image scenarios. Options: 16:9, 9:16.
+                     * 
                      */
                     std::string m_aspectRatio;
                     bool m_aspectRatioHasBeenSet;
 
                     /**
-                     * Generate video duration. Available values: 4, 6, 8 seconds.
+                     * 
                      */
                     double m_duration;
                     bool m_durationHasBeenSet;

@@ -36,7 +36,8 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Branch path cache configuration. The default cache expiration for all files is 30 days.
+                * Path cache configuration.
+By default, the cache expiration time for all files is 30 days.
                 */
                 class RuleCache : public AbstractModel
                 {
@@ -48,15 +49,31 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Rule type: <li>all: valid for all files;</li> <li>file: valid for specified file suffix;</li> <li>directory: valid for specified path;</li> <li>path: specified absolute The path takes effect. </li>
-                     * @return RuleType Rule type: <li>all: valid for all files;</li> <li>file: valid for specified file suffix;</li> <li>directory: valid for specified path;</li> <li>path: specified absolute The path takes effect. </li>
+                     * 获取Rule type:
+<li>all: take effect for all files;</li>
+<li>file: The specified file suffix takes effect;</li>
+<li>directory: The specified path takes effect;</li>
+<li>path: The absolute path takes effect.</li>
+                     * @return RuleType Rule type:
+<li>all: take effect for all files;</li>
+<li>file: The specified file suffix takes effect;</li>
+<li>directory: The specified path takes effect;</li>
+<li>path: The absolute path takes effect.</li>
                      * 
                      */
                     std::string GetRuleType() const;
 
                     /**
-                     * 设置Rule type: <li>all: valid for all files;</li> <li>file: valid for specified file suffix;</li> <li>directory: valid for specified path;</li> <li>path: specified absolute The path takes effect. </li>
-                     * @param _ruleType Rule type: <li>all: valid for all files;</li> <li>file: valid for specified file suffix;</li> <li>directory: valid for specified path;</li> <li>path: specified absolute The path takes effect. </li>
+                     * 设置Rule type:
+<li>all: take effect for all files;</li>
+<li>file: The specified file suffix takes effect;</li>
+<li>directory: The specified path takes effect;</li>
+<li>path: The absolute path takes effect.</li>
+                     * @param _ruleType Rule type:
+<li>all: take effect for all files;</li>
+<li>file: The specified file suffix takes effect;</li>
+<li>directory: The specified path takes effect;</li>
+<li>path: The absolute path takes effect.</li>
                      * 
                      */
                     void SetRuleType(const std::string& _ruleType);
@@ -69,15 +86,31 @@ namespace TencentCloud
                     bool RuleTypeHasBeenSet() const;
 
                     /**
-                     * 获取Matching content under the corresponding type of RuleType: <li>Fill in * when all is used;</li> <li>Fill in suffix name when file is used, such as jpg, txt;</li> <li>Fill in path when directory is used, such as /xxx/ test/;</li> <li>Fill in the absolute path when path is specified, such as /xxx/test.html. </li>
-                     * @return RulePaths Matching content under the corresponding type of RuleType: <li>Fill in * when all is used;</li> <li>Fill in suffix name when file is used, such as jpg, txt;</li> <li>Fill in path when directory is used, such as /xxx/ test/;</li> <li>Fill in the absolute path when path is specified, such as /xxx/test.html. </li>
+                     * 获取Matching content under the corresponding type of RuleType:
+<li>Fill with * when set to all;</li>
+<li>For file, fill in the extension, such as jpg or txt;</li>
+<li>For directory, fill in the path, such as /xxx/test/;</li>
+<li>For path, fill in the absolute path, such as /xxx/test.html.</li>
+                     * @return RulePaths Matching content under the corresponding type of RuleType:
+<li>Fill with * when set to all;</li>
+<li>For file, fill in the extension, such as jpg or txt;</li>
+<li>For directory, fill in the path, such as /xxx/test/;</li>
+<li>For path, fill in the absolute path, such as /xxx/test.html.</li>
                      * 
                      */
                     std::vector<std::string> GetRulePaths() const;
 
                     /**
-                     * 设置Matching content under the corresponding type of RuleType: <li>Fill in * when all is used;</li> <li>Fill in suffix name when file is used, such as jpg, txt;</li> <li>Fill in path when directory is used, such as /xxx/ test/;</li> <li>Fill in the absolute path when path is specified, such as /xxx/test.html. </li>
-                     * @param _rulePaths Matching content under the corresponding type of RuleType: <li>Fill in * when all is used;</li> <li>Fill in suffix name when file is used, such as jpg, txt;</li> <li>Fill in path when directory is used, such as /xxx/ test/;</li> <li>Fill in the absolute path when path is specified, such as /xxx/test.html. </li>
+                     * 设置Matching content under the corresponding type of RuleType:
+<li>Fill with * when set to all;</li>
+<li>For file, fill in the extension, such as jpg or txt;</li>
+<li>For directory, fill in the path, such as /xxx/test/;</li>
+<li>For path, fill in the absolute path, such as /xxx/test.html.</li>
+                     * @param _rulePaths Matching content under the corresponding type of RuleType:
+<li>Fill with * when set to all;</li>
+<li>For file, fill in the extension, such as jpg or txt;</li>
+<li>For directory, fill in the path, such as /xxx/test/;</li>
+<li>For path, fill in the absolute path, such as /xxx/test.html.</li>
                      * 
                      */
                     void SetRulePaths(const std::vector<std::string>& _rulePaths);
@@ -90,15 +123,15 @@ namespace TencentCloud
                     bool RulePathsHasBeenSet() const;
 
                     /**
-                     * 获取Cache configuration.
-                     * @return CacheConfig Cache configuration.
+                     * 获取
+                     * @return CacheConfig 
                      * 
                      */
                     RuleCacheConfig GetCacheConfig() const;
 
                     /**
-                     * 设置Cache configuration.
-                     * @param _cacheConfig Cache configuration.
+                     * 设置
+                     * @param _cacheConfig 
                      * 
                      */
                     void SetCacheConfig(const RuleCacheConfig& _cacheConfig);
@@ -113,19 +146,27 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Rule type: <li>all: valid for all files;</li> <li>file: valid for specified file suffix;</li> <li>directory: valid for specified path;</li> <li>path: specified absolute The path takes effect. </li>
+                     * Rule type:
+<li>all: take effect for all files;</li>
+<li>file: The specified file suffix takes effect;</li>
+<li>directory: The specified path takes effect;</li>
+<li>path: The absolute path takes effect.</li>
                      */
                     std::string m_ruleType;
                     bool m_ruleTypeHasBeenSet;
 
                     /**
-                     * Matching content under the corresponding type of RuleType: <li>Fill in * when all is used;</li> <li>Fill in suffix name when file is used, such as jpg, txt;</li> <li>Fill in path when directory is used, such as /xxx/ test/;</li> <li>Fill in the absolute path when path is specified, such as /xxx/test.html. </li>
+                     * Matching content under the corresponding type of RuleType:
+<li>Fill with * when set to all;</li>
+<li>For file, fill in the extension, such as jpg or txt;</li>
+<li>For directory, fill in the path, such as /xxx/test/;</li>
+<li>For path, fill in the absolute path, such as /xxx/test.html.</li>
                      */
                     std::vector<std::string> m_rulePaths;
                     bool m_rulePathsHasBeenSet;
 
                     /**
-                     * Cache configuration.
+                     * 
                      */
                     RuleCacheConfig m_cacheConfig;
                     bool m_cacheConfigHasBeenSet;

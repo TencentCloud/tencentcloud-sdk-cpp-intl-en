@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Path cache/no cache configuration.
+                * 
                 */
                 class CacheConfigNoCache : public AbstractModel
                 {
@@ -47,15 +47,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Path cache does not cache configuration configuration switch, value: <li>on: on; </li> <li>off: off. </li>
-                     * @return Switch Path cache does not cache configuration configuration switch, value: <li>on: on; </li> <li>off: off. </li>
+                     * 获取Path cache no cache configuration switch. Value:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
+                     * @return Switch Path cache no cache configuration switch. Value:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Path cache does not cache configuration configuration switch, value: <li>on: on; </li> <li>off: off. </li>
-                     * @param _switch Path cache does not cache configuration configuration switch, value: <li>on: on; </li> <li>off: off. </li>
+                     * 设置Path cache no cache configuration switch. Value:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
+                     * @param _switch Path cache no cache configuration switch. Value:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -68,15 +76,23 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取Always return to the origin site for verification, value: <li>on: on; </li> <li>off: off. </li>
-                     * @return Revalidate Always return to the origin site for verification, value: <li>on: on; </li> <li>off: off. </li>
+                     * 获取Always validate against the origin server. Value:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
+                     * @return Revalidate Always validate against the origin server. Value:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
                      * 
                      */
                     std::string GetRevalidate() const;
 
                     /**
-                     * 设置Always return to the origin site for verification, value: <li>on: on; </li> <li>off: off. </li>
-                     * @param _revalidate Always return to the origin site for verification, value: <li>on: on; </li> <li>off: off. </li>
+                     * 设置Always validate against the origin server. Value:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
+                     * @param _revalidate Always validate against the origin server. Value:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
                      * 
                      */
                     void SetRevalidate(const std::string& _revalidate);
@@ -91,13 +107,17 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Path cache does not cache configuration configuration switch, value: <li>on: on; </li> <li>off: off. </li>
+                     * Path cache no cache configuration switch. Value:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * Always return to the origin site for verification, value: <li>on: on; </li> <li>off: off. </li>
+                     * Always validate against the origin server. Value:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
                      */
                     std::string m_revalidate;
                     bool m_revalidateHasBeenSet;

@@ -890,6 +890,56 @@ VodClient::CreateAigcCustomVoiceOutcomeCallable VodClient::CreateAigcCustomVoice
     return prom->get_future();
 }
 
+VodClient::CreateAigcHunyuan3DTaskOutcome VodClient::CreateAigcHunyuan3DTask(const CreateAigcHunyuan3DTaskRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateAigcHunyuan3DTask");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateAigcHunyuan3DTaskResponse rsp = CreateAigcHunyuan3DTaskResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateAigcHunyuan3DTaskOutcome(rsp);
+        else
+            return CreateAigcHunyuan3DTaskOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateAigcHunyuan3DTaskOutcome(outcome.GetError());
+    }
+}
+
+void VodClient::CreateAigcHunyuan3DTaskAsync(const CreateAigcHunyuan3DTaskRequest& request, const CreateAigcHunyuan3DTaskAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const CreateAigcHunyuan3DTaskRequest&;
+    using Resp = CreateAigcHunyuan3DTaskResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "CreateAigcHunyuan3DTask", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+VodClient::CreateAigcHunyuan3DTaskOutcomeCallable VodClient::CreateAigcHunyuan3DTaskCallable(const CreateAigcHunyuan3DTaskRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<CreateAigcHunyuan3DTaskOutcome>>();
+    CreateAigcHunyuan3DTaskAsync(
+    request,
+    [prom](
+        const VodClient*,
+        const CreateAigcHunyuan3DTaskRequest&,
+        CreateAigcHunyuan3DTaskOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 VodClient::CreateAigcImageTaskOutcome VodClient::CreateAigcImageTask(const CreateAigcImageTaskRequest &request)
 {
     auto outcome = MakeRequest(request, "CreateAigcImageTask");
@@ -1832,6 +1882,56 @@ VodClient::CreateJustInTimeTranscodeTemplateOutcomeCallable VodClient::CreateJus
         const VodClient*,
         const CreateJustInTimeTranscodeTemplateRequest&,
         CreateJustInTimeTranscodeTemplateOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+VodClient::CreateKnowledgeBaseOutcome VodClient::CreateKnowledgeBase(const CreateKnowledgeBaseRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateKnowledgeBase");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateKnowledgeBaseResponse rsp = CreateKnowledgeBaseResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateKnowledgeBaseOutcome(rsp);
+        else
+            return CreateKnowledgeBaseOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateKnowledgeBaseOutcome(outcome.GetError());
+    }
+}
+
+void VodClient::CreateKnowledgeBaseAsync(const CreateKnowledgeBaseRequest& request, const CreateKnowledgeBaseAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const CreateKnowledgeBaseRequest&;
+    using Resp = CreateKnowledgeBaseResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "CreateKnowledgeBase", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+VodClient::CreateKnowledgeBaseOutcomeCallable VodClient::CreateKnowledgeBaseCallable(const CreateKnowledgeBaseRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<CreateKnowledgeBaseOutcome>>();
+    CreateKnowledgeBaseAsync(
+    request,
+    [prom](
+        const VodClient*,
+        const CreateKnowledgeBaseRequest&,
+        CreateKnowledgeBaseOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -3690,6 +3790,56 @@ VodClient::DeleteJustInTimeTranscodeTemplateOutcomeCallable VodClient::DeleteJus
     return prom->get_future();
 }
 
+VodClient::DeleteKnowledgeBaseOutcome VodClient::DeleteKnowledgeBase(const DeleteKnowledgeBaseRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteKnowledgeBase");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteKnowledgeBaseResponse rsp = DeleteKnowledgeBaseResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteKnowledgeBaseOutcome(rsp);
+        else
+            return DeleteKnowledgeBaseOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteKnowledgeBaseOutcome(outcome.GetError());
+    }
+}
+
+void VodClient::DeleteKnowledgeBaseAsync(const DeleteKnowledgeBaseRequest& request, const DeleteKnowledgeBaseAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DeleteKnowledgeBaseRequest&;
+    using Resp = DeleteKnowledgeBaseResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DeleteKnowledgeBase", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+VodClient::DeleteKnowledgeBaseOutcomeCallable VodClient::DeleteKnowledgeBaseCallable(const DeleteKnowledgeBaseRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DeleteKnowledgeBaseOutcome>>();
+    DeleteKnowledgeBaseAsync(
+    request,
+    [prom](
+        const VodClient*,
+        const DeleteKnowledgeBaseRequest&,
+        DeleteKnowledgeBaseOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 VodClient::DeleteLLMComprehendTemplateOutcome VodClient::DeleteLLMComprehendTemplate(const DeleteLLMComprehendTemplateRequest &request)
 {
     auto outcome = MakeRequest(request, "DeleteLLMComprehendTemplate");
@@ -5390,6 +5540,56 @@ VodClient::DescribeCLSLogsetsOutcomeCallable VodClient::DescribeCLSLogsetsCallab
     return prom->get_future();
 }
 
+VodClient::DescribeCLSPushTargetsOutcome VodClient::DescribeCLSPushTargets(const DescribeCLSPushTargetsRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeCLSPushTargets");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeCLSPushTargetsResponse rsp = DescribeCLSPushTargetsResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeCLSPushTargetsOutcome(rsp);
+        else
+            return DescribeCLSPushTargetsOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeCLSPushTargetsOutcome(outcome.GetError());
+    }
+}
+
+void VodClient::DescribeCLSPushTargetsAsync(const DescribeCLSPushTargetsRequest& request, const DescribeCLSPushTargetsAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeCLSPushTargetsRequest&;
+    using Resp = DescribeCLSPushTargetsResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeCLSPushTargets", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+VodClient::DescribeCLSPushTargetsOutcomeCallable VodClient::DescribeCLSPushTargetsCallable(const DescribeCLSPushTargetsRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeCLSPushTargetsOutcome>>();
+    DescribeCLSPushTargetsAsync(
+    request,
+    [prom](
+        const VodClient*,
+        const DescribeCLSPushTargetsRequest&,
+        DescribeCLSPushTargetsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 VodClient::DescribeCLSTopicsOutcome VodClient::DescribeCLSTopics(const DescribeCLSTopicsRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeCLSTopics");
@@ -5632,6 +5832,106 @@ VodClient::DescribeCurrentPlaylistOutcomeCallable VodClient::DescribeCurrentPlay
         const VodClient*,
         const DescribeCurrentPlaylistRequest&,
         DescribeCurrentPlaylistOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+VodClient::DescribeDailyMediaPlayStatOutcome VodClient::DescribeDailyMediaPlayStat(const DescribeDailyMediaPlayStatRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeDailyMediaPlayStat");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeDailyMediaPlayStatResponse rsp = DescribeDailyMediaPlayStatResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeDailyMediaPlayStatOutcome(rsp);
+        else
+            return DescribeDailyMediaPlayStatOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeDailyMediaPlayStatOutcome(outcome.GetError());
+    }
+}
+
+void VodClient::DescribeDailyMediaPlayStatAsync(const DescribeDailyMediaPlayStatRequest& request, const DescribeDailyMediaPlayStatAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeDailyMediaPlayStatRequest&;
+    using Resp = DescribeDailyMediaPlayStatResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeDailyMediaPlayStat", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+VodClient::DescribeDailyMediaPlayStatOutcomeCallable VodClient::DescribeDailyMediaPlayStatCallable(const DescribeDailyMediaPlayStatRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeDailyMediaPlayStatOutcome>>();
+    DescribeDailyMediaPlayStatAsync(
+    request,
+    [prom](
+        const VodClient*,
+        const DescribeDailyMediaPlayStatRequest&,
+        DescribeDailyMediaPlayStatOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+VodClient::DescribeDailyMostPlayedStatOutcome VodClient::DescribeDailyMostPlayedStat(const DescribeDailyMostPlayedStatRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeDailyMostPlayedStat");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeDailyMostPlayedStatResponse rsp = DescribeDailyMostPlayedStatResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeDailyMostPlayedStatOutcome(rsp);
+        else
+            return DescribeDailyMostPlayedStatOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeDailyMostPlayedStatOutcome(outcome.GetError());
+    }
+}
+
+void VodClient::DescribeDailyMostPlayedStatAsync(const DescribeDailyMostPlayedStatRequest& request, const DescribeDailyMostPlayedStatAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeDailyMostPlayedStatRequest&;
+    using Resp = DescribeDailyMostPlayedStatResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeDailyMostPlayedStat", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+VodClient::DescribeDailyMostPlayedStatOutcomeCallable VodClient::DescribeDailyMostPlayedStatCallable(const DescribeDailyMostPlayedStatRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeDailyMostPlayedStatOutcome>>();
+    DescribeDailyMostPlayedStatAsync(
+    request,
+    [prom](
+        const VodClient*,
+        const DescribeDailyMostPlayedStatRequest&,
+        DescribeDailyMostPlayedStatOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -6182,6 +6482,56 @@ VodClient::DescribeJustInTimeTranscodeTemplatesOutcomeCallable VodClient::Descri
         const VodClient*,
         const DescribeJustInTimeTranscodeTemplatesRequest&,
         DescribeJustInTimeTranscodeTemplatesOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+VodClient::DescribeKnowledgeBasesOutcome VodClient::DescribeKnowledgeBases(const DescribeKnowledgeBasesRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeKnowledgeBases");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeKnowledgeBasesResponse rsp = DescribeKnowledgeBasesResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeKnowledgeBasesOutcome(rsp);
+        else
+            return DescribeKnowledgeBasesOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeKnowledgeBasesOutcome(outcome.GetError());
+    }
+}
+
+void VodClient::DescribeKnowledgeBasesAsync(const DescribeKnowledgeBasesRequest& request, const DescribeKnowledgeBasesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeKnowledgeBasesRequest&;
+    using Resp = DescribeKnowledgeBasesResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeKnowledgeBases", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+VodClient::DescribeKnowledgeBasesOutcomeCallable VodClient::DescribeKnowledgeBasesCallable(const DescribeKnowledgeBasesRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeKnowledgeBasesOutcome>>();
+    DescribeKnowledgeBasesAsync(
+    request,
+    [prom](
+        const VodClient*,
+        const DescribeKnowledgeBasesRequest&,
+        DescribeKnowledgeBasesOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -8840,6 +9190,56 @@ VodClient::ModifyContentReviewTemplateOutcomeCallable VodClient::ModifyContentRe
     return prom->get_future();
 }
 
+VodClient::ModifyDefaultDistributionConfigOutcome VodClient::ModifyDefaultDistributionConfig(const ModifyDefaultDistributionConfigRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyDefaultDistributionConfig");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyDefaultDistributionConfigResponse rsp = ModifyDefaultDistributionConfigResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyDefaultDistributionConfigOutcome(rsp);
+        else
+            return ModifyDefaultDistributionConfigOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyDefaultDistributionConfigOutcome(outcome.GetError());
+    }
+}
+
+void VodClient::ModifyDefaultDistributionConfigAsync(const ModifyDefaultDistributionConfigRequest& request, const ModifyDefaultDistributionConfigAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ModifyDefaultDistributionConfigRequest&;
+    using Resp = ModifyDefaultDistributionConfigResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ModifyDefaultDistributionConfig", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+VodClient::ModifyDefaultDistributionConfigOutcomeCallable VodClient::ModifyDefaultDistributionConfigCallable(const ModifyDefaultDistributionConfigRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ModifyDefaultDistributionConfigOutcome>>();
+    ModifyDefaultDistributionConfigAsync(
+    request,
+    [prom](
+        const VodClient*,
+        const ModifyDefaultDistributionConfigRequest&,
+        ModifyDefaultDistributionConfigOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 VodClient::ModifyDefaultStorageRegionOutcome VodClient::ModifyDefaultStorageRegion(const ModifyDefaultStorageRegionRequest &request)
 {
     auto outcome = MakeRequest(request, "ModifyDefaultStorageRegion");
@@ -9132,6 +9532,56 @@ VodClient::ModifyJustInTimeTranscodeTemplateOutcomeCallable VodClient::ModifyJus
         const VodClient*,
         const ModifyJustInTimeTranscodeTemplateRequest&,
         ModifyJustInTimeTranscodeTemplateOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+VodClient::ModifyKnowledgeBaseOutcome VodClient::ModifyKnowledgeBase(const ModifyKnowledgeBaseRequest &request)
+{
+    auto outcome = MakeRequest(request, "ModifyKnowledgeBase");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ModifyKnowledgeBaseResponse rsp = ModifyKnowledgeBaseResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ModifyKnowledgeBaseOutcome(rsp);
+        else
+            return ModifyKnowledgeBaseOutcome(o.GetError());
+    }
+    else
+    {
+        return ModifyKnowledgeBaseOutcome(outcome.GetError());
+    }
+}
+
+void VodClient::ModifyKnowledgeBaseAsync(const ModifyKnowledgeBaseRequest& request, const ModifyKnowledgeBaseAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ModifyKnowledgeBaseRequest&;
+    using Resp = ModifyKnowledgeBaseResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ModifyKnowledgeBase", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+VodClient::ModifyKnowledgeBaseOutcomeCallable VodClient::ModifyKnowledgeBaseCallable(const ModifyKnowledgeBaseRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ModifyKnowledgeBaseOutcome>>();
+    ModifyKnowledgeBaseAsync(
+    request,
+    [prom](
+        const VodClient*,
+        const ModifyKnowledgeBaseRequest&,
+        ModifyKnowledgeBaseOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -11082,6 +11532,56 @@ VodClient::SearchMediaBySemanticsOutcomeCallable VodClient::SearchMediaBySemanti
         const VodClient*,
         const SearchMediaBySemanticsRequest&,
         SearchMediaBySemanticsOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+VodClient::SetCLSPushTargetOutcome VodClient::SetCLSPushTarget(const SetCLSPushTargetRequest &request)
+{
+    auto outcome = MakeRequest(request, "SetCLSPushTarget");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        SetCLSPushTargetResponse rsp = SetCLSPushTargetResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return SetCLSPushTargetOutcome(rsp);
+        else
+            return SetCLSPushTargetOutcome(o.GetError());
+    }
+    else
+    {
+        return SetCLSPushTargetOutcome(outcome.GetError());
+    }
+}
+
+void VodClient::SetCLSPushTargetAsync(const SetCLSPushTargetRequest& request, const SetCLSPushTargetAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const SetCLSPushTargetRequest&;
+    using Resp = SetCLSPushTargetResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "SetCLSPushTarget", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+VodClient::SetCLSPushTargetOutcomeCallable VodClient::SetCLSPushTargetCallable(const SetCLSPushTargetRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<SetCLSPushTargetOutcome>>();
+    SetCLSPushTargetAsync(
+    request,
+    [prom](
+        const VodClient*,
+        const SetCLSPushTargetRequest&,
+        SetCLSPushTargetOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {

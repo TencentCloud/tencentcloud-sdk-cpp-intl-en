@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Output result of adaptive bitrate streaming.
+                * 
                 */
                 class ComplexAdaptiveDynamicStreamingTaskOutput : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Adaptive bitrate template ID.
-                     * @return Definition Adaptive bitrate template ID.
+                     * 获取
+                     * @return Definition 
                      * 
                      */
                     uint64_t GetDefinition() const;
 
                     /**
-                     * 设置Adaptive bitrate template ID.
-                     * @param _definition Adaptive bitrate template ID.
+                     * 设置
+                     * @param _definition 
                      * 
                      */
                     void SetDefinition(const uint64_t& _definition);
@@ -68,23 +68,15 @@ namespace TencentCloud
                     bool DefinitionHasBeenSet() const;
 
                     /**
-                     * 获取Adaptive bitrate stream packaging format. Optional values:
-<li>HLS;</li>
-<li>MPEG-DASH.</li>
-                     * @return Format Adaptive bitrate stream packaging format. Optional values:
-<li>HLS;</li>
-<li>MPEG-DASH.</li>
+                     * 获取
+                     * @return Format 
                      * 
                      */
                     std::string GetFormat() const;
 
                     /**
-                     * 设置Adaptive bitrate stream packaging format. Optional values:
-<li>HLS;</li>
-<li>MPEG-DASH.</li>
-                     * @param _format Adaptive bitrate stream packaging format. Optional values:
-<li>HLS;</li>
-<li>MPEG-DASH.</li>
+                     * 设置
+                     * @param _format 
                      * 
                      */
                     void SetFormat(const std::string& _format);
@@ -97,31 +89,15 @@ namespace TencentCloud
                     bool FormatHasBeenSet() const;
 
                     /**
-                     * 获取DRM solution type. Available values:
-<li>Empty string: Unencrypted.</li>
-<li>SimpleAES;</li>
-<li>Widevine;</li>
-<li>FairPlay.</li>
-                     * @return DrmType DRM solution type. Available values:
-<li>Empty string: Unencrypted.</li>
-<li>SimpleAES;</li>
-<li>Widevine;</li>
-<li>FairPlay.</li>
+                     * 获取
+                     * @return DrmType 
                      * 
                      */
                     std::string GetDrmType() const;
 
                     /**
-                     * 设置DRM solution type. Available values:
-<li>Empty string: Unencrypted.</li>
-<li>SimpleAES;</li>
-<li>Widevine;</li>
-<li>FairPlay.</li>
-                     * @param _drmType DRM solution type. Available values:
-<li>Empty string: Unencrypted.</li>
-<li>SimpleAES;</li>
-<li>Widevine;</li>
-<li>FairPlay.</li>
+                     * 设置
+                     * @param _drmType 
                      * 
                      */
                     void SetDrmType(const std::string& _drmType);
@@ -134,15 +110,15 @@ namespace TencentCloud
                     bool DrmTypeHasBeenSet() const;
 
                     /**
-                     * 获取Playback address of the adaptive bitrate stream.
-                     * @return Url Playback address of the adaptive bitrate stream.
+                     * 获取
+                     * @return Url 
                      * 
                      */
                     std::string GetUrl() const;
 
                     /**
-                     * 设置Playback address of the adaptive bitrate stream.
-                     * @param _url Playback address of the adaptive bitrate stream.
+                     * 设置
+                     * @param _url 
                      * 
                      */
                     void SetUrl(const std::string& _url);
@@ -157,31 +133,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Adaptive bitrate template ID.
+                     * 
                      */
                     uint64_t m_definition;
                     bool m_definitionHasBeenSet;
 
                     /**
-                     * Adaptive bitrate stream packaging format. Optional values:
-<li>HLS;</li>
-<li>MPEG-DASH.</li>
+                     * 
                      */
                     std::string m_format;
                     bool m_formatHasBeenSet;
 
                     /**
-                     * DRM solution type. Available values:
-<li>Empty string: Unencrypted.</li>
-<li>SimpleAES;</li>
-<li>Widevine;</li>
-<li>FairPlay.</li>
+                     * 
                      */
                     std::string m_drmType;
                     bool m_drmTypeHasBeenSet;
 
                     /**
-                     * Playback address of the adaptive bitrate stream.
+                     * 
                      */
                     std::string m_url;
                     bool m_urlHasBeenSet;

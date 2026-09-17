@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Parameters for OCR-based recognition of pornographic content
+                * 
                 */
                 class PornOcrReviewTemplateInfoForUpdate : public AbstractModel
                 {
@@ -47,23 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether to enable OCR-based recognition of pornographic content. Valid values:
-<li>ON</li>
-<li>OFF</li>
-                     * @return Switch Whether to enable OCR-based recognition of pornographic content. Valid values:
-<li>ON</li>
-<li>OFF</li>
+                     * 获取
+                     * @return Switch 
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Whether to enable OCR-based recognition of pornographic content. Valid values:
-<li>ON</li>
-<li>OFF</li>
-                     * @param _switch Whether to enable OCR-based recognition of pornographic content. Valid values:
-<li>ON</li>
-<li>OFF</li>
+                     * 设置
+                     * @param _switch 
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -76,15 +68,15 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取Threshold score for violation. If this score is reached or exceeded during intelligent audit, it will be deemed that a suspected violation has occurred. Value range: 0–100.
-                     * @return BlockConfidence Threshold score for violation. If this score is reached or exceeded during intelligent audit, it will be deemed that a suspected violation has occurred. Value range: 0–100.
+                     * 获取
+                     * @return BlockConfidence 
                      * 
                      */
                     int64_t GetBlockConfidence() const;
 
                     /**
-                     * 设置Threshold score for violation. If this score is reached or exceeded during intelligent audit, it will be deemed that a suspected violation has occurred. Value range: 0–100.
-                     * @param _blockConfidence Threshold score for violation. If this score is reached or exceeded during intelligent audit, it will be deemed that a suspected violation has occurred. Value range: 0–100.
+                     * 设置
+                     * @param _blockConfidence 
                      * 
                      */
                     void SetBlockConfidence(const int64_t& _blockConfidence);
@@ -97,15 +89,15 @@ namespace TencentCloud
                     bool BlockConfidenceHasBeenSet() const;
 
                     /**
-                     * 获取Threshold score for human audit. If this score is reached or exceeded during intelligent audit, human audit will be considered necessary. Value range: 0–100.
-                     * @return ReviewConfidence Threshold score for human audit. If this score is reached or exceeded during intelligent audit, human audit will be considered necessary. Value range: 0–100.
+                     * 获取
+                     * @return ReviewConfidence 
                      * 
                      */
                     int64_t GetReviewConfidence() const;
 
                     /**
-                     * 设置Threshold score for human audit. If this score is reached or exceeded during intelligent audit, human audit will be considered necessary. Value range: 0–100.
-                     * @param _reviewConfidence Threshold score for human audit. If this score is reached or exceeded during intelligent audit, human audit will be considered necessary. Value range: 0–100.
+                     * 设置
+                     * @param _reviewConfidence 
                      * 
                      */
                     void SetReviewConfidence(const int64_t& _reviewConfidence);
@@ -120,21 +112,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Whether to enable OCR-based recognition of pornographic content. Valid values:
-<li>ON</li>
-<li>OFF</li>
+                     * 
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * Threshold score for violation. If this score is reached or exceeded during intelligent audit, it will be deemed that a suspected violation has occurred. Value range: 0–100.
+                     * 
                      */
                     int64_t m_blockConfidence;
                     bool m_blockConfidenceHasBeenSet;
 
                     /**
-                     * Threshold score for human audit. If this score is reached or exceeded during intelligent audit, human audit will be considered necessary. Value range: 0–100.
+                     * 
                      */
                     int64_t m_reviewConfidence;
                     bool m_reviewConfidenceHasBeenSet;

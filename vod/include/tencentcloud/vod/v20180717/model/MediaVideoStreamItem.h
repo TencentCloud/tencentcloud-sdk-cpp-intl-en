@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Information of video stream in VOD file
+                * Video stream information of VOD files
                 */
                 class MediaVideoStreamItem : public AbstractModel
                 {
@@ -48,19 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Bitrate of video stream in bps.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Bitrate Bitrate of video stream in bps.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Bitrate of the video stream. Unit: bps.
+                     * @return Bitrate Bitrate of the video stream. Unit: bps.
                      * 
                      */
                     int64_t GetBitrate() const;
 
                     /**
-                     * 设置Bitrate of video stream in bps.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _bitrate Bitrate of video stream in bps.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Bitrate of the video stream. Unit: bps.
+                     * @param _bitrate Bitrate of the video stream. Unit: bps.
                      * 
                      */
                     void SetBitrate(const int64_t& _bitrate);
@@ -73,19 +69,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool BitrateHasBeenSet() const;
 
                     /**
-                     * 获取Height of video stream in px.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Height Height of video stream in px.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Video stream height in px.
+                     * @return Height Video stream height in px.
                      * 
                      */
                     int64_t GetHeight() const;
 
                     /**
-                     * 设置Height of video stream in px.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _height Height of video stream in px.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Video stream height in px.
+                     * @param _height Video stream height in px.
                      * 
                      */
                     void SetHeight(const int64_t& _height);
@@ -98,19 +90,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool HeightHasBeenSet() const;
 
                     /**
-                     * 获取Width of video stream in px.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Width Width of video stream in px.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Video stream width in px.
+                     * @return Width Video stream width in px.
                      * 
                      */
                     int64_t GetWidth() const;
 
                     /**
-                     * 设置Width of video stream in px.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _width Width of video stream in px.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Video stream width in px.
+                     * @param _width Video stream width in px.
                      * 
                      */
                     void SetWidth(const int64_t& _width);
@@ -123,19 +111,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool WidthHasBeenSet() const;
 
                     /**
-                     * 获取Video stream encoder, such as h264.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Codec Video stream encoder, such as h264.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Video stream encoding format, for example, h264.
+                     * @return Codec Video stream encoding format, for example, h264.
                      * 
                      */
                     std::string GetCodec() const;
 
                     /**
-                     * 设置Video stream encoder, such as h264.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _codec Video stream encoder, such as h264.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Video stream encoding format, for example, h264.
+                     * @param _codec Video stream encoding format, for example, h264.
                      * 
                      */
                     void SetCodec(const std::string& _codec);
@@ -148,19 +132,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool CodecHasBeenSet() const;
 
                     /**
-                     * 获取Frame rate in Hz.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Fps Frame rate in Hz.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取Frame rate. Measurement unit: hz.
+                     * @return Fps Frame rate. Measurement unit: hz.
                      * 
                      */
                     int64_t GetFps() const;
 
                     /**
-                     * 设置Frame rate in Hz.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _fps Frame rate in Hz.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置Frame rate. Measurement unit: hz.
+                     * @param _fps Frame rate. Measurement unit: hz.
                      * 
                      */
                     void SetFps(const int64_t& _fps);
@@ -173,15 +153,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool FpsHasBeenSet() const;
 
                     /**
-                     * 获取The codec tag. This parameter is valid only if `Codec` is `hevc`.
-                     * @return CodecTag The codec tag. This parameter is valid only if `Codec` is `hevc`.
+                     * 获取Encoding tag. It is valid only when Codec is hevc.
+                     * @return CodecTag Encoding tag. It is valid only when Codec is hevc.
                      * 
                      */
                     std::string GetCodecTag() const;
 
                     /**
-                     * 设置The codec tag. This parameter is valid only if `Codec` is `hevc`.
-                     * @param _codecTag The codec tag. This parameter is valid only if `Codec` is `hevc`.
+                     * 设置Encoding tag. It is valid only when Codec is hevc.
+                     * @param _codecTag Encoding tag. It is valid only when Codec is hevc.
                      * 
                      */
                     void SetCodecTag(const std::string& _codecTag);
@@ -194,19 +174,19 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool CodecTagHasBeenSet() const;
 
                     /**
-                     * 获取Dynamic range information.
-<li><font color=red>Note</font>: This parameter is valid for transcoding files generated after 2023-01-10T00:00:00Z.</li>
-                     * @return DynamicRangeInfo Dynamic range information.
-<li><font color=red>Note</font>: This parameter is valid for transcoding files generated after 2023-01-10T00:00:00Z.</li>
+                     * 获取Dynamic range information of the frame.
+<li><font color=red>Note</font>: This field is valid for transcoded files processed after 2023-01-10T00:00:00Z.</li>
+                     * @return DynamicRangeInfo Dynamic range information of the frame.
+<li><font color=red>Note</font>: This field is valid for transcoded files processed after 2023-01-10T00:00:00Z.</li>
                      * 
                      */
                     DynamicRangeInfo GetDynamicRangeInfo() const;
 
                     /**
-                     * 设置Dynamic range information.
-<li><font color=red>Note</font>: This parameter is valid for transcoding files generated after 2023-01-10T00:00:00Z.</li>
-                     * @param _dynamicRangeInfo Dynamic range information.
-<li><font color=red>Note</font>: This parameter is valid for transcoding files generated after 2023-01-10T00:00:00Z.</li>
+                     * 设置Dynamic range information of the frame.
+<li><font color=red>Note</font>: This field is valid for transcoded files processed after 2023-01-10T00:00:00Z.</li>
+                     * @param _dynamicRangeInfo Dynamic range information of the frame.
+<li><font color=red>Note</font>: This field is valid for transcoded files processed after 2023-01-10T00:00:00Z.</li>
                      * 
                      */
                     void SetDynamicRangeInfo(const DynamicRangeInfo& _dynamicRangeInfo);
@@ -221,49 +201,44 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Bitrate of video stream in bps.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Bitrate of the video stream. Unit: bps.
                      */
                     int64_t m_bitrate;
                     bool m_bitrateHasBeenSet;
 
                     /**
-                     * Height of video stream in px.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Video stream height in px.
                      */
                     int64_t m_height;
                     bool m_heightHasBeenSet;
 
                     /**
-                     * Width of video stream in px.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Video stream width in px.
                      */
                     int64_t m_width;
                     bool m_widthHasBeenSet;
 
                     /**
-                     * Video stream encoder, such as h264.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Video stream encoding format, for example, h264.
                      */
                     std::string m_codec;
                     bool m_codecHasBeenSet;
 
                     /**
-                     * Frame rate in Hz.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * Frame rate. Measurement unit: hz.
                      */
                     int64_t m_fps;
                     bool m_fpsHasBeenSet;
 
                     /**
-                     * The codec tag. This parameter is valid only if `Codec` is `hevc`.
+                     * Encoding tag. It is valid only when Codec is hevc.
                      */
                     std::string m_codecTag;
                     bool m_codecTagHasBeenSet;
 
                     /**
-                     * Dynamic range information.
-<li><font color=red>Note</font>: This parameter is valid for transcoding files generated after 2023-01-10T00:00:00Z.</li>
+                     * Dynamic range information of the frame.
+<li><font color=red>Note</font>: This field is valid for transcoded files processed after 2023-01-10T00:00:00Z.</li>
                      */
                     DynamicRangeInfo m_dynamicRangeInfo;
                     bool m_dynamicRangeInfoHasBeenSet;

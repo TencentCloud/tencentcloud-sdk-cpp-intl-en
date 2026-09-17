@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Domain name HTTPS acceleration configuration. This is disabled by default.
+                * 
                 */
                 class Https : public AbstractModel
                 {
@@ -48,15 +48,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取https configuration switch, value: <li>on: on; </li> <li>off: off. </li>
-                     * @return Switch https configuration switch, value: <li>on: on; </li> <li>off: off. </li>
+                     * 获取https configuration switch. Value:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
+                     * @return Switch https configuration switch. Value:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置https configuration switch, value: <li>on: on; </li> <li>off: off. </li>
-                     * @param _switch https configuration switch, value: <li>on: on; </li> <li>off: off. </li>
+                     * 设置https configuration switch. Value:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
+                     * @param _switch https configuration switch. Value:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -69,15 +77,23 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取http2 configuration switch, value: <li>on: on; </li> <li>off: off. </li>
-                     * @return Http2 http2 configuration switch, value: <li>on: on; </li> <li>off: off. </li>
+                     * 获取http/2 configuration switch. Value:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
+                     * @return Http2 http/2 configuration switch. Value:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
                      * 
                      */
                     std::string GetHttp2() const;
 
                     /**
-                     * 设置http2 configuration switch, value: <li>on: on; </li> <li>off: off. </li>
-                     * @param _http2 http2 configuration switch, value: <li>on: on; </li> <li>off: off. </li>
+                     * 设置http/2 configuration switch. Value:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
+                     * @param _http2 http/2 configuration switch. Value:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
                      * 
                      */
                     void SetHttp2(const std::string& _http2);
@@ -90,15 +106,15 @@ namespace TencentCloud
                     bool Http2HasBeenSet() const;
 
                     /**
-                     * 获取Cert configuration message.
-                     * @return CertInfo Cert configuration message.
+                     * 获取
+                     * @return CertInfo 
                      * 
                      */
                     CDNCertInfo GetCertInfo() const;
 
                     /**
-                     * 设置Cert configuration message.
-                     * @param _certInfo Cert configuration message.
+                     * 设置
+                     * @param _certInfo 
                      * 
                      */
                     void SetCertInfo(const CDNCertInfo& _certInfo);
@@ -113,19 +129,23 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * https configuration switch, value: <li>on: on; </li> <li>off: off. </li>
+                     * https configuration switch. Value:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * http2 configuration switch, value: <li>on: on; </li> <li>off: off. </li>
+                     * http/2 configuration switch. Value:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
                      */
                     std::string m_http2;
                     bool m_http2HasBeenSet;
 
                     /**
-                     * Cert configuration message.
+                     * 
                      */
                     CDNCertInfo m_certInfo;
                     bool m_certInfoHasBeenSet;

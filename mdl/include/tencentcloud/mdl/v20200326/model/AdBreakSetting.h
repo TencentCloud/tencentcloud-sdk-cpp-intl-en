@@ -134,15 +134,15 @@ namespace TencentCloud
                     bool LSqueezeSettingHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return PipSetting 
+                     * 获取Picture in picture configuration
+                     * @return PipSetting Picture in picture configuration
                      * 
                      */
                     PipSetting GetPipSetting() const;
 
                     /**
-                     * 设置
-                     * @param _pipSetting 
+                     * 设置Picture in picture configuration
+                     * @param _pipSetting Picture in picture configuration
                      * 
                      */
                     void SetPipSetting(const PipSetting& _pipSetting);
@@ -155,15 +155,15 @@ namespace TencentCloud
                     bool PipSettingHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return BorderFrameSetting 
+                     * 获取Circular setting
+                     * @return BorderFrameSetting Circular setting
                      * 
                      */
                     BorderFrameSetting GetBorderFrameSetting() const;
 
                     /**
-                     * 设置
-                     * @param _borderFrameSetting 
+                     * 设置Circular setting
+                     * @param _borderFrameSetting Circular setting
                      * 
                      */
                     void SetBorderFrameSetting(const BorderFrameSetting& _borderFrameSetting);
@@ -202,13 +202,13 @@ namespace TencentCloud
                     bool m_lSqueezeSettingHasBeenSet;
 
                     /**
-                     * 
+                     * Picture in picture configuration
                      */
                     PipSetting m_pipSetting;
                     bool m_pipSettingHasBeenSet;
 
                     /**
-                     * 
+                     * Circular setting
                      */
                     BorderFrameSetting m_borderFrameSetting;
                     bool m_borderFrameSettingHasBeenSet;

@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Custom request header configuration. This is disabled by default.
+                * 
                 */
                 class RequestHeader : public AbstractModel
                 {
@@ -48,15 +48,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Custom request header configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
-                     * @return Switch Custom request header configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
+                     * 获取Custom request header configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
+                     * @return Switch Custom request header configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Custom request header configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
-                     * @param _switch Custom request header configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
+                     * 设置Custom request header configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
+                     * @param _switch Custom request header configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -69,15 +77,15 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取Custom request header configuration rules
-                     * @return HeaderRules Custom request header configuration rules
+                     * 获取
+                     * @return HeaderRules 
                      * 
                      */
                     std::vector<HttpHeaderPathRule> GetHeaderRules() const;
 
                     /**
-                     * 设置Custom request header configuration rules
-                     * @param _headerRules Custom request header configuration rules
+                     * 设置
+                     * @param _headerRules 
                      * 
                      */
                     void SetHeaderRules(const std::vector<HttpHeaderPathRule>& _headerRules);
@@ -92,13 +100,15 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Custom request header configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
+                     * Custom request header configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * Custom request header configuration rules
+                     * 
                      */
                     std::vector<HttpHeaderPathRule> m_headerRules;
                     bool m_headerRulesHasBeenSet;

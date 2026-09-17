@@ -87,42 +87,42 @@ namespace TencentCloud
                     /**
                      * 获取New public IP address (select from available IP addresses of the public network instance bound to the instance). Provide at least one of this or InstanceName.
                      * @return NewPublicIp New public IP address (select from available IP addresses of the public network instance bound to the instance). Provide at least one of this or InstanceName.
-                     * 
+                     * @deprecated
                      */
                     std::string GetNewPublicIp() const;
 
                     /**
                      * 设置New public IP address (select from available IP addresses of the public network instance bound to the instance). Provide at least one of this or InstanceName.
                      * @param _newPublicIp New public IP address (select from available IP addresses of the public network instance bound to the instance). Provide at least one of this or InstanceName.
-                     * 
+                     * @deprecated
                      */
                     void SetNewPublicIp(const std::string& _newPublicIp);
 
                     /**
                      * 判断参数 NewPublicIp 是否已赋值
                      * @return NewPublicIp 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool NewPublicIpHasBeenSet() const;
 
                     /**
                      * 获取IP type, ipv4 or ipv6. Default is ipv4. Valid only when NewPublicIp is specified.
                      * @return IpType IP type, ipv4 or ipv6. Default is ipv4. Valid only when NewPublicIp is specified.
-                     * 
+                     * @deprecated
                      */
                     std::string GetIpType() const;
 
                     /**
                      * 设置IP type, ipv4 or ipv6. Default is ipv4. Valid only when NewPublicIp is specified.
                      * @param _ipType IP type, ipv4 or ipv6. Default is ipv4. Valid only when NewPublicIp is specified.
-                     * 
+                     * @deprecated
                      */
                     void SetIpType(const std::string& _ipType);
 
                     /**
                      * 判断参数 IpType 是否已赋值
                      * @return IpType 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool IpTypeHasBeenSet() const;
 

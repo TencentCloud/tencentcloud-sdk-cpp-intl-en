@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Video stream editing information
+                * 
                 */
                 class EditMediaStreamInfo : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取ID of recorded stream
-                     * @return StreamId ID of recorded stream
+                     * 获取
+                     * @return StreamId 
                      * 
                      */
                     std::string GetStreamId() const;
 
                     /**
-                     * 设置ID of recorded stream
-                     * @param _streamId ID of recorded stream
+                     * 设置
+                     * @param _streamId 
                      * 
                      */
                     void SetStreamId(const std::string& _streamId);
@@ -68,19 +68,15 @@ namespace TencentCloud
                     bool StreamIdHasBeenSet() const;
 
                     /**
-                     * 获取Start time of stream clipping in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return StartTime Start time of stream clipping in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return StartTime 
                      * 
                      */
                     std::string GetStartTime() const;
 
                     /**
-                     * 设置Start time of stream clipping in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _startTime Start time of stream clipping in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _startTime 
                      * 
                      */
                     void SetStartTime(const std::string& _startTime);
@@ -93,19 +89,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取End time of stream clipping in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return EndTime End time of stream clipping in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return EndTime 
                      * 
                      */
                     std::string GetEndTime() const;
 
                     /**
-                     * 设置End time of stream clipping in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _endTime End time of stream clipping in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _endTime 
                      * 
                      */
                     void SetEndTime(const std::string& _endTime);
@@ -120,21 +112,19 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * ID of recorded stream
+                     * 
                      */
                     std::string m_streamId;
                     bool m_streamIdHasBeenSet;
 
                     /**
-                     * Start time of stream clipping in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * End time of stream clipping in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string m_endTime;
                     bool m_endTimeHasBeenSet;

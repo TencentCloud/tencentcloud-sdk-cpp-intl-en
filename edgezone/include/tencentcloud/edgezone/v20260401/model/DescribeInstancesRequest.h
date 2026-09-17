@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID list for filtering by instance ID
-                     * @return InstanceIds Instance ID list for filtering by instance ID
+                     * 获取<p>Instance ID list for filtering by instance ID</p>
+                     * @return InstanceIds <p>Instance ID list for filtering by instance ID</p>
                      * 
                      */
                     std::vector<std::string> GetInstanceIds() const;
 
                     /**
-                     * 设置Instance ID list for filtering by instance ID
-                     * @param _instanceIds Instance ID list for filtering by instance ID
+                     * 设置<p>Instance ID list for filtering by instance ID</p>
+                     * @param _instanceIds <p>Instance ID list for filtering by instance ID</p>
                      * 
                      */
                     void SetInstanceIds(const std::vector<std::string>& _instanceIds);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool InstanceIdsHasBeenSet() const;
 
                     /**
-                     * 获取Instance name, supports fuzzy matching
-                     * @return InstanceName Instance name, supports fuzzy matching
+                     * 获取<p>Instance name, supports fuzzy matching.</p>
+                     * @return InstanceName <p>Instance name, supports fuzzy matching.</p>
                      * 
                      */
                     std::string GetInstanceName() const;
 
                     /**
-                     * 设置Instance name, supports fuzzy matching
-                     * @param _instanceName Instance name, supports fuzzy matching
+                     * 设置<p>Instance name, supports fuzzy matching.</p>
+                     * @param _instanceName <p>Instance name, supports fuzzy matching.</p>
                      * 
                      */
                     void SetInstanceName(const std::string& _instanceName);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool InstanceNameHasBeenSet() const;
 
                     /**
-                     * 获取Availability zone code for filtering instances in the specified availability zone
-                     * @return Zone Availability zone code for filtering instances in the specified availability zone
+                     * 获取<p>Availability zone code for filtering instances in the specified availability zone</p>
+                     * @return Zone <p>Availability zone code for filtering instances in the specified availability zone</p>
                      * 
                      */
                     std::string GetZone() const;
 
                     /**
-                     * 设置Availability zone code for filtering instances in the specified availability zone
-                     * @param _zone Availability zone code for filtering instances in the specified availability zone
+                     * 设置<p>Availability zone code for filtering instances in the specified availability zone</p>
+                     * @param _zone <p>Availability zone code for filtering instances in the specified availability zone</p>
                      * 
                      */
                     void SetZone(const std::string& _zone);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool ZoneHasBeenSet() const;
 
                     /**
-                     * 获取Instance status list for status filtering. Available values: allocating, running, isolating, isolated, terminating, error.
-                     * @return InstanceStatus Instance status list for status filtering. Available values: allocating, running, isolating, isolated, terminating, error.
+                     * 获取<p>Instance status list for status filtering. Available values: allocating, running, isolating, isolated, terminating, error.</p>
+                     * @return InstanceStatus <p>Instance status list for status filtering. Available values: allocating, running, isolating, isolated, terminating, error.</p>
                      * 
                      */
                     std::vector<std::string> GetInstanceStatus() const;
 
                     /**
-                     * 设置Instance status list for status filtering. Available values: allocating, running, isolating, isolated, terminating, error.
-                     * @param _instanceStatus Instance status list for status filtering. Available values: allocating, running, isolating, isolated, terminating, error.
+                     * 设置<p>Instance status list for status filtering. Available values: allocating, running, isolating, isolated, terminating, error.</p>
+                     * @param _instanceStatus <p>Instance status list for status filtering. Available values: allocating, running, isolating, isolated, terminating, error.</p>
                      * 
                      */
                     void SetInstanceStatus(const std::vector<std::string>& _instanceStatus);
@@ -127,15 +127,57 @@ namespace TencentCloud
                     bool InstanceStatusHasBeenSet() const;
 
                     /**
-                     * 获取Public IPv4 address list, used for filtering instances by public IP address
-                     * @return PublicIps Public IPv4 address list, used for filtering instances by public IP address
+                     * 获取<p>Public network ID.</p>
+                     * @return PublicNetworkId <p>Public network ID.</p>
+                     * 
+                     */
+                    std::string GetPublicNetworkId() const;
+
+                    /**
+                     * 设置<p>Public network ID.</p>
+                     * @param _publicNetworkId <p>Public network ID.</p>
+                     * 
+                     */
+                    void SetPublicNetworkId(const std::string& _publicNetworkId);
+
+                    /**
+                     * 判断参数 PublicNetworkId 是否已赋值
+                     * @return PublicNetworkId 是否已赋值
+                     * 
+                     */
+                    bool PublicNetworkIdHasBeenSet() const;
+
+                    /**
+                     * 获取<p>VPC ID.</p>
+                     * @return PrivateNetworkId <p>VPC ID.</p>
+                     * 
+                     */
+                    std::string GetPrivateNetworkId() const;
+
+                    /**
+                     * 设置<p>VPC ID.</p>
+                     * @param _privateNetworkId <p>VPC ID.</p>
+                     * 
+                     */
+                    void SetPrivateNetworkId(const std::string& _privateNetworkId);
+
+                    /**
+                     * 判断参数 PrivateNetworkId 是否已赋值
+                     * @return PrivateNetworkId 是否已赋值
+                     * 
+                     */
+                    bool PrivateNetworkIdHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Public IPv4 address list, used for filtering instances by public IP address</p>
+                     * @return PublicIps <p>Public IPv4 address list, used for filtering instances by public IP address</p>
                      * 
                      */
                     std::vector<std::string> GetPublicIps() const;
 
                     /**
-                     * 设置Public IPv4 address list, used for filtering instances by public IP address
-                     * @param _publicIps Public IPv4 address list, used for filtering instances by public IP address
+                     * 设置<p>Public IPv4 address list, used for filtering instances by public IP address</p>
+                     * @param _publicIps <p>Public IPv4 address list, used for filtering instances by public IP address</p>
                      * 
                      */
                     void SetPublicIps(const std::vector<std::string>& _publicIps);
@@ -148,15 +190,15 @@ namespace TencentCloud
                     bool PublicIpsHasBeenSet() const;
 
                     /**
-                     * 获取Offset. Default value: 0
-                     * @return Offset Offset. Default value: 0
+                     * 获取<p>Offset. Default value: 0.</p>
+                     * @return Offset <p>Offset. Default value: 0.</p>
                      * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
-                     * 设置Offset. Default value: 0
-                     * @param _offset Offset. Default value: 0
+                     * 设置<p>Offset. Default value: 0.</p>
+                     * @param _offset <p>Offset. Default value: 0.</p>
                      * 
                      */
                     void SetOffset(const uint64_t& _offset);
@@ -169,15 +211,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Number of returned results. Default 20. Maximum 100.
-                     * @return Limit Number of returned results. Default 20. Maximum 100.
+                     * 获取<p>Number of returned results. Default 20. Maximum 100.</p>
+                     * @return Limit <p>Number of returned results. Default 20. Maximum 100.</p>
                      * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
-                     * 设置Number of returned results. Default 20. Maximum 100.
-                     * @param _limit Number of returned results. Default 20. Maximum 100.
+                     * 设置<p>Number of returned results. Default 20. Maximum 100.</p>
+                     * @param _limit <p>Number of returned results. Default 20. Maximum 100.</p>
                      * 
                      */
                     void SetLimit(const uint64_t& _limit);
@@ -192,43 +234,55 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Instance ID list for filtering by instance ID
+                     * <p>Instance ID list for filtering by instance ID</p>
                      */
                     std::vector<std::string> m_instanceIds;
                     bool m_instanceIdsHasBeenSet;
 
                     /**
-                     * Instance name, supports fuzzy matching
+                     * <p>Instance name, supports fuzzy matching.</p>
                      */
                     std::string m_instanceName;
                     bool m_instanceNameHasBeenSet;
 
                     /**
-                     * Availability zone code for filtering instances in the specified availability zone
+                     * <p>Availability zone code for filtering instances in the specified availability zone</p>
                      */
                     std::string m_zone;
                     bool m_zoneHasBeenSet;
 
                     /**
-                     * Instance status list for status filtering. Available values: allocating, running, isolating, isolated, terminating, error.
+                     * <p>Instance status list for status filtering. Available values: allocating, running, isolating, isolated, terminating, error.</p>
                      */
                     std::vector<std::string> m_instanceStatus;
                     bool m_instanceStatusHasBeenSet;
 
                     /**
-                     * Public IPv4 address list, used for filtering instances by public IP address
+                     * <p>Public network ID.</p>
+                     */
+                    std::string m_publicNetworkId;
+                    bool m_publicNetworkIdHasBeenSet;
+
+                    /**
+                     * <p>VPC ID.</p>
+                     */
+                    std::string m_privateNetworkId;
+                    bool m_privateNetworkIdHasBeenSet;
+
+                    /**
+                     * <p>Public IPv4 address list, used for filtering instances by public IP address</p>
                      */
                     std::vector<std::string> m_publicIps;
                     bool m_publicIpsHasBeenSet;
 
                     /**
-                     * Offset. Default value: 0
+                     * <p>Offset. Default value: 0.</p>
                      */
                     uint64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Number of returned results. Default 20. Maximum 100.
+                     * <p>Number of returned results. Default 20. Maximum 100.</p>
                      */
                     uint64_t m_limit;
                     bool m_limitHasBeenSet;

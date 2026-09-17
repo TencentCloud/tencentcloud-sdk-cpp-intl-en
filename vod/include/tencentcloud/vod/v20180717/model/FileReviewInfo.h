@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * File moderation information.
+                * 
                 */
                 class FileReviewInfo : public AbstractModel
                 {
@@ -48,27 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Audio/Video moderation details\*.
-
-\* This parameter only contains the information of moderation tasks initiated by the [ReviewAudioVideo](https://intl.cloud.tencent.com/document/api/266/80283?from_cn_redirect=1) or [ReviewImage](https://intl.cloud.tencent.com/document/api/266/73217?from_cn_redirect=1) API.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return MediaReviewInfo Audio/Video moderation details\*.
-
-\* This parameter only contains the information of moderation tasks initiated by the [ReviewAudioVideo](https://intl.cloud.tencent.com/document/api/266/80283?from_cn_redirect=1) or [ReviewImage](https://intl.cloud.tencent.com/document/api/266/73217?from_cn_redirect=1) API.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return MediaReviewInfo 
                      * 
                      */
                     ReviewInfo GetMediaReviewInfo() const;
 
                     /**
-                     * 设置Audio/Video moderation details\*.
-
-\* This parameter only contains the information of moderation tasks initiated by the [ReviewAudioVideo](https://intl.cloud.tencent.com/document/api/266/80283?from_cn_redirect=1) or [ReviewImage](https://intl.cloud.tencent.com/document/api/266/73217?from_cn_redirect=1) API.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _mediaReviewInfo Audio/Video moderation details\*.
-
-\* This parameter only contains the information of moderation tasks initiated by the [ReviewAudioVideo](https://intl.cloud.tencent.com/document/api/266/80283?from_cn_redirect=1) or [ReviewImage](https://intl.cloud.tencent.com/document/api/266/73217?from_cn_redirect=1) API.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _mediaReviewInfo 
                      * 
                      */
                     void SetMediaReviewInfo(const ReviewInfo& _mediaReviewInfo);
@@ -81,27 +69,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool MediaReviewInfoHasBeenSet() const;
 
                     /**
-                     * 获取Thumbnail moderation details\*.
-
-\* This parameter only contains the information of moderation tasks initiated by the [ReviewAudioVideo](https://intl.cloud.tencent.com/document/api/266/80283?from_cn_redirect=1) or [ReviewImage](https://intl.cloud.tencent.com/document/api/266/73217?from_cn_redirect=1) API.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return CoverReviewInfo Thumbnail moderation details\*.
-
-\* This parameter only contains the information of moderation tasks initiated by the [ReviewAudioVideo](https://intl.cloud.tencent.com/document/api/266/80283?from_cn_redirect=1) or [ReviewImage](https://intl.cloud.tencent.com/document/api/266/73217?from_cn_redirect=1) API.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return CoverReviewInfo 
                      * 
                      */
                     ReviewInfo GetCoverReviewInfo() const;
 
                     /**
-                     * 设置Thumbnail moderation details\*.
-
-\* This parameter only contains the information of moderation tasks initiated by the [ReviewAudioVideo](https://intl.cloud.tencent.com/document/api/266/80283?from_cn_redirect=1) or [ReviewImage](https://intl.cloud.tencent.com/document/api/266/73217?from_cn_redirect=1) API.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _coverReviewInfo Thumbnail moderation details\*.
-
-\* This parameter only contains the information of moderation tasks initiated by the [ReviewAudioVideo](https://intl.cloud.tencent.com/document/api/266/80283?from_cn_redirect=1) or [ReviewImage](https://intl.cloud.tencent.com/document/api/266/73217?from_cn_redirect=1) API.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _coverReviewInfo 
                      * 
                      */
                     void SetCoverReviewInfo(const ReviewInfo& _coverReviewInfo);
@@ -116,19 +92,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Audio/Video moderation details\*.
-
-\* This parameter only contains the information of moderation tasks initiated by the [ReviewAudioVideo](https://intl.cloud.tencent.com/document/api/266/80283?from_cn_redirect=1) or [ReviewImage](https://intl.cloud.tencent.com/document/api/266/73217?from_cn_redirect=1) API.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     ReviewInfo m_mediaReviewInfo;
                     bool m_mediaReviewInfoHasBeenSet;
 
                     /**
-                     * Thumbnail moderation details\*.
-
-\* This parameter only contains the information of moderation tasks initiated by the [ReviewAudioVideo](https://intl.cloud.tencent.com/document/api/266/80283?from_cn_redirect=1) or [ReviewImage](https://intl.cloud.tencent.com/document/api/266/73217?from_cn_redirect=1) API.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     ReviewInfo m_coverReviewInfo;
                     bool m_coverReviewInfoHasBeenSet;

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Intelligent categorization result
+                * 
                 */
                 class MediaAiAnalysisClassificationItem : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Name of intelligently generated category.
-                     * @return Classification Name of intelligently generated category.
+                     * 获取
+                     * @return Classification 
                      * 
                      */
                     std::string GetClassification() const;
 
                     /**
-                     * 设置Name of intelligently generated category.
-                     * @param _classification Name of intelligently generated category.
+                     * 设置
+                     * @param _classification 
                      * 
                      */
                     void SetClassification(const std::string& _classification);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool ClassificationHasBeenSet() const;
 
                     /**
-                     * 获取Confidence of intelligently generated category between 0 and 100.
-                     * @return Confidence Confidence of intelligently generated category between 0 and 100.
+                     * 获取
+                     * @return Confidence 
                      * 
                      */
                     double GetConfidence() const;
 
                     /**
-                     * 设置Confidence of intelligently generated category between 0 and 100.
-                     * @param _confidence Confidence of intelligently generated category between 0 and 100.
+                     * 设置
+                     * @param _confidence 
                      * 
                      */
                     void SetConfidence(const double& _confidence);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Name of intelligently generated category.
+                     * 
                      */
                     std::string m_classification;
                     bool m_classificationHasBeenSet;
 
                     /**
-                     * Confidence of intelligently generated category between 0 and 100.
+                     * 
                      */
                     double m_confidence;
                     bool m_confidenceHasBeenSet;

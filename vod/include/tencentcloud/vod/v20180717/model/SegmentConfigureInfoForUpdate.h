@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Control parameter of video splitting recognition task
+                * 
                 */
                 class SegmentConfigureInfoForUpdate : public AbstractModel
                 {
@@ -47,23 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Switch of video splitting recognition task. Valid values:
-<li>ON: enables intelligent video splitting recognition task;</li>
-<li>OFF: disables intelligent video splitting recognition task.</li>
-                     * @return Switch Switch of video splitting recognition task. Valid values:
-<li>ON: enables intelligent video splitting recognition task;</li>
-<li>OFF: disables intelligent video splitting recognition task.</li>
+                     * 获取
+                     * @return Switch 
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Switch of video splitting recognition task. Valid values:
-<li>ON: enables intelligent video splitting recognition task;</li>
-<li>OFF: disables intelligent video splitting recognition task.</li>
-                     * @param _switch Switch of video splitting recognition task. Valid values:
-<li>ON: enables intelligent video splitting recognition task;</li>
-<li>OFF: disables intelligent video splitting recognition task.</li>
+                     * 设置
+                     * @param _switch 
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -78,9 +70,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Switch of video splitting recognition task. Valid values:
-<li>ON: enables intelligent video splitting recognition task;</li>
-<li>OFF: disables intelligent video splitting recognition task.</li>
+                     * 
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;

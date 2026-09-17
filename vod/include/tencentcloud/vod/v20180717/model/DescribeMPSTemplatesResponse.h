@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Total number of records that meet the filtering conditions.
-                     * @return TotalCount Total number of records that meet the filtering conditions.
+                     * 获取<p>Total number of records that meet filter conditions.</p>
+                     * @return TotalCount <p>Total number of records that meet filter conditions.</p>
                      * 
                      */
                     uint64_t GetTotalCount() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取MPS task template details list.
-                     * @return MPSTemplateSet MPS task template details list.
+                     * 获取<p>MPS task template details list.</p>
+                     * @return MPSTemplateSet <p>MPS task template details list.</p>
                      * 
                      */
                     std::vector<MPSTemplate> GetMPSTemplateSet() const;
@@ -75,13 +75,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Total number of records that meet the filtering conditions.
+                     * <p>Total number of records that meet filter conditions.</p>
                      */
                     uint64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * MPS task template details list.
+                     * <p>MPS task template details list.</p>
                      */
                     std::vector<MPSTemplate> m_mPSTemplateSet;
                     bool m_mPSTemplateSetHasBeenSet;

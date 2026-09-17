@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * MPS task template description.
+                * MPS task template detail.
                 */
                 class MPSTemplate : public AbstractModel
                 {

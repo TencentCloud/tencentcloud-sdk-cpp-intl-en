@@ -43,19 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Domain name list. When this field is left empty, list all domain information by default. The limits are as follows:
-<li>The maximum number of domains is 20.</li>
-                     * @return Domains Domain name list. When this field is left empty, list all domain information by default. The limits are as follows:
-<li>The maximum number of domains is 20.</li>
+                     * 获取
+                     * @return Domains 
                      * 
                      */
                     std::vector<std::string> GetDomains() const;
 
                     /**
-                     * 设置Domain name list. When this field is left empty, list all domain information by default. The limits are as follows:
-<li>The maximum number of domains is 20.</li>
-                     * @param _domains Domain name list. When this field is left empty, list all domain information by default. The limits are as follows:
-<li>The maximum number of domains is 20.</li>
+                     * 设置
+                     * @param _domains 
                      * 
                      */
                     void SetDomains(const std::vector<std::string>& _domains);
@@ -68,15 +64,15 @@ namespace TencentCloud
                     bool DomainsHasBeenSet() const;
 
                     /**
-                     * 获取Maximum number of results returned for pagination pull. Default value: 20.
-                     * @return Limit Maximum number of results returned for pagination pull. Default value: 20.
+                     * 获取
+                     * @return Limit 
                      * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
-                     * 设置Maximum number of results returned for pagination pull. Default value: 20.
-                     * @param _limit Maximum number of results returned for pagination pull. Default value: 20.
+                     * 设置
+                     * @param _limit 
                      * 
                      */
                     void SetLimit(const uint64_t& _limit);
@@ -89,15 +85,15 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取Starting offset for pagination pull. Default value: 0.
-                     * @return Offset Starting offset for pagination pull. Default value: 0.
+                     * 获取
+                     * @return Offset 
                      * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
-                     * 设置Starting offset for pagination pull. Default value: 0.
-                     * @param _offset Starting offset for pagination pull. Default value: 0.
+                     * 设置
+                     * @param _offset 
                      * 
                      */
                     void SetOffset(const uint64_t& _offset);
@@ -110,15 +106,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
-                     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+                     * 获取
+                     * @return SubAppId 
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
-                     * @param _subAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+                     * 设置
+                     * @param _subAppId 
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -133,26 +129,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Domain name list. When this field is left empty, list all domain information by default. The limits are as follows:
-<li>The maximum number of domains is 20.</li>
+                     * 
                      */
                     std::vector<std::string> m_domains;
                     bool m_domainsHasBeenSet;
 
                     /**
-                     * Maximum number of results returned for pagination pull. Default value: 20.
+                     * 
                      */
                     uint64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * Starting offset for pagination pull. Default value: 0.
+                     * 
                      */
                     uint64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+                     * 
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;

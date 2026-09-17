@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Track information
+                * 
                 */
                 class MediaTrack : public AbstractModel
                 {
@@ -48,35 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Track type. Valid values:
-<ul>
-<li>Video: video track, which is composed of the following items: <ul><li>VideoTrackItem</li><li>MediaTransitionItem</li> <li>EmptyTrackItem</li></ul> </li>
-<li>Audio: audio track, which is composed of the following items: <ul><li>AudioTrackItem</li><li>MediaTransitionItem</li><li>EmptyTrackItem</li></ul></li>
-<li>Sticker: sticker track, which is composed of the following items: <ul><li> StickerTrackItem</li><li>EmptyTrackItem</li></ul></li>	
-</ul>
-                     * @return Type Track type. Valid values:
-<ul>
-<li>Video: video track, which is composed of the following items: <ul><li>VideoTrackItem</li><li>MediaTransitionItem</li> <li>EmptyTrackItem</li></ul> </li>
-<li>Audio: audio track, which is composed of the following items: <ul><li>AudioTrackItem</li><li>MediaTransitionItem</li><li>EmptyTrackItem</li></ul></li>
-<li>Sticker: sticker track, which is composed of the following items: <ul><li> StickerTrackItem</li><li>EmptyTrackItem</li></ul></li>	
-</ul>
+                     * 获取
+                     * @return Type 
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Track type. Valid values:
-<ul>
-<li>Video: video track, which is composed of the following items: <ul><li>VideoTrackItem</li><li>MediaTransitionItem</li> <li>EmptyTrackItem</li></ul> </li>
-<li>Audio: audio track, which is composed of the following items: <ul><li>AudioTrackItem</li><li>MediaTransitionItem</li><li>EmptyTrackItem</li></ul></li>
-<li>Sticker: sticker track, which is composed of the following items: <ul><li> StickerTrackItem</li><li>EmptyTrackItem</li></ul></li>	
-</ul>
-                     * @param _type Track type. Valid values:
-<ul>
-<li>Video: video track, which is composed of the following items: <ul><li>VideoTrackItem</li><li>MediaTransitionItem</li> <li>EmptyTrackItem</li></ul> </li>
-<li>Audio: audio track, which is composed of the following items: <ul><li>AudioTrackItem</li><li>MediaTransitionItem</li><li>EmptyTrackItem</li></ul></li>
-<li>Sticker: sticker track, which is composed of the following items: <ul><li> StickerTrackItem</li><li>EmptyTrackItem</li></ul></li>	
-</ul>
+                     * 设置
+                     * @param _type 
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -89,19 +69,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取List of media segments on track.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return TrackItems List of media segments on track.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return TrackItems 
                      * 
                      */
                     std::vector<MediaTrackItem> GetTrackItems() const;
 
                     /**
-                     * 设置List of media segments on track.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _trackItems List of media segments on track.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _trackItems 
                      * 
                      */
                     void SetTrackItems(const std::vector<MediaTrackItem>& _trackItems);
@@ -116,19 +92,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Track type. Valid values:
-<ul>
-<li>Video: video track, which is composed of the following items: <ul><li>VideoTrackItem</li><li>MediaTransitionItem</li> <li>EmptyTrackItem</li></ul> </li>
-<li>Audio: audio track, which is composed of the following items: <ul><li>AudioTrackItem</li><li>MediaTransitionItem</li><li>EmptyTrackItem</li></ul></li>
-<li>Sticker: sticker track, which is composed of the following items: <ul><li> StickerTrackItem</li><li>EmptyTrackItem</li></ul></li>	
-</ul>
+                     * 
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * List of media segments on track.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<MediaTrackItem> m_trackItems;
                     bool m_trackItemsHasBeenSet;

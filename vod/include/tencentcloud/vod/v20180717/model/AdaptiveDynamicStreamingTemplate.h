@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Details of a transcoding to adaptive bitrate streaming template
+                * 
                 */
                 class AdaptiveDynamicStreamingTemplate : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Unique ID of the adaptive bitrate streaming template.</p>
-                     * @return Definition <p>Unique ID of the adaptive bitrate streaming template.</p>
+                     * 获取
+                     * @return Definition 
                      * 
                      */
                     uint64_t GetDefinition() const;
 
                     /**
-                     * 设置<p>Unique ID of the adaptive bitrate streaming template.</p>
-                     * @param _definition <p>Unique ID of the adaptive bitrate streaming template.</p>
+                     * 设置
+                     * @param _definition 
                      * 
                      */
                     void SetDefinition(const uint64_t& _definition);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool DefinitionHasBeenSet() const;
 
                     /**
-                     * 获取<p>Template type. Valid values:</p><li>Preset: preset template.</li><li>Custom: custom template.</li>
-                     * @return Type <p>Template type. Valid values:</p><li>Preset: preset template.</li><li>Custom: custom template.</li>
+                     * 获取
+                     * @return Type 
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置<p>Template type. Valid values:</p><li>Preset: preset template.</li><li>Custom: custom template.</li>
-                     * @param _type <p>Template type. Valid values:</p><li>Preset: preset template.</li><li>Custom: custom template.</li>
+                     * 设置
+                     * @param _type 
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Adaptive bitrate streaming template name.</p>
-                     * @return Name <p>Adaptive bitrate streaming template name.</p>
+                     * 获取
+                     * @return Name 
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置<p>Adaptive bitrate streaming template name.</p>
-                     * @param _name <p>Adaptive bitrate streaming template name.</p>
+                     * 设置
+                     * @param _name 
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -111,15 +111,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取<p>Adaptive bitrate streaming template description.</p>
-                     * @return Comment <p>Adaptive bitrate streaming template description.</p>
+                     * 获取
+                     * @return Comment 
                      * 
                      */
                     std::string GetComment() const;
 
                     /**
-                     * 设置<p>Adaptive bitrate streaming template description.</p>
-                     * @param _comment <p>Adaptive bitrate streaming template description.</p>
+                     * 设置
+                     * @param _comment 
                      * 
                      */
                     void SetComment(const std::string& _comment);
@@ -132,15 +132,15 @@ namespace TencentCloud
                     bool CommentHasBeenSet() const;
 
                     /**
-                     * 获取<p>Adaptive Transcoding Format. Value ranges from:</p><li>HLS.</li>
-                     * @return Format <p>Adaptive Transcoding Format. Value ranges from:</p><li>HLS.</li>
+                     * 获取
+                     * @return Format 
                      * 
                      */
                     std::string GetFormat() const;
 
                     /**
-                     * 设置<p>Adaptive Transcoding Format. Value ranges from:</p><li>HLS.</li>
-                     * @param _format <p>Adaptive Transcoding Format. Value ranges from:</p><li>HLS.</li>
+                     * 设置
+                     * @param _format 
                      * 
                      */
                     void SetFormat(const std::string& _format);
@@ -153,15 +153,15 @@ namespace TencentCloud
                     bool FormatHasBeenSet() const;
 
                     /**
-                     * 获取<p>DRM type. Value ranges from:</p><li>SimpleAES</li><li>Widevine</li><li>FairPlay</li><li>Widevine+FairPlay</li>If the value is an empty string, it represents no DRM protection for the video.
-                     * @return DrmType <p>DRM type. Value ranges from:</p><li>SimpleAES</li><li>Widevine</li><li>FairPlay</li><li>Widevine+FairPlay</li>If the value is an empty string, it represents no DRM protection for the video.
+                     * 获取
+                     * @return DrmType 
                      * 
                      */
                     std::string GetDrmType() const;
 
                     /**
-                     * 设置<p>DRM type. Value ranges from:</p><li>SimpleAES</li><li>Widevine</li><li>FairPlay</li><li>Widevine+FairPlay</li>If the value is an empty string, it represents no DRM protection for the video.
-                     * @param _drmType <p>DRM type. Value ranges from:</p><li>SimpleAES</li><li>Widevine</li><li>FairPlay</li><li>Widevine+FairPlay</li>If the value is an empty string, it represents no DRM protection for the video.
+                     * 设置
+                     * @param _drmType 
                      * 
                      */
                     void SetDrmType(const std::string& _drmType);
@@ -174,15 +174,15 @@ namespace TencentCloud
                     bool DrmTypeHasBeenSet() const;
 
                     /**
-                     * 获取<p>DRM key provider. Permissible range:</p><li>SDMC: SDMC;</li><li>VOD: video on demand.</li>Default value is VOD.<p>SDMC service will be gradually phased out subsequently. Please use VOD DRM encryption service.</p>
-                     * @return DrmKeyProvider <p>DRM key provider. Permissible range:</p><li>SDMC: SDMC;</li><li>VOD: video on demand.</li>Default value is VOD.<p>SDMC service will be gradually phased out subsequently. Please use VOD DRM encryption service.</p>
+                     * 获取
+                     * @return DrmKeyProvider 
                      * 
                      */
                     std::string GetDrmKeyProvider() const;
 
                     /**
-                     * 设置<p>DRM key provider. Permissible range:</p><li>SDMC: SDMC;</li><li>VOD: video on demand.</li>Default value is VOD.<p>SDMC service will be gradually phased out subsequently. Please use VOD DRM encryption service.</p>
-                     * @param _drmKeyProvider <p>DRM key provider. Permissible range:</p><li>SDMC: SDMC;</li><li>VOD: video on demand.</li>Default value is VOD.<p>SDMC service will be gradually phased out subsequently. Please use VOD DRM encryption service.</p>
+                     * 设置
+                     * @param _drmKeyProvider 
                      * 
                      */
                     void SetDrmKeyProvider(const std::string& _drmKeyProvider);
@@ -195,15 +195,15 @@ namespace TencentCloud
                     bool DrmKeyProviderHasBeenSet() const;
 
                     /**
-                     * 获取<p>DRM encryption type, value ranges from "cbcs" to "cenc".</p>
-                     * @return DrmEncryptType <p>DRM encryption type, value ranges from "cbcs" to "cenc".</p>
+                     * 获取
+                     * @return DrmEncryptType 
                      * 
                      */
                     std::string GetDrmEncryptType() const;
 
                     /**
-                     * 设置<p>DRM encryption type, value ranges from "cbcs" to "cenc".</p>
-                     * @param _drmEncryptType <p>DRM encryption type, value ranges from "cbcs" to "cenc".</p>
+                     * 设置
+                     * @param _drmEncryptType 
                      * 
                      */
                     void SetDrmEncryptType(const std::string& _drmEncryptType);
@@ -216,15 +216,15 @@ namespace TencentCloud
                     bool DrmEncryptTypeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Adaptive Transcoding Input Stream Parameter Information. Up to 10 entries.</p>
-                     * @return StreamInfos <p>Adaptive Transcoding Input Stream Parameter Information. Up to 10 entries.</p>
+                     * 获取
+                     * @return StreamInfos 
                      * 
                      */
                     std::vector<AdaptiveStreamTemplate> GetStreamInfos() const;
 
                     /**
-                     * 设置<p>Adaptive Transcoding Input Stream Parameter Information. Up to 10 entries.</p>
-                     * @param _streamInfos <p>Adaptive Transcoding Input Stream Parameter Information. Up to 10 entries.</p>
+                     * 设置
+                     * @param _streamInfos 
                      * 
                      */
                     void SetStreamInfos(const std::vector<AdaptiveStreamTemplate>& _streamInfos);
@@ -237,15 +237,15 @@ namespace TencentCloud
                     bool StreamInfosHasBeenSet() const;
 
                     /**
-                     * 获取<p>Whether to prohibit video low bitrate to high bitrate conversion. Value ranges from:</p><li>0: No,</li><li>1: Yes.</li>
-                     * @return DisableHigherVideoBitrate <p>Whether to prohibit video low bitrate to high bitrate conversion. Value ranges from:</p><li>0: No,</li><li>1: Yes.</li>
+                     * 获取
+                     * @return DisableHigherVideoBitrate 
                      * 
                      */
                     uint64_t GetDisableHigherVideoBitrate() const;
 
                     /**
-                     * 设置<p>Whether to prohibit video low bitrate to high bitrate conversion. Value ranges from:</p><li>0: No,</li><li>1: Yes.</li>
-                     * @param _disableHigherVideoBitrate <p>Whether to prohibit video low bitrate to high bitrate conversion. Value ranges from:</p><li>0: No,</li><li>1: Yes.</li>
+                     * 设置
+                     * @param _disableHigherVideoBitrate 
                      * 
                      */
                     void SetDisableHigherVideoBitrate(const uint64_t& _disableHigherVideoBitrate);
@@ -258,15 +258,15 @@ namespace TencentCloud
                     bool DisableHigherVideoBitrateHasBeenSet() const;
 
                     /**
-                     * 获取<p>Whether to prohibit video resolution to high resolution conversion. Value ranges from:</p><li>0: No,</li><li>1: Yes.</li>
-                     * @return DisableHigherVideoResolution <p>Whether to prohibit video resolution to high resolution conversion. Value ranges from:</p><li>0: No,</li><li>1: Yes.</li>
+                     * 获取
+                     * @return DisableHigherVideoResolution 
                      * 
                      */
                     uint64_t GetDisableHigherVideoResolution() const;
 
                     /**
-                     * 设置<p>Whether to prohibit video resolution to high resolution conversion. Value ranges from:</p><li>0: No,</li><li>1: Yes.</li>
-                     * @param _disableHigherVideoResolution <p>Whether to prohibit video resolution to high resolution conversion. Value ranges from:</p><li>0: No,</li><li>1: Yes.</li>
+                     * 设置
+                     * @param _disableHigherVideoResolution 
                      * 
                      */
                     void SetDisableHigherVideoResolution(const uint64_t& _disableHigherVideoResolution);
@@ -279,15 +279,15 @@ namespace TencentCloud
                     bool DisableHigherVideoResolutionHasBeenSet() const;
 
                     /**
-                     * 获取<p>Template creation time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
-                     * @return CreateTime <p>Template creation time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+                     * 获取
+                     * @return CreateTime 
                      * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
-                     * 设置<p>Template creation time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
-                     * @param _createTime <p>Template creation time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+                     * 设置
+                     * @param _createTime 
                      * 
                      */
                     void SetCreateTime(const std::string& _createTime);
@@ -300,15 +300,15 @@ namespace TencentCloud
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Last template modification time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
-                     * @return UpdateTime <p>Last template modification time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+                     * 获取
+                     * @return UpdateTime 
                      * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
-                     * 设置<p>Last template modification time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
-                     * @param _updateTime <p>Last template modification time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+                     * 设置
+                     * @param _updateTime 
                      * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
@@ -321,15 +321,15 @@ namespace TencentCloud
                     bool UpdateTimeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Segment type. Valid only when Format is HLS.</p>
-                     * @return SegmentType <p>Segment type. Valid only when Format is HLS.</p>
+                     * 获取
+                     * @return SegmentType 
                      * 
                      */
                     std::string GetSegmentType() const;
 
                     /**
-                     * 设置<p>Segment type. Valid only when Format is HLS.</p>
-                     * @param _segmentType <p>Segment type. Valid only when Format is HLS.</p>
+                     * 设置
+                     * @param _segmentType 
                      * 
                      */
                     void SetSegmentType(const std::string& _segmentType);
@@ -341,91 +341,118 @@ namespace TencentCloud
                      */
                     bool SegmentTypeHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return SegmentDuration 
+                     * 
+                     */
+                    int64_t GetSegmentDuration() const;
+
+                    /**
+                     * 设置
+                     * @param _segmentDuration 
+                     * 
+                     */
+                    void SetSegmentDuration(const int64_t& _segmentDuration);
+
+                    /**
+                     * 判断参数 SegmentDuration 是否已赋值
+                     * @return SegmentDuration 是否已赋值
+                     * 
+                     */
+                    bool SegmentDurationHasBeenSet() const;
+
                 private:
 
                     /**
-                     * <p>Unique ID of the adaptive bitrate streaming template.</p>
+                     * 
                      */
                     uint64_t m_definition;
                     bool m_definitionHasBeenSet;
 
                     /**
-                     * <p>Template type. Valid values:</p><li>Preset: preset template.</li><li>Custom: custom template.</li>
+                     * 
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * <p>Adaptive bitrate streaming template name.</p>
+                     * 
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * <p>Adaptive bitrate streaming template description.</p>
+                     * 
                      */
                     std::string m_comment;
                     bool m_commentHasBeenSet;
 
                     /**
-                     * <p>Adaptive Transcoding Format. Value ranges from:</p><li>HLS.</li>
+                     * 
                      */
                     std::string m_format;
                     bool m_formatHasBeenSet;
 
                     /**
-                     * <p>DRM type. Value ranges from:</p><li>SimpleAES</li><li>Widevine</li><li>FairPlay</li><li>Widevine+FairPlay</li>If the value is an empty string, it represents no DRM protection for the video.
+                     * 
                      */
                     std::string m_drmType;
                     bool m_drmTypeHasBeenSet;
 
                     /**
-                     * <p>DRM key provider. Permissible range:</p><li>SDMC: SDMC;</li><li>VOD: video on demand.</li>Default value is VOD.<p>SDMC service will be gradually phased out subsequently. Please use VOD DRM encryption service.</p>
+                     * 
                      */
                     std::string m_drmKeyProvider;
                     bool m_drmKeyProviderHasBeenSet;
 
                     /**
-                     * <p>DRM encryption type, value ranges from "cbcs" to "cenc".</p>
+                     * 
                      */
                     std::string m_drmEncryptType;
                     bool m_drmEncryptTypeHasBeenSet;
 
                     /**
-                     * <p>Adaptive Transcoding Input Stream Parameter Information. Up to 10 entries.</p>
+                     * 
                      */
                     std::vector<AdaptiveStreamTemplate> m_streamInfos;
                     bool m_streamInfosHasBeenSet;
 
                     /**
-                     * <p>Whether to prohibit video low bitrate to high bitrate conversion. Value ranges from:</p><li>0: No,</li><li>1: Yes.</li>
+                     * 
                      */
                     uint64_t m_disableHigherVideoBitrate;
                     bool m_disableHigherVideoBitrateHasBeenSet;
 
                     /**
-                     * <p>Whether to prohibit video resolution to high resolution conversion. Value ranges from:</p><li>0: No,</li><li>1: Yes.</li>
+                     * 
                      */
                     uint64_t m_disableHigherVideoResolution;
                     bool m_disableHigherVideoResolutionHasBeenSet;
 
                     /**
-                     * <p>Template creation time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+                     * 
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * <p>Last template modification time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+                     * 
                      */
                     std::string m_updateTime;
                     bool m_updateTimeHasBeenSet;
 
                     /**
-                     * <p>Segment type. Valid only when Format is HLS.</p>
+                     * 
                      */
                     std::string m_segmentType;
                     bool m_segmentTypeHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    int64_t m_segmentDuration;
+                    bool m_segmentDurationHasBeenSet;
 
                 };
             }

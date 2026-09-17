@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * The details of a video splicing task. This parameter is only valid for tasks initiated by the v2017 video splicing API.
+                * 
                 */
                 class ConcatTask2017 : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Video splicing task ID.
-                     * @return TaskId Video splicing task ID.
+                     * 获取
+                     * @return TaskId 
                      * 
                      */
                     std::string GetTaskId() const;
 
                     /**
-                     * 设置Video splicing task ID.
-                     * @param _taskId Video splicing task ID.
+                     * 设置
+                     * @param _taskId 
                      * 
                      */
                     void SetTaskId(const std::string& _taskId);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool TaskIdHasBeenSet() const;
 
                     /**
-                     * 获取Information of source file for video splicing.
-                     * @return FileInfoSet Information of source file for video splicing.
+                     * 获取
+                     * @return FileInfoSet 
                      * 
                      */
                     std::vector<ConcatFileInfo2017> GetFileInfoSet() const;
 
                     /**
-                     * 设置Information of source file for video splicing.
-                     * @param _fileInfoSet Information of source file for video splicing.
+                     * 设置
+                     * @param _fileInfoSet 
                      * 
                      */
                     void SetFileInfoSet(const std::vector<ConcatFileInfo2017>& _fileInfoSet);
@@ -92,13 +92,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Video splicing task ID.
+                     * 
                      */
                     std::string m_taskId;
                     bool m_taskIdHasBeenSet;
 
                     /**
-                     * Information of source file for video splicing.
+                     * 
                      */
                     std::vector<ConcatFileInfo2017> m_fileInfoSet;
                     bool m_fileInfoSetHasBeenSet;

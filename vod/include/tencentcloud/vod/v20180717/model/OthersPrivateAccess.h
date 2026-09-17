@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Origin-pull authentication for other origins
+                * 
                 */
                 class OthersPrivateAccess : public AbstractModel
                 {
@@ -47,15 +47,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Other manufacturers' object storage back-to-origin authentication configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
-                     * @return Switch Other manufacturers' object storage back-to-origin authentication configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
+                     * 获取Origin-pull authentication configuration switch for other vendors' object storage. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
+                     * @return Switch Origin-pull authentication configuration switch for other vendors' object storage. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Other manufacturers' object storage back-to-origin authentication configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
-                     * @param _switch Other manufacturers' object storage back-to-origin authentication configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
+                     * 设置Origin-pull authentication configuration switch for other vendors' object storage. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
+                     * @param _switch Origin-pull authentication configuration switch for other vendors' object storage. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -68,15 +76,15 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取Access ID.
-                     * @return AccessKey Access ID.
+                     * 获取
+                     * @return AccessKey 
                      * 
                      */
                     std::string GetAccessKey() const;
 
                     /**
-                     * 设置Access ID.
-                     * @param _accessKey Access ID.
+                     * 设置
+                     * @param _accessKey 
                      * 
                      */
                     void SetAccessKey(const std::string& _accessKey);
@@ -89,15 +97,15 @@ namespace TencentCloud
                     bool AccessKeyHasBeenSet() const;
 
                     /**
-                     * 获取Key.
-                     * @return SecretKey Key.
+                     * 获取
+                     * @return SecretKey 
                      * 
                      */
                     std::string GetSecretKey() const;
 
                     /**
-                     * 设置Key.
-                     * @param _secretKey Key.
+                     * 设置
+                     * @param _secretKey 
                      * 
                      */
                     void SetSecretKey(const std::string& _secretKey);
@@ -110,15 +118,15 @@ namespace TencentCloud
                     bool SecretKeyHasBeenSet() const;
 
                     /**
-                     * 获取Region.
-                     * @return Region Region.
+                     * 获取
+                     * @return Region 
                      * 
                      */
                     std::string GetRegion() const;
 
                     /**
-                     * 设置Region.
-                     * @param _region Region.
+                     * 设置
+                     * @param _region 
                      * 
                      */
                     void SetRegion(const std::string& _region);
@@ -131,15 +139,15 @@ namespace TencentCloud
                     bool RegionHasBeenSet() const;
 
                     /**
-                     * 获取Bucket name
-                     * @return Bucket Bucket name
+                     * 获取
+                     * @return Bucket 
                      * 
                      */
                     std::string GetBucket() const;
 
                     /**
-                     * 设置Bucket name
-                     * @param _bucket Bucket name
+                     * 设置
+                     * @param _bucket 
                      * 
                      */
                     void SetBucket(const std::string& _bucket);
@@ -154,31 +162,33 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Other manufacturers' object storage back-to-origin authentication configuration switch, the values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
+                     * Origin-pull authentication configuration switch for other vendors' object storage. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * Access ID.
+                     * 
                      */
                     std::string m_accessKey;
                     bool m_accessKeyHasBeenSet;
 
                     /**
-                     * Key.
+                     * 
                      */
                     std::string m_secretKey;
                     bool m_secretKeyHasBeenSet;
 
                     /**
-                     * Region.
+                     * 
                      */
                     std::string m_region;
                     bool m_regionHasBeenSet;
 
                     /**
-                     * Bucket name
+                     * 
                      */
                     std::string m_bucket;
                     bool m_bucketHasBeenSet;

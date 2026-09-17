@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Image scaling details.
+                * 
                 */
                 class ImageScale : public AbstractModel
                 {
@@ -47,35 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The scaling type. Valid values:
-<li>`WidthFirst`: Specify the width and proportionally scale the height.</li>
-<li>`HeightFirst`: Specify the height and proportionally scale the width.</li>
-<li>`LongEdgeFirst`: Specify the long side (`LongEdge`) and proportionally scale the short side.</li>
-<li>`ShortEdgeFirst`: Specify the short side (`ShortEdge`) and proportionally scale the long side.</li>
-<li>Force: Specify both the height and width. The output image may be distorted.</li>
-                     * @return Type The scaling type. Valid values:
-<li>`WidthFirst`: Specify the width and proportionally scale the height.</li>
-<li>`HeightFirst`: Specify the height and proportionally scale the width.</li>
-<li>`LongEdgeFirst`: Specify the long side (`LongEdge`) and proportionally scale the short side.</li>
-<li>`ShortEdgeFirst`: Specify the short side (`ShortEdge`) and proportionally scale the long side.</li>
-<li>Force: Specify both the height and width. The output image may be distorted.</li>
+                     * 获取
+                     * @return Type 
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置The scaling type. Valid values:
-<li>`WidthFirst`: Specify the width and proportionally scale the height.</li>
-<li>`HeightFirst`: Specify the height and proportionally scale the width.</li>
-<li>`LongEdgeFirst`: Specify the long side (`LongEdge`) and proportionally scale the short side.</li>
-<li>`ShortEdgeFirst`: Specify the short side (`ShortEdge`) and proportionally scale the long side.</li>
-<li>Force: Specify both the height and width. The output image may be distorted.</li>
-                     * @param _type The scaling type. Valid values:
-<li>`WidthFirst`: Specify the width and proportionally scale the height.</li>
-<li>`HeightFirst`: Specify the height and proportionally scale the width.</li>
-<li>`LongEdgeFirst`: Specify the long side (`LongEdge`) and proportionally scale the short side.</li>
-<li>`ShortEdgeFirst`: Specify the short side (`ShortEdge`) and proportionally scale the long side.</li>
-<li>Force: Specify both the height and width. The output image may be distorted.</li>
+                     * 设置
+                     * @param _type 
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -88,15 +68,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取The image height (pixels). This parameter is valid only if `Type` is `HeightFirst` or `Force`.
-                     * @return Height The image height (pixels). This parameter is valid only if `Type` is `HeightFirst` or `Force`.
+                     * 获取
+                     * @return Height 
                      * 
                      */
                     uint64_t GetHeight() const;
 
                     /**
-                     * 设置The image height (pixels). This parameter is valid only if `Type` is `HeightFirst` or `Force`.
-                     * @param _height The image height (pixels). This parameter is valid only if `Type` is `HeightFirst` or `Force`.
+                     * 设置
+                     * @param _height 
                      * 
                      */
                     void SetHeight(const uint64_t& _height);
@@ -109,15 +89,15 @@ namespace TencentCloud
                     bool HeightHasBeenSet() const;
 
                     /**
-                     * 获取The image width (pixels). This parameter is valid only if `Type` is `WidthFirst` or `Force`.
-                     * @return Width The image width (pixels). This parameter is valid only if `Type` is `WidthFirst` or `Force`.
+                     * 获取
+                     * @return Width 
                      * 
                      */
                     uint64_t GetWidth() const;
 
                     /**
-                     * 设置The image width (pixels). This parameter is valid only if `Type` is `WidthFirst` or `Force`.
-                     * @param _width The image width (pixels). This parameter is valid only if `Type` is `WidthFirst` or `Force`.
+                     * 设置
+                     * @param _width 
                      * 
                      */
                     void SetWidth(const uint64_t& _width);
@@ -130,15 +110,15 @@ namespace TencentCloud
                     bool WidthHasBeenSet() const;
 
                     /**
-                     * 获取The long side of the output image (pixels). This parameter is valid only if `Type` is `LongEdgeFirst`.
-                     * @return LongEdge The long side of the output image (pixels). This parameter is valid only if `Type` is `LongEdgeFirst`.
+                     * 获取
+                     * @return LongEdge 
                      * 
                      */
                     uint64_t GetLongEdge() const;
 
                     /**
-                     * 设置The long side of the output image (pixels). This parameter is valid only if `Type` is `LongEdgeFirst`.
-                     * @param _longEdge The long side of the output image (pixels). This parameter is valid only if `Type` is `LongEdgeFirst`.
+                     * 设置
+                     * @param _longEdge 
                      * 
                      */
                     void SetLongEdge(const uint64_t& _longEdge);
@@ -151,15 +131,15 @@ namespace TencentCloud
                     bool LongEdgeHasBeenSet() const;
 
                     /**
-                     * 获取The short side of the output image (pixels). This parameter is valid only if `Type` is `ShortEdgeFirst`.
-                     * @return ShortEdge The short side of the output image (pixels). This parameter is valid only if `Type` is `ShortEdgeFirst`.
+                     * 获取
+                     * @return ShortEdge 
                      * 
                      */
                     uint64_t GetShortEdge() const;
 
                     /**
-                     * 设置The short side of the output image (pixels). This parameter is valid only if `Type` is `ShortEdgeFirst`.
-                     * @param _shortEdge The short side of the output image (pixels). This parameter is valid only if `Type` is `ShortEdgeFirst`.
+                     * 设置
+                     * @param _shortEdge 
                      * 
                      */
                     void SetShortEdge(const uint64_t& _shortEdge);
@@ -174,36 +154,31 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The scaling type. Valid values:
-<li>`WidthFirst`: Specify the width and proportionally scale the height.</li>
-<li>`HeightFirst`: Specify the height and proportionally scale the width.</li>
-<li>`LongEdgeFirst`: Specify the long side (`LongEdge`) and proportionally scale the short side.</li>
-<li>`ShortEdgeFirst`: Specify the short side (`ShortEdge`) and proportionally scale the long side.</li>
-<li>Force: Specify both the height and width. The output image may be distorted.</li>
+                     * 
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * The image height (pixels). This parameter is valid only if `Type` is `HeightFirst` or `Force`.
+                     * 
                      */
                     uint64_t m_height;
                     bool m_heightHasBeenSet;
 
                     /**
-                     * The image width (pixels). This parameter is valid only if `Type` is `WidthFirst` or `Force`.
+                     * 
                      */
                     uint64_t m_width;
                     bool m_widthHasBeenSet;
 
                     /**
-                     * The long side of the output image (pixels). This parameter is valid only if `Type` is `LongEdgeFirst`.
+                     * 
                      */
                     uint64_t m_longEdge;
                     bool m_longEdgeHasBeenSet;
 
                     /**
-                     * The short side of the output image (pixels). This parameter is valid only if `Type` is `ShortEdgeFirst`.
+                     * 
                      */
                     uint64_t m_shortEdge;
                     bool m_shortEdgeHasBeenSet;

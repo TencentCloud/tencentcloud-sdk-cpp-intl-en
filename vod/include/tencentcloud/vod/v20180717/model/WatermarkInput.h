@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Watermark parameter type of video processing task
+                * 
                 */
                 class WatermarkInput : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Watermarking template ID.
-                     * @return Definition Watermarking template ID.
+                     * 获取
+                     * @return Definition 
                      * 
                      */
                     uint64_t GetDefinition() const;
 
                     /**
-                     * 设置Watermarking template ID.
-                     * @param _definition Watermarking template ID.
+                     * 设置
+                     * @param _definition 
                      * 
                      */
                     void SetDefinition(const uint64_t& _definition);
@@ -68,19 +68,15 @@ namespace TencentCloud
                     bool DefinitionHasBeenSet() const;
 
                     /**
-                     * 获取Text content, which contains up to 100 characters. Set this parameter only when the watermark type is text.
-VOD does not support adding text watermarks on screenshots.
-                     * @return TextContent Text content, which contains up to 100 characters. Set this parameter only when the watermark type is text.
-VOD does not support adding text watermarks on screenshots.
+                     * 获取
+                     * @return TextContent 
                      * 
                      */
                     std::string GetTextContent() const;
 
                     /**
-                     * 设置Text content, which contains up to 100 characters. Set this parameter only when the watermark type is text.
-VOD does not support adding text watermarks on screenshots.
-                     * @param _textContent Text content, which contains up to 100 characters. Set this parameter only when the watermark type is text.
-VOD does not support adding text watermarks on screenshots.
+                     * 设置
+                     * @param _textContent 
                      * 
                      */
                     void SetTextContent(const std::string& _textContent);
@@ -93,19 +89,15 @@ VOD does not support adding text watermarks on screenshots.
                     bool TextContentHasBeenSet() const;
 
                     /**
-                     * 获取SVG content, which contains up to 2,000,000 characters. Set this parameter only when the watermark type is SVG.
-VOD does not support adding SVG watermarks on screenshots.
-                     * @return SvgContent SVG content, which contains up to 2,000,000 characters. Set this parameter only when the watermark type is SVG.
-VOD does not support adding SVG watermarks on screenshots.
+                     * 获取
+                     * @return SvgContent 
                      * 
                      */
                     std::string GetSvgContent() const;
 
                     /**
-                     * 设置SVG content, which contains up to 2,000,000 characters. Set this parameter only when the watermark type is SVG.
-VOD does not support adding SVG watermarks on screenshots.
-                     * @param _svgContent SVG content, which contains up to 2,000,000 characters. Set this parameter only when the watermark type is SVG.
-VOD does not support adding SVG watermarks on screenshots.
+                     * 设置
+                     * @param _svgContent 
                      * 
                      */
                     void SetSvgContent(const std::string& _svgContent);
@@ -118,27 +110,15 @@ VOD does not support adding SVG watermarks on screenshots.
                     bool SvgContentHasBeenSet() const;
 
                     /**
-                     * 获取Start time offset of a watermark in seconds. If this parameter is left blank or 0 is entered, the watermark will appear upon the first video frame.
-<li>If this parameter is left blank or 0 is entered, the watermark will appear upon the first video frame;</li>
-<li>If this value is greater than 0 (e.g., n), the watermark will appear at second n after the first video frame;</li>
-<li>If this value is smaller than 0 (e.g., -n), the watermark will appear at second n before the last video frame.</li>
-                     * @return StartTimeOffset Start time offset of a watermark in seconds. If this parameter is left blank or 0 is entered, the watermark will appear upon the first video frame.
-<li>If this parameter is left blank or 0 is entered, the watermark will appear upon the first video frame;</li>
-<li>If this value is greater than 0 (e.g., n), the watermark will appear at second n after the first video frame;</li>
-<li>If this value is smaller than 0 (e.g., -n), the watermark will appear at second n before the last video frame.</li>
+                     * 获取
+                     * @return StartTimeOffset 
                      * 
                      */
                     double GetStartTimeOffset() const;
 
                     /**
-                     * 设置Start time offset of a watermark in seconds. If this parameter is left blank or 0 is entered, the watermark will appear upon the first video frame.
-<li>If this parameter is left blank or 0 is entered, the watermark will appear upon the first video frame;</li>
-<li>If this value is greater than 0 (e.g., n), the watermark will appear at second n after the first video frame;</li>
-<li>If this value is smaller than 0 (e.g., -n), the watermark will appear at second n before the last video frame.</li>
-                     * @param _startTimeOffset Start time offset of a watermark in seconds. If this parameter is left blank or 0 is entered, the watermark will appear upon the first video frame.
-<li>If this parameter is left blank or 0 is entered, the watermark will appear upon the first video frame;</li>
-<li>If this value is greater than 0 (e.g., n), the watermark will appear at second n after the first video frame;</li>
-<li>If this value is smaller than 0 (e.g., -n), the watermark will appear at second n before the last video frame.</li>
+                     * 设置
+                     * @param _startTimeOffset 
                      * 
                      */
                     void SetStartTimeOffset(const double& _startTimeOffset);
@@ -151,27 +131,15 @@ VOD does not support adding SVG watermarks on screenshots.
                     bool StartTimeOffsetHasBeenSet() const;
 
                     /**
-                     * 获取End time offset of a watermark in seconds.
-<li>If this parameter is left blank or 0 is entered, the watermark will exist till the last video frame;</li>
-<li>If this value is greater than 0 (e.g., n), the watermark will exist till second n;</li>
-<li>If this value is smaller than 0 (e.g., -n), the watermark will exist till second n before the last video frame.</li>
-                     * @return EndTimeOffset End time offset of a watermark in seconds.
-<li>If this parameter is left blank or 0 is entered, the watermark will exist till the last video frame;</li>
-<li>If this value is greater than 0 (e.g., n), the watermark will exist till second n;</li>
-<li>If this value is smaller than 0 (e.g., -n), the watermark will exist till second n before the last video frame.</li>
+                     * 获取
+                     * @return EndTimeOffset 
                      * 
                      */
                     double GetEndTimeOffset() const;
 
                     /**
-                     * 设置End time offset of a watermark in seconds.
-<li>If this parameter is left blank or 0 is entered, the watermark will exist till the last video frame;</li>
-<li>If this value is greater than 0 (e.g., n), the watermark will exist till second n;</li>
-<li>If this value is smaller than 0 (e.g., -n), the watermark will exist till second n before the last video frame.</li>
-                     * @param _endTimeOffset End time offset of a watermark in seconds.
-<li>If this parameter is left blank or 0 is entered, the watermark will exist till the last video frame;</li>
-<li>If this value is greater than 0 (e.g., n), the watermark will exist till second n;</li>
-<li>If this value is smaller than 0 (e.g., -n), the watermark will exist till second n before the last video frame.</li>
+                     * 设置
+                     * @param _endTimeOffset 
                      * 
                      */
                     void SetEndTimeOffset(const double& _endTimeOffset);
@@ -186,39 +154,31 @@ VOD does not support adding SVG watermarks on screenshots.
                 private:
 
                     /**
-                     * Watermarking template ID.
+                     * 
                      */
                     uint64_t m_definition;
                     bool m_definitionHasBeenSet;
 
                     /**
-                     * Text content, which contains up to 100 characters. Set this parameter only when the watermark type is text.
-VOD does not support adding text watermarks on screenshots.
+                     * 
                      */
                     std::string m_textContent;
                     bool m_textContentHasBeenSet;
 
                     /**
-                     * SVG content, which contains up to 2,000,000 characters. Set this parameter only when the watermark type is SVG.
-VOD does not support adding SVG watermarks on screenshots.
+                     * 
                      */
                     std::string m_svgContent;
                     bool m_svgContentHasBeenSet;
 
                     /**
-                     * Start time offset of a watermark in seconds. If this parameter is left blank or 0 is entered, the watermark will appear upon the first video frame.
-<li>If this parameter is left blank or 0 is entered, the watermark will appear upon the first video frame;</li>
-<li>If this value is greater than 0 (e.g., n), the watermark will appear at second n after the first video frame;</li>
-<li>If this value is smaller than 0 (e.g., -n), the watermark will appear at second n before the last video frame.</li>
+                     * 
                      */
                     double m_startTimeOffset;
                     bool m_startTimeOffsetHasBeenSet;
 
                     /**
-                     * End time offset of a watermark in seconds.
-<li>If this parameter is left blank or 0 is entered, the watermark will exist till the last video frame;</li>
-<li>If this value is greater than 0 (e.g., n), the watermark will exist till second n;</li>
-<li>If this value is smaller than 0 (e.g., -n), the watermark will exist till second n before the last video frame.</li>
+                     * 
                      */
                     double m_endTimeOffset;
                     bool m_endTimeOffsetHasBeenSet;

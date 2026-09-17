@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * The playback statistics.
+                * 
                 */
                 class PlayStatInfo : public AbstractModel
                 {
@@ -47,23 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The start time (in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I)) of the data returned. For example, if the granularity is a day, `2018-12-01T00:00:00+08:00` indicates that the data is for the period between December 1, 2018 (inclusive) and December 2, 2018 (exclusive).
-<li>If the granularity is an hour, `2019-08-22T00:00:00+08:00` indicates the data is for the period between 00:00 and 01:00 AM on August 22, 2019.</li>
-<li>If the granularity is a day, `2019-08-22T00:00:00+08:00` indicates the data is for August 22, 2019.</li>
-                     * @return Time The start time (in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I)) of the data returned. For example, if the granularity is a day, `2018-12-01T00:00:00+08:00` indicates that the data is for the period between December 1, 2018 (inclusive) and December 2, 2018 (exclusive).
-<li>If the granularity is an hour, `2019-08-22T00:00:00+08:00` indicates the data is for the period between 00:00 and 01:00 AM on August 22, 2019.</li>
-<li>If the granularity is a day, `2019-08-22T00:00:00+08:00` indicates the data is for August 22, 2019.</li>
+                     * 获取
+                     * @return Time 
                      * 
                      */
                     std::string GetTime() const;
 
                     /**
-                     * 设置The start time (in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I)) of the data returned. For example, if the granularity is a day, `2018-12-01T00:00:00+08:00` indicates that the data is for the period between December 1, 2018 (inclusive) and December 2, 2018 (exclusive).
-<li>If the granularity is an hour, `2019-08-22T00:00:00+08:00` indicates the data is for the period between 00:00 and 01:00 AM on August 22, 2019.</li>
-<li>If the granularity is a day, `2019-08-22T00:00:00+08:00` indicates the data is for August 22, 2019.</li>
-                     * @param _time The start time (in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I)) of the data returned. For example, if the granularity is a day, `2018-12-01T00:00:00+08:00` indicates that the data is for the period between December 1, 2018 (inclusive) and December 2, 2018 (exclusive).
-<li>If the granularity is an hour, `2019-08-22T00:00:00+08:00` indicates the data is for the period between 00:00 and 01:00 AM on August 22, 2019.</li>
-<li>If the granularity is a day, `2019-08-22T00:00:00+08:00` indicates the data is for August 22, 2019.</li>
+                     * 设置
+                     * @param _time 
                      * 
                      */
                     void SetTime(const std::string& _time);
@@ -76,15 +68,15 @@ namespace TencentCloud
                     bool TimeHasBeenSet() const;
 
                     /**
-                     * 获取The ID of the media file.
-                     * @return FileId The ID of the media file.
+                     * 获取
+                     * @return FileId 
                      * 
                      */
                     std::string GetFileId() const;
 
                     /**
-                     * 设置The ID of the media file.
-                     * @param _fileId The ID of the media file.
+                     * 设置
+                     * @param _fileId 
                      * 
                      */
                     void SetFileId(const std::string& _fileId);
@@ -97,15 +89,15 @@ namespace TencentCloud
                     bool FileIdHasBeenSet() const;
 
                     /**
-                     * 获取The playback times.
-                     * @return PlayTimes The playback times.
+                     * 获取
+                     * @return PlayTimes 
                      * 
                      */
                     uint64_t GetPlayTimes() const;
 
                     /**
-                     * 设置The playback times.
-                     * @param _playTimes The playback times.
+                     * 设置
+                     * @param _playTimes 
                      * 
                      */
                     void SetPlayTimes(const uint64_t& _playTimes);
@@ -118,15 +110,15 @@ namespace TencentCloud
                     bool PlayTimesHasBeenSet() const;
 
                     /**
-                     * 获取The traffic (in bytes) consumed for playback.
-                     * @return Traffic The traffic (in bytes) consumed for playback.
+                     * 获取
+                     * @return Traffic 
                      * 
                      */
                     uint64_t GetTraffic() const;
 
                     /**
-                     * 设置The traffic (in bytes) consumed for playback.
-                     * @param _traffic The traffic (in bytes) consumed for playback.
+                     * 设置
+                     * @param _traffic 
                      * 
                      */
                     void SetTraffic(const uint64_t& _traffic);
@@ -141,27 +133,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The start time (in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I)) of the data returned. For example, if the granularity is a day, `2018-12-01T00:00:00+08:00` indicates that the data is for the period between December 1, 2018 (inclusive) and December 2, 2018 (exclusive).
-<li>If the granularity is an hour, `2019-08-22T00:00:00+08:00` indicates the data is for the period between 00:00 and 01:00 AM on August 22, 2019.</li>
-<li>If the granularity is a day, `2019-08-22T00:00:00+08:00` indicates the data is for August 22, 2019.</li>
+                     * 
                      */
                     std::string m_time;
                     bool m_timeHasBeenSet;
 
                     /**
-                     * The ID of the media file.
+                     * 
                      */
                     std::string m_fileId;
                     bool m_fileIdHasBeenSet;
 
                     /**
-                     * The playback times.
+                     * 
                      */
                     uint64_t m_playTimes;
                     bool m_playTimesHasBeenSet;
 
                     /**
-                     * The traffic (in bytes) consumed for playback.
+                     * 
                      */
                     uint64_t m_traffic;
                     bool m_trafficHasBeenSet;

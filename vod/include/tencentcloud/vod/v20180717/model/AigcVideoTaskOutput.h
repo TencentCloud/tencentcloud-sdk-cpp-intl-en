@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Output info of the AIGC video generation task.
+                * 
                 */
                 class AigcVideoTaskOutput : public AbstractModel
                 {
@@ -49,15 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Output file info of the AIGC video task.</p>
-                     * @return FileInfos <p>Output file info of the AIGC video task.</p>
+                     * 获取
+                     * @return FileInfos 
                      * 
                      */
                     std::vector<AigcVideoTaskOutputFileInfo> GetFileInfos() const;
 
                     /**
-                     * 设置<p>Output file info of the AIGC video task.</p>
-                     * @param _fileInfos <p>Output file info of the AIGC video task.</p>
+                     * 设置
+                     * @param _fileInfos 
                      * 
                      */
                     void SetFileInfos(const std::vector<AigcVideoTaskOutputFileInfo>& _fileInfos);
@@ -70,15 +70,15 @@ namespace TencentCloud
                     bool FileInfosHasBeenSet() const;
 
                     /**
-                     * 获取<p>The task ID of the task type Procedure. If a task flow template (Procedure) is specified when initiating <a href="https://www.tencentcloud.com/document/product/266/126239?from_cn_redirect=1">AIGC video task creation</a>, the task is initiated when the task flow template specifies one or more of MediaProcessTask, AiAnalysisTask, or AiRecognitionTask.</p>
-                     * @return ProcedureTaskIds <p>The task ID of the task type Procedure. If a task flow template (Procedure) is specified when initiating <a href="https://www.tencentcloud.com/document/product/266/126239?from_cn_redirect=1">AIGC video task creation</a>, the task is initiated when the task flow template specifies one or more of MediaProcessTask, AiAnalysisTask, or AiRecognitionTask.</p>
+                     * 获取
+                     * @return ProcedureTaskIds 
                      * 
                      */
                     std::vector<std::string> GetProcedureTaskIds() const;
 
                     /**
-                     * 设置<p>The task ID of the task type Procedure. If a task flow template (Procedure) is specified when initiating <a href="https://www.tencentcloud.com/document/product/266/126239?from_cn_redirect=1">AIGC video task creation</a>, the task is initiated when the task flow template specifies one or more of MediaProcessTask, AiAnalysisTask, or AiRecognitionTask.</p>
-                     * @param _procedureTaskIds <p>The task ID of the task type Procedure. If a task flow template (Procedure) is specified when initiating <a href="https://www.tencentcloud.com/document/product/266/126239?from_cn_redirect=1">AIGC video task creation</a>, the task is initiated when the task flow template specifies one or more of MediaProcessTask, AiAnalysisTask, or AiRecognitionTask.</p>
+                     * 设置
+                     * @param _procedureTaskIds 
                      * 
                      */
                     void SetProcedureTaskIds(const std::vector<std::string>& _procedureTaskIds);
@@ -91,15 +91,15 @@ namespace TencentCloud
                     bool ProcedureTaskIdsHasBeenSet() const;
 
                     /**
-                     * 获取<p>Usage information for AIGC video tasks.</p>
-                     * @return Usage <p>Usage information for AIGC video tasks.</p>
+                     * 获取
+                     * @return Usage 
                      * 
                      */
                     AigcVideoTaskUsage GetUsage() const;
 
                     /**
-                     * 设置<p>Usage information for AIGC video tasks.</p>
-                     * @param _usage <p>Usage information for AIGC video tasks.</p>
+                     * 设置
+                     * @param _usage 
                      * 
                      */
                     void SetUsage(const AigcVideoTaskUsage& _usage);
@@ -114,19 +114,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Output file info of the AIGC video task.</p>
+                     * 
                      */
                     std::vector<AigcVideoTaskOutputFileInfo> m_fileInfos;
                     bool m_fileInfosHasBeenSet;
 
                     /**
-                     * <p>The task ID of the task type Procedure. If a task flow template (Procedure) is specified when initiating <a href="https://www.tencentcloud.com/document/product/266/126239?from_cn_redirect=1">AIGC video task creation</a>, the task is initiated when the task flow template specifies one or more of MediaProcessTask, AiAnalysisTask, or AiRecognitionTask.</p>
+                     * 
                      */
                     std::vector<std::string> m_procedureTaskIds;
                     bool m_procedureTaskIdsHasBeenSet;
 
                     /**
-                     * <p>Usage information for AIGC video tasks.</p>
+                     * 
                      */
                     AigcVideoTaskUsage m_usage;
                     bool m_usageHasBeenSet;

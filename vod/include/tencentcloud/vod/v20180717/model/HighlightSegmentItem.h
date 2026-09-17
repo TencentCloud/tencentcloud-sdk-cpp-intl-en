@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * List of intelligently generated highlights.
+                * 
                 */
                 class HighlightSegmentItem : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Confidence degree.</p>
-                     * @return Confidence <p>Confidence degree.</p>
+                     * 获取
+                     * @return Confidence 
                      * 
                      */
                     double GetConfidence() const;
 
                     /**
-                     * 设置<p>Confidence degree.</p>
-                     * @param _confidence <p>Confidence degree.</p>
+                     * 设置
+                     * @param _confidence 
                      * 
                      */
                     void SetConfidence(const double& _confidence);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool ConfidenceHasBeenSet() const;
 
                     /**
-                     * 获取<p>Segment start time offset.</p><p>Measurement unit: seconds.</p>
-                     * @return StartTimeOffset <p>Segment start time offset.</p><p>Measurement unit: seconds.</p>
+                     * 获取
+                     * @return StartTimeOffset 
                      * 
                      */
                     double GetStartTimeOffset() const;
 
                     /**
-                     * 设置<p>Segment start time offset.</p><p>Measurement unit: seconds.</p>
-                     * @param _startTimeOffset <p>Segment start time offset.</p><p>Measurement unit: seconds.</p>
+                     * 设置
+                     * @param _startTimeOffset 
                      * 
                      */
                     void SetStartTimeOffset(const double& _startTimeOffset);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool StartTimeOffsetHasBeenSet() const;
 
                     /**
-                     * 获取<p>Segment end time offset.</p><p>Unit: seconds</p>
-                     * @return EndTimeOffset <p>Segment end time offset.</p><p>Unit: seconds</p>
+                     * 获取
+                     * @return EndTimeOffset 
                      * 
                      */
                     double GetEndTimeOffset() const;
 
                     /**
-                     * 设置<p>Segment end time offset.</p><p>Unit: seconds</p>
-                     * @param _endTimeOffset <p>Segment end time offset.</p><p>Unit: seconds</p>
+                     * 设置
+                     * @param _endTimeOffset 
                      * 
                      */
                     void SetEndTimeOffset(const double& _endTimeOffset);
@@ -112,19 +112,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Confidence degree.</p>
+                     * 
                      */
                     double m_confidence;
                     bool m_confidenceHasBeenSet;
 
                     /**
-                     * <p>Segment start time offset.</p><p>Measurement unit: seconds.</p>
+                     * 
                      */
                     double m_startTimeOffset;
                     bool m_startTimeOffsetHasBeenSet;
 
                     /**
-                     * <p>Segment end time offset.</p><p>Unit: seconds</p>
+                     * 
                      */
                     double m_endTimeOffset;
                     bool m_endTimeOffsetHasBeenSet;

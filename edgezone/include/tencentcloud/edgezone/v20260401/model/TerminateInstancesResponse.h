@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取List of instance IDs successfully terminated.
-                     * @return InstanceIdSet List of instance IDs successfully terminated.
+                     * 获取<p>List of instance IDs successfully terminated.</p>
+                     * @return InstanceIdSet <p>List of instance IDs successfully terminated.</p>
                      * 
                      */
                     std::vector<std::string> GetInstanceIdSet() const;
@@ -59,10 +59,8 @@ namespace TencentCloud
                     bool InstanceIdSetHasBeenSet() const;
 
                     /**
-                     * 获取List of instances with termination failed (returned when partially successful).
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return FailedInstanceSet List of instances with termination failed (returned when partially successful).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>List of instances with termination failed (returned when partially successful).</p>
+                     * @return FailedInstanceSet <p>List of instances with termination failed (returned when partially successful).</p>
                      * 
                      */
                     std::vector<FailedInstance> GetFailedInstanceSet() const;
@@ -77,14 +75,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * List of instance IDs successfully terminated.
+                     * <p>List of instance IDs successfully terminated.</p>
                      */
                     std::vector<std::string> m_instanceIdSet;
                     bool m_instanceIdSetHasBeenSet;
 
                     /**
-                     * List of instances with termination failed (returned when partially successful).
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>List of instances with termination failed (returned when partially successful).</p>
                      */
                     std::vector<FailedInstance> m_failedInstanceSet;
                     bool m_failedInstanceSetHasBeenSet;

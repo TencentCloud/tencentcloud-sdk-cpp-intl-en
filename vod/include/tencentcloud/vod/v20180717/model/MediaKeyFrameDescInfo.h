@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Video timestamp information
+                * 
                 */
                 class MediaKeyFrameDescInfo : public AbstractModel
                 {
@@ -48,19 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Information array of video timestamps.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return KeyFrameDescSet Information array of video timestamps.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return KeyFrameDescSet 
                      * 
                      */
                     std::vector<MediaKeyFrameDescItem> GetKeyFrameDescSet() const;
 
                     /**
-                     * 设置Information array of video timestamps.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _keyFrameDescSet Information array of video timestamps.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _keyFrameDescSet 
                      * 
                      */
                     void SetKeyFrameDescSet(const std::vector<MediaKeyFrameDescItem>& _keyFrameDescSet);
@@ -75,8 +71,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Information array of video timestamps.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<MediaKeyFrameDescItem> m_keyFrameDescSet;
                     bool m_keyFrameDescSetHasBeenSet;

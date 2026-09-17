@@ -46,15 +46,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取**VOD application ID.** Customers who activate on-demand services from December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).
-                     * @return SubAppId **VOD application ID.** Customers who activate on-demand services from December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).
+                     * 获取
+                     * @return SubAppId 
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置**VOD application ID.** Customers who activate on-demand services from December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).
-                     * @param _subAppId **VOD application ID.** Customers who activate on-demand services from December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).
+                     * 设置
+                     * @param _subAppId 
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -67,15 +67,15 @@ namespace TencentCloud
                     bool SubAppIdHasBeenSet() const;
 
                     /**
-                     * 获取Scenario-based video parameter configuration.
-                     * @return SceneInfo Scenario-based video parameter configuration.
+                     * 获取
+                     * @return SceneInfo 
                      * 
                      */
                     AigcVideoSceneInfo GetSceneInfo() const;
 
                     /**
-                     * 设置Scenario-based video parameter configuration.
-                     * @param _sceneInfo Scenario-based video parameter configuration.
+                     * 设置
+                     * @param _sceneInfo 
                      * 
                      */
                     void SetSceneInfo(const AigcVideoSceneInfo& _sceneInfo);
@@ -88,15 +88,15 @@ namespace TencentCloud
                     bool SceneInfoHasBeenSet() const;
 
                     /**
-                     * 获取Scenario-based output media file configuration for video tasks.
-                     * @return OutputConfig Scenario-based output media file configuration for video tasks.
+                     * 获取
+                     * @return OutputConfig 
                      * 
                      */
                     SceneAigcVideoOutputConfig GetOutputConfig() const;
 
                     /**
-                     * 设置Scenario-based output media file configuration for video tasks.
-                     * @param _outputConfig Scenario-based output media file configuration for video tasks.
+                     * 设置
+                     * @param _outputConfig 
                      * 
                      */
                     void SetOutputConfig(const SceneAigcVideoOutputConfig& _outputConfig);
@@ -109,23 +109,15 @@ namespace TencentCloud
                     bool OutputConfigHasBeenSet() const;
 
                     /**
-                     * 获取Input image list. Supported image formats: jpg, jpeg, png, webp.
-
-
-                     * @return FileInfos Input image list. Supported image formats: jpg, jpeg, png, webp.
-
-
+                     * 获取
+                     * @return FileInfos 
                      * 
                      */
                     std::vector<SceneAigcVideoTaskInputFileInfo> GetFileInfos() const;
 
                     /**
-                     * 设置Input image list. Supported image formats: jpg, jpeg, png, webp.
-
-
-                     * @param _fileInfos Input image list. Supported image formats: jpg, jpeg, png, webp.
-
-
+                     * 设置
+                     * @param _fileInfos 
                      * 
                      */
                     void SetFileInfos(const std::vector<SceneAigcVideoTaskInputFileInfo>& _fileInfos);
@@ -138,15 +130,15 @@ namespace TencentCloud
                     bool FileInfosHasBeenSet() const;
 
                     /**
-                     * 获取An identifier for deduplication. If there has been a request with the same identifier within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using an empty string indicates no deduplication.
-                     * @return SessionId An identifier for deduplication. If there has been a request with the same identifier within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using an empty string indicates no deduplication.
+                     * 获取
+                     * @return SessionId 
                      * 
                      */
                     std::string GetSessionId() const;
 
                     /**
-                     * 设置An identifier for deduplication. If there has been a request with the same identifier within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using an empty string indicates no deduplication.
-                     * @param _sessionId An identifier for deduplication. If there has been a request with the same identifier within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using an empty string indicates no deduplication.
+                     * 设置
+                     * @param _sessionId 
                      * 
                      */
                     void SetSessionId(const std::string& _sessionId);
@@ -159,15 +151,15 @@ namespace TencentCloud
                     bool SessionIdHasBeenSet() const;
 
                     /**
-                     * 获取Source context, used for passing through user request information. The audio and video quality revival complete callback will return the value of this field, up to 1000 characters.
-                     * @return SessionContext Source context, used for passing through user request information. The audio and video quality revival complete callback will return the value of this field, up to 1000 characters.
+                     * 获取
+                     * @return SessionContext 
                      * 
                      */
                     std::string GetSessionContext() const;
 
                     /**
-                     * 设置Source context, used for passing through user request information. The audio and video quality revival complete callback will return the value of this field, up to 1000 characters.
-                     * @param _sessionContext Source context, used for passing through user request information. The audio and video quality revival complete callback will return the value of this field, up to 1000 characters.
+                     * 设置
+                     * @param _sessionContext 
                      * 
                      */
                     void SetSessionContext(const std::string& _sessionContext);
@@ -180,15 +172,15 @@ namespace TencentCloud
                     bool SessionContextHasBeenSet() const;
 
                     /**
-                     * 获取Task priority. The higher the value, the higher the priority. The value ranges from -10 to 10. If left blank, it represents 0.
-                     * @return TasksPriority Task priority. The higher the value, the higher the priority. The value ranges from -10 to 10. If left blank, it represents 0.
+                     * 获取
+                     * @return TasksPriority 
                      * 
                      */
                     int64_t GetTasksPriority() const;
 
                     /**
-                     * 设置Task priority. The higher the value, the higher the priority. The value ranges from -10 to 10. If left blank, it represents 0.
-                     * @param _tasksPriority Task priority. The higher the value, the higher the priority. The value ranges from -10 to 10. If left blank, it represents 0.
+                     * 设置
+                     * @param _tasksPriority 
                      * 
                      */
                     void SetTasksPriority(const int64_t& _tasksPriority);
@@ -201,15 +193,15 @@ namespace TencentCloud
                     bool TasksPriorityHasBeenSet() const;
 
                     /**
-                     * 获取Reserved field, used for special purpose.
-                     * @return ExtInfo Reserved field, used for special purpose.
+                     * 获取
+                     * @return ExtInfo 
                      * 
                      */
                     std::string GetExtInfo() const;
 
                     /**
-                     * 设置Reserved field, used for special purpose.
-                     * @param _extInfo Reserved field, used for special purpose.
+                     * 设置
+                     * @param _extInfo 
                      * 
                      */
                     void SetExtInfo(const std::string& _extInfo);
@@ -222,15 +214,15 @@ namespace TencentCloud
                     bool ExtInfoHasBeenSet() const;
 
                     /**
-                     * 获取Customize prompt
-                     * @return Prompt Customize prompt
+                     * 获取
+                     * @return Prompt 
                      * 
                      */
                     std::string GetPrompt() const;
 
                     /**
-                     * 设置Customize prompt
-                     * @param _prompt Customize prompt
+                     * 设置
+                     * @param _prompt 
                      * 
                      */
                     void SetPrompt(const std::string& _prompt);
@@ -245,57 +237,55 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * **VOD application ID.** Customers who activate on-demand services from December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).
+                     * 
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
 
                     /**
-                     * Scenario-based video parameter configuration.
+                     * 
                      */
                     AigcVideoSceneInfo m_sceneInfo;
                     bool m_sceneInfoHasBeenSet;
 
                     /**
-                     * Scenario-based output media file configuration for video tasks.
+                     * 
                      */
                     SceneAigcVideoOutputConfig m_outputConfig;
                     bool m_outputConfigHasBeenSet;
 
                     /**
-                     * Input image list. Supported image formats: jpg, jpeg, png, webp.
-
-
+                     * 
                      */
                     std::vector<SceneAigcVideoTaskInputFileInfo> m_fileInfos;
                     bool m_fileInfosHasBeenSet;
 
                     /**
-                     * An identifier for deduplication. If there has been a request with the same identifier within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using an empty string indicates no deduplication.
+                     * 
                      */
                     std::string m_sessionId;
                     bool m_sessionIdHasBeenSet;
 
                     /**
-                     * Source context, used for passing through user request information. The audio and video quality revival complete callback will return the value of this field, up to 1000 characters.
+                     * 
                      */
                     std::string m_sessionContext;
                     bool m_sessionContextHasBeenSet;
 
                     /**
-                     * Task priority. The higher the value, the higher the priority. The value ranges from -10 to 10. If left blank, it represents 0.
+                     * 
                      */
                     int64_t m_tasksPriority;
                     bool m_tasksPriorityHasBeenSet;
 
                     /**
-                     * Reserved field, used for special purpose.
+                     * 
                      */
                     std::string m_extInfo;
                     bool m_extInfoHasBeenSet;
 
                     /**
-                     * Customize prompt
+                     * 
                      */
                     std::string m_prompt;
                     bool m_promptHasBeenSet;

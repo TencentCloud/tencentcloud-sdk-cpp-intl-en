@@ -38,7 +38,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Input of media file composing task.
+                * 
                 */
                 class ComposeMediaTaskInput : public AbstractModel
                 {
@@ -50,15 +50,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取List of input media tracks, i.e., information of multiple tracks composed of video, audio, image, and other materials.
-                     * @return Tracks List of input media tracks, i.e., information of multiple tracks composed of video, audio, image, and other materials.
+                     * 获取
+                     * @return Tracks 
                      * 
                      */
                     std::vector<MediaTrack> GetTracks() const;
 
                     /**
-                     * 设置List of input media tracks, i.e., information of multiple tracks composed of video, audio, image, and other materials.
-                     * @param _tracks List of input media tracks, i.e., information of multiple tracks composed of video, audio, image, and other materials.
+                     * 设置
+                     * @param _tracks 
                      * 
                      */
                     void SetTracks(const std::vector<MediaTrack>& _tracks);
@@ -71,19 +71,15 @@ namespace TencentCloud
                     bool TracksHasBeenSet() const;
 
                     /**
-                     * 获取Canvas used for composing video file.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Canvas Canvas used for composing video file.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return Canvas 
                      * 
                      */
                     Canvas GetCanvas() const;
 
                     /**
-                     * 设置Canvas used for composing video file.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _canvas Canvas used for composing video file.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _canvas 
                      * 
                      */
                     void SetCanvas(const Canvas& _canvas);
@@ -96,15 +92,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool CanvasHasBeenSet() const;
 
                     /**
-                     * 获取Information of output media file.
-                     * @return Output Information of output media file.
+                     * 获取
+                     * @return Output 
                      * 
                      */
                     ComposeMediaOutput GetOutput() const;
 
                     /**
-                     * 设置Information of output media file.
-                     * @param _output Information of output media file.
+                     * 设置
+                     * @param _output 
                      * 
                      */
                     void SetOutput(const ComposeMediaOutput& _output);
@@ -119,20 +115,19 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * List of input media tracks, i.e., information of multiple tracks composed of video, audio, image, and other materials.
+                     * 
                      */
                     std::vector<MediaTrack> m_tracks;
                     bool m_tracksHasBeenSet;
 
                     /**
-                     * Canvas used for composing video file.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     Canvas m_canvas;
                     bool m_canvasHasBeenSet;
 
                     /**
-                     * Information of output media file.
+                     * 
                      */
                     ComposeMediaOutput m_output;
                     bool m_outputHasBeenSet;

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Key hotlink protection information for generating the signature
+                * 
                 */
                 class UrlSignatureAuthPolicy : public AbstractModel
                 {
@@ -47,23 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether to enable or disable [key hotlink protection](https://intl.cloud.tencent.com/document/product/266/33986). Valid values:
-<li>`Enabled`: enable</li>
-<li>`Disabled`: disable</li>
-                     * @return Status Whether to enable or disable [key hotlink protection](https://intl.cloud.tencent.com/document/product/266/33986). Valid values:
-<li>`Enabled`: enable</li>
-<li>`Disabled`: disable</li>
+                     * 获取
+                     * @return Status 
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置Whether to enable or disable [key hotlink protection](https://intl.cloud.tencent.com/document/product/266/33986). Valid values:
-<li>`Enabled`: enable</li>
-<li>`Disabled`: disable</li>
-                     * @param _status Whether to enable or disable [key hotlink protection](https://intl.cloud.tencent.com/document/product/266/33986). Valid values:
-<li>`Enabled`: enable</li>
-<li>`Disabled`: disable</li>
+                     * 设置
+                     * @param _status 
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -76,19 +68,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取The key for generating the signature of [key hotlink protection](https://intl.cloud.tencent.com/document/product/266/33986).
-`EncryptedKey` can contain 8-40 bytes, and cannot contain non-printable characters.
-                     * @return EncryptedKey The key for generating the signature of [key hotlink protection](https://intl.cloud.tencent.com/document/product/266/33986).
-`EncryptedKey` can contain 8-40 bytes, and cannot contain non-printable characters.
+                     * 获取
+                     * @return EncryptedKey 
                      * 
                      */
                     std::string GetEncryptedKey() const;
 
                     /**
-                     * 设置The key for generating the signature of [key hotlink protection](https://intl.cloud.tencent.com/document/product/266/33986).
-`EncryptedKey` can contain 8-40 bytes, and cannot contain non-printable characters.
-                     * @param _encryptedKey The key for generating the signature of [key hotlink protection](https://intl.cloud.tencent.com/document/product/266/33986).
-`EncryptedKey` can contain 8-40 bytes, and cannot contain non-printable characters.
+                     * 设置
+                     * @param _encryptedKey 
                      * 
                      */
                     void SetEncryptedKey(const std::string& _encryptedKey);
@@ -103,16 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Whether to enable or disable [key hotlink protection](https://intl.cloud.tencent.com/document/product/266/33986). Valid values:
-<li>`Enabled`: enable</li>
-<li>`Disabled`: disable</li>
+                     * 
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * The key for generating the signature of [key hotlink protection](https://intl.cloud.tencent.com/document/product/266/33986).
-`EncryptedKey` can contain 8-40 bytes, and cannot contain non-printable characters.
+                     * 
                      */
                     std::string m_encryptedKey;
                     bool m_encryptedKeyHasBeenSet;

@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Create custom voice type callback output.
+                * 
                 */
                 class CreateAigcCustomVoiceOutput : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Custom timbre list.</p>
-                     * @return InfoList <p>Custom timbre list.</p>
+                     * 获取
+                     * @return InfoList 
                      * 
                      */
                     std::vector<CustomVoiceInfo> GetInfoList() const;
 
                     /**
-                     * 设置<p>Custom timbre list.</p>
-                     * @param _infoList <p>Custom timbre list.</p>
+                     * 设置
+                     * @param _infoList 
                      * 
                      */
                     void SetInfoList(const std::vector<CustomVoiceInfo>& _infoList);
@@ -71,7 +71,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Custom timbre list.</p>
+                     * 
                      */
                     std::vector<CustomVoiceInfo> m_infoList;
                     bool m_infoListHasBeenSet;

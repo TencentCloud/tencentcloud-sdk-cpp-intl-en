@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Acceleration region information of the domain name
+                * 
                 */
                 class AccelerateAreaInfo : public AbstractModel
                 {
@@ -47,23 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Acceleration region. Valid values:
-<li>Chinese Mainland</li>
-<li>Outside Chinese Mainland</li>
-                     * @return Area Acceleration region. Valid values:
-<li>Chinese Mainland</li>
-<li>Outside Chinese Mainland</li>
+                     * 获取
+                     * @return Area 
                      * 
                      */
                     std::string GetArea() const;
 
                     /**
-                     * 设置Acceleration region. Valid values:
-<li>Chinese Mainland</li>
-<li>Outside Chinese Mainland</li>
-                     * @param _area Acceleration region. Valid values:
-<li>Chinese Mainland</li>
-<li>Outside Chinese Mainland</li>
+                     * 设置
+                     * @param _area 
                      * 
                      */
                     void SetArea(const std::string& _area);
@@ -76,23 +68,15 @@ namespace TencentCloud
                     bool AreaHasBeenSet() const;
 
                     /**
-                     * 获取Reason why acceleration is disabled by Tencent Cloud. Valid values:
-<li>ForLegalReasons: legal reasons</li>
-<li>ForOverdueBills: overdue payment</li>
-                     * @return TencentDisableReason Reason why acceleration is disabled by Tencent Cloud. Valid values:
-<li>ForLegalReasons: legal reasons</li>
-<li>ForOverdueBills: overdue payment</li>
+                     * 获取
+                     * @return TencentDisableReason 
                      * 
                      */
                     std::string GetTencentDisableReason() const;
 
                     /**
-                     * 设置Reason why acceleration is disabled by Tencent Cloud. Valid values:
-<li>ForLegalReasons: legal reasons</li>
-<li>ForOverdueBills: overdue payment</li>
-                     * @param _tencentDisableReason Reason why acceleration is disabled by Tencent Cloud. Valid values:
-<li>ForLegalReasons: legal reasons</li>
-<li>ForOverdueBills: overdue payment</li>
+                     * 设置
+                     * @param _tencentDisableReason 
                      * 
                      */
                     void SetTencentDisableReason(const std::string& _tencentDisableReason);
@@ -105,15 +89,15 @@ namespace TencentCloud
                     bool TencentDisableReasonHasBeenSet() const;
 
                     /**
-                     * 获取CNAME of the acceleration domain name
-                     * @return TencentEdgeDomain CNAME of the acceleration domain name
+                     * 获取
+                     * @return TencentEdgeDomain 
                      * 
                      */
                     std::string GetTencentEdgeDomain() const;
 
                     /**
-                     * 设置CNAME of the acceleration domain name
-                     * @param _tencentEdgeDomain CNAME of the acceleration domain name
+                     * 设置
+                     * @param _tencentEdgeDomain 
                      * 
                      */
                     void SetTencentEdgeDomain(const std::string& _tencentEdgeDomain);
@@ -128,23 +112,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Acceleration region. Valid values:
-<li>Chinese Mainland</li>
-<li>Outside Chinese Mainland</li>
+                     * 
                      */
                     std::string m_area;
                     bool m_areaHasBeenSet;
 
                     /**
-                     * Reason why acceleration is disabled by Tencent Cloud. Valid values:
-<li>ForLegalReasons: legal reasons</li>
-<li>ForOverdueBills: overdue payment</li>
+                     * 
                      */
                     std::string m_tencentDisableReason;
                     bool m_tencentDisableReasonHasBeenSet;
 
                     /**
-                     * CNAME of the acceleration domain name
+                     * 
                      */
                     std::string m_tencentEdgeDomain;
                     bool m_tencentEdgeDomainHasBeenSet;

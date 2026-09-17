@@ -38,7 +38,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Parameters for custom recognition
+                * 
                 */
                 class UserDefineConfigureInfoForUpdate : public AbstractModel
                 {
@@ -50,15 +50,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Parameters for custom facial recognition
-                     * @return FaceReviewInfo Parameters for custom facial recognition
+                     * 获取
+                     * @return FaceReviewInfo 
                      * 
                      */
                     UserDefineFaceReviewTemplateInfoForUpdate GetFaceReviewInfo() const;
 
                     /**
-                     * 设置Parameters for custom facial recognition
-                     * @param _faceReviewInfo Parameters for custom facial recognition
+                     * 设置
+                     * @param _faceReviewInfo 
                      * 
                      */
                     void SetFaceReviewInfo(const UserDefineFaceReviewTemplateInfoForUpdate& _faceReviewInfo);
@@ -71,15 +71,15 @@ namespace TencentCloud
                     bool FaceReviewInfoHasBeenSet() const;
 
                     /**
-                     * 获取Parameters for custom ASR-based recognition
-                     * @return AsrReviewInfo Parameters for custom ASR-based recognition
+                     * 获取
+                     * @return AsrReviewInfo 
                      * 
                      */
                     UserDefineAsrTextReviewTemplateInfoForUpdate GetAsrReviewInfo() const;
 
                     /**
-                     * 设置Parameters for custom ASR-based recognition
-                     * @param _asrReviewInfo Parameters for custom ASR-based recognition
+                     * 设置
+                     * @param _asrReviewInfo 
                      * 
                      */
                     void SetAsrReviewInfo(const UserDefineAsrTextReviewTemplateInfoForUpdate& _asrReviewInfo);
@@ -92,15 +92,15 @@ namespace TencentCloud
                     bool AsrReviewInfoHasBeenSet() const;
 
                     /**
-                     * 获取Parameters for custom OCR-based recognition
-                     * @return OcrReviewInfo Parameters for custom OCR-based recognition
+                     * 获取
+                     * @return OcrReviewInfo 
                      * 
                      */
                     UserDefineOcrTextReviewTemplateInfoForUpdate GetOcrReviewInfo() const;
 
                     /**
-                     * 设置Parameters for custom OCR-based recognition
-                     * @param _ocrReviewInfo Parameters for custom OCR-based recognition
+                     * 设置
+                     * @param _ocrReviewInfo 
                      * 
                      */
                     void SetOcrReviewInfo(const UserDefineOcrTextReviewTemplateInfoForUpdate& _ocrReviewInfo);
@@ -115,19 +115,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Parameters for custom facial recognition
+                     * 
                      */
                     UserDefineFaceReviewTemplateInfoForUpdate m_faceReviewInfo;
                     bool m_faceReviewInfoHasBeenSet;
 
                     /**
-                     * Parameters for custom ASR-based recognition
+                     * 
                      */
                     UserDefineAsrTextReviewTemplateInfoForUpdate m_asrReviewInfo;
                     bool m_asrReviewInfoHasBeenSet;
 
                     /**
-                     * Parameters for custom OCR-based recognition
+                     * 
                      */
                     UserDefineOcrTextReviewTemplateInfoForUpdate m_ocrReviewInfo;
                     bool m_ocrReviewInfoHasBeenSet;

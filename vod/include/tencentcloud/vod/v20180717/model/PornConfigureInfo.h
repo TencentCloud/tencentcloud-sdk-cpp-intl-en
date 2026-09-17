@@ -38,7 +38,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Parameters for recognition of pornographic content
+                * 
                 */
                 class PornConfigureInfo : public AbstractModel
                 {
@@ -50,15 +50,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Image recognition involves control parameters for offensive information.
-                     * @return ImgReviewInfo Image recognition involves control parameters for offensive information.
+                     * 获取
+                     * @return ImgReviewInfo 
                      * 
                      */
                     PornImgReviewTemplateInfo GetImgReviewInfo() const;
 
                     /**
-                     * 设置Image recognition involves control parameters for offensive information.
-                     * @param _imgReviewInfo Image recognition involves control parameters for offensive information.
+                     * 设置
+                     * @param _imgReviewInfo 
                      * 
                      */
                     void SetImgReviewInfo(const PornImgReviewTemplateInfo& _imgReviewInfo);
@@ -71,15 +71,15 @@ namespace TencentCloud
                     bool ImgReviewInfoHasBeenSet() const;
 
                     /**
-                     * 获取ASR-based recognition involves control parameters for offensive information.
-                     * @return AsrReviewInfo ASR-based recognition involves control parameters for offensive information.
+                     * 获取
+                     * @return AsrReviewInfo 
                      * 
                      */
                     PornAsrReviewTemplateInfo GetAsrReviewInfo() const;
 
                     /**
-                     * 设置ASR-based recognition involves control parameters for offensive information.
-                     * @param _asrReviewInfo ASR-based recognition involves control parameters for offensive information.
+                     * 设置
+                     * @param _asrReviewInfo 
                      * 
                      */
                     void SetAsrReviewInfo(const PornAsrReviewTemplateInfo& _asrReviewInfo);
@@ -92,15 +92,15 @@ namespace TencentCloud
                     bool AsrReviewInfoHasBeenSet() const;
 
                     /**
-                     * 获取Text recognition involves control parameters for offensive information.
-                     * @return OcrReviewInfo Text recognition involves control parameters for offensive information.
+                     * 获取
+                     * @return OcrReviewInfo 
                      * 
                      */
                     PornOcrReviewTemplateInfo GetOcrReviewInfo() const;
 
                     /**
-                     * 设置Text recognition involves control parameters for offensive information.
-                     * @param _ocrReviewInfo Text recognition involves control parameters for offensive information.
+                     * 设置
+                     * @param _ocrReviewInfo 
                      * 
                      */
                     void SetOcrReviewInfo(const PornOcrReviewTemplateInfo& _ocrReviewInfo);
@@ -115,19 +115,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Image recognition involves control parameters for offensive information.
+                     * 
                      */
                     PornImgReviewTemplateInfo m_imgReviewInfo;
                     bool m_imgReviewInfoHasBeenSet;
 
                     /**
-                     * ASR-based recognition involves control parameters for offensive information.
+                     * 
                      */
                     PornAsrReviewTemplateInfo m_asrReviewInfo;
                     bool m_asrReviewInfoHasBeenSet;
 
                     /**
-                     * Text recognition involves control parameters for offensive information.
+                     * 
                      */
                     PornOcrReviewTemplateInfo m_ocrReviewInfo;
                     bool m_ocrReviewInfoHasBeenSet;

@@ -38,7 +38,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * An image operation.
+                * 
                 */
                 class ImageOperation : public AbstractModel
                 {
@@ -50,27 +50,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Image processing type. Optional types are:
-<li>Scale: image thumbnail processing;</li>
-<li>CenterCut: image cropping processing;</li>
-<li>Blur: image blur processing. </li>
-                     * @return Type Image processing type. Optional types are:
-<li>Scale: image thumbnail processing;</li>
-<li>CenterCut: image cropping processing;</li>
-<li>Blur: image blur processing. </li>
+                     * 获取
+                     * @return Type 
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Image processing type. Optional types are:
-<li>Scale: image thumbnail processing;</li>
-<li>CenterCut: image cropping processing;</li>
-<li>Blur: image blur processing. </li>
-                     * @param _type Image processing type. Optional types are:
-<li>Scale: image thumbnail processing;</li>
-<li>CenterCut: image cropping processing;</li>
-<li>Blur: image blur processing. </li>
+                     * 设置
+                     * @param _type 
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -83,15 +71,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取The scaling details. This parameter is valid only if `Type` is `Scale`.
-                     * @return Scale The scaling details. This parameter is valid only if `Type` is `Scale`.
+                     * 获取
+                     * @return Scale 
                      * 
                      */
                     ImageScale GetScale() const;
 
                     /**
-                     * 设置The scaling details. This parameter is valid only if `Type` is `Scale`.
-                     * @param _scale The scaling details. This parameter is valid only if `Type` is `Scale`.
+                     * 设置
+                     * @param _scale 
                      * 
                      */
                     void SetScale(const ImageScale& _scale);
@@ -104,15 +92,15 @@ namespace TencentCloud
                     bool ScaleHasBeenSet() const;
 
                     /**
-                     * 获取The cropping details. This parameter is valid only if `Type` is `CenterCut`.
-                     * @return CenterCut The cropping details. This parameter is valid only if `Type` is `CenterCut`.
+                     * 获取
+                     * @return CenterCut 
                      * 
                      */
                     ImageCenterCut GetCenterCut() const;
 
                     /**
-                     * 设置The cropping details. This parameter is valid only if `Type` is `CenterCut`.
-                     * @param _centerCut The cropping details. This parameter is valid only if `Type` is `CenterCut`.
+                     * 设置
+                     * @param _centerCut 
                      * 
                      */
                     void SetCenterCut(const ImageCenterCut& _centerCut);
@@ -125,15 +113,15 @@ namespace TencentCloud
                     bool CenterCutHasBeenSet() const;
 
                     /**
-                     * 获取Image blurring. This parameter is valid only if `Type` is `Blur`.
-                     * @return Blur Image blurring. This parameter is valid only if `Type` is `Blur`.
+                     * 获取
+                     * @return Blur 
                      * 
                      */
                     ImageBlur GetBlur() const;
 
                     /**
-                     * 设置Image blurring. This parameter is valid only if `Type` is `Blur`.
-                     * @param _blur Image blurring. This parameter is valid only if `Type` is `Blur`.
+                     * 设置
+                     * @param _blur 
                      * 
                      */
                     void SetBlur(const ImageBlur& _blur);
@@ -148,28 +136,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Image processing type. Optional types are:
-<li>Scale: image thumbnail processing;</li>
-<li>CenterCut: image cropping processing;</li>
-<li>Blur: image blur processing. </li>
+                     * 
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * The scaling details. This parameter is valid only if `Type` is `Scale`.
+                     * 
                      */
                     ImageScale m_scale;
                     bool m_scaleHasBeenSet;
 
                     /**
-                     * The cropping details. This parameter is valid only if `Type` is `CenterCut`.
+                     * 
                      */
                     ImageCenterCut m_centerCut;
                     bool m_centerCutHasBeenSet;
 
                     /**
-                     * Image blurring. This parameter is valid only if `Type` is `Blur`.
+                     * 
                      */
                     ImageBlur m_blur;
                     bool m_blurHasBeenSet;

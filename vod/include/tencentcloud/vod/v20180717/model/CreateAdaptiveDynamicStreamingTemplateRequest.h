@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Adaptive Transcoding Format. Value ranges from:</p><li>HLS;</li><li>MPEG-DASH.</li>
-                     * @return Format <p>Adaptive Transcoding Format. Value ranges from:</p><li>HLS;</li><li>MPEG-DASH.</li>
+                     * 获取
+                     * @return Format 
                      * 
                      */
                     std::string GetFormat() const;
 
                     /**
-                     * 设置<p>Adaptive Transcoding Format. Value ranges from:</p><li>HLS;</li><li>MPEG-DASH.</li>
-                     * @param _format <p>Adaptive Transcoding Format. Value ranges from:</p><li>HLS;</li><li>MPEG-DASH.</li>
+                     * 设置
+                     * @param _format 
                      * 
                      */
                     void SetFormat(const std::string& _format);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool FormatHasBeenSet() const;
 
                     /**
-                     * 获取<p>Adaptive Transcoding Output Substream Parameter Information. Up to 10 substreams.<br>Note: The frame rate of each substream must remain consistent. If inconsistent, use the frame rate of the first substream as the output frame rate.</p>
-                     * @return StreamInfos <p>Adaptive Transcoding Output Substream Parameter Information. Up to 10 substreams.<br>Note: The frame rate of each substream must remain consistent. If inconsistent, use the frame rate of the first substream as the output frame rate.</p>
+                     * 获取
+                     * @return StreamInfos 
                      * 
                      */
                     std::vector<AdaptiveStreamTemplate> GetStreamInfos() const;
 
                     /**
-                     * 设置<p>Adaptive Transcoding Output Substream Parameter Information. Up to 10 substreams.<br>Note: The frame rate of each substream must remain consistent. If inconsistent, use the frame rate of the first substream as the output frame rate.</p>
-                     * @param _streamInfos <p>Adaptive Transcoding Output Substream Parameter Information. Up to 10 substreams.<br>Note: The frame rate of each substream must remain consistent. If inconsistent, use the frame rate of the first substream as the output frame rate.</p>
+                     * 设置
+                     * @param _streamInfos 
                      * 
                      */
                     void SetStreamInfos(const std::vector<AdaptiveStreamTemplate>& _streamInfos);
@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool StreamInfosHasBeenSet() const;
 
                     /**
-                     * 获取<p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/33987">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID to access resources in on-demand applications (whether default or newly created application).</b></p>
-                     * @return SubAppId <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/33987">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID to access resources in on-demand applications (whether default or newly created application).</b></p>
+                     * 获取
+                     * @return SubAppId 
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置<p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/33987">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID to access resources in on-demand applications (whether default or newly created application).</b></p>
-                     * @param _subAppId <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/33987">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID to access resources in on-demand applications (whether default or newly created application).</b></p>
+                     * 设置
+                     * @param _subAppId 
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -107,15 +107,15 @@ namespace TencentCloud
                     bool SubAppIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>Template name. The length cannot exceed 64 characters.</p>
-                     * @return Name <p>Template name. The length cannot exceed 64 characters.</p>
+                     * 获取
+                     * @return Name 
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置<p>Template name. The length cannot exceed 64 characters.</p>
-                     * @param _name <p>Template name. The length cannot exceed 64 characters.</p>
+                     * 设置
+                     * @param _name 
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -128,15 +128,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取<p>DRM solution type. Value ranges from:</p><li>SimpleAES</li><li>Widevine</li><li>FairPlay</li><li>Widevine+FairPlay</li>The default value is an empty string. If the value is an empty string, it represents no DRM protection for the video.
-                     * @return DrmType <p>DRM solution type. Value ranges from:</p><li>SimpleAES</li><li>Widevine</li><li>FairPlay</li><li>Widevine+FairPlay</li>The default value is an empty string. If the value is an empty string, it represents no DRM protection for the video.
+                     * 获取
+                     * @return DrmType 
                      * 
                      */
                     std::string GetDrmType() const;
 
                     /**
-                     * 设置<p>DRM solution type. Value ranges from:</p><li>SimpleAES</li><li>Widevine</li><li>FairPlay</li><li>Widevine+FairPlay</li>The default value is an empty string. If the value is an empty string, it represents no DRM protection for the video.
-                     * @param _drmType <p>DRM solution type. Value ranges from:</p><li>SimpleAES</li><li>Widevine</li><li>FairPlay</li><li>Widevine+FairPlay</li>The default value is an empty string. If the value is an empty string, it represents no DRM protection for the video.
+                     * 设置
+                     * @param _drmType 
                      * 
                      */
                     void SetDrmType(const std::string& _drmType);
@@ -149,15 +149,15 @@ namespace TencentCloud
                     bool DrmTypeHasBeenSet() const;
 
                     /**
-                     * 获取<p>DRM key provider. Permissible range:</p><li>SDMC: SDMC;</li><li>VOD: video on demand.</li>Default value is VOD.<p>SDMC service will be gradually phased out subsequently. Please use VOD DRM encryption service.</p>
-                     * @return DrmKeyProvider <p>DRM key provider. Permissible range:</p><li>SDMC: SDMC;</li><li>VOD: video on demand.</li>Default value is VOD.<p>SDMC service will be gradually phased out subsequently. Please use VOD DRM encryption service.</p>
+                     * 获取
+                     * @return DrmKeyProvider 
                      * 
                      */
                     std::string GetDrmKeyProvider() const;
 
                     /**
-                     * 设置<p>DRM key provider. Permissible range:</p><li>SDMC: SDMC;</li><li>VOD: video on demand.</li>Default value is VOD.<p>SDMC service will be gradually phased out subsequently. Please use VOD DRM encryption service.</p>
-                     * @param _drmKeyProvider <p>DRM key provider. Permissible range:</p><li>SDMC: SDMC;</li><li>VOD: video on demand.</li>Default value is VOD.<p>SDMC service will be gradually phased out subsequently. Please use VOD DRM encryption service.</p>
+                     * 设置
+                     * @param _drmKeyProvider 
                      * 
                      */
                     void SetDrmKeyProvider(const std::string& _drmKeyProvider);
@@ -170,15 +170,15 @@ namespace TencentCloud
                     bool DrmKeyProviderHasBeenSet() const;
 
                     /**
-                     * 获取<p>Encryption method. Available values:<br>cbcs: supported by Widevine, FairPlay, and WideVine+FairPlay;<br>cenc: supported by Widevine.</p><p>If left blank:<br>cbcs: default method of FairPlay;<br>cenc: default method of Widevine;<br>cbcs: default method of WideVine+FairPlay.</p>
-                     * @return DrmEncryptType <p>Encryption method. Available values:<br>cbcs: supported by Widevine, FairPlay, and WideVine+FairPlay;<br>cenc: supported by Widevine.</p><p>If left blank:<br>cbcs: default method of FairPlay;<br>cenc: default method of Widevine;<br>cbcs: default method of WideVine+FairPlay.</p>
+                     * 获取
+                     * @return DrmEncryptType 
                      * 
                      */
                     std::string GetDrmEncryptType() const;
 
                     /**
-                     * 设置<p>Encryption method. Available values:<br>cbcs: supported by Widevine, FairPlay, and WideVine+FairPlay;<br>cenc: supported by Widevine.</p><p>If left blank:<br>cbcs: default method of FairPlay;<br>cenc: default method of Widevine;<br>cbcs: default method of WideVine+FairPlay.</p>
-                     * @param _drmEncryptType <p>Encryption method. Available values:<br>cbcs: supported by Widevine, FairPlay, and WideVine+FairPlay;<br>cenc: supported by Widevine.</p><p>If left blank:<br>cbcs: default method of FairPlay;<br>cenc: default method of Widevine;<br>cbcs: default method of WideVine+FairPlay.</p>
+                     * 设置
+                     * @param _drmEncryptType 
                      * 
                      */
                     void SetDrmEncryptType(const std::string& _drmEncryptType);
@@ -191,15 +191,15 @@ namespace TencentCloud
                     bool DrmEncryptTypeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Whether to prohibit video low bitrate to high bitrate conversion. Value ranges from:</p><li>0: No,</li><li>1: Yes.</li>Default no.
-                     * @return DisableHigherVideoBitrate <p>Whether to prohibit video low bitrate to high bitrate conversion. Value ranges from:</p><li>0: No,</li><li>1: Yes.</li>Default no.
+                     * 获取
+                     * @return DisableHigherVideoBitrate 
                      * 
                      */
                     uint64_t GetDisableHigherVideoBitrate() const;
 
                     /**
-                     * 设置<p>Whether to prohibit video low bitrate to high bitrate conversion. Value ranges from:</p><li>0: No,</li><li>1: Yes.</li>Default no.
-                     * @param _disableHigherVideoBitrate <p>Whether to prohibit video low bitrate to high bitrate conversion. Value ranges from:</p><li>0: No,</li><li>1: Yes.</li>Default no.
+                     * 设置
+                     * @param _disableHigherVideoBitrate 
                      * 
                      */
                     void SetDisableHigherVideoBitrate(const uint64_t& _disableHigherVideoBitrate);
@@ -212,15 +212,15 @@ namespace TencentCloud
                     bool DisableHigherVideoBitrateHasBeenSet() const;
 
                     /**
-                     * 获取<p>Whether to prohibit video resolution to high resolution conversion. Value ranges from:</p><li>0: No,</li><li>1: Yes.</li>Default no.
-                     * @return DisableHigherVideoResolution <p>Whether to prohibit video resolution to high resolution conversion. Value ranges from:</p><li>0: No,</li><li>1: Yes.</li>Default no.
+                     * 获取
+                     * @return DisableHigherVideoResolution 
                      * 
                      */
                     uint64_t GetDisableHigherVideoResolution() const;
 
                     /**
-                     * 设置<p>Whether to prohibit video resolution to high resolution conversion. Value ranges from:</p><li>0: No,</li><li>1: Yes.</li>Default no.
-                     * @param _disableHigherVideoResolution <p>Whether to prohibit video resolution to high resolution conversion. Value ranges from:</p><li>0: No,</li><li>1: Yes.</li>Default no.
+                     * 设置
+                     * @param _disableHigherVideoResolution 
                      * 
                      */
                     void SetDisableHigherVideoResolution(const uint64_t& _disableHigherVideoResolution);
@@ -233,15 +233,15 @@ namespace TencentCloud
                     bool DisableHigherVideoResolutionHasBeenSet() const;
 
                     /**
-                     * 获取<p>Template description, with a length limit of 256 characters.</p>
-                     * @return Comment <p>Template description, with a length limit of 256 characters.</p>
+                     * 获取
+                     * @return Comment 
                      * 
                      */
                     std::string GetComment() const;
 
                     /**
-                     * 设置<p>Template description, with a length limit of 256 characters.</p>
-                     * @param _comment <p>Template description, with a length limit of 256 characters.</p>
+                     * 设置
+                     * @param _comment 
                      * 
                      */
                     void SetComment(const std::string& _comment);
@@ -254,15 +254,15 @@ namespace TencentCloud
                     bool CommentHasBeenSet() const;
 
                     /**
-                     * 获取<p>Segment type, valid when Format is HLS. Available values:</p><li>ts: ts slicing;</li><li>fmp4: fmp4 slicing.</li>Default value: ts.
-                     * @return SegmentType <p>Segment type, valid when Format is HLS. Available values:</p><li>ts: ts slicing;</li><li>fmp4: fmp4 slicing.</li>Default value: ts.
+                     * 获取
+                     * @return SegmentType 
                      * 
                      */
                     std::string GetSegmentType() const;
 
                     /**
-                     * 设置<p>Segment type, valid when Format is HLS. Available values:</p><li>ts: ts slicing;</li><li>fmp4: fmp4 slicing.</li>Default value: ts.
-                     * @param _segmentType <p>Segment type, valid when Format is HLS. Available values:</p><li>ts: ts slicing;</li><li>fmp4: fmp4 slicing.</li>Default value: ts.
+                     * 设置
+                     * @param _segmentType 
                      * 
                      */
                     void SetSegmentType(const std::string& _segmentType);
@@ -274,73 +274,100 @@ namespace TencentCloud
                      */
                     bool SegmentTypeHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return SegmentDuration 
+                     * 
+                     */
+                    int64_t GetSegmentDuration() const;
+
+                    /**
+                     * 设置
+                     * @param _segmentDuration 
+                     * 
+                     */
+                    void SetSegmentDuration(const int64_t& _segmentDuration);
+
+                    /**
+                     * 判断参数 SegmentDuration 是否已赋值
+                     * @return SegmentDuration 是否已赋值
+                     * 
+                     */
+                    bool SegmentDurationHasBeenSet() const;
+
                 private:
 
                     /**
-                     * <p>Adaptive Transcoding Format. Value ranges from:</p><li>HLS;</li><li>MPEG-DASH.</li>
+                     * 
                      */
                     std::string m_format;
                     bool m_formatHasBeenSet;
 
                     /**
-                     * <p>Adaptive Transcoding Output Substream Parameter Information. Up to 10 substreams.<br>Note: The frame rate of each substream must remain consistent. If inconsistent, use the frame rate of the first substream as the output frame rate.</p>
+                     * 
                      */
                     std::vector<AdaptiveStreamTemplate> m_streamInfos;
                     bool m_streamInfosHasBeenSet;
 
                     /**
-                     * <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/33987">application</a> ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID to access resources in on-demand applications (whether default or newly created application).</b></p>
+                     * 
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
 
                     /**
-                     * <p>Template name. The length cannot exceed 64 characters.</p>
+                     * 
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * <p>DRM solution type. Value ranges from:</p><li>SimpleAES</li><li>Widevine</li><li>FairPlay</li><li>Widevine+FairPlay</li>The default value is an empty string. If the value is an empty string, it represents no DRM protection for the video.
+                     * 
                      */
                     std::string m_drmType;
                     bool m_drmTypeHasBeenSet;
 
                     /**
-                     * <p>DRM key provider. Permissible range:</p><li>SDMC: SDMC;</li><li>VOD: video on demand.</li>Default value is VOD.<p>SDMC service will be gradually phased out subsequently. Please use VOD DRM encryption service.</p>
+                     * 
                      */
                     std::string m_drmKeyProvider;
                     bool m_drmKeyProviderHasBeenSet;
 
                     /**
-                     * <p>Encryption method. Available values:<br>cbcs: supported by Widevine, FairPlay, and WideVine+FairPlay;<br>cenc: supported by Widevine.</p><p>If left blank:<br>cbcs: default method of FairPlay;<br>cenc: default method of Widevine;<br>cbcs: default method of WideVine+FairPlay.</p>
+                     * 
                      */
                     std::string m_drmEncryptType;
                     bool m_drmEncryptTypeHasBeenSet;
 
                     /**
-                     * <p>Whether to prohibit video low bitrate to high bitrate conversion. Value ranges from:</p><li>0: No,</li><li>1: Yes.</li>Default no.
+                     * 
                      */
                     uint64_t m_disableHigherVideoBitrate;
                     bool m_disableHigherVideoBitrateHasBeenSet;
 
                     /**
-                     * <p>Whether to prohibit video resolution to high resolution conversion. Value ranges from:</p><li>0: No,</li><li>1: Yes.</li>Default no.
+                     * 
                      */
                     uint64_t m_disableHigherVideoResolution;
                     bool m_disableHigherVideoResolutionHasBeenSet;
 
                     /**
-                     * <p>Template description, with a length limit of 256 characters.</p>
+                     * 
                      */
                     std::string m_comment;
                     bool m_commentHasBeenSet;
 
                     /**
-                     * <p>Segment type, valid when Format is HLS. Available values:</p><li>ts: ts slicing;</li><li>fmp4: fmp4 slicing.</li>Default value: ts.
+                     * 
                      */
                     std::string m_segmentType;
                     bool m_segmentTypeHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    int64_t m_segmentDuration;
+                    bool m_segmentDurationHasBeenSet;
 
                 };
             }

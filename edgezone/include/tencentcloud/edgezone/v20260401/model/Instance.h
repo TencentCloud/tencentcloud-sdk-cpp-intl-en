@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Instance ID.
-                     * @return InstanceId Instance ID.
+                     * 获取<p>Instance ID.</p>
+                     * @return InstanceId <p>Instance ID.</p>
                      * 
                      */
                     std::string GetInstanceId() const;
 
                     /**
-                     * 设置Instance ID.
-                     * @param _instanceId Instance ID.
+                     * 设置<p>Instance ID.</p>
+                     * @param _instanceId <p>Instance ID.</p>
                      * 
                      */
                     void SetInstanceId(const std::string& _instanceId);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool InstanceIdHasBeenSet() const;
 
                     /**
-                     * 获取Instance name.
-                     * @return InstanceName Instance name.
+                     * 获取<p>Instance name.</p>
+                     * @return InstanceName <p>Instance name.</p>
                      * 
                      */
                     std::string GetInstanceName() const;
 
                     /**
-                     * 设置Instance name.
-                     * @param _instanceName Instance name.
+                     * 设置<p>Instance name.</p>
+                     * @param _instanceName <p>Instance name.</p>
                      * 
                      */
                     void SetInstanceName(const std::string& _instanceName);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool InstanceNameHasBeenSet() const;
 
                     /**
-                     * 获取Bound Physical Machine ID
-                     * @return MachineId Bound Physical Machine ID
+                     * 获取<p>Bound Physical Machine ID</p>
+                     * @return MachineId <p>Bound Physical Machine ID</p>
                      * 
                      */
                     std::string GetMachineId() const;
 
                     /**
-                     * 设置Bound Physical Machine ID
-                     * @param _machineId Bound Physical Machine ID
+                     * 设置<p>Bound Physical Machine ID</p>
+                     * @param _machineId <p>Bound Physical Machine ID</p>
                      * 
                      */
                     void SetMachineId(const std::string& _machineId);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool MachineIdHasBeenSet() const;
 
                     /**
-                     * 获取Model specifications
-                     * @return InstanceType Model specifications
+                     * 获取<p>Model specifications</p>
+                     * @return InstanceType <p>Model specifications</p>
                      * 
                      */
                     std::string GetInstanceType() const;
 
                     /**
-                     * 设置Model specifications
-                     * @param _instanceType Model specifications
+                     * 设置<p>Model specifications</p>
+                     * @param _instanceType <p>Model specifications</p>
                      * 
                      */
                     void SetInstanceType(const std::string& _instanceType);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool InstanceTypeHasBeenSet() const;
 
                     /**
-                     * 获取Availability zone code
-                     * @return Zone Availability zone code
+                     * 获取<p>Availability zone code</p>
+                     * @return Zone <p>Availability zone code</p>
                      * 
                      */
                     std::string GetZone() const;
 
                     /**
-                     * 设置Availability zone code
-                     * @param _zone Availability zone code
+                     * 设置<p>Availability zone code</p>
+                     * @param _zone <p>Availability zone code</p>
                      * 
                      */
                     void SetZone(const std::string& _zone);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool ZoneHasBeenSet() const;
 
                     /**
-                     * 获取Image ID
-                     * @return ImageId Image ID
+                     * 获取<p>Image ID.</p>
+                     * @return ImageId <p>Image ID.</p>
                      * 
                      */
                     std::string GetImageId() const;
 
                     /**
-                     * 设置Image ID
-                     * @param _imageId Image ID
+                     * 设置<p>Image ID.</p>
+                     * @param _imageId <p>Image ID.</p>
                      * 
                      */
                     void SetImageId(const std::string& _imageId);
@@ -173,36 +173,36 @@ namespace TencentCloud
                     bool ImageIdHasBeenSet() const;
 
                     /**
-                     * 获取Image version number
-                     * @return VersionNumber Image version number
-                     * 
+                     * 获取<p>Image version number</p>
+                     * @return VersionNumber <p>Image version number</p>
+                     * @deprecated
                      */
                     std::string GetVersionNumber() const;
 
                     /**
-                     * 设置Image version number
-                     * @param _versionNumber Image version number
-                     * 
+                     * 设置<p>Image version number</p>
+                     * @param _versionNumber <p>Image version number</p>
+                     * @deprecated
                      */
                     void SetVersionNumber(const std::string& _versionNumber);
 
                     /**
                      * 判断参数 VersionNumber 是否已赋值
                      * @return VersionNumber 是否已赋值
-                     * 
+                     * @deprecated
                      */
                     bool VersionNumberHasBeenSet() const;
 
                     /**
-                     * 获取Instance status, value range: allocating, running, isolating, isolated, terminating, error.
-                     * @return InstanceStatus Instance status, value range: allocating, running, isolating, isolated, terminating, error.
+                     * 获取<p>Instance status, value range: allocating, running, isolating, isolated, terminating, error.</p>
+                     * @return InstanceStatus <p>Instance status, value range: allocating, running, isolating, isolated, terminating, error.</p>
                      * 
                      */
                     std::string GetInstanceStatus() const;
 
                     /**
-                     * 设置Instance status, value range: allocating, running, isolating, isolated, terminating, error.
-                     * @param _instanceStatus Instance status, value range: allocating, running, isolating, isolated, terminating, error.
+                     * 设置<p>Instance status, value range: allocating, running, isolating, isolated, terminating, error.</p>
+                     * @param _instanceStatus <p>Instance status, value range: allocating, running, isolating, isolated, terminating, error.</p>
                      * 
                      */
                     void SetInstanceStatus(const std::string& _instanceStatus);
@@ -215,15 +215,15 @@ namespace TencentCloud
                     bool InstanceStatusHasBeenSet() const;
 
                     /**
-                     * 获取Operation status: normal, starting, stopping, stopped, rebooting.
-                     * @return OperateStatus Operation status: normal, starting, stopping, stopped, rebooting.
+                     * 获取<p>Operation status: normal, starting, stopping, stopped, rebooting.</p>
+                     * @return OperateStatus <p>Operation status: normal, starting, stopping, stopped, rebooting.</p>
                      * 
                      */
                     std::string GetOperateStatus() const;
 
                     /**
-                     * 设置Operation status: normal, starting, stopping, stopped, rebooting.
-                     * @param _operateStatus Operation status: normal, starting, stopping, stopped, rebooting.
+                     * 设置<p>Operation status: normal, starting, stopping, stopped, rebooting.</p>
+                     * @param _operateStatus <p>Operation status: normal, starting, stopping, stopped, rebooting.</p>
                      * 
                      */
                     void SetOperateStatus(const std::string& _operateStatus);
@@ -236,15 +236,15 @@ namespace TencentCloud
                     bool OperateStatusHasBeenSet() const;
 
                     /**
-                     * 获取VPC ID
-                     * @return PrivateNetworkId VPC ID
+                     * 获取<p>VPC ID.</p>
+                     * @return PrivateNetworkId <p>VPC ID.</p>
                      * 
                      */
                     std::string GetPrivateNetworkId() const;
 
                     /**
-                     * 设置VPC ID
-                     * @param _privateNetworkId VPC ID
+                     * 设置<p>VPC ID.</p>
+                     * @param _privateNetworkId <p>VPC ID.</p>
                      * 
                      */
                     void SetPrivateNetworkId(const std::string& _privateNetworkId);
@@ -257,15 +257,15 @@ namespace TencentCloud
                     bool PrivateNetworkIdHasBeenSet() const;
 
                     /**
-                     * 获取private IPv4 address
-                     * @return PrivateIp private IPv4 address
+                     * 获取<p>Private IPv4 address</p>
+                     * @return PrivateIp <p>Private IPv4 address</p>
                      * 
                      */
                     std::string GetPrivateIp() const;
 
                     /**
-                     * 设置private IPv4 address
-                     * @param _privateIp private IPv4 address
+                     * 设置<p>Private IPv4 address</p>
+                     * @param _privateIp <p>Private IPv4 address</p>
                      * 
                      */
                     void SetPrivateIp(const std::string& _privateIp);
@@ -278,15 +278,15 @@ namespace TencentCloud
                     bool PrivateIpHasBeenSet() const;
 
                     /**
-                     * 获取private IPv6 address
-                     * @return PrivateIpV6 private IPv6 address
+                     * 获取<p>Private IPv6 address</p>
+                     * @return PrivateIpV6 <p>Private IPv6 address</p>
                      * 
                      */
                     std::string GetPrivateIpV6() const;
 
                     /**
-                     * 设置private IPv6 address
-                     * @param _privateIpV6 private IPv6 address
+                     * 设置<p>Private IPv6 address</p>
+                     * @param _privateIpV6 <p>Private IPv6 address</p>
                      * 
                      */
                     void SetPrivateIpV6(const std::string& _privateIpV6);
@@ -299,15 +299,15 @@ namespace TencentCloud
                     bool PrivateIpV6HasBeenSet() const;
 
                     /**
-                     * 获取Public network ID
-                     * @return PublicNetworkId Public network ID
+                     * 获取<p>Public network ID.</p>
+                     * @return PublicNetworkId <p>Public network ID.</p>
                      * 
                      */
                     std::string GetPublicNetworkId() const;
 
                     /**
-                     * 设置Public network ID
-                     * @param _publicNetworkId Public network ID
+                     * 设置<p>Public network ID.</p>
+                     * @param _publicNetworkId <p>Public network ID.</p>
                      * 
                      */
                     void SetPublicNetworkId(const std::string& _publicNetworkId);
@@ -320,15 +320,15 @@ namespace TencentCloud
                     bool PublicNetworkIdHasBeenSet() const;
 
                     /**
-                     * 获取Public IPv4 address
-                     * @return PublicIp Public IPv4 address
+                     * 获取<p>Public IPv4 address</p>
+                     * @return PublicIp <p>Public IPv4 address</p>
                      * 
                      */
                     std::string GetPublicIp() const;
 
                     /**
-                     * 设置Public IPv4 address
-                     * @param _publicIp Public IPv4 address
+                     * 设置<p>Public IPv4 address</p>
+                     * @param _publicIp <p>Public IPv4 address</p>
                      * 
                      */
                     void SetPublicIp(const std::string& _publicIp);
@@ -341,15 +341,15 @@ namespace TencentCloud
                     bool PublicIpHasBeenSet() const;
 
                     /**
-                     * 获取Public IPv6 address
-                     * @return PublicIpV6 Public IPv6 address
+                     * 获取<p>Public IPv6 address</p>
+                     * @return PublicIpV6 <p>Public IPv6 address</p>
                      * 
                      */
                     std::string GetPublicIpV6() const;
 
                     /**
-                     * 设置Public IPv6 address
-                     * @param _publicIpV6 Public IPv6 address
+                     * 设置<p>Public IPv6 address</p>
+                     * @param _publicIpV6 <p>Public IPv6 address</p>
                      * 
                      */
                     void SetPublicIpV6(const std::string& _publicIpV6);
@@ -362,15 +362,36 @@ namespace TencentCloud
                     bool PublicIpV6HasBeenSet() const;
 
                     /**
-                     * 获取Creation time, expressed according to the ISO8601 standard and using the UTC time. The format is YYYY-MM-DDThh:mm:ssZ.
-                     * @return CreatedTime Creation time, expressed according to the ISO8601 standard and using the UTC time. The format is YYYY-MM-DDThh:mm:ssZ.
+                     * 获取<p>File System Type</p>
+                     * @return FileSystemType <p>File System Type</p>
+                     * 
+                     */
+                    std::string GetFileSystemType() const;
+
+                    /**
+                     * 设置<p>File System Type</p>
+                     * @param _fileSystemType <p>File System Type</p>
+                     * 
+                     */
+                    void SetFileSystemType(const std::string& _fileSystemType);
+
+                    /**
+                     * 判断参数 FileSystemType 是否已赋值
+                     * @return FileSystemType 是否已赋值
+                     * 
+                     */
+                    bool FileSystemTypeHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Creation time, in the ISO 8601 standard format, using UTC time. Format: YYYY-MM-DDThh:mm:ssZ.</p>
+                     * @return CreatedTime <p>Creation time, in the ISO 8601 standard format, using UTC time. Format: YYYY-MM-DDThh:mm:ssZ.</p>
                      * 
                      */
                     std::string GetCreatedTime() const;
 
                     /**
-                     * 设置Creation time, expressed according to the ISO8601 standard and using the UTC time. The format is YYYY-MM-DDThh:mm:ssZ.
-                     * @param _createdTime Creation time, expressed according to the ISO8601 standard and using the UTC time. The format is YYYY-MM-DDThh:mm:ssZ.
+                     * 设置<p>Creation time, in the ISO 8601 standard format, using UTC time. Format: YYYY-MM-DDThh:mm:ssZ.</p>
+                     * @param _createdTime <p>Creation time, in the ISO 8601 standard format, using UTC time. Format: YYYY-MM-DDThh:mm:ssZ.</p>
                      * 
                      */
                     void SetCreatedTime(const std::string& _createdTime);
@@ -382,103 +403,244 @@ namespace TencentCloud
                      */
                     bool CreatedTimeHasBeenSet() const;
 
+                    /**
+                     * 获取<p>Instance family flag</p>
+                     * @return InstanceFamily <p>Instance family flag</p>
+                     * 
+                     */
+                    std::string GetInstanceFamily() const;
+
+                    /**
+                     * 设置<p>Instance family flag</p>
+                     * @param _instanceFamily <p>Instance family flag</p>
+                     * 
+                     */
+                    void SetInstanceFamily(const std::string& _instanceFamily);
+
+                    /**
+                     * 判断参数 InstanceFamily 是否已赋值
+                     * @return InstanceFamily 是否已赋值
+                     * 
+                     */
+                    bool InstanceFamilyHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Model Family Name</p>
+                     * @return InstanceFamilyName <p>Model Family Name</p>
+                     * 
+                     */
+                    std::string GetInstanceFamilyName() const;
+
+                    /**
+                     * 设置<p>Model Family Name</p>
+                     * @param _instanceFamilyName <p>Model Family Name</p>
+                     * 
+                     */
+                    void SetInstanceFamilyName(const std::string& _instanceFamilyName);
+
+                    /**
+                     * 判断参数 InstanceFamilyName 是否已赋值
+                     * @return InstanceFamilyName 是否已赋值
+                     * 
+                     */
+                    bool InstanceFamilyNameHasBeenSet() const;
+
+                    /**
+                     * 获取<p>CPU Model</p>
+                     * @return CpuType <p>CPU Model</p>
+                     * 
+                     */
+                    std::string GetCpuType() const;
+
+                    /**
+                     * 设置<p>CPU Model</p>
+                     * @param _cpuType <p>CPU Model</p>
+                     * 
+                     */
+                    void SetCpuType(const std::string& _cpuType);
+
+                    /**
+                     * 判断参数 CpuType 是否已赋值
+                     * @return CpuType 是否已赋值
+                     * 
+                     */
+                    bool CpuTypeHasBeenSet() const;
+
+                    /**
+                     * 获取<p>CPU cores.</p>
+                     * @return Cpu <p>CPU cores.</p>
+                     * 
+                     */
+                    int64_t GetCpu() const;
+
+                    /**
+                     * 设置<p>CPU cores.</p>
+                     * @param _cpu <p>CPU cores.</p>
+                     * 
+                     */
+                    void SetCpu(const int64_t& _cpu);
+
+                    /**
+                     * 判断参数 Cpu 是否已赋值
+                     * @return Cpu 是否已赋值
+                     * 
+                     */
+                    bool CpuHasBeenSet() const;
+
+                    /**
+                     * 获取<p>Memory size.</p>
+                     * @return Memory <p>Memory size.</p>
+                     * 
+                     */
+                    int64_t GetMemory() const;
+
+                    /**
+                     * 设置<p>Memory size.</p>
+                     * @param _memory <p>Memory size.</p>
+                     * 
+                     */
+                    void SetMemory(const int64_t& _memory);
+
+                    /**
+                     * 判断参数 Memory 是否已赋值
+                     * @return Memory 是否已赋值
+                     * 
+                     */
+                    bool MemoryHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Instance ID.
+                     * <p>Instance ID.</p>
                      */
                     std::string m_instanceId;
                     bool m_instanceIdHasBeenSet;
 
                     /**
-                     * Instance name.
+                     * <p>Instance name.</p>
                      */
                     std::string m_instanceName;
                     bool m_instanceNameHasBeenSet;
 
                     /**
-                     * Bound Physical Machine ID
+                     * <p>Bound Physical Machine ID</p>
                      */
                     std::string m_machineId;
                     bool m_machineIdHasBeenSet;
 
                     /**
-                     * Model specifications
+                     * <p>Model specifications</p>
                      */
                     std::string m_instanceType;
                     bool m_instanceTypeHasBeenSet;
 
                     /**
-                     * Availability zone code
+                     * <p>Availability zone code</p>
                      */
                     std::string m_zone;
                     bool m_zoneHasBeenSet;
 
                     /**
-                     * Image ID
+                     * <p>Image ID.</p>
                      */
                     std::string m_imageId;
                     bool m_imageIdHasBeenSet;
 
                     /**
-                     * Image version number
+                     * <p>Image version number</p>
                      */
                     std::string m_versionNumber;
                     bool m_versionNumberHasBeenSet;
 
                     /**
-                     * Instance status, value range: allocating, running, isolating, isolated, terminating, error.
+                     * <p>Instance status, value range: allocating, running, isolating, isolated, terminating, error.</p>
                      */
                     std::string m_instanceStatus;
                     bool m_instanceStatusHasBeenSet;
 
                     /**
-                     * Operation status: normal, starting, stopping, stopped, rebooting.
+                     * <p>Operation status: normal, starting, stopping, stopped, rebooting.</p>
                      */
                     std::string m_operateStatus;
                     bool m_operateStatusHasBeenSet;
 
                     /**
-                     * VPC ID
+                     * <p>VPC ID.</p>
                      */
                     std::string m_privateNetworkId;
                     bool m_privateNetworkIdHasBeenSet;
 
                     /**
-                     * private IPv4 address
+                     * <p>Private IPv4 address</p>
                      */
                     std::string m_privateIp;
                     bool m_privateIpHasBeenSet;
 
                     /**
-                     * private IPv6 address
+                     * <p>Private IPv6 address</p>
                      */
                     std::string m_privateIpV6;
                     bool m_privateIpV6HasBeenSet;
 
                     /**
-                     * Public network ID
+                     * <p>Public network ID.</p>
                      */
                     std::string m_publicNetworkId;
                     bool m_publicNetworkIdHasBeenSet;
 
                     /**
-                     * Public IPv4 address
+                     * <p>Public IPv4 address</p>
                      */
                     std::string m_publicIp;
                     bool m_publicIpHasBeenSet;
 
                     /**
-                     * Public IPv6 address
+                     * <p>Public IPv6 address</p>
                      */
                     std::string m_publicIpV6;
                     bool m_publicIpV6HasBeenSet;
 
                     /**
-                     * Creation time, expressed according to the ISO8601 standard and using the UTC time. The format is YYYY-MM-DDThh:mm:ssZ.
+                     * <p>File System Type</p>
+                     */
+                    std::string m_fileSystemType;
+                    bool m_fileSystemTypeHasBeenSet;
+
+                    /**
+                     * <p>Creation time, in the ISO 8601 standard format, using UTC time. Format: YYYY-MM-DDThh:mm:ssZ.</p>
                      */
                     std::string m_createdTime;
                     bool m_createdTimeHasBeenSet;
+
+                    /**
+                     * <p>Instance family flag</p>
+                     */
+                    std::string m_instanceFamily;
+                    bool m_instanceFamilyHasBeenSet;
+
+                    /**
+                     * <p>Model Family Name</p>
+                     */
+                    std::string m_instanceFamilyName;
+                    bool m_instanceFamilyNameHasBeenSet;
+
+                    /**
+                     * <p>CPU Model</p>
+                     */
+                    std::string m_cpuType;
+                    bool m_cpuTypeHasBeenSet;
+
+                    /**
+                     * <p>CPU cores.</p>
+                     */
+                    int64_t m_cpu;
+                    bool m_cpuHasBeenSet;
+
+                    /**
+                     * <p>Memory size.</p>
+                     */
+                    int64_t m_memory;
+                    bool m_memoryHasBeenSet;
 
                 };
             }

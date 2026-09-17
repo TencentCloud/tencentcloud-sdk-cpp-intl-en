@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * HTTP header setting rules. Up to 100 entries can be set.
+                * 
                 */
                 class HttpHeaderPathRule : public AbstractModel
                 {
@@ -47,15 +47,27 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取http header setting method: <li>set: setting. Change the value of the specified header parameter to the set value; if the set header does not exist, the header will be added; if there are multiple duplicate header parameters, all will be changed and merged into one header. ;</li> <li>del: delete. Delete the specified header parameter;</li> <li>add: add. Add the specified header parameters. By default, repeated addition is allowed, that is, the same header is added repeatedly (note: repeated addition may affect the browser response, please use the set operation first). </li>
-                     * @return HeaderMode http header setting method: <li>set: setting. Change the value of the specified header parameter to the set value; if the set header does not exist, the header will be added; if there are multiple duplicate header parameters, all will be changed and merged into one header. ;</li> <li>del: delete. Delete the specified header parameter;</li> <li>add: add. Add the specified header parameters. By default, repeated addition is allowed, that is, the same header is added repeatedly (note: repeated addition may affect the browser response, please use the set operation first). </li>
+                     * 获取http header setting method:
+<li>set: Set. Update the value of the specified header parameter to the configured value; if the specified header does not exist, it will be added; if multiple duplicate header parameters exist, all will be updated and merged into one header;</li>
+<li>del: delete. Delete specified HTTP header parameters;</li>
+<li>add: Add. Add the designated header parameter. Duplicate addition is allowed by default, meaning the same header can be repeatedly added (Note: Repeated addition may affect browser response. Please prioritize the set operation).</li>
+                     * @return HeaderMode http header setting method:
+<li>set: Set. Update the value of the specified header parameter to the configured value; if the specified header does not exist, it will be added; if multiple duplicate header parameters exist, all will be updated and merged into one header;</li>
+<li>del: delete. Delete specified HTTP header parameters;</li>
+<li>add: Add. Add the designated header parameter. Duplicate addition is allowed by default, meaning the same header can be repeatedly added (Note: Repeated addition may affect browser response. Please prioritize the set operation).</li>
                      * 
                      */
                     std::string GetHeaderMode() const;
 
                     /**
-                     * 设置http header setting method: <li>set: setting. Change the value of the specified header parameter to the set value; if the set header does not exist, the header will be added; if there are multiple duplicate header parameters, all will be changed and merged into one header. ;</li> <li>del: delete. Delete the specified header parameter;</li> <li>add: add. Add the specified header parameters. By default, repeated addition is allowed, that is, the same header is added repeatedly (note: repeated addition may affect the browser response, please use the set operation first). </li>
-                     * @param _headerMode http header setting method: <li>set: setting. Change the value of the specified header parameter to the set value; if the set header does not exist, the header will be added; if there are multiple duplicate header parameters, all will be changed and merged into one header. ;</li> <li>del: delete. Delete the specified header parameter;</li> <li>add: add. Add the specified header parameters. By default, repeated addition is allowed, that is, the same header is added repeatedly (note: repeated addition may affect the browser response, please use the set operation first). </li>
+                     * 设置http header setting method:
+<li>set: Set. Update the value of the specified header parameter to the configured value; if the specified header does not exist, it will be added; if multiple duplicate header parameters exist, all will be updated and merged into one header;</li>
+<li>del: delete. Delete specified HTTP header parameters;</li>
+<li>add: Add. Add the designated header parameter. Duplicate addition is allowed by default, meaning the same header can be repeatedly added (Note: Repeated addition may affect browser response. Please prioritize the set operation).</li>
+                     * @param _headerMode http header setting method:
+<li>set: Set. Update the value of the specified header parameter to the configured value; if the specified header does not exist, it will be added; if multiple duplicate header parameters exist, all will be updated and merged into one header;</li>
+<li>del: delete. Delete specified HTTP header parameters;</li>
+<li>add: Add. Add the designated header parameter. Duplicate addition is allowed by default, meaning the same header can be repeatedly added (Note: Repeated addition may affect browser response. Please prioritize the set operation).</li>
                      * 
                      */
                     void SetHeaderMode(const std::string& _headerMode);
@@ -68,15 +80,15 @@ namespace TencentCloud
                     bool HeaderModeHasBeenSet() const;
 
                     /**
-                     * 获取HTTP header name. Up to 100 characters can be set.
-                     * @return HeaderName HTTP header name. Up to 100 characters can be set.
+                     * 获取
+                     * @return HeaderName 
                      * 
                      */
                     std::string GetHeaderName() const;
 
                     /**
-                     * 设置HTTP header name. Up to 100 characters can be set.
-                     * @param _headerName HTTP header name. Up to 100 characters can be set.
+                     * 设置
+                     * @param _headerName 
                      * 
                      */
                     void SetHeaderName(const std::string& _headerName);
@@ -89,15 +101,23 @@ namespace TencentCloud
                     bool HeaderNameHasBeenSet() const;
 
                     /**
-                     * 获取http header value, up to 1000 characters can be set; optional when Mode is del; required when Mode is add/set.
-                     * @return HeaderValue http header value, up to 1000 characters can be set; optional when Mode is del; required when Mode is add/set.
+                     * 获取http header value, up to 1000 characters;
+Optional when `Mode` is `del`.
+Required if Mode is add/set.
+                     * @return HeaderValue http header value, up to 1000 characters;
+Optional when `Mode` is `del`.
+Required if Mode is add/set.
                      * 
                      */
                     std::string GetHeaderValue() const;
 
                     /**
-                     * 设置http header value, up to 1000 characters can be set; optional when Mode is del; required when Mode is add/set.
-                     * @param _headerValue http header value, up to 1000 characters can be set; optional when Mode is del; required when Mode is add/set.
+                     * 设置http header value, up to 1000 characters;
+Optional when `Mode` is `del`.
+Required if Mode is add/set.
+                     * @param _headerValue http header value, up to 1000 characters;
+Optional when `Mode` is `del`.
+Required if Mode is add/set.
                      * 
                      */
                     void SetHeaderValue(const std::string& _headerValue);
@@ -110,15 +130,31 @@ namespace TencentCloud
                     bool HeaderValueHasBeenSet() const;
 
                     /**
-                     * 获取Rule type: <li>all: valid for all files;</li> <li>file: valid for specified file suffix;</li> <li>directory: valid for specified path;</li> <li>path: specified absolute The path takes effect. </li>
-                     * @return RuleType Rule type: <li>all: valid for all files;</li> <li>file: valid for specified file suffix;</li> <li>directory: valid for specified path;</li> <li>path: specified absolute The path takes effect. </li>
+                     * 获取Rule type:
+<li>all: take effect for all files;</li>
+<li>file: The specified file suffix takes effect;</li>
+<li>directory: specify the path to take effect;</li>
+<li>path: The absolute path takes effect.</li>
+                     * @return RuleType Rule type:
+<li>all: take effect for all files;</li>
+<li>file: The specified file suffix takes effect;</li>
+<li>directory: specify the path to take effect;</li>
+<li>path: The absolute path takes effect.</li>
                      * 
                      */
                     std::string GetRuleType() const;
 
                     /**
-                     * 设置Rule type: <li>all: valid for all files;</li> <li>file: valid for specified file suffix;</li> <li>directory: valid for specified path;</li> <li>path: specified absolute The path takes effect. </li>
-                     * @param _ruleType Rule type: <li>all: valid for all files;</li> <li>file: valid for specified file suffix;</li> <li>directory: valid for specified path;</li> <li>path: specified absolute The path takes effect. </li>
+                     * 设置Rule type:
+<li>all: take effect for all files;</li>
+<li>file: The specified file suffix takes effect;</li>
+<li>directory: specify the path to take effect;</li>
+<li>path: The absolute path takes effect.</li>
+                     * @param _ruleType Rule type:
+<li>all: take effect for all files;</li>
+<li>file: The specified file suffix takes effect;</li>
+<li>directory: specify the path to take effect;</li>
+<li>path: The absolute path takes effect.</li>
                      * 
                      */
                     void SetRuleType(const std::string& _ruleType);
@@ -131,15 +167,31 @@ namespace TencentCloud
                     bool RuleTypeHasBeenSet() const;
 
                     /**
-                     * 获取Matching content under the corresponding type of RuleType: <li>Fill in * when all is used;</li> <li>Fill in suffix name when file is used, such as jpg, txt;</li> <li>Fill in path when directory is used, such as /xxx/ test/;</li> <li>Fill in the absolute path when path is specified, such as /xxx/test.html. </li>
-                     * @return RulePaths Matching content under the corresponding type of RuleType: <li>Fill in * when all is used;</li> <li>Fill in suffix name when file is used, such as jpg, txt;</li> <li>Fill in path when directory is used, such as /xxx/ test/;</li> <li>Fill in the absolute path when path is specified, such as /xxx/test.html. </li>
+                     * 获取Matching content under the corresponding type of RuleType:
+<li>Fill with * when set to all;</li>
+<li>For file, fill in the extension, such as jpg or txt;</li>
+<li>For directory, fill in the path, such as /xxx/test/;</li>
+<li>For path, fill in the absolute path, such as /xxx/test.html.</li>
+                     * @return RulePaths Matching content under the corresponding type of RuleType:
+<li>Fill with * when set to all;</li>
+<li>For file, fill in the extension, such as jpg or txt;</li>
+<li>For directory, fill in the path, such as /xxx/test/;</li>
+<li>For path, fill in the absolute path, such as /xxx/test.html.</li>
                      * 
                      */
                     std::vector<std::string> GetRulePaths() const;
 
                     /**
-                     * 设置Matching content under the corresponding type of RuleType: <li>Fill in * when all is used;</li> <li>Fill in suffix name when file is used, such as jpg, txt;</li> <li>Fill in path when directory is used, such as /xxx/ test/;</li> <li>Fill in the absolute path when path is specified, such as /xxx/test.html. </li>
-                     * @param _rulePaths Matching content under the corresponding type of RuleType: <li>Fill in * when all is used;</li> <li>Fill in suffix name when file is used, such as jpg, txt;</li> <li>Fill in path when directory is used, such as /xxx/ test/;</li> <li>Fill in the absolute path when path is specified, such as /xxx/test.html. </li>
+                     * 设置Matching content under the corresponding type of RuleType:
+<li>Fill with * when set to all;</li>
+<li>For file, fill in the extension, such as jpg or txt;</li>
+<li>For directory, fill in the path, such as /xxx/test/;</li>
+<li>For path, fill in the absolute path, such as /xxx/test.html.</li>
+                     * @param _rulePaths Matching content under the corresponding type of RuleType:
+<li>Fill with * when set to all;</li>
+<li>For file, fill in the extension, such as jpg or txt;</li>
+<li>For directory, fill in the path, such as /xxx/test/;</li>
+<li>For path, fill in the absolute path, such as /xxx/test.html.</li>
                      * 
                      */
                     void SetRulePaths(const std::vector<std::string>& _rulePaths);
@@ -154,31 +206,44 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * http header setting method: <li>set: setting. Change the value of the specified header parameter to the set value; if the set header does not exist, the header will be added; if there are multiple duplicate header parameters, all will be changed and merged into one header. ;</li> <li>del: delete. Delete the specified header parameter;</li> <li>add: add. Add the specified header parameters. By default, repeated addition is allowed, that is, the same header is added repeatedly (note: repeated addition may affect the browser response, please use the set operation first). </li>
+                     * http header setting method:
+<li>set: Set. Update the value of the specified header parameter to the configured value; if the specified header does not exist, it will be added; if multiple duplicate header parameters exist, all will be updated and merged into one header;</li>
+<li>del: delete. Delete specified HTTP header parameters;</li>
+<li>add: Add. Add the designated header parameter. Duplicate addition is allowed by default, meaning the same header can be repeatedly added (Note: Repeated addition may affect browser response. Please prioritize the set operation).</li>
                      */
                     std::string m_headerMode;
                     bool m_headerModeHasBeenSet;
 
                     /**
-                     * HTTP header name. Up to 100 characters can be set.
+                     * 
                      */
                     std::string m_headerName;
                     bool m_headerNameHasBeenSet;
 
                     /**
-                     * http header value, up to 1000 characters can be set; optional when Mode is del; required when Mode is add/set.
+                     * http header value, up to 1000 characters;
+Optional when `Mode` is `del`.
+Required if Mode is add/set.
                      */
                     std::string m_headerValue;
                     bool m_headerValueHasBeenSet;
 
                     /**
-                     * Rule type: <li>all: valid for all files;</li> <li>file: valid for specified file suffix;</li> <li>directory: valid for specified path;</li> <li>path: specified absolute The path takes effect. </li>
+                     * Rule type:
+<li>all: take effect for all files;</li>
+<li>file: The specified file suffix takes effect;</li>
+<li>directory: specify the path to take effect;</li>
+<li>path: The absolute path takes effect.</li>
                      */
                     std::string m_ruleType;
                     bool m_ruleTypeHasBeenSet;
 
                     /**
-                     * Matching content under the corresponding type of RuleType: <li>Fill in * when all is used;</li> <li>Fill in suffix name when file is used, such as jpg, txt;</li> <li>Fill in path when directory is used, such as /xxx/ test/;</li> <li>Fill in the absolute path when path is specified, such as /xxx/test.html. </li>
+                     * Matching content under the corresponding type of RuleType:
+<li>Fill with * when set to all;</li>
+<li>For file, fill in the extension, such as jpg or txt;</li>
+<li>For directory, fill in the path, such as /xxx/test/;</li>
+<li>For path, fill in the absolute path, such as /xxx/test.html.</li>
                      */
                     std::vector<std::string> m_rulePaths;
                     bool m_rulePathsHasBeenSet;

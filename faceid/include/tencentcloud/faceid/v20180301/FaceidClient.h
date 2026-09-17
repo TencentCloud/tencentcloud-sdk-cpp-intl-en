@@ -57,20 +57,18 @@
 #include <tencentcloud/faceid/v20180301/model/GetFaceIdTokenIntlResponse.h>
 #include <tencentcloud/faceid/v20180301/model/GetLivenessResultRequest.h>
 #include <tencentcloud/faceid/v20180301/model/GetLivenessResultResponse.h>
+#include <tencentcloud/faceid/v20180301/model/GetNFCResultRequest.h>
+#include <tencentcloud/faceid/v20180301/model/GetNFCResultResponse.h>
 #include <tencentcloud/faceid/v20180301/model/GetNFCTokenRequest.h>
 #include <tencentcloud/faceid/v20180301/model/GetNFCTokenResponse.h>
 #include <tencentcloud/faceid/v20180301/model/GetSdkVerificationResultRequest.h>
 #include <tencentcloud/faceid/v20180301/model/GetSdkVerificationResultResponse.h>
 #include <tencentcloud/faceid/v20180301/model/GetWebVerificationResultIntlRequest.h>
 #include <tencentcloud/faceid/v20180301/model/GetWebVerificationResultIntlResponse.h>
-#include <tencentcloud/faceid/v20180301/model/GetWxNFCResultRequest.h>
-#include <tencentcloud/faceid/v20180301/model/GetWxNFCResultResponse.h>
 #include <tencentcloud/faceid/v20180301/model/IdCardOCRVerificationRequest.h>
 #include <tencentcloud/faceid/v20180301/model/IdCardOCRVerificationResponse.h>
 #include <tencentcloud/faceid/v20180301/model/IdCardVerificationRequest.h>
 #include <tencentcloud/faceid/v20180301/model/IdCardVerificationResponse.h>
-#include <tencentcloud/faceid/v20180301/model/ImageRecognitionRequest.h>
-#include <tencentcloud/faceid/v20180301/model/ImageRecognitionResponse.h>
 #include <tencentcloud/faceid/v20180301/model/ImageRecognitionV2Request.h>
 #include <tencentcloud/faceid/v20180301/model/ImageRecognitionV2Response.h>
 #include <tencentcloud/faceid/v20180301/model/LivenessCompareRequest.h>
@@ -148,6 +146,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::GetLivenessResultResponse> GetLivenessResultOutcome;
                 typedef std::future<GetLivenessResultOutcome> GetLivenessResultOutcomeCallable;
                 typedef std::function<void(const FaceidClient*, const Model::GetLivenessResultRequest&, GetLivenessResultOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetLivenessResultAsyncHandler;
+                typedef Outcome<Core::Error, Model::GetNFCResultResponse> GetNFCResultOutcome;
+                typedef std::future<GetNFCResultOutcome> GetNFCResultOutcomeCallable;
+                typedef std::function<void(const FaceidClient*, const Model::GetNFCResultRequest&, GetNFCResultOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetNFCResultAsyncHandler;
                 typedef Outcome<Core::Error, Model::GetNFCTokenResponse> GetNFCTokenOutcome;
                 typedef std::future<GetNFCTokenOutcome> GetNFCTokenOutcomeCallable;
                 typedef std::function<void(const FaceidClient*, const Model::GetNFCTokenRequest&, GetNFCTokenOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetNFCTokenAsyncHandler;
@@ -157,18 +158,12 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::GetWebVerificationResultIntlResponse> GetWebVerificationResultIntlOutcome;
                 typedef std::future<GetWebVerificationResultIntlOutcome> GetWebVerificationResultIntlOutcomeCallable;
                 typedef std::function<void(const FaceidClient*, const Model::GetWebVerificationResultIntlRequest&, GetWebVerificationResultIntlOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetWebVerificationResultIntlAsyncHandler;
-                typedef Outcome<Core::Error, Model::GetWxNFCResultResponse> GetWxNFCResultOutcome;
-                typedef std::future<GetWxNFCResultOutcome> GetWxNFCResultOutcomeCallable;
-                typedef std::function<void(const FaceidClient*, const Model::GetWxNFCResultRequest&, GetWxNFCResultOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetWxNFCResultAsyncHandler;
                 typedef Outcome<Core::Error, Model::IdCardOCRVerificationResponse> IdCardOCRVerificationOutcome;
                 typedef std::future<IdCardOCRVerificationOutcome> IdCardOCRVerificationOutcomeCallable;
                 typedef std::function<void(const FaceidClient*, const Model::IdCardOCRVerificationRequest&, IdCardOCRVerificationOutcome, const std::shared_ptr<const AsyncCallerContext>&)> IdCardOCRVerificationAsyncHandler;
                 typedef Outcome<Core::Error, Model::IdCardVerificationResponse> IdCardVerificationOutcome;
                 typedef std::future<IdCardVerificationOutcome> IdCardVerificationOutcomeCallable;
                 typedef std::function<void(const FaceidClient*, const Model::IdCardVerificationRequest&, IdCardVerificationOutcome, const std::shared_ptr<const AsyncCallerContext>&)> IdCardVerificationAsyncHandler;
-                typedef Outcome<Core::Error, Model::ImageRecognitionResponse> ImageRecognitionOutcome;
-                typedef std::future<ImageRecognitionOutcome> ImageRecognitionOutcomeCallable;
-                typedef std::function<void(const FaceidClient*, const Model::ImageRecognitionRequest&, ImageRecognitionOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ImageRecognitionAsyncHandler;
                 typedef Outcome<Core::Error, Model::ImageRecognitionV2Response> ImageRecognitionV2Outcome;
                 typedef std::future<ImageRecognitionV2Outcome> ImageRecognitionV2OutcomeCallable;
                 typedef std::function<void(const FaceidClient*, const Model::ImageRecognitionV2Request&, ImageRecognitionV2Outcome, const std::shared_ptr<const AsyncCallerContext>&)> ImageRecognitionV2AsyncHandler;
@@ -347,6 +342,20 @@ The data generated with the SDK must be stored in COS, and the region of the COS
                 GetLivenessResultOutcomeCallable GetLivenessResultCallable(const Model::GetLivenessResultRequest& request);
 
                 /**
+                 *This API verifies NFC data. Pass in the NFCToken returned by the SDK, the document fields to be verified, and the portrait photo. The service automatically compares the information to verify with the decrypted document NFC data and outputs the verification result. The NFCToken generated by the SDK is valid for 1 hour. The service is billed per query. 
+The service currently supports NFC recognition and verification of the following fields and portrait photos on Chinese mainland second-generation resident identity cards, exit-entry permits for travelling to and from Hong Kong, China and Macao, China, and Chinese resident passports: 
+
+-Chinese mainland second-generation resident identity card: identity card number, name, sex, ethnicity, date of birth, address, issuing authority, validity start time, validity end time, portrait photo 
+-Exit-Entry Permit for Travelling to and from Hong Kong, China and Macao, China: ID number, name, sex, English name, issuing place, issuing authority, validity end time, date of birth, portrait photo, machine-readable code 
+-Chinese resident passport: passport number, Chinese name, English name, nationality, sex, country or region code, validity start time, validity end time, date of birth, birth place, issuing place, issuing authority, portrait photo, machine-readable code
+                 * @param req GetNFCResultRequest
+                 * @return GetNFCResultOutcome
+                 */
+                GetNFCResultOutcome GetNFCResult(const Model::GetNFCResultRequest &request);
+                void GetNFCResultAsync(const Model::GetNFCResultRequest& request, const GetNFCResultAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                GetNFCResultOutcomeCallable GetNFCResultCallable(const Model::GetNFCResultRequest& request);
+
+                /**
                  *NFC verification service, obtain Token information for the NFC identify request.This API supports NFC recognition and verification of ID cards (second-generation resident identity card, Residence Permit for Hong Kong (China) and Macao (China), Residence Permit for Taiwan (China), Permanent Residence Permit for Foreigners) as well as travel documents (exit-entry permit for travelling to and from Hong Kong (China) and Macao (China), Taiwan travel permit, Mainland Travel Permit for Taiwan Residents, Return Home Permit).
                  * @param req GetNFCTokenRequest
                  * @return GetNFCTokenOutcome
@@ -374,15 +383,6 @@ The data generated with the SDK must be stored in COS, and the region of the COS
                 GetWebVerificationResultIntlOutcomeCallable GetWebVerificationResultIntlCallable(const Model::GetWebVerificationResultIntlRequest& request);
 
                 /**
-                 *Obtain document NFC data, input the Token returned by the NFC SDK (valid for 10 minutes), and return the corresponding document information retrieved via NFC. This API supports NFC recognition and verification of ID cards (second-generation resident identity card, Residence Permit for Hong Kong (China) and Macao (China), Residence Permit for Taiwan (China), Permanent Residence Permit for Foreigners) as well as travel documents (exit-entry permit for travelling to and from Hong Kong (China) and Macao (China), Taiwan travel permit, Mainland Travel Permit for Taiwan Residents, Return Home Permit).
-                 * @param req GetWxNFCResultRequest
-                 * @return GetWxNFCResultOutcome
-                 */
-                GetWxNFCResultOutcome GetWxNFCResult(const Model::GetWxNFCResultRequest &request);
-                void GetWxNFCResultAsync(const Model::GetWxNFCResultRequest& request, const GetWxNFCResultAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                GetWxNFCResultOutcomeCallable GetWxNFCResultCallable(const Model::GetWxNFCResultRequest& request);
-
-                /**
                  *This API is used to validate the authenticity and consistency of the name and identity card number. You can provide the required verification information by manually inputting the name and identity card number or importing the ID card portrait side image.
                  * @param req IdCardOCRVerificationRequest
                  * @return IdCardOCRVerificationOutcome
@@ -399,15 +399,6 @@ The data generated with the SDK must be stored in COS, and the region of the COS
                 IdCardVerificationOutcome IdCardVerification(const Model::IdCardVerificationRequest &request);
                 void IdCardVerificationAsync(const Model::IdCardVerificationRequest& request, const IdCardVerificationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 IdCardVerificationOutcomeCallable IdCardVerificationCallable(const Model::IdCardVerificationRequest& request);
-
-                /**
-                 *This API is used to judge whether the image passed in and the ID photo in the authoritative database belong to the same person based on the identity information (this interface has stopped integration, new customers please use the <a href="https://www.tencentcloud.com/document/product/1007/102203?from_cn_redirect=1">photo face verification (V2.0)</a> API).
-                 * @param req ImageRecognitionRequest
-                 * @return ImageRecognitionOutcome
-                 */
-                ImageRecognitionOutcome ImageRecognition(const Model::ImageRecognitionRequest &request);
-                void ImageRecognitionAsync(const Model::ImageRecognitionRequest& request, const ImageRecognitionAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
-                ImageRecognitionOutcomeCallable ImageRecognitionCallable(const Model::ImageRecognitionRequest& request);
 
                 /**
                  *This API is used to judge whether the image passed in and the ID photo in the authoritative database belong to the same person based on the identity information.

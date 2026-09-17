@@ -41,7 +41,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Domain name information
+                * 
                 */
                 class DomainDetailInfo : public AbstractModel
                 {
@@ -53,15 +53,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Domain name.</p>
-                     * @return Domain <p>Domain name.</p>
+                     * 获取
+                     * @return Domain 
                      * 
                      */
                     std::string GetDomain() const;
 
                     /**
-                     * 设置<p>Domain name.</p>
-                     * @param _domain <p>Domain name.</p>
+                     * 设置
+                     * @param _domain 
                      * 
                      */
                     void SetDomain(const std::string& _domain);
@@ -74,15 +74,15 @@ namespace TencentCloud
                     bool DomainHasBeenSet() const;
 
                     /**
-                     * 获取<p>Acceleration region information.</p>
-                     * @return AccelerateAreaInfos <p>Acceleration region information.</p>
+                     * 获取
+                     * @return AccelerateAreaInfos 
                      * 
                      */
                     std::vector<AccelerateAreaInfo> GetAccelerateAreaInfos() const;
 
                     /**
-                     * 设置<p>Acceleration region information.</p>
-                     * @param _accelerateAreaInfos <p>Acceleration region information.</p>
+                     * 设置
+                     * @param _accelerateAreaInfos 
                      * 
                      */
                     void SetAccelerateAreaInfos(const std::vector<AccelerateAreaInfo>& _accelerateAreaInfos);
@@ -95,15 +95,15 @@ namespace TencentCloud
                     bool AccelerateAreaInfosHasBeenSet() const;
 
                     /**
-                     * 获取<p>Deployment state. Valid values:</p><li>Online: Goes live.</li><li>Deploying: Deployment in progress.</li><li>Locked: Locked. When this state occurs, unable to perform deployment change on that domain name.</li>
-                     * @return DeployStatus <p>Deployment state. Valid values:</p><li>Online: Goes live.</li><li>Deploying: Deployment in progress.</li><li>Locked: Locked. When this state occurs, unable to perform deployment change on that domain name.</li>
+                     * 获取
+                     * @return DeployStatus 
                      * 
                      */
                     std::string GetDeployStatus() const;
 
                     /**
-                     * 设置<p>Deployment state. Valid values:</p><li>Online: Goes live.</li><li>Deploying: Deployment in progress.</li><li>Locked: Locked. When this state occurs, unable to perform deployment change on that domain name.</li>
-                     * @param _deployStatus <p>Deployment state. Valid values:</p><li>Online: Goes live.</li><li>Deploying: Deployment in progress.</li><li>Locked: Locked. When this state occurs, unable to perform deployment change on that domain name.</li>
+                     * 设置
+                     * @param _deployStatus 
                      * 
                      */
                     void SetDeployStatus(const std::string& _deployStatus);
@@ -116,15 +116,15 @@ namespace TencentCloud
                     bool DeployStatusHasBeenSet() const;
 
                     /**
-                     * 获取<p>HTTPS configuration message.</p>
-                     * @return HTTPSConfig <p>HTTPS configuration message.</p>
+                     * 获取
+                     * @return HTTPSConfig 
                      * 
                      */
                     DomainHTTPSConfig GetHTTPSConfig() const;
 
                     /**
-                     * 设置<p>HTTPS configuration message.</p>
-                     * @param _hTTPSConfig <p>HTTPS configuration message.</p>
+                     * 设置
+                     * @param _hTTPSConfig 
                      * 
                      */
                     void SetHTTPSConfig(const DomainHTTPSConfig& _hTTPSConfig);
@@ -137,15 +137,15 @@ namespace TencentCloud
                     bool HTTPSConfigHasBeenSet() const;
 
                     /**
-                     * 获取<p><a href="https://www.tencentcloud.com/document/product/266/14047?from_cn_redirect=1">Key hotlink protection</a> configuration message.</p>
-                     * @return UrlSignatureAuthPolicy <p><a href="https://www.tencentcloud.com/document/product/266/14047?from_cn_redirect=1">Key hotlink protection</a> configuration message.</p>
+                     * 获取
+                     * @return UrlSignatureAuthPolicy 
                      * 
                      */
                     UrlSignatureAuthPolicy GetUrlSignatureAuthPolicy() const;
 
                     /**
-                     * 设置<p><a href="https://www.tencentcloud.com/document/product/266/14047?from_cn_redirect=1">Key hotlink protection</a> configuration message.</p>
-                     * @param _urlSignatureAuthPolicy <p><a href="https://www.tencentcloud.com/document/product/266/14047?from_cn_redirect=1">Key hotlink protection</a> configuration message.</p>
+                     * 设置
+                     * @param _urlSignatureAuthPolicy 
                      * 
                      */
                     void SetUrlSignatureAuthPolicy(const UrlSignatureAuthPolicy& _urlSignatureAuthPolicy);
@@ -158,15 +158,15 @@ namespace TencentCloud
                     bool UrlSignatureAuthPolicyHasBeenSet() const;
 
                     /**
-                     * 获取<p><a href="https://www.tencentcloud.com/document/product/266/14046?from_cn_redirect=1">Referer hotlink protection</a> configuration message.</p>
-                     * @return RefererAuthPolicy <p><a href="https://www.tencentcloud.com/document/product/266/14046?from_cn_redirect=1">Referer hotlink protection</a> configuration message.</p>
+                     * 获取
+                     * @return RefererAuthPolicy 
                      * 
                      */
                     RefererAuthPolicy GetRefererAuthPolicy() const;
 
                     /**
-                     * 设置<p><a href="https://www.tencentcloud.com/document/product/266/14046?from_cn_redirect=1">Referer hotlink protection</a> configuration message.</p>
-                     * @param _refererAuthPolicy <p><a href="https://www.tencentcloud.com/document/product/266/14046?from_cn_redirect=1">Referer hotlink protection</a> configuration message.</p>
+                     * 设置
+                     * @param _refererAuthPolicy 
                      * 
                      */
                     void SetRefererAuthPolicy(const RefererAuthPolicy& _refererAuthPolicy);
@@ -179,15 +179,15 @@ namespace TencentCloud
                     bool RefererAuthPolicyHasBeenSet() const;
 
                     /**
-                     * 获取<p>The time when the domain name is added to the Tencent Cloud VOD system.</p><li>Format according to ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</li>
-                     * @return CreateTime <p>The time when the domain name is added to the Tencent Cloud VOD system.</p><li>Format according to ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</li>
+                     * 获取
+                     * @return CreateTime 
                      * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
-                     * 设置<p>The time when the domain name is added to the Tencent Cloud VOD system.</p><li>Format according to ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</li>
-                     * @param _createTime <p>The time when the domain name is added to the Tencent Cloud VOD system.</p><li>Format according to ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</li>
+                     * 设置
+                     * @param _createTime 
                      * 
                      */
                     void SetCreateTime(const std::string& _createTime);
@@ -200,15 +200,15 @@ namespace TencentCloud
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Domain name QUIC configuration message.</p>
-                     * @return QUICConfig <p>Domain name QUIC configuration message.</p>
+                     * 获取
+                     * @return QUICConfig 
                      * 
                      */
                     DomainQUICConfig GetQUICConfig() const;
 
                     /**
-                     * 设置<p>Domain name QUIC configuration message.</p>
-                     * @param _qUICConfig <p>Domain name QUIC configuration message.</p>
+                     * 设置
+                     * @param _qUICConfig 
                      * 
                      */
                     void SetQUICConfig(const DomainQUICConfig& _qUICConfig);
@@ -221,15 +221,15 @@ namespace TencentCloud
                     bool QUICConfigHasBeenSet() const;
 
                     /**
-                     * 获取<p>IP access restriction configuration message.</p>
-                     * @return IPFilterPolicy <p>IP access restriction configuration message.</p>
+                     * 获取
+                     * @return IPFilterPolicy 
                      * 
                      */
                     IPFilterPolicy GetIPFilterPolicy() const;
 
                     /**
-                     * 设置<p>IP access restriction configuration message.</p>
-                     * @param _iPFilterPolicy <p>IP access restriction configuration message.</p>
+                     * 设置
+                     * @param _iPFilterPolicy 
                      * 
                      */
                     void SetIPFilterPolicy(const IPFilterPolicy& _iPFilterPolicy);
@@ -242,15 +242,15 @@ namespace TencentCloud
                     bool IPFilterPolicyHasBeenSet() const;
 
                     /**
-                     * 获取<p>Domain type. Valid values: <li>VOD: Domain name distributed by using the VOD product;</li> <li>EdgeOne: Domain name distributed by using the EdgeOne product.</li></p>
-                     * @return Type <p>Domain type. Valid values: <li>VOD: Domain name distributed by using the VOD product;</li> <li>EdgeOne: Domain name distributed by using the EdgeOne product.</li></p>
+                     * 获取
+                     * @return Type 
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置<p>Domain type. Valid values: <li>VOD: Domain name distributed by using the VOD product;</li> <li>EdgeOne: Domain name distributed by using the EdgeOne product.</li></p>
-                     * @param _type <p>Domain type. Valid values: <li>VOD: Domain name distributed by using the VOD product;</li> <li>EdgeOne: Domain name distributed by using the EdgeOne product.</li></p>
+                     * 设置
+                     * @param _type 
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -265,61 +265,61 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Domain name.</p>
+                     * 
                      */
                     std::string m_domain;
                     bool m_domainHasBeenSet;
 
                     /**
-                     * <p>Acceleration region information.</p>
+                     * 
                      */
                     std::vector<AccelerateAreaInfo> m_accelerateAreaInfos;
                     bool m_accelerateAreaInfosHasBeenSet;
 
                     /**
-                     * <p>Deployment state. Valid values:</p><li>Online: Goes live.</li><li>Deploying: Deployment in progress.</li><li>Locked: Locked. When this state occurs, unable to perform deployment change on that domain name.</li>
+                     * 
                      */
                     std::string m_deployStatus;
                     bool m_deployStatusHasBeenSet;
 
                     /**
-                     * <p>HTTPS configuration message.</p>
+                     * 
                      */
                     DomainHTTPSConfig m_hTTPSConfig;
                     bool m_hTTPSConfigHasBeenSet;
 
                     /**
-                     * <p><a href="https://www.tencentcloud.com/document/product/266/14047?from_cn_redirect=1">Key hotlink protection</a> configuration message.</p>
+                     * 
                      */
                     UrlSignatureAuthPolicy m_urlSignatureAuthPolicy;
                     bool m_urlSignatureAuthPolicyHasBeenSet;
 
                     /**
-                     * <p><a href="https://www.tencentcloud.com/document/product/266/14046?from_cn_redirect=1">Referer hotlink protection</a> configuration message.</p>
+                     * 
                      */
                     RefererAuthPolicy m_refererAuthPolicy;
                     bool m_refererAuthPolicyHasBeenSet;
 
                     /**
-                     * <p>The time when the domain name is added to the Tencent Cloud VOD system.</p><li>Format according to ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</li>
+                     * 
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * <p>Domain name QUIC configuration message.</p>
+                     * 
                      */
                     DomainQUICConfig m_qUICConfig;
                     bool m_qUICConfigHasBeenSet;
 
                     /**
-                     * <p>IP access restriction configuration message.</p>
+                     * 
                      */
                     IPFilterPolicy m_iPFilterPolicy;
                     bool m_iPFilterPolicyHasBeenSet;
 
                     /**
-                     * <p>Domain type. Valid values: <li>VOD: Domain name distributed by using the VOD product;</li> <li>EdgeOne: Domain name distributed by using the EdgeOne product.</li></p>
+                     * 
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;

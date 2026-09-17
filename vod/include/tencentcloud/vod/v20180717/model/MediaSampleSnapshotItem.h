@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Sampled screenshot information
+                * 
                 */
                 class MediaSampleSnapshotItem : public AbstractModel
                 {
@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Sampled screenshot specification ID. For more information, please see [Sampled Screencapturing Parameter Template](https://intl.cloud.tencent.com/document/product/266/33480?from_cn_redirect=1#.E9.87.87.E6.A0.B7.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Definition Sampled screenshot specification ID. For more information, please see [Sampled Screencapturing Parameter Template](https://intl.cloud.tencent.com/document/product/266/33480?from_cn_redirect=1#.E9.87.87.E6.A0.B7.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return Definition 
                      * 
                      */
                     int64_t GetDefinition() const;
 
                     /**
-                     * 设置Sampled screenshot specification ID. For more information, please see [Sampled Screencapturing Parameter Template](https://intl.cloud.tencent.com/document/product/266/33480?from_cn_redirect=1#.E9.87.87.E6.A0.B7.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _definition Sampled screenshot specification ID. For more information, please see [Sampled Screencapturing Parameter Template](https://intl.cloud.tencent.com/document/product/266/33480?from_cn_redirect=1#.E9.87.87.E6.A0.B7.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _definition 
                      * 
                      */
                     void SetDefinition(const int64_t& _definition);
@@ -72,27 +68,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool DefinitionHasBeenSet() const;
 
                     /**
-                     * 获取Sample type. Valid values:
-<li>Percent: samples at a specified percentage interval.</li>
-<li>Time: samples at a specified time interval.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return SampleType Sample type. Valid values:
-<li>Percent: samples at a specified percentage interval.</li>
-<li>Time: samples at a specified time interval.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return SampleType 
                      * 
                      */
                     std::string GetSampleType() const;
 
                     /**
-                     * 设置Sample type. Valid values:
-<li>Percent: samples at a specified percentage interval.</li>
-<li>Time: samples at a specified time interval.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _sampleType Sample type. Valid values:
-<li>Percent: samples at a specified percentage interval.</li>
-<li>Time: samples at a specified time interval.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _sampleType 
                      * 
                      */
                     void SetSampleType(const std::string& _sampleType);
@@ -105,27 +89,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool SampleTypeHasBeenSet() const;
 
                     /**
-                     * 获取Sampling interval
-<li>If `SampleType` is `Percent`, this value means taking a screenshot at an interval of the specified percentage.</li>
-<li>If `SampleType` is `Time`, this value means taking a screenshot at an interval of the specified time (in seconds). The first screenshot is always the first video frame.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Interval Sampling interval
-<li>If `SampleType` is `Percent`, this value means taking a screenshot at an interval of the specified percentage.</li>
-<li>If `SampleType` is `Time`, this value means taking a screenshot at an interval of the specified time (in seconds). The first screenshot is always the first video frame.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return Interval 
                      * 
                      */
                     int64_t GetInterval() const;
 
                     /**
-                     * 设置Sampling interval
-<li>If `SampleType` is `Percent`, this value means taking a screenshot at an interval of the specified percentage.</li>
-<li>If `SampleType` is `Time`, this value means taking a screenshot at an interval of the specified time (in seconds). The first screenshot is always the first video frame.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _interval Sampling interval
-<li>If `SampleType` is `Percent`, this value means taking a screenshot at an interval of the specified percentage.</li>
-<li>If `SampleType` is `Time`, this value means taking a screenshot at an interval of the specified time (in seconds). The first screenshot is always the first video frame.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _interval 
                      * 
                      */
                     void SetInterval(const int64_t& _interval);
@@ -138,19 +110,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool IntervalHasBeenSet() const;
 
                     /**
-                     * 获取List of URLs of generated screenshots.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return ImageUrlSet List of URLs of generated screenshots.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return ImageUrlSet 
                      * 
                      */
                     std::vector<std::string> GetImageUrlSet() const;
 
                     /**
-                     * 设置List of URLs of generated screenshots.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _imageUrlSet List of URLs of generated screenshots.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _imageUrlSet 
                      * 
                      */
                     void SetImageUrlSet(const std::vector<std::string>& _imageUrlSet);
@@ -163,19 +131,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool ImageUrlSetHasBeenSet() const;
 
                     /**
-                     * 获取List of watermarking template IDs if the screenshots are watermarked.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return WaterMarkDefinition List of watermarking template IDs if the screenshots are watermarked.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return WaterMarkDefinition 
                      * 
                      */
                     std::vector<int64_t> GetWaterMarkDefinition() const;
 
                     /**
-                     * 设置List of watermarking template IDs if the screenshots are watermarked.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _waterMarkDefinition List of watermarking template IDs if the screenshots are watermarked.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _waterMarkDefinition 
                      * 
                      */
                     void SetWaterMarkDefinition(const std::vector<int64_t>& _waterMarkDefinition);
@@ -190,40 +154,31 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Sampled screenshot specification ID. For more information, please see [Sampled Screencapturing Parameter Template](https://intl.cloud.tencent.com/document/product/266/33480?from_cn_redirect=1#.E9.87.87.E6.A0.B7.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t m_definition;
                     bool m_definitionHasBeenSet;
 
                     /**
-                     * Sample type. Valid values:
-<li>Percent: samples at a specified percentage interval.</li>
-<li>Time: samples at a specified time interval.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string m_sampleType;
                     bool m_sampleTypeHasBeenSet;
 
                     /**
-                     * Sampling interval
-<li>If `SampleType` is `Percent`, this value means taking a screenshot at an interval of the specified percentage.</li>
-<li>If `SampleType` is `Time`, this value means taking a screenshot at an interval of the specified time (in seconds). The first screenshot is always the first video frame.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t m_interval;
                     bool m_intervalHasBeenSet;
 
                     /**
-                     * List of URLs of generated screenshots.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<std::string> m_imageUrlSet;
                     bool m_imageUrlSetHasBeenSet;
 
                     /**
-                     * List of watermarking template IDs if the screenshots are watermarked.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<int64_t> m_waterMarkDefinition;
                     bool m_waterMarkDefinitionHasBeenSet;

@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Availability zone list of all regions.
-                     * @return ZoneSet Availability zone list of all regions.
+                     * 获取<p>AZ list of all regions.</p>
+                     * @return ZoneSet <p>AZ list of all regions.</p>
                      * 
                      */
                     std::vector<ZoneInfo> GetZoneSet() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool ZoneSetHasBeenSet() const;
 
                     /**
-                     * 获取Total number of availability zones.
-                     * @return TotalCount Total number of availability zones.
+                     * 获取<p>Total number of availability zones.</p>
+                     * @return TotalCount <p>Total number of availability zones.</p>
                      * 
                      */
                     uint64_t GetTotalCount() const;
@@ -75,13 +75,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Availability zone list of all regions.
+                     * <p>AZ list of all regions.</p>
                      */
                     std::vector<ZoneInfo> m_zoneSet;
                     bool m_zoneSetHasBeenSet;
 
                     /**
-                     * Total number of availability zones.
+                     * <p>Total number of availability zones.</p>
                      */
                     uint64_t m_totalCount;
                     bool m_totalCountHasBeenSet;

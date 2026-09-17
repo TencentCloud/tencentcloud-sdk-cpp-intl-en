@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Total number of records that meet the filtering conditions.
-                     * @return TotalCount Total number of records that meet the filtering conditions.
+                     * 获取
+                     * @return TotalCount 
                      * 
                      */
                     uint64_t GetTotalCount() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取Specified time point screenshot template detail list.
-                     * @return SnapshotByTimeOffsetTemplateSet Specified time point screenshot template detail list.
+                     * 获取
+                     * @return SnapshotByTimeOffsetTemplateSet 
                      * 
                      */
                     std::vector<SnapshotByTimeOffsetTemplate> GetSnapshotByTimeOffsetTemplateSet() const;
@@ -75,13 +75,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Total number of records that meet the filtering conditions.
+                     * 
                      */
                     uint64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * Specified time point screenshot template detail list.
+                     * 
                      */
                     std::vector<SnapshotByTimeOffsetTemplate> m_snapshotByTimeOffsetTemplateSet;
                     bool m_snapshotByTimeOffsetTemplateSetHasBeenSet;

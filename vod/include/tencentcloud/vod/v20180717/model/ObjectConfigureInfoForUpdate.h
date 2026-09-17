@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Control parameter of object recognition task
+                * 
                 */
                 class ObjectConfigureInfoForUpdate : public AbstractModel
                 {
@@ -47,23 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Switch of object recognition task. Valid values:
-<li>ON: enables intelligent object recognition task;</li>
-<li>OFF: disables intelligent object recognition task.</li>
-                     * @return Switch Switch of object recognition task. Valid values:
-<li>ON: enables intelligent object recognition task;</li>
-<li>OFF: disables intelligent object recognition task.</li>
+                     * 获取
+                     * @return Switch 
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Switch of object recognition task. Valid values:
-<li>ON: enables intelligent object recognition task;</li>
-<li>OFF: disables intelligent object recognition task.</li>
-                     * @param _switch Switch of object recognition task. Valid values:
-<li>ON: enables intelligent object recognition task;</li>
-<li>OFF: disables intelligent object recognition task.</li>
+                     * 设置
+                     * @param _switch 
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -76,27 +68,15 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取Object library. Valid values:
-<li>Default: default object library;</li>
-<li>UserDefine: custom object library.</li>
-<li>All: both default and custom object libraries will be used.</li>
-                     * @return ObjectLibrary Object library. Valid values:
-<li>Default: default object library;</li>
-<li>UserDefine: custom object library.</li>
-<li>All: both default and custom object libraries will be used.</li>
+                     * 获取
+                     * @return ObjectLibrary 
                      * 
                      */
                     std::string GetObjectLibrary() const;
 
                     /**
-                     * 设置Object library. Valid values:
-<li>Default: default object library;</li>
-<li>UserDefine: custom object library.</li>
-<li>All: both default and custom object libraries will be used.</li>
-                     * @param _objectLibrary Object library. Valid values:
-<li>Default: default object library;</li>
-<li>UserDefine: custom object library.</li>
-<li>All: both default and custom object libraries will be used.</li>
+                     * 设置
+                     * @param _objectLibrary 
                      * 
                      */
                     void SetObjectLibrary(const std::string& _objectLibrary);
@@ -111,18 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Switch of object recognition task. Valid values:
-<li>ON: enables intelligent object recognition task;</li>
-<li>OFF: disables intelligent object recognition task.</li>
+                     * 
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * Object library. Valid values:
-<li>Default: default object library;</li>
-<li>UserDefine: custom object library.</li>
-<li>All: both default and custom object libraries will be used.</li>
+                     * 
                      */
                     std::string m_objectLibrary;
                     bool m_objectLibraryHasBeenSet;

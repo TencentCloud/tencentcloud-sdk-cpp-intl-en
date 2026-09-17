@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * The QUIC configuration of a domain.
+                * 
                 */
                 class DomainQUICConfig : public AbstractModel
                 {
@@ -47,23 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The QUIC status. Valid values:
-<li>`Enabled`</li>
-<li>`Disabled`</li>
-                     * @return Status The QUIC status. Valid values:
-<li>`Enabled`</li>
-<li>`Disabled`</li>
+                     * 获取
+                     * @return Status 
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置The QUIC status. Valid values:
-<li>`Enabled`</li>
-<li>`Disabled`</li>
-                     * @param _status The QUIC status. Valid values:
-<li>`Enabled`</li>
-<li>`Disabled`</li>
+                     * 设置
+                     * @param _status 
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -78,9 +70,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The QUIC status. Valid values:
-<li>`Enabled`</li>
-<li>`Disabled`</li>
+                     * 
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;

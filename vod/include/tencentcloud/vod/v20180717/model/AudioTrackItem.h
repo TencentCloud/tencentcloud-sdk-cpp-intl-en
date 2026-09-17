@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Audio segment information of audio track.
+                * 
                 */
                 class AudioTrackItem : public AbstractModel
                 {
@@ -48,27 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Source of media material for audio segment, which can be:
-<li>ID of VOD media files</li>
-<li>Download URL of other media files</li>
-Note: when a download URL of other media files is used as the material source and access control (such as hotlink protection) is enabled, the URL needs to carry access control parameters (such as hotlink protection signature).
-                     * @return SourceMedia Source of media material for audio segment, which can be:
-<li>ID of VOD media files</li>
-<li>Download URL of other media files</li>
-Note: when a download URL of other media files is used as the material source and access control (such as hotlink protection) is enabled, the URL needs to carry access control parameters (such as hotlink protection signature).
+                     * 获取
+                     * @return SourceMedia 
                      * 
                      */
                     std::string GetSourceMedia() const;
 
                     /**
-                     * 设置Source of media material for audio segment, which can be:
-<li>ID of VOD media files</li>
-<li>Download URL of other media files</li>
-Note: when a download URL of other media files is used as the material source and access control (such as hotlink protection) is enabled, the URL needs to carry access control parameters (such as hotlink protection signature).
-                     * @param _sourceMedia Source of media material for audio segment, which can be:
-<li>ID of VOD media files</li>
-<li>Download URL of other media files</li>
-Note: when a download URL of other media files is used as the material source and access control (such as hotlink protection) is enabled, the URL needs to carry access control parameters (such as hotlink protection signature).
+                     * 设置
+                     * @param _sourceMedia 
                      * 
                      */
                     void SetSourceMedia(const std::string& _sourceMedia);
@@ -81,15 +69,15 @@ Note: when a download URL of other media files is used as the material source an
                     bool SourceMediaHasBeenSet() const;
 
                     /**
-                     * 获取Start time of audio segment in material file in seconds. Default value: 0, which means to start capturing from the beginning position of the material.
-                     * @return SourceMediaStartTime Start time of audio segment in material file in seconds. Default value: 0, which means to start capturing from the beginning position of the material.
+                     * 获取
+                     * @return SourceMediaStartTime 
                      * 
                      */
                     double GetSourceMediaStartTime() const;
 
                     /**
-                     * 设置Start time of audio segment in material file in seconds. Default value: 0, which means to start capturing from the beginning position of the material.
-                     * @param _sourceMediaStartTime Start time of audio segment in material file in seconds. Default value: 0, which means to start capturing from the beginning position of the material.
+                     * 设置
+                     * @param _sourceMediaStartTime 
                      * 
                      */
                     void SetSourceMediaStartTime(const double& _sourceMediaStartTime);
@@ -102,15 +90,15 @@ Note: when a download URL of other media files is used as the material source an
                     bool SourceMediaStartTimeHasBeenSet() const;
 
                     /**
-                     * 获取Audio segment duration in seconds. By default, the length of the material will be used, which means that the entire material will be captured.
-                     * @return Duration Audio segment duration in seconds. By default, the length of the material will be used, which means that the entire material will be captured.
+                     * 获取
+                     * @return Duration 
                      * 
                      */
                     double GetDuration() const;
 
                     /**
-                     * 设置Audio segment duration in seconds. By default, the length of the material will be used, which means that the entire material will be captured.
-                     * @param _duration Audio segment duration in seconds. By default, the length of the material will be used, which means that the entire material will be captured.
+                     * 设置
+                     * @param _duration 
                      * 
                      */
                     void SetDuration(const double& _duration);
@@ -123,23 +111,15 @@ Note: when a download URL of other media files is used as the material source an
                     bool DurationHasBeenSet() const;
 
                     /**
-                     * 获取The target audio duration, in seconds.
-<li>If `TargetDuration` is empty or `0`, the target duration is the same as `Duration`.</li>
-<li>If `TargetDuration` is a value greater than 0, the playback speed will be changed to make the final audio duration the same as the value of `TargetDuration`.</li>
-                     * @return TargetDuration The target audio duration, in seconds.
-<li>If `TargetDuration` is empty or `0`, the target duration is the same as `Duration`.</li>
-<li>If `TargetDuration` is a value greater than 0, the playback speed will be changed to make the final audio duration the same as the value of `TargetDuration`.</li>
+                     * 获取
+                     * @return TargetDuration 
                      * 
                      */
                     double GetTargetDuration() const;
 
                     /**
-                     * 设置The target audio duration, in seconds.
-<li>If `TargetDuration` is empty or `0`, the target duration is the same as `Duration`.</li>
-<li>If `TargetDuration` is a value greater than 0, the playback speed will be changed to make the final audio duration the same as the value of `TargetDuration`.</li>
-                     * @param _targetDuration The target audio duration, in seconds.
-<li>If `TargetDuration` is empty or `0`, the target duration is the same as `Duration`.</li>
-<li>If `TargetDuration` is a value greater than 0, the playback speed will be changed to make the final audio duration the same as the value of `TargetDuration`.</li>
+                     * 设置
+                     * @param _targetDuration 
                      * 
                      */
                     void SetTargetDuration(const double& _targetDuration);
@@ -152,19 +132,15 @@ Note: when a download URL of other media files is used as the material source an
                     bool TargetDurationHasBeenSet() const;
 
                     /**
-                     * 获取Operation on audio segment, such as volume adjustment.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return AudioOperations Operation on audio segment, such as volume adjustment.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return AudioOperations 
                      * 
                      */
                     std::vector<AudioTransform> GetAudioOperations() const;
 
                     /**
-                     * 设置Operation on audio segment, such as volume adjustment.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _audioOperations Operation on audio segment, such as volume adjustment.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _audioOperations 
                      * 
                      */
                     void SetAudioOperations(const std::vector<AudioTransform>& _audioOperations);
@@ -179,37 +155,31 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Source of media material for audio segment, which can be:
-<li>ID of VOD media files</li>
-<li>Download URL of other media files</li>
-Note: when a download URL of other media files is used as the material source and access control (such as hotlink protection) is enabled, the URL needs to carry access control parameters (such as hotlink protection signature).
+                     * 
                      */
                     std::string m_sourceMedia;
                     bool m_sourceMediaHasBeenSet;
 
                     /**
-                     * Start time of audio segment in material file in seconds. Default value: 0, which means to start capturing from the beginning position of the material.
+                     * 
                      */
                     double m_sourceMediaStartTime;
                     bool m_sourceMediaStartTimeHasBeenSet;
 
                     /**
-                     * Audio segment duration in seconds. By default, the length of the material will be used, which means that the entire material will be captured.
+                     * 
                      */
                     double m_duration;
                     bool m_durationHasBeenSet;
 
                     /**
-                     * The target audio duration, in seconds.
-<li>If `TargetDuration` is empty or `0`, the target duration is the same as `Duration`.</li>
-<li>If `TargetDuration` is a value greater than 0, the playback speed will be changed to make the final audio duration the same as the value of `TargetDuration`.</li>
+                     * 
                      */
                     double m_targetDuration;
                     bool m_targetDurationHasBeenSet;
 
                     /**
-                     * Operation on audio segment, such as volume adjustment.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<AudioTransform> m_audioOperations;
                     bool m_audioOperationsHasBeenSet;

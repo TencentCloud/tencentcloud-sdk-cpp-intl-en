@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
-                     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+                     * 获取
+                     * @return SubAppId 
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
-                     * @param _subAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+                     * 设置
+                     * @param _subAppId 
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -64,31 +64,15 @@ namespace TencentCloud
                     bool SubAppIdHasBeenSet() const;
 
                     /**
-                     * 获取Application status. Valid values:
-<li>On: enabled.</li>
-<li>Off: Disabled.</li>
-<li>Destroyed: Terminate.</li>
-If the current status is Destroying, the enable operation is not allowed. You have to wait until the destruction is completed to re-enable it.
-                     * @return Status Application status. Valid values:
-<li>On: enabled.</li>
-<li>Off: Disabled.</li>
-<li>Destroyed: Terminate.</li>
-If the current status is Destroying, the enable operation is not allowed. You have to wait until the destruction is completed to re-enable it.
+                     * 获取
+                     * @return Status 
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置Application status. Valid values:
-<li>On: enabled.</li>
-<li>Off: Disabled.</li>
-<li>Destroyed: Terminate.</li>
-If the current status is Destroying, the enable operation is not allowed. You have to wait until the destruction is completed to re-enable it.
-                     * @param _status Application status. Valid values:
-<li>On: enabled.</li>
-<li>Off: Disabled.</li>
-<li>Destroyed: Terminate.</li>
-If the current status is Destroying, the enable operation is not allowed. You have to wait until the destruction is completed to re-enable it.
+                     * 设置
+                     * @param _status 
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -103,17 +87,13 @@ If the current status is Destroying, the enable operation is not allowed. You ha
                 private:
 
                     /**
-                     * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+                     * 
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
 
                     /**
-                     * Application status. Valid values:
-<li>On: enabled.</li>
-<li>Off: Disabled.</li>
-<li>Destroyed: Terminate.</li>
-If the current status is Destroying, the enable operation is not allowed. You have to wait until the destruction is completed to re-enable it.
+                     * 
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;

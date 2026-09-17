@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Unique identifier of the Large Model Understanding Template</p>
-                     * @return Definition <p>Unique identifier of the Large Model Understanding Template</p>
+                     * 获取
+                     * @return Definition 
                      * 
                      */
                     int64_t GetDefinition() const;
@@ -60,7 +60,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Unique identifier of the Large Model Understanding Template</p>
+                     * 
                      */
                     int64_t m_definition;
                     bool m_definitionHasBeenSet;

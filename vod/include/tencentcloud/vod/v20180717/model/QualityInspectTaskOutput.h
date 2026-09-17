@@ -25,6 +25,8 @@
 #include <tencentcloud/core/utils/rapidjson/stringbuffer.h>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/vod/v20180717/model/QualityInspectResultItem.h>
+#include <tencentcloud/vod/v20180717/model/QualityInspectContainerDiagnoseResultItem.h>
+#include <tencentcloud/vod/v20180717/model/QualityInspectLLMDetectionReport.h>
 
 
 namespace TencentCloud
@@ -36,7 +38,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Media quality inspection task generates.
+                * 
                 */
                 class QualityInspectTaskOutput : public AbstractModel
                 {
@@ -48,23 +50,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether there is no audio track in the media file. Value ranges from...to...
-<li>0: No, have audio tracks;</li>
-<li>1: Yes, no audio track.</li>
-                     * @return NoAudio Whether there is no audio track in the media file. Value ranges from...to...
-<li>0: No, have audio tracks;</li>
-<li>1: Yes, no audio track.</li>
+                     * 获取
+                     * @return NoAudio 
                      * 
                      */
                     int64_t GetNoAudio() const;
 
                     /**
-                     * 设置Whether there is no audio track in the media file. Value ranges from...to...
-<li>0: No, have audio tracks;</li>
-<li>1: Yes, no audio track.</li>
-                     * @param _noAudio Whether there is no audio track in the media file. Value ranges from...to...
-<li>0: No, have audio tracks;</li>
-<li>1: Yes, no audio track.</li>
+                     * 设置
+                     * @param _noAudio 
                      * 
                      */
                     void SetNoAudio(const int64_t& _noAudio);
@@ -77,23 +71,15 @@ namespace TencentCloud
                     bool NoAudioHasBeenSet() const;
 
                     /**
-                     * 获取Whether there is no video track in the media file. Value ranges from...to...
-<li>0: No, meaning there is a video track;</li>
-<li>1: Yes, no video track.</li>
-                     * @return NoVideo Whether there is no video track in the media file. Value ranges from...to...
-<li>0: No, meaning there is a video track;</li>
-<li>1: Yes, no video track.</li>
+                     * 获取
+                     * @return NoVideo 
                      * 
                      */
                     int64_t GetNoVideo() const;
 
                     /**
-                     * 设置Whether there is no video track in the media file. Value ranges from...to...
-<li>0: No, meaning there is a video track;</li>
-<li>1: Yes, no video track.</li>
-                     * @param _noVideo Whether there is no video track in the media file. Value ranges from...to...
-<li>0: No, meaning there is a video track;</li>
-<li>1: Yes, no video track.</li>
+                     * 设置
+                     * @param _noVideo 
                      * 
                      */
                     void SetNoVideo(const int64_t& _noVideo);
@@ -106,15 +92,15 @@ namespace TencentCloud
                     bool NoVideoHasBeenSet() const;
 
                     /**
-                     * 获取Video picture quality score, value ranges from 0 to 100.
-                     * @return QualityEvaluationScore Video picture quality score, value ranges from 0 to 100.
+                     * 获取
+                     * @return QualityEvaluationScore 
                      * 
                      */
                     uint64_t GetQualityEvaluationScore() const;
 
                     /**
-                     * 设置Video picture quality score, value ranges from 0 to 100.
-                     * @param _qualityEvaluationScore Video picture quality score, value ranges from 0 to 100.
+                     * 设置
+                     * @param _qualityEvaluationScore 
                      * 
                      */
                     void SetQualityEvaluationScore(const uint64_t& _qualityEvaluationScore);
@@ -127,15 +113,15 @@ namespace TencentCloud
                     bool QualityEvaluationScoreHasBeenSet() const;
 
                     /**
-                     * 获取List of abnormalities detected in audio and video quality.
-                     * @return QualityInspectResultSet List of abnormalities detected in audio and video quality.
+                     * 获取
+                     * @return QualityInspectResultSet 
                      * 
                      */
                     std::vector<QualityInspectResultItem> GetQualityInspectResultSet() const;
 
                     /**
-                     * 设置List of abnormalities detected in audio and video quality.
-                     * @param _qualityInspectResultSet List of abnormalities detected in audio and video quality.
+                     * 设置
+                     * @param _qualityInspectResultSet 
                      * 
                      */
                     void SetQualityInspectResultSet(const std::vector<QualityInspectResultItem>& _qualityInspectResultSet);
@@ -147,35 +133,139 @@ namespace TencentCloud
                      */
                     bool QualityInspectResultSetHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return QualityEvaluationMeanOpinionScore 
+                     * 
+                     */
+                    double GetQualityEvaluationMeanOpinionScore() const;
+
+                    /**
+                     * 设置
+                     * @param _qualityEvaluationMeanOpinionScore 
+                     * 
+                     */
+                    void SetQualityEvaluationMeanOpinionScore(const double& _qualityEvaluationMeanOpinionScore);
+
+                    /**
+                     * 判断参数 QualityEvaluationMeanOpinionScore 是否已赋值
+                     * @return QualityEvaluationMeanOpinionScore 是否已赋值
+                     * 
+                     */
+                    bool QualityEvaluationMeanOpinionScoreHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return AestheticEvaluationScore 
+                     * 
+                     */
+                    int64_t GetAestheticEvaluationScore() const;
+
+                    /**
+                     * 设置
+                     * @param _aestheticEvaluationScore 
+                     * 
+                     */
+                    void SetAestheticEvaluationScore(const int64_t& _aestheticEvaluationScore);
+
+                    /**
+                     * 判断参数 AestheticEvaluationScore 是否已赋值
+                     * @return AestheticEvaluationScore 是否已赋值
+                     * 
+                     */
+                    bool AestheticEvaluationScoreHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return ContainerDiagnoseResultSet 
+                     * 
+                     */
+                    std::vector<QualityInspectContainerDiagnoseResultItem> GetContainerDiagnoseResultSet() const;
+
+                    /**
+                     * 设置
+                     * @param _containerDiagnoseResultSet 
+                     * 
+                     */
+                    void SetContainerDiagnoseResultSet(const std::vector<QualityInspectContainerDiagnoseResultItem>& _containerDiagnoseResultSet);
+
+                    /**
+                     * 判断参数 ContainerDiagnoseResultSet 是否已赋值
+                     * @return ContainerDiagnoseResultSet 是否已赋值
+                     * 
+                     */
+                    bool ContainerDiagnoseResultSetHasBeenSet() const;
+
+                    /**
+                     * 获取
+                     * @return LLMDetectionReport 
+                     * 
+                     */
+                    QualityInspectLLMDetectionReport GetLLMDetectionReport() const;
+
+                    /**
+                     * 设置
+                     * @param _lLMDetectionReport 
+                     * 
+                     */
+                    void SetLLMDetectionReport(const QualityInspectLLMDetectionReport& _lLMDetectionReport);
+
+                    /**
+                     * 判断参数 LLMDetectionReport 是否已赋值
+                     * @return LLMDetectionReport 是否已赋值
+                     * 
+                     */
+                    bool LLMDetectionReportHasBeenSet() const;
+
                 private:
 
                     /**
-                     * Whether there is no audio track in the media file. Value ranges from...to...
-<li>0: No, have audio tracks;</li>
-<li>1: Yes, no audio track.</li>
+                     * 
                      */
                     int64_t m_noAudio;
                     bool m_noAudioHasBeenSet;
 
                     /**
-                     * Whether there is no video track in the media file. Value ranges from...to...
-<li>0: No, meaning there is a video track;</li>
-<li>1: Yes, no video track.</li>
+                     * 
                      */
                     int64_t m_noVideo;
                     bool m_noVideoHasBeenSet;
 
                     /**
-                     * Video picture quality score, value ranges from 0 to 100.
+                     * 
                      */
                     uint64_t m_qualityEvaluationScore;
                     bool m_qualityEvaluationScoreHasBeenSet;
 
                     /**
-                     * List of abnormalities detected in audio and video quality.
+                     * 
                      */
                     std::vector<QualityInspectResultItem> m_qualityInspectResultSet;
                     bool m_qualityInspectResultSetHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    double m_qualityEvaluationMeanOpinionScore;
+                    bool m_qualityEvaluationMeanOpinionScoreHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    int64_t m_aestheticEvaluationScore;
+                    bool m_aestheticEvaluationScoreHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::vector<QualityInspectContainerDiagnoseResultItem> m_containerDiagnoseResultSet;
+                    bool m_containerDiagnoseResultSetHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    QualityInspectLLMDetectionReport m_lLMDetectionReport;
+                    bool m_lLMDetectionReportHasBeenSet;
 
                 };
             }

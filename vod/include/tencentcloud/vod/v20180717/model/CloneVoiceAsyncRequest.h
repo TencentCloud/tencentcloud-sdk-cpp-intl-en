@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>VOD application ID. For customers who activate on-demand services on or after December 25, 2023, this field must be filled in with the app ID to access resources in VOD applications, whether in the default or a newly created application.</p>
-                     * @return SubAppId <p>VOD application ID. For customers who activate on-demand services on or after December 25, 2023, this field must be filled in with the app ID to access resources in VOD applications, whether in the default or a newly created application.</p>
+                     * 获取
+                     * @return SubAppId 
                      * 
                      */
                     std::string GetSubAppId() const;
 
                     /**
-                     * 设置<p>VOD application ID. For customers who activate on-demand services on or after December 25, 2023, this field must be filled in with the app ID to access resources in VOD applications, whether in the default or a newly created application.</p>
-                     * @param _subAppId <p>VOD application ID. For customers who activate on-demand services on or after December 25, 2023, this field must be filled in with the app ID to access resources in VOD applications, whether in the default or a newly created application.</p>
+                     * 设置
+                     * @param _subAppId 
                      * 
                      */
                     void SetSubAppId(const std::string& _subAppId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool SubAppIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>Base64-encoded audio for cloning.</p>
-                     * @return AudioData <p>Base64-encoded audio for cloning.</p>
+                     * 获取
+                     * @return AudioData 
                      * 
                      */
                     std::string GetAudioData() const;
 
                     /**
-                     * 设置<p>Base64-encoded audio for cloning.</p>
-                     * @param _audioData <p>Base64-encoded audio for cloning.</p>
+                     * 设置
+                     * @param _audioData 
                      * 
                      */
                     void SetAudioData(const std::string& _audioData);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool AudioDataHasBeenSet() const;
 
                     /**
-                     * 获取<p>Cloning audio URL. Valid when AudioData is empty.</p>
-                     * @return AudioUrl <p>Cloning audio URL. Valid when AudioData is empty.</p>
+                     * 获取
+                     * @return AudioUrl 
                      * 
                      */
                     std::string GetAudioUrl() const;
 
                     /**
-                     * 设置<p>Cloning audio URL. Valid when AudioData is empty.</p>
-                     * @param _audioUrl <p>Cloning audio URL. Valid when AudioData is empty.</p>
+                     * 设置
+                     * @param _audioUrl 
                      * 
                      */
                     void SetAudioUrl(const std::string& _audioUrl);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool AudioUrlHasBeenSet() const;
 
                     /**
-                     * 获取<p>Clone file FileID. Valid when AudioData and AudioUrl are empty</p>
-                     * @return AudioFileId <p>Clone file FileID. Valid when AudioData and AudioUrl are empty</p>
+                     * 获取
+                     * @return AudioFileId 
                      * 
                      */
                     std::string GetAudioFileId() const;
 
                     /**
-                     * 设置<p>Clone file FileID. Valid when AudioData and AudioUrl are empty</p>
-                     * @param _audioFileId <p>Clone file FileID. Valid when AudioData and AudioUrl are empty</p>
+                     * 设置
+                     * @param _audioFileId 
                      * 
                      */
                     void SetAudioFileId(const std::string& _audioFileId);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool AudioFileIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>Language enhancement, such as "zh" "en" "auto", default "auto"</p>
-                     * @return LanguageBoost <p>Language enhancement, such as "zh" "en" "auto", default "auto"</p>
+                     * 获取
+                     * @return LanguageBoost 
                      * 
                      */
                     std::string GetLanguageBoost() const;
 
                     /**
-                     * 设置<p>Language enhancement, such as "zh" "en" "auto", default "auto"</p>
-                     * @param _languageBoost <p>Language enhancement, such as "zh" "en" "auto", default "auto"</p>
+                     * 设置
+                     * @param _languageBoost 
                      * 
                      */
                     void SetLanguageBoost(const std::string& _languageBoost);
@@ -148,15 +148,15 @@ namespace TencentCloud
                     bool LanguageBoostHasBeenSet() const;
 
                     /**
-                     * 获取<p>Timbre clone expansion parameters. Supported fields of <code>ExtParam</code>: </p><ul><li><code>text</code> (string): Text for audition synthesis, up to 1000 characters; do not return the audition audio when empty or not passed.</li></ul>
-                     * @return ExtParam <p>Timbre clone expansion parameters. Supported fields of <code>ExtParam</code>: </p><ul><li><code>text</code> (string): Text for audition synthesis, up to 1000 characters; do not return the audition audio when empty or not passed.</li></ul>
+                     * 获取<p>Voice clone expansion parameters. Fields supported by <code>ExtParam</code>:</p><ul>  <li><code>text</code> (string): Audition synthesis text, up to <code>1000</code> characters. When not empty, <code>tts_model</code> must be passed simultaneously. After the clone is successful, the audition audio <code>DemoAudio</code> is returned.</li>  <li><code>model</code> (string): Clone model. Default: <code>minimax-voice-clone</code>.</li>  <li><code>tts_model</code> (string): Model used to synthesize the audition audio. Options: <code>minimax-speech-2.8-hd</code>, <code>minimax-speech-2.8-turbo</code>, <code>minimax-speech-2.6-hd</code>, <code>minimax-speech-2.6-turbo</code>, <code>minimax-speech-02-hd</code>, <code>minimax-speech-02-turbo</code>. Required when <code>text</code> is not empty.</li>  <li><code>text_lang</code> (string): Language of the audition text.</li>  <li><code>voice_profile</code> (object): Voice profile. Optional fields:    <ul>      <li><code>name</code> (string): Timbre name.</li>      <li><code>description</code> (string): Timbre description.</li>      <li><code>gender</code> (string): Gender. Options: <code>male</code> / <code>female</code> / <code>unknown</code>.</li>      <li><code>age</code> (string): Age segment. Options: <code>child</code> / <code>teenager</code> / <code>youth</code> / <code>middle_aged</code> / <code>senior</code> / <code>unknown</code>.</li>      <li><code>languages</code> (string[]): Supported languages, such as <code>["zh", "en"]</code>.</li>      <li><code>labels</code> (string[]): Timbre tags, such as <code>["magnetic"]</code>.</li>      <li><code>scenes</code> (string[]): Application scenarios, such as <code>["commentate"]</code>.</li>    </ul>  </li></ul>
+                     * @return ExtParam <p>Voice clone expansion parameters. Fields supported by <code>ExtParam</code>:</p><ul>  <li><code>text</code> (string): Audition synthesis text, up to <code>1000</code> characters. When not empty, <code>tts_model</code> must be passed simultaneously. After the clone is successful, the audition audio <code>DemoAudio</code> is returned.</li>  <li><code>model</code> (string): Clone model. Default: <code>minimax-voice-clone</code>.</li>  <li><code>tts_model</code> (string): Model used to synthesize the audition audio. Options: <code>minimax-speech-2.8-hd</code>, <code>minimax-speech-2.8-turbo</code>, <code>minimax-speech-2.6-hd</code>, <code>minimax-speech-2.6-turbo</code>, <code>minimax-speech-02-hd</code>, <code>minimax-speech-02-turbo</code>. Required when <code>text</code> is not empty.</li>  <li><code>text_lang</code> (string): Language of the audition text.</li>  <li><code>voice_profile</code> (object): Voice profile. Optional fields:    <ul>      <li><code>name</code> (string): Timbre name.</li>      <li><code>description</code> (string): Timbre description.</li>      <li><code>gender</code> (string): Gender. Options: <code>male</code> / <code>female</code> / <code>unknown</code>.</li>      <li><code>age</code> (string): Age segment. Options: <code>child</code> / <code>teenager</code> / <code>youth</code> / <code>middle_aged</code> / <code>senior</code> / <code>unknown</code>.</li>      <li><code>languages</code> (string[]): Supported languages, such as <code>["zh", "en"]</code>.</li>      <li><code>labels</code> (string[]): Timbre tags, such as <code>["magnetic"]</code>.</li>      <li><code>scenes</code> (string[]): Application scenarios, such as <code>["commentate"]</code>.</li>    </ul>  </li></ul>
                      * 
                      */
                     std::string GetExtParam() const;
 
                     /**
-                     * 设置<p>Timbre clone expansion parameters. Supported fields of <code>ExtParam</code>: </p><ul><li><code>text</code> (string): Text for audition synthesis, up to 1000 characters; do not return the audition audio when empty or not passed.</li></ul>
-                     * @param _extParam <p>Timbre clone expansion parameters. Supported fields of <code>ExtParam</code>: </p><ul><li><code>text</code> (string): Text for audition synthesis, up to 1000 characters; do not return the audition audio when empty or not passed.</li></ul>
+                     * 设置<p>Voice clone expansion parameters. Fields supported by <code>ExtParam</code>:</p><ul>  <li><code>text</code> (string): Audition synthesis text, up to <code>1000</code> characters. When not empty, <code>tts_model</code> must be passed simultaneously. After the clone is successful, the audition audio <code>DemoAudio</code> is returned.</li>  <li><code>model</code> (string): Clone model. Default: <code>minimax-voice-clone</code>.</li>  <li><code>tts_model</code> (string): Model used to synthesize the audition audio. Options: <code>minimax-speech-2.8-hd</code>, <code>minimax-speech-2.8-turbo</code>, <code>minimax-speech-2.6-hd</code>, <code>minimax-speech-2.6-turbo</code>, <code>minimax-speech-02-hd</code>, <code>minimax-speech-02-turbo</code>. Required when <code>text</code> is not empty.</li>  <li><code>text_lang</code> (string): Language of the audition text.</li>  <li><code>voice_profile</code> (object): Voice profile. Optional fields:    <ul>      <li><code>name</code> (string): Timbre name.</li>      <li><code>description</code> (string): Timbre description.</li>      <li><code>gender</code> (string): Gender. Options: <code>male</code> / <code>female</code> / <code>unknown</code>.</li>      <li><code>age</code> (string): Age segment. Options: <code>child</code> / <code>teenager</code> / <code>youth</code> / <code>middle_aged</code> / <code>senior</code> / <code>unknown</code>.</li>      <li><code>languages</code> (string[]): Supported languages, such as <code>["zh", "en"]</code>.</li>      <li><code>labels</code> (string[]): Timbre tags, such as <code>["magnetic"]</code>.</li>      <li><code>scenes</code> (string[]): Application scenarios, such as <code>["commentate"]</code>.</li>    </ul>  </li></ul>
+                     * @param _extParam <p>Voice clone expansion parameters. Fields supported by <code>ExtParam</code>:</p><ul>  <li><code>text</code> (string): Audition synthesis text, up to <code>1000</code> characters. When not empty, <code>tts_model</code> must be passed simultaneously. After the clone is successful, the audition audio <code>DemoAudio</code> is returned.</li>  <li><code>model</code> (string): Clone model. Default: <code>minimax-voice-clone</code>.</li>  <li><code>tts_model</code> (string): Model used to synthesize the audition audio. Options: <code>minimax-speech-2.8-hd</code>, <code>minimax-speech-2.8-turbo</code>, <code>minimax-speech-2.6-hd</code>, <code>minimax-speech-2.6-turbo</code>, <code>minimax-speech-02-hd</code>, <code>minimax-speech-02-turbo</code>. Required when <code>text</code> is not empty.</li>  <li><code>text_lang</code> (string): Language of the audition text.</li>  <li><code>voice_profile</code> (object): Voice profile. Optional fields:    <ul>      <li><code>name</code> (string): Timbre name.</li>      <li><code>description</code> (string): Timbre description.</li>      <li><code>gender</code> (string): Gender. Options: <code>male</code> / <code>female</code> / <code>unknown</code>.</li>      <li><code>age</code> (string): Age segment. Options: <code>child</code> / <code>teenager</code> / <code>youth</code> / <code>middle_aged</code> / <code>senior</code> / <code>unknown</code>.</li>      <li><code>languages</code> (string[]): Supported languages, such as <code>["zh", "en"]</code>.</li>      <li><code>labels</code> (string[]): Timbre tags, such as <code>["magnetic"]</code>.</li>      <li><code>scenes</code> (string[]): Application scenarios, such as <code>["commentate"]</code>.</li>    </ul>  </li></ul>
                      * 
                      */
                     void SetExtParam(const std::string& _extParam);
@@ -169,15 +169,15 @@ namespace TencentCloud
                     bool ExtParamHasBeenSet() const;
 
                     /**
-                     * 获取<p>Identifies the source context. This is used to pass user request information. The value of this field will be returned in callbacks and task flow status change callbacks. The maximum length is 1000 characters.</p>
-                     * @return SessionContext <p>Identifies the source context. This is used to pass user request information. The value of this field will be returned in callbacks and task flow status change callbacks. The maximum length is 1000 characters.</p>
+                     * 获取
+                     * @return SessionContext 
                      * 
                      */
                     std::string GetSessionContext() const;
 
                     /**
-                     * 设置<p>Identifies the source context. This is used to pass user request information. The value of this field will be returned in callbacks and task flow status change callbacks. The maximum length is 1000 characters.</p>
-                     * @param _sessionContext <p>Identifies the source context. This is used to pass user request information. The value of this field will be returned in callbacks and task flow status change callbacks. The maximum length is 1000 characters.</p>
+                     * 设置
+                     * @param _sessionContext 
                      * 
                      */
                     void SetSessionContext(const std::string& _sessionContext);
@@ -190,15 +190,15 @@ namespace TencentCloud
                     bool SessionContextHasBeenSet() const;
 
                     /**
-                     * 获取<p>Identification Code for Task Deduplication. If a request with the same identification code has been sent within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, it indicates no deduplication.</p>
-                     * @return SessionId <p>Identification Code for Task Deduplication. If a request with the same identification code has been sent within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, it indicates no deduplication.</p>
+                     * 获取
+                     * @return SessionId 
                      * 
                      */
                     std::string GetSessionId() const;
 
                     /**
-                     * 设置<p>Identification Code for Task Deduplication. If a request with the same identification code has been sent within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, it indicates no deduplication.</p>
-                     * @param _sessionId <p>Identification Code for Task Deduplication. If a request with the same identification code has been sent within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, it indicates no deduplication.</p>
+                     * 设置
+                     * @param _sessionId 
                      * 
                      */
                     void SetSessionId(const std::string& _sessionId);
@@ -213,49 +213,49 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>VOD application ID. For customers who activate on-demand services on or after December 25, 2023, this field must be filled in with the app ID to access resources in VOD applications, whether in the default or a newly created application.</p>
+                     * 
                      */
                     std::string m_subAppId;
                     bool m_subAppIdHasBeenSet;
 
                     /**
-                     * <p>Base64-encoded audio for cloning.</p>
+                     * 
                      */
                     std::string m_audioData;
                     bool m_audioDataHasBeenSet;
 
                     /**
-                     * <p>Cloning audio URL. Valid when AudioData is empty.</p>
+                     * 
                      */
                     std::string m_audioUrl;
                     bool m_audioUrlHasBeenSet;
 
                     /**
-                     * <p>Clone file FileID. Valid when AudioData and AudioUrl are empty</p>
+                     * 
                      */
                     std::string m_audioFileId;
                     bool m_audioFileIdHasBeenSet;
 
                     /**
-                     * <p>Language enhancement, such as "zh" "en" "auto", default "auto"</p>
+                     * 
                      */
                     std::string m_languageBoost;
                     bool m_languageBoostHasBeenSet;
 
                     /**
-                     * <p>Timbre clone expansion parameters. Supported fields of <code>ExtParam</code>: </p><ul><li><code>text</code> (string): Text for audition synthesis, up to 1000 characters; do not return the audition audio when empty or not passed.</li></ul>
+                     * <p>Voice clone expansion parameters. Fields supported by <code>ExtParam</code>:</p><ul>  <li><code>text</code> (string): Audition synthesis text, up to <code>1000</code> characters. When not empty, <code>tts_model</code> must be passed simultaneously. After the clone is successful, the audition audio <code>DemoAudio</code> is returned.</li>  <li><code>model</code> (string): Clone model. Default: <code>minimax-voice-clone</code>.</li>  <li><code>tts_model</code> (string): Model used to synthesize the audition audio. Options: <code>minimax-speech-2.8-hd</code>, <code>minimax-speech-2.8-turbo</code>, <code>minimax-speech-2.6-hd</code>, <code>minimax-speech-2.6-turbo</code>, <code>minimax-speech-02-hd</code>, <code>minimax-speech-02-turbo</code>. Required when <code>text</code> is not empty.</li>  <li><code>text_lang</code> (string): Language of the audition text.</li>  <li><code>voice_profile</code> (object): Voice profile. Optional fields:    <ul>      <li><code>name</code> (string): Timbre name.</li>      <li><code>description</code> (string): Timbre description.</li>      <li><code>gender</code> (string): Gender. Options: <code>male</code> / <code>female</code> / <code>unknown</code>.</li>      <li><code>age</code> (string): Age segment. Options: <code>child</code> / <code>teenager</code> / <code>youth</code> / <code>middle_aged</code> / <code>senior</code> / <code>unknown</code>.</li>      <li><code>languages</code> (string[]): Supported languages, such as <code>["zh", "en"]</code>.</li>      <li><code>labels</code> (string[]): Timbre tags, such as <code>["magnetic"]</code>.</li>      <li><code>scenes</code> (string[]): Application scenarios, such as <code>["commentate"]</code>.</li>    </ul>  </li></ul>
                      */
                     std::string m_extParam;
                     bool m_extParamHasBeenSet;
 
                     /**
-                     * <p>Identifies the source context. This is used to pass user request information. The value of this field will be returned in callbacks and task flow status change callbacks. The maximum length is 1000 characters.</p>
+                     * 
                      */
                     std::string m_sessionContext;
                     bool m_sessionContextHasBeenSet;
 
                     /**
-                     * <p>Identification Code for Task Deduplication. If a request with the same identification code has been sent within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, it indicates no deduplication.</p>
+                     * 
                      */
                     std::string m_sessionId;
                     bool m_sessionIdHasBeenSet;

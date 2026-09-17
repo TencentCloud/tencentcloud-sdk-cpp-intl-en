@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Result information of animated image generating in VOD file
+                * 
                 */
                 class MediaAnimatedGraphicsInfo : public AbstractModel
                 {
@@ -48,19 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Result information of animated image generating task
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return AnimatedGraphicsSet Result information of animated image generating task
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return AnimatedGraphicsSet 
                      * 
                      */
                     std::vector<MediaAnimatedGraphicsItem> GetAnimatedGraphicsSet() const;
 
                     /**
-                     * 设置Result information of animated image generating task
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _animatedGraphicsSet Result information of animated image generating task
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _animatedGraphicsSet 
                      * 
                      */
                     void SetAnimatedGraphicsSet(const std::vector<MediaAnimatedGraphicsItem>& _animatedGraphicsSet);
@@ -75,8 +71,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Result information of animated image generating task
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<MediaAnimatedGraphicsItem> m_animatedGraphicsSet;
                     bool m_animatedGraphicsSetHasBeenSet;

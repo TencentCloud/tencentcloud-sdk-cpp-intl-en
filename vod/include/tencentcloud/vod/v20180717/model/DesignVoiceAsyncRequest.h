@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Voice description.</p>
-                     * @return Prompt <p>Voice description.</p>
+                     * 获取
+                     * @return Prompt 
                      * 
                      */
                     std::string GetPrompt() const;
 
                     /**
-                     * 设置<p>Voice description.</p>
-                     * @param _prompt <p>Voice description.</p>
+                     * 设置
+                     * @param _prompt 
                      * 
                      */
                     void SetPrompt(const std::string& _prompt);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool PromptHasBeenSet() const;
 
                     /**
-                     * 获取<p>VOD application ID. For customers who activated on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</p>
-                     * @return SubAppId <p>VOD application ID. For customers who activated on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</p>
+                     * 获取
+                     * @return SubAppId 
                      * 
                      */
                     std::string GetSubAppId() const;
 
                     /**
-                     * 设置<p>VOD application ID. For customers who activated on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</p>
-                     * @param _subAppId <p>VOD application ID. For customers who activated on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</p>
+                     * 设置
+                     * @param _subAppId 
                      * 
                      */
                     void SetSubAppId(const std::string& _subAppId);
@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool SubAppIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>Voice settings</p>
-                     * @return VoiceSettings <p>Voice settings</p>
+                     * 获取
+                     * @return VoiceSettings 
                      * 
                      */
                     VoiceSettings GetVoiceSettings() const;
 
                     /**
-                     * 设置<p>Voice settings</p>
-                     * @param _voiceSettings <p>Voice settings</p>
+                     * 设置
+                     * @param _voiceSettings 
                      * 
                      */
                     void SetVoiceSettings(const VoiceSettings& _voiceSettings);
@@ -107,15 +107,15 @@ namespace TencentCloud
                     bool VoiceSettingsHasBeenSet() const;
 
                     /**
-                     * 获取<p>Audition synthesis text. Maximum 500 characters.</p>
-                     * @return PreviewText <p>Audition synthesis text. Maximum 500 characters.</p>
+                     * 获取
+                     * @return PreviewText 
                      * 
                      */
                     std::string GetPreviewText() const;
 
                     /**
-                     * 设置<p>Audition synthesis text. Maximum 500 characters.</p>
-                     * @param _previewText <p>Audition synthesis text. Maximum 500 characters.</p>
+                     * 设置
+                     * @param _previewText 
                      * 
                      */
                     void SetPreviewText(const std::string& _previewText);
@@ -128,15 +128,15 @@ namespace TencentCloud
                     bool PreviewTextHasBeenSet() const;
 
                     /**
-                     * 获取<p>Extended parameters in the format of a JSON string.</p>
-                     * @return ExtParam <p>Extended parameters in the format of a JSON string.</p>
+                     * 获取
+                     * @return ExtParam 
                      * 
                      */
                     std::string GetExtParam() const;
 
                     /**
-                     * 设置<p>Extended parameters in the format of a JSON string.</p>
-                     * @param _extParam <p>Extended parameters in the format of a JSON string.</p>
+                     * 设置
+                     * @param _extParam 
                      * 
                      */
                     void SetExtParam(const std::string& _extParam);
@@ -149,15 +149,15 @@ namespace TencentCloud
                     bool ExtParamHasBeenSet() const;
 
                     /**
-                     * 获取<p>Identifies the source context. This is used to pass through user request information. The callback and task flow status change callback return the value of this field. The maximum length is 1000 characters.</p>
-                     * @return SessionContext <p>Identifies the source context. This is used to pass through user request information. The callback and task flow status change callback return the value of this field. The maximum length is 1000 characters.</p>
+                     * 获取
+                     * @return SessionContext 
                      * 
                      */
                     std::string GetSessionContext() const;
 
                     /**
-                     * 设置<p>Identifies the source context. This is used to pass through user request information. The callback and task flow status change callback return the value of this field. The maximum length is 1000 characters.</p>
-                     * @param _sessionContext <p>Identifies the source context. This is used to pass through user request information. The callback and task flow status change callback return the value of this field. The maximum length is 1000 characters.</p>
+                     * 设置
+                     * @param _sessionContext 
                      * 
                      */
                     void SetSessionContext(const std::string& _sessionContext);
@@ -170,15 +170,15 @@ namespace TencentCloud
                     bool SessionContextHasBeenSet() const;
 
                     /**
-                     * 获取<p>Identification Code for Task Deduplication. If a request with the same identification code has been made within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Not specifying it or specifying an empty string means no deduplication.</p>
-                     * @return SessionId <p>Identification Code for Task Deduplication. If a request with the same identification code has been made within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Not specifying it or specifying an empty string means no deduplication.</p>
+                     * 获取
+                     * @return SessionId 
                      * 
                      */
                     std::string GetSessionId() const;
 
                     /**
-                     * 设置<p>Identification Code for Task Deduplication. If a request with the same identification code has been made within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Not specifying it or specifying an empty string means no deduplication.</p>
-                     * @param _sessionId <p>Identification Code for Task Deduplication. If a request with the same identification code has been made within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Not specifying it or specifying an empty string means no deduplication.</p>
+                     * 设置
+                     * @param _sessionId 
                      * 
                      */
                     void SetSessionId(const std::string& _sessionId);
@@ -193,43 +193,43 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Voice description.</p>
+                     * 
                      */
                     std::string m_prompt;
                     bool m_promptHasBeenSet;
 
                     /**
-                     * <p>VOD application ID. For customers who activated on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</p>
+                     * 
                      */
                     std::string m_subAppId;
                     bool m_subAppIdHasBeenSet;
 
                     /**
-                     * <p>Voice settings</p>
+                     * 
                      */
                     VoiceSettings m_voiceSettings;
                     bool m_voiceSettingsHasBeenSet;
 
                     /**
-                     * <p>Audition synthesis text. Maximum 500 characters.</p>
+                     * 
                      */
                     std::string m_previewText;
                     bool m_previewTextHasBeenSet;
 
                     /**
-                     * <p>Extended parameters in the format of a JSON string.</p>
+                     * 
                      */
                     std::string m_extParam;
                     bool m_extParamHasBeenSet;
 
                     /**
-                     * <p>Identifies the source context. This is used to pass through user request information. The callback and task flow status change callback return the value of this field. The maximum length is 1000 characters.</p>
+                     * 
                      */
                     std::string m_sessionContext;
                     bool m_sessionContextHasBeenSet;
 
                     /**
-                     * <p>Identification Code for Task Deduplication. If a request with the same identification code has been made within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. Not specifying it or specifying an empty string means no deduplication.</p>
+                     * 
                      */
                     std::string m_sessionId;
                     bool m_sessionIdHasBeenSet;

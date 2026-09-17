@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Intelligent erasure task
+                * 
                 */
                 class MPSSmartEraseTaskInput : public AbstractModel
                 {
@@ -49,15 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>id of the intelligent erasing template.</p>
-                     * @return Definition <p>id of the intelligent erasing template.</p>
+                     * 获取
+                     * @return Definition 
                      * 
                      */
                     int64_t GetDefinition() const;
 
                     /**
-                     * 设置<p>id of the intelligent erasing template.</p>
-                     * @param _definition <p>id of the intelligent erasing template.</p>
+                     * 设置
+                     * @param _definition 
                      * 
                      */
                     void SetDefinition(const int64_t& _definition);
@@ -70,15 +70,15 @@ namespace TencentCloud
                     bool DefinitionHasBeenSet() const;
 
                     /**
-                     * 获取<p>Custom parameters for intelligent erasure. Valid when Definition is set to 0. This parameter is used in highly customized scenarios. It is recommended to prioritize using Definition to specify intelligent erasure parameters.</p>
-                     * @return RawParameter <p>Custom parameters for intelligent erasure. Valid when Definition is set to 0. This parameter is used in highly customized scenarios. It is recommended to prioritize using Definition to specify intelligent erasure parameters.</p>
+                     * 获取
+                     * @return RawParameter 
                      * 
                      */
                     MPSRawSmartEraseParameter GetRawParameter() const;
 
                     /**
-                     * 设置<p>Custom parameters for intelligent erasure. Valid when Definition is set to 0. This parameter is used in highly customized scenarios. It is recommended to prioritize using Definition to specify intelligent erasure parameters.</p>
-                     * @param _rawParameter <p>Custom parameters for intelligent erasure. Valid when Definition is set to 0. This parameter is used in highly customized scenarios. It is recommended to prioritize using Definition to specify intelligent erasure parameters.</p>
+                     * 设置
+                     * @param _rawParameter 
                      * 
                      */
                     void SetRawParameter(const MPSRawSmartEraseParameter& _rawParameter);
@@ -91,15 +91,15 @@ namespace TencentCloud
                     bool RawParameterHasBeenSet() const;
 
                     /**
-                     * 获取<p>Custom parameters for smart erasing. When the value of Definition is not 0, this parameter is valid. When certain erasing parameters in this structure are specified, the specified parameters will be used to overwrite those in the smart erasing template. This parameter is used in highly customized scenarios. It is recommended to use only Definition to specify smart erasing parameters.</p>
-                     * @return OverrideParameter <p>Custom parameters for smart erasing. When the value of Definition is not 0, this parameter is valid. When certain erasing parameters in this structure are specified, the specified parameters will be used to overwrite those in the smart erasing template. This parameter is used in highly customized scenarios. It is recommended to use only Definition to specify smart erasing parameters.</p>
+                     * 获取
+                     * @return OverrideParameter 
                      * 
                      */
                     MPSOverrideEraseParameter GetOverrideParameter() const;
 
                     /**
-                     * 设置<p>Custom parameters for smart erasing. When the value of Definition is not 0, this parameter is valid. When certain erasing parameters in this structure are specified, the specified parameters will be used to overwrite those in the smart erasing template. This parameter is used in highly customized scenarios. It is recommended to use only Definition to specify smart erasing parameters.</p>
-                     * @param _overrideParameter <p>Custom parameters for smart erasing. When the value of Definition is not 0, this parameter is valid. When certain erasing parameters in this structure are specified, the specified parameters will be used to overwrite those in the smart erasing template. This parameter is used in highly customized scenarios. It is recommended to use only Definition to specify smart erasing parameters.</p>
+                     * 设置
+                     * @param _overrideParameter 
                      * 
                      */
                     void SetOverrideParameter(const MPSOverrideEraseParameter& _overrideParameter);
@@ -114,19 +114,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>id of the intelligent erasing template.</p>
+                     * 
                      */
                     int64_t m_definition;
                     bool m_definitionHasBeenSet;
 
                     /**
-                     * <p>Custom parameters for intelligent erasure. Valid when Definition is set to 0. This parameter is used in highly customized scenarios. It is recommended to prioritize using Definition to specify intelligent erasure parameters.</p>
+                     * 
                      */
                     MPSRawSmartEraseParameter m_rawParameter;
                     bool m_rawParameterHasBeenSet;
 
                     /**
-                     * <p>Custom parameters for smart erasing. When the value of Definition is not 0, this parameter is valid. When certain erasing parameters in this structure are specified, the specified parameters will be used to overwrite those in the smart erasing template. This parameter is used in highly customized scenarios. It is recommended to use only Definition to specify smart erasing parameters.</p>
+                     * 
                      */
                     MPSOverrideEraseParameter m_overrideParameter;
                     bool m_overrideParameterHasBeenSet;

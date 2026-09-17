@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Domain https acceleration configuration, the default is off
+                * 
                 */
                 class CDNCertInfo : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The server certificate ID is automatically generated during certificate hosting by SSL Certificate Management.
-                     * @return CertId The server certificate ID is automatically generated during certificate hosting by SSL Certificate Management.
+                     * 获取Server certificate ID is automatically generated when hosting a certificate in SSL certificate management.
+                     * @return CertId Server certificate ID is automatically generated when hosting a certificate in SSL certificate management.
                      * 
                      */
                     std::string GetCertId() const;
 
                     /**
-                     * 设置The server certificate ID is automatically generated during certificate hosting by SSL Certificate Management.
-                     * @param _certId The server certificate ID is automatically generated during certificate hosting by SSL Certificate Management.
+                     * 设置Server certificate ID is automatically generated when hosting a certificate in SSL certificate management.
+                     * @param _certId Server certificate ID is automatically generated when hosting a certificate in SSL certificate management.
                      * 
                      */
                     void SetCertId(const std::string& _certId);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool CertIdHasBeenSet() const;
 
                     /**
-                     * 获取Server certificate information.
-                     * @return Certificate Server certificate information.
+                     * 获取
+                     * @return Certificate 
                      * 
                      */
                     std::string GetCertificate() const;
 
                     /**
-                     * 设置Server certificate information.
-                     * @param _certificate Server certificate information.
+                     * 设置
+                     * @param _certificate 
                      * 
                      */
                     void SetCertificate(const std::string& _certificate);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool CertificateHasBeenSet() const;
 
                     /**
-                     * 获取Server key information.
-                     * @return PrivateKey Server key information.
+                     * 获取
+                     * @return PrivateKey 
                      * 
                      */
                     std::string GetPrivateKey() const;
 
                     /**
-                     * 设置Server key information.
-                     * @param _privateKey Server key information.
+                     * 设置
+                     * @param _privateKey 
                      * 
                      */
                     void SetPrivateKey(const std::string& _privateKey);
@@ -110,15 +110,19 @@ namespace TencentCloud
                     bool PrivateKeyHasBeenSet() const;
 
                     /**
-                     * 获取Certificate expiration time; no need to fill in when configured as an input parameter.
-                     * @return ExpireTime Certificate expiration time; no need to fill in when configured as an input parameter.
+                     * 获取Certificate expiration time;
+No need to fill when used as an input parameter configuration.
+                     * @return ExpireTime Certificate expiration time;
+No need to fill when used as an input parameter configuration.
                      * 
                      */
                     std::string GetExpireTime() const;
 
                     /**
-                     * 设置Certificate expiration time; no need to fill in when configured as an input parameter.
-                     * @param _expireTime Certificate expiration time; no need to fill in when configured as an input parameter.
+                     * 设置Certificate expiration time;
+No need to fill when used as an input parameter configuration.
+                     * @param _expireTime Certificate expiration time;
+No need to fill when used as an input parameter configuration.
                      * 
                      */
                     void SetExpireTime(const std::string& _expireTime);
@@ -133,25 +137,26 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The server certificate ID is automatically generated during certificate hosting by SSL Certificate Management.
+                     * Server certificate ID is automatically generated when hosting a certificate in SSL certificate management.
                      */
                     std::string m_certId;
                     bool m_certIdHasBeenSet;
 
                     /**
-                     * Server certificate information.
+                     * 
                      */
                     std::string m_certificate;
                     bool m_certificateHasBeenSet;
 
                     /**
-                     * Server key information.
+                     * 
                      */
                     std::string m_privateKey;
                     bool m_privateKeyHasBeenSet;
 
                     /**
-                     * Certificate expiration time; no need to fill in when configured as an input parameter.
+                     * Certificate expiration time;
+No need to fill when used as an input parameter configuration.
                      */
                     std::string m_expireTime;
                     bool m_expireTimeHasBeenSet;

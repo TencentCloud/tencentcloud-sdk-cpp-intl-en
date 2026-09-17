@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Subapplication name.
-                     * @return Name Subapplication name.
+                     * 获取
+                     * @return Name 
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Subapplication name.
-                     * @param _name Subapplication name.
+                     * 设置
+                     * @param _name 
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取Tag information. You can query the list of subapplications with specified tags.
-                     * @return Tags Tag information. You can query the list of subapplications with specified tags.
+                     * 获取
+                     * @return Tags 
                      * 
                      */
                     std::vector<ResourceTag> GetTags() const;
 
                     /**
-                     * 设置Tag information. You can query the list of subapplications with specified tags.
-                     * @param _tags Tag information. You can query the list of subapplications with specified tags.
+                     * 设置
+                     * @param _tags 
                      * 
                      */
                     void SetTags(const std::vector<ResourceTag>& _tags);
@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool TagsHasBeenSet() const;
 
                     /**
-                     * 获取Page number offset from the beginning of paginated queries. Default value: 0.
-                     * @return Offset Page number offset from the beginning of paginated queries. Default value: 0.
+                     * 获取
+                     * @return Offset 
                      * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
-                     * 设置Page number offset from the beginning of paginated queries. Default value: 0.
-                     * @param _offset Page number offset from the beginning of paginated queries. Default value: 0.
+                     * 设置
+                     * @param _offset 
                      * 
                      */
                     void SetOffset(const uint64_t& _offset);
@@ -107,15 +107,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Maximum return results of pulling paginated queries. Default: 200; maximum: 200.
-                     * @return Limit Maximum return results of pulling paginated queries. Default: 200; maximum: 200.
+                     * 获取
+                     * @return Limit 
                      * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
-                     * 设置Maximum return results of pulling paginated queries. Default: 200; maximum: 200.
-                     * @param _limit Maximum return results of pulling paginated queries. Default: 200; maximum: 200.
+                     * 设置
+                     * @param _limit 
                      * 
                      */
                     void SetLimit(const uint64_t& _limit);
@@ -130,25 +130,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Subapplication name.
+                     * 
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * Tag information. You can query the list of subapplications with specified tags.
+                     * 
                      */
                     std::vector<ResourceTag> m_tags;
                     bool m_tagsHasBeenSet;
 
                     /**
-                     * Page number offset from the beginning of paginated queries. Default value: 0.
+                     * 
                      */
                     uint64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Maximum return results of pulling paginated queries. Default: 200; maximum: 200.
+                     * 
                      */
                     uint64_t m_limit;
                     bool m_limitHasBeenSet;

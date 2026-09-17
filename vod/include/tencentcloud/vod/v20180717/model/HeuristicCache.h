@@ -48,23 +48,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Heuristic cache configuration switch, the values u200bu200bare: 
-<li>on: on; </li>
-<li>off: off. </li>
-                     * @return Switch Heuristic cache configuration switch, the values u200bu200bare: 
-<li>on: on; </li>
-<li>off: off. </li>
+                     * 获取Heuristic cache configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
+                     * @return Switch Heuristic cache configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Heuristic cache configuration switch, the values u200bu200bare: 
-<li>on: on; </li>
-<li>off: off. </li>
-                     * @param _switch Heuristic cache configuration switch, the values u200bu200bare: 
-<li>on: on; </li>
-<li>off: off. </li>
+                     * 设置Heuristic cache configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
+                     * @param _switch Heuristic cache configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -100,9 +100,9 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Heuristic cache configuration switch, the values u200bu200bare: 
-<li>on: on; </li>
-<li>off: off. </li>
+                     * Heuristic cache configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;

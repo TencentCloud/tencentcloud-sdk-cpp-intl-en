@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Low-light enhancement configuration.
+                * 
                 */
                 class LowLightEnhanceInfo : public AbstractModel
                 {
@@ -47,23 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether to enable low-light enhancement. Valid values:
-<li>`ON`</li>
-<li>`OFF`</li>
-                     * @return Switch Whether to enable low-light enhancement. Valid values:
-<li>`ON`</li>
-<li>`OFF`</li>
+                     * 获取
+                     * @return Switch 
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Whether to enable low-light enhancement. Valid values:
-<li>`ON`</li>
-<li>`OFF`</li>
-                     * @param _switch Whether to enable low-light enhancement. Valid values:
-<li>`ON`</li>
-<li>`OFF`</li>
+                     * 设置
+                     * @param _switch 
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -76,23 +68,15 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取The low-light enhancement type. This parameter is valid only if `Switch` is `ON`.
-<li>`normal`</li>
-Default value: `normal`.
-                     * @return Type The low-light enhancement type. This parameter is valid only if `Switch` is `ON`.
-<li>`normal`</li>
-Default value: `normal`.
+                     * 获取
+                     * @return Type 
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置The low-light enhancement type. This parameter is valid only if `Switch` is `ON`.
-<li>`normal`</li>
-Default value: `normal`.
-                     * @param _type The low-light enhancement type. This parameter is valid only if `Switch` is `ON`.
-<li>`normal`</li>
-Default value: `normal`.
+                     * 设置
+                     * @param _type 
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -107,17 +91,13 @@ Default value: `normal`.
                 private:
 
                     /**
-                     * Whether to enable low-light enhancement. Valid values:
-<li>`ON`</li>
-<li>`OFF`</li>
+                     * 
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * The low-light enhancement type. This parameter is valid only if `Switch` is `ON`.
-<li>`normal`</li>
-Default value: `normal`.
+                     * 
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;

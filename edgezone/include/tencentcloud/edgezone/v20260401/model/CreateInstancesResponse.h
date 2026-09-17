@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取List of successfully created instance IDs.
-                     * @return InstanceIdSet List of successfully created instance IDs.
+                     * 获取<p>List of successfully created instance IDs.</p>
+                     * @return InstanceIdSet <p>List of successfully created instance IDs.</p>
                      * 
                      */
                     std::vector<std::string> GetInstanceIdSet() const;
@@ -58,8 +58,8 @@ namespace TencentCloud
                     bool InstanceIdSetHasBeenSet() const;
 
                     /**
-                     * 获取Count of failed instances. This field is returned only when partially failed, not returned when all successful.
-                     * @return FailedCount Count of failed instances. This field is returned only when partially failed, not returned when all successful.
+                     * 获取<p>Count of failed instances. This field is returned only when partially failed, not returned when all successful.</p>
+                     * @return FailedCount <p>Count of failed instances. This field is returned only when partially failed, not returned when all successful.</p>
                      * 
                      */
                     uint64_t GetFailedCount() const;
@@ -74,13 +74,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * List of successfully created instance IDs.
+                     * <p>List of successfully created instance IDs.</p>
                      */
                     std::vector<std::string> m_instanceIdSet;
                     bool m_instanceIdSetHasBeenSet;
 
                     /**
-                     * Count of failed instances. This field is returned only when partially failed, not returned when all successful.
+                     * <p>Count of failed instances. This field is returned only when partially failed, not returned when all successful.</p>
                      */
                     uint64_t m_failedCount;
                     bool m_failedCountHasBeenSet;

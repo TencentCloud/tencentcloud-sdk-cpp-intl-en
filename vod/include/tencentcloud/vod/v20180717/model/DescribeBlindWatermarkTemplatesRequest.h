@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取VOD application ID. Starting from December 25, 2023, customers who activate on-demand services must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created application).
-                     * @return SubAppId VOD application ID. Starting from December 25, 2023, customers who activate on-demand services must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created application).
+                     * 获取
+                     * @return SubAppId 
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置VOD application ID. Starting from December 25, 2023, customers who activate on-demand services must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created application).
-                     * @param _subAppId VOD application ID. Starting from December 25, 2023, customers who activate on-demand services must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created application).
+                     * 设置
+                     * @param _subAppId 
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool SubAppIdHasBeenSet() const;
 
                     /**
-                     * 获取Filtering condition for the unique identifier of the digital watermark template. The array length cannot exceed 100.
-                     * @return Definitions Filtering condition for the unique identifier of the digital watermark template. The array length cannot exceed 100.
+                     * 获取
+                     * @return Definitions 
                      * 
                      */
                     std::vector<int64_t> GetDefinitions() const;
 
                     /**
-                     * 设置Filtering condition for the unique identifier of the digital watermark template. The array length cannot exceed 100.
-                     * @param _definitions Filtering condition for the unique identifier of the digital watermark template. The array length cannot exceed 100.
+                     * 设置
+                     * @param _definitions 
                      * 
                      */
                     void SetDefinitions(const std::vector<int64_t>& _definitions);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool DefinitionsHasBeenSet() const;
 
                     /**
-                     * 获取Digital watermark type. Valid values: <li>blind-basic: basic copyright digital watermark;</li> <li>blind-nagra: NAGRA forensics watermark.</li>
-                     * @return Type Digital watermark type. Valid values: <li>blind-basic: basic copyright digital watermark;</li> <li>blind-nagra: NAGRA forensics watermark.</li>
+                     * 获取
+                     * @return Type 
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Digital watermark type. Valid values: <li>blind-basic: basic copyright digital watermark;</li> <li>blind-nagra: NAGRA forensics watermark.</li>
-                     * @param _type Digital watermark type. Valid values: <li>blind-basic: basic copyright digital watermark;</li> <li>blind-nagra: NAGRA forensics watermark.</li>
+                     * 设置
+                     * @param _type 
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Pagination offset. Default value: 0.
-                     * @return Offset Pagination offset. Default value: 0.
+                     * 获取
+                     * @return Offset 
                      * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
-                     * 设置Pagination offset. Default value: 0.
-                     * @param _offset Pagination offset. Default value: 0.
+                     * 设置
+                     * @param _offset 
                      * 
                      */
                     void SetOffset(const uint64_t& _offset);
@@ -127,23 +127,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Number of returned entries
-<li>Default value: 10.</li>
-<li>Maximum value: 100.</li>
-                     * @return Limit Number of returned entries
-<li>Default value: 10.</li>
-<li>Maximum value: 100.</li>
+                     * 获取
+                     * @return Limit 
                      * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
-                     * 设置Number of returned entries
-<li>Default value: 10.</li>
-<li>Maximum value: 100.</li>
-                     * @param _limit Number of returned entries
-<li>Default value: 10.</li>
-<li>Maximum value: 100.</li>
+                     * 设置
+                     * @param _limit 
                      * 
                      */
                     void SetLimit(const uint64_t& _limit);
@@ -158,33 +150,31 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * VOD application ID. Starting from December 25, 2023, customers who activate on-demand services must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created application).
+                     * 
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
 
                     /**
-                     * Filtering condition for the unique identifier of the digital watermark template. The array length cannot exceed 100.
+                     * 
                      */
                     std::vector<int64_t> m_definitions;
                     bool m_definitionsHasBeenSet;
 
                     /**
-                     * Digital watermark type. Valid values: <li>blind-basic: basic copyright digital watermark;</li> <li>blind-nagra: NAGRA forensics watermark.</li>
+                     * 
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Pagination offset. Default value: 0.
+                     * 
                      */
                     uint64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Number of returned entries
-<li>Default value: 10.</li>
-<li>Maximum value: 100.</li>
+                     * 
                      */
                     uint64_t m_limit;
                     bool m_limitHasBeenSet;

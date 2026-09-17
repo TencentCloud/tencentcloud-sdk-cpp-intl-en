@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                *  
+                * 
                 */
                 class MediaMiniProgramReviewElem : public AbstractModel
                 {
@@ -47,43 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Audit type. 
-<li>Porn: porn image,</li>
-<li>Porn.Ocr: porn text,</li>
-<li>Porn.Asr: porn speech,</li>
-<li>Terrorism: terrorism image,</li>
-<li>Political: politically sensitive image,</li>
-<li>Political.Ocr: politically sensitive text</li>
-<li>Political.Asr: politically sensitive speech</li>
-                     * @return Type Audit type. 
-<li>Porn: porn image,</li>
-<li>Porn.Ocr: porn text,</li>
-<li>Porn.Asr: porn speech,</li>
-<li>Terrorism: terrorism image,</li>
-<li>Political: politically sensitive image,</li>
-<li>Political.Ocr: politically sensitive text</li>
-<li>Political.Asr: politically sensitive speech</li>
+                     * 获取
+                     * @return Type 
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Audit type. 
-<li>Porn: porn image,</li>
-<li>Porn.Ocr: porn text,</li>
-<li>Porn.Asr: porn speech,</li>
-<li>Terrorism: terrorism image,</li>
-<li>Political: politically sensitive image,</li>
-<li>Political.Ocr: politically sensitive text</li>
-<li>Political.Asr: politically sensitive speech</li>
-                     * @param _type Audit type. 
-<li>Porn: porn image,</li>
-<li>Porn.Ocr: porn text,</li>
-<li>Porn.Asr: porn speech,</li>
-<li>Terrorism: terrorism image,</li>
-<li>Political: politically sensitive image,</li>
-<li>Political.Ocr: politically sensitive text</li>
-<li>Political.Asr: politically sensitive speech</li>
+                     * 设置
+                     * @param _type 
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -96,27 +68,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Audit suggestion.
-<li>pass: normal,</li>
-<li>block: violating,</li>
-<li>review: suspected of violation.</li>
-                     * @return Suggestion Audit suggestion.
-<li>pass: normal,</li>
-<li>block: violating,</li>
-<li>review: suspected of violation.</li>
+                     * 获取
+                     * @return Suggestion 
                      * 
                      */
                     std::string GetSuggestion() const;
 
                     /**
-                     * 设置Audit suggestion.
-<li>pass: normal,</li>
-<li>block: violating,</li>
-<li>review: suspected of violation.</li>
-                     * @param _suggestion Audit suggestion.
-<li>pass: normal,</li>
-<li>block: violating,</li>
-<li>review: suspected of violation.</li>
+                     * 设置
+                     * @param _suggestion 
                      * 
                      */
                     void SetSuggestion(const std::string& _suggestion);
@@ -129,15 +89,15 @@ namespace TencentCloud
                     bool SuggestionHasBeenSet() const;
 
                     /**
-                     * 获取Confidence of audit result between 0 and 100.
-                     * @return Confidence Confidence of audit result between 0 and 100.
+                     * 获取
+                     * @return Confidence 
                      * 
                      */
                     double GetConfidence() const;
 
                     /**
-                     * 设置Confidence of audit result between 0 and 100.
-                     * @param _confidence Confidence of audit result between 0 and 100.
+                     * 设置
+                     * @param _confidence 
                      * 
                      */
                     void SetConfidence(const double& _confidence);
@@ -152,29 +112,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Audit type. 
-<li>Porn: porn image,</li>
-<li>Porn.Ocr: porn text,</li>
-<li>Porn.Asr: porn speech,</li>
-<li>Terrorism: terrorism image,</li>
-<li>Political: politically sensitive image,</li>
-<li>Political.Ocr: politically sensitive text</li>
-<li>Political.Asr: politically sensitive speech</li>
+                     * 
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Audit suggestion.
-<li>pass: normal,</li>
-<li>block: violating,</li>
-<li>review: suspected of violation.</li>
+                     * 
                      */
                     std::string m_suggestion;
                     bool m_suggestionHasBeenSet;
 
                     /**
-                     * Confidence of audit result between 0 and 100.
+                     * 
                      */
                     double m_confidence;
                     bool m_confidenceHasBeenSet;

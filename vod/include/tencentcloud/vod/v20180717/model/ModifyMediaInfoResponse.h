@@ -45,10 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取New video cover URL.
-* Note: This return value is valid only when the request carries CoverData. *
-                     * @return CoverUrl New video cover URL.
-* Note: This return value is valid only when the request carries CoverData. *
+                     * 获取
+                     * @return CoverUrl 
                      * 
                      */
                     std::string GetCoverUrl() const;
@@ -61,8 +59,8 @@ namespace TencentCloud
                     bool CoverUrlHasBeenSet() const;
 
                     /**
-                     * 获取New subtitle information.
-                     * @return AddedSubtitleSet New subtitle information.
+                     * 获取
+                     * @return AddedSubtitleSet 
                      * 
                      */
                     std::vector<MediaSubtitleItem> GetAddedSubtitleSet() const;
@@ -77,14 +75,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * New video cover URL.
-* Note: This return value is valid only when the request carries CoverData. *
+                     * 
                      */
                     std::string m_coverUrl;
                     bool m_coverUrlHasBeenSet;
 
                     /**
-                     * New subtitle information.
+                     * 
                      */
                     std::vector<MediaSubtitleItem> m_addedSubtitleSet;
                     bool m_addedSubtitleSetHasBeenSet;

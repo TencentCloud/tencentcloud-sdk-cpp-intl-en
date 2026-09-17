@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Control parameters for detecting video noise.
+                * 
                 */
                 class NoiseConfigureInfoForUpdate : public AbstractModel
                 {
@@ -47,23 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Video noise inspection switch, optional values:
-<li>ON: enabled;</li>
-<li>OFF: disabled.</li>
-                     * @return Switch Video noise inspection switch, optional values:
-<li>ON: enabled;</li>
-<li>OFF: disabled.</li>
+                     * 获取
+                     * @return Switch 
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Video noise inspection switch, optional values:
-<li>ON: enabled;</li>
-<li>OFF: disabled.</li>
-                     * @param _switch Video noise inspection switch, optional values:
-<li>ON: enabled;</li>
-<li>OFF: disabled.</li>
+                     * 设置
+                     * @param _switch 
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -78,9 +70,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Video noise inspection switch, optional values:
-<li>ON: enabled;</li>
-<li>OFF: disabled.</li>
+                     * 
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Dynamic range information.
+                * Dynamic range information of the frame.
                 */
                 class DynamicRangeInfo : public AbstractModel
                 {
@@ -47,23 +47,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The dynamic range information. Valid values:
-<li>`SDR`: Standard Dynamic Range</li>
-<li>`HDR`: High Dynamic Range</li>
-                     * @return Type The dynamic range information. Valid values:
-<li>`SDR`: Standard Dynamic Range</li>
-<li>`HDR`: High Dynamic Range</li>
+                     * 获取Visual dynamic range information. Valid values:
+<li>SDR: Standard Dynamic Range;</li>
+<li>HDR: High Dynamic Range.</li>
+                     * @return Type Visual dynamic range information. Valid values:
+<li>SDR: Standard Dynamic Range;</li>
+<li>HDR: High Dynamic Range.</li>
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置The dynamic range information. Valid values:
-<li>`SDR`: Standard Dynamic Range</li>
-<li>`HDR`: High Dynamic Range</li>
-                     * @param _type The dynamic range information. Valid values:
-<li>`SDR`: Standard Dynamic Range</li>
-<li>`HDR`: High Dynamic Range</li>
+                     * 设置Visual dynamic range information. Valid values:
+<li>SDR: Standard Dynamic Range;</li>
+<li>HDR: High Dynamic Range.</li>
+                     * @param _type Visual dynamic range information. Valid values:
+<li>SDR: Standard Dynamic Range;</li>
+<li>HDR: High Dynamic Range.</li>
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -76,23 +76,23 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取The HDR type. This parameter is valid only if `Type` is `HDR`. Valid values:
-<li>`hdr10`</li>
-<li>`hlg`</li>
-                     * @return HDRType The HDR type. This parameter is valid only if `Type` is `HDR`. Valid values:
-<li>`hdr10`</li>
-<li>`hlg`</li>
+                     * 获取High dynamic range type. Valid when Type is HDR. Currently supported valid values:
+<li>hdr10: refers to the hdr10 standard;</li>
+<li>hlg: refers to the hlg standard.</li>
+                     * @return HDRType High dynamic range type. Valid when Type is HDR. Currently supported valid values:
+<li>hdr10: refers to the hdr10 standard;</li>
+<li>hlg: refers to the hlg standard.</li>
                      * 
                      */
                     std::string GetHDRType() const;
 
                     /**
-                     * 设置The HDR type. This parameter is valid only if `Type` is `HDR`. Valid values:
-<li>`hdr10`</li>
-<li>`hlg`</li>
-                     * @param _hDRType The HDR type. This parameter is valid only if `Type` is `HDR`. Valid values:
-<li>`hdr10`</li>
-<li>`hlg`</li>
+                     * 设置High dynamic range type. Valid when Type is HDR. Currently supported valid values:
+<li>hdr10: refers to the hdr10 standard;</li>
+<li>hlg: refers to the hlg standard.</li>
+                     * @param _hDRType High dynamic range type. Valid when Type is HDR. Currently supported valid values:
+<li>hdr10: refers to the hdr10 standard;</li>
+<li>hlg: refers to the hlg standard.</li>
                      * 
                      */
                     void SetHDRType(const std::string& _hDRType);
@@ -107,17 +107,17 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The dynamic range information. Valid values:
-<li>`SDR`: Standard Dynamic Range</li>
-<li>`HDR`: High Dynamic Range</li>
+                     * Visual dynamic range information. Valid values:
+<li>SDR: Standard Dynamic Range;</li>
+<li>HDR: High Dynamic Range.</li>
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * The HDR type. This parameter is valid only if `Type` is `HDR`. Valid values:
-<li>`hdr10`</li>
-<li>`hlg`</li>
+                     * High dynamic range type. Valid when Type is HDR. Currently supported valid values:
+<li>hdr10: refers to the hdr10 standard;</li>
+<li>hlg: refers to the hlg standard.</li>
                      */
                     std::string m_hDRType;
                     bool m_hDRTypeHasBeenSet;

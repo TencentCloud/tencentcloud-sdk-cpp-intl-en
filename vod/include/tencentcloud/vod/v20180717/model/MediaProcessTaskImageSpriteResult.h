@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Result type of image sprite generating task
+                * 
                 */
                 class MediaProcessTaskImageSpriteResult : public AbstractModel
                 {
@@ -49,15 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Task status. Valid values: PROCESSING, SUCCESS, FAIL.
-                     * @return Status Task status. Valid values: PROCESSING, SUCCESS, FAIL.
+                     * 获取
+                     * @return Status 
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置Task status. Valid values: PROCESSING, SUCCESS, FAIL.
-                     * @param _status Task status. Valid values: PROCESSING, SUCCESS, FAIL.
+                     * 设置
+                     * @param _status 
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -70,15 +70,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Error code. An empty string indicates the task is successful; other values indicate failure. For details, see [Video Processing Error Codes](https://intl.cloud.tencent.com/zh/document/product/266/39145).
-                     * @return ErrCodeExt Error code. An empty string indicates the task is successful; other values indicate failure. For details, see [Video Processing Error Codes](https://intl.cloud.tencent.com/zh/document/product/266/39145).
+                     * 获取
+                     * @return ErrCodeExt 
                      * 
                      */
                     std::string GetErrCodeExt() const;
 
                     /**
-                     * 设置Error code. An empty string indicates the task is successful; other values indicate failure. For details, see [Video Processing Error Codes](https://intl.cloud.tencent.com/zh/document/product/266/39145).
-                     * @param _errCodeExt Error code. An empty string indicates the task is successful; other values indicate failure. For details, see [Video Processing Error Codes](https://intl.cloud.tencent.com/zh/document/product/266/39145).
+                     * 设置
+                     * @param _errCodeExt 
                      * 
                      */
                     void SetErrCodeExt(const std::string& _errCodeExt);
@@ -91,15 +91,15 @@ namespace TencentCloud
                     bool ErrCodeExtHasBeenSet() const;
 
                     /**
-                     * 获取Error code. 0 indicates the task is successful; other values indicate failure. You’re not recommended to use this parameter, but to use the new parameter `ErrCodeExt`.
-                     * @return ErrCode Error code. 0 indicates the task is successful; other values indicate failure. You’re not recommended to use this parameter, but to use the new parameter `ErrCodeExt`.
+                     * 获取
+                     * @return ErrCode 
                      * 
                      */
                     int64_t GetErrCode() const;
 
                     /**
-                     * 设置Error code. 0 indicates the task is successful; other values indicate failure. You’re not recommended to use this parameter, but to use the new parameter `ErrCodeExt`.
-                     * @param _errCode Error code. 0 indicates the task is successful; other values indicate failure. You’re not recommended to use this parameter, but to use the new parameter `ErrCodeExt`.
+                     * 设置
+                     * @param _errCode 
                      * 
                      */
                     void SetErrCode(const int64_t& _errCode);
@@ -112,19 +112,15 @@ namespace TencentCloud
                     bool ErrCodeHasBeenSet() const;
 
                     /**
-                     * 获取Error message.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Message Error message.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return Message 
                      * 
                      */
                     std::string GetMessage() const;
 
                     /**
-                     * 设置Error message.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _message Error message.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _message 
                      * 
                      */
                     void SetMessage(const std::string& _message);
@@ -137,15 +133,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool MessageHasBeenSet() const;
 
                     /**
-                     * 获取Input of image sprite generating task.
-                     * @return Input Input of image sprite generating task.
+                     * 获取
+                     * @return Input 
                      * 
                      */
                     ImageSpriteTaskInput GetInput() const;
 
                     /**
-                     * 设置Input of image sprite generating task.
-                     * @param _input Input of image sprite generating task.
+                     * 设置
+                     * @param _input 
                      * 
                      */
                     void SetInput(const ImageSpriteTaskInput& _input);
@@ -158,19 +154,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool InputHasBeenSet() const;
 
                     /**
-                     * 获取Output of image sprite generating task.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Output Output of image sprite generating task.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return Output 
                      * 
                      */
                     MediaImageSpriteItem GetOutput() const;
 
                     /**
-                     * 设置Output of image sprite generating task.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _output Output of image sprite generating task.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _output 
                      * 
                      */
                     void SetOutput(const MediaImageSpriteItem& _output);
@@ -183,15 +175,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool OutputHasBeenSet() const;
 
                     /**
-                     * 获取The progress of an image sprite generation task. Value range: 0-100.
-                     * @return Progress The progress of an image sprite generation task. Value range: 0-100.
+                     * 获取
+                     * @return Progress 
                      * 
                      */
                     int64_t GetProgress() const;
 
                     /**
-                     * 设置The progress of an image sprite generation task. Value range: 0-100.
-                     * @param _progress The progress of an image sprite generation task. Value range: 0-100.
+                     * 设置
+                     * @param _progress 
                      * 
                      */
                     void SetProgress(const int64_t& _progress);
@@ -204,15 +196,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool ProgressHasBeenSet() const;
 
                     /**
-                     * 获取The time when the sprite cut task started to be executed, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
-                     * @return BeginProcessTime The time when the sprite cut task started to be executed, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+                     * 获取
+                     * @return BeginProcessTime 
                      * 
                      */
                     std::string GetBeginProcessTime() const;
 
                     /**
-                     * 设置The time when the sprite cut task started to be executed, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
-                     * @param _beginProcessTime The time when the sprite cut task started to be executed, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+                     * 设置
+                     * @param _beginProcessTime 
                      * 
                      */
                     void SetBeginProcessTime(const std::string& _beginProcessTime);
@@ -225,15 +217,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool BeginProcessTimeHasBeenSet() const;
 
                     /**
-                     * 获取The time when the sprite cut task is completed, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
-                     * @return FinishTime The time when the sprite cut task is completed, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+                     * 获取
+                     * @return FinishTime 
                      * 
                      */
                     std::string GetFinishTime() const;
 
                     /**
-                     * 设置The time when the sprite cut task is completed, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
-                     * @param _finishTime The time when the sprite cut task is completed, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+                     * 设置
+                     * @param _finishTime 
                      * 
                      */
                     void SetFinishTime(const std::string& _finishTime);
@@ -248,57 +240,55 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Task status. Valid values: PROCESSING, SUCCESS, FAIL.
+                     * 
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Error code. An empty string indicates the task is successful; other values indicate failure. For details, see [Video Processing Error Codes](https://intl.cloud.tencent.com/zh/document/product/266/39145).
+                     * 
                      */
                     std::string m_errCodeExt;
                     bool m_errCodeExtHasBeenSet;
 
                     /**
-                     * Error code. 0 indicates the task is successful; other values indicate failure. You’re not recommended to use this parameter, but to use the new parameter `ErrCodeExt`.
+                     * 
                      */
                     int64_t m_errCode;
                     bool m_errCodeHasBeenSet;
 
                     /**
-                     * Error message.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string m_message;
                     bool m_messageHasBeenSet;
 
                     /**
-                     * Input of image sprite generating task.
+                     * 
                      */
                     ImageSpriteTaskInput m_input;
                     bool m_inputHasBeenSet;
 
                     /**
-                     * Output of image sprite generating task.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     MediaImageSpriteItem m_output;
                     bool m_outputHasBeenSet;
 
                     /**
-                     * The progress of an image sprite generation task. Value range: 0-100.
+                     * 
                      */
                     int64_t m_progress;
                     bool m_progressHasBeenSet;
 
                     /**
-                     * The time when the sprite cut task started to be executed, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+                     * 
                      */
                     std::string m_beginProcessTime;
                     bool m_beginProcessTimeHasBeenSet;
 
                     /**
-                     * The time when the sprite cut task is completed, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732#iso-date-format).
+                     * 
                      */
                     std::string m_finishTime;
                     bool m_finishTimeHasBeenSet;

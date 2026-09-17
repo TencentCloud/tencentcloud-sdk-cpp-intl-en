@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Result for ASR-based recognition of banned content
+                * 
                 */
                 class AiReviewTaskProhibitedAsrResult : public AbstractModel
                 {
@@ -49,15 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Task status. Valid values: PROCESSING, SUCCESS, FAIL.
-                     * @return Status Task status. Valid values: PROCESSING, SUCCESS, FAIL.
+                     * 获取
+                     * @return Status 
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置Task status. Valid values: PROCESSING, SUCCESS, FAIL.
-                     * @param _status Task status. Valid values: PROCESSING, SUCCESS, FAIL.
+                     * 设置
+                     * @param _status 
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -70,15 +70,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取Error code. An empty string indicates the task is successful; other values indicate failure. For details, see [Video Processing Error Codes](https://intl.cloud.tencent.com/zh/document/product/266/39145).
-                     * @return ErrCodeExt Error code. An empty string indicates the task is successful; other values indicate failure. For details, see [Video Processing Error Codes](https://intl.cloud.tencent.com/zh/document/product/266/39145).
+                     * 获取
+                     * @return ErrCodeExt 
                      * 
                      */
                     std::string GetErrCodeExt() const;
 
                     /**
-                     * 设置Error code. An empty string indicates the task is successful; other values indicate failure. For details, see [Video Processing Error Codes](https://intl.cloud.tencent.com/zh/document/product/266/39145).
-                     * @param _errCodeExt Error code. An empty string indicates the task is successful; other values indicate failure. For details, see [Video Processing Error Codes](https://intl.cloud.tencent.com/zh/document/product/266/39145).
+                     * 设置
+                     * @param _errCodeExt 
                      * 
                      */
                     void SetErrCodeExt(const std::string& _errCodeExt);
@@ -91,15 +91,15 @@ namespace TencentCloud
                     bool ErrCodeExtHasBeenSet() const;
 
                     /**
-                     * 获取Error code. 0 indicates the task is successful; other values indicate failure. You’re not recommended to use this parameter, but to use the new parameter `ErrCodeExt`.
-                     * @return ErrCode Error code. 0 indicates the task is successful; other values indicate failure. You’re not recommended to use this parameter, but to use the new parameter `ErrCodeExt`.
+                     * 获取
+                     * @return ErrCode 
                      * 
                      */
                     int64_t GetErrCode() const;
 
                     /**
-                     * 设置Error code. 0 indicates the task is successful; other values indicate failure. You’re not recommended to use this parameter, but to use the new parameter `ErrCodeExt`.
-                     * @param _errCode Error code. 0 indicates the task is successful; other values indicate failure. You’re not recommended to use this parameter, but to use the new parameter `ErrCodeExt`.
+                     * 设置
+                     * @param _errCode 
                      * 
                      */
                     void SetErrCode(const int64_t& _errCode);
@@ -112,15 +112,15 @@ namespace TencentCloud
                     bool ErrCodeHasBeenSet() const;
 
                     /**
-                     * 获取Error message.
-                     * @return Message Error message.
+                     * 获取
+                     * @return Message 
                      * 
                      */
                     std::string GetMessage() const;
 
                     /**
-                     * 设置Error message.
-                     * @param _message Error message.
+                     * 设置
+                     * @param _message 
                      * 
                      */
                     void SetMessage(const std::string& _message);
@@ -133,15 +133,15 @@ namespace TencentCloud
                     bool MessageHasBeenSet() const;
 
                     /**
-                     * 获取Input for ASR-based recognition of banned content
-                     * @return Input Input for ASR-based recognition of banned content
+                     * 获取
+                     * @return Input 
                      * 
                      */
                     AiReviewProhibitedAsrTaskInput GetInput() const;
 
                     /**
-                     * 设置Input for ASR-based recognition of banned content
-                     * @param _input Input for ASR-based recognition of banned content
+                     * 设置
+                     * @param _input 
                      * 
                      */
                     void SetInput(const AiReviewProhibitedAsrTaskInput& _input);
@@ -154,15 +154,15 @@ namespace TencentCloud
                     bool InputHasBeenSet() const;
 
                     /**
-                     * 获取Audio/video moderation Asr text prohibited task output.
-                     * @return Output Audio/video moderation Asr text prohibited task output.
+                     * 获取
+                     * @return Output 
                      * 
                      */
                     AiReviewProhibitedAsrTaskOutput GetOutput() const;
 
                     /**
-                     * 设置Audio/video moderation Asr text prohibited task output.
-                     * @param _output Audio/video moderation Asr text prohibited task output.
+                     * 设置
+                     * @param _output 
                      * 
                      */
                     void SetOutput(const AiReviewProhibitedAsrTaskOutput& _output);
@@ -175,15 +175,15 @@ namespace TencentCloud
                     bool OutputHasBeenSet() const;
 
                     /**
-                     * 获取The progress of an ASR-based moderation task (banned content). Value range: 0-100.
-                     * @return Progress The progress of an ASR-based moderation task (banned content). Value range: 0-100.
+                     * 获取
+                     * @return Progress 
                      * 
                      */
                     int64_t GetProgress() const;
 
                     /**
-                     * 设置The progress of an ASR-based moderation task (banned content). Value range: 0-100.
-                     * @param _progress The progress of an ASR-based moderation task (banned content). Value range: 0-100.
+                     * 设置
+                     * @param _progress 
                      * 
                      */
                     void SetProgress(const int64_t& _progress);
@@ -198,43 +198,43 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Task status. Valid values: PROCESSING, SUCCESS, FAIL.
+                     * 
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * Error code. An empty string indicates the task is successful; other values indicate failure. For details, see [Video Processing Error Codes](https://intl.cloud.tencent.com/zh/document/product/266/39145).
+                     * 
                      */
                     std::string m_errCodeExt;
                     bool m_errCodeExtHasBeenSet;
 
                     /**
-                     * Error code. 0 indicates the task is successful; other values indicate failure. You’re not recommended to use this parameter, but to use the new parameter `ErrCodeExt`.
+                     * 
                      */
                     int64_t m_errCode;
                     bool m_errCodeHasBeenSet;
 
                     /**
-                     * Error message.
+                     * 
                      */
                     std::string m_message;
                     bool m_messageHasBeenSet;
 
                     /**
-                     * Input for ASR-based recognition of banned content
+                     * 
                      */
                     AiReviewProhibitedAsrTaskInput m_input;
                     bool m_inputHasBeenSet;
 
                     /**
-                     * Audio/video moderation Asr text prohibited task output.
+                     * 
                      */
                     AiReviewProhibitedAsrTaskOutput m_output;
                     bool m_outputHasBeenSet;
 
                     /**
-                     * The progress of an ASR-based moderation task (banned content). Value range: 0-100.
+                     * 
                      */
                     int64_t m_progress;
                     bool m_progressHasBeenSet;

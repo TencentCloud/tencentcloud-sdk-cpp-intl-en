@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
-                     * @return SubAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+                     * 获取
+                     * @return SubAppId 
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置<b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
-                     * @param _subAppId <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+                     * 设置
+                     * @param _subAppId 
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool SubAppIdHasBeenSet() const;
 
                     /**
-                     * 获取The API is <font color='red'>no longer maintained</font>. Refer to the API description for the recommended alternative API.
-                     * @return InputInfo The API is <font color='red'>no longer maintained</font>. Refer to the API description for the recommended alternative API.
+                     * 获取
+                     * @return InputInfo 
                      * 
                      */
                     MediaInputInfo GetInputInfo() const;
 
                     /**
-                     * 设置The API is <font color='red'>no longer maintained</font>. Refer to the API description for the recommended alternative API.
-                     * @param _inputInfo The API is <font color='red'>no longer maintained</font>. Refer to the API description for the recommended alternative API.
+                     * 设置
+                     * @param _inputInfo 
                      * 
                      */
                     void SetInputInfo(const MediaInputInfo& _inputInfo);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool InputInfoHasBeenSet() const;
 
                     /**
-                     * 获取Output file COS path information.
-                     * @return OutputInfo Output file COS path information.
+                     * 获取
+                     * @return OutputInfo 
                      * 
                      */
                     MediaOutputInfo GetOutputInfo() const;
 
                     /**
-                     * 设置Output file COS path information.
-                     * @param _outputInfo Output file COS path information.
+                     * 设置
+                     * @param _outputInfo 
                      * 
                      */
                     void SetOutputInfo(const MediaOutputInfo& _outputInfo);
@@ -111,15 +111,15 @@ namespace TencentCloud
                     bool OutputInfoHasBeenSet() const;
 
                     /**
-                     * 获取Parameters for the video content review task.
-                     * @return AiContentReviewTask Parameters for the video content review task.
+                     * 获取
+                     * @return AiContentReviewTask 
                      * 
                      */
                     AiContentReviewTaskInput GetAiContentReviewTask() const;
 
                     /**
-                     * 设置Parameters for the video content review task.
-                     * @param _aiContentReviewTask Parameters for the video content review task.
+                     * 设置
+                     * @param _aiContentReviewTask 
                      * 
                      */
                     void SetAiContentReviewTask(const AiContentReviewTaskInput& _aiContentReviewTask);
@@ -132,15 +132,15 @@ namespace TencentCloud
                     bool AiContentReviewTaskHasBeenSet() const;
 
                     /**
-                     * 获取Parameters for the video content analysis task.
-                     * @return AiAnalysisTask Parameters for the video content analysis task.
+                     * 获取
+                     * @return AiAnalysisTask 
                      * 
                      */
                     AiAnalysisTaskInput GetAiAnalysisTask() const;
 
                     /**
-                     * 设置Parameters for the video content analysis task.
-                     * @param _aiAnalysisTask Parameters for the video content analysis task.
+                     * 设置
+                     * @param _aiAnalysisTask 
                      * 
                      */
                     void SetAiAnalysisTask(const AiAnalysisTaskInput& _aiAnalysisTask);
@@ -153,15 +153,15 @@ namespace TencentCloud
                     bool AiAnalysisTaskHasBeenSet() const;
 
                     /**
-                     * 获取Parameters for the video content recognition task.
-                     * @return AiRecognitionTask Parameters for the video content recognition task.
+                     * 获取
+                     * @return AiRecognitionTask 
                      * 
                      */
                     AiRecognitionTaskInput GetAiRecognitionTask() const;
 
                     /**
-                     * 设置Parameters for the video content recognition task.
-                     * @param _aiRecognitionTask Parameters for the video content recognition task.
+                     * 设置
+                     * @param _aiRecognitionTask 
                      * 
                      */
                     void SetAiRecognitionTask(const AiRecognitionTaskInput& _aiRecognitionTask);
@@ -174,15 +174,15 @@ namespace TencentCloud
                     bool AiRecognitionTaskHasBeenSet() const;
 
                     /**
-                     * 获取Priority of the task flow. The higher the value, the higher the priority. The value ranges from -10 to 10. If left blank, it represents 0.
-                     * @return TasksPriority Priority of the task flow. The higher the value, the higher the priority. The value ranges from -10 to 10. If left blank, it represents 0.
+                     * 获取
+                     * @return TasksPriority 
                      * 
                      */
                     int64_t GetTasksPriority() const;
 
                     /**
-                     * 设置Priority of the task flow. The higher the value, the higher the priority. The value ranges from -10 to 10. If left blank, it represents 0.
-                     * @param _tasksPriority Priority of the task flow. The higher the value, the higher the priority. The value ranges from -10 to 10. If left blank, it represents 0.
+                     * 设置
+                     * @param _tasksPriority 
                      * 
                      */
                     void SetTasksPriority(const int64_t& _tasksPriority);
@@ -195,15 +195,15 @@ namespace TencentCloud
                     bool TasksPriorityHasBeenSet() const;
 
                     /**
-                     * 获取Task flow status change notification mode. Valid values are Finish, Change, and None. If this is not specified, the default value is Finish.
-                     * @return TasksNotifyMode Task flow status change notification mode. Valid values are Finish, Change, and None. If this is not specified, the default value is Finish.
+                     * 获取
+                     * @return TasksNotifyMode 
                      * 
                      */
                     std::string GetTasksNotifyMode() const;
 
                     /**
-                     * 设置Task flow status change notification mode. Valid values are Finish, Change, and None. If this is not specified, the default value is Finish.
-                     * @param _tasksNotifyMode Task flow status change notification mode. Valid values are Finish, Change, and None. If this is not specified, the default value is Finish.
+                     * 设置
+                     * @param _tasksNotifyMode 
                      * 
                      */
                     void SetTasksNotifyMode(const std::string& _tasksNotifyMode);
@@ -216,15 +216,15 @@ namespace TencentCloud
                     bool TasksNotifyModeHasBeenSet() const;
 
                     /**
-                     * 获取Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
-                     * @return SessionContext Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
+                     * 获取
+                     * @return SessionContext 
                      * 
                      */
                     std::string GetSessionContext() const;
 
                     /**
-                     * 设置Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
-                     * @param _sessionContext Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
+                     * 设置
+                     * @param _sessionContext 
                      * 
                      */
                     void SetSessionContext(const std::string& _sessionContext);
@@ -237,15 +237,15 @@ namespace TencentCloud
                     bool SessionContextHasBeenSet() const;
 
                     /**
-                     * 获取Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
-                     * @return SessionId Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
+                     * 获取
+                     * @return SessionId 
                      * 
                      */
                     std::string GetSessionId() const;
 
                     /**
-                     * 设置Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
-                     * @param _sessionId Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
+                     * 设置
+                     * @param _sessionId 
                      * 
                      */
                     void SetSessionId(const std::string& _sessionId);
@@ -260,61 +260,61 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <b>On-demand [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate on-demand services from December 25, 2023 must fill this field with the app ID when accessing resources in on-demand applications (whether default or newly created).</b>
+                     * 
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
 
                     /**
-                     * The API is <font color='red'>no longer maintained</font>. Refer to the API description for the recommended alternative API.
+                     * 
                      */
                     MediaInputInfo m_inputInfo;
                     bool m_inputInfoHasBeenSet;
 
                     /**
-                     * Output file COS path information.
+                     * 
                      */
                     MediaOutputInfo m_outputInfo;
                     bool m_outputInfoHasBeenSet;
 
                     /**
-                     * Parameters for the video content review task.
+                     * 
                      */
                     AiContentReviewTaskInput m_aiContentReviewTask;
                     bool m_aiContentReviewTaskHasBeenSet;
 
                     /**
-                     * Parameters for the video content analysis task.
+                     * 
                      */
                     AiAnalysisTaskInput m_aiAnalysisTask;
                     bool m_aiAnalysisTaskHasBeenSet;
 
                     /**
-                     * Parameters for the video content recognition task.
+                     * 
                      */
                     AiRecognitionTaskInput m_aiRecognitionTask;
                     bool m_aiRecognitionTaskHasBeenSet;
 
                     /**
-                     * Priority of the task flow. The higher the value, the higher the priority. The value ranges from -10 to 10. If left blank, it represents 0.
+                     * 
                      */
                     int64_t m_tasksPriority;
                     bool m_tasksPriorityHasBeenSet;
 
                     /**
-                     * Task flow status change notification mode. Valid values are Finish, Change, and None. If this is not specified, the default value is Finish.
+                     * 
                      */
                     std::string m_tasksNotifyMode;
                     bool m_tasksNotifyModeHasBeenSet;
 
                     /**
-                     * Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
+                     * 
                      */
                     std::string m_sessionContext;
                     bool m_sessionContextHasBeenSet;
 
                     /**
-                     * Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
+                     * 
                      */
                     std::string m_sessionId;
                     bool m_sessionIdHasBeenSet;

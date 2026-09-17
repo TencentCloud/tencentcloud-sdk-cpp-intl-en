@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * The DRM key information provided by SDMC.
+                * 
                 */
                 class SDMCDrmKeyProviderInfo : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The user ID assigned by SDMC, which can contain up to 128 characters.
-                     * @return Uid The user ID assigned by SDMC, which can contain up to 128 characters.
+                     * 获取
+                     * @return Uid 
                      * 
                      */
                     std::string GetUid() const;
 
                     /**
-                     * 设置The user ID assigned by SDMC, which can contain up to 128 characters.
-                     * @param _uid The user ID assigned by SDMC, which can contain up to 128 characters.
+                     * 设置
+                     * @param _uid 
                      * 
                      */
                     void SetUid(const std::string& _uid);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool UidHasBeenSet() const;
 
                     /**
-                     * 获取The secret ID assigned by SDMC, which can contain up to 128 characters.
-                     * @return SecretId The secret ID assigned by SDMC, which can contain up to 128 characters.
+                     * 获取
+                     * @return SecretId 
                      * 
                      */
                     std::string GetSecretId() const;
 
                     /**
-                     * 设置The secret ID assigned by SDMC, which can contain up to 128 characters.
-                     * @param _secretId The secret ID assigned by SDMC, which can contain up to 128 characters.
+                     * 设置
+                     * @param _secretId 
                      * 
                      */
                     void SetSecretId(const std::string& _secretId);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool SecretIdHasBeenSet() const;
 
                     /**
-                     * 获取The secret key assigned by SDMC, which can contain up to 128 characters.
-                     * @return SecretKey The secret key assigned by SDMC, which can contain up to 128 characters.
+                     * 获取
+                     * @return SecretKey 
                      * 
                      */
                     std::string GetSecretKey() const;
 
                     /**
-                     * 设置The secret key assigned by SDMC, which can contain up to 128 characters.
-                     * @param _secretKey The secret key assigned by SDMC, which can contain up to 128 characters.
+                     * 设置
+                     * @param _secretKey 
                      * 
                      */
                     void SetSecretKey(const std::string& _secretKey);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool SecretKeyHasBeenSet() const;
 
                     /**
-                     * 获取The URL of the FairPlay certificate issued by SDMC. It must be an HTTPS address and can contain up to 1,024 characters.
-                     * @return FairPlayCertificateUrl The URL of the FairPlay certificate issued by SDMC. It must be an HTTPS address and can contain up to 1,024 characters.
+                     * 获取
+                     * @return FairPlayCertificateUrl 
                      * 
                      */
                     std::string GetFairPlayCertificateUrl() const;
 
                     /**
-                     * 设置The URL of the FairPlay certificate issued by SDMC. It must be an HTTPS address and can contain up to 1,024 characters.
-                     * @param _fairPlayCertificateUrl The URL of the FairPlay certificate issued by SDMC. It must be an HTTPS address and can contain up to 1,024 characters.
+                     * 设置
+                     * @param _fairPlayCertificateUrl 
                      * 
                      */
                     void SetFairPlayCertificateUrl(const std::string& _fairPlayCertificateUrl);
@@ -133,25 +133,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The user ID assigned by SDMC, which can contain up to 128 characters.
+                     * 
                      */
                     std::string m_uid;
                     bool m_uidHasBeenSet;
 
                     /**
-                     * The secret ID assigned by SDMC, which can contain up to 128 characters.
+                     * 
                      */
                     std::string m_secretId;
                     bool m_secretIdHasBeenSet;
 
                     /**
-                     * The secret key assigned by SDMC, which can contain up to 128 characters.
+                     * 
                      */
                     std::string m_secretKey;
                     bool m_secretKeyHasBeenSet;
 
                     /**
-                     * The URL of the FairPlay certificate issued by SDMC. It must be an HTTPS address and can contain up to 1,024 characters.
+                     * 
                      */
                     std::string m_fairPlayCertificateUrl;
                     bool m_fairPlayCertificateUrlHasBeenSet;

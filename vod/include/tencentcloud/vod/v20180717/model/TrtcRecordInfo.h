@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * The TRTC recording information.
+                * 
                 */
                 class TrtcRecordInfo : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The TRTC application ID.
-                     * @return SdkAppId The TRTC application ID.
+                     * 获取
+                     * @return SdkAppId 
                      * 
                      */
                     uint64_t GetSdkAppId() const;
 
                     /**
-                     * 设置The TRTC application ID.
-                     * @param _sdkAppId The TRTC application ID.
+                     * 设置
+                     * @param _sdkAppId 
                      * 
                      */
                     void SetSdkAppId(const uint64_t& _sdkAppId);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool SdkAppIdHasBeenSet() const;
 
                     /**
-                     * 获取The TRTC room ID.
-                     * @return RoomId The TRTC room ID.
+                     * 获取
+                     * @return RoomId 
                      * 
                      */
                     std::string GetRoomId() const;
 
                     /**
-                     * 设置The TRTC room ID.
-                     * @param _roomId The TRTC room ID.
+                     * 设置
+                     * @param _roomId 
                      * 
                      */
                     void SetRoomId(const std::string& _roomId);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool RoomIdHasBeenSet() const;
 
                     /**
-                     * 获取The recording task ID.
-                     * @return TaskId The recording task ID.
+                     * 获取
+                     * @return TaskId 
                      * 
                      */
                     std::string GetTaskId() const;
 
                     /**
-                     * 设置The recording task ID.
-                     * @param _taskId The recording task ID.
+                     * 设置
+                     * @param _taskId 
                      * 
                      */
                     void SetTaskId(const std::string& _taskId);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool TaskIdHasBeenSet() const;
 
                     /**
-                     * 获取The IDs of users whose streams are mixed.
-                     * @return UserIds The IDs of users whose streams are mixed.
+                     * 获取
+                     * @return UserIds 
                      * 
                      */
                     std::vector<std::string> GetUserIds() const;
 
                     /**
-                     * 设置The IDs of users whose streams are mixed.
-                     * @param _userIds The IDs of users whose streams are mixed.
+                     * 设置
+                     * @param _userIds 
                      * 
                      */
                     void SetUserIds(const std::vector<std::string>& _userIds);
@@ -133,25 +133,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The TRTC application ID.
+                     * 
                      */
                     uint64_t m_sdkAppId;
                     bool m_sdkAppIdHasBeenSet;
 
                     /**
-                     * The TRTC room ID.
+                     * 
                      */
                     std::string m_roomId;
                     bool m_roomIdHasBeenSet;
 
                     /**
-                     * The recording task ID.
+                     * 
                      */
                     std::string m_taskId;
                     bool m_taskIdHasBeenSet;
 
                     /**
-                     * The IDs of users whose streams are mixed.
+                     * 
                      */
                     std::vector<std::string> m_userIds;
                     bool m_userIdsHasBeenSet;

@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The ID of the NAT gateway, such as `nat-df45454`.
-                     * @return NatGatewayId The ID of the NAT gateway, such as `nat-df45454`.
+                     * 获取NAT gateway ID, for example, `nat-df45454`.
+                     * @return NatGatewayId NAT gateway ID, for example, `nat-df45454`.
                      * 
                      */
                     std::string GetNatGatewayId() const;
 
                     /**
-                     * 设置The ID of the NAT gateway, such as `nat-df45454`.
-                     * @param _natGatewayId The ID of the NAT gateway, such as `nat-df45454`.
+                     * 设置NAT gateway ID, for example, `nat-df45454`.
+                     * @param _natGatewayId NAT gateway ID, for example, `nat-df45454`.
                      * 
                      */
                     void SetNatGatewayId(const std::string& _natGatewayId);
@@ -63,13 +63,40 @@ namespace TencentCloud
                      */
                     bool NatGatewayIdHasBeenSet() const;
 
+                    /**
+                     * 获取Ignores operation risks.
+                     * @return IgnoreOperationRisk Ignores operation risks.
+                     * 
+                     */
+                    bool GetIgnoreOperationRisk() const;
+
+                    /**
+                     * 设置Ignores operation risks.
+                     * @param _ignoreOperationRisk Ignores operation risks.
+                     * 
+                     */
+                    void SetIgnoreOperationRisk(const bool& _ignoreOperationRisk);
+
+                    /**
+                     * 判断参数 IgnoreOperationRisk 是否已赋值
+                     * @return IgnoreOperationRisk 是否已赋值
+                     * 
+                     */
+                    bool IgnoreOperationRiskHasBeenSet() const;
+
                 private:
 
                     /**
-                     * The ID of the NAT gateway, such as `nat-df45454`.
+                     * NAT gateway ID, for example, `nat-df45454`.
                      */
                     std::string m_natGatewayId;
                     bool m_natGatewayIdHasBeenSet;
+
+                    /**
+                     * Ignores operation risks.
+                     */
+                    bool m_ignoreOperationRisk;
+                    bool m_ignoreOperationRiskHasBeenSet;
 
                 };
             }

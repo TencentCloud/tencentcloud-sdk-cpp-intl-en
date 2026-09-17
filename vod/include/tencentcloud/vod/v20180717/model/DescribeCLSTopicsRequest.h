@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Region of the logset belonging to. Valid values: <li>ap-guangzhou: Guangzhou;</li> <li>ap-beijing: Beijing;</li> <li>ap-chengdu: Chengdu;</li> <li>ap-chongqing: Chongqing;</li> <li>ap-nanjing: Nanjing;</li> <li>ap-shanghai: Shanghai;</li> <li>ap-singapore: Singapore.</li>
-                     * @return CLSRegion Region of the logset belonging to. Valid values: <li>ap-guangzhou: Guangzhou;</li> <li>ap-beijing: Beijing;</li> <li>ap-chengdu: Chengdu;</li> <li>ap-chongqing: Chongqing;</li> <li>ap-nanjing: Nanjing;</li> <li>ap-shanghai: Shanghai;</li> <li>ap-singapore: Singapore.</li>
+                     * 获取
+                     * @return CLSRegion 
                      * 
                      */
                     std::string GetCLSRegion() const;
 
                     /**
-                     * 设置Region of the logset belonging to. Valid values: <li>ap-guangzhou: Guangzhou;</li> <li>ap-beijing: Beijing;</li> <li>ap-chengdu: Chengdu;</li> <li>ap-chongqing: Chongqing;</li> <li>ap-nanjing: Nanjing;</li> <li>ap-shanghai: Shanghai;</li> <li>ap-singapore: Singapore.</li>
-                     * @param _cLSRegion Region of the logset belonging to. Valid values: <li>ap-guangzhou: Guangzhou;</li> <li>ap-beijing: Beijing;</li> <li>ap-chengdu: Chengdu;</li> <li>ap-chongqing: Chongqing;</li> <li>ap-nanjing: Nanjing;</li> <li>ap-shanghai: Shanghai;</li> <li>ap-singapore: Singapore.</li>
+                     * 设置
+                     * @param _cLSRegion 
                      * 
                      */
                     void SetCLSRegion(const std::string& _cLSRegion);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool CLSRegionHasBeenSet() const;
 
                     /**
-                     * 获取Log Set ID of Log Topic.
-                     * @return LogsetId Log Set ID of Log Topic.
+                     * 获取
+                     * @return LogsetId 
                      * 
                      */
                     std::string GetLogsetId() const;
 
                     /**
-                     * 设置Log Set ID of Log Topic.
-                     * @param _logsetId Log Set ID of Log Topic.
+                     * 设置
+                     * @param _logsetId 
                      * 
                      */
                     void SetLogsetId(const std::string& _logsetId);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool LogsetIdHasBeenSet() const;
 
                     /**
-                     * 获取Log topic ID list. If left empty, means query all log topics.
-                     * @return TopicIds Log topic ID list. If left empty, means query all log topics.
+                     * 获取
+                     * @return TopicIds 
                      * 
                      */
                     std::vector<std::string> GetTopicIds() const;
 
                     /**
-                     * 设置Log topic ID list. If left empty, means query all log topics.
-                     * @param _topicIds Log topic ID list. If left empty, means query all log topics.
+                     * 设置
+                     * @param _topicIds 
                      * 
                      */
                     void SetTopicIds(const std::vector<std::string>& _topicIds);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool TopicIdsHasBeenSet() const;
 
                     /**
-                     * 获取Pagination offset. Default value: 0.
-                     * @return Offset Pagination offset. Default value: 0.
+                     * 获取
+                     * @return Offset 
                      * 
                      */
                     int64_t GetOffset() const;
 
                     /**
-                     * 设置Pagination offset. Default value: 0.
-                     * @param _offset Pagination offset. Default value: 0.
+                     * 设置
+                     * @param _offset 
                      * 
                      */
                     void SetOffset(const int64_t& _offset);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Number of returned entries. Default value: 20. Maximum value: 100.
-                     * @return Limit Number of returned entries. Default value: 20. Maximum value: 100.
+                     * 获取
+                     * @return Limit 
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置Number of returned entries. Default value: 20. Maximum value: 100.
-                     * @param _limit Number of returned entries. Default value: 20. Maximum value: 100.
+                     * 设置
+                     * @param _limit 
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -150,31 +150,31 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Region of the logset belonging to. Valid values: <li>ap-guangzhou: Guangzhou;</li> <li>ap-beijing: Beijing;</li> <li>ap-chengdu: Chengdu;</li> <li>ap-chongqing: Chongqing;</li> <li>ap-nanjing: Nanjing;</li> <li>ap-shanghai: Shanghai;</li> <li>ap-singapore: Singapore.</li>
+                     * 
                      */
                     std::string m_cLSRegion;
                     bool m_cLSRegionHasBeenSet;
 
                     /**
-                     * Log Set ID of Log Topic.
+                     * 
                      */
                     std::string m_logsetId;
                     bool m_logsetIdHasBeenSet;
 
                     /**
-                     * Log topic ID list. If left empty, means query all log topics.
+                     * 
                      */
                     std::vector<std::string> m_topicIds;
                     bool m_topicIdsHasBeenSet;
 
                     /**
-                     * Pagination offset. Default value: 0.
+                     * 
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Number of returned entries. Default value: 20. Maximum value: 100.
+                     * 
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;

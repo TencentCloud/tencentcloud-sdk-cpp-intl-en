@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Access authentication for Huawei Cloud OBS origin
+                * 
                 */
                 class HwPrivateAccess : public AbstractModel
                 {
@@ -47,15 +47,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Huawei Cloud Object Storage back-to-origin authentication configuration switch, the value is: <li>on: on; </li> <li>off: off. </li>
-                     * @return Switch Huawei Cloud Object Storage back-to-origin authentication configuration switch, the value is: <li>on: on; </li> <li>off: off. </li>
+                     * 获取Huawei Cloud object storage origin-pull authentication configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
+                     * @return Switch Huawei Cloud object storage origin-pull authentication configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Huawei Cloud Object Storage back-to-origin authentication configuration switch, the value is: <li>on: on; </li> <li>off: off. </li>
-                     * @param _switch Huawei Cloud Object Storage back-to-origin authentication configuration switch, the value is: <li>on: on; </li> <li>off: off. </li>
+                     * 设置Huawei Cloud object storage origin-pull authentication configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
+                     * @param _switch Huawei Cloud object storage origin-pull authentication configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -68,15 +76,15 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取Access ID
-                     * @return AccessKey Access ID
+                     * 获取
+                     * @return AccessKey 
                      * 
                      */
                     std::string GetAccessKey() const;
 
                     /**
-                     * 设置Access ID
-                     * @param _accessKey Access ID
+                     * 设置
+                     * @param _accessKey 
                      * 
                      */
                     void SetAccessKey(const std::string& _accessKey);
@@ -89,15 +97,15 @@ namespace TencentCloud
                     bool AccessKeyHasBeenSet() const;
 
                     /**
-                     * 获取Key
-                     * @return SecretKey Key
+                     * 获取
+                     * @return SecretKey 
                      * 
                      */
                     std::string GetSecretKey() const;
 
                     /**
-                     * 设置Key
-                     * @param _secretKey Key
+                     * 设置
+                     * @param _secretKey 
                      * 
                      */
                     void SetSecretKey(const std::string& _secretKey);
@@ -110,15 +118,15 @@ namespace TencentCloud
                     bool SecretKeyHasBeenSet() const;
 
                     /**
-                     * 获取BucketName
-                     * @return Bucket BucketName
+                     * 获取
+                     * @return Bucket 
                      * 
                      */
                     std::string GetBucket() const;
 
                     /**
-                     * 设置BucketName
-                     * @param _bucket BucketName
+                     * 设置
+                     * @param _bucket 
                      * 
                      */
                     void SetBucket(const std::string& _bucket);
@@ -133,25 +141,27 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Huawei Cloud Object Storage back-to-origin authentication configuration switch, the value is: <li>on: on; </li> <li>off: off. </li>
+                     * Huawei Cloud object storage origin-pull authentication configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * Access ID
+                     * 
                      */
                     std::string m_accessKey;
                     bool m_accessKeyHasBeenSet;
 
                     /**
-                     * Key
+                     * 
                      */
                     std::string m_secretKey;
                     bool m_secretKeyHasBeenSet;
 
                     /**
-                     * BucketName
+                     * 
                      */
                     std::string m_bucket;
                     bool m_bucketHasBeenSet;

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * TESHD parameter configuration.
+                * 
                 */
                 class TEHDConfig : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取TESHD transcoding type. Valid values: <li>TEHD-100</li> <li>OFF (default)</li>
-                     * @return Type TESHD transcoding type. Valid values: <li>TEHD-100</li> <li>OFF (default)</li>
+                     * 获取
+                     * @return Type 
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置TESHD transcoding type. Valid values: <li>TEHD-100</li> <li>OFF (default)</li>
-                     * @param _type TESHD transcoding type. Valid values: <li>TEHD-100</li> <li>OFF (default)</li>
+                     * 设置
+                     * @param _type 
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -68,19 +68,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Maximum video bitrate. Valid at that time when Type is specified as top speed Codec.
-Leave it blank or set it to 0 to let VOD automatically set the bitrate cap.
-                     * @return MaxVideoBitrate Maximum video bitrate. Valid at that time when Type is specified as top speed Codec.
-Leave it blank or set it to 0 to let VOD automatically set the bitrate cap.
+                     * 获取
+                     * @return MaxVideoBitrate 
                      * 
                      */
                     uint64_t GetMaxVideoBitrate() const;
 
                     /**
-                     * 设置Maximum video bitrate. Valid at that time when Type is specified as top speed Codec.
-Leave it blank or set it to 0 to let VOD automatically set the bitrate cap.
-                     * @param _maxVideoBitrate Maximum video bitrate. Valid at that time when Type is specified as top speed Codec.
-Leave it blank or set it to 0 to let VOD automatically set the bitrate cap.
+                     * 设置
+                     * @param _maxVideoBitrate 
                      * 
                      */
                     void SetMaxVideoBitrate(const uint64_t& _maxVideoBitrate);
@@ -95,14 +91,13 @@ Leave it blank or set it to 0 to let VOD automatically set the bitrate cap.
                 private:
 
                     /**
-                     * TESHD transcoding type. Valid values: <li>TEHD-100</li> <li>OFF (default)</li>
+                     * 
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Maximum video bitrate. Valid at that time when Type is specified as top speed Codec.
-Leave it blank or set it to 0 to let VOD automatically set the bitrate cap.
+                     * 
                      */
                     uint64_t m_maxVideoBitrate;
                     bool m_maxVideoBitrateHasBeenSet;

@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Trigger content intelligent identification count.
-                     * @return TotalCount Trigger content intelligent identification count.
+                     * 获取
+                     * @return TotalCount 
                      * 
                      */
                     int64_t GetTotalCount() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取Content intelligent identification duration.
-                     * @return TotalDuration Content intelligent identification duration.
+                     * 获取
+                     * @return TotalDuration 
                      * 
                      */
                     int64_t GetTotalDuration() const;
@@ -73,8 +73,8 @@ namespace TencentCloud
                     bool TotalDurationHasBeenSet() const;
 
                     /**
-                     * 获取Content intelligent identification duration stats, one data point per day.
-                     * @return Data Content intelligent identification duration stats, one data point per day.
+                     * 获取
+                     * @return Data 
                      * 
                      */
                     std::vector<StatDataItem> GetData() const;
@@ -89,19 +89,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Trigger content intelligent identification count.
+                     * 
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * Content intelligent identification duration.
+                     * 
                      */
                     int64_t m_totalDuration;
                     bool m_totalDurationHasBeenSet;
 
                     /**
-                     * Content intelligent identification duration stats, one data point per day.
+                     * 
                      */
                     std::vector<StatDataItem> m_data;
                     bool m_dataHasBeenSet;

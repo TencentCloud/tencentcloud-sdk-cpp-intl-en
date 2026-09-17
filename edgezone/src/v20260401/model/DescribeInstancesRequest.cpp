@@ -27,6 +27,8 @@ DescribeInstancesRequest::DescribeInstancesRequest() :
     m_instanceNameHasBeenSet(false),
     m_zoneHasBeenSet(false),
     m_instanceStatusHasBeenSet(false),
+    m_publicNetworkIdHasBeenSet(false),
+    m_privateNetworkIdHasBeenSet(false),
     m_publicIpsHasBeenSet(false),
     m_offsetHasBeenSet(false),
     m_limitHasBeenSet(false)
@@ -80,6 +82,22 @@ string DescribeInstancesRequest::ToJsonString() const
         {
             d[key.c_str()].PushBack(rapidjson::Value().SetString((*itr).c_str(), allocator), allocator);
         }
+    }
+
+    if (m_publicNetworkIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "PublicNetworkId";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_publicNetworkId.c_str(), allocator).Move(), allocator);
+    }
+
+    if (m_privateNetworkIdHasBeenSet)
+    {
+        rapidjson::Value iKey(rapidjson::kStringType);
+        string key = "PrivateNetworkId";
+        iKey.SetString(key.c_str(), allocator);
+        d.AddMember(iKey, rapidjson::Value(m_privateNetworkId.c_str(), allocator).Move(), allocator);
     }
 
     if (m_publicIpsHasBeenSet)
@@ -181,6 +199,38 @@ void DescribeInstancesRequest::SetInstanceStatus(const vector<string>& _instance
 bool DescribeInstancesRequest::InstanceStatusHasBeenSet() const
 {
     return m_instanceStatusHasBeenSet;
+}
+
+string DescribeInstancesRequest::GetPublicNetworkId() const
+{
+    return m_publicNetworkId;
+}
+
+void DescribeInstancesRequest::SetPublicNetworkId(const string& _publicNetworkId)
+{
+    m_publicNetworkId = _publicNetworkId;
+    m_publicNetworkIdHasBeenSet = true;
+}
+
+bool DescribeInstancesRequest::PublicNetworkIdHasBeenSet() const
+{
+    return m_publicNetworkIdHasBeenSet;
+}
+
+string DescribeInstancesRequest::GetPrivateNetworkId() const
+{
+    return m_privateNetworkId;
+}
+
+void DescribeInstancesRequest::SetPrivateNetworkId(const string& _privateNetworkId)
+{
+    m_privateNetworkId = _privateNetworkId;
+    m_privateNetworkIdHasBeenSet = true;
+}
+
+bool DescribeInstancesRequest::PrivateNetworkIdHasBeenSet() const
+{
+    return m_privateNetworkIdHasBeenSet;
 }
 
 vector<string> DescribeInstancesRequest::GetPublicIps() const

@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Unique identifier list of media files. Maximum length: 100.
-                     * @return FileIds Unique identifier list of media files. Maximum length: 100.
+                     * 获取
+                     * @return FileIds 
                      * 
                      */
                     std::vector<std::string> GetFileIds() const;
 
                     /**
-                     * 设置Unique identifier list of media files. Maximum length: 100.
-                     * @param _fileIds Unique identifier list of media files. Maximum length: 100.
+                     * 设置
+                     * @param _fileIds 
                      * 
                      */
                     void SetFileIds(const std::vector<std::string>& _fileIds);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool FileIdsHasBeenSet() const;
 
                     /**
-                     * 获取Accessible duration of thawed temporary media files must be greater than 0. Unit: day.
-                     * @return RestoreDay Accessible duration of thawed temporary media files must be greater than 0. Unit: day.
+                     * 获取
+                     * @return RestoreDay 
                      * 
                      */
                     uint64_t GetRestoreDay() const;
 
                     /**
-                     * 设置Accessible duration of thawed temporary media files must be greater than 0. Unit: day.
-                     * @param _restoreDay Accessible duration of thawed temporary media files must be greater than 0. Unit: day.
+                     * 设置
+                     * @param _restoreDay 
                      * 
                      */
                     void SetRestoreDay(const uint64_t& _restoreDay);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool RestoreDayHasBeenSet() const;
 
                     /**
-                     * 获取<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
-                     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+                     * 获取
+                     * @return SubAppId 
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
-                     * @param _subAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+                     * 设置
+                     * @param _subAppId 
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -106,39 +106,15 @@ namespace TencentCloud
                     bool SubAppIdHasBeenSet() const;
 
                     /**
-                     * 获取Thawing mode. When the current storage type of a media file is archive storage, it takes the following values:
-<li>Speed mode: Expedited. The unfreeze task will be completed in 5 minutes.</li>
-<li>Standard mode: Standard. The unfreeze task will be completed in 5 hours.</li>
-<li>Batch mode: Bulk. The unfreeze task will be completed in 12 hours.</li>
-When the file storage type of the media file is DEEP_ARCHIVE, the following values are available:
-<li>Standard mode: Standard. The unfreeze task will be completed in 24 hours.</li>
-<li>Batch mode: Bulk. The unfreeze task will be completed after 48 hours.</li>
-                     * @return RestoreTier Thawing mode. When the current storage type of a media file is archive storage, it takes the following values:
-<li>Speed mode: Expedited. The unfreeze task will be completed in 5 minutes.</li>
-<li>Standard mode: Standard. The unfreeze task will be completed in 5 hours.</li>
-<li>Batch mode: Bulk. The unfreeze task will be completed in 12 hours.</li>
-When the file storage type of the media file is DEEP_ARCHIVE, the following values are available:
-<li>Standard mode: Standard. The unfreeze task will be completed in 24 hours.</li>
-<li>Batch mode: Bulk. The unfreeze task will be completed after 48 hours.</li>
+                     * 获取
+                     * @return RestoreTier 
                      * 
                      */
                     std::string GetRestoreTier() const;
 
                     /**
-                     * 设置Thawing mode. When the current storage type of a media file is archive storage, it takes the following values:
-<li>Speed mode: Expedited. The unfreeze task will be completed in 5 minutes.</li>
-<li>Standard mode: Standard. The unfreeze task will be completed in 5 hours.</li>
-<li>Batch mode: Bulk. The unfreeze task will be completed in 12 hours.</li>
-When the file storage type of the media file is DEEP_ARCHIVE, the following values are available:
-<li>Standard mode: Standard. The unfreeze task will be completed in 24 hours.</li>
-<li>Batch mode: Bulk. The unfreeze task will be completed after 48 hours.</li>
-                     * @param _restoreTier Thawing mode. When the current storage type of a media file is archive storage, it takes the following values:
-<li>Speed mode: Expedited. The unfreeze task will be completed in 5 minutes.</li>
-<li>Standard mode: Standard. The unfreeze task will be completed in 5 hours.</li>
-<li>Batch mode: Bulk. The unfreeze task will be completed in 12 hours.</li>
-When the file storage type of the media file is DEEP_ARCHIVE, the following values are available:
-<li>Standard mode: Standard. The unfreeze task will be completed in 24 hours.</li>
-<li>Batch mode: Bulk. The unfreeze task will be completed after 48 hours.</li>
+                     * 设置
+                     * @param _restoreTier 
                      * 
                      */
                     void SetRestoreTier(const std::string& _restoreTier);
@@ -153,31 +129,25 @@ When the file storage type of the media file is DEEP_ARCHIVE, the following valu
                 private:
 
                     /**
-                     * Unique identifier list of media files. Maximum length: 100.
+                     * 
                      */
                     std::vector<std::string> m_fileIds;
                     bool m_fileIdsHasBeenSet;
 
                     /**
-                     * Accessible duration of thawed temporary media files must be greater than 0. Unit: day.
+                     * 
                      */
                     uint64_t m_restoreDay;
                     bool m_restoreDayHasBeenSet;
 
                     /**
-                     * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+                     * 
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
 
                     /**
-                     * Thawing mode. When the current storage type of a media file is archive storage, it takes the following values:
-<li>Speed mode: Expedited. The unfreeze task will be completed in 5 minutes.</li>
-<li>Standard mode: Standard. The unfreeze task will be completed in 5 hours.</li>
-<li>Batch mode: Bulk. The unfreeze task will be completed in 12 hours.</li>
-When the file storage type of the media file is DEEP_ARCHIVE, the following values are available:
-<li>Standard mode: Standard. The unfreeze task will be completed in 24 hours.</li>
-<li>Batch mode: Bulk. The unfreeze task will be completed after 48 hours.</li>
+                     * 
                      */
                     std::string m_restoreTier;
                     bool m_restoreTierHasBeenSet;

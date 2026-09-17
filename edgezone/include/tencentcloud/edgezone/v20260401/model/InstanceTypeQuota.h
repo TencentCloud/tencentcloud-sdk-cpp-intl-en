@@ -110,6 +110,27 @@ namespace TencentCloud
                     bool InstanceFamilyHasBeenSet() const;
 
                     /**
+                     * 获取Model family name
+                     * @return InstanceFamilyName Model family name
+                     * 
+                     */
+                    std::string GetInstanceFamilyName() const;
+
+                    /**
+                     * 设置Model family name
+                     * @param _instanceFamilyName Model family name
+                     * 
+                     */
+                    void SetInstanceFamilyName(const std::string& _instanceFamilyName);
+
+                    /**
+                     * 判断参数 InstanceFamilyName 是否已赋值
+                     * @return InstanceFamilyName 是否已赋值
+                     * 
+                     */
+                    bool InstanceFamilyNameHasBeenSet() const;
+
+                    /**
                      * 获取Number of CPU cores.
                      * @return CpuCores Number of CPU cores.
                      * 
@@ -299,6 +320,69 @@ namespace TencentCloud
                     bool DataDiskCountHasBeenSet() const;
 
                     /**
+                     * 获取Second set of data disk types
+                     * @return SecondaryDataDiskType Second set of data disk types
+                     * 
+                     */
+                    std::string GetSecondaryDataDiskType() const;
+
+                    /**
+                     * 设置Second set of data disk types
+                     * @param _secondaryDataDiskType Second set of data disk types
+                     * 
+                     */
+                    void SetSecondaryDataDiskType(const std::string& _secondaryDataDiskType);
+
+                    /**
+                     * 判断参数 SecondaryDataDiskType 是否已赋值
+                     * @return SecondaryDataDiskType 是否已赋值
+                     * 
+                     */
+                    bool SecondaryDataDiskTypeHasBeenSet() const;
+
+                    /**
+                     * 获取Data disk size of the second group (GB)
+                     * @return SecondaryDataDiskSize Data disk size of the second group (GB)
+                     * 
+                     */
+                    int64_t GetSecondaryDataDiskSize() const;
+
+                    /**
+                     * 设置Data disk size of the second group (GB)
+                     * @param _secondaryDataDiskSize Data disk size of the second group (GB)
+                     * 
+                     */
+                    void SetSecondaryDataDiskSize(const int64_t& _secondaryDataDiskSize);
+
+                    /**
+                     * 判断参数 SecondaryDataDiskSize 是否已赋值
+                     * @return SecondaryDataDiskSize 是否已赋值
+                     * 
+                     */
+                    bool SecondaryDataDiskSizeHasBeenSet() const;
+
+                    /**
+                     * 获取Number of data disks in the second set
+                     * @return SecondaryDataDiskCount Number of data disks in the second set
+                     * 
+                     */
+                    int64_t GetSecondaryDataDiskCount() const;
+
+                    /**
+                     * 设置Number of data disks in the second set
+                     * @param _secondaryDataDiskCount Number of data disks in the second set
+                     * 
+                     */
+                    void SetSecondaryDataDiskCount(const int64_t& _secondaryDataDiskCount);
+
+                    /**
+                     * 判断参数 SecondaryDataDiskCount 是否已赋值
+                     * @return SecondaryDataDiskCount 是否已赋值
+                     * 
+                     */
+                    bool SecondaryDataDiskCountHasBeenSet() const;
+
+                    /**
                      * 获取Disk description string (backward compatibility).
                      * @return DiskType Disk description string (backward compatibility).
                      * 
@@ -362,15 +446,15 @@ namespace TencentCloud
                     bool GpuTypeHasBeenSet() const;
 
                     /**
-                     * 获取Quota quantity. 0 indicates no restriction.
-                     * @return Quota Quota quantity. 0 indicates no restriction.
+                     * 获取Quota quantity
+                     * @return Quota Quota quantity
                      * 
                      */
                     uint64_t GetQuota() const;
 
                     /**
-                     * 设置Quota quantity. 0 indicates no restriction.
-                     * @param _quota Quota quantity. 0 indicates no restriction.
+                     * 设置Quota quantity
+                     * @param _quota Quota quantity
                      * 
                      */
                     void SetQuota(const uint64_t& _quota);
@@ -401,6 +485,12 @@ namespace TencentCloud
                      */
                     std::string m_instanceFamily;
                     bool m_instanceFamilyHasBeenSet;
+
+                    /**
+                     * Model family name
+                     */
+                    std::string m_instanceFamilyName;
+                    bool m_instanceFamilyNameHasBeenSet;
 
                     /**
                      * Number of CPU cores.
@@ -457,6 +547,24 @@ namespace TencentCloud
                     bool m_dataDiskCountHasBeenSet;
 
                     /**
+                     * Second set of data disk types
+                     */
+                    std::string m_secondaryDataDiskType;
+                    bool m_secondaryDataDiskTypeHasBeenSet;
+
+                    /**
+                     * Data disk size of the second group (GB)
+                     */
+                    int64_t m_secondaryDataDiskSize;
+                    bool m_secondaryDataDiskSizeHasBeenSet;
+
+                    /**
+                     * Number of data disks in the second set
+                     */
+                    int64_t m_secondaryDataDiskCount;
+                    bool m_secondaryDataDiskCountHasBeenSet;
+
+                    /**
                      * Disk description string (backward compatibility).
                      */
                     std::string m_diskType;
@@ -475,7 +583,7 @@ namespace TencentCloud
                     bool m_gpuTypeHasBeenSet;
 
                     /**
-                     * Quota quantity. 0 indicates no restriction.
+                     * Quota quantity
                      */
                     uint64_t m_quota;
                     bool m_quotaHasBeenSet;

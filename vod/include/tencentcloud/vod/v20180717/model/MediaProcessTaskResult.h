@@ -42,7 +42,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Query result type of task
+                * 
                 */
                 class MediaProcessTaskResult : public AbstractModel
                 {
@@ -54,43 +54,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Task type. Valid values:
-<li>Transcode: transcoding</li>
-<li>AnimatedGraphics: animated image generating</li>
-<li>SnapshotByTimeOffset: time point screencapturing</li>
-<li>SampleSnapshot: sampled screencapturing</li>
-<li>ImageSprites: image sprite generating</li>
-<li>CoverBySnapshot: Screencapturing for cover image</li>
-<li>AdaptiveDynamicStreaming: adaptive bitrate streaming</li>
-                     * @return Type Task type. Valid values:
-<li>Transcode: transcoding</li>
-<li>AnimatedGraphics: animated image generating</li>
-<li>SnapshotByTimeOffset: time point screencapturing</li>
-<li>SampleSnapshot: sampled screencapturing</li>
-<li>ImageSprites: image sprite generating</li>
-<li>CoverBySnapshot: Screencapturing for cover image</li>
-<li>AdaptiveDynamicStreaming: adaptive bitrate streaming</li>
+                     * 获取
+                     * @return Type 
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Task type. Valid values:
-<li>Transcode: transcoding</li>
-<li>AnimatedGraphics: animated image generating</li>
-<li>SnapshotByTimeOffset: time point screencapturing</li>
-<li>SampleSnapshot: sampled screencapturing</li>
-<li>ImageSprites: image sprite generating</li>
-<li>CoverBySnapshot: Screencapturing for cover image</li>
-<li>AdaptiveDynamicStreaming: adaptive bitrate streaming</li>
-                     * @param _type Task type. Valid values:
-<li>Transcode: transcoding</li>
-<li>AnimatedGraphics: animated image generating</li>
-<li>SnapshotByTimeOffset: time point screencapturing</li>
-<li>SampleSnapshot: sampled screencapturing</li>
-<li>ImageSprites: image sprite generating</li>
-<li>CoverBySnapshot: Screencapturing for cover image</li>
-<li>AdaptiveDynamicStreaming: adaptive bitrate streaming</li>
+                     * 设置
+                     * @param _type 
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -103,19 +75,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Query result of transcoding task, which is valid when task type is `Transcode`.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return TranscodeTask Query result of transcoding task, which is valid when task type is `Transcode`.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return TranscodeTask 
                      * 
                      */
                     MediaProcessTaskTranscodeResult GetTranscodeTask() const;
 
                     /**
-                     * 设置Query result of transcoding task, which is valid when task type is `Transcode`.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _transcodeTask Query result of transcoding task, which is valid when task type is `Transcode`.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _transcodeTask 
                      * 
                      */
                     void SetTranscodeTask(const MediaProcessTaskTranscodeResult& _transcodeTask);
@@ -128,19 +96,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool TranscodeTaskHasBeenSet() const;
 
                     /**
-                     * 获取Query result of animated image generating task, which is valid when task type is `AnimatedGraphics`.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return AnimatedGraphicTask Query result of animated image generating task, which is valid when task type is `AnimatedGraphics`.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return AnimatedGraphicTask 
                      * 
                      */
                     MediaProcessTaskAnimatedGraphicResult GetAnimatedGraphicTask() const;
 
                     /**
-                     * 设置Query result of animated image generating task, which is valid when task type is `AnimatedGraphics`.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _animatedGraphicTask Query result of animated image generating task, which is valid when task type is `AnimatedGraphics`.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _animatedGraphicTask 
                      * 
                      */
                     void SetAnimatedGraphicTask(const MediaProcessTaskAnimatedGraphicResult& _animatedGraphicTask);
@@ -153,19 +117,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool AnimatedGraphicTaskHasBeenSet() const;
 
                     /**
-                     * 获取Query result of time point screencapturing task, which is valid when task type is `SnapshotByTimeOffset`.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return SnapshotByTimeOffsetTask Query result of time point screencapturing task, which is valid when task type is `SnapshotByTimeOffset`.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return SnapshotByTimeOffsetTask 
                      * 
                      */
                     MediaProcessTaskSnapshotByTimeOffsetResult GetSnapshotByTimeOffsetTask() const;
 
                     /**
-                     * 设置Query result of time point screencapturing task, which is valid when task type is `SnapshotByTimeOffset`.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _snapshotByTimeOffsetTask Query result of time point screencapturing task, which is valid when task type is `SnapshotByTimeOffset`.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _snapshotByTimeOffsetTask 
                      * 
                      */
                     void SetSnapshotByTimeOffsetTask(const MediaProcessTaskSnapshotByTimeOffsetResult& _snapshotByTimeOffsetTask);
@@ -178,19 +138,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool SnapshotByTimeOffsetTaskHasBeenSet() const;
 
                     /**
-                     * 获取Query result of sampled screencapturing task, which is valid when task type is `SampleSnapshot`.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return SampleSnapshotTask Query result of sampled screencapturing task, which is valid when task type is `SampleSnapshot`.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return SampleSnapshotTask 
                      * 
                      */
                     MediaProcessTaskSampleSnapshotResult GetSampleSnapshotTask() const;
 
                     /**
-                     * 设置Query result of sampled screencapturing task, which is valid when task type is `SampleSnapshot`.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _sampleSnapshotTask Query result of sampled screencapturing task, which is valid when task type is `SampleSnapshot`.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _sampleSnapshotTask 
                      * 
                      */
                     void SetSampleSnapshotTask(const MediaProcessTaskSampleSnapshotResult& _sampleSnapshotTask);
@@ -203,19 +159,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool SampleSnapshotTaskHasBeenSet() const;
 
                     /**
-                     * 获取Query result of image sprite generating task, which is valid when task type is `ImageSprite`.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return ImageSpriteTask Query result of image sprite generating task, which is valid when task type is `ImageSprite`.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return ImageSpriteTask 
                      * 
                      */
                     MediaProcessTaskImageSpriteResult GetImageSpriteTask() const;
 
                     /**
-                     * 设置Query result of image sprite generating task, which is valid when task type is `ImageSprite`.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _imageSpriteTask Query result of image sprite generating task, which is valid when task type is `ImageSprite`.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _imageSpriteTask 
                      * 
                      */
                     void SetImageSpriteTask(const MediaProcessTaskImageSpriteResult& _imageSpriteTask);
@@ -228,19 +180,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool ImageSpriteTaskHasBeenSet() const;
 
                     /**
-                     * 获取Query result of cover generating task, which is valid if task type is `CoverBySnapshot`.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return CoverBySnapshotTask Query result of cover generating task, which is valid if task type is `CoverBySnapshot`.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return CoverBySnapshotTask 
                      * 
                      */
                     MediaProcessTaskCoverBySnapshotResult GetCoverBySnapshotTask() const;
 
                     /**
-                     * 设置Query result of cover generating task, which is valid if task type is `CoverBySnapshot`.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _coverBySnapshotTask Query result of cover generating task, which is valid if task type is `CoverBySnapshot`.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _coverBySnapshotTask 
                      * 
                      */
                     void SetCoverBySnapshotTask(const MediaProcessTaskCoverBySnapshotResult& _coverBySnapshotTask);
@@ -253,19 +201,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool CoverBySnapshotTaskHasBeenSet() const;
 
                     /**
-                     * 获取Query result of adaptive bitrate streaming, which is valid if task type is `AdaptiveDynamicStreaming`.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return AdaptiveDynamicStreamingTask Query result of adaptive bitrate streaming, which is valid if task type is `AdaptiveDynamicStreaming`.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return AdaptiveDynamicStreamingTask 
                      * 
                      */
                     MediaProcessTaskAdaptiveDynamicStreamingResult GetAdaptiveDynamicStreamingTask() const;
 
                     /**
-                     * 设置Query result of adaptive bitrate streaming, which is valid if task type is `AdaptiveDynamicStreaming`.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _adaptiveDynamicStreamingTask Query result of adaptive bitrate streaming, which is valid if task type is `AdaptiveDynamicStreaming`.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _adaptiveDynamicStreamingTask 
                      * 
                      */
                     void SetAdaptiveDynamicStreamingTask(const MediaProcessTaskAdaptiveDynamicStreamingResult& _adaptiveDynamicStreamingTask);
@@ -280,63 +224,49 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Task type. Valid values:
-<li>Transcode: transcoding</li>
-<li>AnimatedGraphics: animated image generating</li>
-<li>SnapshotByTimeOffset: time point screencapturing</li>
-<li>SampleSnapshot: sampled screencapturing</li>
-<li>ImageSprites: image sprite generating</li>
-<li>CoverBySnapshot: Screencapturing for cover image</li>
-<li>AdaptiveDynamicStreaming: adaptive bitrate streaming</li>
+                     * 
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Query result of transcoding task, which is valid when task type is `Transcode`.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     MediaProcessTaskTranscodeResult m_transcodeTask;
                     bool m_transcodeTaskHasBeenSet;
 
                     /**
-                     * Query result of animated image generating task, which is valid when task type is `AnimatedGraphics`.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     MediaProcessTaskAnimatedGraphicResult m_animatedGraphicTask;
                     bool m_animatedGraphicTaskHasBeenSet;
 
                     /**
-                     * Query result of time point screencapturing task, which is valid when task type is `SnapshotByTimeOffset`.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     MediaProcessTaskSnapshotByTimeOffsetResult m_snapshotByTimeOffsetTask;
                     bool m_snapshotByTimeOffsetTaskHasBeenSet;
 
                     /**
-                     * Query result of sampled screencapturing task, which is valid when task type is `SampleSnapshot`.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     MediaProcessTaskSampleSnapshotResult m_sampleSnapshotTask;
                     bool m_sampleSnapshotTaskHasBeenSet;
 
                     /**
-                     * Query result of image sprite generating task, which is valid when task type is `ImageSprite`.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     MediaProcessTaskImageSpriteResult m_imageSpriteTask;
                     bool m_imageSpriteTaskHasBeenSet;
 
                     /**
-                     * Query result of cover generating task, which is valid if task type is `CoverBySnapshot`.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     MediaProcessTaskCoverBySnapshotResult m_coverBySnapshotTask;
                     bool m_coverBySnapshotTaskHasBeenSet;
 
                     /**
-                     * Query result of adaptive bitrate streaming, which is valid if task type is `AdaptiveDynamicStreaming`.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     MediaProcessTaskAdaptiveDynamicStreamingResult m_adaptiveDynamicStreamingTask;
                     bool m_adaptiveDynamicStreamingTaskHasBeenSet;

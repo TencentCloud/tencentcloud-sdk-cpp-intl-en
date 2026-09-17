@@ -38,7 +38,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Input of the AIGC video generation task.
+                * 
                 */
                 class AigcVideoTaskInput : public AbstractModel
                 {
@@ -50,15 +50,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Model name.</p>
-                     * @return ModelName <p>Model name.</p>
+                     * 获取
+                     * @return ModelName 
                      * 
                      */
                     std::string GetModelName() const;
 
                     /**
-                     * 设置<p>Model name.</p>
-                     * @param _modelName <p>Model name.</p>
+                     * 设置
+                     * @param _modelName 
                      * 
                      */
                     void SetModelName(const std::string& _modelName);
@@ -71,15 +71,15 @@ namespace TencentCloud
                     bool ModelNameHasBeenSet() const;
 
                     /**
-                     * 获取<p>Model version.</p>
-                     * @return ModelVersion <p>Model version.</p>
+                     * 获取
+                     * @return ModelVersion 
                      * 
                      */
                     std::string GetModelVersion() const;
 
                     /**
-                     * 设置<p>Model version.</p>
-                     * @param _modelVersion <p>Model version.</p>
+                     * 设置
+                     * @param _modelVersion 
                      * 
                      */
                     void SetModelVersion(const std::string& _modelVersion);
@@ -92,15 +92,15 @@ namespace TencentCloud
                     bool ModelVersionHasBeenSet() const;
 
                     /**
-                     * 获取<p>Input file information of the AIGC video generation task.</p>
-                     * @return FileInfos <p>Input file information of the AIGC video generation task.</p>
+                     * 获取
+                     * @return FileInfos 
                      * 
                      */
                     std::vector<AigcVideoTaskInputFileInfo> GetFileInfos() const;
 
                     /**
-                     * 设置<p>Input file information of the AIGC video generation task.</p>
-                     * @param _fileInfos <p>Input file information of the AIGC video generation task.</p>
+                     * 设置
+                     * @param _fileInfos 
                      * 
                      */
                     void SetFileInfos(const std::vector<AigcVideoTaskInputFileInfo>& _fileInfos);
@@ -113,15 +113,15 @@ namespace TencentCloud
                     bool FileInfosHasBeenSet() const;
 
                     /**
-                     * 获取<p>Fixed entity input information for AIGC tasks.</p>
-                     * @return SubjectInfos <p>Fixed entity input information for AIGC tasks.</p>
+                     * 获取
+                     * @return SubjectInfos 
                      * 
                      */
                     std::vector<AigcVideoTaskInputSubjectInfo> GetSubjectInfos() const;
 
                     /**
-                     * 设置<p>Fixed entity input information for AIGC tasks.</p>
-                     * @param _subjectInfos <p>Fixed entity input information for AIGC tasks.</p>
+                     * 设置
+                     * @param _subjectInfos 
                      * 
                      */
                     void SetSubjectInfos(const std::vector<AigcVideoTaskInputSubjectInfo>& _subjectInfos);
@@ -134,15 +134,15 @@ namespace TencentCloud
                     bool SubjectInfosHasBeenSet() const;
 
                     /**
-                     * 获取<p>Media file ID used as the end frame to generate video. This file has a globally unique ID on VOD, assigned by the VOD backend after successful upload. You can get this field in the <a href="/document/product/266/7830?from_cn_redirect=1">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>.</p>
-                     * @return LastFrameFileId <p>Media file ID used as the end frame to generate video. This file has a globally unique ID on VOD, assigned by the VOD backend after successful upload. You can get this field in the <a href="/document/product/266/7830?from_cn_redirect=1">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>.</p>
+                     * 获取
+                     * @return LastFrameFileId 
                      * 
                      */
                     std::string GetLastFrameFileId() const;
 
                     /**
-                     * 设置<p>Media file ID used as the end frame to generate video. This file has a globally unique ID on VOD, assigned by the VOD backend after successful upload. You can get this field in the <a href="/document/product/266/7830?from_cn_redirect=1">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>.</p>
-                     * @param _lastFrameFileId <p>Media file ID used as the end frame to generate video. This file has a globally unique ID on VOD, assigned by the VOD backend after successful upload. You can get this field in the <a href="/document/product/266/7830?from_cn_redirect=1">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>.</p>
+                     * 设置
+                     * @param _lastFrameFileId 
                      * 
                      */
                     void SetLastFrameFileId(const std::string& _lastFrameFileId);
@@ -155,15 +155,15 @@ namespace TencentCloud
                     bool LastFrameFileIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>Media file URL used as the tail frame to generate video. Description:</p><ol><li>Only support models GV, Kling, and Vidu. Other models are not currently supported. When ModelName is GV, if you specify this parameter, you must simultaneously specify FileInfos as the head frame for video generation. When ModelName is Kling, ModelVersion is 2.1, and output resolution Resolution is specified as 1080P, you can specify this parameter. When ModelName is Vidu and ModelVersion is q2-pro or q2-turbo, you can specify this parameter.</li><li>Image size must be less than 5M.</li><li><ol start="3"><li>Image format value: jpeg, jpg, png, webp.</li></ol></li></ol>
-                     * @return LastFrameUrl <p>Media file URL used as the tail frame to generate video. Description:</p><ol><li>Only support models GV, Kling, and Vidu. Other models are not currently supported. When ModelName is GV, if you specify this parameter, you must simultaneously specify FileInfos as the head frame for video generation. When ModelName is Kling, ModelVersion is 2.1, and output resolution Resolution is specified as 1080P, you can specify this parameter. When ModelName is Vidu and ModelVersion is q2-pro or q2-turbo, you can specify this parameter.</li><li>Image size must be less than 5M.</li><li><ol start="3"><li>Image format value: jpeg, jpg, png, webp.</li></ol></li></ol>
+                     * 获取
+                     * @return LastFrameUrl 
                      * 
                      */
                     std::string GetLastFrameUrl() const;
 
                     /**
-                     * 设置<p>Media file URL used as the tail frame to generate video. Description:</p><ol><li>Only support models GV, Kling, and Vidu. Other models are not currently supported. When ModelName is GV, if you specify this parameter, you must simultaneously specify FileInfos as the head frame for video generation. When ModelName is Kling, ModelVersion is 2.1, and output resolution Resolution is specified as 1080P, you can specify this parameter. When ModelName is Vidu and ModelVersion is q2-pro or q2-turbo, you can specify this parameter.</li><li>Image size must be less than 5M.</li><li><ol start="3"><li>Image format value: jpeg, jpg, png, webp.</li></ol></li></ol>
-                     * @param _lastFrameUrl <p>Media file URL used as the tail frame to generate video. Description:</p><ol><li>Only support models GV, Kling, and Vidu. Other models are not currently supported. When ModelName is GV, if you specify this parameter, you must simultaneously specify FileInfos as the head frame for video generation. When ModelName is Kling, ModelVersion is 2.1, and output resolution Resolution is specified as 1080P, you can specify this parameter. When ModelName is Vidu and ModelVersion is q2-pro or q2-turbo, you can specify this parameter.</li><li>Image size must be less than 5M.</li><li><ol start="3"><li>Image format value: jpeg, jpg, png, webp.</li></ol></li></ol>
+                     * 设置
+                     * @param _lastFrameUrl 
                      * 
                      */
                     void SetLastFrameUrl(const std::string& _lastFrameUrl);
@@ -176,15 +176,15 @@ namespace TencentCloud
                     bool LastFrameUrlHasBeenSet() const;
 
                     /**
-                     * 获取<p>Prompt for video generation. Supports a maximum of 1000 characters. This parameter is required when FileInfos is empty.</p>
-                     * @return Prompt <p>Prompt for video generation. Supports a maximum of 1000 characters. This parameter is required when FileInfos is empty.</p>
+                     * 获取
+                     * @return Prompt 
                      * 
                      */
                     std::string GetPrompt() const;
 
                     /**
-                     * 设置<p>Prompt for video generation. Supports a maximum of 1000 characters. This parameter is required when FileInfos is empty.</p>
-                     * @param _prompt <p>Prompt for video generation. Supports a maximum of 1000 characters. This parameter is required when FileInfos is empty.</p>
+                     * 设置
+                     * @param _prompt 
                      * 
                      */
                     void SetPrompt(const std::string& _prompt);
@@ -197,15 +197,15 @@ namespace TencentCloud
                     bool PromptHasBeenSet() const;
 
                     /**
-                     * 获取<p>To prevent the model from generating video prompts. Supports a maximum of 1000 characters.</p>
-                     * @return NegativePrompt <p>To prevent the model from generating video prompts. Supports a maximum of 1000 characters.</p>
+                     * 获取
+                     * @return NegativePrompt 
                      * 
                      */
                     std::string GetNegativePrompt() const;
 
                     /**
-                     * 设置<p>To prevent the model from generating video prompts. Supports a maximum of 1000 characters.</p>
-                     * @param _negativePrompt <p>To prevent the model from generating video prompts. Supports a maximum of 1000 characters.</p>
+                     * 设置
+                     * @param _negativePrompt 
                      * 
                      */
                     void SetNegativePrompt(const std::string& _negativePrompt);
@@ -218,15 +218,15 @@ namespace TencentCloud
                     bool NegativePromptHasBeenSet() const;
 
                     /**
-                     * 获取<p>Whether to optimize Prompt content automatically. When enabled, the passed in Prompt will be optimized automatically to enhance generation quality. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li></p>
-                     * @return EnhancePrompt <p>Whether to optimize Prompt content automatically. When enabled, the passed in Prompt will be optimized automatically to enhance generation quality. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li></p>
+                     * 获取
+                     * @return EnhancePrompt 
                      * 
                      */
                     std::string GetEnhancePrompt() const;
 
                     /**
-                     * 设置<p>Whether to optimize Prompt content automatically. When enabled, the passed in Prompt will be optimized automatically to enhance generation quality. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li></p>
-                     * @param _enhancePrompt <p>Whether to optimize Prompt content automatically. When enabled, the passed in Prompt will be optimized automatically to enhance generation quality. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li></p>
+                     * 设置
+                     * @param _enhancePrompt 
                      * 
                      */
                     void SetEnhancePrompt(const std::string& _enhancePrompt);
@@ -239,15 +239,15 @@ namespace TencentCloud
                     bool EnhancePromptHasBeenSet() const;
 
                     /**
-                     * 获取<p>Generation mode. Valid values: <li>Standard: standard mode;</li> <li>Professional: high-quality mode;</li></p>
-                     * @return GenerationMode <p>Generation mode. Valid values: <li>Standard: standard mode;</li> <li>Professional: high-quality mode;</li></p>
+                     * 获取
+                     * @return GenerationMode 
                      * 
                      */
                     std::string GetGenerationMode() const;
 
                     /**
-                     * 设置<p>Generation mode. Valid values: <li>Standard: standard mode;</li> <li>Professional: high-quality mode;</li></p>
-                     * @param _generationMode <p>Generation mode. Valid values: <li>Standard: standard mode;</li> <li>Professional: high-quality mode;</li></p>
+                     * 设置
+                     * @param _generationMode 
                      * 
                      */
                     void SetGenerationMode(const std::string& _generationMode);
@@ -260,15 +260,15 @@ namespace TencentCloud
                     bool GenerationModeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Output the result file of the AIGC image generation.</p>
-                     * @return OutputConfig <p>Output the result file of the AIGC image generation.</p>
+                     * 获取
+                     * @return OutputConfig 
                      * 
                      */
                     AigcVideoOutputConfig GetOutputConfig() const;
 
                     /**
-                     * 设置<p>Output the result file of the AIGC image generation.</p>
-                     * @param _outputConfig <p>Output the result file of the AIGC image generation.</p>
+                     * 设置
+                     * @param _outputConfig 
                      * 
                      */
                     void SetOutputConfig(const AigcVideoOutputConfig& _outputConfig);
@@ -281,15 +281,15 @@ namespace TencentCloud
                     bool OutputConfigHasBeenSet() const;
 
                     /**
-                     * 获取<p>Region information of the input file. When the file url is an overseas address, selectable Oversea. Default Mainland.</p>
-                     * @return InputRegion <p>Region information of the input file. When the file url is an overseas address, selectable Oversea. Default Mainland.</p>
+                     * 获取
+                     * @return InputRegion 
                      * 
                      */
                     std::string GetInputRegion() const;
 
                     /**
-                     * 设置<p>Region information of the input file. When the file url is an overseas address, selectable Oversea. Default Mainland.</p>
-                     * @param _inputRegion <p>Region information of the input file. When the file url is an overseas address, selectable Oversea. Default Mainland.</p>
+                     * 设置
+                     * @param _inputRegion 
                      * 
                      */
                     void SetInputRegion(const std::string& _inputRegion);
@@ -302,15 +302,15 @@ namespace TencentCloud
                     bool InputRegionHasBeenSet() const;
 
                     /**
-                     * 获取<p>Scenario type. Values as follows: <li>When ModelName is Kling, value motion_control means action control;</li><li>Other ModelName not currently supported.</li></p>
-                     * @return SceneType <p>Scenario type. Values as follows: <li>When ModelName is Kling, value motion_control means action control;</li><li>Other ModelName not currently supported.</li></p>
+                     * 获取
+                     * @return SceneType 
                      * 
                      */
                     std::string GetSceneType() const;
 
                     /**
-                     * 设置<p>Scenario type. Values as follows: <li>When ModelName is Kling, value motion_control means action control;</li><li>Other ModelName not currently supported.</li></p>
-                     * @param _sceneType <p>Scenario type. Values as follows: <li>When ModelName is Kling, value motion_control means action control;</li><li>Other ModelName not currently supported.</li></p>
+                     * 设置
+                     * @param _sceneType 
                      * 
                      */
                     void SetSceneType(const std::string& _sceneType);
@@ -323,15 +323,15 @@ namespace TencentCloud
                     bool SceneTypeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Random seed of the model.</p>
-                     * @return Seed <p>Random seed of the model.</p>
+                     * 获取
+                     * @return Seed 
                      * 
                      */
                     int64_t GetSeed() const;
 
                     /**
-                     * 设置<p>Random seed of the model.</p>
-                     * @param _seed <p>Random seed of the model.</p>
+                     * 设置
+                     * @param _seed 
                      * 
                      */
                     void SetSeed(const int64_t& _seed);
@@ -343,91 +343,118 @@ namespace TencentCloud
                      */
                     bool SeedHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return ExtInfo 
+                     * 
+                     */
+                    std::string GetExtInfo() const;
+
+                    /**
+                     * 设置
+                     * @param _extInfo 
+                     * 
+                     */
+                    void SetExtInfo(const std::string& _extInfo);
+
+                    /**
+                     * 判断参数 ExtInfo 是否已赋值
+                     * @return ExtInfo 是否已赋值
+                     * 
+                     */
+                    bool ExtInfoHasBeenSet() const;
+
                 private:
 
                     /**
-                     * <p>Model name.</p>
+                     * 
                      */
                     std::string m_modelName;
                     bool m_modelNameHasBeenSet;
 
                     /**
-                     * <p>Model version.</p>
+                     * 
                      */
                     std::string m_modelVersion;
                     bool m_modelVersionHasBeenSet;
 
                     /**
-                     * <p>Input file information of the AIGC video generation task.</p>
+                     * 
                      */
                     std::vector<AigcVideoTaskInputFileInfo> m_fileInfos;
                     bool m_fileInfosHasBeenSet;
 
                     /**
-                     * <p>Fixed entity input information for AIGC tasks.</p>
+                     * 
                      */
                     std::vector<AigcVideoTaskInputSubjectInfo> m_subjectInfos;
                     bool m_subjectInfosHasBeenSet;
 
                     /**
-                     * <p>Media file ID used as the end frame to generate video. This file has a globally unique ID on VOD, assigned by the VOD backend after successful upload. You can get this field in the <a href="/document/product/266/7830?from_cn_redirect=1">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>.</p>
+                     * 
                      */
                     std::string m_lastFrameFileId;
                     bool m_lastFrameFileIdHasBeenSet;
 
                     /**
-                     * <p>Media file URL used as the tail frame to generate video. Description:</p><ol><li>Only support models GV, Kling, and Vidu. Other models are not currently supported. When ModelName is GV, if you specify this parameter, you must simultaneously specify FileInfos as the head frame for video generation. When ModelName is Kling, ModelVersion is 2.1, and output resolution Resolution is specified as 1080P, you can specify this parameter. When ModelName is Vidu and ModelVersion is q2-pro or q2-turbo, you can specify this parameter.</li><li>Image size must be less than 5M.</li><li><ol start="3"><li>Image format value: jpeg, jpg, png, webp.</li></ol></li></ol>
+                     * 
                      */
                     std::string m_lastFrameUrl;
                     bool m_lastFrameUrlHasBeenSet;
 
                     /**
-                     * <p>Prompt for video generation. Supports a maximum of 1000 characters. This parameter is required when FileInfos is empty.</p>
+                     * 
                      */
                     std::string m_prompt;
                     bool m_promptHasBeenSet;
 
                     /**
-                     * <p>To prevent the model from generating video prompts. Supports a maximum of 1000 characters.</p>
+                     * 
                      */
                     std::string m_negativePrompt;
                     bool m_negativePromptHasBeenSet;
 
                     /**
-                     * <p>Whether to optimize Prompt content automatically. When enabled, the passed in Prompt will be optimized automatically to enhance generation quality. Valid values: <li>Enabled: Enable;</li> <li>Disabled: Disable;</li></p>
+                     * 
                      */
                     std::string m_enhancePrompt;
                     bool m_enhancePromptHasBeenSet;
 
                     /**
-                     * <p>Generation mode. Valid values: <li>Standard: standard mode;</li> <li>Professional: high-quality mode;</li></p>
+                     * 
                      */
                     std::string m_generationMode;
                     bool m_generationModeHasBeenSet;
 
                     /**
-                     * <p>Output the result file of the AIGC image generation.</p>
+                     * 
                      */
                     AigcVideoOutputConfig m_outputConfig;
                     bool m_outputConfigHasBeenSet;
 
                     /**
-                     * <p>Region information of the input file. When the file url is an overseas address, selectable Oversea. Default Mainland.</p>
+                     * 
                      */
                     std::string m_inputRegion;
                     bool m_inputRegionHasBeenSet;
 
                     /**
-                     * <p>Scenario type. Values as follows: <li>When ModelName is Kling, value motion_control means action control;</li><li>Other ModelName not currently supported.</li></p>
+                     * 
                      */
                     std::string m_sceneType;
                     bool m_sceneTypeHasBeenSet;
 
                     /**
-                     * <p>Random seed of the model.</p>
+                     * 
                      */
                     int64_t m_seed;
                     bool m_seedHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    std::string m_extInfo;
+                    bool m_extInfoHasBeenSet;
 
                 };
             }

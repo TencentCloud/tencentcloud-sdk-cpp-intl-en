@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Live recording information
+                * 
                 */
                 class LiveRecordInfo : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Live streaming Recording domain name</p>
-                     * @return Domain <p>Live streaming Recording domain name</p>
+                     * 获取
+                     * @return Domain 
                      * 
                      */
                     std::string GetDomain() const;
 
                     /**
-                     * 设置<p>Live streaming Recording domain name</p>
-                     * @param _domain <p>Live streaming Recording domain name</p>
+                     * 设置
+                     * @param _domain 
                      * 
                      */
                     void SetDomain(const std::string& _domain);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool DomainHasBeenSet() const;
 
                     /**
-                     * 获取<p>Live streaming Recording Path</p>
-                     * @return Path <p>Live streaming Recording Path</p>
+                     * 获取
+                     * @return Path 
                      * 
                      */
                     std::string GetPath() const;
 
                     /**
-                     * 设置<p>Live streaming Recording Path</p>
-                     * @param _path <p>Live streaming Recording Path</p>
+                     * 设置
+                     * @param _path 
                      * 
                      */
                     void SetPath(const std::string& _path);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool PathHasBeenSet() const;
 
                     /**
-                     * 获取<p>Live recording stream ID.</p>
-                     * @return StreamId <p>Live recording stream ID.</p>
+                     * 获取
+                     * @return StreamId 
                      * 
                      */
                     std::string GetStreamId() const;
 
                     /**
-                     * 设置<p>Live recording stream ID.</p>
-                     * @param _streamId <p>Live recording stream ID.</p>
+                     * 设置
+                     * @param _streamId 
                      * 
                      */
                     void SetStreamId(const std::string& _streamId);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool StreamIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>Recording start time in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO datetime format</a>.</p>
-                     * @return RecordStartTime <p>Recording start time in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO datetime format</a>.</p>
+                     * 获取
+                     * @return RecordStartTime 
                      * 
                      */
                     std::string GetRecordStartTime() const;
 
                     /**
-                     * 设置<p>Recording start time in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO datetime format</a>.</p>
-                     * @param _recordStartTime <p>Recording start time in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO datetime format</a>.</p>
+                     * 设置
+                     * @param _recordStartTime 
                      * 
                      */
                     void SetRecordStartTime(const std::string& _recordStartTime);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool RecordStartTimeHasBeenSet() const;
 
                     /**
-                     * 获取<p>Recording end time, using <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
-                     * @return RecordEndTime <p>Recording end time, using <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+                     * 获取
+                     * @return RecordEndTime 
                      * 
                      */
                     std::string GetRecordEndTime() const;
 
                     /**
-                     * 设置<p>Recording end time, using <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
-                     * @param _recordEndTime <p>Recording end time, using <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+                     * 设置
+                     * @param _recordEndTime 
                      * 
                      */
                     void SetRecordEndTime(const std::string& _recordEndTime);
@@ -154,31 +154,31 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Live streaming Recording domain name</p>
+                     * 
                      */
                     std::string m_domain;
                     bool m_domainHasBeenSet;
 
                     /**
-                     * <p>Live streaming Recording Path</p>
+                     * 
                      */
                     std::string m_path;
                     bool m_pathHasBeenSet;
 
                     /**
-                     * <p>Live recording stream ID.</p>
+                     * 
                      */
                     std::string m_streamId;
                     bool m_streamIdHasBeenSet;
 
                     /**
-                     * <p>Recording start time in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO datetime format</a>.</p>
+                     * 
                      */
                     std::string m_recordStartTime;
                     bool m_recordStartTimeHasBeenSet;
 
                     /**
-                     * <p>Recording end time, using <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+                     * 
                      */
                     std::string m_recordEndTime;
                     bool m_recordEndTimeHasBeenSet;

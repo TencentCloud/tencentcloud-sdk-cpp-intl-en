@@ -27,6 +27,7 @@
 #include <tencentcloud/vod/v20180717/model/ImageEncodeConfig.h>
 #include <tencentcloud/vod/v20180717/model/ImageEnhanceConfig.h>
 #include <tencentcloud/vod/v20180717/model/ImageBeautyConfig.h>
+#include <tencentcloud/vod/v20180717/model/AiCutOutConfig.h>
 
 
 namespace TencentCloud
@@ -38,7 +39,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Image async processing configuration.
+                * 
                 */
                 class ProcessImageAsyncTask : public AbstractModel
                 {
@@ -50,19 +51,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Image transcoding output configuration.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return EncodeConfig <p>Image transcoding output configuration.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return EncodeConfig 
                      * 
                      */
                     ImageEncodeConfig GetEncodeConfig() const;
 
                     /**
-                     * 设置<p>Image transcoding output configuration.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _encodeConfig <p>Image transcoding output configuration.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _encodeConfig 
                      * 
                      */
                     void SetEncodeConfig(const ImageEncodeConfig& _encodeConfig);
@@ -75,19 +72,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool EncodeConfigHasBeenSet() const;
 
                     /**
-                     * 获取<p>Image enhancement configuration.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return EnhanceConfig <p>Image enhancement configuration.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return EnhanceConfig 
                      * 
                      */
                     ImageEnhanceConfig GetEnhanceConfig() const;
 
                     /**
-                     * 设置<p>Image enhancement configuration.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _enhanceConfig <p>Image enhancement configuration.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _enhanceConfig 
                      * 
                      */
                     void SetEnhanceConfig(const ImageEnhanceConfig& _enhanceConfig);
@@ -100,19 +93,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool EnhanceConfigHasBeenSet() const;
 
                     /**
-                     * 获取<p>Image beauty effect configuration.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return BeautyConfig <p>Image beauty effect configuration.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return BeautyConfig 
                      * 
                      */
                     ImageBeautyConfig GetBeautyConfig() const;
 
                     /**
-                     * 设置<p>Image beauty effect configuration.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _beautyConfig <p>Image beauty effect configuration.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _beautyConfig 
                      * 
                      */
                     void SetBeautyConfig(const ImageBeautyConfig& _beautyConfig);
@@ -124,28 +113,52 @@ Note: This field may return null, indicating that no valid values can be obtaine
                      */
                     bool BeautyConfigHasBeenSet() const;
 
+                    /**
+                     * 获取
+                     * @return AiCutOutConfig 
+                     * 
+                     */
+                    AiCutOutConfig GetAiCutOutConfig() const;
+
+                    /**
+                     * 设置
+                     * @param _aiCutOutConfig 
+                     * 
+                     */
+                    void SetAiCutOutConfig(const AiCutOutConfig& _aiCutOutConfig);
+
+                    /**
+                     * 判断参数 AiCutOutConfig 是否已赋值
+                     * @return AiCutOutConfig 是否已赋值
+                     * 
+                     */
+                    bool AiCutOutConfigHasBeenSet() const;
+
                 private:
 
                     /**
-                     * <p>Image transcoding output configuration.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     ImageEncodeConfig m_encodeConfig;
                     bool m_encodeConfigHasBeenSet;
 
                     /**
-                     * <p>Image enhancement configuration.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     ImageEnhanceConfig m_enhanceConfig;
                     bool m_enhanceConfigHasBeenSet;
 
                     /**
-                     * <p>Image beauty effect configuration.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     ImageBeautyConfig m_beautyConfig;
                     bool m_beautyConfigHasBeenSet;
+
+                    /**
+                     * 
+                     */
+                    AiCutOutConfig m_aiCutOutConfig;
+                    bool m_aiCutOutConfigHasBeenSet;
 
                 };
             }

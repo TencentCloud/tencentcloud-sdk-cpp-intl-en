@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Refreshed URL list. You can specify up to 20 URLs at a time.
-                     * @return Urls Refreshed URL list. You can specify up to 20 URLs at a time.
+                     * 获取
+                     * @return Urls 
                      * 
                      */
                     std::vector<std::string> GetUrls() const;
 
                     /**
-                     * 设置Refreshed URL list. You can specify up to 20 URLs at a time.
-                     * @param _urls Refreshed URL list. You can specify up to 20 URLs at a time.
+                     * 设置
+                     * @param _urls 
                      * 
                      */
                     void SetUrls(const std::vector<std::string>& _urls);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool UrlsHasBeenSet() const;
 
                     /**
-                     * 获取<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
-                     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+                     * 获取
+                     * @return SubAppId 
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
-                     * @param _subAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+                     * 设置
+                     * @param _subAppId 
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -87,13 +87,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Refreshed URL list. You can specify up to 20 URLs at a time.
+                     * 
                      */
                     std::vector<std::string> m_urls;
                     bool m_urlsHasBeenSet;
 
                     /**
-                     * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+                     * 
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;

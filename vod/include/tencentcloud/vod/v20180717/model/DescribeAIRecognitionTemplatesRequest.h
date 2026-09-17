@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate on-demand services after December 25, 2023, they must fill this field with the application ID when accessing resources in on-demand applications (whether it's the default application or a newly created application).</b>
-                     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate on-demand services after December 25, 2023, they must fill this field with the application ID when accessing resources in on-demand applications (whether it's the default application or a newly created application).</b>
+                     * 获取
+                     * @return SubAppId 
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate on-demand services after December 25, 2023, they must fill this field with the application ID when accessing resources in on-demand applications (whether it's the default application or a newly created application).</b>
-                     * @param _subAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate on-demand services after December 25, 2023, they must fill this field with the application ID when accessing resources in on-demand applications (whether it's the default application or a newly created application).</b>
+                     * 设置
+                     * @param _subAppId 
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool SubAppIdHasBeenSet() const;
 
                     /**
-                     * 获取Filter condition for the unique identifier of the audio/video content recognition template. The array can contain up to 100 unique identifiers.
-                     * @return Definitions Filter condition for the unique identifier of the audio/video content recognition template. The array can contain up to 100 unique identifiers.
+                     * 获取
+                     * @return Definitions 
                      * 
                      */
                     std::vector<int64_t> GetDefinitions() const;
 
                     /**
-                     * 设置Filter condition for the unique identifier of the audio/video content recognition template. The array can contain up to 100 unique identifiers.
-                     * @param _definitions Filter condition for the unique identifier of the audio/video content recognition template. The array can contain up to 100 unique identifiers.
+                     * 设置
+                     * @param _definitions 
                      * 
                      */
                     void SetDefinitions(const std::vector<int64_t>& _definitions);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool DefinitionsHasBeenSet() const;
 
                     /**
-                     * 获取Filtering condition for the template type. Valid values:</li><li>Preset: system preset template;</li><li>Custom: user-defined template.</li>Leave blank by default, meaning no filtering on template type.
-                     * @return Type Filtering condition for the template type. Valid values:</li><li>Preset: system preset template;</li><li>Custom: user-defined template.</li>Leave blank by default, meaning no filtering on template type.
+                     * 获取
+                     * @return Type 
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Filtering condition for the template type. Valid values:</li><li>Preset: system preset template;</li><li>Custom: user-defined template.</li>Leave blank by default, meaning no filtering on template type.
-                     * @param _type Filtering condition for the template type. Valid values:</li><li>Preset: system preset template;</li><li>Custom: user-defined template.</li>Leave blank by default, meaning no filtering on template type.
+                     * 设置
+                     * @param _type 
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Pagination offset. Default value: 0.
-                     * @return Offset Pagination offset. Default value: 0.
+                     * 获取
+                     * @return Offset 
                      * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
-                     * 设置Pagination offset. Default value: 0.
-                     * @param _offset Pagination offset. Default value: 0.
+                     * 设置
+                     * @param _offset 
                      * 
                      */
                     void SetOffset(const uint64_t& _offset);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Number of returned entries. Default value: 10. Maximum value: 100.
-                     * @return Limit Number of returned entries. Default value: 10. Maximum value: 100.
+                     * 获取
+                     * @return Limit 
                      * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
-                     * 设置Number of returned entries. Default value: 10. Maximum value: 100.
-                     * @param _limit Number of returned entries. Default value: 10. Maximum value: 100.
+                     * 设置
+                     * @param _limit 
                      * 
                      */
                     void SetLimit(const uint64_t& _limit);
@@ -150,31 +150,31 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate on-demand services after December 25, 2023, they must fill this field with the application ID when accessing resources in on-demand applications (whether it's the default application or a newly created application).</b>
+                     * 
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
 
                     /**
-                     * Filter condition for the unique identifier of the audio/video content recognition template. The array can contain up to 100 unique identifiers.
+                     * 
                      */
                     std::vector<int64_t> m_definitions;
                     bool m_definitionsHasBeenSet;
 
                     /**
-                     * Filtering condition for the template type. Valid values:</li><li>Preset: system preset template;</li><li>Custom: user-defined template.</li>Leave blank by default, meaning no filtering on template type.
+                     * 
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Pagination offset. Default value: 0.
+                     * 
                      */
                     uint64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Number of returned entries. Default value: 10. Maximum value: 100.
+                     * 
                      */
                     uint64_t m_limit;
                     bool m_limitHasBeenSet;

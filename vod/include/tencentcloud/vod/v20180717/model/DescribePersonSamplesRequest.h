@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
-                     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+                     * 获取
+                     * @return SubAppId 
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
-                     * @param _subAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+                     * 设置
+                     * @param _subAppId 
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -64,35 +64,15 @@ namespace TencentCloud
                     bool SubAppIdHasBeenSet() const;
 
                     /**
-                     * 获取Pulled material type. Valid values:
-<li>UserDefine: User-customized material library;</li>
-<li>Default: Default sample library.</li>
-
-Default value: UserDefine, pull user-customized material library materials.
-Description: If you pull the system default material library, you can only use the material name or material ID + material name via pull, and the facial features image returns only one.
-                     * @return Type Pulled material type. Valid values:
-<li>UserDefine: User-customized material library;</li>
-<li>Default: Default sample library.</li>
-
-Default value: UserDefine, pull user-customized material library materials.
-Description: If you pull the system default material library, you can only use the material name or material ID + material name via pull, and the facial features image returns only one.
+                     * 获取
+                     * @return Type 
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Pulled material type. Valid values:
-<li>UserDefine: User-customized material library;</li>
-<li>Default: Default sample library.</li>
-
-Default value: UserDefine, pull user-customized material library materials.
-Description: If you pull the system default material library, you can only use the material name or material ID + material name via pull, and the facial features image returns only one.
-                     * @param _type Pulled material type. Valid values:
-<li>UserDefine: User-customized material library;</li>
-<li>Default: Default sample library.</li>
-
-Default value: UserDefine, pull user-customized material library materials.
-Description: If you pull the system default material library, you can only use the material name or material ID + material name via pull, and the facial features image returns only one.
+                     * 设置
+                     * @param _type 
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -105,15 +85,15 @@ Description: If you pull the system default material library, you can only use t
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Material ID, with an array length limit of 100.
-                     * @return PersonIds Material ID, with an array length limit of 100.
+                     * 获取
+                     * @return PersonIds 
                      * 
                      */
                     std::vector<std::string> GetPersonIds() const;
 
                     /**
-                     * 设置Material ID, with an array length limit of 100.
-                     * @param _personIds Material ID, with an array length limit of 100.
+                     * 设置
+                     * @param _personIds 
                      * 
                      */
                     void SetPersonIds(const std::vector<std::string>& _personIds);
@@ -126,15 +106,15 @@ Description: If you pull the system default material library, you can only use t
                     bool PersonIdsHasBeenSet() const;
 
                     /**
-                     * 获取Material name. Array length limit: 20.
-                     * @return Names Material name. Array length limit: 20.
+                     * 获取
+                     * @return Names 
                      * 
                      */
                     std::vector<std::string> GetNames() const;
 
                     /**
-                     * 设置Material name. Array length limit: 20.
-                     * @param _names Material name. Array length limit: 20.
+                     * 设置
+                     * @param _names 
                      * 
                      */
                     void SetNames(const std::vector<std::string>& _names);
@@ -147,15 +127,15 @@ Description: If you pull the system default material library, you can only use t
                     bool NamesHasBeenSet() const;
 
                     /**
-                     * 获取Material tag. Array length limit: 20.
-                     * @return Tags Material tag. Array length limit: 20.
+                     * 获取
+                     * @return Tags 
                      * 
                      */
                     std::vector<std::string> GetTags() const;
 
                     /**
-                     * 设置Material tag. Array length limit: 20.
-                     * @param _tags Material tag. Array length limit: 20.
+                     * 设置
+                     * @param _tags 
                      * 
                      */
                     void SetTags(const std::vector<std::string>& _tags);
@@ -168,15 +148,15 @@ Description: If you pull the system default material library, you can only use t
                     bool TagsHasBeenSet() const;
 
                     /**
-                     * 获取Pagination offset. Default value: 0.
-                     * @return Offset Pagination offset. Default value: 0.
+                     * 获取
+                     * @return Offset 
                      * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
-                     * 设置Pagination offset. Default value: 0.
-                     * @param _offset Pagination offset. Default value: 0.
+                     * 设置
+                     * @param _offset 
                      * 
                      */
                     void SetOffset(const uint64_t& _offset);
@@ -189,15 +169,15 @@ Description: If you pull the system default material library, you can only use t
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取Number of returned entries. Default value: 100. Maximum value: 100.
-                     * @return Limit Number of returned entries. Default value: 100. Maximum value: 100.
+                     * 获取
+                     * @return Limit 
                      * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
-                     * 设置Number of returned entries. Default value: 100. Maximum value: 100.
-                     * @param _limit Number of returned entries. Default value: 100. Maximum value: 100.
+                     * 设置
+                     * @param _limit 
                      * 
                      */
                     void SetLimit(const uint64_t& _limit);
@@ -212,48 +192,43 @@ Description: If you pull the system default material library, you can only use t
                 private:
 
                     /**
-                     * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. Customers who activate VOD services after December 25, 2023 must fill this field with the application ID when accessing resources in on-demand applications (whether default or newly created).</b>
+                     * 
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
 
                     /**
-                     * Pulled material type. Valid values:
-<li>UserDefine: User-customized material library;</li>
-<li>Default: Default sample library.</li>
-
-Default value: UserDefine, pull user-customized material library materials.
-Description: If you pull the system default material library, you can only use the material name or material ID + material name via pull, and the facial features image returns only one.
+                     * 
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Material ID, with an array length limit of 100.
+                     * 
                      */
                     std::vector<std::string> m_personIds;
                     bool m_personIdsHasBeenSet;
 
                     /**
-                     * Material name. Array length limit: 20.
+                     * 
                      */
                     std::vector<std::string> m_names;
                     bool m_namesHasBeenSet;
 
                     /**
-                     * Material tag. Array length limit: 20.
+                     * 
                      */
                     std::vector<std::string> m_tags;
                     bool m_tagsHasBeenSet;
 
                     /**
-                     * Pagination offset. Default value: 0.
+                     * 
                      */
                     uint64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * Number of returned entries. Default value: 100. Maximum value: 100.
+                     * 
                      */
                     uint64_t m_limit;
                     bool m_limitHasBeenSet;

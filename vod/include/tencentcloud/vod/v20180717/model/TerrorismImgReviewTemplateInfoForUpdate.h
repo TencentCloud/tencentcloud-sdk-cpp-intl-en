@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Parameters for recognition of terrorism content in images
+                * 
                 */
                 class TerrorismImgReviewTemplateInfoForUpdate : public AbstractModel
                 {
@@ -47,23 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether to enable recognition of terrorism content in images. Valid values:
-<li>ON</li>
-<li>OFF</li>
-                     * @return Switch Whether to enable recognition of terrorism content in images. Valid values:
-<li>ON</li>
-<li>OFF</li>
+                     * 获取
+                     * @return Switch 
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Whether to enable recognition of terrorism content in images. Valid values:
-<li>ON</li>
-<li>OFF</li>
-                     * @param _switch Whether to enable recognition of terrorism content in images. Valid values:
-<li>ON</li>
-<li>OFF</li>
+                     * 设置
+                     * @param _switch 
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -76,51 +68,15 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取Filter labels for recognition of terrorism content in images. Results containing the specified labels are returned. If no labels are specified, all results are returned. Valid values:
-<li>`guns`: weapons and guns</li>
-<li>`crowd`: crowd</li>
-<li>`bloody`: bloody scenes</li>
-<li>`police`: police force</li>
-<li>`banners`: terrorism flags</li>
-<li>`militant`: militants</li>
-<li>`explosion`: explosions and fires</li>
-<li>`terrorists`: terrorists</li>
-<li>`scenario`: terrorism images</li>
-                     * @return LabelSet Filter labels for recognition of terrorism content in images. Results containing the specified labels are returned. If no labels are specified, all results are returned. Valid values:
-<li>`guns`: weapons and guns</li>
-<li>`crowd`: crowd</li>
-<li>`bloody`: bloody scenes</li>
-<li>`police`: police force</li>
-<li>`banners`: terrorism flags</li>
-<li>`militant`: militants</li>
-<li>`explosion`: explosions and fires</li>
-<li>`terrorists`: terrorists</li>
-<li>`scenario`: terrorism images</li>
+                     * 获取
+                     * @return LabelSet 
                      * 
                      */
                     std::vector<std::string> GetLabelSet() const;
 
                     /**
-                     * 设置Filter labels for recognition of terrorism content in images. Results containing the specified labels are returned. If no labels are specified, all results are returned. Valid values:
-<li>`guns`: weapons and guns</li>
-<li>`crowd`: crowd</li>
-<li>`bloody`: bloody scenes</li>
-<li>`police`: police force</li>
-<li>`banners`: terrorism flags</li>
-<li>`militant`: militants</li>
-<li>`explosion`: explosions and fires</li>
-<li>`terrorists`: terrorists</li>
-<li>`scenario`: terrorism images</li>
-                     * @param _labelSet Filter labels for recognition of terrorism content in images. Results containing the specified labels are returned. If no labels are specified, all results are returned. Valid values:
-<li>`guns`: weapons and guns</li>
-<li>`crowd`: crowd</li>
-<li>`bloody`: bloody scenes</li>
-<li>`police`: police force</li>
-<li>`banners`: terrorism flags</li>
-<li>`militant`: militants</li>
-<li>`explosion`: explosions and fires</li>
-<li>`terrorists`: terrorists</li>
-<li>`scenario`: terrorism images</li>
+                     * 设置
+                     * @param _labelSet 
                      * 
                      */
                     void SetLabelSet(const std::vector<std::string>& _labelSet);
@@ -133,15 +89,15 @@ namespace TencentCloud
                     bool LabelSetHasBeenSet() const;
 
                     /**
-                     * 获取Confidence score threshold for determining that something should be blocked. If this threshold is reached, VOD will suggest that the content be blocked. Value range: 0-100
-                     * @return BlockConfidence Confidence score threshold for determining that something should be blocked. If this threshold is reached, VOD will suggest that the content be blocked. Value range: 0-100
+                     * 获取
+                     * @return BlockConfidence 
                      * 
                      */
                     int64_t GetBlockConfidence() const;
 
                     /**
-                     * 设置Confidence score threshold for determining that something should be blocked. If this threshold is reached, VOD will suggest that the content be blocked. Value range: 0-100
-                     * @param _blockConfidence Confidence score threshold for determining that something should be blocked. If this threshold is reached, VOD will suggest that the content be blocked. Value range: 0-100
+                     * 设置
+                     * @param _blockConfidence 
                      * 
                      */
                     void SetBlockConfidence(const int64_t& _blockConfidence);
@@ -154,15 +110,15 @@ namespace TencentCloud
                     bool BlockConfidenceHasBeenSet() const;
 
                     /**
-                     * 获取Confidence score threshold for human review. If this threshold is reached, human review is needed. Value range: 0-100
-                     * @return ReviewConfidence Confidence score threshold for human review. If this threshold is reached, human review is needed. Value range: 0-100
+                     * 获取
+                     * @return ReviewConfidence 
                      * 
                      */
                     int64_t GetReviewConfidence() const;
 
                     /**
-                     * 设置Confidence score threshold for human review. If this threshold is reached, human review is needed. Value range: 0-100
-                     * @param _reviewConfidence Confidence score threshold for human review. If this threshold is reached, human review is needed. Value range: 0-100
+                     * 设置
+                     * @param _reviewConfidence 
                      * 
                      */
                     void SetReviewConfidence(const int64_t& _reviewConfidence);
@@ -177,36 +133,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Whether to enable recognition of terrorism content in images. Valid values:
-<li>ON</li>
-<li>OFF</li>
+                     * 
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * Filter labels for recognition of terrorism content in images. Results containing the specified labels are returned. If no labels are specified, all results are returned. Valid values:
-<li>`guns`: weapons and guns</li>
-<li>`crowd`: crowd</li>
-<li>`bloody`: bloody scenes</li>
-<li>`police`: police force</li>
-<li>`banners`: terrorism flags</li>
-<li>`militant`: militants</li>
-<li>`explosion`: explosions and fires</li>
-<li>`terrorists`: terrorists</li>
-<li>`scenario`: terrorism images</li>
+                     * 
                      */
                     std::vector<std::string> m_labelSet;
                     bool m_labelSetHasBeenSet;
 
                     /**
-                     * Confidence score threshold for determining that something should be blocked. If this threshold is reached, VOD will suggest that the content be blocked. Value range: 0-100
+                     * 
                      */
                     int64_t m_blockConfidence;
                     bool m_blockConfidenceHasBeenSet;
 
                     /**
-                     * Confidence score threshold for human review. If this threshold is reached, human review is needed. Value range: 0-100
+                     * 
                      */
                     int64_t m_reviewConfidence;
                     bool m_reviewConfidenceHasBeenSet;

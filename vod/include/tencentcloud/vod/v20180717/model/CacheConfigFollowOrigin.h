@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Path cache configuration follows the origin server configuration.
+                * 
                 */
                 class CacheConfigFollowOrigin : public AbstractModel
                 {
@@ -48,15 +48,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The path cache follows the origin site configuration switch. The values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
-                     * @return Switch The path cache follows the origin site configuration switch. The values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
+                     * 获取Path cache follows the origin site configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
+                     * @return Switch Path cache follows the origin site configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置The path cache follows the origin site configuration switch. The values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
-                     * @param _switch The path cache follows the origin site configuration switch. The values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
+                     * 设置Path cache follows the origin site configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
+                     * @param _switch Path cache follows the origin site configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -69,15 +77,15 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取Heuristic cache configuration.
-                     * @return HeuristicCache Heuristic cache configuration.
+                     * 获取
+                     * @return HeuristicCache 
                      * 
                      */
                     HeuristicCache GetHeuristicCache() const;
 
                     /**
-                     * 设置Heuristic cache configuration.
-                     * @param _heuristicCache Heuristic cache configuration.
+                     * 设置
+                     * @param _heuristicCache 
                      * 
                      */
                     void SetHeuristicCache(const HeuristicCache& _heuristicCache);
@@ -92,13 +100,15 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * The path cache follows the origin site configuration switch. The values u200bu200bare: <li>on: on; </li> <li>off: off. </li>
+                     * Path cache follows the origin site configuration switch. Valid values:
+<li>`on`: Enable;</li>
+<li>`off`: Cache.</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * Heuristic cache configuration.
+                     * 
                      */
                     HeuristicCache m_heuristicCache;
                     bool m_heuristicCacheHasBeenSet;

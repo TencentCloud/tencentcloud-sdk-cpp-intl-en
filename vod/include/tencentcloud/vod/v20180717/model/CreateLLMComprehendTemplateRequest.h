@@ -46,15 +46,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Resolution level. Available values are:</p><ul><li>Audio: Audio-level comprehension</li><li>Video: Video-level comprehension</li></ul>
-                     * @return Level <p>Resolution level. Available values are:</p><ul><li>Audio: Audio-level comprehension</li><li>Video: Video-level comprehension</li></ul>
+                     * 获取
+                     * @return Level 
                      * 
                      */
                     std::string GetLevel() const;
 
                     /**
-                     * 设置<p>Resolution level. Available values are:</p><ul><li>Audio: Audio-level comprehension</li><li>Video: Video-level comprehension</li></ul>
-                     * @param _level <p>Resolution level. Available values are:</p><ul><li>Audio: Audio-level comprehension</li><li>Video: Video-level comprehension</li></ul>
+                     * 设置
+                     * @param _level 
                      * 
                      */
                     void SetLevel(const std::string& _level);
@@ -67,15 +67,15 @@ namespace TencentCloud
                     bool LevelHasBeenSet() const;
 
                     /**
-                     * 获取<p><b>Video-on-demand (VOD) <a href="/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, they must fill this field with the application ID when accessing resources in on-demand applications (whether it's the default application or a newly created application).</b></p>
-                     * @return SubAppId <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, they must fill this field with the application ID when accessing resources in on-demand applications (whether it's the default application or a newly created application).</b></p>
+                     * 获取
+                     * @return SubAppId 
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置<p><b>Video-on-demand (VOD) <a href="/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, they must fill this field with the application ID when accessing resources in on-demand applications (whether it's the default application or a newly created application).</b></p>
-                     * @param _subAppId <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, they must fill this field with the application ID when accessing resources in on-demand applications (whether it's the default application or a newly created application).</b></p>
+                     * 设置
+                     * @param _subAppId 
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -88,15 +88,15 @@ namespace TencentCloud
                     bool SubAppIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>Large model comprehend template name. The length cannot exceed 64 characters.</p>
-                     * @return Name <p>Large model comprehend template name. The length cannot exceed 64 characters.</p>
+                     * 获取
+                     * @return Name 
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置<p>Large model comprehend template name. The length cannot exceed 64 characters.</p>
-                     * @param _name <p>Large model comprehend template name. The length cannot exceed 64 characters.</p>
+                     * 设置
+                     * @param _name 
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -109,15 +109,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取<p>Large model comprehend template description information. The length cannot exceed 256 characters.</p>
-                     * @return Comment <p>Large model comprehend template description information. The length cannot exceed 256 characters.</p>
+                     * 获取
+                     * @return Comment 
                      * 
                      */
                     std::string GetComment() const;
 
                     /**
-                     * 设置<p>Large model comprehend template description information. The length cannot exceed 256 characters.</p>
-                     * @param _comment <p>Large model comprehend template description information. The length cannot exceed 256 characters.</p>
+                     * 设置
+                     * @param _comment 
                      * 
                      */
                     void SetComment(const std::string& _comment);
@@ -130,15 +130,15 @@ namespace TencentCloud
                     bool CommentHasBeenSet() const;
 
                     /**
-                     * 获取<p>Segment summary parsing configuration</p>
-                     * @return Summary <p>Segment summary parsing configuration</p>
+                     * 获取
+                     * @return Summary 
                      * 
                      */
                     LLMComprehendSummary GetSummary() const;
 
                     /**
-                     * 设置<p>Segment summary parsing configuration</p>
-                     * @param _summary <p>Segment summary parsing configuration</p>
+                     * 设置
+                     * @param _summary 
                      * 
                      */
                     void SetSummary(const LLMComprehendSummary& _summary);
@@ -151,15 +151,15 @@ namespace TencentCloud
                     bool SummaryHasBeenSet() const;
 
                     /**
-                     * 获取<p>Text transcription parsing configuration</p>
-                     * @return Asr <p>Text transcription parsing configuration</p>
+                     * 获取
+                     * @return Asr 
                      * 
                      */
                     LLMComprehendAsr GetAsr() const;
 
                     /**
-                     * 设置<p>Text transcription parsing configuration</p>
-                     * @param _asr <p>Text transcription parsing configuration</p>
+                     * 设置
+                     * @param _asr 
                      * 
                      */
                     void SetAsr(const LLMComprehendAsr& _asr);
@@ -172,15 +172,15 @@ namespace TencentCloud
                     bool AsrHasBeenSet() const;
 
                     /**
-                     * 获取<p>Face identification configuration</p>
-                     * @return FaceRecognition <p>Face identification configuration</p>
+                     * 获取
+                     * @return FaceRecognition 
                      * 
                      */
                     LLMComprehendFaceRecognition GetFaceRecognition() const;
 
                     /**
-                     * 设置<p>Face identification configuration</p>
-                     * @param _faceRecognition <p>Face identification configuration</p>
+                     * 设置
+                     * @param _faceRecognition 
                      * 
                      */
                     void SetFaceRecognition(const LLMComprehendFaceRecognition& _faceRecognition);
@@ -195,43 +195,43 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Resolution level. Available values are:</p><ul><li>Audio: Audio-level comprehension</li><li>Video: Video-level comprehension</li></ul>
+                     * 
                      */
                     std::string m_level;
                     bool m_levelHasBeenSet;
 
                     /**
-                     * <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate on-demand services from December 25, 2023, they must fill this field with the application ID when accessing resources in on-demand applications (whether it's the default application or a newly created application).</b></p>
+                     * 
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
 
                     /**
-                     * <p>Large model comprehend template name. The length cannot exceed 64 characters.</p>
+                     * 
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * <p>Large model comprehend template description information. The length cannot exceed 256 characters.</p>
+                     * 
                      */
                     std::string m_comment;
                     bool m_commentHasBeenSet;
 
                     /**
-                     * <p>Segment summary parsing configuration</p>
+                     * 
                      */
                     LLMComprehendSummary m_summary;
                     bool m_summaryHasBeenSet;
 
                     /**
-                     * <p>Text transcription parsing configuration</p>
+                     * 
                      */
                     LLMComprehendAsr m_asr;
                     bool m_asrHasBeenSet;
 
                     /**
-                     * <p>Face identification configuration</p>
+                     * 
                      */
                     LLMComprehendFaceRecognition m_faceRecognition;
                     bool m_faceRecognitionHasBeenSet;

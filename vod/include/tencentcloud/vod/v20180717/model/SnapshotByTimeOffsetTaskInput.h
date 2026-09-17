@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Input parameter type of time point screencapturing task
+                * 
                 */
                 class SnapshotByTimeOffsetTaskInput : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Time point screencapturing template ID.
-                     * @return Definition Time point screencapturing template ID.
+                     * 获取
+                     * @return Definition 
                      * 
                      */
                     uint64_t GetDefinition() const;
 
                     /**
-                     * 设置Time point screencapturing template ID.
-                     * @param _definition Time point screencapturing template ID.
+                     * 设置
+                     * @param _definition 
                      * 
                      */
                     void SetDefinition(const uint64_t& _definition);
@@ -69,23 +69,15 @@ namespace TencentCloud
                     bool DefinitionHasBeenSet() const;
 
                     /**
-                     * 获取The list of screenshot time points. “s” and “%” formats are supported:
-<li>When a time point string ends with “s”, its unit is second. For example, “3.5s” means the 3.5th second of the video.</li>
-<li>When a time point string ends with “%”, it represents the percentage of the video’s duration. For example, “10%” means that the time point is at the 10% of the video’s entire duration.</li>
-                     * @return ExtTimeOffsetSet The list of screenshot time points. “s” and “%” formats are supported:
-<li>When a time point string ends with “s”, its unit is second. For example, “3.5s” means the 3.5th second of the video.</li>
-<li>When a time point string ends with “%”, it represents the percentage of the video’s duration. For example, “10%” means that the time point is at the 10% of the video’s entire duration.</li>
+                     * 获取
+                     * @return ExtTimeOffsetSet 
                      * 
                      */
                     std::vector<std::string> GetExtTimeOffsetSet() const;
 
                     /**
-                     * 设置The list of screenshot time points. “s” and “%” formats are supported:
-<li>When a time point string ends with “s”, its unit is second. For example, “3.5s” means the 3.5th second of the video.</li>
-<li>When a time point string ends with “%”, it represents the percentage of the video’s duration. For example, “10%” means that the time point is at the 10% of the video’s entire duration.</li>
-                     * @param _extTimeOffsetSet The list of screenshot time points. “s” and “%” formats are supported:
-<li>When a time point string ends with “s”, its unit is second. For example, “3.5s” means the 3.5th second of the video.</li>
-<li>When a time point string ends with “%”, it represents the percentage of the video’s duration. For example, “10%” means that the time point is at the 10% of the video’s entire duration.</li>
+                     * 设置
+                     * @param _extTimeOffsetSet 
                      * 
                      */
                     void SetExtTimeOffsetSet(const std::vector<std::string>& _extTimeOffsetSet);
@@ -98,19 +90,15 @@ namespace TencentCloud
                     bool ExtTimeOffsetSetHasBeenSet() const;
 
                     /**
-                     * 获取List of time points for screencapturing in <font color=red>milliseconds</font>.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return TimeOffsetSet List of time points for screencapturing in <font color=red>milliseconds</font>.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return TimeOffsetSet 
                      * 
                      */
                     std::vector<double> GetTimeOffsetSet() const;
 
                     /**
-                     * 设置List of time points for screencapturing in <font color=red>milliseconds</font>.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _timeOffsetSet List of time points for screencapturing in <font color=red>milliseconds</font>.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _timeOffsetSet 
                      * 
                      */
                     void SetTimeOffsetSet(const std::vector<double>& _timeOffsetSet);
@@ -123,19 +111,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool TimeOffsetSetHasBeenSet() const;
 
                     /**
-                     * 获取List of up to 10 image or text watermarks.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return WatermarkSet List of up to 10 image or text watermarks.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return WatermarkSet 
                      * 
                      */
                     std::vector<WatermarkInput> GetWatermarkSet() const;
 
                     /**
-                     * 设置List of up to 10 image or text watermarks.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _watermarkSet List of up to 10 image or text watermarks.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _watermarkSet 
                      * 
                      */
                     void SetWatermarkSet(const std::vector<WatermarkInput>& _watermarkSet);
@@ -150,29 +134,25 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Time point screencapturing template ID.
+                     * 
                      */
                     uint64_t m_definition;
                     bool m_definitionHasBeenSet;
 
                     /**
-                     * The list of screenshot time points. “s” and “%” formats are supported:
-<li>When a time point string ends with “s”, its unit is second. For example, “3.5s” means the 3.5th second of the video.</li>
-<li>When a time point string ends with “%”, it represents the percentage of the video’s duration. For example, “10%” means that the time point is at the 10% of the video’s entire duration.</li>
+                     * 
                      */
                     std::vector<std::string> m_extTimeOffsetSet;
                     bool m_extTimeOffsetSetHasBeenSet;
 
                     /**
-                     * List of time points for screencapturing in <font color=red>milliseconds</font>.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<double> m_timeOffsetSet;
                     bool m_timeOffsetSetHasBeenSet;
 
                     /**
-                     * List of up to 10 image or text watermarks.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<WatermarkInput> m_watermarkSet;
                     bool m_watermarkSetHasBeenSet;

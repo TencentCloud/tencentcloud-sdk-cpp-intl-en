@@ -74,8 +74,8 @@ namespace TencentCloud
                     bool FileIdHasBeenSet() const;
 
                     /**
-                     * 获取<p>ID of the edited video task flow after solidification.</p>
-                     * @return VodTaskId <p>ID of the edited video task flow after solidification.</p>
+                     * 获取<p>Edited video task flow ID after solidification.</p>
+                     * @return VodTaskId <p>Edited video task flow ID after solidification.</p>
                      * 
                      */
                     std::string GetVodTaskId() const;
@@ -89,9 +89,7 @@ namespace TencentCloud
 
                     /**
                      * 获取<p>Edited video metadata.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return MetaData <p>Edited video metadata.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     MediaMetaData GetMetaData() const;
@@ -132,14 +130,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool m_fileIdHasBeenSet;
 
                     /**
-                     * <p>ID of the edited video task flow after solidification.</p>
+                     * <p>Edited video task flow ID after solidification.</p>
                      */
                     std::string m_vodTaskId;
                     bool m_vodTaskIdHasBeenSet;
 
                     /**
                      * <p>Edited video metadata.</p>
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     MediaMetaData m_metaData;
                     bool m_metaDataHasBeenSet;

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * UserAgent blacklist/whitelist rule configuration
+                * 
                 */
                 class UserAgentFilterRule : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取UA blacklist type: <li>whitelist: whitelist;</li> <li>blacklist: blacklist. </li>
-                     * @return FilterType UA blacklist type: <li>whitelist: whitelist;</li> <li>blacklist: blacklist. </li>
+                     * 获取UA allowlist/blocklist type: <li>whitelist: allowlist;</li> <li>blacklist: blocklist.</li>	
+                     * @return FilterType UA allowlist/blocklist type: <li>whitelist: allowlist;</li> <li>blacklist: blocklist.</li>	
                      * 
                      */
                     std::string GetFilterType() const;
 
                     /**
-                     * 设置UA blacklist type: <li>whitelist: whitelist;</li> <li>blacklist: blacklist. </li>
-                     * @param _filterType UA blacklist type: <li>whitelist: whitelist;</li> <li>blacklist: blacklist. </li>
+                     * 设置UA allowlist/blocklist type: <li>whitelist: allowlist;</li> <li>blacklist: blocklist.</li>	
+                     * @param _filterType UA allowlist/blocklist type: <li>whitelist: allowlist;</li> <li>blacklist: blocklist.</li>	
                      * 
                      */
                     void SetFilterType(const std::string& _filterType);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool FilterTypeHasBeenSet() const;
 
                     /**
-                     * 获取UserAgent list.
-                     * @return UserAgents UserAgent list.
+                     * 获取
+                     * @return UserAgents 
                      * 
                      */
                     std::vector<std::string> GetUserAgents() const;
 
                     /**
-                     * 设置UserAgent list.
-                     * @param _userAgents UserAgent list.
+                     * 设置
+                     * @param _userAgents 
                      * 
                      */
                     void SetUserAgents(const std::vector<std::string>& _userAgents);
@@ -89,15 +89,31 @@ namespace TencentCloud
                     bool UserAgentsHasBeenSet() const;
 
                     /**
-                     * 获取Rule type: <li>all: valid for all files;</li> <li>file: valid for specified file suffix;</li> <li>directory: valid for specified path;</li> <li>path: specified absolute The path takes effect. </li>
-                     * @return RuleType Rule type: <li>all: valid for all files;</li> <li>file: valid for specified file suffix;</li> <li>directory: valid for specified path;</li> <li>path: specified absolute The path takes effect. </li>
+                     * 获取Rule type:
+<li>all: take effect for all files;</li>
+<li>file: The specified file suffix takes effect;</li>
+<li>directory: specify the path to take effect;</li>
+<li>path: The absolute path takes effect.</li>
+                     * @return RuleType Rule type:
+<li>all: take effect for all files;</li>
+<li>file: The specified file suffix takes effect;</li>
+<li>directory: specify the path to take effect;</li>
+<li>path: The absolute path takes effect.</li>
                      * 
                      */
                     std::string GetRuleType() const;
 
                     /**
-                     * 设置Rule type: <li>all: valid for all files;</li> <li>file: valid for specified file suffix;</li> <li>directory: valid for specified path;</li> <li>path: specified absolute The path takes effect. </li>
-                     * @param _ruleType Rule type: <li>all: valid for all files;</li> <li>file: valid for specified file suffix;</li> <li>directory: valid for specified path;</li> <li>path: specified absolute The path takes effect. </li>
+                     * 设置Rule type:
+<li>all: take effect for all files;</li>
+<li>file: The specified file suffix takes effect;</li>
+<li>directory: specify the path to take effect;</li>
+<li>path: The absolute path takes effect.</li>
+                     * @param _ruleType Rule type:
+<li>all: take effect for all files;</li>
+<li>file: The specified file suffix takes effect;</li>
+<li>directory: specify the path to take effect;</li>
+<li>path: The absolute path takes effect.</li>
                      * 
                      */
                     void SetRuleType(const std::string& _ruleType);
@@ -110,15 +126,31 @@ namespace TencentCloud
                     bool RuleTypeHasBeenSet() const;
 
                     /**
-                     * 获取Matching content under the corresponding type of RuleType: <li>Fill in * when all is used;</li> <li>Fill in suffix name when file is used, such as jpg, txt;</li> <li>Fill in path when directory is used, such as /xxx/ test/;</li> <li>Fill in the absolute path when path is specified, such as /xxx/test.html. </li>
-                     * @return RulePaths Matching content under the corresponding type of RuleType: <li>Fill in * when all is used;</li> <li>Fill in suffix name when file is used, such as jpg, txt;</li> <li>Fill in path when directory is used, such as /xxx/ test/;</li> <li>Fill in the absolute path when path is specified, such as /xxx/test.html. </li>
+                     * 获取Matching content under the corresponding type of RuleType:
+<li>Fill with * when set to all;</li>
+<li>For file, fill in the extension, such as jpg or txt;</li>
+<li>For directory, fill in the path, such as /xxx/test/;</li>
+<li>For path, fill in the absolute path, such as /xxx/test.html.</li>
+                     * @return RulePaths Matching content under the corresponding type of RuleType:
+<li>Fill with * when set to all;</li>
+<li>For file, fill in the extension, such as jpg or txt;</li>
+<li>For directory, fill in the path, such as /xxx/test/;</li>
+<li>For path, fill in the absolute path, such as /xxx/test.html.</li>
                      * 
                      */
                     std::vector<std::string> GetRulePaths() const;
 
                     /**
-                     * 设置Matching content under the corresponding type of RuleType: <li>Fill in * when all is used;</li> <li>Fill in suffix name when file is used, such as jpg, txt;</li> <li>Fill in path when directory is used, such as /xxx/ test/;</li> <li>Fill in the absolute path when path is specified, such as /xxx/test.html. </li>
-                     * @param _rulePaths Matching content under the corresponding type of RuleType: <li>Fill in * when all is used;</li> <li>Fill in suffix name when file is used, such as jpg, txt;</li> <li>Fill in path when directory is used, such as /xxx/ test/;</li> <li>Fill in the absolute path when path is specified, such as /xxx/test.html. </li>
+                     * 设置Matching content under the corresponding type of RuleType:
+<li>Fill with * when set to all;</li>
+<li>For file, fill in the extension, such as jpg or txt;</li>
+<li>For directory, fill in the path, such as /xxx/test/;</li>
+<li>For path, fill in the absolute path, such as /xxx/test.html.</li>
+                     * @param _rulePaths Matching content under the corresponding type of RuleType:
+<li>Fill with * when set to all;</li>
+<li>For file, fill in the extension, such as jpg or txt;</li>
+<li>For directory, fill in the path, such as /xxx/test/;</li>
+<li>For path, fill in the absolute path, such as /xxx/test.html.</li>
                      * 
                      */
                     void SetRulePaths(const std::vector<std::string>& _rulePaths);
@@ -133,25 +165,33 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * UA blacklist type: <li>whitelist: whitelist;</li> <li>blacklist: blacklist. </li>
+                     * UA allowlist/blocklist type: <li>whitelist: allowlist;</li> <li>blacklist: blocklist.</li>	
                      */
                     std::string m_filterType;
                     bool m_filterTypeHasBeenSet;
 
                     /**
-                     * UserAgent list.
+                     * 
                      */
                     std::vector<std::string> m_userAgents;
                     bool m_userAgentsHasBeenSet;
 
                     /**
-                     * Rule type: <li>all: valid for all files;</li> <li>file: valid for specified file suffix;</li> <li>directory: valid for specified path;</li> <li>path: specified absolute The path takes effect. </li>
+                     * Rule type:
+<li>all: take effect for all files;</li>
+<li>file: The specified file suffix takes effect;</li>
+<li>directory: specify the path to take effect;</li>
+<li>path: The absolute path takes effect.</li>
                      */
                     std::string m_ruleType;
                     bool m_ruleTypeHasBeenSet;
 
                     /**
-                     * Matching content under the corresponding type of RuleType: <li>Fill in * when all is used;</li> <li>Fill in suffix name when file is used, such as jpg, txt;</li> <li>Fill in path when directory is used, such as /xxx/ test/;</li> <li>Fill in the absolute path when path is specified, such as /xxx/test.html. </li>
+                     * Matching content under the corresponding type of RuleType:
+<li>Fill with * when set to all;</li>
+<li>For file, fill in the extension, such as jpg or txt;</li>
+<li>For directory, fill in the path, such as /xxx/test/;</li>
+<li>For path, fill in the absolute path, such as /xxx/test.html.</li>
                      */
                     std::vector<std::string> m_rulePaths;
                     bool m_rulePathsHasBeenSet;

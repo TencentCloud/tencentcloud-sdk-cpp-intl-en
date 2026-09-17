@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * LLM enhancement configuration.
+                * 
                 */
                 class DiffusionEnhanceInfo : public AbstractModel
                 {
@@ -47,23 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Large model enhancement switch. Available values:
-<li>ON: enabled</li>
-<li>OFF: disabled</li>
-                     * @return Switch Large model enhancement switch. Available values:
-<li>ON: enabled</li>
-<li>OFF: disabled</li>
+                     * 获取
+                     * @return Switch 
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Large model enhancement switch. Available values:
-<li>ON: enabled</li>
-<li>OFF: disabled</li>
-                     * @param _switch Large model enhancement switch. Available values:
-<li>ON: enabled</li>
-<li>OFF: disabled</li>
+                     * 设置
+                     * @param _switch 
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -76,31 +68,15 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取Intensity type. Valid only when the large model enhancement control switch is ON. Value range:
-<li>weak: weak;</li>
-<li>NORMAL: The scaling group is normal.</li>
-<li>strong: strong.</li>
-Default value: normal.
-                     * @return Type Intensity type. Valid only when the large model enhancement control switch is ON. Value range:
-<li>weak: weak;</li>
-<li>NORMAL: The scaling group is normal.</li>
-<li>strong: strong.</li>
-Default value: normal.
+                     * 获取
+                     * @return Type 
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Intensity type. Valid only when the large model enhancement control switch is ON. Value range:
-<li>weak: weak;</li>
-<li>NORMAL: The scaling group is normal.</li>
-<li>strong: strong.</li>
-Default value: normal.
-                     * @param _type Intensity type. Valid only when the large model enhancement control switch is ON. Value range:
-<li>weak: weak;</li>
-<li>NORMAL: The scaling group is normal.</li>
-<li>strong: strong.</li>
-Default value: normal.
+                     * 设置
+                     * @param _type 
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -115,19 +91,13 @@ Default value: normal.
                 private:
 
                     /**
-                     * Large model enhancement switch. Available values:
-<li>ON: enabled</li>
-<li>OFF: disabled</li>
+                     * 
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * Intensity type. Valid only when the large model enhancement control switch is ON. Value range:
-<li>weak: weak;</li>
-<li>NORMAL: The scaling group is normal.</li>
-<li>strong: strong.</li>
-Default value: normal.
+                     * 
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;

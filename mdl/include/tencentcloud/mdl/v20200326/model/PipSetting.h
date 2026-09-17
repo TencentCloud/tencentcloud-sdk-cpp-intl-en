@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Picture in Picture Settings
                 */
                 class PipSetting : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return AudioSelection 
+                     * 获取Audio selection: LIVE_SOURCE or AD_SOURCE
+                     * @return AudioSelection Audio selection: LIVE_SOURCE or AD_SOURCE
                      * 
                      */
                     std::string GetAudioSelection() const;
 
                     /**
-                     * 设置
-                     * @param _audioSelection 
+                     * 设置Audio selection: LIVE_SOURCE or AD_SOURCE
+                     * @param _audioSelection Audio selection: LIVE_SOURCE or AD_SOURCE
                      * 
                      */
                     void SetAudioSelection(const std::string& _audioSelection);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool AudioSelectionHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return LiveSourceLayout 
+                     * 获取Live streaming source layout configuration
+                     * @return LiveSourceLayout Live streaming source layout configuration
                      * 
                      */
                     SourceLayout GetLiveSourceLayout() const;
 
                     /**
-                     * 设置
-                     * @param _liveSourceLayout 
+                     * 设置Live streaming source layout configuration
+                     * @param _liveSourceLayout Live streaming source layout configuration
                      * 
                      */
                     void SetLiveSourceLayout(const SourceLayout& _liveSourceLayout);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool LiveSourceLayoutHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AdSourceLayout 
+                     * 获取Advertisement source layout configuration
+                     * @return AdSourceLayout Advertisement source layout configuration
                      * 
                      */
                     SourceLayout GetAdSourceLayout() const;
 
                     /**
-                     * 设置
-                     * @param _adSourceLayout 
+                     * 设置Advertisement source layout configuration
+                     * @param _adSourceLayout Advertisement source layout configuration
                      * 
                      */
                     void SetAdSourceLayout(const SourceLayout& _adSourceLayout);
@@ -111,15 +111,15 @@ namespace TencentCloud
                     bool AdSourceLayoutHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return BackgroundImgUrl 
+                     * 获取Background image URL, starting with http/https and ending in jpg/jpeg/png (only required for UPLOAD_CREATIVES)
+                     * @return BackgroundImgUrl Background image URL, starting with http/https and ending in jpg/jpeg/png (only required for UPLOAD_CREATIVES)
                      * 
                      */
                     std::string GetBackgroundImgUrl() const;
 
                     /**
-                     * 设置
-                     * @param _backgroundImgUrl 
+                     * 设置Background image URL, starting with http/https and ending in jpg/jpeg/png (only required for UPLOAD_CREATIVES)
+                     * @param _backgroundImgUrl Background image URL, starting with http/https and ending in jpg/jpeg/png (only required for UPLOAD_CREATIVES)
                      * 
                      */
                     void SetBackgroundImgUrl(const std::string& _backgroundImgUrl);
@@ -132,15 +132,15 @@ namespace TencentCloud
                     bool BackgroundImgUrlHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AdSourceUrl 
+                     * 获取Advertisement video URL, starting with http/https and ending in mp4 (only required for UPLOAD_CREATIVES)
+                     * @return AdSourceUrl Advertisement video URL, starting with http/https and ending in mp4 (only required for UPLOAD_CREATIVES)
                      * 
                      */
                     std::string GetAdSourceUrl() const;
 
                     /**
-                     * 设置
-                     * @param _adSourceUrl 
+                     * 设置Advertisement video URL, starting with http/https and ending in mp4 (only required for UPLOAD_CREATIVES)
+                     * @param _adSourceUrl Advertisement video URL, starting with http/https and ending in mp4 (only required for UPLOAD_CREATIVES)
                      * 
                      */
                     void SetAdSourceUrl(const std::string& _adSourceUrl);
@@ -155,31 +155,31 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Audio selection: LIVE_SOURCE or AD_SOURCE
                      */
                     std::string m_audioSelection;
                     bool m_audioSelectionHasBeenSet;
 
                     /**
-                     * 
+                     * Live streaming source layout configuration
                      */
                     SourceLayout m_liveSourceLayout;
                     bool m_liveSourceLayoutHasBeenSet;
 
                     /**
-                     * 
+                     * Advertisement source layout configuration
                      */
                     SourceLayout m_adSourceLayout;
                     bool m_adSourceLayoutHasBeenSet;
 
                     /**
-                     * 
+                     * Background image URL, starting with http/https and ending in jpg/jpeg/png (only required for UPLOAD_CREATIVES)
                      */
                     std::string m_backgroundImgUrl;
                     bool m_backgroundImgUrlHasBeenSet;
 
                     /**
-                     * 
+                     * Advertisement video URL, starting with http/https and ending in mp4 (only required for UPLOAD_CREATIVES)
                      */
                     std::string m_adSourceUrl;
                     bool m_adSourceUrlHasBeenSet;

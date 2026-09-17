@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Total number of log download links.</p>
-                     * @return TotalCount <p>Total number of log download links.</p>
+                     * 获取
+                     * @return TotalCount 
                      * 
                      */
                     uint64_t GetTotalCount() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取<p>Log Download List of Overseas CDN Nodes. If overseas acceleration is not enabled for the domain name, ignore this parameter.</p>
-                     * @return OverseaCdnLogs <p>Log Download List of Overseas CDN Nodes. If overseas acceleration is not enabled for the domain name, ignore this parameter.</p>
+                     * 获取
+                     * @return OverseaCdnLogs 
                      * 
                      */
                     std::vector<CdnLogInfo> GetOverseaCdnLogs() const;
@@ -73,8 +73,8 @@ namespace TencentCloud
                     bool OverseaCdnLogsHasBeenSet() const;
 
                     /**
-                     * 获取<p>Log Download List of Domestic CDN Nodes.</p>
-                     * @return DomesticCdnLogs <p>Log Download List of Domestic CDN Nodes.</p>
+                     * 获取
+                     * @return DomesticCdnLogs 
                      * 
                      */
                     std::vector<CdnLogInfo> GetDomesticCdnLogs() const;
@@ -89,19 +89,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Total number of log download links.</p>
+                     * 
                      */
                     uint64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * <p>Log Download List of Overseas CDN Nodes. If overseas acceleration is not enabled for the domain name, ignore this parameter.</p>
+                     * 
                      */
                     std::vector<CdnLogInfo> m_overseaCdnLogs;
                     bool m_overseaCdnLogsHasBeenSet;
 
                     /**
-                     * <p>Log Download List of Domestic CDN Nodes.</p>
+                     * 
                      */
                     std::vector<CdnLogInfo> m_domesticCdnLogs;
                     bool m_domesticCdnLogsHasBeenSet;

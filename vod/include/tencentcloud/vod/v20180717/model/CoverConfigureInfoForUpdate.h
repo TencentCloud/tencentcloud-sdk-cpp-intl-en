@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Control parameter of intelligent cover generating task
+                * 
                 */
                 class CoverConfigureInfoForUpdate : public AbstractModel
                 {
@@ -47,23 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Switch of intelligent cover generating task. Valid values:
-<li>ON: enables intelligent cover generating task;</li>
-<li>OFF: disables intelligent cover generating task.</li>
-                     * @return Switch Switch of intelligent cover generating task. Valid values:
-<li>ON: enables intelligent cover generating task;</li>
-<li>OFF: disables intelligent cover generating task.</li>
+                     * 获取
+                     * @return Switch 
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Switch of intelligent cover generating task. Valid values:
-<li>ON: enables intelligent cover generating task;</li>
-<li>OFF: disables intelligent cover generating task.</li>
-                     * @param _switch Switch of intelligent cover generating task. Valid values:
-<li>ON: enables intelligent cover generating task;</li>
-<li>OFF: disables intelligent cover generating task.</li>
+                     * 设置
+                     * @param _switch 
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -78,9 +70,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Switch of intelligent cover generating task. Valid values:
-<li>ON: enables intelligent cover generating task;</li>
-<li>OFF: disables intelligent cover generating task.</li>
+                     * 
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;

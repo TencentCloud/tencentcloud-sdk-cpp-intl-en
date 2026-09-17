@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Video processing statistics overview, which displays an overview and detailed data of the queried task.
-                     * @return MediaProcessDataSet Video processing statistics overview, which displays an overview and detailed data of the queried task.
+                     * 获取
+                     * @return MediaProcessDataSet 
                      * 
                      */
                     std::vector<TaskStatData> GetMediaProcessDataSet() const;
@@ -61,7 +61,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Video processing statistics overview, which displays an overview and detailed data of the queried task.
+                     * 
                      */
                     std::vector<TaskStatData> m_mediaProcessDataSet;
                     bool m_mediaProcessDataSetHasBeenSet;

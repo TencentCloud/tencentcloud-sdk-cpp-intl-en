@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Remaster template ID, please contact Tencent Cloud for details
-                     * @return Definition Remaster template ID, please contact Tencent Cloud for details
+                     * 获取
+                     * @return Definition 
                      * 
                      */
                     uint64_t GetDefinition() const;
 
                     /**
-                     * 设置Remaster template ID, please contact Tencent Cloud for details
-                     * @param _definition Remaster template ID, please contact Tencent Cloud for details
+                     * 设置
+                     * @param _definition 
                      * 
                      */
                     void SetDefinition(const uint64_t& _definition);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool DefinitionHasBeenSet() const;
 
                     /**
-                     * 获取Media file ID, that is, the globally unique identifier of the file on VOD, which is assigned by the VOD backend after successful upload. This field can be obtained from [video upload completion event notification](https://intl.cloud.tencent.com/document/product/266/7830?from_cn_redirect=1) or [vod console](https://console.cloud.tencent.com/vod/media).
-                     * @return FileId Media file ID, that is, the globally unique identifier of the file on VOD, which is assigned by the VOD backend after successful upload. This field can be obtained from [video upload completion event notification](https://intl.cloud.tencent.com/document/product/266/7830?from_cn_redirect=1) or [vod console](https://console.cloud.tencent.com/vod/media).
+                     * 获取
+                     * @return FileId 
                      * 
                      */
                     std::string GetFileId() const;
 
                     /**
-                     * 设置Media file ID, that is, the globally unique identifier of the file on VOD, which is assigned by the VOD backend after successful upload. This field can be obtained from [video upload completion event notification](https://intl.cloud.tencent.com/document/product/266/7830?from_cn_redirect=1) or [vod console](https://console.cloud.tencent.com/vod/media).
-                     * @param _fileId Media file ID, that is, the globally unique identifier of the file on VOD, which is assigned by the VOD backend after successful upload. This field can be obtained from [video upload completion event notification](https://intl.cloud.tencent.com/document/product/266/7830?from_cn_redirect=1) or [vod console](https://console.cloud.tencent.com/vod/media).
+                     * 设置
+                     * @param _fileId 
                      * 
                      */
                     void SetFileId(const std::string& _fileId);
@@ -86,23 +86,15 @@ namespace TencentCloud
                     bool FileIdHasBeenSet() const;
 
                     /**
-                     * 获取Media storage path.
-Only sub-applications in [FileID + Path mode](https://www.tencentcloud.com/document/product/266/126825?from_cn_redirect=1) can initiate task through MediaStoragePath.
-FileId and MediaStoragePath must provide one of.
-                     * @return MediaStoragePath Media storage path.
-Only sub-applications in [FileID + Path mode](https://www.tencentcloud.com/document/product/266/126825?from_cn_redirect=1) can initiate task through MediaStoragePath.
-FileId and MediaStoragePath must provide one of.
+                     * 获取
+                     * @return MediaStoragePath 
                      * 
                      */
                     std::string GetMediaStoragePath() const;
 
                     /**
-                     * 设置Media storage path.
-Only sub-applications in [FileID + Path mode](https://www.tencentcloud.com/document/product/266/126825?from_cn_redirect=1) can initiate task through MediaStoragePath.
-FileId and MediaStoragePath must provide one of.
-                     * @param _mediaStoragePath Media storage path.
-Only sub-applications in [FileID + Path mode](https://www.tencentcloud.com/document/product/266/126825?from_cn_redirect=1) can initiate task through MediaStoragePath.
-FileId and MediaStoragePath must provide one of.
+                     * 设置
+                     * @param _mediaStoragePath 
                      * 
                      */
                     void SetMediaStoragePath(const std::string& _mediaStoragePath);
@@ -115,15 +107,15 @@ FileId and MediaStoragePath must provide one of.
                     bool MediaStoragePathHasBeenSet() const;
 
                     /**
-                     * 获取<b>VOD [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you want to access resources in the Subapplication, enter the Subapplication ID in this field; otherwise, you do not need to fill in this field.</b>
-                     * @return SubAppId <b>VOD [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you want to access resources in the Subapplication, enter the Subapplication ID in this field; otherwise, you do not need to fill in this field.</b>
+                     * 获取
+                     * @return SubAppId 
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置<b>VOD [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you want to access resources in the Subapplication, enter the Subapplication ID in this field; otherwise, you do not need to fill in this field.</b>
-                     * @param _subAppId <b>VOD [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you want to access resources in the Subapplication, enter the Subapplication ID in this field; otherwise, you do not need to fill in this field.</b>
+                     * 设置
+                     * @param _subAppId 
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -136,15 +128,15 @@ FileId and MediaStoragePath must provide one of.
                     bool SubAppIdHasBeenSet() const;
 
                     /**
-                     * 获取Configuration of media files after Remaster
-                     * @return OutputConfig Configuration of media files after Remaster
+                     * 获取
+                     * @return OutputConfig 
                      * 
                      */
                     EnhanceMediaQualityOutputConfig GetOutputConfig() const;
 
                     /**
-                     * 设置Configuration of media files after Remaster
-                     * @param _outputConfig Configuration of media files after Remaster
+                     * 设置
+                     * @param _outputConfig 
                      * 
                      */
                     void SetOutputConfig(const EnhanceMediaQualityOutputConfig& _outputConfig);
@@ -157,15 +149,15 @@ FileId and MediaStoragePath must provide one of.
                     bool OutputConfigHasBeenSet() const;
 
                     /**
-                     * 获取The identification code used for deduplication. If there has been a request with the same identification code within three days, this request will return an error. Up to 50 characters, without or with an empty string means no deduplication
-                     * @return SessionId The identification code used for deduplication. If there has been a request with the same identification code within three days, this request will return an error. Up to 50 characters, without or with an empty string means no deduplication
+                     * 获取
+                     * @return SessionId 
                      * 
                      */
                     std::string GetSessionId() const;
 
                     /**
-                     * 设置The identification code used for deduplication. If there has been a request with the same identification code within three days, this request will return an error. Up to 50 characters, without or with an empty string means no deduplication
-                     * @param _sessionId The identification code used for deduplication. If there has been a request with the same identification code within three days, this request will return an error. Up to 50 characters, without or with an empty string means no deduplication
+                     * 设置
+                     * @param _sessionId 
                      * 
                      */
                     void SetSessionId(const std::string& _sessionId);
@@ -178,15 +170,15 @@ FileId and MediaStoragePath must provide one of.
                     bool SessionIdHasBeenSet() const;
 
                     /**
-                     * 获取Source context, used to pass through user request information, Remaster completion callback will return this field value, up to 1000 characters
-                     * @return SessionContext Source context, used to pass through user request information, Remaster completion callback will return this field value, up to 1000 characters
+                     * 获取
+                     * @return SessionContext 
                      * 
                      */
                     std::string GetSessionContext() const;
 
                     /**
-                     * 设置Source context, used to pass through user request information, Remaster completion callback will return this field value, up to 1000 characters
-                     * @param _sessionContext Source context, used to pass through user request information, Remaster completion callback will return this field value, up to 1000 characters
+                     * 设置
+                     * @param _sessionContext 
                      * 
                      */
                     void SetSessionContext(const std::string& _sessionContext);
@@ -199,15 +191,15 @@ FileId and MediaStoragePath must provide one of.
                     bool SessionContextHasBeenSet() const;
 
                     /**
-                     * 获取The priority of the task, the higher the value, the higher the priority, the range is -10 to 10, not filled in means 0
-                     * @return TasksPriority The priority of the task, the higher the value, the higher the priority, the range is -10 to 10, not filled in means 0
+                     * 获取
+                     * @return TasksPriority 
                      * 
                      */
                     int64_t GetTasksPriority() const;
 
                     /**
-                     * 设置The priority of the task, the higher the value, the higher the priority, the range is -10 to 10, not filled in means 0
-                     * @param _tasksPriority The priority of the task, the higher the value, the higher the priority, the range is -10 to 10, not filled in means 0
+                     * 设置
+                     * @param _tasksPriority 
                      * 
                      */
                     void SetTasksPriority(const int64_t& _tasksPriority);
@@ -222,51 +214,49 @@ FileId and MediaStoragePath must provide one of.
                 private:
 
                     /**
-                     * Remaster template ID, please contact Tencent Cloud for details
+                     * 
                      */
                     uint64_t m_definition;
                     bool m_definitionHasBeenSet;
 
                     /**
-                     * Media file ID, that is, the globally unique identifier of the file on VOD, which is assigned by the VOD backend after successful upload. This field can be obtained from [video upload completion event notification](https://intl.cloud.tencent.com/document/product/266/7830?from_cn_redirect=1) or [vod console](https://console.cloud.tencent.com/vod/media).
+                     * 
                      */
                     std::string m_fileId;
                     bool m_fileIdHasBeenSet;
 
                     /**
-                     * Media storage path.
-Only sub-applications in [FileID + Path mode](https://www.tencentcloud.com/document/product/266/126825?from_cn_redirect=1) can initiate task through MediaStoragePath.
-FileId and MediaStoragePath must provide one of.
+                     * 
                      */
                     std::string m_mediaStoragePath;
                     bool m_mediaStoragePathHasBeenSet;
 
                     /**
-                     * <b>VOD [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you want to access resources in the Subapplication, enter the Subapplication ID in this field; otherwise, you do not need to fill in this field.</b>
+                     * 
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
 
                     /**
-                     * Configuration of media files after Remaster
+                     * 
                      */
                     EnhanceMediaQualityOutputConfig m_outputConfig;
                     bool m_outputConfigHasBeenSet;
 
                     /**
-                     * The identification code used for deduplication. If there has been a request with the same identification code within three days, this request will return an error. Up to 50 characters, without or with an empty string means no deduplication
+                     * 
                      */
                     std::string m_sessionId;
                     bool m_sessionIdHasBeenSet;
 
                     /**
-                     * Source context, used to pass through user request information, Remaster completion callback will return this field value, up to 1000 characters
+                     * 
                      */
                     std::string m_sessionContext;
                     bool m_sessionContextHasBeenSet;
 
                     /**
-                     * The priority of the task, the higher the value, the higher the priority, the range is -10 to 10, not filled in means 0
+                     * 
                      */
                     int64_t m_tasksPriority;
                     bool m_tasksPriorityHasBeenSet;

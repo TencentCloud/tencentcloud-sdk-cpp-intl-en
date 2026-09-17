@@ -36,9 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Intelligent erasure, specify region configuration.
-Perform erasure directly in the designated region within a specified period.
-When both BeginMs and EndMs are set to 0, directly perform erase on the designated region in the entire video.
+                * 
                 */
                 class MPSEraseTimeArea : public AbstractModel
                 {
@@ -50,15 +48,15 @@ When both BeginMs and EndMs are set to 0, directly perform erase on the designat
 
 
                     /**
-                     * 获取<p>Start time, unit: ms</p>
-                     * @return BeginMs <p>Start time, unit: ms</p>
+                     * 获取
+                     * @return BeginMs 
                      * 
                      */
                     uint64_t GetBeginMs() const;
 
                     /**
-                     * 设置<p>Start time, unit: ms</p>
-                     * @param _beginMs <p>Start time, unit: ms</p>
+                     * 设置
+                     * @param _beginMs 
                      * 
                      */
                     void SetBeginMs(const uint64_t& _beginMs);
@@ -71,15 +69,15 @@ When both BeginMs and EndMs are set to 0, directly perform erase on the designat
                     bool BeginMsHasBeenSet() const;
 
                     /**
-                     * 获取<p>End time, unit: ms</p>
-                     * @return EndMs <p>End time, unit: ms</p>
+                     * 获取
+                     * @return EndMs 
                      * 
                      */
                     uint64_t GetEndMs() const;
 
                     /**
-                     * 设置<p>End time, unit: ms</p>
-                     * @param _endMs <p>End time, unit: ms</p>
+                     * 设置
+                     * @param _endMs 
                      * 
                      */
                     void SetEndMs(const uint64_t& _endMs);
@@ -92,15 +90,15 @@ When both BeginMs and EndMs are set to 0, directly perform erase on the designat
                     bool EndMsHasBeenSet() const;
 
                     /**
-                     * 获取<p>Domain list for erasure within the period</p>
-                     * @return Areas <p>Domain list for erasure within the period</p>
+                     * 获取
+                     * @return Areas 
                      * 
                      */
                     std::vector<MPSEraseArea> GetAreas() const;
 
                     /**
-                     * 设置<p>Domain list for erasure within the period</p>
-                     * @param _areas <p>Domain list for erasure within the period</p>
+                     * 设置
+                     * @param _areas 
                      * 
                      */
                     void SetAreas(const std::vector<MPSEraseArea>& _areas);
@@ -115,19 +113,19 @@ When both BeginMs and EndMs are set to 0, directly perform erase on the designat
                 private:
 
                     /**
-                     * <p>Start time, unit: ms</p>
+                     * 
                      */
                     uint64_t m_beginMs;
                     bool m_beginMsHasBeenSet;
 
                     /**
-                     * <p>End time, unit: ms</p>
+                     * 
                      */
                     uint64_t m_endMs;
                     bool m_endMsHasBeenSet;
 
                     /**
-                     * <p>Domain list for erasure within the period</p>
+                     * 
                      */
                     std::vector<MPSEraseArea> m_areas;
                     bool m_areasHasBeenSet;

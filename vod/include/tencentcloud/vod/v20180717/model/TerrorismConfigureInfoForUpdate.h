@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Parameters for recognition of terrorism content
+                * 
                 */
                 class TerrorismConfigureInfoForUpdate : public AbstractModel
                 {
@@ -49,15 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Parameters for recognition of terrorism content in images
-                     * @return ImgReviewInfo Parameters for recognition of terrorism content in images
+                     * 获取
+                     * @return ImgReviewInfo 
                      * 
                      */
                     TerrorismImgReviewTemplateInfoForUpdate GetImgReviewInfo() const;
 
                     /**
-                     * 设置Parameters for recognition of terrorism content in images
-                     * @param _imgReviewInfo Parameters for recognition of terrorism content in images
+                     * 设置
+                     * @param _imgReviewInfo 
                      * 
                      */
                     void SetImgReviewInfo(const TerrorismImgReviewTemplateInfoForUpdate& _imgReviewInfo);
@@ -70,15 +70,15 @@ namespace TencentCloud
                     bool ImgReviewInfoHasBeenSet() const;
 
                     /**
-                     * 获取Parameters for OCR-based recognition of terrorism content
-                     * @return OcrReviewInfo Parameters for OCR-based recognition of terrorism content
+                     * 获取
+                     * @return OcrReviewInfo 
                      * 
                      */
                     TerrorismOcrReviewTemplateInfoForUpdate GetOcrReviewInfo() const;
 
                     /**
-                     * 设置Parameters for OCR-based recognition of terrorism content
-                     * @param _ocrReviewInfo Parameters for OCR-based recognition of terrorism content
+                     * 设置
+                     * @param _ocrReviewInfo 
                      * 
                      */
                     void SetOcrReviewInfo(const TerrorismOcrReviewTemplateInfoForUpdate& _ocrReviewInfo);
@@ -93,13 +93,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Parameters for recognition of terrorism content in images
+                     * 
                      */
                     TerrorismImgReviewTemplateInfoForUpdate m_imgReviewInfo;
                     bool m_imgReviewInfoHasBeenSet;
 
                     /**
-                     * Parameters for OCR-based recognition of terrorism content
+                     * 
                      */
                     TerrorismOcrReviewTemplateInfoForUpdate m_ocrReviewInfo;
                     bool m_ocrReviewInfoHasBeenSet;

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * The information of a digital watermark.
+                * 
                 */
                 class TraceWatermarkInput : public AbstractModel
                 {
@@ -47,23 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether to use digital watermarks. This parameter is required. Valid values:
-<li>ON</li>
-<li>OFF</li>
-                     * @return Switch Whether to use digital watermarks. This parameter is required. Valid values:
-<li>ON</li>
-<li>OFF</li>
+                     * 获取
+                     * @return Switch 
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Whether to use digital watermarks. This parameter is required. Valid values:
-<li>ON</li>
-<li>OFF</li>
-                     * @param _switch Whether to use digital watermarks. This parameter is required. Valid values:
-<li>ON</li>
-<li>OFF</li>
+                     * 设置
+                     * @param _switch 
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -76,15 +68,15 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取This parameter has been deprecated.
-                     * @return Definition This parameter has been deprecated.
+                     * 获取
+                     * @return Definition 
                      * @deprecated
                      */
                     uint64_t GetDefinition() const;
 
                     /**
-                     * 设置This parameter has been deprecated.
-                     * @param _definition This parameter has been deprecated.
+                     * 设置
+                     * @param _definition 
                      * @deprecated
                      */
                     void SetDefinition(const uint64_t& _definition);
@@ -99,15 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Whether to use digital watermarks. This parameter is required. Valid values:
-<li>ON</li>
-<li>OFF</li>
+                     * 
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * This parameter has been deprecated.
+                     * 
                      */
                     uint64_t m_definition;
                     bool m_definitionHasBeenSet;

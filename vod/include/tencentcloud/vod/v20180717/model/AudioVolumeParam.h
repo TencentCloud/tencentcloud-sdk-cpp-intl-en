@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Audio gain adjustment parameter
+                * 
                 */
                 class AudioVolumeParam : public AbstractModel
                 {
@@ -47,27 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Whether to mute. Valid values: 0, 1.
-<li>0: not muted.</li>
-<li>1: muted.</li>
-Default value: 0.
-                     * @return Mute Whether to mute. Valid values: 0, 1.
-<li>0: not muted.</li>
-<li>1: muted.</li>
-Default value: 0.
+                     * 获取
+                     * @return Mute 
                      * 
                      */
                     int64_t GetMute() const;
 
                     /**
-                     * 设置Whether to mute. Valid values: 0, 1.
-<li>0: not muted.</li>
-<li>1: muted.</li>
-Default value: 0.
-                     * @param _mute Whether to mute. Valid values: 0, 1.
-<li>0: not muted.</li>
-<li>1: muted.</li>
-Default value: 0.
+                     * 设置
+                     * @param _mute 
                      * 
                      */
                     void SetMute(const int64_t& _mute);
@@ -80,31 +68,15 @@ Default value: 0.
                     bool MuteHasBeenSet() const;
 
                     /**
-                     * 获取Audio gain. Value range: 0-10.
-<li>If the value is greater than 1, the volume will be increased.</li>
-<li>If the value is smaller than 1, the volume will be decreased.</li>
-<li>0 and 1: no change.</li>
-Default value: 0.
-                     * @return Gain Audio gain. Value range: 0-10.
-<li>If the value is greater than 1, the volume will be increased.</li>
-<li>If the value is smaller than 1, the volume will be decreased.</li>
-<li>0 and 1: no change.</li>
-Default value: 0.
+                     * 获取
+                     * @return Gain 
                      * 
                      */
                     double GetGain() const;
 
                     /**
-                     * 设置Audio gain. Value range: 0-10.
-<li>If the value is greater than 1, the volume will be increased.</li>
-<li>If the value is smaller than 1, the volume will be decreased.</li>
-<li>0 and 1: no change.</li>
-Default value: 0.
-                     * @param _gain Audio gain. Value range: 0-10.
-<li>If the value is greater than 1, the volume will be increased.</li>
-<li>If the value is smaller than 1, the volume will be decreased.</li>
-<li>0 and 1: no change.</li>
-Default value: 0.
+                     * 设置
+                     * @param _gain 
                      * 
                      */
                     void SetGain(const double& _gain);
@@ -119,20 +91,13 @@ Default value: 0.
                 private:
 
                     /**
-                     * Whether to mute. Valid values: 0, 1.
-<li>0: not muted.</li>
-<li>1: muted.</li>
-Default value: 0.
+                     * 
                      */
                     int64_t m_mute;
                     bool m_muteHasBeenSet;
 
                     /**
-                     * Audio gain. Value range: 0-10.
-<li>If the value is greater than 1, the volume will be increased.</li>
-<li>If the value is smaller than 1, the volume will be decreased.</li>
-<li>0 and 1: no change.</li>
-Default value: 0.
+                     * 
                      */
                     double m_gain;
                     bool m_gainHasBeenSet;

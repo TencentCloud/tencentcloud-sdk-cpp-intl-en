@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * AI dress up configuration message.
+                * 
                 */
                 class AiTryOnConfig : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Dress up model.</p><p>Enumeration value:</p><ul><li>WAND-tryon-1.0-lite: Lightweight tier, prioritizing speed.</li><li>WAND-tryon-1.0-flash: Balanced tier, taking into account effect and latency.</li><li>WAND-tryon-1.0-pro: High-quality tier, prioritizing effect.</li></ul>
-                     * @return Model <p>Dress up model.</p><p>Enumeration value:</p><ul><li>WAND-tryon-1.0-lite: Lightweight tier, prioritizing speed.</li><li>WAND-tryon-1.0-flash: Balanced tier, taking into account effect and latency.</li><li>WAND-tryon-1.0-pro: High-quality tier, prioritizing effect.</li></ul>
+                     * 获取
+                     * @return Model 
                      * 
                      */
                     std::string GetModel() const;
 
                     /**
-                     * 设置<p>Dress up model.</p><p>Enumeration value:</p><ul><li>WAND-tryon-1.0-lite: Lightweight tier, prioritizing speed.</li><li>WAND-tryon-1.0-flash: Balanced tier, taking into account effect and latency.</li><li>WAND-tryon-1.0-pro: High-quality tier, prioritizing effect.</li></ul>
-                     * @param _model <p>Dress up model.</p><p>Enumeration value:</p><ul><li>WAND-tryon-1.0-lite: Lightweight tier, prioritizing speed.</li><li>WAND-tryon-1.0-flash: Balanced tier, taking into account effect and latency.</li><li>WAND-tryon-1.0-pro: High-quality tier, prioritizing effect.</li></ul>
+                     * 设置
+                     * @param _model 
                      * 
                      */
                     void SetModel(const std::string& _model);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool ModelHasBeenSet() const;
 
                     /**
-                     * 获取<p>Input the image list of clothing that needs to be replaced. 1-4 images are supported.</p>
-                     * @return ClothesFileInfos <p>Input the image list of clothing that needs to be replaced. 1-4 images are supported.</p>
+                     * 获取
+                     * @return ClothesFileInfos 
                      * 
                      */
                     std::vector<SceneAigcImageTaskInputFileInfo> GetClothesFileInfos() const;
 
                     /**
-                     * 设置<p>Input the image list of clothing that needs to be replaced. 1-4 images are supported.</p>
-                     * @param _clothesFileInfos <p>Input the image list of clothing that needs to be replaced. 1-4 images are supported.</p>
+                     * 设置
+                     * @param _clothesFileInfos 
                      * 
                      */
                     void SetClothesFileInfos(const std::vector<SceneAigcImageTaskInputFileInfo>& _clothesFileInfos);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool ClothesFileInfosHasBeenSet() const;
 
                     /**
-                     * 获取<p>Dress up command Prompt.</p>
-                     * @return Prompt <p>Dress up command Prompt.</p>
+                     * 获取
+                     * @return Prompt 
                      * 
                      */
                     std::string GetPrompt() const;
 
                     /**
-                     * 设置<p>Dress up command Prompt.</p>
-                     * @param _prompt <p>Dress up command Prompt.</p>
+                     * 设置
+                     * @param _prompt 
                      * 
                      */
                     void SetPrompt(const std::string& _prompt);
@@ -113,19 +113,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Dress up model.</p><p>Enumeration value:</p><ul><li>WAND-tryon-1.0-lite: Lightweight tier, prioritizing speed.</li><li>WAND-tryon-1.0-flash: Balanced tier, taking into account effect and latency.</li><li>WAND-tryon-1.0-pro: High-quality tier, prioritizing effect.</li></ul>
+                     * 
                      */
                     std::string m_model;
                     bool m_modelHasBeenSet;
 
                     /**
-                     * <p>Input the image list of clothing that needs to be replaced. 1-4 images are supported.</p>
+                     * 
                      */
                     std::vector<SceneAigcImageTaskInputFileInfo> m_clothesFileInfos;
                     bool m_clothesFileInfosHasBeenSet;
 
                     /**
-                     * <p>Dress up command Prompt.</p>
+                     * 
                      */
                     std::string m_prompt;
                     bool m_promptHasBeenSet;

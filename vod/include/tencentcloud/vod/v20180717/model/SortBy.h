@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Sort by criterion
+                * 
                 */
                 class SortBy : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Sort by field
-                     * @return Field Sort by field
+                     * 获取
+                     * @return Field 
                      * 
                      */
                     std::string GetField() const;
 
                     /**
-                     * 设置Sort by field
-                     * @param _field Sort by field
+                     * 设置
+                     * @param _field 
                      * 
                      */
                     void SetField(const std::string& _field);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool FieldHasBeenSet() const;
 
                     /**
-                     * 获取Sorting order. Valid values: Asc (ascending), Desc (descending)
-                     * @return Order Sorting order. Valid values: Asc (ascending), Desc (descending)
+                     * 获取
+                     * @return Order 
                      * 
                      */
                     std::string GetOrder() const;
 
                     /**
-                     * 设置Sorting order. Valid values: Asc (ascending), Desc (descending)
-                     * @param _order Sorting order. Valid values: Asc (ascending), Desc (descending)
+                     * 设置
+                     * @param _order 
                      * 
                      */
                     void SetOrder(const std::string& _order);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Sort by field
+                     * 
                      */
                     std::string m_field;
                     bool m_fieldHasBeenSet;
 
                     /**
-                     * Sorting order. Valid values: Asc (ascending), Desc (descending)
+                     * 
                      */
                     std::string m_order;
                     bool m_orderHasBeenSet;

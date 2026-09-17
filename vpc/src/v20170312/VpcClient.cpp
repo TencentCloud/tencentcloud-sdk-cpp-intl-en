@@ -1190,6 +1190,56 @@ VpcClient::CheckAssistantCidrOutcomeCallable VpcClient::CheckAssistantCidrCallab
     return prom->get_future();
 }
 
+VpcClient::CheckGatewayFlowMonitorOutcome VpcClient::CheckGatewayFlowMonitor(const CheckGatewayFlowMonitorRequest &request)
+{
+    auto outcome = MakeRequest(request, "CheckGatewayFlowMonitor");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CheckGatewayFlowMonitorResponse rsp = CheckGatewayFlowMonitorResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CheckGatewayFlowMonitorOutcome(rsp);
+        else
+            return CheckGatewayFlowMonitorOutcome(o.GetError());
+    }
+    else
+    {
+        return CheckGatewayFlowMonitorOutcome(outcome.GetError());
+    }
+}
+
+void VpcClient::CheckGatewayFlowMonitorAsync(const CheckGatewayFlowMonitorRequest& request, const CheckGatewayFlowMonitorAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const CheckGatewayFlowMonitorRequest&;
+    using Resp = CheckGatewayFlowMonitorResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "CheckGatewayFlowMonitor", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+VpcClient::CheckGatewayFlowMonitorOutcomeCallable VpcClient::CheckGatewayFlowMonitorCallable(const CheckGatewayFlowMonitorRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<CheckGatewayFlowMonitorOutcome>>();
+    CheckGatewayFlowMonitorAsync(
+    request,
+    [prom](
+        const VpcClient*,
+        const CheckGatewayFlowMonitorRequest&,
+        CheckGatewayFlowMonitorOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 VpcClient::CheckNetDetectStateOutcome VpcClient::CheckNetDetectState(const CheckNetDetectStateRequest &request)
 {
     auto outcome = MakeRequest(request, "CheckNetDetectState");
@@ -7090,6 +7140,56 @@ VpcClient::DescribeNatGatewayDirectConnectGatewayRouteOutcomeCallable VpcClient:
     return prom->get_future();
 }
 
+VpcClient::DescribeNatGatewayFlowMonitorDetailOutcome VpcClient::DescribeNatGatewayFlowMonitorDetail(const DescribeNatGatewayFlowMonitorDetailRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeNatGatewayFlowMonitorDetail");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeNatGatewayFlowMonitorDetailResponse rsp = DescribeNatGatewayFlowMonitorDetailResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeNatGatewayFlowMonitorDetailOutcome(rsp);
+        else
+            return DescribeNatGatewayFlowMonitorDetailOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeNatGatewayFlowMonitorDetailOutcome(outcome.GetError());
+    }
+}
+
+void VpcClient::DescribeNatGatewayFlowMonitorDetailAsync(const DescribeNatGatewayFlowMonitorDetailRequest& request, const DescribeNatGatewayFlowMonitorDetailAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeNatGatewayFlowMonitorDetailRequest&;
+    using Resp = DescribeNatGatewayFlowMonitorDetailResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeNatGatewayFlowMonitorDetail", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+VpcClient::DescribeNatGatewayFlowMonitorDetailOutcomeCallable VpcClient::DescribeNatGatewayFlowMonitorDetailCallable(const DescribeNatGatewayFlowMonitorDetailRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeNatGatewayFlowMonitorDetailOutcome>>();
+    DescribeNatGatewayFlowMonitorDetailAsync(
+    request,
+    [prom](
+        const VpcClient*,
+        const DescribeNatGatewayFlowMonitorDetailRequest&,
+        DescribeNatGatewayFlowMonitorDetailOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 VpcClient::DescribeNatGatewaySourceIpTranslationNatRulesOutcome VpcClient::DescribeNatGatewaySourceIpTranslationNatRules(const DescribeNatGatewaySourceIpTranslationNatRulesRequest &request)
 {
     auto outcome = MakeRequest(request, "DescribeNatGatewaySourceIpTranslationNatRules");
@@ -7132,6 +7232,56 @@ VpcClient::DescribeNatGatewaySourceIpTranslationNatRulesOutcomeCallable VpcClien
         const VpcClient*,
         const DescribeNatGatewaySourceIpTranslationNatRulesRequest&,
         DescribeNatGatewaySourceIpTranslationNatRulesOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+VpcClient::DescribeNatGatewayZonesOutcome VpcClient::DescribeNatGatewayZones(const DescribeNatGatewayZonesRequest &request)
+{
+    auto outcome = MakeRequest(request, "DescribeNatGatewayZones");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DescribeNatGatewayZonesResponse rsp = DescribeNatGatewayZonesResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DescribeNatGatewayZonesOutcome(rsp);
+        else
+            return DescribeNatGatewayZonesOutcome(o.GetError());
+    }
+    else
+    {
+        return DescribeNatGatewayZonesOutcome(outcome.GetError());
+    }
+}
+
+void VpcClient::DescribeNatGatewayZonesAsync(const DescribeNatGatewayZonesRequest& request, const DescribeNatGatewayZonesAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DescribeNatGatewayZonesRequest&;
+    using Resp = DescribeNatGatewayZonesResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DescribeNatGatewayZones", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+VpcClient::DescribeNatGatewayZonesOutcomeCallable VpcClient::DescribeNatGatewayZonesCallable(const DescribeNatGatewayZonesRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DescribeNatGatewayZonesOutcome>>();
+    DescribeNatGatewayZonesAsync(
+    request,
+    [prom](
+        const VpcClient*,
+        const DescribeNatGatewayZonesRequest&,
+        DescribeNatGatewayZonesOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {

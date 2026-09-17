@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Smart subtitle input struct.
+                * 
                 */
                 class MPSSmartSubtitlesTaskInput : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<p>Smart subtitle template ID.</p>
-                     * @return Definition <p>Smart subtitle template ID.</p>
+                     * 获取
+                     * @return Definition 
                      * 
                      */
                     uint64_t GetDefinition() const;
 
                     /**
-                     * 设置<p>Smart subtitle template ID.</p>
-                     * @param _definition <p>Smart subtitle template ID.</p>
+                     * 设置
+                     * @param _definition 
                      * 
                      */
                     void SetDefinition(const uint64_t& _definition);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool DefinitionHasBeenSet() const;
 
                     /**
-                     * 获取<p>Custom smart subtitle parameter. It takes effect when Definition is set to 0. This parameter is used in high customization scenarios. It is recommended that you preferentially use Definition to specify smart subtitle parameters.</p>
-                     * @return RawParameter <p>Custom smart subtitle parameter. It takes effect when Definition is set to 0. This parameter is used in high customization scenarios. It is recommended that you preferentially use Definition to specify smart subtitle parameters.</p>
+                     * 获取
+                     * @return RawParameter 
                      * 
                      */
                     MPSRawSmartSubtitleParameter GetRawParameter() const;
 
                     /**
-                     * 设置<p>Custom smart subtitle parameter. It takes effect when Definition is set to 0. This parameter is used in high customization scenarios. It is recommended that you preferentially use Definition to specify smart subtitle parameters.</p>
-                     * @param _rawParameter <p>Custom smart subtitle parameter. It takes effect when Definition is set to 0. This parameter is used in high customization scenarios. It is recommended that you preferentially use Definition to specify smart subtitle parameters.</p>
+                     * 设置
+                     * @param _rawParameter 
                      * 
                      */
                     void SetRawParameter(const MPSRawSmartSubtitleParameter& _rawParameter);
@@ -92,13 +92,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <p>Smart subtitle template ID.</p>
+                     * 
                      */
                     uint64_t m_definition;
                     bool m_definitionHasBeenSet;
 
                     /**
-                     * <p>Custom smart subtitle parameter. It takes effect when Definition is set to 0. This parameter is used in high customization scenarios. It is recommended that you preferentially use Definition to specify smart subtitle parameters.</p>
+                     * 
                      */
                     MPSRawSmartSubtitleParameter m_rawParameter;
                     bool m_rawParameterHasBeenSet;

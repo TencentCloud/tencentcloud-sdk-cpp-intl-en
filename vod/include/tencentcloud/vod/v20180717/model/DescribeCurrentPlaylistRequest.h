@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取<B>VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) id.</b>.
-                     * @return SubAppId <B>VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) id.</b>.
+                     * 获取
+                     * @return SubAppId 
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置<B>VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) id.</b>.
-                     * @param _subAppId <B>VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) id.</b>.
+                     * 设置
+                     * @param _subAppId 
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool SubAppIdHasBeenSet() const;
 
                     /**
-                     * 获取The unique identifier of the playlist.
-                     * @return RoundPlayId The unique identifier of the playlist.
+                     * 获取
+                     * @return RoundPlayId 
                      * 
                      */
                     std::string GetRoundPlayId() const;
 
                     /**
-                     * 设置The unique identifier of the playlist.
-                     * @param _roundPlayId The unique identifier of the playlist.
+                     * 设置
+                     * @param _roundPlayId 
                      * 
                      */
                     void SetRoundPlayId(const std::string& _roundPlayId);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool RoundPlayIdHasBeenSet() const;
 
                     /**
-                     * 获取The length of the returned playlist. maximum is 10, default value is 5.
-                     * @return Limit The length of the returned playlist. maximum is 10, default value is 5.
+                     * 获取
+                     * @return Limit 
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置The length of the returned playlist. maximum is 10, default value is 5.
-                     * @param _limit The length of the returned playlist. maximum is 10, default value is 5.
+                     * 设置
+                     * @param _limit 
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -108,19 +108,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * <B>VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) id.</b>.
+                     * 
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
 
                     /**
-                     * The unique identifier of the playlist.
+                     * 
                      */
                     std::string m_roundPlayId;
                     bool m_roundPlayIdHasBeenSet;
 
                     /**
-                     * The length of the returned playlist. maximum is 10, default value is 5.
+                     * 
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;

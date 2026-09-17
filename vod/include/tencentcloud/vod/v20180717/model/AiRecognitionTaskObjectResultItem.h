@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Single-object recognition result.
+                * 
                 */
                 class AiRecognitionTaskObjectResultItem : public AbstractModel
                 {
@@ -49,15 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Name of recognized object.
-                     * @return Name Name of recognized object.
+                     * 获取
+                     * @return Name 
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Name of recognized object.
-                     * @param _name Name of recognized object.
+                     * 设置
+                     * @param _name 
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -70,15 +70,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取List of segments that contain an object.
-                     * @return SegmentSet List of segments that contain an object.
+                     * 获取
+                     * @return SegmentSet 
                      * @deprecated
                      */
                     std::vector<AiRecognitionTaskObjectSeqmentItem> GetSegmentSet() const;
 
                     /**
-                     * 设置List of segments that contain an object.
-                     * @param _segmentSet List of segments that contain an object.
+                     * 设置
+                     * @param _segmentSet 
                      * @deprecated
                      */
                     void SetSegmentSet(const std::vector<AiRecognitionTaskObjectSeqmentItem>& _segmentSet);
@@ -91,15 +91,15 @@ namespace TencentCloud
                     bool SegmentSetHasBeenSet() const;
 
                     /**
-                     * 获取List of fragments in which the object appears.
-                     * @return RecognitionSegmentSet List of fragments in which the object appears.
+                     * 获取
+                     * @return RecognitionSegmentSet 
                      * 
                      */
                     std::vector<AiRecognitionTaskObjectSegmentItem> GetRecognitionSegmentSet() const;
 
                     /**
-                     * 设置List of fragments in which the object appears.
-                     * @param _recognitionSegmentSet List of fragments in which the object appears.
+                     * 设置
+                     * @param _recognitionSegmentSet 
                      * 
                      */
                     void SetRecognitionSegmentSet(const std::vector<AiRecognitionTaskObjectSegmentItem>& _recognitionSegmentSet);
@@ -114,19 +114,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Name of recognized object.
+                     * 
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * List of segments that contain an object.
+                     * 
                      */
                     std::vector<AiRecognitionTaskObjectSeqmentItem> m_segmentSet;
                     bool m_segmentSetHasBeenSet;
 
                     /**
-                     * List of fragments in which the object appears.
+                     * 
                      */
                     std::vector<AiRecognitionTaskObjectSegmentItem> m_recognitionSegmentSet;
                     bool m_recognitionSegmentSetHasBeenSet;

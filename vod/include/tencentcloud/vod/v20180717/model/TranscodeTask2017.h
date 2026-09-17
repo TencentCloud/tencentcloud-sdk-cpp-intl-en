@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * The details of a video transcoding task. This parameter is only valid for tasks initiated by the v2017 video transcoding API.
+                * 
                 */
                 class TranscodeTask2017 : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Transcoding task ID.
-                     * @return TaskId Transcoding task ID.
+                     * 获取
+                     * @return TaskId 
                      * 
                      */
                     std::string GetTaskId() const;
 
                     /**
-                     * 设置Transcoding task ID.
-                     * @param _taskId Transcoding task ID.
+                     * 设置
+                     * @param _taskId 
                      * 
                      */
                     void SetTaskId(const std::string& _taskId);
@@ -69,27 +69,15 @@ namespace TencentCloud
                     bool TaskIdHasBeenSet() const;
 
                     /**
-                     * 获取Error code
-<li>0: success;</li>
-<li>Other values: failure.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return ErrCode Error code
-<li>0: success;</li>
-<li>Other values: failure.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return ErrCode 
                      * 
                      */
                     int64_t GetErrCode() const;
 
                     /**
-                     * 设置Error code
-<li>0: success;</li>
-<li>Other values: failure.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _errCode Error code
-<li>0: success;</li>
-<li>Other values: failure.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _errCode 
                      * 
                      */
                     void SetErrCode(const int64_t& _errCode);
@@ -102,19 +90,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool ErrCodeHasBeenSet() const;
 
                     /**
-                     * 获取Error message.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Message Error message.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return Message 
                      * 
                      */
                     std::string GetMessage() const;
 
                     /**
-                     * 设置Error message.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _message Error message.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _message 
                      * 
                      */
                     void SetMessage(const std::string& _message);
@@ -127,19 +111,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool MessageHasBeenSet() const;
 
                     /**
-                     * 获取ID of transcoded file.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return FileId ID of transcoded file.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return FileId 
                      * 
                      */
                     std::string GetFileId() const;
 
                     /**
-                     * 设置ID of transcoded file.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _fileId ID of transcoded file.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _fileId 
                      * 
                      */
                     void SetFileId(const std::string& _fileId);
@@ -152,19 +132,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool FileIdHasBeenSet() const;
 
                     /**
-                     * 获取Name of transcoded file.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return FileName Name of transcoded file.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return FileName 
                      * 
                      */
                     std::string GetFileName() const;
 
                     /**
-                     * 设置Name of transcoded file.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _fileName Name of transcoded file.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _fileName 
                      * 
                      */
                     void SetFileName(const std::string& _fileName);
@@ -177,19 +153,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool FileNameHasBeenSet() const;
 
                     /**
-                     * 获取Video duration in seconds.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return Duration Video duration in seconds.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return Duration 
                      * 
                      */
                     uint64_t GetDuration() const;
 
                     /**
-                     * 设置Video duration in seconds.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _duration Video duration in seconds.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _duration 
                      * 
                      */
                     void SetDuration(const uint64_t& _duration);
@@ -202,19 +174,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool DurationHasBeenSet() const;
 
                     /**
-                     * 获取Cover address.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return CoverUrl Cover address.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return CoverUrl 
                      * 
                      */
                     std::string GetCoverUrl() const;
 
                     /**
-                     * 设置Cover address.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _coverUrl Cover address.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _coverUrl 
                      * 
                      */
                     void SetCoverUrl(const std::string& _coverUrl);
@@ -227,19 +195,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                     bool CoverUrlHasBeenSet() const;
 
                     /**
-                     * 获取Playback information generated after video transcoding.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @return PlayInfoSet Playback information generated after video transcoding.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 获取
+                     * @return PlayInfoSet 
                      * 
                      */
                     std::vector<TranscodePlayInfo2017> GetPlayInfoSet() const;
 
                     /**
-                     * 设置Playback information generated after video transcoding.
-Note: this field may return null, indicating that no valid values can be obtained.
-                     * @param _playInfoSet Playback information generated after video transcoding.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 设置
+                     * @param _playInfoSet 
                      * 
                      */
                     void SetPlayInfoSet(const std::vector<TranscodePlayInfo2017>& _playInfoSet);
@@ -254,58 +218,49 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Transcoding task ID.
+                     * 
                      */
                     std::string m_taskId;
                     bool m_taskIdHasBeenSet;
 
                     /**
-                     * Error code
-<li>0: success;</li>
-<li>Other values: failure.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     int64_t m_errCode;
                     bool m_errCodeHasBeenSet;
 
                     /**
-                     * Error message.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string m_message;
                     bool m_messageHasBeenSet;
 
                     /**
-                     * ID of transcoded file.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string m_fileId;
                     bool m_fileIdHasBeenSet;
 
                     /**
-                     * Name of transcoded file.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string m_fileName;
                     bool m_fileNameHasBeenSet;
 
                     /**
-                     * Video duration in seconds.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     uint64_t m_duration;
                     bool m_durationHasBeenSet;
 
                     /**
-                     * Cover address.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::string m_coverUrl;
                     bool m_coverUrlHasBeenSet;
 
                     /**
-                     * Playback information generated after video transcoding.
-Note: this field may return null, indicating that no valid values can be obtained.
+                     * 
                      */
                     std::vector<TranscodePlayInfo2017> m_playInfoSet;
                     bool m_playInfoSetHasBeenSet;

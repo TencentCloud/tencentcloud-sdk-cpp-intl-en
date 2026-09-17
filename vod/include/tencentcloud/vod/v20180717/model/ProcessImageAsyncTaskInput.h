@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Image processing configuration.
+                * 
                 */
                 class ProcessImageAsyncTaskInput : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Image asynchronous processing template ID.
-                     * @return Definition Image asynchronous processing template ID.
+                     * 获取
+                     * @return Definition 
                      * 
                      */
                     int64_t GetDefinition() const;
 
                     /**
-                     * 设置Image asynchronous processing template ID.
-                     * @param _definition Image asynchronous processing template ID.
+                     * 设置
+                     * @param _definition 
                      * 
                      */
                     void SetDefinition(const int64_t& _definition);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool DefinitionHasBeenSet() const;
 
                     /**
-                     * 获取Extended parameters for asynchronous image processing.
-                     * @return ExtendedParameter Extended parameters for asynchronous image processing.
+                     * 获取
+                     * @return ExtendedParameter 
                      * 
                      */
                     ProcessImageAsyncInputExtendedParameter GetExtendedParameter() const;
 
                     /**
-                     * 设置Extended parameters for asynchronous image processing.
-                     * @param _extendedParameter Extended parameters for asynchronous image processing.
+                     * 设置
+                     * @param _extendedParameter 
                      * 
                      */
                     void SetExtendedParameter(const ProcessImageAsyncInputExtendedParameter& _extendedParameter);
@@ -92,13 +92,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Image asynchronous processing template ID.
+                     * 
                      */
                     int64_t m_definition;
                     bool m_definitionHasBeenSet;
 
                     /**
-                     * Extended parameters for asynchronous image processing.
+                     * 
                      */
                     ProcessImageAsyncInputExtendedParameter m_extendedParameter;
                     bool m_extendedParameterHasBeenSet;
