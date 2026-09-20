@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Operations such as image rotation and flipping.
                 */
                 class ImageTransform : public AbstractModel
                 {
@@ -47,15 +47,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Type 
+                     * 获取Type. Valid values:
+<li> Rotate: image rotation.</li>
+<li> Flip: image flipping.</li>
+                     * @return Type Type. Valid values:
+<li> Rotate: image rotation.</li>
+<li> Flip: image flipping.</li>
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置
-                     * @param _type 
+                     * 设置Type. Valid values:
+<li> Rotate: image rotation.</li>
+<li> Flip: image flipping.</li>
+                     * @param _type Type. Valid values:
+<li> Rotate: image rotation.</li>
+<li> Flip: image flipping.</li>
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -68,15 +76,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return RotateAngle 
+                     * 获取Rotation angle of the image around the center point as the origin. Value range: 0-360. Valid when Type is Rotate.
+                     * @return RotateAngle Rotation angle of the image around the center point as the origin. Value range: 0-360. Valid when Type is Rotate.
                      * 
                      */
                     double GetRotateAngle() const;
 
                     /**
-                     * 设置
-                     * @param _rotateAngle 
+                     * 设置Rotation angle of the image around the center point as the origin. Value range: 0-360. Valid when Type is Rotate.
+                     * @param _rotateAngle Rotation angle of the image around the center point as the origin. Value range: 0-360. Valid when Type is Rotate.
                      * 
                      */
                     void SetRotateAngle(const double& _rotateAngle);
@@ -89,15 +97,27 @@ namespace TencentCloud
                     bool RotateAngleHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Flip 
+                     * 获取Image flipping action. Valid values:
+<li>Horizental: Flip horizontally, that is, left and right mirroring.</li>
+<li>Vertical: Flip vertically, that is, mirror up and down.</li>
+Valid when Type is set to Flip.
+                     * @return Flip Image flipping action. Valid values:
+<li>Horizental: Flip horizontally, that is, left and right mirroring.</li>
+<li>Vertical: Flip vertically, that is, mirror up and down.</li>
+Valid when Type is set to Flip.
                      * 
                      */
                     std::string GetFlip() const;
 
                     /**
-                     * 设置
-                     * @param _flip 
+                     * 设置Image flipping action. Valid values:
+<li>Horizental: Flip horizontally, that is, left and right mirroring.</li>
+<li>Vertical: Flip vertically, that is, mirror up and down.</li>
+Valid when Type is set to Flip.
+                     * @param _flip Image flipping action. Valid values:
+<li>Horizental: Flip horizontally, that is, left and right mirroring.</li>
+<li>Vertical: Flip vertically, that is, mirror up and down.</li>
+Valid when Type is set to Flip.
                      * 
                      */
                     void SetFlip(const std::string& _flip);
@@ -112,19 +132,24 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Type. Valid values:
+<li> Rotate: image rotation.</li>
+<li> Flip: image flipping.</li>
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * 
+                     * Rotation angle of the image around the center point as the origin. Value range: 0-360. Valid when Type is Rotate.
                      */
                     double m_rotateAngle;
                     bool m_rotateAngleHasBeenSet;
 
                     /**
-                     * 
+                     * Image flipping action. Valid values:
+<li>Horizental: Flip horizontally, that is, left and right mirroring.</li>
+<li>Vertical: Flip vertically, that is, mirror up and down.</li>
+Valid when Type is set to Flip.
                      */
                     std::string m_flip;
                     bool m_flipHasBeenSet;

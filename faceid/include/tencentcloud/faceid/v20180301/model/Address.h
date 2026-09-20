@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Overseas Document Address
+                * Overseas document address
                 */
                 class Address : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Nationality.
-                     * @return Country Nationality.
+                     * 获取Country
+                     * @return Country Country
                      * 
                      */
                     std::string GetCountry() const;
 
                     /**
-                     * 设置Nationality.
-                     * @param _country Nationality.
+                     * 设置Country
+                     * @param _country Country
                      * 
                      */
                     void SetCountry(const std::string& _country);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool CountryHasBeenSet() const;
 
                     /**
-                     * 获取Post code.
-                     * @return PostalCode Post code.
+                     * 获取Postal code
+                     * @return PostalCode Postal code
                      * 
                      */
                     std::string GetPostalCode() const;
 
                     /**
-                     * 设置Post code.
-                     * @param _postalCode Post code.
+                     * 设置Postal code
+                     * @param _postalCode Postal code
                      * 
                      */
                     void SetPostalCode(const std::string& _postalCode);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool PostalCodeHasBeenSet() const;
 
                     /**
-                     * 获取Subregion.
-                     * @return Subdivision Subregion.
+                     * 获取Sub-region
+                     * @return Subdivision Sub-region
                      * 
                      */
                     std::string GetSubdivision() const;
 
                     /**
-                     * 设置Subregion.
-                     * @param _subdivision Subregion.
+                     * 设置Sub-region
+                     * @param _subdivision Sub-region
                      * 
                      */
                     void SetSubdivision(const std::string& _subdivision);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool SubdivisionHasBeenSet() const;
 
                     /**
-                     * 获取City.
-                     * @return City City.
+                     * 获取city
+                     * @return City city
                      * 
                      */
                     std::string GetCity() const;
 
                     /**
-                     * 设置City.
-                     * @param _city City.
+                     * 设置city
+                     * @param _city city
                      * 
                      */
                     void SetCity(const std::string& _city);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool CityHasBeenSet() const;
 
                     /**
-                     * 获取Complete address.
-                     * @return FormattedAddress Complete address.
+                     * 获取Complete address
+                     * @return FormattedAddress Complete address
                      * 
                      */
                     std::string GetFormattedAddress() const;
 
                     /**
-                     * 设置Complete address.
-                     * @param _formattedAddress Complete address.
+                     * 设置Complete address
+                     * @param _formattedAddress Complete address
                      * 
                      */
                     void SetFormattedAddress(const std::string& _formattedAddress);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool FormattedAddressHasBeenSet() const;
 
                     /**
-                     * 获取The first line of address.
-                     * @return LineOne The first line of address.
+                     * 获取First line of the address bar
+                     * @return LineOne First line of the address bar
                      * 
                      */
                     std::string GetLineOne() const;
 
                     /**
-                     * 设置The first line of address.
-                     * @param _lineOne The first line of address.
+                     * 设置First line of the address bar
+                     * @param _lineOne First line of the address bar
                      * 
                      */
                     void SetLineOne(const std::string& _lineOne);
@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool LineOneHasBeenSet() const;
 
                     /**
-                     * 获取The second line of address.
-                     * @return LineTwo The second line of address.
+                     * 获取Second line of the address bar
+                     * @return LineTwo Second line of the address bar
                      * 
                      */
                     std::string GetLineTwo() const;
 
                     /**
-                     * 设置The second line of address.
-                     * @param _lineTwo The second line of address.
+                     * 设置Second line of the address bar
+                     * @param _lineTwo Second line of the address bar
                      * 
                      */
                     void SetLineTwo(const std::string& _lineTwo);
@@ -194,15 +194,15 @@ namespace TencentCloud
                     bool LineTwoHasBeenSet() const;
 
                     /**
-                     * 获取The third line of address.
-                     * @return LineThree The third line of address.
+                     * 获取Third line of the address bar
+                     * @return LineThree Third line of the address bar
                      * 
                      */
                     std::string GetLineThree() const;
 
                     /**
-                     * 设置The third line of address.
-                     * @param _lineThree The third line of address.
+                     * 设置Third line of the address bar
+                     * @param _lineThree Third line of the address bar
                      * 
                      */
                     void SetLineThree(const std::string& _lineThree);
@@ -215,15 +215,15 @@ namespace TencentCloud
                     bool LineThreeHasBeenSet() const;
 
                     /**
-                     * 获取The fourth line of address.
-                     * @return LineFour The fourth line of address.
+                     * 获取Fourth line of the address bar
+                     * @return LineFour Fourth line of the address bar
                      * 
                      */
                     std::string GetLineFour() const;
 
                     /**
-                     * 设置The fourth line of address.
-                     * @param _lineFour The fourth line of address.
+                     * 设置Fourth line of the address bar
+                     * @param _lineFour Fourth line of the address bar
                      * 
                      */
                     void SetLineFour(const std::string& _lineFour);
@@ -236,15 +236,15 @@ namespace TencentCloud
                     bool LineFourHasBeenSet() const;
 
                     /**
-                     * 获取The fifth line of address.
-                     * @return LineFive The fifth line of address.
+                     * 获取Fifth line of the address bar
+                     * @return LineFive Fifth line of the address bar
                      * 
                      */
                     std::string GetLineFive() const;
 
                     /**
-                     * 设置The fifth line of address.
-                     * @param _lineFive The fifth line of address.
+                     * 设置Fifth line of the address bar
+                     * @param _lineFive Fifth line of the address bar
                      * 
                      */
                     void SetLineFive(const std::string& _lineFive);
@@ -259,61 +259,61 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Nationality.
+                     * Country
                      */
                     std::string m_country;
                     bool m_countryHasBeenSet;
 
                     /**
-                     * Post code.
+                     * Postal code
                      */
                     std::string m_postalCode;
                     bool m_postalCodeHasBeenSet;
 
                     /**
-                     * Subregion.
+                     * Sub-region
                      */
                     std::string m_subdivision;
                     bool m_subdivisionHasBeenSet;
 
                     /**
-                     * City.
+                     * city
                      */
                     std::string m_city;
                     bool m_cityHasBeenSet;
 
                     /**
-                     * Complete address.
+                     * Complete address
                      */
                     std::string m_formattedAddress;
                     bool m_formattedAddressHasBeenSet;
 
                     /**
-                     * The first line of address.
+                     * First line of the address bar
                      */
                     std::string m_lineOne;
                     bool m_lineOneHasBeenSet;
 
                     /**
-                     * The second line of address.
+                     * Second line of the address bar
                      */
                     std::string m_lineTwo;
                     bool m_lineTwoHasBeenSet;
 
                     /**
-                     * The third line of address.
+                     * Third line of the address bar
                      */
                     std::string m_lineThree;
                     bool m_lineThreeHasBeenSet;
 
                     /**
-                     * The fourth line of address.
+                     * Fourth line of the address bar
                      */
                     std::string m_lineFour;
                     bool m_lineFourHasBeenSet;
 
                     /**
-                     * The fifth line of address.
+                     * Fifth line of the address bar
                      */
                     std::string m_lineFive;
                     bool m_lineFiveHasBeenSet;

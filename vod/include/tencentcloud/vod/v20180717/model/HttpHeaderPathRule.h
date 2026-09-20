@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Http header setting rules, with a maximum of 100.
                 */
                 class HttpHeaderPathRule : public AbstractModel
                 {
@@ -48,26 +48,26 @@ namespace TencentCloud
 
                     /**
                      * 获取http header setting method:
-<li>set: Set. Update the value of the specified header parameter to the configured value; if the specified header does not exist, it will be added; if multiple duplicate header parameters exist, all will be updated and merged into one header;</li>
+<li>set: Set. Change the value of the specified header parameter to the configured value; if the configured header does not exist, it will be added; if there are multiple duplicate header parameters, all will be updated and merged into one header;</li>
 <li>del: delete. Delete specified HTTP header parameters;</li>
-<li>add: Add. Add the designated header parameter. Duplicate addition is allowed by default, meaning the same header can be repeatedly added (Note: Repeated addition may affect browser response. Please prioritize the set operation).</li>
+<li>add: Add. Add the specified header parameter. Duplicate addition is allowed by default, meaning the same header can be repeatedly added (Note: Repeated addition may affect browser response. Use the set operation preferentially).</li>
                      * @return HeaderMode http header setting method:
-<li>set: Set. Update the value of the specified header parameter to the configured value; if the specified header does not exist, it will be added; if multiple duplicate header parameters exist, all will be updated and merged into one header;</li>
+<li>set: Set. Change the value of the specified header parameter to the configured value; if the configured header does not exist, it will be added; if there are multiple duplicate header parameters, all will be updated and merged into one header;</li>
 <li>del: delete. Delete specified HTTP header parameters;</li>
-<li>add: Add. Add the designated header parameter. Duplicate addition is allowed by default, meaning the same header can be repeatedly added (Note: Repeated addition may affect browser response. Please prioritize the set operation).</li>
+<li>add: Add. Add the specified header parameter. Duplicate addition is allowed by default, meaning the same header can be repeatedly added (Note: Repeated addition may affect browser response. Use the set operation preferentially).</li>
                      * 
                      */
                     std::string GetHeaderMode() const;
 
                     /**
                      * 设置http header setting method:
-<li>set: Set. Update the value of the specified header parameter to the configured value; if the specified header does not exist, it will be added; if multiple duplicate header parameters exist, all will be updated and merged into one header;</li>
+<li>set: Set. Change the value of the specified header parameter to the configured value; if the configured header does not exist, it will be added; if there are multiple duplicate header parameters, all will be updated and merged into one header;</li>
 <li>del: delete. Delete specified HTTP header parameters;</li>
-<li>add: Add. Add the designated header parameter. Duplicate addition is allowed by default, meaning the same header can be repeatedly added (Note: Repeated addition may affect browser response. Please prioritize the set operation).</li>
+<li>add: Add. Add the specified header parameter. Duplicate addition is allowed by default, meaning the same header can be repeatedly added (Note: Repeated addition may affect browser response. Use the set operation preferentially).</li>
                      * @param _headerMode http header setting method:
-<li>set: Set. Update the value of the specified header parameter to the configured value; if the specified header does not exist, it will be added; if multiple duplicate header parameters exist, all will be updated and merged into one header;</li>
+<li>set: Set. Change the value of the specified header parameter to the configured value; if the configured header does not exist, it will be added; if there are multiple duplicate header parameters, all will be updated and merged into one header;</li>
 <li>del: delete. Delete specified HTTP header parameters;</li>
-<li>add: Add. Add the designated header parameter. Duplicate addition is allowed by default, meaning the same header can be repeatedly added (Note: Repeated addition may affect browser response. Please prioritize the set operation).</li>
+<li>add: Add. Add the specified header parameter. Duplicate addition is allowed by default, meaning the same header can be repeatedly added (Note: Repeated addition may affect browser response. Use the set operation preferentially).</li>
                      * 
                      */
                     void SetHeaderMode(const std::string& _headerMode);
@@ -80,15 +80,15 @@ namespace TencentCloud
                     bool HeaderModeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return HeaderName 
+                     * 获取http header name, up to 100 characters.
+                     * @return HeaderName http header name, up to 100 characters.
                      * 
                      */
                     std::string GetHeaderName() const;
 
                     /**
-                     * 设置
-                     * @param _headerName 
+                     * 设置http header name, up to 100 characters.
+                     * @param _headerName http header name, up to 100 characters.
                      * 
                      */
                     void SetHeaderName(const std::string& _headerName);
@@ -207,15 +207,15 @@ Required if Mode is add/set.
 
                     /**
                      * http header setting method:
-<li>set: Set. Update the value of the specified header parameter to the configured value; if the specified header does not exist, it will be added; if multiple duplicate header parameters exist, all will be updated and merged into one header;</li>
+<li>set: Set. Change the value of the specified header parameter to the configured value; if the configured header does not exist, it will be added; if there are multiple duplicate header parameters, all will be updated and merged into one header;</li>
 <li>del: delete. Delete specified HTTP header parameters;</li>
-<li>add: Add. Add the designated header parameter. Duplicate addition is allowed by default, meaning the same header can be repeatedly added (Note: Repeated addition may affect browser response. Please prioritize the set operation).</li>
+<li>add: Add. Add the specified header parameter. Duplicate addition is allowed by default, meaning the same header can be repeatedly added (Note: Repeated addition may affect browser response. Use the set operation preferentially).</li>
                      */
                     std::string m_headerMode;
                     bool m_headerModeHasBeenSet;
 
                     /**
-                     * 
+                     * http header name, up to 100 characters.
                      */
                     std::string m_headerName;
                     bool m_headerNameHasBeenSet;

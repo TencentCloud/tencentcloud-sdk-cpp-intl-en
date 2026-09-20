@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Input for video start and end recognition.
                 */
                 class AiRecognitionTaskHeadTailResultInput : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Definition 
+                     * 获取Video start and end recognition template ID.
+                     * @return Definition Video start and end recognition template ID.
                      * 
                      */
                     int64_t GetDefinition() const;
 
                     /**
-                     * 设置
-                     * @param _definition 
+                     * 设置Video start and end recognition template ID.
+                     * @param _definition Video start and end recognition template ID.
                      * 
                      */
                     void SetDefinition(const int64_t& _definition);
@@ -70,7 +70,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Video start and end recognition template ID.
                      */
                     int64_t m_definition;
                     bool m_definitionHasBeenSet;

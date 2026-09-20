@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Target parameter for video quality remastering
                 */
                 class RebuildMediaTargetInfo : public AbstractModel
                 {
@@ -49,15 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return MediaName 
+                     * 获取Output filename, up to 64 characters. By default, the system specifies the generated file name.
+                     * @return MediaName Output filename, up to 64 characters. By default, the system specifies the generated file name.
                      * 
                      */
                     std::string GetMediaName() const;
 
                     /**
-                     * 设置
-                     * @param _mediaName 
+                     * 设置Output filename, up to 64 characters. By default, the system specifies the generated file name.
+                     * @param _mediaName Output filename, up to 64 characters. By default, the system specifies the generated file name.
                      * 
                      */
                     void SetMediaName(const std::string& _mediaName);
@@ -70,15 +70,15 @@ namespace TencentCloud
                     bool MediaNameHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Description 
+                     * 获取Description. It can contain up to 128 characters. The default description is empty.
+                     * @return Description Description. It can contain up to 128 characters. The default description is empty.
                      * 
                      */
                     std::string GetDescription() const;
 
                     /**
-                     * 设置
-                     * @param _description 
+                     * 设置Description. It can contain up to 128 characters. The default description is empty.
+                     * @param _description Description. It can contain up to 128 characters. The default description is empty.
                      * 
                      */
                     void SetDescription(const std::string& _description);
@@ -91,15 +91,19 @@ namespace TencentCloud
                     bool DescriptionHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ClassId 
+                     * 获取Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the [Create Category](https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1) API.
+<li>Default value: 0, indicate other categories.</li>
+                     * @return ClassId Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the [Create Category](https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1) API.
+<li>Default value: 0, indicate other categories.</li>
                      * 
                      */
                     int64_t GetClassId() const;
 
                     /**
-                     * 设置
-                     * @param _classId 
+                     * 设置Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the [Create Category](https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1) API.
+<li>Default value: 0, indicate other categories.</li>
+                     * @param _classId Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the [Create Category](https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1) API.
+<li>Default value: 0, indicate other categories.</li>
                      * 
                      */
                     void SetClassId(const int64_t& _classId);
@@ -112,15 +116,15 @@ namespace TencentCloud
                     bool ClassIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ExpireTime 
+                     * 获取Expiry date of the output file. The file will be deleted after this time. It never expires by default. The format follows the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @return ExpireTime Expiry date of the output file. The file will be deleted after this time. It never expires by default. The format follows the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      * 
                      */
                     std::string GetExpireTime() const;
 
                     /**
-                     * 设置
-                     * @param _expireTime 
+                     * 设置Expiry date of the output file. The file will be deleted after this time. It never expires by default. The format follows the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @param _expireTime Expiry date of the output file. The file will be deleted after this time. It never expires by default. The format follows the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      * 
                      */
                     void SetExpireTime(const std::string& _expireTime);
@@ -133,15 +137,15 @@ namespace TencentCloud
                     bool ExpireTimeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Container 
+                     * 获取Output file container format. Available values: mp4, flv, hls. Default: mp4.
+                     * @return Container Output file container format. Available values: mp4, flv, hls. Default: mp4.
                      * 
                      */
                     std::string GetContainer() const;
 
                     /**
-                     * 设置
-                     * @param _container 
+                     * 设置Output file container format. Available values: mp4, flv, hls. Default: mp4.
+                     * @param _container Output file container format. Available values: mp4, flv, hls. Default: mp4.
                      * 
                      */
                     void SetContainer(const std::string& _container);
@@ -154,15 +158,15 @@ namespace TencentCloud
                     bool ContainerHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return VideoStream 
+                     * 获取Output video information.
+                     * @return VideoStream Output video information.
                      * 
                      */
                     RebuildMediaTargetVideoStream GetVideoStream() const;
 
                     /**
-                     * 设置
-                     * @param _videoStream 
+                     * 设置Output video information.
+                     * @param _videoStream Output video information.
                      * 
                      */
                     void SetVideoStream(const RebuildMediaTargetVideoStream& _videoStream);
@@ -175,15 +179,15 @@ namespace TencentCloud
                     bool VideoStreamHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AudioStream 
+                     * 获取Output audio information.
+                     * @return AudioStream Output audio information.
                      * 
                      */
                     RebuildMediaTargetAudioStream GetAudioStream() const;
 
                     /**
-                     * 设置
-                     * @param _audioStream 
+                     * 设置Output audio information.
+                     * @param _audioStream Output audio information.
                      * 
                      */
                     void SetAudioStream(const RebuildMediaTargetAudioStream& _audioStream);
@@ -196,15 +200,31 @@ namespace TencentCloud
                     bool AudioStreamHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return RemoveVideo 
+                     * 获取Indicates whether to remove video data. Valid values:
+<li>0: retention</li>
+<li>1: Remove</li>
+
+Default value: 0.
+                     * @return RemoveVideo Indicates whether to remove video data. Valid values:
+<li>0: retention</li>
+<li>1: Remove</li>
+
+Default value: 0.
                      * 
                      */
                     int64_t GetRemoveVideo() const;
 
                     /**
-                     * 设置
-                     * @param _removeVideo 
+                     * 设置Indicates whether to remove video data. Valid values:
+<li>0: retention</li>
+<li>1: Remove</li>
+
+Default value: 0.
+                     * @param _removeVideo Indicates whether to remove video data. Valid values:
+<li>0: retention</li>
+<li>1: Remove</li>
+
+Default value: 0.
                      * 
                      */
                     void SetRemoveVideo(const int64_t& _removeVideo);
@@ -217,15 +237,31 @@ namespace TencentCloud
                     bool RemoveVideoHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return RemoveAudio 
+                     * 获取Indicates whether to remove audio data. Available values:
+<li>0: retention</li>
+<li>1: Remove</li>
+
+Default value: 0.
+                     * @return RemoveAudio Indicates whether to remove audio data. Available values:
+<li>0: retention</li>
+<li>1: Remove</li>
+
+Default value: 0.
                      * 
                      */
                     int64_t GetRemoveAudio() const;
 
                     /**
-                     * 设置
-                     * @param _removeAudio 
+                     * 设置Indicates whether to remove audio data. Available values:
+<li>0: retention</li>
+<li>1: Remove</li>
+
+Default value: 0.
+                     * @param _removeAudio Indicates whether to remove audio data. Available values:
+<li>0: retention</li>
+<li>1: Remove</li>
+
+Default value: 0.
                      * 
                      */
                     void SetRemoveAudio(const int64_t& _removeAudio);
@@ -240,55 +276,64 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Output filename, up to 64 characters. By default, the system specifies the generated file name.
                      */
                     std::string m_mediaName;
                     bool m_mediaNameHasBeenSet;
 
                     /**
-                     * 
+                     * Description. It can contain up to 128 characters. The default description is empty.
                      */
                     std::string m_description;
                     bool m_descriptionHasBeenSet;
 
                     /**
-                     * 
+                     * Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the [Create Category](https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1) API.
+<li>Default value: 0, indicate other categories.</li>
                      */
                     int64_t m_classId;
                     bool m_classIdHasBeenSet;
 
                     /**
-                     * 
+                     * Expiry date of the output file. The file will be deleted after this time. It never expires by default. The format follows the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      */
                     std::string m_expireTime;
                     bool m_expireTimeHasBeenSet;
 
                     /**
-                     * 
+                     * Output file container format. Available values: mp4, flv, hls. Default: mp4.
                      */
                     std::string m_container;
                     bool m_containerHasBeenSet;
 
                     /**
-                     * 
+                     * Output video information.
                      */
                     RebuildMediaTargetVideoStream m_videoStream;
                     bool m_videoStreamHasBeenSet;
 
                     /**
-                     * 
+                     * Output audio information.
                      */
                     RebuildMediaTargetAudioStream m_audioStream;
                     bool m_audioStreamHasBeenSet;
 
                     /**
-                     * 
+                     * Indicates whether to remove video data. Valid values:
+<li>0: retention</li>
+<li>1: Remove</li>
+
+Default value: 0.
                      */
                     int64_t m_removeVideo;
                     bool m_removeVideoHasBeenSet;
 
                     /**
-                     * 
+                     * Indicates whether to remove audio data. Available values:
+<li>0: retention</li>
+<li>1: Remove</li>
+
+Default value: 0.
                      */
                     int64_t m_removeAudio;
                     bool m_removeAudioHasBeenSet;

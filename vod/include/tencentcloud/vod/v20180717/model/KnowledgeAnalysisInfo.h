@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Media analysis information in the knowledge base.
                 */
                 class KnowledgeAnalysisInfo : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Definition 
+                     * 获取<p>Large model parsing template number</p>
+                     * @return Definition <p>Large model parsing template number</p>
                      * 
                      */
                     int64_t GetDefinition() const;
 
                     /**
-                     * 设置
-                     * @param _definition 
+                     * 设置<p>Large model parsing template number</p>
+                     * @param _definition <p>Large model parsing template number</p>
                      * 
                      */
                     void SetDefinition(const int64_t& _definition);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool DefinitionHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AnalysisResults 
+                     * 获取<p>Large model parsing result</p>
+                     * @return AnalysisResults <p>Large model parsing result</p>
                      * 
                      */
                     std::vector<KnowledgeAnalysisResult> GetAnalysisResults() const;
 
                     /**
-                     * 设置
-                     * @param _analysisResults 
+                     * 设置<p>Large model parsing result</p>
+                     * @param _analysisResults <p>Large model parsing result</p>
                      * 
                      */
                     void SetAnalysisResults(const std::vector<KnowledgeAnalysisResult>& _analysisResults);
@@ -92,13 +92,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p>Large model parsing template number</p>
                      */
                     int64_t m_definition;
                     bool m_definitionHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Large model parsing result</p>
                      */
                     std::vector<KnowledgeAnalysisResult> m_analysisResults;
                     bool m_analysisResultsHasBeenSet;

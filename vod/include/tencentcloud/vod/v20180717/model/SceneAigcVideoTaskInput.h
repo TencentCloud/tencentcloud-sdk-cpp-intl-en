@@ -38,7 +38,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Scenario-based information of an AIGC video task.
                 */
                 class SceneAigcVideoTaskInput : public AbstractModel
                 {
@@ -50,15 +50,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return SceneInfo 
+                     * 获取Scenario-based image generation parameter configuration.
+                     * @return SceneInfo Scenario-based image generation parameter configuration.
                      * 
                      */
                     AigcVideoSceneInfo GetSceneInfo() const;
 
                     /**
-                     * 设置
-                     * @param _sceneInfo 
+                     * 设置Scenario-based image generation parameter configuration.
+                     * @param _sceneInfo Scenario-based image generation parameter configuration.
                      * 
                      */
                     void SetSceneInfo(const AigcVideoSceneInfo& _sceneInfo);
@@ -71,15 +71,15 @@ namespace TencentCloud
                     bool SceneInfoHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return FileInfos 
+                     * 获取List of input images.
+                     * @return FileInfos List of input images.
                      * 
                      */
                     std::vector<SceneAigcVideoTaskInputFileInfo> GetFileInfos() const;
 
                     /**
-                     * 设置
-                     * @param _fileInfos 
+                     * 设置List of input images.
+                     * @param _fileInfos List of input images.
                      * 
                      */
                     void SetFileInfos(const std::vector<SceneAigcVideoTaskInputFileInfo>& _fileInfos);
@@ -92,15 +92,15 @@ namespace TencentCloud
                     bool FileInfosHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return OutputConfig 
+                     * 获取Configuration of the output media file for the scenario-based image generation task.
+                     * @return OutputConfig Configuration of the output media file for the scenario-based image generation task.
                      * 
                      */
                     SceneAigcVideoOutputConfig GetOutputConfig() const;
 
                     /**
-                     * 设置
-                     * @param _outputConfig 
+                     * 设置Configuration of the output media file for the scenario-based image generation task.
+                     * @param _outputConfig Configuration of the output media file for the scenario-based image generation task.
                      * 
                      */
                     void SetOutputConfig(const SceneAigcVideoOutputConfig& _outputConfig);
@@ -115,19 +115,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Scenario-based image generation parameter configuration.
                      */
                     AigcVideoSceneInfo m_sceneInfo;
                     bool m_sceneInfoHasBeenSet;
 
                     /**
-                     * 
+                     * List of input images.
                      */
                     std::vector<SceneAigcVideoTaskInputFileInfo> m_fileInfos;
                     bool m_fileInfosHasBeenSet;
 
                     /**
-                     * 
+                     * Configuration of the output media file for the scenario-based image generation task.
                      */
                     SceneAigcVideoOutputConfig m_outputConfig;
                     bool m_outputConfigHasBeenSet;

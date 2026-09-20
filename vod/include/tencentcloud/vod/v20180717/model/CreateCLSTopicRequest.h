@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return CLSRegion 
+                     * 获取Region to which the logset belongs. Valid values: <li>ap-guangzhou: Guangzhou;</li> <li>ap-beijing: Beijing;</li> <li>ap-chengdu: Chengdu;</li> <li>ap-chongqing: Chongqing;</li> <li>ap-nanjing: Nanjing;</li> <li>ap-shanghai: Shanghai;</li> <li>ap-singapore: Singapore.</li>
+                     * @return CLSRegion Region to which the logset belongs. Valid values: <li>ap-guangzhou: Guangzhou;</li> <li>ap-beijing: Beijing;</li> <li>ap-chengdu: Chengdu;</li> <li>ap-chongqing: Chongqing;</li> <li>ap-nanjing: Nanjing;</li> <li>ap-shanghai: Shanghai;</li> <li>ap-singapore: Singapore.</li>
                      * 
                      */
                     std::string GetCLSRegion() const;
 
                     /**
-                     * 设置
-                     * @param _cLSRegion 
+                     * 设置Region to which the logset belongs. Valid values: <li>ap-guangzhou: Guangzhou;</li> <li>ap-beijing: Beijing;</li> <li>ap-chengdu: Chengdu;</li> <li>ap-chongqing: Chongqing;</li> <li>ap-nanjing: Nanjing;</li> <li>ap-shanghai: Shanghai;</li> <li>ap-singapore: Singapore.</li>
+                     * @param _cLSRegion Region to which the logset belongs. Valid values: <li>ap-guangzhou: Guangzhou;</li> <li>ap-beijing: Beijing;</li> <li>ap-chengdu: Chengdu;</li> <li>ap-chongqing: Chongqing;</li> <li>ap-nanjing: Nanjing;</li> <li>ap-shanghai: Shanghai;</li> <li>ap-singapore: Singapore.</li>
                      * 
                      */
                     void SetCLSRegion(const std::string& _cLSRegion);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool CLSRegionHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return TopicName 
+                     * 获取Log topic name.
+                     * @return TopicName Log topic name.
                      * 
                      */
                     std::string GetTopicName() const;
 
                     /**
-                     * 设置
-                     * @param _topicName 
+                     * 设置Log topic name.
+                     * @param _topicName Log topic name.
                      * 
                      */
                     void SetTopicName(const std::string& _topicName);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool TopicNameHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return LogsetId 
+                     * 获取Logset ID.
+                     * @return LogsetId Logset ID.
                      * 
                      */
                     std::string GetLogsetId() const;
 
                     /**
-                     * 设置
-                     * @param _logsetId 
+                     * 设置Logset ID.
+                     * @param _logsetId Logset ID.
                      * 
                      */
                     void SetLogsetId(const std::string& _logsetId);
@@ -108,19 +108,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Region to which the logset belongs. Valid values: <li>ap-guangzhou: Guangzhou;</li> <li>ap-beijing: Beijing;</li> <li>ap-chengdu: Chengdu;</li> <li>ap-chongqing: Chongqing;</li> <li>ap-nanjing: Nanjing;</li> <li>ap-shanghai: Shanghai;</li> <li>ap-singapore: Singapore.</li>
                      */
                     std::string m_cLSRegion;
                     bool m_cLSRegionHasBeenSet;
 
                     /**
-                     * 
+                     * Log topic name.
                      */
                     std::string m_topicName;
                     bool m_topicNameHasBeenSet;
 
                     /**
-                     * 
+                     * Logset ID.
                      */
                     std::string m_logsetId;
                     bool m_logsetIdHasBeenSet;

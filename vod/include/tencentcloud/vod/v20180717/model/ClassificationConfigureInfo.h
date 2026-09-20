@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Intelligent classification task control parameters
                 */
                 class ClassificationConfigureInfo : public AbstractModel
                 {
@@ -47,15 +47,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Switch 
+                     * 获取Intelligent categorization task switch. Valid values:
+<li>ON: enable the intelligent classification task;</li>
+<li>OFF: Disable the intelligent classification task.</li>
+                     * @return Switch Intelligent categorization task switch. Valid values:
+<li>ON: enable the intelligent classification task;</li>
+<li>OFF: Disable the intelligent classification task.</li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置
-                     * @param _switch 
+                     * 设置Intelligent categorization task switch. Valid values:
+<li>ON: enable the intelligent classification task;</li>
+<li>OFF: Disable the intelligent classification task.</li>
+                     * @param _switch Intelligent categorization task switch. Valid values:
+<li>ON: enable the intelligent classification task;</li>
+<li>OFF: Disable the intelligent classification task.</li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -70,7 +78,9 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Intelligent categorization task switch. Valid values:
+<li>ON: enable the intelligent classification task;</li>
+<li>OFF: Disable the intelligent classification task.</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;

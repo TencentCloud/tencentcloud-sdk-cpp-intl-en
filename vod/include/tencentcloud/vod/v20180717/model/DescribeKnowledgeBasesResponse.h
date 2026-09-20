@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return TotalCount 
+                     * 获取<p>Total number of eligible knowledge bases. Includes the implicit default knowledge base.</p>
+                     * @return TotalCount <p>Total number of eligible knowledge bases. Includes the implicit default knowledge base.</p>
                      * 
                      */
                     int64_t GetTotalCount() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return KnowledgeBaseSet 
+                     * 获取<p>Knowledge base information list.</p>
+                     * @return KnowledgeBaseSet <p>Knowledge base information list.</p>
                      * 
                      */
                     std::vector<KnowledgeBaseInfo> GetKnowledgeBaseSet() const;
@@ -75,13 +75,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p>Total number of eligible knowledge bases. Includes the implicit default knowledge base.</p>
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Knowledge base information list.</p>
                      */
                     std::vector<KnowledgeBaseInfo> m_knowledgeBaseSet;
                     bool m_knowledgeBaseSetHasBeenSet;

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Screenshot output information (2017 version)
                 */
                 class SnapshotByTimeOffset2017 : public AbstractModel
                 {
@@ -47,15 +47,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return ErrCode 
+                     * 获取Error code.
+<li>0: success;</li>
+<li>Other value: failure.</li>
+                     * @return ErrCode Error code.
+<li>0: success;</li>
+<li>Other value: failure.</li>
                      * 
                      */
                     int64_t GetErrCode() const;
 
                     /**
-                     * 设置
-                     * @param _errCode 
+                     * 设置Error code.
+<li>0: success;</li>
+<li>Other value: failure.</li>
+                     * @param _errCode Error code.
+<li>0: success;</li>
+<li>Other value: failure.</li>
                      * 
                      */
                     void SetErrCode(const int64_t& _errCode);
@@ -68,15 +76,15 @@ namespace TencentCloud
                     bool ErrCodeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return TimeOffset 
+                     * 获取Screenshot time, in milliseconds.
+                     * @return TimeOffset Screenshot time, in milliseconds.
                      * 
                      */
                     uint64_t GetTimeOffset() const;
 
                     /**
-                     * 设置
-                     * @param _timeOffset 
+                     * 设置Screenshot time, in milliseconds.
+                     * @param _timeOffset Screenshot time, in milliseconds.
                      * 
                      */
                     void SetTimeOffset(const uint64_t& _timeOffset);
@@ -89,15 +97,15 @@ namespace TencentCloud
                     bool TimeOffsetHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Url 
+                     * 获取Screenshot output file address.
+                     * @return Url Screenshot output file address.
                      * 
                      */
                     std::string GetUrl() const;
 
                     /**
-                     * 设置
-                     * @param _url 
+                     * 设置Screenshot output file address.
+                     * @param _url Screenshot output file address.
                      * 
                      */
                     void SetUrl(const std::string& _url);
@@ -112,19 +120,21 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Error code.
+<li>0: success;</li>
+<li>Other value: failure.</li>
                      */
                     int64_t m_errCode;
                     bool m_errCodeHasBeenSet;
 
                     /**
-                     * 
+                     * Screenshot time, in milliseconds.
                      */
                     uint64_t m_timeOffset;
                     bool m_timeOffsetHasBeenSet;
 
                     /**
-                     * 
+                     * Screenshot output file address.
                      */
                     std::string m_url;
                     bool m_urlHasBeenSet;

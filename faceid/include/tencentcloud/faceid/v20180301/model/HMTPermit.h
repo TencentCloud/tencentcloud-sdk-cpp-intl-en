@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Exit/entry permit (card) for traveling to and from Hong Kong (China), Macao (China), or Taiwan (China)
+                * Hong Kong, Macau and Taiwan Travel Permit
                 */
                 class HMTPermit : public AbstractModel
                 {
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool EnglishNameHasBeenSet() const;
 
                     /**
-                     * 获取License number
-                     * @return Number License number
+                     * 获取ID number
+                     * @return Number ID number
                      * 
                      */
                     std::string GetNumber() const;
 
                     /**
-                     * 设置License number
-                     * @param _number License number
+                     * 设置ID number
+                     * @param _number ID number
                      * 
                      */
                     void SetNumber(const std::string& _number);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool NumberHasBeenSet() const;
 
                     /**
-                     * 获取Gender
-                     * @return Sex Gender
+                     * 获取Sex
+                     * @return Sex Sex
                      * 
                      */
                     std::string GetSex() const;
 
                     /**
-                     * 设置Gender
-                     * @param _sex Gender
+                     * 设置Sex
+                     * @param _sex Sex
                      * 
                      */
                     void SetSex(const std::string& _sex);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool SexHasBeenSet() const;
 
                     /**
-                     * 获取Valid date
-                     * @return ValidDate Valid date
+                     * 获取Validity period.
+                     * @return ValidDate Validity period.
                      * 
                      */
                     std::string GetValidDate() const;
 
                     /**
-                     * 设置Valid date
-                     * @param _validDate Valid date
+                     * 设置Validity period.
+                     * @param _validDate Validity period.
                      * 
                      */
                     void SetValidDate(const std::string& _validDate);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool ValidDateHasBeenSet() const;
 
                     /**
-                     * 获取Issued authority
-                     * @return IssueAuthority Issued authority
+                     * 获取Issuing authority
+                     * @return IssueAuthority Issuing authority
                      * 
                      */
                     std::string GetIssueAuthority() const;
 
                     /**
-                     * 设置Issued authority
-                     * @param _issueAuthority Issued authority
+                     * 设置Issuing authority
+                     * @param _issueAuthority Issuing authority
                      * 
                      */
                     void SetIssueAuthority(const std::string& _issueAuthority);
@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool IssueAuthorityHasBeenSet() const;
 
                     /**
-                     * 获取Issued address
-                     * @return IssueAddress Issued address
+                     * 获取Issuing place
+                     * @return IssueAddress Issuing place
                      * 
                      */
                     std::string GetIssueAddress() const;
 
                     /**
-                     * 设置Issued address
-                     * @param _issueAddress Issued address
+                     * 设置Issuing place
+                     * @param _issueAddress Issuing place
                      * 
                      */
                     void SetIssueAddress(const std::string& _issueAddress);
@@ -194,15 +194,15 @@ namespace TencentCloud
                     bool IssueAddressHasBeenSet() const;
 
                     /**
-                     * 获取Birthday
-                     * @return Birthday Birthday
+                     * 获取Date of birth
+                     * @return Birthday Date of birth
                      * 
                      */
                     std::string GetBirthday() const;
 
                     /**
-                     * 设置Birthday
-                     * @param _birthday Birthday
+                     * 设置Date of birth
+                     * @param _birthday Date of birth
                      * 
                      */
                     void SetBirthday(const std::string& _birthday);
@@ -229,37 +229,37 @@ namespace TencentCloud
                     bool m_englishNameHasBeenSet;
 
                     /**
-                     * License number
+                     * ID number
                      */
                     std::string m_number;
                     bool m_numberHasBeenSet;
 
                     /**
-                     * Gender
+                     * Sex
                      */
                     std::string m_sex;
                     bool m_sexHasBeenSet;
 
                     /**
-                     * Valid date
+                     * Validity period.
                      */
                     std::string m_validDate;
                     bool m_validDateHasBeenSet;
 
                     /**
-                     * Issued authority
+                     * Issuing authority
                      */
                     std::string m_issueAuthority;
                     bool m_issueAuthorityHasBeenSet;
 
                     /**
-                     * Issued address
+                     * Issuing place
                      */
                     std::string m_issueAddress;
                     bool m_issueAddressHasBeenSet;
 
                     /**
-                     * Birthday
+                     * Date of birth
                      */
                     std::string m_birthday;
                     bool m_birthdayHasBeenSet;

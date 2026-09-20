@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Task input parameter type for using a video screencapture as the cover image
                 */
                 class CoverBySnapshotTaskInput : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Definition 
+                     * 获取Time point screenshot template ID.
+                     * @return Definition Time point screenshot template ID.
                      * 
                      */
                     uint64_t GetDefinition() const;
 
                     /**
-                     * 设置
-                     * @param _definition 
+                     * 设置Time point screenshot template ID.
+                     * @param _definition Time point screenshot template ID.
                      * 
                      */
                     void SetDefinition(const uint64_t& _definition);
@@ -69,15 +69,23 @@ namespace TencentCloud
                     bool DefinitionHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return PositionType 
+                     * 获取Screenshot type. Valid values:
+<li>Time: time point screencapturing</li>
+<li>Percent: screenshot by percentage</li>
+                     * @return PositionType Screenshot type. Valid values:
+<li>Time: time point screencapturing</li>
+<li>Percent: screenshot by percentage</li>
                      * 
                      */
                     std::string GetPositionType() const;
 
                     /**
-                     * 设置
-                     * @param _positionType 
+                     * 设置Screenshot type. Valid values:
+<li>Time: time point screencapturing</li>
+<li>Percent: screenshot by percentage</li>
+                     * @param _positionType Screenshot type. Valid values:
+<li>Time: time point screencapturing</li>
+<li>Percent: screenshot by percentage</li>
                      * 
                      */
                     void SetPositionType(const std::string& _positionType);
@@ -90,15 +98,23 @@ namespace TencentCloud
                     bool PositionTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return PositionValue 
+                     * 获取Screenshot position:
+<li>For time point screenshot, this value indicates the second of the specified video to use as the cover</li>
+<li>For percentage-based screenshots, this value indicates the percentage of the video used as the cover.</li>
+                     * @return PositionValue Screenshot position:
+<li>For time point screenshot, this value indicates the second of the specified video to use as the cover</li>
+<li>For percentage-based screenshots, this value indicates the percentage of the video used as the cover.</li>
                      * 
                      */
                     double GetPositionValue() const;
 
                     /**
-                     * 设置
-                     * @param _positionValue 
+                     * 设置Screenshot position:
+<li>For time point screenshot, this value indicates the second of the specified video to use as the cover</li>
+<li>For percentage-based screenshots, this value indicates the percentage of the video used as the cover.</li>
+                     * @param _positionValue Screenshot position:
+<li>For time point screenshot, this value indicates the second of the specified video to use as the cover</li>
+<li>For percentage-based screenshots, this value indicates the percentage of the video used as the cover.</li>
                      * 
                      */
                     void SetPositionValue(const double& _positionValue);
@@ -111,15 +127,15 @@ namespace TencentCloud
                     bool PositionValueHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return WatermarkSet 
+                     * 获取Watermark list. Multiple image or text watermarks up to a maximum of 10 are supported.
+                     * @return WatermarkSet Watermark list. Multiple image or text watermarks up to a maximum of 10 are supported.
                      * 
                      */
                     std::vector<WatermarkInput> GetWatermarkSet() const;
 
                     /**
-                     * 设置
-                     * @param _watermarkSet 
+                     * 设置Watermark list. Multiple image or text watermarks up to a maximum of 10 are supported.
+                     * @param _watermarkSet Watermark list. Multiple image or text watermarks up to a maximum of 10 are supported.
                      * 
                      */
                     void SetWatermarkSet(const std::vector<WatermarkInput>& _watermarkSet);
@@ -134,25 +150,29 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Time point screenshot template ID.
                      */
                     uint64_t m_definition;
                     bool m_definitionHasBeenSet;
 
                     /**
-                     * 
+                     * Screenshot type. Valid values:
+<li>Time: time point screencapturing</li>
+<li>Percent: screenshot by percentage</li>
                      */
                     std::string m_positionType;
                     bool m_positionTypeHasBeenSet;
 
                     /**
-                     * 
+                     * Screenshot position:
+<li>For time point screenshot, this value indicates the second of the specified video to use as the cover</li>
+<li>For percentage-based screenshots, this value indicates the percentage of the video used as the cover.</li>
                      */
                     double m_positionValue;
                     bool m_positionValueHasBeenSet;
 
                     /**
-                     * 
+                     * Watermark list. Multiple image or text watermarks up to a maximum of 10 are supported.
                      */
                     std::vector<WatermarkInput> m_watermarkSet;
                     bool m_watermarkSetHasBeenSet;

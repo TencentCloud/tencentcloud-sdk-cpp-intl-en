@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Definition 
+                     * 获取Unique identifier for rotation diagram template.
+                     * @return Definition Unique identifier for rotation diagram template.
                      * 
                      */
                     uint64_t GetDefinition() const;
 
                     /**
-                     * 设置
-                     * @param _definition 
+                     * 设置Unique identifier for rotation diagram template.
+                     * @param _definition Unique identifier for rotation diagram template.
                      * 
                      */
                     void SetDefinition(const uint64_t& _definition);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool DefinitionHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SubAppId 
+                     * 获取<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
+                     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置
-                     * @param _subAppId 
+                     * 设置<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
+                     * @param _subAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool SubAppIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Name 
+                     * 获取Rotating image template name. Length limit: 64 characters.
+                     * @return Name Rotating image template name. Length limit: 64 characters.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置
-                     * @param _name 
+                     * 设置Rotating image template name. Length limit: 64 characters.
+                     * @param _name Rotating image template name. Length limit: 64 characters.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Width 
+                     * 获取The maximum value of the animated gif width (or long side). Valid values: 0 and [32, 4096]. Unit: px.<li>When Width and Height are both 0, the resolution is from the same source;</li><li>When Width is 0 and Height is non-0, Width is scaled proportionally;</li><li>When Width is non-0 and Height is 0, the Height is scaled proportionally;</li><li>When both Width and Height are non-0, the resolution is specified by the user.</li>Default value: 0.
+                     * @return Width The maximum value of the animated gif width (or long side). Valid values: 0 and [32, 4096]. Unit: px.<li>When Width and Height are both 0, the resolution is from the same source;</li><li>When Width is 0 and Height is non-0, Width is scaled proportionally;</li><li>When Width is non-0 and Height is 0, the Height is scaled proportionally;</li><li>When both Width and Height are non-0, the resolution is specified by the user.</li>Default value: 0.
                      * 
                      */
                     uint64_t GetWidth() const;
 
                     /**
-                     * 设置
-                     * @param _width 
+                     * 设置The maximum value of the animated gif width (or long side). Valid values: 0 and [32, 4096]. Unit: px.<li>When Width and Height are both 0, the resolution is from the same source;</li><li>When Width is 0 and Height is non-0, Width is scaled proportionally;</li><li>When Width is non-0 and Height is 0, the Height is scaled proportionally;</li><li>When both Width and Height are non-0, the resolution is specified by the user.</li>Default value: 0.
+                     * @param _width The maximum value of the animated gif width (or long side). Valid values: 0 and [32, 4096]. Unit: px.<li>When Width and Height are both 0, the resolution is from the same source;</li><li>When Width is 0 and Height is non-0, Width is scaled proportionally;</li><li>When Width is non-0 and Height is 0, the Height is scaled proportionally;</li><li>When both Width and Height are non-0, the resolution is specified by the user.</li>Default value: 0.
                      * 
                      */
                     void SetWidth(const uint64_t& _width);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool WidthHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Height 
+                     * 获取The maximum value of the animated gif height (or short side). Valid values: 0 and [32, 4096]. Unit: px.<li>When Width and Height are both 0, the resolution is from the same source;</li><li>When Width is 0 and Height is non-0, Width is scaled proportionally;</li><li>When Width is non-0 and Height is 0, the Height is scaled proportionally;</li><li>When both Width and Height are non-0, the resolution is specified by the user.</li>Default value: 0.
+                     * @return Height The maximum value of the animated gif height (or short side). Valid values: 0 and [32, 4096]. Unit: px.<li>When Width and Height are both 0, the resolution is from the same source;</li><li>When Width is 0 and Height is non-0, Width is scaled proportionally;</li><li>When Width is non-0 and Height is 0, the Height is scaled proportionally;</li><li>When both Width and Height are non-0, the resolution is specified by the user.</li>Default value: 0.
                      * 
                      */
                     uint64_t GetHeight() const;
 
                     /**
-                     * 设置
-                     * @param _height 
+                     * 设置The maximum value of the animated gif height (or short side). Valid values: 0 and [32, 4096]. Unit: px.<li>When Width and Height are both 0, the resolution is from the same source;</li><li>When Width is 0 and Height is non-0, Width is scaled proportionally;</li><li>When Width is non-0 and Height is 0, the Height is scaled proportionally;</li><li>When both Width and Height are non-0, the resolution is specified by the user.</li>Default value: 0.
+                     * @param _height The maximum value of the animated gif height (or short side). Valid values: 0 and [32, 4096]. Unit: px.<li>When Width and Height are both 0, the resolution is from the same source;</li><li>When Width is 0 and Height is non-0, Width is scaled proportionally;</li><li>When Width is non-0 and Height is 0, the Height is scaled proportionally;</li><li>When both Width and Height are non-0, the resolution is specified by the user.</li>Default value: 0.
                      * 
                      */
                     void SetHeight(const uint64_t& _height);
@@ -148,15 +148,27 @@ namespace TencentCloud
                     bool HeightHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ResolutionAdaptive 
+                     * 获取Resolution adaptation. Available values:
+<li>open: enable. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
+<li>close: closed. At this point, Width represents the video width, and Height indicates the video height.</li>
+Default value: open.
+                     * @return ResolutionAdaptive Resolution adaptation. Available values:
+<li>open: enable. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
+<li>close: closed. At this point, Width represents the video width, and Height indicates the video height.</li>
+Default value: open.
                      * 
                      */
                     std::string GetResolutionAdaptive() const;
 
                     /**
-                     * 设置
-                     * @param _resolutionAdaptive 
+                     * 设置Resolution adaptation. Available values:
+<li>open: enable. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
+<li>close: closed. At this point, Width represents the video width, and Height indicates the video height.</li>
+Default value: open.
+                     * @param _resolutionAdaptive Resolution adaptation. Available values:
+<li>open: enable. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
+<li>close: closed. At this point, Width represents the video width, and Height indicates the video height.</li>
+Default value: open.
                      * 
                      */
                     void SetResolutionAdaptive(const std::string& _resolutionAdaptive);
@@ -169,15 +181,15 @@ namespace TencentCloud
                     bool ResolutionAdaptiveHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Format 
+                     * 获取Animated image file format. Valid values: `gif` and `webp`.
+                     * @return Format Animated image file format. Valid values: `gif` and `webp`.
                      * 
                      */
                     std::string GetFormat() const;
 
                     /**
-                     * 设置
-                     * @param _format 
+                     * 设置Animated image file format. Valid values: `gif` and `webp`.
+                     * @param _format Animated image file format. Valid values: `gif` and `webp`.
                      * 
                      */
                     void SetFormat(const std::string& _format);
@@ -190,15 +202,15 @@ namespace TencentCloud
                     bool FormatHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Fps 
+                     * 获取Frame rate. Value range: [1, 30]. Unit: Hz.
+                     * @return Fps Frame rate. Value range: [1, 30]. Unit: Hz.
                      * 
                      */
                     uint64_t GetFps() const;
 
                     /**
-                     * 设置
-                     * @param _fps 
+                     * 设置Frame rate. Value range: [1, 30]. Unit: Hz.
+                     * @param _fps Frame rate. Value range: [1, 30]. Unit: Hz.
                      * 
                      */
                     void SetFps(const uint64_t& _fps);
@@ -211,15 +223,15 @@ namespace TencentCloud
                     bool FpsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Quality 
+                     * 获取Image quality. Valid range: [1, 100]. Default value: 75.
+                     * @return Quality Image quality. Valid range: [1, 100]. Default value: 75.
                      * 
                      */
                     double GetQuality() const;
 
                     /**
-                     * 设置
-                     * @param _quality 
+                     * 设置Image quality. Valid range: [1, 100]. Default value: 75.
+                     * @param _quality Image quality. Valid range: [1, 100]. Default value: 75.
                      * 
                      */
                     void SetQuality(const double& _quality);
@@ -232,15 +244,15 @@ namespace TencentCloud
                     bool QualityHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Comment 
+                     * 获取Template description, with a length limit of 256 characters.
+                     * @return Comment Template description, with a length limit of 256 characters.
                      * 
                      */
                     std::string GetComment() const;
 
                     /**
-                     * 设置
-                     * @param _comment 
+                     * 设置Template description, with a length limit of 256 characters.
+                     * @param _comment Template description, with a length limit of 256 characters.
                      * 
                      */
                     void SetComment(const std::string& _comment);
@@ -255,61 +267,64 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Unique identifier for rotation diagram template.
                      */
                     uint64_t m_definition;
                     bool m_definitionHasBeenSet;
 
                     /**
-                     * 
+                     * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
 
                     /**
-                     * 
+                     * Rotating image template name. Length limit: 64 characters.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * 
+                     * The maximum value of the animated gif width (or long side). Valid values: 0 and [32, 4096]. Unit: px.<li>When Width and Height are both 0, the resolution is from the same source;</li><li>When Width is 0 and Height is non-0, Width is scaled proportionally;</li><li>When Width is non-0 and Height is 0, the Height is scaled proportionally;</li><li>When both Width and Height are non-0, the resolution is specified by the user.</li>Default value: 0.
                      */
                     uint64_t m_width;
                     bool m_widthHasBeenSet;
 
                     /**
-                     * 
+                     * The maximum value of the animated gif height (or short side). Valid values: 0 and [32, 4096]. Unit: px.<li>When Width and Height are both 0, the resolution is from the same source;</li><li>When Width is 0 and Height is non-0, Width is scaled proportionally;</li><li>When Width is non-0 and Height is 0, the Height is scaled proportionally;</li><li>When both Width and Height are non-0, the resolution is specified by the user.</li>Default value: 0.
                      */
                     uint64_t m_height;
                     bool m_heightHasBeenSet;
 
                     /**
-                     * 
+                     * Resolution adaptation. Available values:
+<li>open: enable. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
+<li>close: closed. At this point, Width represents the video width, and Height indicates the video height.</li>
+Default value: open.
                      */
                     std::string m_resolutionAdaptive;
                     bool m_resolutionAdaptiveHasBeenSet;
 
                     /**
-                     * 
+                     * Animated image file format. Valid values: `gif` and `webp`.
                      */
                     std::string m_format;
                     bool m_formatHasBeenSet;
 
                     /**
-                     * 
+                     * Frame rate. Value range: [1, 30]. Unit: Hz.
                      */
                     uint64_t m_fps;
                     bool m_fpsHasBeenSet;
 
                     /**
-                     * 
+                     * Image quality. Valid range: [1, 100]. Default value: 75.
                      */
                     double m_quality;
                     bool m_qualityHasBeenSet;
 
                     /**
-                     * 
+                     * Template description, with a length limit of 256 characters.
                      */
                     std::string m_comment;
                     bool m_commentHasBeenSet;

@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Media analysis result of the knowledge base.
                 */
                 class KnowledgeAnalysisResult : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return TaskType 
+                     * 获取<p>Task type to process</p><p>Enumeration values:</p><ul><li>AiAnalysis.DescriptionTask: intelligent summary task</li><li>AiAnalysis.VideoComprehensionTask: video understanding task</li><li>SmartSubtitle.AsrFullTextTask: intelligent speech full-text recognition task</li></ul>
+                     * @return TaskType <p>Task type to process</p><p>Enumeration values:</p><ul><li>AiAnalysis.DescriptionTask: intelligent summary task</li><li>AiAnalysis.VideoComprehensionTask: video understanding task</li><li>SmartSubtitle.AsrFullTextTask: intelligent speech full-text recognition task</li></ul>
                      * 
                      */
                     std::string GetTaskType() const;
 
                     /**
-                     * 设置
-                     * @param _taskType 
+                     * 设置<p>Task type to process</p><p>Enumeration values:</p><ul><li>AiAnalysis.DescriptionTask: intelligent summary task</li><li>AiAnalysis.VideoComprehensionTask: video understanding task</li><li>SmartSubtitle.AsrFullTextTask: intelligent speech full-text recognition task</li></ul>
+                     * @param _taskType <p>Task type to process</p><p>Enumeration values:</p><ul><li>AiAnalysis.DescriptionTask: intelligent summary task</li><li>AiAnalysis.VideoComprehensionTask: video understanding task</li><li>SmartSubtitle.AsrFullTextTask: intelligent speech full-text recognition task</li></ul>
                      * 
                      */
                     void SetTaskType(const std::string& _taskType);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool TaskTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return File 
+                     * 获取<p>Task output file collection</p>
+                     * @return File <p>Task output file collection</p>
                      * 
                      */
                     MPSOutputFileInfo GetFile() const;
 
                     /**
-                     * 设置
-                     * @param _file 
+                     * 设置<p>Task output file collection</p>
+                     * @param _file <p>Task output file collection</p>
                      * 
                      */
                     void SetFile(const MPSOutputFileInfo& _file);
@@ -92,13 +92,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p>Task type to process</p><p>Enumeration values:</p><ul><li>AiAnalysis.DescriptionTask: intelligent summary task</li><li>AiAnalysis.VideoComprehensionTask: video understanding task</li><li>SmartSubtitle.AsrFullTextTask: intelligent speech full-text recognition task</li></ul>
                      */
                     std::string m_taskType;
                     bool m_taskTypeHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Task output file collection</p>
                      */
                     MPSOutputFileInfo m_file;
                     bool m_fileHasBeenSet;

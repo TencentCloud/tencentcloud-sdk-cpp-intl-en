@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Definition 
+                     * 获取Video rebirth template ID.
+                     * @return Definition Video rebirth template ID.
                      * 
                      */
                     int64_t GetDefinition() const;
@@ -60,7 +60,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Video rebirth template ID.
                      */
                     int64_t m_definition;
                     bool m_definitionHasBeenSet;

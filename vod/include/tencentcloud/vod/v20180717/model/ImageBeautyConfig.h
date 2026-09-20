@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Image beauty configuration.
                 */
                 class ImageBeautyConfig : public AbstractModel
                 {
@@ -49,15 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return BeautyEffectItems 
+                     * 获取<p>Beauty effect item.</p>
+                     * @return BeautyEffectItems <p>Beauty effect item.</p>
                      * 
                      */
                     std::vector<BeautyEffectItem> GetBeautyEffectItems() const;
 
                     /**
-                     * 设置
-                     * @param _beautyEffectItems 
+                     * 设置<p>Beauty effect item.</p>
+                     * @param _beautyEffectItems <p>Beauty effect item.</p>
                      * 
                      */
                     void SetBeautyEffectItems(const std::vector<BeautyEffectItem>& _beautyEffectItems);
@@ -70,15 +70,15 @@ namespace TencentCloud
                     bool BeautyEffectItemsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return BeautyFilterItems 
+                     * 获取<p>Beauty filter item.</p>
+                     * @return BeautyFilterItems <p>Beauty filter item.</p>
                      * 
                      */
                     std::vector<BeautyFilterItem> GetBeautyFilterItems() const;
 
                     /**
-                     * 设置
-                     * @param _beautyFilterItems 
+                     * 设置<p>Beauty filter item.</p>
+                     * @param _beautyFilterItems <p>Beauty filter item.</p>
                      * 
                      */
                     void SetBeautyFilterItems(const std::vector<BeautyFilterItem>& _beautyFilterItems);
@@ -93,13 +93,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p>Beauty effect item.</p>
                      */
                     std::vector<BeautyEffectItem> m_beautyEffectItems;
                     bool m_beautyEffectItemsHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Beauty filter item.</p>
                      */
                     std::vector<BeautyFilterItem> m_beautyFilterItems;
                     bool m_beautyFilterItemsHasBeenSet;

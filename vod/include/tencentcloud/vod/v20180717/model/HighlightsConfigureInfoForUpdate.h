@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Intelligent highlight task control parameter
                 */
                 class HighlightsConfigureInfoForUpdate : public AbstractModel
                 {
@@ -47,15 +47,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Switch 
+                     * 获取Intelligent highlight task switch. Available values:
+<li>ON: enable the intelligent highlight task;</li>
+<li>OFF: Disable the intelligent highlight task.</li>
+                     * @return Switch Intelligent highlight task switch. Available values:
+<li>ON: enable the intelligent highlight task;</li>
+<li>OFF: Disable the intelligent highlight task.</li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置
-                     * @param _switch 
+                     * 设置Intelligent highlight task switch. Available values:
+<li>ON: enable the intelligent highlight task;</li>
+<li>OFF: Disable the intelligent highlight task.</li>
+                     * @param _switch Intelligent highlight task switch. Available values:
+<li>ON: enable the intelligent highlight task;</li>
+<li>OFF: Disable the intelligent highlight task.</li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -70,7 +78,9 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Intelligent highlight task switch. Available values:
+<li>ON: enable the intelligent highlight task;</li>
+<li>OFF: Disable the intelligent highlight task.</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;

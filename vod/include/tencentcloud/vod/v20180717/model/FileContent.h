@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * File stored in VOD.
                 */
                 class FileContent : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Key 
+                     * 获取Object key.
+                     * @return Key Object key.
                      * 
                      */
                     std::string GetKey() const;
 
                     /**
-                     * 设置
-                     * @param _key 
+                     * 设置Object key.
+                     * @param _key Object key.
                      * 
                      */
                     void SetKey(const std::string& _key);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool KeyHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return LastModified 
+                     * 获取Last modification time in ISO 8601 format, for example, 2019-05-24T10:56:40Z.
+                     * @return LastModified Last modification time in ISO 8601 format, for example, 2019-05-24T10:56:40Z.
                      * 
                      */
                     std::string GetLastModified() const;
 
                     /**
-                     * 设置
-                     * @param _lastModified 
+                     * 设置Last modification time in ISO 8601 format, for example, 2019-05-24T10:56:40Z.
+                     * @param _lastModified Last modification time in ISO 8601 format, for example, 2019-05-24T10:56:40Z.
                      * 
                      */
                     void SetLastModified(const std::string& _lastModified);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool LastModifiedHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ETag 
+                     * 获取Entity Tag of an object is an information Tag that identifies the object content when the object is created. It can be used to check whether the object content has changed.
+                     * @return ETag Entity Tag of an object is an information Tag that identifies the object content when the object is created. It can be used to check whether the object content has changed.
                      * 
                      */
                     std::string GetETag() const;
 
                     /**
-                     * 设置
-                     * @param _eTag 
+                     * 设置Entity Tag of an object is an information Tag that identifies the object content when the object is created. It can be used to check whether the object content has changed.
+                     * @param _eTag Entity Tag of an object is an information Tag that identifies the object content when the object is created. It can be used to check whether the object content has changed.
                      * 
                      */
                     void SetETag(const std::string& _eTag);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool ETagHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Size 
+                     * 获取Object size in bytes.
+                     * @return Size Object size in bytes.
                      * 
                      */
                     int64_t GetSize() const;
 
                     /**
-                     * 设置
-                     * @param _size 
+                     * 设置Object size in bytes.
+                     * @param _size Object size in bytes.
                      * 
                      */
                     void SetSize(const int64_t& _size);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool SizeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return StorageClass 
+                     * 获取For enumeration values, please refer to the [storage type](https://www.tencentcloud.com/document/product/436/33417?from_cn_redirect=1) document, for example, STANDARD_IA and ARCHIVE.
+                     * @return StorageClass For enumeration values, please refer to the [storage type](https://www.tencentcloud.com/document/product/436/33417?from_cn_redirect=1) document, for example, STANDARD_IA and ARCHIVE.
                      * 
                      */
                     std::string GetStorageClass() const;
 
                     /**
-                     * 设置
-                     * @param _storageClass 
+                     * 设置For enumeration values, please refer to the [storage type](https://www.tencentcloud.com/document/product/436/33417?from_cn_redirect=1) document, for example, STANDARD_IA and ARCHIVE.
+                     * @param _storageClass For enumeration values, please refer to the [storage type](https://www.tencentcloud.com/document/product/436/33417?from_cn_redirect=1) document, for example, STANDARD_IA and ARCHIVE.
                      * 
                      */
                     void SetStorageClass(const std::string& _storageClass);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool StorageClassHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return FileId 
+                     * 获取Unique identifier of the media file corresponding to this file.
+                     * @return FileId Unique identifier of the media file corresponding to this file.
                      * 
                      */
                     std::string GetFileId() const;
 
                     /**
-                     * 设置
-                     * @param _fileId 
+                     * 设置Unique identifier of the media file corresponding to this file.
+                     * @param _fileId Unique identifier of the media file corresponding to this file.
                      * 
                      */
                     void SetFileId(const std::string& _fileId);
@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool FileIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Category 
+                     * 获取File category: <li>Video: video file</li> <li>Audio: audio file</li> <li>Image: image file</li> <li>Other: other files</li>
+                     * @return Category File category: <li>Video: video file</li> <li>Audio: audio file</li> <li>Image: image file</li> <li>Other: other files</li>
                      * 
                      */
                     std::string GetCategory() const;
 
                     /**
-                     * 设置
-                     * @param _category 
+                     * 设置File category: <li>Video: video file</li> <li>Audio: audio file</li> <li>Image: image file</li> <li>Other: other files</li>
+                     * @param _category File category: <li>Video: video file</li> <li>Audio: audio file</li> <li>Image: image file</li> <li>Other: other files</li>
                      * 
                      */
                     void SetCategory(const std::string& _category);
@@ -194,15 +194,47 @@ namespace TencentCloud
                     bool CategoryHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return FileType 
+                     * 获取Optional values:
+-OriginalFiles: source file
+- TranscodeFiles: transcoded file
+-AdaptiveDynamicStreamingFiles: adaptive bitrate stream files
+- SubtitleFiles: subtitle files.
+- SampleSnapshotFiles: sampled screenshot files.
+- ImageSpriteFiles: image sprite screenshot files
+- SnapshotByTimeOffsetFiles: time point screenshot files.
+
+                     * @return FileType Optional values:
+-OriginalFiles: source file
+- TranscodeFiles: transcoded file
+-AdaptiveDynamicStreamingFiles: adaptive bitrate stream files
+- SubtitleFiles: subtitle files.
+- SampleSnapshotFiles: sampled screenshot files.
+- ImageSpriteFiles: image sprite screenshot files
+- SnapshotByTimeOffsetFiles: time point screenshot files.
+
                      * 
                      */
                     std::string GetFileType() const;
 
                     /**
-                     * 设置
-                     * @param _fileType 
+                     * 设置Optional values:
+-OriginalFiles: source file
+- TranscodeFiles: transcoded file
+-AdaptiveDynamicStreamingFiles: adaptive bitrate stream files
+- SubtitleFiles: subtitle files.
+- SampleSnapshotFiles: sampled screenshot files.
+- ImageSpriteFiles: image sprite screenshot files
+- SnapshotByTimeOffsetFiles: time point screenshot files.
+
+                     * @param _fileType Optional values:
+-OriginalFiles: source file
+- TranscodeFiles: transcoded file
+-AdaptiveDynamicStreamingFiles: adaptive bitrate stream files
+- SubtitleFiles: subtitle files.
+- SampleSnapshotFiles: sampled screenshot files.
+- ImageSpriteFiles: image sprite screenshot files
+- SnapshotByTimeOffsetFiles: time point screenshot files.
+
                      * 
                      */
                     void SetFileType(const std::string& _fileType);
@@ -215,15 +247,15 @@ namespace TencentCloud
                     bool FileTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Definition 
+                     * 获取Video template ID. For template definition, see Transcoding Template.
+                     * @return Definition Video template ID. For template definition, see Transcoding Template.
                      * 
                      */
                     int64_t GetDefinition() const;
 
                     /**
-                     * 设置
-                     * @param _definition 
+                     * 设置Video template ID. For template definition, see Transcoding Template.
+                     * @param _definition Video template ID. For template definition, see Transcoding Template.
                      * 
                      */
                     void SetDefinition(const int64_t& _definition);
@@ -236,15 +268,19 @@ namespace TencentCloud
                     bool DefinitionHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SubtitleID 
+                     * 获取Subtitle ID.
+Value only when FileType is SubtitleFiles.
+                     * @return SubtitleID Subtitle ID.
+Value only when FileType is SubtitleFiles.
                      * 
                      */
                     std::string GetSubtitleID() const;
 
                     /**
-                     * 设置
-                     * @param _subtitleID 
+                     * 设置Subtitle ID.
+Value only when FileType is SubtitleFiles.
+                     * @param _subtitleID Subtitle ID.
+Value only when FileType is SubtitleFiles.
                      * 
                      */
                     void SetSubtitleID(const std::string& _subtitleID);
@@ -259,61 +295,70 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Object key.
                      */
                     std::string m_key;
                     bool m_keyHasBeenSet;
 
                     /**
-                     * 
+                     * Last modification time in ISO 8601 format, for example, 2019-05-24T10:56:40Z.
                      */
                     std::string m_lastModified;
                     bool m_lastModifiedHasBeenSet;
 
                     /**
-                     * 
+                     * Entity Tag of an object is an information Tag that identifies the object content when the object is created. It can be used to check whether the object content has changed.
                      */
                     std::string m_eTag;
                     bool m_eTagHasBeenSet;
 
                     /**
-                     * 
+                     * Object size in bytes.
                      */
                     int64_t m_size;
                     bool m_sizeHasBeenSet;
 
                     /**
-                     * 
+                     * For enumeration values, please refer to the [storage type](https://www.tencentcloud.com/document/product/436/33417?from_cn_redirect=1) document, for example, STANDARD_IA and ARCHIVE.
                      */
                     std::string m_storageClass;
                     bool m_storageClassHasBeenSet;
 
                     /**
-                     * 
+                     * Unique identifier of the media file corresponding to this file.
                      */
                     std::string m_fileId;
                     bool m_fileIdHasBeenSet;
 
                     /**
-                     * 
+                     * File category: <li>Video: video file</li> <li>Audio: audio file</li> <li>Image: image file</li> <li>Other: other files</li>
                      */
                     std::string m_category;
                     bool m_categoryHasBeenSet;
 
                     /**
-                     * 
+                     * Optional values:
+-OriginalFiles: source file
+- TranscodeFiles: transcoded file
+-AdaptiveDynamicStreamingFiles: adaptive bitrate stream files
+- SubtitleFiles: subtitle files.
+- SampleSnapshotFiles: sampled screenshot files.
+- ImageSpriteFiles: image sprite screenshot files
+- SnapshotByTimeOffsetFiles: time point screenshot files.
+
                      */
                     std::string m_fileType;
                     bool m_fileTypeHasBeenSet;
 
                     /**
-                     * 
+                     * Video template ID. For template definition, see Transcoding Template.
                      */
                     int64_t m_definition;
                     bool m_definitionHasBeenSet;
 
                     /**
-                     * 
+                     * Subtitle ID.
+Value only when FileType is SubtitleFiles.
                      */
                     std::string m_subtitleID;
                     bool m_subtitleIDHasBeenSet;

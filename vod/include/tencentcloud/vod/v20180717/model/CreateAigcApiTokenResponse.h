@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return ApiToken 
+                     * 获取Token of the API
+                     * @return ApiToken Token of the API
                      * 
                      */
                     std::string GetApiToken() const;
@@ -60,7 +60,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Token of the API
                      */
                     std::string m_apiToken;
                     bool m_apiTokenHasBeenSet;

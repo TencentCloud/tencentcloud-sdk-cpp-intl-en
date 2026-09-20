@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * MPS media processing task info.
                 */
                 class ProcessMediaByMPS : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return TaskId 
+                     * 获取Task ID.
+                     * @return TaskId Task ID.
                      * 
                      */
                     std::string GetTaskId() const;
 
                     /**
-                     * 设置
-                     * @param _taskId 
+                     * 设置Task ID.
+                     * @param _taskId Task ID.
                      * 
                      */
                     void SetTaskId(const std::string& _taskId);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool TaskIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Status 
+                     * 获取Task status. Valid values: <li>PROCESSING: Processing; </li><li>FINISH: Completed.</li>
+                     * @return Status Task status. Valid values: <li>PROCESSING: Processing; </li><li>FINISH: Completed.</li>
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置
-                     * @param _status 
+                     * 设置Task status. Valid values: <li>PROCESSING: Processing; </li><li>FINISH: Completed.</li>
+                     * @param _status Task status. Valid values: <li>PROCESSING: Processing; </li><li>FINISH: Completed.</li>
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ErrCode 
+                     * 获取Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, use the ErrCode of each specific task.
+                     * @return ErrCode Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, use the ErrCode of each specific task.
                      * 
                      */
                     int64_t GetErrCode() const;
 
                     /**
-                     * 设置
-                     * @param _errCode 
+                     * 设置Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, use the ErrCode of each specific task.
+                     * @param _errCode Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, use the ErrCode of each specific task.
                      * 
                      */
                     void SetErrCode(const int64_t& _errCode);
@@ -111,15 +111,15 @@ namespace TencentCloud
                     bool ErrCodeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Message 
+                     * 获取Error information. If a source error occurs, the corresponding exception Message is returned. Otherwise, use the Message of each specific task.
+                     * @return Message Error information. If a source error occurs, the corresponding exception Message is returned. Otherwise, use the Message of each specific task.
                      * 
                      */
                     std::string GetMessage() const;
 
                     /**
-                     * 设置
-                     * @param _message 
+                     * 设置Error information. If a source error occurs, the corresponding exception Message is returned. Otherwise, use the Message of each specific task.
+                     * @param _message Error information. If a source error occurs, the corresponding exception Message is returned. Otherwise, use the Message of each specific task.
                      * 
                      */
                     void SetMessage(const std::string& _message);
@@ -132,15 +132,15 @@ namespace TencentCloud
                     bool MessageHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SubTaskSet 
+                     * 获取MPS video processing task.
+                     * @return SubTaskSet MPS video processing task.
                      * 
                      */
                     std::vector<MPSSubTaskResult> GetSubTaskSet() const;
 
                     /**
-                     * 设置
-                     * @param _subTaskSet 
+                     * 设置MPS video processing task.
+                     * @param _subTaskSet MPS video processing task.
                      * 
                      */
                     void SetSubTaskSet(const std::vector<MPSSubTaskResult>& _subTaskSet);
@@ -155,31 +155,31 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Task ID.
                      */
                     std::string m_taskId;
                     bool m_taskIdHasBeenSet;
 
                     /**
-                     * 
+                     * Task status. Valid values: <li>PROCESSING: Processing; </li><li>FINISH: Completed.</li>
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * 
+                     * Error code. A non-zero error code is returned when a source error occurs. If 0 is returned, use the ErrCode of each specific task.
                      */
                     int64_t m_errCode;
                     bool m_errCodeHasBeenSet;
 
                     /**
-                     * 
+                     * Error information. If a source error occurs, the corresponding exception Message is returned. Otherwise, use the Message of each specific task.
                      */
                     std::string m_message;
                     bool m_messageHasBeenSet;
 
                     /**
-                     * 
+                     * MPS video processing task.
                      */
                     std::vector<MPSSubTaskResult> m_subTaskSet;
                     bool m_subTaskSetHasBeenSet;

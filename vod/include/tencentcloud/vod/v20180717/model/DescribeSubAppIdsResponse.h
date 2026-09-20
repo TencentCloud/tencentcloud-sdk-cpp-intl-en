@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return SubAppIdInfoSet 
+                     * 获取Application information collection.
+                     * @return SubAppIdInfoSet Application information collection.
                      * 
                      */
                     std::vector<SubAppIdInfo> GetSubAppIdInfoSet() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool SubAppIdInfoSetHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return TotalCount 
+                     * 获取Total number of applications.
+                     * @return TotalCount Total number of applications.
                      * 
                      */
                     uint64_t GetTotalCount() const;
@@ -75,13 +75,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Application information collection.
                      */
                     std::vector<SubAppIdInfo> m_subAppIdInfoSet;
                     bool m_subAppIdInfoSetHasBeenSet;
 
                     /**
-                     * 
+                     * Total number of applications.
                      */
                     uint64_t m_totalCount;
                     bool m_totalCountHasBeenSet;

@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Name 
+                     * 获取Application name
+                     * @return Name Application name
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置
-                     * @param _name 
+                     * 设置Application name
+                     * @param _name Application name
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Tags 
+                     * 获取Tag information. Query the application list with a specified tag.
+                     * @return Tags Tag information. Query the application list with a specified tag.
                      * 
                      */
                     std::vector<ResourceTag> GetTags() const;
 
                     /**
-                     * 设置
-                     * @param _tags 
+                     * 设置Tag information. Query the application list with a specified tag.
+                     * @param _tags Tag information. Query the application list with a specified tag.
                      * 
                      */
                     void SetTags(const std::vector<ResourceTag>& _tags);
@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool TagsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Offset 
+                     * 获取Starting offset for pagination pull. Default value: 0.
+                     * @return Offset Starting offset for pagination pull. Default value: 0.
                      * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
-                     * 设置
-                     * @param _offset 
+                     * 设置Starting offset for pagination pull. Default value: 0.
+                     * @param _offset Starting offset for pagination pull. Default value: 0.
                      * 
                      */
                     void SetOffset(const uint64_t& _offset);
@@ -107,15 +107,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Limit 
+                     * 获取Maximum number of results returned for pagination pull. Default value: 200; maximum value: 200.
+                     * @return Limit Maximum number of results returned for pagination pull. Default value: 200; maximum value: 200.
                      * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
-                     * 设置
-                     * @param _limit 
+                     * 设置Maximum number of results returned for pagination pull. Default value: 200; maximum value: 200.
+                     * @param _limit Maximum number of results returned for pagination pull. Default value: 200; maximum value: 200.
                      * 
                      */
                     void SetLimit(const uint64_t& _limit);
@@ -130,25 +130,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Application name
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * 
+                     * Tag information. Query the application list with a specified tag.
                      */
                     std::vector<ResourceTag> m_tags;
                     bool m_tagsHasBeenSet;
 
                     /**
-                     * 
+                     * Starting offset for pagination pull. Default value: 0.
                      */
                     uint64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * 
+                     * Maximum number of results returned for pagination pull. Default value: 200; maximum value: 200.
                      */
                     uint64_t m_limit;
                     bool m_limitHasBeenSet;

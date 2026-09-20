@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * File attribute retrieval task output
                 */
                 class DescribeFileAttributesTaskOutput : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Md5 
+                     * 获取Md5 value of the media file.
+                     * @return Md5 Md5 value of the media file.
                      * 
                      */
                     std::string GetMd5() const;
 
                     /**
-                     * 设置
-                     * @param _md5 
+                     * 设置Md5 value of the media file.
+                     * @param _md5 Md5 value of the media file.
                      * 
                      */
                     void SetMd5(const std::string& _md5);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool Md5HasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Sha1 
+                     * 获取Sha1 value of the media file.
+                     * @return Sha1 Sha1 value of the media file.
                      * 
                      */
                     std::string GetSha1() const;
 
                     /**
-                     * 设置
-                     * @param _sha1 
+                     * 设置Sha1 value of the media file.
+                     * @param _sha1 Sha1 value of the media file.
                      * 
                      */
                     void SetSha1(const std::string& _sha1);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Md5 value of the media file.
                      */
                     std::string m_md5;
                     bool m_md5HasBeenSet;
 
                     /**
-                     * 
+                     * Sha1 value of the media file.
                      */
                     std::string m_sha1;
                     bool m_sha1HasBeenSet;

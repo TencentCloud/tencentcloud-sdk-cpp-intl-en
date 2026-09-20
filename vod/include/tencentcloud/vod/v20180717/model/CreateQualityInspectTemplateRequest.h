@@ -55,15 +55,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return SubAppId 
+                     * 获取<p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), this field must be filled in as the application ID.</b></p>
+                     * @return SubAppId <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), this field must be filled in as the application ID.</b></p>
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置
-                     * @param _subAppId 
+                     * 设置<p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), this field must be filled in as the application ID.</b></p>
+                     * @param _subAppId <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), this field must be filled in as the application ID.</b></p>
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -76,15 +76,15 @@ namespace TencentCloud
                     bool SubAppIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Name 
+                     * 获取<p>Audio and video quality inspection template name.</p>
+                     * @return Name <p>Audio and video quality inspection template name.</p>
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置
-                     * @param _name 
+                     * 设置<p>Audio and video quality inspection template name.</p>
+                     * @param _name <p>Audio and video quality inspection template name.</p>
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -97,15 +97,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Comment 
+                     * 获取<p>Audio and video quality inspection template description.</p>
+                     * @return Comment <p>Audio and video quality inspection template description.</p>
                      * 
                      */
                     std::string GetComment() const;
 
                     /**
-                     * 设置
-                     * @param _comment 
+                     * 设置<p>Audio and video quality inspection template description.</p>
+                     * @param _comment <p>Audio and video quality inspection template description.</p>
                      * 
                      */
                     void SetComment(const std::string& _comment);
@@ -118,15 +118,15 @@ namespace TencentCloud
                     bool CommentHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Configs 
+                     * 获取<p>Audio and video quality detection configuration parameters.</p>
+                     * @return Configs <p>Audio and video quality detection configuration parameters.</p>
                      * 
                      */
                     std::vector<QualityInspectConfig> GetConfigs() const;
 
                     /**
-                     * 设置
-                     * @param _configs 
+                     * 设置<p>Audio and video quality detection configuration parameters.</p>
+                     * @param _configs <p>Audio and video quality detection configuration parameters.</p>
                      * 
                      */
                     void SetConfigs(const std::vector<QualityInspectConfig>& _configs);
@@ -139,15 +139,15 @@ namespace TencentCloud
                     bool ConfigsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Strategy 
+                     * 获取<p>Spot check policy parameters for audio and video quality inspection.</p>
+                     * @return Strategy <p>Spot check policy parameters for audio and video quality inspection.</p>
                      * 
                      */
                     QualityInspectStrategy GetStrategy() const;
 
                     /**
-                     * 设置
-                     * @param _strategy 
+                     * 设置<p>Spot check policy parameters for audio and video quality inspection.</p>
+                     * @param _strategy <p>Spot check policy parameters for audio and video quality inspection.</p>
                      * 
                      */
                     void SetStrategy(const QualityInspectStrategy& _strategy);
@@ -160,15 +160,15 @@ namespace TencentCloud
                     bool StrategyHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ScreenshotInterval 
+                     * 获取<p>(Not recommended. Use Configs instead.) Frame interception interval in seconds. Minimum value: 1. If not specified, the default frame interval is 1 second.</p>
+                     * @return ScreenshotInterval <p>(Not recommended. Use Configs instead.) Frame interception interval in seconds. Minimum value: 1. If not specified, the default frame interval is 1 second.</p>
                      * 
                      */
                     double GetScreenshotInterval() const;
 
                     /**
-                     * 设置
-                     * @param _screenshotInterval 
+                     * 设置<p>(Not recommended. Use Configs instead.) Frame interception interval in seconds. Minimum value: 1. If not specified, the default frame interval is 1 second.</p>
+                     * @param _screenshotInterval <p>(Not recommended. Use Configs instead.) Frame interception interval in seconds. Minimum value: 1. If not specified, the default frame interval is 1 second.</p>
                      * 
                      */
                     void SetScreenshotInterval(const double& _screenshotInterval);
@@ -181,15 +181,15 @@ namespace TencentCloud
                     bool ScreenshotIntervalHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return JitterConfigure 
+                     * 获取<p>(Not recommended. Use Configs instead.) Control parameters for video frame jitter and ghosting detection.</p>
+                     * @return JitterConfigure <p>(Not recommended. Use Configs instead.) Control parameters for video frame jitter and ghosting detection.</p>
                      * 
                      */
                     JitterConfigureInfo GetJitterConfigure() const;
 
                     /**
-                     * 设置
-                     * @param _jitterConfigure 
+                     * 设置<p>(Not recommended. Use Configs instead.) Control parameters for video frame jitter and ghosting detection.</p>
+                     * @param _jitterConfigure <p>(Not recommended. Use Configs instead.) Control parameters for video frame jitter and ghosting detection.</p>
                      * 
                      */
                     void SetJitterConfigure(const JitterConfigureInfo& _jitterConfigure);
@@ -202,15 +202,15 @@ namespace TencentCloud
                     bool JitterConfigureHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return BlurConfigure 
+                     * 获取<p>(Not recommended. Use Configs as an alternative.) Control parameters for video frame blur detection.</p>
+                     * @return BlurConfigure <p>(Not recommended. Use Configs as an alternative.) Control parameters for video frame blur detection.</p>
                      * 
                      */
                     BlurConfigureInfo GetBlurConfigure() const;
 
                     /**
-                     * 设置
-                     * @param _blurConfigure 
+                     * 设置<p>(Not recommended. Use Configs as an alternative.) Control parameters for video frame blur detection.</p>
+                     * @param _blurConfigure <p>(Not recommended. Use Configs as an alternative.) Control parameters for video frame blur detection.</p>
                      * 
                      */
                     void SetBlurConfigure(const BlurConfigureInfo& _blurConfigure);
@@ -223,15 +223,15 @@ namespace TencentCloud
                     bool BlurConfigureHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AbnormalLightingConfigure 
+                     * 获取<p>(Not recommended. Use Configs as an alternative.) Control parameters for low-light and overexposure detection in video frames.</p>
+                     * @return AbnormalLightingConfigure <p>(Not recommended. Use Configs as an alternative.) Control parameters for low-light and overexposure detection in video frames.</p>
                      * 
                      */
                     AbnormalLightingConfigureInfo GetAbnormalLightingConfigure() const;
 
                     /**
-                     * 设置
-                     * @param _abnormalLightingConfigure 
+                     * 设置<p>(Not recommended. Use Configs as an alternative.) Control parameters for low-light and overexposure detection in video frames.</p>
+                     * @param _abnormalLightingConfigure <p>(Not recommended. Use Configs as an alternative.) Control parameters for low-light and overexposure detection in video frames.</p>
                      * 
                      */
                     void SetAbnormalLightingConfigure(const AbnormalLightingConfigureInfo& _abnormalLightingConfigure);
@@ -244,15 +244,15 @@ namespace TencentCloud
                     bool AbnormalLightingConfigureHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return CrashScreenConfigure 
+                     * 获取<p>(Not recommended. Use Configs as an alternative.) Control parameters for distortion detection in video footage.</p>
+                     * @return CrashScreenConfigure <p>(Not recommended. Use Configs as an alternative.) Control parameters for distortion detection in video footage.</p>
                      * 
                      */
                     CrashScreenConfigureInfo GetCrashScreenConfigure() const;
 
                     /**
-                     * 设置
-                     * @param _crashScreenConfigure 
+                     * 设置<p>(Not recommended. Use Configs as an alternative.) Control parameters for distortion detection in video footage.</p>
+                     * @param _crashScreenConfigure <p>(Not recommended. Use Configs as an alternative.) Control parameters for distortion detection in video footage.</p>
                      * 
                      */
                     void SetCrashScreenConfigure(const CrashScreenConfigureInfo& _crashScreenConfigure);
@@ -265,15 +265,15 @@ namespace TencentCloud
                     bool CrashScreenConfigureHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return BlackWhiteEdgeConfigure 
+                     * 获取<p>(Not recommended. Use Configs as an alternative.) Control parameters for detecting video picture black edges, white edges, black screen, and white screen.</p>
+                     * @return BlackWhiteEdgeConfigure <p>(Not recommended. Use Configs as an alternative.) Control parameters for detecting video picture black edges, white edges, black screen, and white screen.</p>
                      * 
                      */
                     BlackWhiteEdgeConfigureInfo GetBlackWhiteEdgeConfigure() const;
 
                     /**
-                     * 设置
-                     * @param _blackWhiteEdgeConfigure 
+                     * 设置<p>(Not recommended. Use Configs as an alternative.) Control parameters for detecting video picture black edges, white edges, black screen, and white screen.</p>
+                     * @param _blackWhiteEdgeConfigure <p>(Not recommended. Use Configs as an alternative.) Control parameters for detecting video picture black edges, white edges, black screen, and white screen.</p>
                      * 
                      */
                     void SetBlackWhiteEdgeConfigure(const BlackWhiteEdgeConfigureInfo& _blackWhiteEdgeConfigure);
@@ -286,15 +286,15 @@ namespace TencentCloud
                     bool BlackWhiteEdgeConfigureHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return NoiseConfigure 
+                     * 获取<p>(Not recommended. Use Configs instead.) Control parameters for video frame noise detection.</p>
+                     * @return NoiseConfigure <p>(Not recommended. Use Configs instead.) Control parameters for video frame noise detection.</p>
                      * 
                      */
                     NoiseConfigureInfo GetNoiseConfigure() const;
 
                     /**
-                     * 设置
-                     * @param _noiseConfigure 
+                     * 设置<p>(Not recommended. Use Configs instead.) Control parameters for video frame noise detection.</p>
+                     * @param _noiseConfigure <p>(Not recommended. Use Configs instead.) Control parameters for video frame noise detection.</p>
                      * 
                      */
                     void SetNoiseConfigure(const NoiseConfigureInfo& _noiseConfigure);
@@ -307,15 +307,15 @@ namespace TencentCloud
                     bool NoiseConfigureHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return MosaicConfigure 
+                     * 获取<p>(Not recommended. Use Configs instead.) Control parameters for video frame mosaic detection.</p>
+                     * @return MosaicConfigure <p>(Not recommended. Use Configs instead.) Control parameters for video frame mosaic detection.</p>
                      * 
                      */
                     MosaicConfigureInfo GetMosaicConfigure() const;
 
                     /**
-                     * 设置
-                     * @param _mosaicConfigure 
+                     * 设置<p>(Not recommended. Use Configs instead.) Control parameters for video frame mosaic detection.</p>
+                     * @param _mosaicConfigure <p>(Not recommended. Use Configs instead.) Control parameters for video frame mosaic detection.</p>
                      * 
                      */
                     void SetMosaicConfigure(const MosaicConfigureInfo& _mosaicConfigure);
@@ -328,15 +328,15 @@ namespace TencentCloud
                     bool MosaicConfigureHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return QRCodeConfigure 
+                     * 获取<p>(Not recommended. Use Configs as an alternative.) Control parameters for video frame QR code detection.</p>
+                     * @return QRCodeConfigure <p>(Not recommended. Use Configs as an alternative.) Control parameters for video frame QR code detection.</p>
                      * 
                      */
                     QRCodeConfigureInfo GetQRCodeConfigure() const;
 
                     /**
-                     * 设置
-                     * @param _qRCodeConfigure 
+                     * 设置<p>(Not recommended. Use Configs as an alternative.) Control parameters for video frame QR code detection.</p>
+                     * @param _qRCodeConfigure <p>(Not recommended. Use Configs as an alternative.) Control parameters for video frame QR code detection.</p>
                      * 
                      */
                     void SetQRCodeConfigure(const QRCodeConfigureInfo& _qRCodeConfigure);
@@ -349,15 +349,15 @@ namespace TencentCloud
                     bool QRCodeConfigureHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return VoiceConfigure 
+                     * 获取<p>(Not recommended, use Configs as an alternative) Control parameters for audio (mute, bass, pop) detection.</p>
+                     * @return VoiceConfigure <p>(Not recommended, use Configs as an alternative) Control parameters for audio (mute, bass, pop) detection.</p>
                      * 
                      */
                     VoiceConfigureInfo GetVoiceConfigure() const;
 
                     /**
-                     * 设置
-                     * @param _voiceConfigure 
+                     * 设置<p>(Not recommended, use Configs as an alternative) Control parameters for audio (mute, bass, pop) detection.</p>
+                     * @param _voiceConfigure <p>(Not recommended, use Configs as an alternative) Control parameters for audio (mute, bass, pop) detection.</p>
                      * 
                      */
                     void SetVoiceConfigure(const VoiceConfigureInfo& _voiceConfigure);
@@ -370,15 +370,15 @@ namespace TencentCloud
                     bool VoiceConfigureHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return QualityEvaluationConfigure 
+                     * 获取<p>(Not recommended. Use Configs instead.) Control parameters for video frame quality evaluation.</p>
+                     * @return QualityEvaluationConfigure <p>(Not recommended. Use Configs instead.) Control parameters for video frame quality evaluation.</p>
                      * 
                      */
                     QualityEvaluationConfigureInfo GetQualityEvaluationConfigure() const;
 
                     /**
-                     * 设置
-                     * @param _qualityEvaluationConfigure 
+                     * 设置<p>(Not recommended. Use Configs instead.) Control parameters for video frame quality evaluation.</p>
+                     * @param _qualityEvaluationConfigure <p>(Not recommended. Use Configs instead.) Control parameters for video frame quality evaluation.</p>
                      * 
                      */
                     void SetQualityEvaluationConfigure(const QualityEvaluationConfigureInfo& _qualityEvaluationConfigure);
@@ -393,97 +393,97 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), this field must be filled in as the application ID.</b></p>
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Audio and video quality inspection template name.</p>
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Audio and video quality inspection template description.</p>
                      */
                     std::string m_comment;
                     bool m_commentHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Audio and video quality detection configuration parameters.</p>
                      */
                     std::vector<QualityInspectConfig> m_configs;
                     bool m_configsHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Spot check policy parameters for audio and video quality inspection.</p>
                      */
                     QualityInspectStrategy m_strategy;
                     bool m_strategyHasBeenSet;
 
                     /**
-                     * 
+                     * <p>(Not recommended. Use Configs instead.) Frame interception interval in seconds. Minimum value: 1. If not specified, the default frame interval is 1 second.</p>
                      */
                     double m_screenshotInterval;
                     bool m_screenshotIntervalHasBeenSet;
 
                     /**
-                     * 
+                     * <p>(Not recommended. Use Configs instead.) Control parameters for video frame jitter and ghosting detection.</p>
                      */
                     JitterConfigureInfo m_jitterConfigure;
                     bool m_jitterConfigureHasBeenSet;
 
                     /**
-                     * 
+                     * <p>(Not recommended. Use Configs as an alternative.) Control parameters for video frame blur detection.</p>
                      */
                     BlurConfigureInfo m_blurConfigure;
                     bool m_blurConfigureHasBeenSet;
 
                     /**
-                     * 
+                     * <p>(Not recommended. Use Configs as an alternative.) Control parameters for low-light and overexposure detection in video frames.</p>
                      */
                     AbnormalLightingConfigureInfo m_abnormalLightingConfigure;
                     bool m_abnormalLightingConfigureHasBeenSet;
 
                     /**
-                     * 
+                     * <p>(Not recommended. Use Configs as an alternative.) Control parameters for distortion detection in video footage.</p>
                      */
                     CrashScreenConfigureInfo m_crashScreenConfigure;
                     bool m_crashScreenConfigureHasBeenSet;
 
                     /**
-                     * 
+                     * <p>(Not recommended. Use Configs as an alternative.) Control parameters for detecting video picture black edges, white edges, black screen, and white screen.</p>
                      */
                     BlackWhiteEdgeConfigureInfo m_blackWhiteEdgeConfigure;
                     bool m_blackWhiteEdgeConfigureHasBeenSet;
 
                     /**
-                     * 
+                     * <p>(Not recommended. Use Configs instead.) Control parameters for video frame noise detection.</p>
                      */
                     NoiseConfigureInfo m_noiseConfigure;
                     bool m_noiseConfigureHasBeenSet;
 
                     /**
-                     * 
+                     * <p>(Not recommended. Use Configs instead.) Control parameters for video frame mosaic detection.</p>
                      */
                     MosaicConfigureInfo m_mosaicConfigure;
                     bool m_mosaicConfigureHasBeenSet;
 
                     /**
-                     * 
+                     * <p>(Not recommended. Use Configs as an alternative.) Control parameters for video frame QR code detection.</p>
                      */
                     QRCodeConfigureInfo m_qRCodeConfigure;
                     bool m_qRCodeConfigureHasBeenSet;
 
                     /**
-                     * 
+                     * <p>(Not recommended, use Configs as an alternative) Control parameters for audio (mute, bass, pop) detection.</p>
                      */
                     VoiceConfigureInfo m_voiceConfigure;
                     bool m_voiceConfigureHasBeenSet;
 
                     /**
-                     * 
+                     * <p>(Not recommended. Use Configs instead.) Control parameters for video frame quality evaluation.</p>
                      */
                     QualityEvaluationConfigureInfo m_qualityEvaluationConfigure;
                     bool m_qualityEvaluationConfigureHasBeenSet;

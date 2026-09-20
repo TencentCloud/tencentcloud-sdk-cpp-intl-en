@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return DomainName 
+                     * 获取<p>Distribute the configured domain name (abandoned).</p>
+                     * @return DomainName <p>Distribute the configured domain name (abandoned).</p>
                      * @deprecated
                      */
                     std::string GetDomainName() const;
@@ -58,8 +58,8 @@ namespace TencentCloud
                     bool DomainNameHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Domain 
+                     * 获取<p>Distribute the configured domain name.</p>
+                     * @return Domain <p>Distribute the configured domain name.</p>
                      * 
                      */
                     std::string GetDomain() const;
@@ -72,8 +72,8 @@ namespace TencentCloud
                     bool DomainHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Scheme 
+                     * 获取<p>Protocol of the distribution configuration, which is HTTP or HTTPS.</p>
+                     * @return Scheme <p>Protocol of the distribution configuration, which is HTTP or HTTPS.</p>
                      * 
                      */
                     std::string GetScheme() const;
@@ -86,8 +86,8 @@ namespace TencentCloud
                     bool SchemeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return PlayKey 
+                     * 获取<p>Playback key, consisting of upper- and lower-case letters (a - Z) or numbers (0 - 9), with a length between 8 - 20 characters.</p>
+                     * @return PlayKey <p>Playback key, consisting of upper- and lower-case letters (a - Z) or numbers (0 - 9), with a length between 8 - 20 characters.</p>
                      * 
                      */
                     std::string GetPlayKey() const;
@@ -102,25 +102,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p>Distribute the configured domain name (abandoned).</p>
                      */
                     std::string m_domainName;
                     bool m_domainNameHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Distribute the configured domain name.</p>
                      */
                     std::string m_domain;
                     bool m_domainHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Protocol of the distribution configuration, which is HTTP or HTTPS.</p>
                      */
                     std::string m_scheme;
                     bool m_schemeHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Playback key, consisting of upper- and lower-case letters (a - Z) or numbers (0 - 9), with a length between 8 - 20 characters.</p>
                      */
                     std::string m_playKey;
                     bool m_playKeyHasBeenSet;

@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Definition 
+                     * 获取Unique identifier of the review template.
+                     * @return Definition Unique identifier of the review template.
                      * 
                      */
                     int64_t GetDefinition() const;
 
                     /**
-                     * 设置
-                     * @param _definition 
+                     * 设置Unique identifier of the review template.
+                     * @param _definition Unique identifier of the review template.
                      * 
                      */
                     void SetDefinition(const int64_t& _definition);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool DefinitionHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SubAppId 
+                     * 获取<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services from December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b>
+                     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services from December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b>
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置
-                     * @param _subAppId 
+                     * 设置<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services from December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b>
+                     * @param _subAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services from December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b>
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool SubAppIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Name 
+                     * 获取Review template name, with a length limit of 64 characters.
+                     * @return Name Review template name, with a length limit of 64 characters.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置
-                     * @param _name 
+                     * 设置Review template name, with a length limit of 64 characters.
+                     * @param _name Review template name, with a length limit of 64 characters.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Comment 
+                     * 获取Review template description information, with a length limit of 256 characters.
+                     * @return Comment Review template description information, with a length limit of 256 characters.
                      * 
                      */
                     std::string GetComment() const;
 
                     /**
-                     * 设置
-                     * @param _comment 
+                     * 设置Review template description information, with a length limit of 256 characters.
+                     * @param _comment Review template description information, with a length limit of 256 characters.
                      * 
                      */
                     void SetComment(const std::string& _comment);
@@ -127,15 +127,51 @@ namespace TencentCloud
                     bool CommentHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Labels 
+                     * 获取List of violation labels to return. Optional values:
+<li>Porn: Pornography;</li>
+<li>Terror: violence.</li>
+<li>Polity: inappropriate information;</li>
+<li>Illegal: illegal;</li>
+<li>Abuse: verbal abuse;</li>
+<li>Ad: advertisement;</li>
+<li>Moan: panting.</li>
+
+Note: Leaving it blank means it does not update.
+                     * @return Labels List of violation labels to return. Optional values:
+<li>Porn: Pornography;</li>
+<li>Terror: violence.</li>
+<li>Polity: inappropriate information;</li>
+<li>Illegal: illegal;</li>
+<li>Abuse: verbal abuse;</li>
+<li>Ad: advertisement;</li>
+<li>Moan: panting.</li>
+
+Note: Leaving it blank means it does not update.
                      * 
                      */
                     std::vector<std::string> GetLabels() const;
 
                     /**
-                     * 设置
-                     * @param _labels 
+                     * 设置List of violation labels to return. Optional values:
+<li>Porn: Pornography;</li>
+<li>Terror: violence.</li>
+<li>Polity: inappropriate information;</li>
+<li>Illegal: illegal;</li>
+<li>Abuse: verbal abuse;</li>
+<li>Ad: advertisement;</li>
+<li>Moan: panting.</li>
+
+Note: Leaving it blank means it does not update.
+                     * @param _labels List of violation labels to return. Optional values:
+<li>Porn: Pornography;</li>
+<li>Terror: violence.</li>
+<li>Polity: inappropriate information;</li>
+<li>Illegal: illegal;</li>
+<li>Abuse: verbal abuse;</li>
+<li>Ad: advertisement;</li>
+<li>Moan: panting.</li>
+
+Note: Leaving it blank means it does not update.
                      * 
                      */
                     void SetLabels(const std::vector<std::string>& _labels);
@@ -150,31 +186,40 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Unique identifier of the review template.
                      */
                     int64_t m_definition;
                     bool m_definitionHasBeenSet;
 
                     /**
-                     * 
+                     * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services from December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b>
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
 
                     /**
-                     * 
+                     * Review template name, with a length limit of 64 characters.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * 
+                     * Review template description information, with a length limit of 256 characters.
                      */
                     std::string m_comment;
                     bool m_commentHasBeenSet;
 
                     /**
-                     * 
+                     * List of violation labels to return. Optional values:
+<li>Porn: Pornography;</li>
+<li>Terror: violence.</li>
+<li>Polity: inappropriate information;</li>
+<li>Illegal: illegal;</li>
+<li>Abuse: verbal abuse;</li>
+<li>Ad: advertisement;</li>
+<li>Moan: panting.</li>
+
+Note: Leaving it blank means it does not update.
                      */
                     std::vector<std::string> m_labels;
                     bool m_labelsHasBeenSet;

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Program information for carousel playback
                 */
                 class RoundPlayListItemInfo : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return FileId 
+                     * 获取Media file identifier.
+                     * @return FileId Media file identifier.
                      * 
                      */
                     std::string GetFileId() const;
 
                     /**
-                     * 设置
-                     * @param _fileId 
+                     * 设置Media file identifier.
+                     * @param _fileId Media file identifier.
                      * 
                      */
                     void SetFileId(const std::string& _fileId);
@@ -68,15 +68,27 @@ namespace TencentCloud
                     bool FileIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AudioVideoType 
+                     * 获取Played audio and video type. Available values:
+<li>Transcode: transcoding output. There will be multiple templates for transcoding output, and the Definition field must be specified.</li>
+<li>Original: original audio/video.</li>
+The format of Type must be HLS format.
+                     * @return AudioVideoType Played audio and video type. Available values:
+<li>Transcode: transcoding output. There will be multiple templates for transcoding output, and the Definition field must be specified.</li>
+<li>Original: original audio/video.</li>
+The format of Type must be HLS format.
                      * 
                      */
                     std::string GetAudioVideoType() const;
 
                     /**
-                     * 设置
-                     * @param _audioVideoType 
+                     * 设置Played audio and video type. Available values:
+<li>Transcode: transcoding output. There will be multiple templates for transcoding output, and the Definition field must be specified.</li>
+<li>Original: original audio/video.</li>
+The format of Type must be HLS format.
+                     * @param _audioVideoType Played audio and video type. Available values:
+<li>Transcode: transcoding output. There will be multiple templates for transcoding output, and the Definition field must be specified.</li>
+<li>Original: original audio/video.</li>
+The format of Type must be HLS format.
                      * 
                      */
                     void SetAudioVideoType(const std::string& _audioVideoType);
@@ -89,15 +101,15 @@ namespace TencentCloud
                     bool AudioVideoTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ItemId 
+                     * 获取Program ID assigned by the system.
+                     * @return ItemId Program ID assigned by the system.
                      * 
                      */
                     std::string GetItemId() const;
 
                     /**
-                     * 设置
-                     * @param _itemId 
+                     * 设置Program ID assigned by the system.
+                     * @param _itemId Program ID assigned by the system.
                      * 
                      */
                     void SetItemId(const std::string& _itemId);
@@ -110,15 +122,15 @@ namespace TencentCloud
                     bool ItemIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Definition 
+                     * 获取Specify the transcoding template for playback. This parameter is required when AudioVideoType is Transcode.
+                     * @return Definition Specify the transcoding template for playback. This parameter is required when AudioVideoType is Transcode.
                      * 
                      */
                     int64_t GetDefinition() const;
 
                     /**
-                     * 设置
-                     * @param _definition 
+                     * 设置Specify the transcoding template for playback. This parameter is required when AudioVideoType is Transcode.
+                     * @param _definition Specify the transcoding template for playback. This parameter is required when AudioVideoType is Transcode.
                      * 
                      */
                     void SetDefinition(const int64_t& _definition);
@@ -133,25 +145,28 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Media file identifier.
                      */
                     std::string m_fileId;
                     bool m_fileIdHasBeenSet;
 
                     /**
-                     * 
+                     * Played audio and video type. Available values:
+<li>Transcode: transcoding output. There will be multiple templates for transcoding output, and the Definition field must be specified.</li>
+<li>Original: original audio/video.</li>
+The format of Type must be HLS format.
                      */
                     std::string m_audioVideoType;
                     bool m_audioVideoTypeHasBeenSet;
 
                     /**
-                     * 
+                     * Program ID assigned by the system.
                      */
                     std::string m_itemId;
                     bool m_itemIdHasBeenSet;
 
                     /**
-                     * 
+                     * Specify the transcoding template for playback. This parameter is required when AudioVideoType is Transcode.
                      */
                     int64_t m_definition;
                     bool m_definitionHasBeenSet;

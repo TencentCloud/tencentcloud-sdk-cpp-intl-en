@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return TaskId 
+                     * 获取Video editing task ID. This can be used to query the status of the edit task (task type: EditMedia).
+                     * @return TaskId Video editing task ID. This can be used to query the status of the edit task (task type: EditMedia).
                      * 
                      */
                     std::string GetTaskId() const;
@@ -60,7 +60,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Video editing task ID. This can be used to query the status of the edit task (task type: EditMedia).
                      */
                     std::string m_taskId;
                     bool m_taskIdHasBeenSet;

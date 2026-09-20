@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Character parameter information for AIGC video conversion.
                 */
                 class AigcVideoRedrawTaskInfo : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Style 
+                     * 获取<p>For description of the style. Limited to 50 characters.</p>
+                     * @return Style <p>For description of the style. Limited to 50 characters.</p>
                      * 
                      */
                     std::string GetStyle() const;
 
                     /**
-                     * 设置
-                     * @param _style 
+                     * 设置<p>For description of the style. Limited to 50 characters.</p>
+                     * @param _style <p>For description of the style. Limited to 50 characters.</p>
                      * 
                      */
                     void SetStyle(const std::string& _style);
@@ -70,7 +70,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p>For description of the style. Limited to 50 characters.</p>
                      */
                     std::string m_style;
                     bool m_styleHasBeenSet;

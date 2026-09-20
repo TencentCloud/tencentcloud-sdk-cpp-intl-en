@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Philippines VoteID Card
+                * Philippines voter card
                 */
                 class PhilippinesVoteID : public AbstractModel
                 {
@@ -48,18 +48,14 @@ namespace TencentCloud
 
                     /**
                      * 获取VIN of Philippines VoteID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return VIN VIN of Philippines VoteID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetVIN() const;
 
                     /**
                      * 设置VIN of Philippines VoteID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _vIN VIN of Philippines VoteID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetVIN(const std::string& _vIN);
@@ -72,19 +68,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool VINHasBeenSet() const;
 
                     /**
-                     * 获取First name
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return FirstName First name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Name
+                     * @return FirstName Name
                      * 
                      */
                     std::string GetFirstName() const;
 
                     /**
-                     * 设置First name
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _firstName First name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Name
+                     * @param _firstName Name
                      * 
                      */
                     void SetFirstName(const std::string& _firstName);
@@ -98,18 +90,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Last name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return LastName Last name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetLastName() const;
 
                     /**
                      * 设置Last name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _lastName Last name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetLastName(const std::string& _lastName);
@@ -122,19 +110,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool LastNameHasBeenSet() const;
 
                     /**
-                     * 获取Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Birthday Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Date of birth
+                     * @return Birthday Date of birth
                      * 
                      */
                     std::string GetBirthday() const;
 
                     /**
-                     * 设置Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _birthday Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Date of birth
+                     * @param _birthday Date of birth
                      * 
                      */
                     void SetBirthday(const std::string& _birthday);
@@ -147,19 +131,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool BirthdayHasBeenSet() const;
 
                     /**
-                     * 获取Civil status
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return CivilStatus Civil status
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Marital status
+                     * @return CivilStatus Marital status
                      * 
                      */
                     std::string GetCivilStatus() const;
 
                     /**
-                     * 设置Civil status
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _civilStatus Civil status
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Marital status
+                     * @param _civilStatus Marital status
                      * 
                      */
                     void SetCivilStatus(const std::string& _civilStatus);
@@ -173,18 +153,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Nationality
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Citizenship Nationality
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetCitizenship() const;
 
                     /**
                      * 设置Nationality
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _citizenship Nationality
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetCitizenship(const std::string& _citizenship);
@@ -197,19 +173,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CitizenshipHasBeenSet() const;
 
                     /**
-                     * 获取Address
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Address Address
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Address.
+                     * @return Address Address.
                      * 
                      */
                     std::string GetAddress() const;
 
                     /**
-                     * 设置Address
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _address Address
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Address.
+                     * @param _address Address.
                      * 
                      */
                     void SetAddress(const std::string& _address);
@@ -222,19 +194,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool AddressHasBeenSet() const;
 
                     /**
-                     * 获取Region
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return PrecinctNo Region
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Region.
+                     * @return PrecinctNo Region.
                      * 
                      */
                     std::string GetPrecinctNo() const;
 
                     /**
-                     * 设置Region
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _precinctNo Region
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Region.
+                     * @param _precinctNo Region.
                      * 
                      */
                     void SetPrecinctNo(const std::string& _precinctNo);
@@ -250,56 +218,48 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * VIN of Philippines VoteID
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_vIN;
                     bool m_vINHasBeenSet;
 
                     /**
-                     * First name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Name
                      */
                     std::string m_firstName;
                     bool m_firstNameHasBeenSet;
 
                     /**
                      * Last name
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_lastName;
                     bool m_lastNameHasBeenSet;
 
                     /**
-                     * Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Date of birth
                      */
                     std::string m_birthday;
                     bool m_birthdayHasBeenSet;
 
                     /**
-                     * Civil status
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Marital status
                      */
                     std::string m_civilStatus;
                     bool m_civilStatusHasBeenSet;
 
                     /**
                      * Nationality
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_citizenship;
                     bool m_citizenshipHasBeenSet;
 
                     /**
-                     * Address
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Address.
                      */
                     std::string m_address;
                     bool m_addressHasBeenSet;
 
                     /**
-                     * Region
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Region.
                      */
                     std::string m_precinctNo;
                     bool m_precinctNoHasBeenSet;

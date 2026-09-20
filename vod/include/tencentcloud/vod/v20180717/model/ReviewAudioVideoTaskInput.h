@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Input for the audio/video moderation task.
                 */
                 class ReviewAudioVideoTaskInput : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return FileId 
+                     * 获取Media file ID.
+                     * @return FileId Media file ID.
                      * 
                      */
                     std::string GetFileId() const;
 
                     /**
-                     * 设置
-                     * @param _fileId 
+                     * 设置Media file ID.
+                     * @param _fileId Media file ID.
                      * 
                      */
                     void SetFileId(const std::string& _fileId);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool FileIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Definition 
+                     * 获取Audio/video moderation template ID.
+                     * @return Definition Audio/video moderation template ID.
                      * 
                      */
                     uint64_t GetDefinition() const;
 
                     /**
-                     * 设置
-                     * @param _definition 
+                     * 设置Audio/video moderation template ID.
+                     * @param _definition Audio/video moderation template ID.
                      * 
                      */
                     void SetDefinition(const uint64_t& _definition);
@@ -89,15 +89,23 @@ namespace TencentCloud
                     bool DefinitionHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ReviewContents 
+                     * 获取Content for review. Available values:
+<li>Media: original audio/video;</li>
+<li>Cover: cover.</li>
+                     * @return ReviewContents Content for review. Available values:
+<li>Media: original audio/video;</li>
+<li>Cover: cover.</li>
                      * 
                      */
                     std::vector<std::string> GetReviewContents() const;
 
                     /**
-                     * 设置
-                     * @param _reviewContents 
+                     * 设置Content for review. Available values:
+<li>Media: original audio/video;</li>
+<li>Cover: cover.</li>
+                     * @param _reviewContents Content for review. Available values:
+<li>Media: original audio/video;</li>
+<li>Cover: cover.</li>
                      * 
                      */
                     void SetReviewContents(const std::vector<std::string>& _reviewContents);
@@ -112,19 +120,21 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Media file ID.
                      */
                     std::string m_fileId;
                     bool m_fileIdHasBeenSet;
 
                     /**
-                     * 
+                     * Audio/video moderation template ID.
                      */
                     uint64_t m_definition;
                     bool m_definitionHasBeenSet;
 
                     /**
-                     * 
+                     * Content for review. Available values:
+<li>Media: original audio/video;</li>
+<li>Cover: cover.</li>
                      */
                     std::vector<std::string> m_reviewContents;
                     bool m_reviewContentsHasBeenSet;

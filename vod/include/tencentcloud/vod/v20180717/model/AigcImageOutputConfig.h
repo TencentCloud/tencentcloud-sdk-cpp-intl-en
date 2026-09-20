@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Configuration of the output media file of the AIGC image generation task.
                 */
                 class AigcImageOutputConfig : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return StorageMode 
+                     * 获取<p>Storage mode</p><p>Enumeration values:</p><ul><li>Temporary: temporary storage. The generated video file will not be stored in VOD. You can obtain a temporary access URL from the event notification, with a valid period of 7 days.</li><li>Permanent: permanent storage. The generated video file will be stored in VOD. You can obtain the FileId from the event notification.</li></ul><p>Default value: Temporary</p>
+                     * @return StorageMode <p>Storage mode</p><p>Enumeration values:</p><ul><li>Temporary: temporary storage. The generated video file will not be stored in VOD. You can obtain a temporary access URL from the event notification, with a valid period of 7 days.</li><li>Permanent: permanent storage. The generated video file will be stored in VOD. You can obtain the FileId from the event notification.</li></ul><p>Default value: Temporary</p>
                      * 
                      */
                     std::string GetStorageMode() const;
 
                     /**
-                     * 设置
-                     * @param _storageMode 
+                     * 设置<p>Storage mode</p><p>Enumeration values:</p><ul><li>Temporary: temporary storage. The generated video file will not be stored in VOD. You can obtain a temporary access URL from the event notification, with a valid period of 7 days.</li><li>Permanent: permanent storage. The generated video file will be stored in VOD. You can obtain the FileId from the event notification.</li></ul><p>Default value: Temporary</p>
+                     * @param _storageMode <p>Storage mode</p><p>Enumeration values:</p><ul><li>Temporary: temporary storage. The generated video file will not be stored in VOD. You can obtain a temporary access URL from the event notification, with a valid period of 7 days.</li><li>Permanent: permanent storage. The generated video file will be stored in VOD. You can obtain the FileId from the event notification.</li></ul><p>Default value: Temporary</p>
                      * 
                      */
                     void SetStorageMode(const std::string& _storageMode);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool StorageModeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return MediaName 
+                     * 获取<p>Output filename, up to 64 characters. By default, the system assigns the generated filename.</p>
+                     * @return MediaName <p>Output filename, up to 64 characters. By default, the system assigns the generated filename.</p>
                      * 
                      */
                     std::string GetMediaName() const;
 
                     /**
-                     * 设置
-                     * @param _mediaName 
+                     * 设置<p>Output filename, up to 64 characters. By default, the system assigns the generated filename.</p>
+                     * @param _mediaName <p>Output filename, up to 64 characters. By default, the system assigns the generated filename.</p>
                      * 
                      */
                     void SetMediaName(const std::string& _mediaName);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool MediaNameHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ClassId 
+                     * 获取<p>Category ID, used to categorize and manage media. You can create a category via the <a href="/document/product/266/7812">Create Category</a> API to obtain the category ID.</p><li>Default value: 0, indicating other categories.</li>
+                     * @return ClassId <p>Category ID, used to categorize and manage media. You can create a category via the <a href="/document/product/266/7812">Create Category</a> API to obtain the category ID.</p><li>Default value: 0, indicating other categories.</li>
                      * 
                      */
                     int64_t GetClassId() const;
 
                     /**
-                     * 设置
-                     * @param _classId 
+                     * 设置<p>Category ID, used to categorize and manage media. You can create a category via the <a href="/document/product/266/7812">Create Category</a> API to obtain the category ID.</p><li>Default value: 0, indicating other categories.</li>
+                     * @param _classId <p>Category ID, used to categorize and manage media. You can create a category via the <a href="/document/product/266/7812">Create Category</a> API to obtain the category ID.</p><li>Default value: 0, indicating other categories.</li>
                      * 
                      */
                     void SetClassId(const int64_t& _classId);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool ClassIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ExpireTime 
+                     * 获取<p>Expiry date of the output file. The file will be deleted after this time. It never expires by default. The format is according to the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
+                     * @return ExpireTime <p>Expiry date of the output file. The file will be deleted after this time. It never expires by default. The format is according to the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
                      * 
                      */
                     std::string GetExpireTime() const;
 
                     /**
-                     * 设置
-                     * @param _expireTime 
+                     * 设置<p>Expiry date of the output file. The file will be deleted after this time. It never expires by default. The format is according to the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
+                     * @param _expireTime <p>Expiry date of the output file. The file will be deleted after this time. It never expires by default. The format is according to the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
                      * 
                      */
                     void SetExpireTime(const std::string& _expireTime);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool ExpireTimeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Resolution 
+                     * 获取<p>Resolution of the generated image. Available values for each model:</p><ul><li>OG: 1K, 2K, 4K. Default: 1K.</li><li>GG 2.5: 1K, 2K, 4K. Default: 1K.</li><li>GG 3.0: 1K, 2K, 4K. Default: 1K.</li><li>GG 3.1: 720P, 1K, 2K, 4K. Default: 1K.</li><li>Kling 2.1: 1k, 2k. Default: 1k.</li><li>Kling 3.0: 1k, 2k. Default: 1k.</li><li>Kling 3.0-Omni: 1k, 2k, 4k. Default: 1k.</li><li>Kling O1: 1k, 2k, 4k. Default: 1k.</li><li>SI 4.0: 1K, 2K, 4K. Default: 1K.</li><li>SI 4.5: 2K, 4K. Default: 2K.</li><li>SI 5.0-lite: 2K, 3K. Default: 2K.</li><li>Vidu q2: 1080p, 2K, 4K. Default: 1080p.</li><li>Hunyuan 3.0: This field is not currently supported. You can set the resolution via the <code>ExtInfo</code> field.</li><li>Qwen 0925: This field is not currently supported. You can set the resolution via the <code>ExtInfo</code> field.</li></ul>
+                     * @return Resolution <p>Resolution of the generated image. Available values for each model:</p><ul><li>OG: 1K, 2K, 4K. Default: 1K.</li><li>GG 2.5: 1K, 2K, 4K. Default: 1K.</li><li>GG 3.0: 1K, 2K, 4K. Default: 1K.</li><li>GG 3.1: 720P, 1K, 2K, 4K. Default: 1K.</li><li>Kling 2.1: 1k, 2k. Default: 1k.</li><li>Kling 3.0: 1k, 2k. Default: 1k.</li><li>Kling 3.0-Omni: 1k, 2k, 4k. Default: 1k.</li><li>Kling O1: 1k, 2k, 4k. Default: 1k.</li><li>SI 4.0: 1K, 2K, 4K. Default: 1K.</li><li>SI 4.5: 2K, 4K. Default: 2K.</li><li>SI 5.0-lite: 2K, 3K. Default: 2K.</li><li>Vidu q2: 1080p, 2K, 4K. Default: 1080p.</li><li>Hunyuan 3.0: This field is not currently supported. You can set the resolution via the <code>ExtInfo</code> field.</li><li>Qwen 0925: This field is not currently supported. You can set the resolution via the <code>ExtInfo</code> field.</li></ul>
                      * 
                      */
                     std::string GetResolution() const;
 
                     /**
-                     * 设置
-                     * @param _resolution 
+                     * 设置<p>Resolution of the generated image. Available values for each model:</p><ul><li>OG: 1K, 2K, 4K. Default: 1K.</li><li>GG 2.5: 1K, 2K, 4K. Default: 1K.</li><li>GG 3.0: 1K, 2K, 4K. Default: 1K.</li><li>GG 3.1: 720P, 1K, 2K, 4K. Default: 1K.</li><li>Kling 2.1: 1k, 2k. Default: 1k.</li><li>Kling 3.0: 1k, 2k. Default: 1k.</li><li>Kling 3.0-Omni: 1k, 2k, 4k. Default: 1k.</li><li>Kling O1: 1k, 2k, 4k. Default: 1k.</li><li>SI 4.0: 1K, 2K, 4K. Default: 1K.</li><li>SI 4.5: 2K, 4K. Default: 2K.</li><li>SI 5.0-lite: 2K, 3K. Default: 2K.</li><li>Vidu q2: 1080p, 2K, 4K. Default: 1080p.</li><li>Hunyuan 3.0: This field is not currently supported. You can set the resolution via the <code>ExtInfo</code> field.</li><li>Qwen 0925: This field is not currently supported. You can set the resolution via the <code>ExtInfo</code> field.</li></ul>
+                     * @param _resolution <p>Resolution of the generated image. Available values for each model:</p><ul><li>OG: 1K, 2K, 4K. Default: 1K.</li><li>GG 2.5: 1K, 2K, 4K. Default: 1K.</li><li>GG 3.0: 1K, 2K, 4K. Default: 1K.</li><li>GG 3.1: 720P, 1K, 2K, 4K. Default: 1K.</li><li>Kling 2.1: 1k, 2k. Default: 1k.</li><li>Kling 3.0: 1k, 2k. Default: 1k.</li><li>Kling 3.0-Omni: 1k, 2k, 4k. Default: 1k.</li><li>Kling O1: 1k, 2k, 4k. Default: 1k.</li><li>SI 4.0: 1K, 2K, 4K. Default: 1K.</li><li>SI 4.5: 2K, 4K. Default: 2K.</li><li>SI 5.0-lite: 2K, 3K. Default: 2K.</li><li>Vidu q2: 1080p, 2K, 4K. Default: 1080p.</li><li>Hunyuan 3.0: This field is not currently supported. You can set the resolution via the <code>ExtInfo</code> field.</li><li>Qwen 0925: This field is not currently supported. You can set the resolution via the <code>ExtInfo</code> field.</li></ul>
                      * 
                      */
                     void SetResolution(const std::string& _resolution);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool ResolutionHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AspectRatio 
+                     * 获取<p>Specify the aspect ratio of the generated image.</p><ul><li>OG: 1:1, 3:2, 2:3, 3:4, 4:3, 16:9, 9:16, 21:9, 9:21;</li><li>GG 2.5: 1:1, 2:3, 3:2, 3:4, 4:3, 4:5, 5:4, 9:16, 16:9, 21:9;</li><li>GG 3.0: 1:1, 2:3, 3:2, 3:4, 4:3, 4:5, 5:4, 9:16, 16:9, 21:9;</li><li>GG 3.1: 1:1, 1:4, 1:8, 2:3, 3:2, 3:4, 4:1, 4:3, 4:5, 5:4, 8:1, 9:16, 16:9, 21:9;</li><li>Kling 2.1: 16:9, 9:16, 1:1, 4:3, 3:4, 3:2, 2:3, 21:9;</li><li>Kling 3.0: 16:9, 9:16, 1:1, 4:3, 3:4, 3:2, 2:3, 21:9;</li><li>Kling 3.0-Omni: 16:9, 9:16, 1:1, 4:3, 3:4, 3:2, 2:3, 21:9, auto;</li><li>Kling O1: 16:9, 9:16, 1:1, 4:3, 3:4, 3:2, 2:3, 21:9, auto;</li><li>Vidu q2: 16:9, 9:16, 1:1, 3:4, 4:3, 21:9, 2:3, 3:2;</li><li>SI 4.0: <strong>does not support</strong> this parameter. You can specify 16:9, 9:16, 1:1, 4:3, 3:4, 3:2, 2:3, 21:9 via prompt;</li><li>SI 4.5: <strong>does not support</strong> this parameter. You can specify 16:9, 9:16, 1:1, 4:3, 3:4, 3:2, 2:3, 21:9 via prompt;</li><li>SI 5.0-lite: <strong>does not support</strong> this parameter. You can specify 16:9, 9:16, 1:1, 4:3, 3:4, 3:2, 2:3, 21:9 via prompt;</li><li>Hunyuan 3.0: not supported;</li><li>Qwen 2.0: not supported;</li><li>Qwen 0925: not supported;</li></ul>
+                     * @return AspectRatio <p>Specify the aspect ratio of the generated image.</p><ul><li>OG: 1:1, 3:2, 2:3, 3:4, 4:3, 16:9, 9:16, 21:9, 9:21;</li><li>GG 2.5: 1:1, 2:3, 3:2, 3:4, 4:3, 4:5, 5:4, 9:16, 16:9, 21:9;</li><li>GG 3.0: 1:1, 2:3, 3:2, 3:4, 4:3, 4:5, 5:4, 9:16, 16:9, 21:9;</li><li>GG 3.1: 1:1, 1:4, 1:8, 2:3, 3:2, 3:4, 4:1, 4:3, 4:5, 5:4, 8:1, 9:16, 16:9, 21:9;</li><li>Kling 2.1: 16:9, 9:16, 1:1, 4:3, 3:4, 3:2, 2:3, 21:9;</li><li>Kling 3.0: 16:9, 9:16, 1:1, 4:3, 3:4, 3:2, 2:3, 21:9;</li><li>Kling 3.0-Omni: 16:9, 9:16, 1:1, 4:3, 3:4, 3:2, 2:3, 21:9, auto;</li><li>Kling O1: 16:9, 9:16, 1:1, 4:3, 3:4, 3:2, 2:3, 21:9, auto;</li><li>Vidu q2: 16:9, 9:16, 1:1, 3:4, 4:3, 21:9, 2:3, 3:2;</li><li>SI 4.0: <strong>does not support</strong> this parameter. You can specify 16:9, 9:16, 1:1, 4:3, 3:4, 3:2, 2:3, 21:9 via prompt;</li><li>SI 4.5: <strong>does not support</strong> this parameter. You can specify 16:9, 9:16, 1:1, 4:3, 3:4, 3:2, 2:3, 21:9 via prompt;</li><li>SI 5.0-lite: <strong>does not support</strong> this parameter. You can specify 16:9, 9:16, 1:1, 4:3, 3:4, 3:2, 2:3, 21:9 via prompt;</li><li>Hunyuan 3.0: not supported;</li><li>Qwen 2.0: not supported;</li><li>Qwen 0925: not supported;</li></ul>
                      * 
                      */
                     std::string GetAspectRatio() const;
 
                     /**
-                     * 设置
-                     * @param _aspectRatio 
+                     * 设置<p>Specify the aspect ratio of the generated image.</p><ul><li>OG: 1:1, 3:2, 2:3, 3:4, 4:3, 16:9, 9:16, 21:9, 9:21;</li><li>GG 2.5: 1:1, 2:3, 3:2, 3:4, 4:3, 4:5, 5:4, 9:16, 16:9, 21:9;</li><li>GG 3.0: 1:1, 2:3, 3:2, 3:4, 4:3, 4:5, 5:4, 9:16, 16:9, 21:9;</li><li>GG 3.1: 1:1, 1:4, 1:8, 2:3, 3:2, 3:4, 4:1, 4:3, 4:5, 5:4, 8:1, 9:16, 16:9, 21:9;</li><li>Kling 2.1: 16:9, 9:16, 1:1, 4:3, 3:4, 3:2, 2:3, 21:9;</li><li>Kling 3.0: 16:9, 9:16, 1:1, 4:3, 3:4, 3:2, 2:3, 21:9;</li><li>Kling 3.0-Omni: 16:9, 9:16, 1:1, 4:3, 3:4, 3:2, 2:3, 21:9, auto;</li><li>Kling O1: 16:9, 9:16, 1:1, 4:3, 3:4, 3:2, 2:3, 21:9, auto;</li><li>Vidu q2: 16:9, 9:16, 1:1, 3:4, 4:3, 21:9, 2:3, 3:2;</li><li>SI 4.0: <strong>does not support</strong> this parameter. You can specify 16:9, 9:16, 1:1, 4:3, 3:4, 3:2, 2:3, 21:9 via prompt;</li><li>SI 4.5: <strong>does not support</strong> this parameter. You can specify 16:9, 9:16, 1:1, 4:3, 3:4, 3:2, 2:3, 21:9 via prompt;</li><li>SI 5.0-lite: <strong>does not support</strong> this parameter. You can specify 16:9, 9:16, 1:1, 4:3, 3:4, 3:2, 2:3, 21:9 via prompt;</li><li>Hunyuan 3.0: not supported;</li><li>Qwen 2.0: not supported;</li><li>Qwen 0925: not supported;</li></ul>
+                     * @param _aspectRatio <p>Specify the aspect ratio of the generated image.</p><ul><li>OG: 1:1, 3:2, 2:3, 3:4, 4:3, 16:9, 9:16, 21:9, 9:21;</li><li>GG 2.5: 1:1, 2:3, 3:2, 3:4, 4:3, 4:5, 5:4, 9:16, 16:9, 21:9;</li><li>GG 3.0: 1:1, 2:3, 3:2, 3:4, 4:3, 4:5, 5:4, 9:16, 16:9, 21:9;</li><li>GG 3.1: 1:1, 1:4, 1:8, 2:3, 3:2, 3:4, 4:1, 4:3, 4:5, 5:4, 8:1, 9:16, 16:9, 21:9;</li><li>Kling 2.1: 16:9, 9:16, 1:1, 4:3, 3:4, 3:2, 2:3, 21:9;</li><li>Kling 3.0: 16:9, 9:16, 1:1, 4:3, 3:4, 3:2, 2:3, 21:9;</li><li>Kling 3.0-Omni: 16:9, 9:16, 1:1, 4:3, 3:4, 3:2, 2:3, 21:9, auto;</li><li>Kling O1: 16:9, 9:16, 1:1, 4:3, 3:4, 3:2, 2:3, 21:9, auto;</li><li>Vidu q2: 16:9, 9:16, 1:1, 3:4, 4:3, 21:9, 2:3, 3:2;</li><li>SI 4.0: <strong>does not support</strong> this parameter. You can specify 16:9, 9:16, 1:1, 4:3, 3:4, 3:2, 2:3, 21:9 via prompt;</li><li>SI 4.5: <strong>does not support</strong> this parameter. You can specify 16:9, 9:16, 1:1, 4:3, 3:4, 3:2, 2:3, 21:9 via prompt;</li><li>SI 5.0-lite: <strong>does not support</strong> this parameter. You can specify 16:9, 9:16, 1:1, 4:3, 3:4, 3:2, 2:3, 21:9 via prompt;</li><li>Hunyuan 3.0: not supported;</li><li>Qwen 2.0: not supported;</li><li>Qwen 0925: not supported;</li></ul>
                      * 
                      */
                     void SetAspectRatio(const std::string& _aspectRatio);
@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool AspectRatioHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return PersonGeneration 
+                     * 获取<p>Whether to allow generation of people or human faces. Valid values: <li>AllowAdult: allow generation of adults;</li> <li>Disallowed: forbid people or human faces in images;</li></p>
+                     * @return PersonGeneration <p>Whether to allow generation of people or human faces. Valid values: <li>AllowAdult: allow generation of adults;</li> <li>Disallowed: forbid people or human faces in images;</li></p>
                      * 
                      */
                     std::string GetPersonGeneration() const;
 
                     /**
-                     * 设置
-                     * @param _personGeneration 
+                     * 设置<p>Whether to allow generation of people or human faces. Valid values: <li>AllowAdult: allow generation of adults;</li> <li>Disallowed: forbid people or human faces in images;</li></p>
+                     * @param _personGeneration <p>Whether to allow generation of people or human faces. Valid values: <li>AllowAdult: allow generation of adults;</li> <li>Disallowed: forbid people or human faces in images;</li></p>
                      * 
                      */
                     void SetPersonGeneration(const std::string& _personGeneration);
@@ -194,15 +194,15 @@ namespace TencentCloud
                     bool PersonGenerationHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return InputComplianceCheck 
+                     * 获取<p>Whether to enable compliance check on the input content. Valid values: <li>Enabled: enable;</li> <li>Disabled: disable;</li></p>
+                     * @return InputComplianceCheck <p>Whether to enable compliance check on the input content. Valid values: <li>Enabled: enable;</li> <li>Disabled: disable;</li></p>
                      * 
                      */
                     std::string GetInputComplianceCheck() const;
 
                     /**
-                     * 设置
-                     * @param _inputComplianceCheck 
+                     * 设置<p>Whether to enable compliance check on the input content. Valid values: <li>Enabled: enable;</li> <li>Disabled: disable;</li></p>
+                     * @param _inputComplianceCheck <p>Whether to enable compliance check on the input content. Valid values: <li>Enabled: enable;</li> <li>Disabled: disable;</li></p>
                      * 
                      */
                     void SetInputComplianceCheck(const std::string& _inputComplianceCheck);
@@ -215,15 +215,15 @@ namespace TencentCloud
                     bool InputComplianceCheckHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return OutputComplianceCheck 
+                     * 获取<p>Whether to enable compliance check on output content. Valid values: <li>Enabled: enable;</li> <li>Disabled: disable;</li></p>
+                     * @return OutputComplianceCheck <p>Whether to enable compliance check on output content. Valid values: <li>Enabled: enable;</li> <li>Disabled: disable;</li></p>
                      * 
                      */
                     std::string GetOutputComplianceCheck() const;
 
                     /**
-                     * 设置
-                     * @param _outputComplianceCheck 
+                     * 设置<p>Whether to enable compliance check on output content. Valid values: <li>Enabled: enable;</li> <li>Disabled: disable;</li></p>
+                     * @param _outputComplianceCheck <p>Whether to enable compliance check on output content. Valid values: <li>Enabled: enable;</li> <li>Disabled: disable;</li></p>
                      * 
                      */
                     void SetOutputComplianceCheck(const std::string& _outputComplianceCheck);
@@ -236,15 +236,15 @@ namespace TencentCloud
                     bool OutputComplianceCheckHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return OutputImageCount 
+                     * 获取<p>Number of images generated. Available values for each model:</p><ul><li>Kling: available value 1-9;</li><li>OG: available value 1-8;</li></ul><p><strong>Not effective for other models.</strong></p>
+                     * @return OutputImageCount <p>Number of images generated. Available values for each model:</p><ul><li>Kling: available value 1-9;</li><li>OG: available value 1-8;</li></ul><p><strong>Not effective for other models.</strong></p>
                      * 
                      */
                     uint64_t GetOutputImageCount() const;
 
                     /**
-                     * 设置
-                     * @param _outputImageCount 
+                     * 设置<p>Number of images generated. Available values for each model:</p><ul><li>Kling: available value 1-9;</li><li>OG: available value 1-8;</li></ul><p><strong>Not effective for other models.</strong></p>
+                     * @param _outputImageCount <p>Number of images generated. Available values for each model:</p><ul><li>Kling: available value 1-9;</li><li>OG: available value 1-8;</li></ul><p><strong>Not effective for other models.</strong></p>
                      * 
                      */
                     void SetOutputImageCount(const uint64_t& _outputImageCount);
@@ -257,15 +257,15 @@ namespace TencentCloud
                     bool OutputImageCountHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return OutputFormat 
+                     * 获取<p>Specify the image file format for model output. If not specified, the model default value is followed. Available values:</p><ul><li>jpeg</li><li>png</li></ul>
+                     * @return OutputFormat <p>Specify the image file format for model output. If not specified, the model default value is followed. Available values:</p><ul><li>jpeg</li><li>png</li></ul>
                      * 
                      */
                     std::string GetOutputFormat() const;
 
                     /**
-                     * 设置
-                     * @param _outputFormat 
+                     * 设置<p>Specify the image file format for model output. If not specified, the model default value is followed. Available values:</p><ul><li>jpeg</li><li>png</li></ul>
+                     * @param _outputFormat <p>Specify the image file format for model output. If not specified, the model default value is followed. Available values:</p><ul><li>jpeg</li><li>png</li></ul>
                      * 
                      */
                     void SetOutputFormat(const std::string& _outputFormat);
@@ -278,15 +278,15 @@ namespace TencentCloud
                     bool OutputFormatHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return LogoAdd 
+                     * 获取<p>Indicates whether to enable a logo watermark. Disabled by default. Valid values:</p><ul><li>Enabled: enable;</li><li>Disabled: disable;</li></ul>
+                     * @return LogoAdd <p>Indicates whether to enable a logo watermark. Disabled by default. Valid values:</p><ul><li>Enabled: enable;</li><li>Disabled: disable;</li></ul>
                      * 
                      */
                     std::string GetLogoAdd() const;
 
                     /**
-                     * 设置
-                     * @param _logoAdd 
+                     * 设置<p>Indicates whether to enable a logo watermark. Disabled by default. Valid values:</p><ul><li>Enabled: enable;</li><li>Disabled: disable;</li></ul>
+                     * @param _logoAdd <p>Indicates whether to enable a logo watermark. Disabled by default. Valid values:</p><ul><li>Enabled: enable;</li><li>Disabled: disable;</li></ul>
                      * 
                      */
                     void SetLogoAdd(const std::string& _logoAdd);
@@ -301,73 +301,73 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p>Storage mode</p><p>Enumeration values:</p><ul><li>Temporary: temporary storage. The generated video file will not be stored in VOD. You can obtain a temporary access URL from the event notification, with a valid period of 7 days.</li><li>Permanent: permanent storage. The generated video file will be stored in VOD. You can obtain the FileId from the event notification.</li></ul><p>Default value: Temporary</p>
                      */
                     std::string m_storageMode;
                     bool m_storageModeHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Output filename, up to 64 characters. By default, the system assigns the generated filename.</p>
                      */
                     std::string m_mediaName;
                     bool m_mediaNameHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Category ID, used to categorize and manage media. You can create a category via the <a href="/document/product/266/7812">Create Category</a> API to obtain the category ID.</p><li>Default value: 0, indicating other categories.</li>
                      */
                     int64_t m_classId;
                     bool m_classIdHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Expiry date of the output file. The file will be deleted after this time. It never expires by default. The format is according to the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
                      */
                     std::string m_expireTime;
                     bool m_expireTimeHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Resolution of the generated image. Available values for each model:</p><ul><li>OG: 1K, 2K, 4K. Default: 1K.</li><li>GG 2.5: 1K, 2K, 4K. Default: 1K.</li><li>GG 3.0: 1K, 2K, 4K. Default: 1K.</li><li>GG 3.1: 720P, 1K, 2K, 4K. Default: 1K.</li><li>Kling 2.1: 1k, 2k. Default: 1k.</li><li>Kling 3.0: 1k, 2k. Default: 1k.</li><li>Kling 3.0-Omni: 1k, 2k, 4k. Default: 1k.</li><li>Kling O1: 1k, 2k, 4k. Default: 1k.</li><li>SI 4.0: 1K, 2K, 4K. Default: 1K.</li><li>SI 4.5: 2K, 4K. Default: 2K.</li><li>SI 5.0-lite: 2K, 3K. Default: 2K.</li><li>Vidu q2: 1080p, 2K, 4K. Default: 1080p.</li><li>Hunyuan 3.0: This field is not currently supported. You can set the resolution via the <code>ExtInfo</code> field.</li><li>Qwen 0925: This field is not currently supported. You can set the resolution via the <code>ExtInfo</code> field.</li></ul>
                      */
                     std::string m_resolution;
                     bool m_resolutionHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Specify the aspect ratio of the generated image.</p><ul><li>OG: 1:1, 3:2, 2:3, 3:4, 4:3, 16:9, 9:16, 21:9, 9:21;</li><li>GG 2.5: 1:1, 2:3, 3:2, 3:4, 4:3, 4:5, 5:4, 9:16, 16:9, 21:9;</li><li>GG 3.0: 1:1, 2:3, 3:2, 3:4, 4:3, 4:5, 5:4, 9:16, 16:9, 21:9;</li><li>GG 3.1: 1:1, 1:4, 1:8, 2:3, 3:2, 3:4, 4:1, 4:3, 4:5, 5:4, 8:1, 9:16, 16:9, 21:9;</li><li>Kling 2.1: 16:9, 9:16, 1:1, 4:3, 3:4, 3:2, 2:3, 21:9;</li><li>Kling 3.0: 16:9, 9:16, 1:1, 4:3, 3:4, 3:2, 2:3, 21:9;</li><li>Kling 3.0-Omni: 16:9, 9:16, 1:1, 4:3, 3:4, 3:2, 2:3, 21:9, auto;</li><li>Kling O1: 16:9, 9:16, 1:1, 4:3, 3:4, 3:2, 2:3, 21:9, auto;</li><li>Vidu q2: 16:9, 9:16, 1:1, 3:4, 4:3, 21:9, 2:3, 3:2;</li><li>SI 4.0: <strong>does not support</strong> this parameter. You can specify 16:9, 9:16, 1:1, 4:3, 3:4, 3:2, 2:3, 21:9 via prompt;</li><li>SI 4.5: <strong>does not support</strong> this parameter. You can specify 16:9, 9:16, 1:1, 4:3, 3:4, 3:2, 2:3, 21:9 via prompt;</li><li>SI 5.0-lite: <strong>does not support</strong> this parameter. You can specify 16:9, 9:16, 1:1, 4:3, 3:4, 3:2, 2:3, 21:9 via prompt;</li><li>Hunyuan 3.0: not supported;</li><li>Qwen 2.0: not supported;</li><li>Qwen 0925: not supported;</li></ul>
                      */
                     std::string m_aspectRatio;
                     bool m_aspectRatioHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Whether to allow generation of people or human faces. Valid values: <li>AllowAdult: allow generation of adults;</li> <li>Disallowed: forbid people or human faces in images;</li></p>
                      */
                     std::string m_personGeneration;
                     bool m_personGenerationHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Whether to enable compliance check on the input content. Valid values: <li>Enabled: enable;</li> <li>Disabled: disable;</li></p>
                      */
                     std::string m_inputComplianceCheck;
                     bool m_inputComplianceCheckHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Whether to enable compliance check on output content. Valid values: <li>Enabled: enable;</li> <li>Disabled: disable;</li></p>
                      */
                     std::string m_outputComplianceCheck;
                     bool m_outputComplianceCheckHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Number of images generated. Available values for each model:</p><ul><li>Kling: available value 1-9;</li><li>OG: available value 1-8;</li></ul><p><strong>Not effective for other models.</strong></p>
                      */
                     uint64_t m_outputImageCount;
                     bool m_outputImageCountHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Specify the image file format for model output. If not specified, the model default value is followed. Available values:</p><ul><li>jpeg</li><li>png</li></ul>
                      */
                     std::string m_outputFormat;
                     bool m_outputFormatHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Indicates whether to enable a logo watermark. Disabled by default. Valid values:</p><ul><li>Enabled: enable;</li><li>Disabled: disable;</li></ul>
                      */
                     std::string m_logoAdd;
                     bool m_logoAddHasBeenSet;

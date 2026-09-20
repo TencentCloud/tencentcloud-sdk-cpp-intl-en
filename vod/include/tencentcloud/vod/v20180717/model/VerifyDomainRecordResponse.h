@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Result 
+                     * 获取Whether the verification is successful.
+                     * @return Result Whether the verification is successful.
                      * 
                      */
                     bool GetResult() const;
@@ -60,7 +60,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Whether the verification is successful.
                      */
                     bool m_result;
                     bool m_resultHasBeenSet;

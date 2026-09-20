@@ -38,7 +38,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Input of the AIGC sound effect task.
                 */
                 class AigcAudioTaskInput : public AbstractModel
                 {
@@ -50,15 +50,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return ModelName 
+                     * 获取<p>Model name.</p>
+                     * @return ModelName <p>Model name.</p>
                      * 
                      */
                     std::string GetModelName() const;
 
                     /**
-                     * 设置
-                     * @param _modelName 
+                     * 设置<p>Model name.</p>
+                     * @param _modelName <p>Model name.</p>
                      * 
                      */
                     void SetModelName(const std::string& _modelName);
@@ -71,15 +71,15 @@ namespace TencentCloud
                     bool ModelNameHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ModelVersion 
+                     * 获取<p>Model version.</p>
+                     * @return ModelVersion <p>Model version.</p>
                      * 
                      */
                     std::string GetModelVersion() const;
 
                     /**
-                     * 设置
-                     * @param _modelVersion 
+                     * 设置<p>Model version.</p>
+                     * @param _modelVersion <p>Model version.</p>
                      * 
                      */
                     void SetModelVersion(const std::string& _modelVersion);
@@ -92,15 +92,15 @@ namespace TencentCloud
                     bool ModelVersionHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SceneType 
+                     * 获取<p>Scenario type. Values are as follows: <li>When ModelName is Kling, the value motion_control means action control;</li><li>Other ModelName values are not currently supported.</li></p>
+                     * @return SceneType <p>Scenario type. Values are as follows: <li>When ModelName is Kling, the value motion_control means action control;</li><li>Other ModelName values are not currently supported.</li></p>
                      * 
                      */
                     std::string GetSceneType() const;
 
                     /**
-                     * 设置
-                     * @param _sceneType 
+                     * 设置<p>Scenario type. Values are as follows: <li>When ModelName is Kling, the value motion_control means action control;</li><li>Other ModelName values are not currently supported.</li></p>
+                     * @param _sceneType <p>Scenario type. Values are as follows: <li>When ModelName is Kling, the value motion_control means action control;</li><li>Other ModelName values are not currently supported.</li></p>
                      * 
                      */
                     void SetSceneType(const std::string& _sceneType);
@@ -113,15 +113,15 @@ namespace TencentCloud
                     bool SceneTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Prompt 
+                     * 获取<p>Prompt content for video generation. Supports up to 1000 characters. This parameter is required when FileInfos is empty.</p>
+                     * @return Prompt <p>Prompt content for video generation. Supports up to 1000 characters. This parameter is required when FileInfos is empty.</p>
                      * 
                      */
                     std::string GetPrompt() const;
 
                     /**
-                     * 设置
-                     * @param _prompt 
+                     * 设置<p>Prompt content for video generation. Supports up to 1000 characters. This parameter is required when FileInfos is empty.</p>
+                     * @param _prompt <p>Prompt content for video generation. Supports up to 1000 characters. This parameter is required when FileInfos is empty.</p>
                      * 
                      */
                     void SetPrompt(const std::string& _prompt);
@@ -134,15 +134,15 @@ namespace TencentCloud
                     bool PromptHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return NegativePrompt 
+                     * 获取<p>Prompt to prevent the model from generating video. Supports up to 1000 characters.</p>
+                     * @return NegativePrompt <p>Prompt to prevent the model from generating video. Supports up to 1000 characters.</p>
                      * 
                      */
                     std::string GetNegativePrompt() const;
 
                     /**
-                     * 设置
-                     * @param _negativePrompt 
+                     * 设置<p>Prompt to prevent the model from generating video. Supports up to 1000 characters.</p>
+                     * @param _negativePrompt <p>Prompt to prevent the model from generating video. Supports up to 1000 characters.</p>
                      * 
                      */
                     void SetNegativePrompt(const std::string& _negativePrompt);
@@ -155,15 +155,15 @@ namespace TencentCloud
                     bool NegativePromptHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AudioInfos 
+                     * 获取<p>Audio content for reference.</p>
+                     * @return AudioInfos <p>Audio content for reference.</p>
                      * 
                      */
                     std::vector<AigcAudioReferenceAudioInfo> GetAudioInfos() const;
 
                     /**
-                     * 设置
-                     * @param _audioInfos 
+                     * 设置<p>Audio content for reference.</p>
+                     * @param _audioInfos <p>Audio content for reference.</p>
                      * 
                      */
                     void SetAudioInfos(const std::vector<AigcAudioReferenceAudioInfo>& _audioInfos);
@@ -176,15 +176,15 @@ namespace TencentCloud
                     bool AudioInfosHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return VideoInfos 
+                     * 获取<p>Reference video info.</p>
+                     * @return VideoInfos <p>Reference video info.</p>
                      * 
                      */
                     std::vector<AigcAudioReferenceVideoInfo> GetVideoInfos() const;
 
                     /**
-                     * 设置
-                     * @param _videoInfos 
+                     * 设置<p>Reference video info.</p>
+                     * @param _videoInfos <p>Reference video info.</p>
                      * 
                      */
                     void SetVideoInfos(const std::vector<AigcAudioReferenceVideoInfo>& _videoInfos);
@@ -197,15 +197,15 @@ namespace TencentCloud
                     bool VideoInfosHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return EnhancePrompt 
+                     * 获取<p>Whether to optimize Prompt content automatically. When Enabled, the passed-in Prompt will be optimized automatically to enhance generation quality. Valid values: <li>Enabled: enable;</li> <li>Disabled: disable;</li></p>
+                     * @return EnhancePrompt <p>Whether to optimize Prompt content automatically. When Enabled, the passed-in Prompt will be optimized automatically to enhance generation quality. Valid values: <li>Enabled: enable;</li> <li>Disabled: disable;</li></p>
                      * 
                      */
                     bool GetEnhancePrompt() const;
 
                     /**
-                     * 设置
-                     * @param _enhancePrompt 
+                     * 设置<p>Whether to optimize Prompt content automatically. When Enabled, the passed-in Prompt will be optimized automatically to enhance generation quality. Valid values: <li>Enabled: enable;</li> <li>Disabled: disable;</li></p>
+                     * @param _enhancePrompt <p>Whether to optimize Prompt content automatically. When Enabled, the passed-in Prompt will be optimized automatically to enhance generation quality. Valid values: <li>Enabled: enable;</li> <li>Disabled: disable;</li></p>
                      * 
                      */
                     void SetEnhancePrompt(const bool& _enhancePrompt);
@@ -218,15 +218,15 @@ namespace TencentCloud
                     bool EnhancePromptHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return OutputConfig 
+                     * 获取<p>Output result file output of AIGC image generation.</p>
+                     * @return OutputConfig <p>Output result file output of AIGC image generation.</p>
                      * 
                      */
                     AigcAudioOutputConfig GetOutputConfig() const;
 
                     /**
-                     * 设置
-                     * @param _outputConfig 
+                     * 设置<p>Output result file output of AIGC image generation.</p>
+                     * @param _outputConfig <p>Output result file output of AIGC image generation.</p>
                      * 
                      */
                     void SetOutputConfig(const AigcAudioOutputConfig& _outputConfig);
@@ -239,15 +239,15 @@ namespace TencentCloud
                     bool OutputConfigHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AdditionalParameters 
+                     * 获取<p>Additional parameter.</p>
+                     * @return AdditionalParameters <p>Additional parameter.</p>
                      * 
                      */
                     std::string GetAdditionalParameters() const;
 
                     /**
-                     * 设置
-                     * @param _additionalParameters 
+                     * 设置<p>Additional parameter.</p>
+                     * @param _additionalParameters <p>Additional parameter.</p>
                      * 
                      */
                     void SetAdditionalParameters(const std::string& _additionalParameters);
@@ -262,61 +262,61 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p>Model name.</p>
                      */
                     std::string m_modelName;
                     bool m_modelNameHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Model version.</p>
                      */
                     std::string m_modelVersion;
                     bool m_modelVersionHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Scenario type. Values are as follows: <li>When ModelName is Kling, the value motion_control means action control;</li><li>Other ModelName values are not currently supported.</li></p>
                      */
                     std::string m_sceneType;
                     bool m_sceneTypeHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Prompt content for video generation. Supports up to 1000 characters. This parameter is required when FileInfos is empty.</p>
                      */
                     std::string m_prompt;
                     bool m_promptHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Prompt to prevent the model from generating video. Supports up to 1000 characters.</p>
                      */
                     std::string m_negativePrompt;
                     bool m_negativePromptHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Audio content for reference.</p>
                      */
                     std::vector<AigcAudioReferenceAudioInfo> m_audioInfos;
                     bool m_audioInfosHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Reference video info.</p>
                      */
                     std::vector<AigcAudioReferenceVideoInfo> m_videoInfos;
                     bool m_videoInfosHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Whether to optimize Prompt content automatically. When Enabled, the passed-in Prompt will be optimized automatically to enhance generation quality. Valid values: <li>Enabled: enable;</li> <li>Disabled: disable;</li></p>
                      */
                     bool m_enhancePrompt;
                     bool m_enhancePromptHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Output result file output of AIGC image generation.</p>
                      */
                     AigcAudioOutputConfig m_outputConfig;
                     bool m_outputConfigHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Additional parameter.</p>
                      */
                     std::string m_additionalParameters;
                     bool m_additionalParametersHasBeenSet;

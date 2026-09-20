@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Image encoding format parameters.
                 */
                 class ImageSceneAigcEncodeConfig : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Format 
+                     * 获取Image format. Valid values: JPEG and PNG. If it is not specified, the original image format is used. Animations are not supported.
+                     * @return Format Image format. Valid values: JPEG and PNG. If it is not specified, the original image format is used. Animations are not supported.
                      * 
                      */
                     std::string GetFormat() const;
 
                     /**
-                     * 设置
-                     * @param _format 
+                     * 设置Image format. Valid values: JPEG and PNG. If it is not specified, the original image format is used. Animations are not supported.
+                     * @param _format Image format. Valid values: JPEG and PNG. If it is not specified, the original image format is used. Animations are not supported.
                      * 
                      */
                     void SetFormat(const std::string& _format);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool FormatHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Quality 
+                     * 获取Relative image quality. Valid range: 1 - 100. The value is based on the original image quality, and the default is the original image quality.
+                     * @return Quality Relative image quality. Valid range: 1 - 100. The value is based on the original image quality, and the default is the original image quality.
                      * 
                      */
                     int64_t GetQuality() const;
 
                     /**
-                     * 设置
-                     * @param _quality 
+                     * 设置Relative image quality. Valid range: 1 - 100. The value is based on the original image quality, and the default is the original image quality.
+                     * @param _quality Relative image quality. Valid range: 1 - 100. The value is based on the original image quality, and the default is the original image quality.
                      * 
                      */
                     void SetQuality(const int64_t& _quality);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Image format. Valid values: JPEG and PNG. If it is not specified, the original image format is used. Animations are not supported.
                      */
                     std::string m_format;
                     bool m_formatHasBeenSet;
 
                     /**
-                     * 
+                     * Relative image quality. Valid range: 1 - 100. The value is based on the original image quality, and the default is the original image quality.
                      */
                     int64_t m_quality;
                     bool m_qualityHasBeenSet;

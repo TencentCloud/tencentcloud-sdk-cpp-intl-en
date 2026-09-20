@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Extraction task info of digital watermarking on videos
                 */
                 class ExtractBlindWatermarkTask : public AbstractModel
                 {
@@ -49,15 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return TaskId 
+                     * 获取Media processing task ID.
+                     * @return TaskId Media processing task ID.
                      * 
                      */
                     std::string GetTaskId() const;
 
                     /**
-                     * 设置
-                     * @param _taskId 
+                     * 设置Media processing task ID.
+                     * @param _taskId Media processing task ID.
                      * 
                      */
                     void SetTaskId(const std::string& _taskId);
@@ -70,15 +70,27 @@ namespace TencentCloud
                     bool TaskIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Status 
+                     * 获取Task stream status. Valid values:
+<li>WAITING: waiting.</li>
+<li>PROCESSING: Processing;</li>
+<li>FINISH: completed</li>
+                     * @return Status Task stream status. Valid values:
+<li>WAITING: waiting.</li>
+<li>PROCESSING: Processing;</li>
+<li>FINISH: completed</li>
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置
-                     * @param _status 
+                     * 设置Task stream status. Valid values:
+<li>WAITING: waiting.</li>
+<li>PROCESSING: Processing;</li>
+<li>FINISH: completed</li>
+                     * @param _status Task stream status. Valid values:
+<li>WAITING: waiting.</li>
+<li>PROCESSING: Processing;</li>
+<li>FINISH: completed</li>
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -91,15 +103,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ErrCode 
+                     * 获取Error code. `0` indicates success. Other values indicate failure.
+                     * @return ErrCode Error code. `0` indicates success. Other values indicate failure.
                      * 
                      */
                     int64_t GetErrCode() const;
 
                     /**
-                     * 设置
-                     * @param _errCode 
+                     * 设置Error code. `0` indicates success. Other values indicate failure.
+                     * @param _errCode Error code. `0` indicates success. Other values indicate failure.
                      * 
                      */
                     void SetErrCode(const int64_t& _errCode);
@@ -112,15 +124,15 @@ namespace TencentCloud
                     bool ErrCodeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Message 
+                     * 获取Error message.
+                     * @return Message Error message.
                      * 
                      */
                     std::string GetMessage() const;
 
                     /**
-                     * 设置
-                     * @param _message 
+                     * 设置Error message.
+                     * @param _message Error message.
                      * 
                      */
                     void SetMessage(const std::string& _message);
@@ -133,15 +145,15 @@ namespace TencentCloud
                     bool MessageHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return InputInfo 
+                     * 获取Input information of the file for digital watermark extraction.
+                     * @return InputInfo Input information of the file for digital watermark extraction.
                      * 
                      */
                     ExtractBlindWatermarkInputInfo GetInputInfo() const;
 
                     /**
-                     * 设置
-                     * @param _inputInfo 
+                     * 设置Input information of the file for digital watermark extraction.
+                     * @param _inputInfo Input information of the file for digital watermark extraction.
                      * 
                      */
                     void SetInputInfo(const ExtractBlindWatermarkInputInfo& _inputInfo);
@@ -154,15 +166,15 @@ namespace TencentCloud
                     bool InputInfoHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Type 
+                     * 获取Digital watermark type. Valid values: <li>blind-basic: basic copyright digital watermark;</li> <li>blind-ab: ab copyright digital watermark.</li>
+                     * @return Type Digital watermark type. Valid values: <li>blind-basic: basic copyright digital watermark;</li> <li>blind-ab: ab copyright digital watermark.</li>
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置
-                     * @param _type 
+                     * 设置Digital watermark type. Valid values: <li>blind-basic: basic copyright digital watermark;</li> <li>blind-ab: ab copyright digital watermark.</li>
+                     * @param _type Digital watermark type. Valid values: <li>blind-basic: basic copyright digital watermark;</li> <li>blind-ab: ab copyright digital watermark.</li>
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -175,15 +187,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return IsDetected 
+                     * 获取Tags whether a watermark is detected. If this parameter is true, the Result field will return the watermark extraction Result. If this parameter is false, the Result field will not return.
+                     * @return IsDetected Tags whether a watermark is detected. If this parameter is true, the Result field will return the watermark extraction Result. If this parameter is false, the Result field will not return.
                      * 
                      */
                     bool GetIsDetected() const;
 
                     /**
-                     * 设置
-                     * @param _isDetected 
+                     * 设置Tags whether a watermark is detected. If this parameter is true, the Result field will return the watermark extraction Result. If this parameter is false, the Result field will not return.
+                     * @param _isDetected Tags whether a watermark is detected. If this parameter is true, the Result field will return the watermark extraction Result. If this parameter is false, the Result field will not return.
                      * 
                      */
                     void SetIsDetected(const bool& _isDetected);
@@ -196,15 +208,15 @@ namespace TencentCloud
                     bool IsDetectedHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Result 
+                     * 获取Extracted digital watermark content. This field will not be returned if no watermark is detected.
+                     * @return Result Extracted digital watermark content. This field will not be returned if no watermark is detected.
                      * 
                      */
                     std::string GetResult() const;
 
                     /**
-                     * 设置
-                     * @param _result 
+                     * 设置Extracted digital watermark content. This field will not be returned if no watermark is detected.
+                     * @param _result Extracted digital watermark content. This field will not be returned if no watermark is detected.
                      * 
                      */
                     void SetResult(const std::string& _result);
@@ -217,15 +229,15 @@ namespace TencentCloud
                     bool ResultHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ResultUV 
+                     * 获取Player's ID extracted from the traceability watermark, in hexadecimal, 6 digits in total.
+                     * @return ResultUV Player's ID extracted from the traceability watermark, in hexadecimal, 6 digits in total.
                      * 
                      */
                     std::string GetResultUV() const;
 
                     /**
-                     * 设置
-                     * @param _resultUV 
+                     * 设置Player's ID extracted from the traceability watermark, in hexadecimal, 6 digits in total.
+                     * @param _resultUV Player's ID extracted from the traceability watermark, in hexadecimal, 6 digits in total.
                      * 
                      */
                     void SetResultUV(const std::string& _resultUV);
@@ -238,15 +250,15 @@ namespace TencentCloud
                     bool ResultUVHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ExtractBlindWatermarkConfig 
+                     * 获取Configuration for digital watermark extraction.
+                     * @return ExtractBlindWatermarkConfig Configuration for digital watermark extraction.
                      * 
                      */
                     ExtractBlindWatermarkTaskConfig GetExtractBlindWatermarkConfig() const;
 
                     /**
-                     * 设置
-                     * @param _extractBlindWatermarkConfig 
+                     * 设置Configuration for digital watermark extraction.
+                     * @param _extractBlindWatermarkConfig Configuration for digital watermark extraction.
                      * 
                      */
                     void SetExtractBlindWatermarkConfig(const ExtractBlindWatermarkTaskConfig& _extractBlindWatermarkConfig);
@@ -259,15 +271,15 @@ namespace TencentCloud
                     bool ExtractBlindWatermarkConfigHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SessionContext 
+                     * 获取Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
+                     * @return SessionContext Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
                      * 
                      */
                     std::string GetSessionContext() const;
 
                     /**
-                     * 设置
-                     * @param _sessionContext 
+                     * 设置Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
+                     * @param _sessionContext Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
                      * 
                      */
                     void SetSessionContext(const std::string& _sessionContext);
@@ -280,15 +292,15 @@ namespace TencentCloud
                     bool SessionContextHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SessionId 
+                     * 获取Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
+                     * @return SessionId Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
                      * 
                      */
                     std::string GetSessionId() const;
 
                     /**
-                     * 设置
-                     * @param _sessionId 
+                     * 设置Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
+                     * @param _sessionId Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
                      * 
                      */
                     void SetSessionId(const std::string& _sessionId);
@@ -303,73 +315,76 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Media processing task ID.
                      */
                     std::string m_taskId;
                     bool m_taskIdHasBeenSet;
 
                     /**
-                     * 
+                     * Task stream status. Valid values:
+<li>WAITING: waiting.</li>
+<li>PROCESSING: Processing;</li>
+<li>FINISH: completed</li>
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * 
+                     * Error code. `0` indicates success. Other values indicate failure.
                      */
                     int64_t m_errCode;
                     bool m_errCodeHasBeenSet;
 
                     /**
-                     * 
+                     * Error message.
                      */
                     std::string m_message;
                     bool m_messageHasBeenSet;
 
                     /**
-                     * 
+                     * Input information of the file for digital watermark extraction.
                      */
                     ExtractBlindWatermarkInputInfo m_inputInfo;
                     bool m_inputInfoHasBeenSet;
 
                     /**
-                     * 
+                     * Digital watermark type. Valid values: <li>blind-basic: basic copyright digital watermark;</li> <li>blind-ab: ab copyright digital watermark.</li>
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * 
+                     * Tags whether a watermark is detected. If this parameter is true, the Result field will return the watermark extraction Result. If this parameter is false, the Result field will not return.
                      */
                     bool m_isDetected;
                     bool m_isDetectedHasBeenSet;
 
                     /**
-                     * 
+                     * Extracted digital watermark content. This field will not be returned if no watermark is detected.
                      */
                     std::string m_result;
                     bool m_resultHasBeenSet;
 
                     /**
-                     * 
+                     * Player's ID extracted from the traceability watermark, in hexadecimal, 6 digits in total.
                      */
                     std::string m_resultUV;
                     bool m_resultUVHasBeenSet;
 
                     /**
-                     * 
+                     * Configuration for digital watermark extraction.
                      */
                     ExtractBlindWatermarkTaskConfig m_extractBlindWatermarkConfig;
                     bool m_extractBlindWatermarkConfigHasBeenSet;
 
                     /**
-                     * 
+                     * Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
                      */
                     std::string m_sessionContext;
                     bool m_sessionContextHasBeenSet;
 
                     /**
-                     * 
+                     * Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
                      */
                     std::string m_sessionId;
                     bool m_sessionIdHasBeenSet;

@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Fill with fixed value: 9.
-                     * @return CaptchaType Fill with fixed value: 9.
+                     * 获取<p>Fixed value: 9.</p>
+                     * @return CaptchaType <p>Fixed value: 9.</p>
                      * 
                      */
                     uint64_t GetCaptchaType() const;
 
                     /**
-                     * 设置Fill with fixed value: 9.
-                     * @param _captchaType Fill with fixed value: 9.
+                     * 设置<p>Fixed value: 9.</p>
+                     * @param _captchaType <p>Fixed value: 9.</p>
                      * 
                      */
                     void SetCaptchaType(const uint64_t& _captchaType);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool CaptchaTypeHasBeenSet() const;
 
                     /**
-                     * 获取The user verification ticket returned by the frontend callback function.
-                     * @return Ticket The user verification ticket returned by the frontend callback function.
+                     * 获取<p>User verification ticket returned by the frontend callback function</p>
+                     * @return Ticket <p>User verification ticket returned by the frontend callback function</p>
                      * 
                      */
                     std::string GetTicket() const;
 
                     /**
-                     * 设置The user verification ticket returned by the frontend callback function.
-                     * @param _ticket The user verification ticket returned by the frontend callback function.
+                     * 设置<p>User verification ticket returned by the frontend callback function</p>
+                     * @param _ticket <p>User verification ticket returned by the frontend callback function</p>
                      * 
                      */
                     void SetTicket(const std::string& _ticket);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool TicketHasBeenSet() const;
 
                     /**
-                     * 获取The user public IP obtained from the customer backend server.
-                     * @return UserIp The user public IP obtained from the customer backend server.
+                     * 获取<p>Public network IP of the verification</p>
+                     * @return UserIp <p>Public network IP of the verification</p>
                      * 
                      */
                     std::string GetUserIp() const;
 
                     /**
-                     * 设置The user public IP obtained from the customer backend server.
-                     * @param _userIp The user public IP obtained from the customer backend server.
+                     * 设置<p>Public network IP of the verification</p>
+                     * @param _userIp <p>Public network IP of the verification</p>
                      * 
                      */
                     void SetUserIp(const std::string& _userIp);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool UserIpHasBeenSet() const;
 
                     /**
-                     * 获取A random string returned by the frontend callback function
-                     * @return Randstr A random string returned by the frontend callback function
+                     * 获取<p>Random string returned by the frontend callback function</p>
+                     * @return Randstr <p>Random string returned by the frontend callback function</p>
                      * 
                      */
                     std::string GetRandstr() const;
 
                     /**
-                     * 设置A random string returned by the frontend callback function
-                     * @param _randstr A random string returned by the frontend callback function
+                     * 设置<p>Random string returned by the frontend callback function</p>
+                     * @param _randstr <p>Random string returned by the frontend callback function</p>
                      * 
                      */
                     void SetRandstr(const std::string& _randstr);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool RandstrHasBeenSet() const;
 
                     /**
-                     * 获取CAPTCHA's app ID. Log in to the [Captcha console](https://console.cloud.tencent.com/captcha/graphical) and you can view the CaptchaAppId in the "Key" column of the CAPTCHA list.
-                     * @return CaptchaAppId CAPTCHA's app ID. Log in to the [Captcha console](https://console.cloud.tencent.com/captcha/graphical) and you can view the CaptchaAppId in the "Key" column of the CAPTCHA list.
+                     * 获取<p>Captcha appId. Log in to the <a href="https://console.cloud.tencent.com/captcha/graphical">verification code console</a>. In the [Key] column of the verification list, you can see CaptchaAppId.</p>
+                     * @return CaptchaAppId <p>Captcha appId. Log in to the <a href="https://console.cloud.tencent.com/captcha/graphical">verification code console</a>. In the [Key] column of the verification list, you can see CaptchaAppId.</p>
                      * 
                      */
                     uint64_t GetCaptchaAppId() const;
 
                     /**
-                     * 设置CAPTCHA's app ID. Log in to the [Captcha console](https://console.cloud.tencent.com/captcha/graphical) and you can view the CaptchaAppId in the "Key" column of the CAPTCHA list.
-                     * @param _captchaAppId CAPTCHA's app ID. Log in to the [Captcha console](https://console.cloud.tencent.com/captcha/graphical) and you can view the CaptchaAppId in the "Key" column of the CAPTCHA list.
+                     * 设置<p>Captcha appId. Log in to the <a href="https://console.cloud.tencent.com/captcha/graphical">verification code console</a>. In the [Key] column of the verification list, you can see CaptchaAppId.</p>
+                     * @param _captchaAppId <p>Captcha appId. Log in to the <a href="https://console.cloud.tencent.com/captcha/graphical">verification code console</a>. In the [Key] column of the verification list, you can see CaptchaAppId.</p>
                      * 
                      */
                     void SetCaptchaAppId(const uint64_t& _captchaAppId);
@@ -148,15 +148,15 @@ namespace TencentCloud
                     bool CaptchaAppIdHasBeenSet() const;
 
                     /**
-                     * 获取CAPTCHA's app key. Log in to the [Captcha console](https://console.cloud.tencent.com/captcha/graphical) and you can view the AppSecretKey in the "Key" column of the CAPTCHA list. AppSecretKey is the key for CAPTCHA ticket verification performed by the server. Please keep it confidential and do not disclose it to any third parties.
-                     * @return AppSecretKey CAPTCHA's app key. Log in to the [Captcha console](https://console.cloud.tencent.com/captcha/graphical) and you can view the AppSecretKey in the "Key" column of the CAPTCHA list. AppSecretKey is the key for CAPTCHA ticket verification performed by the server. Please keep it confidential and do not disclose it to any third parties.
+                     * 获取<p>Captcha application key. Log in to the <a href="https://console.cloud.tencent.com/captcha/graphical">verification code console</a>, and view AppSecretKey in the [Key] column of the verification list. AppSecretKey is a key for server-side verification of verification code tickets. Keep it confidential and do not leak it to third parties.</p>
+                     * @return AppSecretKey <p>Captcha application key. Log in to the <a href="https://console.cloud.tencent.com/captcha/graphical">verification code console</a>, and view AppSecretKey in the [Key] column of the verification list. AppSecretKey is a key for server-side verification of verification code tickets. Keep it confidential and do not leak it to third parties.</p>
                      * 
                      */
                     std::string GetAppSecretKey() const;
 
                     /**
-                     * 设置CAPTCHA's app key. Log in to the [Captcha console](https://console.cloud.tencent.com/captcha/graphical) and you can view the AppSecretKey in the "Key" column of the CAPTCHA list. AppSecretKey is the key for CAPTCHA ticket verification performed by the server. Please keep it confidential and do not disclose it to any third parties.
-                     * @param _appSecretKey CAPTCHA's app key. Log in to the [Captcha console](https://console.cloud.tencent.com/captcha/graphical) and you can view the AppSecretKey in the "Key" column of the CAPTCHA list. AppSecretKey is the key for CAPTCHA ticket verification performed by the server. Please keep it confidential and do not disclose it to any third parties.
+                     * 设置<p>Captcha application key. Log in to the <a href="https://console.cloud.tencent.com/captcha/graphical">verification code console</a>, and view AppSecretKey in the [Key] column of the verification list. AppSecretKey is a key for server-side verification of verification code tickets. Keep it confidential and do not leak it to third parties.</p>
+                     * @param _appSecretKey <p>Captcha application key. Log in to the <a href="https://console.cloud.tencent.com/captcha/graphical">verification code console</a>, and view AppSecretKey in the [Key] column of the verification list. AppSecretKey is a key for server-side verification of verification code tickets. Keep it confidential and do not leak it to third parties.</p>
                      * 
                      */
                     void SetAppSecretKey(const std::string& _appSecretKey);
@@ -169,15 +169,15 @@ namespace TencentCloud
                     bool AppSecretKeyHasBeenSet() const;
 
                     /**
-                     * 获取Reserved field.
-                     * @return BusinessId Reserved field.
+                     * 获取<p>Reserved field</p>
+                     * @return BusinessId <p>Reserved field</p>
                      * 
                      */
                     uint64_t GetBusinessId() const;
 
                     /**
-                     * 设置Reserved field.
-                     * @param _businessId Reserved field.
+                     * 设置<p>Reserved field</p>
+                     * @param _businessId <p>Reserved field</p>
                      * 
                      */
                     void SetBusinessId(const uint64_t& _businessId);
@@ -190,15 +190,15 @@ namespace TencentCloud
                     bool BusinessIdHasBeenSet() const;
 
                     /**
-                     * 获取Reserved field.
-                     * @return SceneId Reserved field.
+                     * 获取<p>Reserved field</p>
+                     * @return SceneId <p>Reserved field</p>
                      * 
                      */
                     uint64_t GetSceneId() const;
 
                     /**
-                     * 设置Reserved field.
-                     * @param _sceneId Reserved field.
+                     * 设置<p>Reserved field</p>
+                     * @param _sceneId <p>Reserved field</p>
                      * 
                      */
                     void SetSceneId(const uint64_t& _sceneId);
@@ -211,15 +211,15 @@ namespace TencentCloud
                     bool SceneIdHasBeenSet() const;
 
                     /**
-                     * 获取MAC address or unique identifier of a device
-                     * @return MacAddress MAC address or unique identifier of a device
+                     * 获取<p>mac address or unique device identifier</p>
+                     * @return MacAddress <p>mac address or unique device identifier</p>
                      * 
                      */
                     std::string GetMacAddress() const;
 
                     /**
-                     * 设置MAC address or unique identifier of a device
-                     * @param _macAddress MAC address or unique identifier of a device
+                     * 设置<p>mac address or unique device identifier</p>
+                     * @param _macAddress <p>mac address or unique device identifier</p>
                      * 
                      */
                     void SetMacAddress(const std::string& _macAddress);
@@ -232,15 +232,15 @@ namespace TencentCloud
                     bool MacAddressHasBeenSet() const;
 
                     /**
-                     * 获取Mobile equipment identity number
-                     * @return Imei Mobile equipment identity number
+                     * 获取<p>Mobile device number</p>
+                     * @return Imei <p>Mobile device number</p>
                      * 
                      */
                     std::string GetImei() const;
 
                     /**
-                     * 设置Mobile equipment identity number
-                     * @param _imei Mobile equipment identity number
+                     * 设置<p>Mobile device number</p>
+                     * @param _imei <p>Mobile device number</p>
                      * 
                      */
                     void SetImei(const std::string& _imei);
@@ -253,15 +253,15 @@ namespace TencentCloud
                     bool ImeiHasBeenSet() const;
 
                     /**
-                     * 获取Indicates whether to return the time when the frontend obtains the CAPTCHA. Valid values: 1 (return the time) and others.
-                     * @return NeedGetCaptchaTime Indicates whether to return the time when the frontend obtains the CAPTCHA. Valid values: 1 (return the time) and others.
+                     * 获取<p>Whether to return the time when the frontend obtains the verification code. Value: 1: need to return</p>
+                     * @return NeedGetCaptchaTime <p>Whether to return the time when the frontend obtains the verification code. Value: 1: need to return</p>
                      * 
                      */
                     int64_t GetNeedGetCaptchaTime() const;
 
                     /**
-                     * 设置Indicates whether to return the time when the frontend obtains the CAPTCHA. Valid values: 1 (return the time) and others.
-                     * @param _needGetCaptchaTime Indicates whether to return the time when the frontend obtains the CAPTCHA. Valid values: 1 (return the time) and others.
+                     * 设置<p>Whether to return the time when the frontend obtains the verification code. Value: 1: need to return</p>
+                     * @param _needGetCaptchaTime <p>Whether to return the time when the frontend obtains the verification code. Value: 1: need to return</p>
                      * 
                      */
                     void SetNeedGetCaptchaTime(const int64_t& _needGetCaptchaTime);
@@ -276,67 +276,67 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Fill with fixed value: 9.
+                     * <p>Fixed value: 9.</p>
                      */
                     uint64_t m_captchaType;
                     bool m_captchaTypeHasBeenSet;
 
                     /**
-                     * The user verification ticket returned by the frontend callback function.
+                     * <p>User verification ticket returned by the frontend callback function</p>
                      */
                     std::string m_ticket;
                     bool m_ticketHasBeenSet;
 
                     /**
-                     * The user public IP obtained from the customer backend server.
+                     * <p>Public network IP of the verification</p>
                      */
                     std::string m_userIp;
                     bool m_userIpHasBeenSet;
 
                     /**
-                     * A random string returned by the frontend callback function
+                     * <p>Random string returned by the frontend callback function</p>
                      */
                     std::string m_randstr;
                     bool m_randstrHasBeenSet;
 
                     /**
-                     * CAPTCHA's app ID. Log in to the [Captcha console](https://console.cloud.tencent.com/captcha/graphical) and you can view the CaptchaAppId in the "Key" column of the CAPTCHA list.
+                     * <p>Captcha appId. Log in to the <a href="https://console.cloud.tencent.com/captcha/graphical">verification code console</a>. In the [Key] column of the verification list, you can see CaptchaAppId.</p>
                      */
                     uint64_t m_captchaAppId;
                     bool m_captchaAppIdHasBeenSet;
 
                     /**
-                     * CAPTCHA's app key. Log in to the [Captcha console](https://console.cloud.tencent.com/captcha/graphical) and you can view the AppSecretKey in the "Key" column of the CAPTCHA list. AppSecretKey is the key for CAPTCHA ticket verification performed by the server. Please keep it confidential and do not disclose it to any third parties.
+                     * <p>Captcha application key. Log in to the <a href="https://console.cloud.tencent.com/captcha/graphical">verification code console</a>, and view AppSecretKey in the [Key] column of the verification list. AppSecretKey is a key for server-side verification of verification code tickets. Keep it confidential and do not leak it to third parties.</p>
                      */
                     std::string m_appSecretKey;
                     bool m_appSecretKeyHasBeenSet;
 
                     /**
-                     * Reserved field.
+                     * <p>Reserved field</p>
                      */
                     uint64_t m_businessId;
                     bool m_businessIdHasBeenSet;
 
                     /**
-                     * Reserved field.
+                     * <p>Reserved field</p>
                      */
                     uint64_t m_sceneId;
                     bool m_sceneIdHasBeenSet;
 
                     /**
-                     * MAC address or unique identifier of a device
+                     * <p>mac address or unique device identifier</p>
                      */
                     std::string m_macAddress;
                     bool m_macAddressHasBeenSet;
 
                     /**
-                     * Mobile equipment identity number
+                     * <p>Mobile device number</p>
                      */
                     std::string m_imei;
                     bool m_imeiHasBeenSet;
 
                     /**
-                     * Indicates whether to return the time when the frontend obtains the CAPTCHA. Valid values: 1 (return the time) and others.
+                     * <p>Whether to return the time when the frontend obtains the verification code. Value: 1: need to return</p>
                      */
                     int64_t m_needGetCaptchaTime;
                     bool m_needGetCaptchaTimeHasBeenSet;

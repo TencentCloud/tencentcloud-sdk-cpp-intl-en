@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return TotalCount 
+                     * 获取<p>Total records that meet the search criteria.</p><li>Maximum value: 5000. When the number of hits exceeds 5000, this field will return 5000 instead of the actual total hits.</li>
+                     * @return TotalCount <p>Total records that meet the search criteria.</p><li>Maximum value: 5000. When the number of hits exceeds 5000, this field will return 5000 instead of the actual total hits.</li>
                      * 
                      */
                     uint64_t GetTotalCount() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return MediaInfoSet 
+                     * 获取<p>Media file information list.</p>
+                     * @return MediaInfoSet <p>Media file information list.</p>
                      * 
                      */
                     std::vector<MediaInfo> GetMediaInfoSet() const;
@@ -75,13 +75,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p>Total records that meet the search criteria.</p><li>Maximum value: 5000. When the number of hits exceeds 5000, this field will return 5000 instead of the actual total hits.</li>
                      */
                     uint64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Media file information list.</p>
                      */
                     std::vector<MediaInfo> m_mediaInfoSet;
                     bool m_mediaInfoSetHasBeenSet;

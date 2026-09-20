@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Push a domain name to a CLS destination.
                 */
                 class DomainCLSTargetInfo : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Domain 
+                     * 获取Domain name.
+                     * @return Domain Domain name.
                      * 
                      */
                     std::string GetDomain() const;
 
                     /**
-                     * 设置
-                     * @param _domain 
+                     * 设置Domain name.
+                     * @param _domain Domain name.
                      * 
                      */
                     void SetDomain(const std::string& _domain);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool DomainHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ChineseMainlandCLSTargetInfo 
+                     * 获取Log push target in the Chinese mainland.
+                     * @return ChineseMainlandCLSTargetInfo Log push target in the Chinese mainland.
                      * 
                      */
                     AreaCLSTargetInfo GetChineseMainlandCLSTargetInfo() const;
 
                     /**
-                     * 设置
-                     * @param _chineseMainlandCLSTargetInfo 
+                     * 设置Log push target in the Chinese mainland.
+                     * @param _chineseMainlandCLSTargetInfo Log push target in the Chinese mainland.
                      * 
                      */
                     void SetChineseMainlandCLSTargetInfo(const AreaCLSTargetInfo& _chineseMainlandCLSTargetInfo);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool ChineseMainlandCLSTargetInfoHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return OutsideChineseMainlandCLSTargetInfo 
+                     * 获取Log push targets outside the Chinese mainland.
+                     * @return OutsideChineseMainlandCLSTargetInfo Log push targets outside the Chinese mainland.
                      * 
                      */
                     AreaCLSTargetInfo GetOutsideChineseMainlandCLSTargetInfo() const;
 
                     /**
-                     * 设置
-                     * @param _outsideChineseMainlandCLSTargetInfo 
+                     * 设置Log push targets outside the Chinese mainland.
+                     * @param _outsideChineseMainlandCLSTargetInfo Log push targets outside the Chinese mainland.
                      * 
                      */
                     void SetOutsideChineseMainlandCLSTargetInfo(const AreaCLSTargetInfo& _outsideChineseMainlandCLSTargetInfo);
@@ -113,19 +113,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Domain name.
                      */
                     std::string m_domain;
                     bool m_domainHasBeenSet;
 
                     /**
-                     * 
+                     * Log push target in the Chinese mainland.
                      */
                     AreaCLSTargetInfo m_chineseMainlandCLSTargetInfo;
                     bool m_chineseMainlandCLSTargetInfoHasBeenSet;
 
                     /**
-                     * 
+                     * Log push targets outside the Chinese mainland.
                      */
                     AreaCLSTargetInfo m_outsideChineseMainlandCLSTargetInfo;
                     bool m_outsideChineseMainlandCLSTargetInfoHasBeenSet;

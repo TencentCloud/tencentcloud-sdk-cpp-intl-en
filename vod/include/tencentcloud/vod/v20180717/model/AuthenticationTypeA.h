@@ -38,7 +38,7 @@ namespace TencentCloud
                 * Timestamp hotlink protection mode A configuration;
 The access URL format of timestamp hotlink protection mode A is: http://DomainName/Filename?sign=timestamp-rand-uid-md5hash;
 Among them, `timestamp` is a decimal UNIX timestamp.
-`rand` is a random string of 0–100 upper- and lower-case letters and numbers.
+`rand` is a random string of 0 to 100 upper- and lower-case letters and digits.
 uid is 0;
 md5hash: MD5 (file path-timestamp-rand-uid-custom key).
                 */
@@ -78,18 +78,18 @@ Only allow upper- and lower-case letters and digits, with a length of 6 to 32 ch
 
                     /**
                      * 获取Signature parameter name setting;
-Only allow upper- and lower-case letters, digits, or underscores, with a length of 1 to 100 characters, and cannot start with a digit.
+Only allow upper- and lower-case letters, digits, or underscores. The length is 1–100 characters and cannot start with a digit.
                      * @return SignParam Signature parameter name setting;
-Only allow upper- and lower-case letters, digits, or underscores, with a length of 1 to 100 characters, and cannot start with a digit.
+Only allow upper- and lower-case letters, digits, or underscores. The length is 1–100 characters and cannot start with a digit.
                      * 
                      */
                     std::string GetSignParam() const;
 
                     /**
                      * 设置Signature parameter name setting;
-Only allow upper- and lower-case letters, digits, or underscores, with a length of 1 to 100 characters, and cannot start with a digit.
+Only allow upper- and lower-case letters, digits, or underscores. The length is 1–100 characters and cannot start with a digit.
                      * @param _signParam Signature parameter name setting;
-Only allow upper- and lower-case letters, digits, or underscores, with a length of 1 to 100 characters, and cannot start with a digit.
+Only allow upper- and lower-case letters, digits, or underscores. The length is 1–100 characters and cannot start with a digit.
                      * 
                      */
                     void SetSignParam(const std::string& _signParam);
@@ -128,18 +128,18 @@ In seconds. Maximum settable value: 630720000.
 
                     /**
                      * 获取List of filename extensions for authentication/no authentication settings;
-If it contains the character *, it indicates all files.
+If it contains the character *, it means all files.
                      * @return FileExtensions List of filename extensions for authentication/no authentication settings;
-If it contains the character *, it indicates all files.
+If it contains the character *, it means all files.
                      * 
                      */
                     std::vector<std::string> GetFileExtensions() const;
 
                     /**
                      * 设置List of filename extensions for authentication/no authentication settings;
-If it contains the character *, it indicates all files.
+If it contains the character *, it means all files.
                      * @param _fileExtensions List of filename extensions for authentication/no authentication settings;
-If it contains the character *, it indicates all files.
+If it contains the character *, it means all files.
                      * 
                      */
                     void SetFileExtensions(const std::vector<std::string>& _fileExtensions);
@@ -152,19 +152,19 @@ If it contains the character *, it indicates all files.
                     bool FileExtensionsHasBeenSet() const;
 
                     /**
-                     * 获取whitelist: allowlist, means to authenticate all types except the FileExtensions list;
-blacklist: blocklist, means only applicable to authenticate the types in FileExtensions.
-                     * @return FilterType whitelist: allowlist, means to authenticate all types except the FileExtensions list;
-blacklist: blocklist, means only applicable to authenticate the types in FileExtensions.
+                     * 获取whitelist: allowlist, means to authenticate all types except those in the FileExtensions list.
+blacklist: blocklist, which means authentication is only applicable to the types in FileExtensions.
+                     * @return FilterType whitelist: allowlist, means to authenticate all types except those in the FileExtensions list.
+blacklist: blocklist, which means authentication is only applicable to the types in FileExtensions.
                      * 
                      */
                     std::string GetFilterType() const;
 
                     /**
-                     * 设置whitelist: allowlist, means to authenticate all types except the FileExtensions list;
-blacklist: blocklist, means only applicable to authenticate the types in FileExtensions.
-                     * @param _filterType whitelist: allowlist, means to authenticate all types except the FileExtensions list;
-blacklist: blocklist, means only applicable to authenticate the types in FileExtensions.
+                     * 设置whitelist: allowlist, means to authenticate all types except those in the FileExtensions list.
+blacklist: blocklist, which means authentication is only applicable to the types in FileExtensions.
+                     * @param _filterType whitelist: allowlist, means to authenticate all types except those in the FileExtensions list.
+blacklist: blocklist, which means authentication is only applicable to the types in FileExtensions.
                      * 
                      */
                     void SetFilterType(const std::string& _filterType);
@@ -177,18 +177,18 @@ blacklist: blocklist, means only applicable to authenticate the types in FileExt
                     bool FilterTypeHasBeenSet() const;
 
                     /**
-                     * 获取Secondary key for signature calculation;
+                     * 获取Secondary key for signature calculation.
 Only allow upper- and lower-case letters and digits, with a length of 6 to 32 characters.
-                     * @return BackupSecretKey Secondary key for signature calculation;
+                     * @return BackupSecretKey Secondary key for signature calculation.
 Only allow upper- and lower-case letters and digits, with a length of 6 to 32 characters.
                      * 
                      */
                     std::string GetBackupSecretKey() const;
 
                     /**
-                     * 设置Secondary key for signature calculation;
+                     * 设置Secondary key for signature calculation.
 Only allow upper- and lower-case letters and digits, with a length of 6 to 32 characters.
-                     * @param _backupSecretKey Secondary key for signature calculation;
+                     * @param _backupSecretKey Secondary key for signature calculation.
 Only allow upper- and lower-case letters and digits, with a length of 6 to 32 characters.
                      * 
                      */
@@ -212,7 +212,7 @@ Only allow upper- and lower-case letters and digits, with a length of 6 to 32 ch
 
                     /**
                      * Signature parameter name setting;
-Only allow upper- and lower-case letters, digits, or underscores, with a length of 1 to 100 characters, and cannot start with a digit.
+Only allow upper- and lower-case letters, digits, or underscores. The length is 1–100 characters and cannot start with a digit.
                      */
                     std::string m_signParam;
                     bool m_signParamHasBeenSet;
@@ -226,20 +226,20 @@ In seconds. Maximum settable value: 630720000.
 
                     /**
                      * List of filename extensions for authentication/no authentication settings;
-If it contains the character *, it indicates all files.
+If it contains the character *, it means all files.
                      */
                     std::vector<std::string> m_fileExtensions;
                     bool m_fileExtensionsHasBeenSet;
 
                     /**
-                     * whitelist: allowlist, means to authenticate all types except the FileExtensions list;
-blacklist: blocklist, means only applicable to authenticate the types in FileExtensions.
+                     * whitelist: allowlist, means to authenticate all types except those in the FileExtensions list.
+blacklist: blocklist, which means authentication is only applicable to the types in FileExtensions.
                      */
                     std::string m_filterType;
                     bool m_filterTypeHasBeenSet;
 
                     /**
-                     * Secondary key for signature calculation;
+                     * Secondary key for signature calculation.
 Only allow upper- and lower-case letters and digits, with a length of 6 to 32 characters.
                      */
                     std::string m_backupSecretKey;

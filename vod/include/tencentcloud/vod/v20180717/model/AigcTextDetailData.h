@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Aigc-generated text detailed data
                 */
                 class AigcTextDetailData : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Timestamp 
+                     * 获取<p>Request start time (RFC3339)</p>
+                     * @return Timestamp <p>Request start time (RFC3339)</p>
                      * 
                      */
                     std::string GetTimestamp() const;
 
                     /**
-                     * 设置
-                     * @param _timestamp 
+                     * 设置<p>Request start time (RFC3339)</p>
+                     * @param _timestamp <p>Request start time (RFC3339)</p>
                      * 
                      */
                     void SetTimestamp(const std::string& _timestamp);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool TimestampHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ReqId 
+                     * 获取<p>Gateway layer request ID</p>
+                     * @return ReqId <p>Gateway layer request ID</p>
                      * 
                      */
                     std::string GetReqId() const;
 
                     /**
-                     * 设置
-                     * @param _reqId 
+                     * 设置<p>Gateway layer request ID</p>
+                     * @param _reqId <p>Gateway layer request ID</p>
                      * 
                      */
                     void SetReqId(const std::string& _reqId);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool ReqIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ChatId 
+                     * 获取<p>Dialogue ID returned by the backend model</p>
+                     * @return ChatId <p>Dialogue ID returned by the backend model</p>
                      * 
                      */
                     std::string GetChatId() const;
 
                     /**
-                     * 设置
-                     * @param _chatId 
+                     * 设置<p>Dialogue ID returned by the backend model</p>
+                     * @param _chatId <p>Dialogue ID returned by the backend model</p>
                      * 
                      */
                     void SetChatId(const std::string& _chatId);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool ChatIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return StatusCode 
+                     * 获取<p>HTTP status code returned to client</p>
+                     * @return StatusCode <p>HTTP status code returned to client</p>
                      * 
                      */
                     uint64_t GetStatusCode() const;
 
                     /**
-                     * 设置
-                     * @param _statusCode 
+                     * 设置<p>HTTP status code returned to client</p>
+                     * @param _statusCode <p>HTTP status code returned to client</p>
                      * 
                      */
                     void SetStatusCode(const uint64_t& _statusCode);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool StatusCodeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Model 
+                     * 获取<p>Model name</p>
+                     * @return Model <p>Model name</p>
                      * 
                      */
                     std::string GetModel() const;
 
                     /**
-                     * 设置
-                     * @param _model 
+                     * 设置<p>Model name</p>
+                     * @param _model <p>Model name</p>
                      * 
                      */
                     void SetModel(const std::string& _model);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool ModelHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SubAppId 
+                     * 获取<p>Application ID.</p>
+                     * @return SubAppId <p>Application ID.</p>
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置
-                     * @param _subAppId 
+                     * 设置<p>Application ID.</p>
+                     * @param _subAppId <p>Application ID.</p>
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool SubAppIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ApiKey 
+                     * 获取<p>Masked api_key: first 8 characters + **** (returned without modification if length ≤ 8)</p>
+                     * @return ApiKey <p>Masked api_key: first 8 characters + **** (returned without modification if length ≤ 8)</p>
                      * 
                      */
                     std::string GetApiKey() const;
 
                     /**
-                     * 设置
-                     * @param _apiKey 
+                     * 设置<p>Masked api_key: first 8 characters + **** (returned without modification if length ≤ 8)</p>
+                     * @param _apiKey <p>Masked api_key: first 8 characters + **** (returned without modification if length ≤ 8)</p>
                      * 
                      */
                     void SetApiKey(const std::string& _apiKey);
@@ -194,15 +194,15 @@ namespace TencentCloud
                     bool ApiKeyHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Stream 
+                     * 获取<p>Whether to return in streaming mode</p>
+                     * @return Stream <p>Whether to return in streaming mode</p>
                      * 
                      */
                     bool GetStream() const;
 
                     /**
-                     * 设置
-                     * @param _stream 
+                     * 设置<p>Whether to return in streaming mode</p>
+                     * @param _stream <p>Whether to return in streaming mode</p>
                      * 
                      */
                     void SetStream(const bool& _stream);
@@ -215,15 +215,15 @@ namespace TencentCloud
                     bool StreamHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return InputTokens 
+                     * 获取<p>Input token count</p>
+                     * @return InputTokens <p>Input token count</p>
                      * 
                      */
                     int64_t GetInputTokens() const;
 
                     /**
-                     * 设置
-                     * @param _inputTokens 
+                     * 设置<p>Input token count</p>
+                     * @param _inputTokens <p>Input token count</p>
                      * 
                      */
                     void SetInputTokens(const int64_t& _inputTokens);
@@ -236,15 +236,15 @@ namespace TencentCloud
                     bool InputTokensHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return OutputTokens 
+                     * 获取<p>Output token count</p>
+                     * @return OutputTokens <p>Output token count</p>
                      * 
                      */
                     int64_t GetOutputTokens() const;
 
                     /**
-                     * 设置
-                     * @param _outputTokens 
+                     * 设置<p>Output token count</p>
+                     * @param _outputTokens <p>Output token count</p>
                      * 
                      */
                     void SetOutputTokens(const int64_t& _outputTokens);
@@ -257,15 +257,15 @@ namespace TencentCloud
                     bool OutputTokensHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return CacheInputTokens 
+                     * 获取<p>Number of tokens that hit the prompt cache</p>
+                     * @return CacheInputTokens <p>Number of tokens that hit the prompt cache</p>
                      * 
                      */
                     int64_t GetCacheInputTokens() const;
 
                     /**
-                     * 设置
-                     * @param _cacheInputTokens 
+                     * 设置<p>Number of tokens that hit the prompt cache</p>
+                     * @param _cacheInputTokens <p>Number of tokens that hit the prompt cache</p>
                      * 
                      */
                     void SetCacheInputTokens(const int64_t& _cacheInputTokens);
@@ -278,15 +278,15 @@ namespace TencentCloud
                     bool CacheInputTokensHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return TotalTokens 
+                     * 获取<p>Total token count</p>
+                     * @return TotalTokens <p>Total token count</p>
                      * 
                      */
                     int64_t GetTotalTokens() const;
 
                     /**
-                     * 设置
-                     * @param _totalTokens 
+                     * 设置<p>Total token count</p>
+                     * @param _totalTokens <p>Total token count</p>
                      * 
                      */
                     void SetTotalTokens(const int64_t& _totalTokens);
@@ -299,15 +299,15 @@ namespace TencentCloud
                     bool TotalTokensHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return TPS 
+                     * 获取<p>tokens/second in the generation stage</p>
+                     * @return TPS <p>tokens/second in the generation stage</p>
                      * 
                      */
                     double GetTPS() const;
 
                     /**
-                     * 设置
-                     * @param _tPS 
+                     * 设置<p>tokens/second in the generation stage</p>
+                     * @param _tPS <p>tokens/second in the generation stage</p>
                      * 
                      */
                     void SetTPS(const double& _tPS);
@@ -320,15 +320,15 @@ namespace TencentCloud
                     bool TPSHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return TTFT 
+                     * 获取<p>Time To First Token</p><p>Unit: seconds</p>
+                     * @return TTFT <p>Time To First Token</p><p>Unit: seconds</p>
                      * 
                      */
                     double GetTTFT() const;
 
                     /**
-                     * 设置
-                     * @param _tTFT 
+                     * 设置<p>Time To First Token</p><p>Unit: seconds</p>
+                     * @param _tTFT <p>Time To First Token</p><p>Unit: seconds</p>
                      * 
                      */
                     void SetTTFT(const double& _tTFT);
@@ -341,15 +341,15 @@ namespace TencentCloud
                     bool TTFTHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Total 
+                     * 获取<p>End-to-end total time</p><p>Unit: seconds</p>
+                     * @return Total <p>End-to-end total time</p><p>Unit: seconds</p>
                      * 
                      */
                     double GetTotal() const;
 
                     /**
-                     * 设置
-                     * @param _total 
+                     * 设置<p>End-to-end total time</p><p>Unit: seconds</p>
+                     * @param _total <p>End-to-end total time</p><p>Unit: seconds</p>
                      * 
                      */
                     void SetTotal(const double& _total);
@@ -362,15 +362,15 @@ namespace TencentCloud
                     bool TotalHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ApiType 
+                     * 获取<p>Entry protocol: completions / responses / anthropic</p>
+                     * @return ApiType <p>Entry protocol: completions / responses / anthropic</p>
                      * 
                      */
                     std::string GetApiType() const;
 
                     /**
-                     * 设置
-                     * @param _apiType 
+                     * 设置<p>Entry protocol: completions / responses / anthropic</p>
+                     * @param _apiType <p>Entry protocol: completions / responses / anthropic</p>
                      * 
                      */
                     void SetApiType(const std::string& _apiType);
@@ -385,97 +385,97 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p>Request start time (RFC3339)</p>
                      */
                     std::string m_timestamp;
                     bool m_timestampHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Gateway layer request ID</p>
                      */
                     std::string m_reqId;
                     bool m_reqIdHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Dialogue ID returned by the backend model</p>
                      */
                     std::string m_chatId;
                     bool m_chatIdHasBeenSet;
 
                     /**
-                     * 
+                     * <p>HTTP status code returned to client</p>
                      */
                     uint64_t m_statusCode;
                     bool m_statusCodeHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Model name</p>
                      */
                     std::string m_model;
                     bool m_modelHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Application ID.</p>
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Masked api_key: first 8 characters + **** (returned without modification if length ≤ 8)</p>
                      */
                     std::string m_apiKey;
                     bool m_apiKeyHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Whether to return in streaming mode</p>
                      */
                     bool m_stream;
                     bool m_streamHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Input token count</p>
                      */
                     int64_t m_inputTokens;
                     bool m_inputTokensHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Output token count</p>
                      */
                     int64_t m_outputTokens;
                     bool m_outputTokensHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Number of tokens that hit the prompt cache</p>
                      */
                     int64_t m_cacheInputTokens;
                     bool m_cacheInputTokensHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Total token count</p>
                      */
                     int64_t m_totalTokens;
                     bool m_totalTokensHasBeenSet;
 
                     /**
-                     * 
+                     * <p>tokens/second in the generation stage</p>
                      */
                     double m_tPS;
                     bool m_tPSHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Time To First Token</p><p>Unit: seconds</p>
                      */
                     double m_tTFT;
                     bool m_tTFTHasBeenSet;
 
                     /**
-                     * 
+                     * <p>End-to-end total time</p><p>Unit: seconds</p>
                      */
                     double m_total;
                     bool m_totalHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Entry protocol: completions / responses / anthropic</p>
                      */
                     std::string m_apiType;
                     bool m_apiTypeHasBeenSet;

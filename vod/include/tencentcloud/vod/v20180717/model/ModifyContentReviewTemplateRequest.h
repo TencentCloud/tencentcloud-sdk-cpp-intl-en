@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Definition 
+                     * 获取Unique identifier of the content review template.
+                     * @return Definition Unique identifier of the content review template.
                      * 
                      */
                     int64_t GetDefinition() const;
 
                     /**
-                     * 设置
-                     * @param _definition 
+                     * 设置Unique identifier of the content review template.
+                     * @param _definition Unique identifier of the content review template.
                      * 
                      */
                     void SetDefinition(const int64_t& _definition);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool DefinitionHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SubAppId 
+                     * 获取<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
+                     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置
-                     * @param _subAppId 
+                     * 设置<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
+                     * @param _subAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool SubAppIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Name 
+                     * 获取Content review template name, with a length limit of 64 characters.
+                     * @return Name Content review template name, with a length limit of 64 characters.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置
-                     * @param _name 
+                     * 设置Content review template name, with a length limit of 64 characters.
+                     * @param _name Content review template name, with a length limit of 64 characters.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -111,15 +111,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Comment 
+                     * 获取Content review template description, with a length limit of 256 characters.
+                     * @return Comment Content review template description, with a length limit of 256 characters.
                      * 
                      */
                     std::string GetComment() const;
 
                     /**
-                     * 设置
-                     * @param _comment 
+                     * 设置Content review template description, with a length limit of 256 characters.
+                     * @param _comment Content review template description, with a length limit of 256 characters.
                      * 
                      */
                     void SetComment(const std::string& _comment);
@@ -132,15 +132,15 @@ namespace TencentCloud
                     bool CommentHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return TerrorismConfigure 
+                     * 获取Control parameters for unsafe information.
+                     * @return TerrorismConfigure Control parameters for unsafe information.
                      * 
                      */
                     TerrorismConfigureInfoForUpdate GetTerrorismConfigure() const;
 
                     /**
-                     * 设置
-                     * @param _terrorismConfigure 
+                     * 设置Control parameters for unsafe information.
+                     * @param _terrorismConfigure Control parameters for unsafe information.
                      * 
                      */
                     void SetTerrorismConfigure(const TerrorismConfigureInfoForUpdate& _terrorismConfigure);
@@ -153,15 +153,15 @@ namespace TencentCloud
                     bool TerrorismConfigureHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return PornConfigure 
+                     * 获取Control parameters for offensive information.
+                     * @return PornConfigure Control parameters for offensive information.
                      * 
                      */
                     PornConfigureInfoForUpdate GetPornConfigure() const;
 
                     /**
-                     * 设置
-                     * @param _pornConfigure 
+                     * 设置Control parameters for offensive information.
+                     * @param _pornConfigure Control parameters for offensive information.
                      * 
                      */
                     void SetPornConfigure(const PornConfigureInfoForUpdate& _pornConfigure);
@@ -174,15 +174,15 @@ namespace TencentCloud
                     bool PornConfigureHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return PoliticalConfigure 
+                     * 获取Control parameter for inappropriate information.
+                     * @return PoliticalConfigure Control parameter for inappropriate information.
                      * 
                      */
                     PoliticalConfigureInfoForUpdate GetPoliticalConfigure() const;
 
                     /**
-                     * 设置
-                     * @param _politicalConfigure 
+                     * 设置Control parameter for inappropriate information.
+                     * @param _politicalConfigure Control parameter for inappropriate information.
                      * 
                      */
                     void SetPoliticalConfigure(const PoliticalConfigureInfoForUpdate& _politicalConfigure);
@@ -195,15 +195,23 @@ namespace TencentCloud
                     bool PoliticalConfigureHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ProhibitedConfigure 
+                     * 获取Prohibited control parameters. Restricted content includes:
+<li>Abusive language;</li>
+<li>Drug-related violation.</li>
+                     * @return ProhibitedConfigure Prohibited control parameters. Restricted content includes:
+<li>Abusive language;</li>
+<li>Drug-related violation.</li>
                      * 
                      */
                     ProhibitedConfigureInfoForUpdate GetProhibitedConfigure() const;
 
                     /**
-                     * 设置
-                     * @param _prohibitedConfigure 
+                     * 设置Prohibited control parameters. Restricted content includes:
+<li>Abusive language;</li>
+<li>Drug-related violation.</li>
+                     * @param _prohibitedConfigure Prohibited control parameters. Restricted content includes:
+<li>Abusive language;</li>
+<li>Drug-related violation.</li>
                      * 
                      */
                     void SetProhibitedConfigure(const ProhibitedConfigureInfoForUpdate& _prohibitedConfigure);
@@ -216,15 +224,15 @@ namespace TencentCloud
                     bool ProhibitedConfigureHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return UserDefineConfigure 
+                     * 获取User-defined content review control parameters.
+                     * @return UserDefineConfigure User-defined content review control parameters.
                      * 
                      */
                     UserDefineConfigureInfoForUpdate GetUserDefineConfigure() const;
 
                     /**
-                     * 设置
-                     * @param _userDefineConfigure 
+                     * 设置User-defined content review control parameters.
+                     * @param _userDefineConfigure User-defined content review control parameters.
                      * 
                      */
                     void SetUserDefineConfigure(const UserDefineConfigureInfoForUpdate& _userDefineConfigure);
@@ -237,15 +245,15 @@ namespace TencentCloud
                     bool UserDefineConfigureHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ScreenshotInterval 
+                     * 获取Frame interception interval in seconds. Minimum value: 0.5 seconds.
+                     * @return ScreenshotInterval Frame interception interval in seconds. Minimum value: 0.5 seconds.
                      * 
                      */
                     double GetScreenshotInterval() const;
 
                     /**
-                     * 设置
-                     * @param _screenshotInterval 
+                     * 设置Frame interception interval in seconds. Minimum value: 0.5 seconds.
+                     * @param _screenshotInterval Frame interception interval in seconds. Minimum value: 0.5 seconds.
                      * 
                      */
                     void SetScreenshotInterval(const double& _screenshotInterval);
@@ -258,15 +266,23 @@ namespace TencentCloud
                     bool ScreenshotIntervalHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ReviewWallSwitch 
+                     * 获取Whether the review result enters the review wall (for manual recognition of the review result).
+<li>ON: yes</li>
+<li>OFF: no</li>
+                     * @return ReviewWallSwitch Whether the review result enters the review wall (for manual recognition of the review result).
+<li>ON: yes</li>
+<li>OFF: no</li>
                      * 
                      */
                     std::string GetReviewWallSwitch() const;
 
                     /**
-                     * 设置
-                     * @param _reviewWallSwitch 
+                     * 设置Whether the review result enters the review wall (for manual recognition of the review result).
+<li>ON: yes</li>
+<li>OFF: no</li>
+                     * @param _reviewWallSwitch Whether the review result enters the review wall (for manual recognition of the review result).
+<li>ON: yes</li>
+<li>OFF: no</li>
                      * 
                      */
                     void SetReviewWallSwitch(const std::string& _reviewWallSwitch);
@@ -281,67 +297,71 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Unique identifier of the content review template.
                      */
                     int64_t m_definition;
                     bool m_definitionHasBeenSet;
 
                     /**
-                     * 
+                     * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
 
                     /**
-                     * 
+                     * Content review template name, with a length limit of 64 characters.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * 
+                     * Content review template description, with a length limit of 256 characters.
                      */
                     std::string m_comment;
                     bool m_commentHasBeenSet;
 
                     /**
-                     * 
+                     * Control parameters for unsafe information.
                      */
                     TerrorismConfigureInfoForUpdate m_terrorismConfigure;
                     bool m_terrorismConfigureHasBeenSet;
 
                     /**
-                     * 
+                     * Control parameters for offensive information.
                      */
                     PornConfigureInfoForUpdate m_pornConfigure;
                     bool m_pornConfigureHasBeenSet;
 
                     /**
-                     * 
+                     * Control parameter for inappropriate information.
                      */
                     PoliticalConfigureInfoForUpdate m_politicalConfigure;
                     bool m_politicalConfigureHasBeenSet;
 
                     /**
-                     * 
+                     * Prohibited control parameters. Restricted content includes:
+<li>Abusive language;</li>
+<li>Drug-related violation.</li>
                      */
                     ProhibitedConfigureInfoForUpdate m_prohibitedConfigure;
                     bool m_prohibitedConfigureHasBeenSet;
 
                     /**
-                     * 
+                     * User-defined content review control parameters.
                      */
                     UserDefineConfigureInfoForUpdate m_userDefineConfigure;
                     bool m_userDefineConfigureHasBeenSet;
 
                     /**
-                     * 
+                     * Frame interception interval in seconds. Minimum value: 0.5 seconds.
                      */
                     double m_screenshotInterval;
                     bool m_screenshotIntervalHasBeenSet;
 
                     /**
-                     * 
+                     * Whether the review result enters the review wall (for manual recognition of the review result).
+<li>ON: yes</li>
+<li>OFF: no</li>
                      */
                     std::string m_reviewWallSwitch;
                     bool m_reviewWallSwitchHasBeenSet;

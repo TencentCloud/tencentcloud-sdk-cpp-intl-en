@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Task result type of image moderation involving inappropriate information
                 */
                 class PoliticalImageResult : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Confidence 
+                     * 获取Score for authentication involving inappropriate information. The score ranges from 0 to 100.
+                     * @return Confidence Score for authentication involving inappropriate information. The score ranges from 0 to 100.
                      * 
                      */
                     double GetConfidence() const;
 
                     /**
-                     * 设置
-                     * @param _confidence 
+                     * 设置Score for authentication involving inappropriate information. The score ranges from 0 to 100.
+                     * @param _confidence Score for authentication involving inappropriate information. The score ranges from 0 to 100.
                      * 
                      */
                     void SetConfidence(const double& _confidence);
@@ -68,15 +68,27 @@ namespace TencentCloud
                     bool ConfidenceHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Suggestion 
+                     * 获取Result suggestions for authentication involving inappropriate information. Value range:
+<li>pass;</li>
+<li>review;</li>
+<li>block.</li>
+                     * @return Suggestion Result suggestions for authentication involving inappropriate information. Value range:
+<li>pass;</li>
+<li>review;</li>
+<li>block.</li>
                      * 
                      */
                     std::string GetSuggestion() const;
 
                     /**
-                     * 设置
-                     * @param _suggestion 
+                     * 设置Result suggestions for authentication involving inappropriate information. Value range:
+<li>pass;</li>
+<li>review;</li>
+<li>block.</li>
+                     * @param _suggestion Result suggestions for authentication involving inappropriate information. Value range:
+<li>pass;</li>
+<li>review;</li>
+<li>block.</li>
                      * 
                      */
                     void SetSuggestion(const std::string& _suggestion);
@@ -89,15 +101,15 @@ namespace TencentCloud
                     bool SuggestionHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Name 
+                     * 获取Involves inappropriate information and violative icon names.
+                     * @return Name Involves inappropriate information and violative icon names.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置
-                     * @param _name 
+                     * 设置Involves inappropriate information and violative icon names.
+                     * @param _name Involves inappropriate information and violative icon names.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -110,15 +122,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AreaCoordSet 
+                     * 获取Area coordinates (pixel level) where inappropriate information or violation icons appear, [x1, y1, x2, y2], i.e. coordinates of the top-left corner and bottom-right corner.
+                     * @return AreaCoordSet Area coordinates (pixel level) where inappropriate information or violation icons appear, [x1, y1, x2, y2], i.e. coordinates of the top-left corner and bottom-right corner.
                      * 
                      */
                     std::vector<int64_t> GetAreaCoordSet() const;
 
                     /**
-                     * 设置
-                     * @param _areaCoordSet 
+                     * 设置Area coordinates (pixel level) where inappropriate information or violation icons appear, [x1, y1, x2, y2], i.e. coordinates of the top-left corner and bottom-right corner.
+                     * @param _areaCoordSet Area coordinates (pixel level) where inappropriate information or violation icons appear, [x1, y1, x2, y2], i.e. coordinates of the top-left corner and bottom-right corner.
                      * 
                      */
                     void SetAreaCoordSet(const std::vector<int64_t>& _areaCoordSet);
@@ -133,25 +145,28 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Score for authentication involving inappropriate information. The score ranges from 0 to 100.
                      */
                     double m_confidence;
                     bool m_confidenceHasBeenSet;
 
                     /**
-                     * 
+                     * Result suggestions for authentication involving inappropriate information. Value range:
+<li>pass;</li>
+<li>review;</li>
+<li>block.</li>
                      */
                     std::string m_suggestion;
                     bool m_suggestionHasBeenSet;
 
                     /**
-                     * 
+                     * Involves inappropriate information and violative icon names.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * 
+                     * Area coordinates (pixel level) where inappropriate information or violation icons appear, [x1, y1, x2, y2], i.e. coordinates of the top-left corner and bottom-right corner.
                      */
                     std::vector<int64_t> m_areaCoordSet;
                     bool m_areaCoordSetHasBeenSet;

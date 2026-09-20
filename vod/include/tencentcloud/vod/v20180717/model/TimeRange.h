@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Universal data type for description of a time period.
                 */
                 class TimeRange : public AbstractModel
                 {
@@ -47,15 +47,19 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return After 
+                     * 获取<li>Equal to or greater than this time (start time).</li>
+<li>Format according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).</li>
+                     * @return After <li>Equal to or greater than this time (start time).</li>
+<li>Format according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).</li>
                      * 
                      */
                     std::string GetAfter() const;
 
                     /**
-                     * 设置
-                     * @param _after 
+                     * 设置<li>Equal to or greater than this time (start time).</li>
+<li>Format according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).</li>
+                     * @param _after <li>Equal to or greater than this time (start time).</li>
+<li>Format according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).</li>
                      * 
                      */
                     void SetAfter(const std::string& _after);
@@ -68,15 +72,19 @@ namespace TencentCloud
                     bool AfterHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Before 
+                     * 获取<li>Less than this time (end time).</li>
+<li>Format according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).</li>
+                     * @return Before <li>Less than this time (end time).</li>
+<li>Format according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).</li>
                      * 
                      */
                     std::string GetBefore() const;
 
                     /**
-                     * 设置
-                     * @param _before 
+                     * 设置<li>Less than this time (end time).</li>
+<li>Format according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).</li>
+                     * @param _before <li>Less than this time (end time).</li>
+<li>Format according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).</li>
                      * 
                      */
                     void SetBefore(const std::string& _before);
@@ -91,13 +99,15 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <li>Equal to or greater than this time (start time).</li>
+<li>Format according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).</li>
                      */
                     std::string m_after;
                     bool m_afterHasBeenSet;
 
                     /**
-                     * 
+                     * <li>Less than this time (end time).</li>
+<li>Format according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).</li>
                      */
                     std::string m_before;
                     bool m_beforeHasBeenSet;

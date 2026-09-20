@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Control parameters for video opening and closing credits recognition tasks
                 */
                 class HeadTailConfigureInfoForUpdate : public AbstractModel
                 {
@@ -47,15 +47,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Switch 
+                     * 获取Video start and end recognition task switch. Available values:
+<li>ON: Enable the intelligent video opening and closing credits recognition task;</li>
+<li>OFF: Disable the intelligent video opening and closing credits recognition task.</li>
+                     * @return Switch Video start and end recognition task switch. Available values:
+<li>ON: Enable the intelligent video opening and closing credits recognition task;</li>
+<li>OFF: Disable the intelligent video opening and closing credits recognition task.</li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置
-                     * @param _switch 
+                     * 设置Video start and end recognition task switch. Available values:
+<li>ON: Enable the intelligent video opening and closing credits recognition task;</li>
+<li>OFF: Disable the intelligent video opening and closing credits recognition task.</li>
+                     * @param _switch Video start and end recognition task switch. Available values:
+<li>ON: Enable the intelligent video opening and closing credits recognition task;</li>
+<li>OFF: Disable the intelligent video opening and closing credits recognition task.</li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -70,7 +78,9 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Video start and end recognition task switch. Available values:
+<li>ON: Enable the intelligent video opening and closing credits recognition task;</li>
+<li>OFF: Disable the intelligent video opening and closing credits recognition task.</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;

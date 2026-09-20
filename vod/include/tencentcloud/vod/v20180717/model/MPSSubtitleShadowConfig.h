@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Subtitle suppression module text shadow configuration
                 */
                 class MPSSubtitleShadowConfig : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return SubtitleShadowConfigSwitch 
+                     * 获取<p>Text shadow configuration switch, 0 for off, 1 for on, default 0</p>
+                     * @return SubtitleShadowConfigSwitch <p>Text shadow configuration switch, 0 for off, 1 for on, default 0</p>
                      * 
                      */
                     int64_t GetSubtitleShadowConfigSwitch() const;
 
                     /**
-                     * 设置
-                     * @param _subtitleShadowConfigSwitch 
+                     * 设置<p>Text shadow configuration switch, 0 for off, 1 for on, default 0</p>
+                     * @param _subtitleShadowConfigSwitch <p>Text shadow configuration switch, 0 for off, 1 for on, default 0</p>
                      * 
                      */
                     void SetSubtitleShadowConfigSwitch(const int64_t& _subtitleShadowConfigSwitch);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool SubtitleShadowConfigSwitchHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ShadowWidth 
+                     * 获取<p>Shadow width, default unit pixel, underlying default value 0, no shading</p>
+                     * @return ShadowWidth <p>Shadow width, default unit pixel, underlying default value 0, no shading</p>
                      * 
                      */
                     double GetShadowWidth() const;
 
                     /**
-                     * 设置
-                     * @param _shadowWidth 
+                     * 设置<p>Shadow width, default unit pixel, underlying default value 0, no shading</p>
+                     * @param _shadowWidth <p>Shadow width, default unit pixel, underlying default value 0, no shading</p>
                      * 
                      */
                     void SetShadowWidth(const double& _shadowWidth);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool ShadowWidthHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ShadowWidthUnit 
+                     * 获取<p>Shadow width unit. 0 for pixel, 1 for percentage. Default is 0 (pixel).</p>
+                     * @return ShadowWidthUnit <p>Shadow width unit. 0 for pixel, 1 for percentage. Default is 0 (pixel).</p>
                      * 
                      */
                     int64_t GetShadowWidthUnit() const;
 
                     /**
-                     * 设置
-                     * @param _shadowWidthUnit 
+                     * 设置<p>Shadow width unit. 0 for pixel, 1 for percentage. Default is 0 (pixel).</p>
+                     * @param _shadowWidthUnit <p>Shadow width unit. 0 for pixel, 1 for percentage. Default is 0 (pixel).</p>
                      * 
                      */
                     void SetShadowWidthUnit(const int64_t& _shadowWidthUnit);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool ShadowWidthUnitHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ShadowColor 
+                     * 获取<p>Shadow color. 6-digit base-16 RGB. Black by default if left blank (when shadow has set)</p>
+                     * @return ShadowColor <p>Shadow color. 6-digit base-16 RGB. Black by default if left blank (when shadow has set)</p>
                      * 
                      */
                     std::string GetShadowColor() const;
 
                     /**
-                     * 设置
-                     * @param _shadowColor 
+                     * 设置<p>Shadow color. 6-digit base-16 RGB. Black by default if left blank (when shadow has set)</p>
+                     * @param _shadowColor <p>Shadow color. 6-digit base-16 RGB. Black by default if left blank (when shadow has set)</p>
                      * 
                      */
                     void SetShadowColor(const std::string& _shadowColor);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool ShadowColorHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ShadowAlpha 
+                     * 获取<p>Shadow transparency. The value should be a positive floating-point number in the range of (0, 1]. If this is not specified, the default value is 1, which means completely opaque (with shadow configured).</p>
+                     * @return ShadowAlpha <p>Shadow transparency. The value should be a positive floating-point number in the range of (0, 1]. If this is not specified, the default value is 1, which means completely opaque (with shadow configured).</p>
                      * 
                      */
                     double GetShadowAlpha() const;
 
                     /**
-                     * 设置
-                     * @param _shadowAlpha 
+                     * 设置<p>Shadow transparency. The value should be a positive floating-point number in the range of (0, 1]. If this is not specified, the default value is 1, which means completely opaque (with shadow configured).</p>
+                     * @param _shadowAlpha <p>Shadow transparency. The value should be a positive floating-point number in the range of (0, 1]. If this is not specified, the default value is 1, which means completely opaque (with shadow configured).</p>
                      * 
                      */
                     void SetShadowAlpha(const double& _shadowAlpha);
@@ -154,31 +154,31 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p>Text shadow configuration switch, 0 for off, 1 for on, default 0</p>
                      */
                     int64_t m_subtitleShadowConfigSwitch;
                     bool m_subtitleShadowConfigSwitchHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Shadow width, default unit pixel, underlying default value 0, no shading</p>
                      */
                     double m_shadowWidth;
                     bool m_shadowWidthHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Shadow width unit. 0 for pixel, 1 for percentage. Default is 0 (pixel).</p>
                      */
                     int64_t m_shadowWidthUnit;
                     bool m_shadowWidthUnitHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Shadow color. 6-digit base-16 RGB. Black by default if left blank (when shadow has set)</p>
                      */
                     std::string m_shadowColor;
                     bool m_shadowColorHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Shadow transparency. The value should be a positive floating-point number in the range of (0, 1]. If this is not specified, the default value is 1, which means completely opaque (with shadow configured).</p>
                      */
                     double m_shadowAlpha;
                     bool m_shadowAlphaHasBeenSet;

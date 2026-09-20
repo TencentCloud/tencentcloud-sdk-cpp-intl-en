@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * An issue detected by the LLM large model for audio and video quality detection.
                 */
                 class QualityInspectLLMDetectionIssue : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Tag 
+                     * 获取<p>Issue category tag.</p>
+                     * @return Tag <p>Issue category tag.</p>
                      * 
                      */
                     std::string GetTag() const;
 
                     /**
-                     * 设置
-                     * @param _tag 
+                     * 设置<p>Issue category tag.</p>
+                     * @param _tag <p>Issue category tag.</p>
                      * 
                      */
                     void SetTag(const std::string& _tag);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool TagHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Description 
+                     * 获取<p>Issue description.</p>
+                     * @return Description <p>Issue description.</p>
                      * 
                      */
                     std::string GetDescription() const;
 
                     /**
-                     * 设置
-                     * @param _description 
+                     * 设置<p>Issue description.</p>
+                     * @param _description <p>Issue description.</p>
                      * 
                      */
                     void SetDescription(const std::string& _description);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool DescriptionHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Score 
+                     * 获取<p>Quality score of the issue</p><p>Value range: [0, 100]</p>
+                     * @return Score <p>Quality score of the issue</p><p>Value range: [0, 100]</p>
                      * 
                      */
                     double GetScore() const;
 
                     /**
-                     * 设置
-                     * @param _score 
+                     * 设置<p>Quality score of the issue</p><p>Value range: [0, 100]</p>
+                     * @param _score <p>Quality score of the issue</p><p>Value range: [0, 100]</p>
                      * 
                      */
                     void SetScore(const double& _score);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool ScoreHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Confidence 
+                     * 获取<p>Detection confidence for the issue</p><p>Value range: [0, 100]</p>
+                     * @return Confidence <p>Detection confidence for the issue</p><p>Value range: [0, 100]</p>
                      * 
                      */
                     double GetConfidence() const;
 
                     /**
-                     * 设置
-                     * @param _confidence 
+                     * 设置<p>Detection confidence for the issue</p><p>Value range: [0, 100]</p>
+                     * @param _confidence <p>Detection confidence for the issue</p><p>Value range: [0, 100]</p>
                      * 
                      */
                     void SetConfidence(const double& _confidence);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool ConfidenceHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return StartTimeMs 
+                     * 获取<p>Issue start time.</p><p>Unit: ms.</p>
+                     * @return StartTimeMs <p>Issue start time.</p><p>Unit: ms.</p>
                      * 
                      */
                     int64_t GetStartTimeMs() const;
 
                     /**
-                     * 设置
-                     * @param _startTimeMs 
+                     * 设置<p>Issue start time.</p><p>Unit: ms.</p>
+                     * @param _startTimeMs <p>Issue start time.</p><p>Unit: ms.</p>
                      * 
                      */
                     void SetStartTimeMs(const int64_t& _startTimeMs);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool StartTimeMsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return EndTimeMs 
+                     * 获取<p>Issue end time.</p><p>Unit: ms.</p>
+                     * @return EndTimeMs <p>Issue end time.</p><p>Unit: ms.</p>
                      * 
                      */
                     int64_t GetEndTimeMs() const;
 
                     /**
-                     * 设置
-                     * @param _endTimeMs 
+                     * 设置<p>Issue end time.</p><p>Unit: ms.</p>
+                     * @param _endTimeMs <p>Issue end time.</p><p>Unit: ms.</p>
                      * 
                      */
                     void SetEndTimeMs(const int64_t& _endTimeMs);
@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool EndTimeMsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ExtraData 
+                     * 获取<p>Additional data (JSON format), such as severity and other supplementary information.</p>
+                     * @return ExtraData <p>Additional data (JSON format), such as severity and other supplementary information.</p>
                      * 
                      */
                     std::string GetExtraData() const;
 
                     /**
-                     * 设置
-                     * @param _extraData 
+                     * 设置<p>Additional data (JSON format), such as severity and other supplementary information.</p>
+                     * @param _extraData <p>Additional data (JSON format), such as severity and other supplementary information.</p>
                      * 
                      */
                     void SetExtraData(const std::string& _extraData);
@@ -196,43 +196,43 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p>Issue category tag.</p>
                      */
                     std::string m_tag;
                     bool m_tagHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Issue description.</p>
                      */
                     std::string m_description;
                     bool m_descriptionHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Quality score of the issue</p><p>Value range: [0, 100]</p>
                      */
                     double m_score;
                     bool m_scoreHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Detection confidence for the issue</p><p>Value range: [0, 100]</p>
                      */
                     double m_confidence;
                     bool m_confidenceHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Issue start time.</p><p>Unit: ms.</p>
                      */
                     int64_t m_startTimeMs;
                     bool m_startTimeMsHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Issue end time.</p><p>Unit: ms.</p>
                      */
                     int64_t m_endTimeMs;
                     bool m_endTimeMsHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Additional data (JSON format), such as severity and other supplementary information.</p>
                      */
                     std::string m_extraData;
                     bool m_extraDataHasBeenSet;

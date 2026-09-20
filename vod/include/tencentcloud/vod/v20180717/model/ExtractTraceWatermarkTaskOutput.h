@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Extract traceability watermark output information
                 */
                 class ExtractTraceWatermarkTaskOutput : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Uv 
+                     * 获取Player's ID in hexadecimal, 6 digits.
+                     * @return Uv Player's ID in hexadecimal, 6 digits.
                      * 
                      */
                     std::string GetUv() const;
 
                     /**
-                     * 设置
-                     * @param _uv 
+                     * 设置Player's ID in hexadecimal, 6 digits.
+                     * @param _uv Player's ID in hexadecimal, 6 digits.
                      * 
                      */
                     void SetUv(const std::string& _uv);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool UvHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Uid 
+                     * 获取Deprecated.
+                     * @return Uid Deprecated.
                      * @deprecated
                      */
                     std::string GetUid() const;
 
                     /**
-                     * 设置
-                     * @param _uid 
+                     * 设置Deprecated.
+                     * @param _uid Deprecated.
                      * @deprecated
                      */
                     void SetUid(const std::string& _uid);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Player's ID in hexadecimal, 6 digits.
                      */
                     std::string m_uv;
                     bool m_uvHasBeenSet;
 
                     /**
-                     * 
+                     * Deprecated.
                      */
                     std::string m_uid;
                     bool m_uidHasBeenSet;

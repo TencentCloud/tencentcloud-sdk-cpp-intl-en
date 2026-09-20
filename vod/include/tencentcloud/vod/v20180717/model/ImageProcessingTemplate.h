@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Image processing template supports up to three operations. For example: crop - thumbnail - crop.
                 */
                 class ImageProcessingTemplate : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Definition 
+                     * 获取Unique identifier of the image processing template.
+                     * @return Definition Unique identifier of the image processing template.
                      * 
                      */
                     uint64_t GetDefinition() const;
 
                     /**
-                     * 设置
-                     * @param _definition 
+                     * 设置Unique identifier of the image processing template.
+                     * @param _definition Unique identifier of the image processing template.
                      * 
                      */
                     void SetDefinition(const uint64_t& _definition);
@@ -69,15 +69,23 @@ namespace TencentCloud
                     bool DefinitionHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Type 
+                     * 获取Template type. Valid values:
+<li>Preset: system-preset template;</li>
+<li>Custom: custom template.</li>
+                     * @return Type Template type. Valid values:
+<li>Preset: system-preset template;</li>
+<li>Custom: custom template.</li>
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置
-                     * @param _type 
+                     * 设置Template type. Valid values:
+<li>Preset: system-preset template;</li>
+<li>Custom: custom template.</li>
+                     * @param _type Template type. Valid values:
+<li>Preset: system-preset template;</li>
+<li>Custom: custom template.</li>
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -90,15 +98,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Name 
+                     * 获取Image processing template name.
+                     * @return Name Image processing template name.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置
-                     * @param _name 
+                     * 设置Image processing template name.
+                     * @param _name Image processing template name.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -111,15 +119,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Comment 
+                     * 获取Template description information.
+                     * @return Comment Template description information.
                      * 
                      */
                     std::string GetComment() const;
 
                     /**
-                     * 设置
-                     * @param _comment 
+                     * 设置Template description information.
+                     * @param _comment Template description information.
                      * 
                      */
                     void SetComment(const std::string& _comment);
@@ -132,15 +140,19 @@ namespace TencentCloud
                     bool CommentHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Operations 
+                     * 获取Array of image processing operations. Operations are performed in array order.
+<li>Length limit: 3.</li>
+                     * @return Operations Array of image processing operations. Operations are performed in array order.
+<li>Length limit: 3.</li>
                      * 
                      */
                     std::vector<ImageOperation> GetOperations() const;
 
                     /**
-                     * 设置
-                     * @param _operations 
+                     * 设置Array of image processing operations. Operations are performed in array order.
+<li>Length limit: 3.</li>
+                     * @param _operations Array of image processing operations. Operations are performed in array order.
+<li>Length limit: 3.</li>
                      * 
                      */
                     void SetOperations(const std::vector<ImageOperation>& _operations);
@@ -153,15 +165,15 @@ namespace TencentCloud
                     bool OperationsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return CreateTime 
+                     * 获取Template creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @return CreateTime Template creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
-                     * 设置
-                     * @param _createTime 
+                     * 设置Template creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @param _createTime Template creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      * 
                      */
                     void SetCreateTime(const std::string& _createTime);
@@ -176,37 +188,40 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Unique identifier of the image processing template.
                      */
                     uint64_t m_definition;
                     bool m_definitionHasBeenSet;
 
                     /**
-                     * 
+                     * Template type. Valid values:
+<li>Preset: system-preset template;</li>
+<li>Custom: custom template.</li>
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * 
+                     * Image processing template name.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * 
+                     * Template description information.
                      */
                     std::string m_comment;
                     bool m_commentHasBeenSet;
 
                     /**
-                     * 
+                     * Array of image processing operations. Operations are performed in array order.
+<li>Length limit: 3.</li>
                      */
                     std::vector<ImageOperation> m_operations;
                     bool m_operationsHasBeenSet;
 
                     /**
-                     * 
+                     * Template creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;

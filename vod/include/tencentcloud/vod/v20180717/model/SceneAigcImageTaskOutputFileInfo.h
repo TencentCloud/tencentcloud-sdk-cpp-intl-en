@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Output file information of the scenario-based AIGC image generation task.
                 */
                 class SceneAigcImageTaskOutputFileInfo : public AbstractModel
                 {
@@ -48,15 +48,19 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return StorageMode 
+                     * 获取Storage mode. Valid values: <li>Permanent: retained permanently;</li> <li>Temporary: temporary storage;</li>
+
+                     * @return StorageMode Storage mode. Valid values: <li>Permanent: retained permanently;</li> <li>Temporary: temporary storage;</li>
+
                      * 
                      */
                     std::string GetStorageMode() const;
 
                     /**
-                     * 设置
-                     * @param _storageMode 
+                     * 设置Storage mode. Valid values: <li>Permanent: retained permanently;</li> <li>Temporary: temporary storage;</li>
+
+                     * @param _storageMode Storage mode. Valid values: <li>Permanent: retained permanently;</li> <li>Temporary: temporary storage;</li>
+
                      * 
                      */
                     void SetStorageMode(const std::string& _storageMode);
@@ -69,15 +73,15 @@ namespace TencentCloud
                     bool StorageModeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return MediaName 
+                     * 获取Output filename, up to 64 characters. By default, the system assigns the generated filename. Valid when StorageMode is Permanent.
+                     * @return MediaName Output filename, up to 64 characters. By default, the system assigns the generated filename. Valid when StorageMode is Permanent.
                      * 
                      */
                     std::string GetMediaName() const;
 
                     /**
-                     * 设置
-                     * @param _mediaName 
+                     * 设置Output filename, up to 64 characters. By default, the system assigns the generated filename. Valid when StorageMode is Permanent.
+                     * @param _mediaName Output filename, up to 64 characters. By default, the system assigns the generated filename. Valid when StorageMode is Permanent.
                      * 
                      */
                     void SetMediaName(const std::string& _mediaName);
@@ -90,15 +94,19 @@ namespace TencentCloud
                     bool MediaNameHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ClassId 
+                     * 获取Category ID, used to categorize and manage media. You can create a category via the [Create Category](https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1) API to obtain the category ID. Valid when StorageMode is Permanent.
+
+                     * @return ClassId Category ID, used to categorize and manage media. You can create a category via the [Create Category](https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1) API to obtain the category ID. Valid when StorageMode is Permanent.
+
                      * 
                      */
                     int64_t GetClassId() const;
 
                     /**
-                     * 设置
-                     * @param _classId 
+                     * 设置Category ID, used to categorize and manage media. You can create a category via the [Create Category](https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1) API to obtain the category ID. Valid when StorageMode is Permanent.
+
+                     * @param _classId Category ID, used to categorize and manage media. You can create a category via the [Create Category](https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1) API to obtain the category ID. Valid when StorageMode is Permanent.
+
                      * 
                      */
                     void SetClassId(const int64_t& _classId);
@@ -111,15 +119,15 @@ namespace TencentCloud
                     bool ClassIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ExpireTime 
+                     * 获取Expiry date of the output file. The file will be deleted after this time. It never expires by default. The format is according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @return ExpireTime Expiry date of the output file. The file will be deleted after this time. It never expires by default. The format is according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      * 
                      */
                     std::string GetExpireTime() const;
 
                     /**
-                     * 设置
-                     * @param _expireTime 
+                     * 设置Expiry date of the output file. The file will be deleted after this time. It never expires by default. The format is according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @param _expireTime Expiry date of the output file. The file will be deleted after this time. It never expires by default. The format is according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      * 
                      */
                     void SetExpireTime(const std::string& _expireTime);
@@ -132,15 +140,15 @@ namespace TencentCloud
                     bool ExpireTimeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return FileType 
+                     * 获取File type, for example, mp4, flv.
+                     * @return FileType File type, for example, mp4, flv.
                      * 
                      */
                     std::string GetFileType() const;
 
                     /**
-                     * 设置
-                     * @param _fileType 
+                     * 设置File type, for example, mp4, flv.
+                     * @param _fileType File type, for example, mp4, flv.
                      * 
                      */
                     void SetFileType(const std::string& _fileType);
@@ -153,15 +161,15 @@ namespace TencentCloud
                     bool FileTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return FileUrl 
+                     * 获取Media file playback address.
+                     * @return FileUrl Media file playback address.
                      * 
                      */
                     std::string GetFileUrl() const;
 
                     /**
-                     * 设置
-                     * @param _fileUrl 
+                     * 设置Media file playback address.
+                     * @param _fileUrl Media file playback address.
                      * 
                      */
                     void SetFileUrl(const std::string& _fileUrl);
@@ -174,15 +182,15 @@ namespace TencentCloud
                     bool FileUrlHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return FileId 
+                     * 获取Media file ID. Valid when StorageMode is Permanent.
+                     * @return FileId Media file ID. Valid when StorageMode is Permanent.
                      * 
                      */
                     std::string GetFileId() const;
 
                     /**
-                     * 设置
-                     * @param _fileId 
+                     * 设置Media file ID. Valid when StorageMode is Permanent.
+                     * @param _fileId Media file ID. Valid when StorageMode is Permanent.
                      * 
                      */
                     void SetFileId(const std::string& _fileId);
@@ -195,15 +203,15 @@ namespace TencentCloud
                     bool FileIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return MetaData 
+                     * 获取Meta information of the output video. Valid only when StorageMode is Permanent.
+                     * @return MetaData Meta information of the output video. Valid only when StorageMode is Permanent.
                      * 
                      */
                     MediaMetaData GetMetaData() const;
 
                     /**
-                     * 设置
-                     * @param _metaData 
+                     * 设置Meta information of the output video. Valid only when StorageMode is Permanent.
+                     * @param _metaData Meta information of the output video. Valid only when StorageMode is Permanent.
                      * 
                      */
                     void SetMetaData(const MediaMetaData& _metaData);
@@ -218,49 +226,51 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Storage mode. Valid values: <li>Permanent: retained permanently;</li> <li>Temporary: temporary storage;</li>
+
                      */
                     std::string m_storageMode;
                     bool m_storageModeHasBeenSet;
 
                     /**
-                     * 
+                     * Output filename, up to 64 characters. By default, the system assigns the generated filename. Valid when StorageMode is Permanent.
                      */
                     std::string m_mediaName;
                     bool m_mediaNameHasBeenSet;
 
                     /**
-                     * 
+                     * Category ID, used to categorize and manage media. You can create a category via the [Create Category](https://www.tencentcloud.com/document/product/266/7812?from_cn_redirect=1) API to obtain the category ID. Valid when StorageMode is Permanent.
+
                      */
                     int64_t m_classId;
                     bool m_classIdHasBeenSet;
 
                     /**
-                     * 
+                     * Expiry date of the output file. The file will be deleted after this time. It never expires by default. The format is according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      */
                     std::string m_expireTime;
                     bool m_expireTimeHasBeenSet;
 
                     /**
-                     * 
+                     * File type, for example, mp4, flv.
                      */
                     std::string m_fileType;
                     bool m_fileTypeHasBeenSet;
 
                     /**
-                     * 
+                     * Media file playback address.
                      */
                     std::string m_fileUrl;
                     bool m_fileUrlHasBeenSet;
 
                     /**
-                     * 
+                     * Media file ID. Valid when StorageMode is Permanent.
                      */
                     std::string m_fileId;
                     bool m_fileIdHasBeenSet;
 
                     /**
-                     * 
+                     * Meta information of the output video. Valid only when StorageMode is Permanent.
                      */
                     MediaMetaData m_metaData;
                     bool m_metaDataHasBeenSet;

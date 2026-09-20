@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Segments for frame tagging
                 */
                 class MediaAiAnalysisFrameTagSegmentItem : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return StartTimeOffset 
+                     * 获取<p>Offset time starting from frame tagging.</p><p>Unit: seconds</p>
+                     * @return StartTimeOffset <p>Offset time starting from frame tagging.</p><p>Unit: seconds</p>
                      * 
                      */
                     double GetStartTimeOffset() const;
 
                     /**
-                     * 设置
-                     * @param _startTimeOffset 
+                     * 设置<p>Offset time starting from frame tagging.</p><p>Unit: seconds</p>
+                     * @param _startTimeOffset <p>Offset time starting from frame tagging.</p><p>Unit: seconds</p>
                      * 
                      */
                     void SetStartTimeOffset(const double& _startTimeOffset);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool StartTimeOffsetHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return EndTimeOffset 
+                     * 获取<p>Offset time when frame tagging ends.</p><p>Unit: seconds</p>
+                     * @return EndTimeOffset <p>Offset time when frame tagging ends.</p><p>Unit: seconds</p>
                      * 
                      */
                     double GetEndTimeOffset() const;
 
                     /**
-                     * 设置
-                     * @param _endTimeOffset 
+                     * 设置<p>Offset time when frame tagging ends.</p><p>Unit: seconds</p>
+                     * @param _endTimeOffset <p>Offset time when frame tagging ends.</p><p>Unit: seconds</p>
                      * 
                      */
                     void SetEndTimeOffset(const double& _endTimeOffset);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool EndTimeOffsetHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return TagSet 
+                     * 获取<p>Tag list in the time segment.</p>
+                     * @return TagSet <p>Tag list in the time segment.</p>
                      * 
                      */
                     std::vector<MediaAiAnalysisFrameTagItem> GetTagSet() const;
 
                     /**
-                     * 设置
-                     * @param _tagSet 
+                     * 设置<p>Tag list in the time segment.</p>
+                     * @param _tagSet <p>Tag list in the time segment.</p>
                      * 
                      */
                     void SetTagSet(const std::vector<MediaAiAnalysisFrameTagItem>& _tagSet);
@@ -113,19 +113,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p>Offset time starting from frame tagging.</p><p>Unit: seconds</p>
                      */
                     double m_startTimeOffset;
                     bool m_startTimeOffsetHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Offset time when frame tagging ends.</p><p>Unit: seconds</p>
                      */
                     double m_endTimeOffset;
                     bool m_endTimeOffsetHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Tag list in the time segment.</p>
                      */
                     std::vector<MediaAiAnalysisFrameTagItem> m_tagSet;
                     bool m_tagSetHasBeenSet;

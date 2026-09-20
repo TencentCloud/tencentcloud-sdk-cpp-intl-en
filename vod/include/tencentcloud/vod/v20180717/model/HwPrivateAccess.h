@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Huawei Cloud object storage origin-pull authentication
                 */
                 class HwPrivateAccess : public AbstractModel
                 {
@@ -76,15 +76,15 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AccessKey 
+                     * 获取Access ID.
+                     * @return AccessKey Access ID.
                      * 
                      */
                     std::string GetAccessKey() const;
 
                     /**
-                     * 设置
-                     * @param _accessKey 
+                     * 设置Access ID.
+                     * @param _accessKey Access ID.
                      * 
                      */
                     void SetAccessKey(const std::string& _accessKey);
@@ -97,15 +97,15 @@ namespace TencentCloud
                     bool AccessKeyHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SecretKey 
+                     * 获取Key.
+                     * @return SecretKey Key.
                      * 
                      */
                     std::string GetSecretKey() const;
 
                     /**
-                     * 设置
-                     * @param _secretKey 
+                     * 设置Key.
+                     * @param _secretKey Key.
                      * 
                      */
                     void SetSecretKey(const std::string& _secretKey);
@@ -118,15 +118,15 @@ namespace TencentCloud
                     bool SecretKeyHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Bucket 
+                     * 获取Bucket Name.
+                     * @return Bucket Bucket Name.
                      * 
                      */
                     std::string GetBucket() const;
 
                     /**
-                     * 设置
-                     * @param _bucket 
+                     * 设置Bucket Name.
+                     * @param _bucket Bucket Name.
                      * 
                      */
                     void SetBucket(const std::string& _bucket);
@@ -149,19 +149,19 @@ namespace TencentCloud
                     bool m_switchHasBeenSet;
 
                     /**
-                     * 
+                     * Access ID.
                      */
                     std::string m_accessKey;
                     bool m_accessKeyHasBeenSet;
 
                     /**
-                     * 
+                     * Key.
                      */
                     std::string m_secretKey;
                     bool m_secretKeyHasBeenSet;
 
                     /**
-                     * 
+                     * Bucket Name.
                      */
                     std::string m_bucket;
                     bool m_bucketHasBeenSet;

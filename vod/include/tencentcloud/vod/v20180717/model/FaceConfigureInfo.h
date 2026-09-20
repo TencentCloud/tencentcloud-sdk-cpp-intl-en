@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Face recognition task control parameter
                 */
                 class FaceConfigureInfo : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Switch 
+                     * 获取<p>Face recognition task switch. Available values:</p><li>ON: Enable the intelligent face recognition task;</li><li>OFF: Disable the intelligent face recognition task.</li>
+                     * @return Switch <p>Face recognition task switch. Available values:</p><li>ON: Enable the intelligent face recognition task;</li><li>OFF: Disable the intelligent face recognition task.</li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置
-                     * @param _switch 
+                     * 设置<p>Face recognition task switch. Available values:</p><li>ON: Enable the intelligent face recognition task;</li><li>OFF: Disable the intelligent face recognition task.</li>
+                     * @param _switch <p>Face recognition task switch. Available values:</p><li>ON: Enable the intelligent face recognition task;</li><li>OFF: Disable the intelligent face recognition task.</li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Score 
+                     * 获取<p>Face recognition filter score. When the recognition result reaches this score or above, the recognition result will be returned. Default score: 95. Value range: 0-100.</p>
+                     * @return Score <p>Face recognition filter score. When the recognition result reaches this score or above, the recognition result will be returned. Default score: 95. Value range: 0-100.</p>
                      * 
                      */
                     double GetScore() const;
 
                     /**
-                     * 设置
-                     * @param _score 
+                     * 设置<p>Face recognition filter score. When the recognition result reaches this score or above, the recognition result will be returned. Default score: 95. Value range: 0-100.</p>
+                     * @param _score <p>Face recognition filter score. When the recognition result reaches this score or above, the recognition result will be returned. Default score: 95. Value range: 0-100.</p>
                      * 
                      */
                     void SetScore(const double& _score);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool ScoreHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return DefaultLibraryLabelSet 
+                     * 获取<p>Filter tag for default characters, specifying the tags of default characters to return. If not filled or empty, all default character results will be returned. Available tag values:</p><li>entertainment: entertainment star;</li><li>sport: sports celebrity;</li><li>politician: relevant people.</li>
+                     * @return DefaultLibraryLabelSet <p>Filter tag for default characters, specifying the tags of default characters to return. If not filled or empty, all default character results will be returned. Available tag values:</p><li>entertainment: entertainment star;</li><li>sport: sports celebrity;</li><li>politician: relevant people.</li>
                      * 
                      */
                     std::vector<std::string> GetDefaultLibraryLabelSet() const;
 
                     /**
-                     * 设置
-                     * @param _defaultLibraryLabelSet 
+                     * 设置<p>Filter tag for default characters, specifying the tags of default characters to return. If not filled or empty, all default character results will be returned. Available tag values:</p><li>entertainment: entertainment star;</li><li>sport: sports celebrity;</li><li>politician: relevant people.</li>
+                     * @param _defaultLibraryLabelSet <p>Filter tag for default characters, specifying the tags of default characters to return. If not filled or empty, all default character results will be returned. Available tag values:</p><li>entertainment: entertainment star;</li><li>sport: sports celebrity;</li><li>politician: relevant people.</li>
                      * 
                      */
                     void SetDefaultLibraryLabelSet(const std::vector<std::string>& _defaultLibraryLabelSet);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool DefaultLibraryLabelSetHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return UserDefineLibraryLabelSet 
+                     * 获取<p>Filter tag for user-defined characters, specifying the tags of user-defined characters to return. If not specified or empty, all customized figure results are returned.<br>The number of tags can be up to 100, and each tag can contain up to 16 characters.</p>
+                     * @return UserDefineLibraryLabelSet <p>Filter tag for user-defined characters, specifying the tags of user-defined characters to return. If not specified or empty, all customized figure results are returned.<br>The number of tags can be up to 100, and each tag can contain up to 16 characters.</p>
                      * 
                      */
                     std::vector<std::string> GetUserDefineLibraryLabelSet() const;
 
                     /**
-                     * 设置
-                     * @param _userDefineLibraryLabelSet 
+                     * 设置<p>Filter tag for user-defined characters, specifying the tags of user-defined characters to return. If not specified or empty, all customized figure results are returned.<br>The number of tags can be up to 100, and each tag can contain up to 16 characters.</p>
+                     * @param _userDefineLibraryLabelSet <p>Filter tag for user-defined characters, specifying the tags of user-defined characters to return. If not specified or empty, all customized figure results are returned.<br>The number of tags can be up to 100, and each tag can contain up to 16 characters.</p>
                      * 
                      */
                     void SetUserDefineLibraryLabelSet(const std::vector<std::string>& _userDefineLibraryLabelSet);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool UserDefineLibraryLabelSetHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return FaceLibrary 
+                     * 获取<p>Figure library selection. Available values:</p><li>Default: use the default figure library.</li><li>UserDefine: use a user-defined figure library.</li><li>All: use both the default and user-defined figure libraries.</li>Default value: All, use the system default figure library and user-defined figure library.
+                     * @return FaceLibrary <p>Figure library selection. Available values:</p><li>Default: use the default figure library.</li><li>UserDefine: use a user-defined figure library.</li><li>All: use both the default and user-defined figure libraries.</li>Default value: All, use the system default figure library and user-defined figure library.
                      * 
                      */
                     std::string GetFaceLibrary() const;
 
                     /**
-                     * 设置
-                     * @param _faceLibrary 
+                     * 设置<p>Figure library selection. Available values:</p><li>Default: use the default figure library.</li><li>UserDefine: use a user-defined figure library.</li><li>All: use both the default and user-defined figure libraries.</li>Default value: All, use the system default figure library and user-defined figure library.
+                     * @param _faceLibrary <p>Figure library selection. Available values:</p><li>Default: use the default figure library.</li><li>UserDefine: use a user-defined figure library.</li><li>All: use both the default and user-defined figure libraries.</li>Default value: All, use the system default figure library and user-defined figure library.
                      * 
                      */
                     void SetFaceLibrary(const std::string& _faceLibrary);
@@ -154,31 +154,31 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p>Face recognition task switch. Available values:</p><li>ON: Enable the intelligent face recognition task;</li><li>OFF: Disable the intelligent face recognition task.</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Face recognition filter score. When the recognition result reaches this score or above, the recognition result will be returned. Default score: 95. Value range: 0-100.</p>
                      */
                     double m_score;
                     bool m_scoreHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Filter tag for default characters, specifying the tags of default characters to return. If not filled or empty, all default character results will be returned. Available tag values:</p><li>entertainment: entertainment star;</li><li>sport: sports celebrity;</li><li>politician: relevant people.</li>
                      */
                     std::vector<std::string> m_defaultLibraryLabelSet;
                     bool m_defaultLibraryLabelSetHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Filter tag for user-defined characters, specifying the tags of user-defined characters to return. If not specified or empty, all customized figure results are returned.<br>The number of tags can be up to 100, and each tag can contain up to 16 characters.</p>
                      */
                     std::vector<std::string> m_userDefineLibraryLabelSet;
                     bool m_userDefineLibraryLabelSetHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Figure library selection. Available values:</p><li>Default: use the default figure library.</li><li>UserDefine: use a user-defined figure library.</li><li>All: use both the default and user-defined figure libraries.</li>Default value: All, use the system default figure library and user-defined figure library.
                      */
                     std::string m_faceLibrary;
                     bool m_faceLibraryHasBeenSet;

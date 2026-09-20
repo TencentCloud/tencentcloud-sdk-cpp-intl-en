@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Browser cache rule configuration, used to set the default MaxAge value. Disabled by default.
                 */
                 class MaxAge : public AbstractModel
                 {

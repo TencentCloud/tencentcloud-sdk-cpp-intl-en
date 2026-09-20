@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * DNS resolution verification information
                 */
                 class DNSVerifyInfo : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return SubDomain 
+                     * 获取Sub-parsing.
+                     * @return SubDomain Sub-parsing.
                      * 
                      */
                     std::string GetSubDomain() const;
 
                     /**
-                     * 设置
-                     * @param _subDomain 
+                     * 设置Sub-parsing.
+                     * @param _subDomain Sub-parsing.
                      * 
                      */
                     void SetSubDomain(const std::string& _subDomain);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool SubDomainHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Record 
+                     * 获取Parse the value.
+                     * @return Record Parse the value.
                      * 
                      */
                     std::string GetRecord() const;
 
                     /**
-                     * 设置
-                     * @param _record 
+                     * 设置Parse the value.
+                     * @param _record Parse the value.
                      * 
                      */
                     void SetRecord(const std::string& _record);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool RecordHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return RecordType 
+                     * 获取Parsing type.
+                     * @return RecordType Parsing type.
                      * 
                      */
                     std::string GetRecordType() const;
 
                     /**
-                     * 设置
-                     * @param _recordType 
+                     * 设置Parsing type.
+                     * @param _recordType Parsing type.
                      * 
                      */
                     void SetRecordType(const std::string& _recordType);
@@ -112,19 +112,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Sub-parsing.
                      */
                     std::string m_subDomain;
                     bool m_subDomainHasBeenSet;
 
                     /**
-                     * 
+                     * Parse the value.
                      */
                     std::string m_record;
                     bool m_recordHasBeenSet;
 
                     /**
-                     * 
+                     * Parsing type.
                      */
                     std::string m_recordType;
                     bool m_recordTypeHasBeenSet;

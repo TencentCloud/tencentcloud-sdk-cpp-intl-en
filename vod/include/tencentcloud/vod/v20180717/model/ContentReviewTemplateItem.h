@@ -40,7 +40,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Audio/Video Moderation Template Details
                 */
                 class ContentReviewTemplateItem : public AbstractModel
                 {
@@ -52,15 +52,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Definition 
+                     * 获取Unique identifier of an audio and video review template.
+                     * @return Definition Unique identifier of an audio and video review template.
                      * 
                      */
                     int64_t GetDefinition() const;
 
                     /**
-                     * 设置
-                     * @param _definition 
+                     * 设置Unique identifier of an audio and video review template.
+                     * @param _definition Unique identifier of an audio and video review template.
                      * 
                      */
                     void SetDefinition(const int64_t& _definition);
@@ -73,15 +73,15 @@ namespace TencentCloud
                     bool DefinitionHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Name 
+                     * 获取Audio/video moderation template name. Length limit: 64 characters.
+                     * @return Name Audio/video moderation template name. Length limit: 64 characters.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置
-                     * @param _name 
+                     * 设置Audio/video moderation template name. Length limit: 64 characters.
+                     * @param _name Audio/video moderation template name. Length limit: 64 characters.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -94,15 +94,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Comment 
+                     * 获取Description of the audio and video review template, with a length limit of 256 characters.
+                     * @return Comment Description of the audio and video review template, with a length limit of 256 characters.
                      * 
                      */
                     std::string GetComment() const;
 
                     /**
-                     * 设置
-                     * @param _comment 
+                     * 设置Description of the audio and video review template, with a length limit of 256 characters.
+                     * @param _comment Description of the audio and video review template, with a length limit of 256 characters.
                      * 
                      */
                     void SetComment(const std::string& _comment);
@@ -115,15 +115,15 @@ namespace TencentCloud
                     bool CommentHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return PornConfigure 
+                     * 获取Authentication involves control parameters for offensive information.
+                     * @return PornConfigure Authentication involves control parameters for offensive information.
                      * 
                      */
                     PornConfigureInfo GetPornConfigure() const;
 
                     /**
-                     * 设置
-                     * @param _pornConfigure 
+                     * 设置Authentication involves control parameters for offensive information.
+                     * @param _pornConfigure Authentication involves control parameters for offensive information.
                      * 
                      */
                     void SetPornConfigure(const PornConfigureInfo& _pornConfigure);
@@ -136,15 +136,15 @@ namespace TencentCloud
                     bool PornConfigureHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return TerrorismConfigure 
+                     * 获取Control parameters for authentication involving unsafe information.
+                     * @return TerrorismConfigure Control parameters for authentication involving unsafe information.
                      * 
                      */
                     TerrorismConfigureInfo GetTerrorismConfigure() const;
 
                     /**
-                     * 设置
-                     * @param _terrorismConfigure 
+                     * 设置Control parameters for authentication involving unsafe information.
+                     * @param _terrorismConfigure Control parameters for authentication involving unsafe information.
                      * 
                      */
                     void SetTerrorismConfigure(const TerrorismConfigureInfo& _terrorismConfigure);
@@ -157,15 +157,15 @@ namespace TencentCloud
                     bool TerrorismConfigureHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return PoliticalConfigure 
+                     * 获取Control parameters for identifying inappropriate information.
+                     * @return PoliticalConfigure Control parameters for identifying inappropriate information.
                      * 
                      */
                     PoliticalConfigureInfo GetPoliticalConfigure() const;
 
                     /**
-                     * 设置
-                     * @param _politicalConfigure 
+                     * 设置Control parameters for identifying inappropriate information.
+                     * @param _politicalConfigure Control parameters for identifying inappropriate information.
                      * 
                      */
                     void SetPoliticalConfigure(const PoliticalConfigureInfo& _politicalConfigure);
@@ -178,15 +178,23 @@ namespace TencentCloud
                     bool PoliticalConfigureHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ProhibitedConfigure 
+                     * 获取Prohibited control parameters. Restricted content includes:
+<li>Abusive language;</li>
+<li>Drug-related violation.</li>
+                     * @return ProhibitedConfigure Prohibited control parameters. Restricted content includes:
+<li>Abusive language;</li>
+<li>Drug-related violation.</li>
                      * 
                      */
                     ProhibitedConfigureInfo GetProhibitedConfigure() const;
 
                     /**
-                     * 设置
-                     * @param _prohibitedConfigure 
+                     * 设置Prohibited control parameters. Restricted content includes:
+<li>Abusive language;</li>
+<li>Drug-related violation.</li>
+                     * @param _prohibitedConfigure Prohibited control parameters. Restricted content includes:
+<li>Abusive language;</li>
+<li>Drug-related violation.</li>
                      * 
                      */
                     void SetProhibitedConfigure(const ProhibitedConfigureInfo& _prohibitedConfigure);
@@ -199,15 +207,15 @@ namespace TencentCloud
                     bool ProhibitedConfigureHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return UserDefineConfigure 
+                     * 获取User-customized control parameters for audio/video moderation.
+                     * @return UserDefineConfigure User-customized control parameters for audio/video moderation.
                      * 
                      */
                     UserDefineConfigureInfo GetUserDefineConfigure() const;
 
                     /**
-                     * 设置
-                     * @param _userDefineConfigure 
+                     * 设置User-customized control parameters for audio/video moderation.
+                     * @param _userDefineConfigure User-customized control parameters for audio/video moderation.
                      * 
                      */
                     void SetUserDefineConfigure(const UserDefineConfigureInfo& _userDefineConfigure);
@@ -220,15 +228,23 @@ namespace TencentCloud
                     bool UserDefineConfigureHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ReviewWallSwitch 
+                     * 获取Whether the audio/video moderation result enters the audio/video moderation wall (for manual review of the audio/video moderation result).
+<li>ON: Yes;</li>
+<li>OFF: No.</li>
+                     * @return ReviewWallSwitch Whether the audio/video moderation result enters the audio/video moderation wall (for manual review of the audio/video moderation result).
+<li>ON: Yes;</li>
+<li>OFF: No.</li>
                      * 
                      */
                     std::string GetReviewWallSwitch() const;
 
                     /**
-                     * 设置
-                     * @param _reviewWallSwitch 
+                     * 设置Whether the audio/video moderation result enters the audio/video moderation wall (for manual review of the audio/video moderation result).
+<li>ON: Yes;</li>
+<li>OFF: No.</li>
+                     * @param _reviewWallSwitch Whether the audio/video moderation result enters the audio/video moderation wall (for manual review of the audio/video moderation result).
+<li>ON: Yes;</li>
+<li>OFF: No.</li>
                      * 
                      */
                     void SetReviewWallSwitch(const std::string& _reviewWallSwitch);
@@ -241,15 +257,15 @@ namespace TencentCloud
                     bool ReviewWallSwitchHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ScreenshotInterval 
+                     * 获取Frame interception interval in seconds. If not specified, the default frame interval is 1 second, with a minimum value of 0.5 seconds.
+                     * @return ScreenshotInterval Frame interception interval in seconds. If not specified, the default frame interval is 1 second, with a minimum value of 0.5 seconds.
                      * 
                      */
                     double GetScreenshotInterval() const;
 
                     /**
-                     * 设置
-                     * @param _screenshotInterval 
+                     * 设置Frame interception interval in seconds. If not specified, the default frame interval is 1 second, with a minimum value of 0.5 seconds.
+                     * @param _screenshotInterval Frame interception interval in seconds. If not specified, the default frame interval is 1 second, with a minimum value of 0.5 seconds.
                      * 
                      */
                     void SetScreenshotInterval(const double& _screenshotInterval);
@@ -262,15 +278,15 @@ namespace TencentCloud
                     bool ScreenshotIntervalHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return CreateTime 
+                     * 获取Template creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @return CreateTime Template creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
-                     * 设置
-                     * @param _createTime 
+                     * 设置Template creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @param _createTime Template creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      * 
                      */
                     void SetCreateTime(const std::string& _createTime);
@@ -283,15 +299,15 @@ namespace TencentCloud
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return UpdateTime 
+                     * 获取Template last modified time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @return UpdateTime Template last modified time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
-                     * 设置
-                     * @param _updateTime 
+                     * 设置Template last modified time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @param _updateTime Template last modified time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
@@ -306,73 +322,77 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Unique identifier of an audio and video review template.
                      */
                     int64_t m_definition;
                     bool m_definitionHasBeenSet;
 
                     /**
-                     * 
+                     * Audio/video moderation template name. Length limit: 64 characters.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * 
+                     * Description of the audio and video review template, with a length limit of 256 characters.
                      */
                     std::string m_comment;
                     bool m_commentHasBeenSet;
 
                     /**
-                     * 
+                     * Authentication involves control parameters for offensive information.
                      */
                     PornConfigureInfo m_pornConfigure;
                     bool m_pornConfigureHasBeenSet;
 
                     /**
-                     * 
+                     * Control parameters for authentication involving unsafe information.
                      */
                     TerrorismConfigureInfo m_terrorismConfigure;
                     bool m_terrorismConfigureHasBeenSet;
 
                     /**
-                     * 
+                     * Control parameters for identifying inappropriate information.
                      */
                     PoliticalConfigureInfo m_politicalConfigure;
                     bool m_politicalConfigureHasBeenSet;
 
                     /**
-                     * 
+                     * Prohibited control parameters. Restricted content includes:
+<li>Abusive language;</li>
+<li>Drug-related violation.</li>
                      */
                     ProhibitedConfigureInfo m_prohibitedConfigure;
                     bool m_prohibitedConfigureHasBeenSet;
 
                     /**
-                     * 
+                     * User-customized control parameters for audio/video moderation.
                      */
                     UserDefineConfigureInfo m_userDefineConfigure;
                     bool m_userDefineConfigureHasBeenSet;
 
                     /**
-                     * 
+                     * Whether the audio/video moderation result enters the audio/video moderation wall (for manual review of the audio/video moderation result).
+<li>ON: Yes;</li>
+<li>OFF: No.</li>
                      */
                     std::string m_reviewWallSwitch;
                     bool m_reviewWallSwitchHasBeenSet;
 
                     /**
-                     * 
+                     * Frame interception interval in seconds. If not specified, the default frame interval is 1 second, with a minimum value of 0.5 seconds.
                      */
                     double m_screenshotInterval;
                     bool m_screenshotIntervalHasBeenSet;
 
                     /**
-                     * 
+                     * Template creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * 
+                     * Template last modified time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      */
                     std::string m_updateTime;
                     bool m_updateTimeHasBeenSet;

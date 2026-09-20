@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Video information of the remastered output
                 */
                 class RebuildMediaTargetVideoStream : public AbstractModel
                 {
@@ -47,15 +47,31 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Codec 
+                     * 获取Encoding format for video streams. Optional values:
+<li>libx264: H.264 encoding;</li>
+<li>libx265: H.265 encoding;</li>
+<li>av1: AOMedia Video 1 encoding.</li>
+The default encoding format for video streams is H.264.
+                     * @return Codec Encoding format for video streams. Optional values:
+<li>libx264: H.264 encoding;</li>
+<li>libx265: H.265 encoding;</li>
+<li>av1: AOMedia Video 1 encoding.</li>
+The default encoding format for video streams is H.264.
                      * 
                      */
                     std::string GetCodec() const;
 
                     /**
-                     * 设置
-                     * @param _codec 
+                     * 设置Encoding format for video streams. Optional values:
+<li>libx264: H.264 encoding;</li>
+<li>libx265: H.265 encoding;</li>
+<li>av1: AOMedia Video 1 encoding.</li>
+The default encoding format for video streams is H.264.
+                     * @param _codec Encoding format for video streams. Optional values:
+<li>libx264: H.264 encoding;</li>
+<li>libx265: H.265 encoding;</li>
+<li>av1: AOMedia Video 1 encoding.</li>
+The default encoding format for video streams is H.264.
                      * 
                      */
                     void SetCodec(const std::string& _codec);
@@ -68,15 +84,19 @@ namespace TencentCloud
                     bool CodecHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Bitrate 
+                     * 获取Bitrate of video stream. Value range: 0 and [128, 35000]. Unit: kbps.
+When the value is 0, VOD automatically sets the bitrate.
+                     * @return Bitrate Bitrate of video stream. Value range: 0 and [128, 35000]. Unit: kbps.
+When the value is 0, VOD automatically sets the bitrate.
                      * 
                      */
                     int64_t GetBitrate() const;
 
                     /**
-                     * 设置
-                     * @param _bitrate 
+                     * 设置Bitrate of video stream. Value range: 0 and [128, 35000]. Unit: kbps.
+When the value is 0, VOD automatically sets the bitrate.
+                     * @param _bitrate Bitrate of video stream. Value range: 0 and [128, 35000]. Unit: kbps.
+When the value is 0, VOD automatically sets the bitrate.
                      * 
                      */
                     void SetBitrate(const int64_t& _bitrate);
@@ -89,15 +109,15 @@ namespace TencentCloud
                     bool BitrateHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Fps 
+                     * 获取Video frame rate. Value range: [0, 100]. Unit: Hz. A value of 0 means the frame rate is consistent with the original video.
+                     * @return Fps Video frame rate. Value range: [0, 100]. Unit: Hz. A value of 0 means the frame rate is consistent with the original video.
                      * 
                      */
                     int64_t GetFps() const;
 
                     /**
-                     * 设置
-                     * @param _fps 
+                     * 设置Video frame rate. Value range: [0, 100]. Unit: Hz. A value of 0 means the frame rate is consistent with the original video.
+                     * @param _fps Video frame rate. Value range: [0, 100]. Unit: Hz. A value of 0 means the frame rate is consistent with the original video.
                      * 
                      */
                     void SetFps(const int64_t& _fps);
@@ -110,15 +130,31 @@ namespace TencentCloud
                     bool FpsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ResolutionAdaptive 
+                     * 获取Resolution adaptation. Available values:
+<li>open: enable. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
+<li>close: closed. At this point, Width represents the video width, and Height indicates the video height.</li>
+
+Default value: open.
+                     * @return ResolutionAdaptive Resolution adaptation. Available values:
+<li>open: enable. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
+<li>close: closed. At this point, Width represents the video width, and Height indicates the video height.</li>
+
+Default value: open.
                      * 
                      */
                     std::string GetResolutionAdaptive() const;
 
                     /**
-                     * 设置
-                     * @param _resolutionAdaptive 
+                     * 设置Resolution adaptation. Available values:
+<li>open: enable. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
+<li>close: closed. At this point, Width represents the video width, and Height indicates the video height.</li>
+
+Default value: open.
+                     * @param _resolutionAdaptive Resolution adaptation. Available values:
+<li>open: enable. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
+<li>close: closed. At this point, Width represents the video width, and Height indicates the video height.</li>
+
+Default value: open.
                      * 
                      */
                     void SetResolutionAdaptive(const std::string& _resolutionAdaptive);
@@ -131,15 +167,39 @@ namespace TencentCloud
                     bool ResolutionAdaptiveHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Width 
+                     * 获取Maximum value of the video stream width (or long edge) in px. Value range: 0 and [128, 4096].
+<li>If both Width and Height are 0, the resolution is the same as the source.</li>
+<li>If Width is 0 but Height is not 0, the width will be proportionally scaled.</li>
+<li>If Width is not 0 but Height is 0, the height will be proportionally scaled.</li>
+<li>If both Width and Height are not 0, the resolution is as specified by the user.</li>
+
+Default value: 0.
+                     * @return Width Maximum value of the video stream width (or long edge) in px. Value range: 0 and [128, 4096].
+<li>If both Width and Height are 0, the resolution is the same as the source.</li>
+<li>If Width is 0 but Height is not 0, the width will be proportionally scaled.</li>
+<li>If Width is not 0 but Height is 0, the height will be proportionally scaled.</li>
+<li>If both Width and Height are not 0, the resolution is as specified by the user.</li>
+
+Default value: 0.
                      * 
                      */
                     int64_t GetWidth() const;
 
                     /**
-                     * 设置
-                     * @param _width 
+                     * 设置Maximum value of the video stream width (or long edge) in px. Value range: 0 and [128, 4096].
+<li>If both Width and Height are 0, the resolution is the same as the source.</li>
+<li>If Width is 0 but Height is not 0, the width will be proportionally scaled.</li>
+<li>If Width is not 0 but Height is 0, the height will be proportionally scaled.</li>
+<li>If both Width and Height are not 0, the resolution is as specified by the user.</li>
+
+Default value: 0.
+                     * @param _width Maximum value of the video stream width (or long edge) in px. Value range: 0 and [128, 4096].
+<li>If both Width and Height are 0, the resolution is the same as the source.</li>
+<li>If Width is 0 but Height is not 0, the width will be proportionally scaled.</li>
+<li>If Width is not 0 but Height is 0, the height will be proportionally scaled.</li>
+<li>If both Width and Height are not 0, the resolution is as specified by the user.</li>
+
+Default value: 0.
                      * 
                      */
                     void SetWidth(const int64_t& _width);
@@ -152,15 +212,39 @@ namespace TencentCloud
                     bool WidthHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Height 
+                     * 获取Maximum value of the video stream height (or short side). Value range: 0 and [128, 4096]. Unit: px.
+<li>If both Width and Height are 0, the resolution is the same as the source.</li>
+<li>If Width is 0 but Height is not 0, the width will be proportionally scaled.</li>
+<li>If Width is not 0 but Height is 0, the height will be proportionally scaled.</li>
+<li>If both Width and Height are not 0, the resolution is as specified by the user.</li>
+
+Default value: 0.
+                     * @return Height Maximum value of the video stream height (or short side). Value range: 0 and [128, 4096]. Unit: px.
+<li>If both Width and Height are 0, the resolution is the same as the source.</li>
+<li>If Width is 0 but Height is not 0, the width will be proportionally scaled.</li>
+<li>If Width is not 0 but Height is 0, the height will be proportionally scaled.</li>
+<li>If both Width and Height are not 0, the resolution is as specified by the user.</li>
+
+Default value: 0.
                      * 
                      */
                     int64_t GetHeight() const;
 
                     /**
-                     * 设置
-                     * @param _height 
+                     * 设置Maximum value of the video stream height (or short side). Value range: 0 and [128, 4096]. Unit: px.
+<li>If both Width and Height are 0, the resolution is the same as the source.</li>
+<li>If Width is 0 but Height is not 0, the width will be proportionally scaled.</li>
+<li>If Width is not 0 but Height is 0, the height will be proportionally scaled.</li>
+<li>If both Width and Height are not 0, the resolution is as specified by the user.</li>
+
+Default value: 0.
+                     * @param _height Maximum value of the video stream height (or short side). Value range: 0 and [128, 4096]. Unit: px.
+<li>If both Width and Height are 0, the resolution is the same as the source.</li>
+<li>If Width is 0 but Height is not 0, the width will be proportionally scaled.</li>
+<li>If Width is not 0 but Height is 0, the height will be proportionally scaled.</li>
+<li>If both Width and Height are not 0, the resolution is as specified by the user.</li>
+
+Default value: 0.
                      * 
                      */
                     void SetHeight(const int64_t& _height);
@@ -173,15 +257,31 @@ namespace TencentCloud
                     bool HeightHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return FillType 
+                     * 获取Filling method. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "padding". Optional filling modes:
+<li>stretch: stretch each frame to fill the entire screen, which may cause the transcoded video to be "squashed" or "stretched";</li>
+<li>black: Fill with black. Maintain the video aspect ratio and fill the remaining edges with black.</li>
+
+Default value: stretch.
+                     * @return FillType Filling method. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "padding". Optional filling modes:
+<li>stretch: stretch each frame to fill the entire screen, which may cause the transcoded video to be "squashed" or "stretched";</li>
+<li>black: Fill with black. Maintain the video aspect ratio and fill the remaining edges with black.</li>
+
+Default value: stretch.
                      * 
                      */
                     std::string GetFillType() const;
 
                     /**
-                     * 设置
-                     * @param _fillType 
+                     * 设置Filling method. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "padding". Optional filling modes:
+<li>stretch: stretch each frame to fill the entire screen, which may cause the transcoded video to be "squashed" or "stretched";</li>
+<li>black: Fill with black. Maintain the video aspect ratio and fill the remaining edges with black.</li>
+
+Default value: stretch.
+                     * @param _fillType Filling method. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "padding". Optional filling modes:
+<li>stretch: stretch each frame to fill the entire screen, which may cause the transcoded video to be "squashed" or "stretched";</li>
+<li>black: Fill with black. Maintain the video aspect ratio and fill the remaining edges with black.</li>
+
+Default value: stretch.
                      * 
                      */
                     void SetFillType(const std::string& _fillType);
@@ -194,15 +294,19 @@ namespace TencentCloud
                     bool FillTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Gop 
+                     * 获取Interval between I-frames, in frames. Value range: 0 and [1, 100000].
+If this parameter is 0 or left blank, the system will automatically set the GOP length.
+                     * @return Gop Interval between I-frames, in frames. Value range: 0 and [1, 100000].
+If this parameter is 0 or left blank, the system will automatically set the GOP length.
                      * 
                      */
                     int64_t GetGop() const;
 
                     /**
-                     * 设置
-                     * @param _gop 
+                     * 设置Interval between I-frames, in frames. Value range: 0 and [1, 100000].
+If this parameter is 0 or left blank, the system will automatically set the GOP length.
+                     * @param _gop Interval between I-frames, in frames. Value range: 0 and [1, 100000].
+If this parameter is 0 or left blank, the system will automatically set the GOP length.
                      * 
                      */
                     void SetGop(const int64_t& _gop);
@@ -217,49 +321,75 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Encoding format for video streams. Optional values:
+<li>libx264: H.264 encoding;</li>
+<li>libx265: H.265 encoding;</li>
+<li>av1: AOMedia Video 1 encoding.</li>
+The default encoding format for video streams is H.264.
                      */
                     std::string m_codec;
                     bool m_codecHasBeenSet;
 
                     /**
-                     * 
+                     * Bitrate of video stream. Value range: 0 and [128, 35000]. Unit: kbps.
+When the value is 0, VOD automatically sets the bitrate.
                      */
                     int64_t m_bitrate;
                     bool m_bitrateHasBeenSet;
 
                     /**
-                     * 
+                     * Video frame rate. Value range: [0, 100]. Unit: Hz. A value of 0 means the frame rate is consistent with the original video.
                      */
                     int64_t m_fps;
                     bool m_fpsHasBeenSet;
 
                     /**
-                     * 
+                     * Resolution adaptation. Available values:
+<li>open: enable. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
+<li>close: closed. At this point, Width represents the video width, and Height indicates the video height.</li>
+
+Default value: open.
                      */
                     std::string m_resolutionAdaptive;
                     bool m_resolutionAdaptiveHasBeenSet;
 
                     /**
-                     * 
+                     * Maximum value of the video stream width (or long edge) in px. Value range: 0 and [128, 4096].
+<li>If both Width and Height are 0, the resolution is the same as the source.</li>
+<li>If Width is 0 but Height is not 0, the width will be proportionally scaled.</li>
+<li>If Width is not 0 but Height is 0, the height will be proportionally scaled.</li>
+<li>If both Width and Height are not 0, the resolution is as specified by the user.</li>
+
+Default value: 0.
                      */
                     int64_t m_width;
                     bool m_widthHasBeenSet;
 
                     /**
-                     * 
+                     * Maximum value of the video stream height (or short side). Value range: 0 and [128, 4096]. Unit: px.
+<li>If both Width and Height are 0, the resolution is the same as the source.</li>
+<li>If Width is 0 but Height is not 0, the width will be proportionally scaled.</li>
+<li>If Width is not 0 but Height is 0, the height will be proportionally scaled.</li>
+<li>If both Width and Height are not 0, the resolution is as specified by the user.</li>
+
+Default value: 0.
                      */
                     int64_t m_height;
                     bool m_heightHasBeenSet;
 
                     /**
-                     * 
+                     * Filling method. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "padding". Optional filling modes:
+<li>stretch: stretch each frame to fill the entire screen, which may cause the transcoded video to be "squashed" or "stretched";</li>
+<li>black: Fill with black. Maintain the video aspect ratio and fill the remaining edges with black.</li>
+
+Default value: stretch.
                      */
                     std::string m_fillType;
                     bool m_fillTypeHasBeenSet;
 
                     /**
-                     * 
+                     * Interval between I-frames, in frames. Value range: 0 and [1, 100000].
+If this parameter is 0 or left blank, the system will automatically set the GOP length.
                      */
                     int64_t m_gop;
                     bool m_gopHasBeenSet;

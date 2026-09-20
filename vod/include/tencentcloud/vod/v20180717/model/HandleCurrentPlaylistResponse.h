@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return RoundPlaylist 
+                     * 获取List of successfully operated programs.
+                     * @return RoundPlaylist List of successfully operated programs.
                      * 
                      */
                     std::vector<RoundPlayListItemInfo> GetRoundPlaylist() const;
@@ -61,7 +61,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * List of successfully operated programs.
                      */
                     std::vector<RoundPlayListItemInfo> m_roundPlaylist;
                     bool m_roundPlaylistHasBeenSet;

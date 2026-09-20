@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Playback statistical information.
                 */
                 class PlayStatInfo : public AbstractModel
                 {
@@ -47,15 +47,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Time 
+                     * 获取Start time of the time interval where the data resides, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). For example, when the time granularity is day, 2018-12-01T00:00:00+08:00 means the interval from December 1, 2018 (inclusive) to December 2, 2018 (exclusive).
+<li>For hour-level data, 2019-08-22T00:00:00+08:00 refers to the stats from 0:00 to 1:00 on August 22, 2019.</li>
+<li>For daily-level data, 2019-08-22T00:00:00+08:00 refers to the stats of 2019-08-22.</li>
+                     * @return Time Start time of the time interval where the data resides, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). For example, when the time granularity is day, 2018-12-01T00:00:00+08:00 means the interval from December 1, 2018 (inclusive) to December 2, 2018 (exclusive).
+<li>For hour-level data, 2019-08-22T00:00:00+08:00 refers to the stats from 0:00 to 1:00 on August 22, 2019.</li>
+<li>For daily-level data, 2019-08-22T00:00:00+08:00 refers to the stats of 2019-08-22.</li>
                      * 
                      */
                     std::string GetTime() const;
 
                     /**
-                     * 设置
-                     * @param _time 
+                     * 设置Start time of the time interval where the data resides, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). For example, when the time granularity is day, 2018-12-01T00:00:00+08:00 means the interval from December 1, 2018 (inclusive) to December 2, 2018 (exclusive).
+<li>For hour-level data, 2019-08-22T00:00:00+08:00 refers to the stats from 0:00 to 1:00 on August 22, 2019.</li>
+<li>For daily-level data, 2019-08-22T00:00:00+08:00 refers to the stats of 2019-08-22.</li>
+                     * @param _time Start time of the time interval where the data resides, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). For example, when the time granularity is day, 2018-12-01T00:00:00+08:00 means the interval from December 1, 2018 (inclusive) to December 2, 2018 (exclusive).
+<li>For hour-level data, 2019-08-22T00:00:00+08:00 refers to the stats from 0:00 to 1:00 on August 22, 2019.</li>
+<li>For daily-level data, 2019-08-22T00:00:00+08:00 refers to the stats of 2019-08-22.</li>
                      * 
                      */
                     void SetTime(const std::string& _time);
@@ -68,15 +76,15 @@ namespace TencentCloud
                     bool TimeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return FileId 
+                     * 获取Media file ID.
+                     * @return FileId Media file ID.
                      * 
                      */
                     std::string GetFileId() const;
 
                     /**
-                     * 设置
-                     * @param _fileId 
+                     * 设置Media file ID.
+                     * @param _fileId Media file ID.
                      * 
                      */
                     void SetFileId(const std::string& _fileId);
@@ -89,15 +97,15 @@ namespace TencentCloud
                     bool FileIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return PlayTimes 
+                     * 获取Number of plays.
+                     * @return PlayTimes Number of plays.
                      * 
                      */
                     uint64_t GetPlayTimes() const;
 
                     /**
-                     * 设置
-                     * @param _playTimes 
+                     * 设置Number of plays.
+                     * @param _playTimes Number of plays.
                      * 
                      */
                     void SetPlayTimes(const uint64_t& _playTimes);
@@ -110,15 +118,15 @@ namespace TencentCloud
                     bool PlayTimesHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Traffic 
+                     * 获取Playback traffic volume. Measurement unit: byte.
+                     * @return Traffic Playback traffic volume. Measurement unit: byte.
                      * 
                      */
                     uint64_t GetTraffic() const;
 
                     /**
-                     * 设置
-                     * @param _traffic 
+                     * 设置Playback traffic volume. Measurement unit: byte.
+                     * @param _traffic Playback traffic volume. Measurement unit: byte.
                      * 
                      */
                     void SetTraffic(const uint64_t& _traffic);
@@ -133,25 +141,27 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Start time of the time interval where the data resides, using [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I). For example, when the time granularity is day, 2018-12-01T00:00:00+08:00 means the interval from December 1, 2018 (inclusive) to December 2, 2018 (exclusive).
+<li>For hour-level data, 2019-08-22T00:00:00+08:00 refers to the stats from 0:00 to 1:00 on August 22, 2019.</li>
+<li>For daily-level data, 2019-08-22T00:00:00+08:00 refers to the stats of 2019-08-22.</li>
                      */
                     std::string m_time;
                     bool m_timeHasBeenSet;
 
                     /**
-                     * 
+                     * Media file ID.
                      */
                     std::string m_fileId;
                     bool m_fileIdHasBeenSet;
 
                     /**
-                     * 
+                     * Number of plays.
                      */
                     uint64_t m_playTimes;
                     bool m_playTimesHasBeenSet;
 
                     /**
-                     * 
+                     * Playback traffic volume. Measurement unit: byte.
                      */
                     uint64_t m_traffic;
                     bool m_trafficHasBeenSet;

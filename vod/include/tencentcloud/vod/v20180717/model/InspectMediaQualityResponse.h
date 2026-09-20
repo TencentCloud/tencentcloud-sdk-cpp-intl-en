@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return TaskId 
+                     * 获取Audio and video quality inspection task ID.
+                     * @return TaskId Audio and video quality inspection task ID.
                      * 
                      */
                     std::string GetTaskId() const;
@@ -60,7 +60,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Audio and video quality inspection task ID.
                      */
                     std::string m_taskId;
                     bool m_taskIdHasBeenSet;

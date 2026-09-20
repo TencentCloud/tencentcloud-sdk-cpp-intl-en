@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Forced redirect configuration for access protocols. Disabled by default.
                 */
                 class ForceRedirect : public AbstractModel
                 {
@@ -77,10 +77,10 @@ namespace TencentCloud
 
                     /**
                      * 获取Access forced redirect type:
-<li>http: Force HTTP redirect</li>
+<li>http: Force HTTP redirection</li>
 <li>https: Force HTTPS redirection</li>
                      * @return RedirectType Access forced redirect type:
-<li>http: Force HTTP redirect</li>
+<li>http: Force HTTP redirection</li>
 <li>https: Force HTTPS redirection</li>
                      * 
                      */
@@ -88,10 +88,10 @@ namespace TencentCloud
 
                     /**
                      * 设置Access forced redirect type:
-<li>http: Force HTTP redirect</li>
+<li>http: Force HTTP redirection</li>
 <li>https: Force HTTPS redirection</li>
                      * @param _redirectType Access forced redirect type:
-<li>http: Force HTTP redirect</li>
+<li>http: Force HTTP redirection</li>
 <li>https: Force HTTPS redirection</li>
                      * 
                      */
@@ -105,15 +105,15 @@ namespace TencentCloud
                     bool RedirectTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return RedirectStatusCode 
+                     * 获取Status code returned for forced redirection. Supports 301 and 302.
+                     * @return RedirectStatusCode Status code returned for forced redirection. Supports 301 and 302.
                      * 
                      */
                     uint64_t GetRedirectStatusCode() const;
 
                     /**
-                     * 设置
-                     * @param _redirectStatusCode 
+                     * 设置Status code returned for forced redirection. Supports 301 and 302.
+                     * @param _redirectStatusCode Status code returned for forced redirection. Supports 301 and 302.
                      * 
                      */
                     void SetRedirectStatusCode(const uint64_t& _redirectStatusCode);
@@ -126,15 +126,15 @@ namespace TencentCloud
                     bool RedirectStatusCodeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return CarryHeaders 
+                     * 获取Whether to return the added header during forced redirection.
+                     * @return CarryHeaders Whether to return the added header during forced redirection.
                      * 
                      */
                     std::string GetCarryHeaders() const;
 
                     /**
-                     * 设置
-                     * @param _carryHeaders 
+                     * 设置Whether to return the added header during forced redirection.
+                     * @param _carryHeaders Whether to return the added header during forced redirection.
                      * 
                      */
                     void SetCarryHeaders(const std::string& _carryHeaders);
@@ -158,20 +158,20 @@ namespace TencentCloud
 
                     /**
                      * Access forced redirect type:
-<li>http: Force HTTP redirect</li>
+<li>http: Force HTTP redirection</li>
 <li>https: Force HTTPS redirection</li>
                      */
                     std::string m_redirectType;
                     bool m_redirectTypeHasBeenSet;
 
                     /**
-                     * 
+                     * Status code returned for forced redirection. Supports 301 and 302.
                      */
                     uint64_t m_redirectStatusCode;
                     bool m_redirectStatusCodeHasBeenSet;
 
                     /**
-                     * 
+                     * Whether to return the added header during forced redirection.
                      */
                     std::string m_carryHeaders;
                     bool m_carryHeadersHasBeenSet;

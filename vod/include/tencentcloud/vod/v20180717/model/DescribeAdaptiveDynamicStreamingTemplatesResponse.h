@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return TotalCount 
+                     * 获取Total number of records that meet the filtering conditions.
+                     * @return TotalCount Total number of records that meet the filtering conditions.
                      * 
                      */
                     uint64_t GetTotalCount() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AdaptiveDynamicStreamingTemplateSet 
+                     * 获取Adaptive bitstream template detail list.
+                     * @return AdaptiveDynamicStreamingTemplateSet Adaptive bitstream template detail list.
                      * 
                      */
                     std::vector<AdaptiveDynamicStreamingTemplate> GetAdaptiveDynamicStreamingTemplateSet() const;
@@ -75,13 +75,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Total number of records that meet the filtering conditions.
                      */
                     uint64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * 
+                     * Adaptive bitstream template detail list.
                      */
                     std::vector<AdaptiveDynamicStreamingTemplate> m_adaptiveDynamicStreamingTemplateSet;
                     bool m_adaptiveDynamicStreamingTemplateSetHasBeenSet;

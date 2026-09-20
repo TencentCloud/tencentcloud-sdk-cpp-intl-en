@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Output audio stream information
                 */
                 class OutputAudioStream : public AbstractModel
                 {
@@ -47,15 +47,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Codec 
+                     * 获取Encoding format for audio streams. Optional values:
+<li>libfdk_aac: suitable for mp4 files.</li>
+Default value: libfdk_aac.
+                     * @return Codec Encoding format for audio streams. Optional values:
+<li>libfdk_aac: suitable for mp4 files.</li>
+Default value: libfdk_aac.
                      * 
                      */
                     std::string GetCodec() const;
 
                     /**
-                     * 设置
-                     * @param _codec 
+                     * 设置Encoding format for audio streams. Optional values:
+<li>libfdk_aac: suitable for mp4 files.</li>
+Default value: libfdk_aac.
+                     * @param _codec Encoding format for audio streams. Optional values:
+<li>libfdk_aac: suitable for mp4 files.</li>
+Default value: libfdk_aac.
                      * 
                      */
                     void SetCodec(const std::string& _codec);
@@ -68,15 +76,39 @@ namespace TencentCloud
                     bool CodecHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SampleRate 
+                     * 获取Sampling rate of the audio stream. Available values:
+<li>16000</li>
+<li>32000</li>
+<li>44100</li>
+<li>48000</li>
+Unit: Hz.
+Default value: 16000.
+                     * @return SampleRate Sampling rate of the audio stream. Available values:
+<li>16000</li>
+<li>32000</li>
+<li>44100</li>
+<li>48000</li>
+Unit: Hz.
+Default value: 16000.
                      * 
                      */
                     int64_t GetSampleRate() const;
 
                     /**
-                     * 设置
-                     * @param _sampleRate 
+                     * 设置Sampling rate of the audio stream. Available values:
+<li>16000</li>
+<li>32000</li>
+<li>44100</li>
+<li>48000</li>
+Unit: Hz.
+Default value: 16000.
+                     * @param _sampleRate Sampling rate of the audio stream. Available values:
+<li>16000</li>
+<li>32000</li>
+<li>44100</li>
+<li>48000</li>
+Unit: Hz.
+Default value: 16000.
                      * 
                      */
                     void SetSampleRate(const int64_t& _sampleRate);
@@ -89,15 +121,27 @@ namespace TencentCloud
                     bool SampleRateHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AudioChannel 
+                     * 获取Number of audio channels. Available values:
+<li>1: mono.</li>
+<li>2: stereo.</li>
+Default value: 2.
+                     * @return AudioChannel Number of audio channels. Available values:
+<li>1: mono.</li>
+<li>2: stereo.</li>
+Default value: 2.
                      * 
                      */
                     int64_t GetAudioChannel() const;
 
                     /**
-                     * 设置
-                     * @param _audioChannel 
+                     * 设置Number of audio channels. Available values:
+<li>1: mono.</li>
+<li>2: stereo.</li>
+Default value: 2.
+                     * @param _audioChannel Number of audio channels. Available values:
+<li>1: mono.</li>
+<li>2: stereo.</li>
+Default value: 2.
                      * 
                      */
                     void SetAudioChannel(const int64_t& _audioChannel);
@@ -110,15 +154,19 @@ namespace TencentCloud
                     bool AudioChannelHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Bitrate 
+                     * 获取Audio stream bitrate. Value range: 0 and [26, 256]. Unit: kbps.
+When the value is 0, the audio bitrate is set automatically.
+                     * @return Bitrate Audio stream bitrate. Value range: 0 and [26, 256]. Unit: kbps.
+When the value is 0, the audio bitrate is set automatically.
                      * 
                      */
                     int64_t GetBitrate() const;
 
                     /**
-                     * 设置
-                     * @param _bitrate 
+                     * 设置Audio stream bitrate. Value range: 0 and [26, 256]. Unit: kbps.
+When the value is 0, the audio bitrate is set automatically.
+                     * @param _bitrate Audio stream bitrate. Value range: 0 and [26, 256]. Unit: kbps.
+When the value is 0, the audio bitrate is set automatically.
                      * 
                      */
                     void SetBitrate(const int64_t& _bitrate);
@@ -133,25 +181,37 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Encoding format for audio streams. Optional values:
+<li>libfdk_aac: suitable for mp4 files.</li>
+Default value: libfdk_aac.
                      */
                     std::string m_codec;
                     bool m_codecHasBeenSet;
 
                     /**
-                     * 
+                     * Sampling rate of the audio stream. Available values:
+<li>16000</li>
+<li>32000</li>
+<li>44100</li>
+<li>48000</li>
+Unit: Hz.
+Default value: 16000.
                      */
                     int64_t m_sampleRate;
                     bool m_sampleRateHasBeenSet;
 
                     /**
-                     * 
+                     * Number of audio channels. Available values:
+<li>1: mono.</li>
+<li>2: stereo.</li>
+Default value: 2.
                      */
                     int64_t m_audioChannel;
                     bool m_audioChannelHasBeenSet;
 
                     /**
-                     * 
+                     * Audio stream bitrate. Value range: 0 and [26, 256]. Unit: kbps.
+When the value is 0, the audio bitrate is set automatically.
                      */
                     int64_t m_bitrate;
                     bool m_bitrateHasBeenSet;

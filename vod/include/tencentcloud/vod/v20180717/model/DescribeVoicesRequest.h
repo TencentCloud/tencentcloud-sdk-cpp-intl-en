@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return SubAppId 
+                     * 获取<p>VOD app ID. For customers who activate on-demand services after December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</p>
+                     * @return SubAppId <p>VOD app ID. For customers who activate on-demand services after December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</p>
                      * 
                      */
                     std::string GetSubAppId() const;
 
                     /**
-                     * 设置
-                     * @param _subAppId 
+                     * 设置<p>VOD app ID. For customers who activate on-demand services after December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</p>
+                     * @param _subAppId <p>VOD app ID. For customers who activate on-demand services after December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</p>
                      * 
                      */
                     void SetSubAppId(const std::string& _subAppId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool SubAppIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return VoiceId 
+                     * 获取<p>Voice ID.</p>
+                     * @return VoiceId <p>Voice ID.</p>
                      * 
                      */
                     std::string GetVoiceId() const;
 
                     /**
-                     * 设置
-                     * @param _voiceId 
+                     * 设置<p>Voice ID.</p>
+                     * @param _voiceId <p>Voice ID.</p>
                      * 
                      */
                     void SetVoiceId(const std::string& _voiceId);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool VoiceIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return VoiceType 
+                     * 获取<p>Voice type.</p><p>Enumeration values:</p><ul><li>system: system audio.</li><li>clone: cloned audio.</li><li>design: designed audio.</li><li>all: All voices (default).</li></ul>
+                     * @return VoiceType <p>Voice type.</p><p>Enumeration values:</p><ul><li>system: system audio.</li><li>clone: cloned audio.</li><li>design: designed audio.</li><li>all: All voices (default).</li></ul>
                      * 
                      */
                     std::string GetVoiceType() const;
 
                     /**
-                     * 设置
-                     * @param _voiceType 
+                     * 设置<p>Voice type.</p><p>Enumeration values:</p><ul><li>system: system audio.</li><li>clone: cloned audio.</li><li>design: designed audio.</li><li>all: All voices (default).</li></ul>
+                     * @param _voiceType <p>Voice type.</p><p>Enumeration values:</p><ul><li>system: system audio.</li><li>clone: cloned audio.</li><li>design: designed audio.</li><li>all: All voices (default).</li></ul>
                      * 
                      */
                     void SetVoiceType(const std::string& _voiceType);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool VoiceTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return VoiceName 
+                     * 获取<p>Voice name.</p>
+                     * @return VoiceName <p>Voice name.</p>
                      * 
                      */
                     std::string GetVoiceName() const;
 
                     /**
-                     * 设置
-                     * @param _voiceName 
+                     * 设置<p>Voice name.</p>
+                     * @param _voiceName <p>Voice name.</p>
                      * 
                      */
                     void SetVoiceName(const std::string& _voiceName);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool VoiceNameHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Description 
+                     * 获取<p>Voice description.</p>
+                     * @return Description <p>Voice description.</p>
                      * 
                      */
                     std::string GetDescription() const;
 
                     /**
-                     * 设置
-                     * @param _description 
+                     * 设置<p>Voice description.</p>
+                     * @param _description <p>Voice description.</p>
                      * 
                      */
                     void SetDescription(const std::string& _description);
@@ -148,15 +148,15 @@ namespace TencentCloud
                     bool DescriptionHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Gender 
+                     * 获取<p>Gender.</p><p>Enumeration values:</p><ul><li>male: male</li><li>female: female</li><li>unknown: unknown</li></ul>
+                     * @return Gender <p>Gender.</p><p>Enumeration values:</p><ul><li>male: male</li><li>female: female</li><li>unknown: unknown</li></ul>
                      * 
                      */
                     std::string GetGender() const;
 
                     /**
-                     * 设置
-                     * @param _gender 
+                     * 设置<p>Gender.</p><p>Enumeration values:</p><ul><li>male: male</li><li>female: female</li><li>unknown: unknown</li></ul>
+                     * @param _gender <p>Gender.</p><p>Enumeration values:</p><ul><li>male: male</li><li>female: female</li><li>unknown: unknown</li></ul>
                      * 
                      */
                     void SetGender(const std::string& _gender);
@@ -169,15 +169,15 @@ namespace TencentCloud
                     bool GenderHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Age 
+                     * 获取<p>Age.</p><p>Enumeration values:</p><ul><li>child: child</li><li>teenager: teenager</li><li>youth: youth</li><li>middle_aged: middle-aged</li><li>senior: senior</li><li>unknown: unknown</li></ul>
+                     * @return Age <p>Age.</p><p>Enumeration values:</p><ul><li>child: child</li><li>teenager: teenager</li><li>youth: youth</li><li>middle_aged: middle-aged</li><li>senior: senior</li><li>unknown: unknown</li></ul>
                      * 
                      */
                     std::string GetAge() const;
 
                     /**
-                     * 设置
-                     * @param _age 
+                     * 设置<p>Age.</p><p>Enumeration values:</p><ul><li>child: child</li><li>teenager: teenager</li><li>youth: youth</li><li>middle_aged: middle-aged</li><li>senior: senior</li><li>unknown: unknown</li></ul>
+                     * @param _age <p>Age.</p><p>Enumeration values:</p><ul><li>child: child</li><li>teenager: teenager</li><li>youth: youth</li><li>middle_aged: middle-aged</li><li>senior: senior</li><li>unknown: unknown</li></ul>
                      * 
                      */
                     void SetAge(const std::string& _age);
@@ -190,15 +190,15 @@ namespace TencentCloud
                     bool AgeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Languages 
+                     * 获取<p>Language.</p>
+                     * @return Languages <p>Language.</p>
                      * 
                      */
                     std::vector<std::string> GetLanguages() const;
 
                     /**
-                     * 设置
-                     * @param _languages 
+                     * 设置<p>Language.</p>
+                     * @param _languages <p>Language.</p>
                      * 
                      */
                     void SetLanguages(const std::vector<std::string>& _languages);
@@ -211,15 +211,15 @@ namespace TencentCloud
                     bool LanguagesHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Labels 
+                     * 获取<p>Tag.</p>
+                     * @return Labels <p>Tag.</p>
                      * 
                      */
                     std::vector<std::string> GetLabels() const;
 
                     /**
-                     * 设置
-                     * @param _labels 
+                     * 设置<p>Tag.</p>
+                     * @param _labels <p>Tag.</p>
                      * 
                      */
                     void SetLabels(const std::vector<std::string>& _labels);
@@ -232,15 +232,15 @@ namespace TencentCloud
                     bool LabelsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Scenes 
+                     * 获取<p>Scenario.</p>
+                     * @return Scenes <p>Scenario.</p>
                      * 
                      */
                     std::vector<std::string> GetScenes() const;
 
                     /**
-                     * 设置
-                     * @param _scenes 
+                     * 设置<p>Scenario.</p>
+                     * @param _scenes <p>Scenario.</p>
                      * 
                      */
                     void SetScenes(const std::vector<std::string>& _scenes);
@@ -253,15 +253,19 @@ namespace TencentCloud
                     bool ScenesHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ExtParam 
+                     * 获取<p>Extended parameters in the format of a JSON string. </p><p>Other filter criteria:
+voiceName (String): Voice name, fuzzy matching. labels (Array of String): Tags. Matches voices that contain these tags.</p>
+                     * @return ExtParam <p>Extended parameters in the format of a JSON string. </p><p>Other filter criteria:
+voiceName (String): Voice name, fuzzy matching. labels (Array of String): Tags. Matches voices that contain these tags.</p>
                      * 
                      */
                     std::string GetExtParam() const;
 
                     /**
-                     * 设置
-                     * @param _extParam 
+                     * 设置<p>Extended parameters in the format of a JSON string. </p><p>Other filter criteria:
+voiceName (String): Voice name, fuzzy matching. labels (Array of String): Tags. Matches voices that contain these tags.</p>
+                     * @param _extParam <p>Extended parameters in the format of a JSON string. </p><p>Other filter criteria:
+voiceName (String): Voice name, fuzzy matching. labels (Array of String): Tags. Matches voices that contain these tags.</p>
                      * 
                      */
                     void SetExtParam(const std::string& _extParam);
@@ -276,67 +280,68 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p>VOD app ID. For customers who activate on-demand services after December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</p>
                      */
                     std::string m_subAppId;
                     bool m_subAppIdHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Voice ID.</p>
                      */
                     std::string m_voiceId;
                     bool m_voiceIdHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Voice type.</p><p>Enumeration values:</p><ul><li>system: system audio.</li><li>clone: cloned audio.</li><li>design: designed audio.</li><li>all: All voices (default).</li></ul>
                      */
                     std::string m_voiceType;
                     bool m_voiceTypeHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Voice name.</p>
                      */
                     std::string m_voiceName;
                     bool m_voiceNameHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Voice description.</p>
                      */
                     std::string m_description;
                     bool m_descriptionHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Gender.</p><p>Enumeration values:</p><ul><li>male: male</li><li>female: female</li><li>unknown: unknown</li></ul>
                      */
                     std::string m_gender;
                     bool m_genderHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Age.</p><p>Enumeration values:</p><ul><li>child: child</li><li>teenager: teenager</li><li>youth: youth</li><li>middle_aged: middle-aged</li><li>senior: senior</li><li>unknown: unknown</li></ul>
                      */
                     std::string m_age;
                     bool m_ageHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Language.</p>
                      */
                     std::vector<std::string> m_languages;
                     bool m_languagesHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Tag.</p>
                      */
                     std::vector<std::string> m_labels;
                     bool m_labelsHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Scenario.</p>
                      */
                     std::vector<std::string> m_scenes;
                     bool m_scenesHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Extended parameters in the format of a JSON string. </p><p>Other filter criteria:
+voiceName (String): Voice name, fuzzy matching. labels (Array of String): Tags. Matches voices that contain these tags.</p>
                      */
                     std::string m_extParam;
                     bool m_extParamHasBeenSet;

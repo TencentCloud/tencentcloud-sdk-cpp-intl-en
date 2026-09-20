@@ -46,15 +46,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return SubAppId 
+                     * 获取<p>VOD application ID. From December 25, 2023, customers who activate on-demand services must fill in this field with the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</p>
+                     * @return SubAppId <p>VOD application ID. From December 25, 2023, customers who activate on-demand services must fill in this field with the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</p>
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置
-                     * @param _subAppId 
+                     * 设置<p>VOD application ID. From December 25, 2023, customers who activate on-demand services must fill in this field with the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</p>
+                     * @param _subAppId <p>VOD application ID. From December 25, 2023, customers who activate on-demand services must fill in this field with the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</p>
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -67,15 +67,15 @@ namespace TencentCloud
                     bool SubAppIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ModelName 
+                     * 获取<p>Model name.</p>
+                     * @return ModelName <p>Model name.</p>
                      * 
                      */
                     std::string GetModelName() const;
 
                     /**
-                     * 设置
-                     * @param _modelName 
+                     * 设置<p>Model name.</p>
+                     * @param _modelName <p>Model name.</p>
                      * 
                      */
                     void SetModelName(const std::string& _modelName);
@@ -88,15 +88,15 @@ namespace TencentCloud
                     bool ModelNameHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ModelVersion 
+                     * 获取<p>Specify the model version number. By default, the system uses the supported stable version of the model.</p>
+                     * @return ModelVersion <p>Specify the model version number. By default, the system uses the supported stable version of the model.</p>
                      * 
                      */
                     std::string GetModelVersion() const;
 
                     /**
-                     * 设置
-                     * @param _modelVersion 
+                     * 设置<p>Specify the model version number. By default, the system uses the supported stable version of the model.</p>
+                     * @param _modelVersion <p>Specify the model version number. By default, the system uses the supported stable version of the model.</p>
                      * 
                      */
                     void SetModelVersion(const std::string& _modelVersion);
@@ -109,15 +109,15 @@ namespace TencentCloud
                     bool ModelVersionHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SceneType 
+                     * 获取<p>Designated scenarios. Currently supports sfx (sound effect) and music.</p>
+                     * @return SceneType <p>Designated scenarios. Currently supports sfx (sound effect) and music.</p>
                      * 
                      */
                     std::string GetSceneType() const;
 
                     /**
-                     * 设置
-                     * @param _sceneType 
+                     * 设置<p>Designated scenarios. Currently supports sfx (sound effect) and music.</p>
+                     * @param _sceneType <p>Designated scenarios. Currently supports sfx (sound effect) and music.</p>
                      * 
                      */
                     void SetSceneType(const std::string& _sceneType);
@@ -130,15 +130,15 @@ namespace TencentCloud
                     bool SceneTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Prompt 
+                     * 获取<p>Description of the generated audio</p>
+                     * @return Prompt <p>Description of the generated audio</p>
                      * 
                      */
                     std::string GetPrompt() const;
 
                     /**
-                     * 设置
-                     * @param _prompt 
+                     * 设置<p>Description of the generated audio</p>
+                     * @param _prompt <p>Description of the generated audio</p>
                      * 
                      */
                     void SetPrompt(const std::string& _prompt);
@@ -151,15 +151,15 @@ namespace TencentCloud
                     bool PromptHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return VideoInfos 
+                     * 获取<p>Video information for reference.</p>
+                     * @return VideoInfos <p>Video information for reference.</p>
                      * 
                      */
                     std::vector<AigcAudioReferenceVideoInfo> GetVideoInfos() const;
 
                     /**
-                     * 设置
-                     * @param _videoInfos 
+                     * 设置<p>Video information for reference.</p>
+                     * @param _videoInfos <p>Video information for reference.</p>
                      * 
                      */
                     void SetVideoInfos(const std::vector<AigcAudioReferenceVideoInfo>& _videoInfos);
@@ -172,15 +172,15 @@ namespace TencentCloud
                     bool VideoInfosHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AudioInfos 
+                     * 获取<p>Specify the reference audio information.</p><p>For example, this is required for music generation.</p>
+                     * @return AudioInfos <p>Specify the reference audio information.</p><p>For example, this is required for music generation.</p>
                      * 
                      */
                     std::vector<AigcAudioReferenceAudioInfo> GetAudioInfos() const;
 
                     /**
-                     * 设置
-                     * @param _audioInfos 
+                     * 设置<p>Specify the reference audio information.</p><p>For example, this is required for music generation.</p>
+                     * @param _audioInfos <p>Specify the reference audio information.</p><p>For example, this is required for music generation.</p>
                      * 
                      */
                     void SetAudioInfos(const std::vector<AigcAudioReferenceAudioInfo>& _audioInfos);
@@ -193,15 +193,15 @@ namespace TencentCloud
                     bool AudioInfosHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return OutputConfig 
+                     * 获取<p>Output parameter</p>
+                     * @return OutputConfig <p>Output parameter</p>
                      * 
                      */
                     AigcAudioOutputConfig GetOutputConfig() const;
 
                     /**
-                     * 设置
-                     * @param _outputConfig 
+                     * 设置<p>Output parameter</p>
+                     * @param _outputConfig <p>Output parameter</p>
                      * 
                      */
                     void SetOutputConfig(const AigcAudioOutputConfig& _outputConfig);
@@ -214,15 +214,15 @@ namespace TencentCloud
                     bool OutputConfigHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AdditionalParameters 
+                     * 获取<p>Special scenario parameters required by the model, formatted as a JSON serialized string.<br>Example:<br>{"camera_control":{"type":"simple"}}.</p>
+                     * @return AdditionalParameters <p>Special scenario parameters required by the model, formatted as a JSON serialized string.<br>Example:<br>{"camera_control":{"type":"simple"}}.</p>
                      * 
                      */
                     std::string GetAdditionalParameters() const;
 
                     /**
-                     * 设置
-                     * @param _additionalParameters 
+                     * 设置<p>Special scenario parameters required by the model, formatted as a JSON serialized string.<br>Example:<br>{"camera_control":{"type":"simple"}}.</p>
+                     * @param _additionalParameters <p>Special scenario parameters required by the model, formatted as a JSON serialized string.<br>Example:<br>{"camera_control":{"type":"simple"}}.</p>
                      * 
                      */
                     void SetAdditionalParameters(const std::string& _additionalParameters);
@@ -237,55 +237,55 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p>VOD application ID. From December 25, 2023, customers who activate on-demand services must fill in this field with the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</p>
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Model name.</p>
                      */
                     std::string m_modelName;
                     bool m_modelNameHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Specify the model version number. By default, the system uses the supported stable version of the model.</p>
                      */
                     std::string m_modelVersion;
                     bool m_modelVersionHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Designated scenarios. Currently supports sfx (sound effect) and music.</p>
                      */
                     std::string m_sceneType;
                     bool m_sceneTypeHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Description of the generated audio</p>
                      */
                     std::string m_prompt;
                     bool m_promptHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Video information for reference.</p>
                      */
                     std::vector<AigcAudioReferenceVideoInfo> m_videoInfos;
                     bool m_videoInfosHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Specify the reference audio information.</p><p>For example, this is required for music generation.</p>
                      */
                     std::vector<AigcAudioReferenceAudioInfo> m_audioInfos;
                     bool m_audioInfosHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Output parameter</p>
                      */
                     AigcAudioOutputConfig m_outputConfig;
                     bool m_outputConfigHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Special scenario parameters required by the model, formatted as a JSON serialized string.<br>Example:<br>{"camera_control":{"type":"simple"}}.</p>
                      */
                     std::string m_additionalParameters;
                     bool m_additionalParametersHasBeenSet;

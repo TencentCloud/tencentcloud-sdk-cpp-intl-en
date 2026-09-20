@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Output of the video dubbing task.
                 */
                 class VideoDubbingAsyncOutput : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return ResultUrl 
+                     * 获取<p>Dubbing result Url</p>
+                     * @return ResultUrl <p>Dubbing result Url</p>
                      * 
                      */
                     std::string GetResultUrl() const;
 
                     /**
-                     * 设置
-                     * @param _resultUrl 
+                     * 设置<p>Dubbing result Url</p>
+                     * @param _resultUrl <p>Dubbing result Url</p>
                      * 
                      */
                     void SetResultUrl(const std::string& _resultUrl);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool ResultUrlHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return FileId 
+                     * 获取<p>Dubbing result FileId</p>
+                     * @return FileId <p>Dubbing result FileId</p>
                      * 
                      */
                     std::string GetFileId() const;
 
                     /**
-                     * 设置
-                     * @param _fileId 
+                     * 设置<p>Dubbing result FileId</p>
+                     * @param _fileId <p>Dubbing result FileId</p>
                      * 
                      */
                     void SetFileId(const std::string& _fileId);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p>Dubbing result Url</p>
                      */
                     std::string m_resultUrl;
                     bool m_resultUrlHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Dubbing result FileId</p>
                      */
                     std::string m_fileId;
                     bool m_fileIdHasBeenSet;

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Intelligent classification result
                 */
                 class MediaAiAnalysisClassificationItem : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Classification 
+                     * 获取Category name for intelligent categorization.
+                     * @return Classification Category name for intelligent categorization.
                      * 
                      */
                     std::string GetClassification() const;
 
                     /**
-                     * 设置
-                     * @param _classification 
+                     * 设置Category name for intelligent categorization.
+                     * @param _classification Category name for intelligent categorization.
                      * 
                      */
                     void SetClassification(const std::string& _classification);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool ClassificationHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Confidence 
+                     * 获取Confidence of the intelligent classification, with a value range from 0 to 100.
+                     * @return Confidence Confidence of the intelligent classification, with a value range from 0 to 100.
                      * 
                      */
                     double GetConfidence() const;
 
                     /**
-                     * 设置
-                     * @param _confidence 
+                     * 设置Confidence of the intelligent classification, with a value range from 0 to 100.
+                     * @param _confidence Confidence of the intelligent classification, with a value range from 0 to 100.
                      * 
                      */
                     void SetConfidence(const double& _confidence);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Category name for intelligent categorization.
                      */
                     std::string m_classification;
                     bool m_classificationHasBeenSet;
 
                     /**
-                     * 
+                     * Confidence of the intelligent classification, with a value range from 0 to 100.
                      */
                     double m_confidence;
                     bool m_confidenceHasBeenSet;

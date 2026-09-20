@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * File validation information
                 */
                 class FileVerifyInfo : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return FileVerifyUrl 
+                     * 获取File validation URL guide.
+                     * @return FileVerifyUrl File validation URL guide.
                      * 
                      */
                     std::string GetFileVerifyUrl() const;
 
                     /**
-                     * 设置
-                     * @param _fileVerifyUrl 
+                     * 设置File validation URL guide.
+                     * @param _fileVerifyUrl File validation URL guide.
                      * 
                      */
                     void SetFileVerifyUrl(const std::string& _fileVerifyUrl);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool FileVerifyUrlHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return FileVerifyDomains 
+                     * 获取File verification domain name list.
+                     * @return FileVerifyDomains File verification domain name list.
                      * 
                      */
                     std::vector<std::string> GetFileVerifyDomains() const;
 
                     /**
-                     * 设置
-                     * @param _fileVerifyDomains 
+                     * 设置File verification domain name list.
+                     * @param _fileVerifyDomains File verification domain name list.
                      * 
                      */
                     void SetFileVerifyDomains(const std::vector<std::string>& _fileVerifyDomains);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool FileVerifyDomainsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return FileVerifyName 
+                     * 获取File verification file name.
+                     * @return FileVerifyName File verification file name.
                      * 
                      */
                     std::string GetFileVerifyName() const;
 
                     /**
-                     * 设置
-                     * @param _fileVerifyName 
+                     * 设置File verification file name.
+                     * @param _fileVerifyName File verification file name.
                      * 
                      */
                     void SetFileVerifyName(const std::string& _fileVerifyName);
@@ -112,19 +112,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * File validation URL guide.
                      */
                     std::string m_fileVerifyUrl;
                     bool m_fileVerifyUrlHasBeenSet;
 
                     /**
-                     * 
+                     * File verification domain name list.
                      */
                     std::vector<std::string> m_fileVerifyDomains;
                     bool m_fileVerifyDomainsHasBeenSet;
 
                     /**
-                     * 
+                     * File verification file name.
                      */
                     std::string m_fileVerifyName;
                     bool m_fileVerifyNameHasBeenSet;

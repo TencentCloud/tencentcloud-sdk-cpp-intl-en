@@ -39,7 +39,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Input of an AIGC Hunyuan 3D task.
                 */
                 class AigcHunyuan3DTaskInput : public AbstractModel
                 {
@@ -51,15 +51,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return ImageInfos 
+                     * 获取<p>Generate 3D reference image information.</p>
+                     * @return ImageInfos <p>Generate 3D reference image information.</p>
                      * 
                      */
                     std::vector<AigcHunyuan3DReferenceImageInfo> GetImageInfos() const;
 
                     /**
-                     * 设置
-                     * @param _imageInfos 
+                     * 设置<p>Generate 3D reference image information.</p>
+                     * @param _imageInfos <p>Generate 3D reference image information.</p>
                      * 
                      */
                     void SetImageInfos(const std::vector<AigcHunyuan3DReferenceImageInfo>& _imageInfos);
@@ -72,15 +72,15 @@ namespace TencentCloud
                     bool ImageInfosHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return MultiViewImageInfos 
+                     * 获取<p>Multi-perspective image information used to generate a 3D model.</p><p>The array length must be between 2 and 8, and must contain the front perspective.</p>
+                     * @return MultiViewImageInfos <p>Multi-perspective image information used to generate a 3D model.</p><p>The array length must be between 2 and 8, and must contain the front perspective.</p>
                      * 
                      */
                     std::vector<AigcHunyuan3DMultiViewImageInfo> GetMultiViewImageInfos() const;
 
                     /**
-                     * 设置
-                     * @param _multiViewImageInfos 
+                     * 设置<p>Multi-perspective image information used to generate a 3D model.</p><p>The array length must be between 2 and 8, and must contain the front perspective.</p>
+                     * @param _multiViewImageInfos <p>Multi-perspective image information used to generate a 3D model.</p><p>The array length must be between 2 and 8, and must contain the front perspective.</p>
                      * 
                      */
                     void SetMultiViewImageInfos(const std::vector<AigcHunyuan3DMultiViewImageInfo>& _multiViewImageInfos);
@@ -93,15 +93,15 @@ namespace TencentCloud
                     bool MultiViewImageInfosHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Prompt 
+                     * 获取<p>Prompt for generating a 3D model.</p>
+                     * @return Prompt <p>Prompt for generating a 3D model.</p>
                      * 
                      */
                     std::string GetPrompt() const;
 
                     /**
-                     * 设置
-                     * @param _prompt 
+                     * 设置<p>Prompt for generating a 3D model.</p>
+                     * @param _prompt <p>Prompt for generating a 3D model.</p>
                      * 
                      */
                     void SetPrompt(const std::string& _prompt);
@@ -114,15 +114,15 @@ namespace TencentCloud
                     bool PromptHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return GenerateType 
+                     * 获取<p>Generation Type.</p><p>Enumeration values:</p><ul><li>Normal: Generate a complete 3D asset (geometry + texture);</li><li>Geometry: Generate only geometry (no texture, faster output speed);</li><li>Texture: Generate only texture (requires filling in MeshInfos)</li></ul>
+                     * @return GenerateType <p>Generation Type.</p><p>Enumeration values:</p><ul><li>Normal: Generate a complete 3D asset (geometry + texture);</li><li>Geometry: Generate only geometry (no texture, faster output speed);</li><li>Texture: Generate only texture (requires filling in MeshInfos)</li></ul>
                      * 
                      */
                     std::string GetGenerateType() const;
 
                     /**
-                     * 设置
-                     * @param _generateType 
+                     * 设置<p>Generation Type.</p><p>Enumeration values:</p><ul><li>Normal: Generate a complete 3D asset (geometry + texture);</li><li>Geometry: Generate only geometry (no texture, faster output speed);</li><li>Texture: Generate only texture (requires filling in MeshInfos)</li></ul>
+                     * @param _generateType <p>Generation Type.</p><p>Enumeration values:</p><ul><li>Normal: Generate a complete 3D asset (geometry + texture);</li><li>Geometry: Generate only geometry (no texture, faster output speed);</li><li>Texture: Generate only texture (requires filling in MeshInfos)</li></ul>
                      * 
                      */
                     void SetGenerateType(const std::string& _generateType);
@@ -135,15 +135,15 @@ namespace TencentCloud
                     bool GenerateTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return MeshInfos 
+                     * 获取<p>Reference 3D model used to generate a 3D model.</p>
+                     * @return MeshInfos <p>Reference 3D model used to generate a 3D model.</p>
                      * 
                      */
                     std::vector<AigcHunyuan3DMeshInfo> GetMeshInfos() const;
 
                     /**
-                     * 设置
-                     * @param _meshInfos 
+                     * 设置<p>Reference 3D model used to generate a 3D model.</p>
+                     * @param _meshInfos <p>Reference 3D model used to generate a 3D model.</p>
                      * 
                      */
                     void SetMeshInfos(const std::vector<AigcHunyuan3DMeshInfo>& _meshInfos);
@@ -156,15 +156,15 @@ namespace TencentCloud
                     bool MeshInfosHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return EnablePBR 
+                     * 获取<p>Whether to enable output of PBR materials.</p><p>Enumeration values:</p><ul><li>Enabled: enable;</li><li>Disabled: disable.</li></ul>
+                     * @return EnablePBR <p>Whether to enable output of PBR materials.</p><p>Enumeration values:</p><ul><li>Enabled: enable;</li><li>Disabled: disable.</li></ul>
                      * 
                      */
                     std::string GetEnablePBR() const;
 
                     /**
-                     * 设置
-                     * @param _enablePBR 
+                     * 设置<p>Whether to enable output of PBR materials.</p><p>Enumeration values:</p><ul><li>Enabled: enable;</li><li>Disabled: disable.</li></ul>
+                     * @param _enablePBR <p>Whether to enable output of PBR materials.</p><p>Enumeration values:</p><ul><li>Enabled: enable;</li><li>Disabled: disable.</li></ul>
                      * 
                      */
                     void SetEnablePBR(const std::string& _enablePBR);
@@ -177,15 +177,15 @@ namespace TencentCloud
                     bool EnablePBRHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return FaceCount 
+                     * 获取<p>Number of patches. This parameter is valid only when the value of GenerateType is Normal or Geometry.</p>
+                     * @return FaceCount <p>Number of patches. This parameter is valid only when the value of GenerateType is Normal or Geometry.</p>
                      * 
                      */
                     int64_t GetFaceCount() const;
 
                     /**
-                     * 设置
-                     * @param _faceCount 
+                     * 设置<p>Number of patches. This parameter is valid only when the value of GenerateType is Normal or Geometry.</p>
+                     * @param _faceCount <p>Number of patches. This parameter is valid only when the value of GenerateType is Normal or Geometry.</p>
                      * 
                      */
                     void SetFaceCount(const int64_t& _faceCount);
@@ -198,15 +198,15 @@ namespace TencentCloud
                     bool FaceCountHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return KeepUV 
+                     * 获取<p>Whether to retain UV unfold.</p><p>Enumeration values:</p><ul><li>Enabled: reserved;</li><li>Disabled: not retain.</li></ul>
+                     * @return KeepUV <p>Whether to retain UV unfold.</p><p>Enumeration values:</p><ul><li>Enabled: reserved;</li><li>Disabled: not retain.</li></ul>
                      * 
                      */
                     std::string GetKeepUV() const;
 
                     /**
-                     * 设置
-                     * @param _keepUV 
+                     * 设置<p>Whether to retain UV unfold.</p><p>Enumeration values:</p><ul><li>Enabled: reserved;</li><li>Disabled: not retain.</li></ul>
+                     * @param _keepUV <p>Whether to retain UV unfold.</p><p>Enumeration values:</p><ul><li>Enabled: reserved;</li><li>Disabled: not retain.</li></ul>
                      * 
                      */
                     void SetKeepUV(const std::string& _keepUV);
@@ -219,15 +219,15 @@ namespace TencentCloud
                     bool KeepUVHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ResultFormat 
+                     * 获取<p>Result format. In addition to the default return of obj and glb, an extra output format.</p><p>Enumeration values:</p><ul><li>FBX: FBX format file.</li></ul>
+                     * @return ResultFormat <p>Result format. In addition to the default return of obj and glb, an extra output format.</p><p>Enumeration values:</p><ul><li>FBX: FBX format file.</li></ul>
                      * 
                      */
                     std::string GetResultFormat() const;
 
                     /**
-                     * 设置
-                     * @param _resultFormat 
+                     * 设置<p>Result format. In addition to the default return of obj and glb, an extra output format.</p><p>Enumeration values:</p><ul><li>FBX: FBX format file.</li></ul>
+                     * @param _resultFormat <p>Result format. In addition to the default return of obj and glb, an extra output format.</p><p>Enumeration values:</p><ul><li>FBX: FBX format file.</li></ul>
                      * 
                      */
                     void SetResultFormat(const std::string& _resultFormat);
@@ -240,15 +240,15 @@ namespace TencentCloud
                     bool ResultFormatHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Seed 
+                     * 获取<p>Random Seed. Results can be reproduced with the same Seed input.</p>
+                     * @return Seed <p>Random Seed. Results can be reproduced with the same Seed input.</p>
                      * 
                      */
                     int64_t GetSeed() const;
 
                     /**
-                     * 设置
-                     * @param _seed 
+                     * 设置<p>Random Seed. Results can be reproduced with the same Seed input.</p>
+                     * @param _seed <p>Random Seed. Results can be reproduced with the same Seed input.</p>
                      * 
                      */
                     void SetSeed(const int64_t& _seed);
@@ -261,15 +261,15 @@ namespace TencentCloud
                     bool SeedHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Style 
+                     * 获取<p>Style control words.</p>
+                     * @return Style <p>Style control words.</p>
                      * 
                      */
                     std::string GetStyle() const;
 
                     /**
-                     * 设置
-                     * @param _style 
+                     * 设置<p>Style control words.</p>
+                     * @param _style <p>Style control words.</p>
                      * 
                      */
                     void SetStyle(const std::string& _style);
@@ -282,15 +282,15 @@ namespace TencentCloud
                     bool StyleHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return OutputConfig 
+                     * 获取<p>Configuration of the output media file of the task.</p>
+                     * @return OutputConfig <p>Configuration of the output media file of the task.</p>
                      * 
                      */
                     AigcHunyuan3DOutputConfig GetOutputConfig() const;
 
                     /**
-                     * 设置
-                     * @param _outputConfig 
+                     * 设置<p>Configuration of the output media file of the task.</p>
+                     * @param _outputConfig <p>Configuration of the output media file of the task.</p>
                      * 
                      */
                     void SetOutputConfig(const AigcHunyuan3DOutputConfig& _outputConfig);
@@ -305,73 +305,73 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p>Generate 3D reference image information.</p>
                      */
                     std::vector<AigcHunyuan3DReferenceImageInfo> m_imageInfos;
                     bool m_imageInfosHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Multi-perspective image information used to generate a 3D model.</p><p>The array length must be between 2 and 8, and must contain the front perspective.</p>
                      */
                     std::vector<AigcHunyuan3DMultiViewImageInfo> m_multiViewImageInfos;
                     bool m_multiViewImageInfosHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Prompt for generating a 3D model.</p>
                      */
                     std::string m_prompt;
                     bool m_promptHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Generation Type.</p><p>Enumeration values:</p><ul><li>Normal: Generate a complete 3D asset (geometry + texture);</li><li>Geometry: Generate only geometry (no texture, faster output speed);</li><li>Texture: Generate only texture (requires filling in MeshInfos)</li></ul>
                      */
                     std::string m_generateType;
                     bool m_generateTypeHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Reference 3D model used to generate a 3D model.</p>
                      */
                     std::vector<AigcHunyuan3DMeshInfo> m_meshInfos;
                     bool m_meshInfosHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Whether to enable output of PBR materials.</p><p>Enumeration values:</p><ul><li>Enabled: enable;</li><li>Disabled: disable.</li></ul>
                      */
                     std::string m_enablePBR;
                     bool m_enablePBRHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Number of patches. This parameter is valid only when the value of GenerateType is Normal or Geometry.</p>
                      */
                     int64_t m_faceCount;
                     bool m_faceCountHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Whether to retain UV unfold.</p><p>Enumeration values:</p><ul><li>Enabled: reserved;</li><li>Disabled: not retain.</li></ul>
                      */
                     std::string m_keepUV;
                     bool m_keepUVHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Result format. In addition to the default return of obj and glb, an extra output format.</p><p>Enumeration values:</p><ul><li>FBX: FBX format file.</li></ul>
                      */
                     std::string m_resultFormat;
                     bool m_resultFormatHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Random Seed. Results can be reproduced with the same Seed input.</p>
                      */
                     int64_t m_seed;
                     bool m_seedHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Style control words.</p>
                      */
                     std::string m_style;
                     bool m_styleHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Configuration of the output media file of the task.</p>
                      */
                     AigcHunyuan3DOutputConfig m_outputConfig;
                     bool m_outputConfigHasBeenSet;

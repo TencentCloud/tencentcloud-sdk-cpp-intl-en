@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Animated image result information of a VOD file
                 */
                 class MediaAnimatedGraphicsInfo : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return AnimatedGraphicsSet 
+                     * 获取Video motion graphic result information
+                     * @return AnimatedGraphicsSet Video motion graphic result information
                      * 
                      */
                     std::vector<MediaAnimatedGraphicsItem> GetAnimatedGraphicsSet() const;
 
                     /**
-                     * 设置
-                     * @param _animatedGraphicsSet 
+                     * 设置Video motion graphic result information
+                     * @param _animatedGraphicsSet Video motion graphic result information
                      * 
                      */
                     void SetAnimatedGraphicsSet(const std::vector<MediaAnimatedGraphicsItem>& _animatedGraphicsSet);
@@ -71,7 +71,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Video motion graphic result information
                      */
                     std::vector<MediaAnimatedGraphicsItem> m_animatedGraphicsSet;
                     bool m_animatedGraphicsSetHasBeenSet;

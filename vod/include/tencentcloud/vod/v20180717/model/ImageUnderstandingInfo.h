@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Image understanding information.
                 */
                 class ImageUnderstandingInfo : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return ImageUnderstandingSet 
+                     * 获取Collection of image understanding items.
+                     * @return ImageUnderstandingSet Collection of image understanding items.
                      * 
                      */
                     std::vector<ImageUnderstandingItem> GetImageUnderstandingSet() const;
 
                     /**
-                     * 设置
-                     * @param _imageUnderstandingSet 
+                     * 设置Collection of image understanding items.
+                     * @param _imageUnderstandingSet Collection of image understanding items.
                      * 
                      */
                     void SetImageUnderstandingSet(const std::vector<ImageUnderstandingItem>& _imageUnderstandingSet);
@@ -71,7 +71,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Collection of image understanding items.
                      */
                     std::vector<ImageUnderstandingItem> m_imageUnderstandingSet;
                     bool m_imageUnderstandingSetHasBeenSet;

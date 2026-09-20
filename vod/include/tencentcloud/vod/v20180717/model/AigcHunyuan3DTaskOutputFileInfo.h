@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Information of the output file of an AIGC Hunyuan 3D task.
                 */
                 class AigcHunyuan3DTaskOutputFileInfo : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return StorageMode 
+                     * 获取<p>Storage mode. Valid values: <li>Permanent: retained permanently;</li> <li>Temporary: temporary storage;</li> Default value: Temporary</p>
+                     * @return StorageMode <p>Storage mode. Valid values: <li>Permanent: retained permanently;</li> <li>Temporary: temporary storage;</li> Default value: Temporary</p>
                      * 
                      */
                     std::string GetStorageMode() const;
 
                     /**
-                     * 设置
-                     * @param _storageMode 
+                     * 设置<p>Storage mode. Valid values: <li>Permanent: retained permanently;</li> <li>Temporary: temporary storage;</li> Default value: Temporary</p>
+                     * @param _storageMode <p>Storage mode. Valid values: <li>Permanent: retained permanently;</li> <li>Temporary: temporary storage;</li> Default value: Temporary</p>
                      * 
                      */
                     void SetStorageMode(const std::string& _storageMode);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool StorageModeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ExpireTime 
+                     * 获取<p>Expiry date of the output file. The file will be deleted after this time. The default is permanent with no expiration. The format follows the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
+                     * @return ExpireTime <p>Expiry date of the output file. The file will be deleted after this time. The default is permanent with no expiration. The format follows the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
                      * 
                      */
                     std::string GetExpireTime() const;
 
                     /**
-                     * 设置
-                     * @param _expireTime 
+                     * 设置<p>Expiry date of the output file. The file will be deleted after this time. The default is permanent with no expiration. The format follows the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
+                     * @param _expireTime <p>Expiry date of the output file. The file will be deleted after this time. The default is permanent with no expiration. The format follows the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
                      * 
                      */
                     void SetExpireTime(const std::string& _expireTime);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool ExpireTimeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return FileType 
+                     * 获取<p>File type, for example, OBJ, GLB, or FBX.</p>
+                     * @return FileType <p>File type, for example, OBJ, GLB, or FBX.</p>
                      * 
                      */
                     std::string GetFileType() const;
 
                     /**
-                     * 设置
-                     * @param _fileType 
+                     * 设置<p>File type, for example, OBJ, GLB, or FBX.</p>
+                     * @param _fileType <p>File type, for example, OBJ, GLB, or FBX.</p>
                      * 
                      */
                     void SetFileType(const std::string& _fileType);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool FileTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return FileUrl 
+                     * 获取<p>Output file address.</p>
+                     * @return FileUrl <p>Output file address.</p>
                      * 
                      */
                     std::string GetFileUrl() const;
 
                     /**
-                     * 设置
-                     * @param _fileUrl 
+                     * 设置<p>Output file address.</p>
+                     * @param _fileUrl <p>Output file address.</p>
                      * 
                      */
                     void SetFileUrl(const std::string& _fileUrl);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool FileUrlHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return PreviewFileUrl 
+                     * 获取<p>Output file preview address.</p><p>Empty if no file preview address is available.</p>
+                     * @return PreviewFileUrl <p>Output file preview address.</p><p>Empty if no file preview address is available.</p>
                      * 
                      */
                     std::string GetPreviewFileUrl() const;
 
                     /**
-                     * 设置
-                     * @param _previewFileUrl 
+                     * 设置<p>Output file preview address.</p><p>Empty if no file preview address is available.</p>
+                     * @param _previewFileUrl <p>Output file preview address.</p><p>Empty if no file preview address is available.</p>
                      * 
                      */
                     void SetPreviewFileUrl(const std::string& _previewFileUrl);
@@ -154,31 +154,31 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p>Storage mode. Valid values: <li>Permanent: retained permanently;</li> <li>Temporary: temporary storage;</li> Default value: Temporary</p>
                      */
                     std::string m_storageMode;
                     bool m_storageModeHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Expiry date of the output file. The file will be deleted after this time. The default is permanent with no expiration. The format follows the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
                      */
                     std::string m_expireTime;
                     bool m_expireTimeHasBeenSet;
 
                     /**
-                     * 
+                     * <p>File type, for example, OBJ, GLB, or FBX.</p>
                      */
                     std::string m_fileType;
                     bool m_fileTypeHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Output file address.</p>
                      */
                     std::string m_fileUrl;
                     bool m_fileUrlHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Output file preview address.</p><p>Empty if no file preview address is available.</p>
                      */
                     std::string m_previewFileUrl;
                     bool m_previewFileUrlHasBeenSet;

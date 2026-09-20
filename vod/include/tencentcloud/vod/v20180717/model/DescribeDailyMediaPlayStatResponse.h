@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return DailyPlayStatInfoSet 
+                     * 获取Playback statistics.
+                     * @return DailyPlayStatInfoSet Playback statistics.
                      * 
                      */
                     std::vector<DailyPlayStatInfo> GetDailyPlayStatInfoSet() const;
@@ -61,7 +61,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Playback statistics.
                      */
                     std::vector<DailyPlayStatInfo> m_dailyPlayStatInfoSet;
                     bool m_dailyPlayStatInfoSetHasBeenSet;

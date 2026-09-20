@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Audio beautification configuration.
                 */
                 class AudioBeautifyInfo : public AbstractModel
                 {
@@ -47,15 +47,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Switch 
+                     * 获取Audio beautification control switch. Available values:
+<li>ON: enable audio beautification</li>
+<li>OFF: disables audio beautification.</li>
+                     * @return Switch Audio beautification control switch. Available values:
+<li>ON: enable audio beautification</li>
+<li>OFF: disables audio beautification.</li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置
-                     * @param _switch 
+                     * 设置Audio beautification control switch. Available values:
+<li>ON: enable audio beautification</li>
+<li>OFF: disables audio beautification.</li>
+                     * @param _switch Audio beautification control switch. Available values:
+<li>ON: enable audio beautification</li>
+<li>OFF: disables audio beautification.</li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -68,15 +76,27 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Types 
+                     * 获取Type. Multiple selections allowed. Valid values:
+<li>declick: noise removal</li>
+<li>deesser: De-essing</li>
+Default value: declick.
+                     * @return Types Type. Multiple selections allowed. Valid values:
+<li>declick: noise removal</li>
+<li>deesser: De-essing</li>
+Default value: declick.
                      * 
                      */
                     std::vector<std::string> GetTypes() const;
 
                     /**
-                     * 设置
-                     * @param _types 
+                     * 设置Type. Multiple selections allowed. Valid values:
+<li>declick: noise removal</li>
+<li>deesser: De-essing</li>
+Default value: declick.
+                     * @param _types Type. Multiple selections allowed. Valid values:
+<li>declick: noise removal</li>
+<li>deesser: De-essing</li>
+Default value: declick.
                      * 
                      */
                     void SetTypes(const std::vector<std::string>& _types);
@@ -91,13 +111,18 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Audio beautification control switch. Available values:
+<li>ON: enable audio beautification</li>
+<li>OFF: disables audio beautification.</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * 
+                     * Type. Multiple selections allowed. Valid values:
+<li>declick: noise removal</li>
+<li>deesser: De-essing</li>
+Default value: declick.
                      */
                     std::vector<std::string> m_types;
                     bool m_typesHasBeenSet;

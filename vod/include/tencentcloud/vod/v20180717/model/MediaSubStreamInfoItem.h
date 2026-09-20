@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Substream information for adaptive bitrate streaming.
                 */
                 class MediaSubStreamInfoItem : public AbstractModel
                 {
@@ -47,15 +47,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Type 
+                     * 获取Sub-stream type. Valid values:
+<li>audio: audio-only;</li>
+<li>video: video (may contain audio stream).</li>
+                     * @return Type Sub-stream type. Valid values:
+<li>audio: audio-only;</li>
+<li>video: video (may contain audio stream).</li>
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置
-                     * @param _type 
+                     * 设置Sub-stream type. Valid values:
+<li>audio: audio-only;</li>
+<li>video: video (may contain audio stream).</li>
+                     * @param _type Sub-stream type. Valid values:
+<li>audio: audio-only;</li>
+<li>video: video (may contain audio stream).</li>
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -68,15 +76,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Width 
+                     * 获取Video image width when the substream is a video stream. Unit: px.
+                     * @return Width Video image width when the substream is a video stream. Unit: px.
                      * 
                      */
                     uint64_t GetWidth() const;
 
                     /**
-                     * 设置
-                     * @param _width 
+                     * 设置Video image width when the substream is a video stream. Unit: px.
+                     * @param _width Video image width when the substream is a video stream. Unit: px.
                      * 
                      */
                     void SetWidth(const uint64_t& _width);
@@ -89,15 +97,15 @@ namespace TencentCloud
                     bool WidthHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Height 
+                     * 获取Substream video screen height in px.
+                     * @return Height Substream video screen height in px.
                      * 
                      */
                     uint64_t GetHeight() const;
 
                     /**
-                     * 设置
-                     * @param _height 
+                     * 设置Substream video screen height in px.
+                     * @param _height Substream video screen height in px.
                      * 
                      */
                     void SetHeight(const uint64_t& _height);
@@ -110,15 +118,19 @@ namespace TencentCloud
                     bool HeightHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Size 
+                     * 获取Substream media file size in bytes.
+<font color=red>Note:</font> This field is 0 for adaptive bitrate stream files generated before 2023-02-09T16:00:00Z.
+                     * @return Size Substream media file size in bytes.
+<font color=red>Note:</font> This field is 0 for adaptive bitrate stream files generated before 2023-02-09T16:00:00Z.
                      * 
                      */
                     uint64_t GetSize() const;
 
                     /**
-                     * 设置
-                     * @param _size 
+                     * 设置Substream media file size in bytes.
+<font color=red>Note:</font> This field is 0 for adaptive bitrate stream files generated before 2023-02-09T16:00:00Z.
+                     * @param _size Substream media file size in bytes.
+<font color=red>Note:</font> This field is 0 for adaptive bitrate stream files generated before 2023-02-09T16:00:00Z.
                      * 
                      */
                     void SetSize(const uint64_t& _size);
@@ -133,25 +145,28 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Sub-stream type. Valid values:
+<li>audio: audio-only;</li>
+<li>video: video (may contain audio stream).</li>
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * 
+                     * Video image width when the substream is a video stream. Unit: px.
                      */
                     uint64_t m_width;
                     bool m_widthHasBeenSet;
 
                     /**
-                     * 
+                     * Substream video screen height in px.
                      */
                     uint64_t m_height;
                     bool m_heightHasBeenSet;
 
                     /**
-                     * 
+                     * Substream media file size in bytes.
+<font color=red>Note:</font> This field is 0 for adaptive bitrate stream files generated before 2023-02-09T16:00:00Z.
                      */
                     uint64_t m_size;
                     bool m_sizeHasBeenSet;

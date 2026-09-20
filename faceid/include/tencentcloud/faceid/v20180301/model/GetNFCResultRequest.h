@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool NFCTokenHasBeenSet() const;
 
                     /**
-                     * 获取Identity card number / passport number / Hong Kong, China and Macao, China travel permit
-                     * @return IdNum Identity card number / passport number / Hong Kong, China and Macao, China travel permit
+                     * 获取Identity card number / passport number / Hong Kong and Macao travel permit
+                     * @return IdNum Identity card number / passport number / Hong Kong and Macao travel permit
                      * 
                      */
                     std::string GetIdNum() const;
 
                     /**
-                     * 设置Identity card number / passport number / Hong Kong, China and Macao, China travel permit
-                     * @param _idNum Identity card number / passport number / Hong Kong, China and Macao, China travel permit
+                     * 设置Identity card number / passport number / Hong Kong and Macao travel permit
+                     * @param _idNum Identity card number / passport number / Hong Kong and Macao travel permit
                      * 
                      */
                     void SetIdNum(const std::string& _idNum);
@@ -366,7 +366,7 @@ namespace TencentCloud
                     bool m_nFCTokenHasBeenSet;
 
                     /**
-                     * Identity card number / passport number / Hong Kong, China and Macao, China travel permit
+                     * Identity card number / passport number / Hong Kong and Macao travel permit
                      */
                     std::string m_idNum;
                     bool m_idNumHasBeenSet;

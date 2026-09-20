@@ -46,7 +46,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Audio-visual quality revival video control info.
                 */
                 class RebuildVideoInfo : public AbstractModel
                 {
@@ -58,15 +58,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return RepairInfo 
+                     * 获取Image quality restoration control parameters.
+                     * @return RepairInfo Image quality restoration control parameters.
                      * 
                      */
                     RepairInfo GetRepairInfo() const;
 
                     /**
-                     * 设置
-                     * @param _repairInfo 
+                     * 设置Image quality restoration control parameters.
+                     * @param _repairInfo Image quality restoration control parameters.
                      * 
                      */
                     void SetRepairInfo(const RepairInfo& _repairInfo);
@@ -79,15 +79,15 @@ namespace TencentCloud
                     bool RepairInfoHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return VideoFrameInterpolationInfo 
+                     * 获取Intelligent frame interpolation control parameters.
+                     * @return VideoFrameInterpolationInfo Intelligent frame interpolation control parameters.
                      * 
                      */
                     VideoFrameInterpolationInfo GetVideoFrameInterpolationInfo() const;
 
                     /**
-                     * 设置
-                     * @param _videoFrameInterpolationInfo 
+                     * 设置Intelligent frame interpolation control parameters.
+                     * @param _videoFrameInterpolationInfo Intelligent frame interpolation control parameters.
                      * 
                      */
                     void SetVideoFrameInterpolationInfo(const VideoFrameInterpolationInfo& _videoFrameInterpolationInfo);
@@ -100,15 +100,15 @@ namespace TencentCloud
                     bool VideoFrameInterpolationInfoHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SuperResolutionInfo 
+                     * 获取Image super-resolution control parameters.
+                     * @return SuperResolutionInfo Image super-resolution control parameters.
                      * 
                      */
                     SuperResolutionInfo GetSuperResolutionInfo() const;
 
                     /**
-                     * 设置
-                     * @param _superResolutionInfo 
+                     * 设置Image super-resolution control parameters.
+                     * @param _superResolutionInfo Image super-resolution control parameters.
                      * 
                      */
                     void SetSuperResolutionInfo(const SuperResolutionInfo& _superResolutionInfo);
@@ -121,15 +121,15 @@ namespace TencentCloud
                     bool SuperResolutionInfoHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return HDRInfo 
+                     * 获取High dynamic range type control parameter.
+                     * @return HDRInfo High dynamic range type control parameter.
                      * 
                      */
                     HDRInfo GetHDRInfo() const;
 
                     /**
-                     * 设置
-                     * @param _hDRInfo 
+                     * 设置High dynamic range type control parameter.
+                     * @param _hDRInfo High dynamic range type control parameter.
                      * 
                      */
                     void SetHDRInfo(const HDRInfo& _hDRInfo);
@@ -142,15 +142,15 @@ namespace TencentCloud
                     bool HDRInfoHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return VideoDenoiseInfo 
+                     * 获取Video noise reduction control parameters.
+                     * @return VideoDenoiseInfo Video noise reduction control parameters.
                      * 
                      */
                     VideoDenoiseInfo GetVideoDenoiseInfo() const;
 
                     /**
-                     * 设置
-                     * @param _videoDenoiseInfo 
+                     * 设置Video noise reduction control parameters.
+                     * @param _videoDenoiseInfo Video noise reduction control parameters.
                      * 
                      */
                     void SetVideoDenoiseInfo(const VideoDenoiseInfo& _videoDenoiseInfo);
@@ -163,15 +163,15 @@ namespace TencentCloud
                     bool VideoDenoiseInfoHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ColorInfo 
+                     * 获取Color enhancement control parameters.
+                     * @return ColorInfo Color enhancement control parameters.
                      * 
                      */
                     ColorEnhanceInfo GetColorInfo() const;
 
                     /**
-                     * 设置
-                     * @param _colorInfo 
+                     * 设置Color enhancement control parameters.
+                     * @param _colorInfo Color enhancement control parameters.
                      * 
                      */
                     void SetColorInfo(const ColorEnhanceInfo& _colorInfo);
@@ -184,15 +184,15 @@ namespace TencentCloud
                     bool ColorInfoHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SharpInfo 
+                     * 获取Detail enhancement control parameters.
+                     * @return SharpInfo Detail enhancement control parameters.
                      * 
                      */
                     SharpEnhanceInfo GetSharpInfo() const;
 
                     /**
-                     * 设置
-                     * @param _sharpInfo 
+                     * 设置Detail enhancement control parameters.
+                     * @param _sharpInfo Detail enhancement control parameters.
                      * 
                      */
                     void SetSharpInfo(const SharpEnhanceInfo& _sharpInfo);
@@ -205,15 +205,15 @@ namespace TencentCloud
                     bool SharpInfoHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return FaceInfo 
+                     * 获取Face enhancement control parameters.
+                     * @return FaceInfo Face enhancement control parameters.
                      * 
                      */
                     FaceEnhanceInfo GetFaceInfo() const;
 
                     /**
-                     * 设置
-                     * @param _faceInfo 
+                     * 设置Face enhancement control parameters.
+                     * @param _faceInfo Face enhancement control parameters.
                      * 
                      */
                     void SetFaceInfo(const FaceEnhanceInfo& _faceInfo);
@@ -226,15 +226,15 @@ namespace TencentCloud
                     bool FaceInfoHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return LowLightInfo 
+                     * 获取Low-light control parameters.
+                     * @return LowLightInfo Low-light control parameters.
                      * 
                      */
                     LowLightEnhanceInfo GetLowLightInfo() const;
 
                     /**
-                     * 设置
-                     * @param _lowLightInfo 
+                     * 设置Low-light control parameters.
+                     * @param _lowLightInfo Low-light control parameters.
                      * 
                      */
                     void SetLowLightInfo(const LowLightEnhanceInfo& _lowLightInfo);
@@ -247,15 +247,15 @@ namespace TencentCloud
                     bool LowLightInfoHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ScratchRepairInfo 
+                     * 获取Scratch removal control parameter.
+                     * @return ScratchRepairInfo Scratch removal control parameter.
                      * 
                      */
                     ScratchRepairInfo GetScratchRepairInfo() const;
 
                     /**
-                     * 设置
-                     * @param _scratchRepairInfo 
+                     * 设置Scratch removal control parameter.
+                     * @param _scratchRepairInfo Scratch removal control parameter.
                      * 
                      */
                     void SetScratchRepairInfo(const ScratchRepairInfo& _scratchRepairInfo);
@@ -268,15 +268,15 @@ namespace TencentCloud
                     bool ScratchRepairInfoHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ArtifactRepairInfo 
+                     * 获取Artifact removal control parameter.
+                     * @return ArtifactRepairInfo Artifact removal control parameter.
                      * 
                      */
                     ArtifactRepairInfo GetArtifactRepairInfo() const;
 
                     /**
-                     * 设置
-                     * @param _artifactRepairInfo 
+                     * 设置Artifact removal control parameter.
+                     * @param _artifactRepairInfo Artifact removal control parameter.
                      * 
                      */
                     void SetArtifactRepairInfo(const ArtifactRepairInfo& _artifactRepairInfo);
@@ -291,67 +291,67 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Image quality restoration control parameters.
                      */
                     RepairInfo m_repairInfo;
                     bool m_repairInfoHasBeenSet;
 
                     /**
-                     * 
+                     * Intelligent frame interpolation control parameters.
                      */
                     VideoFrameInterpolationInfo m_videoFrameInterpolationInfo;
                     bool m_videoFrameInterpolationInfoHasBeenSet;
 
                     /**
-                     * 
+                     * Image super-resolution control parameters.
                      */
                     SuperResolutionInfo m_superResolutionInfo;
                     bool m_superResolutionInfoHasBeenSet;
 
                     /**
-                     * 
+                     * High dynamic range type control parameter.
                      */
                     HDRInfo m_hDRInfo;
                     bool m_hDRInfoHasBeenSet;
 
                     /**
-                     * 
+                     * Video noise reduction control parameters.
                      */
                     VideoDenoiseInfo m_videoDenoiseInfo;
                     bool m_videoDenoiseInfoHasBeenSet;
 
                     /**
-                     * 
+                     * Color enhancement control parameters.
                      */
                     ColorEnhanceInfo m_colorInfo;
                     bool m_colorInfoHasBeenSet;
 
                     /**
-                     * 
+                     * Detail enhancement control parameters.
                      */
                     SharpEnhanceInfo m_sharpInfo;
                     bool m_sharpInfoHasBeenSet;
 
                     /**
-                     * 
+                     * Face enhancement control parameters.
                      */
                     FaceEnhanceInfo m_faceInfo;
                     bool m_faceInfoHasBeenSet;
 
                     /**
-                     * 
+                     * Low-light control parameters.
                      */
                     LowLightEnhanceInfo m_lowLightInfo;
                     bool m_lowLightInfoHasBeenSet;
 
                     /**
-                     * 
+                     * Scratch removal control parameter.
                      */
                     ScratchRepairInfo m_scratchRepairInfo;
                     bool m_scratchRepairInfoHasBeenSet;
 
                     /**
-                     * 
+                     * Artifact removal control parameter.
                      */
                     ArtifactRepairInfo m_artifactRepairInfo;
                     bool m_artifactRepairInfoHasBeenSet;

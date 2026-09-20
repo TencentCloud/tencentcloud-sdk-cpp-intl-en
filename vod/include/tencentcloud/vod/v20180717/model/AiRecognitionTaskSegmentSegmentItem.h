@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Video splitting clip.
                 */
                 class AiRecognitionTaskSegmentSegmentItem : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return FileId 
+                     * 获取File ID. Valid only when processing VOD files and the generated sub-segments are VOD files.
+                     * @return FileId File ID. Valid only when processing VOD files and the generated sub-segments are VOD files.
                      * 
                      */
                     std::string GetFileId() const;
 
                     /**
-                     * 设置
-                     * @param _fileId 
+                     * 设置File ID. Valid only when processing VOD files and the generated sub-segments are VOD files.
+                     * @param _fileId File ID. Valid only when processing VOD files and the generated sub-segments are VOD files.
                      * 
                      */
                     void SetFileId(const std::string& _fileId);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool FileIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SegmentUrl 
+                     * 获取Video splitting segment Url.
+                     * @return SegmentUrl Video splitting segment Url.
                      * 
                      */
                     std::string GetSegmentUrl() const;
 
                     /**
-                     * 设置
-                     * @param _segmentUrl 
+                     * 设置Video splitting segment Url.
+                     * @param _segmentUrl Video splitting segment Url.
                      * 
                      */
                     void SetSegmentUrl(const std::string& _segmentUrl);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool SegmentUrlHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Confidence 
+                     * 获取Confidence of a split segment. Value range: 0-100.
+                     * @return Confidence Confidence of a split segment. Value range: 0-100.
                      * 
                      */
                     double GetConfidence() const;
 
                     /**
-                     * 设置
-                     * @param _confidence 
+                     * 设置Confidence of a split segment. Value range: 0-100.
+                     * @param _confidence Confidence of a split segment. Value range: 0-100.
                      * 
                      */
                     void SetConfidence(const double& _confidence);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool ConfidenceHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return StartTimeOffset 
+                     * 获取Start time offset of a split segment, in seconds.
+                     * @return StartTimeOffset Start time offset of a split segment, in seconds.
                      * 
                      */
                     double GetStartTimeOffset() const;
 
                     /**
-                     * 设置
-                     * @param _startTimeOffset 
+                     * 设置Start time offset of a split segment, in seconds.
+                     * @param _startTimeOffset Start time offset of a split segment, in seconds.
                      * 
                      */
                     void SetStartTimeOffset(const double& _startTimeOffset);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool StartTimeOffsetHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return EndTimeOffset 
+                     * 获取End time offset of a split segment, in seconds.
+                     * @return EndTimeOffset End time offset of a split segment, in seconds.
                      * 
                      */
                     double GetEndTimeOffset() const;
 
                     /**
-                     * 设置
-                     * @param _endTimeOffset 
+                     * 设置End time offset of a split segment, in seconds.
+                     * @param _endTimeOffset End time offset of a split segment, in seconds.
                      * 
                      */
                     void SetEndTimeOffset(const double& _endTimeOffset);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool EndTimeOffsetHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return CovImgUrl 
+                     * 获取Segment cover image Url.
+                     * @return CovImgUrl Segment cover image Url.
                      * 
                      */
                     std::string GetCovImgUrl() const;
 
                     /**
-                     * 设置
-                     * @param _covImgUrl 
+                     * 设置Segment cover image Url.
+                     * @param _covImgUrl Segment cover image Url.
                      * 
                      */
                     void SetCovImgUrl(const std::string& _covImgUrl);
@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool CovImgUrlHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SpecialInfo 
+                     * 获取Special field. Ignore it.
+                     * @return SpecialInfo Special field. Ignore it.
                      * 
                      */
                     std::string GetSpecialInfo() const;
 
                     /**
-                     * 设置
-                     * @param _specialInfo 
+                     * 设置Special field. Ignore it.
+                     * @param _specialInfo Special field. Ignore it.
                      * 
                      */
                     void SetSpecialInfo(const std::string& _specialInfo);
@@ -196,43 +196,43 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * File ID. Valid only when processing VOD files and the generated sub-segments are VOD files.
                      */
                     std::string m_fileId;
                     bool m_fileIdHasBeenSet;
 
                     /**
-                     * 
+                     * Video splitting segment Url.
                      */
                     std::string m_segmentUrl;
                     bool m_segmentUrlHasBeenSet;
 
                     /**
-                     * 
+                     * Confidence of a split segment. Value range: 0-100.
                      */
                     double m_confidence;
                     bool m_confidenceHasBeenSet;
 
                     /**
-                     * 
+                     * Start time offset of a split segment, in seconds.
                      */
                     double m_startTimeOffset;
                     bool m_startTimeOffsetHasBeenSet;
 
                     /**
-                     * 
+                     * End time offset of a split segment, in seconds.
                      */
                     double m_endTimeOffset;
                     bool m_endTimeOffsetHasBeenSet;
 
                     /**
-                     * 
+                     * Segment cover image Url.
                      */
                     std::string m_covImgUrl;
                     bool m_covImgUrlHasBeenSet;
 
                     /**
-                     * 
+                     * Special field. Ignore it.
                      */
                     std::string m_specialInfo;
                     bool m_specialInfoHasBeenSet;

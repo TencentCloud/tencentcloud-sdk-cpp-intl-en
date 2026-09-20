@@ -52,12 +52,12 @@ By default, the cache expiration time for all files is 30 days.
                      * 获取Rule type:
 <li>all: take effect for all files;</li>
 <li>file: The specified file suffix takes effect;</li>
-<li>directory: The specified path takes effect;</li>
+<li>directory: specify the path to take effect;</li>
 <li>path: The absolute path takes effect.</li>
                      * @return RuleType Rule type:
 <li>all: take effect for all files;</li>
 <li>file: The specified file suffix takes effect;</li>
-<li>directory: The specified path takes effect;</li>
+<li>directory: specify the path to take effect;</li>
 <li>path: The absolute path takes effect.</li>
                      * 
                      */
@@ -67,12 +67,12 @@ By default, the cache expiration time for all files is 30 days.
                      * 设置Rule type:
 <li>all: take effect for all files;</li>
 <li>file: The specified file suffix takes effect;</li>
-<li>directory: The specified path takes effect;</li>
+<li>directory: specify the path to take effect;</li>
 <li>path: The absolute path takes effect.</li>
                      * @param _ruleType Rule type:
 <li>all: take effect for all files;</li>
 <li>file: The specified file suffix takes effect;</li>
-<li>directory: The specified path takes effect;</li>
+<li>directory: specify the path to take effect;</li>
 <li>path: The absolute path takes effect.</li>
                      * 
                      */
@@ -123,15 +123,15 @@ By default, the cache expiration time for all files is 30 days.
                     bool RulePathsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return CacheConfig 
+                     * 获取Cache configuration.
+                     * @return CacheConfig Cache configuration.
                      * 
                      */
                     RuleCacheConfig GetCacheConfig() const;
 
                     /**
-                     * 设置
-                     * @param _cacheConfig 
+                     * 设置Cache configuration.
+                     * @param _cacheConfig Cache configuration.
                      * 
                      */
                     void SetCacheConfig(const RuleCacheConfig& _cacheConfig);
@@ -149,7 +149,7 @@ By default, the cache expiration time for all files is 30 days.
                      * Rule type:
 <li>all: take effect for all files;</li>
 <li>file: The specified file suffix takes effect;</li>
-<li>directory: The specified path takes effect;</li>
+<li>directory: specify the path to take effect;</li>
 <li>path: The absolute path takes effect.</li>
                      */
                     std::string m_ruleType;
@@ -166,7 +166,7 @@ By default, the cache expiration time for all files is 30 days.
                     bool m_rulePathsHasBeenSet;
 
                     /**
-                     * 
+                     * Cache configuration.
                      */
                     RuleCacheConfig m_cacheConfig;
                     bool m_cacheConfigHasBeenSet;

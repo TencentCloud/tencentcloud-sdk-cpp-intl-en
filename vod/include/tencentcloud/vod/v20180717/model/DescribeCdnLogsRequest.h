@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return DomainName 
+                     * 获取<p>Domain name.</p>
+                     * @return DomainName <p>Domain name.</p>
                      * 
                      */
                     std::string GetDomainName() const;
 
                     /**
-                     * 设置
-                     * @param _domainName 
+                     * 设置<p>Domain name.</p>
+                     * @param _domainName <p>Domain name.</p>
                      * 
                      */
                     void SetDomainName(const std::string& _domainName);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool DomainNameHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return StartTime 
+                     * 获取<p>Get log start time point, use <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p><p>Parameter format: YYYY-MM-DDThh:MM:ssZ</p>
+                     * @return StartTime <p>Get log start time point, use <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p><p>Parameter format: YYYY-MM-DDThh:MM:ssZ</p>
                      * 
                      */
                     std::string GetStartTime() const;
 
                     /**
-                     * 设置
-                     * @param _startTime 
+                     * 设置<p>Get log start time point, use <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p><p>Parameter format: YYYY-MM-DDThh:MM:ssZ</p>
+                     * @param _startTime <p>Get log start time point, use <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p><p>Parameter format: YYYY-MM-DDThh:MM:ssZ</p>
                      * 
                      */
                     void SetStartTime(const std::string& _startTime);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return EndTime 
+                     * 获取<p>End time must be greater than start time; use the <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p><p>Parameter format: YYYY-MM-DDThh:mm:ssZ.</p>
+                     * @return EndTime <p>End time must be greater than start time; use the <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p><p>Parameter format: YYYY-MM-DDThh:mm:ssZ.</p>
                      * 
                      */
                     std::string GetEndTime() const;
 
                     /**
-                     * 设置
-                     * @param _endTime 
+                     * 设置<p>End time must be greater than start time; use the <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p><p>Parameter format: YYYY-MM-DDThh:mm:ssZ.</p>
+                     * @param _endTime <p>End time must be greater than start time; use the <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p><p>Parameter format: YYYY-MM-DDThh:mm:ssZ.</p>
                      * 
                      */
                     void SetEndTime(const std::string& _endTime);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SubAppId 
+                     * 获取<p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, when accessing resources in on-demand applications (whether the default application or a newly created application), this field must be filled in as the app ID.</b></p>
+                     * @return SubAppId <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, when accessing resources in on-demand applications (whether the default application or a newly created application), this field must be filled in as the app ID.</b></p>
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置
-                     * @param _subAppId 
+                     * 设置<p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, when accessing resources in on-demand applications (whether the default application or a newly created application), this field must be filled in as the app ID.</b></p>
+                     * @param _subAppId <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, when accessing resources in on-demand applications (whether the default application or a newly created application), this field must be filled in as the app ID.</b></p>
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool SubAppIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Limit 
+                     * 获取<p>Maximum number of results returned for pagination pull. Default value: 100; maximum value: 1000.</p>
+                     * @return Limit <p>Maximum number of results returned for pagination pull. Default value: 100; maximum value: 1000.</p>
                      * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
-                     * 设置
-                     * @param _limit 
+                     * 设置<p>Maximum number of results returned for pagination pull. Default value: 100; maximum value: 1000.</p>
+                     * @param _limit <p>Maximum number of results returned for pagination pull. Default value: 100; maximum value: 1000.</p>
                      * 
                      */
                     void SetLimit(const uint64_t& _limit);
@@ -148,15 +148,15 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Offset 
+                     * 获取<p>Starting offset for pagination pull. Default value: 0.</p>
+                     * @return Offset <p>Starting offset for pagination pull. Default value: 0.</p>
                      * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
-                     * 设置
-                     * @param _offset 
+                     * 设置<p>Starting offset for pagination pull. Default value: 0.</p>
+                     * @param _offset <p>Starting offset for pagination pull. Default value: 0.</p>
                      * 
                      */
                     void SetOffset(const uint64_t& _offset);
@@ -171,37 +171,37 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p>Domain name.</p>
                      */
                     std::string m_domainName;
                     bool m_domainNameHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Get log start time point, use <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p><p>Parameter format: YYYY-MM-DDThh:MM:ssZ</p>
                      */
                     std::string m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * 
+                     * <p>End time must be greater than start time; use the <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p><p>Parameter format: YYYY-MM-DDThh:mm:ssZ.</p>
                      */
                     std::string m_endTime;
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * 
+                     * <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, when accessing resources in on-demand applications (whether the default application or a newly created application), this field must be filled in as the app ID.</b></p>
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Maximum number of results returned for pagination pull. Default value: 100; maximum value: 1000.</p>
                      */
                     uint64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Starting offset for pagination pull. Default value: 0.</p>
                      */
                     uint64_t m_offset;
                     bool m_offsetHasBeenSet;

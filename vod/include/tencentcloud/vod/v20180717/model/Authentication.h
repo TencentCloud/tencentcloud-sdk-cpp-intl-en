@@ -39,7 +39,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Timestamp hotlink protection configuration
                 */
                 class Authentication : public AbstractModel
                 {
@@ -84,15 +84,15 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return TypeA 
+                     * 获取Configuration of timestamp hotlink protection mode A.
+                     * @return TypeA Configuration of timestamp hotlink protection mode A.
                      * 
                      */
                     AuthenticationTypeA GetTypeA() const;
 
                     /**
-                     * 设置
-                     * @param _typeA 
+                     * 设置Configuration of timestamp hotlink protection mode A.
+                     * @param _typeA Configuration of timestamp hotlink protection mode A.
                      * 
                      */
                     void SetTypeA(const AuthenticationTypeA& _typeA);
@@ -105,15 +105,15 @@ namespace TencentCloud
                     bool TypeAHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return TypeB 
+                     * 获取Configuration of timestamp hotlink protection mode B.
+                     * @return TypeB Configuration of timestamp hotlink protection mode B.
                      * 
                      */
                     AuthenticationTypeB GetTypeB() const;
 
                     /**
-                     * 设置
-                     * @param _typeB 
+                     * 设置Configuration of timestamp hotlink protection mode B.
+                     * @param _typeB Configuration of timestamp hotlink protection mode B.
                      * 
                      */
                     void SetTypeB(const AuthenticationTypeB& _typeB);
@@ -126,15 +126,15 @@ namespace TencentCloud
                     bool TypeBHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return TypeC 
+                     * 获取Configuration of timestamp hotlink protection mode C.
+                     * @return TypeC Configuration of timestamp hotlink protection mode C.
                      * 
                      */
                     AuthenticationTypeC GetTypeC() const;
 
                     /**
-                     * 设置
-                     * @param _typeC 
+                     * 设置Configuration of timestamp hotlink protection mode C.
+                     * @param _typeC Configuration of timestamp hotlink protection mode C.
                      * 
                      */
                     void SetTypeC(const AuthenticationTypeC& _typeC);
@@ -147,15 +147,15 @@ namespace TencentCloud
                     bool TypeCHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return TypeD 
+                     * 获取Configuration of timestamp hotlink protection mode D.
+                     * @return TypeD Configuration of timestamp hotlink protection mode D.
                      * 
                      */
                     AuthenticationTypeD GetTypeD() const;
 
                     /**
-                     * 设置
-                     * @param _typeD 
+                     * 设置Configuration of timestamp hotlink protection mode D.
+                     * @param _typeD Configuration of timestamp hotlink protection mode D.
                      * 
                      */
                     void SetTypeD(const AuthenticationTypeD& _typeD);
@@ -179,25 +179,25 @@ namespace TencentCloud
                     bool m_switchHasBeenSet;
 
                     /**
-                     * 
+                     * Configuration of timestamp hotlink protection mode A.
                      */
                     AuthenticationTypeA m_typeA;
                     bool m_typeAHasBeenSet;
 
                     /**
-                     * 
+                     * Configuration of timestamp hotlink protection mode B.
                      */
                     AuthenticationTypeB m_typeB;
                     bool m_typeBHasBeenSet;
 
                     /**
-                     * 
+                     * Configuration of timestamp hotlink protection mode C.
                      */
                     AuthenticationTypeC m_typeC;
                     bool m_typeCHasBeenSet;
 
                     /**
-                     * 
+                     * Configuration of timestamp hotlink protection mode D.
                      */
                     AuthenticationTypeD m_typeD;
                     bool m_typeDHasBeenSet;

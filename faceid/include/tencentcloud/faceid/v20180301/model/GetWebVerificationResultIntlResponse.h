@@ -46,12 +46,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The final result of this verification. `0` indicates that the person is the same as that in the photo.
-For other error codes, see <a href="https://www.tencentcloud.com/document/product/1061/55390?lang=en&pg=#8a960e1e-39c0-42cb-b181-b3164d77f81e">Selfie Verification (Mobile HTML5) Error Codes</a>
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ErrorCode The final result of this verification. `0` indicates that the person is the same as that in the photo.
-For other error codes, see <a href="https://www.tencentcloud.com/document/product/1061/55390?lang=en&pg=#8a960e1e-39c0-42cb-b181-b3164d77f81e">Selfie Verification (Mobile HTML5) Error Codes</a>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Final result of this process. 0 indicates successful verification, determined to be the same person.<br>For other error codes, see: <a href="https://www.tencentcloud.com/document/product/1061/55390?lang=en&amp;pg=#8a960e1e-39c0-42cb-b181-b3164d77f81e">Liveness Detection and Face Comparison (Mobile HTML5) Error Codes</a></p>
+                     * @return ErrorCode <p>Final result of this process. 0 indicates successful verification, determined to be the same person.<br>For other error codes, see: <a href="https://www.tencentcloud.com/document/product/1061/55390?lang=en&amp;pg=#8a960e1e-39c0-42cb-b181-b3164d77f81e">Liveness Detection and Face Comparison (Mobile HTML5) Error Codes</a></p>
                      * 
                      */
                     int64_t GetErrorCode() const;
@@ -64,10 +60,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ErrorCodeHasBeenSet() const;
 
                     /**
-                     * 获取The description of the final verification result.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ErrorMsg The description of the final verification result.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>Final result description of this process.</p>
+                     * @return ErrorMsg <p>Final result description of this process.</p>
                      * 
                      */
                     std::string GetErrorMsg() const;
@@ -80,10 +74,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ErrorMsgHasBeenSet() const;
 
                     /**
-                     * 获取The detailed verification result list of this process. Retries are allowed, so a verification process may have several entries of results.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return VerificationDetailList The detailed verification result list of this process. Retries are allowed, so a verification process may have several entries of results.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>List of detailed verification results for this process. Since it is retryable, this process may contain multiple verification information.</p>
+                     * @return VerificationDetailList <p>List of detailed verification results for this process. Since it is retryable, this process may contain multiple verification information.</p>
                      * 
                      */
                     std::vector<VerificationDetail> GetVerificationDetailList() const;
@@ -96,10 +88,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool VerificationDetailListHasBeenSet() const;
 
                     /**
-                     * 获取The Base64-encoded string of the video collected from the video stream. Retries are allowed, and this field returns only the data collected in the last verification. If no video is collected, null is returned.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return VideoBase64 The Base64-encoded string of the video collected from the video stream. Retries are allowed, and this field returns only the data collected in the last verification. If no video is collected, null is returned.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>base64-encoded string of the video content collected from the video stream. Since it is retryable, this field returns the data collected in the last verification. If no video is collected, it returns null.</p>
+                     * @return VideoBase64 <p>base64-encoded string of the video content collected from the video stream. Since it is retryable, this field returns the data collected in the last verification. If no video is collected, it returns null.</p>
                      * 
                      */
                     std::string GetVideoBase64() const;
@@ -112,10 +102,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool VideoBase64HasBeenSet() const;
 
                     /**
-                     * 获取The Base64-encoded string of the best face screenshot collected from the video stream. Retries are allowed, and this field returns only the data collected in the last verification. If no best face screenshot is collected, null is returned.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return BestFrameBase64 The Base64-encoded string of the best face screenshot collected from the video stream. Retries are allowed, and this field returns only the data collected in the last verification. If no best face screenshot is collected, null is returned.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取<p>base64 encoded string of the best face photo collected from the video stream. Since it is retryable, this field returns the data collected in the last verification. If no best face photo is collected, null is returned.</p>
+                     * @return BestFrameBase64 <p>base64 encoded string of the best face photo collected from the video stream. Since it is retryable, this field returns the data collected in the last verification. If no best face photo is collected, null is returned.</p>
                      * 
                      */
                     std::string GetBestFrameBase64() const;
@@ -128,8 +116,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool BestFrameBase64HasBeenSet() const;
 
                     /**
-                     * 获取Card recognize result
-                     * @return OCRResult Card recognize result
+                     * 获取<p>License recognition result</p>
+                     * @return OCRResult <p>License recognition result</p>
                      * 
                      */
                     std::vector<OCRResult> GetOCRResult() const;
@@ -142,8 +130,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool OCRResultHasBeenSet() const;
 
                     /**
-                     * 获取The passthrough parameter of the business, max 1,000 characters, which will be returned in GetWebVerificationResultIntl.
-                     * @return Extra The passthrough parameter of the business, max 1,000 characters, which will be returned in GetWebVerificationResultIntl.
+                     * 获取<p>Service pass-through parameter.</p>
+                     * @return Extra <p>Service pass-through parameter.</p>
                      * 
                      */
                     std::string GetExtra() const;
@@ -158,49 +146,43 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * The final result of this verification. `0` indicates that the person is the same as that in the photo.
-For other error codes, see <a href="https://www.tencentcloud.com/document/product/1061/55390?lang=en&pg=#8a960e1e-39c0-42cb-b181-b3164d77f81e">Selfie Verification (Mobile HTML5) Error Codes</a>
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Final result of this process. 0 indicates successful verification, determined to be the same person.<br>For other error codes, see: <a href="https://www.tencentcloud.com/document/product/1061/55390?lang=en&amp;pg=#8a960e1e-39c0-42cb-b181-b3164d77f81e">Liveness Detection and Face Comparison (Mobile HTML5) Error Codes</a></p>
                      */
                     int64_t m_errorCode;
                     bool m_errorCodeHasBeenSet;
 
                     /**
-                     * The description of the final verification result.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>Final result description of this process.</p>
                      */
                     std::string m_errorMsg;
                     bool m_errorMsgHasBeenSet;
 
                     /**
-                     * The detailed verification result list of this process. Retries are allowed, so a verification process may have several entries of results.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>List of detailed verification results for this process. Since it is retryable, this process may contain multiple verification information.</p>
                      */
                     std::vector<VerificationDetail> m_verificationDetailList;
                     bool m_verificationDetailListHasBeenSet;
 
                     /**
-                     * The Base64-encoded string of the video collected from the video stream. Retries are allowed, and this field returns only the data collected in the last verification. If no video is collected, null is returned.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>base64-encoded string of the video content collected from the video stream. Since it is retryable, this field returns the data collected in the last verification. If no video is collected, it returns null.</p>
                      */
                     std::string m_videoBase64;
                     bool m_videoBase64HasBeenSet;
 
                     /**
-                     * The Base64-encoded string of the best face screenshot collected from the video stream. Retries are allowed, and this field returns only the data collected in the last verification. If no best face screenshot is collected, null is returned.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * <p>base64 encoded string of the best face photo collected from the video stream. Since it is retryable, this field returns the data collected in the last verification. If no best face photo is collected, null is returned.</p>
                      */
                     std::string m_bestFrameBase64;
                     bool m_bestFrameBase64HasBeenSet;
 
                     /**
-                     * Card recognize result
+                     * <p>License recognition result</p>
                      */
                     std::vector<OCRResult> m_oCRResult;
                     bool m_oCRResultHasBeenSet;
 
                     /**
-                     * The passthrough parameter of the business, max 1,000 characters, which will be returned in GetWebVerificationResultIntl.
+                     * <p>Service pass-through parameter.</p>
                      */
                     std::string m_extra;
                     bool m_extraHasBeenSet;

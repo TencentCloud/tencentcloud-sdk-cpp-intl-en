@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return EventSet 
+                     * 获取List of events.
+                     * @return EventSet List of events.
                      * 
                      */
                     std::vector<EventContent> GetEventSet() const;
@@ -61,7 +61,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * List of events.
                      */
                     std::vector<EventContent> m_eventSet;
                     bool m_eventSetHasBeenSet;

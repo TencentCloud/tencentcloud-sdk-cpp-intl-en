@@ -540,6 +540,56 @@ FaceidClient::CompareFaceLivenessOutcomeCallable FaceidClient::CompareFaceLivene
     return prom->get_future();
 }
 
+FaceidClient::CreateEKYCWebhookOutcome FaceidClient::CreateEKYCWebhook(const CreateEKYCWebhookRequest &request)
+{
+    auto outcome = MakeRequest(request, "CreateEKYCWebhook");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        CreateEKYCWebhookResponse rsp = CreateEKYCWebhookResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return CreateEKYCWebhookOutcome(rsp);
+        else
+            return CreateEKYCWebhookOutcome(o.GetError());
+    }
+    else
+    {
+        return CreateEKYCWebhookOutcome(outcome.GetError());
+    }
+}
+
+void FaceidClient::CreateEKYCWebhookAsync(const CreateEKYCWebhookRequest& request, const CreateEKYCWebhookAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const CreateEKYCWebhookRequest&;
+    using Resp = CreateEKYCWebhookResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "CreateEKYCWebhook", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+FaceidClient::CreateEKYCWebhookOutcomeCallable FaceidClient::CreateEKYCWebhookCallable(const CreateEKYCWebhookRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<CreateEKYCWebhookOutcome>>();
+    CreateEKYCWebhookAsync(
+    request,
+    [prom](
+        const FaceidClient*,
+        const CreateEKYCWebhookRequest&,
+        CreateEKYCWebhookOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 FaceidClient::CreateUploadUrlOutcome FaceidClient::CreateUploadUrl(const CreateUploadUrlRequest &request)
 {
     auto outcome = MakeRequest(request, "CreateUploadUrl");
@@ -582,6 +632,56 @@ FaceidClient::CreateUploadUrlOutcomeCallable FaceidClient::CreateUploadUrlCallab
         const FaceidClient*,
         const CreateUploadUrlRequest&,
         CreateUploadUrlOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+FaceidClient::DeleteEKYCWebhookOutcome FaceidClient::DeleteEKYCWebhook(const DeleteEKYCWebhookRequest &request)
+{
+    auto outcome = MakeRequest(request, "DeleteEKYCWebhook");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        DeleteEKYCWebhookResponse rsp = DeleteEKYCWebhookResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return DeleteEKYCWebhookOutcome(rsp);
+        else
+            return DeleteEKYCWebhookOutcome(o.GetError());
+    }
+    else
+    {
+        return DeleteEKYCWebhookOutcome(outcome.GetError());
+    }
+}
+
+void FaceidClient::DeleteEKYCWebhookAsync(const DeleteEKYCWebhookRequest& request, const DeleteEKYCWebhookAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const DeleteEKYCWebhookRequest&;
+    using Resp = DeleteEKYCWebhookResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "DeleteEKYCWebhook", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+FaceidClient::DeleteEKYCWebhookOutcomeCallable FaceidClient::DeleteEKYCWebhookCallable(const DeleteEKYCWebhookRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<DeleteEKYCWebhookOutcome>>();
+    DeleteEKYCWebhookAsync(
+    request,
+    [prom](
+        const FaceidClient*,
+        const DeleteEKYCWebhookRequest&,
+        DeleteEKYCWebhookOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -732,6 +832,56 @@ FaceidClient::GenerateReflectSequenceOutcomeCallable FaceidClient::GenerateRefle
         const FaceidClient*,
         const GenerateReflectSequenceRequest&,
         GenerateReflectSequenceOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+FaceidClient::GetAMLScreeningResultOutcome FaceidClient::GetAMLScreeningResult(const GetAMLScreeningResultRequest &request)
+{
+    auto outcome = MakeRequest(request, "GetAMLScreeningResult");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        GetAMLScreeningResultResponse rsp = GetAMLScreeningResultResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return GetAMLScreeningResultOutcome(rsp);
+        else
+            return GetAMLScreeningResultOutcome(o.GetError());
+    }
+    else
+    {
+        return GetAMLScreeningResultOutcome(outcome.GetError());
+    }
+}
+
+void FaceidClient::GetAMLScreeningResultAsync(const GetAMLScreeningResultRequest& request, const GetAMLScreeningResultAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const GetAMLScreeningResultRequest&;
+    using Resp = GetAMLScreeningResultResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "GetAMLScreeningResult", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+FaceidClient::GetAMLScreeningResultOutcomeCallable FaceidClient::GetAMLScreeningResultCallable(const GetAMLScreeningResultRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<GetAMLScreeningResultOutcome>>();
+    GetAMLScreeningResultAsync(
+    request,
+    [prom](
+        const FaceidClient*,
+        const GetAMLScreeningResultRequest&,
+        GetAMLScreeningResultOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {
@@ -1240,6 +1390,56 @@ FaceidClient::ImageRecognitionV2OutcomeCallable FaceidClient::ImageRecognitionV2
     return prom->get_future();
 }
 
+FaceidClient::ListEKYCWebhooksOutcome FaceidClient::ListEKYCWebhooks(const ListEKYCWebhooksRequest &request)
+{
+    auto outcome = MakeRequest(request, "ListEKYCWebhooks");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        ListEKYCWebhooksResponse rsp = ListEKYCWebhooksResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return ListEKYCWebhooksOutcome(rsp);
+        else
+            return ListEKYCWebhooksOutcome(o.GetError());
+    }
+    else
+    {
+        return ListEKYCWebhooksOutcome(outcome.GetError());
+    }
+}
+
+void FaceidClient::ListEKYCWebhooksAsync(const ListEKYCWebhooksRequest& request, const ListEKYCWebhooksAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const ListEKYCWebhooksRequest&;
+    using Resp = ListEKYCWebhooksResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "ListEKYCWebhooks", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+FaceidClient::ListEKYCWebhooksOutcomeCallable FaceidClient::ListEKYCWebhooksCallable(const ListEKYCWebhooksRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<ListEKYCWebhooksOutcome>>();
+    ListEKYCWebhooksAsync(
+    request,
+    [prom](
+        const FaceidClient*,
+        const ListEKYCWebhooksRequest&,
+        ListEKYCWebhooksOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
 FaceidClient::LivenessCompareOutcome FaceidClient::LivenessCompare(const LivenessCompareRequest &request)
 {
     auto outcome = MakeRequest(request, "LivenessCompare");
@@ -1432,6 +1632,206 @@ FaceidClient::PhoneVerificationOutcomeCallable FaceidClient::PhoneVerificationCa
         const FaceidClient*,
         const PhoneVerificationRequest&,
         PhoneVerificationOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+FaceidClient::RunAMLNameScreeningOutcome FaceidClient::RunAMLNameScreening(const RunAMLNameScreeningRequest &request)
+{
+    auto outcome = MakeRequest(request, "RunAMLNameScreening");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        RunAMLNameScreeningResponse rsp = RunAMLNameScreeningResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return RunAMLNameScreeningOutcome(rsp);
+        else
+            return RunAMLNameScreeningOutcome(o.GetError());
+    }
+    else
+    {
+        return RunAMLNameScreeningOutcome(outcome.GetError());
+    }
+}
+
+void FaceidClient::RunAMLNameScreeningAsync(const RunAMLNameScreeningRequest& request, const RunAMLNameScreeningAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const RunAMLNameScreeningRequest&;
+    using Resp = RunAMLNameScreeningResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "RunAMLNameScreening", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+FaceidClient::RunAMLNameScreeningOutcomeCallable FaceidClient::RunAMLNameScreeningCallable(const RunAMLNameScreeningRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<RunAMLNameScreeningOutcome>>();
+    RunAMLNameScreeningAsync(
+    request,
+    [prom](
+        const FaceidClient*,
+        const RunAMLNameScreeningRequest&,
+        RunAMLNameScreeningOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+FaceidClient::UpdateAMLCustomerProfileOutcome FaceidClient::UpdateAMLCustomerProfile(const UpdateAMLCustomerProfileRequest &request)
+{
+    auto outcome = MakeRequest(request, "UpdateAMLCustomerProfile");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        UpdateAMLCustomerProfileResponse rsp = UpdateAMLCustomerProfileResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return UpdateAMLCustomerProfileOutcome(rsp);
+        else
+            return UpdateAMLCustomerProfileOutcome(o.GetError());
+    }
+    else
+    {
+        return UpdateAMLCustomerProfileOutcome(outcome.GetError());
+    }
+}
+
+void FaceidClient::UpdateAMLCustomerProfileAsync(const UpdateAMLCustomerProfileRequest& request, const UpdateAMLCustomerProfileAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const UpdateAMLCustomerProfileRequest&;
+    using Resp = UpdateAMLCustomerProfileResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "UpdateAMLCustomerProfile", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+FaceidClient::UpdateAMLCustomerProfileOutcomeCallable FaceidClient::UpdateAMLCustomerProfileCallable(const UpdateAMLCustomerProfileRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<UpdateAMLCustomerProfileOutcome>>();
+    UpdateAMLCustomerProfileAsync(
+    request,
+    [prom](
+        const FaceidClient*,
+        const UpdateAMLCustomerProfileRequest&,
+        UpdateAMLCustomerProfileOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+FaceidClient::UpdateAMLOngoingScreeningStatusOutcome FaceidClient::UpdateAMLOngoingScreeningStatus(const UpdateAMLOngoingScreeningStatusRequest &request)
+{
+    auto outcome = MakeRequest(request, "UpdateAMLOngoingScreeningStatus");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        UpdateAMLOngoingScreeningStatusResponse rsp = UpdateAMLOngoingScreeningStatusResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return UpdateAMLOngoingScreeningStatusOutcome(rsp);
+        else
+            return UpdateAMLOngoingScreeningStatusOutcome(o.GetError());
+    }
+    else
+    {
+        return UpdateAMLOngoingScreeningStatusOutcome(outcome.GetError());
+    }
+}
+
+void FaceidClient::UpdateAMLOngoingScreeningStatusAsync(const UpdateAMLOngoingScreeningStatusRequest& request, const UpdateAMLOngoingScreeningStatusAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const UpdateAMLOngoingScreeningStatusRequest&;
+    using Resp = UpdateAMLOngoingScreeningStatusResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "UpdateAMLOngoingScreeningStatus", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+FaceidClient::UpdateAMLOngoingScreeningStatusOutcomeCallable FaceidClient::UpdateAMLOngoingScreeningStatusCallable(const UpdateAMLOngoingScreeningStatusRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<UpdateAMLOngoingScreeningStatusOutcome>>();
+    UpdateAMLOngoingScreeningStatusAsync(
+    request,
+    [prom](
+        const FaceidClient*,
+        const UpdateAMLOngoingScreeningStatusRequest&,
+        UpdateAMLOngoingScreeningStatusOutcome resp,
+        const std::shared_ptr<const AsyncCallerContext>&
+    )
+    {
+        prom->set_value(resp);
+    });
+    return prom->get_future();
+}
+
+FaceidClient::UpdateEKYCWebhookOutcome FaceidClient::UpdateEKYCWebhook(const UpdateEKYCWebhookRequest &request)
+{
+    auto outcome = MakeRequest(request, "UpdateEKYCWebhook");
+    if (outcome.IsSuccess())
+    {
+        auto r = outcome.GetResult();
+        string payload = string(r.Body(), r.BodySize());
+        UpdateEKYCWebhookResponse rsp = UpdateEKYCWebhookResponse();
+        auto o = rsp.Deserialize(payload);
+        if (o.IsSuccess())
+            return UpdateEKYCWebhookOutcome(rsp);
+        else
+            return UpdateEKYCWebhookOutcome(o.GetError());
+    }
+    else
+    {
+        return UpdateEKYCWebhookOutcome(outcome.GetError());
+    }
+}
+
+void FaceidClient::UpdateEKYCWebhookAsync(const UpdateEKYCWebhookRequest& request, const UpdateEKYCWebhookAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context)
+{
+    using Req = const UpdateEKYCWebhookRequest&;
+    using Resp = UpdateEKYCWebhookResponse;
+
+    DoRequestAsync<Req, Resp>(
+        "UpdateEKYCWebhook", request, {{{"Content-Type", "application/json"}}},
+        [this, context, handler](Req req, Outcome<Core::Error, Resp> resp)
+        {
+            handler(this, req, std::move(resp), context);
+        });
+}
+
+FaceidClient::UpdateEKYCWebhookOutcomeCallable FaceidClient::UpdateEKYCWebhookCallable(const UpdateEKYCWebhookRequest &request)
+{
+    const auto prom = std::make_shared<std::promise<UpdateEKYCWebhookOutcome>>();
+    UpdateEKYCWebhookAsync(
+    request,
+    [prom](
+        const FaceidClient*,
+        const UpdateEKYCWebhookRequest&,
+        UpdateEKYCWebhookOutcome resp,
         const std::shared_ptr<const AsyncCallerContext>&
     )
     {

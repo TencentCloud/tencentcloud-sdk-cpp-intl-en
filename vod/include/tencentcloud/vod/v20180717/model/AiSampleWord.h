@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * AI sample management, keyword output information.
                 */
                 class AiSampleWord : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Keyword 
+                     * 获取<p>Keyword.</p>
+                     * @return Keyword <p>Keyword.</p>
                      * 
                      */
                     std::string GetKeyword() const;
 
                     /**
-                     * 设置
-                     * @param _keyword 
+                     * 设置<p>Keyword.</p>
+                     * @param _keyword <p>Keyword.</p>
                      * 
                      */
                     void SetKeyword(const std::string& _keyword);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool KeywordHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return TagSet 
+                     * 获取<p>Keyword tag.</p>
+                     * @return TagSet <p>Keyword tag.</p>
                      * 
                      */
                     std::vector<std::string> GetTagSet() const;
 
                     /**
-                     * 设置
-                     * @param _tagSet 
+                     * 设置<p>Keyword tag.</p>
+                     * @param _tagSet <p>Keyword tag.</p>
                      * 
                      */
                     void SetTagSet(const std::vector<std::string>& _tagSet);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool TagSetHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return UsageSet 
+                     * 获取<p>Keyword application scenario.</p>
+                     * @return UsageSet <p>Keyword application scenario.</p>
                      * 
                      */
                     std::vector<std::string> GetUsageSet() const;
 
                     /**
-                     * 设置
-                     * @param _usageSet 
+                     * 设置<p>Keyword application scenario.</p>
+                     * @param _usageSet <p>Keyword application scenario.</p>
                      * 
                      */
                     void SetUsageSet(const std::vector<std::string>& _usageSet);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool UsageSetHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return CreateTime 
+                     * 获取<p>Creation time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+                     * @return CreateTime <p>Creation time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
                      * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
-                     * 设置
-                     * @param _createTime 
+                     * 设置<p>Creation time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+                     * @param _createTime <p>Creation time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
                      * 
                      */
                     void SetCreateTime(const std::string& _createTime);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return UpdateTime 
+                     * 获取<p>Last modification time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+                     * @return UpdateTime <p>Last modification time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
                      * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
-                     * 设置
-                     * @param _updateTime 
+                     * 设置<p>Last modification time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+                     * @param _updateTime <p>Last modification time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
                      * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
@@ -154,31 +154,31 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p>Keyword.</p>
                      */
                     std::string m_keyword;
                     bool m_keywordHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Keyword tag.</p>
                      */
                     std::vector<std::string> m_tagSet;
                     bool m_tagSetHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Keyword application scenario.</p>
                      */
                     std::vector<std::string> m_usageSet;
                     bool m_usageSetHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Creation time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Last modification time, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
                      */
                     std::string m_updateTime;
                     bool m_updateTimeHasBeenSet;

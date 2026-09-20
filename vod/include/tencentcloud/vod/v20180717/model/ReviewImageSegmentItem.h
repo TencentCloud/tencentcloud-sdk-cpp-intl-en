@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Image moderation clip.
                 */
                 class ReviewImageSegmentItem : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Confidence 
+                     * 获取Score of offensive information involved in suspected clips.
+                     * @return Confidence Score of offensive information involved in suspected clips.
                      * 
                      */
                     double GetConfidence() const;
 
                     /**
-                     * 设置
-                     * @param _confidence 
+                     * 设置Score of offensive information involved in suspected clips.
+                     * @param _confidence Score of offensive information involved in suspected clips.
                      * 
                      */
                     void SetConfidence(const double& _confidence);
@@ -68,15 +68,23 @@ namespace TencentCloud
                     bool ConfidenceHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Suggestion 
+                     * 获取Result suggestions for identifying violations in suspected clips. Value range:
+<li>review: suspected violation, suggest re-examination;</li>
+<li>block: Confirmed violation. Suggest banning.</li>
+                     * @return Suggestion Result suggestions for identifying violations in suspected clips. Value range:
+<li>review: suspected violation, suggest re-examination;</li>
+<li>block: Confirmed violation. Suggest banning.</li>
                      * 
                      */
                     std::string GetSuggestion() const;
 
                     /**
-                     * 设置
-                     * @param _suggestion 
+                     * 设置Result suggestions for identifying violations in suspected clips. Value range:
+<li>review: suspected violation, suggest re-examination;</li>
+<li>block: Confirmed violation. Suggest banning.</li>
+                     * @param _suggestion Result suggestions for identifying violations in suspected clips. Value range:
+<li>review: suspected violation, suggest re-examination;</li>
+<li>block: Confirmed violation. Suggest banning.</li>
                      * 
                      */
                     void SetSuggestion(const std::string& _suggestion);
@@ -89,15 +97,39 @@ namespace TencentCloud
                     bool SuggestionHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Label 
+                     * 获取Tag of the most likely rule violation in the suspected segment. Value range:
+<li>Porn: Pornography;</li>
+<li>Terror: violence.</li>
+<li>Polity: inappropriate information;</li>
+<li>Ad: advertisement;</li>
+<li>Illegal: illegal activities;</li>
+<li>Abuse: abusive language.</li>
+                     * @return Label Tag of the most likely rule violation in the suspected segment. Value range:
+<li>Porn: Pornography;</li>
+<li>Terror: violence.</li>
+<li>Polity: inappropriate information;</li>
+<li>Ad: advertisement;</li>
+<li>Illegal: illegal activities;</li>
+<li>Abuse: abusive language.</li>
                      * 
                      */
                     std::string GetLabel() const;
 
                     /**
-                     * 设置
-                     * @param _label 
+                     * 设置Tag of the most likely rule violation in the suspected segment. Value range:
+<li>Porn: Pornography;</li>
+<li>Terror: violence.</li>
+<li>Polity: inappropriate information;</li>
+<li>Ad: advertisement;</li>
+<li>Illegal: illegal activities;</li>
+<li>Abuse: abusive language.</li>
+                     * @param _label Tag of the most likely rule violation in the suspected segment. Value range:
+<li>Porn: Pornography;</li>
+<li>Terror: violence.</li>
+<li>Polity: inappropriate information;</li>
+<li>Ad: advertisement;</li>
+<li>Illegal: illegal activities;</li>
+<li>Abuse: abusive language.</li>
                      * 
                      */
                     void SetLabel(const std::string& _label);
@@ -110,15 +142,15 @@ namespace TencentCloud
                     bool LabelHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SubLabel 
+                     * 获取Rule violation subtag.
+                     * @return SubLabel Rule violation subtag.
                      * 
                      */
                     std::string GetSubLabel() const;
 
                     /**
-                     * 设置
-                     * @param _subLabel 
+                     * 设置Rule violation subtag.
+                     * @param _subLabel Rule violation subtag.
                      * 
                      */
                     void SetSubLabel(const std::string& _subLabel);
@@ -131,15 +163,23 @@ namespace TencentCloud
                     bool SubLabelHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Form 
+                     * 获取Suspected segment violation form. Value range:
+<li>Image: people or icons in the image;</li>
+<li>OCR: text on the screen.</li>
+                     * @return Form Suspected segment violation form. Value range:
+<li>Image: people or icons in the image;</li>
+<li>OCR: text on the screen.</li>
                      * 
                      */
                     std::string GetForm() const;
 
                     /**
-                     * 设置
-                     * @param _form 
+                     * 设置Suspected segment violation form. Value range:
+<li>Image: people or icons in the image;</li>
+<li>OCR: text on the screen.</li>
+                     * @param _form Suspected segment violation form. Value range:
+<li>Image: people or icons in the image;</li>
+<li>OCR: text on the screen.</li>
                      * 
                      */
                     void SetForm(const std::string& _form);
@@ -152,15 +192,15 @@ namespace TencentCloud
                     bool FormHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AreaCoordSet 
+                     * 获取Zone coordinates of the suspected person, icon, or text (pixel level), [x1, y1, x2, y2], i.e., coordinates of the top-left corner and bottom-right corner.
+                     * @return AreaCoordSet Zone coordinates of the suspected person, icon, or text (pixel level), [x1, y1, x2, y2], i.e., coordinates of the top-left corner and bottom-right corner.
                      * 
                      */
                     std::vector<int64_t> GetAreaCoordSet() const;
 
                     /**
-                     * 设置
-                     * @param _areaCoordSet 
+                     * 设置Zone coordinates of the suspected person, icon, or text (pixel level), [x1, y1, x2, y2], i.e., coordinates of the top-left corner and bottom-right corner.
+                     * @param _areaCoordSet Zone coordinates of the suspected person, icon, or text (pixel level), [x1, y1, x2, y2], i.e., coordinates of the top-left corner and bottom-right corner.
                      * 
                      */
                     void SetAreaCoordSet(const std::vector<int64_t>& _areaCoordSet);
@@ -173,15 +213,15 @@ namespace TencentCloud
                     bool AreaCoordSetHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Text 
+                     * 获取Valid when Form is OCR. It indicates the recognized OCR text content.
+                     * @return Text Valid when Form is OCR. It indicates the recognized OCR text content.
                      * 
                      */
                     std::string GetText() const;
 
                     /**
-                     * 设置
-                     * @param _text 
+                     * 设置Valid when Form is OCR. It indicates the recognized OCR text content.
+                     * @param _text Valid when Form is OCR. It indicates the recognized OCR text content.
                      * 
                      */
                     void SetText(const std::string& _text);
@@ -194,15 +234,15 @@ namespace TencentCloud
                     bool TextHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return KeywordSet 
+                     * 获取Valid when Form is OCR. It indicates the list of violation keywords hit by suspicious fragments.
+                     * @return KeywordSet Valid when Form is OCR. It indicates the list of violation keywords hit by suspicious fragments.
                      * 
                      */
                     std::vector<std::string> GetKeywordSet() const;
 
                     /**
-                     * 设置
-                     * @param _keywordSet 
+                     * 设置Valid when Form is OCR. It indicates the list of violation keywords hit by suspicious fragments.
+                     * @param _keywordSet Valid when Form is OCR. It indicates the list of violation keywords hit by suspicious fragments.
                      * 
                      */
                     void SetKeywordSet(const std::vector<std::string>& _keywordSet);
@@ -217,49 +257,59 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Score of offensive information involved in suspected clips.
                      */
                     double m_confidence;
                     bool m_confidenceHasBeenSet;
 
                     /**
-                     * 
+                     * Result suggestions for identifying violations in suspected clips. Value range:
+<li>review: suspected violation, suggest re-examination;</li>
+<li>block: Confirmed violation. Suggest banning.</li>
                      */
                     std::string m_suggestion;
                     bool m_suggestionHasBeenSet;
 
                     /**
-                     * 
+                     * Tag of the most likely rule violation in the suspected segment. Value range:
+<li>Porn: Pornography;</li>
+<li>Terror: violence.</li>
+<li>Polity: inappropriate information;</li>
+<li>Ad: advertisement;</li>
+<li>Illegal: illegal activities;</li>
+<li>Abuse: abusive language.</li>
                      */
                     std::string m_label;
                     bool m_labelHasBeenSet;
 
                     /**
-                     * 
+                     * Rule violation subtag.
                      */
                     std::string m_subLabel;
                     bool m_subLabelHasBeenSet;
 
                     /**
-                     * 
+                     * Suspected segment violation form. Value range:
+<li>Image: people or icons in the image;</li>
+<li>OCR: text on the screen.</li>
                      */
                     std::string m_form;
                     bool m_formHasBeenSet;
 
                     /**
-                     * 
+                     * Zone coordinates of the suspected person, icon, or text (pixel level), [x1, y1, x2, y2], i.e., coordinates of the top-left corner and bottom-right corner.
                      */
                     std::vector<int64_t> m_areaCoordSet;
                     bool m_areaCoordSetHasBeenSet;
 
                     /**
-                     * 
+                     * Valid when Form is OCR. It indicates the recognized OCR text content.
                      */
                     std::string m_text;
                     bool m_textHasBeenSet;
 
                     /**
-                     * 
+                     * Valid when Form is OCR. It indicates the list of violation keywords hit by suspicious fragments.
                      */
                     std::vector<std::string> m_keywordSet;
                     bool m_keywordSetHasBeenSet;

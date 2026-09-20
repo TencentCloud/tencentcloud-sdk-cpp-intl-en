@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return TotalCount 
+                     * 获取Total number of eligible entries.
+                     * @return TotalCount Total number of eligible entries.
                      * 
                      */
                     uint64_t GetTotalCount() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return WordSet 
+                     * 获取Keyword information.
+                     * @return WordSet Keyword information.
                      * 
                      */
                     std::vector<AiSampleWord> GetWordSet() const;
@@ -75,13 +75,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Total number of eligible entries.
                      */
                     uint64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * 
+                     * Keyword information.
                      */
                     std::vector<AiSampleWord> m_wordSet;
                     bool m_wordSetHasBeenSet;

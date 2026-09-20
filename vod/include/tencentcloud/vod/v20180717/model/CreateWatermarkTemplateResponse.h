@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Definition 
+                     * 获取Watermark template unique identifier.
+                     * @return Definition Watermark template unique identifier.
                      * 
                      */
                     int64_t GetDefinition() const;
@@ -58,8 +58,8 @@ namespace TencentCloud
                     bool DefinitionHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ImageUrl 
+                     * 获取Watermark image address. This field is valid only when Type is image.
+                     * @return ImageUrl Watermark image address. This field is valid only when Type is image.
                      * 
                      */
                     std::string GetImageUrl() const;
@@ -74,13 +74,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Watermark template unique identifier.
                      */
                     int64_t m_definition;
                     bool m_definitionHasBeenSet;
 
                     /**
-                     * 
+                     * Watermark image address. This field is valid only when Type is image.
                      */
                     std::string m_imageUrl;
                     bool m_imageUrlHasBeenSet;

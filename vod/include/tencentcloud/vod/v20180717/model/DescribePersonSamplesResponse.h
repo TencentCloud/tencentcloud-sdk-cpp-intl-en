@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return TotalCount 
+                     * 获取<p>Total number of qualified records.</p>
+                     * @return TotalCount <p>Total number of qualified records.</p>
                      * 
                      */
                     uint64_t GetTotalCount() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return PersonSet 
+                     * 获取<p>Character information.</p>
+                     * @return PersonSet <p>Character information.</p>
                      * 
                      */
                     std::vector<AiSamplePerson> GetPersonSet() const;
@@ -75,13 +75,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p>Total number of qualified records.</p>
                      */
                     uint64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Character information.</p>
                      */
                     std::vector<AiSamplePerson> m_personSet;
                     bool m_personSetHasBeenSet;

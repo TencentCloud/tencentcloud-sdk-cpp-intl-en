@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Task result type for unsafe information involved in image moderation
                 */
                 class TerrorismImageResult : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Confidence 
+                     * 获取Authentication involves scoring unsafe information, with a score from 0 to 100.
+                     * @return Confidence Authentication involves scoring unsafe information, with a score from 0 to 100.
                      * 
                      */
                     double GetConfidence() const;
 
                     /**
-                     * 设置
-                     * @param _confidence 
+                     * 设置Authentication involves scoring unsafe information, with a score from 0 to 100.
+                     * @param _confidence Authentication involves scoring unsafe information, with a score from 0 to 100.
                      * 
                      */
                     void SetConfidence(const double& _confidence);
@@ -68,15 +68,27 @@ namespace TencentCloud
                     bool ConfidenceHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Suggestion 
+                     * 获取Authentication result suggestions involving unsafe information. Value range:
+<li>pass;</li>
+<li>review;</li>
+<li>block.</li>
+                     * @return Suggestion Authentication result suggestions involving unsafe information. Value range:
+<li>pass;</li>
+<li>review;</li>
+<li>block.</li>
                      * 
                      */
                     std::string GetSuggestion() const;
 
                     /**
-                     * 设置
-                     * @param _suggestion 
+                     * 设置Authentication result suggestions involving unsafe information. Value range:
+<li>pass;</li>
+<li>review;</li>
+<li>block.</li>
+                     * @param _suggestion Authentication result suggestions involving unsafe information. Value range:
+<li>pass;</li>
+<li>review;</li>
+<li>block.</li>
                      * 
                      */
                     void SetSuggestion(const std::string& _suggestion);
@@ -89,15 +101,43 @@ namespace TencentCloud
                     bool SuggestionHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Label 
+                     * 获取Result tag for authentication involving unsafe information. Value range:
+<li>guns: weapons and firearms;</li>
+<li>crowd: crowd gathering;</li>
+<li>police: police force;</li>
+<li>bloody: graphic violence;</li>
+<li>banners: violent and terrorist flags;</li>
+<li>explosion: explosions and fires;</li>
+<li>scenario: Violent and terrorist visuals.</li>
+                     * @return Label Result tag for authentication involving unsafe information. Value range:
+<li>guns: weapons and firearms;</li>
+<li>crowd: crowd gathering;</li>
+<li>police: police force;</li>
+<li>bloody: graphic violence;</li>
+<li>banners: violent and terrorist flags;</li>
+<li>explosion: explosions and fires;</li>
+<li>scenario: Violent and terrorist visuals.</li>
                      * 
                      */
                     std::string GetLabel() const;
 
                     /**
-                     * 设置
-                     * @param _label 
+                     * 设置Result tag for authentication involving unsafe information. Value range:
+<li>guns: weapons and firearms;</li>
+<li>crowd: crowd gathering;</li>
+<li>police: police force;</li>
+<li>bloody: graphic violence;</li>
+<li>banners: violent and terrorist flags;</li>
+<li>explosion: explosions and fires;</li>
+<li>scenario: Violent and terrorist visuals.</li>
+                     * @param _label Result tag for authentication involving unsafe information. Value range:
+<li>guns: weapons and firearms;</li>
+<li>crowd: crowd gathering;</li>
+<li>police: police force;</li>
+<li>bloody: graphic violence;</li>
+<li>banners: violent and terrorist flags;</li>
+<li>explosion: explosions and fires;</li>
+<li>scenario: Violent and terrorist visuals.</li>
                      * 
                      */
                     void SetLabel(const std::string& _label);
@@ -112,19 +152,29 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Authentication involves scoring unsafe information, with a score from 0 to 100.
                      */
                     double m_confidence;
                     bool m_confidenceHasBeenSet;
 
                     /**
-                     * 
+                     * Authentication result suggestions involving unsafe information. Value range:
+<li>pass;</li>
+<li>review;</li>
+<li>block.</li>
                      */
                     std::string m_suggestion;
                     bool m_suggestionHasBeenSet;
 
                     /**
-                     * 
+                     * Result tag for authentication involving unsafe information. Value range:
+<li>guns: weapons and firearms;</li>
+<li>crowd: crowd gathering;</li>
+<li>police: police force;</li>
+<li>bloody: graphic violence;</li>
+<li>banners: violent and terrorist flags;</li>
+<li>explosion: explosions and fires;</li>
+<li>scenario: Violent and terrorist visuals.</li>
                      */
                     std::string m_label;
                     bool m_labelHasBeenSet;

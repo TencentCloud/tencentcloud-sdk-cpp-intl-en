@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Watermark period configuration.
                 */
                 class WatermarkCycleConfigForUpdate : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return StartTime 
+                     * 获取Playback time point of the first occurrence of the watermark in the video. Measurement unit: second.
+                     * @return StartTime Playback time point of the first occurrence of the watermark in the video. Measurement unit: second.
                      * 
                      */
                     double GetStartTime() const;
 
                     /**
-                     * 设置
-                     * @param _startTime 
+                     * 设置Playback time point of the first occurrence of the watermark in the video. Measurement unit: second.
+                     * @param _startTime Playback time point of the first occurrence of the watermark in the video. Measurement unit: second.
                      * 
                      */
                     void SetStartTime(const double& _startTime);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return DisplayDuration 
+                     * 获取Duration of watermark display in a watermark cycle, in seconds.
+                     * @return DisplayDuration Duration of watermark display in a watermark cycle, in seconds.
                      * 
                      */
                     double GetDisplayDuration() const;
 
                     /**
-                     * 设置
-                     * @param _displayDuration 
+                     * 设置Duration of watermark display in a watermark cycle, in seconds.
+                     * @param _displayDuration Duration of watermark display in a watermark cycle, in seconds.
                      * 
                      */
                     void SetDisplayDuration(const double& _displayDuration);
@@ -89,15 +89,19 @@ namespace TencentCloud
                     bool DisplayDurationHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return CycleDuration 
+                     * 获取Duration of a watermark cycle, in seconds.
+Set to 0, a watermark will last only one watermark cycle (displayed for DisplayDuration seconds in the entire video).
+                     * @return CycleDuration Duration of a watermark cycle, in seconds.
+Set to 0, a watermark will last only one watermark cycle (displayed for DisplayDuration seconds in the entire video).
                      * 
                      */
                     double GetCycleDuration() const;
 
                     /**
-                     * 设置
-                     * @param _cycleDuration 
+                     * 设置Duration of a watermark cycle, in seconds.
+Set to 0, a watermark will last only one watermark cycle (displayed for DisplayDuration seconds in the entire video).
+                     * @param _cycleDuration Duration of a watermark cycle, in seconds.
+Set to 0, a watermark will last only one watermark cycle (displayed for DisplayDuration seconds in the entire video).
                      * 
                      */
                     void SetCycleDuration(const double& _cycleDuration);
@@ -112,19 +116,20 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Playback time point of the first occurrence of the watermark in the video. Measurement unit: second.
                      */
                     double m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * 
+                     * Duration of watermark display in a watermark cycle, in seconds.
                      */
                     double m_displayDuration;
                     bool m_displayDurationHasBeenSet;
 
                     /**
-                     * 
+                     * Duration of a watermark cycle, in seconds.
+Set to 0, a watermark will last only one watermark cycle (displayed for DisplayDuration seconds in the entire video).
                      */
                     double m_cycleDuration;
                     bool m_cycleDurationHasBeenSet;

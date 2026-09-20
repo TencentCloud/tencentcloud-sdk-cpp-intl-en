@@ -39,7 +39,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Adaptive transcoding stream parameter template
                 */
                 class AdaptiveStreamTemplate : public AbstractModel
                 {
@@ -51,15 +51,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Video 
+                     * 获取<p>Video parameter information.</p>
+                     * @return Video <p>Video parameter information.</p>
                      * 
                      */
                     VideoTemplateInfo GetVideo() const;
 
                     /**
-                     * 设置
-                     * @param _video 
+                     * 设置<p>Video parameter information.</p>
+                     * @param _video <p>Video parameter information.</p>
                      * 
                      */
                     void SetVideo(const VideoTemplateInfo& _video);
@@ -72,15 +72,15 @@ namespace TencentCloud
                     bool VideoHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Audio 
+                     * 获取<p>Audio parameter information.</p>
+                     * @return Audio <p>Audio parameter information.</p>
                      * 
                      */
                     AudioTemplateInfo GetAudio() const;
 
                     /**
-                     * 设置
-                     * @param _audio 
+                     * 设置<p>Audio parameter information.</p>
+                     * @param _audio <p>Audio parameter information.</p>
                      * 
                      */
                     void SetAudio(const AudioTemplateInfo& _audio);
@@ -93,15 +93,15 @@ namespace TencentCloud
                     bool AudioHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return RemoveAudio 
+                     * 获取<p>Indicates whether to remove the audio stream. Value range:</p><li>0: No,</li><li>1: Yes.</li>
+                     * @return RemoveAudio <p>Indicates whether to remove the audio stream. Value range:</p><li>0: No,</li><li>1: Yes.</li>
                      * 
                      */
                     uint64_t GetRemoveAudio() const;
 
                     /**
-                     * 设置
-                     * @param _removeAudio 
+                     * 设置<p>Indicates whether to remove the audio stream. Value range:</p><li>0: No,</li><li>1: Yes.</li>
+                     * @param _removeAudio <p>Indicates whether to remove the audio stream. Value range:</p><li>0: No,</li><li>1: Yes.</li>
                      * 
                      */
                     void SetRemoveAudio(const uint64_t& _removeAudio);
@@ -114,15 +114,15 @@ namespace TencentCloud
                     bool RemoveAudioHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return RemoveVideo 
+                     * 获取<p>Indicates whether to remove the video stream. Value range:</p><li>0: No.</li><li>1: Yes.</li>
+                     * @return RemoveVideo <p>Indicates whether to remove the video stream. Value range:</p><li>0: No.</li><li>1: Yes.</li>
                      * 
                      */
                     uint64_t GetRemoveVideo() const;
 
                     /**
-                     * 设置
-                     * @param _removeVideo 
+                     * 设置<p>Indicates whether to remove the video stream. Value range:</p><li>0: No.</li><li>1: Yes.</li>
+                     * @param _removeVideo <p>Indicates whether to remove the video stream. Value range:</p><li>0: No.</li><li>1: Yes.</li>
                      * 
                      */
                     void SetRemoveVideo(const uint64_t& _removeVideo);
@@ -135,15 +135,15 @@ namespace TencentCloud
                     bool RemoveVideoHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return TEHDConfig 
+                     * 获取<p>Top Speed Codec transcoding parameters.</p>
+                     * @return TEHDConfig <p>Top Speed Codec transcoding parameters.</p>
                      * 
                      */
                     TEHDConfig GetTEHDConfig() const;
 
                     /**
-                     * 设置
-                     * @param _tEHDConfig 
+                     * 设置<p>Top Speed Codec transcoding parameters.</p>
+                     * @param _tEHDConfig <p>Top Speed Codec transcoding parameters.</p>
                      * 
                      */
                     void SetTEHDConfig(const TEHDConfig& _tEHDConfig);
@@ -156,15 +156,15 @@ namespace TencentCloud
                     bool TEHDConfigHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return EnhanceConfig 
+                     * 获取<p>Audio/video enhancement configurations.</p>
+                     * @return EnhanceConfig <p>Audio/video enhancement configurations.</p>
                      * 
                      */
                     EnhanceConfig GetEnhanceConfig() const;
 
                     /**
-                     * 设置
-                     * @param _enhanceConfig 
+                     * 设置<p>Audio/video enhancement configurations.</p>
+                     * @param _enhanceConfig <p>Audio/video enhancement configurations.</p>
                      * 
                      */
                     void SetEnhanceConfig(const EnhanceConfig& _enhanceConfig);
@@ -177,15 +177,15 @@ namespace TencentCloud
                     bool EnhanceConfigHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return StdExtInfo 
+                     * 获取<p>Extended parameter.</p>
+                     * @return StdExtInfo <p>Extended parameter.</p>
                      * 
                      */
                     std::string GetStdExtInfo() const;
 
                     /**
-                     * 设置
-                     * @param _stdExtInfo 
+                     * 设置<p>Extended parameter.</p>
+                     * @param _stdExtInfo <p>Extended parameter.</p>
                      * 
                      */
                     void SetStdExtInfo(const std::string& _stdExtInfo);
@@ -200,43 +200,43 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p>Video parameter information.</p>
                      */
                     VideoTemplateInfo m_video;
                     bool m_videoHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Audio parameter information.</p>
                      */
                     AudioTemplateInfo m_audio;
                     bool m_audioHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Indicates whether to remove the audio stream. Value range:</p><li>0: No,</li><li>1: Yes.</li>
                      */
                     uint64_t m_removeAudio;
                     bool m_removeAudioHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Indicates whether to remove the video stream. Value range:</p><li>0: No.</li><li>1: Yes.</li>
                      */
                     uint64_t m_removeVideo;
                     bool m_removeVideoHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Top Speed Codec transcoding parameters.</p>
                      */
                     TEHDConfig m_tEHDConfig;
                     bool m_tEHDConfigHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Audio/video enhancement configurations.</p>
                      */
                     EnhanceConfig m_enhanceConfig;
                     bool m_enhanceConfigHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Extended parameter.</p>
                      */
                     std::string m_stdExtInfo;
                     bool m_stdExtInfoHasBeenSet;

@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Bitrate reduction task information
                 */
                 class ReduceMediaBitrateTask : public AbstractModel
                 {
@@ -49,15 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return TaskId 
+                     * 获取Video processing task ID.
+                     * @return TaskId Video processing task ID.
                      * 
                      */
                     std::string GetTaskId() const;
 
                     /**
-                     * 设置
-                     * @param _taskId 
+                     * 设置Video processing task ID.
+                     * @param _taskId Video processing task ID.
                      * 
                      */
                     void SetTaskId(const std::string& _taskId);
@@ -70,15 +70,23 @@ namespace TencentCloud
                     bool TaskIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Status 
+                     * 获取Task stream status. Valid values:
+<li>PROCESSING: Processing;</li>
+<li>FINISH: completed</li>
+                     * @return Status Task stream status. Valid values:
+<li>PROCESSING: Processing;</li>
+<li>FINISH: completed</li>
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置
-                     * @param _status 
+                     * 设置Task stream status. Valid values:
+<li>PROCESSING: Processing;</li>
+<li>FINISH: completed</li>
+                     * @param _status Task stream status. Valid values:
+<li>PROCESSING: Processing;</li>
+<li>FINISH: completed</li>
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -91,15 +99,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return FileId 
+                     * 获取Media file ID.
+                     * @return FileId Media file ID.
                      * 
                      */
                     std::string GetFileId() const;
 
                     /**
-                     * 设置
-                     * @param _fileId 
+                     * 设置Media file ID.
+                     * @param _fileId Media file ID.
                      * 
                      */
                     void SetFileId(const std::string& _fileId);
@@ -112,15 +120,15 @@ namespace TencentCloud
                     bool FileIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return FileName 
+                     * 获取Media filename.
+                     * @return FileName Media filename.
                      * 
                      */
                     std::string GetFileName() const;
 
                     /**
-                     * 设置
-                     * @param _fileName 
+                     * 设置Media filename.
+                     * @param _fileName Media filename.
                      * 
                      */
                     void SetFileName(const std::string& _fileName);
@@ -133,15 +141,15 @@ namespace TencentCloud
                     bool FileNameHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return FileUrl 
+                     * 获取Media file address.
+                     * @return FileUrl Media file address.
                      * 
                      */
                     std::string GetFileUrl() const;
 
                     /**
-                     * 设置
-                     * @param _fileUrl 
+                     * 设置Media file address.
+                     * @param _fileUrl Media file address.
                      * 
                      */
                     void SetFileUrl(const std::string& _fileUrl);
@@ -154,15 +162,15 @@ namespace TencentCloud
                     bool FileUrlHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return MetaData 
+                     * 获取Metadata of the original video.
+                     * @return MetaData Metadata of the original video.
                      * 
                      */
                     MediaMetaData GetMetaData() const;
 
                     /**
-                     * 设置
-                     * @param _metaData 
+                     * 设置Metadata of the original video.
+                     * @param _metaData Metadata of the original video.
                      * 
                      */
                     void SetMetaData(const MediaMetaData& _metaData);
@@ -175,15 +183,15 @@ namespace TencentCloud
                     bool MetaDataHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return MediaProcessResultSet 
+                     * 获取Bitrate reduction task execution status and results.
+                     * @return MediaProcessResultSet Bitrate reduction task execution status and results.
                      * 
                      */
                     std::vector<ReduceMediaBitrateMediaProcessTaskResult> GetMediaProcessResultSet() const;
 
                     /**
-                     * 设置
-                     * @param _mediaProcessResultSet 
+                     * 设置Bitrate reduction task execution status and results.
+                     * @param _mediaProcessResultSet Bitrate reduction task execution status and results.
                      * 
                      */
                     void SetMediaProcessResultSet(const std::vector<ReduceMediaBitrateMediaProcessTaskResult>& _mediaProcessResultSet);
@@ -196,15 +204,15 @@ namespace TencentCloud
                     bool MediaProcessResultSetHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return TasksPriority 
+                     * 获取Priority of the task flow, with a value range of [-10, 10].
+                     * @return TasksPriority Priority of the task flow, with a value range of [-10, 10].
                      * 
                      */
                     int64_t GetTasksPriority() const;
 
                     /**
-                     * 设置
-                     * @param _tasksPriority 
+                     * 设置Priority of the task flow, with a value range of [-10, 10].
+                     * @param _tasksPriority Priority of the task flow, with a value range of [-10, 10].
                      * 
                      */
                     void SetTasksPriority(const int64_t& _tasksPriority);
@@ -217,15 +225,23 @@ namespace TencentCloud
                     bool TasksPriorityHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return TasksNotifyMode 
+                     * 获取Task flow status change notification mode.
+<li>Finish: An event notification is initiated only when all task flows are completed.</li>
+<li>None: non-acceptance of the task flow callback.</li>
+                     * @return TasksNotifyMode Task flow status change notification mode.
+<li>Finish: An event notification is initiated only when all task flows are completed.</li>
+<li>None: non-acceptance of the task flow callback.</li>
                      * 
                      */
                     std::string GetTasksNotifyMode() const;
 
                     /**
-                     * 设置
-                     * @param _tasksNotifyMode 
+                     * 设置Task flow status change notification mode.
+<li>Finish: An event notification is initiated only when all task flows are completed.</li>
+<li>None: non-acceptance of the task flow callback.</li>
+                     * @param _tasksNotifyMode Task flow status change notification mode.
+<li>Finish: An event notification is initiated only when all task flows are completed.</li>
+<li>None: non-acceptance of the task flow callback.</li>
                      * 
                      */
                     void SetTasksNotifyMode(const std::string& _tasksNotifyMode);
@@ -238,15 +254,15 @@ namespace TencentCloud
                     bool TasksNotifyModeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SessionContext 
+                     * 获取Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
+                     * @return SessionContext Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
                      * 
                      */
                     std::string GetSessionContext() const;
 
                     /**
-                     * 设置
-                     * @param _sessionContext 
+                     * 设置Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
+                     * @param _sessionContext Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
                      * 
                      */
                     void SetSessionContext(const std::string& _sessionContext);
@@ -259,15 +275,15 @@ namespace TencentCloud
                     bool SessionContextHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SessionId 
+                     * 获取Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
+                     * @return SessionId Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
                      * 
                      */
                     std::string GetSessionId() const;
 
                     /**
-                     * 设置
-                     * @param _sessionId 
+                     * 设置Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
+                     * @param _sessionId Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
                      * 
                      */
                     void SetSessionId(const std::string& _sessionId);
@@ -282,67 +298,71 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Video processing task ID.
                      */
                     std::string m_taskId;
                     bool m_taskIdHasBeenSet;
 
                     /**
-                     * 
+                     * Task stream status. Valid values:
+<li>PROCESSING: Processing;</li>
+<li>FINISH: completed</li>
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * 
+                     * Media file ID.
                      */
                     std::string m_fileId;
                     bool m_fileIdHasBeenSet;
 
                     /**
-                     * 
+                     * Media filename.
                      */
                     std::string m_fileName;
                     bool m_fileNameHasBeenSet;
 
                     /**
-                     * 
+                     * Media file address.
                      */
                     std::string m_fileUrl;
                     bool m_fileUrlHasBeenSet;
 
                     /**
-                     * 
+                     * Metadata of the original video.
                      */
                     MediaMetaData m_metaData;
                     bool m_metaDataHasBeenSet;
 
                     /**
-                     * 
+                     * Bitrate reduction task execution status and results.
                      */
                     std::vector<ReduceMediaBitrateMediaProcessTaskResult> m_mediaProcessResultSet;
                     bool m_mediaProcessResultSetHasBeenSet;
 
                     /**
-                     * 
+                     * Priority of the task flow, with a value range of [-10, 10].
                      */
                     int64_t m_tasksPriority;
                     bool m_tasksPriorityHasBeenSet;
 
                     /**
-                     * 
+                     * Task flow status change notification mode.
+<li>Finish: An event notification is initiated only when all task flows are completed.</li>
+<li>None: non-acceptance of the task flow callback.</li>
                      */
                     std::string m_tasksNotifyMode;
                     bool m_tasksNotifyModeHasBeenSet;
 
                     /**
-                     * 
+                     * Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
                      */
                     std::string m_sessionContext;
                     bool m_sessionContextHasBeenSet;
 
                     /**
-                     * 
+                     * Identifier for deduplication. If a request with the same identifier has been sent within the past seven days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.
                      */
                     std::string m_sessionId;
                     bool m_sessionIdHasBeenSet;

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Video splitting input.
                 */
                 class AiRecognitionTaskSegmentResultInput : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Definition 
+                     * 获取Video splitting template ID.
+                     * @return Definition Video splitting template ID.
                      * 
                      */
                     int64_t GetDefinition() const;
 
                     /**
-                     * 设置
-                     * @param _definition 
+                     * 设置Video splitting template ID.
+                     * @param _definition Video splitting template ID.
                      * 
                      */
                     void SetDefinition(const int64_t& _definition);
@@ -70,7 +70,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Video splitting template ID.
                      */
                     int64_t m_definition;
                     bool m_definitionHasBeenSet;

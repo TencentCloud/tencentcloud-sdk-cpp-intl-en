@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return QuotaSet 
+                     * 获取<p>Quota list</p>
+                     * @return QuotaSet <p>Quota list</p>
                      * 
                      */
                     std::vector<AigcQuotaItem> GetQuotaSet() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool QuotaSetHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return TotalCount 
+                     * 获取<p>Total quantity.</p>
+                     * @return TotalCount <p>Total quantity.</p>
                      * 
                      */
                     uint64_t GetTotalCount() const;
@@ -75,13 +75,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p>Quota list</p>
                      */
                     std::vector<AigcQuotaItem> m_quotaSet;
                     bool m_quotaSetHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Total quantity.</p>
                      */
                     uint64_t m_totalCount;
                     bool m_totalCountHasBeenSet;

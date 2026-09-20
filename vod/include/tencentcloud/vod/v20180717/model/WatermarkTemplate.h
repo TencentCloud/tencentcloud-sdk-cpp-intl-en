@@ -38,7 +38,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Watermark template details.
                 */
                 class WatermarkTemplate : public AbstractModel
                 {
@@ -50,15 +50,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Definition 
+                     * 获取Watermark template unique identifier.
+                     * @return Definition Watermark template unique identifier.
                      * 
                      */
                     int64_t GetDefinition() const;
 
                     /**
-                     * 设置
-                     * @param _definition 
+                     * 设置Watermark template unique identifier.
+                     * @param _definition Watermark template unique identifier.
                      * 
                      */
                     void SetDefinition(const int64_t& _definition);
@@ -71,15 +71,23 @@ namespace TencentCloud
                     bool DefinitionHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Type 
+                     * 获取Watermark type. Valid values:
+<li>image: image watermark;</li>
+<li>text: text watermark.</li>
+                     * @return Type Watermark type. Valid values:
+<li>image: image watermark;</li>
+<li>text: text watermark.</li>
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置
-                     * @param _type 
+                     * 设置Watermark type. Valid values:
+<li>image: image watermark;</li>
+<li>text: text watermark.</li>
+                     * @param _type Watermark type. Valid values:
+<li>image: image watermark;</li>
+<li>text: text watermark.</li>
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -92,15 +100,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Name 
+                     * 获取Watermark template name.
+                     * @return Name Watermark template name.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置
-                     * @param _name 
+                     * 设置Watermark template name.
+                     * @param _name Watermark template name.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -113,15 +121,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Comment 
+                     * 获取Template description information.
+                     * @return Comment Template description information.
                      * 
                      */
                     std::string GetComment() const;
 
                     /**
-                     * 设置
-                     * @param _comment 
+                     * 设置Template description information.
+                     * @param _comment Template description information.
                      * 
                      */
                     void SetComment(const std::string& _comment);
@@ -134,15 +142,23 @@ namespace TencentCloud
                     bool CommentHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return XPos 
+                     * 获取Horizontal position of the watermark image origin point from the video origin point.
+<li>If a string ends with %, it indicates that the `Left` of a watermark is a position at a specified percentage of a video's width. For example, `10%` means that `Left` is 10% of a video's width.</li>
+<li>If a string ends with px, it means the watermark Left is at the specified pixel position of the video width. For example, 100px means Left is 100 pixels.</li>
+                     * @return XPos Horizontal position of the watermark image origin point from the video origin point.
+<li>If a string ends with %, it indicates that the `Left` of a watermark is a position at a specified percentage of a video's width. For example, `10%` means that `Left` is 10% of a video's width.</li>
+<li>If a string ends with px, it means the watermark Left is at the specified pixel position of the video width. For example, 100px means Left is 100 pixels.</li>
                      * 
                      */
                     std::string GetXPos() const;
 
                     /**
-                     * 设置
-                     * @param _xPos 
+                     * 设置Horizontal position of the watermark image origin point from the video origin point.
+<li>If a string ends with %, it indicates that the `Left` of a watermark is a position at a specified percentage of a video's width. For example, `10%` means that `Left` is 10% of a video's width.</li>
+<li>If a string ends with px, it means the watermark Left is at the specified pixel position of the video width. For example, 100px means Left is 100 pixels.</li>
+                     * @param _xPos Horizontal position of the watermark image origin point from the video origin point.
+<li>If a string ends with %, it indicates that the `Left` of a watermark is a position at a specified percentage of a video's width. For example, `10%` means that `Left` is 10% of a video's width.</li>
+<li>If a string ends with px, it means the watermark Left is at the specified pixel position of the video width. For example, 100px means Left is 100 pixels.</li>
                      * 
                      */
                     void SetXPos(const std::string& _xPos);
@@ -155,15 +171,23 @@ namespace TencentCloud
                     bool XPosHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return YPos 
+                     * 获取Vertical position of the watermark image origin point from the video origin point.
+<li>If a string ends with %, it indicates that the `Top` of a watermark is a location at a specified percentage of a video's height. For example, `10%` means that `Top` is 10% of a video's height.</li>
+<li>If a string ends with px, it means the watermark Top is at the specified pixel position of the video height. For example, 100px means the Top is 100 pixels.</li>
+                     * @return YPos Vertical position of the watermark image origin point from the video origin point.
+<li>If a string ends with %, it indicates that the `Top` of a watermark is a location at a specified percentage of a video's height. For example, `10%` means that `Top` is 10% of a video's height.</li>
+<li>If a string ends with px, it means the watermark Top is at the specified pixel position of the video height. For example, 100px means the Top is 100 pixels.</li>
                      * 
                      */
                     std::string GetYPos() const;
 
                     /**
-                     * 设置
-                     * @param _yPos 
+                     * 设置Vertical position of the watermark image origin point from the video origin point.
+<li>If a string ends with %, it indicates that the `Top` of a watermark is a location at a specified percentage of a video's height. For example, `10%` means that `Top` is 10% of a video's height.</li>
+<li>If a string ends with px, it means the watermark Top is at the specified pixel position of the video height. For example, 100px means the Top is 100 pixels.</li>
+                     * @param _yPos Vertical position of the watermark image origin point from the video origin point.
+<li>If a string ends with %, it indicates that the `Top` of a watermark is a location at a specified percentage of a video's height. For example, `10%` means that `Top` is 10% of a video's height.</li>
+<li>If a string ends with px, it means the watermark Top is at the specified pixel position of the video height. For example, 100px means the Top is 100 pixels.</li>
                      * 
                      */
                     void SetYPos(const std::string& _yPos);
@@ -176,15 +200,15 @@ namespace TencentCloud
                     bool YPosHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ImageTemplate 
+                     * 获取Image watermark template. This field is valid only when Type is image.
+                     * @return ImageTemplate Image watermark template. This field is valid only when Type is image.
                      * 
                      */
                     ImageWatermarkTemplate GetImageTemplate() const;
 
                     /**
-                     * 设置
-                     * @param _imageTemplate 
+                     * 设置Image watermark template. This field is valid only when Type is image.
+                     * @param _imageTemplate Image watermark template. This field is valid only when Type is image.
                      * 
                      */
                     void SetImageTemplate(const ImageWatermarkTemplate& _imageTemplate);
@@ -197,15 +221,15 @@ namespace TencentCloud
                     bool ImageTemplateHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return TextTemplate 
+                     * 获取Text watermarking template. This field is valid only when Type is text.
+                     * @return TextTemplate Text watermarking template. This field is valid only when Type is text.
                      * 
                      */
                     TextWatermarkTemplateInput GetTextTemplate() const;
 
                     /**
-                     * 设置
-                     * @param _textTemplate 
+                     * 设置Text watermarking template. This field is valid only when Type is text.
+                     * @param _textTemplate Text watermarking template. This field is valid only when Type is text.
                      * 
                      */
                     void SetTextTemplate(const TextWatermarkTemplateInput& _textTemplate);
@@ -218,15 +242,15 @@ namespace TencentCloud
                     bool TextTemplateHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SvgTemplate 
+                     * 获取SVG watermark template. This field is valid when Type is `svg`.
+                     * @return SvgTemplate SVG watermark template. This field is valid when Type is `svg`.
                      * 
                      */
                     SvgWatermarkInput GetSvgTemplate() const;
 
                     /**
-                     * 设置
-                     * @param _svgTemplate 
+                     * 设置SVG watermark template. This field is valid when Type is `svg`.
+                     * @param _svgTemplate SVG watermark template. This field is valid when Type is `svg`.
                      * 
                      */
                     void SetSvgTemplate(const SvgWatermarkInput& _svgTemplate);
@@ -239,15 +263,15 @@ namespace TencentCloud
                     bool SvgTemplateHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return CreateTime 
+                     * 获取Template creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @return CreateTime Template creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
-                     * 设置
-                     * @param _createTime 
+                     * 设置Template creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @param _createTime Template creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      * 
                      */
                     void SetCreateTime(const std::string& _createTime);
@@ -260,15 +284,15 @@ namespace TencentCloud
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return UpdateTime 
+                     * 获取Template last modified time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @return UpdateTime Template last modified time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
-                     * 设置
-                     * @param _updateTime 
+                     * 设置Template last modified time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @param _updateTime Template last modified time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
@@ -281,15 +305,31 @@ namespace TencentCloud
                     bool UpdateTimeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return CoordinateOrigin 
+                     * 获取Origin position. Valid values:
+<li>topLeft: indicates that the coordinate origin is at the top left corner of the video image and the watermark origin is at the top left corner of the image or text.</li>
+<li>topRight: indicates that the coordinate origin is at the top right corner of the video image and the watermark origin is at the top right corner of the image or text.</li>
+<li>bottomLeft: indicates that the coordinate origin is at the bottom-left corner of the video image and the watermark origin is at the bottom-left corner of the image or text.</li>
+<li>bottomRight: indicates that the coordinate origin is at the bottom-right corner of the video image and the watermark origin is at the lower-right of the image or text.</li>
+                     * @return CoordinateOrigin Origin position. Valid values:
+<li>topLeft: indicates that the coordinate origin is at the top left corner of the video image and the watermark origin is at the top left corner of the image or text.</li>
+<li>topRight: indicates that the coordinate origin is at the top right corner of the video image and the watermark origin is at the top right corner of the image or text.</li>
+<li>bottomLeft: indicates that the coordinate origin is at the bottom-left corner of the video image and the watermark origin is at the bottom-left corner of the image or text.</li>
+<li>bottomRight: indicates that the coordinate origin is at the bottom-right corner of the video image and the watermark origin is at the lower-right of the image or text.</li>
                      * 
                      */
                     std::string GetCoordinateOrigin() const;
 
                     /**
-                     * 设置
-                     * @param _coordinateOrigin 
+                     * 设置Origin position. Valid values:
+<li>topLeft: indicates that the coordinate origin is at the top left corner of the video image and the watermark origin is at the top left corner of the image or text.</li>
+<li>topRight: indicates that the coordinate origin is at the top right corner of the video image and the watermark origin is at the top right corner of the image or text.</li>
+<li>bottomLeft: indicates that the coordinate origin is at the bottom-left corner of the video image and the watermark origin is at the bottom-left corner of the image or text.</li>
+<li>bottomRight: indicates that the coordinate origin is at the bottom-right corner of the video image and the watermark origin is at the lower-right of the image or text.</li>
+                     * @param _coordinateOrigin Origin position. Valid values:
+<li>topLeft: indicates that the coordinate origin is at the top left corner of the video image and the watermark origin is at the top left corner of the image or text.</li>
+<li>topRight: indicates that the coordinate origin is at the top right corner of the video image and the watermark origin is at the top right corner of the image or text.</li>
+<li>bottomLeft: indicates that the coordinate origin is at the bottom-left corner of the video image and the watermark origin is at the bottom-left corner of the image or text.</li>
+<li>bottomRight: indicates that the coordinate origin is at the bottom-right corner of the video image and the watermark origin is at the lower-right of the image or text.</li>
                      * 
                      */
                     void SetCoordinateOrigin(const std::string& _coordinateOrigin);
@@ -304,73 +344,83 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Watermark template unique identifier.
                      */
                     int64_t m_definition;
                     bool m_definitionHasBeenSet;
 
                     /**
-                     * 
+                     * Watermark type. Valid values:
+<li>image: image watermark;</li>
+<li>text: text watermark.</li>
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * 
+                     * Watermark template name.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * 
+                     * Template description information.
                      */
                     std::string m_comment;
                     bool m_commentHasBeenSet;
 
                     /**
-                     * 
+                     * Horizontal position of the watermark image origin point from the video origin point.
+<li>If a string ends with %, it indicates that the `Left` of a watermark is a position at a specified percentage of a video's width. For example, `10%` means that `Left` is 10% of a video's width.</li>
+<li>If a string ends with px, it means the watermark Left is at the specified pixel position of the video width. For example, 100px means Left is 100 pixels.</li>
                      */
                     std::string m_xPos;
                     bool m_xPosHasBeenSet;
 
                     /**
-                     * 
+                     * Vertical position of the watermark image origin point from the video origin point.
+<li>If a string ends with %, it indicates that the `Top` of a watermark is a location at a specified percentage of a video's height. For example, `10%` means that `Top` is 10% of a video's height.</li>
+<li>If a string ends with px, it means the watermark Top is at the specified pixel position of the video height. For example, 100px means the Top is 100 pixels.</li>
                      */
                     std::string m_yPos;
                     bool m_yPosHasBeenSet;
 
                     /**
-                     * 
+                     * Image watermark template. This field is valid only when Type is image.
                      */
                     ImageWatermarkTemplate m_imageTemplate;
                     bool m_imageTemplateHasBeenSet;
 
                     /**
-                     * 
+                     * Text watermarking template. This field is valid only when Type is text.
                      */
                     TextWatermarkTemplateInput m_textTemplate;
                     bool m_textTemplateHasBeenSet;
 
                     /**
-                     * 
+                     * SVG watermark template. This field is valid when Type is `svg`.
                      */
                     SvgWatermarkInput m_svgTemplate;
                     bool m_svgTemplateHasBeenSet;
 
                     /**
-                     * 
+                     * Template creation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * 
+                     * Template last modified time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      */
                     std::string m_updateTime;
                     bool m_updateTimeHasBeenSet;
 
                     /**
-                     * 
+                     * Origin position. Valid values:
+<li>topLeft: indicates that the coordinate origin is at the top left corner of the video image and the watermark origin is at the top left corner of the image or text.</li>
+<li>topRight: indicates that the coordinate origin is at the top right corner of the video image and the watermark origin is at the top right corner of the image or text.</li>
+<li>bottomLeft: indicates that the coordinate origin is at the bottom-left corner of the video image and the watermark origin is at the bottom-left corner of the image or text.</li>
+<li>bottomRight: indicates that the coordinate origin is at the bottom-right corner of the video image and the watermark origin is at the lower-right of the image or text.</li>
                      */
                     std::string m_coordinateOrigin;
                     bool m_coordinateOriginHasBeenSet;

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Task input parameter type of Ocr text involving offensive content in audio/video moderation
                 */
                 class AiReviewPornOcrTaskInput : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Definition 
+                     * 获取Template ID for authenticating offensive content.
+                     * @return Definition Template ID for authenticating offensive content.
                      * 
                      */
                     uint64_t GetDefinition() const;
 
                     /**
-                     * 设置
-                     * @param _definition 
+                     * 设置Template ID for authenticating offensive content.
+                     * @param _definition Template ID for authenticating offensive content.
                      * 
                      */
                     void SetDefinition(const uint64_t& _definition);
@@ -70,7 +70,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Template ID for authenticating offensive content.
                      */
                     uint64_t m_definition;
                     bool m_definitionHasBeenSet;

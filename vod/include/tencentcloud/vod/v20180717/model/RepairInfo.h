@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Image quality restoration control parameters
                 */
                 class RepairInfo : public AbstractModel
                 {
@@ -47,15 +47,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Switch 
+                     * 获取Image quality restoration control switch. Available values:
+<li>ON: Enable image quality restoration;</li>
+<li>OFF: Disable image quality restoration.</li>
+                     * @return Switch Image quality restoration control switch. Available values:
+<li>ON: Enable image quality restoration;</li>
+<li>OFF: Disable image quality restoration.</li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置
-                     * @param _switch 
+                     * 设置Image quality restoration control switch. Available values:
+<li>ON: Enable image quality restoration;</li>
+<li>OFF: Disable image quality restoration.</li>
+                     * @param _switch Image quality restoration control switch. Available values:
+<li>ON: Enable image quality restoration;</li>
+<li>OFF: Disable image quality restoration.</li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -68,15 +76,31 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Type 
+                     * 获取Image quality restoration type. It is valid only when the image quality restoration control switch is ON. Available values:
+<li>weak: light image quality restoration;</li>
+<li>normal: normal image quality restoration;</li>
+<li>strong: strong image restoration.</li>
+Default value: weak.
+                     * @return Type Image quality restoration type. It is valid only when the image quality restoration control switch is ON. Available values:
+<li>weak: light image quality restoration;</li>
+<li>normal: normal image quality restoration;</li>
+<li>strong: strong image restoration.</li>
+Default value: weak.
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置
-                     * @param _type 
+                     * 设置Image quality restoration type. It is valid only when the image quality restoration control switch is ON. Available values:
+<li>weak: light image quality restoration;</li>
+<li>normal: normal image quality restoration;</li>
+<li>strong: strong image restoration.</li>
+Default value: weak.
+                     * @param _type Image quality restoration type. It is valid only when the image quality restoration control switch is ON. Available values:
+<li>weak: light image quality restoration;</li>
+<li>normal: normal image quality restoration;</li>
+<li>strong: strong image restoration.</li>
+Default value: weak.
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -91,13 +115,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Image quality restoration control switch. Available values:
+<li>ON: Enable image quality restoration;</li>
+<li>OFF: Disable image quality restoration.</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * 
+                     * Image quality restoration type. It is valid only when the image quality restoration control switch is ON. Available values:
+<li>weak: light image quality restoration;</li>
+<li>normal: normal image quality restoration;</li>
+<li>strong: strong image restoration.</li>
+Default value: weak.
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;

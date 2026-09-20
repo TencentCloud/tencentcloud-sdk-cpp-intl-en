@@ -44,15 +44,47 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Usages 
+                     * 获取<b>Keyword application scenario. Available values:</b>
+1. Recognition.Ocr: Perform content recognition through OCR.
+2. Recognition.Asr: Perform content recognition through audio recognition technology.
+3. Review.Ocr: Perform inappropriate content recognition through OCR.
+4. Review.Asr: Perform inappropriate content recognition through audio recognition technology;
+<b>Can be abbreviated as:</b>
+5. Recognition: Perform content recognition through OCR and audio recognition technology, equivalent to 1+2;
+6. Review: Perform inappropriate content recognition using OCR and audio recognition technology, equivalent to 3+4.
+7. All: Perform content recognition and inappropriate content recognition through OCR and audio recognition technology, equivalent to 1+2+3+4.
+                     * @return Usages <b>Keyword application scenario. Available values:</b>
+1. Recognition.Ocr: Perform content recognition through OCR.
+2. Recognition.Asr: Perform content recognition through audio recognition technology.
+3. Review.Ocr: Perform inappropriate content recognition through OCR.
+4. Review.Asr: Perform inappropriate content recognition through audio recognition technology;
+<b>Can be abbreviated as:</b>
+5. Recognition: Perform content recognition through OCR and audio recognition technology, equivalent to 1+2;
+6. Review: Perform inappropriate content recognition using OCR and audio recognition technology, equivalent to 3+4.
+7. All: Perform content recognition and inappropriate content recognition through OCR and audio recognition technology, equivalent to 1+2+3+4.
                      * 
                      */
                     std::vector<std::string> GetUsages() const;
 
                     /**
-                     * 设置
-                     * @param _usages 
+                     * 设置<b>Keyword application scenario. Available values:</b>
+1. Recognition.Ocr: Perform content recognition through OCR.
+2. Recognition.Asr: Perform content recognition through audio recognition technology.
+3. Review.Ocr: Perform inappropriate content recognition through OCR.
+4. Review.Asr: Perform inappropriate content recognition through audio recognition technology;
+<b>Can be abbreviated as:</b>
+5. Recognition: Perform content recognition through OCR and audio recognition technology, equivalent to 1+2;
+6. Review: Perform inappropriate content recognition using OCR and audio recognition technology, equivalent to 3+4.
+7. All: Perform content recognition and inappropriate content recognition through OCR and audio recognition technology, equivalent to 1+2+3+4.
+                     * @param _usages <b>Keyword application scenario. Available values:</b>
+1. Recognition.Ocr: Perform content recognition through OCR.
+2. Recognition.Asr: Perform content recognition through audio recognition technology.
+3. Review.Ocr: Perform inappropriate content recognition through OCR.
+4. Review.Asr: Perform inappropriate content recognition through audio recognition technology;
+<b>Can be abbreviated as:</b>
+5. Recognition: Perform content recognition through OCR and audio recognition technology, equivalent to 1+2;
+6. Review: Perform inappropriate content recognition using OCR and audio recognition technology, equivalent to 3+4.
+7. All: Perform content recognition and inappropriate content recognition through OCR and audio recognition technology, equivalent to 1+2+3+4.
                      * 
                      */
                     void SetUsages(const std::vector<std::string>& _usages);
@@ -65,15 +97,15 @@ namespace TencentCloud
                     bool UsagesHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Words 
+                     * 获取Keyword. Array length limit: 100.
+                     * @return Words Keyword. Array length limit: 100.
                      * 
                      */
                     std::vector<AiSampleWordInfo> GetWords() const;
 
                     /**
-                     * 设置
-                     * @param _words 
+                     * 设置Keyword. Array length limit: 100.
+                     * @param _words Keyword. Array length limit: 100.
                      * 
                      */
                     void SetWords(const std::vector<AiSampleWordInfo>& _words);
@@ -86,15 +118,15 @@ namespace TencentCloud
                     bool WordsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SubAppId 
+                     * 获取<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b>
+                     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b>
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置
-                     * @param _subAppId 
+                     * 设置<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b>
+                     * @param _subAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b>
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -109,19 +141,27 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <b>Keyword application scenario. Available values:</b>
+1. Recognition.Ocr: Perform content recognition through OCR.
+2. Recognition.Asr: Perform content recognition through audio recognition technology.
+3. Review.Ocr: Perform inappropriate content recognition through OCR.
+4. Review.Asr: Perform inappropriate content recognition through audio recognition technology;
+<b>Can be abbreviated as:</b>
+5. Recognition: Perform content recognition through OCR and audio recognition technology, equivalent to 1+2;
+6. Review: Perform inappropriate content recognition using OCR and audio recognition technology, equivalent to 3+4.
+7. All: Perform content recognition and inappropriate content recognition through OCR and audio recognition technology, equivalent to 1+2+3+4.
                      */
                     std::vector<std::string> m_usages;
                     bool m_usagesHasBeenSet;
 
                     /**
-                     * 
+                     * Keyword. Array length limit: 100.
                      */
                     std::vector<AiSampleWordInfo> m_words;
                     bool m_wordsHasBeenSet;
 
                     /**
-                     * 
+                     * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b>
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;

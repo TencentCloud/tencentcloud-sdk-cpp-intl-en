@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return SubAppId 
+                     * 获取<p>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services from December 25, 2023, this field must be filled in with the app ID when accessing resources in VOD applications, whether default or newly created.</p>
+                     * @return SubAppId <p>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services from December 25, 2023, this field must be filled in with the app ID when accessing resources in VOD applications, whether default or newly created.</p>
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置
-                     * @param _subAppId 
+                     * 设置<p>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services from December 25, 2023, this field must be filled in with the app ID when accessing resources in VOD applications, whether default or newly created.</p>
+                     * @param _subAppId <p>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services from December 25, 2023, this field must be filled in with the app ID when accessing resources in VOD applications, whether default or newly created.</p>
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool SubAppIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Offset 
+                     * 获取<p>Paging offset. Default value: 0.</p>
+                     * @return Offset <p>Paging offset. Default value: 0.</p>
                      * 
                      */
                     int64_t GetOffset() const;
 
                     /**
-                     * 设置
-                     * @param _offset 
+                     * 设置<p>Paging offset. Default value: 0.</p>
+                     * @param _offset <p>Paging offset. Default value: 0.</p>
                      * 
                      */
                     void SetOffset(const int64_t& _offset);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Limit 
+                     * 获取<p>Number of returned entries. Default value: 100. Maximum value: 100.</p>
+                     * @return Limit <p>Number of returned entries. Default value: 100. Maximum value: 100.</p>
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置
-                     * @param _limit 
+                     * 设置<p>Number of returned entries. Default value: 100. Maximum value: 100.</p>
+                     * @param _limit <p>Number of returned entries. Default value: 100. Maximum value: 100.</p>
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Name 
+                     * 获取<p>Filter by knowledge base name with exact matching. If not specified, all knowledge bases will be returned.</p>
+                     * @return Name <p>Filter by knowledge base name with exact matching. If not specified, all knowledge bases will be returned.</p>
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置
-                     * @param _name 
+                     * 设置<p>Filter by knowledge base name with exact matching. If not specified, all knowledge bases will be returned.</p>
+                     * @param _name <p>Filter by knowledge base name with exact matching. If not specified, all knowledge bases will be returned.</p>
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -129,25 +129,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services from December 25, 2023, this field must be filled in with the app ID when accessing resources in VOD applications, whether default or newly created.</p>
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Paging offset. Default value: 0.</p>
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Number of returned entries. Default value: 100. Maximum value: 100.</p>
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Filter by knowledge base name with exact matching. If not specified, all knowledge bases will be returned.</p>
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;

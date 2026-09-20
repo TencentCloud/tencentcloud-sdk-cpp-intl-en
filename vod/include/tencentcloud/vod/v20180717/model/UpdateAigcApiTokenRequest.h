@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return SubAppId 
+                     * 获取<p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
+                     * @return SubAppId <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置
-                     * @param _subAppId 
+                     * 设置<p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
+                     * @param _subAppId <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool SubAppIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ApiToken 
+                     * 获取<p>To update the Api Key</p>
+                     * @return ApiToken <p>To update the Api Key</p>
                      * 
                      */
                     std::string GetApiToken() const;
 
                     /**
-                     * 设置
-                     * @param _apiToken 
+                     * 设置<p>To update the Api Key</p>
+                     * @param _apiToken <p>To update the Api Key</p>
                      * 
                      */
                     void SetApiToken(const std::string& _apiToken);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool ApiTokenHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ActionType 
+                     * 获取<p>Merge (default, merge the ExtInfo JSON by top-level key), Overwrite (directly overwrite)</p>
+                     * @return ActionType <p>Merge (default, merge the ExtInfo JSON by top-level key), Overwrite (directly overwrite)</p>
                      * 
                      */
                     std::string GetActionType() const;
 
                     /**
-                     * 设置
-                     * @param _actionType 
+                     * 设置<p>Merge (default, merge the ExtInfo JSON by top-level key), Overwrite (directly overwrite)</p>
+                     * @param _actionType <p>Merge (default, merge the ExtInfo JSON by top-level key), Overwrite (directly overwrite)</p>
                      * 
                      */
                     void SetActionType(const std::string& _actionType);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool ActionTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ExtInfo 
+                     * 获取<p>Extended information of the token.</p>
+                     * @return ExtInfo <p>Extended information of the token.</p>
                      * 
                      */
                     std::string GetExtInfo() const;
 
                     /**
-                     * 设置
-                     * @param _extInfo 
+                     * 设置<p>Extended information of the token.</p>
+                     * @param _extInfo <p>Extended information of the token.</p>
                      * 
                      */
                     void SetExtInfo(const std::string& _extInfo);
@@ -129,25 +129,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
 
                     /**
-                     * 
+                     * <p>To update the Api Key</p>
                      */
                     std::string m_apiToken;
                     bool m_apiTokenHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Merge (default, merge the ExtInfo JSON by top-level key), Overwrite (directly overwrite)</p>
                      */
                     std::string m_actionType;
                     bool m_actionTypeHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Extended information of the token.</p>
                      */
                     std::string m_extInfo;
                     bool m_extInfoHasBeenSet;

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Sprite image information
                 */
                 class MediaImageSpriteItem : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Definition 
+                     * 获取<p>Sprite sheet specification. See <a href="https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF">sprite sheet parameter template</a>.</p>
+                     * @return Definition <p>Sprite sheet specification. See <a href="https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF">sprite sheet parameter template</a>.</p>
                      * 
                      */
                     int64_t GetDefinition() const;
 
                     /**
-                     * 设置
-                     * @param _definition 
+                     * 设置<p>Sprite sheet specification. See <a href="https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF">sprite sheet parameter template</a>.</p>
+                     * @param _definition <p>Sprite sheet specification. See <a href="https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF">sprite sheet parameter template</a>.</p>
                      * 
                      */
                     void SetDefinition(const int64_t& _definition);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool DefinitionHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Height 
+                     * 获取<p>Height of the small image in the sprite sheet.</p>
+                     * @return Height <p>Height of the small image in the sprite sheet.</p>
                      * 
                      */
                     int64_t GetHeight() const;
 
                     /**
-                     * 设置
-                     * @param _height 
+                     * 设置<p>Height of the small image in the sprite sheet.</p>
+                     * @param _height <p>Height of the small image in the sprite sheet.</p>
                      * 
                      */
                     void SetHeight(const int64_t& _height);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool HeightHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Width 
+                     * 获取<p>Width of the small image in the sprite sheet.</p>
+                     * @return Width <p>Width of the small image in the sprite sheet.</p>
                      * 
                      */
                     int64_t GetWidth() const;
 
                     /**
-                     * 设置
-                     * @param _width 
+                     * 设置<p>Width of the small image in the sprite sheet.</p>
+                     * @param _width <p>Width of the small image in the sprite sheet.</p>
                      * 
                      */
                     void SetWidth(const int64_t& _width);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool WidthHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return TotalCount 
+                     * 获取<p>The number of small images in each large sprite sheet.</p>
+                     * @return TotalCount <p>The number of small images in each large sprite sheet.</p>
                      * 
                      */
                     int64_t GetTotalCount() const;
 
                     /**
-                     * 设置
-                     * @param _totalCount 
+                     * 设置<p>The number of small images in each large sprite sheet.</p>
+                     * @param _totalCount <p>The number of small images in each large sprite sheet.</p>
                      * 
                      */
                     void SetTotalCount(const int64_t& _totalCount);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ImageUrlSet 
+                     * 获取<p>Domain names or IP addresses of each sprite sheet.</p>
+                     * @return ImageUrlSet <p>Domain names or IP addresses of each sprite sheet.</p>
                      * 
                      */
                     std::vector<std::string> GetImageUrlSet() const;
 
                     /**
-                     * 设置
-                     * @param _imageUrlSet 
+                     * 设置<p>Domain names or IP addresses of each sprite sheet.</p>
+                     * @param _imageUrlSet <p>Domain names or IP addresses of each sprite sheet.</p>
                      * 
                      */
                     void SetImageUrlSet(const std::vector<std::string>& _imageUrlSet);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool ImageUrlSetHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return WebVttUrl 
+                     * 获取<p>Address of the WebVtt file that describes the temporal relationship between sprite subimages and time. The WebVtt file indicates the time point corresponding to each sprite subimage and its coordinates in the sprite sheet. It is used by the player to implement preview.</p>
+                     * @return WebVttUrl <p>Address of the WebVtt file that describes the temporal relationship between sprite subimages and time. The WebVtt file indicates the time point corresponding to each sprite subimage and its coordinates in the sprite sheet. It is used by the player to implement preview.</p>
                      * 
                      */
                     std::string GetWebVttUrl() const;
 
                     /**
-                     * 设置
-                     * @param _webVttUrl 
+                     * 设置<p>Address of the WebVtt file that describes the temporal relationship between sprite subimages and time. The WebVtt file indicates the time point corresponding to each sprite subimage and its coordinates in the sprite sheet. It is used by the player to implement preview.</p>
+                     * @param _webVttUrl <p>Address of the WebVtt file that describes the temporal relationship between sprite subimages and time. The WebVtt file indicates the time point corresponding to each sprite subimage and its coordinates in the sprite sheet. It is used by the player to implement preview.</p>
                      * 
                      */
                     void SetWebVttUrl(const std::string& _webVttUrl);
@@ -175,37 +175,37 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p>Sprite sheet specification. See <a href="https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF">sprite sheet parameter template</a>.</p>
                      */
                     int64_t m_definition;
                     bool m_definitionHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Height of the small image in the sprite sheet.</p>
                      */
                     int64_t m_height;
                     bool m_heightHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Width of the small image in the sprite sheet.</p>
                      */
                     int64_t m_width;
                     bool m_widthHasBeenSet;
 
                     /**
-                     * 
+                     * <p>The number of small images in each large sprite sheet.</p>
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Domain names or IP addresses of each sprite sheet.</p>
                      */
                     std::vector<std::string> m_imageUrlSet;
                     bool m_imageUrlSetHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Address of the WebVtt file that describes the temporal relationship between sprite subimages and time. The WebVtt file indicates the time point corresponding to each sprite subimage and its coordinates in the sprite sheet. It is used by the player to implement preview.</p>
                      */
                     std::string m_webVttUrl;
                     bool m_webVttUrlHasBeenSet;

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Stamp extraction configuration.
                 */
                 class PatternConfig : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return TransparencyThreshold 
+                     * 获取<p>Transparency threshold</p><p>Value range: [0, 255]</p><p>Default value: 30</p>
+                     * @return TransparencyThreshold <p>Transparency threshold</p><p>Value range: [0, 255]</p><p>Default value: 30</p>
                      * 
                      */
                     int64_t GetTransparencyThreshold() const;
 
                     /**
-                     * 设置
-                     * @param _transparencyThreshold 
+                     * 设置<p>Transparency threshold</p><p>Value range: [0, 255]</p><p>Default value: 30</p>
+                     * @param _transparencyThreshold <p>Transparency threshold</p><p>Value range: [0, 255]</p><p>Default value: 30</p>
                      * 
                      */
                     void SetTransparencyThreshold(const int64_t& _transparencyThreshold);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool TransparencyThresholdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return OpaqueThreshold 
+                     * 获取<p>Opaque threshold, must be greater than TransparencyThreshold</p><p>Value range: [0, 255]</p><p>Default value: 127</p>
+                     * @return OpaqueThreshold <p>Opaque threshold, must be greater than TransparencyThreshold</p><p>Value range: [0, 255]</p><p>Default value: 127</p>
                      * 
                      */
                     int64_t GetOpaqueThreshold() const;
 
                     /**
-                     * 设置
-                     * @param _opaqueThreshold 
+                     * 设置<p>Opaque threshold, must be greater than TransparencyThreshold</p><p>Value range: [0, 255]</p><p>Default value: 127</p>
+                     * @param _opaqueThreshold <p>Opaque threshold, must be greater than TransparencyThreshold</p><p>Value range: [0, 255]</p><p>Default value: 127</p>
                      * 
                      */
                     void SetOpaqueThreshold(const int64_t& _opaqueThreshold);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool OpaqueThresholdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return EdgeSamplingStep 
+                     * 获取<p>Edge sampling steps</p><p>Value range: [1, 10]</p><p>Default value: 5</p>
+                     * @return EdgeSamplingStep <p>Edge sampling steps</p><p>Value range: [1, 10]</p><p>Default value: 5</p>
                      * 
                      */
                     int64_t GetEdgeSamplingStep() const;
 
                     /**
-                     * 设置
-                     * @param _edgeSamplingStep 
+                     * 设置<p>Edge sampling steps</p><p>Value range: [1, 10]</p><p>Default value: 5</p>
+                     * @param _edgeSamplingStep <p>Edge sampling steps</p><p>Value range: [1, 10]</p><p>Default value: 5</p>
                      * 
                      */
                     void SetEdgeSamplingStep(const int64_t& _edgeSamplingStep);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool EdgeSamplingStepHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return EdgeExpansionStep 
+                     * 获取<p>Edge expansion steps</p><p>Default value: 5</p>
+                     * @return EdgeExpansionStep <p>Edge expansion steps</p><p>Default value: 5</p>
                      * 
                      */
                     int64_t GetEdgeExpansionStep() const;
 
                     /**
-                     * 设置
-                     * @param _edgeExpansionStep 
+                     * 设置<p>Edge expansion steps</p><p>Default value: 5</p>
+                     * @param _edgeExpansionStep <p>Edge expansion steps</p><p>Default value: 5</p>
                      * 
                      */
                     void SetEdgeExpansionStep(const int64_t& _edgeExpansionStep);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool EdgeExpansionStepHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return EdgeBlendingIntensity 
+                     * 获取<p>Edge fusion strength</p><p>Value range: [0.0, 1.0]</p><p>Default value: 0.5</p>
+                     * @return EdgeBlendingIntensity <p>Edge fusion strength</p><p>Value range: [0.0, 1.0]</p><p>Default value: 0.5</p>
                      * 
                      */
                     double GetEdgeBlendingIntensity() const;
 
                     /**
-                     * 设置
-                     * @param _edgeBlendingIntensity 
+                     * 设置<p>Edge fusion strength</p><p>Value range: [0.0, 1.0]</p><p>Default value: 0.5</p>
+                     * @param _edgeBlendingIntensity <p>Edge fusion strength</p><p>Value range: [0.0, 1.0]</p><p>Default value: 0.5</p>
                      * 
                      */
                     void SetEdgeBlendingIntensity(const double& _edgeBlendingIntensity);
@@ -154,31 +154,31 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p>Transparency threshold</p><p>Value range: [0, 255]</p><p>Default value: 30</p>
                      */
                     int64_t m_transparencyThreshold;
                     bool m_transparencyThresholdHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Opaque threshold, must be greater than TransparencyThreshold</p><p>Value range: [0, 255]</p><p>Default value: 127</p>
                      */
                     int64_t m_opaqueThreshold;
                     bool m_opaqueThresholdHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Edge sampling steps</p><p>Value range: [1, 10]</p><p>Default value: 5</p>
                      */
                     int64_t m_edgeSamplingStep;
                     bool m_edgeSamplingStepHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Edge expansion steps</p><p>Default value: 5</p>
                      */
                     int64_t m_edgeExpansionStep;
                     bool m_edgeExpansionStepHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Edge fusion strength</p><p>Value range: [0.0, 1.0]</p><p>Default value: 0.5</p>
                      */
                     double m_edgeBlendingIntensity;
                     bool m_edgeBlendingIntensityHasBeenSet;

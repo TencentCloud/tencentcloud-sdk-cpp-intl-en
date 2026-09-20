@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Knowledge base information.
                 */
                 class KnowledgeBaseInfo : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return KnowledgeBaseId 
+                     * 获取<p>Knowledge base ID.</p>
+                     * @return KnowledgeBaseId <p>Knowledge base ID.</p>
                      * 
                      */
                     std::string GetKnowledgeBaseId() const;
 
                     /**
-                     * 设置
-                     * @param _knowledgeBaseId 
+                     * 设置<p>Knowledge base ID.</p>
+                     * @param _knowledgeBaseId <p>Knowledge base ID.</p>
                      * 
                      */
                     void SetKnowledgeBaseId(const std::string& _knowledgeBaseId);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool KnowledgeBaseIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Name 
+                     * 获取<p>Knowledge base name.</p>
+                     * @return Name <p>Knowledge base name.</p>
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置
-                     * @param _name 
+                     * 设置<p>Knowledge base name.</p>
+                     * @param _name <p>Knowledge base name.</p>
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Description 
+                     * 获取<p>Repository description.</p>
+                     * @return Description <p>Repository description.</p>
                      * 
                      */
                     std::string GetDescription() const;
 
                     /**
-                     * 设置
-                     * @param _description 
+                     * 设置<p>Repository description.</p>
+                     * @param _description <p>Repository description.</p>
                      * 
                      */
                     void SetDescription(const std::string& _description);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool DescriptionHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Status 
+                     * 获取<p>Knowledge base status.</p><p>Enumeration values:</p><ul><li>creating: Creating</li><li>active: Normal</li><li>deleting: Deleting</li></ul>
+                     * @return Status <p>Knowledge base status.</p><p>Enumeration values:</p><ul><li>creating: Creating</li><li>active: Normal</li><li>deleting: Deleting</li></ul>
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置
-                     * @param _status 
+                     * 设置<p>Knowledge base status.</p><p>Enumeration values:</p><ul><li>creating: Creating</li><li>active: Normal</li><li>deleting: Deleting</li></ul>
+                     * @param _status <p>Knowledge base status.</p><p>Enumeration values:</p><ul><li>creating: Creating</li><li>active: Normal</li><li>deleting: Deleting</li></ul>
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return CreateTime 
+                     * 获取<p>Creation time of the knowledge base.</p>
+                     * @return CreateTime <p>Creation time of the knowledge base.</p>
                      * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
-                     * 设置
-                     * @param _createTime 
+                     * 设置<p>Creation time of the knowledge base.</p>
+                     * @param _createTime <p>Creation time of the knowledge base.</p>
                      * 
                      */
                     void SetCreateTime(const std::string& _createTime);
@@ -154,31 +154,31 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p>Knowledge base ID.</p>
                      */
                     std::string m_knowledgeBaseId;
                     bool m_knowledgeBaseIdHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Knowledge base name.</p>
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Repository description.</p>
                      */
                     std::string m_description;
                     bool m_descriptionHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Knowledge base status.</p><p>Enumeration values:</p><ul><li>creating: Creating</li><li>active: Normal</li><li>deleting: Deleting</li></ul>
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Creation time of the knowledge base.</p>
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;

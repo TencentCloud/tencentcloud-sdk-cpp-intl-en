@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Task control parameters for image recognition involving unsafe information.
                 */
                 class TerrorismImgReviewTemplateInfoForUpdate : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Switch 
+                     * 获取<p>Task switch for image recognition involving unsafe information. Available values:</p><li>ON: Enable the task for image recognition involving unsafe information.</li><li>OFF: Disable the task for image recognition involving unsafe information.</li>
+                     * @return Switch <p>Task switch for image recognition involving unsafe information. Available values:</p><li>ON: Enable the task for image recognition involving unsafe information.</li><li>OFF: Disable the task for image recognition involving unsafe information.</li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置
-                     * @param _switch 
+                     * 设置<p>Task switch for image recognition involving unsafe information. Available values:</p><li>ON: Enable the task for image recognition involving unsafe information.</li><li>OFF: Disable the task for image recognition involving unsafe information.</li>
+                     * @param _switch <p>Task switch for image recognition involving unsafe information. Available values:</p><li>ON: Enable the task for image recognition involving unsafe information.</li><li>OFF: Disable the task for image recognition involving unsafe information.</li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return LabelSet 
+                     * 获取<p>Image recognition involves filter tags for unsafe information. If the review result contains the selected tag, the result will be returned. If the filter tag is empty, all auditing results will be returned. Available values are:</p><li>guns: weapons and firearms;</li><li>crowd: crowd gathering;</li><li>bloody: graphic violence;</li><li>police: Police force;</li><li>banners: flags of violent terrorism;</li><li>militant: militant;</li><li>explosion: explosions and fires;</li><li>terrorists: figures of violent terrorism;</li><li>scenario: scenes of violent terrorism.</li>
+                     * @return LabelSet <p>Image recognition involves filter tags for unsafe information. If the review result contains the selected tag, the result will be returned. If the filter tag is empty, all auditing results will be returned. Available values are:</p><li>guns: weapons and firearms;</li><li>crowd: crowd gathering;</li><li>bloody: graphic violence;</li><li>police: Police force;</li><li>banners: flags of violent terrorism;</li><li>militant: militant;</li><li>explosion: explosions and fires;</li><li>terrorists: figures of violent terrorism;</li><li>scenario: scenes of violent terrorism.</li>
                      * 
                      */
                     std::vector<std::string> GetLabelSet() const;
 
                     /**
-                     * 设置
-                     * @param _labelSet 
+                     * 设置<p>Image recognition involves filter tags for unsafe information. If the review result contains the selected tag, the result will be returned. If the filter tag is empty, all auditing results will be returned. Available values are:</p><li>guns: weapons and firearms;</li><li>crowd: crowd gathering;</li><li>bloody: graphic violence;</li><li>police: Police force;</li><li>banners: flags of violent terrorism;</li><li>militant: militant;</li><li>explosion: explosions and fires;</li><li>terrorists: figures of violent terrorism;</li><li>scenario: scenes of violent terrorism.</li>
+                     * @param _labelSet <p>Image recognition involves filter tags for unsafe information. If the review result contains the selected tag, the result will be returned. If the filter tag is empty, all auditing results will be returned. Available values are:</p><li>guns: weapons and firearms;</li><li>crowd: crowd gathering;</li><li>bloody: graphic violence;</li><li>police: Police force;</li><li>banners: flags of violent terrorism;</li><li>militant: militant;</li><li>explosion: explosions and fires;</li><li>terrorists: figures of violent terrorism;</li><li>scenario: scenes of violent terrorism.</li>
                      * 
                      */
                     void SetLabelSet(const std::vector<std::string>& _labelSet);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool LabelSetHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return BlockConfidence 
+                     * 获取<p>Threshold score for determining suspected violations. When the moderation score reaches this threshold, it is considered a suspected violation. Value range: 0-100.</p>
+                     * @return BlockConfidence <p>Threshold score for determining suspected violations. When the moderation score reaches this threshold, it is considered a suspected violation. Value range: 0-100.</p>
                      * 
                      */
                     int64_t GetBlockConfidence() const;
 
                     /**
-                     * 设置
-                     * @param _blockConfidence 
+                     * 设置<p>Threshold score for determining suspected violations. When the moderation score reaches this threshold, it is considered a suspected violation. Value range: 0-100.</p>
+                     * @param _blockConfidence <p>Threshold score for determining suspected violations. When the moderation score reaches this threshold, it is considered a suspected violation. Value range: 0-100.</p>
                      * 
                      */
                     void SetBlockConfidence(const int64_t& _blockConfidence);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool BlockConfidenceHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ReviewConfidence 
+                     * 获取<p>Threshold score for determining whether manual review is required for violations. When the moderation score reaches or exceeds this value, manual review is considered necessary. Value range: 0–100.</p>
+                     * @return ReviewConfidence <p>Threshold score for determining whether manual review is required for violations. When the moderation score reaches or exceeds this value, manual review is considered necessary. Value range: 0–100.</p>
                      * 
                      */
                     int64_t GetReviewConfidence() const;
 
                     /**
-                     * 设置
-                     * @param _reviewConfidence 
+                     * 设置<p>Threshold score for determining whether manual review is required for violations. When the moderation score reaches or exceeds this value, manual review is considered necessary. Value range: 0–100.</p>
+                     * @param _reviewConfidence <p>Threshold score for determining whether manual review is required for violations. When the moderation score reaches or exceeds this value, manual review is considered necessary. Value range: 0–100.</p>
                      * 
                      */
                     void SetReviewConfidence(const int64_t& _reviewConfidence);
@@ -133,25 +133,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p>Task switch for image recognition involving unsafe information. Available values:</p><li>ON: Enable the task for image recognition involving unsafe information.</li><li>OFF: Disable the task for image recognition involving unsafe information.</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Image recognition involves filter tags for unsafe information. If the review result contains the selected tag, the result will be returned. If the filter tag is empty, all auditing results will be returned. Available values are:</p><li>guns: weapons and firearms;</li><li>crowd: crowd gathering;</li><li>bloody: graphic violence;</li><li>police: Police force;</li><li>banners: flags of violent terrorism;</li><li>militant: militant;</li><li>explosion: explosions and fires;</li><li>terrorists: figures of violent terrorism;</li><li>scenario: scenes of violent terrorism.</li>
                      */
                     std::vector<std::string> m_labelSet;
                     bool m_labelSetHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Threshold score for determining suspected violations. When the moderation score reaches this threshold, it is considered a suspected violation. Value range: 0-100.</p>
                      */
                     int64_t m_blockConfidence;
                     bool m_blockConfidenceHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Threshold score for determining whether manual review is required for violations. When the moderation score reaches or exceeds this value, manual review is considered necessary. Value range: 0–100.</p>
                      */
                     int64_t m_reviewConfidence;
                     bool m_reviewConfidenceHasBeenSet;

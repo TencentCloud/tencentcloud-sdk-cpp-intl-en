@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Speech keyword recognition input.
                 */
                 class AiRecognitionTaskAsrWordsResultInput : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Definition 
+                     * 获取Template ID for speech keyword recognition.
+                     * @return Definition Template ID for speech keyword recognition.
                      * 
                      */
                     int64_t GetDefinition() const;
 
                     /**
-                     * 设置
-                     * @param _definition 
+                     * 设置Template ID for speech keyword recognition.
+                     * @param _definition Template ID for speech keyword recognition.
                      * 
                      */
                     void SetDefinition(const int64_t& _definition);
@@ -70,7 +70,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Template ID for speech keyword recognition.
                      */
                     int64_t m_definition;
                     bool m_definitionHasBeenSet;

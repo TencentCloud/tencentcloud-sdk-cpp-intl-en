@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Subtitle suppression input information
                 */
                 class SubtitleInfoInput : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Id 
+                     * 获取<p>Subtitle ID.</p>
+                     * @return Id <p>Subtitle ID.</p>
                      * 
                      */
                     std::string GetId() const;
 
                     /**
-                     * 设置
-                     * @param _id 
+                     * 设置<p>Subtitle ID.</p>
+                     * @param _id <p>Subtitle ID.</p>
                      * 
                      */
                     void SetId(const std::string& _id);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool IdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return StreamIndex 
+                     * 获取<p>Specifies the subtitle track index to be suppressed into the video. The value starts from 0, where 0 indicates using the first subtitle track in the source video. This parameter is valid only when Id is SUBTITLE_ID_PLACE_HOLDER. StreamIndex must match the subtitle track index in the source file. For example, if the subtitle track in the source file is stream#0:3, StreamIndex should be 3. Otherwise, task processing may fail.</p>
+                     * @return StreamIndex <p>Specifies the subtitle track index to be suppressed into the video. The value starts from 0, where 0 indicates using the first subtitle track in the source video. This parameter is valid only when Id is SUBTITLE_ID_PLACE_HOLDER. StreamIndex must match the subtitle track index in the source file. For example, if the subtitle track in the source file is stream#0:3, StreamIndex should be 3. Otherwise, task processing may fail.</p>
                      * 
                      */
                     int64_t GetStreamIndex() const;
 
                     /**
-                     * 设置
-                     * @param _streamIndex 
+                     * 设置<p>Specifies the subtitle track index to be suppressed into the video. The value starts from 0, where 0 indicates using the first subtitle track in the source video. This parameter is valid only when Id is SUBTITLE_ID_PLACE_HOLDER. StreamIndex must match the subtitle track index in the source file. For example, if the subtitle track in the source file is stream#0:3, StreamIndex should be 3. Otherwise, task processing may fail.</p>
+                     * @param _streamIndex <p>Specifies the subtitle track index to be suppressed into the video. The value starts from 0, where 0 indicates using the first subtitle track in the source video. This parameter is valid only when Id is SUBTITLE_ID_PLACE_HOLDER. StreamIndex must match the subtitle track index in the source file. For example, if the subtitle track in the source file is stream#0:3, StreamIndex should be 3. Otherwise, task processing may fail.</p>
                      * 
                      */
                     void SetStreamIndex(const int64_t& _streamIndex);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool StreamIndexHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return FontType 
+                     * 获取<p>Font type.</p><p>Enumeration values:</p><ul><li>hei.ttf: Heiti</li><li>song.ttf: Song Typeface</li><li>kai.ttf (recommended) or simkai.ttf: KaiTi</li><li>msyh.ttf: Microsoft YaHei</li><li>msyhbd.ttf: Microsoft YaHei in bold</li><li>hkjgt.ttf: Hwakangangtai</li><li>dhttx.ttf: Dianheiti Ultra Light</li><li>xqgdzt.ttf: Xique Ancient Dictionary</li><li>qpcyt.ttf: Smart Splice Super Round Body</li><li>arial.ttf: only supports English</li><li>dinalternate.ttf: DIN Alternate Bold</li><li>helveticalt.ttf: Helvetica</li><li>helveticains.ttf: Helvetica Inserat</li><li>trajanpro.ttf: TrajanPro-Bold</li><li>korean.ttf: Korean</li><li>japanese.ttf: Japanese</li><li>thai.ttf: Thai</li><li>roboto.ttf: Roboto</li><li>notosans.ttf: NotoSans</li><li>notosansthai.ttf: Thai NotoSansThai</li><li>sarabun.ttf: Thai Sarabun</li><li>kanit.ttf: Thai Kanit</li><li>charmonman.ttf: Thai Charmonman</li><li>notonaskharabic.ttf: Arabic NotoNaskhArabic</li><li>notosansdevanagari.ttf: India NotoSansDevanagari</li><li>notosanstc.ttf: Cantonese Source Han Sans NotoSansTC</li><li>notosanskr.ttf: Korean NotoSansKR</li><li>gothica1.ttf: Korean GothicA1</li><li>nanummyeongjo.ttf: Korean NanumMyeongjo</li><li>notosansjp.ttf: Japanese NotoSansJP</li><li>notoserifjp.ttf: Japanese NotoSerifJP</li><li>shipporimincho.ttf: Japanese ShipporiMincho</li></ul><p>Default value: hei.ttf Heiti</p>
+                     * @return FontType <p>Font type.</p><p>Enumeration values:</p><ul><li>hei.ttf: Heiti</li><li>song.ttf: Song Typeface</li><li>kai.ttf (recommended) or simkai.ttf: KaiTi</li><li>msyh.ttf: Microsoft YaHei</li><li>msyhbd.ttf: Microsoft YaHei in bold</li><li>hkjgt.ttf: Hwakangangtai</li><li>dhttx.ttf: Dianheiti Ultra Light</li><li>xqgdzt.ttf: Xique Ancient Dictionary</li><li>qpcyt.ttf: Smart Splice Super Round Body</li><li>arial.ttf: only supports English</li><li>dinalternate.ttf: DIN Alternate Bold</li><li>helveticalt.ttf: Helvetica</li><li>helveticains.ttf: Helvetica Inserat</li><li>trajanpro.ttf: TrajanPro-Bold</li><li>korean.ttf: Korean</li><li>japanese.ttf: Japanese</li><li>thai.ttf: Thai</li><li>roboto.ttf: Roboto</li><li>notosans.ttf: NotoSans</li><li>notosansthai.ttf: Thai NotoSansThai</li><li>sarabun.ttf: Thai Sarabun</li><li>kanit.ttf: Thai Kanit</li><li>charmonman.ttf: Thai Charmonman</li><li>notonaskharabic.ttf: Arabic NotoNaskhArabic</li><li>notosansdevanagari.ttf: India NotoSansDevanagari</li><li>notosanstc.ttf: Cantonese Source Han Sans NotoSansTC</li><li>notosanskr.ttf: Korean NotoSansKR</li><li>gothica1.ttf: Korean GothicA1</li><li>nanummyeongjo.ttf: Korean NanumMyeongjo</li><li>notosansjp.ttf: Japanese NotoSansJP</li><li>notoserifjp.ttf: Japanese NotoSerifJP</li><li>shipporimincho.ttf: Japanese ShipporiMincho</li></ul><p>Default value: hei.ttf Heiti</p>
                      * 
                      */
                     std::string GetFontType() const;
 
                     /**
-                     * 设置
-                     * @param _fontType 
+                     * 设置<p>Font type.</p><p>Enumeration values:</p><ul><li>hei.ttf: Heiti</li><li>song.ttf: Song Typeface</li><li>kai.ttf (recommended) or simkai.ttf: KaiTi</li><li>msyh.ttf: Microsoft YaHei</li><li>msyhbd.ttf: Microsoft YaHei in bold</li><li>hkjgt.ttf: Hwakangangtai</li><li>dhttx.ttf: Dianheiti Ultra Light</li><li>xqgdzt.ttf: Xique Ancient Dictionary</li><li>qpcyt.ttf: Smart Splice Super Round Body</li><li>arial.ttf: only supports English</li><li>dinalternate.ttf: DIN Alternate Bold</li><li>helveticalt.ttf: Helvetica</li><li>helveticains.ttf: Helvetica Inserat</li><li>trajanpro.ttf: TrajanPro-Bold</li><li>korean.ttf: Korean</li><li>japanese.ttf: Japanese</li><li>thai.ttf: Thai</li><li>roboto.ttf: Roboto</li><li>notosans.ttf: NotoSans</li><li>notosansthai.ttf: Thai NotoSansThai</li><li>sarabun.ttf: Thai Sarabun</li><li>kanit.ttf: Thai Kanit</li><li>charmonman.ttf: Thai Charmonman</li><li>notonaskharabic.ttf: Arabic NotoNaskhArabic</li><li>notosansdevanagari.ttf: India NotoSansDevanagari</li><li>notosanstc.ttf: Cantonese Source Han Sans NotoSansTC</li><li>notosanskr.ttf: Korean NotoSansKR</li><li>gothica1.ttf: Korean GothicA1</li><li>nanummyeongjo.ttf: Korean NanumMyeongjo</li><li>notosansjp.ttf: Japanese NotoSansJP</li><li>notoserifjp.ttf: Japanese NotoSerifJP</li><li>shipporimincho.ttf: Japanese ShipporiMincho</li></ul><p>Default value: hei.ttf Heiti</p>
+                     * @param _fontType <p>Font type.</p><p>Enumeration values:</p><ul><li>hei.ttf: Heiti</li><li>song.ttf: Song Typeface</li><li>kai.ttf (recommended) or simkai.ttf: KaiTi</li><li>msyh.ttf: Microsoft YaHei</li><li>msyhbd.ttf: Microsoft YaHei in bold</li><li>hkjgt.ttf: Hwakangangtai</li><li>dhttx.ttf: Dianheiti Ultra Light</li><li>xqgdzt.ttf: Xique Ancient Dictionary</li><li>qpcyt.ttf: Smart Splice Super Round Body</li><li>arial.ttf: only supports English</li><li>dinalternate.ttf: DIN Alternate Bold</li><li>helveticalt.ttf: Helvetica</li><li>helveticains.ttf: Helvetica Inserat</li><li>trajanpro.ttf: TrajanPro-Bold</li><li>korean.ttf: Korean</li><li>japanese.ttf: Japanese</li><li>thai.ttf: Thai</li><li>roboto.ttf: Roboto</li><li>notosans.ttf: NotoSans</li><li>notosansthai.ttf: Thai NotoSansThai</li><li>sarabun.ttf: Thai Sarabun</li><li>kanit.ttf: Thai Kanit</li><li>charmonman.ttf: Thai Charmonman</li><li>notonaskharabic.ttf: Arabic NotoNaskhArabic</li><li>notosansdevanagari.ttf: India NotoSansDevanagari</li><li>notosanstc.ttf: Cantonese Source Han Sans NotoSansTC</li><li>notosanskr.ttf: Korean NotoSansKR</li><li>gothica1.ttf: Korean GothicA1</li><li>nanummyeongjo.ttf: Korean NanumMyeongjo</li><li>notosansjp.ttf: Japanese NotoSansJP</li><li>notoserifjp.ttf: Japanese NotoSerifJP</li><li>shipporimincho.ttf: Japanese ShipporiMincho</li></ul><p>Default value: hei.ttf Heiti</p>
                      * 
                      */
                     void SetFontType(const std::string& _fontType);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool FontTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return FontSize 
+                     * 获取<p>Font size. If not specified, the font size of the subtitle file applies. Pixel and percentage formats are supported:</p><ul><li>Pixel: Npx, where N ranges from (0,4096].</li><li>Percentage: N%, where N ranges from (0,100]. For example, 10% means the subtitle font size equals 10% of the source video height. If left blank and the subtitle file has no settings, the default is 5% of the source video height.</li></ul>
+                     * @return FontSize <p>Font size. If not specified, the font size of the subtitle file applies. Pixel and percentage formats are supported:</p><ul><li>Pixel: Npx, where N ranges from (0,4096].</li><li>Percentage: N%, where N ranges from (0,100]. For example, 10% means the subtitle font size equals 10% of the source video height. If left blank and the subtitle file has no settings, the default is 5% of the source video height.</li></ul>
                      * 
                      */
                     std::string GetFontSize() const;
 
                     /**
-                     * 设置
-                     * @param _fontSize 
+                     * 设置<p>Font size. If not specified, the font size of the subtitle file applies. Pixel and percentage formats are supported:</p><ul><li>Pixel: Npx, where N ranges from (0,4096].</li><li>Percentage: N%, where N ranges from (0,100]. For example, 10% means the subtitle font size equals 10% of the source video height. If left blank and the subtitle file has no settings, the default is 5% of the source video height.</li></ul>
+                     * @param _fontSize <p>Font size. If not specified, the font size of the subtitle file applies. Pixel and percentage formats are supported:</p><ul><li>Pixel: Npx, where N ranges from (0,4096].</li><li>Percentage: N%, where N ranges from (0,100]. For example, 10% means the subtitle font size equals 10% of the source video height. If left blank and the subtitle file has no settings, the default is 5% of the source video height.</li></ul>
                      * 
                      */
                     void SetFontSize(const std::string& _fontSize);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool FontSizeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return FontColor 
+                     * 获取<p>Text color, format: 0xRRGGBB.</p><p>Default value: 0xFFFFFF (white).</p>
+                     * @return FontColor <p>Text color, format: 0xRRGGBB.</p><p>Default value: 0xFFFFFF (white).</p>
                      * 
                      */
                     std::string GetFontColor() const;
 
                     /**
-                     * 设置
-                     * @param _fontColor 
+                     * 设置<p>Text color, format: 0xRRGGBB.</p><p>Default value: 0xFFFFFF (white).</p>
+                     * @param _fontColor <p>Text color, format: 0xRRGGBB.</p><p>Default value: 0xFFFFFF (white).</p>
                      * 
                      */
                     void SetFontColor(const std::string& _fontColor);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool FontColorHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return FontAlpha 
+                     * 获取<p>Text opacity. Value ranges from 0 to 1.</p><ul><li>0: completely transparent;</li><li>1: completely opaque</li></ul><p>Default value: 1</p>
+                     * @return FontAlpha <p>Text opacity. Value ranges from 0 to 1.</p><ul><li>0: completely transparent;</li><li>1: completely opaque</li></ul><p>Default value: 1</p>
                      * 
                      */
                     double GetFontAlpha() const;
 
                     /**
-                     * 设置
-                     * @param _fontAlpha 
+                     * 设置<p>Text opacity. Value ranges from 0 to 1.</p><ul><li>0: completely transparent;</li><li>1: completely opaque</li></ul><p>Default value: 1</p>
+                     * @param _fontAlpha <p>Text opacity. Value ranges from 0 to 1.</p><ul><li>0: completely transparent;</li><li>1: completely opaque</li></ul><p>Default value: 1</p>
                      * 
                      */
                     void SetFontAlpha(const double& _fontAlpha);
@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool FontAlphaHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return YPos 
+                     * 获取<p>Subtitle Y-coordinate position. Specify this parameter to ignore the built-in coordinates in the subtitle file. Supports pixel and percentage formats:</p><ul><li>Pixel: Npx, where N ranges from [0,4096].</li><li>Percentage: N%, where N ranges from [0,100]. For example, 10% means the subtitle Y-coordinate = 10%<em>source video height. Default value: source video height</em>4%.<br>Note: The coordinate axis origin is at the bottom of the central axis of the source video, and the subtitle reference point is at the bottom of the central axis of the subtitle. Refer to the figure below:<img src="https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png" alt="image"></li></ul>
+                     * @return YPos <p>Subtitle Y-coordinate position. Specify this parameter to ignore the built-in coordinates in the subtitle file. Supports pixel and percentage formats:</p><ul><li>Pixel: Npx, where N ranges from [0,4096].</li><li>Percentage: N%, where N ranges from [0,100]. For example, 10% means the subtitle Y-coordinate = 10%<em>source video height. Default value: source video height</em>4%.<br>Note: The coordinate axis origin is at the bottom of the central axis of the source video, and the subtitle reference point is at the bottom of the central axis of the subtitle. Refer to the figure below:<img src="https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png" alt="image"></li></ul>
                      * 
                      */
                     std::string GetYPos() const;
 
                     /**
-                     * 设置
-                     * @param _yPos 
+                     * 设置<p>Subtitle Y-coordinate position. Specify this parameter to ignore the built-in coordinates in the subtitle file. Supports pixel and percentage formats:</p><ul><li>Pixel: Npx, where N ranges from [0,4096].</li><li>Percentage: N%, where N ranges from [0,100]. For example, 10% means the subtitle Y-coordinate = 10%<em>source video height. Default value: source video height</em>4%.<br>Note: The coordinate axis origin is at the bottom of the central axis of the source video, and the subtitle reference point is at the bottom of the central axis of the subtitle. Refer to the figure below:<img src="https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png" alt="image"></li></ul>
+                     * @param _yPos <p>Subtitle Y-coordinate position. Specify this parameter to ignore the built-in coordinates in the subtitle file. Supports pixel and percentage formats:</p><ul><li>Pixel: Npx, where N ranges from [0,4096].</li><li>Percentage: N%, where N ranges from [0,100]. For example, 10% means the subtitle Y-coordinate = 10%<em>source video height. Default value: source video height</em>4%.<br>Note: The coordinate axis origin is at the bottom of the central axis of the source video, and the subtitle reference point is at the bottom of the central axis of the subtitle. Refer to the figure below:<img src="https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png" alt="image"></li></ul>
                      * 
                      */
                     void SetYPos(const std::string& _yPos);
@@ -194,15 +194,15 @@ namespace TencentCloud
                     bool YPosHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return BoardY 
+                     * 获取<p>Y-coordinate position of the subtitle background base plate. Supports pixel and percentage formats:</p><ul><li>Pixel: Npx, where N ranges from [0,4096].</li><li>Percentage: N%, where N ranges from [0,100]. For example, 10% means the subtitle background base plate Y-coordinate = 10% * source video height. If not specified, the subtitle background base plate is disabled.<br>Note: The coordinate axis origin is located at the bottom of the central axis of the source video, and the reference point of the subtitle background base plate is at the bottom of its central axis. Refer to the figure below: <img src="https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png" alt="image"></li></ul>
+                     * @return BoardY <p>Y-coordinate position of the subtitle background base plate. Supports pixel and percentage formats:</p><ul><li>Pixel: Npx, where N ranges from [0,4096].</li><li>Percentage: N%, where N ranges from [0,100]. For example, 10% means the subtitle background base plate Y-coordinate = 10% * source video height. If not specified, the subtitle background base plate is disabled.<br>Note: The coordinate axis origin is located at the bottom of the central axis of the source video, and the reference point of the subtitle background base plate is at the bottom of its central axis. Refer to the figure below: <img src="https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png" alt="image"></li></ul>
                      * 
                      */
                     std::string GetBoardY() const;
 
                     /**
-                     * 设置
-                     * @param _boardY 
+                     * 设置<p>Y-coordinate position of the subtitle background base plate. Supports pixel and percentage formats:</p><ul><li>Pixel: Npx, where N ranges from [0,4096].</li><li>Percentage: N%, where N ranges from [0,100]. For example, 10% means the subtitle background base plate Y-coordinate = 10% * source video height. If not specified, the subtitle background base plate is disabled.<br>Note: The coordinate axis origin is located at the bottom of the central axis of the source video, and the reference point of the subtitle background base plate is at the bottom of its central axis. Refer to the figure below: <img src="https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png" alt="image"></li></ul>
+                     * @param _boardY <p>Y-coordinate position of the subtitle background base plate. Supports pixel and percentage formats:</p><ul><li>Pixel: Npx, where N ranges from [0,4096].</li><li>Percentage: N%, where N ranges from [0,100]. For example, 10% means the subtitle background base plate Y-coordinate = 10% * source video height. If not specified, the subtitle background base plate is disabled.<br>Note: The coordinate axis origin is located at the bottom of the central axis of the source video, and the reference point of the subtitle background base plate is at the bottom of its central axis. Refer to the figure below: <img src="https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png" alt="image"></li></ul>
                      * 
                      */
                     void SetBoardY(const std::string& _boardY);
@@ -215,15 +215,15 @@ namespace TencentCloud
                     bool BoardYHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return BoardWidth 
+                     * 获取<p>Width of the base plate, a positive integer.</p><ul><li>Pixel: Npx, N value range: [0,4096].</li><li>Percentage: N%, N value range: [0, 100]. If the base plate is enabled and this parameter is not specified, the default width is 90% of the source video width.</li></ul>
+                     * @return BoardWidth <p>Width of the base plate, a positive integer.</p><ul><li>Pixel: Npx, N value range: [0,4096].</li><li>Percentage: N%, N value range: [0, 100]. If the base plate is enabled and this parameter is not specified, the default width is 90% of the source video width.</li></ul>
                      * 
                      */
                     std::string GetBoardWidth() const;
 
                     /**
-                     * 设置
-                     * @param _boardWidth 
+                     * 设置<p>Width of the base plate, a positive integer.</p><ul><li>Pixel: Npx, N value range: [0,4096].</li><li>Percentage: N%, N value range: [0, 100]. If the base plate is enabled and this parameter is not specified, the default width is 90% of the source video width.</li></ul>
+                     * @param _boardWidth <p>Width of the base plate, a positive integer.</p><ul><li>Pixel: Npx, N value range: [0,4096].</li><li>Percentage: N%, N value range: [0, 100]. If the base plate is enabled and this parameter is not specified, the default width is 90% of the source video width.</li></ul>
                      * 
                      */
                     void SetBoardWidth(const std::string& _boardWidth);
@@ -236,15 +236,15 @@ namespace TencentCloud
                     bool BoardWidthHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return BoardHeight 
+                     * 获取<p>Height of the base plate, a positive integer.</p><ul><li>Pixel: Npx, N value ranges from 0 to 4096.</li><li>Percentage: N%, N value ranges from 0 to 100. If background is enabled and this parameter is not specified, the default height is 15% of the source video height.</li></ul>
+                     * @return BoardHeight <p>Height of the base plate, a positive integer.</p><ul><li>Pixel: Npx, N value ranges from 0 to 4096.</li><li>Percentage: N%, N value ranges from 0 to 100. If background is enabled and this parameter is not specified, the default height is 15% of the source video height.</li></ul>
                      * 
                      */
                     std::string GetBoardHeight() const;
 
                     /**
-                     * 设置
-                     * @param _boardHeight 
+                     * 设置<p>Height of the base plate, a positive integer.</p><ul><li>Pixel: Npx, N value ranges from 0 to 4096.</li><li>Percentage: N%, N value ranges from 0 to 100. If background is enabled and this parameter is not specified, the default height is 15% of the source video height.</li></ul>
+                     * @param _boardHeight <p>Height of the base plate, a positive integer.</p><ul><li>Pixel: Npx, N value ranges from 0 to 4096.</li><li>Percentage: N%, N value ranges from 0 to 100. If background is enabled and this parameter is not specified, the default height is 15% of the source video height.</li></ul>
                      * 
                      */
                     void SetBoardHeight(const std::string& _boardHeight);
@@ -257,15 +257,15 @@ namespace TencentCloud
                     bool BoardHeightHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return BoardColor 
+                     * 获取<p>Base plate color. Format: 0xRRGGBB.</p><p>Default value: 0x000000 (black).</p>
+                     * @return BoardColor <p>Base plate color. Format: 0xRRGGBB.</p><p>Default value: 0x000000 (black).</p>
                      * 
                      */
                     std::string GetBoardColor() const;
 
                     /**
-                     * 设置
-                     * @param _boardColor 
+                     * 设置<p>Base plate color. Format: 0xRRGGBB.</p><p>Default value: 0x000000 (black).</p>
+                     * @param _boardColor <p>Base plate color. Format: 0xRRGGBB.</p><p>Default value: 0x000000 (black).</p>
                      * 
                      */
                     void SetBoardColor(const std::string& _boardColor);
@@ -278,15 +278,15 @@ namespace TencentCloud
                     bool BoardColorHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return BoardAlpha 
+                     * 获取<p>Subtitle background transparency. Value range: [0, 1].</p><ul><li>0: completely transparent;</li><li>1: completely opaque.</li></ul><p>Default value: 0.8.</p>
+                     * @return BoardAlpha <p>Subtitle background transparency. Value range: [0, 1].</p><ul><li>0: completely transparent;</li><li>1: completely opaque.</li></ul><p>Default value: 0.8.</p>
                      * 
                      */
                     double GetBoardAlpha() const;
 
                     /**
-                     * 设置
-                     * @param _boardAlpha 
+                     * 设置<p>Subtitle background transparency. Value range: [0, 1].</p><ul><li>0: completely transparent;</li><li>1: completely opaque.</li></ul><p>Default value: 0.8.</p>
+                     * @param _boardAlpha <p>Subtitle background transparency. Value range: [0, 1].</p><ul><li>0: completely transparent;</li><li>1: completely opaque.</li></ul><p>Default value: 0.8.</p>
                      * 
                      */
                     void SetBoardAlpha(const double& _boardAlpha);
@@ -299,15 +299,15 @@ namespace TencentCloud
                     bool BoardAlphaHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Alignment 
+                     * 获取<p>Alignment mode.</p><p>Enumeration values:</p><ul><li>top: top alignment. The top position of subtitles is fixed, while the bottom position changes according to the number of lines. </li><li>bottom: bottom alignment. The bottom position of subtitles is fixed, while the top position changes according to the number of lines. </li></ul><p>Default value: bottom</p>
+                     * @return Alignment <p>Alignment mode.</p><p>Enumeration values:</p><ul><li>top: top alignment. The top position of subtitles is fixed, while the bottom position changes according to the number of lines. </li><li>bottom: bottom alignment. The bottom position of subtitles is fixed, while the top position changes according to the number of lines. </li></ul><p>Default value: bottom</p>
                      * 
                      */
                     std::string GetAlignment() const;
 
                     /**
-                     * 设置
-                     * @param _alignment 
+                     * 设置<p>Alignment mode.</p><p>Enumeration values:</p><ul><li>top: top alignment. The top position of subtitles is fixed, while the bottom position changes according to the number of lines. </li><li>bottom: bottom alignment. The bottom position of subtitles is fixed, while the top position changes according to the number of lines. </li></ul><p>Default value: bottom</p>
+                     * @param _alignment <p>Alignment mode.</p><p>Enumeration values:</p><ul><li>top: top alignment. The top position of subtitles is fixed, while the bottom position changes according to the number of lines. </li><li>bottom: bottom alignment. The bottom position of subtitles is fixed, while the top position changes according to the number of lines. </li></ul><p>Default value: bottom</p>
                      * 
                      */
                     void SetAlignment(const std::string& _alignment);
@@ -320,15 +320,15 @@ namespace TencentCloud
                     bool AlignmentHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return OutlineWidth 
+                     * 获取<p>Stroke width. Floating-point number.</p><ul><li>Pixel: Npx, N value range: [0, 1000].</li><li>Percentage: N%, N value range: [0, 100].</li></ul><p>If left blank, defaults to 0.3% of the source video height.</p>
+                     * @return OutlineWidth <p>Stroke width. Floating-point number.</p><ul><li>Pixel: Npx, N value range: [0, 1000].</li><li>Percentage: N%, N value range: [0, 100].</li></ul><p>If left blank, defaults to 0.3% of the source video height.</p>
                      * 
                      */
                     std::string GetOutlineWidth() const;
 
                     /**
-                     * 设置
-                     * @param _outlineWidth 
+                     * 设置<p>Stroke width. Floating-point number.</p><ul><li>Pixel: Npx, N value range: [0, 1000].</li><li>Percentage: N%, N value range: [0, 100].</li></ul><p>If left blank, defaults to 0.3% of the source video height.</p>
+                     * @param _outlineWidth <p>Stroke width. Floating-point number.</p><ul><li>Pixel: Npx, N value range: [0, 1000].</li><li>Percentage: N%, N value range: [0, 100].</li></ul><p>If left blank, defaults to 0.3% of the source video height.</p>
                      * 
                      */
                     void SetOutlineWidth(const std::string& _outlineWidth);
@@ -341,15 +341,15 @@ namespace TencentCloud
                     bool OutlineWidthHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return OutlineColor 
+                     * 获取<p>Border color. Format: 0xRRGGBB.</p><p>Default value: 0x000000 (black).</p>
+                     * @return OutlineColor <p>Border color. Format: 0xRRGGBB.</p><p>Default value: 0x000000 (black).</p>
                      * 
                      */
                     std::string GetOutlineColor() const;
 
                     /**
-                     * 设置
-                     * @param _outlineColor 
+                     * 设置<p>Border color. Format: 0xRRGGBB.</p><p>Default value: 0x000000 (black).</p>
+                     * @param _outlineColor <p>Border color. Format: 0xRRGGBB.</p><p>Default value: 0x000000 (black).</p>
                      * 
                      */
                     void SetOutlineColor(const std::string& _outlineColor);
@@ -362,15 +362,15 @@ namespace TencentCloud
                     bool OutlineColorHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return OutlineAlpha 
+                     * 获取<p>Stroke transparency. The value should be a positive floating-point number in the range of (0, 1].</p><ul><li>0: completely transparent;</li><li>1: completely opaque.</li></ul><p>Default value: 1</p>
+                     * @return OutlineAlpha <p>Stroke transparency. The value should be a positive floating-point number in the range of (0, 1].</p><ul><li>0: completely transparent;</li><li>1: completely opaque.</li></ul><p>Default value: 1</p>
                      * 
                      */
                     double GetOutlineAlpha() const;
 
                     /**
-                     * 设置
-                     * @param _outlineAlpha 
+                     * 设置<p>Stroke transparency. The value should be a positive floating-point number in the range of (0, 1].</p><ul><li>0: completely transparent;</li><li>1: completely opaque.</li></ul><p>Default value: 1</p>
+                     * @param _outlineAlpha <p>Stroke transparency. The value should be a positive floating-point number in the range of (0, 1].</p><ul><li>0: completely transparent;</li><li>1: completely opaque.</li></ul><p>Default value: 1</p>
                      * 
                      */
                     void SetOutlineAlpha(const double& _outlineAlpha);
@@ -383,15 +383,15 @@ namespace TencentCloud
                     bool OutlineAlphaHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ShadowWidth 
+                     * 获取<p>Shadow width. Floating-point number.</p><ul><li>Pixel: Npx, N value range: [0, 1000].</li><li>Percentage: N%, N value range: [0, 100]. No shading by default if left blank.</li></ul>
+                     * @return ShadowWidth <p>Shadow width. Floating-point number.</p><ul><li>Pixel: Npx, N value range: [0, 1000].</li><li>Percentage: N%, N value range: [0, 100]. No shading by default if left blank.</li></ul>
                      * 
                      */
                     std::string GetShadowWidth() const;
 
                     /**
-                     * 设置
-                     * @param _shadowWidth 
+                     * 设置<p>Shadow width. Floating-point number.</p><ul><li>Pixel: Npx, N value range: [0, 1000].</li><li>Percentage: N%, N value range: [0, 100]. No shading by default if left blank.</li></ul>
+                     * @param _shadowWidth <p>Shadow width. Floating-point number.</p><ul><li>Pixel: Npx, N value range: [0, 1000].</li><li>Percentage: N%, N value range: [0, 100]. No shading by default if left blank.</li></ul>
                      * 
                      */
                     void SetShadowWidth(const std::string& _shadowWidth);
@@ -404,15 +404,15 @@ namespace TencentCloud
                     bool ShadowWidthHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ShadowColor 
+                     * 获取<p>Shadow color. Format: 0xRRGGBB.</p><p>Default value: 0x000000 (black) if shadow is set.</p>
+                     * @return ShadowColor <p>Shadow color. Format: 0xRRGGBB.</p><p>Default value: 0x000000 (black) if shadow is set.</p>
                      * 
                      */
                     std::string GetShadowColor() const;
 
                     /**
-                     * 设置
-                     * @param _shadowColor 
+                     * 设置<p>Shadow color. Format: 0xRRGGBB.</p><p>Default value: 0x000000 (black) if shadow is set.</p>
+                     * @param _shadowColor <p>Shadow color. Format: 0xRRGGBB.</p><p>Default value: 0x000000 (black) if shadow is set.</p>
                      * 
                      */
                     void SetShadowColor(const std::string& _shadowColor);
@@ -425,15 +425,15 @@ namespace TencentCloud
                     bool ShadowColorHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ShadowAlpha 
+                     * 获取<p>Shadow transparency. The value should be a positive floating-point number in the range of (0, 1].</p><ul><li>0: completely transparent;</li><li>1: completely opaque.</li></ul><p>Default value: 1, which means completely opaque, with shadow configured.</p>
+                     * @return ShadowAlpha <p>Shadow transparency. The value should be a positive floating-point number in the range of (0, 1].</p><ul><li>0: completely transparent;</li><li>1: completely opaque.</li></ul><p>Default value: 1, which means completely opaque, with shadow configured.</p>
                      * 
                      */
                     double GetShadowAlpha() const;
 
                     /**
-                     * 设置
-                     * @param _shadowAlpha 
+                     * 设置<p>Shadow transparency. The value should be a positive floating-point number in the range of (0, 1].</p><ul><li>0: completely transparent;</li><li>1: completely opaque.</li></ul><p>Default value: 1, which means completely opaque, with shadow configured.</p>
+                     * @param _shadowAlpha <p>Shadow transparency. The value should be a positive floating-point number in the range of (0, 1].</p><ul><li>0: completely transparent;</li><li>1: completely opaque.</li></ul><p>Default value: 1, which means completely opaque, with shadow configured.</p>
                      * 
                      */
                     void SetShadowAlpha(const double& _shadowAlpha);
@@ -446,15 +446,15 @@ namespace TencentCloud
                     bool ShadowAlphaHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return LineSpacing 
+                     * 获取<p>Line spacing. Positive integer.</p><ul><li>Pixel: Npx, where N is in the range of [0, 1000].</li><li>Percentage: N%, where N is in the range of [0, 100].</li></ul><p>Default value: 0</p>
+                     * @return LineSpacing <p>Line spacing. Positive integer.</p><ul><li>Pixel: Npx, where N is in the range of [0, 1000].</li><li>Percentage: N%, where N is in the range of [0, 100].</li></ul><p>Default value: 0</p>
                      * 
                      */
                     std::string GetLineSpacing() const;
 
                     /**
-                     * 设置
-                     * @param _lineSpacing 
+                     * 设置<p>Line spacing. Positive integer.</p><ul><li>Pixel: Npx, where N is in the range of [0, 1000].</li><li>Percentage: N%, where N is in the range of [0, 100].</li></ul><p>Default value: 0</p>
+                     * @param _lineSpacing <p>Line spacing. Positive integer.</p><ul><li>Pixel: Npx, where N is in the range of [0, 1000].</li><li>Percentage: N%, where N is in the range of [0, 100].</li></ul><p>Default value: 0</p>
                      * 
                      */
                     void SetLineSpacing(const std::string& _lineSpacing);
@@ -469,121 +469,121 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p>Subtitle ID.</p>
                      */
                     std::string m_id;
                     bool m_idHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Specifies the subtitle track index to be suppressed into the video. The value starts from 0, where 0 indicates using the first subtitle track in the source video. This parameter is valid only when Id is SUBTITLE_ID_PLACE_HOLDER. StreamIndex must match the subtitle track index in the source file. For example, if the subtitle track in the source file is stream#0:3, StreamIndex should be 3. Otherwise, task processing may fail.</p>
                      */
                     int64_t m_streamIndex;
                     bool m_streamIndexHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Font type.</p><p>Enumeration values:</p><ul><li>hei.ttf: Heiti</li><li>song.ttf: Song Typeface</li><li>kai.ttf (recommended) or simkai.ttf: KaiTi</li><li>msyh.ttf: Microsoft YaHei</li><li>msyhbd.ttf: Microsoft YaHei in bold</li><li>hkjgt.ttf: Hwakangangtai</li><li>dhttx.ttf: Dianheiti Ultra Light</li><li>xqgdzt.ttf: Xique Ancient Dictionary</li><li>qpcyt.ttf: Smart Splice Super Round Body</li><li>arial.ttf: only supports English</li><li>dinalternate.ttf: DIN Alternate Bold</li><li>helveticalt.ttf: Helvetica</li><li>helveticains.ttf: Helvetica Inserat</li><li>trajanpro.ttf: TrajanPro-Bold</li><li>korean.ttf: Korean</li><li>japanese.ttf: Japanese</li><li>thai.ttf: Thai</li><li>roboto.ttf: Roboto</li><li>notosans.ttf: NotoSans</li><li>notosansthai.ttf: Thai NotoSansThai</li><li>sarabun.ttf: Thai Sarabun</li><li>kanit.ttf: Thai Kanit</li><li>charmonman.ttf: Thai Charmonman</li><li>notonaskharabic.ttf: Arabic NotoNaskhArabic</li><li>notosansdevanagari.ttf: India NotoSansDevanagari</li><li>notosanstc.ttf: Cantonese Source Han Sans NotoSansTC</li><li>notosanskr.ttf: Korean NotoSansKR</li><li>gothica1.ttf: Korean GothicA1</li><li>nanummyeongjo.ttf: Korean NanumMyeongjo</li><li>notosansjp.ttf: Japanese NotoSansJP</li><li>notoserifjp.ttf: Japanese NotoSerifJP</li><li>shipporimincho.ttf: Japanese ShipporiMincho</li></ul><p>Default value: hei.ttf Heiti</p>
                      */
                     std::string m_fontType;
                     bool m_fontTypeHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Font size. If not specified, the font size of the subtitle file applies. Pixel and percentage formats are supported:</p><ul><li>Pixel: Npx, where N ranges from (0,4096].</li><li>Percentage: N%, where N ranges from (0,100]. For example, 10% means the subtitle font size equals 10% of the source video height. If left blank and the subtitle file has no settings, the default is 5% of the source video height.</li></ul>
                      */
                     std::string m_fontSize;
                     bool m_fontSizeHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Text color, format: 0xRRGGBB.</p><p>Default value: 0xFFFFFF (white).</p>
                      */
                     std::string m_fontColor;
                     bool m_fontColorHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Text opacity. Value ranges from 0 to 1.</p><ul><li>0: completely transparent;</li><li>1: completely opaque</li></ul><p>Default value: 1</p>
                      */
                     double m_fontAlpha;
                     bool m_fontAlphaHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Subtitle Y-coordinate position. Specify this parameter to ignore the built-in coordinates in the subtitle file. Supports pixel and percentage formats:</p><ul><li>Pixel: Npx, where N ranges from [0,4096].</li><li>Percentage: N%, where N ranges from [0,100]. For example, 10% means the subtitle Y-coordinate = 10%<em>source video height. Default value: source video height</em>4%.<br>Note: The coordinate axis origin is at the bottom of the central axis of the source video, and the subtitle reference point is at the bottom of the central axis of the subtitle. Refer to the figure below:<img src="https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png" alt="image"></li></ul>
                      */
                     std::string m_yPos;
                     bool m_yPosHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Y-coordinate position of the subtitle background base plate. Supports pixel and percentage formats:</p><ul><li>Pixel: Npx, where N ranges from [0,4096].</li><li>Percentage: N%, where N ranges from [0,100]. For example, 10% means the subtitle background base plate Y-coordinate = 10% * source video height. If not specified, the subtitle background base plate is disabled.<br>Note: The coordinate axis origin is located at the bottom of the central axis of the source video, and the reference point of the subtitle background base plate is at the bottom of its central axis. Refer to the figure below: <img src="https://ie-mps-1258344699.cos.ap-nanjing.tencentcos.cn/common/cloud/mps-demo/102_ai_subtitle/subtitle_style.png" alt="image"></li></ul>
                      */
                     std::string m_boardY;
                     bool m_boardYHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Width of the base plate, a positive integer.</p><ul><li>Pixel: Npx, N value range: [0,4096].</li><li>Percentage: N%, N value range: [0, 100]. If the base plate is enabled and this parameter is not specified, the default width is 90% of the source video width.</li></ul>
                      */
                     std::string m_boardWidth;
                     bool m_boardWidthHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Height of the base plate, a positive integer.</p><ul><li>Pixel: Npx, N value ranges from 0 to 4096.</li><li>Percentage: N%, N value ranges from 0 to 100. If background is enabled and this parameter is not specified, the default height is 15% of the source video height.</li></ul>
                      */
                     std::string m_boardHeight;
                     bool m_boardHeightHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Base plate color. Format: 0xRRGGBB.</p><p>Default value: 0x000000 (black).</p>
                      */
                     std::string m_boardColor;
                     bool m_boardColorHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Subtitle background transparency. Value range: [0, 1].</p><ul><li>0: completely transparent;</li><li>1: completely opaque.</li></ul><p>Default value: 0.8.</p>
                      */
                     double m_boardAlpha;
                     bool m_boardAlphaHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Alignment mode.</p><p>Enumeration values:</p><ul><li>top: top alignment. The top position of subtitles is fixed, while the bottom position changes according to the number of lines. </li><li>bottom: bottom alignment. The bottom position of subtitles is fixed, while the top position changes according to the number of lines. </li></ul><p>Default value: bottom</p>
                      */
                     std::string m_alignment;
                     bool m_alignmentHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Stroke width. Floating-point number.</p><ul><li>Pixel: Npx, N value range: [0, 1000].</li><li>Percentage: N%, N value range: [0, 100].</li></ul><p>If left blank, defaults to 0.3% of the source video height.</p>
                      */
                     std::string m_outlineWidth;
                     bool m_outlineWidthHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Border color. Format: 0xRRGGBB.</p><p>Default value: 0x000000 (black).</p>
                      */
                     std::string m_outlineColor;
                     bool m_outlineColorHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Stroke transparency. The value should be a positive floating-point number in the range of (0, 1].</p><ul><li>0: completely transparent;</li><li>1: completely opaque.</li></ul><p>Default value: 1</p>
                      */
                     double m_outlineAlpha;
                     bool m_outlineAlphaHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Shadow width. Floating-point number.</p><ul><li>Pixel: Npx, N value range: [0, 1000].</li><li>Percentage: N%, N value range: [0, 100]. No shading by default if left blank.</li></ul>
                      */
                     std::string m_shadowWidth;
                     bool m_shadowWidthHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Shadow color. Format: 0xRRGGBB.</p><p>Default value: 0x000000 (black) if shadow is set.</p>
                      */
                     std::string m_shadowColor;
                     bool m_shadowColorHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Shadow transparency. The value should be a positive floating-point number in the range of (0, 1].</p><ul><li>0: completely transparent;</li><li>1: completely opaque.</li></ul><p>Default value: 1, which means completely opaque, with shadow configured.</p>
                      */
                     double m_shadowAlpha;
                     bool m_shadowAlphaHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Line spacing. Positive integer.</p><ul><li>Pixel: Npx, where N is in the range of [0, 1000].</li><li>Percentage: N%, where N is in the range of [0, 100].</li></ul><p>Default value: 0</p>
                      */
                     std::string m_lineSpacing;
                     bool m_lineSpacingHasBeenSet;

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Path cache no cache configuration
                 */
                 class CacheConfigNoCache : public AbstractModel
                 {
@@ -47,10 +47,10 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Path cache no cache configuration switch. Value:
+                     * 获取Path cache no cache configuration toggle, Value:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
-                     * @return Switch Path cache no cache configuration switch. Value:
+                     * @return Switch Path cache no cache configuration toggle, Value:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
                      * 
@@ -58,10 +58,10 @@ namespace TencentCloud
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Path cache no cache configuration switch. Value:
+                     * 设置Path cache no cache configuration toggle, Value:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
-                     * @param _switch Path cache no cache configuration switch. Value:
+                     * @param _switch Path cache no cache configuration toggle, Value:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
                      * 
@@ -107,7 +107,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Path cache no cache configuration switch. Value:
+                     * Path cache no cache configuration toggle, Value:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
                      */

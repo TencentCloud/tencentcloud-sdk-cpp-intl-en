@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Output file information parameters for video processing.
                 */
                 class MediaOutputInfo : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Region 
+                     * 获取Region of the output file Bucket, for example, ap-guangzhou.
+                     * @return Region Region of the output file Bucket, for example, ap-guangzhou.
                      * 
                      */
                     std::string GetRegion() const;
 
                     /**
-                     * 设置
-                     * @param _region 
+                     * 设置Region of the output file Bucket, for example, ap-guangzhou.
+                     * @param _region Region of the output file Bucket, for example, ap-guangzhou.
                      * 
                      */
                     void SetRegion(const std::string& _region);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool RegionHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Bucket 
+                     * 获取Output file Bucket.
+                     * @return Bucket Output file Bucket.
                      * 
                      */
                     std::string GetBucket() const;
 
                     /**
-                     * 设置
-                     * @param _bucket 
+                     * 设置Output file Bucket.
+                     * @param _bucket Output file Bucket.
                      * 
                      */
                     void SetBucket(const std::string& _bucket);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool BucketHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Dir 
+                     * 获取Output file directory. The directory name must end with "/".
+                     * @return Dir Output file directory. The directory name must end with "/".
                      * 
                      */
                     std::string GetDir() const;
 
                     /**
-                     * 设置
-                     * @param _dir 
+                     * 设置Output file directory. The directory name must end with "/".
+                     * @param _dir Output file directory. The directory name must end with "/".
                      * 
                      */
                     void SetDir(const std::string& _dir);
@@ -112,19 +112,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Region of the output file Bucket, for example, ap-guangzhou.
                      */
                     std::string m_region;
                     bool m_regionHasBeenSet;
 
                     /**
-                     * 
+                     * Output file Bucket.
                      */
                     std::string m_bucket;
                     bool m_bucketHasBeenSet;
 
                     /**
-                     * 
+                     * Output file directory. The directory name must end with "/".
                      */
                     std::string m_dir;
                     bool m_dirHasBeenSet;

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Philippines TinID Card
+                * Philippines TinID
                 */
                 class PhilippinesTinID : public AbstractModel
                 {
@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取License number
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return LicenseNumber License number
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Code
+                     * @return LicenseNumber Code
                      * 
                      */
                     std::string GetLicenseNumber() const;
 
                     /**
-                     * 设置License number
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _licenseNumber License number
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Code
+                     * @param _licenseNumber Code
                      * 
                      */
                     void SetLicenseNumber(const std::string& _licenseNumber);
@@ -72,19 +68,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool LicenseNumberHasBeenSet() const;
 
                     /**
-                     * 获取Full name
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return FullName Full name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Name
+                     * @return FullName Name
                      * 
                      */
                     std::string GetFullName() const;
 
                     /**
-                     * 设置Full name
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _fullName Full name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Name
+                     * @param _fullName Name
                      * 
                      */
                     void SetFullName(const std::string& _fullName);
@@ -97,19 +89,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool FullNameHasBeenSet() const;
 
                     /**
-                     * 获取Address
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Address Address
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Address.
+                     * @return Address Address.
                      * 
                      */
                     std::string GetAddress() const;
 
                     /**
-                     * 设置Address
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _address Address
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Address.
+                     * @param _address Address.
                      * 
                      */
                     void SetAddress(const std::string& _address);
@@ -123,18 +111,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Birthday Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetBirthday() const;
 
                     /**
                      * 设置Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _birthday Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetBirthday(const std::string& _birthday);
@@ -147,19 +131,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool BirthdayHasBeenSet() const;
 
                     /**
-                     * 获取Date of issue
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return IssueDate Date of issue
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Issue date
+                     * @return IssueDate Issue date
                      * 
                      */
                     std::string GetIssueDate() const;
 
                     /**
-                     * 设置Date of issue
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _issueDate Date of issue
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Issue date
+                     * @param _issueDate Issue date
                      * 
                      */
                     void SetIssueDate(const std::string& _issueDate);
@@ -174,36 +154,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * License number
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Code
                      */
                     std::string m_licenseNumber;
                     bool m_licenseNumberHasBeenSet;
 
                     /**
-                     * Full name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Name
                      */
                     std::string m_fullName;
                     bool m_fullNameHasBeenSet;
 
                     /**
-                     * Address
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Address.
                      */
                     std::string m_address;
                     bool m_addressHasBeenSet;
 
                     /**
                      * Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_birthday;
                     bool m_birthdayHasBeenSet;
 
                     /**
-                     * Date of issue
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Issue date
                      */
                     std::string m_issueDate;
                     bool m_issueDateHasBeenSet;

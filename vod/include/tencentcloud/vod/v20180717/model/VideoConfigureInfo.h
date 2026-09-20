@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Instant transcoding video template configuration.
                 */
                 class VideoConfigureInfo : public AbstractModel
                 {
@@ -47,15 +47,39 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Width 
+                     * 获取Maximum value of the video stream width (or long edge) in px. Value range: 0 and [128, 1920].
+<li>If both Width and Height are 0, the resolution is the same as the source.</li>
+<li>If Width is 0 but Height is not 0, the width will be proportionally scaled.</li>
+<li>If Width is not 0 but Height is 0, the height will be proportionally scaled.</li>
+<li>If both Width and Height are not 0, the resolution is as specified by the user.</li>
+
+Default value: 0.
+                     * @return Width Maximum value of the video stream width (or long edge) in px. Value range: 0 and [128, 1920].
+<li>If both Width and Height are 0, the resolution is the same as the source.</li>
+<li>If Width is 0 but Height is not 0, the width will be proportionally scaled.</li>
+<li>If Width is not 0 but Height is 0, the height will be proportionally scaled.</li>
+<li>If both Width and Height are not 0, the resolution is as specified by the user.</li>
+
+Default value: 0.
                      * 
                      */
                     int64_t GetWidth() const;
 
                     /**
-                     * 设置
-                     * @param _width 
+                     * 设置Maximum value of the video stream width (or long edge) in px. Value range: 0 and [128, 1920].
+<li>If both Width and Height are 0, the resolution is the same as the source.</li>
+<li>If Width is 0 but Height is not 0, the width will be proportionally scaled.</li>
+<li>If Width is not 0 but Height is 0, the height will be proportionally scaled.</li>
+<li>If both Width and Height are not 0, the resolution is as specified by the user.</li>
+
+Default value: 0.
+                     * @param _width Maximum value of the video stream width (or long edge) in px. Value range: 0 and [128, 1920].
+<li>If both Width and Height are 0, the resolution is the same as the source.</li>
+<li>If Width is 0 but Height is not 0, the width will be proportionally scaled.</li>
+<li>If Width is not 0 but Height is 0, the height will be proportionally scaled.</li>
+<li>If both Width and Height are not 0, the resolution is as specified by the user.</li>
+
+Default value: 0.
                      * 
                      */
                     void SetWidth(const int64_t& _width);
@@ -68,15 +92,39 @@ namespace TencentCloud
                     bool WidthHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Height 
+                     * 获取Maximum value of the video stream height (or short side). Value range: 0 and [128, 1920]. Unit: px.
+<li>If both Width and Height are 0, the resolution is the same as the source.</li>
+<li>If Width is 0 but Height is not 0, the width will be proportionally scaled.</li>
+<li>If Width is not 0 but Height is 0, the height will be proportionally scaled.</li>
+<li>If both Width and Height are not 0, the resolution is as specified by the user.</li>
+
+Default value: 0.
+                     * @return Height Maximum value of the video stream height (or short side). Value range: 0 and [128, 1920]. Unit: px.
+<li>If both Width and Height are 0, the resolution is the same as the source.</li>
+<li>If Width is 0 but Height is not 0, the width will be proportionally scaled.</li>
+<li>If Width is not 0 but Height is 0, the height will be proportionally scaled.</li>
+<li>If both Width and Height are not 0, the resolution is as specified by the user.</li>
+
+Default value: 0.
                      * 
                      */
                     int64_t GetHeight() const;
 
                     /**
-                     * 设置
-                     * @param _height 
+                     * 设置Maximum value of the video stream height (or short side). Value range: 0 and [128, 1920]. Unit: px.
+<li>If both Width and Height are 0, the resolution is the same as the source.</li>
+<li>If Width is 0 but Height is not 0, the width will be proportionally scaled.</li>
+<li>If Width is not 0 but Height is 0, the height will be proportionally scaled.</li>
+<li>If both Width and Height are not 0, the resolution is as specified by the user.</li>
+
+Default value: 0.
+                     * @param _height Maximum value of the video stream height (or short side). Value range: 0 and [128, 1920]. Unit: px.
+<li>If both Width and Height are 0, the resolution is the same as the source.</li>
+<li>If Width is 0 but Height is not 0, the width will be proportionally scaled.</li>
+<li>If Width is not 0 but Height is 0, the height will be proportionally scaled.</li>
+<li>If both Width and Height are not 0, the resolution is as specified by the user.</li>
+
+Default value: 0.
                      * 
                      */
                     void SetHeight(const int64_t& _height);
@@ -89,15 +137,31 @@ namespace TencentCloud
                     bool HeightHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ResolutionAdaptive 
+                     * 获取Resolution adaptation. Available values:
+<li>open: enabled. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
+<li>close: closed. At this point, Width represents the width of the video, and Height indicates the height of the video.</li>
+
+Default value: open.
+                     * @return ResolutionAdaptive Resolution adaptation. Available values:
+<li>open: enabled. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
+<li>close: closed. At this point, Width represents the width of the video, and Height indicates the height of the video.</li>
+
+Default value: open.
                      * 
                      */
                     std::string GetResolutionAdaptive() const;
 
                     /**
-                     * 设置
-                     * @param _resolutionAdaptive 
+                     * 设置Resolution adaptation. Available values:
+<li>open: enabled. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
+<li>close: closed. At this point, Width represents the width of the video, and Height indicates the height of the video.</li>
+
+Default value: open.
+                     * @param _resolutionAdaptive Resolution adaptation. Available values:
+<li>open: enabled. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
+<li>close: closed. At this point, Width represents the width of the video, and Height indicates the height of the video.</li>
+
+Default value: open.
                      * 
                      */
                     void SetResolutionAdaptive(const std::string& _resolutionAdaptive);
@@ -110,15 +174,19 @@ namespace TencentCloud
                     bool ResolutionAdaptiveHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Bitrate 
+                     * 获取Bitrate of the video stream. Value range: 0 and [128, 10000]. Unit: kbps.
+When the value is 0, VOD automatically sets the bitrate.
+                     * @return Bitrate Bitrate of the video stream. Value range: 0 and [128, 10000]. Unit: kbps.
+When the value is 0, VOD automatically sets the bitrate.
                      * 
                      */
                     int64_t GetBitrate() const;
 
                     /**
-                     * 设置
-                     * @param _bitrate 
+                     * 设置Bitrate of the video stream. Value range: 0 and [128, 10000]. Unit: kbps.
+When the value is 0, VOD automatically sets the bitrate.
+                     * @param _bitrate Bitrate of the video stream. Value range: 0 and [128, 10000]. Unit: kbps.
+When the value is 0, VOD automatically sets the bitrate.
                      * 
                      */
                     void SetBitrate(const int64_t& _bitrate);
@@ -133,25 +201,42 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Maximum value of the video stream width (or long edge) in px. Value range: 0 and [128, 1920].
+<li>If both Width and Height are 0, the resolution is the same as the source.</li>
+<li>If Width is 0 but Height is not 0, the width will be proportionally scaled.</li>
+<li>If Width is not 0 but Height is 0, the height will be proportionally scaled.</li>
+<li>If both Width and Height are not 0, the resolution is as specified by the user.</li>
+
+Default value: 0.
                      */
                     int64_t m_width;
                     bool m_widthHasBeenSet;
 
                     /**
-                     * 
+                     * Maximum value of the video stream height (or short side). Value range: 0 and [128, 1920]. Unit: px.
+<li>If both Width and Height are 0, the resolution is the same as the source.</li>
+<li>If Width is 0 but Height is not 0, the width will be proportionally scaled.</li>
+<li>If Width is not 0 but Height is 0, the height will be proportionally scaled.</li>
+<li>If both Width and Height are not 0, the resolution is as specified by the user.</li>
+
+Default value: 0.
                      */
                     int64_t m_height;
                     bool m_heightHasBeenSet;
 
                     /**
-                     * 
+                     * Resolution adaptation. Available values:
+<li>open: enabled. At this point, Width represents the long side of the video, and Height indicates the short side of the video;</li>
+<li>close: closed. At this point, Width represents the width of the video, and Height indicates the height of the video.</li>
+
+Default value: open.
                      */
                     std::string m_resolutionAdaptive;
                     bool m_resolutionAdaptiveHasBeenSet;
 
                     /**
-                     * 
+                     * Bitrate of the video stream. Value range: 0 and [128, 10000]. Unit: kbps.
+When the value is 0, VOD automatically sets the bitrate.
                      */
                     int64_t m_bitrate;
                     bool m_bitrateHasBeenSet;

@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return SubAppId 
+                     * 获取<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+                     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置
-                     * @param _subAppId 
+                     * 设置<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+                     * @param _subAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -64,15 +64,27 @@ namespace TencentCloud
                     bool SubAppIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Type 
+                     * 获取Watermark type filter. Valid values:
+<li>image: image watermark;</li>
+<li>Text: text watermark.</li>
+<li>svg: SVG watermark.</li>
+                     * @return Type Watermark type filter. Valid values:
+<li>image: image watermark;</li>
+<li>Text: text watermark.</li>
+<li>svg: SVG watermark.</li>
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置
-                     * @param _type 
+                     * 设置Watermark type filter. Valid values:
+<li>image: image watermark;</li>
+<li>Text: text watermark.</li>
+<li>svg: SVG watermark.</li>
+                     * @param _type Watermark type filter. Valid values:
+<li>image: image watermark;</li>
+<li>Text: text watermark.</li>
+<li>svg: SVG watermark.</li>
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -85,15 +97,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Offset 
+                     * 获取Pagination offset. Default value: 0.
+                     * @return Offset Pagination offset. Default value: 0.
                      * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
-                     * 设置
-                     * @param _offset 
+                     * 设置Pagination offset. Default value: 0.
+                     * @param _offset Pagination offset. Default value: 0.
                      * 
                      */
                     void SetOffset(const uint64_t& _offset);
@@ -106,15 +118,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Definitions 
+                     * 获取Filtering condition for the unique identifier of the watermark template. The array length cannot exceed 100.
+                     * @return Definitions Filtering condition for the unique identifier of the watermark template. The array length cannot exceed 100.
                      * 
                      */
                     std::vector<int64_t> GetDefinitions() const;
 
                     /**
-                     * 设置
-                     * @param _definitions 
+                     * 设置Filtering condition for the unique identifier of the watermark template. The array length cannot exceed 100.
+                     * @param _definitions Filtering condition for the unique identifier of the watermark template. The array length cannot exceed 100.
                      * 
                      */
                     void SetDefinitions(const std::vector<int64_t>& _definitions);
@@ -127,15 +139,23 @@ namespace TencentCloud
                     bool DefinitionsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Limit 
+                     * 获取Number of returned entries
+<li>Default value: 10.</li>
+<li>Maximum value: 100.</li>
+                     * @return Limit Number of returned entries
+<li>Default value: 10.</li>
+<li>Maximum value: 100.</li>
                      * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
-                     * 设置
-                     * @param _limit 
+                     * 设置Number of returned entries
+<li>Default value: 10.</li>
+<li>Maximum value: 100.</li>
+                     * @param _limit Number of returned entries
+<li>Default value: 10.</li>
+<li>Maximum value: 100.</li>
                      * 
                      */
                     void SetLimit(const uint64_t& _limit);
@@ -150,31 +170,36 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
 
                     /**
-                     * 
+                     * Watermark type filter. Valid values:
+<li>image: image watermark;</li>
+<li>Text: text watermark.</li>
+<li>svg: SVG watermark.</li>
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * 
+                     * Pagination offset. Default value: 0.
                      */
                     uint64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * 
+                     * Filtering condition for the unique identifier of the watermark template. The array length cannot exceed 100.
                      */
                     std::vector<int64_t> m_definitions;
                     bool m_definitionsHasBeenSet;
 
                     /**
-                     * 
+                     * Number of returned entries
+<li>Default value: 10.</li>
+<li>Maximum value: 100.</li>
                      */
                     uint64_t m_limit;
                     bool m_limitHasBeenSet;

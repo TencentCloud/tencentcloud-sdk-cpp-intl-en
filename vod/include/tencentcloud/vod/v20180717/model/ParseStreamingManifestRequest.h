@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return MediaManifestContent 
+                     * 获取<p>Content of the index file to be parsed.</p>
+                     * @return MediaManifestContent <p>Content of the index file to be parsed.</p>
                      * 
                      */
                     std::string GetMediaManifestContent() const;
 
                     /**
-                     * 设置
-                     * @param _mediaManifestContent 
+                     * 设置<p>Content of the index file to be parsed.</p>
+                     * @param _mediaManifestContent <p>Content of the index file to be parsed.</p>
                      * 
                      */
                     void SetMediaManifestContent(const std::string& _mediaManifestContent);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool MediaManifestContentHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ManifestType 
+                     * 获取<p>Video index file format. Default format: m3u8.</p><li>m3u8</li><li>mpd</li>
+                     * @return ManifestType <p>Video index file format. Default format: m3u8.</p><li>m3u8</li><li>mpd</li>
                      * 
                      */
                     std::string GetManifestType() const;
 
                     /**
-                     * 设置
-                     * @param _manifestType 
+                     * 设置<p>Video index file format. Default format: m3u8.</p><li>m3u8</li><li>mpd</li>
+                     * @param _manifestType <p>Video index file format. Default format: m3u8.</p><li>m3u8</li><li>mpd</li>
                      * 
                      */
                     void SetManifestType(const std::string& _manifestType);
@@ -87,13 +87,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p>Content of the index file to be parsed.</p>
                      */
                     std::string m_mediaManifestContent;
                     bool m_mediaManifestContentHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Video index file format. Default format: m3u8.</p><li>m3u8</li><li>mpd</li>
                      */
                     std::string m_manifestType;
                     bool m_manifestTypeHasBeenSet;

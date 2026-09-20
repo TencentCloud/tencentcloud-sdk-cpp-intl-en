@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Video transcoding task information. This structure is only used for tasks initiated via the 2017 [video transcoding](https://www.tencentcloud.com/document/product/266/7822?from_cn_redirect=1) API.
                 */
                 class TranscodeTask2017 : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return TaskId 
+                     * 获取Transcoding task ID.
+                     * @return TaskId Transcoding task ID.
                      * 
                      */
                     std::string GetTaskId() const;
 
                     /**
-                     * 设置
-                     * @param _taskId 
+                     * 设置Transcoding task ID.
+                     * @param _taskId Transcoding task ID.
                      * 
                      */
                     void SetTaskId(const std::string& _taskId);
@@ -69,15 +69,23 @@ namespace TencentCloud
                     bool TaskIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ErrCode 
+                     * 获取Error code.
+<li>0: success;</li>
+<li>Other value: unsuccessful.</li>
+                     * @return ErrCode Error code.
+<li>0: success;</li>
+<li>Other value: unsuccessful.</li>
                      * 
                      */
                     int64_t GetErrCode() const;
 
                     /**
-                     * 设置
-                     * @param _errCode 
+                     * 设置Error code.
+<li>0: success;</li>
+<li>Other value: unsuccessful.</li>
+                     * @param _errCode Error code.
+<li>0: success;</li>
+<li>Other value: unsuccessful.</li>
                      * 
                      */
                     void SetErrCode(const int64_t& _errCode);
@@ -90,15 +98,15 @@ namespace TencentCloud
                     bool ErrCodeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Message 
+                     * 获取Error message.
+                     * @return Message Error message.
                      * 
                      */
                     std::string GetMessage() const;
 
                     /**
-                     * 设置
-                     * @param _message 
+                     * 设置Error message.
+                     * @param _message Error message.
                      * 
                      */
                     void SetMessage(const std::string& _message);
@@ -111,15 +119,15 @@ namespace TencentCloud
                     bool MessageHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return FileId 
+                     * 获取Transcoded file ID.
+                     * @return FileId Transcoded file ID.
                      * 
                      */
                     std::string GetFileId() const;
 
                     /**
-                     * 设置
-                     * @param _fileId 
+                     * 设置Transcoded file ID.
+                     * @param _fileId Transcoded file ID.
                      * 
                      */
                     void SetFileId(const std::string& _fileId);
@@ -132,15 +140,15 @@ namespace TencentCloud
                     bool FileIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return FileName 
+                     * 获取Name of the transcoded file.
+                     * @return FileName Name of the transcoded file.
                      * 
                      */
                     std::string GetFileName() const;
 
                     /**
-                     * 设置
-                     * @param _fileName 
+                     * 设置Name of the transcoded file.
+                     * @param _fileName Name of the transcoded file.
                      * 
                      */
                     void SetFileName(const std::string& _fileName);
@@ -153,15 +161,15 @@ namespace TencentCloud
                     bool FileNameHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Duration 
+                     * 获取Video duration, in seconds.
+                     * @return Duration Video duration, in seconds.
                      * 
                      */
                     uint64_t GetDuration() const;
 
                     /**
-                     * 设置
-                     * @param _duration 
+                     * 设置Video duration, in seconds.
+                     * @param _duration Video duration, in seconds.
                      * 
                      */
                     void SetDuration(const uint64_t& _duration);
@@ -174,15 +182,15 @@ namespace TencentCloud
                     bool DurationHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return CoverUrl 
+                     * 获取Address of a cover.
+                     * @return CoverUrl Address of a cover.
                      * 
                      */
                     std::string GetCoverUrl() const;
 
                     /**
-                     * 设置
-                     * @param _coverUrl 
+                     * 设置Address of a cover.
+                     * @param _coverUrl Address of a cover.
                      * 
                      */
                     void SetCoverUrl(const std::string& _coverUrl);
@@ -195,15 +203,15 @@ namespace TencentCloud
                     bool CoverUrlHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return PlayInfoSet 
+                     * 获取Playback information generated after video transcoding.
+                     * @return PlayInfoSet Playback information generated after video transcoding.
                      * 
                      */
                     std::vector<TranscodePlayInfo2017> GetPlayInfoSet() const;
 
                     /**
-                     * 设置
-                     * @param _playInfoSet 
+                     * 设置Playback information generated after video transcoding.
+                     * @param _playInfoSet Playback information generated after video transcoding.
                      * 
                      */
                     void SetPlayInfoSet(const std::vector<TranscodePlayInfo2017>& _playInfoSet);
@@ -218,49 +226,51 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Transcoding task ID.
                      */
                     std::string m_taskId;
                     bool m_taskIdHasBeenSet;
 
                     /**
-                     * 
+                     * Error code.
+<li>0: success;</li>
+<li>Other value: unsuccessful.</li>
                      */
                     int64_t m_errCode;
                     bool m_errCodeHasBeenSet;
 
                     /**
-                     * 
+                     * Error message.
                      */
                     std::string m_message;
                     bool m_messageHasBeenSet;
 
                     /**
-                     * 
+                     * Transcoded file ID.
                      */
                     std::string m_fileId;
                     bool m_fileIdHasBeenSet;
 
                     /**
-                     * 
+                     * Name of the transcoded file.
                      */
                     std::string m_fileName;
                     bool m_fileNameHasBeenSet;
 
                     /**
-                     * 
+                     * Video duration, in seconds.
                      */
                     uint64_t m_duration;
                     bool m_durationHasBeenSet;
 
                     /**
-                     * 
+                     * Address of a cover.
                      */
                     std::string m_coverUrl;
                     bool m_coverUrlHasBeenSet;
 
                     /**
-                     * 
+                     * Playback information generated after video transcoding.
                      */
                     std::vector<TranscodePlayInfo2017> m_playInfoSet;
                     bool m_playInfoSetHasBeenSet;

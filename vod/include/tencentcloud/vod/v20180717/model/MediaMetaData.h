@@ -70,15 +70,15 @@ namespace TencentCloud
                     bool SizeHasBeenSet() const;
 
                     /**
-                     * 获取Container type, for example, m4a, mp4.
-                     * @return Container Container type, for example, m4a, mp4.
+                     * 获取Container type, for example, m4a and mp4.
+                     * @return Container Container type, for example, m4a and mp4.
                      * 
                      */
                     std::string GetContainer() const;
 
                     /**
-                     * 设置Container type, for example, m4a, mp4.
-                     * @param _container Container type, for example, m4a, mp4.
+                     * 设置Container type, for example, m4a and mp4.
+                     * @param _container Container type, for example, m4a and mp4.
                      * 
                      */
                     void SetContainer(const std::string& _container);
@@ -91,15 +91,15 @@ namespace TencentCloud
                     bool ContainerHasBeenSet() const;
 
                     /**
-                     * 获取Sum of the mean video stream bitrate and mean audio stream bitrate, in bps.
-                     * @return Bitrate Sum of the mean video stream bitrate and mean audio stream bitrate, in bps.
+                     * 获取Sum of the mean video stream bitrate and mean audio stream bitrate, unit: bps.
+                     * @return Bitrate Sum of the mean video stream bitrate and mean audio stream bitrate, unit: bps.
                      * 
                      */
                     int64_t GetBitrate() const;
 
                     /**
-                     * 设置Sum of the mean video stream bitrate and mean audio stream bitrate, in bps.
-                     * @param _bitrate Sum of the mean video stream bitrate and mean audio stream bitrate, in bps.
+                     * 设置Sum of the mean video stream bitrate and mean audio stream bitrate, unit: bps.
+                     * @param _bitrate Sum of the mean video stream bitrate and mean audio stream bitrate, unit: bps.
                      * 
                      */
                     void SetBitrate(const int64_t& _bitrate);
@@ -112,15 +112,15 @@ namespace TencentCloud
                     bool BitrateHasBeenSet() const;
 
                     /**
-                     * 获取Maximum video stream height in px.
-                     * @return Height Maximum video stream height in px.
+                     * 获取Maximum height of the video stream. Unit: px.
+                     * @return Height Maximum height of the video stream. Unit: px.
                      * 
                      */
                     int64_t GetHeight() const;
 
                     /**
-                     * 设置Maximum video stream height in px.
-                     * @param _height Maximum video stream height in px.
+                     * 设置Maximum height of the video stream. Unit: px.
+                     * @param _height Maximum height of the video stream. Unit: px.
                      * 
                      */
                     void SetHeight(const int64_t& _height);
@@ -175,15 +175,15 @@ namespace TencentCloud
                     bool DurationHasBeenSet() const;
 
                     /**
-                     * 获取Selection angle during video shooting. Unit: degree.
-                     * @return Rotate Selection angle during video shooting. Unit: degree.
+                     * 获取Selection angle during video shooting. Measurement unit: degree.
+                     * @return Rotate Selection angle during video shooting. Measurement unit: degree.
                      * 
                      */
                     int64_t GetRotate() const;
 
                     /**
-                     * 设置Selection angle during video shooting. Unit: degree.
-                     * @param _rotate Selection angle during video shooting. Unit: degree.
+                     * 设置Selection angle during video shooting. Measurement unit: degree.
+                     * @param _rotate Selection angle during video shooting. Measurement unit: degree.
                      * 
                      */
                     void SetRotate(const int64_t& _rotate);
@@ -259,15 +259,15 @@ namespace TencentCloud
                     bool VideoDurationHasBeenSet() const;
 
                     /**
-                     * 获取Audio duration, in seconds.
-                     * @return AudioDuration Audio duration, in seconds.
+                     * 获取Audio duration in seconds.
+                     * @return AudioDuration Audio duration in seconds.
                      * 
                      */
                     double GetAudioDuration() const;
 
                     /**
-                     * 设置Audio duration, in seconds.
-                     * @param _audioDuration Audio duration, in seconds.
+                     * 设置Audio duration in seconds.
+                     * @param _audioDuration Audio duration in seconds.
                      * 
                      */
                     void SetAudioDuration(const double& _audioDuration);
@@ -313,19 +313,19 @@ namespace TencentCloud
                     bool m_sizeHasBeenSet;
 
                     /**
-                     * Container type, for example, m4a, mp4.
+                     * Container type, for example, m4a and mp4.
                      */
                     std::string m_container;
                     bool m_containerHasBeenSet;
 
                     /**
-                     * Sum of the mean video stream bitrate and mean audio stream bitrate, in bps.
+                     * Sum of the mean video stream bitrate and mean audio stream bitrate, unit: bps.
                      */
                     int64_t m_bitrate;
                     bool m_bitrateHasBeenSet;
 
                     /**
-                     * Maximum video stream height in px.
+                     * Maximum height of the video stream. Unit: px.
                      */
                     int64_t m_height;
                     bool m_heightHasBeenSet;
@@ -343,7 +343,7 @@ namespace TencentCloud
                     bool m_durationHasBeenSet;
 
                     /**
-                     * Selection angle during video shooting. Unit: degree.
+                     * Selection angle during video shooting. Measurement unit: degree.
                      */
                     int64_t m_rotate;
                     bool m_rotateHasBeenSet;
@@ -367,7 +367,7 @@ namespace TencentCloud
                     bool m_videoDurationHasBeenSet;
 
                     /**
-                     * Audio duration, in seconds.
+                     * Audio duration in seconds.
                      */
                     double m_audioDuration;
                     bool m_audioDurationHasBeenSet;

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Callback input information for creating a custom timbre.
                 */
                 class CreateAigcCustomVoiceInput : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return VoiceName 
+                     * 获取<p>Timbre name.</p>
+                     * @return VoiceName <p>Timbre name.</p>
                      * 
                      */
                     std::string GetVoiceName() const;
 
                     /**
-                     * 设置
-                     * @param _voiceName 
+                     * 设置<p>Timbre name.</p>
+                     * @param _voiceName <p>Timbre name.</p>
                      * 
                      */
                     void SetVoiceName(const std::string& _voiceName);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool VoiceNameHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return VoiceUrl 
+                     * 获取<p>Link to obtain the timbre data file.</p>
+                     * @return VoiceUrl <p>Link to obtain the timbre data file.</p>
                      * 
                      */
                     std::string GetVoiceUrl() const;
 
                     /**
-                     * 设置
-                     * @param _voiceUrl 
+                     * 设置<p>Link to obtain the timbre data file.</p>
+                     * @param _voiceUrl <p>Link to obtain the timbre data file.</p>
                      * 
                      */
                     void SetVoiceUrl(const std::string& _voiceUrl);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool VoiceUrlHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return VideoId 
+                     * 获取<p>Historic works ID, which can provide audio material by referring to historic works.</p>
+                     * @return VideoId <p>Historic works ID, which can provide audio material by referring to historic works.</p>
                      * 
                      */
                     std::string GetVideoId() const;
 
                     /**
-                     * 设置
-                     * @param _videoId 
+                     * 设置<p>Historic works ID, which can provide audio material by referring to historic works.</p>
+                     * @param _videoId <p>Historic works ID, which can provide audio material by referring to historic works.</p>
                      * 
                      */
                     void SetVideoId(const std::string& _videoId);
@@ -112,19 +112,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p>Timbre name.</p>
                      */
                     std::string m_voiceName;
                     bool m_voiceNameHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Link to obtain the timbre data file.</p>
                      */
                     std::string m_voiceUrl;
                     bool m_voiceUrlHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Historic works ID, which can provide audio material by referring to historic works.</p>
                      */
                     std::string m_videoId;
                     bool m_videoIdHasBeenSet;

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Input parameter type for importing a task flow template into the Intelligent Media Assets knowledge base.
                 */
                 class ImportMediaKnowledgeTaskInput : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Definition 
+                     * 获取<p>Large Model Understanding Template</p>
+                     * @return Definition <p>Large Model Understanding Template</p>
                      * 
                      */
                     uint64_t GetDefinition() const;
 
                     /**
-                     * 设置
-                     * @param _definition 
+                     * 设置<p>Large Model Understanding Template</p>
+                     * @param _definition <p>Large Model Understanding Template</p>
                      * 
                      */
                     void SetDefinition(const uint64_t& _definition);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool DefinitionHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return KnowledgeBaseIds 
+                     * 获取<p>List of knowledge base IDs. If left empty, the default knowledge base will be used.</p>
+                     * @return KnowledgeBaseIds <p>List of knowledge base IDs. If left empty, the default knowledge base will be used.</p>
                      * 
                      */
                     std::vector<std::string> GetKnowledgeBaseIds() const;
 
                     /**
-                     * 设置
-                     * @param _knowledgeBaseIds 
+                     * 设置<p>List of knowledge base IDs. If left empty, the default knowledge base will be used.</p>
+                     * @param _knowledgeBaseIds <p>List of knowledge base IDs. If left empty, the default knowledge base will be used.</p>
                      * 
                      */
                     void SetKnowledgeBaseIds(const std::vector<std::string>& _knowledgeBaseIds);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p>Large Model Understanding Template</p>
                      */
                     uint64_t m_definition;
                     bool m_definitionHasBeenSet;
 
                     /**
-                     * 
+                     * <p>List of knowledge base IDs. If left empty, the default knowledge base will be used.</p>
                      */
                     std::vector<std::string> m_knowledgeBaseIds;
                     bool m_knowledgeBaseIdsHasBeenSet;

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Image beauty effect item.
                 */
                 class BeautyEffectItem : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Switch 
+                     * 获取<p>Whether to enable beauty effects.</p><p>Enumeration values:</p><ul><li>ON: On</li><li>OFF: Off</li></ul>
+                     * @return Switch <p>Whether to enable beauty effects.</p><p>Enumeration values:</p><ul><li>ON: On</li><li>OFF: Off</li></ul>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置
-                     * @param _switch 
+                     * 设置<p>Whether to enable beauty effects.</p><p>Enumeration values:</p><ul><li>ON: On</li><li>OFF: Off</li></ul>
+                     * @param _switch <p>Whether to enable beauty effects.</p><p>Enumeration values:</p><ul><li>ON: On</li><li>OFF: Off</li></ul>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Type 
+                     * 获取<p>Beauty item.</p>
+                     * @return Type <p>Beauty item.</p>
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置
-                     * @param _type 
+                     * 设置<p>Beauty item.</p>
+                     * @param _type <p>Beauty item.</p>
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Value 
+                     * 获取<p>Intensity of beauty effects.</p>
+                     * @return Value <p>Intensity of beauty effects.</p>
                      * 
                      */
                     int64_t GetValue() const;
 
                     /**
-                     * 设置
-                     * @param _value 
+                     * 设置<p>Intensity of beauty effects.</p>
+                     * @param _value <p>Intensity of beauty effects.</p>
                      * 
                      */
                     void SetValue(const int64_t& _value);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool ValueHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ResourcePath 
+                     * 获取<p>Extra resource path.</p>
+                     * @return ResourcePath <p>Extra resource path.</p>
                      * 
                      */
                     std::string GetResourcePath() const;
 
                     /**
-                     * 设置
-                     * @param _resourcePath 
+                     * 设置<p>Extra resource path.</p>
+                     * @param _resourcePath <p>Extra resource path.</p>
                      * 
                      */
                     void SetResourcePath(const std::string& _resourcePath);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool ResourcePathHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ExtInfo 
+                     * 获取<p>Additional information.</p>
+                     * @return ExtInfo <p>Additional information.</p>
                      * 
                      */
                     std::string GetExtInfo() const;
 
                     /**
-                     * 设置
-                     * @param _extInfo 
+                     * 设置<p>Additional information.</p>
+                     * @param _extInfo <p>Additional information.</p>
                      * 
                      */
                     void SetExtInfo(const std::string& _extInfo);
@@ -154,31 +154,31 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p>Whether to enable beauty effects.</p><p>Enumeration values:</p><ul><li>ON: On</li><li>OFF: Off</li></ul>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Beauty item.</p>
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Intensity of beauty effects.</p>
                      */
                     int64_t m_value;
                     bool m_valueHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Extra resource path.</p>
                      */
                     std::string m_resourcePath;
                     bool m_resourcePathHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Additional information.</p>
                      */
                     std::string m_extInfo;
                     bool m_extInfoHasBeenSet;

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Automatic Follow Configuration for 301/302 status codes during origin-pull, disabled by default
                 */
                 class FollowRedirect : public AbstractModel
                 {
@@ -47,10 +47,10 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Follow origin configuration switch. Valid values:
+                     * 获取Follow origin-pull configuration switch. Valid values:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
-                     * @return Switch Follow origin configuration switch. Valid values:
+                     * @return Switch Follow origin-pull configuration switch. Valid values:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
                      * 
@@ -58,10 +58,10 @@ namespace TencentCloud
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Follow origin configuration switch. Valid values:
+                     * 设置Follow origin-pull configuration switch. Valid values:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
-                     * @param _switch Follow origin configuration switch. Valid values:
+                     * @param _switch Follow origin-pull configuration switch. Valid values:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
                      * 
@@ -78,7 +78,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Follow origin configuration switch. Valid values:
+                     * Follow origin-pull configuration switch. Valid values:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
                      */

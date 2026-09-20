@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Text keyword recognition input.
                 */
                 class AiRecognitionTaskOcrWordsResultInput : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Definition 
+                     * 获取Text keyword recognition template ID.
+                     * @return Definition Text keyword recognition template ID.
                      * 
                      */
                     int64_t GetDefinition() const;
 
                     /**
-                     * 设置
-                     * @param _definition 
+                     * 设置Text keyword recognition template ID.
+                     * @param _definition Text keyword recognition template ID.
                      * 
                      */
                     void SetDefinition(const int64_t& _definition);
@@ -70,7 +70,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Text keyword recognition template ID.
                      */
                     int64_t m_definition;
                     bool m_definitionHasBeenSet;

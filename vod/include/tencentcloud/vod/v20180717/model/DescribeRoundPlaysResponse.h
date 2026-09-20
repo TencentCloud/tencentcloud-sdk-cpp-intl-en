@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return TotalCount 
+                     * 获取<p>Total number of carousel playlists meeting filtering criteria. Deprecated. For batch query, please use the ScrollToken parameter.</p>
+                     * @return TotalCount <p>Total number of carousel playlists meeting filtering criteria. Deprecated. For batch query, please use the ScrollToken parameter.</p>
                      * @deprecated
                      */
                     int64_t GetTotalCount() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return RoundPlaySet 
+                     * 获取<p>Carousel playlist details list.</p>
+                     * @return RoundPlaySet <p>Carousel playlist details list.</p>
                      * 
                      */
                     std::vector<RoundPlayInfo> GetRoundPlaySet() const;
@@ -73,8 +73,8 @@ namespace TencentCloud
                     bool RoundPlaySetHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ScrollToken 
+                     * 获取<p>Pagination identifier. If a request does not return all the data entries, this field indicates the ID of the next entry. If this field is empty, there is no more data.</p>
+                     * @return ScrollToken <p>Pagination identifier. If a request does not return all the data entries, this field indicates the ID of the next entry. If this field is empty, there is no more data.</p>
                      * 
                      */
                     std::string GetScrollToken() const;
@@ -89,19 +89,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p>Total number of carousel playlists meeting filtering criteria. Deprecated. For batch query, please use the ScrollToken parameter.</p>
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Carousel playlist details list.</p>
                      */
                     std::vector<RoundPlayInfo> m_roundPlaySet;
                     bool m_roundPlaySetHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Pagination identifier. If a request does not return all the data entries, this field indicates the ID of the next entry. If this field is empty, there is no more data.</p>
                      */
                     std::string m_scrollToken;
                     bool m_scrollTokenHasBeenSet;

@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return ClassInfoSet 
+                     * 获取Classification information collection
+                     * @return ClassInfoSet Classification information collection
                      * 
                      */
                     std::vector<MediaClassInfo> GetClassInfoSet() const;
@@ -61,7 +61,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Classification information collection
                      */
                     std::vector<MediaClassInfo> m_classInfoSet;
                     bool m_classInfoSetHasBeenSet;

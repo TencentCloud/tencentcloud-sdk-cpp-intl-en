@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Parameter configuration for AI product image generation
                 */
                 class ProductImageConfig : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Prompt 
+                     * 获取Prompt for image generation background. If this field is default, inspiration is generated automatically.
+                     * @return Prompt Prompt for image generation background. If this field is default, inspiration is generated automatically.
                      * 
                      */
                     std::string GetPrompt() const;
 
                     /**
-                     * 设置
-                     * @param _prompt 
+                     * 设置Prompt for image generation background. If this field is default, inspiration is generated automatically.
+                     * @param _prompt Prompt for image generation background. If this field is default, inspiration is generated automatically.
                      * 
                      */
                     void SetPrompt(const std::string& _prompt);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool PromptHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return NegativePrompt 
+                     * 获取Prompt content used to prevent the model from generating images.
+                     * @return NegativePrompt Prompt content used to prevent the model from generating images.
                      * 
                      */
                     std::string GetNegativePrompt() const;
 
                     /**
-                     * 设置
-                     * @param _negativePrompt 
+                     * 设置Prompt content used to prevent the model from generating images.
+                     * @param _negativePrompt Prompt content used to prevent the model from generating images.
                      * 
                      */
                     void SetNegativePrompt(const std::string& _negativePrompt);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool NegativePromptHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ProductDesc 
+                     * 获取A detailed product description helps generate images that better meet requirements.
+                     * @return ProductDesc A detailed product description helps generate images that better meet requirements.
                      * 
                      */
                     std::string GetProductDesc() const;
 
                     /**
-                     * 设置
-                     * @param _productDesc 
+                     * 设置A detailed product description helps generate images that better meet requirements.
+                     * @param _productDesc A detailed product description helps generate images that better meet requirements.
                      * 
                      */
                     void SetProductDesc(const std::string& _productDesc);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool ProductDescHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return MoreRequirement 
+                     * 获取Special requirements. If any, input them through this field.
+                     * @return MoreRequirement Special requirements. If any, input them through this field.
                      * 
                      */
                     std::string GetMoreRequirement() const;
 
                     /**
-                     * 设置
-                     * @param _moreRequirement 
+                     * 设置Special requirements. If any, input them through this field.
+                     * @param _moreRequirement Special requirements. If any, input them through this field.
                      * 
                      */
                     void SetMoreRequirement(const std::string& _moreRequirement);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool MoreRequirementHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return OutputImageCount 
+                     * 获取Number of images expected to be generated. Default value: 1. Maximum valid value: 10.
+                     * @return OutputImageCount Number of images expected to be generated. Default value: 1. Maximum valid value: 10.
                      * 
                      */
                     uint64_t GetOutputImageCount() const;
 
                     /**
-                     * 设置
-                     * @param _outputImageCount 
+                     * 设置Number of images expected to be generated. Default value: 1. Maximum valid value: 10.
+                     * @param _outputImageCount Number of images expected to be generated. Default value: 1. Maximum valid value: 10.
                      * 
                      */
                     void SetOutputImageCount(const uint64_t& _outputImageCount);
@@ -154,31 +154,31 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Prompt for image generation background. If this field is default, inspiration is generated automatically.
                      */
                     std::string m_prompt;
                     bool m_promptHasBeenSet;
 
                     /**
-                     * 
+                     * Prompt content used to prevent the model from generating images.
                      */
                     std::string m_negativePrompt;
                     bool m_negativePromptHasBeenSet;
 
                     /**
-                     * 
+                     * A detailed product description helps generate images that better meet requirements.
                      */
                     std::string m_productDesc;
                     bool m_productDescHasBeenSet;
 
                     /**
-                     * 
+                     * Special requirements. If any, input them through this field.
                      */
                     std::string m_moreRequirement;
                     bool m_moreRequirementHasBeenSet;
 
                     /**
-                     * 
+                     * Number of images expected to be generated. Default value: 1. Maximum valid value: 10.
                      */
                     uint64_t m_outputImageCount;
                     bool m_outputImageCountHasBeenSet;

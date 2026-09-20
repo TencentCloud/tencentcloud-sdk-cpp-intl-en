@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Policy information for audio and video quality inspection.
                 */
                 class QualityInspectStrategy : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return StrategyType 
+                     * 获取<p>Policy type.</p><p>Enumeration values:</p><ul><li>TimeSpotCheck: Time-based spot check policy.</li></ul>
+                     * @return StrategyType <p>Policy type.</p><p>Enumeration values:</p><ul><li>TimeSpotCheck: Time-based spot check policy.</li></ul>
                      * 
                      */
                     std::string GetStrategyType() const;
 
                     /**
-                     * 设置
-                     * @param _strategyType 
+                     * 设置<p>Policy type.</p><p>Enumeration values:</p><ul><li>TimeSpotCheck: Time-based spot check policy.</li></ul>
+                     * @param _strategyType <p>Policy type.</p><p>Enumeration values:</p><ul><li>TimeSpotCheck: Time-based spot check policy.</li></ul>
                      * 
                      */
                     void SetStrategyType(const std::string& _strategyType);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool StrategyTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return TimeSpotCheck 
+                     * 获取<p>Spot check policy parameter based on time. Valid when StrategyType is TimeSpotCheck.</p>
+                     * @return TimeSpotCheck <p>Spot check policy parameter based on time. Valid when StrategyType is TimeSpotCheck.</p>
                      * 
                      */
                     QualityInspectTimeSpotCheck GetTimeSpotCheck() const;
 
                     /**
-                     * 设置
-                     * @param _timeSpotCheck 
+                     * 设置<p>Spot check policy parameter based on time. Valid when StrategyType is TimeSpotCheck.</p>
+                     * @param _timeSpotCheck <p>Spot check policy parameter based on time. Valid when StrategyType is TimeSpotCheck.</p>
                      * 
                      */
                     void SetTimeSpotCheck(const QualityInspectTimeSpotCheck& _timeSpotCheck);
@@ -92,13 +92,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p>Policy type.</p><p>Enumeration values:</p><ul><li>TimeSpotCheck: Time-based spot check policy.</li></ul>
                      */
                     std::string m_strategyType;
                     bool m_strategyTypeHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Spot check policy parameter based on time. Valid when StrategyType is TimeSpotCheck.</p>
                      */
                     QualityInspectTimeSpotCheck m_timeSpotCheck;
                     bool m_timeSpotCheckHasBeenSet;

@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Input of an AIGC image generation task.
                 */
                 class AigcImageTaskInput : public AbstractModel
                 {
@@ -49,15 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return ModelName 
+                     * 获取<p>Model name.</p>
+                     * @return ModelName <p>Model name.</p>
                      * 
                      */
                     std::string GetModelName() const;
 
                     /**
-                     * 设置
-                     * @param _modelName 
+                     * 设置<p>Model name.</p>
+                     * @param _modelName <p>Model name.</p>
                      * 
                      */
                     void SetModelName(const std::string& _modelName);
@@ -70,15 +70,15 @@ namespace TencentCloud
                     bool ModelNameHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ModelVersion 
+                     * 获取<p>Model version.</p>
+                     * @return ModelVersion <p>Model version.</p>
                      * 
                      */
                     std::string GetModelVersion() const;
 
                     /**
-                     * 设置
-                     * @param _modelVersion 
+                     * 设置<p>Model version.</p>
+                     * @param _modelVersion <p>Model version.</p>
                      * 
                      */
                     void SetModelVersion(const std::string& _modelVersion);
@@ -91,15 +91,15 @@ namespace TencentCloud
                     bool ModelVersionHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return FileInfos 
+                     * 获取<p>AIGC image generation task input file information.</p>
+                     * @return FileInfos <p>AIGC image generation task input file information.</p>
                      * 
                      */
                     std::vector<AigcImageTaskInputFileInfo> GetFileInfos() const;
 
                     /**
-                     * 设置
-                     * @param _fileInfos 
+                     * 设置<p>AIGC image generation task input file information.</p>
+                     * @param _fileInfos <p>AIGC image generation task input file information.</p>
                      * 
                      */
                     void SetFileInfos(const std::vector<AigcImageTaskInputFileInfo>& _fileInfos);
@@ -112,15 +112,15 @@ namespace TencentCloud
                     bool FileInfosHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Prompt 
+                     * 获取<p>Prompt for image generation. This parameter is required when FileInfos is empty.</p>
+                     * @return Prompt <p>Prompt for image generation. This parameter is required when FileInfos is empty.</p>
                      * 
                      */
                     std::string GetPrompt() const;
 
                     /**
-                     * 设置
-                     * @param _prompt 
+                     * 设置<p>Prompt for image generation. This parameter is required when FileInfos is empty.</p>
+                     * @param _prompt <p>Prompt for image generation. This parameter is required when FileInfos is empty.</p>
                      * 
                      */
                     void SetPrompt(const std::string& _prompt);
@@ -133,15 +133,15 @@ namespace TencentCloud
                     bool PromptHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return NegativePrompt 
+                     * 获取<p>Prompt to prevent the model from image generation.</p>
+                     * @return NegativePrompt <p>Prompt to prevent the model from image generation.</p>
                      * 
                      */
                     std::string GetNegativePrompt() const;
 
                     /**
-                     * 设置
-                     * @param _negativePrompt 
+                     * 设置<p>Prompt to prevent the model from image generation.</p>
+                     * @param _negativePrompt <p>Prompt to prevent the model from image generation.</p>
                      * 
                      */
                     void SetNegativePrompt(const std::string& _negativePrompt);
@@ -154,15 +154,15 @@ namespace TencentCloud
                     bool NegativePromptHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return EnhancePrompt 
+                     * 获取<p>Whether to optimize Prompt content automatically. When Enabled, the passed-in Prompt will be optimized automatically to enhance generation quality. Valid values: <li>Enabled: enable;</li> <li>Disabled: disable;</li></p>
+                     * @return EnhancePrompt <p>Whether to optimize Prompt content automatically. When Enabled, the passed-in Prompt will be optimized automatically to enhance generation quality. Valid values: <li>Enabled: enable;</li> <li>Disabled: disable;</li></p>
                      * 
                      */
                     std::string GetEnhancePrompt() const;
 
                     /**
-                     * 设置
-                     * @param _enhancePrompt 
+                     * 设置<p>Whether to optimize Prompt content automatically. When Enabled, the passed-in Prompt will be optimized automatically to enhance generation quality. Valid values: <li>Enabled: enable;</li> <li>Disabled: disable;</li></p>
+                     * @param _enhancePrompt <p>Whether to optimize Prompt content automatically. When Enabled, the passed-in Prompt will be optimized automatically to enhance generation quality. Valid values: <li>Enabled: enable;</li> <li>Disabled: disable;</li></p>
                      * 
                      */
                     void SetEnhancePrompt(const std::string& _enhancePrompt);
@@ -175,15 +175,15 @@ namespace TencentCloud
                     bool EnhancePromptHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return GenerationMode 
+                     * 获取<p>Generation mode. Valid values: <li>Standard: standard mode;</li> <li>Professional: high-quality mode;</li></p>
+                     * @return GenerationMode <p>Generation mode. Valid values: <li>Standard: standard mode;</li> <li>Professional: high-quality mode;</li></p>
                      * 
                      */
                     std::string GetGenerationMode() const;
 
                     /**
-                     * 设置
-                     * @param _generationMode 
+                     * 设置<p>Generation mode. Valid values: <li>Standard: standard mode;</li> <li>Professional: high-quality mode;</li></p>
+                     * @param _generationMode <p>Generation mode. Valid values: <li>Standard: standard mode;</li> <li>Professional: high-quality mode;</li></p>
                      * 
                      */
                     void SetGenerationMode(const std::string& _generationMode);
@@ -196,15 +196,15 @@ namespace TencentCloud
                     bool GenerationModeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return OutputConfig 
+                     * 获取<p>AIGC image generation output result file output.</p>
+                     * @return OutputConfig <p>AIGC image generation output result file output.</p>
                      * 
                      */
                     AigcImageOutputConfig GetOutputConfig() const;
 
                     /**
-                     * 设置
-                     * @param _outputConfig 
+                     * 设置<p>AIGC image generation output result file output.</p>
+                     * @param _outputConfig <p>AIGC image generation output result file output.</p>
                      * 
                      */
                     void SetOutputConfig(const AigcImageOutputConfig& _outputConfig);
@@ -217,15 +217,15 @@ namespace TencentCloud
                     bool OutputConfigHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Seed 
+                     * 获取<p>Random seed of the model.</p>
+                     * @return Seed <p>Random seed of the model.</p>
                      * 
                      */
                     int64_t GetSeed() const;
 
                     /**
-                     * 设置
-                     * @param _seed 
+                     * 设置<p>Random seed of the model.</p>
+                     * @param _seed <p>Random seed of the model.</p>
                      * 
                      */
                     void SetSeed(const int64_t& _seed);
@@ -238,15 +238,15 @@ namespace TencentCloud
                     bool SeedHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SceneType 
+                     * 获取<p>Scenario type. Values are as follows: <li>When ModelName is Hunyuan: 3d_panorama means panoramic view;</li><li>Other ModelName values are not currently supported.</li></p>
+                     * @return SceneType <p>Scenario type. Values are as follows: <li>When ModelName is Hunyuan: 3d_panorama means panoramic view;</li><li>Other ModelName values are not currently supported.</li></p>
                      * 
                      */
                     std::string GetSceneType() const;
 
                     /**
-                     * 设置
-                     * @param _sceneType 
+                     * 设置<p>Scenario type. Values are as follows: <li>When ModelName is Hunyuan: 3d_panorama means panoramic view;</li><li>Other ModelName values are not currently supported.</li></p>
+                     * @param _sceneType <p>Scenario type. Values are as follows: <li>When ModelName is Hunyuan: 3d_panorama means panoramic view;</li><li>Other ModelName values are not currently supported.</li></p>
                      * 
                      */
                     void SetSceneType(const std::string& _sceneType);
@@ -259,15 +259,15 @@ namespace TencentCloud
                     bool SceneTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ExtInfo 
+                     * 获取<p>Pass-through parameter.</p>
+                     * @return ExtInfo <p>Pass-through parameter.</p>
                      * 
                      */
                     std::string GetExtInfo() const;
 
                     /**
-                     * 设置
-                     * @param _extInfo 
+                     * 设置<p>Pass-through parameter.</p>
+                     * @param _extInfo <p>Pass-through parameter.</p>
                      * 
                      */
                     void SetExtInfo(const std::string& _extInfo);
@@ -282,67 +282,67 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p>Model name.</p>
                      */
                     std::string m_modelName;
                     bool m_modelNameHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Model version.</p>
                      */
                     std::string m_modelVersion;
                     bool m_modelVersionHasBeenSet;
 
                     /**
-                     * 
+                     * <p>AIGC image generation task input file information.</p>
                      */
                     std::vector<AigcImageTaskInputFileInfo> m_fileInfos;
                     bool m_fileInfosHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Prompt for image generation. This parameter is required when FileInfos is empty.</p>
                      */
                     std::string m_prompt;
                     bool m_promptHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Prompt to prevent the model from image generation.</p>
                      */
                     std::string m_negativePrompt;
                     bool m_negativePromptHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Whether to optimize Prompt content automatically. When Enabled, the passed-in Prompt will be optimized automatically to enhance generation quality. Valid values: <li>Enabled: enable;</li> <li>Disabled: disable;</li></p>
                      */
                     std::string m_enhancePrompt;
                     bool m_enhancePromptHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Generation mode. Valid values: <li>Standard: standard mode;</li> <li>Professional: high-quality mode;</li></p>
                      */
                     std::string m_generationMode;
                     bool m_generationModeHasBeenSet;
 
                     /**
-                     * 
+                     * <p>AIGC image generation output result file output.</p>
                      */
                     AigcImageOutputConfig m_outputConfig;
                     bool m_outputConfigHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Random seed of the model.</p>
                      */
                     int64_t m_seed;
                     bool m_seedHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Scenario type. Values are as follows: <li>When ModelName is Hunyuan: 3d_panorama means panoramic view;</li><li>Other ModelName values are not currently supported.</li></p>
                      */
                     std::string m_sceneType;
                     bool m_sceneTypeHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Pass-through parameter.</p>
                      */
                     std::string m_extInfo;
                     bool m_extInfoHasBeenSet;

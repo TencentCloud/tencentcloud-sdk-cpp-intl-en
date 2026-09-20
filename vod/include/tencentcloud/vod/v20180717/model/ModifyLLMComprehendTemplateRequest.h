@@ -46,15 +46,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Definition 
+                     * 获取<p>Unique identifier of the Large Model Understanding template.</p>
+                     * @return Definition <p>Unique identifier of the Large Model Understanding template.</p>
                      * 
                      */
                     int64_t GetDefinition() const;
 
                     /**
-                     * 设置
-                     * @param _definition 
+                     * 设置<p>Unique identifier of the Large Model Understanding template.</p>
+                     * @param _definition <p>Unique identifier of the Large Model Understanding template.</p>
                      * 
                      */
                     void SetDefinition(const int64_t& _definition);
@@ -67,15 +67,15 @@ namespace TencentCloud
                     bool DefinitionHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SubAppId 
+                     * 获取<p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b></p>
+                     * @return SubAppId <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b></p>
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置
-                     * @param _subAppId 
+                     * 设置<p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b></p>
+                     * @param _subAppId <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b></p>
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -88,15 +88,15 @@ namespace TencentCloud
                     bool SubAppIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Name 
+                     * 获取<p>Large model parsing template name. Length limit: 64 characters.</p>
+                     * @return Name <p>Large model parsing template name. Length limit: 64 characters.</p>
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置
-                     * @param _name 
+                     * 设置<p>Large model parsing template name. Length limit: 64 characters.</p>
+                     * @param _name <p>Large model parsing template name. Length limit: 64 characters.</p>
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -109,15 +109,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Comment 
+                     * 获取<p>Large model parsing template description. Length limit: 256 characters.</p>
+                     * @return Comment <p>Large model parsing template description. Length limit: 256 characters.</p>
                      * 
                      */
                     std::string GetComment() const;
 
                     /**
-                     * 设置
-                     * @param _comment 
+                     * 设置<p>Large model parsing template description. Length limit: 256 characters.</p>
+                     * @param _comment <p>Large model parsing template description. Length limit: 256 characters.</p>
                      * 
                      */
                     void SetComment(const std::string& _comment);
@@ -130,15 +130,15 @@ namespace TencentCloud
                     bool CommentHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Model 
+                     * 获取<p>Parsing model. Available values are:</p><ul><li>Basic: Base Model</li><li>Pro: Optimization Model</li></ul>
+                     * @return Model <p>Parsing model. Available values are:</p><ul><li>Basic: Base Model</li><li>Pro: Optimization Model</li></ul>
                      * 
                      */
                     std::string GetModel() const;
 
                     /**
-                     * 设置
-                     * @param _model 
+                     * 设置<p>Parsing model. Available values are:</p><ul><li>Basic: Base Model</li><li>Pro: Optimization Model</li></ul>
+                     * @param _model <p>Parsing model. Available values are:</p><ul><li>Basic: Base Model</li><li>Pro: Optimization Model</li></ul>
                      * 
                      */
                     void SetModel(const std::string& _model);
@@ -151,15 +151,15 @@ namespace TencentCloud
                     bool ModelHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Summary 
+                     * 获取<p>Segment summary parsing configuration</p>
+                     * @return Summary <p>Segment summary parsing configuration</p>
                      * 
                      */
                     LLMComprehendSummaryForUpdate GetSummary() const;
 
                     /**
-                     * 设置
-                     * @param _summary 
+                     * 设置<p>Segment summary parsing configuration</p>
+                     * @param _summary <p>Segment summary parsing configuration</p>
                      * 
                      */
                     void SetSummary(const LLMComprehendSummaryForUpdate& _summary);
@@ -172,15 +172,15 @@ namespace TencentCloud
                     bool SummaryHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Asr 
+                     * 获取<p>Text transcription parsing configuration</p>
+                     * @return Asr <p>Text transcription parsing configuration</p>
                      * 
                      */
                     LLMComprehendAsrForUpdate GetAsr() const;
 
                     /**
-                     * 设置
-                     * @param _asr 
+                     * 设置<p>Text transcription parsing configuration</p>
+                     * @param _asr <p>Text transcription parsing configuration</p>
                      * 
                      */
                     void SetAsr(const LLMComprehendAsrForUpdate& _asr);
@@ -193,15 +193,15 @@ namespace TencentCloud
                     bool AsrHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return FaceRecognition 
+                     * 获取<p>Facial recognition configuration</p>
+                     * @return FaceRecognition <p>Facial recognition configuration</p>
                      * 
                      */
                     LLMComprehendFaceRecognitionForUpdate GetFaceRecognition() const;
 
                     /**
-                     * 设置
-                     * @param _faceRecognition 
+                     * 设置<p>Facial recognition configuration</p>
+                     * @param _faceRecognition <p>Facial recognition configuration</p>
                      * 
                      */
                     void SetFaceRecognition(const LLMComprehendFaceRecognitionForUpdate& _faceRecognition);
@@ -216,49 +216,49 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p>Unique identifier of the Large Model Understanding template.</p>
                      */
                     int64_t m_definition;
                     bool m_definitionHasBeenSet;
 
                     /**
-                     * 
+                     * <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</b></p>
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Large model parsing template name. Length limit: 64 characters.</p>
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Large model parsing template description. Length limit: 256 characters.</p>
                      */
                     std::string m_comment;
                     bool m_commentHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Parsing model. Available values are:</p><ul><li>Basic: Base Model</li><li>Pro: Optimization Model</li></ul>
                      */
                     std::string m_model;
                     bool m_modelHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Segment summary parsing configuration</p>
                      */
                     LLMComprehendSummaryForUpdate m_summary;
                     bool m_summaryHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Text transcription parsing configuration</p>
                      */
                     LLMComprehendAsrForUpdate m_asr;
                     bool m_asrHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Facial recognition configuration</p>
                      */
                     LLMComprehendFaceRecognitionForUpdate m_faceRecognition;
                     bool m_faceRecognitionHasBeenSet;

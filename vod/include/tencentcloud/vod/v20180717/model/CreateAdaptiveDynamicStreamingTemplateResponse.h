@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Definition 
+                     * 获取<p>Adaptive Transcoding Template Unique Identifier.</p>
+                     * @return Definition <p>Adaptive Transcoding Template Unique Identifier.</p>
                      * 
                      */
                     uint64_t GetDefinition() const;
@@ -60,7 +60,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p>Adaptive Transcoding Template Unique Identifier.</p>
                      */
                     uint64_t m_definition;
                     bool m_definitionHasBeenSet;

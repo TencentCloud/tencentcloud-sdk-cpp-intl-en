@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Input file information for an AIGC video conversion task.
                 */
                 class AigcVideoRedrawTaskInputFileInfo : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Type 
+                     * 获取<p>Input video file type. Valid values: <li>File: on-demand media file;</li> <li>Url: accessible URL;</li></p>
+                     * @return Type <p>Input video file type. Valid values: <li>File: on-demand media file;</li> <li>Url: accessible URL;</li></p>
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置
-                     * @param _type 
+                     * 设置<p>Input video file type. Valid values: <li>File: on-demand media file;</li> <li>Url: accessible URL;</li></p>
+                     * @param _type <p>Input video file type. Valid values: <li>File: on-demand media file;</li> <li>Url: accessible URL;</li></p>
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return FileId 
+                     * 获取<p>Media file ID, the globally unique identifier of the file on VOD, assigned by the VOD backend after successful upload. This field can be obtained from <a href="/document/product/266/7830">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when Type is File. Notes: 1. Images less than 10M are recommended; 2. Image format values: jpeg, jpg, png.</p>
+                     * @return FileId <p>Media file ID, the globally unique identifier of the file on VOD, assigned by the VOD backend after successful upload. This field can be obtained from <a href="/document/product/266/7830">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when Type is File. Notes: 1. Images less than 10M are recommended; 2. Image format values: jpeg, jpg, png.</p>
                      * 
                      */
                     std::string GetFileId() const;
 
                     /**
-                     * 设置
-                     * @param _fileId 
+                     * 设置<p>Media file ID, the globally unique identifier of the file on VOD, assigned by the VOD backend after successful upload. This field can be obtained from <a href="/document/product/266/7830">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when Type is File. Notes: 1. Images less than 10M are recommended; 2. Image format values: jpeg, jpg, png.</p>
+                     * @param _fileId <p>Media file ID, the globally unique identifier of the file on VOD, assigned by the VOD backend after successful upload. This field can be obtained from <a href="/document/product/266/7830">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when Type is File. Notes: 1. Images less than 10M are recommended; 2. Image format values: jpeg, jpg, png.</p>
                      * 
                      */
                     void SetFileId(const std::string& _fileId);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool FileIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Url 
+                     * 获取<p>Accessible file URL. This parameter is valid when Type is Url. Note: 1. Images less than 10M are recommended; 2. Supported image formats: jpeg, jpg, png.</p>
+                     * @return Url <p>Accessible file URL. This parameter is valid when Type is Url. Note: 1. Images less than 10M are recommended; 2. Supported image formats: jpeg, jpg, png.</p>
                      * 
                      */
                     std::string GetUrl() const;
 
                     /**
-                     * 设置
-                     * @param _url 
+                     * 设置<p>Accessible file URL. This parameter is valid when Type is Url. Note: 1. Images less than 10M are recommended; 2. Supported image formats: jpeg, jpg, png.</p>
+                     * @param _url <p>Accessible file URL. This parameter is valid when Type is Url. Note: 1. Images less than 10M are recommended; 2. Supported image formats: jpeg, jpg, png.</p>
                      * 
                      */
                     void SetUrl(const std::string& _url);
@@ -112,19 +112,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p>Input video file type. Valid values: <li>File: on-demand media file;</li> <li>Url: accessible URL;</li></p>
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Media file ID, the globally unique identifier of the file on VOD, assigned by the VOD backend after successful upload. This field can be obtained from <a href="/document/product/266/7830">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>. This parameter is valid when Type is File. Notes: 1. Images less than 10M are recommended; 2. Image format values: jpeg, jpg, png.</p>
                      */
                     std::string m_fileId;
                     bool m_fileIdHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Accessible file URL. This parameter is valid when Type is Url. Note: 1. Images less than 10M are recommended; 2. Supported image formats: jpeg, jpg, png.</p>
                      */
                     std::string m_url;
                     bool m_urlHasBeenSet;

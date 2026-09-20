@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Input for full speech recognition.
                 */
                 class AiRecognitionTaskAsrFullTextResultInput : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Definition 
+                     * 获取Template ID for full text speech recognition.
+                     * @return Definition Template ID for full text speech recognition.
                      * 
                      */
                     int64_t GetDefinition() const;
 
                     /**
-                     * 设置
-                     * @param _definition 
+                     * 设置Template ID for full text speech recognition.
+                     * @param _definition Template ID for full text speech recognition.
                      * 
                      */
                     void SetDefinition(const int64_t& _definition);
@@ -70,7 +70,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Template ID for full text speech recognition.
                      */
                     int64_t m_definition;
                     bool m_definitionHasBeenSet;

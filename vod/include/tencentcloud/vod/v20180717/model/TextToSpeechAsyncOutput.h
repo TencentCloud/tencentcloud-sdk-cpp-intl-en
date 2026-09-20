@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Speech synthesis task output.
                 */
                 class TextToSpeechAsyncOutput : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return AudioUrl 
+                     * 获取<p>URL of the synthetic audio result</p>
+                     * @return AudioUrl <p>URL of the synthetic audio result</p>
                      * 
                      */
                     std::string GetAudioUrl() const;
 
                     /**
-                     * 设置
-                     * @param _audioUrl 
+                     * 设置<p>URL of the synthetic audio result</p>
+                     * @param _audioUrl <p>URL of the synthetic audio result</p>
                      * 
                      */
                     void SetAudioUrl(const std::string& _audioUrl);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool AudioUrlHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return VoiceId 
+                     * 获取<p>Used voice ID.</p>
+                     * @return VoiceId <p>Used voice ID.</p>
                      * 
                      */
                     std::string GetVoiceId() const;
 
                     /**
-                     * 设置
-                     * @param _voiceId 
+                     * 设置<p>Used voice ID.</p>
+                     * @param _voiceId <p>Used voice ID.</p>
                      * 
                      */
                     void SetVoiceId(const std::string& _voiceId);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool VoiceIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ExtInfo 
+                     * 获取<p>Extended information.</p>
+                     * @return ExtInfo <p>Extended information.</p>
                      * 
                      */
                     std::string GetExtInfo() const;
 
                     /**
-                     * 设置
-                     * @param _extInfo 
+                     * 设置<p>Extended information.</p>
+                     * @param _extInfo <p>Extended information.</p>
                      * 
                      */
                     void SetExtInfo(const std::string& _extInfo);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool ExtInfoHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return FileId 
+                     * 获取<p>FileId of the synthetic audio result</p>
+                     * @return FileId <p>FileId of the synthetic audio result</p>
                      * 
                      */
                     std::string GetFileId() const;
 
                     /**
-                     * 设置
-                     * @param _fileId 
+                     * 设置<p>FileId of the synthetic audio result</p>
+                     * @param _fileId <p>FileId of the synthetic audio result</p>
                      * 
                      */
                     void SetFileId(const std::string& _fileId);
@@ -133,25 +133,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p>URL of the synthetic audio result</p>
                      */
                     std::string m_audioUrl;
                     bool m_audioUrlHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Used voice ID.</p>
                      */
                     std::string m_voiceId;
                     bool m_voiceIdHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Extended information.</p>
                      */
                     std::string m_extInfo;
                     bool m_extInfoHasBeenSet;
 
                     /**
-                     * 
+                     * <p>FileId of the synthetic audio result</p>
                      */
                     std::string m_fileId;
                     bool m_fileIdHasBeenSet;

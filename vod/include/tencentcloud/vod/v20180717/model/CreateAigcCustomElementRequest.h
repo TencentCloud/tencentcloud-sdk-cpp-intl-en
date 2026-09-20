@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return ElementName 
+                     * 获取Subject name. It cannot exceed 20 characters.
+                     * @return ElementName Subject name. It cannot exceed 20 characters.
                      * 
                      */
                     std::string GetElementName() const;
 
                     /**
-                     * 设置
-                     * @param _elementName 
+                     * 设置Subject name. It cannot exceed 20 characters.
+                     * @param _elementName Subject name. It cannot exceed 20 characters.
                      * 
                      */
                     void SetElementName(const std::string& _elementName);
@@ -65,15 +65,23 @@ namespace TencentCloud
                     bool ElementNameHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ElementDescription 
+                     * 获取Subject description.
+
+Up to 100 characters.
+                     * @return ElementDescription Subject description.
+
+Up to 100 characters.
                      * 
                      */
                     std::string GetElementDescription() const;
 
                     /**
-                     * 设置
-                     * @param _elementDescription 
+                     * 设置Subject description.
+
+Up to 100 characters.
+                     * @param _elementDescription Subject description.
+
+Up to 100 characters.
                      * 
                      */
                     void SetElementDescription(const std::string& _elementDescription);
@@ -86,15 +94,27 @@ namespace TencentCloud
                     bool ElementDescriptionHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ElementFrontalImage 
+                     * 获取Front reference image of the subject.
+Supports passing an image URL (ensure it is accessible).
+Image format: .jpg, .jpeg, and .png are supported.
+The image file size must not exceed 10 MB. The image width and height must not be less than 300 px. The image aspect ratio must be between 1:2.5 and 2.5:1.
+                     * @return ElementFrontalImage Front reference image of the subject.
+Supports passing an image URL (ensure it is accessible).
+Image format: .jpg, .jpeg, and .png are supported.
+The image file size must not exceed 10 MB. The image width and height must not be less than 300 px. The image aspect ratio must be between 1:2.5 and 2.5:1.
                      * 
                      */
                     std::string GetElementFrontalImage() const;
 
                     /**
-                     * 设置
-                     * @param _elementFrontalImage 
+                     * 设置Front reference image of the subject.
+Supports passing an image URL (ensure it is accessible).
+Image format: .jpg, .jpeg, and .png are supported.
+The image file size must not exceed 10 MB. The image width and height must not be less than 300 px. The image aspect ratio must be between 1:2.5 and 2.5:1.
+                     * @param _elementFrontalImage Front reference image of the subject.
+Supports passing an image URL (ensure it is accessible).
+Image format: .jpg, .jpeg, and .png are supported.
+The image file size must not exceed 10 MB. The image width and height must not be less than 300 px. The image aspect ratio must be between 1:2.5 and 2.5:1.
                      * 
                      */
                     void SetElementFrontalImage(const std::string& _elementFrontalImage);
@@ -107,15 +127,15 @@ namespace TencentCloud
                     bool ElementFrontalImageHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ElementReferList 
+                     * 获取Other reference lists of the subject. You can upload multiple reference images of the subject from different angles to define its appearance. Upload at least 1 reference image and up to 3 reference images.
+                     * @return ElementReferList Other reference lists of the subject. You can upload multiple reference images of the subject from different angles to define its appearance. Upload at least 1 reference image and up to 3 reference images.
                      * 
                      */
                     std::vector<ElementReferInfo> GetElementReferList() const;
 
                     /**
-                     * 设置
-                     * @param _elementReferList 
+                     * 设置Other reference lists of the subject. You can upload multiple reference images of the subject from different angles to define its appearance. Upload at least 1 reference image and up to 3 reference images.
+                     * @param _elementReferList Other reference lists of the subject. You can upload multiple reference images of the subject from different angles to define its appearance. Upload at least 1 reference image and up to 3 reference images.
                      * 
                      */
                     void SetElementReferList(const std::vector<ElementReferInfo>& _elementReferList);
@@ -130,25 +150,30 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Subject name. It cannot exceed 20 characters.
                      */
                     std::string m_elementName;
                     bool m_elementNameHasBeenSet;
 
                     /**
-                     * 
+                     * Subject description.
+
+Up to 100 characters.
                      */
                     std::string m_elementDescription;
                     bool m_elementDescriptionHasBeenSet;
 
                     /**
-                     * 
+                     * Front reference image of the subject.
+Supports passing an image URL (ensure it is accessible).
+Image format: .jpg, .jpeg, and .png are supported.
+The image file size must not exceed 10 MB. The image width and height must not be less than 300 px. The image aspect ratio must be between 1:2.5 and 2.5:1.
                      */
                     std::string m_elementFrontalImage;
                     bool m_elementFrontalImageHasBeenSet;
 
                     /**
-                     * 
+                     * Other reference lists of the subject. You can upload multiple reference images of the subject from different angles to define its appearance. Upload at least 1 reference image and up to 3 reference images.
                      */
                     std::vector<ElementReferInfo> m_elementReferList;
                     bool m_elementReferListHasBeenSet;

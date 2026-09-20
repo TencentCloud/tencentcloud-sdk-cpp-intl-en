@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Voice keyword recognition control parameters.
                 */
                 class AsrWordsConfigureInfo : public AbstractModel
                 {
@@ -47,15 +47,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Switch 
+                     * 获取Speech keyword recognition task switch. Available values:
+<li>ON: enable the speech keyword recognition task;</li>
+<li>OFF: disables the speech keyword recognition task.</li>
+                     * @return Switch Speech keyword recognition task switch. Available values:
+<li>ON: enable the speech keyword recognition task;</li>
+<li>OFF: disables the speech keyword recognition task.</li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置
-                     * @param _switch 
+                     * 设置Speech keyword recognition task switch. Available values:
+<li>ON: enable the speech keyword recognition task;</li>
+<li>OFF: disables the speech keyword recognition task.</li>
+                     * @param _switch Speech keyword recognition task switch. Available values:
+<li>ON: enable the speech keyword recognition task;</li>
+<li>OFF: disables the speech keyword recognition task.</li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -68,15 +76,19 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return LabelSet 
+                     * 获取Keyword filtering tag. Specify the tag of keywords to return. If this parameter is not specified or is empty, all results are returned.
+The number of tags can be up to 10, and each tag can contain up to 16 characters.
+                     * @return LabelSet Keyword filtering tag. Specify the tag of keywords to return. If this parameter is not specified or is empty, all results are returned.
+The number of tags can be up to 10, and each tag can contain up to 16 characters.
                      * 
                      */
                     std::vector<std::string> GetLabelSet() const;
 
                     /**
-                     * 设置
-                     * @param _labelSet 
+                     * 设置Keyword filtering tag. Specify the tag of keywords to return. If this parameter is not specified or is empty, all results are returned.
+The number of tags can be up to 10, and each tag can contain up to 16 characters.
+                     * @param _labelSet Keyword filtering tag. Specify the tag of keywords to return. If this parameter is not specified or is empty, all results are returned.
+The number of tags can be up to 10, and each tag can contain up to 16 characters.
                      * 
                      */
                     void SetLabelSet(const std::vector<std::string>& _labelSet);
@@ -91,13 +103,16 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Speech keyword recognition task switch. Available values:
+<li>ON: enable the speech keyword recognition task;</li>
+<li>OFF: disables the speech keyword recognition task.</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * 
+                     * Keyword filtering tag. Specify the tag of keywords to return. If this parameter is not specified or is empty, all results are returned.
+The number of tags can be up to 10, and each tag can contain up to 16 characters.
                      */
                     std::vector<std::string> m_labelSet;
                     bool m_labelSetHasBeenSet;

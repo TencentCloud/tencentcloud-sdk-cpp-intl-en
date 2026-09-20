@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return TotalCount 
+                     * 获取Total number of log topics.
+                     * @return TotalCount Total number of log topics.
                      * 
                      */
                     int64_t GetTotalCount() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Topics 
+                     * 获取Log topic list.
+                     * @return Topics Log topic list.
                      * 
                      */
                     std::vector<CLSTopicInfo> GetTopics() const;
@@ -75,13 +75,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Total number of log topics.
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * 
+                     * Log topic list.
                      */
                     std::vector<CLSTopicInfo> m_topics;
                     bool m_topicsHasBeenSet;

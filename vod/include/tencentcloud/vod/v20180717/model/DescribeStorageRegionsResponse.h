@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return StorageRegionInfos 
+                     * 获取Storage region information list.
+                     * @return StorageRegionInfos Storage region information list.
                      * 
                      */
                     std::vector<StorageRegionInfo> GetStorageRegionInfos() const;
@@ -61,7 +61,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Storage region information list.
                      */
                     std::vector<StorageRegionInfo> m_storageRegionInfos;
                     bool m_storageRegionInfosHasBeenSet;

@@ -38,7 +38,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Input for MPS intelligent erasure template
                 */
                 class MPSSmartEraseTemplateForUpdate : public AbstractModel
                 {
@@ -50,15 +50,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Definition 
+                     * 获取<p>Unique identifier of the intelligent erasure template</p>
+                     * @return Definition <p>Unique identifier of the intelligent erasure template</p>
                      * 
                      */
                     int64_t GetDefinition() const;
 
                     /**
-                     * 设置
-                     * @param _definition 
+                     * 设置<p>Unique identifier of the intelligent erasure template</p>
+                     * @param _definition <p>Unique identifier of the intelligent erasure template</p>
                      * 
                      */
                     void SetDefinition(const int64_t& _definition);
@@ -71,15 +71,15 @@ namespace TencentCloud
                     bool DefinitionHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Name 
+                     * 获取<p>Length limit for the smart erasing template name: 64 characters.</p>
+                     * @return Name <p>Length limit for the smart erasing template name: 64 characters.</p>
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置
-                     * @param _name 
+                     * 设置<p>Length limit for the smart erasing template name: 64 characters.</p>
+                     * @param _name <p>Length limit for the smart erasing template name: 64 characters.</p>
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -92,15 +92,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return EraseType 
+                     * 获取<p>Removal Type</p><ul><li>subtitle removal</li><li>watermark removal</li><li>privacy protection</li></ul>
+                     * @return EraseType <p>Removal Type</p><ul><li>subtitle removal</li><li>watermark removal</li><li>privacy protection</li></ul>
                      * 
                      */
                     std::string GetEraseType() const;
 
                     /**
-                     * 设置
-                     * @param _eraseType 
+                     * 设置<p>Removal Type</p><ul><li>subtitle removal</li><li>watermark removal</li><li>privacy protection</li></ul>
+                     * @param _eraseType <p>Removal Type</p><ul><li>subtitle removal</li><li>watermark removal</li><li>privacy protection</li></ul>
                      * 
                      */
                     void SetEraseType(const std::string& _eraseType);
@@ -113,15 +113,15 @@ namespace TencentCloud
                     bool EraseTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Comment 
+                     * 获取<p>Length limit for the description information of the smart erasing template: 256 characters.</p>
+                     * @return Comment <p>Length limit for the description information of the smart erasing template: 256 characters.</p>
                      * 
                      */
                     std::string GetComment() const;
 
                     /**
-                     * 设置
-                     * @param _comment 
+                     * 设置<p>Length limit for the description information of the smart erasing template: 256 characters.</p>
+                     * @param _comment <p>Length limit for the description information of the smart erasing template: 256 characters.</p>
                      * 
                      */
                     void SetComment(const std::string& _comment);
@@ -134,15 +134,15 @@ namespace TencentCloud
                     bool CommentHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return EraseSubtitleConfig 
+                     * 获取<p>Subtitle erasing configuration. It takes effect when the value of EraseType is set to subtitle, or when the value of EraseType is left unspecified but the original EraseType value of the modified template is subtitle.</p>
+                     * @return EraseSubtitleConfig <p>Subtitle erasing configuration. It takes effect when the value of EraseType is set to subtitle, or when the value of EraseType is left unspecified but the original EraseType value of the modified template is subtitle.</p>
                      * 
                      */
                     MPSSmartEraseSubtitleConfig GetEraseSubtitleConfig() const;
 
                     /**
-                     * 设置
-                     * @param _eraseSubtitleConfig 
+                     * 设置<p>Subtitle erasing configuration. It takes effect when the value of EraseType is set to subtitle, or when the value of EraseType is left unspecified but the original EraseType value of the modified template is subtitle.</p>
+                     * @param _eraseSubtitleConfig <p>Subtitle erasing configuration. It takes effect when the value of EraseType is set to subtitle, or when the value of EraseType is left unspecified but the original EraseType value of the modified template is subtitle.</p>
                      * 
                      */
                     void SetEraseSubtitleConfig(const MPSSmartEraseSubtitleConfig& _eraseSubtitleConfig);
@@ -155,15 +155,15 @@ namespace TencentCloud
                     bool EraseSubtitleConfigHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return EraseWatermarkConfig 
+                     * 获取<p>Watermark erasing configuration. The value of EraseType can be set to watermark or left unspecified. This parameter is valid only when the value of EraseType of the corresponding template is set to watermark.</p>
+                     * @return EraseWatermarkConfig <p>Watermark erasing configuration. The value of EraseType can be set to watermark or left unspecified. This parameter is valid only when the value of EraseType of the corresponding template is set to watermark.</p>
                      * 
                      */
                     MPSSmartEraseWatermarkConfig GetEraseWatermarkConfig() const;
 
                     /**
-                     * 设置
-                     * @param _eraseWatermarkConfig 
+                     * 设置<p>Watermark erasing configuration. The value of EraseType can be set to watermark or left unspecified. This parameter is valid only when the value of EraseType of the corresponding template is set to watermark.</p>
+                     * @param _eraseWatermarkConfig <p>Watermark erasing configuration. The value of EraseType can be set to watermark or left unspecified. This parameter is valid only when the value of EraseType of the corresponding template is set to watermark.</p>
                      * 
                      */
                     void SetEraseWatermarkConfig(const MPSSmartEraseWatermarkConfig& _eraseWatermarkConfig);
@@ -176,15 +176,15 @@ namespace TencentCloud
                     bool EraseWatermarkConfigHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ErasePrivacyConfig 
+                     * 获取<p>Privacy protection configuration. The value of EraseType can be set to privacy or left unspecified. This parameter is valid only when the value of EraseType of the corresponding template is set to privacy.</p>
+                     * @return ErasePrivacyConfig <p>Privacy protection configuration. The value of EraseType can be set to privacy or left unspecified. This parameter is valid only when the value of EraseType of the corresponding template is set to privacy.</p>
                      * 
                      */
                     MPSSmartErasePrivacyConfig GetErasePrivacyConfig() const;
 
                     /**
-                     * 设置
-                     * @param _erasePrivacyConfig 
+                     * 设置<p>Privacy protection configuration. The value of EraseType can be set to privacy or left unspecified. This parameter is valid only when the value of EraseType of the corresponding template is set to privacy.</p>
+                     * @param _erasePrivacyConfig <p>Privacy protection configuration. The value of EraseType can be set to privacy or left unspecified. This parameter is valid only when the value of EraseType of the corresponding template is set to privacy.</p>
                      * 
                      */
                     void SetErasePrivacyConfig(const MPSSmartErasePrivacyConfig& _erasePrivacyConfig);
@@ -197,15 +197,15 @@ namespace TencentCloud
                     bool ErasePrivacyConfigHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SampleWidth 
+                     * 获取<p>Width of the sample video or image, in pixels.</p>
+                     * @return SampleWidth <p>Width of the sample video or image, in pixels.</p>
                      * 
                      */
                     uint64_t GetSampleWidth() const;
 
                     /**
-                     * 设置
-                     * @param _sampleWidth 
+                     * 设置<p>Width of the sample video or image, in pixels.</p>
+                     * @param _sampleWidth <p>Width of the sample video or image, in pixels.</p>
                      * 
                      */
                     void SetSampleWidth(const uint64_t& _sampleWidth);
@@ -218,15 +218,15 @@ namespace TencentCloud
                     bool SampleWidthHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SampleHeight 
+                     * 获取<p>Height of the sample video or image, in pixels.</p>
+                     * @return SampleHeight <p>Height of the sample video or image, in pixels.</p>
                      * 
                      */
                     uint64_t GetSampleHeight() const;
 
                     /**
-                     * 设置
-                     * @param _sampleHeight 
+                     * 设置<p>Height of the sample video or image, in pixels.</p>
+                     * @param _sampleHeight <p>Height of the sample video or image, in pixels.</p>
                      * 
                      */
                     void SetSampleHeight(const uint64_t& _sampleHeight);
@@ -241,55 +241,55 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p>Unique identifier of the intelligent erasure template</p>
                      */
                     int64_t m_definition;
                     bool m_definitionHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Length limit for the smart erasing template name: 64 characters.</p>
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Removal Type</p><ul><li>subtitle removal</li><li>watermark removal</li><li>privacy protection</li></ul>
                      */
                     std::string m_eraseType;
                     bool m_eraseTypeHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Length limit for the description information of the smart erasing template: 256 characters.</p>
                      */
                     std::string m_comment;
                     bool m_commentHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Subtitle erasing configuration. It takes effect when the value of EraseType is set to subtitle, or when the value of EraseType is left unspecified but the original EraseType value of the modified template is subtitle.</p>
                      */
                     MPSSmartEraseSubtitleConfig m_eraseSubtitleConfig;
                     bool m_eraseSubtitleConfigHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Watermark erasing configuration. The value of EraseType can be set to watermark or left unspecified. This parameter is valid only when the value of EraseType of the corresponding template is set to watermark.</p>
                      */
                     MPSSmartEraseWatermarkConfig m_eraseWatermarkConfig;
                     bool m_eraseWatermarkConfigHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Privacy protection configuration. The value of EraseType can be set to privacy or left unspecified. This parameter is valid only when the value of EraseType of the corresponding template is set to privacy.</p>
                      */
                     MPSSmartErasePrivacyConfig m_erasePrivacyConfig;
                     bool m_erasePrivacyConfigHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Width of the sample video or image, in pixels.</p>
                      */
                     uint64_t m_sampleWidth;
                     bool m_sampleWidthHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Height of the sample video or image, in pixels.</p>
                      */
                     uint64_t m_sampleHeight;
                     bool m_sampleHeightHasBeenSet;

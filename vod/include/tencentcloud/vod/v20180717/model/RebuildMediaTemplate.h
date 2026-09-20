@@ -39,7 +39,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Details of the Audio and Video Quality Rebirth Template.
                 */
                 class RebuildMediaTemplate : public AbstractModel
                 {
@@ -51,15 +51,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Definition 
+                     * 获取Audio and video quality rebirth template number.
+                     * @return Definition Audio and video quality rebirth template number.
                      * 
                      */
                     int64_t GetDefinition() const;
 
                     /**
-                     * 设置
-                     * @param _definition 
+                     * 设置Audio and video quality rebirth template number.
+                     * @param _definition Audio and video quality rebirth template number.
                      * 
                      */
                     void SetDefinition(const int64_t& _definition);
@@ -72,15 +72,23 @@ namespace TencentCloud
                     bool DefinitionHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Type 
+                     * 获取Template type. Available values:
+<li>Preset: system-preset template;</li>
+<li>Custom: custom template.</li>
+                     * @return Type Template type. Available values:
+<li>Preset: system-preset template;</li>
+<li>Custom: custom template.</li>
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置
-                     * @param _type 
+                     * 设置Template type. Available values:
+<li>Preset: system-preset template;</li>
+<li>Custom: custom template.</li>
+                     * @param _type Template type. Available values:
+<li>Preset: system-preset template;</li>
+<li>Custom: custom template.</li>
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -93,15 +101,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Name 
+                     * 获取Audio and video quality rebirth template name.
+                     * @return Name Audio and video quality rebirth template name.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置
-                     * @param _name 
+                     * 设置Audio and video quality rebirth template name.
+                     * @param _name Audio and video quality rebirth template name.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -114,15 +122,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Comment 
+                     * 获取Description of the Audio and Video Quality Rebirth Template.
+                     * @return Comment Description of the Audio and Video Quality Rebirth Template.
                      * 
                      */
                     std::string GetComment() const;
 
                     /**
-                     * 设置
-                     * @param _comment 
+                     * 设置Description of the Audio and Video Quality Rebirth Template.
+                     * @param _comment Description of the Audio and Video Quality Rebirth Template.
                      * 
                      */
                     void SetComment(const std::string& _comment);
@@ -135,15 +143,15 @@ namespace TencentCloud
                     bool CommentHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return RebuildVideoInfo 
+                     * 获取Audio-visual quality revival video control info.
+                     * @return RebuildVideoInfo Audio-visual quality revival video control info.
                      * 
                      */
                     RebuildVideoInfo GetRebuildVideoInfo() const;
 
                     /**
-                     * 设置
-                     * @param _rebuildVideoInfo 
+                     * 设置Audio-visual quality revival video control info.
+                     * @param _rebuildVideoInfo Audio-visual quality revival video control info.
                      * 
                      */
                     void SetRebuildVideoInfo(const RebuildVideoInfo& _rebuildVideoInfo);
@@ -156,15 +164,15 @@ namespace TencentCloud
                     bool RebuildVideoInfoHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return RebuildAudioInfo 
+                     * 获取Audio-visual quality revival audio control info.
+                     * @return RebuildAudioInfo Audio-visual quality revival audio control info.
                      * 
                      */
                     RebuildAudioInfo GetRebuildAudioInfo() const;
 
                     /**
-                     * 设置
-                     * @param _rebuildAudioInfo 
+                     * 设置Audio-visual quality revival audio control info.
+                     * @param _rebuildAudioInfo Audio-visual quality revival audio control info.
                      * 
                      */
                     void SetRebuildAudioInfo(const RebuildAudioInfo& _rebuildAudioInfo);
@@ -177,15 +185,15 @@ namespace TencentCloud
                     bool RebuildAudioInfoHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return TargetVideoInfo 
+                     * 获取Output video control information.
+                     * @return TargetVideoInfo Output video control information.
                      * 
                      */
                     RebuildMediaTargetVideoStream GetTargetVideoInfo() const;
 
                     /**
-                     * 设置
-                     * @param _targetVideoInfo 
+                     * 设置Output video control information.
+                     * @param _targetVideoInfo Output video control information.
                      * 
                      */
                     void SetTargetVideoInfo(const RebuildMediaTargetVideoStream& _targetVideoInfo);
@@ -198,15 +206,15 @@ namespace TencentCloud
                     bool TargetVideoInfoHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return TargetAudioInfo 
+                     * 获取Output audio control information.
+                     * @return TargetAudioInfo Output audio control information.
                      * 
                      */
                     RebuildMediaTargetAudioStream GetTargetAudioInfo() const;
 
                     /**
-                     * 设置
-                     * @param _targetAudioInfo 
+                     * 设置Output audio control information.
+                     * @param _targetAudioInfo Output audio control information.
                      * 
                      */
                     void SetTargetAudioInfo(const RebuildMediaTargetAudioStream& _targetAudioInfo);
@@ -219,15 +227,15 @@ namespace TencentCloud
                     bool TargetAudioInfoHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Container 
+                     * 获取Muxing format. Available values: mp4, hls. mp4 is selected by default.
+                     * @return Container Muxing format. Available values: mp4, hls. mp4 is selected by default.
                      * 
                      */
                     std::string GetContainer() const;
 
                     /**
-                     * 设置
-                     * @param _container 
+                     * 设置Muxing format. Available values: mp4, hls. mp4 is selected by default.
+                     * @param _container Muxing format. Available values: mp4, hls. mp4 is selected by default.
                      * 
                      */
                     void SetContainer(const std::string& _container);
@@ -240,15 +248,27 @@ namespace TencentCloud
                     bool ContainerHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return RemoveVideo 
+                     * 获取Indicates whether to remove video data. Available values:
+<li>`0`: reserved</li>
+<li>1: Remove</li>
+Default value: 0.
+                     * @return RemoveVideo Indicates whether to remove video data. Available values:
+<li>`0`: reserved</li>
+<li>1: Remove</li>
+Default value: 0.
                      * 
                      */
                     int64_t GetRemoveVideo() const;
 
                     /**
-                     * 设置
-                     * @param _removeVideo 
+                     * 设置Indicates whether to remove video data. Available values:
+<li>`0`: reserved</li>
+<li>1: Remove</li>
+Default value: 0.
+                     * @param _removeVideo Indicates whether to remove video data. Available values:
+<li>`0`: reserved</li>
+<li>1: Remove</li>
+Default value: 0.
                      * 
                      */
                     void SetRemoveVideo(const int64_t& _removeVideo);
@@ -261,15 +281,27 @@ namespace TencentCloud
                     bool RemoveVideoHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return RemoveAudio 
+                     * 获取Indicates whether to remove audio data. Available values:
+<li>`0`: reserved</li>
+<li>1: Remove</li>
+Default value: 0.
+                     * @return RemoveAudio Indicates whether to remove audio data. Available values:
+<li>`0`: reserved</li>
+<li>1: Remove</li>
+Default value: 0.
                      * 
                      */
                     int64_t GetRemoveAudio() const;
 
                     /**
-                     * 设置
-                     * @param _removeAudio 
+                     * 设置Indicates whether to remove audio data. Available values:
+<li>`0`: reserved</li>
+<li>1: Remove</li>
+Default value: 0.
+                     * @param _removeAudio Indicates whether to remove audio data. Available values:
+<li>`0`: reserved</li>
+<li>1: Remove</li>
+Default value: 0.
                      * 
                      */
                     void SetRemoveAudio(const int64_t& _removeAudio);
@@ -282,15 +314,15 @@ namespace TencentCloud
                     bool RemoveAudioHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return CreateTime 
+                     * 获取Template creation time in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @return CreateTime Template creation time in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      * 
                      */
                     std::string GetCreateTime() const;
 
                     /**
-                     * 设置
-                     * @param _createTime 
+                     * 设置Template creation time in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @param _createTime Template creation time in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      * 
                      */
                     void SetCreateTime(const std::string& _createTime);
@@ -303,15 +335,15 @@ namespace TencentCloud
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return UpdateTime 
+                     * 获取Template last modified time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @return UpdateTime Template last modified time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      * 
                      */
                     std::string GetUpdateTime() const;
 
                     /**
-                     * 设置
-                     * @param _updateTime 
+                     * 设置Template last modified time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @param _updateTime Template last modified time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      * 
                      */
                     void SetUpdateTime(const std::string& _updateTime);
@@ -326,79 +358,87 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Audio and video quality rebirth template number.
                      */
                     int64_t m_definition;
                     bool m_definitionHasBeenSet;
 
                     /**
-                     * 
+                     * Template type. Available values:
+<li>Preset: system-preset template;</li>
+<li>Custom: custom template.</li>
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * 
+                     * Audio and video quality rebirth template name.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * 
+                     * Description of the Audio and Video Quality Rebirth Template.
                      */
                     std::string m_comment;
                     bool m_commentHasBeenSet;
 
                     /**
-                     * 
+                     * Audio-visual quality revival video control info.
                      */
                     RebuildVideoInfo m_rebuildVideoInfo;
                     bool m_rebuildVideoInfoHasBeenSet;
 
                     /**
-                     * 
+                     * Audio-visual quality revival audio control info.
                      */
                     RebuildAudioInfo m_rebuildAudioInfo;
                     bool m_rebuildAudioInfoHasBeenSet;
 
                     /**
-                     * 
+                     * Output video control information.
                      */
                     RebuildMediaTargetVideoStream m_targetVideoInfo;
                     bool m_targetVideoInfoHasBeenSet;
 
                     /**
-                     * 
+                     * Output audio control information.
                      */
                     RebuildMediaTargetAudioStream m_targetAudioInfo;
                     bool m_targetAudioInfoHasBeenSet;
 
                     /**
-                     * 
+                     * Muxing format. Available values: mp4, hls. mp4 is selected by default.
                      */
                     std::string m_container;
                     bool m_containerHasBeenSet;
 
                     /**
-                     * 
+                     * Indicates whether to remove video data. Available values:
+<li>`0`: reserved</li>
+<li>1: Remove</li>
+Default value: 0.
                      */
                     int64_t m_removeVideo;
                     bool m_removeVideoHasBeenSet;
 
                     /**
-                     * 
+                     * Indicates whether to remove audio data. Available values:
+<li>`0`: reserved</li>
+<li>1: Remove</li>
+Default value: 0.
                      */
                     int64_t m_removeAudio;
                     bool m_removeAudioHasBeenSet;
 
                     /**
-                     * 
+                     * Template creation time in ISO date format (https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      */
                     std::string m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * 
+                     * Template last modified time, use [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      */
                     std::string m_updateTime;
                     bool m_updateTimeHasBeenSet;

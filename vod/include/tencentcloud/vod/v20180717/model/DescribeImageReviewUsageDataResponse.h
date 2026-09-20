@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return ImageReviewUsageDataSet 
+                     * 获取Image moderation count statistics, showing overview data of image moderation counts within a specified time range.
+                     * @return ImageReviewUsageDataSet Image moderation count statistics, showing overview data of image moderation counts within a specified time range.
                      * 
                      */
                     std::vector<ImageReviewUsageDataItem> GetImageReviewUsageDataSet() const;
@@ -61,7 +61,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Image moderation count statistics, showing overview data of image moderation counts within a specified time range.
                      */
                     std::vector<ImageReviewUsageDataItem> m_imageReviewUsageDataSet;
                     bool m_imageReviewUsageDataSetHasBeenSet;

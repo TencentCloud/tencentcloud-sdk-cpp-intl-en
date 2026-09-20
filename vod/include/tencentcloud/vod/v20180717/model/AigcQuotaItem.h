@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * AIGC quota
                 */
                 class AigcQuotaItem : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return QuotaType 
+                     * 获取<p>Quota type</p><p>Enumeration values:</p><ul><li>Image: AIGC image task</li><li>Video: AIGC video task</li><li>Text: AIGC text task</li></ul>
+                     * @return QuotaType <p>Quota type</p><p>Enumeration values:</p><ul><li>Image: AIGC image task</li><li>Video: AIGC video task</li><li>Text: AIGC text task</li></ul>
                      * 
                      */
                     std::string GetQuotaType() const;
 
                     /**
-                     * 设置
-                     * @param _quotaType 
+                     * 设置<p>Quota type</p><p>Enumeration values:</p><ul><li>Image: AIGC image task</li><li>Video: AIGC video task</li><li>Text: AIGC text task</li></ul>
+                     * @param _quotaType <p>Quota type</p><p>Enumeration values:</p><ul><li>Image: AIGC image task</li><li>Video: AIGC video task</li><li>Text: AIGC text task</li></ul>
                      * 
                      */
                     void SetQuotaType(const std::string& _quotaType);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool QuotaTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ApiToken 
+                     * 获取<p>Valid only when QuotaLimit=Text. It is used to select the ApiToken for quota limit.</p>
+                     * @return ApiToken <p>Valid only when QuotaLimit=Text. It is used to select the ApiToken for quota limit.</p>
                      * 
                      */
                     std::string GetApiToken() const;
 
                     /**
-                     * 设置
-                     * @param _apiToken 
+                     * 设置<p>Valid only when QuotaLimit=Text. It is used to select the ApiToken for quota limit.</p>
+                     * @param _apiToken <p>Valid only when QuotaLimit=Text. It is used to select the ApiToken for quota limit.</p>
                      * 
                      */
                     void SetApiToken(const std::string& _apiToken);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool ApiTokenHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return QuotaLimit 
+                     * 获取<p>Number of quotas for the task</p><p>Unit:</p><ul><li>When QuotaLimit=Image, unit: images</li><li>When QuotaLimit=Video, unit: seconds</li><li>When QuotaLimit=Text, unit: tokens</li></ul>
+                     * @return QuotaLimit <p>Number of quotas for the task</p><p>Unit:</p><ul><li>When QuotaLimit=Image, unit: images</li><li>When QuotaLimit=Video, unit: seconds</li><li>When QuotaLimit=Text, unit: tokens</li></ul>
                      * 
                      */
                     uint64_t GetQuotaLimit() const;
 
                     /**
-                     * 设置
-                     * @param _quotaLimit 
+                     * 设置<p>Number of quotas for the task</p><p>Unit:</p><ul><li>When QuotaLimit=Image, unit: images</li><li>When QuotaLimit=Video, unit: seconds</li><li>When QuotaLimit=Text, unit: tokens</li></ul>
+                     * @param _quotaLimit <p>Number of quotas for the task</p><p>Unit:</p><ul><li>When QuotaLimit=Image, unit: images</li><li>When QuotaLimit=Video, unit: seconds</li><li>When QuotaLimit=Text, unit: tokens</li></ul>
                      * 
                      */
                     void SetQuotaLimit(const uint64_t& _quotaLimit);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool QuotaLimitHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Usage 
+                     * 获取<p>Already used amount</p><p>Unit:</p><ul><li>When QuotaLimit=Image, the unit is images</li><li>When QuotaLimit=Video, the unit is seconds</li><li>When QuotaLimit=Text, the unit is tokens</li></ul>
+                     * @return Usage <p>Already used amount</p><p>Unit:</p><ul><li>When QuotaLimit=Image, the unit is images</li><li>When QuotaLimit=Video, the unit is seconds</li><li>When QuotaLimit=Text, the unit is tokens</li></ul>
                      * 
                      */
                     uint64_t GetUsage() const;
 
                     /**
-                     * 设置
-                     * @param _usage 
+                     * 设置<p>Already used amount</p><p>Unit:</p><ul><li>When QuotaLimit=Image, the unit is images</li><li>When QuotaLimit=Video, the unit is seconds</li><li>When QuotaLimit=Text, the unit is tokens</li></ul>
+                     * @param _usage <p>Already used amount</p><p>Unit:</p><ul><li>When QuotaLimit=Image, the unit is images</li><li>When QuotaLimit=Video, the unit is seconds</li><li>When QuotaLimit=Text, the unit is tokens</li></ul>
                      * 
                      */
                     void SetUsage(const uint64_t& _usage);
@@ -133,25 +133,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p>Quota type</p><p>Enumeration values:</p><ul><li>Image: AIGC image task</li><li>Video: AIGC video task</li><li>Text: AIGC text task</li></ul>
                      */
                     std::string m_quotaType;
                     bool m_quotaTypeHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Valid only when QuotaLimit=Text. It is used to select the ApiToken for quota limit.</p>
                      */
                     std::string m_apiToken;
                     bool m_apiTokenHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Number of quotas for the task</p><p>Unit:</p><ul><li>When QuotaLimit=Image, unit: images</li><li>When QuotaLimit=Video, unit: seconds</li><li>When QuotaLimit=Text, unit: tokens</li></ul>
                      */
                     uint64_t m_quotaLimit;
                     bool m_quotaLimitHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Already used amount</p><p>Unit:</p><ul><li>When QuotaLimit=Image, the unit is images</li><li>When QuotaLimit=Video, the unit is seconds</li><li>When QuotaLimit=Text, the unit is tokens</li></ul>
                      */
                     uint64_t m_usage;
                     bool m_usageHasBeenSet;

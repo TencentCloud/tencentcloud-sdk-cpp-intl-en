@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Indonesia ID card.
+                * Indonesian Identity Card (mapped field result)
                 */
                 class NormalIndonesiaIDCard : public AbstractModel
                 {
@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取License number
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return LicenseNumber License number
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取ID number
+                     * @return LicenseNumber ID number
                      * 
                      */
                     std::string GetLicenseNumber() const;
 
                     /**
-                     * 设置License number
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _licenseNumber License number
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置ID number
+                     * @param _licenseNumber ID number
                      * 
                      */
                     void SetLicenseNumber(const std::string& _licenseNumber);
@@ -73,18 +69,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return FullName Name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetFullName() const;
 
                     /**
                      * 设置Name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _fullName Name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetFullName(const std::string& _fullName);
@@ -97,19 +89,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool FullNameHasBeenSet() const;
 
                     /**
-                     * 获取Birth place/Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Birthday Birth place/Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Birthplace/Date of birth
+                     * @return Birthday Birthplace/Date of birth
                      * 
                      */
                     std::string GetBirthday() const;
 
                     /**
-                     * 设置Birth place/Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _birthday Birth place/Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Birthplace/Date of birth
+                     * @param _birthday Birthplace/Date of birth
                      * 
                      */
                     void SetBirthday(const std::string& _birthday);
@@ -122,19 +110,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool BirthdayHasBeenSet() const;
 
                     /**
-                     * 获取Gender
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Sex Gender
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Sex
+                     * @return Sex Sex
                      * 
                      */
                     std::string GetSex() const;
 
                     /**
-                     * 设置Gender
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _sex Gender
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Sex
+                     * @param _sex Sex
                      * 
                      */
                     void SetSex(const std::string& _sex);
@@ -148,18 +132,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Blood type
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return BloodType Blood type
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetBloodType() const;
 
                     /**
                      * 设置Blood type
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _bloodType Blood type
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetBloodType(const std::string& _bloodType);
@@ -172,19 +152,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool BloodTypeHasBeenSet() const;
 
                     /**
-                     * 获取Address
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return FormattedAddress Address
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Address.
+                     * @return FormattedAddress Address.
                      * 
                      */
                     std::string GetFormattedAddress() const;
 
                     /**
-                     * 设置Address
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _formattedAddress Address
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Address.
+                     * @param _formattedAddress Address.
                      * 
                      */
                     void SetFormattedAddress(const std::string& _formattedAddress);
@@ -198,18 +174,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Street
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Street Street
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetStreet() const;
 
                     /**
                      * 设置Street
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _street Street
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetStreet(const std::string& _street);
@@ -223,18 +195,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Village
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Village Village
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetVillage() const;
 
                     /**
                      * 设置Village
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _village Village
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetVillage(const std::string& _village);
@@ -247,19 +215,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool VillageHasBeenSet() const;
 
                     /**
-                     * 获取Region
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Area Region
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Region.
+                     * @return Area Region.
                      * 
                      */
                     std::string GetArea() const;
 
                     /**
-                     * 设置Region
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _area Region
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Region.
+                     * @param _area Region.
                      * 
                      */
                     void SetArea(const std::string& _area);
@@ -272,19 +236,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool AreaHasBeenSet() const;
 
                     /**
-                     * 获取Religious beliefs
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Religion Religious beliefs
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Religious belief
+                     * @return Religion Religious belief
                      * 
                      */
                     std::string GetReligion() const;
 
                     /**
-                     * 设置Religious beliefs
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _religion Religious beliefs
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Religious belief
+                     * @param _religion Religious belief
                      * 
                      */
                     void SetReligion(const std::string& _religion);
@@ -298,18 +258,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Marital status
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return MaritalStatus Marital status
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetMaritalStatus() const;
 
                     /**
                      * 设置Marital status
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _maritalStatus Marital status
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetMaritalStatus(const std::string& _maritalStatus);
@@ -322,19 +278,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool MaritalStatusHasBeenSet() const;
 
                     /**
-                     * 获取Job
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Occupation Job
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Occupation
+                     * @return Occupation Occupation
                      * 
                      */
                     std::string GetOccupation() const;
 
                     /**
-                     * 设置Job
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _occupation Job
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Occupation
+                     * @param _occupation Occupation
                      * 
                      */
                     void SetOccupation(const std::string& _occupation);
@@ -348,18 +300,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Nationality
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Nationality Nationality
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetNationality() const;
 
                     /**
                      * 设置Nationality
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _nationality Nationality
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetNationality(const std::string& _nationality);
@@ -372,19 +320,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool NationalityHasBeenSet() const;
 
                     /**
-                     * 获取ID card validity period
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DueDate ID card validity period
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Validity period of the ID card
+                     * @return DueDate Validity period of the ID card
                      * 
                      */
                     std::string GetDueDate() const;
 
                     /**
-                     * 设置ID card validity period
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _dueDate ID card validity period
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Validity period of the ID card
+                     * @param _dueDate Validity period of the ID card
                      * 
                      */
                     void SetDueDate(const std::string& _dueDate);
@@ -397,19 +341,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DueDateHasBeenSet() const;
 
                     /**
-                     * 获取Date of issue
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return IssuedDate Date of issue
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Issue date
+                     * @return IssuedDate Issue date
                      * 
                      */
                     std::string GetIssuedDate() const;
 
                     /**
-                     * 设置Date of issue
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _issuedDate Date of issue
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Issue date
+                     * @param _issuedDate Issue date
                      * 
                      */
                     void SetIssuedDate(const std::string& _issuedDate);
@@ -423,18 +363,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Province
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Province Province
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetProvince() const;
 
                     /**
                      * 设置Province
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _province Province
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetProvince(const std::string& _province);
@@ -447,19 +383,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ProvinceHasBeenSet() const;
 
                     /**
-                     * 获取City
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return City City
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取city
+                     * @return City city
                      * 
                      */
                     std::string GetCity() const;
 
                     /**
-                     * 设置City
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _city City
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置city
+                     * @param _city city
                      * 
                      */
                     void SetCity(const std::string& _city);
@@ -474,120 +406,103 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * License number
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * ID number
                      */
                     std::string m_licenseNumber;
                     bool m_licenseNumberHasBeenSet;
 
                     /**
                      * Name
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_fullName;
                     bool m_fullNameHasBeenSet;
 
                     /**
-                     * Birth place/Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Birthplace/Date of birth
                      */
                     std::string m_birthday;
                     bool m_birthdayHasBeenSet;
 
                     /**
-                     * Gender
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Sex
                      */
                     std::string m_sex;
                     bool m_sexHasBeenSet;
 
                     /**
                      * Blood type
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_bloodType;
                     bool m_bloodTypeHasBeenSet;
 
                     /**
-                     * Address
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Address.
                      */
                     std::string m_formattedAddress;
                     bool m_formattedAddressHasBeenSet;
 
                     /**
                      * Street
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_street;
                     bool m_streetHasBeenSet;
 
                     /**
                      * Village
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_village;
                     bool m_villageHasBeenSet;
 
                     /**
-                     * Region
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Region.
                      */
                     std::string m_area;
                     bool m_areaHasBeenSet;
 
                     /**
-                     * Religious beliefs
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Religious belief
                      */
                     std::string m_religion;
                     bool m_religionHasBeenSet;
 
                     /**
                      * Marital status
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_maritalStatus;
                     bool m_maritalStatusHasBeenSet;
 
                     /**
-                     * Job
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Occupation
                      */
                     std::string m_occupation;
                     bool m_occupationHasBeenSet;
 
                     /**
                      * Nationality
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_nationality;
                     bool m_nationalityHasBeenSet;
 
                     /**
-                     * ID card validity period
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Validity period of the ID card
                      */
                     std::string m_dueDate;
                     bool m_dueDateHasBeenSet;
 
                     /**
-                     * Date of issue
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Issue date
                      */
                     std::string m_issuedDate;
                     bool m_issuedDateHasBeenSet;
 
                     /**
                      * Province
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_province;
                     bool m_provinceHasBeenSet;
 
                     /**
-                     * City
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * city
                      */
                     std::string m_city;
                     bool m_cityHasBeenSet;

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Playback statistics.
                 */
                 class DailyPlayStatInfo : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Date 
+                     * 获取<p>Date of playing media file in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+                     * @return Date <p>Date of playing media file in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
                      * 
                      */
                     std::string GetDate() const;
 
                     /**
-                     * 设置
-                     * @param _date 
+                     * 设置<p>Date of playing media file in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+                     * @param _date <p>Date of playing media file in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
                      * 
                      */
                     void SetDate(const std::string& _date);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool DateHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return FileId 
+                     * 获取<p>Media file ID.</p>
+                     * @return FileId <p>Media file ID.</p>
                      * 
                      */
                     std::string GetFileId() const;
 
                     /**
-                     * 设置
-                     * @param _fileId 
+                     * 设置<p>Media file ID.</p>
+                     * @param _fileId <p>Media file ID.</p>
                      * 
                      */
                     void SetFileId(const std::string& _fileId);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool FileIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return PlayTimes 
+                     * 获取<p>Number of plays.</p>
+                     * @return PlayTimes <p>Number of plays.</p>
                      * 
                      */
                     uint64_t GetPlayTimes() const;
 
                     /**
-                     * 设置
-                     * @param _playTimes 
+                     * 设置<p>Number of plays.</p>
+                     * @param _playTimes <p>Number of plays.</p>
                      * 
                      */
                     void SetPlayTimes(const uint64_t& _playTimes);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool PlayTimesHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Traffic 
+                     * 获取<p>Playback traffic volume, unit: byte.</p>
+                     * @return Traffic <p>Playback traffic volume, unit: byte.</p>
                      * 
                      */
                     uint64_t GetTraffic() const;
 
                     /**
-                     * 设置
-                     * @param _traffic 
+                     * 设置<p>Playback traffic volume, unit: byte.</p>
+                     * @param _traffic <p>Playback traffic volume, unit: byte.</p>
                      * 
                      */
                     void SetTraffic(const uint64_t& _traffic);
@@ -133,25 +133,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p>Date of playing media file in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
                      */
                     std::string m_date;
                     bool m_dateHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Media file ID.</p>
                      */
                     std::string m_fileId;
                     bool m_fileIdHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Number of plays.</p>
                      */
                     uint64_t m_playTimes;
                     bool m_playTimesHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Playback traffic volume, unit: byte.</p>
                      */
                     uint64_t m_traffic;
                     bool m_trafficHasBeenSet;

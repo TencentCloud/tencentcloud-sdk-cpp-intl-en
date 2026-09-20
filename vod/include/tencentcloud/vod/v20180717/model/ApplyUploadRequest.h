@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return MediaType 
+                     * 获取<p>Media type. For available values, see <a href="/document/product/266/9760#.E6.96.87.E4.BB.B6.E7.B1.BB.E5.9E.8B">Upload Capability Summary</a>.</p>
+                     * @return MediaType <p>Media type. For available values, see <a href="/document/product/266/9760#.E6.96.87.E4.BB.B6.E7.B1.BB.E5.9E.8B">Upload Capability Summary</a>.</p>
                      * 
                      */
                     std::string GetMediaType() const;
 
                     /**
-                     * 设置
-                     * @param _mediaType 
+                     * 设置<p>Media type. For available values, see <a href="/document/product/266/9760#.E6.96.87.E4.BB.B6.E7.B1.BB.E5.9E.8B">Upload Capability Summary</a>.</p>
+                     * @param _mediaType <p>Media type. For available values, see <a href="/document/product/266/9760#.E6.96.87.E4.BB.B6.E7.B1.BB.E5.9E.8B">Upload Capability Summary</a>.</p>
                      * 
                      */
                     void SetMediaType(const std::string& _mediaType);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool MediaTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SubAppId 
+                     * 获取<p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b></p>
+                     * @return SubAppId <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b></p>
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置
-                     * @param _subAppId 
+                     * 设置<p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b></p>
+                     * @param _subAppId <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b></p>
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool SubAppIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return MediaName 
+                     * 获取<p>Media name.</p>
+                     * @return MediaName <p>Media name.</p>
                      * 
                      */
                     std::string GetMediaName() const;
 
                     /**
-                     * 设置
-                     * @param _mediaName 
+                     * 设置<p>Media name.</p>
+                     * @param _mediaName <p>Media name.</p>
                      * 
                      */
                     void SetMediaName(const std::string& _mediaName);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool MediaNameHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return CoverType 
+                     * 获取<p>Cover Type. For available values, see <a href="/document/product/266/9760#.E6.96.87.E4.BB.B6.E7.B1.BB.E5.9E.8B">upload capability summary</a>.</p>
+                     * @return CoverType <p>Cover Type. For available values, see <a href="/document/product/266/9760#.E6.96.87.E4.BB.B6.E7.B1.BB.E5.9E.8B">upload capability summary</a>.</p>
                      * 
                      */
                     std::string GetCoverType() const;
 
                     /**
-                     * 设置
-                     * @param _coverType 
+                     * 设置<p>Cover Type. For available values, see <a href="/document/product/266/9760#.E6.96.87.E4.BB.B6.E7.B1.BB.E5.9E.8B">upload capability summary</a>.</p>
+                     * @param _coverType <p>Cover Type. For available values, see <a href="/document/product/266/9760#.E6.96.87.E4.BB.B6.E7.B1.BB.E5.9E.8B">upload capability summary</a>.</p>
                      * 
                      */
                     void SetCoverType(const std::string& _coverType);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool CoverTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Procedure 
+                     * 获取<p>Subsequent media task processing operations, which can automatically initiate task flow operations after media upload is completed. The parameter value is the task flow template name. VOD supports <a href="/document/product/266/33819">creating a task flow template</a> and naming the template.</p>
+                     * @return Procedure <p>Subsequent media task processing operations, which can automatically initiate task flow operations after media upload is completed. The parameter value is the task flow template name. VOD supports <a href="/document/product/266/33819">creating a task flow template</a> and naming the template.</p>
                      * 
                      */
                     std::string GetProcedure() const;
 
                     /**
-                     * 设置
-                     * @param _procedure 
+                     * 设置<p>Subsequent media task processing operations, which can automatically initiate task flow operations after media upload is completed. The parameter value is the task flow template name. VOD supports <a href="/document/product/266/33819">creating a task flow template</a> and naming the template.</p>
+                     * @param _procedure <p>Subsequent media task processing operations, which can automatically initiate task flow operations after media upload is completed. The parameter value is the task flow template name. VOD supports <a href="/document/product/266/33819">creating a task flow template</a> and naming the template.</p>
                      * 
                      */
                     void SetProcedure(const std::string& _procedure);
@@ -148,15 +148,15 @@ namespace TencentCloud
                     bool ProcedureHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ExpireTime 
+                     * 获取<p>Media file expiry time, format according to the ISO 8601 standard representation. For details, see <a href="/document/product/266/11732#I">ISO date format description</a>.</p>
+                     * @return ExpireTime <p>Media file expiry time, format according to the ISO 8601 standard representation. For details, see <a href="/document/product/266/11732#I">ISO date format description</a>.</p>
                      * 
                      */
                     std::string GetExpireTime() const;
 
                     /**
-                     * 设置
-                     * @param _expireTime 
+                     * 设置<p>Media file expiry time, format according to the ISO 8601 standard representation. For details, see <a href="/document/product/266/11732#I">ISO date format description</a>.</p>
+                     * @param _expireTime <p>Media file expiry time, format according to the ISO 8601 standard representation. For details, see <a href="/document/product/266/11732#I">ISO date format description</a>.</p>
                      * 
                      */
                     void SetExpireTime(const std::string& _expireTime);
@@ -169,15 +169,15 @@ namespace TencentCloud
                     bool ExpireTimeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return StorageRegion 
+                     * 获取<p>Designated upload park, applicable only to users with special requirements for upload region.</p>
+                     * @return StorageRegion <p>Designated upload park, applicable only to users with special requirements for upload region.</p>
                      * 
                      */
                     std::string GetStorageRegion() const;
 
                     /**
-                     * 设置
-                     * @param _storageRegion 
+                     * 设置<p>Designated upload park, applicable only to users with special requirements for upload region.</p>
+                     * @param _storageRegion <p>Designated upload park, applicable only to users with special requirements for upload region.</p>
                      * 
                      */
                     void SetStorageRegion(const std::string& _storageRegion);
@@ -190,15 +190,15 @@ namespace TencentCloud
                     bool StorageRegionHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ClassId 
+                     * 获取<p>Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the <a href="/document/product/266/7812">create category</a> API.</p><li>Default value: 0, indicating other categories.</li>
+                     * @return ClassId <p>Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the <a href="/document/product/266/7812">create category</a> API.</p><li>Default value: 0, indicating other categories.</li>
                      * 
                      */
                     int64_t GetClassId() const;
 
                     /**
-                     * 设置
-                     * @param _classId 
+                     * 设置<p>Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the <a href="/document/product/266/7812">create category</a> API.</p><li>Default value: 0, indicating other categories.</li>
+                     * @param _classId <p>Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the <a href="/document/product/266/7812">create category</a> API.</p><li>Default value: 0, indicating other categories.</li>
                      * 
                      */
                     void SetClassId(const int64_t& _classId);
@@ -211,15 +211,15 @@ namespace TencentCloud
                     bool ClassIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SourceContext 
+                     * 获取<p>Source context. This is used to pass user request information. The <a href="/document/product/266/7830">upload completion callback</a> returns the value of this field. The maximum length is 250 characters.</p>
+                     * @return SourceContext <p>Source context. This is used to pass user request information. The <a href="/document/product/266/7830">upload completion callback</a> returns the value of this field. The maximum length is 250 characters.</p>
                      * 
                      */
                     std::string GetSourceContext() const;
 
                     /**
-                     * 设置
-                     * @param _sourceContext 
+                     * 设置<p>Source context. This is used to pass user request information. The <a href="/document/product/266/7830">upload completion callback</a> returns the value of this field. The maximum length is 250 characters.</p>
+                     * @param _sourceContext <p>Source context. This is used to pass user request information. The <a href="/document/product/266/7830">upload completion callback</a> returns the value of this field. The maximum length is 250 characters.</p>
                      * 
                      */
                     void SetSourceContext(const std::string& _sourceContext);
@@ -232,15 +232,15 @@ namespace TencentCloud
                     bool SourceContextHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SessionContext 
+                     * 获取<p>Session context. This is used to pass user request information. After specifying the Procedure parameter, the <a href="/document/product/266/9636">task flow status change callback</a> returns the value of this field. The maximum length is 1000 characters.</p>
+                     * @return SessionContext <p>Session context. This is used to pass user request information. After specifying the Procedure parameter, the <a href="/document/product/266/9636">task flow status change callback</a> returns the value of this field. The maximum length is 1000 characters.</p>
                      * 
                      */
                     std::string GetSessionContext() const;
 
                     /**
-                     * 设置
-                     * @param _sessionContext 
+                     * 设置<p>Session context. This is used to pass user request information. After specifying the Procedure parameter, the <a href="/document/product/266/9636">task flow status change callback</a> returns the value of this field. The maximum length is 1000 characters.</p>
+                     * @param _sessionContext <p>Session context. This is used to pass user request information. After specifying the Procedure parameter, the <a href="/document/product/266/9636">task flow status change callback</a> returns the value of this field. The maximum length is 1000 characters.</p>
                      * 
                      */
                     void SetSessionContext(const std::string& _sessionContext);
@@ -253,15 +253,15 @@ namespace TencentCloud
                     bool SessionContextHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ExtInfo 
+                     * 获取<p>Reserved field, used when special usage.</p>
+                     * @return ExtInfo <p>Reserved field, used when special usage.</p>
                      * 
                      */
                     std::string GetExtInfo() const;
 
                     /**
-                     * 设置
-                     * @param _extInfo 
+                     * 设置<p>Reserved field, used when special usage.</p>
+                     * @param _extInfo <p>Reserved field, used when special usage.</p>
                      * 
                      */
                     void SetExtInfo(const std::string& _extInfo);
@@ -274,15 +274,15 @@ namespace TencentCloud
                     bool ExtInfoHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return MediaStoragePath 
+                     * 获取<p>Media storage path, starting with /.<br>Only sub-apps in <a href="https://www.tencentcloud.com/document/product/266/126825?from_cn_redirect=1">FileID + Path mode</a> can specify a storage path.</p>
+                     * @return MediaStoragePath <p>Media storage path, starting with /.<br>Only sub-apps in <a href="https://www.tencentcloud.com/document/product/266/126825?from_cn_redirect=1">FileID + Path mode</a> can specify a storage path.</p>
                      * 
                      */
                     std::string GetMediaStoragePath() const;
 
                     /**
-                     * 设置
-                     * @param _mediaStoragePath 
+                     * 设置<p>Media storage path, starting with /.<br>Only sub-apps in <a href="https://www.tencentcloud.com/document/product/266/126825?from_cn_redirect=1">FileID + Path mode</a> can specify a storage path.</p>
+                     * @param _mediaStoragePath <p>Media storage path, starting with /.<br>Only sub-apps in <a href="https://www.tencentcloud.com/document/product/266/126825?from_cn_redirect=1">FileID + Path mode</a> can specify a storage path.</p>
                      * 
                      */
                     void SetMediaStoragePath(const std::string& _mediaStoragePath);
@@ -297,73 +297,73 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p>Media type. For available values, see <a href="/document/product/266/9760#.E6.96.87.E4.BB.B6.E7.B1.BB.E5.9E.8B">Upload Capability Summary</a>.</p>
                      */
                     std::string m_mediaType;
                     bool m_mediaTypeHasBeenSet;
 
                     /**
-                     * 
+                     * <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b></p>
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Media name.</p>
                      */
                     std::string m_mediaName;
                     bool m_mediaNameHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Cover Type. For available values, see <a href="/document/product/266/9760#.E6.96.87.E4.BB.B6.E7.B1.BB.E5.9E.8B">upload capability summary</a>.</p>
                      */
                     std::string m_coverType;
                     bool m_coverTypeHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Subsequent media task processing operations, which can automatically initiate task flow operations after media upload is completed. The parameter value is the task flow template name. VOD supports <a href="/document/product/266/33819">creating a task flow template</a> and naming the template.</p>
                      */
                     std::string m_procedure;
                     bool m_procedureHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Media file expiry time, format according to the ISO 8601 standard representation. For details, see <a href="/document/product/266/11732#I">ISO date format description</a>.</p>
                      */
                     std::string m_expireTime;
                     bool m_expireTimeHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Designated upload park, applicable only to users with special requirements for upload region.</p>
                      */
                     std::string m_storageRegion;
                     bool m_storageRegionHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the <a href="/document/product/266/7812">create category</a> API.</p><li>Default value: 0, indicating other categories.</li>
                      */
                     int64_t m_classId;
                     bool m_classIdHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Source context. This is used to pass user request information. The <a href="/document/product/266/7830">upload completion callback</a> returns the value of this field. The maximum length is 250 characters.</p>
                      */
                     std::string m_sourceContext;
                     bool m_sourceContextHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Session context. This is used to pass user request information. After specifying the Procedure parameter, the <a href="/document/product/266/9636">task flow status change callback</a> returns the value of this field. The maximum length is 1000 characters.</p>
                      */
                     std::string m_sessionContext;
                     bool m_sessionContextHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Reserved field, used when special usage.</p>
                      */
                     std::string m_extInfo;
                     bool m_extInfoHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Media storage path, starting with /.<br>Only sub-apps in <a href="https://www.tencentcloud.com/document/product/266/126825?from_cn_redirect=1">FileID + Path mode</a> can specify a storage path.</p>
                      */
                     std::string m_mediaStoragePath;
                     bool m_mediaStoragePathHasBeenSet;

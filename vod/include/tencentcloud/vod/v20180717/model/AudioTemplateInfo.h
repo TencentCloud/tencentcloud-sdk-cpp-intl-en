@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Audio stream configuration parameters
                 */
                 class AudioTemplateInfo : public AbstractModel
                 {
@@ -47,15 +47,87 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Codec 
+                     * 获取Audio stream encoding format.
+When the outer parameter Container is mp3, optional values:
+<li>libmp3lame.</li>
+When the outer parameter Container is ogg or flac, optional values:
+<li>flac.</li>
+When the outer parameter Container is m4a, valid values are:
+<li>libfdk_aac;</li>
+<li>libmp3lame;</li>
+<li>ac3.</li>
+When the outer parameter Container is mp4 or flv, valid values are:
+<li>libfdk_aac: more suitable for mp4;</li>
+<li>libmp3lame: more suitable for flv;</li>
+<li>mp2.</li>
+When the outer parameter Container is hls, valid values are:
+<li>libfdk_aac.</li>
+When the outer parameter Format is HLS or MPEG-DASH, valid values are:
+<li>libfdk_aac.</li>
+When the outer parameter Container is wav, valid values are:
+<li>pcm16.</li>
+                     * @return Codec Audio stream encoding format.
+When the outer parameter Container is mp3, optional values:
+<li>libmp3lame.</li>
+When the outer parameter Container is ogg or flac, optional values:
+<li>flac.</li>
+When the outer parameter Container is m4a, valid values are:
+<li>libfdk_aac;</li>
+<li>libmp3lame;</li>
+<li>ac3.</li>
+When the outer parameter Container is mp4 or flv, valid values are:
+<li>libfdk_aac: more suitable for mp4;</li>
+<li>libmp3lame: more suitable for flv;</li>
+<li>mp2.</li>
+When the outer parameter Container is hls, valid values are:
+<li>libfdk_aac.</li>
+When the outer parameter Format is HLS or MPEG-DASH, valid values are:
+<li>libfdk_aac.</li>
+When the outer parameter Container is wav, valid values are:
+<li>pcm16.</li>
                      * 
                      */
                     std::string GetCodec() const;
 
                     /**
-                     * 设置
-                     * @param _codec 
+                     * 设置Audio stream encoding format.
+When the outer parameter Container is mp3, optional values:
+<li>libmp3lame.</li>
+When the outer parameter Container is ogg or flac, optional values:
+<li>flac.</li>
+When the outer parameter Container is m4a, valid values are:
+<li>libfdk_aac;</li>
+<li>libmp3lame;</li>
+<li>ac3.</li>
+When the outer parameter Container is mp4 or flv, valid values are:
+<li>libfdk_aac: more suitable for mp4;</li>
+<li>libmp3lame: more suitable for flv;</li>
+<li>mp2.</li>
+When the outer parameter Container is hls, valid values are:
+<li>libfdk_aac.</li>
+When the outer parameter Format is HLS or MPEG-DASH, valid values are:
+<li>libfdk_aac.</li>
+When the outer parameter Container is wav, valid values are:
+<li>pcm16.</li>
+                     * @param _codec Audio stream encoding format.
+When the outer parameter Container is mp3, optional values:
+<li>libmp3lame.</li>
+When the outer parameter Container is ogg or flac, optional values:
+<li>flac.</li>
+When the outer parameter Container is m4a, valid values are:
+<li>libfdk_aac;</li>
+<li>libmp3lame;</li>
+<li>ac3.</li>
+When the outer parameter Container is mp4 or flv, valid values are:
+<li>libfdk_aac: more suitable for mp4;</li>
+<li>libmp3lame: more suitable for flv;</li>
+<li>mp2.</li>
+When the outer parameter Container is hls, valid values are:
+<li>libfdk_aac.</li>
+When the outer parameter Format is HLS or MPEG-DASH, valid values are:
+<li>libfdk_aac.</li>
+When the outer parameter Container is wav, valid values are:
+<li>pcm16.</li>
                      * 
                      */
                     void SetCodec(const std::string& _codec);
@@ -68,15 +140,19 @@ namespace TencentCloud
                     bool CodecHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Bitrate 
+                     * 获取Bitrate of the audio stream. Value range: 0 and [26, 256]. Unit: kbps.
+When the value is 0, it means VOD automatically sets the bitrate.
+                     * @return Bitrate Bitrate of the audio stream. Value range: 0 and [26, 256]. Unit: kbps.
+When the value is 0, it means VOD automatically sets the bitrate.
                      * 
                      */
                     uint64_t GetBitrate() const;
 
                     /**
-                     * 设置
-                     * @param _bitrate 
+                     * 设置Bitrate of the audio stream. Value range: 0 and [26, 256]. Unit: kbps.
+When the value is 0, it means VOD automatically sets the bitrate.
+                     * @param _bitrate Bitrate of the audio stream. Value range: 0 and [26, 256]. Unit: kbps.
+When the value is 0, it means VOD automatically sets the bitrate.
                      * 
                      */
                     void SetBitrate(const uint64_t& _bitrate);
@@ -89,15 +165,35 @@ namespace TencentCloud
                     bool BitrateHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SampleRate 
+                     * 获取Sampling rate of the audio stream. Available values:
+<li>16000, selectable only when Codec is pcm16.</li>
+<li>32000</li>
+<li>44100</li>
+<li>48000</li>
+Unit: Hz.
+                     * @return SampleRate Sampling rate of the audio stream. Available values:
+<li>16000, selectable only when Codec is pcm16.</li>
+<li>32000</li>
+<li>44100</li>
+<li>48000</li>
+Unit: Hz.
                      * 
                      */
                     uint64_t GetSampleRate() const;
 
                     /**
-                     * 设置
-                     * @param _sampleRate 
+                     * 设置Sampling rate of the audio stream. Available values:
+<li>16000, selectable only when Codec is pcm16.</li>
+<li>32000</li>
+<li>44100</li>
+<li>48000</li>
+Unit: Hz.
+                     * @param _sampleRate Sampling rate of the audio stream. Available values:
+<li>16000, selectable only when Codec is pcm16.</li>
+<li>32000</li>
+<li>44100</li>
+<li>48000</li>
+Unit: Hz.
                      * 
                      */
                     void SetSampleRate(const uint64_t& _sampleRate);
@@ -110,15 +206,39 @@ namespace TencentCloud
                     bool SampleRateHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AudioChannel 
+                     * 获取Audio channel. Valid values:
+<li>1: single channel.</li>
+<li>2: dual channel.</li>
+<li>6: Stereo.</li>
+<li>0: The number of audio channels remains the same as the original audio</li>
+When the media encapsulation format is audio (flac, ogg, mp3, and m4a), the number of channels cannot be set to stereo.
+Default value: 2.
+                     * @return AudioChannel Audio channel. Valid values:
+<li>1: single channel.</li>
+<li>2: dual channel.</li>
+<li>6: Stereo.</li>
+<li>0: The number of audio channels remains the same as the original audio</li>
+When the media encapsulation format is audio (flac, ogg, mp3, and m4a), the number of channels cannot be set to stereo.
+Default value: 2.
                      * 
                      */
                     int64_t GetAudioChannel() const;
 
                     /**
-                     * 设置
-                     * @param _audioChannel 
+                     * 设置Audio channel. Valid values:
+<li>1: single channel.</li>
+<li>2: dual channel.</li>
+<li>6: Stereo.</li>
+<li>0: The number of audio channels remains the same as the original audio</li>
+When the media encapsulation format is audio (flac, ogg, mp3, and m4a), the number of channels cannot be set to stereo.
+Default value: 2.
+                     * @param _audioChannel Audio channel. Valid values:
+<li>1: single channel.</li>
+<li>2: dual channel.</li>
+<li>6: Stereo.</li>
+<li>0: The number of audio channels remains the same as the original audio</li>
+When the media encapsulation format is audio (flac, ogg, mp3, and m4a), the number of channels cannot be set to stereo.
+Default value: 2.
                      * 
                      */
                     void SetAudioChannel(const int64_t& _audioChannel);
@@ -133,25 +253,55 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Audio stream encoding format.
+When the outer parameter Container is mp3, optional values:
+<li>libmp3lame.</li>
+When the outer parameter Container is ogg or flac, optional values:
+<li>flac.</li>
+When the outer parameter Container is m4a, valid values are:
+<li>libfdk_aac;</li>
+<li>libmp3lame;</li>
+<li>ac3.</li>
+When the outer parameter Container is mp4 or flv, valid values are:
+<li>libfdk_aac: more suitable for mp4;</li>
+<li>libmp3lame: more suitable for flv;</li>
+<li>mp2.</li>
+When the outer parameter Container is hls, valid values are:
+<li>libfdk_aac.</li>
+When the outer parameter Format is HLS or MPEG-DASH, valid values are:
+<li>libfdk_aac.</li>
+When the outer parameter Container is wav, valid values are:
+<li>pcm16.</li>
                      */
                     std::string m_codec;
                     bool m_codecHasBeenSet;
 
                     /**
-                     * 
+                     * Bitrate of the audio stream. Value range: 0 and [26, 256]. Unit: kbps.
+When the value is 0, it means VOD automatically sets the bitrate.
                      */
                     uint64_t m_bitrate;
                     bool m_bitrateHasBeenSet;
 
                     /**
-                     * 
+                     * Sampling rate of the audio stream. Available values:
+<li>16000, selectable only when Codec is pcm16.</li>
+<li>32000</li>
+<li>44100</li>
+<li>48000</li>
+Unit: Hz.
                      */
                     uint64_t m_sampleRate;
                     bool m_sampleRateHasBeenSet;
 
                     /**
-                     * 
+                     * Audio channel. Valid values:
+<li>1: single channel.</li>
+<li>2: dual channel.</li>
+<li>6: Stereo.</li>
+<li>0: The number of audio channels remains the same as the original audio</li>
+When the media encapsulation format is audio (flac, ogg, mp3, and m4a), the number of channels cannot be set to stereo.
+Default value: 2.
                      */
                     int64_t m_audioChannel;
                     bool m_audioChannelHasBeenSet;

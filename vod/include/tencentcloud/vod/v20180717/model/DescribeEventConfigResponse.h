@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Mode 
+                     * 获取Method of receiving event notifications. "PUSH" indicates normal callback (https://www.tencentcloud.com/document/product/266/33779?from_cn_redirect=1#.E6.99.AE.E9.80.9A.E5.9B.9E.E8.B0.83), and "PULL" indicates reliable callback (https://www.tencentcloud.com/document/product/266/33779?from_cn_redirect=1#.E5.8F.AF.E9.9D.A0.E5.9B.9E.E8.B0.83).
+                     * @return Mode Method of receiving event notifications. "PUSH" indicates normal callback (https://www.tencentcloud.com/document/product/266/33779?from_cn_redirect=1#.E6.99.AE.E9.80.9A.E5.9B.9E.E8.B0.83), and "PULL" indicates reliable callback (https://www.tencentcloud.com/document/product/266/33779?from_cn_redirect=1#.E5.8F.AF.E9.9D.A0.E5.9B.9E.E8.B0.83).
                      * 
                      */
                     std::string GetMode() const;
@@ -58,8 +58,8 @@ namespace TencentCloud
                     bool ModeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return NotificationUrl 
+                     * 获取Use the [normal callback](https://www.tencentcloud.com/document/product/266/33779?from_cn_redirect=1#.E6.99.AE.E9.80.9A.E5.9B.9E.E8.B0.83) mode for the address to receive V3 event notifications.
+                     * @return NotificationUrl Use the [normal callback](https://www.tencentcloud.com/document/product/266/33779?from_cn_redirect=1#.E6.99.AE.E9.80.9A.E5.9B.9E.E8.B0.83) mode for the address to receive V3 event notifications.
                      * 
                      */
                     std::string GetNotificationUrl() const;
@@ -72,8 +72,8 @@ namespace TencentCloud
                     bool NotificationUrlHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return UploadMediaCompleteEventSwitch 
+                     * 获取Whether to receive [video upload completed](https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1) event notifications. "OFF" means the event notification is ignored, and "ON" means event notifications are received.
+                     * @return UploadMediaCompleteEventSwitch Whether to receive [video upload completed](https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1) event notifications. "OFF" means the event notification is ignored, and "ON" means event notifications are received.
                      * 
                      */
                     std::string GetUploadMediaCompleteEventSwitch() const;
@@ -86,8 +86,8 @@ namespace TencentCloud
                     bool UploadMediaCompleteEventSwitchHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return DeleteMediaCompleteEventSwitch 
+                     * 获取Whether to receive [video deletion completed](https://www.tencentcloud.com/document/product/266/13434?from_cn_redirect=1) event notifications. "OFF" means the event notification is ignored, and "ON" means event notifications are received.
+                     * @return DeleteMediaCompleteEventSwitch Whether to receive [video deletion completed](https://www.tencentcloud.com/document/product/266/13434?from_cn_redirect=1) event notifications. "OFF" means the event notification is ignored, and "ON" means event notifications are received.
                      * 
                      */
                     std::string GetDeleteMediaCompleteEventSwitch() const;
@@ -100,8 +100,8 @@ namespace TencentCloud
                     bool DeleteMediaCompleteEventSwitchHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return PersistenceCompleteEventSwitch 
+                     * 获取Whether to receive event notifications for clip solidification completion. "OFF" means the event notification is ignored, and "ON" means event notifications are received.
+                     * @return PersistenceCompleteEventSwitch Whether to receive event notifications for clip solidification completion. "OFF" means the event notification is ignored, and "ON" means event notifications are received.
                      * 
                      */
                     std::string GetPersistenceCompleteEventSwitch() const;
@@ -116,31 +116,31 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Method of receiving event notifications. "PUSH" indicates normal callback (https://www.tencentcloud.com/document/product/266/33779?from_cn_redirect=1#.E6.99.AE.E9.80.9A.E5.9B.9E.E8.B0.83), and "PULL" indicates reliable callback (https://www.tencentcloud.com/document/product/266/33779?from_cn_redirect=1#.E5.8F.AF.E9.9D.A0.E5.9B.9E.E8.B0.83).
                      */
                     std::string m_mode;
                     bool m_modeHasBeenSet;
 
                     /**
-                     * 
+                     * Use the [normal callback](https://www.tencentcloud.com/document/product/266/33779?from_cn_redirect=1#.E6.99.AE.E9.80.9A.E5.9B.9E.E8.B0.83) mode for the address to receive V3 event notifications.
                      */
                     std::string m_notificationUrl;
                     bool m_notificationUrlHasBeenSet;
 
                     /**
-                     * 
+                     * Whether to receive [video upload completed](https://www.tencentcloud.com/document/product/266/7830?from_cn_redirect=1) event notifications. "OFF" means the event notification is ignored, and "ON" means event notifications are received.
                      */
                     std::string m_uploadMediaCompleteEventSwitch;
                     bool m_uploadMediaCompleteEventSwitchHasBeenSet;
 
                     /**
-                     * 
+                     * Whether to receive [video deletion completed](https://www.tencentcloud.com/document/product/266/13434?from_cn_redirect=1) event notifications. "OFF" means the event notification is ignored, and "ON" means event notifications are received.
                      */
                     std::string m_deleteMediaCompleteEventSwitch;
                     bool m_deleteMediaCompleteEventSwitchHasBeenSet;
 
                     /**
-                     * 
+                     * Whether to receive event notifications for clip solidification completion. "OFF" means the event notification is ignored, and "ON" means event notifications are received.
                      */
                     std::string m_persistenceCompleteEventSwitch;
                     bool m_persistenceCompleteEventSwitchHasBeenSet;

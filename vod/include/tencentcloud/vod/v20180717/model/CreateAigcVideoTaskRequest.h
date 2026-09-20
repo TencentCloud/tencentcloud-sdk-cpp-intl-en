@@ -46,15 +46,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return SubAppId 
+                     * 获取<p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b></p>
+                     * @return SubAppId <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b></p>
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置
-                     * @param _subAppId 
+                     * 设置<p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b></p>
+                     * @param _subAppId <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b></p>
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -67,15 +67,15 @@ namespace TencentCloud
                     bool SubAppIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ModelName 
+                     * 获取<p>Model name. Parameter values:<br>Kling: Kling;<br>Vidu;<br>Hailuo: Hailuo;<br>Hunyuan: Hunyuan;<br>Mingmou: Mingmou;<br>GV;<br>OS;<br>PixVerse;</p>
+                     * @return ModelName <p>Model name. Parameter values:<br>Kling: Kling;<br>Vidu;<br>Hailuo: Hailuo;<br>Hunyuan: Hunyuan;<br>Mingmou: Mingmou;<br>GV;<br>OS;<br>PixVerse;</p>
                      * 
                      */
                     std::string GetModelName() const;
 
                     /**
-                     * 设置
-                     * @param _modelName 
+                     * 设置<p>Model name. Parameter values:<br>Kling: Kling;<br>Vidu;<br>Hailuo: Hailuo;<br>Hunyuan: Hunyuan;<br>Mingmou: Mingmou;<br>GV;<br>OS;<br>PixVerse;</p>
+                     * @param _modelName <p>Model name. Parameter values:<br>Kling: Kling;<br>Vidu;<br>Hailuo: Hailuo;<br>Hunyuan: Hunyuan;<br>Mingmou: Mingmou;<br>GV;<br>OS;<br>PixVerse;</p>
                      * 
                      */
                     void SetModelName(const std::string& _modelName);
@@ -88,15 +88,15 @@ namespace TencentCloud
                     bool ModelNameHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ModelVersion 
+                     * 获取<p>Model version. Value: <br>When ModelName is Hailuo, available values are 02, 2.3, 2.3-fast, H3, H3_regen, and H3-Max;<br>When ModelName is Kling, available values are 1.6, 2.0, 2.1, 2.5, 2.6, O1, 3.0, 3.0-Omni, 3.0-turbo, and scene;<br>When ModelName is Vidu, available values are q2, q2-pro, q2-turbo, q3, q3-pro, q3-turbo, q3-mix, q3-drama, q3-ad, scene, avatar-q2-pro, avatar-q2-turbo, and lip-sync;<br>When ModelName is GV, available values are 3.1, 3.1-fast, 3.1-lite, and omni;<br>When ModelName is OS, available values are 2.0;<br>When ModelName is Hunyuan, available values are 1.5 and 3d_2.0;<br>When ModelName is Mingmou, available values are 1.0;<br>When ModelName is PixVerse, available values are v5.6, v6, and c1;</p>
+                     * @return ModelVersion <p>Model version. Value: <br>When ModelName is Hailuo, available values are 02, 2.3, 2.3-fast, H3, H3_regen, and H3-Max;<br>When ModelName is Kling, available values are 1.6, 2.0, 2.1, 2.5, 2.6, O1, 3.0, 3.0-Omni, 3.0-turbo, and scene;<br>When ModelName is Vidu, available values are q2, q2-pro, q2-turbo, q3, q3-pro, q3-turbo, q3-mix, q3-drama, q3-ad, scene, avatar-q2-pro, avatar-q2-turbo, and lip-sync;<br>When ModelName is GV, available values are 3.1, 3.1-fast, 3.1-lite, and omni;<br>When ModelName is OS, available values are 2.0;<br>When ModelName is Hunyuan, available values are 1.5 and 3d_2.0;<br>When ModelName is Mingmou, available values are 1.0;<br>When ModelName is PixVerse, available values are v5.6, v6, and c1;</p>
                      * 
                      */
                     std::string GetModelVersion() const;
 
                     /**
-                     * 设置
-                     * @param _modelVersion 
+                     * 设置<p>Model version. Value: <br>When ModelName is Hailuo, available values are 02, 2.3, 2.3-fast, H3, H3_regen, and H3-Max;<br>When ModelName is Kling, available values are 1.6, 2.0, 2.1, 2.5, 2.6, O1, 3.0, 3.0-Omni, 3.0-turbo, and scene;<br>When ModelName is Vidu, available values are q2, q2-pro, q2-turbo, q3, q3-pro, q3-turbo, q3-mix, q3-drama, q3-ad, scene, avatar-q2-pro, avatar-q2-turbo, and lip-sync;<br>When ModelName is GV, available values are 3.1, 3.1-fast, 3.1-lite, and omni;<br>When ModelName is OS, available values are 2.0;<br>When ModelName is Hunyuan, available values are 1.5 and 3d_2.0;<br>When ModelName is Mingmou, available values are 1.0;<br>When ModelName is PixVerse, available values are v5.6, v6, and c1;</p>
+                     * @param _modelVersion <p>Model version. Value: <br>When ModelName is Hailuo, available values are 02, 2.3, 2.3-fast, H3, H3_regen, and H3-Max;<br>When ModelName is Kling, available values are 1.6, 2.0, 2.1, 2.5, 2.6, O1, 3.0, 3.0-Omni, 3.0-turbo, and scene;<br>When ModelName is Vidu, available values are q2, q2-pro, q2-turbo, q3, q3-pro, q3-turbo, q3-mix, q3-drama, q3-ad, scene, avatar-q2-pro, avatar-q2-turbo, and lip-sync;<br>When ModelName is GV, available values are 3.1, 3.1-fast, 3.1-lite, and omni;<br>When ModelName is OS, available values are 2.0;<br>When ModelName is Hunyuan, available values are 1.5 and 3d_2.0;<br>When ModelName is Mingmou, available values are 1.0;<br>When ModelName is PixVerse, available values are v5.6, v6, and c1;</p>
                      * 
                      */
                     void SetModelVersion(const std::string& _modelVersion);
@@ -109,15 +109,15 @@ namespace TencentCloud
                     bool ModelVersionHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return FileInfos 
+                     * 获取<p>Describes the resource file to be used by the model for video generation, divided into <strong>first and last frame mode, reference image/video/sound generation, video editing, and other modes</strong>.</p><p><strong>First and last frame video generation</strong>: <strong>The Usage field of the first frame image is FirstFrame, and the Usage field of the last frame image is LastFrame</strong>. One image is supported for each. The first frame can be imported separately, but the last frame cannot be imported separately. <strong>First and last frame generation uses the image ratio for reference</strong>.<br><strong>Reference image/video/sound generation</strong>: You can import single or multiple images/videos/sounds as references, with the <strong>Usage field set to Reference</strong>. <strong>In reference mode, you can adjust the aspect ratio of the generated video</strong>.<br><strong>Video editing</strong>: Vidu and Kling can input a video for editing. You can also import images while importing a video, with the <strong>Usage field of the image set to Reference</strong>.</p><p>Note:</p><ol><li>Image size cannot exceed 10 MB.</li><li>Supported image formats: jpeg, jpg, png. x0b</li><li>For whether a specific model version supports reference image/video/sound, first and last frame, video editing, and other features, you can request documentation from us or refer to the original vendor's document information.</li></ol>
+                     * @return FileInfos <p>Describes the resource file to be used by the model for video generation, divided into <strong>first and last frame mode, reference image/video/sound generation, video editing, and other modes</strong>.</p><p><strong>First and last frame video generation</strong>: <strong>The Usage field of the first frame image is FirstFrame, and the Usage field of the last frame image is LastFrame</strong>. One image is supported for each. The first frame can be imported separately, but the last frame cannot be imported separately. <strong>First and last frame generation uses the image ratio for reference</strong>.<br><strong>Reference image/video/sound generation</strong>: You can import single or multiple images/videos/sounds as references, with the <strong>Usage field set to Reference</strong>. <strong>In reference mode, you can adjust the aspect ratio of the generated video</strong>.<br><strong>Video editing</strong>: Vidu and Kling can input a video for editing. You can also import images while importing a video, with the <strong>Usage field of the image set to Reference</strong>.</p><p>Note:</p><ol><li>Image size cannot exceed 10 MB.</li><li>Supported image formats: jpeg, jpg, png. x0b</li><li>For whether a specific model version supports reference image/video/sound, first and last frame, video editing, and other features, you can request documentation from us or refer to the original vendor's document information.</li></ol>
                      * 
                      */
                     std::vector<AigcVideoTaskInputFileInfo> GetFileInfos() const;
 
                     /**
-                     * 设置
-                     * @param _fileInfos 
+                     * 设置<p>Describes the resource file to be used by the model for video generation, divided into <strong>first and last frame mode, reference image/video/sound generation, video editing, and other modes</strong>.</p><p><strong>First and last frame video generation</strong>: <strong>The Usage field of the first frame image is FirstFrame, and the Usage field of the last frame image is LastFrame</strong>. One image is supported for each. The first frame can be imported separately, but the last frame cannot be imported separately. <strong>First and last frame generation uses the image ratio for reference</strong>.<br><strong>Reference image/video/sound generation</strong>: You can import single or multiple images/videos/sounds as references, with the <strong>Usage field set to Reference</strong>. <strong>In reference mode, you can adjust the aspect ratio of the generated video</strong>.<br><strong>Video editing</strong>: Vidu and Kling can input a video for editing. You can also import images while importing a video, with the <strong>Usage field of the image set to Reference</strong>.</p><p>Note:</p><ol><li>Image size cannot exceed 10 MB.</li><li>Supported image formats: jpeg, jpg, png. x0b</li><li>For whether a specific model version supports reference image/video/sound, first and last frame, video editing, and other features, you can request documentation from us or refer to the original vendor's document information.</li></ol>
+                     * @param _fileInfos <p>Describes the resource file to be used by the model for video generation, divided into <strong>first and last frame mode, reference image/video/sound generation, video editing, and other modes</strong>.</p><p><strong>First and last frame video generation</strong>: <strong>The Usage field of the first frame image is FirstFrame, and the Usage field of the last frame image is LastFrame</strong>. One image is supported for each. The first frame can be imported separately, but the last frame cannot be imported separately. <strong>First and last frame generation uses the image ratio for reference</strong>.<br><strong>Reference image/video/sound generation</strong>: You can import single or multiple images/videos/sounds as references, with the <strong>Usage field set to Reference</strong>. <strong>In reference mode, you can adjust the aspect ratio of the generated video</strong>.<br><strong>Video editing</strong>: Vidu and Kling can input a video for editing. You can also import images while importing a video, with the <strong>Usage field of the image set to Reference</strong>.</p><p>Note:</p><ol><li>Image size cannot exceed 10 MB.</li><li>Supported image formats: jpeg, jpg, png. x0b</li><li>For whether a specific model version supports reference image/video/sound, first and last frame, video editing, and other features, you can request documentation from us or refer to the original vendor's document information.</li></ol>
                      * 
                      */
                     void SetFileInfos(const std::vector<AigcVideoTaskInputFileInfo>& _fileInfos);
@@ -130,15 +130,15 @@ namespace TencentCloud
                     bool FileInfosHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SubjectInfos 
+                     * 获取<p>Subject input information.</p>
+                     * @return SubjectInfos <p>Subject input information.</p>
                      * 
                      */
                     std::vector<AigcVideoTaskInputSubjectInfo> GetSubjectInfos() const;
 
                     /**
-                     * 设置
-                     * @param _subjectInfos 
+                     * 设置<p>Subject input information.</p>
+                     * @param _subjectInfos <p>Subject input information.</p>
                      * 
                      */
                     void SetSubjectInfos(const std::vector<AigcVideoTaskInputSubjectInfo>& _subjectInfos);
@@ -151,15 +151,15 @@ namespace TencentCloud
                     bool SubjectInfosHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return LastFrameFileId 
+                     * 获取<p>Media file ID used as the last frame image to generate a video. The globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. You can obtain this field in the <a href="/document/product/266/7830">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>.</p><ol><li>When you specify this parameter, you must also specify the first frame through FileInfos.</li><li>The image size must be less than 10M.</li><li>The image format values are: jpeg, jpg, png, webp.</li></ol>
+                     * @return LastFrameFileId <p>Media file ID used as the last frame image to generate a video. The globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. You can obtain this field in the <a href="/document/product/266/7830">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>.</p><ol><li>When you specify this parameter, you must also specify the first frame through FileInfos.</li><li>The image size must be less than 10M.</li><li>The image format values are: jpeg, jpg, png, webp.</li></ol>
                      * 
                      */
                     std::string GetLastFrameFileId() const;
 
                     /**
-                     * 设置
-                     * @param _lastFrameFileId 
+                     * 设置<p>Media file ID used as the last frame image to generate a video. The globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. You can obtain this field in the <a href="/document/product/266/7830">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>.</p><ol><li>When you specify this parameter, you must also specify the first frame through FileInfos.</li><li>The image size must be less than 10M.</li><li>The image format values are: jpeg, jpg, png, webp.</li></ol>
+                     * @param _lastFrameFileId <p>Media file ID used as the last frame image to generate a video. The globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. You can obtain this field in the <a href="/document/product/266/7830">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>.</p><ol><li>When you specify this parameter, you must also specify the first frame through FileInfos.</li><li>The image size must be less than 10M.</li><li>The image format values are: jpeg, jpg, png, webp.</li></ol>
                      * 
                      */
                     void SetLastFrameFileId(const std::string& _lastFrameFileId);
@@ -172,15 +172,15 @@ namespace TencentCloud
                     bool LastFrameFileIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return LastFrameUrl 
+                     * 获取<p>URL of the media file used as the last frame to generate video. Note:</p><ol><li>When specifying this parameter, you must also specify the first frame through FileInfos.</li><li>Image size must be less than 5M.</li><li>Supported image formats: jpeg, jpg, png, webp.</li></ol>
+                     * @return LastFrameUrl <p>URL of the media file used as the last frame to generate video. Note:</p><ol><li>When specifying this parameter, you must also specify the first frame through FileInfos.</li><li>Image size must be less than 5M.</li><li>Supported image formats: jpeg, jpg, png, webp.</li></ol>
                      * 
                      */
                     std::string GetLastFrameUrl() const;
 
                     /**
-                     * 设置
-                     * @param _lastFrameUrl 
+                     * 设置<p>URL of the media file used as the last frame to generate video. Note:</p><ol><li>When specifying this parameter, you must also specify the first frame through FileInfos.</li><li>Image size must be less than 5M.</li><li>Supported image formats: jpeg, jpg, png, webp.</li></ol>
+                     * @param _lastFrameUrl <p>URL of the media file used as the last frame to generate video. Note:</p><ol><li>When specifying this parameter, you must also specify the first frame through FileInfos.</li><li>Image size must be less than 5M.</li><li>Supported image formats: jpeg, jpg, png, webp.</li></ol>
                      * 
                      */
                     void SetLastFrameUrl(const std::string& _lastFrameUrl);
@@ -193,15 +193,15 @@ namespace TencentCloud
                     bool LastFrameUrlHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Prompt 
+                     * 获取<p>Prompt for video generation.<br>When no reference file is passed in, no usage scenario type is used, and ExtInfo is not null, Prompt is required.</p>
+                     * @return Prompt <p>Prompt for video generation.<br>When no reference file is passed in, no usage scenario type is used, and ExtInfo is not null, Prompt is required.</p>
                      * 
                      */
                     std::string GetPrompt() const;
 
                     /**
-                     * 设置
-                     * @param _prompt 
+                     * 设置<p>Prompt for video generation.<br>When no reference file is passed in, no usage scenario type is used, and ExtInfo is not null, Prompt is required.</p>
+                     * @param _prompt <p>Prompt for video generation.<br>When no reference file is passed in, no usage scenario type is used, and ExtInfo is not null, Prompt is required.</p>
                      * 
                      */
                     void SetPrompt(const std::string& _prompt);
@@ -214,15 +214,15 @@ namespace TencentCloud
                     bool PromptHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return NegativePrompt 
+                     * 获取<p>Prompt to prevent the model from generating videos.</p>
+                     * @return NegativePrompt <p>Prompt to prevent the model from generating videos.</p>
                      * 
                      */
                     std::string GetNegativePrompt() const;
 
                     /**
-                     * 设置
-                     * @param _negativePrompt 
+                     * 设置<p>Prompt to prevent the model from generating videos.</p>
+                     * @param _negativePrompt <p>Prompt to prevent the model from generating videos.</p>
                      * 
                      */
                     void SetNegativePrompt(const std::string& _negativePrompt);
@@ -235,15 +235,15 @@ namespace TencentCloud
                     bool NegativePromptHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return EnhancePrompt 
+                     * 获取<p>Whether to optimize Prompt content automatically. When Enabled, the passed-in Prompt will be optimized automatically to enhance generation quality. Valid values: <li>Enabled: enable;</li> <li>Disabled: disable;</li></p>
+                     * @return EnhancePrompt <p>Whether to optimize Prompt content automatically. When Enabled, the passed-in Prompt will be optimized automatically to enhance generation quality. Valid values: <li>Enabled: enable;</li> <li>Disabled: disable;</li></p>
                      * 
                      */
                     std::string GetEnhancePrompt() const;
 
                     /**
-                     * 设置
-                     * @param _enhancePrompt 
+                     * 设置<p>Whether to optimize Prompt content automatically. When Enabled, the passed-in Prompt will be optimized automatically to enhance generation quality. Valid values: <li>Enabled: enable;</li> <li>Disabled: disable;</li></p>
+                     * @param _enhancePrompt <p>Whether to optimize Prompt content automatically. When Enabled, the passed-in Prompt will be optimized automatically to enhance generation quality. Valid values: <li>Enabled: enable;</li> <li>Disabled: disable;</li></p>
                      * 
                      */
                     void SetEnhancePrompt(const std::string& _enhancePrompt);
@@ -256,15 +256,15 @@ namespace TencentCloud
                     bool EnhancePromptHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return OutputConfig 
+                     * 获取<p>Output media file configuration for a video task.</p>
+                     * @return OutputConfig <p>Output media file configuration for a video task.</p>
                      * 
                      */
                     AigcVideoOutputConfig GetOutputConfig() const;
 
                     /**
-                     * 设置
-                     * @param _outputConfig 
+                     * 设置<p>Output media file configuration for a video task.</p>
+                     * @param _outputConfig <p>Output media file configuration for a video task.</p>
                      * 
                      */
                     void SetOutputConfig(const AigcVideoOutputConfig& _outputConfig);
@@ -277,15 +277,15 @@ namespace TencentCloud
                     bool OutputConfigHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return InputRegion 
+                     * 获取<p>Region information of the input file. Values are as follows:</p><ul><li>If the input file is stored overseas: Oversea;</li><li>If the input file is stored in the western United States: OverseaUSWest;</li><li>If the input file is stored in the Chinese mainland: Mainland.</li></ul><p>Default value: Mainland</p>
+                     * @return InputRegion <p>Region information of the input file. Values are as follows:</p><ul><li>If the input file is stored overseas: Oversea;</li><li>If the input file is stored in the western United States: OverseaUSWest;</li><li>If the input file is stored in the Chinese mainland: Mainland.</li></ul><p>Default value: Mainland</p>
                      * 
                      */
                     std::string GetInputRegion() const;
 
                     /**
-                     * 设置
-                     * @param _inputRegion 
+                     * 设置<p>Region information of the input file. Values are as follows:</p><ul><li>If the input file is stored overseas: Oversea;</li><li>If the input file is stored in the western United States: OverseaUSWest;</li><li>If the input file is stored in the Chinese mainland: Mainland.</li></ul><p>Default value: Mainland</p>
+                     * @param _inputRegion <p>Region information of the input file. Values are as follows:</p><ul><li>If the input file is stored overseas: Oversea;</li><li>If the input file is stored in the western United States: OverseaUSWest;</li><li>If the input file is stored in the Chinese mainland: Mainland.</li></ul><p>Default value: Mainland</p>
                      * 
                      */
                     void SetInputRegion(const std::string& _inputRegion);
@@ -298,15 +298,15 @@ namespace TencentCloud
                     bool InputRegionHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SceneType 
+                     * 获取<p>Scenario type. Values are as follows:</p><li>When ModelName is Kling: motion_control means action control; avatar_i2v means digital human; lip_sync means lip-sync;</li><li>When ModelName is Vidu: template_effect means special effect template;</li><li>Other ModelName values are not currently supported.</li>
+                     * @return SceneType <p>Scenario type. Values are as follows:</p><li>When ModelName is Kling: motion_control means action control; avatar_i2v means digital human; lip_sync means lip-sync;</li><li>When ModelName is Vidu: template_effect means special effect template;</li><li>Other ModelName values are not currently supported.</li>
                      * 
                      */
                     std::string GetSceneType() const;
 
                     /**
-                     * 设置
-                     * @param _sceneType 
+                     * 设置<p>Scenario type. Values are as follows:</p><li>When ModelName is Kling: motion_control means action control; avatar_i2v means digital human; lip_sync means lip-sync;</li><li>When ModelName is Vidu: template_effect means special effect template;</li><li>Other ModelName values are not currently supported.</li>
+                     * @param _sceneType <p>Scenario type. Values are as follows:</p><li>When ModelName is Kling: motion_control means action control; avatar_i2v means digital human; lip_sync means lip-sync;</li><li>When ModelName is Vidu: template_effect means special effect template;</li><li>Other ModelName values are not currently supported.</li>
                      * 
                      */
                     void SetSceneType(const std::string& _sceneType);
@@ -319,15 +319,15 @@ namespace TencentCloud
                     bool SceneTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Procedure 
+                     * 获取<p><a href="https://www.tencentcloud.com/document/product/266/33475?from_cn_redirect=1#.E4.BB.BB.E5.8A.A1.E6.B5.81">Task flow name</a>. Fill in when you need to execute a task flow on the generated new video.</p>
+                     * @return Procedure <p><a href="https://www.tencentcloud.com/document/product/266/33475?from_cn_redirect=1#.E4.BB.BB.E5.8A.A1.E6.B5.81">Task flow name</a>. Fill in when you need to execute a task flow on the generated new video.</p>
                      * 
                      */
                     std::string GetProcedure() const;
 
                     /**
-                     * 设置
-                     * @param _procedure 
+                     * 设置<p><a href="https://www.tencentcloud.com/document/product/266/33475?from_cn_redirect=1#.E4.BB.BB.E5.8A.A1.E6.B5.81">Task flow name</a>. Fill in when you need to execute a task flow on the generated new video.</p>
+                     * @param _procedure <p><a href="https://www.tencentcloud.com/document/product/266/33475?from_cn_redirect=1#.E4.BB.BB.E5.8A.A1.E6.B5.81">Task flow name</a>. Fill in when you need to execute a task flow on the generated new video.</p>
                      * 
                      */
                     void SetProcedure(const std::string& _procedure);
@@ -340,15 +340,15 @@ namespace TencentCloud
                     bool ProcedureHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Seed 
+                     * 获取<p>Random seed of the model.</p>
+                     * @return Seed <p>Random seed of the model.</p>
                      * 
                      */
                     int64_t GetSeed() const;
 
                     /**
-                     * 设置
-                     * @param _seed 
+                     * 设置<p>Random seed of the model.</p>
+                     * @param _seed <p>Random seed of the model.</p>
                      * 
                      */
                     void SetSeed(const int64_t& _seed);
@@ -361,15 +361,15 @@ namespace TencentCloud
                     bool SeedHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SessionId 
+                     * 获取<p>Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
+                     * @return SessionId <p>Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
                      * 
                      */
                     std::string GetSessionId() const;
 
                     /**
-                     * 设置
-                     * @param _sessionId 
+                     * 设置<p>Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
+                     * @param _sessionId <p>Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
                      * 
                      */
                     void SetSessionId(const std::string& _sessionId);
@@ -382,15 +382,15 @@ namespace TencentCloud
                     bool SessionIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SessionContext 
+                     * 获取<p>Source context. This is used to pass user request information. The audio and video quality revival complete callback returns the value of this field. The maximum length is 1000 characters.</p>
+                     * @return SessionContext <p>Source context. This is used to pass user request information. The audio and video quality revival complete callback returns the value of this field. The maximum length is 1000 characters.</p>
                      * 
                      */
                     std::string GetSessionContext() const;
 
                     /**
-                     * 设置
-                     * @param _sessionContext 
+                     * 设置<p>Source context. This is used to pass user request information. The audio and video quality revival complete callback returns the value of this field. The maximum length is 1000 characters.</p>
+                     * @param _sessionContext <p>Source context. This is used to pass user request information. The audio and video quality revival complete callback returns the value of this field. The maximum length is 1000 characters.</p>
                      * 
                      */
                     void SetSessionContext(const std::string& _sessionContext);
@@ -403,15 +403,15 @@ namespace TencentCloud
                     bool SessionContextHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return TasksPriority 
+                     * 获取<p>Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If this is not specified, the default value is 0.</p>
+                     * @return TasksPriority <p>Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If this is not specified, the default value is 0.</p>
                      * 
                      */
                     int64_t GetTasksPriority() const;
 
                     /**
-                     * 设置
-                     * @param _tasksPriority 
+                     * 设置<p>Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If this is not specified, the default value is 0.</p>
+                     * @param _tasksPriority <p>Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If this is not specified, the default value is 0.</p>
                      * 
                      */
                     void SetTasksPriority(const int64_t& _tasksPriority);
@@ -424,15 +424,15 @@ namespace TencentCloud
                     bool TasksPriorityHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ExtInfo 
+                     * 获取<p>Reserved field, used for special purposes.<br>Can be used to import special model parameters, storyboard prompts, etc.</p>
+                     * @return ExtInfo <p>Reserved field, used for special purposes.<br>Can be used to import special model parameters, storyboard prompts, etc.</p>
                      * 
                      */
                     std::string GetExtInfo() const;
 
                     /**
-                     * 设置
-                     * @param _extInfo 
+                     * 设置<p>Reserved field, used for special purposes.<br>Can be used to import special model parameters, storyboard prompts, etc.</p>
+                     * @param _extInfo <p>Reserved field, used for special purposes.<br>Can be used to import special model parameters, storyboard prompts, etc.</p>
                      * 
                      */
                     void SetExtInfo(const std::string& _extInfo);
@@ -447,115 +447,115 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b></p>
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Model name. Parameter values:<br>Kling: Kling;<br>Vidu;<br>Hailuo: Hailuo;<br>Hunyuan: Hunyuan;<br>Mingmou: Mingmou;<br>GV;<br>OS;<br>PixVerse;</p>
                      */
                     std::string m_modelName;
                     bool m_modelNameHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Model version. Value: <br>When ModelName is Hailuo, available values are 02, 2.3, 2.3-fast, H3, H3_regen, and H3-Max;<br>When ModelName is Kling, available values are 1.6, 2.0, 2.1, 2.5, 2.6, O1, 3.0, 3.0-Omni, 3.0-turbo, and scene;<br>When ModelName is Vidu, available values are q2, q2-pro, q2-turbo, q3, q3-pro, q3-turbo, q3-mix, q3-drama, q3-ad, scene, avatar-q2-pro, avatar-q2-turbo, and lip-sync;<br>When ModelName is GV, available values are 3.1, 3.1-fast, 3.1-lite, and omni;<br>When ModelName is OS, available values are 2.0;<br>When ModelName is Hunyuan, available values are 1.5 and 3d_2.0;<br>When ModelName is Mingmou, available values are 1.0;<br>When ModelName is PixVerse, available values are v5.6, v6, and c1;</p>
                      */
                     std::string m_modelVersion;
                     bool m_modelVersionHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Describes the resource file to be used by the model for video generation, divided into <strong>first and last frame mode, reference image/video/sound generation, video editing, and other modes</strong>.</p><p><strong>First and last frame video generation</strong>: <strong>The Usage field of the first frame image is FirstFrame, and the Usage field of the last frame image is LastFrame</strong>. One image is supported for each. The first frame can be imported separately, but the last frame cannot be imported separately. <strong>First and last frame generation uses the image ratio for reference</strong>.<br><strong>Reference image/video/sound generation</strong>: You can import single or multiple images/videos/sounds as references, with the <strong>Usage field set to Reference</strong>. <strong>In reference mode, you can adjust the aspect ratio of the generated video</strong>.<br><strong>Video editing</strong>: Vidu and Kling can input a video for editing. You can also import images while importing a video, with the <strong>Usage field of the image set to Reference</strong>.</p><p>Note:</p><ol><li>Image size cannot exceed 10 MB.</li><li>Supported image formats: jpeg, jpg, png. x0b</li><li>For whether a specific model version supports reference image/video/sound, first and last frame, video editing, and other features, you can request documentation from us or refer to the original vendor's document information.</li></ol>
                      */
                     std::vector<AigcVideoTaskInputFileInfo> m_fileInfos;
                     bool m_fileInfosHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Subject input information.</p>
                      */
                     std::vector<AigcVideoTaskInputSubjectInfo> m_subjectInfos;
                     bool m_subjectInfosHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Media file ID used as the last frame image to generate a video. The globally unique identifier of the file in VOD, assigned by the VOD backend after successful upload. You can obtain this field in the <a href="/document/product/266/7830">video upload completion event notification</a> or the <a href="https://console.cloud.tencent.com/vod/media">VOD console</a>.</p><ol><li>When you specify this parameter, you must also specify the first frame through FileInfos.</li><li>The image size must be less than 10M.</li><li>The image format values are: jpeg, jpg, png, webp.</li></ol>
                      */
                     std::string m_lastFrameFileId;
                     bool m_lastFrameFileIdHasBeenSet;
 
                     /**
-                     * 
+                     * <p>URL of the media file used as the last frame to generate video. Note:</p><ol><li>When specifying this parameter, you must also specify the first frame through FileInfos.</li><li>Image size must be less than 5M.</li><li>Supported image formats: jpeg, jpg, png, webp.</li></ol>
                      */
                     std::string m_lastFrameUrl;
                     bool m_lastFrameUrlHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Prompt for video generation.<br>When no reference file is passed in, no usage scenario type is used, and ExtInfo is not null, Prompt is required.</p>
                      */
                     std::string m_prompt;
                     bool m_promptHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Prompt to prevent the model from generating videos.</p>
                      */
                     std::string m_negativePrompt;
                     bool m_negativePromptHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Whether to optimize Prompt content automatically. When Enabled, the passed-in Prompt will be optimized automatically to enhance generation quality. Valid values: <li>Enabled: enable;</li> <li>Disabled: disable;</li></p>
                      */
                     std::string m_enhancePrompt;
                     bool m_enhancePromptHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Output media file configuration for a video task.</p>
                      */
                     AigcVideoOutputConfig m_outputConfig;
                     bool m_outputConfigHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Region information of the input file. Values are as follows:</p><ul><li>If the input file is stored overseas: Oversea;</li><li>If the input file is stored in the western United States: OverseaUSWest;</li><li>If the input file is stored in the Chinese mainland: Mainland.</li></ul><p>Default value: Mainland</p>
                      */
                     std::string m_inputRegion;
                     bool m_inputRegionHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Scenario type. Values are as follows:</p><li>When ModelName is Kling: motion_control means action control; avatar_i2v means digital human; lip_sync means lip-sync;</li><li>When ModelName is Vidu: template_effect means special effect template;</li><li>Other ModelName values are not currently supported.</li>
                      */
                     std::string m_sceneType;
                     bool m_sceneTypeHasBeenSet;
 
                     /**
-                     * 
+                     * <p><a href="https://www.tencentcloud.com/document/product/266/33475?from_cn_redirect=1#.E4.BB.BB.E5.8A.A1.E6.B5.81">Task flow name</a>. Fill in when you need to execute a task flow on the generated new video.</p>
                      */
                     std::string m_procedure;
                     bool m_procedureHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Random seed of the model.</p>
                      */
                     int64_t m_seed;
                     bool m_seedHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
                      */
                     std::string m_sessionId;
                     bool m_sessionIdHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Source context. This is used to pass user request information. The audio and video quality revival complete callback returns the value of this field. The maximum length is 1000 characters.</p>
                      */
                     std::string m_sessionContext;
                     bool m_sessionContextHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If this is not specified, the default value is 0.</p>
                      */
                     int64_t m_tasksPriority;
                     bool m_tasksPriorityHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Reserved field, used for special purposes.<br>Can be used to import special model parameters, storyboard prompts, etc.</p>
                      */
                     std::string m_extInfo;
                     bool m_extInfoHasBeenSet;

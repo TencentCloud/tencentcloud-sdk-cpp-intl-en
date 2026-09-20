@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Speech synthesis task input.
                 */
                 class TextToSpeechAsyncInput : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return VoiceId 
+                     * 获取<p>Voice ID.</p>
+                     * @return VoiceId <p>Voice ID.</p>
                      * 
                      */
                     std::string GetVoiceId() const;
 
                     /**
-                     * 设置
-                     * @param _voiceId 
+                     * 设置<p>Voice ID.</p>
+                     * @param _voiceId <p>Voice ID.</p>
                      * 
                      */
                     void SetVoiceId(const std::string& _voiceId);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool VoiceIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Text 
+                     * 获取<p>Text to convert to speech.</p>
+                     * @return Text <p>Text to convert to speech.</p>
                      * 
                      */
                     std::string GetText() const;
 
                     /**
-                     * 设置
-                     * @param _text 
+                     * 设置<p>Text to convert to speech.</p>
+                     * @param _text <p>Text to convert to speech.</p>
                      * 
                      */
                     void SetText(const std::string& _text);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool TextHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return LanguageBoost 
+                     * 获取<p>Text to speech language.</p>
+                     * @return LanguageBoost <p>Text to speech language.</p>
                      * 
                      */
                     std::string GetLanguageBoost() const;
 
                     /**
-                     * 设置
-                     * @param _languageBoost 
+                     * 设置<p>Text to speech language.</p>
+                     * @param _languageBoost <p>Text to speech language.</p>
                      * 
                      */
                     void SetLanguageBoost(const std::string& _languageBoost);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool LanguageBoostHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ExtParam 
+                     * 获取<p>Extended parameters in the format of a JSON string.</p>
+                     * @return ExtParam <p>Extended parameters in the format of a JSON string.</p>
                      * 
                      */
                     std::string GetExtParam() const;
 
                     /**
-                     * 设置
-                     * @param _extParam 
+                     * 设置<p>Extended parameters in the format of a JSON string.</p>
+                     * @param _extParam <p>Extended parameters in the format of a JSON string.</p>
                      * 
                      */
                     void SetExtParam(const std::string& _extParam);
@@ -133,25 +133,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p>Voice ID.</p>
                      */
                     std::string m_voiceId;
                     bool m_voiceIdHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Text to convert to speech.</p>
                      */
                     std::string m_text;
                     bool m_textHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Text to speech language.</p>
                      */
                     std::string m_languageBoost;
                     bool m_languageBoostHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Extended parameters in the format of a JSON string.</p>
                      */
                     std::string m_extParam;
                     bool m_extParamHasBeenSet;

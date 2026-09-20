@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Watermark removal configuration for the smart erasing template.
                 */
                 class MPSSmartEraseWatermarkConfig : public AbstractModel
                 {
@@ -49,15 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return WatermarkEraseMethod 
+                     * 获取<p>Watermark removal method. <strong>Auto removal:</strong> Model A automatically identifies the watermark in the video and generates a new video after removal. Suitable for dynamic watermarks. When using auto removal, if you do not specify AutoAreas, auto removal is performed on the full screen. If AutoAreas is specified, auto removal is performed on your specified areas. <strong>Specified area removal:</strong> For static watermarks with fixed positions, it is recommended to directly specify the removal area. When using specified area removal, import at least one specified area. - auto: auto removal - custom: specified area removal</p>
+                     * @return WatermarkEraseMethod <p>Watermark removal method. <strong>Auto removal:</strong> Model A automatically identifies the watermark in the video and generates a new video after removal. Suitable for dynamic watermarks. When using auto removal, if you do not specify AutoAreas, auto removal is performed on the full screen. If AutoAreas is specified, auto removal is performed on your specified areas. <strong>Specified area removal:</strong> For static watermarks with fixed positions, it is recommended to directly specify the removal area. When using specified area removal, import at least one specified area. - auto: auto removal - custom: specified area removal</p>
                      * 
                      */
                     std::string GetWatermarkEraseMethod() const;
 
                     /**
-                     * 设置
-                     * @param _watermarkEraseMethod 
+                     * 设置<p>Watermark removal method. <strong>Auto removal:</strong> Model A automatically identifies the watermark in the video and generates a new video after removal. Suitable for dynamic watermarks. When using auto removal, if you do not specify AutoAreas, auto removal is performed on the full screen. If AutoAreas is specified, auto removal is performed on your specified areas. <strong>Specified area removal:</strong> For static watermarks with fixed positions, it is recommended to directly specify the removal area. When using specified area removal, import at least one specified area. - auto: auto removal - custom: specified area removal</p>
+                     * @param _watermarkEraseMethod <p>Watermark removal method. <strong>Auto removal:</strong> Model A automatically identifies the watermark in the video and generates a new video after removal. Suitable for dynamic watermarks. When using auto removal, if you do not specify AutoAreas, auto removal is performed on the full screen. If AutoAreas is specified, auto removal is performed on your specified areas. <strong>Specified area removal:</strong> For static watermarks with fixed positions, it is recommended to directly specify the removal area. When using specified area removal, import at least one specified area. - auto: auto removal - custom: specified area removal</p>
                      * 
                      */
                     void SetWatermarkEraseMethod(const std::string& _watermarkEraseMethod);
@@ -70,15 +70,15 @@ namespace TencentCloud
                     bool WatermarkEraseMethodHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return WatermarkModel 
+                     * 获取<p>Watermark removal model. Basic Edition: provide average effects and high cost performance. It applies to animations or videos with clean backgrounds. Advanced Edition: provide better effectiveness and is suitable for realistic-style videos such as short dramas. - basic edition - advanced edition</p>
+                     * @return WatermarkModel <p>Watermark removal model. Basic Edition: provide average effects and high cost performance. It applies to animations or videos with clean backgrounds. Advanced Edition: provide better effectiveness and is suitable for realistic-style videos such as short dramas. - basic edition - advanced edition</p>
                      * 
                      */
                     std::string GetWatermarkModel() const;
 
                     /**
-                     * 设置
-                     * @param _watermarkModel 
+                     * 设置<p>Watermark removal model. Basic Edition: provide average effects and high cost performance. It applies to animations or videos with clean backgrounds. Advanced Edition: provide better effectiveness and is suitable for realistic-style videos such as short dramas. - basic edition - advanced edition</p>
+                     * @param _watermarkModel <p>Watermark removal model. Basic Edition: provide average effects and high cost performance. It applies to animations or videos with clean backgrounds. Advanced Edition: provide better effectiveness and is suitable for realistic-style videos such as short dramas. - basic edition - advanced edition</p>
                      * 
                      */
                     void SetWatermarkModel(const std::string& _watermarkModel);
@@ -91,15 +91,15 @@ namespace TencentCloud
                     bool WatermarkModelHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AutoAreas 
+                     * 获取<p>Automatically erase custom regions. For selected regions, use the AI model to automatically detect and erase existing targets. Note: When the erase method is set to custom, this parameter will not take effect. Input [] for region cleanup. If not provided, the template region information remains unchanged.</p>
+                     * @return AutoAreas <p>Automatically erase custom regions. For selected regions, use the AI model to automatically detect and erase existing targets. Note: When the erase method is set to custom, this parameter will not take effect. Input [] for region cleanup. If not provided, the template region information remains unchanged.</p>
                      * 
                      */
                     std::vector<MPSEraseArea> GetAutoAreas() const;
 
                     /**
-                     * 设置
-                     * @param _autoAreas 
+                     * 设置<p>Automatically erase custom regions. For selected regions, use the AI model to automatically detect and erase existing targets. Note: When the erase method is set to custom, this parameter will not take effect. Input [] for region cleanup. If not provided, the template region information remains unchanged.</p>
+                     * @param _autoAreas <p>Automatically erase custom regions. For selected regions, use the AI model to automatically detect and erase existing targets. Note: When the erase method is set to custom, this parameter will not take effect. Input [] for region cleanup. If not provided, the template region information remains unchanged.</p>
                      * 
                      */
                     void SetAutoAreas(const std::vector<MPSEraseArea>& _autoAreas);
@@ -112,15 +112,15 @@ namespace TencentCloud
                     bool AutoAreasHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return CustomAreas 
+                     * 获取<p>Designate the removal of custom regions. For specified regions, directly perform erasure without detection and recognition within a selected time range. Note: Import [] to clear regions. The template region information remains unchanged if not imported.</p>
+                     * @return CustomAreas <p>Designate the removal of custom regions. For specified regions, directly perform erasure without detection and recognition within a selected time range. Note: Import [] to clear regions. The template region information remains unchanged if not imported.</p>
                      * 
                      */
                     std::vector<MPSEraseTimeArea> GetCustomAreas() const;
 
                     /**
-                     * 设置
-                     * @param _customAreas 
+                     * 设置<p>Designate the removal of custom regions. For specified regions, directly perform erasure without detection and recognition within a selected time range. Note: Import [] to clear regions. The template region information remains unchanged if not imported.</p>
+                     * @param _customAreas <p>Designate the removal of custom regions. For specified regions, directly perform erasure without detection and recognition within a selected time range. Note: Import [] to clear regions. The template region information remains unchanged if not imported.</p>
                      * 
                      */
                     void SetCustomAreas(const std::vector<MPSEraseTimeArea>& _customAreas);
@@ -135,25 +135,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p>Watermark removal method. <strong>Auto removal:</strong> Model A automatically identifies the watermark in the video and generates a new video after removal. Suitable for dynamic watermarks. When using auto removal, if you do not specify AutoAreas, auto removal is performed on the full screen. If AutoAreas is specified, auto removal is performed on your specified areas. <strong>Specified area removal:</strong> For static watermarks with fixed positions, it is recommended to directly specify the removal area. When using specified area removal, import at least one specified area. - auto: auto removal - custom: specified area removal</p>
                      */
                     std::string m_watermarkEraseMethod;
                     bool m_watermarkEraseMethodHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Watermark removal model. Basic Edition: provide average effects and high cost performance. It applies to animations or videos with clean backgrounds. Advanced Edition: provide better effectiveness and is suitable for realistic-style videos such as short dramas. - basic edition - advanced edition</p>
                      */
                     std::string m_watermarkModel;
                     bool m_watermarkModelHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Automatically erase custom regions. For selected regions, use the AI model to automatically detect and erase existing targets. Note: When the erase method is set to custom, this parameter will not take effect. Input [] for region cleanup. If not provided, the template region information remains unchanged.</p>
                      */
                     std::vector<MPSEraseArea> m_autoAreas;
                     bool m_autoAreasHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Designate the removal of custom regions. For specified regions, directly perform erasure without detection and recognition within a selected time range. Note: Import [] to clear regions. The template region information remains unchanged if not imported.</p>
                      */
                     std::vector<MPSEraseTimeArea> m_customAreas;
                     bool m_customAreasHasBeenSet;

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Video clipping result file info (2017)
                 */
                 class ClipFileInfo2017 : public AbstractModel
                 {
@@ -47,15 +47,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return ErrCode 
+                     * 获取Error code.
+<li>0: success;</li>
+<li>Other values: Failed.</li>
+                     * @return ErrCode Error code.
+<li>0: success;</li>
+<li>Other values: Failed.</li>
                      * 
                      */
                     int64_t GetErrCode() const;
 
                     /**
-                     * 设置
-                     * @param _errCode 
+                     * 设置Error code.
+<li>0: success;</li>
+<li>Other values: Failed.</li>
+                     * @param _errCode Error code.
+<li>0: success;</li>
+<li>Other values: Failed.</li>
                      * 
                      */
                     void SetErrCode(const int64_t& _errCode);
@@ -68,15 +76,15 @@ namespace TencentCloud
                     bool ErrCodeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Message 
+                     * 获取Error description.
+                     * @return Message Error description.
                      * 
                      */
                     std::string GetMessage() const;
 
                     /**
-                     * 设置
-                     * @param _message 
+                     * 设置Error description.
+                     * @param _message Error description.
                      * 
                      */
                     void SetMessage(const std::string& _message);
@@ -89,15 +97,15 @@ namespace TencentCloud
                     bool MessageHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return FileId 
+                     * 获取Output the file ID of the target file.
+                     * @return FileId Output the file ID of the target file.
                      * 
                      */
                     std::string GetFileId() const;
 
                     /**
-                     * 设置
-                     * @param _fileId 
+                     * 设置Output the file ID of the target file.
+                     * @param _fileId Output the file ID of the target file.
                      * 
                      */
                     void SetFileId(const std::string& _fileId);
@@ -110,15 +118,15 @@ namespace TencentCloud
                     bool FileIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return FileUrl 
+                     * 获取File address of the output target file.
+                     * @return FileUrl File address of the output target file.
                      * 
                      */
                     std::string GetFileUrl() const;
 
                     /**
-                     * 设置
-                     * @param _fileUrl 
+                     * 设置File address of the output target file.
+                     * @param _fileUrl File address of the output target file.
                      * 
                      */
                     void SetFileUrl(const std::string& _fileUrl);
@@ -131,15 +139,15 @@ namespace TencentCloud
                     bool FileUrlHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return FileType 
+                     * 获取Output file type of the target file.
+                     * @return FileType Output file type of the target file.
                      * 
                      */
                     std::string GetFileType() const;
 
                     /**
-                     * 设置
-                     * @param _fileType 
+                     * 设置Output file type of the target file.
+                     * @param _fileType Output file type of the target file.
                      * 
                      */
                     void SetFileType(const std::string& _fileType);
@@ -154,31 +162,33 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Error code.
+<li>0: success;</li>
+<li>Other values: Failed.</li>
                      */
                     int64_t m_errCode;
                     bool m_errCodeHasBeenSet;
 
                     /**
-                     * 
+                     * Error description.
                      */
                     std::string m_message;
                     bool m_messageHasBeenSet;
 
                     /**
-                     * 
+                     * Output the file ID of the target file.
                      */
                     std::string m_fileId;
                     bool m_fileIdHasBeenSet;
 
                     /**
-                     * 
+                     * File address of the output target file.
                      */
                     std::string m_fileUrl;
                     bool m_fileUrlHasBeenSet;
 
                     /**
-                     * 
+                     * Output file type of the target file.
                      */
                     std::string m_fileType;
                     bool m_fileTypeHasBeenSet;

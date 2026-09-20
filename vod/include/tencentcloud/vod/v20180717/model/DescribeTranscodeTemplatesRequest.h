@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return SubAppId 
+                     * 获取<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+                     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置
-                     * @param _subAppId 
+                     * 设置<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+                     * @param _subAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool SubAppIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Definitions 
+                     * 获取Filtering condition for the unique identifier of the transcoding template. The array length cannot exceed 100.
+                     * @return Definitions Filtering condition for the unique identifier of the transcoding template. The array length cannot exceed 100.
                      * 
                      */
                     std::vector<int64_t> GetDefinitions() const;
 
                     /**
-                     * 设置
-                     * @param _definitions 
+                     * 设置Filtering condition for the unique identifier of the transcoding template. The array length cannot exceed 100.
+                     * @param _definitions Filtering condition for the unique identifier of the transcoding template. The array length cannot exceed 100.
                      * 
                      */
                     void SetDefinitions(const std::vector<int64_t>& _definitions);
@@ -85,15 +85,23 @@ namespace TencentCloud
                     bool DefinitionsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Type 
+                     * 获取Condition for filtering templates by type. Valid values:
+<li>Preset: system-preset template;</li>
+<li>Custom: custom template.</li>
+                     * @return Type Condition for filtering templates by type. Valid values:
+<li>Preset: system-preset template;</li>
+<li>Custom: custom template.</li>
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置
-                     * @param _type 
+                     * 设置Condition for filtering templates by type. Valid values:
+<li>Preset: system-preset template;</li>
+<li>Custom: custom template.</li>
+                     * @param _type Condition for filtering templates by type. Valid values:
+<li>Preset: system-preset template;</li>
+<li>Custom: custom template.</li>
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -106,15 +114,23 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ContainerType 
+                     * 获取Muxing format filter criteria. Available values:
+<li>Video: Video format. A container format that can contain both video and audio streams.</li>
+<li>PureAudio: Pure audio format. A muxing format that can only contain audio streams.</li>
+                     * @return ContainerType Muxing format filter criteria. Available values:
+<li>Video: Video format. A container format that can contain both video and audio streams.</li>
+<li>PureAudio: Pure audio format. A muxing format that can only contain audio streams.</li>
                      * 
                      */
                     std::string GetContainerType() const;
 
                     /**
-                     * 设置
-                     * @param _containerType 
+                     * 设置Muxing format filter criteria. Available values:
+<li>Video: Video format. A container format that can contain both video and audio streams.</li>
+<li>PureAudio: Pure audio format. A muxing format that can only contain audio streams.</li>
+                     * @param _containerType Muxing format filter criteria. Available values:
+<li>Video: Video format. A container format that can contain both video and audio streams.</li>
+<li>PureAudio: Pure audio format. A muxing format that can only contain audio streams.</li>
                      * 
                      */
                     void SetContainerType(const std::string& _containerType);
@@ -127,15 +143,23 @@ namespace TencentCloud
                     bool ContainerTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return TEHDType 
+                     * 获取TSC filter criteria for filtering standard or TSC transcoding templates. Available values:
+<li>Common: standard transcoding template;</li>
+<li>TEHD: Ultra-HD template.</li>
+                     * @return TEHDType TSC filter criteria for filtering standard or TSC transcoding templates. Available values:
+<li>Common: standard transcoding template;</li>
+<li>TEHD: Ultra-HD template.</li>
                      * 
                      */
                     std::string GetTEHDType() const;
 
                     /**
-                     * 设置
-                     * @param _tEHDType 
+                     * 设置TSC filter criteria for filtering standard or TSC transcoding templates. Available values:
+<li>Common: standard transcoding template;</li>
+<li>TEHD: Ultra-HD template.</li>
+                     * @param _tEHDType TSC filter criteria for filtering standard or TSC transcoding templates. Available values:
+<li>Common: standard transcoding template;</li>
+<li>TEHD: Ultra-HD template.</li>
                      * 
                      */
                     void SetTEHDType(const std::string& _tEHDType);
@@ -148,15 +172,15 @@ namespace TencentCloud
                     bool TEHDTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Offset 
+                     * 获取Pagination offset. Default value: 0.
+                     * @return Offset Pagination offset. Default value: 0.
                      * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
-                     * 设置
-                     * @param _offset 
+                     * 设置Pagination offset. Default value: 0.
+                     * @param _offset Pagination offset. Default value: 0.
                      * 
                      */
                     void SetOffset(const uint64_t& _offset);
@@ -169,15 +193,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Limit 
+                     * 获取Number of returned entries. Default value: 10. Maximum value: 100.
+                     * @return Limit Number of returned entries. Default value: 10. Maximum value: 100.
                      * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
-                     * 设置
-                     * @param _limit 
+                     * 设置Number of returned entries. Default value: 10. Maximum value: 100.
+                     * @param _limit Number of returned entries. Default value: 10. Maximum value: 100.
                      * 
                      */
                     void SetLimit(const uint64_t& _limit);
@@ -190,15 +214,35 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return EnhanceType 
+                     * 获取Enhancement type. Valid values:
+<li>VideoEnhance: video enhancement only.</li>
+<li>AudioEnhance (audio enhancement only).</li>
+<li>AudioVideoEnhance: audio and video enhancement.</li>
+<li>AnyEnhance (including video enhancement only, audio enhancement only, and audio and video enhancement)</li>
+<li>None (non-enhanced)</li>
+                     * @return EnhanceType Enhancement type. Valid values:
+<li>VideoEnhance: video enhancement only.</li>
+<li>AudioEnhance (audio enhancement only).</li>
+<li>AudioVideoEnhance: audio and video enhancement.</li>
+<li>AnyEnhance (including video enhancement only, audio enhancement only, and audio and video enhancement)</li>
+<li>None (non-enhanced)</li>
                      * 
                      */
                     std::string GetEnhanceType() const;
 
                     /**
-                     * 设置
-                     * @param _enhanceType 
+                     * 设置Enhancement type. Valid values:
+<li>VideoEnhance: video enhancement only.</li>
+<li>AudioEnhance (audio enhancement only).</li>
+<li>AudioVideoEnhance: audio and video enhancement.</li>
+<li>AnyEnhance (including video enhancement only, audio enhancement only, and audio and video enhancement)</li>
+<li>None (non-enhanced)</li>
+                     * @param _enhanceType Enhancement type. Valid values:
+<li>VideoEnhance: video enhancement only.</li>
+<li>AudioEnhance (audio enhancement only).</li>
+<li>AudioVideoEnhance: audio and video enhancement.</li>
+<li>AnyEnhance (including video enhancement only, audio enhancement only, and audio and video enhancement)</li>
+<li>None (non-enhanced)</li>
                      * 
                      */
                     void SetEnhanceType(const std::string& _enhanceType);
@@ -211,15 +255,15 @@ namespace TencentCloud
                     bool EnhanceTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return EnhanceScenarioType 
+                     * 获取Enhancement scenario configuration. Available values: <li>common: general enhancement parameters, suitable for basic optimization of various video types to improve overall video quality.</li> <li>AIGC: overall resolution enhancement, using AI technology to improve overall video resolution and enhance image definition.</li> <li>short_play: enhances face and subtitle details, highlights facial expression details and subtitle clarity, and improves the viewing experience.</li> <li>short_video: optimizes complex and diverse image quality issues. For complex short video scenarios, it optimizes video quality and addresses multiple visual issues.</li> <li>game: repairs motion blur and enhances details, focusing on enhancing the clarity of game details and restoring motion blur areas to make the game screen content clearer and richer.</li> <li>HD_movie_series: achieves ultra-high-definition smooth effects. For the demand of ultra-high-definition video in broadcasting and OTT, it generates 4K 60fps HDR ultra-high-definition standard video. It supports broadcasting scenario format standards.</li> <li>LQ_material: overall resolution enhancement, specially optimized for issues in old videos such as insufficient resolution, blur distortion, scratch damage, and color temperature caused by the age of shooting.</li> <li>lecture: beautifies and enhances face effects. For scenarios where people explain in shows, e-commerce, conferences, and lectures, it performs specialized optimization for face regions, noise reduction, and burr processing.</li>
+                     * @return EnhanceScenarioType Enhancement scenario configuration. Available values: <li>common: general enhancement parameters, suitable for basic optimization of various video types to improve overall video quality.</li> <li>AIGC: overall resolution enhancement, using AI technology to improve overall video resolution and enhance image definition.</li> <li>short_play: enhances face and subtitle details, highlights facial expression details and subtitle clarity, and improves the viewing experience.</li> <li>short_video: optimizes complex and diverse image quality issues. For complex short video scenarios, it optimizes video quality and addresses multiple visual issues.</li> <li>game: repairs motion blur and enhances details, focusing on enhancing the clarity of game details and restoring motion blur areas to make the game screen content clearer and richer.</li> <li>HD_movie_series: achieves ultra-high-definition smooth effects. For the demand of ultra-high-definition video in broadcasting and OTT, it generates 4K 60fps HDR ultra-high-definition standard video. It supports broadcasting scenario format standards.</li> <li>LQ_material: overall resolution enhancement, specially optimized for issues in old videos such as insufficient resolution, blur distortion, scratch damage, and color temperature caused by the age of shooting.</li> <li>lecture: beautifies and enhances face effects. For scenarios where people explain in shows, e-commerce, conferences, and lectures, it performs specialized optimization for face regions, noise reduction, and burr processing.</li>
                      * 
                      */
                     std::string GetEnhanceScenarioType() const;
 
                     /**
-                     * 设置
-                     * @param _enhanceScenarioType 
+                     * 设置Enhancement scenario configuration. Available values: <li>common: general enhancement parameters, suitable for basic optimization of various video types to improve overall video quality.</li> <li>AIGC: overall resolution enhancement, using AI technology to improve overall video resolution and enhance image definition.</li> <li>short_play: enhances face and subtitle details, highlights facial expression details and subtitle clarity, and improves the viewing experience.</li> <li>short_video: optimizes complex and diverse image quality issues. For complex short video scenarios, it optimizes video quality and addresses multiple visual issues.</li> <li>game: repairs motion blur and enhances details, focusing on enhancing the clarity of game details and restoring motion blur areas to make the game screen content clearer and richer.</li> <li>HD_movie_series: achieves ultra-high-definition smooth effects. For the demand of ultra-high-definition video in broadcasting and OTT, it generates 4K 60fps HDR ultra-high-definition standard video. It supports broadcasting scenario format standards.</li> <li>LQ_material: overall resolution enhancement, specially optimized for issues in old videos such as insufficient resolution, blur distortion, scratch damage, and color temperature caused by the age of shooting.</li> <li>lecture: beautifies and enhances face effects. For scenarios where people explain in shows, e-commerce, conferences, and lectures, it performs specialized optimization for face regions, noise reduction, and burr processing.</li>
+                     * @param _enhanceScenarioType Enhancement scenario configuration. Available values: <li>common: general enhancement parameters, suitable for basic optimization of various video types to improve overall video quality.</li> <li>AIGC: overall resolution enhancement, using AI technology to improve overall video resolution and enhance image definition.</li> <li>short_play: enhances face and subtitle details, highlights facial expression details and subtitle clarity, and improves the viewing experience.</li> <li>short_video: optimizes complex and diverse image quality issues. For complex short video scenarios, it optimizes video quality and addresses multiple visual issues.</li> <li>game: repairs motion blur and enhances details, focusing on enhancing the clarity of game details and restoring motion blur areas to make the game screen content clearer and richer.</li> <li>HD_movie_series: achieves ultra-high-definition smooth effects. For the demand of ultra-high-definition video in broadcasting and OTT, it generates 4K 60fps HDR ultra-high-definition standard video. It supports broadcasting scenario format standards.</li> <li>LQ_material: overall resolution enhancement, specially optimized for issues in old videos such as insufficient resolution, blur distortion, scratch damage, and color temperature caused by the age of shooting.</li> <li>lecture: beautifies and enhances face effects. For scenarios where people explain in shows, e-commerce, conferences, and lectures, it performs specialized optimization for face regions, noise reduction, and burr processing.</li>
                      * 
                      */
                     void SetEnhanceScenarioType(const std::string& _enhanceScenarioType);
@@ -234,55 +278,66 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
 
                     /**
-                     * 
+                     * Filtering condition for the unique identifier of the transcoding template. The array length cannot exceed 100.
                      */
                     std::vector<int64_t> m_definitions;
                     bool m_definitionsHasBeenSet;
 
                     /**
-                     * 
+                     * Condition for filtering templates by type. Valid values:
+<li>Preset: system-preset template;</li>
+<li>Custom: custom template.</li>
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * 
+                     * Muxing format filter criteria. Available values:
+<li>Video: Video format. A container format that can contain both video and audio streams.</li>
+<li>PureAudio: Pure audio format. A muxing format that can only contain audio streams.</li>
                      */
                     std::string m_containerType;
                     bool m_containerTypeHasBeenSet;
 
                     /**
-                     * 
+                     * TSC filter criteria for filtering standard or TSC transcoding templates. Available values:
+<li>Common: standard transcoding template;</li>
+<li>TEHD: Ultra-HD template.</li>
                      */
                     std::string m_tEHDType;
                     bool m_tEHDTypeHasBeenSet;
 
                     /**
-                     * 
+                     * Pagination offset. Default value: 0.
                      */
                     uint64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * 
+                     * Number of returned entries. Default value: 10. Maximum value: 100.
                      */
                     uint64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * 
+                     * Enhancement type. Valid values:
+<li>VideoEnhance: video enhancement only.</li>
+<li>AudioEnhance (audio enhancement only).</li>
+<li>AudioVideoEnhance: audio and video enhancement.</li>
+<li>AnyEnhance (including video enhancement only, audio enhancement only, and audio and video enhancement)</li>
+<li>None (non-enhanced)</li>
                      */
                     std::string m_enhanceType;
                     bool m_enhanceTypeHasBeenSet;
 
                     /**
-                     * 
+                     * Enhancement scenario configuration. Available values: <li>common: general enhancement parameters, suitable for basic optimization of various video types to improve overall video quality.</li> <li>AIGC: overall resolution enhancement, using AI technology to improve overall video resolution and enhance image definition.</li> <li>short_play: enhances face and subtitle details, highlights facial expression details and subtitle clarity, and improves the viewing experience.</li> <li>short_video: optimizes complex and diverse image quality issues. For complex short video scenarios, it optimizes video quality and addresses multiple visual issues.</li> <li>game: repairs motion blur and enhances details, focusing on enhancing the clarity of game details and restoring motion blur areas to make the game screen content clearer and richer.</li> <li>HD_movie_series: achieves ultra-high-definition smooth effects. For the demand of ultra-high-definition video in broadcasting and OTT, it generates 4K 60fps HDR ultra-high-definition standard video. It supports broadcasting scenario format standards.</li> <li>LQ_material: overall resolution enhancement, specially optimized for issues in old videos such as insufficient resolution, blur distortion, scratch damage, and color temperature caused by the age of shooting.</li> <li>lecture: beautifies and enhances face effects. For scenarios where people explain in shows, e-commerce, conferences, and lectures, it performs specialized optimization for face regions, noise reduction, and burr processing.</li>
                      */
                     std::string m_enhanceScenarioType;
                     bool m_enhanceScenarioTypeHasBeenSet;

@@ -38,7 +38,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Task control parameter for authentication involving inappropriate information
                 */
                 class PoliticalConfigureInfo : public AbstractModel
                 {
@@ -50,15 +50,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return ImgReviewInfo 
+                     * 获取Image recognition involves control parameters for inappropriate information.
+                     * @return ImgReviewInfo Image recognition involves control parameters for inappropriate information.
                      * 
                      */
                     PoliticalImgReviewTemplateInfo GetImgReviewInfo() const;
 
                     /**
-                     * 设置
-                     * @param _imgReviewInfo 
+                     * 设置Image recognition involves control parameters for inappropriate information.
+                     * @param _imgReviewInfo Image recognition involves control parameters for inappropriate information.
                      * 
                      */
                     void SetImgReviewInfo(const PoliticalImgReviewTemplateInfo& _imgReviewInfo);
@@ -71,15 +71,15 @@ namespace TencentCloud
                     bool ImgReviewInfoHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AsrReviewInfo 
+                     * 获取Control parameters for ASR-based recognition involving inappropriate information.
+                     * @return AsrReviewInfo Control parameters for ASR-based recognition involving inappropriate information.
                      * 
                      */
                     PoliticalAsrReviewTemplateInfo GetAsrReviewInfo() const;
 
                     /**
-                     * 设置
-                     * @param _asrReviewInfo 
+                     * 设置Control parameters for ASR-based recognition involving inappropriate information.
+                     * @param _asrReviewInfo Control parameters for ASR-based recognition involving inappropriate information.
                      * 
                      */
                     void SetAsrReviewInfo(const PoliticalAsrReviewTemplateInfo& _asrReviewInfo);
@@ -92,15 +92,15 @@ namespace TencentCloud
                     bool AsrReviewInfoHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return OcrReviewInfo 
+                     * 获取Control parameters for text recognition involving inappropriate information.
+                     * @return OcrReviewInfo Control parameters for text recognition involving inappropriate information.
                      * 
                      */
                     PoliticalOcrReviewTemplateInfo GetOcrReviewInfo() const;
 
                     /**
-                     * 设置
-                     * @param _ocrReviewInfo 
+                     * 设置Control parameters for text recognition involving inappropriate information.
+                     * @param _ocrReviewInfo Control parameters for text recognition involving inappropriate information.
                      * 
                      */
                     void SetOcrReviewInfo(const PoliticalOcrReviewTemplateInfo& _ocrReviewInfo);
@@ -115,19 +115,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Image recognition involves control parameters for inappropriate information.
                      */
                     PoliticalImgReviewTemplateInfo m_imgReviewInfo;
                     bool m_imgReviewInfoHasBeenSet;
 
                     /**
-                     * 
+                     * Control parameters for ASR-based recognition involving inappropriate information.
                      */
                     PoliticalAsrReviewTemplateInfo m_asrReviewInfo;
                     bool m_asrReviewInfoHasBeenSet;
 
                     /**
-                     * 
+                     * Control parameters for text recognition involving inappropriate information.
                      */
                     PoliticalOcrReviewTemplateInfo m_ocrReviewInfo;
                     bool m_ocrReviewInfoHasBeenSet;

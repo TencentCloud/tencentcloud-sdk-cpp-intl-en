@@ -40,7 +40,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Segment information of the media track.
                 */
                 class MediaTrackItem : public AbstractModel
                 {
@@ -52,15 +52,35 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Type 
+                     * 获取Fragment type. Valid values:
+<li>Video: video clip.</li>
+<li>Audio: audio clip.</li>
+<li>Sticker: texture segment.</li>
+<li>Transition: transition.</li>
+<li>Empty: empty segment.</li>
+                     * @return Type Fragment type. Valid values:
+<li>Video: video clip.</li>
+<li>Audio: audio clip.</li>
+<li>Sticker: texture segment.</li>
+<li>Transition: transition.</li>
+<li>Empty: empty segment.</li>
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置
-                     * @param _type 
+                     * 设置Fragment type. Valid values:
+<li>Video: video clip.</li>
+<li>Audio: audio clip.</li>
+<li>Sticker: texture segment.</li>
+<li>Transition: transition.</li>
+<li>Empty: empty segment.</li>
+                     * @param _type Fragment type. Valid values:
+<li>Video: video clip.</li>
+<li>Audio: audio clip.</li>
+<li>Sticker: texture segment.</li>
+<li>Transition: transition.</li>
+<li>Empty: empty segment.</li>
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -73,15 +93,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return VideoItem 
+                     * 获取Video clip. Valid when Type is Video.
+                     * @return VideoItem Video clip. Valid when Type is Video.
                      * 
                      */
                     VideoTrackItem GetVideoItem() const;
 
                     /**
-                     * 设置
-                     * @param _videoItem 
+                     * 设置Video clip. Valid when Type is Video.
+                     * @param _videoItem Video clip. Valid when Type is Video.
                      * 
                      */
                     void SetVideoItem(const VideoTrackItem& _videoItem);
@@ -94,15 +114,15 @@ namespace TencentCloud
                     bool VideoItemHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AudioItem 
+                     * 获取Audio clip. Valid when Type = Audio.
+                     * @return AudioItem Audio clip. Valid when Type = Audio.
                      * 
                      */
                     AudioTrackItem GetAudioItem() const;
 
                     /**
-                     * 设置
-                     * @param _audioItem 
+                     * 设置Audio clip. Valid when Type = Audio.
+                     * @param _audioItem Audio clip. Valid when Type = Audio.
                      * 
                      */
                     void SetAudioItem(const AudioTrackItem& _audioItem);
@@ -115,15 +135,15 @@ namespace TencentCloud
                     bool AudioItemHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return StickerItem 
+                     * 获取Texture segment. Valid when Type is Sticker.
+                     * @return StickerItem Texture segment. Valid when Type is Sticker.
                      * 
                      */
                     StickerTrackItem GetStickerItem() const;
 
                     /**
-                     * 设置
-                     * @param _stickerItem 
+                     * 设置Texture segment. Valid when Type is Sticker.
+                     * @param _stickerItem Texture segment. Valid when Type is Sticker.
                      * 
                      */
                     void SetStickerItem(const StickerTrackItem& _stickerItem);
@@ -136,15 +156,15 @@ namespace TencentCloud
                     bool StickerItemHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return TransitionItem 
+                     * 获取Transition. Valid when Type is Transition.
+                     * @return TransitionItem Transition. Valid when Type is Transition.
                      * 
                      */
                     MediaTransitionItem GetTransitionItem() const;
 
                     /**
-                     * 设置
-                     * @param _transitionItem 
+                     * 设置Transition. Valid when Type is Transition.
+                     * @param _transitionItem Transition. Valid when Type is Transition.
                      * 
                      */
                     void SetTransitionItem(const MediaTransitionItem& _transitionItem);
@@ -157,15 +177,19 @@ namespace TencentCloud
                     bool TransitionItemHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return EmptyItem 
+                     * 获取Empty segment. Valid when Type is Empty. Empty segments are used as placeholders on the timeline.<li>If a period of silence is required between two audio clips, you can use EmptyTrackItem as a placeholder.</li>
+<li>Use EmptyTrackItem as a placeholder to locate an item.</li>
+                     * @return EmptyItem Empty segment. Valid when Type is Empty. Empty segments are used as placeholders on the timeline.<li>If a period of silence is required between two audio clips, you can use EmptyTrackItem as a placeholder.</li>
+<li>Use EmptyTrackItem as a placeholder to locate an item.</li>
                      * 
                      */
                     EmptyTrackItem GetEmptyItem() const;
 
                     /**
-                     * 设置
-                     * @param _emptyItem 
+                     * 设置Empty segment. Valid when Type is Empty. Empty segments are used as placeholders on the timeline.<li>If a period of silence is required between two audio clips, you can use EmptyTrackItem as a placeholder.</li>
+<li>Use EmptyTrackItem as a placeholder to locate an item.</li>
+                     * @param _emptyItem Empty segment. Valid when Type is Empty. Empty segments are used as placeholders on the timeline.<li>If a period of silence is required between two audio clips, you can use EmptyTrackItem as a placeholder.</li>
+<li>Use EmptyTrackItem as a placeholder to locate an item.</li>
                      * 
                      */
                     void SetEmptyItem(const EmptyTrackItem& _emptyItem);
@@ -180,37 +204,43 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Fragment type. Valid values:
+<li>Video: video clip.</li>
+<li>Audio: audio clip.</li>
+<li>Sticker: texture segment.</li>
+<li>Transition: transition.</li>
+<li>Empty: empty segment.</li>
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * 
+                     * Video clip. Valid when Type is Video.
                      */
                     VideoTrackItem m_videoItem;
                     bool m_videoItemHasBeenSet;
 
                     /**
-                     * 
+                     * Audio clip. Valid when Type = Audio.
                      */
                     AudioTrackItem m_audioItem;
                     bool m_audioItemHasBeenSet;
 
                     /**
-                     * 
+                     * Texture segment. Valid when Type is Sticker.
                      */
                     StickerTrackItem m_stickerItem;
                     bool m_stickerItemHasBeenSet;
 
                     /**
-                     * 
+                     * Transition. Valid when Type is Transition.
                      */
                     MediaTransitionItem m_transitionItem;
                     bool m_transitionItemHasBeenSet;
 
                     /**
-                     * 
+                     * Empty segment. Valid when Type is Empty. Empty segments are used as placeholders on the timeline.<li>If a period of silence is required between two audio clips, you can use EmptyTrackItem as a placeholder.</li>
+<li>Use EmptyTrackItem as a placeholder to locate an item.</li>
                      */
                     EmptyTrackItem m_emptyItem;
                     bool m_emptyItemHasBeenSet;

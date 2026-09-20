@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * IP allowlist/blocklist path-specific configuration
                 */
                 class IpFilterPathRule : public AbstractModel
                 {
@@ -76,18 +76,18 @@ namespace TencentCloud
                     bool FilterTypeHasBeenSet() const;
 
                     /**
-                     * 获取IP blocklist/allowlist list, supporting IPs in X.X.X.X format or network segments in /8, /16, or /24 format.
+                     * 获取IP blocklist and allowlist. Supports IPs in X.X.X.X format or network segments in /8, /16, or /24 format.
 Fill up to 50 allowlist entries or 50 blocklist entries.
-                     * @return Filters IP blocklist/allowlist list, supporting IPs in X.X.X.X format or network segments in /8, /16, or /24 format.
+                     * @return Filters IP blocklist and allowlist. Supports IPs in X.X.X.X format or network segments in /8, /16, or /24 format.
 Fill up to 50 allowlist entries or 50 blocklist entries.
                      * 
                      */
                     std::vector<std::string> GetFilters() const;
 
                     /**
-                     * 设置IP blocklist/allowlist list, supporting IPs in X.X.X.X format or network segments in /8, /16, or /24 format.
+                     * 设置IP blocklist and allowlist. Supports IPs in X.X.X.X format or network segments in /8, /16, or /24 format.
 Fill up to 50 allowlist entries or 50 blocklist entries.
-                     * @param _filters IP blocklist/allowlist list, supporting IPs in X.X.X.X format or network segments in /8, /16, or /24 format.
+                     * @param _filters IP blocklist and allowlist. Supports IPs in X.X.X.X format or network segments in /8, /16, or /24 format.
 Fill up to 50 allowlist entries or 50 blocklist entries.
                      * 
                      */
@@ -104,12 +104,12 @@ Fill up to 50 allowlist entries or 50 blocklist entries.
                      * 获取Rule type:
 <li>all: take effect for all files;</li>
 <li>file: The specified file suffix takes effect;</li>
-<li>directory: The specified path takes effect;</li>
+<li>directory: specify the path to take effect;</li>
 <li>path: The absolute path takes effect.</li>
                      * @return RuleType Rule type:
 <li>all: take effect for all files;</li>
 <li>file: The specified file suffix takes effect;</li>
-<li>directory: The specified path takes effect;</li>
+<li>directory: specify the path to take effect;</li>
 <li>path: The absolute path takes effect.</li>
                      * 
                      */
@@ -119,12 +119,12 @@ Fill up to 50 allowlist entries or 50 blocklist entries.
                      * 设置Rule type:
 <li>all: take effect for all files;</li>
 <li>file: The specified file suffix takes effect;</li>
-<li>directory: The specified path takes effect;</li>
+<li>directory: specify the path to take effect;</li>
 <li>path: The absolute path takes effect.</li>
                      * @param _ruleType Rule type:
 <li>all: take effect for all files;</li>
 <li>file: The specified file suffix takes effect;</li>
-<li>directory: The specified path takes effect;</li>
+<li>directory: specify the path to take effect;</li>
 <li>path: The absolute path takes effect.</li>
                      * 
                      */
@@ -185,7 +185,7 @@ Fill up to 50 allowlist entries or 50 blocklist entries.
                     bool m_filterTypeHasBeenSet;
 
                     /**
-                     * IP blocklist/allowlist list, supporting IPs in X.X.X.X format or network segments in /8, /16, or /24 format.
+                     * IP blocklist and allowlist. Supports IPs in X.X.X.X format or network segments in /8, /16, or /24 format.
 Fill up to 50 allowlist entries or 50 blocklist entries.
                      */
                     std::vector<std::string> m_filters;
@@ -195,7 +195,7 @@ Fill up to 50 allowlist entries or 50 blocklist entries.
                      * Rule type:
 <li>all: take effect for all files;</li>
 <li>file: The specified file suffix takes effect;</li>
-<li>directory: The specified path takes effect;</li>
+<li>directory: specify the path to take effect;</li>
 <li>path: The absolute path takes effect.</li>
                      */
                     std::string m_ruleType;

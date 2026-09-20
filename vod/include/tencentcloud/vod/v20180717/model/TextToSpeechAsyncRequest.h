@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Text 
+                     * 获取<p>Text to convert to speech.</p>
+                     * @return Text <p>Text to convert to speech.</p>
                      * 
                      */
                     std::string GetText() const;
 
                     /**
-                     * 设置
-                     * @param _text 
+                     * 设置<p>Text to convert to speech.</p>
+                     * @param _text <p>Text to convert to speech.</p>
                      * 
                      */
                     void SetText(const std::string& _text);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool TextHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return VoiceId 
+                     * 获取<p>Voice ID.</p>
+                     * @return VoiceId <p>Voice ID.</p>
                      * 
                      */
                     std::string GetVoiceId() const;
 
                     /**
-                     * 设置
-                     * @param _voiceId 
+                     * 设置<p>Voice ID.</p>
+                     * @param _voiceId <p>Voice ID.</p>
                      * 
                      */
                     void SetVoiceId(const std::string& _voiceId);
@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool VoiceIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SubAppId 
+                     * 获取<p>VOD application ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the application ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</p>
+                     * @return SubAppId <p>VOD application ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the application ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</p>
                      * 
                      */
                     std::string GetSubAppId() const;
 
                     /**
-                     * 设置
-                     * @param _subAppId 
+                     * 设置<p>VOD application ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the application ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</p>
+                     * @param _subAppId <p>VOD application ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the application ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</p>
                      * 
                      */
                     void SetSubAppId(const std::string& _subAppId);
@@ -107,15 +107,15 @@ namespace TencentCloud
                     bool SubAppIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return LanguageBoost 
+                     * 获取<p>Language enhancement, such as "zh" "en" "auto", default "auto"</p>
+                     * @return LanguageBoost <p>Language enhancement, such as "zh" "en" "auto", default "auto"</p>
                      * 
                      */
                     std::string GetLanguageBoost() const;
 
                     /**
-                     * 设置
-                     * @param _languageBoost 
+                     * 设置<p>Language enhancement, such as "zh" "en" "auto", default "auto"</p>
+                     * @param _languageBoost <p>Language enhancement, such as "zh" "en" "auto", default "auto"</p>
                      * 
                      */
                     void SetLanguageBoost(const std::string& _languageBoost);
@@ -128,15 +128,15 @@ namespace TencentCloud
                     bool LanguageBoostHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ExtParam 
+                     * 获取<p>Extended parameters for text-to-synthesized speech (async). Fields supported by ExtParam:</p><ul><li>model (string): Synthesis model. Selectable values: minimax-speech-2.8-hd, minimax-speech-2.8-turbo, minimax-speech-2.6-hd, minimax-speech-2.6-turbo, minimax-speech-02-hd, minimax-speech-02-turbo. Default: minimax-speech-2.8-hd.</li><li>text_lang (string): Text language, for example zh / en. Synonymous with the input parameter LanguageBoost. If both are passed, ExtParam takes precedence.</li><li>audio_setting (object): Audio output and voice type fine-tuning parameters. Note: For the async API, speaking rate, volume, pitch, and emotion are all under audio_setting, different from voice_setting in the Synchronous Interface. Optional fields:<ul><li>speed (float): Speaking rate, [0.5, 2.0]. Default: 1.0.</li><li>vol (float): Volume, (0, 10]. Default: 1.0.</li><li>pitch (int): Pitch, [-12, 12]. Default: 0.</li><li>emotion (string): Emotion. Selectable values: happy / sad / angry / fearful / disgusted / surprised / calm / fluent / whisper.</li><li>sample_rate (int): Sampling rate. Selectable values: 8000 / 16000 / 22050 / 24000 / 32000 / 44100. Default: 16000.</li><li>format (string): Audio format. Selectable values: mp3 / wav. Default: wav.</li><li>duration (float): Target duration in seconds.</li><li>cut_silence (bool): Whether to trim silence segments.</li></ul></li></ul>
+                     * @return ExtParam <p>Extended parameters for text-to-synthesized speech (async). Fields supported by ExtParam:</p><ul><li>model (string): Synthesis model. Selectable values: minimax-speech-2.8-hd, minimax-speech-2.8-turbo, minimax-speech-2.6-hd, minimax-speech-2.6-turbo, minimax-speech-02-hd, minimax-speech-02-turbo. Default: minimax-speech-2.8-hd.</li><li>text_lang (string): Text language, for example zh / en. Synonymous with the input parameter LanguageBoost. If both are passed, ExtParam takes precedence.</li><li>audio_setting (object): Audio output and voice type fine-tuning parameters. Note: For the async API, speaking rate, volume, pitch, and emotion are all under audio_setting, different from voice_setting in the Synchronous Interface. Optional fields:<ul><li>speed (float): Speaking rate, [0.5, 2.0]. Default: 1.0.</li><li>vol (float): Volume, (0, 10]. Default: 1.0.</li><li>pitch (int): Pitch, [-12, 12]. Default: 0.</li><li>emotion (string): Emotion. Selectable values: happy / sad / angry / fearful / disgusted / surprised / calm / fluent / whisper.</li><li>sample_rate (int): Sampling rate. Selectable values: 8000 / 16000 / 22050 / 24000 / 32000 / 44100. Default: 16000.</li><li>format (string): Audio format. Selectable values: mp3 / wav. Default: wav.</li><li>duration (float): Target duration in seconds.</li><li>cut_silence (bool): Whether to trim silence segments.</li></ul></li></ul>
                      * 
                      */
                     std::string GetExtParam() const;
 
                     /**
-                     * 设置
-                     * @param _extParam 
+                     * 设置<p>Extended parameters for text-to-synthesized speech (async). Fields supported by ExtParam:</p><ul><li>model (string): Synthesis model. Selectable values: minimax-speech-2.8-hd, minimax-speech-2.8-turbo, minimax-speech-2.6-hd, minimax-speech-2.6-turbo, minimax-speech-02-hd, minimax-speech-02-turbo. Default: minimax-speech-2.8-hd.</li><li>text_lang (string): Text language, for example zh / en. Synonymous with the input parameter LanguageBoost. If both are passed, ExtParam takes precedence.</li><li>audio_setting (object): Audio output and voice type fine-tuning parameters. Note: For the async API, speaking rate, volume, pitch, and emotion are all under audio_setting, different from voice_setting in the Synchronous Interface. Optional fields:<ul><li>speed (float): Speaking rate, [0.5, 2.0]. Default: 1.0.</li><li>vol (float): Volume, (0, 10]. Default: 1.0.</li><li>pitch (int): Pitch, [-12, 12]. Default: 0.</li><li>emotion (string): Emotion. Selectable values: happy / sad / angry / fearful / disgusted / surprised / calm / fluent / whisper.</li><li>sample_rate (int): Sampling rate. Selectable values: 8000 / 16000 / 22050 / 24000 / 32000 / 44100. Default: 16000.</li><li>format (string): Audio format. Selectable values: mp3 / wav. Default: wav.</li><li>duration (float): Target duration in seconds.</li><li>cut_silence (bool): Whether to trim silence segments.</li></ul></li></ul>
+                     * @param _extParam <p>Extended parameters for text-to-synthesized speech (async). Fields supported by ExtParam:</p><ul><li>model (string): Synthesis model. Selectable values: minimax-speech-2.8-hd, minimax-speech-2.8-turbo, minimax-speech-2.6-hd, minimax-speech-2.6-turbo, minimax-speech-02-hd, minimax-speech-02-turbo. Default: minimax-speech-2.8-hd.</li><li>text_lang (string): Text language, for example zh / en. Synonymous with the input parameter LanguageBoost. If both are passed, ExtParam takes precedence.</li><li>audio_setting (object): Audio output and voice type fine-tuning parameters. Note: For the async API, speaking rate, volume, pitch, and emotion are all under audio_setting, different from voice_setting in the Synchronous Interface. Optional fields:<ul><li>speed (float): Speaking rate, [0.5, 2.0]. Default: 1.0.</li><li>vol (float): Volume, (0, 10]. Default: 1.0.</li><li>pitch (int): Pitch, [-12, 12]. Default: 0.</li><li>emotion (string): Emotion. Selectable values: happy / sad / angry / fearful / disgusted / surprised / calm / fluent / whisper.</li><li>sample_rate (int): Sampling rate. Selectable values: 8000 / 16000 / 22050 / 24000 / 32000 / 44100. Default: 16000.</li><li>format (string): Audio format. Selectable values: mp3 / wav. Default: wav.</li><li>duration (float): Target duration in seconds.</li><li>cut_silence (bool): Whether to trim silence segments.</li></ul></li></ul>
                      * 
                      */
                     void SetExtParam(const std::string& _extParam);
@@ -149,15 +149,15 @@ namespace TencentCloud
                     bool ExtParamHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Output 
+                     * 获取<p>Output parameters.</p><p>Specifies the output format, etc. The default output audio format is url.</p>
+                     * @return Output <p>Output parameters.</p><p>Specifies the output format, etc. The default output audio format is url.</p>
                      * 
                      */
                     TextToSpeechAsyncOutputOption GetOutput() const;
 
                     /**
-                     * 设置
-                     * @param _output 
+                     * 设置<p>Output parameters.</p><p>Specifies the output format, etc. The default output audio format is url.</p>
+                     * @param _output <p>Output parameters.</p><p>Specifies the output format, etc. The default output audio format is url.</p>
                      * 
                      */
                     void SetOutput(const TextToSpeechAsyncOutputOption& _output);
@@ -170,15 +170,15 @@ namespace TencentCloud
                     bool OutputHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SessionContext 
+                     * 获取<p>Identifies source context. This is used to pass user request information. The callback and task flow status change callback return the value of this field. The maximum length is 1000 characters.</p>
+                     * @return SessionContext <p>Identifies source context. This is used to pass user request information. The callback and task flow status change callback return the value of this field. The maximum length is 1000 characters.</p>
                      * 
                      */
                     std::string GetSessionContext() const;
 
                     /**
-                     * 设置
-                     * @param _sessionContext 
+                     * 设置<p>Identifies source context. This is used to pass user request information. The callback and task flow status change callback return the value of this field. The maximum length is 1000 characters.</p>
+                     * @param _sessionContext <p>Identifies source context. This is used to pass user request information. The callback and task flow status change callback return the value of this field. The maximum length is 1000 characters.</p>
                      * 
                      */
                     void SetSessionContext(const std::string& _sessionContext);
@@ -191,15 +191,15 @@ namespace TencentCloud
                     bool SessionContextHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SessionId 
+                     * 获取<p>Identification Code for Task Deduplication. If a request with the same identification code has been made within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, it indicates no deduplication.</p>
+                     * @return SessionId <p>Identification Code for Task Deduplication. If a request with the same identification code has been made within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, it indicates no deduplication.</p>
                      * 
                      */
                     std::string GetSessionId() const;
 
                     /**
-                     * 设置
-                     * @param _sessionId 
+                     * 设置<p>Identification Code for Task Deduplication. If a request with the same identification code has been made within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, it indicates no deduplication.</p>
+                     * @param _sessionId <p>Identification Code for Task Deduplication. If a request with the same identification code has been made within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, it indicates no deduplication.</p>
                      * 
                      */
                     void SetSessionId(const std::string& _sessionId);
@@ -214,49 +214,49 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p>Text to convert to speech.</p>
                      */
                     std::string m_text;
                     bool m_textHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Voice ID.</p>
                      */
                     std::string m_voiceId;
                     bool m_voiceIdHasBeenSet;
 
                     /**
-                     * 
+                     * <p>VOD application ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the application ID when accessing resources in on-demand applications, whether in the default application or a newly created application.</p>
                      */
                     std::string m_subAppId;
                     bool m_subAppIdHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Language enhancement, such as "zh" "en" "auto", default "auto"</p>
                      */
                     std::string m_languageBoost;
                     bool m_languageBoostHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Extended parameters for text-to-synthesized speech (async). Fields supported by ExtParam:</p><ul><li>model (string): Synthesis model. Selectable values: minimax-speech-2.8-hd, minimax-speech-2.8-turbo, minimax-speech-2.6-hd, minimax-speech-2.6-turbo, minimax-speech-02-hd, minimax-speech-02-turbo. Default: minimax-speech-2.8-hd.</li><li>text_lang (string): Text language, for example zh / en. Synonymous with the input parameter LanguageBoost. If both are passed, ExtParam takes precedence.</li><li>audio_setting (object): Audio output and voice type fine-tuning parameters. Note: For the async API, speaking rate, volume, pitch, and emotion are all under audio_setting, different from voice_setting in the Synchronous Interface. Optional fields:<ul><li>speed (float): Speaking rate, [0.5, 2.0]. Default: 1.0.</li><li>vol (float): Volume, (0, 10]. Default: 1.0.</li><li>pitch (int): Pitch, [-12, 12]. Default: 0.</li><li>emotion (string): Emotion. Selectable values: happy / sad / angry / fearful / disgusted / surprised / calm / fluent / whisper.</li><li>sample_rate (int): Sampling rate. Selectable values: 8000 / 16000 / 22050 / 24000 / 32000 / 44100. Default: 16000.</li><li>format (string): Audio format. Selectable values: mp3 / wav. Default: wav.</li><li>duration (float): Target duration in seconds.</li><li>cut_silence (bool): Whether to trim silence segments.</li></ul></li></ul>
                      */
                     std::string m_extParam;
                     bool m_extParamHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Output parameters.</p><p>Specifies the output format, etc. The default output audio format is url.</p>
                      */
                     TextToSpeechAsyncOutputOption m_output;
                     bool m_outputHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Identifies source context. This is used to pass user request information. The callback and task flow status change callback return the value of this field. The maximum length is 1000 characters.</p>
                      */
                     std::string m_sessionContext;
                     bool m_sessionContextHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Identification Code for Task Deduplication. If a request with the same identification code has been made within the past 3 days, an error will be returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, it indicates no deduplication.</p>
                      */
                     std::string m_sessionId;
                     bool m_sessionIdHasBeenSet;

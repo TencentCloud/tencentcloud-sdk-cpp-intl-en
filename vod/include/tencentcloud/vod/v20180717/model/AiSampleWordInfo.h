@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * AI sample management, keyword input.
                 */
                 class AiSampleWordInfo : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Keyword 
+                     * 获取<p>Keyword. Length limit: 20 characters.</p>
+                     * @return Keyword <p>Keyword. Length limit: 20 characters.</p>
                      * 
                      */
                     std::string GetKeyword() const;
 
                     /**
-                     * 设置
-                     * @param _keyword 
+                     * 设置<p>Keyword. Length limit: 20 characters.</p>
+                     * @param _keyword <p>Keyword. Length limit: 20 characters.</p>
                      * 
                      */
                     void SetKeyword(const std::string& _keyword);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool KeywordHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Tags 
+                     * 获取<p>Keyword tag</p><li>Array length limit: 20 tags;</li><li>Single tag length limit: 128 characters.</li>
+                     * @return Tags <p>Keyword tag</p><li>Array length limit: 20 tags;</li><li>Single tag length limit: 128 characters.</li>
                      * 
                      */
                     std::vector<std::string> GetTags() const;
 
                     /**
-                     * 设置
-                     * @param _tags 
+                     * 设置<p>Keyword tag</p><li>Array length limit: 20 tags;</li><li>Single tag length limit: 128 characters.</li>
+                     * @param _tags <p>Keyword tag</p><li>Array length limit: 20 tags;</li><li>Single tag length limit: 128 characters.</li>
                      * 
                      */
                     void SetTags(const std::vector<std::string>& _tags);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p>Keyword. Length limit: 20 characters.</p>
                      */
                     std::string m_keyword;
                     bool m_keywordHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Keyword tag</p><li>Array length limit: 20 tags;</li><li>Single tag length limit: 128 characters.</li>
                      */
                     std::vector<std::string> m_tags;
                     bool m_tagsHasBeenSet;

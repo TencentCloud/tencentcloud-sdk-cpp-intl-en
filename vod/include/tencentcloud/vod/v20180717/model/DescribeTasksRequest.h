@@ -45,15 +45,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return SubAppId 
+                     * 获取<p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services on or after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the application ID.</b></p>
+                     * @return SubAppId <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services on or after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the application ID.</b></p>
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置
-                     * @param _subAppId 
+                     * 设置<p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services on or after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the application ID.</b></p>
+                     * @param _subAppId <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services on or after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the application ID.</b></p>
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -66,15 +66,15 @@ namespace TencentCloud
                     bool SubAppIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Status 
+                     * 获取<p>Filter criteria: task status. Available values: WAITING, PROCESSING, FINISH.</p>
+                     * @return Status <p>Filter criteria: task status. Available values: WAITING, PROCESSING, FINISH.</p>
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置
-                     * @param _status 
+                     * 设置<p>Filter criteria: task status. Available values: WAITING, PROCESSING, FINISH.</p>
+                     * @param _status <p>Filter criteria: task status. Available values: WAITING, PROCESSING, FINISH.</p>
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -87,15 +87,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return FileId 
+                     * 获取<p>Filter criteria: file ID.</p>
+                     * @return FileId <p>Filter criteria: file ID.</p>
                      * 
                      */
                     std::string GetFileId() const;
 
                     /**
-                     * 设置
-                     * @param _fileId 
+                     * 设置<p>Filter criteria: file ID.</p>
+                     * @param _fileId <p>Filter criteria: file ID.</p>
                      * 
                      */
                     void SetFileId(const std::string& _fileId);
@@ -108,15 +108,15 @@ namespace TencentCloud
                     bool FileIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return CreateTime 
+                     * 获取<p>Filter condition: task creation time.</p>
+                     * @return CreateTime <p>Filter condition: task creation time.</p>
                      * 
                      */
                     TimeRange GetCreateTime() const;
 
                     /**
-                     * 设置
-                     * @param _createTime 
+                     * 设置<p>Filter condition: task creation time.</p>
+                     * @param _createTime <p>Filter condition: task creation time.</p>
                      * 
                      */
                     void SetCreateTime(const TimeRange& _createTime);
@@ -129,15 +129,15 @@ namespace TencentCloud
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return FinishTime 
+                     * 获取<p>Filter condition: task end time.</p>
+                     * @return FinishTime <p>Filter condition: task end time.</p>
                      * 
                      */
                     TimeRange GetFinishTime() const;
 
                     /**
-                     * 设置
-                     * @param _finishTime 
+                     * 设置<p>Filter condition: task end time.</p>
+                     * @param _finishTime <p>Filter condition: task end time.</p>
                      * 
                      */
                     void SetFinishTime(const TimeRange& _finishTime);
@@ -150,15 +150,15 @@ namespace TencentCloud
                     bool FinishTimeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Sort 
+                     * 获取<p>Sorting method. Optional Sort.Field:</p><li> CreateTime: task creation time.</li><li>FinishTime: task end time.</li>
+                     * @return Sort <p>Sorting method. Optional Sort.Field:</p><li> CreateTime: task creation time.</li><li>FinishTime: task end time.</li>
                      * 
                      */
                     SortBy GetSort() const;
 
                     /**
-                     * 设置
-                     * @param _sort 
+                     * 设置<p>Sorting method. Optional Sort.Field:</p><li> CreateTime: task creation time.</li><li>FinishTime: task end time.</li>
+                     * @param _sort <p>Sorting method. Optional Sort.Field:</p><li> CreateTime: task creation time.</li><li>FinishTime: task end time.</li>
                      * 
                      */
                     void SetSort(const SortBy& _sort);
@@ -171,15 +171,15 @@ namespace TencentCloud
                     bool SortHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Limit 
+                     * 获取<p>Number of returned entries. Default value: 10. Maximum value: 100.</p>
+                     * @return Limit <p>Number of returned entries. Default value: 10. Maximum value: 100.</p>
                      * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
-                     * 设置
-                     * @param _limit 
+                     * 设置<p>Number of returned entries. Default value: 10. Maximum value: 100.</p>
+                     * @param _limit <p>Number of returned entries. Default value: 10. Maximum value: 100.</p>
                      * 
                      */
                     void SetLimit(const uint64_t& _limit);
@@ -192,15 +192,15 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ScrollToken 
+                     * 获取<p>Scrolling identifier which is used for pulling in batches. If a single request cannot pull all the data entries, the API will return `ScrollToken`, and if the next request carries it, the next pull will start from the next entry.</p>
+                     * @return ScrollToken <p>Scrolling identifier which is used for pulling in batches. If a single request cannot pull all the data entries, the API will return `ScrollToken`, and if the next request carries it, the next pull will start from the next entry.</p>
                      * 
                      */
                     std::string GetScrollToken() const;
 
                     /**
-                     * 设置
-                     * @param _scrollToken 
+                     * 设置<p>Scrolling identifier which is used for pulling in batches. If a single request cannot pull all the data entries, the API will return `ScrollToken`, and if the next request carries it, the next pull will start from the next entry.</p>
+                     * @param _scrollToken <p>Scrolling identifier which is used for pulling in batches. If a single request cannot pull all the data entries, the API will return `ScrollToken`, and if the next request carries it, the next pull will start from the next entry.</p>
                      * 
                      */
                     void SetScrollToken(const std::string& _scrollToken);
@@ -215,49 +215,49 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services on or after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the application ID.</b></p>
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Filter criteria: task status. Available values: WAITING, PROCESSING, FINISH.</p>
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Filter criteria: file ID.</p>
                      */
                     std::string m_fileId;
                     bool m_fileIdHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Filter condition: task creation time.</p>
                      */
                     TimeRange m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Filter condition: task end time.</p>
                      */
                     TimeRange m_finishTime;
                     bool m_finishTimeHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Sorting method. Optional Sort.Field:</p><li> CreateTime: task creation time.</li><li>FinishTime: task end time.</li>
                      */
                     SortBy m_sort;
                     bool m_sortHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Number of returned entries. Default value: 10. Maximum value: 100.</p>
                      */
                     uint64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Scrolling identifier which is used for pulling in batches. If a single request cannot pull all the data entries, the API will return `ScrollToken`, and if the next request carries it, the next pull will start from the next entry.</p>
                      */
                     std::string m_scrollToken;
                     bool m_scrollTokenHasBeenSet;

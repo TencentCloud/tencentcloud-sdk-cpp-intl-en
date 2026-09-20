@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Voice information.
                 */
                 class VoiceInfo : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return VoiceId 
+                     * 获取<p>Voice ID.</p>
+                     * @return VoiceId <p>Voice ID.</p>
                      * 
                      */
                     std::string GetVoiceId() const;
 
                     /**
-                     * 设置
-                     * @param _voiceId 
+                     * 设置<p>Voice ID.</p>
+                     * @param _voiceId <p>Voice ID.</p>
                      * 
                      */
                     void SetVoiceId(const std::string& _voiceId);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool VoiceIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Name 
+                     * 获取<p>Voice name.</p>
+                     * @return Name <p>Voice name.</p>
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置
-                     * @param _name 
+                     * 设置<p>Voice name.</p>
+                     * @param _name <p>Voice name.</p>
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Description 
+                     * 获取<p>Voice description.</p>
+                     * @return Description <p>Voice description.</p>
                      * 
                      */
                     std::string GetDescription() const;
 
                     /**
-                     * 设置
-                     * @param _description 
+                     * 设置<p>Voice description.</p>
+                     * @param _description <p>Voice description.</p>
                      * 
                      */
                     void SetDescription(const std::string& _description);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool DescriptionHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Category 
+                     * 获取<p>Voice type.</p><p>Enumeration values:</p><ul><li>system: system audio.</li><li>clone: cloned audio.</li><li>design: designed audio.</li></ul>
+                     * @return Category <p>Voice type.</p><p>Enumeration values:</p><ul><li>system: system audio.</li><li>clone: cloned audio.</li><li>design: designed audio.</li></ul>
                      * 
                      */
                     std::string GetCategory() const;
 
                     /**
-                     * 设置
-                     * @param _category 
+                     * 设置<p>Voice type.</p><p>Enumeration values:</p><ul><li>system: system audio.</li><li>clone: cloned audio.</li><li>design: designed audio.</li></ul>
+                     * @param _category <p>Voice type.</p><p>Enumeration values:</p><ul><li>system: system audio.</li><li>clone: cloned audio.</li><li>design: designed audio.</li></ul>
                      * 
                      */
                     void SetCategory(const std::string& _category);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool CategoryHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Gender 
+                     * 获取<p>Gender. </p><p>Enumeration values: </p><ul><li>male: Male, </li><li>female: Female.</li></ul>
+                     * @return Gender <p>Gender. </p><p>Enumeration values: </p><ul><li>male: Male, </li><li>female: Female.</li></ul>
                      * 
                      */
                     std::string GetGender() const;
 
                     /**
-                     * 设置
-                     * @param _gender 
+                     * 设置<p>Gender. </p><p>Enumeration values: </p><ul><li>male: Male, </li><li>female: Female.</li></ul>
+                     * @param _gender <p>Gender. </p><p>Enumeration values: </p><ul><li>male: Male, </li><li>female: Female.</li></ul>
                      * 
                      */
                     void SetGender(const std::string& _gender);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool GenderHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Age 
+                     * 获取<p>Age.</p><p>Enumeration values:</p><ul><li>child: child</li><li>teenager: teenager</li><li>youth: youth</li><li>middle_aged: middle-aged</li><li>senior: senior</li><li>unknown: unknown</li></ul>
+                     * @return Age <p>Age.</p><p>Enumeration values:</p><ul><li>child: child</li><li>teenager: teenager</li><li>youth: youth</li><li>middle_aged: middle-aged</li><li>senior: senior</li><li>unknown: unknown</li></ul>
                      * 
                      */
                     std::string GetAge() const;
 
                     /**
-                     * 设置
-                     * @param _age 
+                     * 设置<p>Age.</p><p>Enumeration values:</p><ul><li>child: child</li><li>teenager: teenager</li><li>youth: youth</li><li>middle_aged: middle-aged</li><li>senior: senior</li><li>unknown: unknown</li></ul>
+                     * @param _age <p>Age.</p><p>Enumeration values:</p><ul><li>child: child</li><li>teenager: teenager</li><li>youth: youth</li><li>middle_aged: middle-aged</li><li>senior: senior</li><li>unknown: unknown</li></ul>
                      * 
                      */
                     void SetAge(const std::string& _age);
@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool AgeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Languages 
+                     * 获取<p>List of supported languages. </p><p>For example: en.</p>
+                     * @return Languages <p>List of supported languages. </p><p>For example: en.</p>
                      * 
                      */
                     std::vector<std::string> GetLanguages() const;
 
                     /**
-                     * 设置
-                     * @param _languages 
+                     * 设置<p>List of supported languages. </p><p>For example: en.</p>
+                     * @param _languages <p>List of supported languages. </p><p>For example: en.</p>
                      * 
                      */
                     void SetLanguages(const std::vector<std::string>& _languages);
@@ -194,15 +194,15 @@ namespace TencentCloud
                     bool LanguagesHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AudioUrl 
+                     * 获取<p>Audition audio URL.</p>
+                     * @return AudioUrl <p>Audition audio URL.</p>
                      * 
                      */
                     std::string GetAudioUrl() const;
 
                     /**
-                     * 设置
-                     * @param _audioUrl 
+                     * 设置<p>Audition audio URL.</p>
+                     * @param _audioUrl <p>Audition audio URL.</p>
                      * 
                      */
                     void SetAudioUrl(const std::string& _audioUrl);
@@ -215,15 +215,15 @@ namespace TencentCloud
                     bool AudioUrlHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Labels 
+                     * 获取<p>List of tags. </p><p>For example: gentle.</p>
+                     * @return Labels <p>List of tags. </p><p>For example: gentle.</p>
                      * 
                      */
                     std::vector<std::string> GetLabels() const;
 
                     /**
-                     * 设置
-                     * @param _labels 
+                     * 设置<p>List of tags. </p><p>For example: gentle.</p>
+                     * @param _labels <p>List of tags. </p><p>For example: gentle.</p>
                      * 
                      */
                     void SetLabels(const std::vector<std::string>& _labels);
@@ -236,15 +236,15 @@ namespace TencentCloud
                     bool LabelsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Scenes 
+                     * 获取<p>Recommended scenarios. </p><p>For example: education.</p>
+                     * @return Scenes <p>Recommended scenarios. </p><p>For example: education.</p>
                      * 
                      */
                     std::vector<std::string> GetScenes() const;
 
                     /**
-                     * 设置
-                     * @param _scenes 
+                     * 设置<p>Recommended scenarios. </p><p>For example: education.</p>
+                     * @param _scenes <p>Recommended scenarios. </p><p>For example: education.</p>
                      * 
                      */
                     void SetScenes(const std::vector<std::string>& _scenes);
@@ -259,61 +259,61 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p>Voice ID.</p>
                      */
                     std::string m_voiceId;
                     bool m_voiceIdHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Voice name.</p>
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Voice description.</p>
                      */
                     std::string m_description;
                     bool m_descriptionHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Voice type.</p><p>Enumeration values:</p><ul><li>system: system audio.</li><li>clone: cloned audio.</li><li>design: designed audio.</li></ul>
                      */
                     std::string m_category;
                     bool m_categoryHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Gender. </p><p>Enumeration values: </p><ul><li>male: Male, </li><li>female: Female.</li></ul>
                      */
                     std::string m_gender;
                     bool m_genderHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Age.</p><p>Enumeration values:</p><ul><li>child: child</li><li>teenager: teenager</li><li>youth: youth</li><li>middle_aged: middle-aged</li><li>senior: senior</li><li>unknown: unknown</li></ul>
                      */
                     std::string m_age;
                     bool m_ageHasBeenSet;
 
                     /**
-                     * 
+                     * <p>List of supported languages. </p><p>For example: en.</p>
                      */
                     std::vector<std::string> m_languages;
                     bool m_languagesHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Audition audio URL.</p>
                      */
                     std::string m_audioUrl;
                     bool m_audioUrlHasBeenSet;
 
                     /**
-                     * 
+                     * <p>List of tags. </p><p>For example: gentle.</p>
                      */
                     std::vector<std::string> m_labels;
                     bool m_labelsHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Recommended scenarios. </p><p>For example: education.</p>
                      */
                     std::vector<std::string> m_scenes;
                     bool m_scenesHasBeenSet;

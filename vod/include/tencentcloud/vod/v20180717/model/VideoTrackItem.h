@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Video clip information of the video track.
                 */
                 class VideoTrackItem : public AbstractModel
                 {
@@ -49,15 +49,27 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return SourceMedia 
+                     * 获取Media material source of the video clip, which can be:
+<li>Media file ID for VOD;</li>
+<li>Download URL of other media files.</li>
+Note: When using the download URL of another media file as the material source and access control (such as hotlink protection) is enabled, the URL needs to carry access control parameters (such as a hotlink protection signature).
+                     * @return SourceMedia Media material source of the video clip, which can be:
+<li>Media file ID for VOD;</li>
+<li>Download URL of other media files.</li>
+Note: When using the download URL of another media file as the material source and access control (such as hotlink protection) is enabled, the URL needs to carry access control parameters (such as a hotlink protection signature).
                      * 
                      */
                     std::string GetSourceMedia() const;
 
                     /**
-                     * 设置
-                     * @param _sourceMedia 
+                     * 设置Media material source of the video clip, which can be:
+<li>Media file ID for VOD;</li>
+<li>Download URL of other media files.</li>
+Note: When using the download URL of another media file as the material source and access control (such as hotlink protection) is enabled, the URL needs to carry access control parameters (such as a hotlink protection signature).
+                     * @param _sourceMedia Media material source of the video clip, which can be:
+<li>Media file ID for VOD;</li>
+<li>Download URL of other media files.</li>
+Note: When using the download URL of another media file as the material source and access control (such as hotlink protection) is enabled, the URL needs to carry access control parameters (such as a hotlink protection signature).
                      * 
                      */
                     void SetSourceMedia(const std::string& _sourceMedia);
@@ -70,15 +82,15 @@ namespace TencentCloud
                     bool SourceMediaHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SourceMediaStartTime 
+                     * 获取Start time of the video clip in the material file, in seconds. Default value: 0.
+                     * @return SourceMediaStartTime Start time of the video clip in the material file, in seconds. Default value: 0.
                      * 
                      */
                     double GetSourceMediaStartTime() const;
 
                     /**
-                     * 设置
-                     * @param _sourceMediaStartTime 
+                     * 设置Start time of the video clip in the material file, in seconds. Default value: 0.
+                     * @param _sourceMediaStartTime Start time of the video clip in the material file, in seconds. Default value: 0.
                      * 
                      */
                     void SetSourceMediaStartTime(const double& _sourceMediaStartTime);
@@ -91,15 +103,15 @@ namespace TencentCloud
                     bool SourceMediaStartTimeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Duration 
+                     * 获取Video segment duration, in seconds. Default value: the length of the video material itself, which means the entire material is captured. If the source file is an image, Duration must be greater than 0.
+                     * @return Duration Video segment duration, in seconds. Default value: the length of the video material itself, which means the entire material is captured. If the source file is an image, Duration must be greater than 0.
                      * 
                      */
                     double GetDuration() const;
 
                     /**
-                     * 设置
-                     * @param _duration 
+                     * 设置Video segment duration, in seconds. Default value: the length of the video material itself, which means the entire material is captured. If the source file is an image, Duration must be greater than 0.
+                     * @param _duration Video segment duration, in seconds. Default value: the length of the video material itself, which means the entire material is captured. If the source file is an image, Duration must be greater than 0.
                      * 
                      */
                     void SetDuration(const double& _duration);
@@ -112,15 +124,23 @@ namespace TencentCloud
                     bool DurationHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return TargetDuration 
+                     * 获取Target duration of the video clip, in seconds.
+<li>If TargetDuration is not specified or set to 0, it means the target duration is the same as Duration;</li>
+<li>When TargetDuration is set to a value more than 0, the video clip will be fast-forwarded or slowed down to make the duration of the output segment equal to TargetDuration.</li>
+                     * @return TargetDuration Target duration of the video clip, in seconds.
+<li>If TargetDuration is not specified or set to 0, it means the target duration is the same as Duration;</li>
+<li>When TargetDuration is set to a value more than 0, the video clip will be fast-forwarded or slowed down to make the duration of the output segment equal to TargetDuration.</li>
                      * 
                      */
                     double GetTargetDuration() const;
 
                     /**
-                     * 设置
-                     * @param _targetDuration 
+                     * 设置Target duration of the video clip, in seconds.
+<li>If TargetDuration is not specified or set to 0, it means the target duration is the same as Duration;</li>
+<li>When TargetDuration is set to a value more than 0, the video clip will be fast-forwarded or slowed down to make the duration of the output segment equal to TargetDuration.</li>
+                     * @param _targetDuration Target duration of the video clip, in seconds.
+<li>If TargetDuration is not specified or set to 0, it means the target duration is the same as Duration;</li>
+<li>When TargetDuration is set to a value more than 0, the video clip will be fast-forwarded or slowed down to make the duration of the output segment equal to TargetDuration.</li>
                      * 
                      */
                     void SetTargetDuration(const double& _targetDuration);
@@ -133,15 +153,23 @@ namespace TencentCloud
                     bool TargetDurationHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return CoordinateOrigin 
+                     * 获取Video origin position. Valid values:
+<li>Center: The coordinate origin is the central position, such as the center of the canvas.</li>
+Default value: Center.
+                     * @return CoordinateOrigin Video origin position. Valid values:
+<li>Center: The coordinate origin is the central position, such as the center of the canvas.</li>
+Default value: Center.
                      * 
                      */
                     std::string GetCoordinateOrigin() const;
 
                     /**
-                     * 设置
-                     * @param _coordinateOrigin 
+                     * 设置Video origin position. Valid values:
+<li>Center: The coordinate origin is the central position, such as the center of the canvas.</li>
+Default value: Center.
+                     * @param _coordinateOrigin Video origin position. Valid values:
+<li>Center: The coordinate origin is the central position, such as the center of the canvas.</li>
+Default value: Center.
                      * 
                      */
                     void SetCoordinateOrigin(const std::string& _coordinateOrigin);
@@ -154,15 +182,27 @@ namespace TencentCloud
                     bool CoordinateOriginHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return XPos 
+                     * 获取Horizontal position of the video clip origin point relative to the origin of canvas. Supports % and px formats.
+<li>When the string ends with %, it means the video clip XPos is at the specified percentage of the canvas width. For example, 10% means XPos is at 10% of the canvas width.</li>
+<li>If a string ends with px, it means the unit of the video clip XPos is pixel. For example, 100px means XPos is 100 pixels.</li>
+Default value: 0px.
+                     * @return XPos Horizontal position of the video clip origin point relative to the origin of canvas. Supports % and px formats.
+<li>When the string ends with %, it means the video clip XPos is at the specified percentage of the canvas width. For example, 10% means XPos is at 10% of the canvas width.</li>
+<li>If a string ends with px, it means the unit of the video clip XPos is pixel. For example, 100px means XPos is 100 pixels.</li>
+Default value: 0px.
                      * 
                      */
                     std::string GetXPos() const;
 
                     /**
-                     * 设置
-                     * @param _xPos 
+                     * 设置Horizontal position of the video clip origin point relative to the origin of canvas. Supports % and px formats.
+<li>When the string ends with %, it means the video clip XPos is at the specified percentage of the canvas width. For example, 10% means XPos is at 10% of the canvas width.</li>
+<li>If a string ends with px, it means the unit of the video clip XPos is pixel. For example, 100px means XPos is 100 pixels.</li>
+Default value: 0px.
+                     * @param _xPos Horizontal position of the video clip origin point relative to the origin of canvas. Supports % and px formats.
+<li>When the string ends with %, it means the video clip XPos is at the specified percentage of the canvas width. For example, 10% means XPos is at 10% of the canvas width.</li>
+<li>If a string ends with px, it means the unit of the video clip XPos is pixel. For example, 100px means XPos is 100 pixels.</li>
+Default value: 0px.
                      * 
                      */
                     void SetXPos(const std::string& _xPos);
@@ -175,15 +215,27 @@ namespace TencentCloud
                     bool XPosHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return YPos 
+                     * 获取Vertical position of the video clip origin point relative to the canvas origin point. Supports % and px formats.
+<li>If a string ends with %, it indicates that the `YPos` of a video clip is at a specified percentage of the canvas height. For example, `10%` means that `YPos` is 10% of the canvas height.</li>
+<li>If a string ends with px, it means the unit of the video clip YPos is pixel. For example, 100px means YPos is 100 pixels.</li>
+Default value: 0px.
+                     * @return YPos Vertical position of the video clip origin point relative to the canvas origin point. Supports % and px formats.
+<li>If a string ends with %, it indicates that the `YPos` of a video clip is at a specified percentage of the canvas height. For example, `10%` means that `YPos` is 10% of the canvas height.</li>
+<li>If a string ends with px, it means the unit of the video clip YPos is pixel. For example, 100px means YPos is 100 pixels.</li>
+Default value: 0px.
                      * 
                      */
                     std::string GetYPos() const;
 
                     /**
-                     * 设置
-                     * @param _yPos 
+                     * 设置Vertical position of the video clip origin point relative to the canvas origin point. Supports % and px formats.
+<li>If a string ends with %, it indicates that the `YPos` of a video clip is at a specified percentage of the canvas height. For example, `10%` means that `YPos` is 10% of the canvas height.</li>
+<li>If a string ends with px, it means the unit of the video clip YPos is pixel. For example, 100px means YPos is 100 pixels.</li>
+Default value: 0px.
+                     * @param _yPos Vertical position of the video clip origin point relative to the canvas origin point. Supports % and px formats.
+<li>If a string ends with %, it indicates that the `YPos` of a video clip is at a specified percentage of the canvas height. For example, `10%` means that `YPos` is 10% of the canvas height.</li>
+<li>If a string ends with px, it means the unit of the video clip YPos is pixel. For example, 100px means YPos is 100 pixels.</li>
+Default value: 0px.
                      * 
                      */
                     void SetYPos(const std::string& _yPos);
@@ -196,15 +248,35 @@ namespace TencentCloud
                     bool YPosHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Width 
+                     * 获取Width of a video clip, supporting two formats: % and px.
+<li>If a string ends with %, it indicates that the `Width` of a video clip is a percentage of the canvas width. For example, `10%` means that `Width` is 10% of the canvas width.</li>
+<li>If a string ends with px, it means the video clip Width unit is pixel. For example, 100px means the Width is 100 pixels.</li>
+<li>If both Width and Height are empty, the width and height of the video footage itself will be used.</li>
+<li>If Width is empty but Height is not empty, the width will be proportionally scaled.</li>
+<li>If Width is not empty but Height is empty, the height will be proportionally scaled.</li>
+                     * @return Width Width of a video clip, supporting two formats: % and px.
+<li>If a string ends with %, it indicates that the `Width` of a video clip is a percentage of the canvas width. For example, `10%` means that `Width` is 10% of the canvas width.</li>
+<li>If a string ends with px, it means the video clip Width unit is pixel. For example, 100px means the Width is 100 pixels.</li>
+<li>If both Width and Height are empty, the width and height of the video footage itself will be used.</li>
+<li>If Width is empty but Height is not empty, the width will be proportionally scaled.</li>
+<li>If Width is not empty but Height is empty, the height will be proportionally scaled.</li>
                      * 
                      */
                     std::string GetWidth() const;
 
                     /**
-                     * 设置
-                     * @param _width 
+                     * 设置Width of a video clip, supporting two formats: % and px.
+<li>If a string ends with %, it indicates that the `Width` of a video clip is a percentage of the canvas width. For example, `10%` means that `Width` is 10% of the canvas width.</li>
+<li>If a string ends with px, it means the video clip Width unit is pixel. For example, 100px means the Width is 100 pixels.</li>
+<li>If both Width and Height are empty, the width and height of the video footage itself will be used.</li>
+<li>If Width is empty but Height is not empty, the width will be proportionally scaled.</li>
+<li>If Width is not empty but Height is empty, the height will be proportionally scaled.</li>
+                     * @param _width Width of a video clip, supporting two formats: % and px.
+<li>If a string ends with %, it indicates that the `Width` of a video clip is a percentage of the canvas width. For example, `10%` means that `Width` is 10% of the canvas width.</li>
+<li>If a string ends with px, it means the video clip Width unit is pixel. For example, 100px means the Width is 100 pixels.</li>
+<li>If both Width and Height are empty, the width and height of the video footage itself will be used.</li>
+<li>If Width is empty but Height is not empty, the width will be proportionally scaled.</li>
+<li>If Width is not empty but Height is empty, the height will be proportionally scaled.</li>
                      * 
                      */
                     void SetWidth(const std::string& _width);
@@ -217,15 +289,35 @@ namespace TencentCloud
                     bool WidthHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Height 
+                     * 获取Height of a video clip, supporting two formats: % and px.
+<li>If a string ends with %, it indicates that the `Height` of a video clip is a percentage of the canvas height. For example, `10%` means that `Height` is 10% of the canvas height.</li>
+</li><li>If a string ends with px, it means the video clip Height unit is pixel. For example, 100px means the Height is 100 pixels.</li>
+<li>If both Width and Height are empty, the width and height of the video footage itself will be used.</li>
+<li>If Width is empty but Height is not empty, the width will be proportionally scaled.</li>
+<li>If Width is not empty but Height is empty, the height will be proportionally scaled.</li>
+                     * @return Height Height of a video clip, supporting two formats: % and px.
+<li>If a string ends with %, it indicates that the `Height` of a video clip is a percentage of the canvas height. For example, `10%` means that `Height` is 10% of the canvas height.</li>
+</li><li>If a string ends with px, it means the video clip Height unit is pixel. For example, 100px means the Height is 100 pixels.</li>
+<li>If both Width and Height are empty, the width and height of the video footage itself will be used.</li>
+<li>If Width is empty but Height is not empty, the width will be proportionally scaled.</li>
+<li>If Width is not empty but Height is empty, the height will be proportionally scaled.</li>
                      * 
                      */
                     std::string GetHeight() const;
 
                     /**
-                     * 设置
-                     * @param _height 
+                     * 设置Height of a video clip, supporting two formats: % and px.
+<li>If a string ends with %, it indicates that the `Height` of a video clip is a percentage of the canvas height. For example, `10%` means that `Height` is 10% of the canvas height.</li>
+</li><li>If a string ends with px, it means the video clip Height unit is pixel. For example, 100px means the Height is 100 pixels.</li>
+<li>If both Width and Height are empty, the width and height of the video footage itself will be used.</li>
+<li>If Width is empty but Height is not empty, the width will be proportionally scaled.</li>
+<li>If Width is not empty but Height is empty, the height will be proportionally scaled.</li>
+                     * @param _height Height of a video clip, supporting two formats: % and px.
+<li>If a string ends with %, it indicates that the `Height` of a video clip is a percentage of the canvas height. For example, `10%` means that `Height` is 10% of the canvas height.</li>
+</li><li>If a string ends with px, it means the video clip Height unit is pixel. For example, 100px means the Height is 100 pixels.</li>
+<li>If both Width and Height are empty, the width and height of the video footage itself will be used.</li>
+<li>If Width is empty but Height is not empty, the width will be proportionally scaled.</li>
+<li>If Width is not empty but Height is empty, the height will be proportionally scaled.</li>
                      * 
                      */
                     void SetHeight(const std::string& _height);
@@ -238,15 +330,15 @@ namespace TencentCloud
                     bool HeightHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AudioOperations 
+                     * 获取Perform operations on audio, such as muting.
+                     * @return AudioOperations Perform operations on audio, such as muting.
                      * 
                      */
                     std::vector<AudioTransform> GetAudioOperations() const;
 
                     /**
-                     * 设置
-                     * @param _audioOperations 
+                     * 设置Perform operations on audio, such as muting.
+                     * @param _audioOperations Perform operations on audio, such as muting.
                      * 
                      */
                     void SetAudioOperations(const std::vector<AudioTransform>& _audioOperations);
@@ -259,15 +351,15 @@ namespace TencentCloud
                     bool AudioOperationsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ImageOperations 
+                     * 获取Operation performed on the image, for example, image rotation.
+                     * @return ImageOperations Operation performed on the image, for example, image rotation.
                      * 
                      */
                     std::vector<ImageTransform> GetImageOperations() const;
 
                     /**
-                     * 设置
-                     * @param _imageOperations 
+                     * 设置Operation performed on the image, for example, image rotation.
+                     * @param _imageOperations Operation performed on the image, for example, image rotation.
                      * 
                      */
                     void SetImageOperations(const std::vector<ImageTransform>& _imageOperations);
@@ -282,67 +374,90 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Media material source of the video clip, which can be:
+<li>Media file ID for VOD;</li>
+<li>Download URL of other media files.</li>
+Note: When using the download URL of another media file as the material source and access control (such as hotlink protection) is enabled, the URL needs to carry access control parameters (such as a hotlink protection signature).
                      */
                     std::string m_sourceMedia;
                     bool m_sourceMediaHasBeenSet;
 
                     /**
-                     * 
+                     * Start time of the video clip in the material file, in seconds. Default value: 0.
                      */
                     double m_sourceMediaStartTime;
                     bool m_sourceMediaStartTimeHasBeenSet;
 
                     /**
-                     * 
+                     * Video segment duration, in seconds. Default value: the length of the video material itself, which means the entire material is captured. If the source file is an image, Duration must be greater than 0.
                      */
                     double m_duration;
                     bool m_durationHasBeenSet;
 
                     /**
-                     * 
+                     * Target duration of the video clip, in seconds.
+<li>If TargetDuration is not specified or set to 0, it means the target duration is the same as Duration;</li>
+<li>When TargetDuration is set to a value more than 0, the video clip will be fast-forwarded or slowed down to make the duration of the output segment equal to TargetDuration.</li>
                      */
                     double m_targetDuration;
                     bool m_targetDurationHasBeenSet;
 
                     /**
-                     * 
+                     * Video origin position. Valid values:
+<li>Center: The coordinate origin is the central position, such as the center of the canvas.</li>
+Default value: Center.
                      */
                     std::string m_coordinateOrigin;
                     bool m_coordinateOriginHasBeenSet;
 
                     /**
-                     * 
+                     * Horizontal position of the video clip origin point relative to the origin of canvas. Supports % and px formats.
+<li>When the string ends with %, it means the video clip XPos is at the specified percentage of the canvas width. For example, 10% means XPos is at 10% of the canvas width.</li>
+<li>If a string ends with px, it means the unit of the video clip XPos is pixel. For example, 100px means XPos is 100 pixels.</li>
+Default value: 0px.
                      */
                     std::string m_xPos;
                     bool m_xPosHasBeenSet;
 
                     /**
-                     * 
+                     * Vertical position of the video clip origin point relative to the canvas origin point. Supports % and px formats.
+<li>If a string ends with %, it indicates that the `YPos` of a video clip is at a specified percentage of the canvas height. For example, `10%` means that `YPos` is 10% of the canvas height.</li>
+<li>If a string ends with px, it means the unit of the video clip YPos is pixel. For example, 100px means YPos is 100 pixels.</li>
+Default value: 0px.
                      */
                     std::string m_yPos;
                     bool m_yPosHasBeenSet;
 
                     /**
-                     * 
+                     * Width of a video clip, supporting two formats: % and px.
+<li>If a string ends with %, it indicates that the `Width` of a video clip is a percentage of the canvas width. For example, `10%` means that `Width` is 10% of the canvas width.</li>
+<li>If a string ends with px, it means the video clip Width unit is pixel. For example, 100px means the Width is 100 pixels.</li>
+<li>If both Width and Height are empty, the width and height of the video footage itself will be used.</li>
+<li>If Width is empty but Height is not empty, the width will be proportionally scaled.</li>
+<li>If Width is not empty but Height is empty, the height will be proportionally scaled.</li>
                      */
                     std::string m_width;
                     bool m_widthHasBeenSet;
 
                     /**
-                     * 
+                     * Height of a video clip, supporting two formats: % and px.
+<li>If a string ends with %, it indicates that the `Height` of a video clip is a percentage of the canvas height. For example, `10%` means that `Height` is 10% of the canvas height.</li>
+</li><li>If a string ends with px, it means the video clip Height unit is pixel. For example, 100px means the Height is 100 pixels.</li>
+<li>If both Width and Height are empty, the width and height of the video footage itself will be used.</li>
+<li>If Width is empty but Height is not empty, the width will be proportionally scaled.</li>
+<li>If Width is not empty but Height is empty, the height will be proportionally scaled.</li>
                      */
                     std::string m_height;
                     bool m_heightHasBeenSet;
 
                     /**
-                     * 
+                     * Perform operations on audio, such as muting.
                      */
                     std::vector<AudioTransform> m_audioOperations;
                     bool m_audioOperationsHasBeenSet;
 
                     /**
-                     * 
+                     * Operation performed on the image, for example, image rotation.
                      */
                     std::vector<ImageTransform> m_imageOperations;
                     bool m_imageOperationsHasBeenSet;

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Dynamic range information of the frame.
+                * Visual dynamic range info.
                 */
                 class DynamicRangeInfo : public AbstractModel
                 {
@@ -47,10 +47,10 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Visual dynamic range information. Valid values:
+                     * 获取Dynamic range information of the frame. Valid values:
 <li>SDR: Standard Dynamic Range;</li>
 <li>HDR: High Dynamic Range.</li>
-                     * @return Type Visual dynamic range information. Valid values:
+                     * @return Type Dynamic range information of the frame. Valid values:
 <li>SDR: Standard Dynamic Range;</li>
 <li>HDR: High Dynamic Range.</li>
                      * 
@@ -58,10 +58,10 @@ namespace TencentCloud
                     std::string GetType() const;
 
                     /**
-                     * 设置Visual dynamic range information. Valid values:
+                     * 设置Dynamic range information of the frame. Valid values:
 <li>SDR: Standard Dynamic Range;</li>
 <li>HDR: High Dynamic Range.</li>
-                     * @param _type Visual dynamic range information. Valid values:
+                     * @param _type Dynamic range information of the frame. Valid values:
 <li>SDR: Standard Dynamic Range;</li>
 <li>HDR: High Dynamic Range.</li>
                      * 
@@ -76,10 +76,10 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取High dynamic range type. Valid when Type is HDR. Currently supported valid values:
+                     * 获取High dynamic range type. Valid when Type is HDR. Currently supports the following valid values:
 <li>hdr10: refers to the hdr10 standard;</li>
 <li>hlg: refers to the hlg standard.</li>
-                     * @return HDRType High dynamic range type. Valid when Type is HDR. Currently supported valid values:
+                     * @return HDRType High dynamic range type. Valid when Type is HDR. Currently supports the following valid values:
 <li>hdr10: refers to the hdr10 standard;</li>
 <li>hlg: refers to the hlg standard.</li>
                      * 
@@ -87,10 +87,10 @@ namespace TencentCloud
                     std::string GetHDRType() const;
 
                     /**
-                     * 设置High dynamic range type. Valid when Type is HDR. Currently supported valid values:
+                     * 设置High dynamic range type. Valid when Type is HDR. Currently supports the following valid values:
 <li>hdr10: refers to the hdr10 standard;</li>
 <li>hlg: refers to the hlg standard.</li>
-                     * @param _hDRType High dynamic range type. Valid when Type is HDR. Currently supported valid values:
+                     * @param _hDRType High dynamic range type. Valid when Type is HDR. Currently supports the following valid values:
 <li>hdr10: refers to the hdr10 standard;</li>
 <li>hlg: refers to the hlg standard.</li>
                      * 
@@ -107,7 +107,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Visual dynamic range information. Valid values:
+                     * Dynamic range information of the frame. Valid values:
 <li>SDR: Standard Dynamic Range;</li>
 <li>HDR: High Dynamic Range.</li>
                      */
@@ -115,7 +115,7 @@ namespace TencentCloud
                     bool m_typeHasBeenSet;
 
                     /**
-                     * High dynamic range type. Valid when Type is HDR. Currently supported valid values:
+                     * High dynamic range type. Valid when Type is HDR. Currently supports the following valid values:
 <li>hdr10: refers to the hdr10 standard;</li>
 <li>hlg: refers to the hlg standard.</li>
                      */

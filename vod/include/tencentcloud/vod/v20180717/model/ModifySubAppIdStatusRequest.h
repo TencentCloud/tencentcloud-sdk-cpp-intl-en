@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return SubAppId 
+                     * 获取<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+                     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置
-                     * @param _subAppId 
+                     * 设置<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+                     * @param _subAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -64,15 +64,31 @@ namespace TencentCloud
                     bool SubAppIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Status 
+                     * 获取Application status. Valid values:
+<li>On: enabled.</li>
+<li>Off: disabled</li>
+<li>Destroyed: Terminated.</li>
+If the current status is `Destoying`, you cannot enable it. You have to wait until it is destroyed before re-enabling.
+                     * @return Status Application status. Valid values:
+<li>On: enabled.</li>
+<li>Off: disabled</li>
+<li>Destroyed: Terminated.</li>
+If the current status is `Destoying`, you cannot enable it. You have to wait until it is destroyed before re-enabling.
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置
-                     * @param _status 
+                     * 设置Application status. Valid values:
+<li>On: enabled.</li>
+<li>Off: disabled</li>
+<li>Destroyed: Terminated.</li>
+If the current status is `Destoying`, you cannot enable it. You have to wait until it is destroyed before re-enabling.
+                     * @param _status Application status. Valid values:
+<li>On: enabled.</li>
+<li>Off: disabled</li>
+<li>Destroyed: Terminated.</li>
+If the current status is `Destoying`, you cannot enable it. You have to wait until it is destroyed before re-enabling.
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -87,13 +103,17 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
 
                     /**
-                     * 
+                     * Application status. Valid values:
+<li>On: enabled.</li>
+<li>Off: disabled</li>
+<li>Destroyed: Terminated.</li>
+If the current status is `Destoying`, you cannot enable it. You have to wait until it is destroyed before re-enabling.
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;

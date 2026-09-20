@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return MediaCount 
+                     * 获取Total current media volume.
+                     * @return MediaCount Total current media volume.
                      * 
                      */
                     uint64_t GetMediaCount() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool MediaCountHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return TotalStorage 
+                     * 获取Current total storage capacity, in bytes.
+                     * @return TotalStorage Current total storage capacity, in bytes.
                      * 
                      */
                     uint64_t GetTotalStorage() const;
@@ -73,8 +73,8 @@ namespace TencentCloud
                     bool TotalStorageHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return StandardStorage 
+                     * 获取Current standard storage capacity, in bytes.
+                     * @return StandardStorage Current standard storage capacity, in bytes.
                      * 
                      */
                     uint64_t GetStandardStorage() const;
@@ -87,8 +87,8 @@ namespace TencentCloud
                     bool StandardStorageHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return InfrequentStorage 
+                     * 获取Current infrequent access storage capacity in bytes.
+                     * @return InfrequentStorage Current infrequent access storage capacity in bytes.
                      * 
                      */
                     uint64_t GetInfrequentStorage() const;
@@ -101,8 +101,8 @@ namespace TencentCloud
                     bool InfrequentStorageHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ArchiveStorage 
+                     * 获取Current archive storage capacity, in bytes.
+                     * @return ArchiveStorage Current archive storage capacity, in bytes.
                      * 
                      */
                     uint64_t GetArchiveStorage() const;
@@ -115,8 +115,8 @@ namespace TencentCloud
                     bool ArchiveStorageHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return DeepArchiveStorage 
+                     * 获取Current deep archive storage capacity, in bytes.
+                     * @return DeepArchiveStorage Current deep archive storage capacity, in bytes.
                      * 
                      */
                     uint64_t GetDeepArchiveStorage() const;
@@ -129,8 +129,8 @@ namespace TencentCloud
                     bool DeepArchiveStorageHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return StorageStat 
+                     * 获取Storage usage in each billing region.
+                     * @return StorageStat Storage usage in each billing region.
                      * 
                      */
                     std::vector<StorageStatData> GetStorageStat() const;
@@ -145,43 +145,43 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Total current media volume.
                      */
                     uint64_t m_mediaCount;
                     bool m_mediaCountHasBeenSet;
 
                     /**
-                     * 
+                     * Current total storage capacity, in bytes.
                      */
                     uint64_t m_totalStorage;
                     bool m_totalStorageHasBeenSet;
 
                     /**
-                     * 
+                     * Current standard storage capacity, in bytes.
                      */
                     uint64_t m_standardStorage;
                     bool m_standardStorageHasBeenSet;
 
                     /**
-                     * 
+                     * Current infrequent access storage capacity in bytes.
                      */
                     uint64_t m_infrequentStorage;
                     bool m_infrequentStorageHasBeenSet;
 
                     /**
-                     * 
+                     * Current archive storage capacity, in bytes.
                      */
                     uint64_t m_archiveStorage;
                     bool m_archiveStorageHasBeenSet;
 
                     /**
-                     * 
+                     * Current deep archive storage capacity, in bytes.
                      */
                     uint64_t m_deepArchiveStorage;
                     bool m_deepArchiveStorageHasBeenSet;
 
                     /**
-                     * 
+                     * Storage usage in each billing region.
                      */
                     std::vector<StorageStatData> m_storageStat;
                     bool m_storageStatHasBeenSet;

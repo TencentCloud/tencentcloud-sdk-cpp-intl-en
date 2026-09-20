@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Abnormal result information for audio and video quality inspection.
                 */
                 class QualityInspectResultItem : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Type 
+                     * 获取<p>Exception type. Value range:</p><li>Jitter: jitter;</li><li>Blur: blurry;</li><li>LowLighting: low illumination;</li><li>HighLighting: overexposure;</li><li>CrashScreen: screen glitch;</li><li>BlackWhiteEdge: black and white edges;</li><li>SolidColorScreen: solid color screen;</li><li>Noise: noise;</li><li>Mosaic: mosaic;</li><li>QRCode: QR code;</li><li>AppletCode: mini program code;</li><li>BarCode: barcode;</li><li>LowVoice: low voice;</li><li>HighVoice: high voice;</li><li>NoVoice: mute;</li><li>LowEvaluation: no reference scoring below threshold.</li><li> LowColorfulness: color richness info.</li><li> AudioVideoAsync: audio and video synchronization issues.</li><li> AudioSubtitleAsync: audio and subtitle synchronization issues.</li><li> VideoAesthetic: low video aesthetic score.</li><li> AudioDiscontinuity: discontinuous audio.</li><li> AudioVolume: volume information.</li><li> AudioLoudnessJitter: severe volume change.</li><li> BackgroundMusic: background music exists.</li><li> AudioEvaluation: poor bass quality.</li><li> AudioNoise: noise.</li><li> AudioSpeechQuality: low speech definition.</li><li> AudioReverb: high reverberation level.</li><li> AudioHighLoudness: loudness distortion.</li>
+                     * @return Type <p>Exception type. Value range:</p><li>Jitter: jitter;</li><li>Blur: blurry;</li><li>LowLighting: low illumination;</li><li>HighLighting: overexposure;</li><li>CrashScreen: screen glitch;</li><li>BlackWhiteEdge: black and white edges;</li><li>SolidColorScreen: solid color screen;</li><li>Noise: noise;</li><li>Mosaic: mosaic;</li><li>QRCode: QR code;</li><li>AppletCode: mini program code;</li><li>BarCode: barcode;</li><li>LowVoice: low voice;</li><li>HighVoice: high voice;</li><li>NoVoice: mute;</li><li>LowEvaluation: no reference scoring below threshold.</li><li> LowColorfulness: color richness info.</li><li> AudioVideoAsync: audio and video synchronization issues.</li><li> AudioSubtitleAsync: audio and subtitle synchronization issues.</li><li> VideoAesthetic: low video aesthetic score.</li><li> AudioDiscontinuity: discontinuous audio.</li><li> AudioVolume: volume information.</li><li> AudioLoudnessJitter: severe volume change.</li><li> BackgroundMusic: background music exists.</li><li> AudioEvaluation: poor bass quality.</li><li> AudioNoise: noise.</li><li> AudioSpeechQuality: low speech definition.</li><li> AudioReverb: high reverberation level.</li><li> AudioHighLoudness: loudness distortion.</li>
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置
-                     * @param _type 
+                     * 设置<p>Exception type. Value range:</p><li>Jitter: jitter;</li><li>Blur: blurry;</li><li>LowLighting: low illumination;</li><li>HighLighting: overexposure;</li><li>CrashScreen: screen glitch;</li><li>BlackWhiteEdge: black and white edges;</li><li>SolidColorScreen: solid color screen;</li><li>Noise: noise;</li><li>Mosaic: mosaic;</li><li>QRCode: QR code;</li><li>AppletCode: mini program code;</li><li>BarCode: barcode;</li><li>LowVoice: low voice;</li><li>HighVoice: high voice;</li><li>NoVoice: mute;</li><li>LowEvaluation: no reference scoring below threshold.</li><li> LowColorfulness: color richness info.</li><li> AudioVideoAsync: audio and video synchronization issues.</li><li> AudioSubtitleAsync: audio and subtitle synchronization issues.</li><li> VideoAesthetic: low video aesthetic score.</li><li> AudioDiscontinuity: discontinuous audio.</li><li> AudioVolume: volume information.</li><li> AudioLoudnessJitter: severe volume change.</li><li> BackgroundMusic: background music exists.</li><li> AudioEvaluation: poor bass quality.</li><li> AudioNoise: noise.</li><li> AudioSpeechQuality: low speech definition.</li><li> AudioReverb: high reverberation level.</li><li> AudioHighLoudness: loudness distortion.</li>
+                     * @param _type <p>Exception type. Value range:</p><li>Jitter: jitter;</li><li>Blur: blurry;</li><li>LowLighting: low illumination;</li><li>HighLighting: overexposure;</li><li>CrashScreen: screen glitch;</li><li>BlackWhiteEdge: black and white edges;</li><li>SolidColorScreen: solid color screen;</li><li>Noise: noise;</li><li>Mosaic: mosaic;</li><li>QRCode: QR code;</li><li>AppletCode: mini program code;</li><li>BarCode: barcode;</li><li>LowVoice: low voice;</li><li>HighVoice: high voice;</li><li>NoVoice: mute;</li><li>LowEvaluation: no reference scoring below threshold.</li><li> LowColorfulness: color richness info.</li><li> AudioVideoAsync: audio and video synchronization issues.</li><li> AudioSubtitleAsync: audio and subtitle synchronization issues.</li><li> VideoAesthetic: low video aesthetic score.</li><li> AudioDiscontinuity: discontinuous audio.</li><li> AudioVolume: volume information.</li><li> AudioLoudnessJitter: severe volume change.</li><li> BackgroundMusic: background music exists.</li><li> AudioEvaluation: poor bass quality.</li><li> AudioNoise: noise.</li><li> AudioSpeechQuality: low speech definition.</li><li> AudioReverb: high reverberation level.</li><li> AudioHighLoudness: loudness distortion.</li>
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SegmentSet 
+                     * 获取<p>Abnormal fragment list.<br><font color="red">Note:</font> This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to SegmentSetFileUrl.</p>
+                     * @return SegmentSet <p>Abnormal fragment list.<br><font color="red">Note:</font> This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to SegmentSetFileUrl.</p>
                      * 
                      */
                     std::vector<QualityInspectItem> GetSegmentSet() const;
 
                     /**
-                     * 设置
-                     * @param _segmentSet 
+                     * 设置<p>Abnormal fragment list.<br><font color="red">Note:</font> This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to SegmentSetFileUrl.</p>
+                     * @param _segmentSet <p>Abnormal fragment list.<br><font color="red">Note:</font> This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to SegmentSetFileUrl.</p>
                      * 
                      */
                     void SetSegmentSet(const std::vector<QualityInspectItem>& _segmentSet);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool SegmentSetHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SegmentSetFileUrl 
+                     * 获取<p>URL of the abnormal fragment list file. The file content is in JSON format, and its data structure is consistent with the fields of SegmentSet. (The file will not be retained permanently. It will be deleted after reaching the SegmentSetFileUrlExpireTime time point.)</p>
+                     * @return SegmentSetFileUrl <p>URL of the abnormal fragment list file. The file content is in JSON format, and its data structure is consistent with the fields of SegmentSet. (The file will not be retained permanently. It will be deleted after reaching the SegmentSetFileUrlExpireTime time point.)</p>
                      * 
                      */
                     std::string GetSegmentSetFileUrl() const;
 
                     /**
-                     * 设置
-                     * @param _segmentSetFileUrl 
+                     * 设置<p>URL of the abnormal fragment list file. The file content is in JSON format, and its data structure is consistent with the fields of SegmentSet. (The file will not be retained permanently. It will be deleted after reaching the SegmentSetFileUrlExpireTime time point.)</p>
+                     * @param _segmentSetFileUrl <p>URL of the abnormal fragment list file. The file content is in JSON format, and its data structure is consistent with the fields of SegmentSet. (The file will not be retained permanently. It will be deleted after reaching the SegmentSetFileUrlExpireTime time point.)</p>
                      * 
                      */
                     void SetSegmentSetFileUrl(const std::string& _segmentSetFileUrl);
@@ -111,15 +111,15 @@ namespace TencentCloud
                     bool SegmentSetFileUrlHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SegmentSetFileUrlExpireTime 
+                     * 获取<p>Expiration time of the URL of the exception segment list file, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+                     * @return SegmentSetFileUrlExpireTime <p>Expiration time of the URL of the exception segment list file, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
                      * 
                      */
                     std::string GetSegmentSetFileUrlExpireTime() const;
 
                     /**
-                     * 设置
-                     * @param _segmentSetFileUrlExpireTime 
+                     * 设置<p>Expiration time of the URL of the exception segment list file, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
+                     * @param _segmentSetFileUrlExpireTime <p>Expiration time of the URL of the exception segment list file, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
                      * 
                      */
                     void SetSegmentSetFileUrlExpireTime(const std::string& _segmentSetFileUrlExpireTime);
@@ -134,25 +134,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p>Exception type. Value range:</p><li>Jitter: jitter;</li><li>Blur: blurry;</li><li>LowLighting: low illumination;</li><li>HighLighting: overexposure;</li><li>CrashScreen: screen glitch;</li><li>BlackWhiteEdge: black and white edges;</li><li>SolidColorScreen: solid color screen;</li><li>Noise: noise;</li><li>Mosaic: mosaic;</li><li>QRCode: QR code;</li><li>AppletCode: mini program code;</li><li>BarCode: barcode;</li><li>LowVoice: low voice;</li><li>HighVoice: high voice;</li><li>NoVoice: mute;</li><li>LowEvaluation: no reference scoring below threshold.</li><li> LowColorfulness: color richness info.</li><li> AudioVideoAsync: audio and video synchronization issues.</li><li> AudioSubtitleAsync: audio and subtitle synchronization issues.</li><li> VideoAesthetic: low video aesthetic score.</li><li> AudioDiscontinuity: discontinuous audio.</li><li> AudioVolume: volume information.</li><li> AudioLoudnessJitter: severe volume change.</li><li> BackgroundMusic: background music exists.</li><li> AudioEvaluation: poor bass quality.</li><li> AudioNoise: noise.</li><li> AudioSpeechQuality: low speech definition.</li><li> AudioReverb: high reverberation level.</li><li> AudioHighLoudness: loudness distortion.</li>
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Abnormal fragment list.<br><font color="red">Note:</font> This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to SegmentSetFileUrl.</p>
                      */
                     std::vector<QualityInspectItem> m_segmentSet;
                     bool m_segmentSetHasBeenSet;
 
                     /**
-                     * 
+                     * <p>URL of the abnormal fragment list file. The file content is in JSON format, and its data structure is consistent with the fields of SegmentSet. (The file will not be retained permanently. It will be deleted after reaching the SegmentSetFileUrlExpireTime time point.)</p>
                      */
                     std::string m_segmentSetFileUrl;
                     bool m_segmentSetFileUrlHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Expiration time of the URL of the exception segment list file, in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>.</p>
                      */
                     std::string m_segmentSetFileUrlExpireTime;
                     bool m_segmentSetFileUrlExpireTimeHasBeenSet;

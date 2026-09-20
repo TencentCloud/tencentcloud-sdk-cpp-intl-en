@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Intelligent frame tagging task input type.
                 */
                 class AiAnalysisTaskFrameTagInput : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Definition 
+                     * 获取ID of the intelligent video frame-by-frame tagging template.
+                     * @return Definition ID of the intelligent video frame-by-frame tagging template.
                      * 
                      */
                     uint64_t GetDefinition() const;
 
                     /**
-                     * 设置
-                     * @param _definition 
+                     * 设置ID of the intelligent video frame-by-frame tagging template.
+                     * @param _definition ID of the intelligent video frame-by-frame tagging template.
                      * 
                      */
                     void SetDefinition(const uint64_t& _definition);
@@ -70,7 +70,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * ID of the intelligent video frame-by-frame tagging template.
                      */
                     uint64_t m_definition;
                     bool m_definitionHasBeenSet;

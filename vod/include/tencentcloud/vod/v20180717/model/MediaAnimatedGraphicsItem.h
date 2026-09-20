@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Video motion graphic result information
                 */
                 class MediaAnimatedGraphicsItem : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Url 
+                     * 获取File address of the animated image.
+                     * @return Url File address of the animated image.
                      * 
                      */
                     std::string GetUrl() const;
 
                     /**
-                     * 设置
-                     * @param _url 
+                     * 设置File address of the animated image.
+                     * @param _url File address of the animated image.
                      * 
                      */
                     void SetUrl(const std::string& _url);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool UrlHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Definition 
+                     * 获取Rotating image template ID. See [video-to-animated image conversion parameter template](https://www.tencentcloud.com/document/product/266/33481?from_cn_redirect=1#.3Cspan-id-.3D-.22zdt.22.3E.3C.2Fspan.3E.E8.BD.AC.E5.8A.A8.E5.9B.BE.E6.A8.A1.E6.9D.BF).
+                     * @return Definition Rotating image template ID. See [video-to-animated image conversion parameter template](https://www.tencentcloud.com/document/product/266/33481?from_cn_redirect=1#.3Cspan-id-.3D-.22zdt.22.3E.3C.2Fspan.3E.E8.BD.AC.E5.8A.A8.E5.9B.BE.E6.A8.A1.E6.9D.BF).
                      * 
                      */
                     int64_t GetDefinition() const;
 
                     /**
-                     * 设置
-                     * @param _definition 
+                     * 设置Rotating image template ID. See [video-to-animated image conversion parameter template](https://www.tencentcloud.com/document/product/266/33481?from_cn_redirect=1#.3Cspan-id-.3D-.22zdt.22.3E.3C.2Fspan.3E.E8.BD.AC.E5.8A.A8.E5.9B.BE.E6.A8.A1.E6.9D.BF).
+                     * @param _definition Rotating image template ID. See [video-to-animated image conversion parameter template](https://www.tencentcloud.com/document/product/266/33481?from_cn_redirect=1#.3Cspan-id-.3D-.22zdt.22.3E.3C.2Fspan.3E.E8.BD.AC.E5.8A.A8.E5.9B.BE.E6.A8.A1.E6.9D.BF).
                      * 
                      */
                     void SetDefinition(const int64_t& _definition);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool DefinitionHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Container 
+                     * 获取Animated image file format, for example, gif.
+                     * @return Container Animated image file format, for example, gif.
                      * 
                      */
                     std::string GetContainer() const;
 
                     /**
-                     * 设置
-                     * @param _container 
+                     * 设置Animated image file format, for example, gif.
+                     * @param _container Animated image file format, for example, gif.
                      * 
                      */
                     void SetContainer(const std::string& _container);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool ContainerHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Height 
+                     * 获取Height of the animated image. Measurement unit: px.
+                     * @return Height Height of the animated image. Measurement unit: px.
                      * 
                      */
                     int64_t GetHeight() const;
 
                     /**
-                     * 设置
-                     * @param _height 
+                     * 设置Height of the animated image. Measurement unit: px.
+                     * @param _height Height of the animated image. Measurement unit: px.
                      * 
                      */
                     void SetHeight(const int64_t& _height);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool HeightHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Width 
+                     * 获取Width of the animated image in px.
+                     * @return Width Width of the animated image in px.
                      * 
                      */
                     int64_t GetWidth() const;
 
                     /**
-                     * 设置
-                     * @param _width 
+                     * 设置Width of the animated image in px.
+                     * @param _width Width of the animated image in px.
                      * 
                      */
                     void SetWidth(const int64_t& _width);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool WidthHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Bitrate 
+                     * 获取Animated image bitrate. Measurement unit: bps.
+                     * @return Bitrate Animated image bitrate. Measurement unit: bps.
                      * 
                      */
                     int64_t GetBitrate() const;
 
                     /**
-                     * 设置
-                     * @param _bitrate 
+                     * 设置Animated image bitrate. Measurement unit: bps.
+                     * @param _bitrate Animated image bitrate. Measurement unit: bps.
                      * 
                      */
                     void SetBitrate(const int64_t& _bitrate);
@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool BitrateHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Size 
+                     * 获取Animated image size. Unit: byte.
+                     * @return Size Animated image size. Unit: byte.
                      * 
                      */
                     int64_t GetSize() const;
 
                     /**
-                     * 设置
-                     * @param _size 
+                     * 设置Animated image size. Unit: byte.
+                     * @param _size Animated image size. Unit: byte.
                      * 
                      */
                     void SetSize(const int64_t& _size);
@@ -194,15 +194,15 @@ namespace TencentCloud
                     bool SizeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Md5 
+                     * 获取md5 value of the animated image.
+                     * @return Md5 md5 value of the animated image.
                      * 
                      */
                     std::string GetMd5() const;
 
                     /**
-                     * 设置
-                     * @param _md5 
+                     * 设置md5 value of the animated image.
+                     * @param _md5 md5 value of the animated image.
                      * 
                      */
                     void SetMd5(const std::string& _md5);
@@ -215,15 +215,15 @@ namespace TencentCloud
                     bool Md5HasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return StartTimeOffset 
+                     * 获取Start time offset of the GIF in the video, in seconds.
+                     * @return StartTimeOffset Start time offset of the GIF in the video, in seconds.
                      * 
                      */
                     double GetStartTimeOffset() const;
 
                     /**
-                     * 设置
-                     * @param _startTimeOffset 
+                     * 设置Start time offset of the GIF in the video, in seconds.
+                     * @param _startTimeOffset Start time offset of the GIF in the video, in seconds.
                      * 
                      */
                     void SetStartTimeOffset(const double& _startTimeOffset);
@@ -236,15 +236,15 @@ namespace TencentCloud
                     bool StartTimeOffsetHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return EndTimeOffset 
+                     * 获取End time offset of the GIF in the video, in seconds.
+                     * @return EndTimeOffset End time offset of the GIF in the video, in seconds.
                      * 
                      */
                     double GetEndTimeOffset() const;
 
                     /**
-                     * 设置
-                     * @param _endTimeOffset 
+                     * 设置End time offset of the GIF in the video, in seconds.
+                     * @param _endTimeOffset End time offset of the GIF in the video, in seconds.
                      * 
                      */
                     void SetEndTimeOffset(const double& _endTimeOffset);
@@ -259,61 +259,61 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * File address of the animated image.
                      */
                     std::string m_url;
                     bool m_urlHasBeenSet;
 
                     /**
-                     * 
+                     * Rotating image template ID. See [video-to-animated image conversion parameter template](https://www.tencentcloud.com/document/product/266/33481?from_cn_redirect=1#.3Cspan-id-.3D-.22zdt.22.3E.3C.2Fspan.3E.E8.BD.AC.E5.8A.A8.E5.9B.BE.E6.A8.A1.E6.9D.BF).
                      */
                     int64_t m_definition;
                     bool m_definitionHasBeenSet;
 
                     /**
-                     * 
+                     * Animated image file format, for example, gif.
                      */
                     std::string m_container;
                     bool m_containerHasBeenSet;
 
                     /**
-                     * 
+                     * Height of the animated image. Measurement unit: px.
                      */
                     int64_t m_height;
                     bool m_heightHasBeenSet;
 
                     /**
-                     * 
+                     * Width of the animated image in px.
                      */
                     int64_t m_width;
                     bool m_widthHasBeenSet;
 
                     /**
-                     * 
+                     * Animated image bitrate. Measurement unit: bps.
                      */
                     int64_t m_bitrate;
                     bool m_bitrateHasBeenSet;
 
                     /**
-                     * 
+                     * Animated image size. Unit: byte.
                      */
                     int64_t m_size;
                     bool m_sizeHasBeenSet;
 
                     /**
-                     * 
+                     * md5 value of the animated image.
                      */
                     std::string m_md5;
                     bool m_md5HasBeenSet;
 
                     /**
-                     * 
+                     * Start time offset of the GIF in the video, in seconds.
                      */
                     double m_startTimeOffset;
                     bool m_startTimeOffsetHasBeenSet;
 
                     /**
-                     * 
+                     * End time offset of the GIF in the video, in seconds.
                      */
                     double m_endTimeOffset;
                     bool m_endTimeOffsetHasBeenSet;

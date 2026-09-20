@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Media import knowledge base task
                 */
                 class ImportMediaKnowledgeTask : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return TaskId 
+                     * 获取<p>Task ID.</p>
+                     * @return TaskId <p>Task ID.</p>
                      * 
                      */
                     std::string GetTaskId() const;
 
                     /**
-                     * 设置
-                     * @param _taskId 
+                     * 设置<p>Task ID.</p>
+                     * @param _taskId <p>Task ID.</p>
                      * 
                      */
                     void SetTaskId(const std::string& _taskId);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool TaskIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return FileId 
+                     * 获取<p>Media file ID</p>
+                     * @return FileId <p>Media file ID</p>
                      * 
                      */
                     std::string GetFileId() const;
 
                     /**
-                     * 设置
-                     * @param _fileId 
+                     * 设置<p>Media file ID</p>
+                     * @param _fileId <p>Media file ID</p>
                      * 
                      */
                     void SetFileId(const std::string& _fileId);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool FileIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Input 
+                     * 获取<p>Input of the import knowledge base task.</p>
+                     * @return Input <p>Input of the import knowledge base task.</p>
                      * 
                      */
                     ImportMediaKnowledgeTaskInput GetInput() const;
 
                     /**
-                     * 设置
-                     * @param _input 
+                     * 设置<p>Input of the import knowledge base task.</p>
+                     * @param _input <p>Input of the import knowledge base task.</p>
                      * 
                      */
                     void SetInput(const ImportMediaKnowledgeTaskInput& _input);
@@ -111,15 +111,15 @@ namespace TencentCloud
                     bool InputHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Status 
+                     * 获取<p>Task status. Valid values: <li>PROCESSING: Processing; </li><li>FINISH: Completed.</li></p>
+                     * @return Status <p>Task status. Valid values: <li>PROCESSING: Processing; </li><li>FINISH: Completed.</li></p>
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置
-                     * @param _status 
+                     * 设置<p>Task status. Valid values: <li>PROCESSING: Processing; </li><li>FINISH: Completed.</li></p>
+                     * @param _status <p>Task status. Valid values: <li>PROCESSING: Processing; </li><li>FINISH: Completed.</li></p>
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -132,15 +132,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ErrCode 
+                     * 获取<p>Error code. 0 indicates success, and other values indicate failure.</p>
+                     * @return ErrCode <p>Error code. 0 indicates success, and other values indicate failure.</p>
                      * 
                      */
                     int64_t GetErrCode() const;
 
                     /**
-                     * 设置
-                     * @param _errCode 
+                     * 设置<p>Error code. 0 indicates success, and other values indicate failure.</p>
+                     * @param _errCode <p>Error code. 0 indicates success, and other values indicate failure.</p>
                      * 
                      */
                     void SetErrCode(const int64_t& _errCode);
@@ -153,15 +153,15 @@ namespace TencentCloud
                     bool ErrCodeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Message 
+                     * 获取<p>Error message.</p>
+                     * @return Message <p>Error message.</p>
                      * 
                      */
                     std::string GetMessage() const;
 
                     /**
-                     * 设置
-                     * @param _message 
+                     * 设置<p>Error message.</p>
+                     * @param _message <p>Error message.</p>
                      * 
                      */
                     void SetMessage(const std::string& _message);
@@ -176,37 +176,37 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p>Task ID.</p>
                      */
                     std::string m_taskId;
                     bool m_taskIdHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Media file ID</p>
                      */
                     std::string m_fileId;
                     bool m_fileIdHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Input of the import knowledge base task.</p>
                      */
                     ImportMediaKnowledgeTaskInput m_input;
                     bool m_inputHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Task status. Valid values: <li>PROCESSING: Processing; </li><li>FINISH: Completed.</li></p>
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Error code. 0 indicates success, and other values indicate failure.</p>
                      */
                     int64_t m_errCode;
                     bool m_errCodeHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Error message.</p>
                      */
                     std::string m_message;
                     bool m_messageHasBeenSet;

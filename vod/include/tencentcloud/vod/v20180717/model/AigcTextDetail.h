@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * AIGC-generated text detail
                 */
                 class AigcTextDetail : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return PageSize 
+                     * 获取<p>Entries per page</p>
+                     * @return PageSize <p>Entries per page</p>
                      * 
                      */
                     uint64_t GetPageSize() const;
 
                     /**
-                     * 设置
-                     * @param _pageSize 
+                     * 设置<p>Entries per page</p>
+                     * @param _pageSize <p>Entries per page</p>
                      * 
                      */
                     void SetPageSize(const uint64_t& _pageSize);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool PageSizeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ScrollToken 
+                     * 获取<p>scroll_token returned in the previous page response, used for turning to the next page</p>
+                     * @return ScrollToken <p>scroll_token returned in the previous page response, used for turning to the next page</p>
                      * 
                      */
                     std::string GetScrollToken() const;
 
                     /**
-                     * 设置
-                     * @param _scrollToken 
+                     * 设置<p>scroll_token returned in the previous page response, used for turning to the next page</p>
+                     * @param _scrollToken <p>scroll_token returned in the previous page response, used for turning to the next page</p>
                      * 
                      */
                     void SetScrollToken(const std::string& _scrollToken);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool ScrollTokenHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Data 
+                     * 获取<p>Text generation details</p>
+                     * @return Data <p>Text generation details</p>
                      * 
                      */
                     std::vector<AigcTextDetailData> GetData() const;
 
                     /**
-                     * 设置
-                     * @param _data 
+                     * 设置<p>Text generation details</p>
+                     * @param _data <p>Text generation details</p>
                      * 
                      */
                     void SetData(const std::vector<AigcTextDetailData>& _data);
@@ -113,19 +113,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p>Entries per page</p>
                      */
                     uint64_t m_pageSize;
                     bool m_pageSizeHasBeenSet;
 
                     /**
-                     * 
+                     * <p>scroll_token returned in the previous page response, used for turning to the next page</p>
                      */
                     std::string m_scrollToken;
                     bool m_scrollTokenHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Text generation details</p>
                      */
                     std::vector<AigcTextDetailData> m_data;
                     bool m_dataHasBeenSet;

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Heuristic custom time cache configuration
                 */
                 class HeuristicCacheConfig : public AbstractModel
                 {
@@ -76,15 +76,15 @@ namespace TencentCloud
                     bool HeuristicCacheTimeSwitchHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return HeuristicCacheTime 
+                     * 获取Unit: seconds.
+                     * @return HeuristicCacheTime Unit: seconds.
                      * 
                      */
                     uint64_t GetHeuristicCacheTime() const;
 
                     /**
-                     * 设置
-                     * @param _heuristicCacheTime 
+                     * 设置Unit: seconds.
+                     * @param _heuristicCacheTime Unit: seconds.
                      * 
                      */
                     void SetHeuristicCacheTime(const uint64_t& _heuristicCacheTime);
@@ -107,7 +107,7 @@ namespace TencentCloud
                     bool m_heuristicCacheTimeSwitchHasBeenSet;
 
                     /**
-                     * 
+                     * Unit: seconds.
                      */
                     uint64_t m_heuristicCacheTime;
                     bool m_heuristicCacheTimeHasBeenSet;

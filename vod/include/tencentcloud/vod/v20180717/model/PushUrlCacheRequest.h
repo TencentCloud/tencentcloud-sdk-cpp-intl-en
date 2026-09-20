@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Urls 
+                     * 获取<p>Preheated URL list. You can specify up to 20 URLs at a time.</p>
+                     * @return Urls <p>Preheated URL list. You can specify up to 20 URLs at a time.</p>
                      * 
                      */
                     std::vector<std::string> GetUrls() const;
 
                     /**
-                     * 设置
-                     * @param _urls 
+                     * 设置<p>Preheated URL list. You can specify up to 20 URLs at a time.</p>
+                     * @param _urls <p>Preheated URL list. You can specify up to 20 URLs at a time.</p>
                      * 
                      */
                     void SetUrls(const std::vector<std::string>& _urls);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool UrlsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SubAppId 
+                     * 获取<p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be filled with the app ID to access resources in on-demand applications, whether in the default application or a newly created application.</b></p>
+                     * @return SubAppId <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be filled with the app ID to access resources in on-demand applications, whether in the default application or a newly created application.</b></p>
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置
-                     * @param _subAppId 
+                     * 设置<p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be filled with the app ID to access resources in on-demand applications, whether in the default application or a newly created application.</b></p>
+                     * @param _subAppId <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be filled with the app ID to access resources in on-demand applications, whether in the default application or a newly created application.</b></p>
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -87,13 +87,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p>Preheated URL list. You can specify up to 20 URLs at a time.</p>
                      */
                     std::vector<std::string> m_urls;
                     bool m_urlsHasBeenSet;
 
                     /**
-                     * 
+                     * <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be filled with the app ID to access resources in on-demand applications, whether in the default application or a newly created application.</b></p>
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;

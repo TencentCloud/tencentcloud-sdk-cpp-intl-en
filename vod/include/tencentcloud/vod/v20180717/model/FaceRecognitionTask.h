@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Face recognition task
                 */
                 class FaceRecognitionTask : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Definition 
+                     * 获取<p>Face recognition template No.</p>
+                     * @return Definition <p>Face recognition template No.</p>
                      * 
                      */
                     int64_t GetDefinition() const;
 
                     /**
-                     * 设置
-                     * @param _definition 
+                     * 设置<p>Face recognition template No.</p>
+                     * @param _definition <p>Face recognition template No.</p>
                      * 
                      */
                     void SetDefinition(const int64_t& _definition);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool DefinitionHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return OutputFile 
+                     * 获取<p>Output file information</p>
+                     * @return OutputFile <p>Output file information</p>
                      * 
                      */
                     std::vector<FaceRecognitionOutputFileInfo> GetOutputFile() const;
 
                     /**
-                     * 设置
-                     * @param _outputFile 
+                     * 设置<p>Output file information</p>
+                     * @param _outputFile <p>Output file information</p>
                      * 
                      */
                     void SetOutputFile(const std::vector<FaceRecognitionOutputFileInfo>& _outputFile);
@@ -92,13 +92,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p>Face recognition template No.</p>
                      */
                     int64_t m_definition;
                     bool m_definitionHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Output file information</p>
                      */
                     std::vector<FaceRecognitionOutputFileInfo> m_outputFile;
                     bool m_outputFileHasBeenSet;

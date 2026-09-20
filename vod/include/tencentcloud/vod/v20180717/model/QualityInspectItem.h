@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Abnormal fragment information for audio and video quality inspection.
                 */
                 class QualityInspectItem : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return StartTimeOffset 
+                     * 获取Offset time of abnormal segment start, in seconds.
+                     * @return StartTimeOffset Offset time of abnormal segment start, in seconds.
                      * 
                      */
                     double GetStartTimeOffset() const;
 
                     /**
-                     * 设置
-                     * @param _startTimeOffset 
+                     * 设置Offset time of abnormal segment start, in seconds.
+                     * @param _startTimeOffset Offset time of abnormal segment start, in seconds.
                      * 
                      */
                     void SetStartTimeOffset(const double& _startTimeOffset);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool StartTimeOffsetHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return EndTimeOffset 
+                     * 获取End time offset of an abnormal fragment, in seconds.
+                     * @return EndTimeOffset End time offset of an abnormal fragment, in seconds.
                      * 
                      */
                     double GetEndTimeOffset() const;
 
                     /**
-                     * 设置
-                     * @param _endTimeOffset 
+                     * 设置End time offset of an abnormal fragment, in seconds.
+                     * @param _endTimeOffset End time offset of an abnormal fragment, in seconds.
                      * 
                      */
                     void SetEndTimeOffset(const double& _endTimeOffset);
@@ -89,15 +89,39 @@ namespace TencentCloud
                     bool EndTimeOffsetHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AreaCoordSet 
+                     * 获取Coordinates of the detected abnormal area. The array contains 4 elements [x1,y1,x2,y2], which represent the horizontal and vertical coordinates of the top-left and bottom-right corners of the area in sequence.
+<font color=red>Note:</font> This field is valid only when Type is one of the following values:
+<li>BlackWhiteEdge: black and white edges;</li>
+<li>Mosaic: mosaic;</li>
+<li>QRCode: QR code;</li>
+<li>AppletCode: mini program code;</li>
+<li>BarCode: barcode.</li>
+                     * @return AreaCoordSet Coordinates of the detected abnormal area. The array contains 4 elements [x1,y1,x2,y2], which represent the horizontal and vertical coordinates of the top-left and bottom-right corners of the area in sequence.
+<font color=red>Note:</font> This field is valid only when Type is one of the following values:
+<li>BlackWhiteEdge: black and white edges;</li>
+<li>Mosaic: mosaic;</li>
+<li>QRCode: QR code;</li>
+<li>AppletCode: mini program code;</li>
+<li>BarCode: barcode.</li>
                      * 
                      */
                     std::vector<int64_t> GetAreaCoordSet() const;
 
                     /**
-                     * 设置
-                     * @param _areaCoordSet 
+                     * 设置Coordinates of the detected abnormal area. The array contains 4 elements [x1,y1,x2,y2], which represent the horizontal and vertical coordinates of the top-left and bottom-right corners of the area in sequence.
+<font color=red>Note:</font> This field is valid only when Type is one of the following values:
+<li>BlackWhiteEdge: black and white edges;</li>
+<li>Mosaic: mosaic;</li>
+<li>QRCode: QR code;</li>
+<li>AppletCode: mini program code;</li>
+<li>BarCode: barcode.</li>
+                     * @param _areaCoordSet Coordinates of the detected abnormal area. The array contains 4 elements [x1,y1,x2,y2], which represent the horizontal and vertical coordinates of the top-left and bottom-right corners of the area in sequence.
+<font color=red>Note:</font> This field is valid only when Type is one of the following values:
+<li>BlackWhiteEdge: black and white edges;</li>
+<li>Mosaic: mosaic;</li>
+<li>QRCode: QR code;</li>
+<li>AppletCode: mini program code;</li>
+<li>BarCode: barcode.</li>
                      * 
                      */
                     void SetAreaCoordSet(const std::vector<int64_t>& _areaCoordSet);
@@ -110,15 +134,35 @@ namespace TencentCloud
                     bool AreaCoordSetHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Confidence 
+                     * 获取Confidence. Value range: [0, 100].
+<font color=red>Note:</font> This field is valid only when Type is one of the following values:
+<li>Mosaic: mosaic;</li>
+<li>QRCode: QR code;</li>
+<li>AppletCode: mini program code;</li>
+<li>BarCode: barcode.</li>
+                     * @return Confidence Confidence. Value range: [0, 100].
+<font color=red>Note:</font> This field is valid only when Type is one of the following values:
+<li>Mosaic: mosaic;</li>
+<li>QRCode: QR code;</li>
+<li>AppletCode: mini program code;</li>
+<li>BarCode: barcode.</li>
                      * 
                      */
                     uint64_t GetConfidence() const;
 
                     /**
-                     * 设置
-                     * @param _confidence 
+                     * 设置Confidence. Value range: [0, 100].
+<font color=red>Note:</font> This field is valid only when Type is one of the following values:
+<li>Mosaic: mosaic;</li>
+<li>QRCode: QR code;</li>
+<li>AppletCode: mini program code;</li>
+<li>BarCode: barcode.</li>
+                     * @param _confidence Confidence. Value range: [0, 100].
+<font color=red>Note:</font> This field is valid only when Type is one of the following values:
+<li>Mosaic: mosaic;</li>
+<li>QRCode: QR code;</li>
+<li>AppletCode: mini program code;</li>
+<li>BarCode: barcode.</li>
                      * 
                      */
                     void SetConfidence(const uint64_t& _confidence);
@@ -133,25 +177,36 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Offset time of abnormal segment start, in seconds.
                      */
                     double m_startTimeOffset;
                     bool m_startTimeOffsetHasBeenSet;
 
                     /**
-                     * 
+                     * End time offset of an abnormal fragment, in seconds.
                      */
                     double m_endTimeOffset;
                     bool m_endTimeOffsetHasBeenSet;
 
                     /**
-                     * 
+                     * Coordinates of the detected abnormal area. The array contains 4 elements [x1,y1,x2,y2], which represent the horizontal and vertical coordinates of the top-left and bottom-right corners of the area in sequence.
+<font color=red>Note:</font> This field is valid only when Type is one of the following values:
+<li>BlackWhiteEdge: black and white edges;</li>
+<li>Mosaic: mosaic;</li>
+<li>QRCode: QR code;</li>
+<li>AppletCode: mini program code;</li>
+<li>BarCode: barcode.</li>
                      */
                     std::vector<int64_t> m_areaCoordSet;
                     bool m_areaCoordSetHasBeenSet;
 
                     /**
-                     * 
+                     * Confidence. Value range: [0, 100].
+<font color=red>Note:</font> This field is valid only when Type is one of the following values:
+<li>Mosaic: mosaic;</li>
+<li>QRCode: QR code;</li>
+<li>AppletCode: mini program code;</li>
+<li>BarCode: barcode.</li>
                      */
                     uint64_t m_confidence;
                     bool m_confidenceHasBeenSet;

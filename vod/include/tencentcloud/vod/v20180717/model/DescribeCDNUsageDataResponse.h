@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return DataInterval 
+                     * 获取Time granularity. Unit: minute.
+                     * @return DataInterval Time granularity. Unit: minute.
                      * 
                      */
                     int64_t GetDataInterval() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool DataIntervalHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Data 
+                     * 获取CDN stats.
+                     * @return Data CDN stats.
                      * 
                      */
                     std::vector<StatDataItem> GetData() const;
@@ -75,13 +75,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Time granularity. Unit: minute.
                      */
                     int64_t m_dataInterval;
                     bool m_dataIntervalHasBeenSet;
 
                     /**
-                     * 
+                     * CDN stats.
                      */
                     std::vector<StatDataItem> m_data;
                     bool m_dataHasBeenSet;

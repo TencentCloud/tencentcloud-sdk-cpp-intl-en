@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Source file information for video stitching (2017 version)
                 */
                 class ConcatFileInfo2017 : public AbstractModel
                 {
@@ -47,15 +47,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return ErrCode 
+                     * 获取Error code.
+<li>0: success;</li>
+<li>Other value: failure.</li>
+                     * @return ErrCode Error code.
+<li>0: success;</li>
+<li>Other value: failure.</li>
                      * 
                      */
                     int64_t GetErrCode() const;
 
                     /**
-                     * 设置
-                     * @param _errCode 
+                     * 设置Error code.
+<li>0: success;</li>
+<li>Other value: failure.</li>
+                     * @param _errCode Error code.
+<li>0: success;</li>
+<li>Other value: failure.</li>
                      * 
                      */
                     void SetErrCode(const int64_t& _errCode);
@@ -68,15 +76,15 @@ namespace TencentCloud
                     bool ErrCodeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Message 
+                     * 获取Error message.
+                     * @return Message Error message.
                      * 
                      */
                     std::string GetMessage() const;
 
                     /**
-                     * 设置
-                     * @param _message 
+                     * 设置Error message.
+                     * @param _message Error message.
                      * 
                      */
                     void SetMessage(const std::string& _message);
@@ -89,15 +97,15 @@ namespace TencentCloud
                     bool MessageHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return FileId 
+                     * 获取ID of the source file for video splicing.
+                     * @return FileId ID of the source file for video splicing.
                      * 
                      */
                     std::string GetFileId() const;
 
                     /**
-                     * 设置
-                     * @param _fileId 
+                     * 设置ID of the source file for video splicing.
+                     * @param _fileId ID of the source file for video splicing.
                      * 
                      */
                     void SetFileId(const std::string& _fileId);
@@ -110,15 +118,15 @@ namespace TencentCloud
                     bool FileIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return FileUrl 
+                     * 获取Domain names or IP addresses of source files for video splicing.
+                     * @return FileUrl Domain names or IP addresses of source files for video splicing.
                      * 
                      */
                     std::string GetFileUrl() const;
 
                     /**
-                     * 设置
-                     * @param _fileUrl 
+                     * 设置Domain names or IP addresses of source files for video splicing.
+                     * @param _fileUrl Domain names or IP addresses of source files for video splicing.
                      * 
                      */
                     void SetFileUrl(const std::string& _fileUrl);
@@ -131,15 +139,15 @@ namespace TencentCloud
                     bool FileUrlHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return FileType 
+                     * 获取Format of the source file for video splicing.
+                     * @return FileType Format of the source file for video splicing.
                      * 
                      */
                     std::string GetFileType() const;
 
                     /**
-                     * 设置
-                     * @param _fileType 
+                     * 设置Format of the source file for video splicing.
+                     * @param _fileType Format of the source file for video splicing.
                      * 
                      */
                     void SetFileType(const std::string& _fileType);
@@ -154,31 +162,33 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Error code.
+<li>0: success;</li>
+<li>Other value: failure.</li>
                      */
                     int64_t m_errCode;
                     bool m_errCodeHasBeenSet;
 
                     /**
-                     * 
+                     * Error message.
                      */
                     std::string m_message;
                     bool m_messageHasBeenSet;
 
                     /**
-                     * 
+                     * ID of the source file for video splicing.
                      */
                     std::string m_fileId;
                     bool m_fileIdHasBeenSet;
 
                     /**
-                     * 
+                     * Domain names or IP addresses of source files for video splicing.
                      */
                     std::string m_fileUrl;
                     bool m_fileUrlHasBeenSet;
 
                     /**
-                     * 
+                     * Format of the source file for video splicing.
                      */
                     std::string m_fileType;
                     bool m_fileTypeHasBeenSet;

@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return SearchResults 
+                     * 获取<p>Media list.</p>
+                     * @return SearchResults <p>Media list.</p>
                      * 
                      */
                     std::vector<SemanticsSearchResult> GetSearchResults() const;
@@ -61,7 +61,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p>Media list.</p>
                      */
                     std::vector<SemanticsSearchResult> m_searchResults;
                     bool m_searchResultsHasBeenSet;

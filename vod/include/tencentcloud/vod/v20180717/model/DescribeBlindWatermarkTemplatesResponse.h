@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return TotalCount 
+                     * 获取Total number of records that meet the filtering conditions.
+                     * @return TotalCount Total number of records that meet the filtering conditions.
                      * 
                      */
                     uint64_t GetTotalCount() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return BlindWatermarkTemplateSet 
+                     * 获取List of digital watermark template details.
+                     * @return BlindWatermarkTemplateSet List of digital watermark template details.
                      * 
                      */
                     std::vector<BlindWatermarkTemplate> GetBlindWatermarkTemplateSet() const;
@@ -75,13 +75,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Total number of records that meet the filtering conditions.
                      */
                     uint64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * 
+                     * List of digital watermark template details.
                      */
                     std::vector<BlindWatermarkTemplate> m_blindWatermarkTemplateSet;
                     bool m_blindWatermarkTemplateSetHasBeenSet;

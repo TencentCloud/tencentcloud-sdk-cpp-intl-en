@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return StartTime 
+                     * 获取Start date. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @return StartTime Start date. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      * 
                      */
                     std::string GetStartTime() const;
 
                     /**
-                     * 设置
-                     * @param _startTime 
+                     * 设置Start date. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @param _startTime Start date. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      * 
                      */
                     void SetStartTime(const std::string& _startTime);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return EndTime 
+                     * 获取End date, which should be greater than the start date. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @return EndTime End date, which should be greater than the start date. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      * 
                      */
                     std::string GetEndTime() const;
 
                     /**
-                     * 设置
-                     * @param _endTime 
+                     * 设置End date, which should be greater than the start date. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @param _endTime End date, which should be greater than the start date. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      * 
                      */
                     void SetEndTime(const std::string& _endTime);
@@ -85,15 +85,23 @@ namespace TencentCloud
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return DataType 
+                     * 获取CDN statistics data types. Valid values:
+<li>Flux: Traffic, unit: byte.</li>
+<li>Bandwidth: bandwidth, in bps.</li>
+                     * @return DataType CDN statistics data types. Valid values:
+<li>Flux: Traffic, unit: byte.</li>
+<li>Bandwidth: bandwidth, in bps.</li>
                      * 
                      */
                     std::string GetDataType() const;
 
                     /**
-                     * 设置
-                     * @param _dataType 
+                     * 设置CDN statistics data types. Valid values:
+<li>Flux: Traffic, unit: byte.</li>
+<li>Bandwidth: bandwidth, in bps.</li>
+                     * @param _dataType CDN statistics data types. Valid values:
+<li>Flux: Traffic, unit: byte.</li>
+<li>Bandwidth: bandwidth, in bps.</li>
                      * 
                      */
                     void SetDataType(const std::string& _dataType);
@@ -106,15 +114,15 @@ namespace TencentCloud
                     bool DataTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SubAppId 
+                     * 获取<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+                     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置
-                     * @param _subAppId 
+                     * 设置<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+                     * @param _subAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -127,15 +135,31 @@ namespace TencentCloud
                     bool SubAppIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return DataInterval 
+                     * 获取Time granularity of usage data. Unit: minute. Valid values:
+<li>5: 5 minutes, returns detailed data at a 5-minute granularity within the specified query time.</li>
+<li>60: 1-hour granularity, returns data at 1-hour granularity within the specified query time.</li>
+<li>1440: Day granularity. Return the data of 1-day granularity within the specified query time.</li>
+Default value: 1440. The data of day granularity is returned.
+                     * @return DataInterval Time granularity of usage data. Unit: minute. Valid values:
+<li>5: 5 minutes, returns detailed data at a 5-minute granularity within the specified query time.</li>
+<li>60: 1-hour granularity, returns data at 1-hour granularity within the specified query time.</li>
+<li>1440: Day granularity. Return the data of 1-day granularity within the specified query time.</li>
+Default value: 1440. The data of day granularity is returned.
                      * 
                      */
                     uint64_t GetDataInterval() const;
 
                     /**
-                     * 设置
-                     * @param _dataInterval 
+                     * 设置Time granularity of usage data. Unit: minute. Valid values:
+<li>5: 5 minutes, returns detailed data at a 5-minute granularity within the specified query time.</li>
+<li>60: 1-hour granularity, returns data at 1-hour granularity within the specified query time.</li>
+<li>1440: Day granularity. Return the data of 1-day granularity within the specified query time.</li>
+Default value: 1440. The data of day granularity is returned.
+                     * @param _dataInterval Time granularity of usage data. Unit: minute. Valid values:
+<li>5: 5 minutes, returns detailed data at a 5-minute granularity within the specified query time.</li>
+<li>60: 1-hour granularity, returns data at 1-hour granularity within the specified query time.</li>
+<li>1440: Day granularity. Return the data of 1-day granularity within the specified query time.</li>
+Default value: 1440. The data of day granularity is returned.
                      * 
                      */
                     void SetDataInterval(const uint64_t& _dataInterval);
@@ -148,15 +172,15 @@ namespace TencentCloud
                     bool DataIntervalHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return DomainNames 
+                     * 获取Domain name list. Up to 20 domain names can be queried for usage data at a time. Multiple domain names can be specified to query the overlaid usage data of these domains. By default, the overlaid usage data of ALL domain names is returned.
+                     * @return DomainNames Domain name list. Up to 20 domain names can be queried for usage data at a time. Multiple domain names can be specified to query the overlaid usage data of these domains. By default, the overlaid usage data of ALL domain names is returned.
                      * 
                      */
                     std::vector<std::string> GetDomainNames() const;
 
                     /**
-                     * 设置
-                     * @param _domainNames 
+                     * 设置Domain name list. Up to 20 domain names can be queried for usage data at a time. Multiple domain names can be specified to query the overlaid usage data of these domains. By default, the overlaid usage data of ALL domain names is returned.
+                     * @param _domainNames Domain name list. Up to 20 domain names can be queried for usage data at a time. Multiple domain names can be specified to query the overlaid usage data of these domains. By default, the overlaid usage data of ALL domain names is returned.
                      * 
                      */
                     void SetDomainNames(const std::vector<std::string>& _domainNames);
@@ -171,37 +195,43 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Start date. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      */
                     std::string m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * 
+                     * End date, which should be greater than the start date. Use the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      */
                     std::string m_endTime;
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * 
+                     * CDN statistics data types. Valid values:
+<li>Flux: Traffic, unit: byte.</li>
+<li>Bandwidth: bandwidth, in bps.</li>
                      */
                     std::string m_dataType;
                     bool m_dataTypeHasBeenSet;
 
                     /**
-                     * 
+                     * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
 
                     /**
-                     * 
+                     * Time granularity of usage data. Unit: minute. Valid values:
+<li>5: 5 minutes, returns detailed data at a 5-minute granularity within the specified query time.</li>
+<li>60: 1-hour granularity, returns data at 1-hour granularity within the specified query time.</li>
+<li>1440: Day granularity. Return the data of 1-day granularity within the specified query time.</li>
+Default value: 1440. The data of day granularity is returned.
                      */
                     uint64_t m_dataInterval;
                     bool m_dataIntervalHasBeenSet;
 
                     /**
-                     * 
+                     * Domain name list. Up to 20 domain names can be queried for usage data at a time. Multiple domain names can be specified to query the overlaid usage data of these domains. By default, the overlaid usage data of ALL domain names is returned.
                      */
                     std::vector<std::string> m_domainNames;
                     bool m_domainNamesHasBeenSet;

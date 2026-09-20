@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return TotalCount 
+                     * 获取<p>Total number of records that meet filter conditions.</p>
+                     * @return TotalCount <p>Total number of records that meet filter conditions.</p>
                      * 
                      */
                     uint64_t GetTotalCount() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return LLMComprehendTemplateSet 
+                     * 获取<p>Large model parsing template detail list.</p>
+                     * @return LLMComprehendTemplateSet <p>Large model parsing template detail list.</p>
                      * 
                      */
                     std::vector<LLMComprehendTemplateItem> GetLLMComprehendTemplateSet() const;
@@ -75,13 +75,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p>Total number of records that meet filter conditions.</p>
                      */
                     uint64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Large model parsing template detail list.</p>
                      */
                     std::vector<LLMComprehendTemplateItem> m_lLMComprehendTemplateSet;
                     bool m_lLMComprehendTemplateSetHasBeenSet;

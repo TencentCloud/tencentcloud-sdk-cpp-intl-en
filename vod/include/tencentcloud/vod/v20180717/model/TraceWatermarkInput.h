@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Watermark parameters for tracing the source
                 */
                 class TraceWatermarkInput : public AbstractModel
                 {
@@ -47,15 +47,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Switch 
+                     * 获取Traceability watermark task switch. Required. Available values:
+<li>ON: enable traceability watermark;</li>
+<li>OFF: disable traceability watermark.</li>
+                     * @return Switch Traceability watermark task switch. Required. Available values:
+<li>ON: enable traceability watermark;</li>
+<li>OFF: disable traceability watermark.</li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置
-                     * @param _switch 
+                     * 设置Traceability watermark task switch. Required. Available values:
+<li>ON: enable traceability watermark;</li>
+<li>OFF: disable traceability watermark.</li>
+                     * @param _switch Traceability watermark task switch. Required. Available values:
+<li>ON: enable traceability watermark;</li>
+<li>OFF: disable traceability watermark.</li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -68,15 +76,15 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Definition 
+                     * 获取Deprecated. Do not use.
+                     * @return Definition Deprecated. Do not use.
                      * @deprecated
                      */
                     uint64_t GetDefinition() const;
 
                     /**
-                     * 设置
-                     * @param _definition 
+                     * 设置Deprecated. Do not use.
+                     * @param _definition Deprecated. Do not use.
                      * @deprecated
                      */
                     void SetDefinition(const uint64_t& _definition);
@@ -91,13 +99,15 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Traceability watermark task switch. Required. Available values:
+<li>ON: enable traceability watermark;</li>
+<li>OFF: disable traceability watermark.</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * 
+                     * Deprecated. Do not use.
                      */
                     uint64_t m_definition;
                     bool m_definitionHasBeenSet;

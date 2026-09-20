@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return SubAppId 
+                     * 获取<p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), they must fill in this field with the app ID.</b></p>
+                     * @return SubAppId <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), they must fill in this field with the app ID.</b></p>
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置
-                     * @param _subAppId 
+                     * 设置<p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), they must fill in this field with the app ID.</b></p>
+                     * @param _subAppId <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), they must fill in this field with the app ID.</b></p>
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool SubAppIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return RoundPlayIds 
+                     * 获取<p>Filter criteria: carousel playlist identifiers. The array can contain up to 100 identifiers.</p>
+                     * @return RoundPlayIds <p>Filter criteria: carousel playlist identifiers. The array can contain up to 100 identifiers.</p>
                      * 
                      */
                     std::vector<std::string> GetRoundPlayIds() const;
 
                     /**
-                     * 设置
-                     * @param _roundPlayIds 
+                     * 设置<p>Filter criteria: carousel playlist identifiers. The array can contain up to 100 identifiers.</p>
+                     * @param _roundPlayIds <p>Filter criteria: carousel playlist identifiers. The array can contain up to 100 identifiers.</p>
                      * 
                      */
                     void SetRoundPlayIds(const std::vector<std::string>& _roundPlayIds);
@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool RoundPlayIdsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Status 
+                     * 获取<p>Filter criteria, carousel playlist status. Available values: <li>Enabled: Running state;</li> <li>Disabled: Stopped.</li></p>
+                     * @return Status <p>Filter criteria, carousel playlist status. Available values: <li>Enabled: Running state;</li> <li>Disabled: Stopped.</li></p>
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置
-                     * @param _status 
+                     * 设置<p>Filter criteria, carousel playlist status. Available values: <li>Enabled: Running state;</li> <li>Disabled: Stopped.</li></p>
+                     * @param _status <p>Filter criteria, carousel playlist status. Available values: <li>Enabled: Running state;</li> <li>Disabled: Stopped.</li></p>
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -107,15 +107,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return CreateTime 
+                     * 获取<p>Filter criteria: Carousel Playlist Creation Time.</p>
+                     * @return CreateTime <p>Filter criteria: Carousel Playlist Creation Time.</p>
                      * 
                      */
                     TimeRange GetCreateTime() const;
 
                     /**
-                     * 设置
-                     * @param _createTime 
+                     * 设置<p>Filter criteria: Carousel Playlist Creation Time.</p>
+                     * @param _createTime <p>Filter criteria: Carousel Playlist Creation Time.</p>
                      * 
                      */
                     void SetCreateTime(const TimeRange& _createTime);
@@ -128,15 +128,15 @@ namespace TencentCloud
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return UpdateTime 
+                     * 获取<p>Filter criteria: carousel playlist update time.</p>
+                     * @return UpdateTime <p>Filter criteria: carousel playlist update time.</p>
                      * 
                      */
                     TimeRange GetUpdateTime() const;
 
                     /**
-                     * 设置
-                     * @param _updateTime 
+                     * 设置<p>Filter criteria: carousel playlist update time.</p>
+                     * @param _updateTime <p>Filter criteria: carousel playlist update time.</p>
                      * 
                      */
                     void SetUpdateTime(const TimeRange& _updateTime);
@@ -149,15 +149,15 @@ namespace TencentCloud
                     bool UpdateTimeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ScrollToken 
+                     * 获取<p>Scrolling identifier which is used for pulling in batches. If a single request cannot pull all the data entries, the API will return `ScrollToken`, and if the next request carries it, the next pull will start from the next entry.</p>
+                     * @return ScrollToken <p>Scrolling identifier which is used for pulling in batches. If a single request cannot pull all the data entries, the API will return `ScrollToken`, and if the next request carries it, the next pull will start from the next entry.</p>
                      * 
                      */
                     std::string GetScrollToken() const;
 
                     /**
-                     * 设置
-                     * @param _scrollToken 
+                     * 设置<p>Scrolling identifier which is used for pulling in batches. If a single request cannot pull all the data entries, the API will return `ScrollToken`, and if the next request carries it, the next pull will start from the next entry.</p>
+                     * @param _scrollToken <p>Scrolling identifier which is used for pulling in batches. If a single request cannot pull all the data entries, the API will return `ScrollToken`, and if the next request carries it, the next pull will start from the next entry.</p>
                      * 
                      */
                     void SetScrollToken(const std::string& _scrollToken);
@@ -170,15 +170,15 @@ namespace TencentCloud
                     bool ScrollTokenHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Offset 
+                     * 获取<p>Paging offset. Default value: 0. Deprecated. Perform batch query according to the ScrollToken parameter.</p>
+                     * @return Offset <p>Paging offset. Default value: 0. Deprecated. Perform batch query according to the ScrollToken parameter.</p>
                      * @deprecated
                      */
                     int64_t GetOffset() const;
 
                     /**
-                     * 设置
-                     * @param _offset 
+                     * 设置<p>Paging offset. Default value: 0. Deprecated. Perform batch query according to the ScrollToken parameter.</p>
+                     * @param _offset <p>Paging offset. Default value: 0. Deprecated. Perform batch query according to the ScrollToken parameter.</p>
                      * @deprecated
                      */
                     void SetOffset(const int64_t& _offset);
@@ -191,15 +191,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Limit 
+                     * 获取<p>Number of returned entries. Default value: 10. Maximum value: 100.</p>
+                     * @return Limit <p>Number of returned entries. Default value: 10. Maximum value: 100.</p>
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置
-                     * @param _limit 
+                     * 设置<p>Number of returned entries. Default value: 10. Maximum value: 100.</p>
+                     * @param _limit <p>Number of returned entries. Default value: 10. Maximum value: 100.</p>
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -214,49 +214,49 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, if they access resources in on-demand applications (whether the default application or a newly created application), they must fill in this field with the app ID.</b></p>
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Filter criteria: carousel playlist identifiers. The array can contain up to 100 identifiers.</p>
                      */
                     std::vector<std::string> m_roundPlayIds;
                     bool m_roundPlayIdsHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Filter criteria, carousel playlist status. Available values: <li>Enabled: Running state;</li> <li>Disabled: Stopped.</li></p>
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Filter criteria: Carousel Playlist Creation Time.</p>
                      */
                     TimeRange m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Filter criteria: carousel playlist update time.</p>
                      */
                     TimeRange m_updateTime;
                     bool m_updateTimeHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Scrolling identifier which is used for pulling in batches. If a single request cannot pull all the data entries, the API will return `ScrollToken`, and if the next request carries it, the next pull will start from the next entry.</p>
                      */
                     std::string m_scrollToken;
                     bool m_scrollTokenHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Paging offset. Default value: 0. Deprecated. Perform batch query according to the ScrollToken parameter.</p>
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Number of returned entries. Default value: 10. Maximum value: 100.</p>
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;

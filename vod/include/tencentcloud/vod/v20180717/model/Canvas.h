@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Canvas information. In video production, if the source material (video or image) cannot fill the output video window, the set canvas is used to draw the background.
                 */
                 class Canvas : public AbstractModel
                 {
@@ -47,15 +47,27 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Color 
+                     * 获取Background color. Valid values:
+<li>Black: black background</li>
+<li>White: white background</li>
+Default value: Black.
+                     * @return Color Background color. Valid values:
+<li>Black: black background</li>
+<li>White: white background</li>
+Default value: Black.
                      * 
                      */
                     std::string GetColor() const;
 
                     /**
-                     * 设置
-                     * @param _color 
+                     * 设置Background color. Valid values:
+<li>Black: black background</li>
+<li>White: white background</li>
+Default value: Black.
+                     * @param _color Background color. Valid values:
+<li>Black: black background</li>
+<li>White: white background</li>
+Default value: Black.
                      * 
                      */
                     void SetColor(const std::string& _color);
@@ -68,15 +80,19 @@ namespace TencentCloud
                     bool ColorHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Width 
+                     * 获取Canvas width, i.e., the width of the output video. Value range: 0-3840. Unit: px.
+Default value: 0, which means the video width is the same as that of the first video clip on the first video track.
+                     * @return Width Canvas width, i.e., the width of the output video. Value range: 0-3840. Unit: px.
+Default value: 0, which means the video width is the same as that of the first video clip on the first video track.
                      * 
                      */
                     int64_t GetWidth() const;
 
                     /**
-                     * 设置
-                     * @param _width 
+                     * 设置Canvas width, i.e., the width of the output video. Value range: 0-3840. Unit: px.
+Default value: 0, which means the video width is the same as that of the first video clip on the first video track.
+                     * @param _width Canvas width, i.e., the width of the output video. Value range: 0-3840. Unit: px.
+Default value: 0, which means the video width is the same as that of the first video clip on the first video track.
                      * 
                      */
                     void SetWidth(const int64_t& _width);
@@ -89,15 +105,19 @@ namespace TencentCloud
                     bool WidthHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Height 
+                     * 获取Canvas height, i.e. the height (or long side) of the output video. Value range: 0–3840. Unit: px.
+Default value: 0, which means the video height is the same as that of the first video clip on the first video track.
+                     * @return Height Canvas height, i.e. the height (or long side) of the output video. Value range: 0–3840. Unit: px.
+Default value: 0, which means the video height is the same as that of the first video clip on the first video track.
                      * 
                      */
                     int64_t GetHeight() const;
 
                     /**
-                     * 设置
-                     * @param _height 
+                     * 设置Canvas height, i.e. the height (or long side) of the output video. Value range: 0–3840. Unit: px.
+Default value: 0, which means the video height is the same as that of the first video clip on the first video track.
+                     * @param _height Canvas height, i.e. the height (or long side) of the output video. Value range: 0–3840. Unit: px.
+Default value: 0, which means the video height is the same as that of the first video clip on the first video track.
                      * 
                      */
                     void SetHeight(const int64_t& _height);
@@ -112,19 +132,24 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Background color. Valid values:
+<li>Black: black background</li>
+<li>White: white background</li>
+Default value: Black.
                      */
                     std::string m_color;
                     bool m_colorHasBeenSet;
 
                     /**
-                     * 
+                     * Canvas width, i.e., the width of the output video. Value range: 0-3840. Unit: px.
+Default value: 0, which means the video width is the same as that of the first video clip on the first video track.
                      */
                     int64_t m_width;
                     bool m_widthHasBeenSet;
 
                     /**
-                     * 
+                     * Canvas height, i.e. the height (or long side) of the output video. Value range: 0–3840. Unit: px.
+Default value: 0, which means the video height is the same as that of the first video clip on the first video track.
                      */
                     int64_t m_height;
                     bool m_heightHasBeenSet;

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Malaysia ID card.
+                * Malaysian identity card
                 */
                 class MLIDCard : public AbstractModel
                 {
@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Full Name
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Name Full Name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Name
+                     * @return Name Name
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置Full Name
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _name Full Name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Name
+                     * @param _name Name
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -72,19 +68,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取License number
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ID License number
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Identity card number
+                     * @return ID Identity card number
                      * 
                      */
                     std::string GetID() const;
 
                     /**
-                     * 设置License number
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _iD License number
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Identity card number
+                     * @param _iD Identity card number
                      * 
                      */
                     void SetID(const std::string& _iD);
@@ -97,19 +89,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool IDHasBeenSet() const;
 
                     /**
-                     * 获取Gender
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Sex Gender
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Sex
+                     * @return Sex Sex
                      * 
                      */
                     std::string GetSex() const;
 
                     /**
-                     * 设置Gender
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _sex Gender
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Sex
+                     * @param _sex Sex
                      * 
                      */
                     void SetSex(const std::string& _sex);
@@ -122,19 +110,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool SexHasBeenSet() const;
 
                     /**
-                     * 获取Address
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Address Address
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Address.
+                     * @return Address Address.
                      * 
                      */
                     std::string GetAddress() const;
 
                     /**
-                     * 设置Address
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _address Address
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Address.
+                     * @param _address Address.
                      * 
                      */
                     void SetAddress(const std::string& _address);
@@ -147,47 +131,43 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool AddressHasBeenSet() const;
 
                     /**
-                     * 获取Lisence type
-MyKad ID card
-MyPR Permanent resident ID card
+                     * 获取Document type
+MyKad identity card
+MyPR permanent residence permit
 MyTentera Military ID card
 MyKAS Temporary ID card
 POLIS Police ID card
-IKAD Labor ID card
+IKAD labor ID card
 MyKid Juvenile ID card
-Example: MyKad
-                     * @return Type Lisence type
-MyKad ID card
-MyPR Permanent resident ID card
+                     * @return Type Document type
+MyKad identity card
+MyPR permanent residence permit
 MyTentera Military ID card
 MyKAS Temporary ID card
 POLIS Police ID card
-IKAD Labor ID card
+IKAD labor ID card
 MyKid Juvenile ID card
-Example: MyKad
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置Lisence type
-MyKad ID card
-MyPR Permanent resident ID card
+                     * 设置Document type
+MyKad identity card
+MyPR permanent residence permit
 MyTentera Military ID card
 MyKAS Temporary ID card
 POLIS Police ID card
-IKAD Labor ID card
+IKAD labor ID card
 MyKid Juvenile ID card
-Example: MyKad
-                     * @param _type Lisence type
-MyKad ID card
-MyPR Permanent resident ID card
+                     * @param _type Document type
+MyKad identity card
+MyPR permanent residence permit
 MyTentera Military ID card
 MyKAS Temporary ID card
 POLIS Police ID card
-IKAD Labor ID card
+IKAD labor ID card
 MyKid Juvenile ID card
-Example: MyKad
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -200,19 +180,15 @@ Example: MyKad
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取Birthday (Currently, this filed only supports IKAD labor ID card and MyKad ID card)
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Birthday Birthday (Currently, this filed only supports IKAD labor ID card and MyKad ID card)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Date of birth (currently this field only supports IKAD labor ID card and MyKad ID card)
+                     * @return Birthday Date of birth (currently this field only supports IKAD labor ID card and MyKad ID card)
                      * 
                      */
                     std::string GetBirthday() const;
 
                     /**
-                     * 设置Birthday (Currently, this filed only supports IKAD labor ID card and MyKad ID card)
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _birthday Birthday (Currently, this filed only supports IKAD labor ID card and MyKad ID card)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Date of birth (currently this field only supports IKAD labor ID card and MyKad ID card)
+                     * @param _birthday Date of birth (currently this field only supports IKAD labor ID card and MyKad ID card)
                      * 
                      */
                     void SetBirthday(const std::string& _birthday);
@@ -227,50 +203,44 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Full Name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Name
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * License number
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Identity card number
                      */
                     std::string m_iD;
                     bool m_iDHasBeenSet;
 
                     /**
-                     * Gender
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Sex
                      */
                     std::string m_sex;
                     bool m_sexHasBeenSet;
 
                     /**
-                     * Address
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Address.
                      */
                     std::string m_address;
                     bool m_addressHasBeenSet;
 
                     /**
-                     * Lisence type
-MyKad ID card
-MyPR Permanent resident ID card
+                     * Document type
+MyKad identity card
+MyPR permanent residence permit
 MyTentera Military ID card
 MyKAS Temporary ID card
 POLIS Police ID card
-IKAD Labor ID card
+IKAD labor ID card
 MyKid Juvenile ID card
-Example: MyKad
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * Birthday (Currently, this filed only supports IKAD labor ID card and MyKad ID card)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Date of birth (currently this field only supports IKAD labor ID card and MyKad ID card)
                      */
                     std::string m_birthday;
                     bool m_birthdayHasBeenSet;

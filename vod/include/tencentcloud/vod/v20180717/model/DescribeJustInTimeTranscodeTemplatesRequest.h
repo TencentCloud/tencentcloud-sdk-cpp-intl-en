@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Names 
+                     * 获取Template name filter condition. The array can contain up to 100 template names.
+                     * @return Names Template name filter condition. The array can contain up to 100 template names.
                      * 
                      */
                     std::vector<std::string> GetNames() const;
 
                     /**
-                     * 设置
-                     * @param _names 
+                     * 设置Template name filter condition. The array can contain up to 100 template names.
+                     * @param _names Template name filter condition. The array can contain up to 100 template names.
                      * 
                      */
                     void SetNames(const std::vector<std::string>& _names);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool NamesHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SubAppId 
+                     * 获取<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the application ID.</b>
+                     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the application ID.</b>
                      * 
                      */
                     int64_t GetSubAppId() const;
 
                     /**
-                     * 设置
-                     * @param _subAppId 
+                     * 设置<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the application ID.</b>
+                     * @param _subAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the application ID.</b>
                      * 
                      */
                     void SetSubAppId(const int64_t& _subAppId);
@@ -85,15 +85,23 @@ namespace TencentCloud
                     bool SubAppIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Type 
+                     * 获取Condition for filtering templates by type. Valid values:
+<li>Preset: system preset task flow template;</li>
+<li>Custom: user-defined task flow template.</li>
+                     * @return Type Condition for filtering templates by type. Valid values:
+<li>Preset: system preset task flow template;</li>
+<li>Custom: user-defined task flow template.</li>
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置
-                     * @param _type 
+                     * 设置Condition for filtering templates by type. Valid values:
+<li>Preset: system preset task flow template;</li>
+<li>Custom: user-defined task flow template.</li>
+                     * @param _type Condition for filtering templates by type. Valid values:
+<li>Preset: system preset task flow template;</li>
+<li>Custom: user-defined task flow template.</li>
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -106,15 +114,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Offset 
+                     * 获取Pagination offset. Default value: 0.
+                     * @return Offset Pagination offset. Default value: 0.
                      * 
                      */
                     int64_t GetOffset() const;
 
                     /**
-                     * 设置
-                     * @param _offset 
+                     * 设置Pagination offset. Default value: 0.
+                     * @param _offset Pagination offset. Default value: 0.
                      * 
                      */
                     void SetOffset(const int64_t& _offset);
@@ -127,15 +135,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Limit 
+                     * 获取Number of returned entries. Default value: 10. Maximum value: 100.
+                     * @return Limit Number of returned entries. Default value: 10. Maximum value: 100.
                      * 
                      */
                     int64_t GetLimit() const;
 
                     /**
-                     * 设置
-                     * @param _limit 
+                     * 设置Number of returned entries. Default value: 10. Maximum value: 100.
+                     * @param _limit Number of returned entries. Default value: 10. Maximum value: 100.
                      * 
                      */
                     void SetLimit(const int64_t& _limit);
@@ -150,31 +158,33 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Template name filter condition. The array can contain up to 100 template names.
                      */
                     std::vector<std::string> m_names;
                     bool m_namesHasBeenSet;
 
                     /**
-                     * 
+                     * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the application ID.</b>
                      */
                     int64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
 
                     /**
-                     * 
+                     * Condition for filtering templates by type. Valid values:
+<li>Preset: system preset task flow template;</li>
+<li>Custom: user-defined task flow template.</li>
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * 
+                     * Pagination offset. Default value: 0.
                      */
                     int64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * 
+                     * Number of returned entries. Default value: 10. Maximum value: 100.
                      */
                     int64_t m_limit;
                     bool m_limitHasBeenSet;

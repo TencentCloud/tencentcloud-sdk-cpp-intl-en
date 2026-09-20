@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Area configurations for the subtitle OCR extraction box.
                 */
                 class MPSSelectingSubtitleAreasConfig : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return AutoAreas 
+                     * 获取<p>Automatically select a custom region. For the selected areas, the AI model is used to automatically detect and extract the target content.</p>
+                     * @return AutoAreas <p>Automatically select a custom region. For the selected areas, the AI model is used to automatically detect and extract the target content.</p>
                      * 
                      */
                     std::vector<MPSEraseArea> GetAutoAreas() const;
 
                     /**
-                     * 设置
-                     * @param _autoAreas 
+                     * 设置<p>Automatically select a custom region. For the selected areas, the AI model is used to automatically detect and extract the target content.</p>
+                     * @param _autoAreas <p>Automatically select a custom region. For the selected areas, the AI model is used to automatically detect and extract the target content.</p>
                      * 
                      */
                     void SetAutoAreas(const std::vector<MPSEraseArea>& _autoAreas);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool AutoAreasHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SampleWidth 
+                     * 获取<p>Width of the sample video or image, in pixels.</p>
+                     * @return SampleWidth <p>Width of the sample video or image, in pixels.</p>
                      * 
                      */
                     uint64_t GetSampleWidth() const;
 
                     /**
-                     * 设置
-                     * @param _sampleWidth 
+                     * 设置<p>Width of the sample video or image, in pixels.</p>
+                     * @param _sampleWidth <p>Width of the sample video or image, in pixels.</p>
                      * 
                      */
                     void SetSampleWidth(const uint64_t& _sampleWidth);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool SampleWidthHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SampleHeight 
+                     * 获取<p>Height of the sample video or image, in pixels.</p>
+                     * @return SampleHeight <p>Height of the sample video or image, in pixels.</p>
                      * 
                      */
                     uint64_t GetSampleHeight() const;
 
                     /**
-                     * 设置
-                     * @param _sampleHeight 
+                     * 设置<p>Height of the sample video or image, in pixels.</p>
+                     * @param _sampleHeight <p>Height of the sample video or image, in pixels.</p>
                      * 
                      */
                     void SetSampleHeight(const uint64_t& _sampleHeight);
@@ -113,19 +113,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p>Automatically select a custom region. For the selected areas, the AI model is used to automatically detect and extract the target content.</p>
                      */
                     std::vector<MPSEraseArea> m_autoAreas;
                     bool m_autoAreasHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Width of the sample video or image, in pixels.</p>
                      */
                     uint64_t m_sampleWidth;
                     bool m_sampleWidthHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Height of the sample video or image, in pixels.</p>
                      */
                     uint64_t m_sampleHeight;
                     bool m_sampleHeightHasBeenSet;

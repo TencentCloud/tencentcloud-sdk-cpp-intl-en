@@ -41,7 +41,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Input parameter type for video to adaptive bitrate stream
                 */
                 class AdaptiveDynamicStreamingTaskInput : public AbstractModel
                 {
@@ -53,15 +53,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Definition 
+                     * 获取<p>Adaptive bitrate streaming template ID.</p>
+                     * @return Definition <p>Adaptive bitrate streaming template ID.</p>
                      * 
                      */
                     uint64_t GetDefinition() const;
 
                     /**
-                     * 设置
-                     * @param _definition 
+                     * 设置<p>Adaptive bitrate streaming template ID.</p>
+                     * @param _definition <p>Adaptive bitrate streaming template ID.</p>
                      * 
                      */
                     void SetDefinition(const uint64_t& _definition);
@@ -74,15 +74,15 @@ namespace TencentCloud
                     bool DefinitionHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return WatermarkSet 
+                     * 获取<p>Watermark list. Up to 10 image or text watermarks are supported.</p>
+                     * @return WatermarkSet <p>Watermark list. Up to 10 image or text watermarks are supported.</p>
                      * 
                      */
                     std::vector<WatermarkInput> GetWatermarkSet() const;
 
                     /**
-                     * 设置
-                     * @param _watermarkSet 
+                     * 设置<p>Watermark list. Up to 10 image or text watermarks are supported.</p>
+                     * @param _watermarkSet <p>Watermark list. Up to 10 image or text watermarks are supported.</p>
                      * 
                      */
                     void SetWatermarkSet(const std::vector<WatermarkInput>& _watermarkSet);
@@ -95,15 +95,15 @@ namespace TencentCloud
                     bool WatermarkSetHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return TraceWatermark 
+                     * 获取<p>Traceable watermark.</p>
+                     * @return TraceWatermark <p>Traceable watermark.</p>
                      * 
                      */
                     TraceWatermarkInput GetTraceWatermark() const;
 
                     /**
-                     * 设置
-                     * @param _traceWatermark 
+                     * 设置<p>Traceable watermark.</p>
+                     * @param _traceWatermark <p>Traceable watermark.</p>
                      * 
                      */
                     void SetTraceWatermark(const TraceWatermarkInput& _traceWatermark);
@@ -116,15 +116,15 @@ namespace TencentCloud
                     bool TraceWatermarkHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return CopyRightWatermark 
+                     * 获取<p>Copyright watermark.</p>
+                     * @return CopyRightWatermark <p>Copyright watermark.</p>
                      * 
                      */
                     CopyRightWatermarkInput GetCopyRightWatermark() const;
 
                     /**
-                     * 设置
-                     * @param _copyRightWatermark 
+                     * 设置<p>Copyright watermark.</p>
+                     * @param _copyRightWatermark <p>Copyright watermark.</p>
                      * 
                      */
                     void SetCopyRightWatermark(const CopyRightWatermarkInput& _copyRightWatermark);
@@ -137,15 +137,15 @@ namespace TencentCloud
                     bool CopyRightWatermarkHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return BlindWatermark 
+                     * 获取<p>Digital watermark.</p>
+                     * @return BlindWatermark <p>Digital watermark.</p>
                      * 
                      */
                     BlindWatermarkInput GetBlindWatermark() const;
 
                     /**
-                     * 设置
-                     * @param _blindWatermark 
+                     * 设置<p>Digital watermark.</p>
+                     * @param _blindWatermark <p>Digital watermark.</p>
                      * 
                      */
                     void SetBlindWatermark(const BlindWatermarkInput& _blindWatermark);
@@ -158,15 +158,15 @@ namespace TencentCloud
                     bool BlindWatermarkHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SubtitleSet 
+                     * 获取<p>External subtitle list. Elements are subtitle IDs. Supports multiple subtitles, up to 16.</p>
+                     * @return SubtitleSet <p>External subtitle list. Elements are subtitle IDs. Supports multiple subtitles, up to 16.</p>
                      * 
                      */
                     std::vector<std::string> GetSubtitleSet() const;
 
                     /**
-                     * 设置
-                     * @param _subtitleSet 
+                     * 设置<p>External subtitle list. Elements are subtitle IDs. Supports multiple subtitles, up to 16.</p>
+                     * @param _subtitleSet <p>External subtitle list. Elements are subtitle IDs. Supports multiple subtitles, up to 16.</p>
                      * 
                      */
                     void SetSubtitleSet(const std::vector<std::string>& _subtitleSet);
@@ -179,15 +179,15 @@ namespace TencentCloud
                     bool SubtitleSetHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SubtitleInfoSet 
+                     * 获取<p>Subtitle suppression information list. Up to 2 supported.</p>
+                     * @return SubtitleInfoSet <p>Subtitle suppression information list. Up to 2 supported.</p>
                      * 
                      */
                     std::vector<SubtitleInfoInput> GetSubtitleInfoSet() const;
 
                     /**
-                     * 设置
-                     * @param _subtitleInfoSet 
+                     * 设置<p>Subtitle suppression information list. Up to 2 supported.</p>
+                     * @param _subtitleInfoSet <p>Subtitle suppression information list. Up to 2 supported.</p>
                      * 
                      */
                     void SetSubtitleInfoSet(const std::vector<SubtitleInfoInput>& _subtitleInfoSet);
@@ -200,15 +200,15 @@ namespace TencentCloud
                     bool SubtitleInfoSetHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return DrmInfo 
+                     * 获取<p>Third-party DRM encryption information. It is not currently supported to initiate tasks using third-party DRM information via task flow.</p>
+                     * @return DrmInfo <p>Third-party DRM encryption information. It is not currently supported to initiate tasks using third-party DRM information via task flow.</p>
                      * 
                      */
                     ThirdPartyDrmInfo GetDrmInfo() const;
 
                     /**
-                     * 设置
-                     * @param _drmInfo 
+                     * 设置<p>Third-party DRM encryption information. It is not currently supported to initiate tasks using third-party DRM information via task flow.</p>
+                     * @param _drmInfo <p>Third-party DRM encryption information. It is not currently supported to initiate tasks using third-party DRM information via task flow.</p>
                      * 
                      */
                     void SetDrmInfo(const ThirdPartyDrmInfo& _drmInfo);
@@ -223,49 +223,49 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p>Adaptive bitrate streaming template ID.</p>
                      */
                     uint64_t m_definition;
                     bool m_definitionHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Watermark list. Up to 10 image or text watermarks are supported.</p>
                      */
                     std::vector<WatermarkInput> m_watermarkSet;
                     bool m_watermarkSetHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Traceable watermark.</p>
                      */
                     TraceWatermarkInput m_traceWatermark;
                     bool m_traceWatermarkHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Copyright watermark.</p>
                      */
                     CopyRightWatermarkInput m_copyRightWatermark;
                     bool m_copyRightWatermarkHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Digital watermark.</p>
                      */
                     BlindWatermarkInput m_blindWatermark;
                     bool m_blindWatermarkHasBeenSet;
 
                     /**
-                     * 
+                     * <p>External subtitle list. Elements are subtitle IDs. Supports multiple subtitles, up to 16.</p>
                      */
                     std::vector<std::string> m_subtitleSet;
                     bool m_subtitleSetHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Subtitle suppression information list. Up to 2 supported.</p>
                      */
                     std::vector<SubtitleInfoInput> m_subtitleInfoSet;
                     bool m_subtitleInfoSetHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Third-party DRM encryption information. It is not currently supported to initiate tasks using third-party DRM information via task flow.</p>
                      */
                     ThirdPartyDrmInfo m_drmInfo;
                     bool m_drmInfoHasBeenSet;

@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return StartTime 
+                     * 获取<p>Start date. Use the <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52">ISO date format</a>.</p>
+                     * @return StartTime <p>Start date. Use the <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52">ISO date format</a>.</p>
                      * 
                      */
                     std::string GetStartTime() const;
 
                     /**
-                     * 设置
-                     * @param _startTime 
+                     * 设置<p>Start date. Use the <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52">ISO date format</a>.</p>
+                     * @param _startTime <p>Start date. Use the <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52">ISO date format</a>.</p>
                      * 
                      */
                     void SetStartTime(const std::string& _startTime);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return EndTime 
+                     * 获取<p>End date, which must be greater than or equal to the start date. Use the <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52">ISO date format</a>.</p>
+                     * @return EndTime <p>End date, which must be greater than or equal to the start date. Use the <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52">ISO date format</a>.</p>
                      * 
                      */
                     std::string GetEndTime() const;
 
                     /**
-                     * 设置
-                     * @param _endTime 
+                     * 设置<p>End date, which must be greater than or equal to the start date. Use the <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52">ISO date format</a>.</p>
+                     * @param _endTime <p>End date, which must be greater than or equal to the start date. Use the <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52">ISO date format</a>.</p>
                      * 
                      */
                     void SetEndTime(const std::string& _endTime);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AigcType 
+                     * 获取<p>AIGC type.</p><p>Enumeration values:</p><ul><li>Video: video</li><li>Image: image</li><li>Text: text</li><li>Audio: audio</li><li>SceneAigcVideo: Scenario-based video processing</li><li>SceneAigcImage: Scenario-based image processing</li><li>SceneAigcTime: Scenario-based processing times</li><li>TextDetail: Text detailed record</li></ul>
+                     * @return AigcType <p>AIGC type.</p><p>Enumeration values:</p><ul><li>Video: video</li><li>Image: image</li><li>Text: text</li><li>Audio: audio</li><li>SceneAigcVideo: Scenario-based video processing</li><li>SceneAigcImage: Scenario-based image processing</li><li>SceneAigcTime: Scenario-based processing times</li><li>TextDetail: Text detailed record</li></ul>
                      * 
                      */
                     std::string GetAigcType() const;
 
                     /**
-                     * 设置
-                     * @param _aigcType 
+                     * 设置<p>AIGC type.</p><p>Enumeration values:</p><ul><li>Video: video</li><li>Image: image</li><li>Text: text</li><li>Audio: audio</li><li>SceneAigcVideo: Scenario-based video processing</li><li>SceneAigcImage: Scenario-based image processing</li><li>SceneAigcTime: Scenario-based processing times</li><li>TextDetail: Text detailed record</li></ul>
+                     * @param _aigcType <p>AIGC type.</p><p>Enumeration values:</p><ul><li>Video: video</li><li>Image: image</li><li>Text: text</li><li>Audio: audio</li><li>SceneAigcVideo: Scenario-based video processing</li><li>SceneAigcImage: Scenario-based image processing</li><li>SceneAigcTime: Scenario-based processing times</li><li>TextDetail: Text detailed record</li></ul>
                      * 
                      */
                     void SetAigcType(const std::string& _aigcType);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool AigcTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SubAppId 
+                     * 获取<p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b></p>
+                     * @return SubAppId <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b></p>
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置
-                     * @param _subAppId 
+                     * 设置<p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b></p>
+                     * @param _subAppId <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b></p>
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -169,15 +169,15 @@ namespace TencentCloud
                     bool APIKeysHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ScrollToken 
+                     * 获取<p>Query cursor</p>
+                     * @return ScrollToken <p>Query cursor</p>
                      * 
                      */
                     std::string GetScrollToken() const;
 
                     /**
-                     * 设置
-                     * @param _scrollToken 
+                     * 设置<p>Query cursor</p>
+                     * @param _scrollToken <p>Query cursor</p>
                      * 
                      */
                     void SetScrollToken(const std::string& _scrollToken);
@@ -190,15 +190,15 @@ namespace TencentCloud
                     bool ScrollTokenHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return PageSize 
+                     * 获取<p>Size per page. Maximum value: 200. If it exceeds 200, it will be truncated to 200</p>
+                     * @return PageSize <p>Size per page. Maximum value: 200. If it exceeds 200, it will be truncated to 200</p>
                      * 
                      */
                     uint64_t GetPageSize() const;
 
                     /**
-                     * 设置
-                     * @param _pageSize 
+                     * 设置<p>Size per page. Maximum value: 200. If it exceeds 200, it will be truncated to 200</p>
+                     * @param _pageSize <p>Size per page. Maximum value: 200. If it exceeds 200, it will be truncated to 200</p>
                      * 
                      */
                     void SetPageSize(const uint64_t& _pageSize);
@@ -211,15 +211,15 @@ namespace TencentCloud
                     bool PageSizeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ReqId 
+                     * 获取<p>RequestId for text generation. Valid when AigcType is TextDetail.</p>
+                     * @return ReqId <p>RequestId for text generation. Valid when AigcType is TextDetail.</p>
                      * 
                      */
                     std::string GetReqId() const;
 
                     /**
-                     * 设置
-                     * @param _reqId 
+                     * 设置<p>RequestId for text generation. Valid when AigcType is TextDetail.</p>
+                     * @param _reqId <p>RequestId for text generation. Valid when AigcType is TextDetail.</p>
                      * 
                      */
                     void SetReqId(const std::string& _reqId);
@@ -234,25 +234,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p>Start date. Use the <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52">ISO date format</a>.</p>
                      */
                     std::string m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * 
+                     * <p>End date, which must be greater than or equal to the start date. Use the <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52">ISO date format</a>.</p>
                      */
                     std::string m_endTime;
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * 
+                     * <p>AIGC type.</p><p>Enumeration values:</p><ul><li>Video: video</li><li>Image: image</li><li>Text: text</li><li>Audio: audio</li><li>SceneAigcVideo: Scenario-based video processing</li><li>SceneAigcImage: Scenario-based image processing</li><li>SceneAigcTime: Scenario-based processing times</li><li>TextDetail: Text detailed record</li></ul>
                      */
                     std::string m_aigcType;
                     bool m_aigcTypeHasBeenSet;
 
                     /**
-                     * 
+                     * <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b></p>
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
@@ -270,19 +270,19 @@ namespace TencentCloud
                     bool m_aPIKeysHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Query cursor</p>
                      */
                     std::string m_scrollToken;
                     bool m_scrollTokenHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Size per page. Maximum value: 200. If it exceeds 200, it will be truncated to 200</p>
                      */
                     uint64_t m_pageSize;
                     bool m_pageSizeHasBeenSet;
 
                     /**
-                     * 
+                     * <p>RequestId for text generation. Valid when AigcType is TextDetail.</p>
                      */
                     std::string m_reqId;
                     bool m_reqIdHasBeenSet;

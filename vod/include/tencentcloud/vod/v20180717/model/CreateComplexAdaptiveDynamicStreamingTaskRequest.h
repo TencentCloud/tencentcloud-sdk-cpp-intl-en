@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return SubAppId 
+                     * 获取<b>The VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID.</b>
+                     * @return SubAppId <b>The VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID.</b>
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置
-                     * @param _subAppId 
+                     * 设置<b>The VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID.</b>
+                     * @param _subAppId <b>The VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID.</b>
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool SubAppIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return FileId 
+                     * 获取Media ID of the main media file.
+                     * @return FileId Media ID of the main media file.
                      * 
                      */
                     std::string GetFileId() const;
 
                     /**
-                     * 设置
-                     * @param _fileId 
+                     * 设置Media ID of the main media file.
+                     * @param _fileId Media ID of the main media file.
                      * 
                      */
                     void SetFileId(const std::string& _fileId);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool FileIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return StreamParaSet 
+                     * 获取Adaptive bitrate parameters. Supports up to 8.
+                     * @return StreamParaSet Adaptive bitrate parameters. Supports up to 8.
                      * 
                      */
                     std::vector<ComplexAdaptiveDynamicStreamingTaskStreamPara> GetStreamParaSet() const;
 
                     /**
-                     * 设置
-                     * @param _streamParaSet 
+                     * 设置Adaptive bitrate parameters. Supports up to 8.
+                     * @param _streamParaSet Adaptive bitrate parameters. Supports up to 8.
                      * 
                      */
                     void SetStreamParaSet(const std::vector<ComplexAdaptiveDynamicStreamingTaskStreamPara>& _streamParaSet);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool StreamParaSetHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return HeadTailSet 
+                     * 获取List of opening and ending sequences. Multiple opening and ending sequences are supported, up to 4. If this field is specified, the start time of the media specified in AudioSet and SubtitleSet will automatically adjust to keep synchronized with the main media.
+                     * @return HeadTailSet List of opening and ending sequences. Multiple opening and ending sequences are supported, up to 4. If this field is specified, the start time of the media specified in AudioSet and SubtitleSet will automatically adjust to keep synchronized with the main media.
                      * 
                      */
                     std::vector<HeadTailTaskInput> GetHeadTailSet() const;
 
                     /**
-                     * 设置
-                     * @param _headTailSet 
+                     * 设置List of opening and ending sequences. Multiple opening and ending sequences are supported, up to 4. If this field is specified, the start time of the media specified in AudioSet and SubtitleSet will automatically adjust to keep synchronized with the main media.
+                     * @param _headTailSet List of opening and ending sequences. Multiple opening and ending sequences are supported, up to 4. If this field is specified, the start time of the media specified in AudioSet and SubtitleSet will automatically adjust to keep synchronized with the main media.
                      * 
                      */
                     void SetHeadTailSet(const std::vector<HeadTailTaskInput>& _headTailSet);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool HeadTailSetHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AudioSet 
+                     * 获取Multilingual audio stream parameters. Supports up to 16. Each array element corresponds to an audio stream in the adaptive bitrate stream. If you want to add an audio stream from the main media file to the output adaptive bitrate stream, specify it here as well. The order of elements in the array determines the order of audio streams in the adaptive bitrate stream. If the input media file contains both video and audio streams, the video stream will be ignored.
+                     * @return AudioSet Multilingual audio stream parameters. Supports up to 16. Each array element corresponds to an audio stream in the adaptive bitrate stream. If you want to add an audio stream from the main media file to the output adaptive bitrate stream, specify it here as well. The order of elements in the array determines the order of audio streams in the adaptive bitrate stream. If the input media file contains both video and audio streams, the video stream will be ignored.
                      * 
                      */
                     std::vector<ComplexAdaptiveDynamicStreamingTaskAudioInput> GetAudioSet() const;
 
                     /**
-                     * 设置
-                     * @param _audioSet 
+                     * 设置Multilingual audio stream parameters. Supports up to 16. Each array element corresponds to an audio stream in the adaptive bitrate stream. If you want to add an audio stream from the main media file to the output adaptive bitrate stream, specify it here as well. The order of elements in the array determines the order of audio streams in the adaptive bitrate stream. If the input media file contains both video and audio streams, the video stream will be ignored.
+                     * @param _audioSet Multilingual audio stream parameters. Supports up to 16. Each array element corresponds to an audio stream in the adaptive bitrate stream. If you want to add an audio stream from the main media file to the output adaptive bitrate stream, specify it here as well. The order of elements in the array determines the order of audio streams in the adaptive bitrate stream. If the input media file contains both video and audio streams, the video stream will be ignored.
                      * 
                      */
                     void SetAudioSet(const std::vector<ComplexAdaptiveDynamicStreamingTaskAudioInput>& _audioSet);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool AudioSetHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SubtitleSet 
+                     * 获取Multilingual subtitle parameters. Up to 16 supported. Each array element corresponds to a subtitle stream in the adaptive bitrate stream. The order of elements in the array determines the order of subtitle streams in the adaptive bitrate stream.
+                     * @return SubtitleSet Multilingual subtitle parameters. Up to 16 supported. Each array element corresponds to a subtitle stream in the adaptive bitrate stream. The order of elements in the array determines the order of subtitle streams in the adaptive bitrate stream.
                      * 
                      */
                     std::vector<ComplexAdaptiveDynamicStreamingTaskSubtitleInput> GetSubtitleSet() const;
 
                     /**
-                     * 设置
-                     * @param _subtitleSet 
+                     * 设置Multilingual subtitle parameters. Up to 16 supported. Each array element corresponds to a subtitle stream in the adaptive bitrate stream. The order of elements in the array determines the order of subtitle streams in the adaptive bitrate stream.
+                     * @param _subtitleSet Multilingual subtitle parameters. Up to 16 supported. Each array element corresponds to a subtitle stream in the adaptive bitrate stream. The order of elements in the array determines the order of subtitle streams in the adaptive bitrate stream.
                      * 
                      */
                     void SetSubtitleSet(const std::vector<ComplexAdaptiveDynamicStreamingTaskSubtitleInput>& _subtitleSet);
@@ -175,37 +175,37 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <b>The VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID.</b>
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
 
                     /**
-                     * 
+                     * Media ID of the main media file.
                      */
                     std::string m_fileId;
                     bool m_fileIdHasBeenSet;
 
                     /**
-                     * 
+                     * Adaptive bitrate parameters. Supports up to 8.
                      */
                     std::vector<ComplexAdaptiveDynamicStreamingTaskStreamPara> m_streamParaSet;
                     bool m_streamParaSetHasBeenSet;
 
                     /**
-                     * 
+                     * List of opening and ending sequences. Multiple opening and ending sequences are supported, up to 4. If this field is specified, the start time of the media specified in AudioSet and SubtitleSet will automatically adjust to keep synchronized with the main media.
                      */
                     std::vector<HeadTailTaskInput> m_headTailSet;
                     bool m_headTailSetHasBeenSet;
 
                     /**
-                     * 
+                     * Multilingual audio stream parameters. Supports up to 16. Each array element corresponds to an audio stream in the adaptive bitrate stream. If you want to add an audio stream from the main media file to the output adaptive bitrate stream, specify it here as well. The order of elements in the array determines the order of audio streams in the adaptive bitrate stream. If the input media file contains both video and audio streams, the video stream will be ignored.
                      */
                     std::vector<ComplexAdaptiveDynamicStreamingTaskAudioInput> m_audioSet;
                     bool m_audioSetHasBeenSet;
 
                     /**
-                     * 
+                     * Multilingual subtitle parameters. Up to 16 supported. Each array element corresponds to a subtitle stream in the adaptive bitrate stream. The order of elements in the array determines the order of subtitle streams in the adaptive bitrate stream.
                      */
                     std::vector<ComplexAdaptiveDynamicStreamingTaskSubtitleInput> m_subtitleSet;
                     bool m_subtitleSetHasBeenSet;

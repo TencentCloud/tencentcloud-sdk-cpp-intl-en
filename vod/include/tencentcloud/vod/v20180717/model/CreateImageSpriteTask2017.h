@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Video sprite capture task. This structure is only used for tasks initiated by the 2017 version of the capture CSS sprites API (https://www.tencentcloud.com/document/product/266/8101?from_cn_redirect=1).
                 */
                 class CreateImageSpriteTask2017 : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return TaskId 
+                     * 获取<p>Screenshot sprite task ID.</p>
+                     * @return TaskId <p>Screenshot sprite task ID.</p>
                      * 
                      */
                     std::string GetTaskId() const;
 
                     /**
-                     * 设置
-                     * @param _taskId 
+                     * 设置<p>Screenshot sprite task ID.</p>
+                     * @param _taskId <p>Screenshot sprite task ID.</p>
                      * 
                      */
                     void SetTaskId(const std::string& _taskId);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool TaskIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ErrCode 
+                     * 获取<p>Error code</p><li>0: Successful;</li><li>Other values: Failed.</li>
+                     * @return ErrCode <p>Error code</p><li>0: Successful;</li><li>Other values: Failed.</li>
                      * 
                      */
                     int64_t GetErrCode() const;
 
                     /**
-                     * 设置
-                     * @param _errCode 
+                     * 设置<p>Error code</p><li>0: Successful;</li><li>Other values: Failed.</li>
+                     * @param _errCode <p>Error code</p><li>0: Successful;</li><li>Other values: Failed.</li>
                      * 
                      */
                     void SetErrCode(const int64_t& _errCode);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool ErrCodeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Message 
+                     * 获取<p>Error message.</p>
+                     * @return Message <p>Error message.</p>
                      * 
                      */
                     std::string GetMessage() const;
 
                     /**
-                     * 设置
-                     * @param _message 
+                     * 设置<p>Error message.</p>
+                     * @param _message <p>Error message.</p>
                      * 
                      */
                     void SetMessage(const std::string& _message);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool MessageHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return FileId 
+                     * 获取<p>Capture the CSS sprite file ID.</p>
+                     * @return FileId <p>Capture the CSS sprite file ID.</p>
                      * 
                      */
                     std::string GetFileId() const;
 
                     /**
-                     * 设置
-                     * @param _fileId 
+                     * 设置<p>Capture the CSS sprite file ID.</p>
+                     * @param _fileId <p>Capture the CSS sprite file ID.</p>
                      * 
                      */
                     void SetFileId(const std::string& _fileId);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool FileIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Definition 
+                     * 获取<p>Sprite sheet specification. See <a href="https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF">image sprite screenshot template</a>.</p>
+                     * @return Definition <p>Sprite sheet specification. See <a href="https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF">image sprite screenshot template</a>.</p>
                      * 
                      */
                     int64_t GetDefinition() const;
 
                     /**
-                     * 设置
-                     * @param _definition 
+                     * 设置<p>Sprite sheet specification. See <a href="https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF">image sprite screenshot template</a>.</p>
+                     * @param _definition <p>Sprite sheet specification. See <a href="https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF">image sprite screenshot template</a>.</p>
                      * 
                      */
                     void SetDefinition(const int64_t& _definition);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool DefinitionHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return TotalCount 
+                     * 获取<p>Total number of small images in the sprite sheet.</p>
+                     * @return TotalCount <p>Total number of small images in the sprite sheet.</p>
                      * 
                      */
                     uint64_t GetTotalCount() const;
 
                     /**
-                     * 设置
-                     * @param _totalCount 
+                     * 设置<p>Total number of small images in the sprite sheet.</p>
+                     * @param _totalCount <p>Total number of small images in the sprite sheet.</p>
                      * 
                      */
                     void SetTotalCount(const uint64_t& _totalCount);
@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ImageSpriteUrlSet 
+                     * 获取<p>Addresses for capturing CSS sprites output.</p>
+                     * @return ImageSpriteUrlSet <p>Addresses for capturing CSS sprites output.</p>
                      * 
                      */
                     std::vector<std::string> GetImageSpriteUrlSet() const;
 
                     /**
-                     * 设置
-                     * @param _imageSpriteUrlSet 
+                     * 设置<p>Addresses for capturing CSS sprites output.</p>
+                     * @param _imageSpriteUrlSet <p>Addresses for capturing CSS sprites output.</p>
                      * 
                      */
                     void SetImageSpriteUrlSet(const std::vector<std::string>& _imageSpriteUrlSet);
@@ -194,15 +194,15 @@ namespace TencentCloud
                     bool ImageSpriteUrlSetHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return WebVttUrl 
+                     * 获取<p>Sprite sheet sub-image position and temporal relationship WebVtt file address.</p>
+                     * @return WebVttUrl <p>Sprite sheet sub-image position and temporal relationship WebVtt file address.</p>
                      * 
                      */
                     std::string GetWebVttUrl() const;
 
                     /**
-                     * 设置
-                     * @param _webVttUrl 
+                     * 设置<p>Sprite sheet sub-image position and temporal relationship WebVtt file address.</p>
+                     * @param _webVttUrl <p>Sprite sheet sub-image position and temporal relationship WebVtt file address.</p>
                      * 
                      */
                     void SetWebVttUrl(const std::string& _webVttUrl);
@@ -217,49 +217,49 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p>Screenshot sprite task ID.</p>
                      */
                     std::string m_taskId;
                     bool m_taskIdHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Error code</p><li>0: Successful;</li><li>Other values: Failed.</li>
                      */
                     int64_t m_errCode;
                     bool m_errCodeHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Error message.</p>
                      */
                     std::string m_message;
                     bool m_messageHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Capture the CSS sprite file ID.</p>
                      */
                     std::string m_fileId;
                     bool m_fileIdHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Sprite sheet specification. See <a href="https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.9B.AA.E7.A2.A7.E5.9B.BE.E6.A8.A1.E6.9D.BF">image sprite screenshot template</a>.</p>
                      */
                     int64_t m_definition;
                     bool m_definitionHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Total number of small images in the sprite sheet.</p>
                      */
                     uint64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Addresses for capturing CSS sprites output.</p>
                      */
                     std::vector<std::string> m_imageSpriteUrlSet;
                     bool m_imageSpriteUrlSetHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Sprite sheet sub-image position and temporal relationship WebVtt file address.</p>
                      */
                     std::string m_webVttUrl;
                     bool m_webVttUrlHasBeenSet;

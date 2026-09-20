@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Subject reference information.
                 */
                 class ElementReferInfo : public AbstractModel
                 {
@@ -47,15 +47,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return ImageUrl 
+                     * 获取Reference image URLs of the subject from different perspectives.
+Image format: .jpg, .jpeg, and .png are supported.
+Image file size must not exceed 10 MB. Image width and height must not be less than 300 px. Image aspect ratio must be between 1:2.5 and 2.5:1.
+                     * @return ImageUrl Reference image URLs of the subject from different perspectives.
+Image format: .jpg, .jpeg, and .png are supported.
+Image file size must not exceed 10 MB. Image width and height must not be less than 300 px. Image aspect ratio must be between 1:2.5 and 2.5:1.
                      * 
                      */
                     std::string GetImageUrl() const;
 
                     /**
-                     * 设置
-                     * @param _imageUrl 
+                     * 设置Reference image URLs of the subject from different perspectives.
+Image format: .jpg, .jpeg, and .png are supported.
+Image file size must not exceed 10 MB. Image width and height must not be less than 300 px. Image aspect ratio must be between 1:2.5 and 2.5:1.
+                     * @param _imageUrl Reference image URLs of the subject from different perspectives.
+Image format: .jpg, .jpeg, and .png are supported.
+Image file size must not exceed 10 MB. Image width and height must not be less than 300 px. Image aspect ratio must be between 1:2.5 and 2.5:1.
                      * 
                      */
                     void SetImageUrl(const std::string& _imageUrl);
@@ -70,7 +78,9 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Reference image URLs of the subject from different perspectives.
+Image format: .jpg, .jpeg, and .png are supported.
+Image file size must not exceed 10 MB. Image width and height must not be less than 300 px. Image aspect ratio must be between 1:2.5 and 2.5:1.
                      */
                     std::string m_imageUrl;
                     bool m_imageUrlHasBeenSet;

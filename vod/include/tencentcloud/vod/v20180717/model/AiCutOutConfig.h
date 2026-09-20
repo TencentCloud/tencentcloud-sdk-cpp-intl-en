@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Intelligent image masking configuration.
                 */
                 class AiCutOutConfig : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Switch 
+                     * 获取<p>Capability configuration switch. Available values: ON: Enable; OFF: Disable. Default value: ON.</p>
+                     * @return Switch <p>Capability configuration switch. Available values: ON: Enable; OFF: Disable. Default value: ON.</p>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置
-                     * @param _switch 
+                     * 设置<p>Capability configuration switch. Available values: ON: Enable; OFF: Disable. Default value: ON.</p>
+                     * @param _switch <p>Capability configuration switch. Available values: ON: Enable; OFF: Disable. Default value: ON.</p>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Type 
+                     * 获取<p>Matting target type: "foreground" / "pattern"</p>
+                     * @return Type <p>Matting target type: "foreground" / "pattern"</p>
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置
-                     * @param _type 
+                     * 设置<p>Matting target type: "foreground" / "pattern"</p>
+                     * @param _type <p>Matting target type: "foreground" / "pattern"</p>
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return PatternConfig 
+                     * 获取<p>Pattern cutout configuration. This parameter is valid only when Type is pattern.</p>
+                     * @return PatternConfig <p>Pattern cutout configuration. This parameter is valid only when Type is pattern.</p>
                      * 
                      */
                     PatternConfig GetPatternConfig() const;
 
                     /**
-                     * 设置
-                     * @param _patternConfig 
+                     * 设置<p>Pattern cutout configuration. This parameter is valid only when Type is pattern.</p>
+                     * @param _patternConfig <p>Pattern cutout configuration. This parameter is valid only when Type is pattern.</p>
                      * 
                      */
                     void SetPatternConfig(const PatternConfig& _patternConfig);
@@ -111,15 +111,15 @@ namespace TencentCloud
                     bool PatternConfigHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Model 
+                     * 获取<p>Matting model selection. Optional.</p><p>Enumeration values:</p><ul><li>auto: automatically choose an appropriate model</li><li>WAND-cutout-1.0-lite: standard version, fastest speed</li><li>WAND-cutout-2.0-lite: enhanced version, faster speed</li><li>WAND-cutout-2.0-flash: enhanced version, quality-speed balance</li><li>WAND-cutout-3.0-lite: enhanced version, faster speed</li><li>WAND-cutout-3.0-flash: enhanced version, quality-speed balance</li></ul>
+                     * @return Model <p>Matting model selection. Optional.</p><p>Enumeration values:</p><ul><li>auto: automatically choose an appropriate model</li><li>WAND-cutout-1.0-lite: standard version, fastest speed</li><li>WAND-cutout-2.0-lite: enhanced version, faster speed</li><li>WAND-cutout-2.0-flash: enhanced version, quality-speed balance</li><li>WAND-cutout-3.0-lite: enhanced version, faster speed</li><li>WAND-cutout-3.0-flash: enhanced version, quality-speed balance</li></ul>
                      * 
                      */
                     std::string GetModel() const;
 
                     /**
-                     * 设置
-                     * @param _model 
+                     * 设置<p>Matting model selection. Optional.</p><p>Enumeration values:</p><ul><li>auto: automatically choose an appropriate model</li><li>WAND-cutout-1.0-lite: standard version, fastest speed</li><li>WAND-cutout-2.0-lite: enhanced version, faster speed</li><li>WAND-cutout-2.0-flash: enhanced version, quality-speed balance</li><li>WAND-cutout-3.0-lite: enhanced version, faster speed</li><li>WAND-cutout-3.0-flash: enhanced version, quality-speed balance</li></ul>
+                     * @param _model <p>Matting model selection. Optional.</p><p>Enumeration values:</p><ul><li>auto: automatically choose an appropriate model</li><li>WAND-cutout-1.0-lite: standard version, fastest speed</li><li>WAND-cutout-2.0-lite: enhanced version, faster speed</li><li>WAND-cutout-2.0-flash: enhanced version, quality-speed balance</li><li>WAND-cutout-3.0-lite: enhanced version, faster speed</li><li>WAND-cutout-3.0-flash: enhanced version, quality-speed balance</li></ul>
                      * 
                      */
                     void SetModel(const std::string& _model);
@@ -134,25 +134,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p>Capability configuration switch. Available values: ON: Enable; OFF: Disable. Default value: ON.</p>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Matting target type: "foreground" / "pattern"</p>
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Pattern cutout configuration. This parameter is valid only when Type is pattern.</p>
                      */
                     PatternConfig m_patternConfig;
                     bool m_patternConfigHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Matting model selection. Optional.</p><p>Enumeration values:</p><ul><li>auto: automatically choose an appropriate model</li><li>WAND-cutout-1.0-lite: standard version, fastest speed</li><li>WAND-cutout-2.0-lite: enhanced version, faster speed</li><li>WAND-cutout-2.0-flash: enhanced version, quality-speed balance</li><li>WAND-cutout-3.0-lite: enhanced version, faster speed</li><li>WAND-cutout-3.0-flash: enhanced version, quality-speed balance</li></ul>
                      */
                     std::string m_model;
                     bool m_modelHasBeenSet;

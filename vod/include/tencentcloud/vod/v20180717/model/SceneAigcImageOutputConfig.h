@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Configuration of the output media file for an AIGC scenario-based image generation task.
                 */
                 class SceneAigcImageOutputConfig : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return StorageMode 
+                     * 获取<p>Storage mode</p><p>Enumeration values:</p><ul><li>Temporary: temporary storage. The generated video file will not be stored in VOD. You can obtain a temporary access URL in the event notification, valid for 7 days.</li><li>Permanent: retained permanently. The generated video file will be stored in VOD. You can obtain the FileId in the event notification.</li></ul><p>Default value: Temporary</p>
+                     * @return StorageMode <p>Storage mode</p><p>Enumeration values:</p><ul><li>Temporary: temporary storage. The generated video file will not be stored in VOD. You can obtain a temporary access URL in the event notification, valid for 7 days.</li><li>Permanent: retained permanently. The generated video file will be stored in VOD. You can obtain the FileId in the event notification.</li></ul><p>Default value: Temporary</p>
                      * 
                      */
                     std::string GetStorageMode() const;
 
                     /**
-                     * 设置
-                     * @param _storageMode 
+                     * 设置<p>Storage mode</p><p>Enumeration values:</p><ul><li>Temporary: temporary storage. The generated video file will not be stored in VOD. You can obtain a temporary access URL in the event notification, valid for 7 days.</li><li>Permanent: retained permanently. The generated video file will be stored in VOD. You can obtain the FileId in the event notification.</li></ul><p>Default value: Temporary</p>
+                     * @param _storageMode <p>Storage mode</p><p>Enumeration values:</p><ul><li>Temporary: temporary storage. The generated video file will not be stored in VOD. You can obtain a temporary access URL in the event notification, valid for 7 days.</li><li>Permanent: retained permanently. The generated video file will be stored in VOD. You can obtain the FileId in the event notification.</li></ul><p>Default value: Temporary</p>
                      * 
                      */
                     void SetStorageMode(const std::string& _storageMode);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool StorageModeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return MediaName 
+                     * 获取<p>Output filename, up to 64 characters. By default, the system assigns the generated filename.</p>
+                     * @return MediaName <p>Output filename, up to 64 characters. By default, the system assigns the generated filename.</p>
                      * 
                      */
                     std::string GetMediaName() const;
 
                     /**
-                     * 设置
-                     * @param _mediaName 
+                     * 设置<p>Output filename, up to 64 characters. By default, the system assigns the generated filename.</p>
+                     * @param _mediaName <p>Output filename, up to 64 characters. By default, the system assigns the generated filename.</p>
                      * 
                      */
                     void SetMediaName(const std::string& _mediaName);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool MediaNameHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ClassId 
+                     * 获取<p>Category ID, used to categorize and manage media. You can create a category through the <a href="/document/product/266/7812">Create Category</a> API to obtain the category ID.</p><li>Default value: 0, indicating other categories.</li>
+                     * @return ClassId <p>Category ID, used to categorize and manage media. You can create a category through the <a href="/document/product/266/7812">Create Category</a> API to obtain the category ID.</p><li>Default value: 0, indicating other categories.</li>
                      * 
                      */
                     int64_t GetClassId() const;
 
                     /**
-                     * 设置
-                     * @param _classId 
+                     * 设置<p>Category ID, used to categorize and manage media. You can create a category through the <a href="/document/product/266/7812">Create Category</a> API to obtain the category ID.</p><li>Default value: 0, indicating other categories.</li>
+                     * @param _classId <p>Category ID, used to categorize and manage media. You can create a category through the <a href="/document/product/266/7812">Create Category</a> API to obtain the category ID.</p><li>Default value: 0, indicating other categories.</li>
                      * 
                      */
                     void SetClassId(const int64_t& _classId);
@@ -111,15 +111,15 @@ namespace TencentCloud
                     bool ClassIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ExpireTime 
+                     * 获取<p>Expiry date of the output file. The file will be deleted after this time. It never expires by default. Format according to the ISO 8601 standard representation. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
+                     * @return ExpireTime <p>Expiry date of the output file. The file will be deleted after this time. It never expires by default. Format according to the ISO 8601 standard representation. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
                      * 
                      */
                     std::string GetExpireTime() const;
 
                     /**
-                     * 设置
-                     * @param _expireTime 
+                     * 设置<p>Expiry date of the output file. The file will be deleted after this time. It never expires by default. Format according to the ISO 8601 standard representation. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
+                     * @param _expireTime <p>Expiry date of the output file. The file will be deleted after this time. It never expires by default. Format according to the ISO 8601 standard representation. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
                      * 
                      */
                     void SetExpireTime(const std::string& _expireTime);
@@ -132,15 +132,15 @@ namespace TencentCloud
                     bool ExpireTimeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AspectRatio 
+                     * 获取<p>Specify the aspect ratio of the generated image. Input format: W:H.<br>This field is valid in the following scenarios:</p><ul><li>Product image generation. Available values are: 1:1, 3:2, 2:3, 3:4, 4:3, 4:5, 5:4, 16:9, 9:16, 21:9</li><li>AI image expansion. Available values are: 1:1, 3:2, 2:3, 3:4, 4:3, 4:5, 5:4, 9:16, 16:9, 21:9. It can be used in conjunction with ImageWidth and ImageHeight. The rules are as follows: <ol><li>If only AspectRatio is specified, it is adaptively adjusted based on the original image.</li><li>If AspectRatio and ImageWidth are specified, ImageHeight is calculated from both, and vice versa.</li><li>If AspectRatio, ImageWidth, and ImageHeight are specified simultaneously, ImageWidth and ImageHeight are prioritized.</li></ol></li></ul>
+                     * @return AspectRatio <p>Specify the aspect ratio of the generated image. Input format: W:H.<br>This field is valid in the following scenarios:</p><ul><li>Product image generation. Available values are: 1:1, 3:2, 2:3, 3:4, 4:3, 4:5, 5:4, 16:9, 9:16, 21:9</li><li>AI image expansion. Available values are: 1:1, 3:2, 2:3, 3:4, 4:3, 4:5, 5:4, 9:16, 16:9, 21:9. It can be used in conjunction with ImageWidth and ImageHeight. The rules are as follows: <ol><li>If only AspectRatio is specified, it is adaptively adjusted based on the original image.</li><li>If AspectRatio and ImageWidth are specified, ImageHeight is calculated from both, and vice versa.</li><li>If AspectRatio, ImageWidth, and ImageHeight are specified simultaneously, ImageWidth and ImageHeight are prioritized.</li></ol></li></ul>
                      * 
                      */
                     std::string GetAspectRatio() const;
 
                     /**
-                     * 设置
-                     * @param _aspectRatio 
+                     * 设置<p>Specify the aspect ratio of the generated image. Input format: W:H.<br>This field is valid in the following scenarios:</p><ul><li>Product image generation. Available values are: 1:1, 3:2, 2:3, 3:4, 4:3, 4:5, 5:4, 16:9, 9:16, 21:9</li><li>AI image expansion. Available values are: 1:1, 3:2, 2:3, 3:4, 4:3, 4:5, 5:4, 9:16, 16:9, 21:9. It can be used in conjunction with ImageWidth and ImageHeight. The rules are as follows: <ol><li>If only AspectRatio is specified, it is adaptively adjusted based on the original image.</li><li>If AspectRatio and ImageWidth are specified, ImageHeight is calculated from both, and vice versa.</li><li>If AspectRatio, ImageWidth, and ImageHeight are specified simultaneously, ImageWidth and ImageHeight are prioritized.</li></ol></li></ul>
+                     * @param _aspectRatio <p>Specify the aspect ratio of the generated image. Input format: W:H.<br>This field is valid in the following scenarios:</p><ul><li>Product image generation. Available values are: 1:1, 3:2, 2:3, 3:4, 4:3, 4:5, 5:4, 16:9, 9:16, 21:9</li><li>AI image expansion. Available values are: 1:1, 3:2, 2:3, 3:4, 4:3, 4:5, 5:4, 9:16, 16:9, 21:9. It can be used in conjunction with ImageWidth and ImageHeight. The rules are as follows: <ol><li>If only AspectRatio is specified, it is adaptively adjusted based on the original image.</li><li>If AspectRatio and ImageWidth are specified, ImageHeight is calculated from both, and vice versa.</li><li>If AspectRatio, ImageWidth, and ImageHeight are specified simultaneously, ImageWidth and ImageHeight are prioritized.</li></ol></li></ul>
                      * 
                      */
                     void SetAspectRatio(const std::string& _aspectRatio);
@@ -153,15 +153,15 @@ namespace TencentCloud
                     bool AspectRatioHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return EncodeConfig 
+                     * 获取<p>Output image encoding format parameters.</p>
+                     * @return EncodeConfig <p>Output image encoding format parameters.</p>
                      * 
                      */
                     ImageSceneAigcEncodeConfig GetEncodeConfig() const;
 
                     /**
-                     * 设置
-                     * @param _encodeConfig 
+                     * 设置<p>Output image encoding format parameters.</p>
+                     * @param _encodeConfig <p>Output image encoding format parameters.</p>
                      * 
                      */
                     void SetEncodeConfig(const ImageSceneAigcEncodeConfig& _encodeConfig);
@@ -174,15 +174,15 @@ namespace TencentCloud
                     bool EncodeConfigHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ImageWidth 
+                     * 获取<p>Output image width. <strong>Only valid for AI image expansion scenarios</strong>.</p>
+                     * @return ImageWidth <p>Output image width. <strong>Only valid for AI image expansion scenarios</strong>.</p>
                      * 
                      */
                     uint64_t GetImageWidth() const;
 
                     /**
-                     * 设置
-                     * @param _imageWidth 
+                     * 设置<p>Output image width. <strong>Only valid for AI image expansion scenarios</strong>.</p>
+                     * @param _imageWidth <p>Output image width. <strong>Only valid for AI image expansion scenarios</strong>.</p>
                      * 
                      */
                     void SetImageWidth(const uint64_t& _imageWidth);
@@ -195,15 +195,15 @@ namespace TencentCloud
                     bool ImageWidthHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ImageHeight 
+                     * 获取<p>Output image height. <strong>Valid only in AI expansion scenarios</strong>.</p>
+                     * @return ImageHeight <p>Output image height. <strong>Valid only in AI expansion scenarios</strong>.</p>
                      * 
                      */
                     uint64_t GetImageHeight() const;
 
                     /**
-                     * 设置
-                     * @param _imageHeight 
+                     * 设置<p>Output image height. <strong>Valid only in AI expansion scenarios</strong>.</p>
+                     * @param _imageHeight <p>Output image height. <strong>Valid only in AI expansion scenarios</strong>.</p>
                      * 
                      */
                     void SetImageHeight(const uint64_t& _imageHeight);
@@ -216,15 +216,15 @@ namespace TencentCloud
                     bool ImageHeightHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Resolution 
+                     * 获取<p>Output resolution. Only valid for the <code>ai_try_on</code> scenario. Available values: 1K, 2K, 4K.</p>
+                     * @return Resolution <p>Output resolution. Only valid for the <code>ai_try_on</code> scenario. Available values: 1K, 2K, 4K.</p>
                      * 
                      */
                     std::string GetResolution() const;
 
                     /**
-                     * 设置
-                     * @param _resolution 
+                     * 设置<p>Output resolution. Only valid for the <code>ai_try_on</code> scenario. Available values: 1K, 2K, 4K.</p>
+                     * @param _resolution <p>Output resolution. Only valid for the <code>ai_try_on</code> scenario. Available values: 1K, 2K, 4K.</p>
                      * 
                      */
                     void SetResolution(const std::string& _resolution);
@@ -239,55 +239,55 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p>Storage mode</p><p>Enumeration values:</p><ul><li>Temporary: temporary storage. The generated video file will not be stored in VOD. You can obtain a temporary access URL in the event notification, valid for 7 days.</li><li>Permanent: retained permanently. The generated video file will be stored in VOD. You can obtain the FileId in the event notification.</li></ul><p>Default value: Temporary</p>
                      */
                     std::string m_storageMode;
                     bool m_storageModeHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Output filename, up to 64 characters. By default, the system assigns the generated filename.</p>
                      */
                     std::string m_mediaName;
                     bool m_mediaNameHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Category ID, used to categorize and manage media. You can create a category through the <a href="/document/product/266/7812">Create Category</a> API to obtain the category ID.</p><li>Default value: 0, indicating other categories.</li>
                      */
                     int64_t m_classId;
                     bool m_classIdHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Expiry date of the output file. The file will be deleted after this time. It never expires by default. Format according to the ISO 8601 standard representation. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
                      */
                     std::string m_expireTime;
                     bool m_expireTimeHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Specify the aspect ratio of the generated image. Input format: W:H.<br>This field is valid in the following scenarios:</p><ul><li>Product image generation. Available values are: 1:1, 3:2, 2:3, 3:4, 4:3, 4:5, 5:4, 16:9, 9:16, 21:9</li><li>AI image expansion. Available values are: 1:1, 3:2, 2:3, 3:4, 4:3, 4:5, 5:4, 9:16, 16:9, 21:9. It can be used in conjunction with ImageWidth and ImageHeight. The rules are as follows: <ol><li>If only AspectRatio is specified, it is adaptively adjusted based on the original image.</li><li>If AspectRatio and ImageWidth are specified, ImageHeight is calculated from both, and vice versa.</li><li>If AspectRatio, ImageWidth, and ImageHeight are specified simultaneously, ImageWidth and ImageHeight are prioritized.</li></ol></li></ul>
                      */
                     std::string m_aspectRatio;
                     bool m_aspectRatioHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Output image encoding format parameters.</p>
                      */
                     ImageSceneAigcEncodeConfig m_encodeConfig;
                     bool m_encodeConfigHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Output image width. <strong>Only valid for AI image expansion scenarios</strong>.</p>
                      */
                     uint64_t m_imageWidth;
                     bool m_imageWidthHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Output image height. <strong>Valid only in AI expansion scenarios</strong>.</p>
                      */
                     uint64_t m_imageHeight;
                     bool m_imageHeightHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Output resolution. Only valid for the <code>ai_try_on</code> scenario. Available values: 1K, 2K, 4K.</p>
                      */
                     std::string m_resolution;
                     bool m_resolutionHasBeenSet;

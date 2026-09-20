@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Quic configuration item
                 */
                 class Quic : public AbstractModel
                 {
@@ -47,10 +47,10 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Quic configuration switch. Valid values:
+                     * 获取Quic feature configuration switch. Valid values:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
-                     * @return Switch Quic configuration switch. Valid values:
+                     * @return Switch Quic feature configuration switch. Valid values:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
                      * 
@@ -58,10 +58,10 @@ namespace TencentCloud
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Quic configuration switch. Valid values:
+                     * 设置Quic feature configuration switch. Valid values:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
-                     * @param _switch Quic configuration switch. Valid values:
+                     * @param _switch Quic feature configuration switch. Valid values:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
                      * 
@@ -78,7 +78,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Quic configuration switch. Valid values:
+                     * Quic feature configuration switch. Valid values:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
                      */

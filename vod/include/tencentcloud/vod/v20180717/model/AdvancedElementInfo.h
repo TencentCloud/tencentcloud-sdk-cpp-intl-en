@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Custom entity information
                 */
                 class AdvancedElementInfo : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return ElementId 
+                     * 获取<p>Entity ID.</p>
+                     * @return ElementId <p>Entity ID.</p>
                      * 
                      */
                     std::string GetElementId() const;
 
                     /**
-                     * 设置
-                     * @param _elementId 
+                     * 设置<p>Entity ID.</p>
+                     * @param _elementId <p>Entity ID.</p>
                      * 
                      */
                     void SetElementId(const std::string& _elementId);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool ElementIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ElementInfo 
+                     * 获取<p>Entity information.</p>
+                     * @return ElementInfo <p>Entity information.</p>
                      * 
                      */
                     std::string GetElementInfo() const;
 
                     /**
-                     * 设置
-                     * @param _elementInfo 
+                     * 设置<p>Entity information.</p>
+                     * @param _elementInfo <p>Entity information.</p>
                      * 
                      */
                     void SetElementInfo(const std::string& _elementInfo);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p>Entity ID.</p>
                      */
                     std::string m_elementId;
                     bool m_elementIdHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Entity information.</p>
                      */
                     std::string m_elementInfo;
                     bool m_elementInfoHasBeenSet;

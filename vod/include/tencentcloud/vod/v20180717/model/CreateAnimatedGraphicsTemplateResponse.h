@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Definition 
+                     * 获取Unique identifier for rotation diagram template.
+                     * @return Definition Unique identifier for rotation diagram template.
                      * 
                      */
                     uint64_t GetDefinition() const;
@@ -60,7 +60,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Unique identifier for rotation diagram template.
                      */
                     uint64_t m_definition;
                     bool m_definitionHasBeenSet;

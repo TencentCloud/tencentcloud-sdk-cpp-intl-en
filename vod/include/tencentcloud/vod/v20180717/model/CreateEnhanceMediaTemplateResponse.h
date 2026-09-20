@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Definition 
+                     * 获取Audio-visual quality rebirth template ID.
+                     * @return Definition Audio-visual quality rebirth template ID.
                      * 
                      */
                     int64_t GetDefinition() const;
@@ -60,7 +60,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Audio-visual quality rebirth template ID.
                      */
                     int64_t m_definition;
                     bool m_definitionHasBeenSet;

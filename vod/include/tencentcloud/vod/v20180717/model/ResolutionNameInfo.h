@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Substream name information of the player
                 */
                 class ResolutionNameInfo : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return MinEdgeLength 
+                     * 获取Video short side length. Measurement unit: pixel.
+                     * @return MinEdgeLength Video short side length. Measurement unit: pixel.
                      * 
                      */
                     uint64_t GetMinEdgeLength() const;
 
                     /**
-                     * 设置
-                     * @param _minEdgeLength 
+                     * 设置Video short side length. Measurement unit: pixel.
+                     * @param _minEdgeLength Video short side length. Measurement unit: pixel.
                      * 
                      */
                     void SetMinEdgeLength(const uint64_t& _minEdgeLength);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool MinEdgeLengthHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Name 
+                     * 获取Display name.
+                     * @return Name Display name.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置
-                     * @param _name 
+                     * 设置Display name.
+                     * @param _name Display name.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Video short side length. Measurement unit: pixel.
                      */
                     uint64_t m_minEdgeLength;
                     bool m_minEdgeLengthHasBeenSet;
 
                     /**
-                     * 
+                     * Display name.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;

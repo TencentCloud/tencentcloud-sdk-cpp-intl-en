@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return TaskId 
+                     * 获取<p>Task ID. Use this ID to query the result.</p>
+                     * @return TaskId <p>Task ID. Use this ID to query the result.</p>
                      * 
                      */
                     std::string GetTaskId() const;
@@ -60,7 +60,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p>Task ID. Use this ID to query the result.</p>
                      */
                     std::string m_taskId;
                     bool m_taskIdHasBeenSet;

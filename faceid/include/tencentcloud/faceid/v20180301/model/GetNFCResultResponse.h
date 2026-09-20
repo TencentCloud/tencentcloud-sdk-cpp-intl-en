@@ -67,15 +67,15 @@ namespace TencentCloud
                      * 获取Document type. Value range: 
 
 01: ID card. 
-02: Chinese passport. 
-03: Hong Kong, China and Macao, China travel permit. 
+02: Passport. 
+03: Hong Kong and Macao travel permit. 
 99: Other document. 
 Note: This field may return null, indicating that no valid value can be obtained.
                      * @return IdType Document type. Value range: 
 
 01: ID card. 
-02: Chinese passport. 
-03: Hong Kong, China and Macao, China travel permit. 
+02: Passport. 
+03: Hong Kong and Macao travel permit. 
 99: Other document. 
 Note: This field may return null, indicating that no valid value can be obtained.
                      * 
@@ -436,8 +436,8 @@ When all four verification results are 0, the document is genuine.
                      * Document type. Value range: 
 
 01: ID card. 
-02: Chinese passport. 
-03: Hong Kong, China and Macao, China travel permit. 
+02: Passport. 
+03: Hong Kong and Macao travel permit. 
 99: Other document. 
 Note: This field may return null, indicating that no valid value can be obtained.
                      */

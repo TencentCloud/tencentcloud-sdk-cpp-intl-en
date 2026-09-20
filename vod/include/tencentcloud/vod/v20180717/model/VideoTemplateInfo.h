@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Video stream configuration parameters
                 */
                 class VideoTemplateInfo : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Codec 
+                     * 获取<p>Video stream encoding format. Available values:</p><li>libx264: H.264 encoding</li><li>libx265: H.265 encoding</li><li>av1: AOMedia Video 1 encoding</li><li>H.266: H.266 encoding.</li><font color="red">Note:</font><li> The av1 and H.266 encoding containers currently only support mp4.</li><li> H.266 currently only supports the fixed CRF bitrate control method. </li>
+                     * @return Codec <p>Video stream encoding format. Available values:</p><li>libx264: H.264 encoding</li><li>libx265: H.265 encoding</li><li>av1: AOMedia Video 1 encoding</li><li>H.266: H.266 encoding.</li><font color="red">Note:</font><li> The av1 and H.266 encoding containers currently only support mp4.</li><li> H.266 currently only supports the fixed CRF bitrate control method. </li>
                      * 
                      */
                     std::string GetCodec() const;
 
                     /**
-                     * 设置
-                     * @param _codec 
+                     * 设置<p>Video stream encoding format. Available values:</p><li>libx264: H.264 encoding</li><li>libx265: H.265 encoding</li><li>av1: AOMedia Video 1 encoding</li><li>H.266: H.266 encoding.</li><font color="red">Note:</font><li> The av1 and H.266 encoding containers currently only support mp4.</li><li> H.266 currently only supports the fixed CRF bitrate control method. </li>
+                     * @param _codec <p>Video stream encoding format. Available values:</p><li>libx264: H.264 encoding</li><li>libx265: H.265 encoding</li><li>av1: AOMedia Video 1 encoding</li><li>H.266: H.266 encoding.</li><font color="red">Note:</font><li> The av1 and H.266 encoding containers currently only support mp4.</li><li> H.266 currently only supports the fixed CRF bitrate control method. </li>
                      * 
                      */
                     void SetCodec(const std::string& _codec);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool CodecHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Fps 
+                     * 获取<p>Video frame rate. Value range: [0, 100]. Unit: Hz.<br>When the value is 0, it means the frame rate is consistent with the original video.</p>
+                     * @return Fps <p>Video frame rate. Value range: [0, 100]. Unit: Hz.<br>When the value is 0, it means the frame rate is consistent with the original video.</p>
                      * 
                      */
                     uint64_t GetFps() const;
 
                     /**
-                     * 设置
-                     * @param _fps 
+                     * 设置<p>Video frame rate. Value range: [0, 100]. Unit: Hz.<br>When the value is 0, it means the frame rate is consistent with the original video.</p>
+                     * @param _fps <p>Video frame rate. Value range: [0, 100]. Unit: Hz.<br>When the value is 0, it means the frame rate is consistent with the original video.</p>
                      * 
                      */
                     void SetFps(const uint64_t& _fps);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool FpsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Bitrate 
+                     * 获取<p>Bitrate of video stream. Value range: 0 and [128, 100000]. Unit: kbps.<br>When the value is 0, it means VOD automatically sets the bitrate.</p>
+                     * @return Bitrate <p>Bitrate of video stream. Value range: 0 and [128, 100000]. Unit: kbps.<br>When the value is 0, it means VOD automatically sets the bitrate.</p>
                      * 
                      */
                     uint64_t GetBitrate() const;
 
                     /**
-                     * 设置
-                     * @param _bitrate 
+                     * 设置<p>Bitrate of video stream. Value range: 0 and [128, 100000]. Unit: kbps.<br>When the value is 0, it means VOD automatically sets the bitrate.</p>
+                     * @param _bitrate <p>Bitrate of video stream. Value range: 0 and [128, 100000]. Unit: kbps.<br>When the value is 0, it means VOD automatically sets the bitrate.</p>
                      * 
                      */
                     void SetBitrate(const uint64_t& _bitrate);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool BitrateHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ResolutionAdaptive 
+                     * 获取<p>Resolution adaptation. Available values:</p><li>open: enable. At this point, Width represents the long side of the video, and Height represents the short side;</li><li>close: disable. At this point, Width represents the video width, and Height represents the video height.</li>Default value: open.
+                     * @return ResolutionAdaptive <p>Resolution adaptation. Available values:</p><li>open: enable. At this point, Width represents the long side of the video, and Height represents the short side;</li><li>close: disable. At this point, Width represents the video width, and Height represents the video height.</li>Default value: open.
                      * 
                      */
                     std::string GetResolutionAdaptive() const;
 
                     /**
-                     * 设置
-                     * @param _resolutionAdaptive 
+                     * 设置<p>Resolution adaptation. Available values:</p><li>open: enable. At this point, Width represents the long side of the video, and Height represents the short side;</li><li>close: disable. At this point, Width represents the video width, and Height represents the video height.</li>Default value: open.
+                     * @param _resolutionAdaptive <p>Resolution adaptation. Available values:</p><li>open: enable. At this point, Width represents the long side of the video, and Height represents the short side;</li><li>close: disable. At this point, Width represents the video width, and Height represents the video height.</li>Default value: open.
                      * 
                      */
                     void SetResolutionAdaptive(const std::string& _resolutionAdaptive);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool ResolutionAdaptiveHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Width 
+                     * 获取<p>The maximum value of the video stream width (or long side). Valid values: 0 and [128, 8192]. Unit: px.</p><li>When Width and Height are both 0, the resolution is from the same source;</li><li>When Width is 0 and Height is non-0, Width is scaled proportionally;</li><li>When Width is non-0 and Height is 0, the Height is scaled proportionally;</li><li>When both Width and Height are non-0, the resolution is specified by the user.</li>Default value: 0.
+                     * @return Width <p>The maximum value of the video stream width (or long side). Valid values: 0 and [128, 8192]. Unit: px.</p><li>When Width and Height are both 0, the resolution is from the same source;</li><li>When Width is 0 and Height is non-0, Width is scaled proportionally;</li><li>When Width is non-0 and Height is 0, the Height is scaled proportionally;</li><li>When both Width and Height are non-0, the resolution is specified by the user.</li>Default value: 0.
                      * 
                      */
                     uint64_t GetWidth() const;
 
                     /**
-                     * 设置
-                     * @param _width 
+                     * 设置<p>The maximum value of the video stream width (or long side). Valid values: 0 and [128, 8192]. Unit: px.</p><li>When Width and Height are both 0, the resolution is from the same source;</li><li>When Width is 0 and Height is non-0, Width is scaled proportionally;</li><li>When Width is non-0 and Height is 0, the Height is scaled proportionally;</li><li>When both Width and Height are non-0, the resolution is specified by the user.</li>Default value: 0.
+                     * @param _width <p>The maximum value of the video stream width (or long side). Valid values: 0 and [128, 8192]. Unit: px.</p><li>When Width and Height are both 0, the resolution is from the same source;</li><li>When Width is 0 and Height is non-0, Width is scaled proportionally;</li><li>When Width is non-0 and Height is 0, the Height is scaled proportionally;</li><li>When both Width and Height are non-0, the resolution is specified by the user.</li>Default value: 0.
                      * 
                      */
                     void SetWidth(const uint64_t& _width);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool WidthHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Height 
+                     * 获取<p>The maximum value of the video stream height (or short side). Valid values: 0 and [128, 8192]. Unit: px.</p><li>When Width and Height are both 0, the resolution is from the same source;</li><li>When Width is 0 and Height is non-0, Width is scaled proportionally;</li><li>When Width is non-0 and Height is 0, the Height is scaled proportionally;</li><li>When both Width and Height are non-0, the resolution is specified by the user.</li>Default value: 0.
+                     * @return Height <p>The maximum value of the video stream height (or short side). Valid values: 0 and [128, 8192]. Unit: px.</p><li>When Width and Height are both 0, the resolution is from the same source;</li><li>When Width is 0 and Height is non-0, Width is scaled proportionally;</li><li>When Width is non-0 and Height is 0, the Height is scaled proportionally;</li><li>When both Width and Height are non-0, the resolution is specified by the user.</li>Default value: 0.
                      * 
                      */
                     uint64_t GetHeight() const;
 
                     /**
-                     * 设置
-                     * @param _height 
+                     * 设置<p>The maximum value of the video stream height (or short side). Valid values: 0 and [128, 8192]. Unit: px.</p><li>When Width and Height are both 0, the resolution is from the same source;</li><li>When Width is 0 and Height is non-0, Width is scaled proportionally;</li><li>When Width is non-0 and Height is 0, the Height is scaled proportionally;</li><li>When both Width and Height are non-0, the resolution is specified by the user.</li>Default value: 0.
+                     * @param _height <p>The maximum value of the video stream height (or short side). Valid values: 0 and [128, 8192]. Unit: px.</p><li>When Width and Height are both 0, the resolution is from the same source;</li><li>When Width is 0 and Height is non-0, Width is scaled proportionally;</li><li>When Width is non-0 and Height is 0, the Height is scaled proportionally;</li><li>When both Width and Height are non-0, the resolution is specified by the user.</li>Default value: 0.
                      * 
                      */
                     void SetHeight(const uint64_t& _height);
@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool HeightHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return FillType 
+                     * 获取<p>Filling method. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "filling". Optional filling modes:</p><li>stretch: Stretch each frame to fill the entire screen, possibly causing the transcoded video to be "squashed" or "stretched".</li><li>black: Keep black edges. Maintain the video aspect ratio, with the rest of the edges filled with black.</li><li>white: Keep white edges. Maintain the video aspect ratio, with the rest of the edges filled with white.</li><li>gauss: Gaussian blur. Maintain the video aspect ratio, with Gaussian blur filling for the rest of the edges.</li>Default value: black.
+                     * @return FillType <p>Filling method. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "filling". Optional filling modes:</p><li>stretch: Stretch each frame to fill the entire screen, possibly causing the transcoded video to be "squashed" or "stretched".</li><li>black: Keep black edges. Maintain the video aspect ratio, with the rest of the edges filled with black.</li><li>white: Keep white edges. Maintain the video aspect ratio, with the rest of the edges filled with white.</li><li>gauss: Gaussian blur. Maintain the video aspect ratio, with Gaussian blur filling for the rest of the edges.</li>Default value: black.
                      * 
                      */
                     std::string GetFillType() const;
 
                     /**
-                     * 设置
-                     * @param _fillType 
+                     * 设置<p>Filling method. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "filling". Optional filling modes:</p><li>stretch: Stretch each frame to fill the entire screen, possibly causing the transcoded video to be "squashed" or "stretched".</li><li>black: Keep black edges. Maintain the video aspect ratio, with the rest of the edges filled with black.</li><li>white: Keep white edges. Maintain the video aspect ratio, with the rest of the edges filled with white.</li><li>gauss: Gaussian blur. Maintain the video aspect ratio, with Gaussian blur filling for the rest of the edges.</li>Default value: black.
+                     * @param _fillType <p>Filling method. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "filling". Optional filling modes:</p><li>stretch: Stretch each frame to fill the entire screen, possibly causing the transcoded video to be "squashed" or "stretched".</li><li>black: Keep black edges. Maintain the video aspect ratio, with the rest of the edges filled with black.</li><li>white: Keep white edges. Maintain the video aspect ratio, with the rest of the edges filled with white.</li><li>gauss: Gaussian blur. Maintain the video aspect ratio, with Gaussian blur filling for the rest of the edges.</li>Default value: black.
                      * 
                      */
                     void SetFillType(const std::string& _fillType);
@@ -194,15 +194,15 @@ namespace TencentCloud
                     bool FillTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Vcrf 
+                     * 获取<p>Control factor for constant video bitrate. Value range: [1, 51].</p><p><font color="red">Note:</font></p><li>If you specify this parameter, the bitrate control mode for CRF will be used for transcoding (video bitrate will no longer take effect);</li><li>This field is required when the encoding format of the specified video stream is H.266. Recommended value: 28;</li><li>If there are no special requirements, it is not recommended to specify this parameter.</li>
+                     * @return Vcrf <p>Control factor for constant video bitrate. Value range: [1, 51].</p><p><font color="red">Note:</font></p><li>If you specify this parameter, the bitrate control mode for CRF will be used for transcoding (video bitrate will no longer take effect);</li><li>This field is required when the encoding format of the specified video stream is H.266. Recommended value: 28;</li><li>If there are no special requirements, it is not recommended to specify this parameter.</li>
                      * 
                      */
                     uint64_t GetVcrf() const;
 
                     /**
-                     * 设置
-                     * @param _vcrf 
+                     * 设置<p>Control factor for constant video bitrate. Value range: [1, 51].</p><p><font color="red">Note:</font></p><li>If you specify this parameter, the bitrate control mode for CRF will be used for transcoding (video bitrate will no longer take effect);</li><li>This field is required when the encoding format of the specified video stream is H.266. Recommended value: 28;</li><li>If there are no special requirements, it is not recommended to specify this parameter.</li>
+                     * @param _vcrf <p>Control factor for constant video bitrate. Value range: [1, 51].</p><p><font color="red">Note:</font></p><li>If you specify this parameter, the bitrate control mode for CRF will be used for transcoding (video bitrate will no longer take effect);</li><li>This field is required when the encoding format of the specified video stream is H.266. Recommended value: 28;</li><li>If there are no special requirements, it is not recommended to specify this parameter.</li>
                      * 
                      */
                     void SetVcrf(const uint64_t& _vcrf);
@@ -215,15 +215,15 @@ namespace TencentCloud
                     bool VcrfHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Gop 
+                     * 获取<p>Interval between I-frames, in frames. Value range: 0 and [1, 100000].<br>When it is set to 0 or not set, the system will automatically set the gop length.</p>
+                     * @return Gop <p>Interval between I-frames, in frames. Value range: 0 and [1, 100000].<br>When it is set to 0 or not set, the system will automatically set the gop length.</p>
                      * 
                      */
                     uint64_t GetGop() const;
 
                     /**
-                     * 设置
-                     * @param _gop 
+                     * 设置<p>Interval between I-frames, in frames. Value range: 0 and [1, 100000].<br>When it is set to 0 or not set, the system will automatically set the gop length.</p>
+                     * @param _gop <p>Interval between I-frames, in frames. Value range: 0 and [1, 100000].<br>When it is set to 0 or not set, the system will automatically set the gop length.</p>
                      * 
                      */
                     void SetGop(const uint64_t& _gop);
@@ -236,15 +236,15 @@ namespace TencentCloud
                     bool GopHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return GopUnit 
+                     * 获取<p>Gop value unit.</p><p>Enumeration values:</p><ul><li>frame: number of frames.</li><li>second: seconds.</li></ul><p>Default value: frame</p>
+                     * @return GopUnit <p>Gop value unit.</p><p>Enumeration values:</p><ul><li>frame: number of frames.</li><li>second: seconds.</li></ul><p>Default value: frame</p>
                      * 
                      */
                     std::string GetGopUnit() const;
 
                     /**
-                     * 设置
-                     * @param _gopUnit 
+                     * 设置<p>Gop value unit.</p><p>Enumeration values:</p><ul><li>frame: number of frames.</li><li>second: seconds.</li></ul><p>Default value: frame</p>
+                     * @param _gopUnit <p>Gop value unit.</p><p>Enumeration values:</p><ul><li>frame: number of frames.</li><li>second: seconds.</li></ul><p>Default value: frame</p>
                      * 
                      */
                     void SetGopUnit(const std::string& _gopUnit);
@@ -257,15 +257,15 @@ namespace TencentCloud
                     bool GopUnitHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return PreserveHDRSwitch 
+                     * 获取<p>Whether to retain HDR in the transcoding output when the original video is HDR (High Dynamic Range). Value range:</p><li>ON: If the original file is HDR, the transcoding output retains HDR; otherwise, the transcoding output is SDR (Standard Dynamic Range).</li><li>OFF: Regardless of whether the original file is HDR or SDR, the transcoding output is SDR.</li>Default value: OFF.
+                     * @return PreserveHDRSwitch <p>Whether to retain HDR in the transcoding output when the original video is HDR (High Dynamic Range). Value range:</p><li>ON: If the original file is HDR, the transcoding output retains HDR; otherwise, the transcoding output is SDR (Standard Dynamic Range).</li><li>OFF: Regardless of whether the original file is HDR or SDR, the transcoding output is SDR.</li>Default value: OFF.
                      * 
                      */
                     std::string GetPreserveHDRSwitch() const;
 
                     /**
-                     * 设置
-                     * @param _preserveHDRSwitch 
+                     * 设置<p>Whether to retain HDR in the transcoding output when the original video is HDR (High Dynamic Range). Value range:</p><li>ON: If the original file is HDR, the transcoding output retains HDR; otherwise, the transcoding output is SDR (Standard Dynamic Range).</li><li>OFF: Regardless of whether the original file is HDR or SDR, the transcoding output is SDR.</li>Default value: OFF.
+                     * @param _preserveHDRSwitch <p>Whether to retain HDR in the transcoding output when the original video is HDR (High Dynamic Range). Value range:</p><li>ON: If the original file is HDR, the transcoding output retains HDR; otherwise, the transcoding output is SDR (Standard Dynamic Range).</li><li>OFF: Regardless of whether the original file is HDR or SDR, the transcoding output is SDR.</li>Default value: OFF.
                      * 
                      */
                     void SetPreserveHDRSwitch(const std::string& _preserveHDRSwitch);
@@ -278,15 +278,15 @@ namespace TencentCloud
                     bool PreserveHDRSwitchHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return CodecTag 
+                     * 获取<p>Encoding tag. It is valid only when the video stream encoding format is H.265. Available values:</p><li>hvc1: hvc1 tag</li><li>hev1: hev1 tag</li>Default value: hvc1.
+                     * @return CodecTag <p>Encoding tag. It is valid only when the video stream encoding format is H.265. Available values:</p><li>hvc1: hvc1 tag</li><li>hev1: hev1 tag</li>Default value: hvc1.
                      * 
                      */
                     std::string GetCodecTag() const;
 
                     /**
-                     * 设置
-                     * @param _codecTag 
+                     * 设置<p>Encoding tag. It is valid only when the video stream encoding format is H.265. Available values:</p><li>hvc1: hvc1 tag</li><li>hev1: hev1 tag</li>Default value: hvc1.
+                     * @param _codecTag <p>Encoding tag. It is valid only when the video stream encoding format is H.265. Available values:</p><li>hvc1: hvc1 tag</li><li>hev1: hev1 tag</li>Default value: hvc1.
                      * 
                      */
                     void SetCodecTag(const std::string& _codecTag);
@@ -299,15 +299,15 @@ namespace TencentCloud
                     bool CodecTagHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Mode 
+                     * 获取<p>Bitrate control mode.</p><p>Enumeration values:</p><ul><li>VBR: Variable Bit Rate. It dynamically adjusts the output bitrate based on the complexity of the video image to ensure higher image quality. It is suitable for storage scenarios and applications with high image quality requirements.</li><li>ABR: Average Bit Rate. It tries to stabilize the average bitrate of the output video as much as possible while allowing short-term bitrate fluctuation. It is suitable for scenarios where minimizing overall bitrate is desired while maintaining a certain image quality.</li><li>CBR: Constant Bit Rate. It maintains a constant output bitrate during video encoding regardless of image complexity. It is suitable for scenarios with strict network bandwidth requirements, such as live streaming.</li><li>VCRF: Constant quality factor. It controls video quality by setting a quality factor to achieve constant quality encoding of videos. The bitrate is automatically adjusted based on content complexity. It is suitable for scenarios where maintaining a certain image quality is desired.</li></ul><p>Default value: VBR</p>
+                     * @return Mode <p>Bitrate control mode.</p><p>Enumeration values:</p><ul><li>VBR: Variable Bit Rate. It dynamically adjusts the output bitrate based on the complexity of the video image to ensure higher image quality. It is suitable for storage scenarios and applications with high image quality requirements.</li><li>ABR: Average Bit Rate. It tries to stabilize the average bitrate of the output video as much as possible while allowing short-term bitrate fluctuation. It is suitable for scenarios where minimizing overall bitrate is desired while maintaining a certain image quality.</li><li>CBR: Constant Bit Rate. It maintains a constant output bitrate during video encoding regardless of image complexity. It is suitable for scenarios with strict network bandwidth requirements, such as live streaming.</li><li>VCRF: Constant quality factor. It controls video quality by setting a quality factor to achieve constant quality encoding of videos. The bitrate is automatically adjusted based on content complexity. It is suitable for scenarios where maintaining a certain image quality is desired.</li></ul><p>Default value: VBR</p>
                      * 
                      */
                     std::string GetMode() const;
 
                     /**
-                     * 设置
-                     * @param _mode 
+                     * 设置<p>Bitrate control mode.</p><p>Enumeration values:</p><ul><li>VBR: Variable Bit Rate. It dynamically adjusts the output bitrate based on the complexity of the video image to ensure higher image quality. It is suitable for storage scenarios and applications with high image quality requirements.</li><li>ABR: Average Bit Rate. It tries to stabilize the average bitrate of the output video as much as possible while allowing short-term bitrate fluctuation. It is suitable for scenarios where minimizing overall bitrate is desired while maintaining a certain image quality.</li><li>CBR: Constant Bit Rate. It maintains a constant output bitrate during video encoding regardless of image complexity. It is suitable for scenarios with strict network bandwidth requirements, such as live streaming.</li><li>VCRF: Constant quality factor. It controls video quality by setting a quality factor to achieve constant quality encoding of videos. The bitrate is automatically adjusted based on content complexity. It is suitable for scenarios where maintaining a certain image quality is desired.</li></ul><p>Default value: VBR</p>
+                     * @param _mode <p>Bitrate control mode.</p><p>Enumeration values:</p><ul><li>VBR: Variable Bit Rate. It dynamically adjusts the output bitrate based on the complexity of the video image to ensure higher image quality. It is suitable for storage scenarios and applications with high image quality requirements.</li><li>ABR: Average Bit Rate. It tries to stabilize the average bitrate of the output video as much as possible while allowing short-term bitrate fluctuation. It is suitable for scenarios where minimizing overall bitrate is desired while maintaining a certain image quality.</li><li>CBR: Constant Bit Rate. It maintains a constant output bitrate during video encoding regardless of image complexity. It is suitable for scenarios with strict network bandwidth requirements, such as live streaming.</li><li>VCRF: Constant quality factor. It controls video quality by setting a quality factor to achieve constant quality encoding of videos. The bitrate is automatically adjusted based on content complexity. It is suitable for scenarios where maintaining a certain image quality is desired.</li></ul><p>Default value: VBR</p>
                      * 
                      */
                     void SetMode(const std::string& _mode);
@@ -320,15 +320,15 @@ namespace TencentCloud
                     bool ModeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Bframes 
+                     * 获取<p>Number of B-frames between reference frames. Set to auto by default.</p><p>Value range: [0, 16]</p>
+                     * @return Bframes <p>Number of B-frames between reference frames. Set to auto by default.</p><p>Value range: [0, 16]</p>
                      * 
                      */
                     int64_t GetBframes() const;
 
                     /**
-                     * 设置
-                     * @param _bframes 
+                     * 设置<p>Number of B-frames between reference frames. Set to auto by default.</p><p>Value range: [0, 16]</p>
+                     * @param _bframes <p>Number of B-frames between reference frames. Set to auto by default.</p><p>Value range: [0, 16]</p>
                      * 
                      */
                     void SetBframes(const int64_t& _bframes);
@@ -341,15 +341,15 @@ namespace TencentCloud
                     bool BframesHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return HlsTime 
+                     * 获取<p>Average duration of slices. 0 or left empty means auto, which will automatically choose an appropriate slice duration based on features such as the video GOP.</p><p>Value range: [0, 10]</p><p>Unit: second</p><p>Supports only transcoding templates. Adaptive bitrate stream templates are not currently supported.</p>
+                     * @return HlsTime <p>Average duration of slices. 0 or left empty means auto, which will automatically choose an appropriate slice duration based on features such as the video GOP.</p><p>Value range: [0, 10]</p><p>Unit: second</p><p>Supports only transcoding templates. Adaptive bitrate stream templates are not currently supported.</p>
                      * 
                      */
                     int64_t GetHlsTime() const;
 
                     /**
-                     * 设置
-                     * @param _hlsTime 
+                     * 设置<p>Average duration of slices. 0 or left empty means auto, which will automatically choose an appropriate slice duration based on features such as the video GOP.</p><p>Value range: [0, 10]</p><p>Unit: second</p><p>Supports only transcoding templates. Adaptive bitrate stream templates are not currently supported.</p>
+                     * @param _hlsTime <p>Average duration of slices. 0 or left empty means auto, which will automatically choose an appropriate slice duration based on features such as the video GOP.</p><p>Value range: [0, 10]</p><p>Unit: second</p><p>Supports only transcoding templates. Adaptive bitrate stream templates are not currently supported.</p>
                      * 
                      */
                     void SetHlsTime(const int64_t& _hlsTime);
@@ -362,15 +362,15 @@ namespace TencentCloud
                     bool HlsTimeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return VideoProfile 
+                     * 获取<p>A predefined combination of encoding tools or features allowed in a video encoding standard, suitable for different scenarios.</p><p>Enumeration values:</p><ul><li>baseline: Supports only I/p frames and non-interlaced scenarios, suitable for video calls, mobile video, and other scenarios.</li><li>main: The mainstream Profile, providing I-frames, p-frames, and B-frames, and supporting both interlaced and non-interlaced modes. It is mainly used in mainstream audio and video consumption products such as video players and streaming media transmission devices.</li><li>high: The highest encoding level, adding 8X8 prediction on top of the main Profile and supporting custom quantification. It is widely used in Blu-ray storage, HDTV, and other scenarios.</li><li>default: Automatic filling along with the original video.  </li></ul><p>default value: default</p><p>This configuration item is valid only when Codec is libx264.</p>
+                     * @return VideoProfile <p>A predefined combination of encoding tools or features allowed in a video encoding standard, suitable for different scenarios.</p><p>Enumeration values:</p><ul><li>baseline: Supports only I/p frames and non-interlaced scenarios, suitable for video calls, mobile video, and other scenarios.</li><li>main: The mainstream Profile, providing I-frames, p-frames, and B-frames, and supporting both interlaced and non-interlaced modes. It is mainly used in mainstream audio and video consumption products such as video players and streaming media transmission devices.</li><li>high: The highest encoding level, adding 8X8 prediction on top of the main Profile and supporting custom quantification. It is widely used in Blu-ray storage, HDTV, and other scenarios.</li><li>default: Automatic filling along with the original video.  </li></ul><p>default value: default</p><p>This configuration item is valid only when Codec is libx264.</p>
                      * 
                      */
                     std::string GetVideoProfile() const;
 
                     /**
-                     * 设置
-                     * @param _videoProfile 
+                     * 设置<p>A predefined combination of encoding tools or features allowed in a video encoding standard, suitable for different scenarios.</p><p>Enumeration values:</p><ul><li>baseline: Supports only I/p frames and non-interlaced scenarios, suitable for video calls, mobile video, and other scenarios.</li><li>main: The mainstream Profile, providing I-frames, p-frames, and B-frames, and supporting both interlaced and non-interlaced modes. It is mainly used in mainstream audio and video consumption products such as video players and streaming media transmission devices.</li><li>high: The highest encoding level, adding 8X8 prediction on top of the main Profile and supporting custom quantification. It is widely used in Blu-ray storage, HDTV, and other scenarios.</li><li>default: Automatic filling along with the original video.  </li></ul><p>default value: default</p><p>This configuration item is valid only when Codec is libx264.</p>
+                     * @param _videoProfile <p>A predefined combination of encoding tools or features allowed in a video encoding standard, suitable for different scenarios.</p><p>Enumeration values:</p><ul><li>baseline: Supports only I/p frames and non-interlaced scenarios, suitable for video calls, mobile video, and other scenarios.</li><li>main: The mainstream Profile, providing I-frames, p-frames, and B-frames, and supporting both interlaced and non-interlaced modes. It is mainly used in mainstream audio and video consumption products such as video players and streaming media transmission devices.</li><li>high: The highest encoding level, adding 8X8 prediction on top of the main Profile and supporting custom quantification. It is widely used in Blu-ray storage, HDTV, and other scenarios.</li><li>default: Automatic filling along with the original video.  </li></ul><p>default value: default</p><p>This configuration item is valid only when Codec is libx264.</p>
                      * 
                      */
                     void SetVideoProfile(const std::string& _videoProfile);
@@ -385,97 +385,97 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p>Video stream encoding format. Available values:</p><li>libx264: H.264 encoding</li><li>libx265: H.265 encoding</li><li>av1: AOMedia Video 1 encoding</li><li>H.266: H.266 encoding.</li><font color="red">Note:</font><li> The av1 and H.266 encoding containers currently only support mp4.</li><li> H.266 currently only supports the fixed CRF bitrate control method. </li>
                      */
                     std::string m_codec;
                     bool m_codecHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Video frame rate. Value range: [0, 100]. Unit: Hz.<br>When the value is 0, it means the frame rate is consistent with the original video.</p>
                      */
                     uint64_t m_fps;
                     bool m_fpsHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Bitrate of video stream. Value range: 0 and [128, 100000]. Unit: kbps.<br>When the value is 0, it means VOD automatically sets the bitrate.</p>
                      */
                     uint64_t m_bitrate;
                     bool m_bitrateHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Resolution adaptation. Available values:</p><li>open: enable. At this point, Width represents the long side of the video, and Height represents the short side;</li><li>close: disable. At this point, Width represents the video width, and Height represents the video height.</li>Default value: open.
                      */
                     std::string m_resolutionAdaptive;
                     bool m_resolutionAdaptiveHasBeenSet;
 
                     /**
-                     * 
+                     * <p>The maximum value of the video stream width (or long side). Valid values: 0 and [128, 8192]. Unit: px.</p><li>When Width and Height are both 0, the resolution is from the same source;</li><li>When Width is 0 and Height is non-0, Width is scaled proportionally;</li><li>When Width is non-0 and Height is 0, the Height is scaled proportionally;</li><li>When both Width and Height are non-0, the resolution is specified by the user.</li>Default value: 0.
                      */
                     uint64_t m_width;
                     bool m_widthHasBeenSet;
 
                     /**
-                     * 
+                     * <p>The maximum value of the video stream height (or short side). Valid values: 0 and [128, 8192]. Unit: px.</p><li>When Width and Height are both 0, the resolution is from the same source;</li><li>When Width is 0 and Height is non-0, Width is scaled proportionally;</li><li>When Width is non-0 and Height is 0, the Height is scaled proportionally;</li><li>When both Width and Height are non-0, the resolution is specified by the user.</li>Default value: 0.
                      */
                     uint64_t m_height;
                     bool m_heightHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Filling method. When the video stream configuration width and height parameters are inconsistent with the aspect ratio of the original video, the processing method for transcoding is "filling". Optional filling modes:</p><li>stretch: Stretch each frame to fill the entire screen, possibly causing the transcoded video to be "squashed" or "stretched".</li><li>black: Keep black edges. Maintain the video aspect ratio, with the rest of the edges filled with black.</li><li>white: Keep white edges. Maintain the video aspect ratio, with the rest of the edges filled with white.</li><li>gauss: Gaussian blur. Maintain the video aspect ratio, with Gaussian blur filling for the rest of the edges.</li>Default value: black.
                      */
                     std::string m_fillType;
                     bool m_fillTypeHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Control factor for constant video bitrate. Value range: [1, 51].</p><p><font color="red">Note:</font></p><li>If you specify this parameter, the bitrate control mode for CRF will be used for transcoding (video bitrate will no longer take effect);</li><li>This field is required when the encoding format of the specified video stream is H.266. Recommended value: 28;</li><li>If there are no special requirements, it is not recommended to specify this parameter.</li>
                      */
                     uint64_t m_vcrf;
                     bool m_vcrfHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Interval between I-frames, in frames. Value range: 0 and [1, 100000].<br>When it is set to 0 or not set, the system will automatically set the gop length.</p>
                      */
                     uint64_t m_gop;
                     bool m_gopHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Gop value unit.</p><p>Enumeration values:</p><ul><li>frame: number of frames.</li><li>second: seconds.</li></ul><p>Default value: frame</p>
                      */
                     std::string m_gopUnit;
                     bool m_gopUnitHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Whether to retain HDR in the transcoding output when the original video is HDR (High Dynamic Range). Value range:</p><li>ON: If the original file is HDR, the transcoding output retains HDR; otherwise, the transcoding output is SDR (Standard Dynamic Range).</li><li>OFF: Regardless of whether the original file is HDR or SDR, the transcoding output is SDR.</li>Default value: OFF.
                      */
                     std::string m_preserveHDRSwitch;
                     bool m_preserveHDRSwitchHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Encoding tag. It is valid only when the video stream encoding format is H.265. Available values:</p><li>hvc1: hvc1 tag</li><li>hev1: hev1 tag</li>Default value: hvc1.
                      */
                     std::string m_codecTag;
                     bool m_codecTagHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Bitrate control mode.</p><p>Enumeration values:</p><ul><li>VBR: Variable Bit Rate. It dynamically adjusts the output bitrate based on the complexity of the video image to ensure higher image quality. It is suitable for storage scenarios and applications with high image quality requirements.</li><li>ABR: Average Bit Rate. It tries to stabilize the average bitrate of the output video as much as possible while allowing short-term bitrate fluctuation. It is suitable for scenarios where minimizing overall bitrate is desired while maintaining a certain image quality.</li><li>CBR: Constant Bit Rate. It maintains a constant output bitrate during video encoding regardless of image complexity. It is suitable for scenarios with strict network bandwidth requirements, such as live streaming.</li><li>VCRF: Constant quality factor. It controls video quality by setting a quality factor to achieve constant quality encoding of videos. The bitrate is automatically adjusted based on content complexity. It is suitable for scenarios where maintaining a certain image quality is desired.</li></ul><p>Default value: VBR</p>
                      */
                     std::string m_mode;
                     bool m_modeHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Number of B-frames between reference frames. Set to auto by default.</p><p>Value range: [0, 16]</p>
                      */
                     int64_t m_bframes;
                     bool m_bframesHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Average duration of slices. 0 or left empty means auto, which will automatically choose an appropriate slice duration based on features such as the video GOP.</p><p>Value range: [0, 10]</p><p>Unit: second</p><p>Supports only transcoding templates. Adaptive bitrate stream templates are not currently supported.</p>
                      */
                     int64_t m_hlsTime;
                     bool m_hlsTimeHasBeenSet;
 
                     /**
-                     * 
+                     * <p>A predefined combination of encoding tools or features allowed in a video encoding standard, suitable for different scenarios.</p><p>Enumeration values:</p><ul><li>baseline: Supports only I/p frames and non-interlaced scenarios, suitable for video calls, mobile video, and other scenarios.</li><li>main: The mainstream Profile, providing I-frames, p-frames, and B-frames, and supporting both interlaced and non-interlaced modes. It is mainly used in mainstream audio and video consumption products such as video players and streaming media transmission devices.</li><li>high: The highest encoding level, adding 8X8 prediction on top of the main Profile and supporting custom quantification. It is widely used in Blu-ray storage, HDTV, and other scenarios.</li><li>default: Automatic filling along with the original video.  </li></ul><p>default value: default</p><p>This configuration item is valid only when Codec is libx264.</p>
                      */
                     std::string m_videoProfile;
                     bool m_videoProfileHasBeenSet;

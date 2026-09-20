@@ -38,7 +38,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * User-customized control parameters for audio/video moderation tasks
                 */
                 class UserDefineConfigureInfo : public AbstractModel
                 {
@@ -50,15 +50,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return FaceReviewInfo 
+                     * 获取Control parameter for user-defined character audio/video moderation.
+                     * @return FaceReviewInfo Control parameter for user-defined character audio/video moderation.
                      * 
                      */
                     UserDefineFaceReviewTemplateInfo GetFaceReviewInfo() const;
 
                     /**
-                     * 设置
-                     * @param _faceReviewInfo 
+                     * 设置Control parameter for user-defined character audio/video moderation.
+                     * @param _faceReviewInfo Control parameter for user-defined character audio/video moderation.
                      * 
                      */
                     void SetFaceReviewInfo(const UserDefineFaceReviewTemplateInfo& _faceReviewInfo);
@@ -71,15 +71,15 @@ namespace TencentCloud
                     bool FaceReviewInfoHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AsrReviewInfo 
+                     * 获取User-customized voice audio and video review control parameter.
+                     * @return AsrReviewInfo User-customized voice audio and video review control parameter.
                      * 
                      */
                     UserDefineAsrTextReviewTemplateInfo GetAsrReviewInfo() const;
 
                     /**
-                     * 设置
-                     * @param _asrReviewInfo 
+                     * 设置User-customized voice audio and video review control parameter.
+                     * @param _asrReviewInfo User-customized voice audio and video review control parameter.
                      * 
                      */
                     void SetAsrReviewInfo(const UserDefineAsrTextReviewTemplateInfo& _asrReviewInfo);
@@ -92,15 +92,15 @@ namespace TencentCloud
                     bool AsrReviewInfoHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return OcrReviewInfo 
+                     * 获取User-customized text, audio, and video moderation control parameters.
+                     * @return OcrReviewInfo User-customized text, audio, and video moderation control parameters.
                      * 
                      */
                     UserDefineOcrTextReviewTemplateInfo GetOcrReviewInfo() const;
 
                     /**
-                     * 设置
-                     * @param _ocrReviewInfo 
+                     * 设置User-customized text, audio, and video moderation control parameters.
+                     * @param _ocrReviewInfo User-customized text, audio, and video moderation control parameters.
                      * 
                      */
                     void SetOcrReviewInfo(const UserDefineOcrTextReviewTemplateInfo& _ocrReviewInfo);
@@ -115,19 +115,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Control parameter for user-defined character audio/video moderation.
                      */
                     UserDefineFaceReviewTemplateInfo m_faceReviewInfo;
                     bool m_faceReviewInfoHasBeenSet;
 
                     /**
-                     * 
+                     * User-customized voice audio and video review control parameter.
                      */
                     UserDefineAsrTextReviewTemplateInfo m_asrReviewInfo;
                     bool m_asrReviewInfoHasBeenSet;
 
                     /**
-                     * 
+                     * User-customized text, audio, and video moderation control parameters.
                      */
                     UserDefineOcrTextReviewTemplateInfo m_ocrReviewInfo;
                     bool m_ocrReviewInfoHasBeenSet;

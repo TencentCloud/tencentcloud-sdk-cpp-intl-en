@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Definition 
+                     * 获取<p>Audio and video quality inspection template ID.</p>
+                     * @return Definition <p>Audio and video quality inspection template ID.</p>
                      * 
                      */
                     int64_t GetDefinition() const;
@@ -60,7 +60,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p>Audio and video quality inspection template ID.</p>
                      */
                     int64_t m_definition;
                     bool m_definitionHasBeenSet;

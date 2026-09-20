@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Screenshot information at the specified time point
                 */
                 class MediaSnapshotByTimePicInfoItem : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return TimeOffset 
+                     * 获取The time offset of this screenshot in the video file, in <font color=red>ms</font>.
+                     * @return TimeOffset The time offset of this screenshot in the video file, in <font color=red>ms</font>.
                      * 
                      */
                     double GetTimeOffset() const;
 
                     /**
-                     * 设置
-                     * @param _timeOffset 
+                     * 设置The time offset of this screenshot in the video file, in <font color=red>ms</font>.
+                     * @param _timeOffset The time offset of this screenshot in the video file, in <font color=red>ms</font>.
                      * 
                      */
                     void SetTimeOffset(const double& _timeOffset);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool TimeOffsetHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Url 
+                     * 获取URL address of the screenshot.
+                     * @return Url URL address of the screenshot.
                      * 
                      */
                     std::string GetUrl() const;
 
                     /**
-                     * 设置
-                     * @param _url 
+                     * 设置URL address of the screenshot.
+                     * @param _url URL address of the screenshot.
                      * 
                      */
                     void SetUrl(const std::string& _url);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool UrlHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return WaterMarkDefinition 
+                     * 获取List of template IDs used for watermarking if the screenshot is watermarked.
+                     * @return WaterMarkDefinition List of template IDs used for watermarking if the screenshot is watermarked.
                      * 
                      */
                     std::vector<int64_t> GetWaterMarkDefinition() const;
 
                     /**
-                     * 设置
-                     * @param _waterMarkDefinition 
+                     * 设置List of template IDs used for watermarking if the screenshot is watermarked.
+                     * @param _waterMarkDefinition List of template IDs used for watermarking if the screenshot is watermarked.
                      * 
                      */
                     void SetWaterMarkDefinition(const std::vector<int64_t>& _waterMarkDefinition);
@@ -112,19 +112,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * The time offset of this screenshot in the video file, in <font color=red>ms</font>.
                      */
                     double m_timeOffset;
                     bool m_timeOffsetHasBeenSet;
 
                     /**
-                     * 
+                     * URL address of the screenshot.
                      */
                     std::string m_url;
                     bool m_urlHasBeenSet;
 
                     /**
-                     * 
+                     * List of template IDs used for watermarking if the screenshot is watermarked.
                      */
                     std::vector<int64_t> m_waterMarkDefinition;
                     bool m_waterMarkDefinitionHasBeenSet;

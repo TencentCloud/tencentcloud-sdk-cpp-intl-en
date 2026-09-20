@@ -45,7 +45,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Audio/video moderation result
                 */
                 class AiContentReviewResult : public AbstractModel
                 {
@@ -57,15 +57,55 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Type 
+                     * 获取Task type. Valid values:
+<li>Porn: whether image recognition involves offensive content</li>
+<li>Terrorism: image recognition of whether unsafe information is involved</li>
+<li>Political: Whether image recognition involves inappropriate information</li>
+<li>Porn.Asr: ASR text (text in audio) authentication for whether it involves offensive content</li>
+<li>Porn.Ocr: whether Ocr text identification involves offensive content</li>
+<li>Political.Asr: ASR text (text in audio) authentication for whether it involves inappropriate information</li>
+<li>Political.Ocr: Ocr text identification, whether it involves inappropriate information</li>
+<li>Terrorism.Ocr: whether Ocr text identification involves unsafe information</li>
+<li>Prohibited.Asr: Prohibited information recognition in ASR text (text in audio)</li>
+<li>Prohibited.Ocr: OCR text prohibited information recognition</li>
+                     * @return Type Task type. Valid values:
+<li>Porn: whether image recognition involves offensive content</li>
+<li>Terrorism: image recognition of whether unsafe information is involved</li>
+<li>Political: Whether image recognition involves inappropriate information</li>
+<li>Porn.Asr: ASR text (text in audio) authentication for whether it involves offensive content</li>
+<li>Porn.Ocr: whether Ocr text identification involves offensive content</li>
+<li>Political.Asr: ASR text (text in audio) authentication for whether it involves inappropriate information</li>
+<li>Political.Ocr: Ocr text identification, whether it involves inappropriate information</li>
+<li>Terrorism.Ocr: whether Ocr text identification involves unsafe information</li>
+<li>Prohibited.Asr: Prohibited information recognition in ASR text (text in audio)</li>
+<li>Prohibited.Ocr: OCR text prohibited information recognition</li>
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置
-                     * @param _type 
+                     * 设置Task type. Valid values:
+<li>Porn: whether image recognition involves offensive content</li>
+<li>Terrorism: image recognition of whether unsafe information is involved</li>
+<li>Political: Whether image recognition involves inappropriate information</li>
+<li>Porn.Asr: ASR text (text in audio) authentication for whether it involves offensive content</li>
+<li>Porn.Ocr: whether Ocr text identification involves offensive content</li>
+<li>Political.Asr: ASR text (text in audio) authentication for whether it involves inappropriate information</li>
+<li>Political.Ocr: Ocr text identification, whether it involves inappropriate information</li>
+<li>Terrorism.Ocr: whether Ocr text identification involves unsafe information</li>
+<li>Prohibited.Asr: Prohibited information recognition in ASR text (text in audio)</li>
+<li>Prohibited.Ocr: OCR text prohibited information recognition</li>
+                     * @param _type Task type. Valid values:
+<li>Porn: whether image recognition involves offensive content</li>
+<li>Terrorism: image recognition of whether unsafe information is involved</li>
+<li>Political: Whether image recognition involves inappropriate information</li>
+<li>Porn.Asr: ASR text (text in audio) authentication for whether it involves offensive content</li>
+<li>Porn.Ocr: whether Ocr text identification involves offensive content</li>
+<li>Political.Asr: ASR text (text in audio) authentication for whether it involves inappropriate information</li>
+<li>Political.Ocr: Ocr text identification, whether it involves inappropriate information</li>
+<li>Terrorism.Ocr: whether Ocr text identification involves unsafe information</li>
+<li>Prohibited.Asr: Prohibited information recognition in ASR text (text in audio)</li>
+<li>Prohibited.Ocr: OCR text prohibited information recognition</li>
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -78,15 +118,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return PornTask 
+                     * 获取Query result of a video audio/video moderation task (frames involving offensive content). Valid when the task type is Porn.
+                     * @return PornTask Query result of a video audio/video moderation task (frames involving offensive content). Valid when the task type is Porn.
                      * 
                      */
                     AiReviewTaskPornResult GetPornTask() const;
 
                     /**
-                     * 设置
-                     * @param _pornTask 
+                     * 设置Query result of a video audio/video moderation task (frames involving offensive content). Valid when the task type is Porn.
+                     * @param _pornTask Query result of a video audio/video moderation task (frames involving offensive content). Valid when the task type is Porn.
                      * 
                      */
                     void SetPornTask(const AiReviewTaskPornResult& _pornTask);
@@ -99,15 +139,15 @@ namespace TencentCloud
                     bool PornTaskHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return TerrorismTask 
+                     * 获取Query result of a video audio/video moderation task (visuals involve unsafe information). Valid when the task type is Terrorism.
+                     * @return TerrorismTask Query result of a video audio/video moderation task (visuals involve unsafe information). Valid when the task type is Terrorism.
                      * 
                      */
                     AiReviewTaskTerrorismResult GetTerrorismTask() const;
 
                     /**
-                     * 设置
-                     * @param _terrorismTask 
+                     * 设置Query result of a video audio/video moderation task (visuals involve unsafe information). Valid when the task type is Terrorism.
+                     * @param _terrorismTask Query result of a video audio/video moderation task (visuals involve unsafe information). Valid when the task type is Terrorism.
                      * 
                      */
                     void SetTerrorismTask(const AiReviewTaskTerrorismResult& _terrorismTask);
@@ -120,15 +160,15 @@ namespace TencentCloud
                     bool TerrorismTaskHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return PoliticalTask 
+                     * 获取Query result of a video audio/video moderation task (frames involving inappropriate information). Valid when the task type is Political.
+                     * @return PoliticalTask Query result of a video audio/video moderation task (frames involving inappropriate information). Valid when the task type is Political.
                      * 
                      */
                     AiReviewTaskPoliticalResult GetPoliticalTask() const;
 
                     /**
-                     * 设置
-                     * @param _politicalTask 
+                     * 设置Query result of a video audio/video moderation task (frames involving inappropriate information). Valid when the task type is Political.
+                     * @param _politicalTask Query result of a video audio/video moderation task (frames involving inappropriate information). Valid when the task type is Political.
                      * 
                      */
                     void SetPoliticalTask(const AiReviewTaskPoliticalResult& _politicalTask);
@@ -141,15 +181,15 @@ namespace TencentCloud
                     bool PoliticalTaskHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return PornAsrTask 
+                     * 获取Query result of a video audio/video moderation task (ASR text involves offensive content). Valid when the task type is Porn.Asr.
+                     * @return PornAsrTask Query result of a video audio/video moderation task (ASR text involves offensive content). Valid when the task type is Porn.Asr.
                      * 
                      */
                     AiReviewTaskPornAsrResult GetPornAsrTask() const;
 
                     /**
-                     * 设置
-                     * @param _pornAsrTask 
+                     * 设置Query result of a video audio/video moderation task (ASR text involves offensive content). Valid when the task type is Porn.Asr.
+                     * @param _pornAsrTask Query result of a video audio/video moderation task (ASR text involves offensive content). Valid when the task type is Porn.Asr.
                      * 
                      */
                     void SetPornAsrTask(const AiReviewTaskPornAsrResult& _pornAsrTask);
@@ -162,15 +202,15 @@ namespace TencentCloud
                     bool PornAsrTaskHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return PornOcrTask 
+                     * 获取Query result of a video audio/video moderation task (OCR text involving offensive content). Valid when the task type is Porn.Ocr.
+                     * @return PornOcrTask Query result of a video audio/video moderation task (OCR text involving offensive content). Valid when the task type is Porn.Ocr.
                      * 
                      */
                     AiReviewTaskPornOcrResult GetPornOcrTask() const;
 
                     /**
-                     * 设置
-                     * @param _pornOcrTask 
+                     * 设置Query result of a video audio/video moderation task (OCR text involving offensive content). Valid when the task type is Porn.Ocr.
+                     * @param _pornOcrTask Query result of a video audio/video moderation task (OCR text involving offensive content). Valid when the task type is Porn.Ocr.
                      * 
                      */
                     void SetPornOcrTask(const AiReviewTaskPornOcrResult& _pornOcrTask);
@@ -183,15 +223,15 @@ namespace TencentCloud
                     bool PornOcrTaskHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return PoliticalAsrTask 
+                     * 获取Query result of a video audio/video moderation task (ASR text involving inappropriate information). Valid when the task type is Political.Asr.
+                     * @return PoliticalAsrTask Query result of a video audio/video moderation task (ASR text involving inappropriate information). Valid when the task type is Political.Asr.
                      * 
                      */
                     AiReviewTaskPoliticalAsrResult GetPoliticalAsrTask() const;
 
                     /**
-                     * 设置
-                     * @param _politicalAsrTask 
+                     * 设置Query result of a video audio/video moderation task (ASR text involving inappropriate information). Valid when the task type is Political.Asr.
+                     * @param _politicalAsrTask Query result of a video audio/video moderation task (ASR text involving inappropriate information). Valid when the task type is Political.Asr.
                      * 
                      */
                     void SetPoliticalAsrTask(const AiReviewTaskPoliticalAsrResult& _politicalAsrTask);
@@ -204,15 +244,15 @@ namespace TencentCloud
                     bool PoliticalAsrTaskHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return PoliticalOcrTask 
+                     * 获取Query result of a video audio/video moderation task (OCR text involves inappropriate information). Valid when the task type is Political.Ocr.
+                     * @return PoliticalOcrTask Query result of a video audio/video moderation task (OCR text involves inappropriate information). Valid when the task type is Political.Ocr.
                      * 
                      */
                     AiReviewTaskPoliticalOcrResult GetPoliticalOcrTask() const;
 
                     /**
-                     * 设置
-                     * @param _politicalOcrTask 
+                     * 设置Query result of a video audio/video moderation task (OCR text involves inappropriate information). Valid when the task type is Political.Ocr.
+                     * @param _politicalOcrTask Query result of a video audio/video moderation task (OCR text involves inappropriate information). Valid when the task type is Political.Ocr.
                      * 
                      */
                     void SetPoliticalOcrTask(const AiReviewTaskPoliticalOcrResult& _politicalOcrTask);
@@ -225,15 +265,15 @@ namespace TencentCloud
                     bool PoliticalOcrTaskHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return TerrorismOcrTask 
+                     * 获取Query result of a video audio/video moderation task (OCR text involving unsafe information). Valid when the task type is Terrorism.Ocr.
+                     * @return TerrorismOcrTask Query result of a video audio/video moderation task (OCR text involving unsafe information). Valid when the task type is Terrorism.Ocr.
                      * 
                      */
                     AiReviewTaskTerrorismOcrResult GetTerrorismOcrTask() const;
 
                     /**
-                     * 设置
-                     * @param _terrorismOcrTask 
+                     * 设置Query result of a video audio/video moderation task (OCR text involving unsafe information). Valid when the task type is Terrorism.Ocr.
+                     * @param _terrorismOcrTask Query result of a video audio/video moderation task (OCR text involving unsafe information). Valid when the task type is Terrorism.Ocr.
                      * 
                      */
                     void SetTerrorismOcrTask(const AiReviewTaskTerrorismOcrResult& _terrorismOcrTask);
@@ -246,15 +286,15 @@ namespace TencentCloud
                     bool TerrorismOcrTaskHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ProhibitedOcrTask 
+                     * 获取Query result of a video audio/video moderation OCR text prohibited task. Valid when the task type is Prohibited.Ocr.
+                     * @return ProhibitedOcrTask Query result of a video audio/video moderation OCR text prohibited task. Valid when the task type is Prohibited.Ocr.
                      * 
                      */
                     AiReviewTaskProhibitedOcrResult GetProhibitedOcrTask() const;
 
                     /**
-                     * 设置
-                     * @param _prohibitedOcrTask 
+                     * 设置Query result of a video audio/video moderation OCR text prohibited task. Valid when the task type is Prohibited.Ocr.
+                     * @param _prohibitedOcrTask Query result of a video audio/video moderation OCR text prohibited task. Valid when the task type is Prohibited.Ocr.
                      * 
                      */
                     void SetProhibitedOcrTask(const AiReviewTaskProhibitedOcrResult& _prohibitedOcrTask);
@@ -267,15 +307,15 @@ namespace TencentCloud
                     bool ProhibitedOcrTaskHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ProhibitedAsrTask 
+                     * 获取Query result of the ASR text prohibited moderation task for video and audio. Valid when the task type is Prohibited.Asr.
+                     * @return ProhibitedAsrTask Query result of the ASR text prohibited moderation task for video and audio. Valid when the task type is Prohibited.Asr.
                      * 
                      */
                     AiReviewTaskProhibitedAsrResult GetProhibitedAsrTask() const;
 
                     /**
-                     * 设置
-                     * @param _prohibitedAsrTask 
+                     * 设置Query result of the ASR text prohibited moderation task for video and audio. Valid when the task type is Prohibited.Asr.
+                     * @param _prohibitedAsrTask Query result of the ASR text prohibited moderation task for video and audio. Valid when the task type is Prohibited.Asr.
                      * 
                      */
                     void SetProhibitedAsrTask(const AiReviewTaskProhibitedAsrResult& _prohibitedAsrTask);
@@ -290,67 +330,77 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Task type. Valid values:
+<li>Porn: whether image recognition involves offensive content</li>
+<li>Terrorism: image recognition of whether unsafe information is involved</li>
+<li>Political: Whether image recognition involves inappropriate information</li>
+<li>Porn.Asr: ASR text (text in audio) authentication for whether it involves offensive content</li>
+<li>Porn.Ocr: whether Ocr text identification involves offensive content</li>
+<li>Political.Asr: ASR text (text in audio) authentication for whether it involves inappropriate information</li>
+<li>Political.Ocr: Ocr text identification, whether it involves inappropriate information</li>
+<li>Terrorism.Ocr: whether Ocr text identification involves unsafe information</li>
+<li>Prohibited.Asr: Prohibited information recognition in ASR text (text in audio)</li>
+<li>Prohibited.Ocr: OCR text prohibited information recognition</li>
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * 
+                     * Query result of a video audio/video moderation task (frames involving offensive content). Valid when the task type is Porn.
                      */
                     AiReviewTaskPornResult m_pornTask;
                     bool m_pornTaskHasBeenSet;
 
                     /**
-                     * 
+                     * Query result of a video audio/video moderation task (visuals involve unsafe information). Valid when the task type is Terrorism.
                      */
                     AiReviewTaskTerrorismResult m_terrorismTask;
                     bool m_terrorismTaskHasBeenSet;
 
                     /**
-                     * 
+                     * Query result of a video audio/video moderation task (frames involving inappropriate information). Valid when the task type is Political.
                      */
                     AiReviewTaskPoliticalResult m_politicalTask;
                     bool m_politicalTaskHasBeenSet;
 
                     /**
-                     * 
+                     * Query result of a video audio/video moderation task (ASR text involves offensive content). Valid when the task type is Porn.Asr.
                      */
                     AiReviewTaskPornAsrResult m_pornAsrTask;
                     bool m_pornAsrTaskHasBeenSet;
 
                     /**
-                     * 
+                     * Query result of a video audio/video moderation task (OCR text involving offensive content). Valid when the task type is Porn.Ocr.
                      */
                     AiReviewTaskPornOcrResult m_pornOcrTask;
                     bool m_pornOcrTaskHasBeenSet;
 
                     /**
-                     * 
+                     * Query result of a video audio/video moderation task (ASR text involving inappropriate information). Valid when the task type is Political.Asr.
                      */
                     AiReviewTaskPoliticalAsrResult m_politicalAsrTask;
                     bool m_politicalAsrTaskHasBeenSet;
 
                     /**
-                     * 
+                     * Query result of a video audio/video moderation task (OCR text involves inappropriate information). Valid when the task type is Political.Ocr.
                      */
                     AiReviewTaskPoliticalOcrResult m_politicalOcrTask;
                     bool m_politicalOcrTaskHasBeenSet;
 
                     /**
-                     * 
+                     * Query result of a video audio/video moderation task (OCR text involving unsafe information). Valid when the task type is Terrorism.Ocr.
                      */
                     AiReviewTaskTerrorismOcrResult m_terrorismOcrTask;
                     bool m_terrorismOcrTaskHasBeenSet;
 
                     /**
-                     * 
+                     * Query result of a video audio/video moderation OCR text prohibited task. Valid when the task type is Prohibited.Ocr.
                      */
                     AiReviewTaskProhibitedOcrResult m_prohibitedOcrTask;
                     bool m_prohibitedOcrTaskHasBeenSet;
 
                     /**
-                     * 
+                     * Query result of the ASR text prohibited moderation task for video and audio. Valid when the task type is Prohibited.Asr.
                      */
                     AiReviewTaskProhibitedAsrResult m_prohibitedAsrTask;
                     bool m_prohibitedAsrTaskHasBeenSet;

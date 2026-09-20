@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Clipping solidification task information.
                 */
                 class PersistenceCompleteTask : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return FileId 
+                     * 获取The generated media ID.
+                     * @return FileId The generated media ID.
                      * 
                      */
                     std::string GetFileId() const;
 
                     /**
-                     * 设置
-                     * @param _fileId 
+                     * 设置The generated media ID.
+                     * @param _fileId The generated media ID.
                      * 
                      */
                     void SetFileId(const std::string& _fileId);
@@ -68,15 +68,27 @@ namespace TencentCloud
                     bool FileIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return PersistenceSource 
+                     * 获取Sources of clipping solidification include the following three types.
+<li>SimpleHlsClip: comes from simple HLS edit;</li>
+<li>FastEditMedia: comes from rapid media editing;</li>
+<li>LiveRealTimeClip: comes from live stream clipping.</li>
+                     * @return PersistenceSource Sources of clipping solidification include the following three types.
+<li>SimpleHlsClip: comes from simple HLS edit;</li>
+<li>FastEditMedia: comes from rapid media editing;</li>
+<li>LiveRealTimeClip: comes from live stream clipping.</li>
                      * 
                      */
                     std::string GetPersistenceSource() const;
 
                     /**
-                     * 设置
-                     * @param _persistenceSource 
+                     * 设置Sources of clipping solidification include the following three types.
+<li>SimpleHlsClip: comes from simple HLS edit;</li>
+<li>FastEditMedia: comes from rapid media editing;</li>
+<li>LiveRealTimeClip: comes from live stream clipping.</li>
+                     * @param _persistenceSource Sources of clipping solidification include the following three types.
+<li>SimpleHlsClip: comes from simple HLS edit;</li>
+<li>FastEditMedia: comes from rapid media editing;</li>
+<li>LiveRealTimeClip: comes from live stream clipping.</li>
                      * 
                      */
                     void SetPersistenceSource(const std::string& _persistenceSource);
@@ -91,13 +103,16 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * The generated media ID.
                      */
                     std::string m_fileId;
                     bool m_fileIdHasBeenSet;
 
                     /**
-                     * 
+                     * Sources of clipping solidification include the following three types.
+<li>SimpleHlsClip: comes from simple HLS edit;</li>
+<li>FastEditMedia: comes from rapid media editing;</li>
+<li>LiveRealTimeClip: comes from live stream clipping.</li>
                      */
                     std::string m_persistenceSource;
                     bool m_persistenceSourceHasBeenSet;

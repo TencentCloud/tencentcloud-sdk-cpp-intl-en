@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取NFCToken
-                     * @return Token NFCToken
+                     * 获取NFCToken (valid for 10 minutes)
+                     * @return Token NFCToken (valid for 10 minutes)
                      * 
                      */
                     std::string GetToken() const;
@@ -60,7 +60,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * NFCToken
+                     * NFCToken (valid for 10 minutes)
                      */
                     std::string m_token;
                     bool m_tokenHasBeenSet;

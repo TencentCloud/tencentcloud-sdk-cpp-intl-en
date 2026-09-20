@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return SubAppId 
+                     * 获取<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID.</b>
+                     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID.</b>
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置
-                     * @param _subAppId 
+                     * 设置<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID.</b>
+                     * @param _subAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID.</b>
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool SubAppIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return RoundPlayId 
+                     * 获取Carousel playlist unique identifier.
+                     * @return RoundPlayId Carousel playlist unique identifier.
                      * 
                      */
                     std::string GetRoundPlayId() const;
 
                     /**
-                     * 设置
-                     * @param _roundPlayId 
+                     * 设置Carousel playlist unique identifier.
+                     * @param _roundPlayId Carousel playlist unique identifier.
                      * 
                      */
                     void SetRoundPlayId(const std::string& _roundPlayId);
@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool RoundPlayIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Operation 
+                     * 获取Operation type. Valid values: <li>Insert: insert a program into the current playback list. The inserted program remains valid in subsequent carousel processes.</li> <li>InsertTemporary: temporarily insert a program into the current playback list. Temporarily inserted programs are only effective during this carousel process.</li><li>Delete: delete a program from the playback list. Cannot delete currently playing programs.</li>
+                     * @return Operation Operation type. Valid values: <li>Insert: insert a program into the current playback list. The inserted program remains valid in subsequent carousel processes.</li> <li>InsertTemporary: temporarily insert a program into the current playback list. Temporarily inserted programs are only effective during this carousel process.</li><li>Delete: delete a program from the playback list. Cannot delete currently playing programs.</li>
                      * 
                      */
                     std::string GetOperation() const;
 
                     /**
-                     * 设置
-                     * @param _operation 
+                     * 设置Operation type. Valid values: <li>Insert: insert a program into the current playback list. The inserted program remains valid in subsequent carousel processes.</li> <li>InsertTemporary: temporarily insert a program into the current playback list. Temporarily inserted programs are only effective during this carousel process.</li><li>Delete: delete a program from the playback list. Cannot delete currently playing programs.</li>
+                     * @param _operation Operation type. Valid values: <li>Insert: insert a program into the current playback list. The inserted program remains valid in subsequent carousel processes.</li> <li>InsertTemporary: temporarily insert a program into the current playback list. Temporarily inserted programs are only effective during this carousel process.</li><li>Delete: delete a program from the playback list. Cannot delete currently playing programs.</li>
                      * 
                      */
                     void SetOperation(const std::string& _operation);
@@ -107,15 +107,15 @@ namespace TencentCloud
                     bool OperationHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ItemId 
+                     * 获取Playlist program ID. <li>When Operation is Insert, this field is required, indicating that the inserted program list is located after this program.</li> <li>When Operation is InsertTemporary, this field is optional. If not filled in, the program is inserted at the latest insertion point. If this field is filled in and SegmentIndex is also filled in, the program is inserted behind the SegmentIndex fragment of the program corresponding to ItemId. Otherwise, it is inserted after this program.</li> <li>When Operation is Delete, this field is required, indicating deletion of this program. Currently playing programs cannot be deleted.</li>
+                     * @return ItemId Playlist program ID. <li>When Operation is Insert, this field is required, indicating that the inserted program list is located after this program.</li> <li>When Operation is InsertTemporary, this field is optional. If not filled in, the program is inserted at the latest insertion point. If this field is filled in and SegmentIndex is also filled in, the program is inserted behind the SegmentIndex fragment of the program corresponding to ItemId. Otherwise, it is inserted after this program.</li> <li>When Operation is Delete, this field is required, indicating deletion of this program. Currently playing programs cannot be deleted.</li>
                      * 
                      */
                     std::string GetItemId() const;
 
                     /**
-                     * 设置
-                     * @param _itemId 
+                     * 设置Playlist program ID. <li>When Operation is Insert, this field is required, indicating that the inserted program list is located after this program.</li> <li>When Operation is InsertTemporary, this field is optional. If not filled in, the program is inserted at the latest insertion point. If this field is filled in and SegmentIndex is also filled in, the program is inserted behind the SegmentIndex fragment of the program corresponding to ItemId. Otherwise, it is inserted after this program.</li> <li>When Operation is Delete, this field is required, indicating deletion of this program. Currently playing programs cannot be deleted.</li>
+                     * @param _itemId Playlist program ID. <li>When Operation is Insert, this field is required, indicating that the inserted program list is located after this program.</li> <li>When Operation is InsertTemporary, this field is optional. If not filled in, the program is inserted at the latest insertion point. If this field is filled in and SegmentIndex is also filled in, the program is inserted behind the SegmentIndex fragment of the program corresponding to ItemId. Otherwise, it is inserted after this program.</li> <li>When Operation is Delete, this field is required, indicating deletion of this program. Currently playing programs cannot be deleted.</li>
                      * 
                      */
                     void SetItemId(const std::string& _itemId);
@@ -128,15 +128,15 @@ namespace TencentCloud
                     bool ItemIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SegmentIndex 
+                     * 获取Index number of the M3U8 file segment. The SegmentIndex of the first segment in an M3U8 file is 0. This parameter is valid when Operation is InsertTemporary and ItemId has a value.
+                     * @return SegmentIndex Index number of the M3U8 file segment. The SegmentIndex of the first segment in an M3U8 file is 0. This parameter is valid when Operation is InsertTemporary and ItemId has a value.
                      * 
                      */
                     int64_t GetSegmentIndex() const;
 
                     /**
-                     * 设置
-                     * @param _segmentIndex 
+                     * 设置Index number of the M3U8 file segment. The SegmentIndex of the first segment in an M3U8 file is 0. This parameter is valid when Operation is InsertTemporary and ItemId has a value.
+                     * @param _segmentIndex Index number of the M3U8 file segment. The SegmentIndex of the first segment in an M3U8 file is 0. This parameter is valid when Operation is InsertTemporary and ItemId has a value.
                      * 
                      */
                     void SetSegmentIndex(const int64_t& _segmentIndex);
@@ -149,15 +149,15 @@ namespace TencentCloud
                     bool SegmentIndexHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return RoundPlaylist 
+                     * 获取Program list. Required when Operation is Insert, InsertTemporary, or Delete. Indicates the program list to operate. The maximum list length is 10.
+                     * @return RoundPlaylist Program list. Required when Operation is Insert, InsertTemporary, or Delete. Indicates the program list to operate. The maximum list length is 10.
                      * 
                      */
                     std::vector<RoundPlayListItemInfo> GetRoundPlaylist() const;
 
                     /**
-                     * 设置
-                     * @param _roundPlaylist 
+                     * 设置Program list. Required when Operation is Insert, InsertTemporary, or Delete. Indicates the program list to operate. The maximum list length is 10.
+                     * @param _roundPlaylist Program list. Required when Operation is Insert, InsertTemporary, or Delete. Indicates the program list to operate. The maximum list length is 10.
                      * 
                      */
                     void SetRoundPlaylist(const std::vector<RoundPlayListItemInfo>& _roundPlaylist);
@@ -172,37 +172,37 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID.</b>
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
 
                     /**
-                     * 
+                     * Carousel playlist unique identifier.
                      */
                     std::string m_roundPlayId;
                     bool m_roundPlayIdHasBeenSet;
 
                     /**
-                     * 
+                     * Operation type. Valid values: <li>Insert: insert a program into the current playback list. The inserted program remains valid in subsequent carousel processes.</li> <li>InsertTemporary: temporarily insert a program into the current playback list. Temporarily inserted programs are only effective during this carousel process.</li><li>Delete: delete a program from the playback list. Cannot delete currently playing programs.</li>
                      */
                     std::string m_operation;
                     bool m_operationHasBeenSet;
 
                     /**
-                     * 
+                     * Playlist program ID. <li>When Operation is Insert, this field is required, indicating that the inserted program list is located after this program.</li> <li>When Operation is InsertTemporary, this field is optional. If not filled in, the program is inserted at the latest insertion point. If this field is filled in and SegmentIndex is also filled in, the program is inserted behind the SegmentIndex fragment of the program corresponding to ItemId. Otherwise, it is inserted after this program.</li> <li>When Operation is Delete, this field is required, indicating deletion of this program. Currently playing programs cannot be deleted.</li>
                      */
                     std::string m_itemId;
                     bool m_itemIdHasBeenSet;
 
                     /**
-                     * 
+                     * Index number of the M3U8 file segment. The SegmentIndex of the first segment in an M3U8 file is 0. This parameter is valid when Operation is InsertTemporary and ItemId has a value.
                      */
                     int64_t m_segmentIndex;
                     bool m_segmentIndexHasBeenSet;
 
                     /**
-                     * 
+                     * Program list. Required when Operation is Insert, InsertTemporary, or Delete. Indicates the program list to operate. The maximum list length is 10.
                      */
                     std::vector<RoundPlayListItemInfo> m_roundPlaylist;
                     bool m_roundPlaylistHasBeenSet;

@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Task control parameter for authentication involving unsafe information
                 */
                 class TerrorismConfigureInfo : public AbstractModel
                 {
@@ -49,15 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return ImgReviewInfo 
+                     * 获取Task control parameter for image recognition involving unsafe information.
+                     * @return ImgReviewInfo Task control parameter for image recognition involving unsafe information.
                      * 
                      */
                     TerrorismImgReviewTemplateInfo GetImgReviewInfo() const;
 
                     /**
-                     * 设置
-                     * @param _imgReviewInfo 
+                     * 设置Task control parameter for image recognition involving unsafe information.
+                     * @param _imgReviewInfo Task control parameter for image recognition involving unsafe information.
                      * 
                      */
                     void SetImgReviewInfo(const TerrorismImgReviewTemplateInfo& _imgReviewInfo);
@@ -70,15 +70,15 @@ namespace TencentCloud
                     bool ImgReviewInfoHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return OcrReviewInfo 
+                     * 获取Task control parameter for text identification involving unsafe information.
+                     * @return OcrReviewInfo Task control parameter for text identification involving unsafe information.
                      * 
                      */
                     TerrorismOcrReviewTemplateInfo GetOcrReviewInfo() const;
 
                     /**
-                     * 设置
-                     * @param _ocrReviewInfo 
+                     * 设置Task control parameter for text identification involving unsafe information.
+                     * @param _ocrReviewInfo Task control parameter for text identification involving unsafe information.
                      * 
                      */
                     void SetOcrReviewInfo(const TerrorismOcrReviewTemplateInfo& _ocrReviewInfo);
@@ -93,13 +93,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Task control parameter for image recognition involving unsafe information.
                      */
                     TerrorismImgReviewTemplateInfo m_imgReviewInfo;
                     bool m_imgReviewInfoHasBeenSet;
 
                     /**
-                     * 
+                     * Task control parameter for text identification involving unsafe information.
                      */
                     TerrorismOcrReviewTemplateInfo m_ocrReviewInfo;
                     bool m_ocrReviewInfoHasBeenSet;

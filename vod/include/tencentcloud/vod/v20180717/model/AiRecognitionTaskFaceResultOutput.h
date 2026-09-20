@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Intelligent face recognition output.
                 */
                 class AiRecognitionTaskFaceResultOutput : public AbstractModel
                 {
@@ -48,15 +48,19 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return ResultSet 
+                     * 获取Intelligent face recognition result set.
+<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to ResultSetFileUrl.
+                     * @return ResultSet Intelligent face recognition result set.
+<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to ResultSetFileUrl.
                      * 
                      */
                     std::vector<AiRecognitionTaskFaceResultItem> GetResultSet() const;
 
                     /**
-                     * 设置
-                     * @param _resultSet 
+                     * 设置Intelligent face recognition result set.
+<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to ResultSetFileUrl.
+                     * @param _resultSet Intelligent face recognition result set.
+<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to ResultSetFileUrl.
                      * 
                      */
                     void SetResultSet(const std::vector<AiRecognitionTaskFaceResultItem>& _resultSet);
@@ -69,15 +73,15 @@ namespace TencentCloud
                     bool ResultSetHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ResultSetFileUrl 
+                     * 获取URL of the intelligent face recognition result set file. The content of the file is in JSON format, and the data structure is consistent with the ResultSet fields. (The file is not retained permanently. It will be deleted after reaching the ResultSetFileUrlExpireTime time point.)
+                     * @return ResultSetFileUrl URL of the intelligent face recognition result set file. The content of the file is in JSON format, and the data structure is consistent with the ResultSet fields. (The file is not retained permanently. It will be deleted after reaching the ResultSetFileUrlExpireTime time point.)
                      * 
                      */
                     std::string GetResultSetFileUrl() const;
 
                     /**
-                     * 设置
-                     * @param _resultSetFileUrl 
+                     * 设置URL of the intelligent face recognition result set file. The content of the file is in JSON format, and the data structure is consistent with the ResultSet fields. (The file is not retained permanently. It will be deleted after reaching the ResultSetFileUrlExpireTime time point.)
+                     * @param _resultSetFileUrl URL of the intelligent face recognition result set file. The content of the file is in JSON format, and the data structure is consistent with the ResultSet fields. (The file is not retained permanently. It will be deleted after reaching the ResultSetFileUrlExpireTime time point.)
                      * 
                      */
                     void SetResultSetFileUrl(const std::string& _resultSetFileUrl);
@@ -90,15 +94,15 @@ namespace TencentCloud
                     bool ResultSetFileUrlHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ResultSetFileUrlExpireTime 
+                     * 获取Expiration time of the intelligent face recognition result set file URL, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @return ResultSetFileUrlExpireTime Expiration time of the intelligent face recognition result set file URL, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      * 
                      */
                     std::string GetResultSetFileUrlExpireTime() const;
 
                     /**
-                     * 设置
-                     * @param _resultSetFileUrlExpireTime 
+                     * 设置Expiration time of the intelligent face recognition result set file URL, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @param _resultSetFileUrlExpireTime Expiration time of the intelligent face recognition result set file URL, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      * 
                      */
                     void SetResultSetFileUrlExpireTime(const std::string& _resultSetFileUrlExpireTime);
@@ -113,19 +117,20 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Intelligent face recognition result set.
+<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to ResultSetFileUrl.
                      */
                     std::vector<AiRecognitionTaskFaceResultItem> m_resultSet;
                     bool m_resultSetHasBeenSet;
 
                     /**
-                     * 
+                     * URL of the intelligent face recognition result set file. The content of the file is in JSON format, and the data structure is consistent with the ResultSet fields. (The file is not retained permanently. It will be deleted after reaching the ResultSetFileUrlExpireTime time point.)
                      */
                     std::string m_resultSetFileUrl;
                     bool m_resultSetFileUrlHasBeenSet;
 
                     /**
-                     * 
+                     * Expiration time of the intelligent face recognition result set file URL, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      */
                     std::string m_resultSetFileUrlExpireTime;
                     bool m_resultSetFileUrlExpireTimeHasBeenSet;

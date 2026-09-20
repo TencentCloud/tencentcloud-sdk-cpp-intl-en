@@ -45,15 +45,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return FileId 
+                     * 获取<p>Media file unique identifier.</p>
+                     * @return FileId <p>Media file unique identifier.</p>
                      * 
                      */
                     std::string GetFileId() const;
 
                     /**
-                     * 设置
-                     * @param _fileId 
+                     * 设置<p>Media file unique identifier.</p>
+                     * @param _fileId <p>Media file unique identifier.</p>
                      * 
                      */
                     void SetFileId(const std::string& _fileId);
@@ -66,15 +66,15 @@ namespace TencentCloud
                     bool FileIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SubAppId 
+                     * 获取<p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled in with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
+                     * @return SubAppId <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled in with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置
-                     * @param _subAppId 
+                     * 设置<p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled in with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
+                     * @param _subAppId <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled in with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -87,15 +87,15 @@ namespace TencentCloud
                     bool SubAppIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Name 
+                     * 获取<p>Media filename, up to 64 characters.</p>
+                     * @return Name <p>Media filename, up to 64 characters.</p>
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置
-                     * @param _name 
+                     * 设置<p>Media filename, up to 64 characters.</p>
+                     * @param _name <p>Media filename, up to 64 characters.</p>
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -108,15 +108,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Description 
+                     * 获取<p>Media file description, up to 128 characters.</p>
+                     * @return Description <p>Media file description, up to 128 characters.</p>
                      * 
                      */
                     std::string GetDescription() const;
 
                     /**
-                     * 设置
-                     * @param _description 
+                     * 设置<p>Media file description, up to 128 characters.</p>
+                     * @param _description <p>Media file description, up to 128 characters.</p>
                      * 
                      */
                     void SetDescription(const std::string& _description);
@@ -129,15 +129,15 @@ namespace TencentCloud
                     bool DescriptionHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ClassId 
+                     * 获取<p>Media File Category ID.</p>
+                     * @return ClassId <p>Media File Category ID.</p>
                      * 
                      */
                     int64_t GetClassId() const;
 
                     /**
-                     * 设置
-                     * @param _classId 
+                     * 设置<p>Media File Category ID.</p>
+                     * @param _classId <p>Media File Category ID.</p>
                      * 
                      */
                     void SetClassId(const int64_t& _classId);
@@ -150,15 +150,15 @@ namespace TencentCloud
                     bool ClassIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ExpireTime 
+                     * 获取<p>Media file expiry time in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>. "9999-12-31T23:59:59Z" means it never expires. After expiry, the media file and its related resources (transcoding results, sprites) will be permanently deleted.</p>
+                     * @return ExpireTime <p>Media file expiry time in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>. "9999-12-31T23:59:59Z" means it never expires. After expiry, the media file and its related resources (transcoding results, sprites) will be permanently deleted.</p>
                      * 
                      */
                     std::string GetExpireTime() const;
 
                     /**
-                     * 设置
-                     * @param _expireTime 
+                     * 设置<p>Media file expiry time in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>. "9999-12-31T23:59:59Z" means it never expires. After expiry, the media file and its related resources (transcoding results, sprites) will be permanently deleted.</p>
+                     * @param _expireTime <p>Media file expiry time in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>. "9999-12-31T23:59:59Z" means it never expires. After expiry, the media file and its related resources (transcoding results, sprites) will be permanently deleted.</p>
                      * 
                      */
                     void SetExpireTime(const std::string& _expireTime);
@@ -171,15 +171,15 @@ namespace TencentCloud
                     bool ExpireTimeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return CoverData 
+                     * 获取<p>Base64-encoded string of the video cover image file (for example, jpeg, png), only supports gif, jpeg, and png image formats.</p>
+                     * @return CoverData <p>Base64-encoded string of the video cover image file (for example, jpeg, png), only supports gif, jpeg, and png image formats.</p>
                      * 
                      */
                     std::string GetCoverData() const;
 
                     /**
-                     * 设置
-                     * @param _coverData 
+                     * 设置<p>Base64-encoded string of the video cover image file (for example, jpeg, png), only supports gif, jpeg, and png image formats.</p>
+                     * @param _coverData <p>Base64-encoded string of the video cover image file (for example, jpeg, png), only supports gif, jpeg, and png image formats.</p>
                      * 
                      */
                     void SetCoverData(const std::string& _coverData);
@@ -192,15 +192,15 @@ namespace TencentCloud
                     bool CoverDataHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AddKeyFrameDescs 
+                     * 获取<p>Newly added set of video timestamp information. If a timestamp already exists at a certain offset, an overlay operation will be performed. A single media file can have up to 100 timestamp entries. In the same request, the time offset parameters of AddKeyFrameDescs must all be different from those of DeleteKeyFrameDescs.</p>
+                     * @return AddKeyFrameDescs <p>Newly added set of video timestamp information. If a timestamp already exists at a certain offset, an overlay operation will be performed. A single media file can have up to 100 timestamp entries. In the same request, the time offset parameters of AddKeyFrameDescs must all be different from those of DeleteKeyFrameDescs.</p>
                      * 
                      */
                     std::vector<MediaKeyFrameDescItem> GetAddKeyFrameDescs() const;
 
                     /**
-                     * 设置
-                     * @param _addKeyFrameDescs 
+                     * 设置<p>Newly added set of video timestamp information. If a timestamp already exists at a certain offset, an overlay operation will be performed. A single media file can have up to 100 timestamp entries. In the same request, the time offset parameters of AddKeyFrameDescs must all be different from those of DeleteKeyFrameDescs.</p>
+                     * @param _addKeyFrameDescs <p>Newly added set of video timestamp information. If a timestamp already exists at a certain offset, an overlay operation will be performed. A single media file can have up to 100 timestamp entries. In the same request, the time offset parameters of AddKeyFrameDescs must all be different from those of DeleteKeyFrameDescs.</p>
                      * 
                      */
                     void SetAddKeyFrameDescs(const std::vector<MediaKeyFrameDescItem>& _addKeyFrameDescs);
@@ -213,15 +213,15 @@ namespace TencentCloud
                     bool AddKeyFrameDescsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return DeleteKeyFrameDescs 
+                     * 获取<p>Time offset of the video timestamp information set to be deleted, unit: seconds. In the same request, the time offset parameter of AddKeyFrameDescs must be different from that of DeleteKeyFrameDescs.</p>
+                     * @return DeleteKeyFrameDescs <p>Time offset of the video timestamp information set to be deleted, unit: seconds. In the same request, the time offset parameter of AddKeyFrameDescs must be different from that of DeleteKeyFrameDescs.</p>
                      * 
                      */
                     std::vector<double> GetDeleteKeyFrameDescs() const;
 
                     /**
-                     * 设置
-                     * @param _deleteKeyFrameDescs 
+                     * 设置<p>Time offset of the video timestamp information set to be deleted, unit: seconds. In the same request, the time offset parameter of AddKeyFrameDescs must be different from that of DeleteKeyFrameDescs.</p>
+                     * @param _deleteKeyFrameDescs <p>Time offset of the video timestamp information set to be deleted, unit: seconds. In the same request, the time offset parameter of AddKeyFrameDescs must be different from that of DeleteKeyFrameDescs.</p>
                      * 
                      */
                     void SetDeleteKeyFrameDescs(const std::vector<double>& _deleteKeyFrameDescs);
@@ -234,15 +234,15 @@ namespace TencentCloud
                     bool DeleteKeyFrameDescsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ClearKeyFrameDescs 
+                     * 获取<p>The value 1 means to clear video dotting information. Other values are meaningless.<br>In the same request, ClearKeyFrameDescs and AddKeyFrameDescs cannot appear simultaneously.</p>
+                     * @return ClearKeyFrameDescs <p>The value 1 means to clear video dotting information. Other values are meaningless.<br>In the same request, ClearKeyFrameDescs and AddKeyFrameDescs cannot appear simultaneously.</p>
                      * 
                      */
                     int64_t GetClearKeyFrameDescs() const;
 
                     /**
-                     * 设置
-                     * @param _clearKeyFrameDescs 
+                     * 设置<p>The value 1 means to clear video dotting information. Other values are meaningless.<br>In the same request, ClearKeyFrameDescs and AddKeyFrameDescs cannot appear simultaneously.</p>
+                     * @param _clearKeyFrameDescs <p>The value 1 means to clear video dotting information. Other values are meaningless.<br>In the same request, ClearKeyFrameDescs and AddKeyFrameDescs cannot appear simultaneously.</p>
                      * 
                      */
                     void SetClearKeyFrameDescs(const int64_t& _clearKeyFrameDescs);
@@ -255,15 +255,15 @@ namespace TencentCloud
                     bool ClearKeyFrameDescsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AddTags 
+                     * 获取<p>A newly-added group of tags. The maximum for a single media file is 16 tags, and a single tag can contain up to 32 characters. In the same request, the AddTags parameter must be different from DeleteTags.</p>
+                     * @return AddTags <p>A newly-added group of tags. The maximum for a single media file is 16 tags, and a single tag can contain up to 32 characters. In the same request, the AddTags parameter must be different from DeleteTags.</p>
                      * 
                      */
                     std::vector<std::string> GetAddTags() const;
 
                     /**
-                     * 设置
-                     * @param _addTags 
+                     * 设置<p>A newly-added group of tags. The maximum for a single media file is 16 tags, and a single tag can contain up to 32 characters. In the same request, the AddTags parameter must be different from DeleteTags.</p>
+                     * @param _addTags <p>A newly-added group of tags. The maximum for a single media file is 16 tags, and a single tag can contain up to 32 characters. In the same request, the AddTags parameter must be different from DeleteTags.</p>
                      * 
                      */
                     void SetAddTags(const std::vector<std::string>& _addTags);
@@ -276,15 +276,15 @@ namespace TencentCloud
                     bool AddTagsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return DeleteTags 
+                     * 获取<p>A set of tags to delete. In the same request, the AddTags parameter must be all different from DeleteTags.</p>
+                     * @return DeleteTags <p>A set of tags to delete. In the same request, the AddTags parameter must be all different from DeleteTags.</p>
                      * 
                      */
                     std::vector<std::string> GetDeleteTags() const;
 
                     /**
-                     * 设置
-                     * @param _deleteTags 
+                     * 设置<p>A set of tags to delete. In the same request, the AddTags parameter must be all different from DeleteTags.</p>
+                     * @param _deleteTags <p>A set of tags to delete. In the same request, the AddTags parameter must be all different from DeleteTags.</p>
                      * 
                      */
                     void SetDeleteTags(const std::vector<std::string>& _deleteTags);
@@ -297,15 +297,15 @@ namespace TencentCloud
                     bool DeleteTagsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ClearTags 
+                     * 获取<p>The value 1 means to clear all tags of the media file. Other values are meaningless.<br>In the same request, ClearTags and AddTags cannot appear simultaneously.</p>
+                     * @return ClearTags <p>The value 1 means to clear all tags of the media file. Other values are meaningless.<br>In the same request, ClearTags and AddTags cannot appear simultaneously.</p>
                      * 
                      */
                     int64_t GetClearTags() const;
 
                     /**
-                     * 设置
-                     * @param _clearTags 
+                     * 设置<p>The value 1 means to clear all tags of the media file. Other values are meaningless.<br>In the same request, ClearTags and AddTags cannot appear simultaneously.</p>
+                     * @param _clearTags <p>The value 1 means to clear all tags of the media file. Other values are meaningless.<br>In the same request, ClearTags and AddTags cannot appear simultaneously.</p>
                      * 
                      */
                     void SetClearTags(const int64_t& _clearTags);
@@ -318,15 +318,15 @@ namespace TencentCloud
                     bool ClearTagsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AddSubtitles 
+                     * 获取<p>Add a set of subtitles. The maximum for a single media file is 16 subtitles. In the same request, the subtitle IDs specified in AddSubtitles must all be different from DeleteSubtitleIds.</p>
+                     * @return AddSubtitles <p>Add a set of subtitles. The maximum for a single media file is 16 subtitles. In the same request, the subtitle IDs specified in AddSubtitles must all be different from DeleteSubtitleIds.</p>
                      * 
                      */
                     std::vector<MediaSubtitleInput> GetAddSubtitles() const;
 
                     /**
-                     * 设置
-                     * @param _addSubtitles 
+                     * 设置<p>Add a set of subtitles. The maximum for a single media file is 16 subtitles. In the same request, the subtitle IDs specified in AddSubtitles must all be different from DeleteSubtitleIds.</p>
+                     * @param _addSubtitles <p>Add a set of subtitles. The maximum for a single media file is 16 subtitles. In the same request, the subtitle IDs specified in AddSubtitles must all be different from DeleteSubtitleIds.</p>
                      * 
                      */
                     void SetAddSubtitles(const std::vector<MediaSubtitleInput>& _addSubtitles);
@@ -339,15 +339,15 @@ namespace TencentCloud
                     bool AddSubtitlesHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return DeleteSubtitleIds 
+                     * 获取<p>Unique identifier of subtitle to be deleted. In the same request, the subtitle id specified in AddSubtitles must be different from all DeleteSubtitleIds.</p>
+                     * @return DeleteSubtitleIds <p>Unique identifier of subtitle to be deleted. In the same request, the subtitle id specified in AddSubtitles must be different from all DeleteSubtitleIds.</p>
                      * 
                      */
                     std::vector<std::string> GetDeleteSubtitleIds() const;
 
                     /**
-                     * 设置
-                     * @param _deleteSubtitleIds 
+                     * 设置<p>Unique identifier of subtitle to be deleted. In the same request, the subtitle id specified in AddSubtitles must be different from all DeleteSubtitleIds.</p>
+                     * @param _deleteSubtitleIds <p>Unique identifier of subtitle to be deleted. In the same request, the subtitle id specified in AddSubtitles must be different from all DeleteSubtitleIds.</p>
                      * 
                      */
                     void SetDeleteSubtitleIds(const std::vector<std::string>& _deleteSubtitleIds);
@@ -360,15 +360,15 @@ namespace TencentCloud
                     bool DeleteSubtitleIdsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ClearSubtitles 
+                     * 获取<p>The value 1 means to clear all subtitle information of the media file. Other values are meaningless.<br>In the same request, ClearSubtitles and AddSubtitles cannot appear simultaneously.</p>
+                     * @return ClearSubtitles <p>The value 1 means to clear all subtitle information of the media file. Other values are meaningless.<br>In the same request, ClearSubtitles and AddSubtitles cannot appear simultaneously.</p>
                      * 
                      */
                     int64_t GetClearSubtitles() const;
 
                     /**
-                     * 设置
-                     * @param _clearSubtitles 
+                     * 设置<p>The value 1 means to clear all subtitle information of the media file. Other values are meaningless.<br>In the same request, ClearSubtitles and AddSubtitles cannot appear simultaneously.</p>
+                     * @param _clearSubtitles <p>The value 1 means to clear all subtitle information of the media file. Other values are meaningless.<br>In the same request, ClearSubtitles and AddSubtitles cannot appear simultaneously.</p>
                      * 
                      */
                     void SetClearSubtitles(const int64_t& _clearSubtitles);
@@ -381,15 +381,15 @@ namespace TencentCloud
                     bool ClearSubtitlesHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return DeleteKnowledgeBases 
+                     * 获取<p>ID of the knowledge base to be outbound.</p>
+                     * @return DeleteKnowledgeBases <p>ID of the knowledge base to be outbound.</p>
                      * 
                      */
                     std::vector<std::string> GetDeleteKnowledgeBases() const;
 
                     /**
-                     * 设置
-                     * @param _deleteKnowledgeBases 
+                     * 设置<p>ID of the knowledge base to be outbound.</p>
+                     * @param _deleteKnowledgeBases <p>ID of the knowledge base to be outbound.</p>
                      * 
                      */
                     void SetDeleteKnowledgeBases(const std::vector<std::string>& _deleteKnowledgeBases);
@@ -402,15 +402,15 @@ namespace TencentCloud
                     bool DeleteKnowledgeBasesHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ClearKnowledgeBases 
+                     * 获取<p>Value 1 means removing this media file from ALL knowledge bases, other values meaningless.</p><p><br>In the same request, ClearKnowledgeBases and DeleteKnowledgeBases cannot appear simultaneously.<p></p></p>
+                     * @return ClearKnowledgeBases <p>Value 1 means removing this media file from ALL knowledge bases, other values meaningless.</p><p><br>In the same request, ClearKnowledgeBases and DeleteKnowledgeBases cannot appear simultaneously.<p></p></p>
                      * 
                      */
                     int64_t GetClearKnowledgeBases() const;
 
                     /**
-                     * 设置
-                     * @param _clearKnowledgeBases 
+                     * 设置<p>Value 1 means removing this media file from ALL knowledge bases, other values meaningless.</p><p><br>In the same request, ClearKnowledgeBases and DeleteKnowledgeBases cannot appear simultaneously.<p></p></p>
+                     * @param _clearKnowledgeBases <p>Value 1 means removing this media file from ALL knowledge bases, other values meaningless.</p><p><br>In the same request, ClearKnowledgeBases and DeleteKnowledgeBases cannot appear simultaneously.<p></p></p>
                      * 
                      */
                     void SetClearKnowledgeBases(const int64_t& _clearKnowledgeBases);
@@ -425,109 +425,109 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p>Media file unique identifier.</p>
                      */
                     std::string m_fileId;
                     bool m_fileIdHasBeenSet;
 
                     /**
-                     * 
+                     * <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services after December 25, 2023, this field must be filled in with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</b></p>
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Media filename, up to 64 characters.</p>
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Media file description, up to 128 characters.</p>
                      */
                     std::string m_description;
                     bool m_descriptionHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Media File Category ID.</p>
                      */
                     int64_t m_classId;
                     bool m_classIdHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Media file expiry time in <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format</a>. "9999-12-31T23:59:59Z" means it never expires. After expiry, the media file and its related resources (transcoding results, sprites) will be permanently deleted.</p>
                      */
                     std::string m_expireTime;
                     bool m_expireTimeHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Base64-encoded string of the video cover image file (for example, jpeg, png), only supports gif, jpeg, and png image formats.</p>
                      */
                     std::string m_coverData;
                     bool m_coverDataHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Newly added set of video timestamp information. If a timestamp already exists at a certain offset, an overlay operation will be performed. A single media file can have up to 100 timestamp entries. In the same request, the time offset parameters of AddKeyFrameDescs must all be different from those of DeleteKeyFrameDescs.</p>
                      */
                     std::vector<MediaKeyFrameDescItem> m_addKeyFrameDescs;
                     bool m_addKeyFrameDescsHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Time offset of the video timestamp information set to be deleted, unit: seconds. In the same request, the time offset parameter of AddKeyFrameDescs must be different from that of DeleteKeyFrameDescs.</p>
                      */
                     std::vector<double> m_deleteKeyFrameDescs;
                     bool m_deleteKeyFrameDescsHasBeenSet;
 
                     /**
-                     * 
+                     * <p>The value 1 means to clear video dotting information. Other values are meaningless.<br>In the same request, ClearKeyFrameDescs and AddKeyFrameDescs cannot appear simultaneously.</p>
                      */
                     int64_t m_clearKeyFrameDescs;
                     bool m_clearKeyFrameDescsHasBeenSet;
 
                     /**
-                     * 
+                     * <p>A newly-added group of tags. The maximum for a single media file is 16 tags, and a single tag can contain up to 32 characters. In the same request, the AddTags parameter must be different from DeleteTags.</p>
                      */
                     std::vector<std::string> m_addTags;
                     bool m_addTagsHasBeenSet;
 
                     /**
-                     * 
+                     * <p>A set of tags to delete. In the same request, the AddTags parameter must be all different from DeleteTags.</p>
                      */
                     std::vector<std::string> m_deleteTags;
                     bool m_deleteTagsHasBeenSet;
 
                     /**
-                     * 
+                     * <p>The value 1 means to clear all tags of the media file. Other values are meaningless.<br>In the same request, ClearTags and AddTags cannot appear simultaneously.</p>
                      */
                     int64_t m_clearTags;
                     bool m_clearTagsHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Add a set of subtitles. The maximum for a single media file is 16 subtitles. In the same request, the subtitle IDs specified in AddSubtitles must all be different from DeleteSubtitleIds.</p>
                      */
                     std::vector<MediaSubtitleInput> m_addSubtitles;
                     bool m_addSubtitlesHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Unique identifier of subtitle to be deleted. In the same request, the subtitle id specified in AddSubtitles must be different from all DeleteSubtitleIds.</p>
                      */
                     std::vector<std::string> m_deleteSubtitleIds;
                     bool m_deleteSubtitleIdsHasBeenSet;
 
                     /**
-                     * 
+                     * <p>The value 1 means to clear all subtitle information of the media file. Other values are meaningless.<br>In the same request, ClearSubtitles and AddSubtitles cannot appear simultaneously.</p>
                      */
                     int64_t m_clearSubtitles;
                     bool m_clearSubtitlesHasBeenSet;
 
                     /**
-                     * 
+                     * <p>ID of the knowledge base to be outbound.</p>
                      */
                     std::vector<std::string> m_deleteKnowledgeBases;
                     bool m_deleteKnowledgeBasesHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Value 1 means removing this media file from ALL knowledge bases, other values meaningless.</p><p><br>In the same request, ClearKnowledgeBases and DeleteKnowledgeBases cannot appear simultaneously.<p></p></p>
                      */
                     int64_t m_clearKnowledgeBases;
                     bool m_clearKnowledgeBasesHasBeenSet;

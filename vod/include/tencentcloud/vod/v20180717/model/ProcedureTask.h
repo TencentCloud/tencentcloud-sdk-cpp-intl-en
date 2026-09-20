@@ -40,7 +40,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Information of an audio/video processing task.
                 */
                 class ProcedureTask : public AbstractModel
                 {
@@ -52,15 +52,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return TaskId 
+                     * 获取Media processing task ID.
+                     * @return TaskId Media processing task ID.
                      * 
                      */
                     std::string GetTaskId() const;
 
                     /**
-                     * 设置
-                     * @param _taskId 
+                     * 设置Media processing task ID.
+                     * @param _taskId Media processing task ID.
                      * 
                      */
                     void SetTaskId(const std::string& _taskId);
@@ -73,15 +73,23 @@ namespace TencentCloud
                     bool TaskIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Status 
+                     * 获取Task stream status. Valid values:
+<li>PROCESSING: Processing;</li>
+<li>FINISH: completed</li>
+                     * @return Status Task stream status. Valid values:
+<li>PROCESSING: Processing;</li>
+<li>FINISH: completed</li>
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置
-                     * @param _status 
+                     * 设置Task stream status. Valid values:
+<li>PROCESSING: Processing;</li>
+<li>FINISH: completed</li>
+                     * @param _status Task stream status. Valid values:
+<li>PROCESSING: Processing;</li>
+<li>FINISH: completed</li>
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -94,15 +102,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ErrCode 
+                     * 获取Deprecated. Please use the ErrCode of each specific task.
+                     * @return ErrCode Deprecated. Please use the ErrCode of each specific task.
                      * @deprecated
                      */
                     int64_t GetErrCode() const;
 
                     /**
-                     * 设置
-                     * @param _errCode 
+                     * 设置Deprecated. Please use the ErrCode of each specific task.
+                     * @param _errCode Deprecated. Please use the ErrCode of each specific task.
                      * @deprecated
                      */
                     void SetErrCode(const int64_t& _errCode);
@@ -115,15 +123,15 @@ namespace TencentCloud
                     bool ErrCodeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Message 
+                     * 获取Deprecated. Please use the Message of each specific task.
+                     * @return Message Deprecated. Please use the Message of each specific task.
                      * @deprecated
                      */
                     std::string GetMessage() const;
 
                     /**
-                     * 设置
-                     * @param _message 
+                     * 设置Deprecated. Please use the Message of each specific task.
+                     * @param _message Deprecated. Please use the Message of each specific task.
                      * @deprecated
                      */
                     void SetMessage(const std::string& _message);
@@ -136,15 +144,23 @@ namespace TencentCloud
                     bool MessageHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return FileId 
+                     * 获取Media file ID.
+<li>If the process is initiated by [ProcessMedia](https://www.tencentcloud.com/document/product/266/33427?from_cn_redirect=1), this field represents the FileId of [MediaInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInfo);</li>
+<li>If the process is initiated by [ProcessMediaByUrl](https://www.tencentcloud.com/document/product/266/33426?from_cn_redirect=1), this field represents the Id of [MediaInputInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInputInfo).</li>
+                     * @return FileId Media file ID.
+<li>If the process is initiated by [ProcessMedia](https://www.tencentcloud.com/document/product/266/33427?from_cn_redirect=1), this field represents the FileId of [MediaInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInfo);</li>
+<li>If the process is initiated by [ProcessMediaByUrl](https://www.tencentcloud.com/document/product/266/33426?from_cn_redirect=1), this field represents the Id of [MediaInputInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInputInfo).</li>
                      * 
                      */
                     std::string GetFileId() const;
 
                     /**
-                     * 设置
-                     * @param _fileId 
+                     * 设置Media file ID.
+<li>If the process is initiated by [ProcessMedia](https://www.tencentcloud.com/document/product/266/33427?from_cn_redirect=1), this field represents the FileId of [MediaInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInfo);</li>
+<li>If the process is initiated by [ProcessMediaByUrl](https://www.tencentcloud.com/document/product/266/33426?from_cn_redirect=1), this field represents the Id of [MediaInputInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInputInfo).</li>
+                     * @param _fileId Media file ID.
+<li>If the process is initiated by [ProcessMedia](https://www.tencentcloud.com/document/product/266/33427?from_cn_redirect=1), this field represents the FileId of [MediaInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInfo);</li>
+<li>If the process is initiated by [ProcessMediaByUrl](https://www.tencentcloud.com/document/product/266/33426?from_cn_redirect=1), this field represents the Id of [MediaInputInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInputInfo).</li>
                      * 
                      */
                     void SetFileId(const std::string& _fileId);
@@ -157,15 +173,23 @@ namespace TencentCloud
                     bool FileIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return FileName 
+                     * 获取Media file name
+<li>If the process is triggered by [ProcessMedia](https://www.tencentcloud.com/document/product/266/33427?from_cn_redirect=1), this field represents BasicInfo.Name of [MediaInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInfo);</li>
+<li>If the process is initiated by [ProcessMediaByUrl](https://www.tencentcloud.com/document/product/266/33426?from_cn_redirect=1), this field represents the Name of [MediaInputInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInputInfo).</li>
+                     * @return FileName Media file name
+<li>If the process is triggered by [ProcessMedia](https://www.tencentcloud.com/document/product/266/33427?from_cn_redirect=1), this field represents BasicInfo.Name of [MediaInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInfo);</li>
+<li>If the process is initiated by [ProcessMediaByUrl](https://www.tencentcloud.com/document/product/266/33426?from_cn_redirect=1), this field represents the Name of [MediaInputInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInputInfo).</li>
                      * 
                      */
                     std::string GetFileName() const;
 
                     /**
-                     * 设置
-                     * @param _fileName 
+                     * 设置Media file name
+<li>If the process is triggered by [ProcessMedia](https://www.tencentcloud.com/document/product/266/33427?from_cn_redirect=1), this field represents BasicInfo.Name of [MediaInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInfo);</li>
+<li>If the process is initiated by [ProcessMediaByUrl](https://www.tencentcloud.com/document/product/266/33426?from_cn_redirect=1), this field represents the Name of [MediaInputInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInputInfo).</li>
+                     * @param _fileName Media file name
+<li>If the process is triggered by [ProcessMedia](https://www.tencentcloud.com/document/product/266/33427?from_cn_redirect=1), this field represents BasicInfo.Name of [MediaInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInfo);</li>
+<li>If the process is initiated by [ProcessMediaByUrl](https://www.tencentcloud.com/document/product/266/33426?from_cn_redirect=1), this field represents the Name of [MediaInputInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInputInfo).</li>
                      * 
                      */
                     void SetFileName(const std::string& _fileName);
@@ -178,15 +202,23 @@ namespace TencentCloud
                     bool FileNameHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return FileUrl 
+                     * 获取Media file address.
+<li>If the process is initiated by [ProcessMedia](https://www.tencentcloud.com/document/product/266/33427?from_cn_redirect=1), this field represents BasicInfo.MediaUrl of [MediaInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInfo);</li>
+<li>If the process is initiated by [ProcessMediaByUrl](https://www.tencentcloud.com/document/product/266/33426?from_cn_redirect=1), this field represents the URL of [MediaInputInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInputInfo).</li>
+                     * @return FileUrl Media file address.
+<li>If the process is initiated by [ProcessMedia](https://www.tencentcloud.com/document/product/266/33427?from_cn_redirect=1), this field represents BasicInfo.MediaUrl of [MediaInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInfo);</li>
+<li>If the process is initiated by [ProcessMediaByUrl](https://www.tencentcloud.com/document/product/266/33426?from_cn_redirect=1), this field represents the URL of [MediaInputInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInputInfo).</li>
                      * 
                      */
                     std::string GetFileUrl() const;
 
                     /**
-                     * 设置
-                     * @param _fileUrl 
+                     * 设置Media file address.
+<li>If the process is initiated by [ProcessMedia](https://www.tencentcloud.com/document/product/266/33427?from_cn_redirect=1), this field represents BasicInfo.MediaUrl of [MediaInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInfo);</li>
+<li>If the process is initiated by [ProcessMediaByUrl](https://www.tencentcloud.com/document/product/266/33426?from_cn_redirect=1), this field represents the URL of [MediaInputInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInputInfo).</li>
+                     * @param _fileUrl Media file address.
+<li>If the process is initiated by [ProcessMedia](https://www.tencentcloud.com/document/product/266/33427?from_cn_redirect=1), this field represents BasicInfo.MediaUrl of [MediaInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInfo);</li>
+<li>If the process is initiated by [ProcessMediaByUrl](https://www.tencentcloud.com/document/product/266/33426?from_cn_redirect=1), this field represents the URL of [MediaInputInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInputInfo).</li>
                      * 
                      */
                     void SetFileUrl(const std::string& _fileUrl);
@@ -199,15 +231,15 @@ namespace TencentCloud
                     bool FileUrlHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return MetaData 
+                     * 获取Metadata of the original audio/video.
+                     * @return MetaData Metadata of the original audio/video.
                      * 
                      */
                     MediaMetaData GetMetaData() const;
 
                     /**
-                     * 设置
-                     * @param _metaData 
+                     * 设置Metadata of the original audio/video.
+                     * @param _metaData Metadata of the original audio/video.
                      * 
                      */
                     void SetMetaData(const MediaMetaData& _metaData);
@@ -220,15 +252,15 @@ namespace TencentCloud
                     bool MetaDataHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return MediaProcessResultSet 
+                     * 获取Execution status and results of the audio/video processing task.
+                     * @return MediaProcessResultSet Execution status and results of the audio/video processing task.
                      * 
                      */
                     std::vector<MediaProcessTaskResult> GetMediaProcessResultSet() const;
 
                     /**
-                     * 设置
-                     * @param _mediaProcessResultSet 
+                     * 设置Execution status and results of the audio/video processing task.
+                     * @param _mediaProcessResultSet Execution status and results of the audio/video processing task.
                      * 
                      */
                     void SetMediaProcessResultSet(const std::vector<MediaProcessTaskResult>& _mediaProcessResultSet);
@@ -241,15 +273,15 @@ namespace TencentCloud
                     bool MediaProcessResultSetHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AiContentReviewResultSet 
+                     * 获取Execution status and results of an audio/video moderation task.
+                     * @return AiContentReviewResultSet Execution status and results of an audio/video moderation task.
                      * 
                      */
                     std::vector<AiContentReviewResult> GetAiContentReviewResultSet() const;
 
                     /**
-                     * 设置
-                     * @param _aiContentReviewResultSet 
+                     * 设置Execution status and results of an audio/video moderation task.
+                     * @param _aiContentReviewResultSet Execution status and results of an audio/video moderation task.
                      * 
                      */
                     void SetAiContentReviewResultSet(const std::vector<AiContentReviewResult>& _aiContentReviewResultSet);
@@ -262,15 +294,15 @@ namespace TencentCloud
                     bool AiContentReviewResultSetHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AiAnalysisResultSet 
+                     * 获取Execution status and results of an audio/video content analysis task.
+                     * @return AiAnalysisResultSet Execution status and results of an audio/video content analysis task.
                      * 
                      */
                     std::vector<AiAnalysisResult> GetAiAnalysisResultSet() const;
 
                     /**
-                     * 设置
-                     * @param _aiAnalysisResultSet 
+                     * 设置Execution status and results of an audio/video content analysis task.
+                     * @param _aiAnalysisResultSet Execution status and results of an audio/video content analysis task.
                      * 
                      */
                     void SetAiAnalysisResultSet(const std::vector<AiAnalysisResult>& _aiAnalysisResultSet);
@@ -283,15 +315,15 @@ namespace TencentCloud
                     bool AiAnalysisResultSetHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AiRecognitionResultSet 
+                     * 获取Execution status and results of an audio/video content recognition task.
+                     * @return AiRecognitionResultSet Execution status and results of an audio/video content recognition task.
                      * 
                      */
                     std::vector<AiRecognitionResult> GetAiRecognitionResultSet() const;
 
                     /**
-                     * 设置
-                     * @param _aiRecognitionResultSet 
+                     * 设置Execution status and results of an audio/video content recognition task.
+                     * @param _aiRecognitionResultSet Execution status and results of an audio/video content recognition task.
                      * 
                      */
                     void SetAiRecognitionResultSet(const std::vector<AiRecognitionResult>& _aiRecognitionResultSet);
@@ -304,15 +336,15 @@ namespace TencentCloud
                     bool AiRecognitionResultSetHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return TasksPriority 
+                     * 获取Priority of the task flow, with a value range of [-10, 10].
+                     * @return TasksPriority Priority of the task flow, with a value range of [-10, 10].
                      * 
                      */
                     int64_t GetTasksPriority() const;
 
                     /**
-                     * 设置
-                     * @param _tasksPriority 
+                     * 设置Priority of the task flow, with a value range of [-10, 10].
+                     * @param _tasksPriority Priority of the task flow, with a value range of [-10, 10].
                      * 
                      */
                     void SetTasksPriority(const int64_t& _tasksPriority);
@@ -325,15 +357,27 @@ namespace TencentCloud
                     bool TasksPriorityHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return TasksNotifyMode 
+                     * 获取Task flow status change notification mode.
+<li>Finish: Initiate an event notification only when all task flows are completed;</li>
+<li>Change: Event notification will be sent as long as the state of each subtask in the task flow changes;</li>
+<li>None: non-acceptance of the task flow callback.</li>
+                     * @return TasksNotifyMode Task flow status change notification mode.
+<li>Finish: Initiate an event notification only when all task flows are completed;</li>
+<li>Change: Event notification will be sent as long as the state of each subtask in the task flow changes;</li>
+<li>None: non-acceptance of the task flow callback.</li>
                      * 
                      */
                     std::string GetTasksNotifyMode() const;
 
                     /**
-                     * 设置
-                     * @param _tasksNotifyMode 
+                     * 设置Task flow status change notification mode.
+<li>Finish: Initiate an event notification only when all task flows are completed;</li>
+<li>Change: Event notification will be sent as long as the state of each subtask in the task flow changes;</li>
+<li>None: non-acceptance of the task flow callback.</li>
+                     * @param _tasksNotifyMode Task flow status change notification mode.
+<li>Finish: Initiate an event notification only when all task flows are completed;</li>
+<li>Change: Event notification will be sent as long as the state of each subtask in the task flow changes;</li>
+<li>None: non-acceptance of the task flow callback.</li>
                      * 
                      */
                     void SetTasksNotifyMode(const std::string& _tasksNotifyMode);
@@ -346,15 +390,15 @@ namespace TencentCloud
                     bool TasksNotifyModeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SessionContext 
+                     * 获取Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
+                     * @return SessionContext Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
                      * 
                      */
                     std::string GetSessionContext() const;
 
                     /**
-                     * 设置
-                     * @param _sessionContext 
+                     * 设置Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
+                     * @param _sessionContext Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
                      * 
                      */
                     void SetSessionContext(const std::string& _sessionContext);
@@ -367,15 +411,15 @@ namespace TencentCloud
                     bool SessionContextHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SessionId 
+                     * 获取An identifier for deduplication. If there has been a request with the same identifier within the past seven days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
+                     * @return SessionId An identifier for deduplication. If there has been a request with the same identifier within the past seven days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
                      * 
                      */
                     std::string GetSessionId() const;
 
                     /**
-                     * 设置
-                     * @param _sessionId 
+                     * 设置An identifier for deduplication. If there has been a request with the same identifier within the past seven days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
+                     * @param _sessionId An identifier for deduplication. If there has been a request with the same identifier within the past seven days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
                      * 
                      */
                     void SetSessionId(const std::string& _sessionId);
@@ -388,15 +432,19 @@ namespace TencentCloud
                     bool SessionIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Operator 
+                     * 获取Operator. Valid values:
+<li>System: indicates a system trigger.</li>
+                     * @return Operator Operator. Valid values:
+<li>System: indicates a system trigger.</li>
                      * 
                      */
                     std::string GetOperator() const;
 
                     /**
-                     * 设置
-                     * @param _operator 
+                     * 设置Operator. Valid values:
+<li>System: indicates a system trigger.</li>
+                     * @param _operator Operator. Valid values:
+<li>System: indicates a system trigger.</li>
                      * 
                      */
                     void SetOperator(const std::string& _operator);
@@ -409,15 +457,19 @@ namespace TencentCloud
                     bool OperatorHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return OperationType 
+                     * 获取Operation type. Valid values:
+<li>TSC: indicates usage of top speed Codec for smart bitrate reduction.</li>
+                     * @return OperationType Operation type. Valid values:
+<li>TSC: indicates usage of top speed Codec for smart bitrate reduction.</li>
                      * 
                      */
                     std::string GetOperationType() const;
 
                     /**
-                     * 设置
-                     * @param _operationType 
+                     * 设置Operation type. Valid values:
+<li>TSC: indicates usage of top speed Codec for smart bitrate reduction.</li>
+                     * @param _operationType Operation type. Valid values:
+<li>TSC: indicates usage of top speed Codec for smart bitrate reduction.</li>
                      * 
                      */
                     void SetOperationType(const std::string& _operationType);
@@ -432,109 +484,122 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Media processing task ID.
                      */
                     std::string m_taskId;
                     bool m_taskIdHasBeenSet;
 
                     /**
-                     * 
+                     * Task stream status. Valid values:
+<li>PROCESSING: Processing;</li>
+<li>FINISH: completed</li>
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * 
+                     * Deprecated. Please use the ErrCode of each specific task.
                      */
                     int64_t m_errCode;
                     bool m_errCodeHasBeenSet;
 
                     /**
-                     * 
+                     * Deprecated. Please use the Message of each specific task.
                      */
                     std::string m_message;
                     bool m_messageHasBeenSet;
 
                     /**
-                     * 
+                     * Media file ID.
+<li>If the process is initiated by [ProcessMedia](https://www.tencentcloud.com/document/product/266/33427?from_cn_redirect=1), this field represents the FileId of [MediaInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInfo);</li>
+<li>If the process is initiated by [ProcessMediaByUrl](https://www.tencentcloud.com/document/product/266/33426?from_cn_redirect=1), this field represents the Id of [MediaInputInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInputInfo).</li>
                      */
                     std::string m_fileId;
                     bool m_fileIdHasBeenSet;
 
                     /**
-                     * 
+                     * Media file name
+<li>If the process is triggered by [ProcessMedia](https://www.tencentcloud.com/document/product/266/33427?from_cn_redirect=1), this field represents BasicInfo.Name of [MediaInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInfo);</li>
+<li>If the process is initiated by [ProcessMediaByUrl](https://www.tencentcloud.com/document/product/266/33426?from_cn_redirect=1), this field represents the Name of [MediaInputInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInputInfo).</li>
                      */
                     std::string m_fileName;
                     bool m_fileNameHasBeenSet;
 
                     /**
-                     * 
+                     * Media file address.
+<li>If the process is initiated by [ProcessMedia](https://www.tencentcloud.com/document/product/266/33427?from_cn_redirect=1), this field represents BasicInfo.MediaUrl of [MediaInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInfo);</li>
+<li>If the process is initiated by [ProcessMediaByUrl](https://www.tencentcloud.com/document/product/266/33426?from_cn_redirect=1), this field represents the URL of [MediaInputInfo](https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaInputInfo).</li>
                      */
                     std::string m_fileUrl;
                     bool m_fileUrlHasBeenSet;
 
                     /**
-                     * 
+                     * Metadata of the original audio/video.
                      */
                     MediaMetaData m_metaData;
                     bool m_metaDataHasBeenSet;
 
                     /**
-                     * 
+                     * Execution status and results of the audio/video processing task.
                      */
                     std::vector<MediaProcessTaskResult> m_mediaProcessResultSet;
                     bool m_mediaProcessResultSetHasBeenSet;
 
                     /**
-                     * 
+                     * Execution status and results of an audio/video moderation task.
                      */
                     std::vector<AiContentReviewResult> m_aiContentReviewResultSet;
                     bool m_aiContentReviewResultSetHasBeenSet;
 
                     /**
-                     * 
+                     * Execution status and results of an audio/video content analysis task.
                      */
                     std::vector<AiAnalysisResult> m_aiAnalysisResultSet;
                     bool m_aiAnalysisResultSetHasBeenSet;
 
                     /**
-                     * 
+                     * Execution status and results of an audio/video content recognition task.
                      */
                     std::vector<AiRecognitionResult> m_aiRecognitionResultSet;
                     bool m_aiRecognitionResultSetHasBeenSet;
 
                     /**
-                     * 
+                     * Priority of the task flow, with a value range of [-10, 10].
                      */
                     int64_t m_tasksPriority;
                     bool m_tasksPriorityHasBeenSet;
 
                     /**
-                     * 
+                     * Task flow status change notification mode.
+<li>Finish: Initiate an event notification only when all task flows are completed;</li>
+<li>Change: Event notification will be sent as long as the state of each subtask in the task flow changes;</li>
+<li>None: non-acceptance of the task flow callback.</li>
                      */
                     std::string m_tasksNotifyMode;
                     bool m_tasksNotifyModeHasBeenSet;
 
                     /**
-                     * 
+                     * Source context, which is used to pass through the user request information. The callback for task flow status changes will return the value of this field. The maximum length is 1,000 characters.
                      */
                     std::string m_sessionContext;
                     bool m_sessionContextHasBeenSet;
 
                     /**
-                     * 
+                     * An identifier for deduplication. If there has been a request with the same identifier within the past seven days, an error will be returned for the current request. The maximum length is 50 characters. Leaving it blank or using a null string indicates no deduplication is required.
                      */
                     std::string m_sessionId;
                     bool m_sessionIdHasBeenSet;
 
                     /**
-                     * 
+                     * Operator. Valid values:
+<li>System: indicates a system trigger.</li>
                      */
                     std::string m_operator;
                     bool m_operatorHasBeenSet;
 
                     /**
-                     * 
+                     * Operation type. Valid values:
+<li>TSC: indicates usage of top speed Codec for smart bitrate reduction.</li>
                      */
                     std::string m_operationType;
                     bool m_operationTypeHasBeenSet;

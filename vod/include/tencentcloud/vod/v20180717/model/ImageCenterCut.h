@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Crop the image center.
                 */
                 class ImageCenterCut : public AbstractModel
                 {
@@ -47,15 +47,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Type 
+                     * 获取Image cropping type. Selectable values: Circle and Rectangle.
+<li>Circle: inscribed circle cropping, the radius of the output image is Radius.</li>
+<li>Rectangle: Rectangular crop. The output image width is Width and height is Height.</li>
+                     * @return Type Image cropping type. Selectable values: Circle and Rectangle.
+<li>Circle: inscribed circle cropping, the radius of the output image is Radius.</li>
+<li>Rectangle: Rectangular crop. The output image width is Width and height is Height.</li>
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置
-                     * @param _type 
+                     * 设置Image cropping type. Selectable values: Circle and Rectangle.
+<li>Circle: inscribed circle cropping, the radius of the output image is Radius.</li>
+<li>Rectangle: Rectangular crop. The output image width is Width and height is Height.</li>
+                     * @param _type Image cropping type. Selectable values: Circle and Rectangle.
+<li>Circle: inscribed circle cropping, the radius of the output image is Radius.</li>
+<li>Rectangle: Rectangular crop. The output image width is Width and height is Height.</li>
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -68,15 +76,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Width 
+                     * 获取Width of the output image in pixels. Valid when Type is Rectangle.
+                     * @return Width Width of the output image in pixels. Valid when Type is Rectangle.
                      * 
                      */
                     int64_t GetWidth() const;
 
                     /**
-                     * 设置
-                     * @param _width 
+                     * 设置Width of the output image in pixels. Valid when Type is Rectangle.
+                     * @param _width Width of the output image in pixels. Valid when Type is Rectangle.
                      * 
                      */
                     void SetWidth(const int64_t& _width);
@@ -89,15 +97,15 @@ namespace TencentCloud
                     bool WidthHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Height 
+                     * 获取Height of the output image in pixels. Valid when Type is Rectangle.
+                     * @return Height Height of the output image in pixels. Valid when Type is Rectangle.
                      * 
                      */
                     int64_t GetHeight() const;
 
                     /**
-                     * 设置
-                     * @param _height 
+                     * 设置Height of the output image in pixels. Valid when Type is Rectangle.
+                     * @param _height Height of the output image in pixels. Valid when Type is Rectangle.
                      * 
                      */
                     void SetHeight(const int64_t& _height);
@@ -110,15 +118,15 @@ namespace TencentCloud
                     bool HeightHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Radius 
+                     * 获取Radius of the output image in pixels. Valid when Type is Circle.
+                     * @return Radius Radius of the output image in pixels. Valid when Type is Circle.
                      * 
                      */
                     int64_t GetRadius() const;
 
                     /**
-                     * 设置
-                     * @param _radius 
+                     * 设置Radius of the output image in pixels. Valid when Type is Circle.
+                     * @param _radius Radius of the output image in pixels. Valid when Type is Circle.
                      * 
                      */
                     void SetRadius(const int64_t& _radius);
@@ -133,25 +141,27 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Image cropping type. Selectable values: Circle and Rectangle.
+<li>Circle: inscribed circle cropping, the radius of the output image is Radius.</li>
+<li>Rectangle: Rectangular crop. The output image width is Width and height is Height.</li>
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * 
+                     * Width of the output image in pixels. Valid when Type is Rectangle.
                      */
                     int64_t m_width;
                     bool m_widthHasBeenSet;
 
                     /**
-                     * 
+                     * Height of the output image in pixels. Valid when Type is Rectangle.
                      */
                     int64_t m_height;
                     bool m_heightHasBeenSet;
 
                     /**
-                     * 
+                     * Radius of the output image in pixels. Valid when Type is Circle.
                      */
                     int64_t m_radius;
                     bool m_radiusHasBeenSet;

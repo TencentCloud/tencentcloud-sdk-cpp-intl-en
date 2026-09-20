@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Subtitle information.
                 */
                 class AiRecognitionTaskAsrFullTextResultOutputSubtitleItem : public AbstractModel
                 {
@@ -47,15 +47,19 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Id 
+                     * 获取Media asset subtitle ID, used for media asset subtitle management. Valid only when Format is vtt.
+<font color=red>Note:</font> This field is invalid for tasks returned earlier than 2024-11-01T10:00:00Z.
+                     * @return Id Media asset subtitle ID, used for media asset subtitle management. Valid only when Format is vtt.
+<font color=red>Note:</font> This field is invalid for tasks returned earlier than 2024-11-01T10:00:00Z.
                      * 
                      */
                     std::string GetId() const;
 
                     /**
-                     * 设置
-                     * @param _id 
+                     * 设置Media asset subtitle ID, used for media asset subtitle management. Valid only when Format is vtt.
+<font color=red>Note:</font> This field is invalid for tasks returned earlier than 2024-11-01T10:00:00Z.
+                     * @param _id Media asset subtitle ID, used for media asset subtitle management. Valid only when Format is vtt.
+<font color=red>Note:</font> This field is invalid for tasks returned earlier than 2024-11-01T10:00:00Z.
                      * 
                      */
                     void SetId(const std::string& _id);
@@ -68,15 +72,19 @@ namespace TencentCloud
                     bool IdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Name 
+                     * 获取Media asset subtitle name for player display. Valid only when Format is vtt.
+<font color=red>Note:</font> This field is invalid for tasks returned earlier than 2024-11-01T10:00:00Z.
+                     * @return Name Media asset subtitle name for player display. Valid only when Format is vtt.
+<font color=red>Note:</font> This field is invalid for tasks returned earlier than 2024-11-01T10:00:00Z.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置
-                     * @param _name 
+                     * 设置Media asset subtitle name for player display. Valid only when Format is vtt.
+<font color=red>Note:</font> This field is invalid for tasks returned earlier than 2024-11-01T10:00:00Z.
+                     * @param _name Media asset subtitle name for player display. Valid only when Format is vtt.
+<font color=red>Note:</font> This field is invalid for tasks returned earlier than 2024-11-01T10:00:00Z.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -89,15 +97,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Language 
+                     * 获取Subtitle language.
+                     * @return Language Subtitle language.
                      * 
                      */
                     std::string GetLanguage() const;
 
                     /**
-                     * 设置
-                     * @param _language 
+                     * 设置Subtitle language.
+                     * @param _language Subtitle language.
                      * 
                      */
                     void SetLanguage(const std::string& _language);
@@ -110,15 +118,23 @@ namespace TencentCloud
                     bool LanguageHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Format 
+                     * 获取Subtitle file format. Valid values:
+<li>vtt: WebVTT subtitle file;</li>
+<li>srt: SRT Subtitle File.</li>
+                     * @return Format Subtitle file format. Valid values:
+<li>vtt: WebVTT subtitle file;</li>
+<li>srt: SRT Subtitle File.</li>
                      * 
                      */
                     std::string GetFormat() const;
 
                     /**
-                     * 设置
-                     * @param _format 
+                     * 设置Subtitle file format. Valid values:
+<li>vtt: WebVTT subtitle file;</li>
+<li>srt: SRT Subtitle File.</li>
+                     * @param _format Subtitle file format. Valid values:
+<li>vtt: WebVTT subtitle file;</li>
+<li>srt: SRT Subtitle File.</li>
                      * 
                      */
                     void SetFormat(const std::string& _format);
@@ -131,15 +147,15 @@ namespace TencentCloud
                     bool FormatHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Url 
+                     * 获取Subtitle file Url.
+                     * @return Url Subtitle file Url.
                      * 
                      */
                     std::string GetUrl() const;
 
                     /**
-                     * 设置
-                     * @param _url 
+                     * 设置Subtitle file Url.
+                     * @param _url Subtitle file Url.
                      * 
                      */
                     void SetUrl(const std::string& _url);
@@ -154,31 +170,35 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Media asset subtitle ID, used for media asset subtitle management. Valid only when Format is vtt.
+<font color=red>Note:</font> This field is invalid for tasks returned earlier than 2024-11-01T10:00:00Z.
                      */
                     std::string m_id;
                     bool m_idHasBeenSet;
 
                     /**
-                     * 
+                     * Media asset subtitle name for player display. Valid only when Format is vtt.
+<font color=red>Note:</font> This field is invalid for tasks returned earlier than 2024-11-01T10:00:00Z.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * 
+                     * Subtitle language.
                      */
                     std::string m_language;
                     bool m_languageHasBeenSet;
 
                     /**
-                     * 
+                     * Subtitle file format. Valid values:
+<li>vtt: WebVTT subtitle file;</li>
+<li>srt: SRT Subtitle File.</li>
                      */
                     std::string m_format;
                     bool m_formatHasBeenSet;
 
                     /**
-                     * 
+                     * Subtitle file Url.
                      */
                     std::string m_url;
                     bool m_urlHasBeenSet;

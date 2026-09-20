@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Moderation information.
                 */
                 class ReviewInfo : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Definition 
+                     * 获取Content review template ID.
+                     * @return Definition Content review template ID.
                      * 
                      */
                     uint64_t GetDefinition() const;
 
                     /**
-                     * 设置
-                     * @param _definition 
+                     * 设置Content review template ID.
+                     * @param _definition Content review template ID.
                      * 
                      */
                     void SetDefinition(const uint64_t& _definition);
@@ -68,15 +68,27 @@ namespace TencentCloud
                     bool DefinitionHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Suggestion 
+                     * 获取Review result suggestion. Valid values:
+<li>pass: It is recommended to pass.</li>
+<li>review: suggest re-examination;</li>
+<li>block: suggest banning.</li>
+                     * @return Suggestion Review result suggestion. Valid values:
+<li>pass: It is recommended to pass.</li>
+<li>review: suggest re-examination;</li>
+<li>block: suggest banning.</li>
                      * 
                      */
                     std::string GetSuggestion() const;
 
                     /**
-                     * 设置
-                     * @param _suggestion 
+                     * 设置Review result suggestion. Valid values:
+<li>pass: It is recommended to pass.</li>
+<li>review: suggest re-examination;</li>
+<li>block: suggest banning.</li>
+                     * @param _suggestion Review result suggestion. Valid values:
+<li>pass: It is recommended to pass.</li>
+<li>review: suggest re-examination;</li>
+<li>block: suggest banning.</li>
                      * 
                      */
                     void SetSuggestion(const std::string& _suggestion);
@@ -89,15 +101,67 @@ namespace TencentCloud
                     bool SuggestionHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return TypeSet 
+                     * 获取Moderation type. Valid when Suggestion is review or block. Format: Form.Label.
+Form indicates the prohibited form. Value range:
+<li>Image: people or icons on the screen;</li>
+<li>OCR: text on the screen;</li>
+<li>ASR: text in speech.</li>
+<li>Voice: sound.</li>
+Label refers to prohibited tags. Value range:
+<li>Porn: Pornography;</li>
+<li>Terror: violence.</li>
+<li>Polity: inappropriate information;</li>
+<li>Ad: advertisement;</li>
+<li>Illegal: Violating laws or regulations;</li>
+<li>Abuse: abusive language;</li>
+<li>Moan: panting.</li>
+                     * @return TypeSet Moderation type. Valid when Suggestion is review or block. Format: Form.Label.
+Form indicates the prohibited form. Value range:
+<li>Image: people or icons on the screen;</li>
+<li>OCR: text on the screen;</li>
+<li>ASR: text in speech.</li>
+<li>Voice: sound.</li>
+Label refers to prohibited tags. Value range:
+<li>Porn: Pornography;</li>
+<li>Terror: violence.</li>
+<li>Polity: inappropriate information;</li>
+<li>Ad: advertisement;</li>
+<li>Illegal: Violating laws or regulations;</li>
+<li>Abuse: abusive language;</li>
+<li>Moan: panting.</li>
                      * 
                      */
                     std::vector<std::string> GetTypeSet() const;
 
                     /**
-                     * 设置
-                     * @param _typeSet 
+                     * 设置Moderation type. Valid when Suggestion is review or block. Format: Form.Label.
+Form indicates the prohibited form. Value range:
+<li>Image: people or icons on the screen;</li>
+<li>OCR: text on the screen;</li>
+<li>ASR: text in speech.</li>
+<li>Voice: sound.</li>
+Label refers to prohibited tags. Value range:
+<li>Porn: Pornography;</li>
+<li>Terror: violence.</li>
+<li>Polity: inappropriate information;</li>
+<li>Ad: advertisement;</li>
+<li>Illegal: Violating laws or regulations;</li>
+<li>Abuse: abusive language;</li>
+<li>Moan: panting.</li>
+                     * @param _typeSet Moderation type. Valid when Suggestion is review or block. Format: Form.Label.
+Form indicates the prohibited form. Value range:
+<li>Image: people or icons on the screen;</li>
+<li>OCR: text on the screen;</li>
+<li>ASR: text in speech.</li>
+<li>Voice: sound.</li>
+Label refers to prohibited tags. Value range:
+<li>Porn: Pornography;</li>
+<li>Terror: violence.</li>
+<li>Polity: inappropriate information;</li>
+<li>Ad: advertisement;</li>
+<li>Illegal: Violating laws or regulations;</li>
+<li>Abuse: abusive language;</li>
+<li>Moan: panting.</li>
                      * 
                      */
                     void SetTypeSet(const std::vector<std::string>& _typeSet);
@@ -110,15 +174,15 @@ namespace TencentCloud
                     bool TypeSetHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ReviewTime 
+                     * 获取Moderation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @return ReviewTime Moderation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      * 
                      */
                     std::string GetReviewTime() const;
 
                     /**
-                     * 设置
-                     * @param _reviewTime 
+                     * 设置Moderation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @param _reviewTime Moderation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      * 
                      */
                     void SetReviewTime(const std::string& _reviewTime);
@@ -133,25 +197,41 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Content review template ID.
                      */
                     uint64_t m_definition;
                     bool m_definitionHasBeenSet;
 
                     /**
-                     * 
+                     * Review result suggestion. Valid values:
+<li>pass: It is recommended to pass.</li>
+<li>review: suggest re-examination;</li>
+<li>block: suggest banning.</li>
                      */
                     std::string m_suggestion;
                     bool m_suggestionHasBeenSet;
 
                     /**
-                     * 
+                     * Moderation type. Valid when Suggestion is review or block. Format: Form.Label.
+Form indicates the prohibited form. Value range:
+<li>Image: people or icons on the screen;</li>
+<li>OCR: text on the screen;</li>
+<li>ASR: text in speech.</li>
+<li>Voice: sound.</li>
+Label refers to prohibited tags. Value range:
+<li>Porn: Pornography;</li>
+<li>Terror: violence.</li>
+<li>Polity: inappropriate information;</li>
+<li>Ad: advertisement;</li>
+<li>Illegal: Violating laws or regulations;</li>
+<li>Abuse: abusive language;</li>
+<li>Moan: panting.</li>
                      */
                     std::vector<std::string> m_typeSet;
                     bool m_typeSetHasBeenSet;
 
                     /**
-                     * 
+                     * Moderation time in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      */
                     std::string m_reviewTime;
                     bool m_reviewTimeHasBeenSet;

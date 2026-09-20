@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Sprite image information of VOD files
                 */
                 class MediaImageSpriteInfo : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return ImageSpriteSet 
+                     * 获取Collection of sprite image information for specific specifications. Each element represents a set of sprite images with the same spec.
+                     * @return ImageSpriteSet Collection of sprite image information for specific specifications. Each element represents a set of sprite images with the same spec.
                      * 
                      */
                     std::vector<MediaImageSpriteItem> GetImageSpriteSet() const;
 
                     /**
-                     * 设置
-                     * @param _imageSpriteSet 
+                     * 设置Collection of sprite image information for specific specifications. Each element represents a set of sprite images with the same spec.
+                     * @param _imageSpriteSet Collection of sprite image information for specific specifications. Each element represents a set of sprite images with the same spec.
                      * 
                      */
                     void SetImageSpriteSet(const std::vector<MediaImageSpriteItem>& _imageSpriteSet);
@@ -71,7 +71,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Collection of sprite image information for specific specifications. Each element represents a set of sprite images with the same spec.
                      */
                     std::vector<MediaImageSpriteItem> m_imageSpriteSet;
                     bool m_imageSpriteSetHasBeenSet;

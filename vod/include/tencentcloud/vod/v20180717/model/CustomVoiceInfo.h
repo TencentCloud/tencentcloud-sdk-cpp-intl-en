@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Custom tone information.
                 */
                 class CustomVoiceInfo : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return VoiceId 
+                     * 获取<p>Voice ID.</p>
+                     * @return VoiceId <p>Voice ID.</p>
                      * 
                      */
                     std::string GetVoiceId() const;
 
                     /**
-                     * 设置
-                     * @param _voiceId 
+                     * 设置<p>Voice ID.</p>
+                     * @param _voiceId <p>Voice ID.</p>
                      * 
                      */
                     void SetVoiceId(const std::string& _voiceId);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool VoiceIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return VoiceInfo 
+                     * 获取<p>Tone information.</p>
+                     * @return VoiceInfo <p>Tone information.</p>
                      * 
                      */
                     std::string GetVoiceInfo() const;
 
                     /**
-                     * 设置
-                     * @param _voiceInfo 
+                     * 设置<p>Tone information.</p>
+                     * @param _voiceInfo <p>Tone information.</p>
                      * 
                      */
                     void SetVoiceInfo(const std::string& _voiceInfo);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p>Voice ID.</p>
                      */
                     std::string m_voiceId;
                     bool m_voiceIdHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Tone information.</p>
                      */
                     std::string m_voiceInfo;
                     bool m_voiceInfoHasBeenSet;

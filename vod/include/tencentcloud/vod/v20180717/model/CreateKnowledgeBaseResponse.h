@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return KnowledgeBaseId 
+                     * 获取<p>ID of the knowledge base after successful creation.</p>
+                     * @return KnowledgeBaseId <p>ID of the knowledge base after successful creation.</p>
                      * 
                      */
                     std::string GetKnowledgeBaseId() const;
@@ -60,7 +60,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p>ID of the knowledge base after successful creation.</p>
                      */
                     std::string m_knowledgeBaseId;
                     bool m_knowledgeBaseIdHasBeenSet;

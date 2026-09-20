@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Audio/video moderation task type
                 */
                 class AiContentReviewTaskInput : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Definition 
+                     * 获取Audio/video moderation template ID.
+                     * @return Definition Audio/video moderation template ID.
                      * 
                      */
                     uint64_t GetDefinition() const;
 
                     /**
-                     * 设置
-                     * @param _definition 
+                     * 设置Audio/video moderation template ID.
+                     * @param _definition Audio/video moderation template ID.
                      * 
                      */
                     void SetDefinition(const uint64_t& _definition);
@@ -70,7 +70,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Audio/video moderation template ID.
                      */
                     uint64_t m_definition;
                     bool m_definitionHasBeenSet;

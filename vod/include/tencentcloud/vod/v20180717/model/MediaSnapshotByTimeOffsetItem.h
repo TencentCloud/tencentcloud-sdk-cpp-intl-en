@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Screenshot information of a VOD file at the specified time point
                 */
                 class MediaSnapshotByTimeOffsetItem : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Definition 
+                     * 获取SnapshotByTimeOffset specification. See [SnapshotByTimeOffset parameter template](https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E6.97.B6.E9.97.B4.E7.82.B9.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
+                     * @return Definition SnapshotByTimeOffset specification. See [SnapshotByTimeOffset parameter template](https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E6.97.B6.E9.97.B4.E7.82.B9.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
                      * 
                      */
                     int64_t GetDefinition() const;
 
                     /**
-                     * 设置
-                     * @param _definition 
+                     * 设置SnapshotByTimeOffset specification. See [SnapshotByTimeOffset parameter template](https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E6.97.B6.E9.97.B4.E7.82.B9.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
+                     * @param _definition SnapshotByTimeOffset specification. See [SnapshotByTimeOffset parameter template](https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E6.97.B6.E9.97.B4.E7.82.B9.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
                      * 
                      */
                     void SetDefinition(const int64_t& _definition);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool DefinitionHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return PicInfoSet 
+                     * 获取Screenshot information set of the same specification. Each element represents a screenshot.
+                     * @return PicInfoSet Screenshot information set of the same specification. Each element represents a screenshot.
                      * 
                      */
                     std::vector<MediaSnapshotByTimePicInfoItem> GetPicInfoSet() const;
 
                     /**
-                     * 设置
-                     * @param _picInfoSet 
+                     * 设置Screenshot information set of the same specification. Each element represents a screenshot.
+                     * @param _picInfoSet Screenshot information set of the same specification. Each element represents a screenshot.
                      * 
                      */
                     void SetPicInfoSet(const std::vector<MediaSnapshotByTimePicInfoItem>& _picInfoSet);
@@ -92,13 +92,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * SnapshotByTimeOffset specification. See [SnapshotByTimeOffset parameter template](https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E6.97.B6.E9.97.B4.E7.82.B9.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
                      */
                     int64_t m_definition;
                     bool m_definitionHasBeenSet;
 
                     /**
-                     * 
+                     * Screenshot information set of the same specification. Each element represents a screenshot.
                      */
                     std::vector<MediaSnapshotByTimePicInfoItem> m_picInfoSet;
                     bool m_picInfoSetHasBeenSet;

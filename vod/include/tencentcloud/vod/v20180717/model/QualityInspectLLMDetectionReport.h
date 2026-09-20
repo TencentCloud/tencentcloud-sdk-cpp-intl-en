@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * AIGC quality detection result of the large language model for audio and video quality inspection.
                 */
                 class QualityInspectLLMDetectionReport : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return ResultCount 
+                     * 获取<p>Number of detection results.</p>
+                     * @return ResultCount <p>Number of detection results.</p>
                      * 
                      */
                     int64_t GetResultCount() const;
 
                     /**
-                     * 设置
-                     * @param _resultCount 
+                     * 设置<p>Number of detection results.</p>
+                     * @param _resultCount <p>Number of detection results.</p>
                      * 
                      */
                     void SetResultCount(const int64_t& _resultCount);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool ResultCountHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ResultSet 
+                     * 获取<p>Detection item result list.</p>
+                     * @return ResultSet <p>Detection item result list.</p>
                      * 
                      */
                     std::vector<QualityInspectLLMDetectionResultItem> GetResultSet() const;
 
                     /**
-                     * 设置
-                     * @param _resultSet 
+                     * 设置<p>Detection item result list.</p>
+                     * @param _resultSet <p>Detection item result list.</p>
                      * 
                      */
                     void SetResultSet(const std::vector<QualityInspectLLMDetectionResultItem>& _resultSet);
@@ -92,13 +92,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p>Number of detection results.</p>
                      */
                     int64_t m_resultCount;
                     bool m_resultCountHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Detection item result list.</p>
                      */
                     std::vector<QualityInspectLLMDetectionResultItem> m_resultSet;
                     bool m_resultSetHasBeenSet;

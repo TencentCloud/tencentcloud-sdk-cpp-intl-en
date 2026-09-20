@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Text keyword recognition output.
                 */
                 class AiRecognitionTaskOcrWordsResultOutput : public AbstractModel
                 {
@@ -48,15 +48,19 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return ResultSet 
+                     * 获取Text keyword recognition result set.
+<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the corresponding file at ResultSetFileUrl.
+                     * @return ResultSet Text keyword recognition result set.
+<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the corresponding file at ResultSetFileUrl.
                      * 
                      */
                     std::vector<AiRecognitionTaskOcrWordsResultItem> GetResultSet() const;
 
                     /**
-                     * 设置
-                     * @param _resultSet 
+                     * 设置Text keyword recognition result set.
+<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the corresponding file at ResultSetFileUrl.
+                     * @param _resultSet Text keyword recognition result set.
+<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the corresponding file at ResultSetFileUrl.
                      * 
                      */
                     void SetResultSet(const std::vector<AiRecognitionTaskOcrWordsResultItem>& _resultSet);
@@ -69,15 +73,15 @@ namespace TencentCloud
                     bool ResultSetHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ResultSetFileUrl 
+                     * 获取URL of the text keyword recognition result set file. The file content is in JSON format, and the data structure is consistent with the ResultSet fields. (The file is not retained permanently and will be deleted after the ResultSetFileUrlExpireTime time point.)
+                     * @return ResultSetFileUrl URL of the text keyword recognition result set file. The file content is in JSON format, and the data structure is consistent with the ResultSet fields. (The file is not retained permanently and will be deleted after the ResultSetFileUrlExpireTime time point.)
                      * 
                      */
                     std::string GetResultSetFileUrl() const;
 
                     /**
-                     * 设置
-                     * @param _resultSetFileUrl 
+                     * 设置URL of the text keyword recognition result set file. The file content is in JSON format, and the data structure is consistent with the ResultSet fields. (The file is not retained permanently and will be deleted after the ResultSetFileUrlExpireTime time point.)
+                     * @param _resultSetFileUrl URL of the text keyword recognition result set file. The file content is in JSON format, and the data structure is consistent with the ResultSet fields. (The file is not retained permanently and will be deleted after the ResultSetFileUrlExpireTime time point.)
                      * 
                      */
                     void SetResultSetFileUrl(const std::string& _resultSetFileUrl);
@@ -90,15 +94,15 @@ namespace TencentCloud
                     bool ResultSetFileUrlHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ResultSetFileUrlExpireTime 
+                     * 获取Expiration time of the text keyword recognition result set file URL, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @return ResultSetFileUrlExpireTime Expiration time of the text keyword recognition result set file URL, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      * 
                      */
                     std::string GetResultSetFileUrlExpireTime() const;
 
                     /**
-                     * 设置
-                     * @param _resultSetFileUrlExpireTime 
+                     * 设置Expiration time of the text keyword recognition result set file URL, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @param _resultSetFileUrlExpireTime Expiration time of the text keyword recognition result set file URL, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      * 
                      */
                     void SetResultSetFileUrlExpireTime(const std::string& _resultSetFileUrlExpireTime);
@@ -113,19 +117,20 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Text keyword recognition result set.
+<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the corresponding file at ResultSetFileUrl.
                      */
                     std::vector<AiRecognitionTaskOcrWordsResultItem> m_resultSet;
                     bool m_resultSetHasBeenSet;
 
                     /**
-                     * 
+                     * URL of the text keyword recognition result set file. The file content is in JSON format, and the data structure is consistent with the ResultSet fields. (The file is not retained permanently and will be deleted after the ResultSetFileUrlExpireTime time point.)
                      */
                     std::string m_resultSetFileUrl;
                     bool m_resultSetFileUrlHasBeenSet;
 
                     /**
-                     * 
+                     * Expiration time of the text keyword recognition result set file URL, in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      */
                     std::string m_resultSetFileUrlExpireTime;
                     bool m_resultSetFileUrlExpireTimeHasBeenSet;

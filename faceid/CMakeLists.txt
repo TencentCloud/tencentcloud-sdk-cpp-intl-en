@@ -26,14 +26,19 @@ set(faceid_public_header_model
   include/tencentcloud/faceid/v20180301/model/IdCardVerificationRequest.h
   include/tencentcloud/faceid/v20180301/model/ImageRecognitionV2Response.h
   include/tencentcloud/faceid/v20180301/model/GetWebVerificationResultIntlResponse.h
+  include/tencentcloud/faceid/v20180301/model/UpdateAMLOngoingScreeningStatusResponse.h
+  include/tencentcloud/faceid/v20180301/model/GetAMLScreeningResultResponse.h
+  include/tencentcloud/faceid/v20180301/model/Company.h
   include/tencentcloud/faceid/v20180301/model/MobileStatusRequest.h
   include/tencentcloud/faceid/v20180301/model/OCRResult.h
+  include/tencentcloud/faceid/v20180301/model/ListEKYCWebhooksResponse.h
   include/tencentcloud/faceid/v20180301/model/BangladeshIDCard.h
   include/tencentcloud/faceid/v20180301/model/LivenessCompareResponse.h
-  include/tencentcloud/faceid/v20180301/model/GenerateReflectSequenceResponse.h
+  include/tencentcloud/faceid/v20180301/model/PhilippinesSSSID.h
   include/tencentcloud/faceid/v20180301/model/DetectAIFakeFacesRequest.h
   include/tencentcloud/faceid/v20180301/model/IndonesiaIDCard.h
   include/tencentcloud/faceid/v20180301/model/SingaporeIDCard.h
+  include/tencentcloud/faceid/v20180301/model/CreateEKYCWebhookResponse.h
   include/tencentcloud/faceid/v20180301/model/MacaoIDCard.h
   include/tencentcloud/faceid/v20180301/model/GeneralCard.h
   include/tencentcloud/faceid/v20180301/model/PhilippinesUMID.h
@@ -51,9 +56,11 @@ set(faceid_public_header_model
   include/tencentcloud/faceid/v20180301/model/ApplySdkVerificationTokenRequest.h
   include/tencentcloud/faceid/v20180301/model/CardVerifyResult.h
   include/tencentcloud/faceid/v20180301/model/CheckIdNameDateRequest.h
+  include/tencentcloud/faceid/v20180301/model/WebhookList.h
   include/tencentcloud/faceid/v20180301/model/ApplyLivenessTokenResponse.h
   include/tencentcloud/faceid/v20180301/model/CardInfo.h
   include/tencentcloud/faceid/v20180301/model/PhilippinesVoteID.h
+  include/tencentcloud/faceid/v20180301/model/DeleteEKYCWebhookResponse.h
   include/tencentcloud/faceid/v20180301/model/ApplySdkVerificationTokenResponse.h
   include/tencentcloud/faceid/v20180301/model/GetFaceIdTokenIntlRequest.h
   include/tencentcloud/faceid/v20180301/model/PakistanDrivingLicense.h
@@ -63,59 +70,71 @@ set(faceid_public_header_model
   include/tencentcloud/faceid/v20180301/model/HMTPermit.h
   include/tencentcloud/faceid/v20180301/model/PhilippinesTinID.h
   include/tencentcloud/faceid/v20180301/model/DetectAIFakeFacesResponse.h
+  include/tencentcloud/faceid/v20180301/model/DeleteEKYCWebhookRequest.h
   include/tencentcloud/faceid/v20180301/model/LivenessCompareRequest.h
   include/tencentcloud/faceid/v20180301/model/MLIDCard.h
   include/tencentcloud/faceid/v20180301/model/GetFaceIdResultIntlResponse.h
   include/tencentcloud/faceid/v20180301/model/CheckBankCardInformationRequest.h
+  include/tencentcloud/faceid/v20180301/model/ListEKYCWebhooksRequest.h
   include/tencentcloud/faceid/v20180301/model/BankCardVerificationRequest.h
   include/tencentcloud/faceid/v20180301/model/ThailandIDCard.h
   include/tencentcloud/faceid/v20180301/model/CheckIdCardInformationResponse.h
   include/tencentcloud/faceid/v20180301/model/PhoneVerificationResponse.h
   include/tencentcloud/faceid/v20180301/model/IdCardOCRVerificationRequest.h
+  include/tencentcloud/faceid/v20180301/model/UpdateEKYCWebhookResponse.h
   include/tencentcloud/faceid/v20180301/model/BankCard4EVerificationResponse.h
   include/tencentcloud/faceid/v20180301/model/GenerateReflectSequenceRequest.h
   include/tencentcloud/faceid/v20180301/model/EditDetail.h
   include/tencentcloud/faceid/v20180301/model/PakistanIDCard.h
   include/tencentcloud/faceid/v20180301/model/Encryption.h
-  include/tencentcloud/faceid/v20180301/model/GetNFCResultResponse.h
+  include/tencentcloud/faceid/v20180301/model/MobileNetworkTimeVerificationRequest.h
+  include/tencentcloud/faceid/v20180301/model/GetAMLScreeningResultRequest.h
   include/tencentcloud/faceid/v20180301/model/GetLivenessResultRequest.h
   include/tencentcloud/faceid/v20180301/model/CheckIdCardInformationRequest.h
   include/tencentcloud/faceid/v20180301/model/IdCardOCRVerificationResponse.h
   include/tencentcloud/faceid/v20180301/model/NigeriaIDCard.h
   include/tencentcloud/faceid/v20180301/model/CompareFaceLivenessResponse.h
   include/tencentcloud/faceid/v20180301/model/BankCardVerificationResponse.h
-  include/tencentcloud/faceid/v20180301/model/MobileNetworkTimeVerificationRequest.h
+  include/tencentcloud/faceid/v20180301/model/Person.h
+  include/tencentcloud/faceid/v20180301/model/UpdateAMLCustomerProfileRequest.h
+  include/tencentcloud/faceid/v20180301/model/GetNFCResultResponse.h
   include/tencentcloud/faceid/v20180301/model/ApplyWebVerificationBizTokenIntlRequest.h
   include/tencentcloud/faceid/v20180301/model/FileInfo.h
   include/tencentcloud/faceid/v20180301/model/PhilippinesDrivingLicense.h
-  include/tencentcloud/faceid/v20180301/model/PhilippinesSSSID.h
+  include/tencentcloud/faceid/v20180301/model/GenerateReflectSequenceResponse.h
   include/tencentcloud/faceid/v20180301/model/IdCardVerificationResponse.h
   include/tencentcloud/faceid/v20180301/model/WebVerificationConfigIntl.h
   include/tencentcloud/faceid/v20180301/model/CompareResult.h
+  include/tencentcloud/faceid/v20180301/model/RunAMLNameScreeningResponse.h
   include/tencentcloud/faceid/v20180301/model/InternationalIDPassport.h
   include/tencentcloud/faceid/v20180301/model/MobileNetworkTimeVerificationResponse.h
   include/tencentcloud/faceid/v20180301/model/CreateUploadUrlResponse.h
   include/tencentcloud/faceid/v20180301/model/JapanIDCard.h
   include/tencentcloud/faceid/v20180301/model/NigeriaDrivingLicense.h
+  include/tencentcloud/faceid/v20180301/model/CreateEKYCWebhookRequest.h
   include/tencentcloud/faceid/v20180301/model/HKIDCard.h
   include/tencentcloud/faceid/v20180301/model/PhoneVerificationRequest.h
   include/tencentcloud/faceid/v20180301/model/IndonesiaDrivingLicense.h
   include/tencentcloud/faceid/v20180301/model/VerificationDetail.h
   include/tencentcloud/faceid/v20180301/model/DetectReflectLivenessAndCompareResponse.h
   include/tencentcloud/faceid/v20180301/model/VideoLivenessCompareResponse.h
+  include/tencentcloud/faceid/v20180301/model/UpdateAMLCustomerProfileResponse.h
   include/tencentcloud/faceid/v20180301/model/BankCard2EVerificationRequest.h
   include/tencentcloud/faceid/v20180301/model/Address.h
   include/tencentcloud/faceid/v20180301/model/RetrievalLivenessExtraInfo.h
   include/tencentcloud/faceid/v20180301/model/ImageRecognitionV2Request.h
   include/tencentcloud/faceid/v20180301/model/MainlandIDCard.h
   include/tencentcloud/faceid/v20180301/model/NormalMLIDCard.h
+  include/tencentcloud/faceid/v20180301/model/UpdateEKYCWebhookRequest.h
   include/tencentcloud/faceid/v20180301/model/BankCard4EVerificationRequest.h
   include/tencentcloud/faceid/v20180301/model/CreateUploadUrlRequest.h
   include/tencentcloud/faceid/v20180301/model/GetNFCTokenResponse.h
   include/tencentcloud/faceid/v20180301/model/NormalHKIDCard.h
   include/tencentcloud/faceid/v20180301/model/GetSdkVerificationResultRequest.h
+  include/tencentcloud/faceid/v20180301/model/RunAMLNameScreeningRequest.h
   include/tencentcloud/faceid/v20180301/model/ApplyLivenessTokenRequest.h
   include/tencentcloud/faceid/v20180301/model/GetNFCTokenRequest.h
+  include/tencentcloud/faceid/v20180301/model/UpdateAMLOngoingScreeningStatusRequest.h
   include/tencentcloud/faceid/v20180301/model/TaiWanIDCard.h
   include/tencentcloud/faceid/v20180301/model/GetWebVerificationResultIntlRequest.h
   )
@@ -129,14 +148,19 @@ set(faceid_src
   src/v20180301/model/IdCardVerificationRequest.cpp
   src/v20180301/model/ImageRecognitionV2Response.cpp
   src/v20180301/model/GetWebVerificationResultIntlResponse.cpp
+  src/v20180301/model/UpdateAMLOngoingScreeningStatusResponse.cpp
+  src/v20180301/model/GetAMLScreeningResultResponse.cpp
+  src/v20180301/model/Company.cpp
   src/v20180301/model/MobileStatusRequest.cpp
   src/v20180301/model/OCRResult.cpp
+  src/v20180301/model/ListEKYCWebhooksResponse.cpp
   src/v20180301/model/BangladeshIDCard.cpp
   src/v20180301/model/LivenessCompareResponse.cpp
-  src/v20180301/model/GenerateReflectSequenceResponse.cpp
+  src/v20180301/model/PhilippinesSSSID.cpp
   src/v20180301/model/DetectAIFakeFacesRequest.cpp
   src/v20180301/model/IndonesiaIDCard.cpp
   src/v20180301/model/SingaporeIDCard.cpp
+  src/v20180301/model/CreateEKYCWebhookResponse.cpp
   src/v20180301/model/MacaoIDCard.cpp
   src/v20180301/model/GeneralCard.cpp
   src/v20180301/model/PhilippinesUMID.cpp
@@ -154,9 +178,11 @@ set(faceid_src
   src/v20180301/model/ApplySdkVerificationTokenRequest.cpp
   src/v20180301/model/CardVerifyResult.cpp
   src/v20180301/model/CheckIdNameDateRequest.cpp
+  src/v20180301/model/WebhookList.cpp
   src/v20180301/model/ApplyLivenessTokenResponse.cpp
   src/v20180301/model/CardInfo.cpp
   src/v20180301/model/PhilippinesVoteID.cpp
+  src/v20180301/model/DeleteEKYCWebhookResponse.cpp
   src/v20180301/model/ApplySdkVerificationTokenResponse.cpp
   src/v20180301/model/GetFaceIdTokenIntlRequest.cpp
   src/v20180301/model/PakistanDrivingLicense.cpp
@@ -166,59 +192,71 @@ set(faceid_src
   src/v20180301/model/HMTPermit.cpp
   src/v20180301/model/PhilippinesTinID.cpp
   src/v20180301/model/DetectAIFakeFacesResponse.cpp
+  src/v20180301/model/DeleteEKYCWebhookRequest.cpp
   src/v20180301/model/LivenessCompareRequest.cpp
   src/v20180301/model/MLIDCard.cpp
   src/v20180301/model/GetFaceIdResultIntlResponse.cpp
   src/v20180301/model/CheckBankCardInformationRequest.cpp
+  src/v20180301/model/ListEKYCWebhooksRequest.cpp
   src/v20180301/model/BankCardVerificationRequest.cpp
   src/v20180301/model/ThailandIDCard.cpp
   src/v20180301/model/CheckIdCardInformationResponse.cpp
   src/v20180301/model/PhoneVerificationResponse.cpp
   src/v20180301/model/IdCardOCRVerificationRequest.cpp
+  src/v20180301/model/UpdateEKYCWebhookResponse.cpp
   src/v20180301/model/BankCard4EVerificationResponse.cpp
   src/v20180301/model/GenerateReflectSequenceRequest.cpp
   src/v20180301/model/EditDetail.cpp
   src/v20180301/model/PakistanIDCard.cpp
   src/v20180301/model/Encryption.cpp
-  src/v20180301/model/GetNFCResultResponse.cpp
+  src/v20180301/model/MobileNetworkTimeVerificationRequest.cpp
+  src/v20180301/model/GetAMLScreeningResultRequest.cpp
   src/v20180301/model/GetLivenessResultRequest.cpp
   src/v20180301/model/CheckIdCardInformationRequest.cpp
   src/v20180301/model/IdCardOCRVerificationResponse.cpp
   src/v20180301/model/NigeriaIDCard.cpp
   src/v20180301/model/CompareFaceLivenessResponse.cpp
   src/v20180301/model/BankCardVerificationResponse.cpp
-  src/v20180301/model/MobileNetworkTimeVerificationRequest.cpp
+  src/v20180301/model/Person.cpp
+  src/v20180301/model/UpdateAMLCustomerProfileRequest.cpp
+  src/v20180301/model/GetNFCResultResponse.cpp
   src/v20180301/model/ApplyWebVerificationBizTokenIntlRequest.cpp
   src/v20180301/model/FileInfo.cpp
   src/v20180301/model/PhilippinesDrivingLicense.cpp
-  src/v20180301/model/PhilippinesSSSID.cpp
+  src/v20180301/model/GenerateReflectSequenceResponse.cpp
   src/v20180301/model/IdCardVerificationResponse.cpp
   src/v20180301/model/WebVerificationConfigIntl.cpp
   src/v20180301/model/CompareResult.cpp
+  src/v20180301/model/RunAMLNameScreeningResponse.cpp
   src/v20180301/model/InternationalIDPassport.cpp
   src/v20180301/model/MobileNetworkTimeVerificationResponse.cpp
   src/v20180301/model/CreateUploadUrlResponse.cpp
   src/v20180301/model/JapanIDCard.cpp
   src/v20180301/model/NigeriaDrivingLicense.cpp
+  src/v20180301/model/CreateEKYCWebhookRequest.cpp
   src/v20180301/model/HKIDCard.cpp
   src/v20180301/model/PhoneVerificationRequest.cpp
   src/v20180301/model/IndonesiaDrivingLicense.cpp
   src/v20180301/model/VerificationDetail.cpp
   src/v20180301/model/DetectReflectLivenessAndCompareResponse.cpp
   src/v20180301/model/VideoLivenessCompareResponse.cpp
+  src/v20180301/model/UpdateAMLCustomerProfileResponse.cpp
   src/v20180301/model/BankCard2EVerificationRequest.cpp
   src/v20180301/model/Address.cpp
   src/v20180301/model/RetrievalLivenessExtraInfo.cpp
   src/v20180301/model/ImageRecognitionV2Request.cpp
   src/v20180301/model/MainlandIDCard.cpp
   src/v20180301/model/NormalMLIDCard.cpp
+  src/v20180301/model/UpdateEKYCWebhookRequest.cpp
   src/v20180301/model/BankCard4EVerificationRequest.cpp
   src/v20180301/model/CreateUploadUrlRequest.cpp
   src/v20180301/model/GetNFCTokenResponse.cpp
   src/v20180301/model/NormalHKIDCard.cpp
   src/v20180301/model/GetSdkVerificationResultRequest.cpp
+  src/v20180301/model/RunAMLNameScreeningRequest.cpp
   src/v20180301/model/ApplyLivenessTokenRequest.cpp
   src/v20180301/model/GetNFCTokenRequest.cpp
+  src/v20180301/model/UpdateAMLOngoingScreeningStatusRequest.cpp
   src/v20180301/model/TaiWanIDCard.cpp
   src/v20180301/model/GetWebVerificationResultIntlRequest.cpp
   )

@@ -22,6 +22,7 @@
 #include <map>
 #include <tencentcloud/core/AbstractModel.h>
 #include <tencentcloud/ocr/v20181119/model/ConfigAdvanced.h>
+#include <tencentcloud/ocr/v20181119/model/ItemNames.h>
 
 
 namespace TencentCloud
@@ -370,6 +371,48 @@ When set to en, the added key is english.
                      */
                     bool OutputLanguageHasBeenSet() const;
 
+                    /**
+                     * 获取Custom extraction field configuration, specify the custom extracted field name, field type and field prompt.
+                     * @return NewItemNames Custom extraction field configuration, specify the custom extracted field name, field type and field prompt.
+                     * 
+                     */
+                    std::vector<ItemNames> GetNewItemNames() const;
+
+                    /**
+                     * 设置Custom extraction field configuration, specify the custom extracted field name, field type and field prompt.
+                     * @param _newItemNames Custom extraction field configuration, specify the custom extracted field name, field type and field prompt.
+                     * 
+                     */
+                    void SetNewItemNames(const std::vector<ItemNames>& _newItemNames);
+
+                    /**
+                     * 判断参数 NewItemNames 是否已赋值
+                     * @return NewItemNames 是否已赋值
+                     * 
+                     */
+                    bool NewItemNamesHasBeenSet() const;
+
+                    /**
+                     * 获取The algorithm model version used by the multimodal document extraction recognition service. Valid values are '1.0' and '2.0'. Starting from July 20, 2026, the default is '2.0'. Accounts using this interface before that date default to '1.0' when the parameter is omitted. Accounts activated after July 20, 2026 only support '2.0'. Different versions adopt different extraction algorithms; the new version delivers better overall recognition result, and '2.0' is recommended.
+                     * @return MultiModelVersion The algorithm model version used by the multimodal document extraction recognition service. Valid values are '1.0' and '2.0'. Starting from July 20, 2026, the default is '2.0'. Accounts using this interface before that date default to '1.0' when the parameter is omitted. Accounts activated after July 20, 2026 only support '2.0'. Different versions adopt different extraction algorithms; the new version delivers better overall recognition result, and '2.0' is recommended.
+                     * 
+                     */
+                    std::string GetMultiModelVersion() const;
+
+                    /**
+                     * 设置The algorithm model version used by the multimodal document extraction recognition service. Valid values are '1.0' and '2.0'. Starting from July 20, 2026, the default is '2.0'. Accounts using this interface before that date default to '1.0' when the parameter is omitted. Accounts activated after July 20, 2026 only support '2.0'. Different versions adopt different extraction algorithms; the new version delivers better overall recognition result, and '2.0' is recommended.
+                     * @param _multiModelVersion The algorithm model version used by the multimodal document extraction recognition service. Valid values are '1.0' and '2.0'. Starting from July 20, 2026, the default is '2.0'. Accounts using this interface before that date default to '1.0' when the parameter is omitted. Accounts activated after July 20, 2026 only support '2.0'. Different versions adopt different extraction algorithms; the new version delivers better overall recognition result, and '2.0' is recommended.
+                     * 
+                     */
+                    void SetMultiModelVersion(const std::string& _multiModelVersion);
+
+                    /**
+                     * 判断参数 MultiModelVersion 是否已赋值
+                     * @return MultiModelVersion 是否已赋值
+                     * 
+                     */
+                    bool MultiModelVersionHasBeenSet() const;
+
                 private:
 
                     /**
@@ -461,6 +504,18 @@ When set to en, the added key is english.
                      */
                     std::string m_outputLanguage;
                     bool m_outputLanguageHasBeenSet;
+
+                    /**
+                     * Custom extraction field configuration, specify the custom extracted field name, field type and field prompt.
+                     */
+                    std::vector<ItemNames> m_newItemNames;
+                    bool m_newItemNamesHasBeenSet;
+
+                    /**
+                     * The algorithm model version used by the multimodal document extraction recognition service. Valid values are '1.0' and '2.0'. Starting from July 20, 2026, the default is '2.0'. Accounts using this interface before that date default to '1.0' when the parameter is omitted. Accounts activated after July 20, 2026 only support '2.0'. Different versions adopt different extraction algorithms; the new version delivers better overall recognition result, and '2.0' is recommended.
+                     */
+                    std::string m_multiModelVersion;
+                    bool m_multiModelVersionHasBeenSet;
 
                 };
             }

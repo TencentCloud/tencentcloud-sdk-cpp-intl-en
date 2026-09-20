@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Control parameters for audio (mute, bass, pop) detection.
                 */
                 class VoiceConfigureInfo : public AbstractModel
                 {
@@ -47,15 +47,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Switch 
+                     * 获取Audio (mute, bass, pop) detection switch. Available values:
+<li>ON: enabled;</li>
+<li>OFF: Disable.</li>
+                     * @return Switch Audio (mute, bass, pop) detection switch. Available values:
+<li>ON: enabled;</li>
+<li>OFF: Disable.</li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置
-                     * @param _switch 
+                     * 设置Audio (mute, bass, pop) detection switch. Available values:
+<li>ON: enabled;</li>
+<li>OFF: Disable.</li>
+                     * @param _switch Audio (mute, bass, pop) detection switch. Available values:
+<li>ON: enabled;</li>
+<li>OFF: Disable.</li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -70,7 +78,9 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Audio (mute, bass, pop) detection switch. Available values:
+<li>ON: enabled;</li>
+<li>OFF: Disable.</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;

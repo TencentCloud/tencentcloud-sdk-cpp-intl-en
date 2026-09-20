@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * High dynamic range type control parameter.
                 */
                 class HDRInfo : public AbstractModel
                 {
@@ -47,15 +47,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Switch 
+                     * 获取High dynamic range type control switch. Available values:
+<li>ON: enable high dynamic range type switch;</li>
+<li>OFF: disables high dynamic range type conversion.</li>
+                     * @return Switch High dynamic range type control switch. Available values:
+<li>ON: enable high dynamic range type switch;</li>
+<li>OFF: disables high dynamic range type conversion.</li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置
-                     * @param _switch 
+                     * 设置High dynamic range type control switch. Available values:
+<li>ON: enable high dynamic range type switch;</li>
+<li>OFF: disables high dynamic range type conversion.</li>
+                     * @param _switch High dynamic range type control switch. Available values:
+<li>ON: enable high dynamic range type switch;</li>
+<li>OFF: disables high dynamic range type conversion.</li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -68,15 +76,39 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Type 
+                     * 获取High dynamic range type. Valid values:
+<li>hdr10: refers to the hdr10 standard;</li>
+<li>hlg: refers to the hlg standard.</li>
+
+Note:
+<li> Valid only when the high dynamic range type control switch is ON;</li>
+<li>Valid when the video stream encoding format Codec of the video output parameter is specified as libx264 or libx265 in the target parameter.</li>
+                     * @return Type High dynamic range type. Valid values:
+<li>hdr10: refers to the hdr10 standard;</li>
+<li>hlg: refers to the hlg standard.</li>
+
+Note:
+<li> Valid only when the high dynamic range type control switch is ON;</li>
+<li>Valid when the video stream encoding format Codec of the video output parameter is specified as libx264 or libx265 in the target parameter.</li>
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置
-                     * @param _type 
+                     * 设置High dynamic range type. Valid values:
+<li>hdr10: refers to the hdr10 standard;</li>
+<li>hlg: refers to the hlg standard.</li>
+
+Note:
+<li> Valid only when the high dynamic range type control switch is ON;</li>
+<li>Valid when the video stream encoding format Codec of the video output parameter is specified as libx264 or libx265 in the target parameter.</li>
+                     * @param _type High dynamic range type. Valid values:
+<li>hdr10: refers to the hdr10 standard;</li>
+<li>hlg: refers to the hlg standard.</li>
+
+Note:
+<li> Valid only when the high dynamic range type control switch is ON;</li>
+<li>Valid when the video stream encoding format Codec of the video output parameter is specified as libx264 or libx265 in the target parameter.</li>
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -91,13 +123,21 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * High dynamic range type control switch. Available values:
+<li>ON: enable high dynamic range type switch;</li>
+<li>OFF: disables high dynamic range type conversion.</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * 
+                     * High dynamic range type. Valid values:
+<li>hdr10: refers to the hdr10 standard;</li>
+<li>hlg: refers to the hlg standard.</li>
+
+Note:
+<li> Valid only when the high dynamic range type control switch is ON;</li>
+<li>Valid when the video stream encoding format Codec of the video output parameter is specified as libx264 or libx265 in the target parameter.</li>
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;

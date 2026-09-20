@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * File upload task information
                 */
                 class FileUploadTask : public AbstractModel
                 {
@@ -49,15 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return FileId 
+                     * 获取Unique file ID.
+                     * @return FileId Unique file ID.
                      * 
                      */
                     std::string GetFileId() const;
 
                     /**
-                     * 设置
-                     * @param _fileId 
+                     * 设置Unique file ID.
+                     * @param _fileId Unique file ID.
                      * 
                      */
                     void SetFileId(const std::string& _fileId);
@@ -70,15 +70,15 @@ namespace TencentCloud
                     bool FileIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return MediaBasicInfo 
+                     * 获取Basic information of the generated media file after upload completion.
+                     * @return MediaBasicInfo Basic information of the generated media file after upload completion.
                      * 
                      */
                     MediaBasicInfo GetMediaBasicInfo() const;
 
                     /**
-                     * 设置
-                     * @param _mediaBasicInfo 
+                     * 设置Basic information of the generated media file after upload completion.
+                     * @param _mediaBasicInfo Basic information of the generated media file after upload completion.
                      * 
                      */
                     void SetMediaBasicInfo(const MediaBasicInfo& _mediaBasicInfo);
@@ -91,15 +91,15 @@ namespace TencentCloud
                     bool MediaBasicInfoHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ProcedureTaskId 
+                     * 获取Task ID of the `Procedure` type. If A task (Procedure) to execute is specified during video upload, the task is initiated when the task flow template specifies one or more of `MediaProcessTask`, `AiAnalysisTask`, and `AiRecognitionTask`.
+                     * @return ProcedureTaskId Task ID of the `Procedure` type. If A task (Procedure) to execute is specified during video upload, the task is initiated when the task flow template specifies one or more of `MediaProcessTask`, `AiAnalysisTask`, and `AiRecognitionTask`.
                      * 
                      */
                     std::string GetProcedureTaskId() const;
 
                     /**
-                     * 设置
-                     * @param _procedureTaskId 
+                     * 设置Task ID of the `Procedure` type. If A task (Procedure) to execute is specified during video upload, the task is initiated when the task flow template specifies one or more of `MediaProcessTask`, `AiAnalysisTask`, and `AiRecognitionTask`.
+                     * @param _procedureTaskId Task ID of the `Procedure` type. If A task (Procedure) to execute is specified during video upload, the task is initiated when the task flow template specifies one or more of `MediaProcessTask`, `AiAnalysisTask`, and `AiRecognitionTask`.
                      * 
                      */
                     void SetProcedureTaskId(const std::string& _procedureTaskId);
@@ -112,15 +112,15 @@ namespace TencentCloud
                     bool ProcedureTaskIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ReviewAudioVideoTaskId 
+                     * 获取Task ID of the `ReviewAudioVideo` task type. If a task procedure is specified during video upload (https://www.tencentcloud.com/document/product/266/33475?from_cn_redirect=1#.E4.BB.BB.E5.8A.A1.E5.8F.91.E8.B5.B7), the task is initiated when the task flow template specifies `ReviewAudioVideoTask`.
+                     * @return ReviewAudioVideoTaskId Task ID of the `ReviewAudioVideo` task type. If a task procedure is specified during video upload (https://www.tencentcloud.com/document/product/266/33475?from_cn_redirect=1#.E4.BB.BB.E5.8A.A1.E5.8F.91.E8.B5.B7), the task is initiated when the task flow template specifies `ReviewAudioVideoTask`.
                      * 
                      */
                     std::string GetReviewAudioVideoTaskId() const;
 
                     /**
-                     * 设置
-                     * @param _reviewAudioVideoTaskId 
+                     * 设置Task ID of the `ReviewAudioVideo` task type. If a task procedure is specified during video upload (https://www.tencentcloud.com/document/product/266/33475?from_cn_redirect=1#.E4.BB.BB.E5.8A.A1.E5.8F.91.E8.B5.B7), the task is initiated when the task flow template specifies `ReviewAudioVideoTask`.
+                     * @param _reviewAudioVideoTaskId Task ID of the `ReviewAudioVideo` task type. If a task procedure is specified during video upload (https://www.tencentcloud.com/document/product/266/33475?from_cn_redirect=1#.E4.BB.BB.E5.8A.A1.E5.8F.91.E8.B5.B7), the task is initiated when the task flow template specifies `ReviewAudioVideoTask`.
                      * 
                      */
                     void SetReviewAudioVideoTaskId(const std::string& _reviewAudioVideoTaskId);
@@ -133,15 +133,15 @@ namespace TencentCloud
                     bool ReviewAudioVideoTaskIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return MetaData 
+                     * 获取Meta information, including size, duration, video stream information, and audio stream information.
+                     * @return MetaData Meta information, including size, duration, video stream information, and audio stream information.
                      * 
                      */
                     MediaMetaData GetMetaData() const;
 
                     /**
-                     * 设置
-                     * @param _metaData 
+                     * 设置Meta information, including size, duration, video stream information, and audio stream information.
+                     * @param _metaData Meta information, including size, duration, video stream information, and audio stream information.
                      * 
                      */
                     void SetMetaData(const MediaMetaData& _metaData);
@@ -156,31 +156,31 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Unique file ID.
                      */
                     std::string m_fileId;
                     bool m_fileIdHasBeenSet;
 
                     /**
-                     * 
+                     * Basic information of the generated media file after upload completion.
                      */
                     MediaBasicInfo m_mediaBasicInfo;
                     bool m_mediaBasicInfoHasBeenSet;
 
                     /**
-                     * 
+                     * Task ID of the `Procedure` type. If A task (Procedure) to execute is specified during video upload, the task is initiated when the task flow template specifies one or more of `MediaProcessTask`, `AiAnalysisTask`, and `AiRecognitionTask`.
                      */
                     std::string m_procedureTaskId;
                     bool m_procedureTaskIdHasBeenSet;
 
                     /**
-                     * 
+                     * Task ID of the `ReviewAudioVideo` task type. If a task procedure is specified during video upload (https://www.tencentcloud.com/document/product/266/33475?from_cn_redirect=1#.E4.BB.BB.E5.8A.A1.E5.8F.91.E8.B5.B7), the task is initiated when the task flow template specifies `ReviewAudioVideoTask`.
                      */
                     std::string m_reviewAudioVideoTaskId;
                     bool m_reviewAudioVideoTaskIdHasBeenSet;
 
                     /**
-                     * 
+                     * Meta information, including size, duration, video stream information, and audio stream information.
                      */
                     MediaMetaData m_metaData;
                     bool m_metaDataHasBeenSet;

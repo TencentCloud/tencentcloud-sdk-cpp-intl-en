@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Comprehensive enhancement control
                 */
                 class ImageQualityEnhanceInfo : public AbstractModel
                 {
@@ -47,15 +47,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Switch 
+                     * 获取Comprehensive enhancement control switch. Valid values:
+<li>ON: enable comprehensive enhancement;</li>
+<li>OFF: Disable comprehensive enhancement.</li>
+                     * @return Switch Comprehensive enhancement control switch. Valid values:
+<li>ON: enable comprehensive enhancement;</li>
+<li>OFF: Disable comprehensive enhancement.</li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置
-                     * @param _switch 
+                     * 设置Comprehensive enhancement control switch. Valid values:
+<li>ON: enable comprehensive enhancement;</li>
+<li>OFF: Disable comprehensive enhancement.</li>
+                     * @param _switch Comprehensive enhancement control switch. Valid values:
+<li>ON: enable comprehensive enhancement;</li>
+<li>OFF: Disable comprehensive enhancement.</li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -68,15 +76,31 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Type 
+                     * 获取Comprehensive enhancement type. It is valid only when the comprehensive enhancement control switch is ON. Available values:
+<li>weak: light comprehensive enhancement;</li>
+<li>normal: normal comprehensive enhancement;</li>
+<li>strong: strong comprehensive enhancement.</li>
+Default value: weak.
+                     * @return Type Comprehensive enhancement type. It is valid only when the comprehensive enhancement control switch is ON. Available values:
+<li>weak: light comprehensive enhancement;</li>
+<li>normal: normal comprehensive enhancement;</li>
+<li>strong: strong comprehensive enhancement.</li>
+Default value: weak.
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置
-                     * @param _type 
+                     * 设置Comprehensive enhancement type. It is valid only when the comprehensive enhancement control switch is ON. Available values:
+<li>weak: light comprehensive enhancement;</li>
+<li>normal: normal comprehensive enhancement;</li>
+<li>strong: strong comprehensive enhancement.</li>
+Default value: weak.
+                     * @param _type Comprehensive enhancement type. It is valid only when the comprehensive enhancement control switch is ON. Available values:
+<li>weak: light comprehensive enhancement;</li>
+<li>normal: normal comprehensive enhancement;</li>
+<li>strong: strong comprehensive enhancement.</li>
+Default value: weak.
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -91,13 +115,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Comprehensive enhancement control switch. Valid values:
+<li>ON: enable comprehensive enhancement;</li>
+<li>OFF: Disable comprehensive enhancement.</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * 
+                     * Comprehensive enhancement type. It is valid only when the comprehensive enhancement control switch is ON. Available values:
+<li>weak: light comprehensive enhancement;</li>
+<li>normal: normal comprehensive enhancement;</li>
+<li>strong: strong comprehensive enhancement.</li>
+Default value: weak.
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;

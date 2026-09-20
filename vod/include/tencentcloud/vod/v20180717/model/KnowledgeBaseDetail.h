@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Detailed information such as the knowledge library list to import media assets into and the parsing template used
                 */
                 class KnowledgeBaseDetail : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return KnowledgeBaseId 
+                     * 获取<p>Knowledge base ID</p>
+                     * @return KnowledgeBaseId <p>Knowledge base ID</p>
                      * 
                      */
                     std::string GetKnowledgeBaseId() const;
 
                     /**
-                     * 设置
-                     * @param _knowledgeBaseId 
+                     * 设置<p>Knowledge base ID</p>
+                     * @param _knowledgeBaseId <p>Knowledge base ID</p>
                      * 
                      */
                     void SetKnowledgeBaseId(const std::string& _knowledgeBaseId);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool KnowledgeBaseIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Definition 
+                     * 获取<p>Associated large model parsing template</p>
+                     * @return Definition <p>Associated large model parsing template</p>
                      * 
                      */
                     uint64_t GetDefinition() const;
 
                     /**
-                     * 设置
-                     * @param _definition 
+                     * 设置<p>Associated large model parsing template</p>
+                     * @param _definition <p>Associated large model parsing template</p>
                      * 
                      */
                     void SetDefinition(const uint64_t& _definition);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool DefinitionHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ImportTime 
+                     * 获取<p>Storage time</p>
+                     * @return ImportTime <p>Storage time</p>
                      * 
                      */
                     std::string GetImportTime() const;
 
                     /**
-                     * 设置
-                     * @param _importTime 
+                     * 设置<p>Storage time</p>
+                     * @param _importTime <p>Storage time</p>
                      * 
                      */
                     void SetImportTime(const std::string& _importTime);
@@ -112,19 +112,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p>Knowledge base ID</p>
                      */
                     std::string m_knowledgeBaseId;
                     bool m_knowledgeBaseIdHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Associated large model parsing template</p>
                      */
                     uint64_t m_definition;
                     bool m_definitionHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Storage time</p>
                      */
                     std::string m_importTime;
                     bool m_importTimeHasBeenSet;

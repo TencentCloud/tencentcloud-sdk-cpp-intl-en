@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Screenshot information of a VOD file at the specified time point
                 */
                 class MediaSnapshotByTimeOffsetInfo : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return SnapshotByTimeOffsetSet 
+                     * 获取Collection of screenshot information at the specified time point for a specific specification. Currently, each specification can have only one set of screenshots.
+                     * @return SnapshotByTimeOffsetSet Collection of screenshot information at the specified time point for a specific specification. Currently, each specification can have only one set of screenshots.
                      * 
                      */
                     std::vector<MediaSnapshotByTimeOffsetItem> GetSnapshotByTimeOffsetSet() const;
 
                     /**
-                     * 设置
-                     * @param _snapshotByTimeOffsetSet 
+                     * 设置Collection of screenshot information at the specified time point for a specific specification. Currently, each specification can have only one set of screenshots.
+                     * @param _snapshotByTimeOffsetSet Collection of screenshot information at the specified time point for a specific specification. Currently, each specification can have only one set of screenshots.
                      * 
                      */
                     void SetSnapshotByTimeOffsetSet(const std::vector<MediaSnapshotByTimeOffsetItem>& _snapshotByTimeOffsetSet);
@@ -71,7 +71,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Collection of screenshot information at the specified time point for a specific specification. Currently, each specification can have only one set of screenshots.
                      */
                     std::vector<MediaSnapshotByTimeOffsetItem> m_snapshotByTimeOffsetSet;
                     bool m_snapshotByTimeOffsetSetHasBeenSet;

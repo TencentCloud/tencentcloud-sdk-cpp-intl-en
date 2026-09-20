@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Input of the video editing task.
                 */
                 class EditMediaTaskInput : public AbstractModel
                 {
@@ -49,15 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return InputType 
+                     * 获取Source type of the input video. Valid values: File and Stream.
+                     * @return InputType Source type of the input video. Valid values: File and Stream.
                      * 
                      */
                     std::string GetInputType() const;
 
                     /**
-                     * 设置
-                     * @param _inputType 
+                     * 设置Source type of the input video. Valid values: File and Stream.
+                     * @param _inputType Source type of the input video. Valid values: File and Stream.
                      * 
                      */
                     void SetInputType(const std::string& _inputType);
@@ -70,15 +70,15 @@ namespace TencentCloud
                     bool InputTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return FileInfoSet 
+                     * 获取Input video file information. This field has a value when InputType is File.
+                     * @return FileInfoSet Input video file information. This field has a value when InputType is File.
                      * 
                      */
                     std::vector<EditMediaFileInfo> GetFileInfoSet() const;
 
                     /**
-                     * 设置
-                     * @param _fileInfoSet 
+                     * 设置Input video file information. This field has a value when InputType is File.
+                     * @param _fileInfoSet Input video file information. This field has a value when InputType is File.
                      * 
                      */
                     void SetFileInfoSet(const std::vector<EditMediaFileInfo>& _fileInfoSet);
@@ -91,15 +91,15 @@ namespace TencentCloud
                     bool FileInfoSetHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return StreamInfoSet 
+                     * 获取Input stream information. This field has a value when InputType is Stream.
+                     * @return StreamInfoSet Input stream information. This field has a value when InputType is Stream.
                      * 
                      */
                     std::vector<EditMediaStreamInfo> GetStreamInfoSet() const;
 
                     /**
-                     * 设置
-                     * @param _streamInfoSet 
+                     * 设置Input stream information. This field has a value when InputType is Stream.
+                     * @param _streamInfoSet Input stream information. This field has a value when InputType is Stream.
                      * 
                      */
                     void SetStreamInfoSet(const std::vector<EditMediaStreamInfo>& _streamInfoSet);
@@ -114,19 +114,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Source type of the input video. Valid values: File and Stream.
                      */
                     std::string m_inputType;
                     bool m_inputTypeHasBeenSet;
 
                     /**
-                     * 
+                     * Input video file information. This field has a value when InputType is File.
                      */
                     std::vector<EditMediaFileInfo> m_fileInfoSet;
                     bool m_fileInfoSetHasBeenSet;
 
                     /**
-                     * 
+                     * Input stream information. This field has a value when InputType is Stream.
                      */
                     std::vector<EditMediaStreamInfo> m_streamInfoSet;
                     bool m_streamInfoSetHasBeenSet;

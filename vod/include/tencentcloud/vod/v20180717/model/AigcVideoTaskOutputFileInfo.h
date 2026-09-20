@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Information of the output file of an AIGC video generation task.
                 */
                 class AigcVideoTaskOutputFileInfo : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return StorageMode 
+                     * 获取<p>Storage mode. Valid values: <li>Permanent: retained permanently;</li> <li>Temporary: temporary storage;</li><br>Default value: Temporary</p>
+                     * @return StorageMode <p>Storage mode. Valid values: <li>Permanent: retained permanently;</li> <li>Temporary: temporary storage;</li><br>Default value: Temporary</p>
                      * 
                      */
                     std::string GetStorageMode() const;
 
                     /**
-                     * 设置
-                     * @param _storageMode 
+                     * 设置<p>Storage mode. Valid values: <li>Permanent: retained permanently;</li> <li>Temporary: temporary storage;</li><br>Default value: Temporary</p>
+                     * @param _storageMode <p>Storage mode. Valid values: <li>Permanent: retained permanently;</li> <li>Temporary: temporary storage;</li><br>Default value: Temporary</p>
                      * 
                      */
                     void SetStorageMode(const std::string& _storageMode);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool StorageModeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return MediaName 
+                     * 获取<p>Output filename, up to 64 characters. By default, the system assigns a generated filename. Valid when StorageMode is Permanent.</p>
+                     * @return MediaName <p>Output filename, up to 64 characters. By default, the system assigns a generated filename. Valid when StorageMode is Permanent.</p>
                      * 
                      */
                     std::string GetMediaName() const;
 
                     /**
-                     * 设置
-                     * @param _mediaName 
+                     * 设置<p>Output filename, up to 64 characters. By default, the system assigns a generated filename. Valid when StorageMode is Permanent.</p>
+                     * @param _mediaName <p>Output filename, up to 64 characters. By default, the system assigns a generated filename. Valid when StorageMode is Permanent.</p>
                      * 
                      */
                     void SetMediaName(const std::string& _mediaName);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool MediaNameHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ClassId 
+                     * 获取<p>Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the <a href="/document/product/266/7812">Create Category</a> API. Valid when StorageMode is Permanent.</p>
+                     * @return ClassId <p>Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the <a href="/document/product/266/7812">Create Category</a> API. Valid when StorageMode is Permanent.</p>
                      * 
                      */
                     int64_t GetClassId() const;
 
                     /**
-                     * 设置
-                     * @param _classId 
+                     * 设置<p>Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the <a href="/document/product/266/7812">Create Category</a> API. Valid when StorageMode is Permanent.</p>
+                     * @param _classId <p>Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the <a href="/document/product/266/7812">Create Category</a> API. Valid when StorageMode is Permanent.</p>
                      * 
                      */
                     void SetClassId(const int64_t& _classId);
@@ -111,15 +111,15 @@ namespace TencentCloud
                     bool ClassIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ExpireTime 
+                     * 获取<p>Expiry date of the output file. The file will be deleted after this time. The default is permanent with no expiration. The format follows the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
+                     * @return ExpireTime <p>Expiry date of the output file. The file will be deleted after this time. The default is permanent with no expiration. The format follows the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
                      * 
                      */
                     std::string GetExpireTime() const;
 
                     /**
-                     * 设置
-                     * @param _expireTime 
+                     * 设置<p>Expiry date of the output file. The file will be deleted after this time. The default is permanent with no expiration. The format follows the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
+                     * @param _expireTime <p>Expiry date of the output file. The file will be deleted after this time. The default is permanent with no expiration. The format follows the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
                      * 
                      */
                     void SetExpireTime(const std::string& _expireTime);
@@ -132,15 +132,15 @@ namespace TencentCloud
                     bool ExpireTimeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return FileType 
+                     * 获取<p>File type, for example, mp4 or flv.</p>
+                     * @return FileType <p>File type, for example, mp4 or flv.</p>
                      * 
                      */
                     std::string GetFileType() const;
 
                     /**
-                     * 设置
-                     * @param _fileType 
+                     * 设置<p>File type, for example, mp4 or flv.</p>
+                     * @param _fileType <p>File type, for example, mp4 or flv.</p>
                      * 
                      */
                     void SetFileType(const std::string& _fileType);
@@ -153,15 +153,15 @@ namespace TencentCloud
                     bool FileTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return FileUrl 
+                     * 获取<p>Media file playback address.</p>
+                     * @return FileUrl <p>Media file playback address.</p>
                      * 
                      */
                     std::string GetFileUrl() const;
 
                     /**
-                     * 设置
-                     * @param _fileUrl 
+                     * 设置<p>Media file playback address.</p>
+                     * @param _fileUrl <p>Media file playback address.</p>
                      * 
                      */
                     void SetFileUrl(const std::string& _fileUrl);
@@ -174,15 +174,15 @@ namespace TencentCloud
                     bool FileUrlHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return FileContent 
+                     * 获取<p>File content. A return value is returned when UsageType is position_info.</p>
+                     * @return FileContent <p>File content. A return value is returned when UsageType is position_info.</p>
                      * 
                      */
                     std::string GetFileContent() const;
 
                     /**
-                     * 设置
-                     * @param _fileContent 
+                     * 设置<p>File content. A return value is returned when UsageType is position_info.</p>
+                     * @param _fileContent <p>File content. A return value is returned when UsageType is position_info.</p>
                      * 
                      */
                     void SetFileContent(const std::string& _fileContent);
@@ -195,15 +195,15 @@ namespace TencentCloud
                     bool FileContentHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return FileId 
+                     * 获取<p>Media file ID. Valid when StorageMode is Permanent.</p>
+                     * @return FileId <p>Media file ID. Valid when StorageMode is Permanent.</p>
                      * 
                      */
                     std::string GetFileId() const;
 
                     /**
-                     * 设置
-                     * @param _fileId 
+                     * 设置<p>Media file ID. Valid when StorageMode is Permanent.</p>
+                     * @param _fileId <p>Media file ID. Valid when StorageMode is Permanent.</p>
                      * 
                      */
                     void SetFileId(const std::string& _fileId);
@@ -216,15 +216,15 @@ namespace TencentCloud
                     bool FileIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return MetaData 
+                     * 获取<p>Meta information of the output video.</p>
+                     * @return MetaData <p>Meta information of the output video.</p>
                      * 
                      */
                     MediaMetaData GetMetaData() const;
 
                     /**
-                     * 设置
-                     * @param _metaData 
+                     * 设置<p>Meta information of the output video.</p>
+                     * @param _metaData <p>Meta information of the output video.</p>
                      * 
                      */
                     void SetMetaData(const MediaMetaData& _metaData);
@@ -237,15 +237,15 @@ namespace TencentCloud
                     bool MetaDataHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return UsageType 
+                     * 获取<p>Purpose type of the file.</p><p>Enumeration values:</p><ul><li>scene_url: 3D scenario file. The FileUrl field has a return value.</li><li>point_url: Point cloud file. The FileUrl field has a return value.</li><li>mesh_url: Original grid model file. The FileUrl field has a return value.</li><li>mesh_simplified_url: Simplified grid model file. The FileUrl field has a return value.</li><li>position_info: Scene space location information. The FileContent field has a return value.</li><li>image_url: Generated image. The FileUrl field has a return value.</li></ul>
+                     * @return UsageType <p>Purpose type of the file.</p><p>Enumeration values:</p><ul><li>scene_url: 3D scenario file. The FileUrl field has a return value.</li><li>point_url: Point cloud file. The FileUrl field has a return value.</li><li>mesh_url: Original grid model file. The FileUrl field has a return value.</li><li>mesh_simplified_url: Simplified grid model file. The FileUrl field has a return value.</li><li>position_info: Scene space location information. The FileContent field has a return value.</li><li>image_url: Generated image. The FileUrl field has a return value.</li></ul>
                      * 
                      */
                     std::string GetUsageType() const;
 
                     /**
-                     * 设置
-                     * @param _usageType 
+                     * 设置<p>Purpose type of the file.</p><p>Enumeration values:</p><ul><li>scene_url: 3D scenario file. The FileUrl field has a return value.</li><li>point_url: Point cloud file. The FileUrl field has a return value.</li><li>mesh_url: Original grid model file. The FileUrl field has a return value.</li><li>mesh_simplified_url: Simplified grid model file. The FileUrl field has a return value.</li><li>position_info: Scene space location information. The FileContent field has a return value.</li><li>image_url: Generated image. The FileUrl field has a return value.</li></ul>
+                     * @param _usageType <p>Purpose type of the file.</p><p>Enumeration values:</p><ul><li>scene_url: 3D scenario file. The FileUrl field has a return value.</li><li>point_url: Point cloud file. The FileUrl field has a return value.</li><li>mesh_url: Original grid model file. The FileUrl field has a return value.</li><li>mesh_simplified_url: Simplified grid model file. The FileUrl field has a return value.</li><li>position_info: Scene space location information. The FileContent field has a return value.</li><li>image_url: Generated image. The FileUrl field has a return value.</li></ul>
                      * 
                      */
                     void SetUsageType(const std::string& _usageType);
@@ -260,61 +260,61 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p>Storage mode. Valid values: <li>Permanent: retained permanently;</li> <li>Temporary: temporary storage;</li><br>Default value: Temporary</p>
                      */
                     std::string m_storageMode;
                     bool m_storageModeHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Output filename, up to 64 characters. By default, the system assigns a generated filename. Valid when StorageMode is Permanent.</p>
                      */
                     std::string m_mediaName;
                     bool m_mediaNameHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the <a href="/document/product/266/7812">Create Category</a> API. Valid when StorageMode is Permanent.</p>
                      */
                     int64_t m_classId;
                     bool m_classIdHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Expiry date of the output file. The file will be deleted after this time. The default is permanent with no expiration. The format follows the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
                      */
                     std::string m_expireTime;
                     bool m_expireTimeHasBeenSet;
 
                     /**
-                     * 
+                     * <p>File type, for example, mp4 or flv.</p>
                      */
                     std::string m_fileType;
                     bool m_fileTypeHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Media file playback address.</p>
                      */
                     std::string m_fileUrl;
                     bool m_fileUrlHasBeenSet;
 
                     /**
-                     * 
+                     * <p>File content. A return value is returned when UsageType is position_info.</p>
                      */
                     std::string m_fileContent;
                     bool m_fileContentHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Media file ID. Valid when StorageMode is Permanent.</p>
                      */
                     std::string m_fileId;
                     bool m_fileIdHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Meta information of the output video.</p>
                      */
                     MediaMetaData m_metaData;
                     bool m_metaDataHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Purpose type of the file.</p><p>Enumeration values:</p><ul><li>scene_url: 3D scenario file. The FileUrl field has a return value.</li><li>point_url: Point cloud file. The FileUrl field has a return value.</li><li>mesh_url: Original grid model file. The FileUrl field has a return value.</li><li>mesh_simplified_url: Simplified grid model file. The FileUrl field has a return value.</li><li>position_info: Scene space location information. The FileContent field has a return value.</li><li>image_url: Generated image. The FileUrl field has a return value.</li></ul>
                      */
                     std::string m_usageType;
                     bool m_usageTypeHasBeenSet;

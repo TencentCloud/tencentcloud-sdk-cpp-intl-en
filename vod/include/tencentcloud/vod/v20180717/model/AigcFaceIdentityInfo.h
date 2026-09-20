@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Human face identity information.
                 */
                 class AigcFaceIdentityInfo : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return FaceId 
+                     * 获取Face ID in the video. The same human face is treated as a different ID if it appears more than 1s apart in the middle of the video.
+                     * @return FaceId Face ID in the video. The same human face is treated as a different ID if it appears more than 1s apart in the middle of the video.
                      * 
                      */
                     std::string GetFaceId() const;
 
                     /**
-                     * 设置
-                     * @param _faceId 
+                     * 设置Face ID in the video. The same human face is treated as a different ID if it appears more than 1s apart in the middle of the video.
+                     * @param _faceId Face ID in the video. The same human face is treated as a different ID if it appears more than 1s apart in the middle of the video.
                      * 
                      */
                     void SetFaceId(const std::string& _faceId);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool FaceIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return FaceImage 
+                     * 获取Schematic diagram of a human face captured from the video.
+                     * @return FaceImage Schematic diagram of a human face captured from the video.
                      * 
                      */
                     std::string GetFaceImage() const;
 
                     /**
-                     * 设置
-                     * @param _faceImage 
+                     * 设置Schematic diagram of a human face captured from the video.
+                     * @param _faceImage Schematic diagram of a human face captured from the video.
                      * 
                      */
                     void SetFaceImage(const std::string& _faceImage);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool FaceImageHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return StartTime 
+                     * 获取Starting time of the lip-sync interval for this face, which can be used as the best start time for lip-sync. Unit: ms.
+                     * @return StartTime Starting time of the lip-sync interval for this face, which can be used as the best start time for lip-sync. Unit: ms.
                      * 
                      */
                     int64_t GetStartTime() const;
 
                     /**
-                     * 设置
-                     * @param _startTime 
+                     * 设置Starting time of the lip-sync interval for this face, which can be used as the best start time for lip-sync. Unit: ms.
+                     * @param _startTime Starting time of the lip-sync interval for this face, which can be used as the best start time for lip-sync. Unit: ms.
                      * 
                      */
                     void SetStartTime(const int64_t& _startTime);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return EndTime 
+                     * 获取End time of the lip-sync interval for the face. Note: This result has a millisecond-level error and will be later than the actual interval end. Unit: ms.
+                     * @return EndTime End time of the lip-sync interval for the face. Note: This result has a millisecond-level error and will be later than the actual interval end. Unit: ms.
                      * 
                      */
                     int64_t GetEndTime() const;
 
                     /**
-                     * 设置
-                     * @param _endTime 
+                     * 设置End time of the lip-sync interval for the face. Note: This result has a millisecond-level error and will be later than the actual interval end. Unit: ms.
+                     * @param _endTime End time of the lip-sync interval for the face. Note: This result has a millisecond-level error and will be later than the actual interval end. Unit: ms.
                      * 
                      */
                     void SetEndTime(const int64_t& _endTime);
@@ -133,25 +133,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Face ID in the video. The same human face is treated as a different ID if it appears more than 1s apart in the middle of the video.
                      */
                     std::string m_faceId;
                     bool m_faceIdHasBeenSet;
 
                     /**
-                     * 
+                     * Schematic diagram of a human face captured from the video.
                      */
                     std::string m_faceImage;
                     bool m_faceImageHasBeenSet;
 
                     /**
-                     * 
+                     * Starting time of the lip-sync interval for this face, which can be used as the best start time for lip-sync. Unit: ms.
                      */
                     int64_t m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * 
+                     * End time of the lip-sync interval for the face. Note: This result has a millisecond-level error and will be later than the actual interval end. Unit: ms.
                      */
                     int64_t m_endTime;
                     bool m_endTimeHasBeenSet;

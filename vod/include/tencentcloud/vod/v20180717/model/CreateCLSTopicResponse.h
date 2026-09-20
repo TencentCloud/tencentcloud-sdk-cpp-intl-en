@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return TopicId 
+                     * 获取Log topic ID.
+                     * @return TopicId Log topic ID.
                      * 
                      */
                     std::string GetTopicId() const;
@@ -60,7 +60,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Log topic ID.
                      */
                     std::string m_topicId;
                     bool m_topicIdHasBeenSet;

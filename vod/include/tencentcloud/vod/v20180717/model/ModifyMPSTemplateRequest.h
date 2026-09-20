@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return SubAppId 
+                     * 获取<p><b>VOD <a href="/document/product/266/14574">application</a> ID.</b></p>
+                     * @return SubAppId <p><b>VOD <a href="/document/product/266/14574">application</a> ID.</b></p>
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置
-                     * @param _subAppId 
+                     * 设置<p><b>VOD <a href="/document/product/266/14574">application</a> ID.</b></p>
+                     * @param _subAppId <p><b>VOD <a href="/document/product/266/14574">application</a> ID.</b></p>
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool SubAppIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return TemplateType 
+                     * 获取<p>Type of the MPS template that needs to be modified.</p><p>Enumeration values:</p><ul><li>AIAnalysis: intelligent analysis template</li><li>SmartSubtitle: intelligent subtitle template</li><li>SmartErase: intelligent erasure template</li><li>EmbedSubtitle: subtitle suppression template</li></ul>
+                     * @return TemplateType <p>Type of the MPS template that needs to be modified.</p><p>Enumeration values:</p><ul><li>AIAnalysis: intelligent analysis template</li><li>SmartSubtitle: intelligent subtitle template</li><li>SmartErase: intelligent erasure template</li><li>EmbedSubtitle: subtitle suppression template</li></ul>
                      * 
                      */
                     std::string GetTemplateType() const;
 
                     /**
-                     * 设置
-                     * @param _templateType 
+                     * 设置<p>Type of the MPS template that needs to be modified.</p><p>Enumeration values:</p><ul><li>AIAnalysis: intelligent analysis template</li><li>SmartSubtitle: intelligent subtitle template</li><li>SmartErase: intelligent erasure template</li><li>EmbedSubtitle: subtitle suppression template</li></ul>
+                     * @param _templateType <p>Type of the MPS template that needs to be modified.</p><p>Enumeration values:</p><ul><li>AIAnalysis: intelligent analysis template</li><li>SmartSubtitle: intelligent subtitle template</li><li>SmartErase: intelligent erasure template</li><li>EmbedSubtitle: subtitle suppression template</li></ul>
                      * 
                      */
                     void SetTemplateType(const std::string& _templateType);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool TemplateTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return MPSModifyTemplateParams 
+                     * 获取<p>MPS template parameter modification. This parameter is used for passing through to the media processing service (MPS) to modify user-defined MPS task templates from the VOD side.<br> Currently, only the following task types support template modification in this way:</p><ol><li>Audio and video enhancement: only support filling in the content of Name, Comment, RemoveVideo, RemoveAudio, VideoTemplate, AudioTemplate, and EnhanceConfig parameters in the <a href="https://www.tencentcloud.com/document/api/862/37578?from_cn_redirect=1">modify transcoding template</a> API. Currently, only the above parameters can be configured in the template. Other parameters are not required. If other parameters are included, the system will automatically ignore them.</li><li>AI analysis: only support filling in the content of Name, Comment, ClassificationConfigure, TagConfigure, CoverConfigure, and FrameTagConfigure parameters in the <a href="https://www.tencentcloud.com/document/api/862/40246?from_cn_redirect=1">modify content analysis template</a> API. Currently, only the above parameters can be configured in the template. Other parameters are not required. If other parameters are included, the system will automatically ignore them.</li><li>Smart subtitling: only support filling in the content of Name, Comment, TranslateSwitch, VideoSrcLanguage, SubtitleFormat, SubtitleType, AsrHotWordsConfigure, TranslateDstLanguage, and ProcessType parameters in the <a href="https://www.tencentcloud.com/document/api/862/117001?from_cn_redirect=1">modify smart subtitling template</a> API. Currently, only the above parameters can be configured in the template. Other parameters are not required. If other parameters are included, the system will automatically ignore them.</li><li>Intelligent erasure: only support filling in the content of Name, Comment, EraseType, EraseSubtitleConfig, EraseWatermarkConfig, and ErasePrivacyConfig parameters in the <a href="https://www.tencentcloud.com/document/api/862/123732?from_cn_redirect=1">modify intelligent erasure template</a> API. Currently, only the above parameters can be configured in the template. Other parameters are not required. If other parameters are included, the system will automatically ignore them.</li></ol>
+                     * @return MPSModifyTemplateParams <p>MPS template parameter modification. This parameter is used for passing through to the media processing service (MPS) to modify user-defined MPS task templates from the VOD side.<br> Currently, only the following task types support template modification in this way:</p><ol><li>Audio and video enhancement: only support filling in the content of Name, Comment, RemoveVideo, RemoveAudio, VideoTemplate, AudioTemplate, and EnhanceConfig parameters in the <a href="https://www.tencentcloud.com/document/api/862/37578?from_cn_redirect=1">modify transcoding template</a> API. Currently, only the above parameters can be configured in the template. Other parameters are not required. If other parameters are included, the system will automatically ignore them.</li><li>AI analysis: only support filling in the content of Name, Comment, ClassificationConfigure, TagConfigure, CoverConfigure, and FrameTagConfigure parameters in the <a href="https://www.tencentcloud.com/document/api/862/40246?from_cn_redirect=1">modify content analysis template</a> API. Currently, only the above parameters can be configured in the template. Other parameters are not required. If other parameters are included, the system will automatically ignore them.</li><li>Smart subtitling: only support filling in the content of Name, Comment, TranslateSwitch, VideoSrcLanguage, SubtitleFormat, SubtitleType, AsrHotWordsConfigure, TranslateDstLanguage, and ProcessType parameters in the <a href="https://www.tencentcloud.com/document/api/862/117001?from_cn_redirect=1">modify smart subtitling template</a> API. Currently, only the above parameters can be configured in the template. Other parameters are not required. If other parameters are included, the system will automatically ignore them.</li><li>Intelligent erasure: only support filling in the content of Name, Comment, EraseType, EraseSubtitleConfig, EraseWatermarkConfig, and ErasePrivacyConfig parameters in the <a href="https://www.tencentcloud.com/document/api/862/123732?from_cn_redirect=1">modify intelligent erasure template</a> API. Currently, only the above parameters can be configured in the template. Other parameters are not required. If other parameters are included, the system will automatically ignore them.</li></ol>
                      * 
                      */
                     std::string GetMPSModifyTemplateParams() const;
 
                     /**
-                     * 设置
-                     * @param _mPSModifyTemplateParams 
+                     * 设置<p>MPS template parameter modification. This parameter is used for passing through to the media processing service (MPS) to modify user-defined MPS task templates from the VOD side.<br> Currently, only the following task types support template modification in this way:</p><ol><li>Audio and video enhancement: only support filling in the content of Name, Comment, RemoveVideo, RemoveAudio, VideoTemplate, AudioTemplate, and EnhanceConfig parameters in the <a href="https://www.tencentcloud.com/document/api/862/37578?from_cn_redirect=1">modify transcoding template</a> API. Currently, only the above parameters can be configured in the template. Other parameters are not required. If other parameters are included, the system will automatically ignore them.</li><li>AI analysis: only support filling in the content of Name, Comment, ClassificationConfigure, TagConfigure, CoverConfigure, and FrameTagConfigure parameters in the <a href="https://www.tencentcloud.com/document/api/862/40246?from_cn_redirect=1">modify content analysis template</a> API. Currently, only the above parameters can be configured in the template. Other parameters are not required. If other parameters are included, the system will automatically ignore them.</li><li>Smart subtitling: only support filling in the content of Name, Comment, TranslateSwitch, VideoSrcLanguage, SubtitleFormat, SubtitleType, AsrHotWordsConfigure, TranslateDstLanguage, and ProcessType parameters in the <a href="https://www.tencentcloud.com/document/api/862/117001?from_cn_redirect=1">modify smart subtitling template</a> API. Currently, only the above parameters can be configured in the template. Other parameters are not required. If other parameters are included, the system will automatically ignore them.</li><li>Intelligent erasure: only support filling in the content of Name, Comment, EraseType, EraseSubtitleConfig, EraseWatermarkConfig, and ErasePrivacyConfig parameters in the <a href="https://www.tencentcloud.com/document/api/862/123732?from_cn_redirect=1">modify intelligent erasure template</a> API. Currently, only the above parameters can be configured in the template. Other parameters are not required. If other parameters are included, the system will automatically ignore them.</li></ol>
+                     * @param _mPSModifyTemplateParams <p>MPS template parameter modification. This parameter is used for passing through to the media processing service (MPS) to modify user-defined MPS task templates from the VOD side.<br> Currently, only the following task types support template modification in this way:</p><ol><li>Audio and video enhancement: only support filling in the content of Name, Comment, RemoveVideo, RemoveAudio, VideoTemplate, AudioTemplate, and EnhanceConfig parameters in the <a href="https://www.tencentcloud.com/document/api/862/37578?from_cn_redirect=1">modify transcoding template</a> API. Currently, only the above parameters can be configured in the template. Other parameters are not required. If other parameters are included, the system will automatically ignore them.</li><li>AI analysis: only support filling in the content of Name, Comment, ClassificationConfigure, TagConfigure, CoverConfigure, and FrameTagConfigure parameters in the <a href="https://www.tencentcloud.com/document/api/862/40246?from_cn_redirect=1">modify content analysis template</a> API. Currently, only the above parameters can be configured in the template. Other parameters are not required. If other parameters are included, the system will automatically ignore them.</li><li>Smart subtitling: only support filling in the content of Name, Comment, TranslateSwitch, VideoSrcLanguage, SubtitleFormat, SubtitleType, AsrHotWordsConfigure, TranslateDstLanguage, and ProcessType parameters in the <a href="https://www.tencentcloud.com/document/api/862/117001?from_cn_redirect=1">modify smart subtitling template</a> API. Currently, only the above parameters can be configured in the template. Other parameters are not required. If other parameters are included, the system will automatically ignore them.</li><li>Intelligent erasure: only support filling in the content of Name, Comment, EraseType, EraseSubtitleConfig, EraseWatermarkConfig, and ErasePrivacyConfig parameters in the <a href="https://www.tencentcloud.com/document/api/862/123732?from_cn_redirect=1">modify intelligent erasure template</a> API. Currently, only the above parameters can be configured in the template. Other parameters are not required. If other parameters are included, the system will automatically ignore them.</li></ol>
                      * 
                      */
                     void SetMPSModifyTemplateParams(const std::string& _mPSModifyTemplateParams);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool MPSModifyTemplateParamsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AIAnalysisTemplate 
+                     * 获取<p>Intelligent analysis template parameter. Valid when MPSModifyTemplateParams is empty.</p>
+                     * @return AIAnalysisTemplate <p>Intelligent analysis template parameter. Valid when MPSModifyTemplateParams is empty.</p>
                      * 
                      */
                     MPSAIAnalysisTemplateForUpdate GetAIAnalysisTemplate() const;
 
                     /**
-                     * 设置
-                     * @param _aIAnalysisTemplate 
+                     * 设置<p>Intelligent analysis template parameter. Valid when MPSModifyTemplateParams is empty.</p>
+                     * @param _aIAnalysisTemplate <p>Intelligent analysis template parameter. Valid when MPSModifyTemplateParams is empty.</p>
                      * 
                      */
                     void SetAIAnalysisTemplate(const MPSAIAnalysisTemplateForUpdate& _aIAnalysisTemplate);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool AIAnalysisTemplateHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SmartSubtitleTemplate 
+                     * 获取<p>Smart subtitle template parameter. Valid when MPSModifyTemplateParams is empty.</p>
+                     * @return SmartSubtitleTemplate <p>Smart subtitle template parameter. Valid when MPSModifyTemplateParams is empty.</p>
                      * 
                      */
                     MPSSmartSubtitleTemplateForUpdate GetSmartSubtitleTemplate() const;
 
                     /**
-                     * 设置
-                     * @param _smartSubtitleTemplate 
+                     * 设置<p>Smart subtitle template parameter. Valid when MPSModifyTemplateParams is empty.</p>
+                     * @param _smartSubtitleTemplate <p>Smart subtitle template parameter. Valid when MPSModifyTemplateParams is empty.</p>
                      * 
                      */
                     void SetSmartSubtitleTemplate(const MPSSmartSubtitleTemplateForUpdate& _smartSubtitleTemplate);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool SmartSubtitleTemplateHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SmartEraseTemplate 
+                     * 获取<p>Intelligent erasure template parameter. Valid when MPSModifyTemplateParams is empty.</p>
+                     * @return SmartEraseTemplate <p>Intelligent erasure template parameter. Valid when MPSModifyTemplateParams is empty.</p>
                      * 
                      */
                     MPSSmartEraseTemplateForUpdate GetSmartEraseTemplate() const;
 
                     /**
-                     * 设置
-                     * @param _smartEraseTemplate 
+                     * 设置<p>Intelligent erasure template parameter. Valid when MPSModifyTemplateParams is empty.</p>
+                     * @param _smartEraseTemplate <p>Intelligent erasure template parameter. Valid when MPSModifyTemplateParams is empty.</p>
                      * 
                      */
                     void SetSmartEraseTemplate(const MPSSmartEraseTemplateForUpdate& _smartEraseTemplate);
@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool SmartEraseTemplateHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return EmbedSubtitleTemplate 
+                     * 获取<p>Subtitle suppression template parameter. Valid when MPSModifyTemplateParams is empty.</p>
+                     * @return EmbedSubtitleTemplate <p>Subtitle suppression template parameter. Valid when MPSModifyTemplateParams is empty.</p>
                      * 
                      */
                     MPSEmbedSubtitleTemplateForUpdate GetEmbedSubtitleTemplate() const;
 
                     /**
-                     * 设置
-                     * @param _embedSubtitleTemplate 
+                     * 设置<p>Subtitle suppression template parameter. Valid when MPSModifyTemplateParams is empty.</p>
+                     * @param _embedSubtitleTemplate <p>Subtitle suppression template parameter. Valid when MPSModifyTemplateParams is empty.</p>
                      * 
                      */
                     void SetEmbedSubtitleTemplate(const MPSEmbedSubtitleTemplateForUpdate& _embedSubtitleTemplate);
@@ -196,43 +196,43 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p><b>VOD <a href="/document/product/266/14574">application</a> ID.</b></p>
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Type of the MPS template that needs to be modified.</p><p>Enumeration values:</p><ul><li>AIAnalysis: intelligent analysis template</li><li>SmartSubtitle: intelligent subtitle template</li><li>SmartErase: intelligent erasure template</li><li>EmbedSubtitle: subtitle suppression template</li></ul>
                      */
                     std::string m_templateType;
                     bool m_templateTypeHasBeenSet;
 
                     /**
-                     * 
+                     * <p>MPS template parameter modification. This parameter is used for passing through to the media processing service (MPS) to modify user-defined MPS task templates from the VOD side.<br> Currently, only the following task types support template modification in this way:</p><ol><li>Audio and video enhancement: only support filling in the content of Name, Comment, RemoveVideo, RemoveAudio, VideoTemplate, AudioTemplate, and EnhanceConfig parameters in the <a href="https://www.tencentcloud.com/document/api/862/37578?from_cn_redirect=1">modify transcoding template</a> API. Currently, only the above parameters can be configured in the template. Other parameters are not required. If other parameters are included, the system will automatically ignore them.</li><li>AI analysis: only support filling in the content of Name, Comment, ClassificationConfigure, TagConfigure, CoverConfigure, and FrameTagConfigure parameters in the <a href="https://www.tencentcloud.com/document/api/862/40246?from_cn_redirect=1">modify content analysis template</a> API. Currently, only the above parameters can be configured in the template. Other parameters are not required. If other parameters are included, the system will automatically ignore them.</li><li>Smart subtitling: only support filling in the content of Name, Comment, TranslateSwitch, VideoSrcLanguage, SubtitleFormat, SubtitleType, AsrHotWordsConfigure, TranslateDstLanguage, and ProcessType parameters in the <a href="https://www.tencentcloud.com/document/api/862/117001?from_cn_redirect=1">modify smart subtitling template</a> API. Currently, only the above parameters can be configured in the template. Other parameters are not required. If other parameters are included, the system will automatically ignore them.</li><li>Intelligent erasure: only support filling in the content of Name, Comment, EraseType, EraseSubtitleConfig, EraseWatermarkConfig, and ErasePrivacyConfig parameters in the <a href="https://www.tencentcloud.com/document/api/862/123732?from_cn_redirect=1">modify intelligent erasure template</a> API. Currently, only the above parameters can be configured in the template. Other parameters are not required. If other parameters are included, the system will automatically ignore them.</li></ol>
                      */
                     std::string m_mPSModifyTemplateParams;
                     bool m_mPSModifyTemplateParamsHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Intelligent analysis template parameter. Valid when MPSModifyTemplateParams is empty.</p>
                      */
                     MPSAIAnalysisTemplateForUpdate m_aIAnalysisTemplate;
                     bool m_aIAnalysisTemplateHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Smart subtitle template parameter. Valid when MPSModifyTemplateParams is empty.</p>
                      */
                     MPSSmartSubtitleTemplateForUpdate m_smartSubtitleTemplate;
                     bool m_smartSubtitleTemplateHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Intelligent erasure template parameter. Valid when MPSModifyTemplateParams is empty.</p>
                      */
                     MPSSmartEraseTemplateForUpdate m_smartEraseTemplate;
                     bool m_smartEraseTemplateHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Subtitle suppression template parameter. Valid when MPSModifyTemplateParams is empty.</p>
                      */
                     MPSEmbedSubtitleTemplateForUpdate m_embedSubtitleTemplate;
                     bool m_embedSubtitleTemplateHasBeenSet;

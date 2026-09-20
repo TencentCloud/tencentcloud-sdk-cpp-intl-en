@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Intelligent highlight result.
                 */
                 class AiAnalysisTaskHighlightOutput : public AbstractModel
                 {
@@ -48,15 +48,19 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return HighlightSet 
+                     * 获取Intelligent video highlight list.
+<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to HighlightSetFileUrl.
+                     * @return HighlightSet Intelligent video highlight list.
+<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to HighlightSetFileUrl.
                      * 
                      */
                     std::vector<MediaAiAnalysisHighlightItem> GetHighlightSet() const;
 
                     /**
-                     * 设置
-                     * @param _highlightSet 
+                     * 设置Intelligent video highlight list.
+<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to HighlightSetFileUrl.
+                     * @param _highlightSet Intelligent video highlight list.
+<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to HighlightSetFileUrl.
                      * 
                      */
                     void SetHighlightSet(const std::vector<MediaAiAnalysisHighlightItem>& _highlightSet);
@@ -69,15 +73,15 @@ namespace TencentCloud
                     bool HighlightSetHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return HighlightSetFileUrl 
+                     * 获取URL of the video intelligent highlight list file. The content of the file is JSON, and the data structure is consistent with the HighlightSet fields. The file is not retained permanently and will be deleted after the HighlightSetFileUrlExpireTime time point is reached.
+                     * @return HighlightSetFileUrl URL of the video intelligent highlight list file. The content of the file is JSON, and the data structure is consistent with the HighlightSet fields. The file is not retained permanently and will be deleted after the HighlightSetFileUrlExpireTime time point is reached.
                      * 
                      */
                     std::string GetHighlightSetFileUrl() const;
 
                     /**
-                     * 设置
-                     * @param _highlightSetFileUrl 
+                     * 设置URL of the video intelligent highlight list file. The content of the file is JSON, and the data structure is consistent with the HighlightSet fields. The file is not retained permanently and will be deleted after the HighlightSetFileUrlExpireTime time point is reached.
+                     * @param _highlightSetFileUrl URL of the video intelligent highlight list file. The content of the file is JSON, and the data structure is consistent with the HighlightSet fields. The file is not retained permanently and will be deleted after the HighlightSetFileUrlExpireTime time point is reached.
                      * 
                      */
                     void SetHighlightSetFileUrl(const std::string& _highlightSetFileUrl);
@@ -90,15 +94,15 @@ namespace TencentCloud
                     bool HighlightSetFileUrlHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return HighlightSetFileUrlExpireTime 
+                     * 获取Expiration time of the video intelligent highlight list file URL in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @return HighlightSetFileUrlExpireTime Expiration time of the video intelligent highlight list file URL in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      * 
                      */
                     std::string GetHighlightSetFileUrlExpireTime() const;
 
                     /**
-                     * 设置
-                     * @param _highlightSetFileUrlExpireTime 
+                     * 设置Expiration time of the video intelligent highlight list file URL in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @param _highlightSetFileUrlExpireTime Expiration time of the video intelligent highlight list file URL in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      * 
                      */
                     void SetHighlightSetFileUrlExpireTime(const std::string& _highlightSetFileUrlExpireTime);
@@ -113,19 +117,20 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Intelligent video highlight list.
+<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to HighlightSetFileUrl.
                      */
                     std::vector<MediaAiAnalysisHighlightItem> m_highlightSet;
                     bool m_highlightSetHasBeenSet;
 
                     /**
-                     * 
+                     * URL of the video intelligent highlight list file. The content of the file is JSON, and the data structure is consistent with the HighlightSet fields. The file is not retained permanently and will be deleted after the HighlightSetFileUrlExpireTime time point is reached.
                      */
                     std::string m_highlightSetFileUrl;
                     bool m_highlightSetFileUrlHasBeenSet;
 
                     /**
-                     * 
+                     * Expiration time of the video intelligent highlight list file URL in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      */
                     std::string m_highlightSetFileUrlExpireTime;
                     bool m_highlightSetFileUrlExpireTimeHasBeenSet;

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Task result type of image moderation involving offensive content
                 */
                 class PornImageResult : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Confidence 
+                     * 获取Score of authentication involving offensive content. Value range: 0–100.
+                     * @return Confidence Score of authentication involving offensive content. Value range: 0–100.
                      * 
                      */
                     double GetConfidence() const;
 
                     /**
-                     * 设置
-                     * @param _confidence 
+                     * 设置Score of authentication involving offensive content. Value range: 0–100.
+                     * @param _confidence Score of authentication involving offensive content. Value range: 0–100.
                      * 
                      */
                     void SetConfidence(const double& _confidence);
@@ -68,15 +68,27 @@ namespace TencentCloud
                     bool ConfidenceHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Suggestion 
+                     * 获取Result suggestions for authenticating offensive content. Value range:
+<li>pass;</li>
+<li>review;</li>
+<li>block.</li>
+                     * @return Suggestion Result suggestions for authenticating offensive content. Value range:
+<li>pass;</li>
+<li>review;</li>
+<li>block.</li>
                      * 
                      */
                     std::string GetSuggestion() const;
 
                     /**
-                     * 设置
-                     * @param _suggestion 
+                     * 设置Result suggestions for authenticating offensive content. Value range:
+<li>pass;</li>
+<li>review;</li>
+<li>block.</li>
+                     * @param _suggestion Result suggestions for authenticating offensive content. Value range:
+<li>pass;</li>
+<li>review;</li>
+<li>block.</li>
                      * 
                      */
                     void SetSuggestion(const std::string& _suggestion);
@@ -89,15 +101,31 @@ namespace TencentCloud
                     bool SuggestionHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Label 
+                     * 获取Result tag for authenticating offensive content. Value range:
+<li>porn: pornography;</li>
+<li>sexy: sexy;</li>
+<li>vulgar: Vulgar;</li>
+<li>intimacy: intimate behavior.</li>
+                     * @return Label Result tag for authenticating offensive content. Value range:
+<li>porn: pornography;</li>
+<li>sexy: sexy;</li>
+<li>vulgar: Vulgar;</li>
+<li>intimacy: intimate behavior.</li>
                      * 
                      */
                     std::string GetLabel() const;
 
                     /**
-                     * 设置
-                     * @param _label 
+                     * 设置Result tag for authenticating offensive content. Value range:
+<li>porn: pornography;</li>
+<li>sexy: sexy;</li>
+<li>vulgar: Vulgar;</li>
+<li>intimacy: intimate behavior.</li>
+                     * @param _label Result tag for authenticating offensive content. Value range:
+<li>porn: pornography;</li>
+<li>sexy: sexy;</li>
+<li>vulgar: Vulgar;</li>
+<li>intimacy: intimate behavior.</li>
                      * 
                      */
                     void SetLabel(const std::string& _label);
@@ -112,19 +140,26 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Score of authentication involving offensive content. Value range: 0–100.
                      */
                     double m_confidence;
                     bool m_confidenceHasBeenSet;
 
                     /**
-                     * 
+                     * Result suggestions for authenticating offensive content. Value range:
+<li>pass;</li>
+<li>review;</li>
+<li>block.</li>
                      */
                     std::string m_suggestion;
                     bool m_suggestionHasBeenSet;
 
                     /**
-                     * 
+                     * Result tag for authenticating offensive content. Value range:
+<li>porn: pornography;</li>
+<li>sexy: sexy;</li>
+<li>vulgar: Vulgar;</li>
+<li>intimacy: intimate behavior.</li>
                      */
                     std::string m_label;
                     bool m_labelHasBeenSet;

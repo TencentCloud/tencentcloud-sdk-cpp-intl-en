@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return SubAppId 
+                     * 获取<p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate VOD services from December 25, 2023, this field must be filled with the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b></p>
+                     * @return SubAppId <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate VOD services from December 25, 2023, this field must be filled with the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b></p>
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置
-                     * @param _subAppId 
+                     * 设置<p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate VOD services from December 25, 2023, this field must be filled with the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b></p>
+                     * @param _subAppId <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate VOD services from December 25, 2023, this field must be filled with the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b></p>
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool SubAppIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AudioFileInfo 
+                     * 获取<p>Original audio file (ensure it is accessible). The model will use the audio timbre passed in this parameter as an example to replicate the voice type.  </p><p>Input limitations: Note 1: Supported audio formats: mp3, m4a, wav; Note 2: The duration of the uploaded audio file should be no less than 10 seconds and no more than 5 minutes; Note 3: The uploaded audio file size must not exceed 20 MB; Note 4: The audio content must not involve copyright, otherwise it will be removed or terminated.</p>
+                     * @return AudioFileInfo <p>Original audio file (ensure it is accessible). The model will use the audio timbre passed in this parameter as an example to replicate the voice type.  </p><p>Input limitations: Note 1: Supported audio formats: mp3, m4a, wav; Note 2: The duration of the uploaded audio file should be no less than 10 seconds and no more than 5 minutes; Note 3: The uploaded audio file size must not exceed 20 MB; Note 4: The audio content must not involve copyright, otherwise it will be removed or terminated.</p>
                      * 
                      */
                     AigcAudioCloneInputFileInfo GetAudioFileInfo() const;
 
                     /**
-                     * 设置
-                     * @param _audioFileInfo 
+                     * 设置<p>Original audio file (ensure it is accessible). The model will use the audio timbre passed in this parameter as an example to replicate the voice type.  </p><p>Input limitations: Note 1: Supported audio formats: mp3, m4a, wav; Note 2: The duration of the uploaded audio file should be no less than 10 seconds and no more than 5 minutes; Note 3: The uploaded audio file size must not exceed 20 MB; Note 4: The audio content must not involve copyright, otherwise it will be removed or terminated.</p>
+                     * @param _audioFileInfo <p>Original audio file (ensure it is accessible). The model will use the audio timbre passed in this parameter as an example to replicate the voice type.  </p><p>Input limitations: Note 1: Supported audio formats: mp3, m4a, wav; Note 2: The duration of the uploaded audio file should be no less than 10 seconds and no more than 5 minutes; Note 3: The uploaded audio file size must not exceed 20 MB; Note 4: The audio content must not involve copyright, otherwise it will be removed or terminated.</p>
                      * 
                      */
                     void SetAudioFileInfo(const AigcAudioCloneInputFileInfo& _audioFileInfo);
@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool AudioFileInfoHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return VoiceId 
+                     * 获取<p>Custom voice ID, for example: "vidu01".</p><p>Input limitations:</p><ul><li>Length range of a custom voice_ID: [8,256];</li><li>The first character must be an English letter;</li><li>Numbers, letters, hyphens, and underscores are allowed;</li><li>The last character cannot be - or _</li><li>voice_ID cannot duplicate an existing ID, otherwise an error will be reported.</li></ul>
+                     * @return VoiceId <p>Custom voice ID, for example: "vidu01".</p><p>Input limitations:</p><ul><li>Length range of a custom voice_ID: [8,256];</li><li>The first character must be an English letter;</li><li>Numbers, letters, hyphens, and underscores are allowed;</li><li>The last character cannot be - or _</li><li>voice_ID cannot duplicate an existing ID, otherwise an error will be reported.</li></ul>
                      * 
                      */
                     std::string GetVoiceId() const;
 
                     /**
-                     * 设置
-                     * @param _voiceId 
+                     * 设置<p>Custom voice ID, for example: "vidu01".</p><p>Input limitations:</p><ul><li>Length range of a custom voice_ID: [8,256];</li><li>The first character must be an English letter;</li><li>Numbers, letters, hyphens, and underscores are allowed;</li><li>The last character cannot be - or _</li><li>voice_ID cannot duplicate an existing ID, otherwise an error will be reported.</li></ul>
+                     * @param _voiceId <p>Custom voice ID, for example: "vidu01".</p><p>Input limitations:</p><ul><li>Length range of a custom voice_ID: [8,256];</li><li>The first character must be an English letter;</li><li>Numbers, letters, hyphens, and underscores are allowed;</li><li>The last character cannot be - or _</li><li>voice_ID cannot duplicate an existing ID, otherwise an error will be reported.</li></ul>
                      * 
                      */
                     void SetVoiceId(const std::string& _voiceId);
@@ -107,15 +107,15 @@ namespace TencentCloud
                     bool VoiceIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Text 
+                     * 获取<p>Parameters for clone audition.</p><p>Parameter format: up to 1000 characters. The model will use the cloned voice type to read aloud the text content and return an audition audio link. Note: Audition will incur text to speech fees based on the number of characters.</p>
+                     * @return Text <p>Parameters for clone audition.</p><p>Parameter format: up to 1000 characters. The model will use the cloned voice type to read aloud the text content and return an audition audio link. Note: Audition will incur text to speech fees based on the number of characters.</p>
                      * 
                      */
                     std::string GetText() const;
 
                     /**
-                     * 设置
-                     * @param _text 
+                     * 设置<p>Parameters for clone audition.</p><p>Parameter format: up to 1000 characters. The model will use the cloned voice type to read aloud the text content and return an audition audio link. Note: Audition will incur text to speech fees based on the number of characters.</p>
+                     * @param _text <p>Parameters for clone audition.</p><p>Parameter format: up to 1000 characters. The model will use the cloned voice type to read aloud the text content and return an audition audio link. Note: Audition will incur text to speech fees based on the number of characters.</p>
                      * 
                      */
                     void SetText(const std::string& _text);
@@ -128,15 +128,15 @@ namespace TencentCloud
                     bool TextHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return PromptAudioFileInfo 
+                     * 获取<p>Sample audio for voice replication. Providing this parameter will help in enhancing the similarity and stability of the text to speech voice type. If you use this parameter, you need to upload a short sample audio at the same time.</p><p>Input parameter limits: Note 1: Supported audio formats: mp3, m4a, wav; Note 2: The duration of the uploaded audio must be less than 8 seconds; Note 3: The uploaded audio file size must be no more than 20 mb.</p>
+                     * @return PromptAudioFileInfo <p>Sample audio for voice replication. Providing this parameter will help in enhancing the similarity and stability of the text to speech voice type. If you use this parameter, you need to upload a short sample audio at the same time.</p><p>Input parameter limits: Note 1: Supported audio formats: mp3, m4a, wav; Note 2: The duration of the uploaded audio must be less than 8 seconds; Note 3: The uploaded audio file size must be no more than 20 mb.</p>
                      * 
                      */
                     AigcAudioCloneInputFileInfo GetPromptAudioFileInfo() const;
 
                     /**
-                     * 设置
-                     * @param _promptAudioFileInfo 
+                     * 设置<p>Sample audio for voice replication. Providing this parameter will help in enhancing the similarity and stability of the text to speech voice type. If you use this parameter, you need to upload a short sample audio at the same time.</p><p>Input parameter limits: Note 1: Supported audio formats: mp3, m4a, wav; Note 2: The duration of the uploaded audio must be less than 8 seconds; Note 3: The uploaded audio file size must be no more than 20 mb.</p>
+                     * @param _promptAudioFileInfo <p>Sample audio for voice replication. Providing this parameter will help in enhancing the similarity and stability of the text to speech voice type. If you use this parameter, you need to upload a short sample audio at the same time.</p><p>Input parameter limits: Note 1: Supported audio formats: mp3, m4a, wav; Note 2: The duration of the uploaded audio must be less than 8 seconds; Note 3: The uploaded audio file size must be no more than 20 mb.</p>
                      * 
                      */
                     void SetPromptAudioFileInfo(const AigcAudioCloneInputFileInfo& _promptAudioFileInfo);
@@ -149,15 +149,15 @@ namespace TencentCloud
                     bool PromptAudioFileInfoHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return PromptText 
+                     * 获取<p>The text content corresponding to the sample audio must be consistent with the audio content, and punctuation is required at the end of the sentence.</p>
+                     * @return PromptText <p>The text content corresponding to the sample audio must be consistent with the audio content, and punctuation is required at the end of the sentence.</p>
                      * 
                      */
                     std::string GetPromptText() const;
 
                     /**
-                     * 设置
-                     * @param _promptText 
+                     * 设置<p>The text content corresponding to the sample audio must be consistent with the audio content, and punctuation is required at the end of the sentence.</p>
+                     * @param _promptText <p>The text content corresponding to the sample audio must be consistent with the audio content, and punctuation is required at the end of the sentence.</p>
                      * 
                      */
                     void SetPromptText(const std::string& _promptText);
@@ -170,15 +170,15 @@ namespace TencentCloud
                     bool PromptTextHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Payload 
+                     * 获取<p>Pass-through parameter. Input parameter limit: no processing, data transmission only. Note: up to 1048576 characters</p>
+                     * @return Payload <p>Pass-through parameter. Input parameter limit: no processing, data transmission only. Note: up to 1048576 characters</p>
                      * 
                      */
                     std::string GetPayload() const;
 
                     /**
-                     * 设置
-                     * @param _payload 
+                     * 设置<p>Pass-through parameter. Input parameter limit: no processing, data transmission only. Note: up to 1048576 characters</p>
+                     * @param _payload <p>Pass-through parameter. Input parameter limit: no processing, data transmission only. Note: up to 1048576 characters</p>
                      * 
                      */
                     void SetPayload(const std::string& _payload);
@@ -191,15 +191,15 @@ namespace TencentCloud
                     bool PayloadHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SessionId 
+                     * 获取<p>Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
+                     * @return SessionId <p>Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
                      * 
                      */
                     std::string GetSessionId() const;
 
                     /**
-                     * 设置
-                     * @param _sessionId 
+                     * 设置<p>Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
+                     * @param _sessionId <p>Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
                      * 
                      */
                     void SetSessionId(const std::string& _sessionId);
@@ -212,15 +212,15 @@ namespace TencentCloud
                     bool SessionIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SessionContext 
+                     * 获取<p>Source context. This is used to pass user request information. The audio and video quality revival complete callback returns the value of this field. The maximum length is 1000 characters.</p>
+                     * @return SessionContext <p>Source context. This is used to pass user request information. The audio and video quality revival complete callback returns the value of this field. The maximum length is 1000 characters.</p>
                      * 
                      */
                     std::string GetSessionContext() const;
 
                     /**
-                     * 设置
-                     * @param _sessionContext 
+                     * 设置<p>Source context. This is used to pass user request information. The audio and video quality revival complete callback returns the value of this field. The maximum length is 1000 characters.</p>
+                     * @param _sessionContext <p>Source context. This is used to pass user request information. The audio and video quality revival complete callback returns the value of this field. The maximum length is 1000 characters.</p>
                      * 
                      */
                     void SetSessionContext(const std::string& _sessionContext);
@@ -233,15 +233,15 @@ namespace TencentCloud
                     bool SessionContextHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return TasksPriority 
+                     * 获取<p>Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If this is not specified, the default value is 0.</p>
+                     * @return TasksPriority <p>Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If this is not specified, the default value is 0.</p>
                      * 
                      */
                     int64_t GetTasksPriority() const;
 
                     /**
-                     * 设置
-                     * @param _tasksPriority 
+                     * 设置<p>Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If this is not specified, the default value is 0.</p>
+                     * @param _tasksPriority <p>Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If this is not specified, the default value is 0.</p>
                      * 
                      */
                     void SetTasksPriority(const int64_t& _tasksPriority);
@@ -254,15 +254,15 @@ namespace TencentCloud
                     bool TasksPriorityHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ExtInfo 
+                     * 获取<p>Reserved field, used for special purposes.</p>
+                     * @return ExtInfo <p>Reserved field, used for special purposes.</p>
                      * 
                      */
                     std::string GetExtInfo() const;
 
                     /**
-                     * 设置
-                     * @param _extInfo 
+                     * 设置<p>Reserved field, used for special purposes.</p>
+                     * @param _extInfo <p>Reserved field, used for special purposes.</p>
                      * 
                      */
                     void SetExtInfo(const std::string& _extInfo);
@@ -277,67 +277,67 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate VOD services from December 25, 2023, this field must be filled with the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b></p>
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Original audio file (ensure it is accessible). The model will use the audio timbre passed in this parameter as an example to replicate the voice type.  </p><p>Input limitations: Note 1: Supported audio formats: mp3, m4a, wav; Note 2: The duration of the uploaded audio file should be no less than 10 seconds and no more than 5 minutes; Note 3: The uploaded audio file size must not exceed 20 MB; Note 4: The audio content must not involve copyright, otherwise it will be removed or terminated.</p>
                      */
                     AigcAudioCloneInputFileInfo m_audioFileInfo;
                     bool m_audioFileInfoHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Custom voice ID, for example: "vidu01".</p><p>Input limitations:</p><ul><li>Length range of a custom voice_ID: [8,256];</li><li>The first character must be an English letter;</li><li>Numbers, letters, hyphens, and underscores are allowed;</li><li>The last character cannot be - or _</li><li>voice_ID cannot duplicate an existing ID, otherwise an error will be reported.</li></ul>
                      */
                     std::string m_voiceId;
                     bool m_voiceIdHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Parameters for clone audition.</p><p>Parameter format: up to 1000 characters. The model will use the cloned voice type to read aloud the text content and return an audition audio link. Note: Audition will incur text to speech fees based on the number of characters.</p>
                      */
                     std::string m_text;
                     bool m_textHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Sample audio for voice replication. Providing this parameter will help in enhancing the similarity and stability of the text to speech voice type. If you use this parameter, you need to upload a short sample audio at the same time.</p><p>Input parameter limits: Note 1: Supported audio formats: mp3, m4a, wav; Note 2: The duration of the uploaded audio must be less than 8 seconds; Note 3: The uploaded audio file size must be no more than 20 mb.</p>
                      */
                     AigcAudioCloneInputFileInfo m_promptAudioFileInfo;
                     bool m_promptAudioFileInfoHasBeenSet;
 
                     /**
-                     * 
+                     * <p>The text content corresponding to the sample audio must be consistent with the audio content, and punctuation is required at the end of the sentence.</p>
                      */
                     std::string m_promptText;
                     bool m_promptTextHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Pass-through parameter. Input parameter limit: no processing, data transmission only. Note: up to 1048576 characters</p>
                      */
                     std::string m_payload;
                     bool m_payloadHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
                      */
                     std::string m_sessionId;
                     bool m_sessionIdHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Source context. This is used to pass user request information. The audio and video quality revival complete callback returns the value of this field. The maximum length is 1000 characters.</p>
                      */
                     std::string m_sessionContext;
                     bool m_sessionContextHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If this is not specified, the default value is 0.</p>
                      */
                     int64_t m_tasksPriority;
                     bool m_tasksPriorityHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Reserved field, used for special purposes.</p>
                      */
                     std::string m_extInfo;
                     bool m_extInfoHasBeenSet;

@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Custom response header configuration, disabled by default
                 */
                 class ResponseHeader : public AbstractModel
                 {
@@ -77,15 +77,15 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return HeaderRules 
+                     * 获取Custom response header rule.
+                     * @return HeaderRules Custom response header rule.
                      * 
                      */
                     std::vector<HttpHeaderPathRule> GetHeaderRules() const;
 
                     /**
-                     * 设置
-                     * @param _headerRules 
+                     * 设置Custom response header rule.
+                     * @param _headerRules Custom response header rule.
                      * 
                      */
                     void SetHeaderRules(const std::vector<HttpHeaderPathRule>& _headerRules);
@@ -108,7 +108,7 @@ namespace TencentCloud
                     bool m_switchHasBeenSet;
 
                     /**
-                     * 
+                     * Custom response header rule.
                      */
                     std::vector<HttpHeaderPathRule> m_headerRules;
                     bool m_headerRulesHasBeenSet;

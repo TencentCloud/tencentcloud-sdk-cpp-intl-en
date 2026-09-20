@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return SubAppId 
+                     * 获取<p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate VOD services from December 25, 2023, this field must be filled with the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b></p>
+                     * @return SubAppId <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate VOD services from December 25, 2023, this field must be filled with the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b></p>
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置
-                     * @param _subAppId 
+                     * 设置<p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate VOD services from December 25, 2023, this field must be filled with the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b></p>
+                     * @param _subAppId <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate VOD services from December 25, 2023, this field must be filled with the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b></p>
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool SubAppIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SubjectName 
+                     * 获取<p>Subject name.</p>
+                     * @return SubjectName <p>Subject name.</p>
                      * 
                      */
                     std::string GetSubjectName() const;
 
                     /**
-                     * 设置
-                     * @param _subjectName 
+                     * 设置<p>Subject name.</p>
+                     * @param _subjectName <p>Subject name.</p>
                      * 
                      */
                     void SetSubjectName(const std::string& _subjectName);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool SubjectNameHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SubjectImages 
+                     * 获取<p>Main image. Upload at least 1 main image. * Note 1: You can pass an image URL (make sure it is accessible); * Note 2: Input limit: 3 images; * Note 3: Supported formats: png, jpeg, jpg, webp; * Note 4: The image ratio must be less than 1:4 or 4:1; * Note 5: The image size must not exceed 50 MB;</p>
+                     * @return SubjectImages <p>Main image. Upload at least 1 main image. * Note 1: You can pass an image URL (make sure it is accessible); * Note 2: Input limit: 3 images; * Note 3: Supported formats: png, jpeg, jpg, webp; * Note 4: The image ratio must be less than 1:4 or 4:1; * Note 5: The image size must not exceed 50 MB;</p>
                      * 
                      */
                     std::vector<std::string> GetSubjectImages() const;
 
                     /**
-                     * 设置
-                     * @param _subjectImages 
+                     * 设置<p>Main image. Upload at least 1 main image. * Note 1: You can pass an image URL (make sure it is accessible); * Note 2: Input limit: 3 images; * Note 3: Supported formats: png, jpeg, jpg, webp; * Note 4: The image ratio must be less than 1:4 or 4:1; * Note 5: The image size must not exceed 50 MB;</p>
+                     * @param _subjectImages <p>Main image. Upload at least 1 main image. * Note 1: You can pass an image URL (make sure it is accessible); * Note 2: Input limit: 3 images; * Note 3: Supported formats: png, jpeg, jpg, webp; * Note 4: The image ratio must be less than 1:4 or 4:1; * Note 5: The image size must not exceed 50 MB;</p>
                      * 
                      */
                     void SetSubjectImages(const std::vector<std::string>& _subjectImages);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool SubjectImagesHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SubjectVideos 
+                     * 获取<p>Video reference allows uploading 1 subject video</p><ul><li>Note 1: For reference only, the viduq2-pro model supports the use of video subjects</li><li>Note 2: Allows uploading up to 1 video of 5 seconds</li><li>Note 3: Video supports mp4, avi, mov formats</li><li>Note 4: Video pixel cannot be less than 128*128, and the ratio must be less than 1:4 or 4:1, and the size no more than 100M.</li></ul>
+                     * @return SubjectVideos <p>Video reference allows uploading 1 subject video</p><ul><li>Note 1: For reference only, the viduq2-pro model supports the use of video subjects</li><li>Note 2: Allows uploading up to 1 video of 5 seconds</li><li>Note 3: Video supports mp4, avi, mov formats</li><li>Note 4: Video pixel cannot be less than 128*128, and the ratio must be less than 1:4 or 4:1, and the size no more than 100M.</li></ul>
                      * 
                      */
                     std::vector<std::string> GetSubjectVideos() const;
 
                     /**
-                     * 设置
-                     * @param _subjectVideos 
+                     * 设置<p>Video reference allows uploading 1 subject video</p><ul><li>Note 1: For reference only, the viduq2-pro model supports the use of video subjects</li><li>Note 2: Allows uploading up to 1 video of 5 seconds</li><li>Note 3: Video supports mp4, avi, mov formats</li><li>Note 4: Video pixel cannot be less than 128*128, and the ratio must be less than 1:4 or 4:1, and the size no more than 100M.</li></ul>
+                     * @param _subjectVideos <p>Video reference allows uploading 1 subject video</p><ul><li>Note 1: For reference only, the viduq2-pro model supports the use of video subjects</li><li>Note 2: Allows uploading up to 1 video of 5 seconds</li><li>Note 3: Video supports mp4, avi, mov formats</li><li>Note 4: Video pixel cannot be less than 128*128, and the ratio must be less than 1:4 or 4:1, and the size no more than 100M.</li></ul>
                      * 
                      */
                     void SetSubjectVideos(const std::vector<std::string>& _subjectVideos);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool SubjectVideosHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return VoiceId 
+                     * 获取<p>Main voice type Id. This information is used only when creating an audio and video direct output task.</p><ul><li>Note 1: If no voice type Id is passed when generating an audio and video direct output task, the system will automatically recommend a voice type.</li><li>Note 2: q2-pro does not support using a voice type Id.</li></ul>
+                     * @return VoiceId <p>Main voice type Id. This information is used only when creating an audio and video direct output task.</p><ul><li>Note 1: If no voice type Id is passed when generating an audio and video direct output task, the system will automatically recommend a voice type.</li><li>Note 2: q2-pro does not support using a voice type Id.</li></ul>
                      * 
                      */
                     std::string GetVoiceId() const;
 
                     /**
-                     * 设置
-                     * @param _voiceId 
+                     * 设置<p>Main voice type Id. This information is used only when creating an audio and video direct output task.</p><ul><li>Note 1: If no voice type Id is passed when generating an audio and video direct output task, the system will automatically recommend a voice type.</li><li>Note 2: q2-pro does not support using a voice type Id.</li></ul>
+                     * @param _voiceId <p>Main voice type Id. This information is used only when creating an audio and video direct output task.</p><ul><li>Note 1: If no voice type Id is passed when generating an audio and video direct output task, the system will automatically recommend a voice type.</li><li>Note 2: q2-pro does not support using a voice type Id.</li></ul>
                      * 
                      */
                     void SetVoiceId(const std::string& _voiceId);
@@ -148,15 +148,15 @@ namespace TencentCloud
                     bool VoiceIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SessionId 
+                     * 获取<p>Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
+                     * @return SessionId <p>Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
                      * 
                      */
                     std::string GetSessionId() const;
 
                     /**
-                     * 设置
-                     * @param _sessionId 
+                     * 设置<p>Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
+                     * @param _sessionId <p>Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
                      * 
                      */
                     void SetSessionId(const std::string& _sessionId);
@@ -169,15 +169,15 @@ namespace TencentCloud
                     bool SessionIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SessionContext 
+                     * 获取<p>Source context. This is used to pass user request information. The task completion callback returns the value of this field. The maximum length is 1000 characters.</p>
+                     * @return SessionContext <p>Source context. This is used to pass user request information. The task completion callback returns the value of this field. The maximum length is 1000 characters.</p>
                      * 
                      */
                     std::string GetSessionContext() const;
 
                     /**
-                     * 设置
-                     * @param _sessionContext 
+                     * 设置<p>Source context. This is used to pass user request information. The task completion callback returns the value of this field. The maximum length is 1000 characters.</p>
+                     * @param _sessionContext <p>Source context. This is used to pass user request information. The task completion callback returns the value of this field. The maximum length is 1000 characters.</p>
                      * 
                      */
                     void SetSessionContext(const std::string& _sessionContext);
@@ -190,15 +190,15 @@ namespace TencentCloud
                     bool SessionContextHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return TasksPriority 
+                     * 获取<p>Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.</p>
+                     * @return TasksPriority <p>Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.</p>
                      * 
                      */
                     int64_t GetTasksPriority() const;
 
                     /**
-                     * 设置
-                     * @param _tasksPriority 
+                     * 设置<p>Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.</p>
+                     * @param _tasksPriority <p>Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.</p>
                      * 
                      */
                     void SetTasksPriority(const int64_t& _tasksPriority);
@@ -213,49 +213,49 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p><b>Video-on-demand (VOD) <a href="https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1">application</a> ID. For customers who activate VOD services from December 25, 2023, this field must be filled with the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b></p>
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Subject name.</p>
                      */
                     std::string m_subjectName;
                     bool m_subjectNameHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Main image. Upload at least 1 main image. * Note 1: You can pass an image URL (make sure it is accessible); * Note 2: Input limit: 3 images; * Note 3: Supported formats: png, jpeg, jpg, webp; * Note 4: The image ratio must be less than 1:4 or 4:1; * Note 5: The image size must not exceed 50 MB;</p>
                      */
                     std::vector<std::string> m_subjectImages;
                     bool m_subjectImagesHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Video reference allows uploading 1 subject video</p><ul><li>Note 1: For reference only, the viduq2-pro model supports the use of video subjects</li><li>Note 2: Allows uploading up to 1 video of 5 seconds</li><li>Note 3: Video supports mp4, avi, mov formats</li><li>Note 4: Video pixel cannot be less than 128*128, and the ratio must be less than 1:4 or 4:1, and the size no more than 100M.</li></ul>
                      */
                     std::vector<std::string> m_subjectVideos;
                     bool m_subjectVideosHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Main voice type Id. This information is used only when creating an audio and video direct output task.</p><ul><li>Note 1: If no voice type Id is passed when generating an audio and video direct output task, the system will automatically recommend a voice type.</li><li>Note 2: q2-pro does not support using a voice type Id.</li></ul>
                      */
                     std::string m_voiceId;
                     bool m_voiceIdHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Identifier for deduplication. If a request with the same identifier has been sent within the past three days, an error is returned for the current request. The maximum length is 50 characters. If this is not specified or left empty, deduplication is not performed.</p>
                      */
                     std::string m_sessionId;
                     bool m_sessionIdHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Source context. This is used to pass user request information. The task completion callback returns the value of this field. The maximum length is 1000 characters.</p>
                      */
                     std::string m_sessionContext;
                     bool m_sessionContextHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Task priority. The higher the value, the higher the priority. The value range is from -10 to 10. If left blank, the default value is 0.</p>
                      */
                     int64_t m_tasksPriority;
                     bool m_tasksPriorityHasBeenSet;

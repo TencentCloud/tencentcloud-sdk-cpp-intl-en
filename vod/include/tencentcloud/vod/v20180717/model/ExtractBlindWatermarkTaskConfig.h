@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Extract the configuration of a video transcoding digital watermarking task
                 */
                 class ExtractBlindWatermarkTaskConfig : public AbstractModel
                 {
@@ -47,15 +47,19 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return SegmentDuration 
+                     * 获取Valid when the digital watermark extraction type is blind-abseq. Used to specify the segment duration of the input video. Unit: ms.
+If left empty, the default segment duration is 5 seconds.
+                     * @return SegmentDuration Valid when the digital watermark extraction type is blind-abseq. Used to specify the segment duration of the input video. Unit: ms.
+If left empty, the default segment duration is 5 seconds.
                      * 
                      */
                     int64_t GetSegmentDuration() const;
 
                     /**
-                     * 设置
-                     * @param _segmentDuration 
+                     * 设置Valid when the digital watermark extraction type is blind-abseq. Used to specify the segment duration of the input video. Unit: ms.
+If left empty, the default segment duration is 5 seconds.
+                     * @param _segmentDuration Valid when the digital watermark extraction type is blind-abseq. Used to specify the segment duration of the input video. Unit: ms.
+If left empty, the default segment duration is 5 seconds.
                      * 
                      */
                     void SetSegmentDuration(const int64_t& _segmentDuration);
@@ -70,7 +74,8 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Valid when the digital watermark extraction type is blind-abseq. Used to specify the segment duration of the input video. Unit: ms.
+If left empty, the default segment duration is 5 seconds.
                      */
                     int64_t m_segmentDuration;
                     bool m_segmentDurationHasBeenSet;

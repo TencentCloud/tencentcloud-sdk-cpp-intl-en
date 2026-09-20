@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return VoiceId 
+                     * 获取<p>Voice ID.</p>
+                     * @return VoiceId <p>Voice ID.</p>
                      * 
                      */
                     std::string GetVoiceId() const;
 
                     /**
-                     * 设置
-                     * @param _voiceId 
+                     * 设置<p>Voice ID.</p>
+                     * @param _voiceId <p>Voice ID.</p>
                      * 
                      */
                     void SetVoiceId(const std::string& _voiceId);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool VoiceIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return VoiceFields 
+                     * 获取<p>Fields of the updated voice.</p>
+                     * @return VoiceFields <p>Fields of the updated voice.</p>
                      * 
                      */
                     VoiceUpdateFields GetVoiceFields() const;
 
                     /**
-                     * 设置
-                     * @param _voiceFields 
+                     * 设置<p>Fields of the updated voice.</p>
+                     * @param _voiceFields <p>Fields of the updated voice.</p>
                      * 
                      */
                     void SetVoiceFields(const VoiceUpdateFields& _voiceFields);
@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool VoiceFieldsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SubAppId 
+                     * 获取<p>VOD app ID. For customers who activate on-demand services after December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</p>
+                     * @return SubAppId <p>VOD app ID. For customers who activate on-demand services after December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</p>
                      * 
                      */
                     std::string GetSubAppId() const;
 
                     /**
-                     * 设置
-                     * @param _subAppId 
+                     * 设置<p>VOD app ID. For customers who activate on-demand services after December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</p>
+                     * @param _subAppId <p>VOD app ID. For customers who activate on-demand services after December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</p>
                      * 
                      */
                     void SetSubAppId(const std::string& _subAppId);
@@ -107,15 +107,15 @@ namespace TencentCloud
                     bool SubAppIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ExtParam 
+                     * 获取<p>Extended parameters in the format of a JSON string.</p>
+                     * @return ExtParam <p>Extended parameters in the format of a JSON string.</p>
                      * 
                      */
                     std::string GetExtParam() const;
 
                     /**
-                     * 设置
-                     * @param _extParam 
+                     * 设置<p>Extended parameters in the format of a JSON string.</p>
+                     * @param _extParam <p>Extended parameters in the format of a JSON string.</p>
                      * 
                      */
                     void SetExtParam(const std::string& _extParam);
@@ -130,25 +130,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p>Voice ID.</p>
                      */
                     std::string m_voiceId;
                     bool m_voiceIdHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Fields of the updated voice.</p>
                      */
                     VoiceUpdateFields m_voiceFields;
                     bool m_voiceFieldsHasBeenSet;
 
                     /**
-                     * 
+                     * <p>VOD app ID. For customers who activate on-demand services after December 25, 2023, this field must be filled with the app ID when accessing resources in on-demand applications (whether the default application or a newly created application).</p>
                      */
                     std::string m_subAppId;
                     bool m_subAppIdHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Extended parameters in the format of a JSON string.</p>
                      */
                     std::string m_extParam;
                     bool m_extParamHasBeenSet;

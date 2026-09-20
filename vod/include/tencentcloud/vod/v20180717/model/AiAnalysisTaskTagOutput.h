@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Intelligent tag result information.
                 */
                 class AiAnalysisTaskTagOutput : public AbstractModel
                 {
@@ -48,15 +48,19 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return TagSet 
+                     * 获取Video intelligent tag list.
+<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to TagSetFileUrl.
+                     * @return TagSet Video intelligent tag list.
+<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to TagSetFileUrl.
                      * 
                      */
                     std::vector<MediaAiAnalysisTagItem> GetTagSet() const;
 
                     /**
-                     * 设置
-                     * @param _tagSet 
+                     * 设置Video intelligent tag list.
+<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to TagSetFileUrl.
+                     * @param _tagSet Video intelligent tag list.
+<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to TagSetFileUrl.
                      * 
                      */
                     void SetTagSet(const std::vector<MediaAiAnalysisTagItem>& _tagSet);
@@ -69,15 +73,15 @@ namespace TencentCloud
                     bool TagSetHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return TagSetFileUrl 
+                     * 获取URL of the video intelligent tag list file. The content of the file is JSON, and the data structure is consistent with the TagSet fields. The file is not retained permanently and will be deleted after the TagSetFileUrlExpireTime time point is reached.
+                     * @return TagSetFileUrl URL of the video intelligent tag list file. The content of the file is JSON, and the data structure is consistent with the TagSet fields. The file is not retained permanently and will be deleted after the TagSetFileUrlExpireTime time point is reached.
                      * 
                      */
                     std::string GetTagSetFileUrl() const;
 
                     /**
-                     * 设置
-                     * @param _tagSetFileUrl 
+                     * 设置URL of the video intelligent tag list file. The content of the file is JSON, and the data structure is consistent with the TagSet fields. The file is not retained permanently and will be deleted after the TagSetFileUrlExpireTime time point is reached.
+                     * @param _tagSetFileUrl URL of the video intelligent tag list file. The content of the file is JSON, and the data structure is consistent with the TagSet fields. The file is not retained permanently and will be deleted after the TagSetFileUrlExpireTime time point is reached.
                      * 
                      */
                     void SetTagSetFileUrl(const std::string& _tagSetFileUrl);
@@ -90,15 +94,15 @@ namespace TencentCloud
                     bool TagSetFileUrlHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return TagSetFileUrlExpireTime 
+                     * 获取Expiration time of the video intelligent tag list file URL in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @return TagSetFileUrlExpireTime Expiration time of the video intelligent tag list file URL in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      * 
                      */
                     std::string GetTagSetFileUrlExpireTime() const;
 
                     /**
-                     * 设置
-                     * @param _tagSetFileUrlExpireTime 
+                     * 设置Expiration time of the video intelligent tag list file URL in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @param _tagSetFileUrlExpireTime Expiration time of the video intelligent tag list file URL in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      * 
                      */
                     void SetTagSetFileUrlExpireTime(const std::string& _tagSetFileUrlExpireTime);
@@ -113,19 +117,20 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Video intelligent tag list.
+<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to TagSetFileUrl.
                      */
                     std::vector<MediaAiAnalysisTagItem> m_tagSet;
                     bool m_tagSetHasBeenSet;
 
                     /**
-                     * 
+                     * URL of the video intelligent tag list file. The content of the file is JSON, and the data structure is consistent with the TagSet fields. The file is not retained permanently and will be deleted after the TagSetFileUrlExpireTime time point is reached.
                      */
                     std::string m_tagSetFileUrl;
                     bool m_tagSetFileUrlHasBeenSet;
 
                     /**
-                     * 
+                     * Expiration time of the video intelligent tag list file URL in [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      */
                     std::string m_tagSetFileUrlExpireTime;
                     bool m_tagSetFileUrlExpireTimeHasBeenSet;

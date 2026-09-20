@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * General liscense information.
+                * General card certificate information
                 */
                 class GeneralCard : public AbstractModel
                 {
@@ -48,19 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取License number
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return LicenseNumber License number
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取ID number
+                     * @return LicenseNumber ID number
                      * 
                      */
                     std::string GetLicenseNumber() const;
 
                     /**
-                     * 设置License number
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _licenseNumber License number
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置ID number
+                     * @param _licenseNumber ID number
                      * 
                      */
                     void SetLicenseNumber(const std::string& _licenseNumber);
@@ -73,19 +69,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool LicenseNumberHasBeenSet() const;
 
                     /**
-                     * 获取Personal number, which is returned when it is a passport
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return PersonalNumber Personal number, which is returned when it is a passport
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Personal number. It is returned when the identity document type is a passport.
+                     * @return PersonalNumber Personal number. It is returned when the identity document type is a passport.
                      * 
                      */
                     std::string GetPersonalNumber() const;
 
                     /**
-                     * 设置Personal number, which is returned when it is a passport
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _personalNumber Personal number, which is returned when it is a passport
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Personal number. It is returned when the identity document type is a passport.
+                     * @param _personalNumber Personal number. It is returned when the identity document type is a passport.
                      * 
                      */
                     void SetPersonalNumber(const std::string& _personalNumber);
@@ -98,19 +90,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool PersonalNumberHasBeenSet() const;
 
                     /**
-                     * 获取The first line of passport machine reading code
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return PassportCodeFirst The first line of passport machine reading code
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取MRZ line 1 of the passport
+                     * @return PassportCodeFirst MRZ line 1 of the passport
                      * 
                      */
                     std::string GetPassportCodeFirst() const;
 
                     /**
-                     * 设置The first line of passport machine reading code
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _passportCodeFirst The first line of passport machine reading code
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置MRZ line 1 of the passport
+                     * @param _passportCodeFirst MRZ line 1 of the passport
                      * 
                      */
                     void SetPassportCodeFirst(const std::string& _passportCodeFirst);
@@ -123,19 +111,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool PassportCodeFirstHasBeenSet() const;
 
                     /**
-                     * 获取The first line of passport machine reading code
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return PassportCodeSecond The first line of passport machine reading code
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取MRZ line 2 of the passport
+                     * @return PassportCodeSecond MRZ line 2 of the passport
                      * 
                      */
                     std::string GetPassportCodeSecond() const;
 
                     /**
-                     * 设置The first line of passport machine reading code
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _passportCodeSecond The first line of passport machine reading code
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置MRZ line 2 of the passport
+                     * @param _passportCodeSecond MRZ line 2 of the passport
                      * 
                      */
                     void SetPassportCodeSecond(const std::string& _passportCodeSecond);
@@ -148,19 +132,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool PassportCodeSecondHasBeenSet() const;
 
                     /**
-                     * 获取Date of expiry in the format of YYYY-MM-DD
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ExpirationDate Date of expiry in the format of YYYY-MM-DD
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Expiration date in YYYY-MM-DD format
+                     * @return ExpirationDate Expiration date in YYYY-MM-DD format
                      * 
                      */
                     std::string GetExpirationDate() const;
 
                     /**
-                     * 设置Date of expiry in the format of YYYY-MM-DD
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _expirationDate Date of expiry in the format of YYYY-MM-DD
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Expiration date in YYYY-MM-DD format
+                     * @param _expirationDate Expiration date in YYYY-MM-DD format
                      * 
                      */
                     void SetExpirationDate(const std::string& _expirationDate);
@@ -173,19 +153,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ExpirationDateHasBeenSet() const;
 
                     /**
-                     * 获取Valid date in the format of YYYY-MM-DD
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DueDate Valid date in the format of YYYY-MM-DD
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Expiration date in YYYY-MM-DD format
+                     * @return DueDate Expiration date in YYYY-MM-DD format
                      * 
                      */
                     std::string GetDueDate() const;
 
                     /**
-                     * 设置Valid date in the format of YYYY-MM-DD
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _dueDate Valid date in the format of YYYY-MM-DD
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Expiration date in YYYY-MM-DD format
+                     * @param _dueDate Expiration date in YYYY-MM-DD format
                      * 
                      */
                     void SetDueDate(const std::string& _dueDate);
@@ -198,19 +174,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool DueDateHasBeenSet() const;
 
                     /**
-                     * 获取Date of issue in the format of YYYY-MM-DD
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return IssuedDate Date of issue in the format of YYYY-MM-DD
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Issue date in YYYY-MM-DD format
+                     * @return IssuedDate Issue date in YYYY-MM-DD format
                      * 
                      */
                     std::string GetIssuedDate() const;
 
                     /**
-                     * 设置Date of issue in the format of YYYY-MM-DD
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _issuedDate Date of issue in the format of YYYY-MM-DD
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Issue date in YYYY-MM-DD format
+                     * @param _issuedDate Issue date in YYYY-MM-DD format
                      * 
                      */
                     void SetIssuedDate(const std::string& _issuedDate);
@@ -224,18 +196,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Issuing authority
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return IssuedAuthority Issuing authority
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetIssuedAuthority() const;
 
                     /**
                      * 设置Issuing authority
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _issuedAuthority Issuing authority
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetIssuedAuthority(const std::string& _issuedAuthority);
@@ -248,23 +216,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool IssuedAuthorityHasBeenSet() const;
 
                     /**
-                     * 获取Issuing country, which is returned following the ISO 3166 country coding specification
-Note: This field may return null, indicating that no valid values can be obtained.
-Example: MYS
-                     * @return IssuedCountry Issuing country, which is returned following the ISO 3166 country coding specification
-Note: This field may return null, indicating that no valid values can be obtained.
-Example: MYS
+                     * 获取Issuing country. Return following the ISO 3166 country coding specification.
+                     * @return IssuedCountry Issuing country. Return following the ISO 3166 country coding specification.
                      * 
                      */
                     std::string GetIssuedCountry() const;
 
                     /**
-                     * 设置Issuing country, which is returned following the ISO 3166 country coding specification
-Note: This field may return null, indicating that no valid values can be obtained.
-Example: MYS
-                     * @param _issuedCountry Issuing country, which is returned following the ISO 3166 country coding specification
-Note: This field may return null, indicating that no valid values can be obtained.
-Example: MYS
+                     * 设置Issuing country. Return following the ISO 3166 country coding specification.
+                     * @param _issuedCountry Issuing country. Return following the ISO 3166 country coding specification.
                      * 
                      */
                     void SetIssuedCountry(const std::string& _issuedCountry);
@@ -277,19 +237,15 @@ Example: MYS
                     bool IssuedCountryHasBeenSet() const;
 
                     /**
-                     * 获取Full Name
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return FullName Full Name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Name
+                     * @return FullName Name
                      * 
                      */
                     std::string GetFullName() const;
 
                     /**
-                     * 设置Full Name
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _fullName Full Name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Name
+                     * @param _fullName Name
                      * 
                      */
                     void SetFullName(const std::string& _fullName);
@@ -302,19 +258,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool FullNameHasBeenSet() const;
 
                     /**
-                     * 获取First name
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return FirstName First name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Name
+                     * @return FirstName Name
                      * 
                      */
                     std::string GetFirstName() const;
 
                     /**
-                     * 设置First name
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _firstName First name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Name
+                     * @param _firstName Name
                      * 
                      */
                     void SetFirstName(const std::string& _firstName);
@@ -328,18 +280,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Last name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return LastName Last name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetLastName() const;
 
                     /**
                      * 设置Last name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _lastName Last name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetLastName(const std::string& _lastName);
@@ -352,35 +300,27 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool LastNameHasBeenSet() const;
 
                     /**
-                     * 获取Gender on the license
-- M: male
-- F: female
-- X: other gender
-Note: This field may return null, indicating that no valid values can be obtained.
-Example: M
-                     * @return Sex Gender on the license
-- M: male
-- F: female
-- X: other gender
-Note: This field may return null, indicating that no valid values can be obtained.
-Example: M
+                     * 获取Gender on the document
+-M: male
+-F: female
+- X: Other gender identity
+                     * @return Sex Gender on the document
+-M: male
+-F: female
+- X: Other gender identity
                      * 
                      */
                     std::string GetSex() const;
 
                     /**
-                     * 设置Gender on the license
-- M: male
-- F: female
-- X: other gender
-Note: This field may return null, indicating that no valid values can be obtained.
-Example: M
-                     * @param _sex Gender on the license
-- M: male
-- F: female
-- X: other gender
-Note: This field may return null, indicating that no valid values can be obtained.
-Example: M
+                     * 设置Gender on the document
+-M: male
+-F: female
+- X: Other gender identity
+                     * @param _sex Gender on the document
+-M: male
+-F: female
+- X: Other gender identity
                      * 
                      */
                     void SetSex(const std::string& _sex);
@@ -393,19 +333,15 @@ Example: M
                     bool SexHasBeenSet() const;
 
                     /**
-                     * 获取Age. 0 indicates that no valid information is obtained.
-Example: 0
-                     * @return Age Age. 0 indicates that no valid information is obtained.
-Example: 0
+                     * 获取Age. 0 indicates no valid info is obtained.
+                     * @return Age Age. 0 indicates no valid info is obtained.
                      * 
                      */
                     std::string GetAge() const;
 
                     /**
-                     * 设置Age. 0 indicates that no valid information is obtained.
-Example: 0
-                     * @param _age Age. 0 indicates that no valid information is obtained.
-Example: 0
+                     * 设置Age. 0 indicates no valid info is obtained.
+                     * @param _age Age. 0 indicates no valid info is obtained.
                      * 
                      */
                     void SetAge(const std::string& _age);
@@ -418,19 +354,15 @@ Example: 0
                     bool AgeHasBeenSet() const;
 
                     /**
-                     * 获取Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Birthday Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Date of birth
+                     * @return Birthday Date of birth
                      * 
                      */
                     std::string GetBirthday() const;
 
                     /**
-                     * 设置Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _birthday Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Date of birth
+                     * @param _birthday Date of birth
                      * 
                      */
                     void SetBirthday(const std::string& _birthday);
@@ -444,18 +376,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Birth place
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return BirthPlace Birth place
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetBirthPlace() const;
 
                     /**
                      * 设置Birth place
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _birthPlace Birth place
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetBirthPlace(const std::string& _birthPlace);
@@ -468,23 +396,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool BirthPlaceHasBeenSet() const;
 
                     /**
-                     * 获取Nationality, which is returned following the ISO 3166 country coding specification
-Note: This field may return null, indicating that no valid values can be obtained.
-Example: IND
-                     * @return Nationality Nationality, which is returned following the ISO 3166 country coding specification
-Note: This field may return null, indicating that no valid values can be obtained.
-Example: IND
+                     * 获取Document nationality. Return following the ISO 3166 country coding specification.
+                     * @return Nationality Document nationality. Return following the ISO 3166 country coding specification.
                      * 
                      */
                     std::string GetNationality() const;
 
                     /**
-                     * 设置Nationality, which is returned following the ISO 3166 country coding specification
-Note: This field may return null, indicating that no valid values can be obtained.
-Example: IND
-                     * @param _nationality Nationality, which is returned following the ISO 3166 country coding specification
-Note: This field may return null, indicating that no valid values can be obtained.
-Example: IND
+                     * 设置Document nationality. Return following the ISO 3166 country coding specification.
+                     * @param _nationality Document nationality. Return following the ISO 3166 country coding specification.
                      * 
                      */
                     void SetNationality(const std::string& _nationality);
@@ -498,18 +418,14 @@ Example: IND
 
                     /**
                      * 获取Registration number
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return RegistrationNumber Registration number
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetRegistrationNumber() const;
 
                     /**
                      * 设置Registration number
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _registrationNumber Registration number
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetRegistrationNumber(const std::string& _registrationNumber);
@@ -522,19 +438,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool RegistrationNumberHasBeenSet() const;
 
                     /**
-                     * 获取Address
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Address Address
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Document address information
+                     * @return Address Document address information
                      * 
                      */
                     Address GetAddress() const;
 
                     /**
-                     * 设置Address
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _address Address
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Document address information
+                     * @param _address Document address information
                      * 
                      */
                     void SetAddress(const Address& _address);
@@ -547,15 +459,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool AddressHasBeenSet() const;
 
                     /**
-                     * 获取Localized name.
-                     * @return FullNameLocal Localized name.
+                     * 获取Localized name
+                     * @return FullNameLocal Localized name
                      * 
                      */
                     std::string GetFullNameLocal() const;
 
                     /**
-                     * 设置Localized name.
-                     * @param _fullNameLocal Localized name.
+                     * 设置Localized name
+                     * @param _fullNameLocal Localized name
                      * 
                      */
                     void SetFullNameLocal(const std::string& _fullNameLocal);
@@ -568,15 +480,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool FullNameLocalHasBeenSet() const;
 
                     /**
-                     * 获取Localization.
-                     * @return FirstNameLocal Localization.
+                     * 获取Localized name
+                     * @return FirstNameLocal Localized name
                      * 
                      */
                     std::string GetFirstNameLocal() const;
 
                     /**
-                     * 设置Localization.
-                     * @param _firstNameLocal Localization.
+                     * 设置Localized name
+                     * @param _firstNameLocal Localized name
                      * 
                      */
                     void SetFirstNameLocal(const std::string& _firstNameLocal);
@@ -589,15 +501,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool FirstNameLocalHasBeenSet() const;
 
                     /**
-                     * 获取Localized surname.
-                     * @return LastNameLocal Localized surname.
+                     * 获取Localized last name
+                     * @return LastNameLocal Localized last name
                      * 
                      */
                     std::string GetLastNameLocal() const;
 
                     /**
-                     * 设置Localized surname.
-                     * @param _lastNameLocal Localized surname.
+                     * 设置Localized last name
+                     * @param _lastNameLocal Localized last name
                      * 
                      */
                     void SetLastNameLocal(const std::string& _lastNameLocal);
@@ -612,158 +524,136 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * License number
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * ID number
                      */
                     std::string m_licenseNumber;
                     bool m_licenseNumberHasBeenSet;
 
                     /**
-                     * Personal number, which is returned when it is a passport
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Personal number. It is returned when the identity document type is a passport.
                      */
                     std::string m_personalNumber;
                     bool m_personalNumberHasBeenSet;
 
                     /**
-                     * The first line of passport machine reading code
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * MRZ line 1 of the passport
                      */
                     std::string m_passportCodeFirst;
                     bool m_passportCodeFirstHasBeenSet;
 
                     /**
-                     * The first line of passport machine reading code
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * MRZ line 2 of the passport
                      */
                     std::string m_passportCodeSecond;
                     bool m_passportCodeSecondHasBeenSet;
 
                     /**
-                     * Date of expiry in the format of YYYY-MM-DD
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Expiration date in YYYY-MM-DD format
                      */
                     std::string m_expirationDate;
                     bool m_expirationDateHasBeenSet;
 
                     /**
-                     * Valid date in the format of YYYY-MM-DD
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Expiration date in YYYY-MM-DD format
                      */
                     std::string m_dueDate;
                     bool m_dueDateHasBeenSet;
 
                     /**
-                     * Date of issue in the format of YYYY-MM-DD
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Issue date in YYYY-MM-DD format
                      */
                     std::string m_issuedDate;
                     bool m_issuedDateHasBeenSet;
 
                     /**
                      * Issuing authority
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_issuedAuthority;
                     bool m_issuedAuthorityHasBeenSet;
 
                     /**
-                     * Issuing country, which is returned following the ISO 3166 country coding specification
-Note: This field may return null, indicating that no valid values can be obtained.
-Example: MYS
+                     * Issuing country. Return following the ISO 3166 country coding specification.
                      */
                     std::string m_issuedCountry;
                     bool m_issuedCountryHasBeenSet;
 
                     /**
-                     * Full Name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Name
                      */
                     std::string m_fullName;
                     bool m_fullNameHasBeenSet;
 
                     /**
-                     * First name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Name
                      */
                     std::string m_firstName;
                     bool m_firstNameHasBeenSet;
 
                     /**
                      * Last name
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_lastName;
                     bool m_lastNameHasBeenSet;
 
                     /**
-                     * Gender on the license
-- M: male
-- F: female
-- X: other gender
-Note: This field may return null, indicating that no valid values can be obtained.
-Example: M
+                     * Gender on the document
+-M: male
+-F: female
+- X: Other gender identity
                      */
                     std::string m_sex;
                     bool m_sexHasBeenSet;
 
                     /**
-                     * Age. 0 indicates that no valid information is obtained.
-Example: 0
+                     * Age. 0 indicates no valid info is obtained.
                      */
                     std::string m_age;
                     bool m_ageHasBeenSet;
 
                     /**
-                     * Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Date of birth
                      */
                     std::string m_birthday;
                     bool m_birthdayHasBeenSet;
 
                     /**
                      * Birth place
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_birthPlace;
                     bool m_birthPlaceHasBeenSet;
 
                     /**
-                     * Nationality, which is returned following the ISO 3166 country coding specification
-Note: This field may return null, indicating that no valid values can be obtained.
-Example: IND
+                     * Document nationality. Return following the ISO 3166 country coding specification.
                      */
                     std::string m_nationality;
                     bool m_nationalityHasBeenSet;
 
                     /**
                      * Registration number
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_registrationNumber;
                     bool m_registrationNumberHasBeenSet;
 
                     /**
-                     * Address
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Document address information
                      */
                     Address m_address;
                     bool m_addressHasBeenSet;
 
                     /**
-                     * Localized name.
+                     * Localized name
                      */
                     std::string m_fullNameLocal;
                     bool m_fullNameLocalHasBeenSet;
 
                     /**
-                     * Localization.
+                     * Localized name
                      */
                     std::string m_firstNameLocal;
                     bool m_firstNameLocalHasBeenSet;
 
                     /**
-                     * Localized surname.
+                     * Localized last name
                      */
                     std::string m_lastNameLocal;
                     bool m_lastNameLocalHasBeenSet;

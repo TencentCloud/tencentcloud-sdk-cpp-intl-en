@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * CLS logset information
                 */
                 class CLSLogsetInfo : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return LogsetId 
+                     * 获取Logset ID.
+                     * @return LogsetId Logset ID.
                      * 
                      */
                     std::string GetLogsetId() const;
 
                     /**
-                     * 设置
-                     * @param _logsetId 
+                     * 设置Logset ID.
+                     * @param _logsetId Logset ID.
                      * 
                      */
                     void SetLogsetId(const std::string& _logsetId);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool LogsetIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return LogsetName 
+                     * 获取Logset name.
+                     * @return LogsetName Logset name.
                      * 
                      */
                     std::string GetLogsetName() const;
 
                     /**
-                     * 设置
-                     * @param _logsetName 
+                     * 设置Logset name.
+                     * @param _logsetName Logset name.
                      * 
                      */
                     void SetLogsetName(const std::string& _logsetName);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Logset ID.
                      */
                     std::string m_logsetId;
                     bool m_logsetIdHasBeenSet;
 
                     /**
-                     * 
+                     * Logset name.
                      */
                     std::string m_logsetName;
                     bool m_logsetNameHasBeenSet;

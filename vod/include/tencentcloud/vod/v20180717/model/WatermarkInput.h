@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Watermark parameter type in a video processing task.
                 */
                 class WatermarkInput : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Definition 
+                     * 获取Watermark template ID.
+                     * @return Definition Watermark template ID.
                      * 
                      */
                     uint64_t GetDefinition() const;
 
                     /**
-                     * 设置
-                     * @param _definition 
+                     * 设置Watermark template ID.
+                     * @param _definition Watermark template ID.
                      * 
                      */
                     void SetDefinition(const uint64_t& _definition);
@@ -68,15 +68,19 @@ namespace TencentCloud
                     bool DefinitionHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return TextContent 
+                     * 获取Text content, up to 100 characters. Fill in only when the watermark type is text watermark.
+Text watermarks do not support watermarking screenshots.
+                     * @return TextContent Text content, up to 100 characters. Fill in only when the watermark type is text watermark.
+Text watermarks do not support watermarking screenshots.
                      * 
                      */
                     std::string GetTextContent() const;
 
                     /**
-                     * 设置
-                     * @param _textContent 
+                     * 设置Text content, up to 100 characters. Fill in only when the watermark type is text watermark.
+Text watermarks do not support watermarking screenshots.
+                     * @param _textContent Text content, up to 100 characters. Fill in only when the watermark type is text watermark.
+Text watermarks do not support watermarking screenshots.
                      * 
                      */
                     void SetTextContent(const std::string& _textContent);
@@ -89,15 +93,19 @@ namespace TencentCloud
                     bool TextContentHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SvgContent 
+                     * 获取SVG content. Length not exceeding 2000000 characters. Fill in only when the watermark type is SVG watermark.
+SVG watermark does not support screenshot watermarking.
+                     * @return SvgContent SVG content. Length not exceeding 2000000 characters. Fill in only when the watermark type is SVG watermark.
+SVG watermark does not support screenshot watermarking.
                      * 
                      */
                     std::string GetSvgContent() const;
 
                     /**
-                     * 设置
-                     * @param _svgContent 
+                     * 设置SVG content. Length not exceeding 2000000 characters. Fill in only when the watermark type is SVG watermark.
+SVG watermark does not support screenshot watermarking.
+                     * @param _svgContent SVG content. Length not exceeding 2000000 characters. Fill in only when the watermark type is SVG watermark.
+SVG watermark does not support screenshot watermarking.
                      * 
                      */
                     void SetSvgContent(const std::string& _svgContent);
@@ -110,15 +118,27 @@ namespace TencentCloud
                     bool SvgContentHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return StartTimeOffset 
+                     * 获取Start time offset of a watermark, in seconds. If not set or set to 0, a watermark starts appearing when a video starts.
+<li>If not set or set to 0, a watermark starts appearing when a video starts.</li>
+<li>If the value is greater than 0 (for example, n), a watermark will appear at second n of a video.</li>
+<li>When the value is less than 0 (assuming -n), the watermark appears n seconds before the end of the video.</li>
+                     * @return StartTimeOffset Start time offset of a watermark, in seconds. If not set or set to 0, a watermark starts appearing when a video starts.
+<li>If not set or set to 0, a watermark starts appearing when a video starts.</li>
+<li>If the value is greater than 0 (for example, n), a watermark will appear at second n of a video.</li>
+<li>When the value is less than 0 (assuming -n), the watermark appears n seconds before the end of the video.</li>
                      * 
                      */
                     double GetStartTimeOffset() const;
 
                     /**
-                     * 设置
-                     * @param _startTimeOffset 
+                     * 设置Start time offset of a watermark, in seconds. If not set or set to 0, a watermark starts appearing when a video starts.
+<li>If not set or set to 0, a watermark starts appearing when a video starts.</li>
+<li>If the value is greater than 0 (for example, n), a watermark will appear at second n of a video.</li>
+<li>When the value is less than 0 (assuming -n), the watermark appears n seconds before the end of the video.</li>
+                     * @param _startTimeOffset Start time offset of a watermark, in seconds. If not set or set to 0, a watermark starts appearing when a video starts.
+<li>If not set or set to 0, a watermark starts appearing when a video starts.</li>
+<li>If the value is greater than 0 (for example, n), a watermark will appear at second n of a video.</li>
+<li>When the value is less than 0 (assuming -n), the watermark appears n seconds before the end of the video.</li>
                      * 
                      */
                     void SetStartTimeOffset(const double& _startTimeOffset);
@@ -131,15 +151,27 @@ namespace TencentCloud
                     bool StartTimeOffsetHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return EndTimeOffset 
+                     * 获取End time offset of a watermark, in seconds.
+<li>If not set or set to 0, a watermark will last until the end of a video.</li>
+<li>If the value is greater than 0 (for example, n), a watermark will disappear at second n.</li>
+<li>When the value is less than 0 (assuming -n), the watermark persists until n seconds before the end of the video.</li>
+                     * @return EndTimeOffset End time offset of a watermark, in seconds.
+<li>If not set or set to 0, a watermark will last until the end of a video.</li>
+<li>If the value is greater than 0 (for example, n), a watermark will disappear at second n.</li>
+<li>When the value is less than 0 (assuming -n), the watermark persists until n seconds before the end of the video.</li>
                      * 
                      */
                     double GetEndTimeOffset() const;
 
                     /**
-                     * 设置
-                     * @param _endTimeOffset 
+                     * 设置End time offset of a watermark, in seconds.
+<li>If not set or set to 0, a watermark will last until the end of a video.</li>
+<li>If the value is greater than 0 (for example, n), a watermark will disappear at second n.</li>
+<li>When the value is less than 0 (assuming -n), the watermark persists until n seconds before the end of the video.</li>
+                     * @param _endTimeOffset End time offset of a watermark, in seconds.
+<li>If not set or set to 0, a watermark will last until the end of a video.</li>
+<li>If the value is greater than 0 (for example, n), a watermark will disappear at second n.</li>
+<li>When the value is less than 0 (assuming -n), the watermark persists until n seconds before the end of the video.</li>
                      * 
                      */
                     void SetEndTimeOffset(const double& _endTimeOffset);
@@ -154,31 +186,39 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Watermark template ID.
                      */
                     uint64_t m_definition;
                     bool m_definitionHasBeenSet;
 
                     /**
-                     * 
+                     * Text content, up to 100 characters. Fill in only when the watermark type is text watermark.
+Text watermarks do not support watermarking screenshots.
                      */
                     std::string m_textContent;
                     bool m_textContentHasBeenSet;
 
                     /**
-                     * 
+                     * SVG content. Length not exceeding 2000000 characters. Fill in only when the watermark type is SVG watermark.
+SVG watermark does not support screenshot watermarking.
                      */
                     std::string m_svgContent;
                     bool m_svgContentHasBeenSet;
 
                     /**
-                     * 
+                     * Start time offset of a watermark, in seconds. If not set or set to 0, a watermark starts appearing when a video starts.
+<li>If not set or set to 0, a watermark starts appearing when a video starts.</li>
+<li>If the value is greater than 0 (for example, n), a watermark will appear at second n of a video.</li>
+<li>When the value is less than 0 (assuming -n), the watermark appears n seconds before the end of the video.</li>
                      */
                     double m_startTimeOffset;
                     bool m_startTimeOffsetHasBeenSet;
 
                     /**
-                     * 
+                     * End time offset of a watermark, in seconds.
+<li>If not set or set to 0, a watermark will last until the end of a video.</li>
+<li>If the value is greater than 0 (for example, n), a watermark will disappear at second n.</li>
+<li>When the value is less than 0 (assuming -n), the watermark persists until n seconds before the end of the video.</li>
                      */
                     double m_endTimeOffset;
                     bool m_endTimeOffsetHasBeenSet;

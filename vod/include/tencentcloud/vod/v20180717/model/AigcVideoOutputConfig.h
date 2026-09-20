@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Configuration of the output media file for an AIGC video task.
                 */
                 class AigcVideoOutputConfig : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return StorageMode 
+                     * 获取<p>Storage mode</p><p>Enumeration values:</p><ul><li>Temporary: Temporary storage. The generated video file will not be stored in VOD. You can obtain a temporary access URL in the event notification, with a valid period of 7 days.</li><li>Permanent: Permanent storage. The generated video file will be stored in VOD. You can obtain the FileId in the event notification.</li></ul><p>Default value: Temporary</p>
+                     * @return StorageMode <p>Storage mode</p><p>Enumeration values:</p><ul><li>Temporary: Temporary storage. The generated video file will not be stored in VOD. You can obtain a temporary access URL in the event notification, with a valid period of 7 days.</li><li>Permanent: Permanent storage. The generated video file will be stored in VOD. You can obtain the FileId in the event notification.</li></ul><p>Default value: Temporary</p>
                      * 
                      */
                     std::string GetStorageMode() const;
 
                     /**
-                     * 设置
-                     * @param _storageMode 
+                     * 设置<p>Storage mode</p><p>Enumeration values:</p><ul><li>Temporary: Temporary storage. The generated video file will not be stored in VOD. You can obtain a temporary access URL in the event notification, with a valid period of 7 days.</li><li>Permanent: Permanent storage. The generated video file will be stored in VOD. You can obtain the FileId in the event notification.</li></ul><p>Default value: Temporary</p>
+                     * @param _storageMode <p>Storage mode</p><p>Enumeration values:</p><ul><li>Temporary: Temporary storage. The generated video file will not be stored in VOD. You can obtain a temporary access URL in the event notification, with a valid period of 7 days.</li><li>Permanent: Permanent storage. The generated video file will be stored in VOD. You can obtain the FileId in the event notification.</li></ul><p>Default value: Temporary</p>
                      * 
                      */
                     void SetStorageMode(const std::string& _storageMode);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool StorageModeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return MediaName 
+                     * 获取<p>Output media file name, up to 64 characters. By default, the system specifies the generated file name.</p>
+                     * @return MediaName <p>Output media file name, up to 64 characters. By default, the system specifies the generated file name.</p>
                      * 
                      */
                     std::string GetMediaName() const;
 
                     /**
-                     * 设置
-                     * @param _mediaName 
+                     * 设置<p>Output media file name, up to 64 characters. By default, the system specifies the generated file name.</p>
+                     * @param _mediaName <p>Output media file name, up to 64 characters. By default, the system specifies the generated file name.</p>
                      * 
                      */
                     void SetMediaName(const std::string& _mediaName);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool MediaNameHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ClassId 
+                     * 获取<p>Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the <a href="/document/product/266/7812">Create Category</a> API.</p><li>Default value: 0, indicating other categories.</li>
+                     * @return ClassId <p>Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the <a href="/document/product/266/7812">Create Category</a> API.</p><li>Default value: 0, indicating other categories.</li>
                      * 
                      */
                     int64_t GetClassId() const;
 
                     /**
-                     * 设置
-                     * @param _classId 
+                     * 设置<p>Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the <a href="/document/product/266/7812">Create Category</a> API.</p><li>Default value: 0, indicating other categories.</li>
+                     * @param _classId <p>Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the <a href="/document/product/266/7812">Create Category</a> API.</p><li>Default value: 0, indicating other categories.</li>
                      * 
                      */
                     void SetClassId(const int64_t& _classId);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool ClassIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ExpireTime 
+                     * 获取<p>Expiry date of the output file. The file will be deleted after this time. It never expires by default. The format follows the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
+                     * @return ExpireTime <p>Expiry date of the output file. The file will be deleted after this time. It never expires by default. The format follows the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
                      * 
                      */
                     std::string GetExpireTime() const;
 
                     /**
-                     * 设置
-                     * @param _expireTime 
+                     * 设置<p>Expiry date of the output file. The file will be deleted after this time. It never expires by default. The format follows the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
+                     * @param _expireTime <p>Expiry date of the output file. The file will be deleted after this time. It never expires by default. The format follows the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
                      * 
                      */
                     void SetExpireTime(const std::string& _expireTime);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool ExpireTimeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Duration 
+                     * 获取<p>Duration of the generated video, in seconds.</p><li>When ModelName is Kling, available values are 3-15, with a default value of 5;</li><li>When ModelName is Hailuo, available values are 6 and 10, with a default value of 6; when the version is H3, available values are 4-15 seconds (integer)</li><li>When ModelName is Vidu, you can specify 1-10;</li><li>When ModelName is GV, the available value is 8, with a default value of 8;</li><li>When ModelName is OS, available values are 4, 8, and 12, with a default value of 8;</li><li>When ModelName is PixVerse, you can specify 1-15, with a default value of 5;</li>
+                     * @return Duration <p>Duration of the generated video, in seconds.</p><li>When ModelName is Kling, available values are 3-15, with a default value of 5;</li><li>When ModelName is Hailuo, available values are 6 and 10, with a default value of 6; when the version is H3, available values are 4-15 seconds (integer)</li><li>When ModelName is Vidu, you can specify 1-10;</li><li>When ModelName is GV, the available value is 8, with a default value of 8;</li><li>When ModelName is OS, available values are 4, 8, and 12, with a default value of 8;</li><li>When ModelName is PixVerse, you can specify 1-15, with a default value of 5;</li>
                      * 
                      */
                     double GetDuration() const;
 
                     /**
-                     * 设置
-                     * @param _duration 
+                     * 设置<p>Duration of the generated video, in seconds.</p><li>When ModelName is Kling, available values are 3-15, with a default value of 5;</li><li>When ModelName is Hailuo, available values are 6 and 10, with a default value of 6; when the version is H3, available values are 4-15 seconds (integer)</li><li>When ModelName is Vidu, you can specify 1-10;</li><li>When ModelName is GV, the available value is 8, with a default value of 8;</li><li>When ModelName is OS, available values are 4, 8, and 12, with a default value of 8;</li><li>When ModelName is PixVerse, you can specify 1-15, with a default value of 5;</li>
+                     * @param _duration <p>Duration of the generated video, in seconds.</p><li>When ModelName is Kling, available values are 3-15, with a default value of 5;</li><li>When ModelName is Hailuo, available values are 6 and 10, with a default value of 6; when the version is H3, available values are 4-15 seconds (integer)</li><li>When ModelName is Vidu, you can specify 1-10;</li><li>When ModelName is GV, the available value is 8, with a default value of 8;</li><li>When ModelName is OS, available values are 4, 8, and 12, with a default value of 8;</li><li>When ModelName is PixVerse, you can specify 1-15, with a default value of 5;</li>
                      * 
                      */
                     void SetDuration(const double& _duration);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool DurationHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Resolution 
+                     * 获取<p>Resolution of the generated video.</p><li>When ModelName is Kling, available values are 720P and 1080P, with a default value of 720P;</li><li>When ModelName is Hailuo, available values are 768P and 1080P, with a default value of 768P; when the version is H3, available values are 768P, 1080P, 2K, and 4K;</li><li>When ModelName is Vidu, available values are 720P and 1080P, with a default value of 720P;</li><li>When ModelName is GV, available values are 720P and 1080P, with a default value of 720P;</li><li>When ModelName is OS, the available value is 720P;</li><li>When ModelName is PixVerse, available values are 540p, 720p, 1080p, 2k, and 4k, with a default value of 720p;</li>
+                     * @return Resolution <p>Resolution of the generated video.</p><li>When ModelName is Kling, available values are 720P and 1080P, with a default value of 720P;</li><li>When ModelName is Hailuo, available values are 768P and 1080P, with a default value of 768P; when the version is H3, available values are 768P, 1080P, 2K, and 4K;</li><li>When ModelName is Vidu, available values are 720P and 1080P, with a default value of 720P;</li><li>When ModelName is GV, available values are 720P and 1080P, with a default value of 720P;</li><li>When ModelName is OS, the available value is 720P;</li><li>When ModelName is PixVerse, available values are 540p, 720p, 1080p, 2k, and 4k, with a default value of 720p;</li>
                      * 
                      */
                     std::string GetResolution() const;
 
                     /**
-                     * 设置
-                     * @param _resolution 
+                     * 设置<p>Resolution of the generated video.</p><li>When ModelName is Kling, available values are 720P and 1080P, with a default value of 720P;</li><li>When ModelName is Hailuo, available values are 768P and 1080P, with a default value of 768P; when the version is H3, available values are 768P, 1080P, 2K, and 4K;</li><li>When ModelName is Vidu, available values are 720P and 1080P, with a default value of 720P;</li><li>When ModelName is GV, available values are 720P and 1080P, with a default value of 720P;</li><li>When ModelName is OS, the available value is 720P;</li><li>When ModelName is PixVerse, available values are 540p, 720p, 1080p, 2k, and 4k, with a default value of 720p;</li>
+                     * @param _resolution <p>Resolution of the generated video.</p><li>When ModelName is Kling, available values are 720P and 1080P, with a default value of 720P;</li><li>When ModelName is Hailuo, available values are 768P and 1080P, with a default value of 768P; when the version is H3, available values are 768P, 1080P, 2K, and 4K;</li><li>When ModelName is Vidu, available values are 720P and 1080P, with a default value of 720P;</li><li>When ModelName is GV, available values are 720P and 1080P, with a default value of 720P;</li><li>When ModelName is OS, the available value is 720P;</li><li>When ModelName is PixVerse, available values are 540p, 720p, 1080p, 2k, and 4k, with a default value of 720p;</li>
                      * 
                      */
                     void SetResolution(const std::string& _resolution);
@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool ResolutionHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AspectRatio 
+                     * 获取<p>Aspect ratio of the generated video.</p><li>When ModelName is Kling, for text-to-video, the available values are 16:9, 9:16, and 1:1, with a default of 16:9.</li><li>When ModelName is Vidu, for text-to-video and reference image-to-video, the available values are 16:9, 9:16, 4:3, 3:4, and 1:1. Only version q2 supports 4:3 and 3:4.</li><li>When ModelName is GV, the available values are 16:9 and 9:16, with a default of 16:9.</li><li>When ModelName is OS, for text-to-video, the available values are 16:9 and 9:16, with a default of 16:9.</li><li>When ModelName is Hailuo and the version is H3, for text-to-video and reference image-to-video, the available values are 21:9, 16:9, 4:3, 1:1, 3:4, and 9:16. For image-to-video (first and last frame video), the resolution matches the image.</li><li>When ModelName is PixVerse, the available values are 16:9, 4:3, 1:1, 3:4, 9:16, 2:3, 3:2, and 21:9.</li>
+                     * @return AspectRatio <p>Aspect ratio of the generated video.</p><li>When ModelName is Kling, for text-to-video, the available values are 16:9, 9:16, and 1:1, with a default of 16:9.</li><li>When ModelName is Vidu, for text-to-video and reference image-to-video, the available values are 16:9, 9:16, 4:3, 3:4, and 1:1. Only version q2 supports 4:3 and 3:4.</li><li>When ModelName is GV, the available values are 16:9 and 9:16, with a default of 16:9.</li><li>When ModelName is OS, for text-to-video, the available values are 16:9 and 9:16, with a default of 16:9.</li><li>When ModelName is Hailuo and the version is H3, for text-to-video and reference image-to-video, the available values are 21:9, 16:9, 4:3, 1:1, 3:4, and 9:16. For image-to-video (first and last frame video), the resolution matches the image.</li><li>When ModelName is PixVerse, the available values are 16:9, 4:3, 1:1, 3:4, 9:16, 2:3, 3:2, and 21:9.</li>
                      * 
                      */
                     std::string GetAspectRatio() const;
 
                     /**
-                     * 设置
-                     * @param _aspectRatio 
+                     * 设置<p>Aspect ratio of the generated video.</p><li>When ModelName is Kling, for text-to-video, the available values are 16:9, 9:16, and 1:1, with a default of 16:9.</li><li>When ModelName is Vidu, for text-to-video and reference image-to-video, the available values are 16:9, 9:16, 4:3, 3:4, and 1:1. Only version q2 supports 4:3 and 3:4.</li><li>When ModelName is GV, the available values are 16:9 and 9:16, with a default of 16:9.</li><li>When ModelName is OS, for text-to-video, the available values are 16:9 and 9:16, with a default of 16:9.</li><li>When ModelName is Hailuo and the version is H3, for text-to-video and reference image-to-video, the available values are 21:9, 16:9, 4:3, 1:1, 3:4, and 9:16. For image-to-video (first and last frame video), the resolution matches the image.</li><li>When ModelName is PixVerse, the available values are 16:9, 4:3, 1:1, 3:4, 9:16, 2:3, 3:2, and 21:9.</li>
+                     * @param _aspectRatio <p>Aspect ratio of the generated video.</p><li>When ModelName is Kling, for text-to-video, the available values are 16:9, 9:16, and 1:1, with a default of 16:9.</li><li>When ModelName is Vidu, for text-to-video and reference image-to-video, the available values are 16:9, 9:16, 4:3, 3:4, and 1:1. Only version q2 supports 4:3 and 3:4.</li><li>When ModelName is GV, the available values are 16:9 and 9:16, with a default of 16:9.</li><li>When ModelName is OS, for text-to-video, the available values are 16:9 and 9:16, with a default of 16:9.</li><li>When ModelName is Hailuo and the version is H3, for text-to-video and reference image-to-video, the available values are 21:9, 16:9, 4:3, 1:1, 3:4, and 9:16. For image-to-video (first and last frame video), the resolution matches the image.</li><li>When ModelName is PixVerse, the available values are 16:9, 4:3, 1:1, 3:4, 9:16, 2:3, 3:2, and 21:9.</li>
                      * 
                      */
                     void SetAspectRatio(const std::string& _aspectRatio);
@@ -194,15 +194,15 @@ namespace TencentCloud
                     bool AspectRatioHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AudioGeneration 
+                     * 获取<p>Whether to generate audio. Supported models include GV, OS, Vidu, Jimeng, and Kling.</p><p>Enumeration values:</p><ul><li>Enabled: Enable</li><li>Disabled: Disable</li></ul><p>Default value: Disabled</p>
+                     * @return AudioGeneration <p>Whether to generate audio. Supported models include GV, OS, Vidu, Jimeng, and Kling.</p><p>Enumeration values:</p><ul><li>Enabled: Enable</li><li>Disabled: Disable</li></ul><p>Default value: Disabled</p>
                      * 
                      */
                     std::string GetAudioGeneration() const;
 
                     /**
-                     * 设置
-                     * @param _audioGeneration 
+                     * 设置<p>Whether to generate audio. Supported models include GV, OS, Vidu, Jimeng, and Kling.</p><p>Enumeration values:</p><ul><li>Enabled: Enable</li><li>Disabled: Disable</li></ul><p>Default value: Disabled</p>
+                     * @param _audioGeneration <p>Whether to generate audio. Supported models include GV, OS, Vidu, Jimeng, and Kling.</p><p>Enumeration values:</p><ul><li>Enabled: Enable</li><li>Disabled: Disable</li></ul><p>Default value: Disabled</p>
                      * 
                      */
                     void SetAudioGeneration(const std::string& _audioGeneration);
@@ -215,15 +215,15 @@ namespace TencentCloud
                     bool AudioGenerationHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return PersonGeneration 
+                     * 获取<p>Whether to allow generation of people or human faces. Valid values: <li>AllowAdult: allow generation of adults;</li> <li>Disallowed: forbid people or human faces in images;</li></p>
+                     * @return PersonGeneration <p>Whether to allow generation of people or human faces. Valid values: <li>AllowAdult: allow generation of adults;</li> <li>Disallowed: forbid people or human faces in images;</li></p>
                      * 
                      */
                     std::string GetPersonGeneration() const;
 
                     /**
-                     * 设置
-                     * @param _personGeneration 
+                     * 设置<p>Whether to allow generation of people or human faces. Valid values: <li>AllowAdult: allow generation of adults;</li> <li>Disallowed: forbid people or human faces in images;</li></p>
+                     * @param _personGeneration <p>Whether to allow generation of people or human faces. Valid values: <li>AllowAdult: allow generation of adults;</li> <li>Disallowed: forbid people or human faces in images;</li></p>
                      * 
                      */
                     void SetPersonGeneration(const std::string& _personGeneration);
@@ -236,15 +236,15 @@ namespace TencentCloud
                     bool PersonGenerationHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return InputComplianceCheck 
+                     * 获取<p>Whether compliance check is enabled for the input content. Valid values: <li>Enabled: enable;</li> <li>Disabled: disable;</li></p>
+                     * @return InputComplianceCheck <p>Whether compliance check is enabled for the input content. Valid values: <li>Enabled: enable;</li> <li>Disabled: disable;</li></p>
                      * 
                      */
                     std::string GetInputComplianceCheck() const;
 
                     /**
-                     * 设置
-                     * @param _inputComplianceCheck 
+                     * 设置<p>Whether compliance check is enabled for the input content. Valid values: <li>Enabled: enable;</li> <li>Disabled: disable;</li></p>
+                     * @param _inputComplianceCheck <p>Whether compliance check is enabled for the input content. Valid values: <li>Enabled: enable;</li> <li>Disabled: disable;</li></p>
                      * 
                      */
                     void SetInputComplianceCheck(const std::string& _inputComplianceCheck);
@@ -257,15 +257,15 @@ namespace TencentCloud
                     bool InputComplianceCheckHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return OutputComplianceCheck 
+                     * 获取<p>Whether to enable compliance check on output content. Valid values: <li>Enabled: enable;</li> <li>Disabled: disable;</li></p>
+                     * @return OutputComplianceCheck <p>Whether to enable compliance check on output content. Valid values: <li>Enabled: enable;</li> <li>Disabled: disable;</li></p>
                      * 
                      */
                     std::string GetOutputComplianceCheck() const;
 
                     /**
-                     * 设置
-                     * @param _outputComplianceCheck 
+                     * 设置<p>Whether to enable compliance check on output content. Valid values: <li>Enabled: enable;</li> <li>Disabled: disable;</li></p>
+                     * @param _outputComplianceCheck <p>Whether to enable compliance check on output content. Valid values: <li>Enabled: enable;</li> <li>Disabled: disable;</li></p>
                      * 
                      */
                     void SetOutputComplianceCheck(const std::string& _outputComplianceCheck);
@@ -278,15 +278,15 @@ namespace TencentCloud
                     bool OutputComplianceCheckHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return EnhanceSwitch 
+                     * 获取<p>Whether to enable video enhancement. Valid values: <li>Enabled: enable;</li> <li>Disabled: disable;</li><br>Description:</p><ol><li>For the selected resolution exceeding the model's generation resolution, enhancement is enabled by default.</li><li>For resolutions the model can directly generate, you can also choose direct low-resolution generation and use enhancement to obtain the specified resolution.</li></ol>
+                     * @return EnhanceSwitch <p>Whether to enable video enhancement. Valid values: <li>Enabled: enable;</li> <li>Disabled: disable;</li><br>Description:</p><ol><li>For the selected resolution exceeding the model's generation resolution, enhancement is enabled by default.</li><li>For resolutions the model can directly generate, you can also choose direct low-resolution generation and use enhancement to obtain the specified resolution.</li></ol>
                      * 
                      */
                     std::string GetEnhanceSwitch() const;
 
                     /**
-                     * 设置
-                     * @param _enhanceSwitch 
+                     * 设置<p>Whether to enable video enhancement. Valid values: <li>Enabled: enable;</li> <li>Disabled: disable;</li><br>Description:</p><ol><li>For the selected resolution exceeding the model's generation resolution, enhancement is enabled by default.</li><li>For resolutions the model can directly generate, you can also choose direct low-resolution generation and use enhancement to obtain the specified resolution.</li></ol>
+                     * @param _enhanceSwitch <p>Whether to enable video enhancement. Valid values: <li>Enabled: enable;</li> <li>Disabled: disable;</li><br>Description:</p><ol><li>For the selected resolution exceeding the model's generation resolution, enhancement is enabled by default.</li><li>For resolutions the model can directly generate, you can also choose direct low-resolution generation and use enhancement to obtain the specified resolution.</li></ol>
                      * 
                      */
                     void SetEnhanceSwitch(const std::string& _enhanceSwitch);
@@ -299,15 +299,15 @@ namespace TencentCloud
                     bool EnhanceSwitchHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return OffPeak 
+                     * 获取<p>Whether to enable off-peak. Valid values: <li>Enabled: enable;</li> <li>Disabled: disable;</li></p>
+                     * @return OffPeak <p>Whether to enable off-peak. Valid values: <li>Enabled: enable;</li> <li>Disabled: disable;</li></p>
                      * 
                      */
                     std::string GetOffPeak() const;
 
                     /**
-                     * 设置
-                     * @param _offPeak 
+                     * 设置<p>Whether to enable off-peak. Valid values: <li>Enabled: enable;</li> <li>Disabled: disable;</li></p>
+                     * @param _offPeak <p>Whether to enable off-peak. Valid values: <li>Enabled: enable;</li> <li>Disabled: disable;</li></p>
                      * 
                      */
                     void SetOffPeak(const std::string& _offPeak);
@@ -320,15 +320,15 @@ namespace TencentCloud
                     bool OffPeakHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return FrameInterpolate 
+                     * 获取<p>Whether to enable vidu intelligent frame interpolation. Valid values: <li>Enabled: enable;</li> <li>Disabled: disable;</li></p>
+                     * @return FrameInterpolate <p>Whether to enable vidu intelligent frame interpolation. Valid values: <li>Enabled: enable;</li> <li>Disabled: disable;</li></p>
                      * 
                      */
                     std::string GetFrameInterpolate() const;
 
                     /**
-                     * 设置
-                     * @param _frameInterpolate 
+                     * 设置<p>Whether to enable vidu intelligent frame interpolation. Valid values: <li>Enabled: enable;</li> <li>Disabled: disable;</li></p>
+                     * @param _frameInterpolate <p>Whether to enable vidu intelligent frame interpolation. Valid values: <li>Enabled: enable;</li> <li>Disabled: disable;</li></p>
                      * 
                      */
                     void SetFrameInterpolate(const std::string& _frameInterpolate);
@@ -341,15 +341,15 @@ namespace TencentCloud
                     bool FrameInterpolateHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return LogoAdd 
+                     * 获取<p>Indicates whether to enable the logo watermark. Valid values: <li>Enabled: enable;</li> <li>Disabled: disable;</li></p>
+                     * @return LogoAdd <p>Indicates whether to enable the logo watermark. Valid values: <li>Enabled: enable;</li> <li>Disabled: disable;</li></p>
                      * 
                      */
                     std::string GetLogoAdd() const;
 
                     /**
-                     * 设置
-                     * @param _logoAdd 
+                     * 设置<p>Indicates whether to enable the logo watermark. Valid values: <li>Enabled: enable;</li> <li>Disabled: disable;</li></p>
+                     * @param _logoAdd <p>Indicates whether to enable the logo watermark. Valid values: <li>Enabled: enable;</li> <li>Disabled: disable;</li></p>
                      * 
                      */
                     void SetLogoAdd(const std::string& _logoAdd);
@@ -362,15 +362,15 @@ namespace TencentCloud
                     bool LogoAddHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return EnableBGM 
+                     * 获取<p>Whether to add background music to the generated video.</p><p>Enumeration values:</p><ul><li>Enabled: The system will automatically select suitable music from the preset BGM library and add it.</li><li>Disabled: Do not add BGM.</li></ul><p>Default value: Disabled</p>
+                     * @return EnableBGM <p>Whether to add background music to the generated video.</p><p>Enumeration values:</p><ul><li>Enabled: The system will automatically select suitable music from the preset BGM library and add it.</li><li>Disabled: Do not add BGM.</li></ul><p>Default value: Disabled</p>
                      * 
                      */
                     std::string GetEnableBGM() const;
 
                     /**
-                     * 设置
-                     * @param _enableBGM 
+                     * 设置<p>Whether to add background music to the generated video.</p><p>Enumeration values:</p><ul><li>Enabled: The system will automatically select suitable music from the preset BGM library and add it.</li><li>Disabled: Do not add BGM.</li></ul><p>Default value: Disabled</p>
+                     * @param _enableBGM <p>Whether to add background music to the generated video.</p><p>Enumeration values:</p><ul><li>Enabled: The system will automatically select suitable music from the preset BGM library and add it.</li><li>Disabled: Do not add BGM.</li></ul><p>Default value: Disabled</p>
                      * 
                      */
                     void SetEnableBGM(const std::string& _enableBGM);
@@ -385,97 +385,97 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p>Storage mode</p><p>Enumeration values:</p><ul><li>Temporary: Temporary storage. The generated video file will not be stored in VOD. You can obtain a temporary access URL in the event notification, with a valid period of 7 days.</li><li>Permanent: Permanent storage. The generated video file will be stored in VOD. You can obtain the FileId in the event notification.</li></ul><p>Default value: Temporary</p>
                      */
                     std::string m_storageMode;
                     bool m_storageModeHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Output media file name, up to 64 characters. By default, the system specifies the generated file name.</p>
                      */
                     std::string m_mediaName;
                     bool m_mediaNameHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Category ID, used to categorize and manage media. You can create a category and obtain the category ID through the <a href="/document/product/266/7812">Create Category</a> API.</p><li>Default value: 0, indicating other categories.</li>
                      */
                     int64_t m_classId;
                     bool m_classIdHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Expiry date of the output file. The file will be deleted after this time. It never expires by default. The format follows the ISO 8601 standard. For details, see <a href="https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I">ISO date format description</a>.</p>
                      */
                     std::string m_expireTime;
                     bool m_expireTimeHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Duration of the generated video, in seconds.</p><li>When ModelName is Kling, available values are 3-15, with a default value of 5;</li><li>When ModelName is Hailuo, available values are 6 and 10, with a default value of 6; when the version is H3, available values are 4-15 seconds (integer)</li><li>When ModelName is Vidu, you can specify 1-10;</li><li>When ModelName is GV, the available value is 8, with a default value of 8;</li><li>When ModelName is OS, available values are 4, 8, and 12, with a default value of 8;</li><li>When ModelName is PixVerse, you can specify 1-15, with a default value of 5;</li>
                      */
                     double m_duration;
                     bool m_durationHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Resolution of the generated video.</p><li>When ModelName is Kling, available values are 720P and 1080P, with a default value of 720P;</li><li>When ModelName is Hailuo, available values are 768P and 1080P, with a default value of 768P; when the version is H3, available values are 768P, 1080P, 2K, and 4K;</li><li>When ModelName is Vidu, available values are 720P and 1080P, with a default value of 720P;</li><li>When ModelName is GV, available values are 720P and 1080P, with a default value of 720P;</li><li>When ModelName is OS, the available value is 720P;</li><li>When ModelName is PixVerse, available values are 540p, 720p, 1080p, 2k, and 4k, with a default value of 720p;</li>
                      */
                     std::string m_resolution;
                     bool m_resolutionHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Aspect ratio of the generated video.</p><li>When ModelName is Kling, for text-to-video, the available values are 16:9, 9:16, and 1:1, with a default of 16:9.</li><li>When ModelName is Vidu, for text-to-video and reference image-to-video, the available values are 16:9, 9:16, 4:3, 3:4, and 1:1. Only version q2 supports 4:3 and 3:4.</li><li>When ModelName is GV, the available values are 16:9 and 9:16, with a default of 16:9.</li><li>When ModelName is OS, for text-to-video, the available values are 16:9 and 9:16, with a default of 16:9.</li><li>When ModelName is Hailuo and the version is H3, for text-to-video and reference image-to-video, the available values are 21:9, 16:9, 4:3, 1:1, 3:4, and 9:16. For image-to-video (first and last frame video), the resolution matches the image.</li><li>When ModelName is PixVerse, the available values are 16:9, 4:3, 1:1, 3:4, 9:16, 2:3, 3:2, and 21:9.</li>
                      */
                     std::string m_aspectRatio;
                     bool m_aspectRatioHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Whether to generate audio. Supported models include GV, OS, Vidu, Jimeng, and Kling.</p><p>Enumeration values:</p><ul><li>Enabled: Enable</li><li>Disabled: Disable</li></ul><p>Default value: Disabled</p>
                      */
                     std::string m_audioGeneration;
                     bool m_audioGenerationHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Whether to allow generation of people or human faces. Valid values: <li>AllowAdult: allow generation of adults;</li> <li>Disallowed: forbid people or human faces in images;</li></p>
                      */
                     std::string m_personGeneration;
                     bool m_personGenerationHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Whether compliance check is enabled for the input content. Valid values: <li>Enabled: enable;</li> <li>Disabled: disable;</li></p>
                      */
                     std::string m_inputComplianceCheck;
                     bool m_inputComplianceCheckHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Whether to enable compliance check on output content. Valid values: <li>Enabled: enable;</li> <li>Disabled: disable;</li></p>
                      */
                     std::string m_outputComplianceCheck;
                     bool m_outputComplianceCheckHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Whether to enable video enhancement. Valid values: <li>Enabled: enable;</li> <li>Disabled: disable;</li><br>Description:</p><ol><li>For the selected resolution exceeding the model's generation resolution, enhancement is enabled by default.</li><li>For resolutions the model can directly generate, you can also choose direct low-resolution generation and use enhancement to obtain the specified resolution.</li></ol>
                      */
                     std::string m_enhanceSwitch;
                     bool m_enhanceSwitchHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Whether to enable off-peak. Valid values: <li>Enabled: enable;</li> <li>Disabled: disable;</li></p>
                      */
                     std::string m_offPeak;
                     bool m_offPeakHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Whether to enable vidu intelligent frame interpolation. Valid values: <li>Enabled: enable;</li> <li>Disabled: disable;</li></p>
                      */
                     std::string m_frameInterpolate;
                     bool m_frameInterpolateHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Indicates whether to enable the logo watermark. Valid values: <li>Enabled: enable;</li> <li>Disabled: disable;</li></p>
                      */
                     std::string m_logoAdd;
                     bool m_logoAddHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Whether to add background music to the generated video.</p><p>Enumeration values:</p><ul><li>Enabled: The system will automatically select suitable music from the preset BGM library and add it.</li><li>Disabled: Do not add BGM.</li></ul><p>Default value: Disabled</p>
                      */
                     std::string m_enableBGM;
                     bool m_enableBGMHasBeenSet;

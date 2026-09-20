@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return TotalCount 
+                     * 获取Total number of domain name pushes.
+                     * @return TotalCount Total number of domain name pushes.
                      * 
                      */
                     int64_t GetTotalCount() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return DomainCLSTargets 
+                     * 获取Domain name push to CLS target list.
+                     * @return DomainCLSTargets Domain name push to CLS target list.
                      * 
                      */
                     std::vector<DomainCLSTargetInfo> GetDomainCLSTargets() const;
@@ -75,13 +75,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Total number of domain name pushes.
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * 
+                     * Domain name push to CLS target list.
                      */
                     std::vector<DomainCLSTargetInfo> m_domainCLSTargets;
                     bool m_domainCLSTargetsHasBeenSet;

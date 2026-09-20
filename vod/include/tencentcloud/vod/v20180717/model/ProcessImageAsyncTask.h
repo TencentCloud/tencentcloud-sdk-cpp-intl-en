@@ -39,7 +39,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Image asynchronous processing configuration.
                 */
                 class ProcessImageAsyncTask : public AbstractModel
                 {
@@ -51,15 +51,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return EncodeConfig 
+                     * 获取<p>Image transcoding output configuration.</p>
+                     * @return EncodeConfig <p>Image transcoding output configuration.</p>
                      * 
                      */
                     ImageEncodeConfig GetEncodeConfig() const;
 
                     /**
-                     * 设置
-                     * @param _encodeConfig 
+                     * 设置<p>Image transcoding output configuration.</p>
+                     * @param _encodeConfig <p>Image transcoding output configuration.</p>
                      * 
                      */
                     void SetEncodeConfig(const ImageEncodeConfig& _encodeConfig);
@@ -72,15 +72,15 @@ namespace TencentCloud
                     bool EncodeConfigHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return EnhanceConfig 
+                     * 获取<p>Image enhancement configuration.</p>
+                     * @return EnhanceConfig <p>Image enhancement configuration.</p>
                      * 
                      */
                     ImageEnhanceConfig GetEnhanceConfig() const;
 
                     /**
-                     * 设置
-                     * @param _enhanceConfig 
+                     * 设置<p>Image enhancement configuration.</p>
+                     * @param _enhanceConfig <p>Image enhancement configuration.</p>
                      * 
                      */
                     void SetEnhanceConfig(const ImageEnhanceConfig& _enhanceConfig);
@@ -93,15 +93,15 @@ namespace TencentCloud
                     bool EnhanceConfigHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return BeautyConfig 
+                     * 获取<p>Image beauty effect configuration.</p>
+                     * @return BeautyConfig <p>Image beauty effect configuration.</p>
                      * 
                      */
                     ImageBeautyConfig GetBeautyConfig() const;
 
                     /**
-                     * 设置
-                     * @param _beautyConfig 
+                     * 设置<p>Image beauty effect configuration.</p>
+                     * @param _beautyConfig <p>Image beauty effect configuration.</p>
                      * 
                      */
                     void SetBeautyConfig(const ImageBeautyConfig& _beautyConfig);
@@ -114,15 +114,15 @@ namespace TencentCloud
                     bool BeautyConfigHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AiCutOutConfig 
+                     * 获取<p>Ai cutout configuration</p>
+                     * @return AiCutOutConfig <p>Ai cutout configuration</p>
                      * 
                      */
                     AiCutOutConfig GetAiCutOutConfig() const;
 
                     /**
-                     * 设置
-                     * @param _aiCutOutConfig 
+                     * 设置<p>Ai cutout configuration</p>
+                     * @param _aiCutOutConfig <p>Ai cutout configuration</p>
                      * 
                      */
                     void SetAiCutOutConfig(const AiCutOutConfig& _aiCutOutConfig);
@@ -137,25 +137,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p>Image transcoding output configuration.</p>
                      */
                     ImageEncodeConfig m_encodeConfig;
                     bool m_encodeConfigHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Image enhancement configuration.</p>
                      */
                     ImageEnhanceConfig m_enhanceConfig;
                     bool m_enhanceConfigHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Image beauty effect configuration.</p>
                      */
                     ImageBeautyConfig m_beautyConfig;
                     bool m_beautyConfigHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Ai cutout configuration</p>
                      */
                     AiCutOutConfig m_aiCutOutConfig;
                     bool m_aiCutOutConfigHasBeenSet;

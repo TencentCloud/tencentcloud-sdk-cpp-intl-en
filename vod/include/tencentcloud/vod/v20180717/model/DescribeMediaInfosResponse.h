@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return MediaInfoSet 
+                     * 获取<p>Media file information list.</p>
+                     * @return MediaInfoSet <p>Media file information list.</p>
                      * 
                      */
                     std::vector<MediaInfo> GetMediaInfoSet() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool MediaInfoSetHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return NotExistFileIdSet 
+                     * 获取<p>List of non-existent file IDs.</p>
+                     * @return NotExistFileIdSet <p>List of non-existent file IDs.</p>
                      * 
                      */
                     std::vector<std::string> GetNotExistFileIdSet() const;
@@ -75,13 +75,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p>Media file information list.</p>
                      */
                     std::vector<MediaInfo> m_mediaInfoSet;
                     bool m_mediaInfoSetHasBeenSet;
 
                     /**
-                     * 
+                     * <p>List of non-existent file IDs.</p>
                      */
                     std::vector<std::string> m_notExistFileIdSet;
                     bool m_notExistFileIdSetHasBeenSet;

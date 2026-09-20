@@ -39,7 +39,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Audio enhancement configuration.
                 */
                 class AudioEnhanceConfig : public AbstractModel
                 {
@@ -51,15 +51,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Denoise 
+                     * 获取Audio noise reduction configuration.
+                     * @return Denoise Audio noise reduction configuration.
                      * 
                      */
                     AudioDenoiseInfo GetDenoise() const;
 
                     /**
-                     * 设置
-                     * @param _denoise 
+                     * 设置Audio noise reduction configuration.
+                     * @param _denoise Audio noise reduction configuration.
                      * 
                      */
                     void SetDenoise(const AudioDenoiseInfo& _denoise);
@@ -72,15 +72,15 @@ namespace TencentCloud
                     bool DenoiseHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Separate 
+                     * 获取Audio separation configuration.
+                     * @return Separate Audio separation configuration.
                      * 
                      */
                     AudioSeparateInfo GetSeparate() const;
 
                     /**
-                     * 设置
-                     * @param _separate 
+                     * 设置Audio separation configuration.
+                     * @param _separate Audio separation configuration.
                      * 
                      */
                     void SetSeparate(const AudioSeparateInfo& _separate);
@@ -93,15 +93,15 @@ namespace TencentCloud
                     bool SeparateHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return VolumeBalance 
+                     * 获取Volume equalization configuration.
+                     * @return VolumeBalance Volume equalization configuration.
                      * 
                      */
                     AudioVolumeBalanceInfo GetVolumeBalance() const;
 
                     /**
-                     * 设置
-                     * @param _volumeBalance 
+                     * 设置Volume equalization configuration.
+                     * @param _volumeBalance Volume equalization configuration.
                      * 
                      */
                     void SetVolumeBalance(const AudioVolumeBalanceInfo& _volumeBalance);
@@ -114,15 +114,15 @@ namespace TencentCloud
                     bool VolumeBalanceHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Beautify 
+                     * 获取Volume beautification configuration.
+                     * @return Beautify Volume beautification configuration.
                      * 
                      */
                     AudioBeautifyInfo GetBeautify() const;
 
                     /**
-                     * 设置
-                     * @param _beautify 
+                     * 设置Volume beautification configuration.
+                     * @param _beautify Volume beautification configuration.
                      * 
                      */
                     void SetBeautify(const AudioBeautifyInfo& _beautify);
@@ -137,25 +137,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Audio noise reduction configuration.
                      */
                     AudioDenoiseInfo m_denoise;
                     bool m_denoiseHasBeenSet;
 
                     /**
-                     * 
+                     * Audio separation configuration.
                      */
                     AudioSeparateInfo m_separate;
                     bool m_separateHasBeenSet;
 
                     /**
-                     * 
+                     * Volume equalization configuration.
                      */
                     AudioVolumeBalanceInfo m_volumeBalance;
                     bool m_volumeBalanceHasBeenSet;
 
                     /**
-                     * 
+                     * Volume beautification configuration.
                      */
                     AudioBeautifyInfo m_beautify;
                     bool m_beautifyHasBeenSet;

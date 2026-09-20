@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * AI sample management, face information that failed processing
                 */
                 class AiSampleFailFaceInfo : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Index 
+                     * 获取Incorrect image subscript in the input parameter FaceContents, starting from 0.
+                     * @return Index Incorrect image subscript in the input parameter FaceContents, starting from 0.
                      * 
                      */
                     uint64_t GetIndex() const;
 
                     /**
-                     * 设置
-                     * @param _index 
+                     * 设置Incorrect image subscript in the input parameter FaceContents, starting from 0.
+                     * @param _index Incorrect image subscript in the input parameter FaceContents, starting from 0.
                      * 
                      */
                     void SetIndex(const uint64_t& _index);
@@ -68,15 +68,23 @@ namespace TencentCloud
                     bool IndexHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ErrCode 
+                     * 获取Error code. Value:
+<li>0: success;</li>
+<li>Other: Failed.</li>
+                     * @return ErrCode Error code. Value:
+<li>0: success;</li>
+<li>Other: Failed.</li>
                      * 
                      */
                     int64_t GetErrCode() const;
 
                     /**
-                     * 设置
-                     * @param _errCode 
+                     * 设置Error code. Value:
+<li>0: success;</li>
+<li>Other: Failed.</li>
+                     * @param _errCode Error code. Value:
+<li>0: success;</li>
+<li>Other: Failed.</li>
                      * 
                      */
                     void SetErrCode(const int64_t& _errCode);
@@ -89,15 +97,15 @@ namespace TencentCloud
                     bool ErrCodeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Message 
+                     * 获取Error description.
+                     * @return Message Error description.
                      * 
                      */
                     std::string GetMessage() const;
 
                     /**
-                     * 设置
-                     * @param _message 
+                     * 设置Error description.
+                     * @param _message Error description.
                      * 
                      */
                     void SetMessage(const std::string& _message);
@@ -112,19 +120,21 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Incorrect image subscript in the input parameter FaceContents, starting from 0.
                      */
                     uint64_t m_index;
                     bool m_indexHasBeenSet;
 
                     /**
-                     * 
+                     * Error code. Value:
+<li>0: success;</li>
+<li>Other: Failed.</li>
                      */
                     int64_t m_errCode;
                     bool m_errCodeHasBeenSet;
 
                     /**
-                     * 
+                     * Error description.
                      */
                     std::string m_message;
                     bool m_messageHasBeenSet;

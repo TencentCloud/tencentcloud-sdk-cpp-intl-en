@@ -45,15 +45,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return SubAppId 
+                     * 获取<p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b></p>
+                     * @return SubAppId <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b></p>
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置
-                     * @param _subAppId 
+                     * 设置<p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b></p>
+                     * @param _subAppId <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b></p>
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -66,15 +66,15 @@ namespace TencentCloud
                     bool SubAppIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return FileIds 
+                     * 获取<p>File ID collection. Match any element in the collection.</p><li>Array length limit: 10.</li><li>Single ID length limit: 40 characters.</li>
+                     * @return FileIds <p>File ID collection. Match any element in the collection.</p><li>Array length limit: 10.</li><li>Single ID length limit: 40 characters.</li>
                      * 
                      */
                     std::vector<std::string> GetFileIds() const;
 
                     /**
-                     * 设置
-                     * @param _fileIds 
+                     * 设置<p>File ID collection. Match any element in the collection.</p><li>Array length limit: 10.</li><li>Single ID length limit: 40 characters.</li>
+                     * @param _fileIds <p>File ID collection. Match any element in the collection.</p><li>Array length limit: 10.</li><li>Single ID length limit: 40 characters.</li>
                      * 
                      */
                     void SetFileIds(const std::vector<std::string>& _fileIds);
@@ -87,15 +87,15 @@ namespace TencentCloud
                     bool FileIdsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Names 
+                     * 获取<p>File name collection, fuzzy match media file names. The higher the matching degree, the higher priority in sorting.</p><li>Single file name length limit: 100 characters.</li><li>Array length limit: 10.</li>
+                     * @return Names <p>File name collection, fuzzy match media file names. The higher the matching degree, the higher priority in sorting.</p><li>Single file name length limit: 100 characters.</li><li>Array length limit: 10.</li>
                      * 
                      */
                     std::vector<std::string> GetNames() const;
 
                     /**
-                     * 设置
-                     * @param _names 
+                     * 设置<p>File name collection, fuzzy match media file names. The higher the matching degree, the higher priority in sorting.</p><li>Single file name length limit: 100 characters.</li><li>Array length limit: 10.</li>
+                     * @param _names <p>File name collection, fuzzy match media file names. The higher the matching degree, the higher priority in sorting.</p><li>Single file name length limit: 100 characters.</li><li>Array length limit: 10.</li>
                      * 
                      */
                     void SetNames(const std::vector<std::string>& _names);
@@ -108,15 +108,15 @@ namespace TencentCloud
                     bool NamesHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return NamePrefixes 
+                     * 获取<p>File name prefix, which is used to match media files by file name prefix.</p><li>Single file name prefix length limit: 100 characters.</li><li>Array length limit: 10.</li>
+                     * @return NamePrefixes <p>File name prefix, which is used to match media files by file name prefix.</p><li>Single file name prefix length limit: 100 characters.</li><li>Array length limit: 10.</li>
                      * 
                      */
                     std::vector<std::string> GetNamePrefixes() const;
 
                     /**
-                     * 设置
-                     * @param _namePrefixes 
+                     * 设置<p>File name prefix, which is used to match media files by file name prefix.</p><li>Single file name prefix length limit: 100 characters.</li><li>Array length limit: 10.</li>
+                     * @param _namePrefixes <p>File name prefix, which is used to match media files by file name prefix.</p><li>Single file name prefix length limit: 100 characters.</li><li>Array length limit: 10.</li>
                      * 
                      */
                     void SetNamePrefixes(const std::vector<std::string>& _namePrefixes);
@@ -129,15 +129,15 @@ namespace TencentCloud
                     bool NamePrefixesHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Descriptions 
+                     * 获取<p>File description set. Fuzzy match media file descriptions. The higher the matching degree, the higher priority in sorting.</p><li>Single description length limit: 100 characters.</li><li>Array length limit: 10.</li>
+                     * @return Descriptions <p>File description set. Fuzzy match media file descriptions. The higher the matching degree, the higher priority in sorting.</p><li>Single description length limit: 100 characters.</li><li>Array length limit: 10.</li>
                      * 
                      */
                     std::vector<std::string> GetDescriptions() const;
 
                     /**
-                     * 设置
-                     * @param _descriptions 
+                     * 设置<p>File description set. Fuzzy match media file descriptions. The higher the matching degree, the higher priority in sorting.</p><li>Single description length limit: 100 characters.</li><li>Array length limit: 10.</li>
+                     * @param _descriptions <p>File description set. Fuzzy match media file descriptions. The higher the matching degree, the higher priority in sorting.</p><li>Single description length limit: 100 characters.</li><li>Array length limit: 10.</li>
                      * 
                      */
                     void SetDescriptions(const std::vector<std::string>& _descriptions);
@@ -150,15 +150,15 @@ namespace TencentCloud
                     bool DescriptionsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ClassIds 
+                     * 获取<p>Category ID collection. Match the category with the specified ID in the collection and all its subclasses.</p><li>Array length limit: 10.</li>
+                     * @return ClassIds <p>Category ID collection. Match the category with the specified ID in the collection and all its subclasses.</p><li>Array length limit: 10.</li>
                      * 
                      */
                     std::vector<int64_t> GetClassIds() const;
 
                     /**
-                     * 设置
-                     * @param _classIds 
+                     * 设置<p>Category ID collection. Match the category with the specified ID in the collection and all its subclasses.</p><li>Array length limit: 10.</li>
+                     * @param _classIds <p>Category ID collection. Match the category with the specified ID in the collection and all its subclasses.</p><li>Array length limit: 10.</li>
                      * 
                      */
                     void SetClassIds(const std::vector<int64_t>& _classIds);
@@ -171,15 +171,15 @@ namespace TencentCloud
                     bool ClassIdsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Tags 
+                     * 获取<p>Tag set. Match any element in the collection.</p><li>Single tag length limit: 32 characters.</li><li>Array length limit: 16.</li>
+                     * @return Tags <p>Tag set. Match any element in the collection.</p><li>Single tag length limit: 32 characters.</li><li>Array length limit: 16.</li>
                      * 
                      */
                     std::vector<std::string> GetTags() const;
 
                     /**
-                     * 设置
-                     * @param _tags 
+                     * 设置<p>Tag set. Match any element in the collection.</p><li>Single tag length limit: 32 characters.</li><li>Array length limit: 16.</li>
+                     * @param _tags <p>Tag set. Match any element in the collection.</p><li>Single tag length limit: 32 characters.</li><li>Array length limit: 16.</li>
                      * 
                      */
                     void SetTags(const std::vector<std::string>& _tags);
@@ -192,15 +192,15 @@ namespace TencentCloud
                     bool TagsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Categories 
+                     * 获取<p>File type. Match any element in the collection:</p><li>Video: video file</li><li>Audio: audio file</li><li>Image: image file</li>
+                     * @return Categories <p>File type. Match any element in the collection:</p><li>Video: video file</li><li>Audio: audio file</li><li>Image: image file</li>
                      * 
                      */
                     std::vector<std::string> GetCategories() const;
 
                     /**
-                     * 设置
-                     * @param _categories 
+                     * 设置<p>File type. Match any element in the collection:</p><li>Video: video file</li><li>Audio: audio file</li><li>Image: image file</li>
+                     * @param _categories <p>File type. Match any element in the collection:</p><li>Video: video file</li><li>Audio: audio file</li><li>Image: image file</li>
                      * 
                      */
                     void SetCategories(const std::vector<std::string>& _categories);
@@ -213,15 +213,15 @@ namespace TencentCloud
                     bool CategoriesHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SourceTypes 
+                     * 获取<p>Media file source collection. For source values, see <a href="https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaSourceData">SourceType</a>.</p><li>Array length limit: 10.</li>
+                     * @return SourceTypes <p>Media file source collection. For source values, see <a href="https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaSourceData">SourceType</a>.</p><li>Array length limit: 10.</li>
                      * 
                      */
                     std::vector<std::string> GetSourceTypes() const;
 
                     /**
-                     * 设置
-                     * @param _sourceTypes 
+                     * 设置<p>Media file source collection. For source values, see <a href="https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaSourceData">SourceType</a>.</p><li>Array length limit: 10.</li>
+                     * @param _sourceTypes <p>Media file source collection. For source values, see <a href="https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaSourceData">SourceType</a>.</p><li>Array length limit: 10.</li>
                      * 
                      */
                     void SetSourceTypes(const std::vector<std::string>& _sourceTypes);
@@ -234,15 +234,15 @@ namespace TencentCloud
                     bool SourceTypesHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return StreamIds 
+                     * 获取<p>Push stream live code collection. Match any element in the collection.</p><li>Array length limit: 10.</li>
+                     * @return StreamIds <p>Push stream live code collection. Match any element in the collection.</p><li>Array length limit: 10.</li>
                      * 
                      */
                     std::vector<std::string> GetStreamIds() const;
 
                     /**
-                     * 设置
-                     * @param _streamIds 
+                     * 设置<p>Push stream live code collection. Match any element in the collection.</p><li>Array length limit: 10.</li>
+                     * @param _streamIds <p>Push stream live code collection. Match any element in the collection.</p><li>Array length limit: 10.</li>
                      * 
                      */
                     void SetStreamIds(const std::vector<std::string>& _streamIds);
@@ -255,15 +255,15 @@ namespace TencentCloud
                     bool StreamIdsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return CreateTime 
+                     * 获取<p>Files whose creation time matches this time period.</p><li>Includes the specified start and end points in time.</li>
+                     * @return CreateTime <p>Files whose creation time matches this time period.</p><li>Includes the specified start and end points in time.</li>
                      * 
                      */
                     TimeRange GetCreateTime() const;
 
                     /**
-                     * 设置
-                     * @param _createTime 
+                     * 设置<p>Files whose creation time matches this time period.</p><li>Includes the specified start and end points in time.</li>
+                     * @param _createTime <p>Files whose creation time matches this time period.</p><li>Includes the specified start and end points in time.</li>
                      * 
                      */
                     void SetCreateTime(const TimeRange& _createTime);
@@ -276,15 +276,15 @@ namespace TencentCloud
                     bool CreateTimeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ExpireTime 
+                     * 获取<p>Files whose expiration time falls within this period cannot be retrieved.</p><li>Includes the specified start and end points in time.</li>
+                     * @return ExpireTime <p>Files whose expiration time falls within this period cannot be retrieved.</p><li>Includes the specified start and end points in time.</li>
                      * 
                      */
                     TimeRange GetExpireTime() const;
 
                     /**
-                     * 设置
-                     * @param _expireTime 
+                     * 设置<p>Files whose expiration time falls within this period cannot be retrieved.</p><li>Includes the specified start and end points in time.</li>
+                     * @param _expireTime <p>Files whose expiration time falls within this period cannot be retrieved.</p><li>Includes the specified start and end points in time.</li>
                      * 
                      */
                     void SetExpireTime(const TimeRange& _expireTime);
@@ -297,15 +297,15 @@ namespace TencentCloud
                     bool ExpireTimeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return StorageRegions 
+                     * 获取<p>Media file storage region, for example, ap-chongqing. For details, see <a href="https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1#.E5.B7.B2.E6.94.AF.E6.8C.81.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8">Region List</a>.</p><li>Single storage region length limit: 20 characters.</li><li>Array length limit: 20.</li>
+                     * @return StorageRegions <p>Media file storage region, for example, ap-chongqing. For details, see <a href="https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1#.E5.B7.B2.E6.94.AF.E6.8C.81.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8">Region List</a>.</p><li>Single storage region length limit: 20 characters.</li><li>Array length limit: 20.</li>
                      * 
                      */
                     std::vector<std::string> GetStorageRegions() const;
 
                     /**
-                     * 设置
-                     * @param _storageRegions 
+                     * 设置<p>Media file storage region, for example, ap-chongqing. For details, see <a href="https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1#.E5.B7.B2.E6.94.AF.E6.8C.81.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8">Region List</a>.</p><li>Single storage region length limit: 20 characters.</li><li>Array length limit: 20.</li>
+                     * @param _storageRegions <p>Media file storage region, for example, ap-chongqing. For details, see <a href="https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1#.E5.B7.B2.E6.94.AF.E6.8C.81.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8">Region List</a>.</p><li>Single storage region length limit: 20 characters.</li><li>Array length limit: 20.</li>
                      * 
                      */
                     void SetStorageRegions(const std::vector<std::string>& _storageRegions);
@@ -318,15 +318,15 @@ namespace TencentCloud
                     bool StorageRegionsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return StorageClasses 
+                     * 获取<p>Storage type array. Optional values:</p><li> STANDARD: standard storage.</li><li> STANDARD_IA: infrequent storage.</li><li> ARCHIVE: archive storage.</li><li> DEEP_ARCHIVE: deep archive storage.</li>
+                     * @return StorageClasses <p>Storage type array. Optional values:</p><li> STANDARD: standard storage.</li><li> STANDARD_IA: infrequent storage.</li><li> ARCHIVE: archive storage.</li><li> DEEP_ARCHIVE: deep archive storage.</li>
                      * 
                      */
                     std::vector<std::string> GetStorageClasses() const;
 
                     /**
-                     * 设置
-                     * @param _storageClasses 
+                     * 设置<p>Storage type array. Optional values:</p><li> STANDARD: standard storage.</li><li> STANDARD_IA: infrequent storage.</li><li> ARCHIVE: archive storage.</li><li> DEEP_ARCHIVE: deep archive storage.</li>
+                     * @param _storageClasses <p>Storage type array. Optional values:</p><li> STANDARD: standard storage.</li><li> STANDARD_IA: infrequent storage.</li><li> ARCHIVE: archive storage.</li><li> DEEP_ARCHIVE: deep archive storage.</li>
                      * 
                      */
                     void SetStorageClasses(const std::vector<std::string>& _storageClasses);
@@ -339,15 +339,15 @@ namespace TencentCloud
                     bool StorageClassesHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return MediaTypes 
+                     * 获取<p>Media file packaging format collection. Match any element in the collection.</p><li>Array length limit: 10.</li>
+                     * @return MediaTypes <p>Media file packaging format collection. Match any element in the collection.</p><li>Array length limit: 10.</li>
                      * 
                      */
                     std::vector<std::string> GetMediaTypes() const;
 
                     /**
-                     * 设置
-                     * @param _mediaTypes 
+                     * 设置<p>Media file packaging format collection. Match any element in the collection.</p><li>Array length limit: 10.</li>
+                     * @param _mediaTypes <p>Media file packaging format collection. Match any element in the collection.</p><li>Array length limit: 10.</li>
                      * 
                      */
                     void SetMediaTypes(const std::vector<std::string>& _mediaTypes);
@@ -360,15 +360,15 @@ namespace TencentCloud
                     bool MediaTypesHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Status 
+                     * 获取<p>Media file status. Match any element in the collection.</p><li> Normal: normal;</li><li> SystemForbidden: platform ban;</li><li> Forbidden: proactive ban.</li>
+                     * @return Status <p>Media file status. Match any element in the collection.</p><li> Normal: normal;</li><li> SystemForbidden: platform ban;</li><li> Forbidden: proactive ban.</li>
                      * 
                      */
                     std::vector<std::string> GetStatus() const;
 
                     /**
-                     * 设置
-                     * @param _status 
+                     * 设置<p>Media file status. Match any element in the collection.</p><li> Normal: normal;</li><li> SystemForbidden: platform ban;</li><li> Forbidden: proactive ban.</li>
+                     * @param _status <p>Media file status. Match any element in the collection.</p><li> Normal: normal;</li><li> SystemForbidden: platform ban;</li><li> Forbidden: proactive ban.</li>
                      * 
                      */
                     void SetStatus(const std::vector<std::string>& _status);
@@ -381,15 +381,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ReviewResults 
+                     * 获取<p>Media file review result, match any element in the collection.</p><li> pass: pass review;</li><li> review: suspected violation, suggest re-examination;</li><li> block: confirmed violation, suggest banning;</li><li> notModerated: not moderated.</li>
+                     * @return ReviewResults <p>Media file review result, match any element in the collection.</p><li> pass: pass review;</li><li> review: suspected violation, suggest re-examination;</li><li> block: confirmed violation, suggest banning;</li><li> notModerated: not moderated.</li>
                      * 
                      */
                     std::vector<std::string> GetReviewResults() const;
 
                     /**
-                     * 设置
-                     * @param _reviewResults 
+                     * 设置<p>Media file review result, match any element in the collection.</p><li> pass: pass review;</li><li> review: suspected violation, suggest re-examination;</li><li> block: confirmed violation, suggest banning;</li><li> notModerated: not moderated.</li>
+                     * @param _reviewResults <p>Media file review result, match any element in the collection.</p><li> pass: pass review;</li><li> review: suspected violation, suggest re-examination;</li><li> block: confirmed violation, suggest banning;</li><li> notModerated: not moderated.</li>
                      * 
                      */
                     void SetReviewResults(const std::vector<std::string>& _reviewResults);
@@ -402,15 +402,15 @@ namespace TencentCloud
                     bool ReviewResultsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return TrtcSdkAppIds 
+                     * 获取<p>TRTC application ID collection. Match any element in the collection.</p><li>Array length limit: 10.</li>
+                     * @return TrtcSdkAppIds <p>TRTC application ID collection. Match any element in the collection.</p><li>Array length limit: 10.</li>
                      * 
                      */
                     std::vector<uint64_t> GetTrtcSdkAppIds() const;
 
                     /**
-                     * 设置
-                     * @param _trtcSdkAppIds 
+                     * 设置<p>TRTC application ID collection. Match any element in the collection.</p><li>Array length limit: 10.</li>
+                     * @param _trtcSdkAppIds <p>TRTC application ID collection. Match any element in the collection.</p><li>Array length limit: 10.</li>
                      * 
                      */
                     void SetTrtcSdkAppIds(const std::vector<uint64_t>& _trtcSdkAppIds);
@@ -423,15 +423,15 @@ namespace TencentCloud
                     bool TrtcSdkAppIdsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return TrtcRoomIds 
+                     * 获取<p>TRTC room ID collection. Match any element in the collection.</p><li>Single room ID length limit: 64 characters;</li><li>Array length limit: 10.</li>
+                     * @return TrtcRoomIds <p>TRTC room ID collection. Match any element in the collection.</p><li>Single room ID length limit: 64 characters;</li><li>Array length limit: 10.</li>
                      * 
                      */
                     std::vector<std::string> GetTrtcRoomIds() const;
 
                     /**
-                     * 设置
-                     * @param _trtcRoomIds 
+                     * 设置<p>TRTC room ID collection. Match any element in the collection.</p><li>Single room ID length limit: 64 characters;</li><li>Array length limit: 10.</li>
+                     * @param _trtcRoomIds <p>TRTC room ID collection. Match any element in the collection.</p><li>Single room ID length limit: 64 characters;</li><li>Array length limit: 10.</li>
                      * 
                      */
                     void SetTrtcRoomIds(const std::vector<std::string>& _trtcRoomIds);
@@ -444,15 +444,15 @@ namespace TencentCloud
                     bool TrtcRoomIdsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Filters 
+                     * 获取<p>Information to be returned for all specified media files. Multiple information can be specified simultaneously. N starts incrementing from 0. If this field is not filled in, all information is returned by default. Options: </p><li>basicInfo (video basic information). </li><li>metaData (video metadata). </li><li>transcodeInfo (video transcoding result information). </li><li>animatedGraphicsInfo (video motion graphic result information). </li><li>imageSpriteInfo (video thumbnail information). </li><li>snapshotByTimeOffsetInfo (video screenshot by specified time point). </li><li>sampleSnapshotInfo (sampling screenshot information). </li><li>keyFrameDescInfo (Dotting Information). </li><li>adaptiveDynamicStreamingInfo (Adaptive Bitrate Streaming information). </li><li>miniProgramReviewInfo (miniProgramReviewInfo). </li>
+                     * @return Filters <p>Information to be returned for all specified media files. Multiple information can be specified simultaneously. N starts incrementing from 0. If this field is not filled in, all information is returned by default. Options: </p><li>basicInfo (video basic information). </li><li>metaData (video metadata). </li><li>transcodeInfo (video transcoding result information). </li><li>animatedGraphicsInfo (video motion graphic result information). </li><li>imageSpriteInfo (video thumbnail information). </li><li>snapshotByTimeOffsetInfo (video screenshot by specified time point). </li><li>sampleSnapshotInfo (sampling screenshot information). </li><li>keyFrameDescInfo (Dotting Information). </li><li>adaptiveDynamicStreamingInfo (Adaptive Bitrate Streaming information). </li><li>miniProgramReviewInfo (miniProgramReviewInfo). </li>
                      * 
                      */
                     std::vector<std::string> GetFilters() const;
 
                     /**
-                     * 设置
-                     * @param _filters 
+                     * 设置<p>Information to be returned for all specified media files. Multiple information can be specified simultaneously. N starts incrementing from 0. If this field is not filled in, all information is returned by default. Options: </p><li>basicInfo (video basic information). </li><li>metaData (video metadata). </li><li>transcodeInfo (video transcoding result information). </li><li>animatedGraphicsInfo (video motion graphic result information). </li><li>imageSpriteInfo (video thumbnail information). </li><li>snapshotByTimeOffsetInfo (video screenshot by specified time point). </li><li>sampleSnapshotInfo (sampling screenshot information). </li><li>keyFrameDescInfo (Dotting Information). </li><li>adaptiveDynamicStreamingInfo (Adaptive Bitrate Streaming information). </li><li>miniProgramReviewInfo (miniProgramReviewInfo). </li>
+                     * @param _filters <p>Information to be returned for all specified media files. Multiple information can be specified simultaneously. N starts incrementing from 0. If this field is not filled in, all information is returned by default. Options: </p><li>basicInfo (video basic information). </li><li>metaData (video metadata). </li><li>transcodeInfo (video transcoding result information). </li><li>animatedGraphicsInfo (video motion graphic result information). </li><li>imageSpriteInfo (video thumbnail information). </li><li>snapshotByTimeOffsetInfo (video screenshot by specified time point). </li><li>sampleSnapshotInfo (sampling screenshot information). </li><li>keyFrameDescInfo (Dotting Information). </li><li>adaptiveDynamicStreamingInfo (Adaptive Bitrate Streaming information). </li><li>miniProgramReviewInfo (miniProgramReviewInfo). </li>
                      * 
                      */
                     void SetFilters(const std::vector<std::string>& _filters);
@@ -465,15 +465,15 @@ namespace TencentCloud
                     bool FiltersHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Sort 
+                     * 获取<p>Sorting method.</p><li>Sort.Field optional CreateTime.</li><li>When Text, Names, or Descriptions is not empty, the Sort.Field field is invalid, and search results sorted by relevance.</li>
+                     * @return Sort <p>Sorting method.</p><li>Sort.Field optional CreateTime.</li><li>When Text, Names, or Descriptions is not empty, the Sort.Field field is invalid, and search results sorted by relevance.</li>
                      * 
                      */
                     SortBy GetSort() const;
 
                     /**
-                     * 设置
-                     * @param _sort 
+                     * 设置<p>Sorting method.</p><li>Sort.Field optional CreateTime.</li><li>When Text, Names, or Descriptions is not empty, the Sort.Field field is invalid, and search results sorted by relevance.</li>
+                     * @param _sort <p>Sorting method.</p><li>Sort.Field optional CreateTime.</li><li>When Text, Names, or Descriptions is not empty, the Sort.Field field is invalid, and search results sorted by relevance.</li>
                      * 
                      */
                     void SetSort(const SortBy& _sort);
@@ -486,15 +486,15 @@ namespace TencentCloud
                     bool SortHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Offset 
+                     * 获取<div id="p_offset">Starting offset amount for pagination return. Default value: 0. It will return entries from Offset to Offset+Limit-1. <li>Value ranges from Offset + Limit to no more than 5000. (See: <a href="#maxResultsDesc">API return result count limit</a>)</li></div>
+                     * @return Offset <div id="p_offset">Starting offset amount for pagination return. Default value: 0. It will return entries from Offset to Offset+Limit-1. <li>Value ranges from Offset + Limit to no more than 5000. (See: <a href="#maxResultsDesc">API return result count limit</a>)</li></div>
                      * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
-                     * 设置
-                     * @param _offset 
+                     * 设置<div id="p_offset">Starting offset amount for pagination return. Default value: 0. It will return entries from Offset to Offset+Limit-1. <li>Value ranges from Offset + Limit to no more than 5000. (See: <a href="#maxResultsDesc">API return result count limit</a>)</li></div>
+                     * @param _offset <div id="p_offset">Starting offset amount for pagination return. Default value: 0. It will return entries from Offset to Offset+Limit-1. <li>Value ranges from Offset + Limit to no more than 5000. (See: <a href="#maxResultsDesc">API return result count limit</a>)</li></div>
                      * 
                      */
                     void SetOffset(const uint64_t& _offset);
@@ -507,15 +507,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Limit 
+                     * 获取<div id="p_limit">Number of records returned in pages. Default value: 10. Records from Offset to Offset+Limit-1 will be returned.<li>Value range: Offset + Limit no more than 5000. (See <a href="#maxResultsDesc">API return result count limit</a>.)</li></div>
+                     * @return Limit <div id="p_limit">Number of records returned in pages. Default value: 10. Records from Offset to Offset+Limit-1 will be returned.<li>Value range: Offset + Limit no more than 5000. (See <a href="#maxResultsDesc">API return result count limit</a>.)</li></div>
                      * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
-                     * 设置
-                     * @param _limit 
+                     * 设置<div id="p_limit">Number of records returned in pages. Default value: 10. Records from Offset to Offset+Limit-1 will be returned.<li>Value range: Offset + Limit no more than 5000. (See <a href="#maxResultsDesc">API return result count limit</a>.)</li></div>
+                     * @param _limit <div id="p_limit">Number of records returned in pages. Default value: 10. Records from Offset to Offset+Limit-1 will be returned.<li>Value range: Offset + Limit no more than 5000. (See <a href="#maxResultsDesc">API return result count limit</a>.)</li></div>
                      * 
                      */
                     void SetLimit(const uint64_t& _limit);
@@ -528,15 +528,15 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Text 
+                     * 获取<p>(Not recommended: use Names, NamePrefixes, or Descriptions instead)<br>Search text. Fuzzy match media file name or description information. More matches and higher matching degree result in higher priority in sorting. Length limit: 64 characters.</p>
+                     * @return Text <p>(Not recommended: use Names, NamePrefixes, or Descriptions instead)<br>Search text. Fuzzy match media file name or description information. More matches and higher matching degree result in higher priority in sorting. Length limit: 64 characters.</p>
                      * 
                      */
                     std::string GetText() const;
 
                     /**
-                     * 设置
-                     * @param _text 
+                     * 设置<p>(Not recommended: use Names, NamePrefixes, or Descriptions instead)<br>Search text. Fuzzy match media file name or description information. More matches and higher matching degree result in higher priority in sorting. Length limit: 64 characters.</p>
+                     * @param _text <p>(Not recommended: use Names, NamePrefixes, or Descriptions instead)<br>Search text. Fuzzy match media file name or description information. More matches and higher matching degree result in higher priority in sorting. Length limit: 64 characters.</p>
                      * 
                      */
                     void SetText(const std::string& _text);
@@ -549,15 +549,15 @@ namespace TencentCloud
                     bool TextHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SourceType 
+                     * 获取<p>(Not recommended: use SourceTypes instead)<br>Media file source. For source values, see <a href="https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaSourceData">SourceType</a>.</p>
+                     * @return SourceType <p>(Not recommended: use SourceTypes instead)<br>Media file source. For source values, see <a href="https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaSourceData">SourceType</a>.</p>
                      * 
                      */
                     std::string GetSourceType() const;
 
                     /**
-                     * 设置
-                     * @param _sourceType 
+                     * 设置<p>(Not recommended: use SourceTypes instead)<br>Media file source. For source values, see <a href="https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaSourceData">SourceType</a>.</p>
+                     * @param _sourceType <p>(Not recommended: use SourceTypes instead)<br>Media file source. For source values, see <a href="https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaSourceData">SourceType</a>.</p>
                      * 
                      */
                     void SetSourceType(const std::string& _sourceType);
@@ -570,15 +570,15 @@ namespace TencentCloud
                     bool SourceTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return StreamId 
+                     * 获取<p>(Not recommended: use StreamIds instead)<br>Push stream live code.</p>
+                     * @return StreamId <p>(Not recommended: use StreamIds instead)<br>Push stream live code.</p>
                      * 
                      */
                     std::string GetStreamId() const;
 
                     /**
-                     * 设置
-                     * @param _streamId 
+                     * 设置<p>(Not recommended: use StreamIds instead)<br>Push stream live code.</p>
+                     * @param _streamId <p>(Not recommended: use StreamIds instead)<br>Push stream live code.</p>
                      * 
                      */
                     void SetStreamId(const std::string& _streamId);
@@ -591,15 +591,15 @@ namespace TencentCloud
                     bool StreamIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return StartTime 
+                     * 获取<p>(Not recommended: use CreateTime instead)<br>Start time of the creation time.</p><li>Greater than or equal to the start time.</li><li>When CreateTime.After also exists, CreateTime.After will be used first.</li><li>Format according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).</li>
+                     * @return StartTime <p>(Not recommended: use CreateTime instead)<br>Start time of the creation time.</p><li>Greater than or equal to the start time.</li><li>When CreateTime.After also exists, CreateTime.After will be used first.</li><li>Format according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).</li>
                      * 
                      */
                     std::string GetStartTime() const;
 
                     /**
-                     * 设置
-                     * @param _startTime 
+                     * 设置<p>(Not recommended: use CreateTime instead)<br>Start time of the creation time.</p><li>Greater than or equal to the start time.</li><li>When CreateTime.After also exists, CreateTime.After will be used first.</li><li>Format according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).</li>
+                     * @param _startTime <p>(Not recommended: use CreateTime instead)<br>Start time of the creation time.</p><li>Greater than or equal to the start time.</li><li>When CreateTime.After also exists, CreateTime.After will be used first.</li><li>Format according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).</li>
                      * 
                      */
                     void SetStartTime(const std::string& _startTime);
@@ -612,15 +612,15 @@ namespace TencentCloud
                     bool StartTimeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return EndTime 
+                     * 获取<p>(Not recommended: use CreateTime instead)<br>End time of the creation time.</p><li>Less than end time.</li><li>When CreateTime.Before also exists, CreateTime.Before takes precedence.</li><li>Format according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).</li>
+                     * @return EndTime <p>(Not recommended: use CreateTime instead)<br>End time of the creation time.</p><li>Less than end time.</li><li>When CreateTime.Before also exists, CreateTime.Before takes precedence.</li><li>Format according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).</li>
                      * 
                      */
                     std::string GetEndTime() const;
 
                     /**
-                     * 设置
-                     * @param _endTime 
+                     * 设置<p>(Not recommended: use CreateTime instead)<br>End time of the creation time.</p><li>Less than end time.</li><li>When CreateTime.Before also exists, CreateTime.Before takes precedence.</li><li>Format according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).</li>
+                     * @param _endTime <p>(Not recommended: use CreateTime instead)<br>End time of the creation time.</p><li>Less than end time.</li><li>When CreateTime.Before also exists, CreateTime.Before takes precedence.</li><li>Format according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).</li>
                      * 
                      */
                     void SetEndTime(const std::string& _endTime);
@@ -633,15 +633,15 @@ namespace TencentCloud
                     bool EndTimeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Vids 
+                     * 获取<p>This field is invalid.</p>
+                     * @return Vids <p>This field is invalid.</p>
                      * 
                      */
                     std::vector<std::string> GetVids() const;
 
                     /**
-                     * 设置
-                     * @param _vids 
+                     * 设置<p>This field is invalid.</p>
+                     * @param _vids <p>This field is invalid.</p>
                      * 
                      */
                     void SetVids(const std::vector<std::string>& _vids);
@@ -654,15 +654,15 @@ namespace TencentCloud
                     bool VidsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Vid 
+                     * 获取<p>This field is invalid.</p>
+                     * @return Vid <p>This field is invalid.</p>
                      * 
                      */
                     std::string GetVid() const;
 
                     /**
-                     * 设置
-                     * @param _vid 
+                     * 设置<p>This field is invalid.</p>
+                     * @param _vid <p>This field is invalid.</p>
                      * 
                      */
                     void SetVid(const std::string& _vid);
@@ -675,15 +675,15 @@ namespace TencentCloud
                     bool VidHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return StreamDomains 
+                     * 获取<p>Live push Domain, valid when the media asset source is live recording.</p>
+                     * @return StreamDomains <p>Live push Domain, valid when the media asset source is live recording.</p>
                      * 
                      */
                     std::vector<std::string> GetStreamDomains() const;
 
                     /**
-                     * 设置
-                     * @param _streamDomains 
+                     * 设置<p>Live push Domain, valid when the media asset source is live recording.</p>
+                     * @param _streamDomains <p>Live push Domain, valid when the media asset source is live recording.</p>
                      * 
                      */
                     void SetStreamDomains(const std::vector<std::string>& _streamDomains);
@@ -696,15 +696,15 @@ namespace TencentCloud
                     bool StreamDomainsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return StreamPaths 
+                     * 获取<p>Live push Path. Valid when the media asset source is live recording.</p>
+                     * @return StreamPaths <p>Live push Path. Valid when the media asset source is live recording.</p>
                      * 
                      */
                     std::vector<std::string> GetStreamPaths() const;
 
                     /**
-                     * 设置
-                     * @param _streamPaths 
+                     * 设置<p>Live push Path. Valid when the media asset source is live recording.</p>
+                     * @param _streamPaths <p>Live push Path. Valid when the media asset source is live recording.</p>
                      * 
                      */
                     void SetStreamPaths(const std::vector<std::string>& _streamPaths);
@@ -717,15 +717,15 @@ namespace TencentCloud
                     bool StreamPathsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return KnowledgeBases 
+                     * 获取<p>Knowledge base ID, match any element in the collection.</p>
+                     * @return KnowledgeBases <p>Knowledge base ID, match any element in the collection.</p>
                      * 
                      */
                     std::vector<std::string> GetKnowledgeBases() const;
 
                     /**
-                     * 设置
-                     * @param _knowledgeBases 
+                     * 设置<p>Knowledge base ID, match any element in the collection.</p>
+                     * @param _knowledgeBases <p>Knowledge base ID, match any element in the collection.</p>
                      * 
                      */
                     void SetKnowledgeBases(const std::vector<std::string>& _knowledgeBases);
@@ -740,199 +740,199 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p><b>Video-on-demand (VOD) <a href="/document/product/266/14574">application</a> ID. For customers who activate VOD services on or after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b></p>
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
 
                     /**
-                     * 
+                     * <p>File ID collection. Match any element in the collection.</p><li>Array length limit: 10.</li><li>Single ID length limit: 40 characters.</li>
                      */
                     std::vector<std::string> m_fileIds;
                     bool m_fileIdsHasBeenSet;
 
                     /**
-                     * 
+                     * <p>File name collection, fuzzy match media file names. The higher the matching degree, the higher priority in sorting.</p><li>Single file name length limit: 100 characters.</li><li>Array length limit: 10.</li>
                      */
                     std::vector<std::string> m_names;
                     bool m_namesHasBeenSet;
 
                     /**
-                     * 
+                     * <p>File name prefix, which is used to match media files by file name prefix.</p><li>Single file name prefix length limit: 100 characters.</li><li>Array length limit: 10.</li>
                      */
                     std::vector<std::string> m_namePrefixes;
                     bool m_namePrefixesHasBeenSet;
 
                     /**
-                     * 
+                     * <p>File description set. Fuzzy match media file descriptions. The higher the matching degree, the higher priority in sorting.</p><li>Single description length limit: 100 characters.</li><li>Array length limit: 10.</li>
                      */
                     std::vector<std::string> m_descriptions;
                     bool m_descriptionsHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Category ID collection. Match the category with the specified ID in the collection and all its subclasses.</p><li>Array length limit: 10.</li>
                      */
                     std::vector<int64_t> m_classIds;
                     bool m_classIdsHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Tag set. Match any element in the collection.</p><li>Single tag length limit: 32 characters.</li><li>Array length limit: 16.</li>
                      */
                     std::vector<std::string> m_tags;
                     bool m_tagsHasBeenSet;
 
                     /**
-                     * 
+                     * <p>File type. Match any element in the collection:</p><li>Video: video file</li><li>Audio: audio file</li><li>Image: image file</li>
                      */
                     std::vector<std::string> m_categories;
                     bool m_categoriesHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Media file source collection. For source values, see <a href="https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaSourceData">SourceType</a>.</p><li>Array length limit: 10.</li>
                      */
                     std::vector<std::string> m_sourceTypes;
                     bool m_sourceTypesHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Push stream live code collection. Match any element in the collection.</p><li>Array length limit: 10.</li>
                      */
                     std::vector<std::string> m_streamIds;
                     bool m_streamIdsHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Files whose creation time matches this time period.</p><li>Includes the specified start and end points in time.</li>
                      */
                     TimeRange m_createTime;
                     bool m_createTimeHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Files whose expiration time falls within this period cannot be retrieved.</p><li>Includes the specified start and end points in time.</li>
                      */
                     TimeRange m_expireTime;
                     bool m_expireTimeHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Media file storage region, for example, ap-chongqing. For details, see <a href="https://www.tencentcloud.com/document/product/266/9760?from_cn_redirect=1#.E5.B7.B2.E6.94.AF.E6.8C.81.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8">Region List</a>.</p><li>Single storage region length limit: 20 characters.</li><li>Array length limit: 20.</li>
                      */
                     std::vector<std::string> m_storageRegions;
                     bool m_storageRegionsHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Storage type array. Optional values:</p><li> STANDARD: standard storage.</li><li> STANDARD_IA: infrequent storage.</li><li> ARCHIVE: archive storage.</li><li> DEEP_ARCHIVE: deep archive storage.</li>
                      */
                     std::vector<std::string> m_storageClasses;
                     bool m_storageClassesHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Media file packaging format collection. Match any element in the collection.</p><li>Array length limit: 10.</li>
                      */
                     std::vector<std::string> m_mediaTypes;
                     bool m_mediaTypesHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Media file status. Match any element in the collection.</p><li> Normal: normal;</li><li> SystemForbidden: platform ban;</li><li> Forbidden: proactive ban.</li>
                      */
                     std::vector<std::string> m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Media file review result, match any element in the collection.</p><li> pass: pass review;</li><li> review: suspected violation, suggest re-examination;</li><li> block: confirmed violation, suggest banning;</li><li> notModerated: not moderated.</li>
                      */
                     std::vector<std::string> m_reviewResults;
                     bool m_reviewResultsHasBeenSet;
 
                     /**
-                     * 
+                     * <p>TRTC application ID collection. Match any element in the collection.</p><li>Array length limit: 10.</li>
                      */
                     std::vector<uint64_t> m_trtcSdkAppIds;
                     bool m_trtcSdkAppIdsHasBeenSet;
 
                     /**
-                     * 
+                     * <p>TRTC room ID collection. Match any element in the collection.</p><li>Single room ID length limit: 64 characters;</li><li>Array length limit: 10.</li>
                      */
                     std::vector<std::string> m_trtcRoomIds;
                     bool m_trtcRoomIdsHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Information to be returned for all specified media files. Multiple information can be specified simultaneously. N starts incrementing from 0. If this field is not filled in, all information is returned by default. Options: </p><li>basicInfo (video basic information). </li><li>metaData (video metadata). </li><li>transcodeInfo (video transcoding result information). </li><li>animatedGraphicsInfo (video motion graphic result information). </li><li>imageSpriteInfo (video thumbnail information). </li><li>snapshotByTimeOffsetInfo (video screenshot by specified time point). </li><li>sampleSnapshotInfo (sampling screenshot information). </li><li>keyFrameDescInfo (Dotting Information). </li><li>adaptiveDynamicStreamingInfo (Adaptive Bitrate Streaming information). </li><li>miniProgramReviewInfo (miniProgramReviewInfo). </li>
                      */
                     std::vector<std::string> m_filters;
                     bool m_filtersHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Sorting method.</p><li>Sort.Field optional CreateTime.</li><li>When Text, Names, or Descriptions is not empty, the Sort.Field field is invalid, and search results sorted by relevance.</li>
                      */
                     SortBy m_sort;
                     bool m_sortHasBeenSet;
 
                     /**
-                     * 
+                     * <div id="p_offset">Starting offset amount for pagination return. Default value: 0. It will return entries from Offset to Offset+Limit-1. <li>Value ranges from Offset + Limit to no more than 5000. (See: <a href="#maxResultsDesc">API return result count limit</a>)</li></div>
                      */
                     uint64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * 
+                     * <div id="p_limit">Number of records returned in pages. Default value: 10. Records from Offset to Offset+Limit-1 will be returned.<li>Value range: Offset + Limit no more than 5000. (See <a href="#maxResultsDesc">API return result count limit</a>.)</li></div>
                      */
                     uint64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * 
+                     * <p>(Not recommended: use Names, NamePrefixes, or Descriptions instead)<br>Search text. Fuzzy match media file name or description information. More matches and higher matching degree result in higher priority in sorting. Length limit: 64 characters.</p>
                      */
                     std::string m_text;
                     bool m_textHasBeenSet;
 
                     /**
-                     * 
+                     * <p>(Not recommended: use SourceTypes instead)<br>Media file source. For source values, see <a href="https://www.tencentcloud.com/document/product/266/31773?from_cn_redirect=1#MediaSourceData">SourceType</a>.</p>
                      */
                     std::string m_sourceType;
                     bool m_sourceTypeHasBeenSet;
 
                     /**
-                     * 
+                     * <p>(Not recommended: use StreamIds instead)<br>Push stream live code.</p>
                      */
                     std::string m_streamId;
                     bool m_streamIdHasBeenSet;
 
                     /**
-                     * 
+                     * <p>(Not recommended: use CreateTime instead)<br>Start time of the creation time.</p><li>Greater than or equal to the start time.</li><li>When CreateTime.After also exists, CreateTime.After will be used first.</li><li>Format according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).</li>
                      */
                     std::string m_startTime;
                     bool m_startTimeHasBeenSet;
 
                     /**
-                     * 
+                     * <p>(Not recommended: use CreateTime instead)<br>End time of the creation time.</p><li>Less than end time.</li><li>When CreateTime.Before also exists, CreateTime.Before takes precedence.</li><li>Format according to the ISO 8601 standard. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).</li>
                      */
                     std::string m_endTime;
                     bool m_endTimeHasBeenSet;
 
                     /**
-                     * 
+                     * <p>This field is invalid.</p>
                      */
                     std::vector<std::string> m_vids;
                     bool m_vidsHasBeenSet;
 
                     /**
-                     * 
+                     * <p>This field is invalid.</p>
                      */
                     std::string m_vid;
                     bool m_vidHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Live push Domain, valid when the media asset source is live recording.</p>
                      */
                     std::vector<std::string> m_streamDomains;
                     bool m_streamDomainsHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Live push Path. Valid when the media asset source is live recording.</p>
                      */
                     std::vector<std::string> m_streamPaths;
                     bool m_streamPathsHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Knowledge base ID, match any element in the collection.</p>
                      */
                     std::vector<std::string> m_knowledgeBases;
                     bool m_knowledgeBasesHasBeenSet;

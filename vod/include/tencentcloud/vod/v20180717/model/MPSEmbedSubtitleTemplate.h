@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * MPS subtitle suppression template
                 */
                 class MPSEmbedSubtitleTemplate : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Name 
+                     * 获取<p>Subtitle suppression template name<br>Length limit: 64 characters.</p>
+                     * @return Name <p>Subtitle suppression template name<br>Length limit: 64 characters.</p>
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置
-                     * @param _name 
+                     * 设置<p>Subtitle suppression template name<br>Length limit: 64 characters.</p>
+                     * @param _name <p>Subtitle suppression template name<br>Length limit: 64 characters.</p>
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Comment 
+                     * 获取<p>Subtitle suppression template description information<br>Length limit: 256 characters.</p>
+                     * @return Comment <p>Subtitle suppression template description information<br>Length limit: 256 characters.</p>
                      * 
                      */
                     std::string GetComment() const;
 
                     /**
-                     * 设置
-                     * @param _comment 
+                     * 设置<p>Subtitle suppression template description information<br>Length limit: 256 characters.</p>
+                     * @param _comment <p>Subtitle suppression template description information<br>Length limit: 256 characters.</p>
                      * 
                      */
                     void SetComment(const std::string& _comment);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool CommentHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SubtitleEmbedConfig 
+                     * 获取<p>Subtitle suppression configuration</p>
+                     * @return SubtitleEmbedConfig <p>Subtitle suppression configuration</p>
                      * 
                      */
                     MPSSubtitleEmbedConfig GetSubtitleEmbedConfig() const;
 
                     /**
-                     * 设置
-                     * @param _subtitleEmbedConfig 
+                     * 设置<p>Subtitle suppression configuration</p>
+                     * @param _subtitleEmbedConfig <p>Subtitle suppression configuration</p>
                      * 
                      */
                     void SetSubtitleEmbedConfig(const MPSSubtitleEmbedConfig& _subtitleEmbedConfig);
@@ -113,19 +113,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p>Subtitle suppression template name<br>Length limit: 64 characters.</p>
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Subtitle suppression template description information<br>Length limit: 256 characters.</p>
                      */
                     std::string m_comment;
                     bool m_commentHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Subtitle suppression configuration</p>
                      */
                     MPSSubtitleEmbedConfig m_subtitleEmbedConfig;
                     bool m_subtitleEmbedConfigHasBeenSet;

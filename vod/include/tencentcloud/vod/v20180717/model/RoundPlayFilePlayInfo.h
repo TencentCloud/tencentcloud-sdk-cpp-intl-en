@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Playback information of the carousel program
                 */
                 class RoundPlayFilePlayInfo : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return ItemId 
+                     * 获取Playlist program ID assigned by the system.
+                     * @return ItemId Playlist program ID assigned by the system.
                      * 
                      */
                     std::string GetItemId() const;
 
                     /**
-                     * 设置
-                     * @param _itemId 
+                     * 设置Playlist program ID assigned by the system.
+                     * @param _itemId Playlist program ID assigned by the system.
                      * 
                      */
                     void SetItemId(const std::string& _itemId);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool ItemIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return FileId 
+                     * 获取Media file identifier.
+                     * @return FileId Media file identifier.
                      * 
                      */
                     std::string GetFileId() const;
 
                     /**
-                     * 设置
-                     * @param _fileId 
+                     * 设置Media file identifier.
+                     * @param _fileId Media file identifier.
                      * 
                      */
                     void SetFileId(const std::string& _fileId);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool FileIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return StartPlayTime 
+                     * 获取Playback start time in ISO 8601 format. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
+                     * @return StartPlayTime Playback start time in ISO 8601 format. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
                      * 
                      */
                     std::string GetStartPlayTime() const;
 
                     /**
-                     * 设置
-                     * @param _startPlayTime 
+                     * 设置Playback start time in ISO 8601 format. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
+                     * @param _startPlayTime Playback start time in ISO 8601 format. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
                      * 
                      */
                     void SetStartPlayTime(const std::string& _startPlayTime);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool StartPlayTimeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Duration 
+                     * 获取Playback duration, in seconds.
+                     * @return Duration Playback duration, in seconds.
                      * 
                      */
                     double GetDuration() const;
 
                     /**
-                     * 设置
-                     * @param _duration 
+                     * 设置Playback duration, in seconds.
+                     * @param _duration Playback duration, in seconds.
                      * 
                      */
                     void SetDuration(const double& _duration);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool DurationHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Progress 
+                     * 获取Playback progress, in seconds.
+                     * @return Progress Playback progress, in seconds.
                      * 
                      */
                     double GetProgress() const;
 
                     /**
-                     * 设置
-                     * @param _progress 
+                     * 设置Playback progress, in seconds.
+                     * @param _progress Playback progress, in seconds.
                      * 
                      */
                     void SetProgress(const double& _progress);
@@ -154,31 +154,31 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Playlist program ID assigned by the system.
                      */
                     std::string m_itemId;
                     bool m_itemIdHasBeenSet;
 
                     /**
-                     * 
+                     * Media file identifier.
                      */
                     std::string m_fileId;
                     bool m_fileIdHasBeenSet;
 
                     /**
-                     * 
+                     * Playback start time in ISO 8601 format. For details, see [ISO date format description](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#52).
                      */
                     std::string m_startPlayTime;
                     bool m_startPlayTimeHasBeenSet;
 
                     /**
-                     * 
+                     * Playback duration, in seconds.
                      */
                     double m_duration;
                     bool m_durationHasBeenSet;
 
                     /**
-                     * 
+                     * Playback progress, in seconds.
                      */
                     double m_progress;
                     bool m_progressHasBeenSet;

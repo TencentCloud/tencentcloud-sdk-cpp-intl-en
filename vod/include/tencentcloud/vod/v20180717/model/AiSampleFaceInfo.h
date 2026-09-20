@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * AI sample management and face information.
                 */
                 class AiSampleFaceInfo : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return FaceId 
+                     * 获取Face image ID.
+                     * @return FaceId Face image ID.
                      * 
                      */
                     std::string GetFaceId() const;
 
                     /**
-                     * 设置
-                     * @param _faceId 
+                     * 设置Face image ID.
+                     * @param _faceId Face image ID.
                      * 
                      */
                     void SetFaceId(const std::string& _faceId);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool FaceIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Url 
+                     * 获取Human face image address.
+                     * @return Url Human face image address.
                      * 
                      */
                     std::string GetUrl() const;
 
                     /**
-                     * 设置
-                     * @param _url 
+                     * 设置Human face image address.
+                     * @param _url Human face image address.
                      * 
                      */
                     void SetUrl(const std::string& _url);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Face image ID.
                      */
                     std::string m_faceId;
                     bool m_faceIdHasBeenSet;
 
                     /**
-                     * 
+                     * Human face image address.
                      */
                     std::string m_url;
                     bool m_urlHasBeenSet;

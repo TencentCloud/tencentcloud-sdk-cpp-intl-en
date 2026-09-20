@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Taiwan (China) ID card.
+                * Taiwan (China) ID card
                 */
                 class TaiWanIDCard : public AbstractModel
                 {
@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Full name
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return FullName Full name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Name.
+                     * @return FullName Name.
                      * 
                      */
                     std::string GetFullName() const;
 
                     /**
-                     * 设置Full name
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _fullName Full name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Name.
+                     * @param _fullName Name.
                      * 
                      */
                     void SetFullName(const std::string& _fullName);
@@ -72,19 +68,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool FullNameHasBeenSet() const;
 
                     /**
-                     * 获取License number
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return LicenseNumber License number
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Identity card
+                     * @return LicenseNumber Identity card
                      * 
                      */
                     std::string GetLicenseNumber() const;
 
                     /**
-                     * 设置License number
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _licenseNumber License number
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Identity card
+                     * @param _licenseNumber Identity card
                      * 
                      */
                     void SetLicenseNumber(const std::string& _licenseNumber);
@@ -97,19 +89,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool LicenseNumberHasBeenSet() const;
 
                     /**
-                     * 获取Gender
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Sex Gender
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Sex
+                     * @return Sex Sex
                      * 
                      */
                     std::string GetSex() const;
 
                     /**
-                     * 设置Gender
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _sex Gender
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Sex
+                     * @param _sex Sex
                      * 
                      */
                     void SetSex(const std::string& _sex);
@@ -122,19 +110,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool SexHasBeenSet() const;
 
                     /**
-                     * 获取Issued country
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return IssuedCountry Issued country
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取City of issuance
+                     * @return IssuedCountry City of issuance
                      * 
                      */
                     std::string GetIssuedCountry() const;
 
                     /**
-                     * 设置Issued country
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _issuedCountry Issued country
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置City of issuance
+                     * @param _issuedCountry City of issuance
                      * 
                      */
                     void SetIssuedCountry(const std::string& _issuedCountry);
@@ -148,18 +132,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Registration number
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return RegistrationNumber Registration number
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetRegistrationNumber() const;
 
                     /**
                      * 设置Registration number
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _registrationNumber Registration number
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetRegistrationNumber(const std::string& _registrationNumber);
@@ -174,36 +154,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Full name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Name.
                      */
                     std::string m_fullName;
                     bool m_fullNameHasBeenSet;
 
                     /**
-                     * License number
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Identity card
                      */
                     std::string m_licenseNumber;
                     bool m_licenseNumberHasBeenSet;
 
                     /**
-                     * Gender
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Sex
                      */
                     std::string m_sex;
                     bool m_sexHasBeenSet;
 
                     /**
-                     * Issued country
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * City of issuance
                      */
                     std::string m_issuedCountry;
                     bool m_issuedCountryHasBeenSet;
 
                     /**
                      * Registration number
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_registrationNumber;
                     bool m_registrationNumberHasBeenSet;

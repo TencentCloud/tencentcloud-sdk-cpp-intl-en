@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Track information
                 */
                 class MediaTrack : public AbstractModel
                 {
@@ -48,15 +48,35 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Type 
+                     * 获取Track type. Valid values:
+<ul>
+<li>Video: Video track. A video track consists of the following items: <ul><li>VideoTrackItem</li><li>MediaTransitionItem</li> <li>EmptyTrackItem</li></ul> </li>
+<li>Audio: Audio track. An audio track consists of the following items: <ul><li>AudioTrackItem</li><li>MediaTransitionItem</li><li>EmptyTrackItem</li></ul></li>
+<li>Sticker: Texture track. The texture track consists of the following items:<ul><li> StickerTrackItem</li><li>EmptyTrackItem</li></ul></li>	
+</ul>
+                     * @return Type Track type. Valid values:
+<ul>
+<li>Video: Video track. A video track consists of the following items: <ul><li>VideoTrackItem</li><li>MediaTransitionItem</li> <li>EmptyTrackItem</li></ul> </li>
+<li>Audio: Audio track. An audio track consists of the following items: <ul><li>AudioTrackItem</li><li>MediaTransitionItem</li><li>EmptyTrackItem</li></ul></li>
+<li>Sticker: Texture track. The texture track consists of the following items:<ul><li> StickerTrackItem</li><li>EmptyTrackItem</li></ul></li>	
+</ul>
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置
-                     * @param _type 
+                     * 设置Track type. Valid values:
+<ul>
+<li>Video: Video track. A video track consists of the following items: <ul><li>VideoTrackItem</li><li>MediaTransitionItem</li> <li>EmptyTrackItem</li></ul> </li>
+<li>Audio: Audio track. An audio track consists of the following items: <ul><li>AudioTrackItem</li><li>MediaTransitionItem</li><li>EmptyTrackItem</li></ul></li>
+<li>Sticker: Texture track. The texture track consists of the following items:<ul><li> StickerTrackItem</li><li>EmptyTrackItem</li></ul></li>	
+</ul>
+                     * @param _type Track type. Valid values:
+<ul>
+<li>Video: Video track. A video track consists of the following items: <ul><li>VideoTrackItem</li><li>MediaTransitionItem</li> <li>EmptyTrackItem</li></ul> </li>
+<li>Audio: Audio track. An audio track consists of the following items: <ul><li>AudioTrackItem</li><li>MediaTransitionItem</li><li>EmptyTrackItem</li></ul></li>
+<li>Sticker: Texture track. The texture track consists of the following items:<ul><li> StickerTrackItem</li><li>EmptyTrackItem</li></ul></li>	
+</ul>
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -69,15 +89,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return TrackItems 
+                     * 获取List of media segments on track.
+                     * @return TrackItems List of media segments on track.
                      * 
                      */
                     std::vector<MediaTrackItem> GetTrackItems() const;
 
                     /**
-                     * 设置
-                     * @param _trackItems 
+                     * 设置List of media segments on track.
+                     * @param _trackItems List of media segments on track.
                      * 
                      */
                     void SetTrackItems(const std::vector<MediaTrackItem>& _trackItems);
@@ -92,13 +112,18 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Track type. Valid values:
+<ul>
+<li>Video: Video track. A video track consists of the following items: <ul><li>VideoTrackItem</li><li>MediaTransitionItem</li> <li>EmptyTrackItem</li></ul> </li>
+<li>Audio: Audio track. An audio track consists of the following items: <ul><li>AudioTrackItem</li><li>MediaTransitionItem</li><li>EmptyTrackItem</li></ul></li>
+<li>Sticker: Texture track. The texture track consists of the following items:<ul><li> StickerTrackItem</li><li>EmptyTrackItem</li></ul></li>	
+</ul>
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * 
+                     * List of media segments on track.
                      */
                     std::vector<MediaTrackItem> m_trackItems;
                     bool m_trackItemsHasBeenSet;

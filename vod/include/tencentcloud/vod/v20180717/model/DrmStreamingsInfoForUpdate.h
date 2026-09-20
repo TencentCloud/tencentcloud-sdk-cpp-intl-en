@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * DRM adaptive bitrate stream playback information modification object
                 */
                 class DrmStreamingsInfoForUpdate : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return SimpleAesDefinition 
+                     * 获取Adaptive bitrate streaming template ID with SimpleAES protection type.
+                     * @return SimpleAesDefinition Adaptive bitrate streaming template ID with SimpleAES protection type.
                      * 
                      */
                     uint64_t GetSimpleAesDefinition() const;
 
                     /**
-                     * 设置
-                     * @param _simpleAesDefinition 
+                     * 设置Adaptive bitrate streaming template ID with SimpleAES protection type.
+                     * @param _simpleAesDefinition Adaptive bitrate streaming template ID with SimpleAES protection type.
                      * 
                      */
                     void SetSimpleAesDefinition(const uint64_t& _simpleAesDefinition);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool SimpleAesDefinitionHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return WidevineDefinition 
+                     * 获取Adaptive bitrate streaming template ID with Widevine protection type.
+                     * @return WidevineDefinition Adaptive bitrate streaming template ID with Widevine protection type.
                      * 
                      */
                     uint64_t GetWidevineDefinition() const;
 
                     /**
-                     * 设置
-                     * @param _widevineDefinition 
+                     * 设置Adaptive bitrate streaming template ID with Widevine protection type.
+                     * @param _widevineDefinition Adaptive bitrate streaming template ID with Widevine protection type.
                      * 
                      */
                     void SetWidevineDefinition(const uint64_t& _widevineDefinition);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool WidevineDefinitionHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return FairPlayDefinition 
+                     * 获取Adaptive bitstreaming template ID with FairPlay protection.
+                     * @return FairPlayDefinition Adaptive bitstreaming template ID with FairPlay protection.
                      * 
                      */
                     uint64_t GetFairPlayDefinition() const;
 
                     /**
-                     * 设置
-                     * @param _fairPlayDefinition 
+                     * 设置Adaptive bitstreaming template ID with FairPlay protection.
+                     * @param _fairPlayDefinition Adaptive bitstreaming template ID with FairPlay protection.
                      * 
                      */
                     void SetFairPlayDefinition(const uint64_t& _fairPlayDefinition);
@@ -112,19 +112,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Adaptive bitrate streaming template ID with SimpleAES protection type.
                      */
                     uint64_t m_simpleAesDefinition;
                     bool m_simpleAesDefinitionHasBeenSet;
 
                     /**
-                     * 
+                     * Adaptive bitrate streaming template ID with Widevine protection type.
                      */
                     uint64_t m_widevineDefinition;
                     bool m_widevineDefinitionHasBeenSet;
 
                     /**
-                     * 
+                     * Adaptive bitstreaming template ID with FairPlay protection.
                      */
                     uint64_t m_fairPlayDefinition;
                     bool m_fairPlayDefinitionHasBeenSet;

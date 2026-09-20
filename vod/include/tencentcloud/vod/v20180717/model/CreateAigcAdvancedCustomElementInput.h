@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Create a custom user-submitted input.
                 */
                 class CreateAigcAdvancedCustomElementInput : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return ElementName 
+                     * 获取<p>Subject name.</p>
+                     * @return ElementName <p>Subject name.</p>
                      * 
                      */
                     std::string GetElementName() const;
 
                     /**
-                     * 设置
-                     * @param _elementName 
+                     * 设置<p>Subject name.</p>
+                     * @param _elementName <p>Subject name.</p>
                      * 
                      */
                     void SetElementName(const std::string& _elementName);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool ElementNameHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ElementDescription 
+                     * 获取<p>Subject description.</p>
+                     * @return ElementDescription <p>Subject description.</p>
                      * 
                      */
                     std::string GetElementDescription() const;
 
                     /**
-                     * 设置
-                     * @param _elementDescription 
+                     * 设置<p>Subject description.</p>
+                     * @param _elementDescription <p>Subject description.</p>
                      * 
                      */
                     void SetElementDescription(const std::string& _elementDescription);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool ElementDescriptionHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ReferenceType 
+                     * 获取<p>Subject reference method.</p>
+                     * @return ReferenceType <p>Subject reference method.</p>
                      * 
                      */
                     std::string GetReferenceType() const;
 
                     /**
-                     * 设置
-                     * @param _referenceType 
+                     * 设置<p>Subject reference method.</p>
+                     * @param _referenceType <p>Subject reference method.</p>
                      * 
                      */
                     void SetReferenceType(const std::string& _referenceType);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool ReferenceTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ElementVoiceId 
+                     * 获取<p>Main timbre.</p>
+                     * @return ElementVoiceId <p>Main timbre.</p>
                      * 
                      */
                     std::string GetElementVoiceId() const;
 
                     /**
-                     * 设置
-                     * @param _elementVoiceId 
+                     * 设置<p>Main timbre.</p>
+                     * @param _elementVoiceId <p>Main timbre.</p>
                      * 
                      */
                     void SetElementVoiceId(const std::string& _elementVoiceId);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool ElementVoiceIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ElementVideoList 
+                     * 获取<p>Subject reference video.</p>
+                     * @return ElementVideoList <p>Subject reference video.</p>
                      * 
                      */
                     std::string GetElementVideoList() const;
 
                     /**
-                     * 设置
-                     * @param _elementVideoList 
+                     * 设置<p>Subject reference video.</p>
+                     * @param _elementVideoList <p>Subject reference video.</p>
                      * 
                      */
                     void SetElementVideoList(const std::string& _elementVideoList);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool ElementVideoListHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ElementImageList 
+                     * 获取<p>Main body reference image.</p>
+                     * @return ElementImageList <p>Main body reference image.</p>
                      * 
                      */
                     std::string GetElementImageList() const;
 
                     /**
-                     * 设置
-                     * @param _elementImageList 
+                     * 设置<p>Main body reference image.</p>
+                     * @param _elementImageList <p>Main body reference image.</p>
                      * 
                      */
                     void SetElementImageList(const std::string& _elementImageList);
@@ -173,15 +173,15 @@ namespace TencentCloud
                     bool ElementImageListHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return TagList 
+                     * 获取<p>Subject configuration tag.</p>
+                     * @return TagList <p>Subject configuration tag.</p>
                      * 
                      */
                     std::string GetTagList() const;
 
                     /**
-                     * 设置
-                     * @param _tagList 
+                     * 设置<p>Subject configuration tag.</p>
+                     * @param _tagList <p>Subject configuration tag.</p>
                      * 
                      */
                     void SetTagList(const std::string& _tagList);
@@ -196,43 +196,43 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p>Subject name.</p>
                      */
                     std::string m_elementName;
                     bool m_elementNameHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Subject description.</p>
                      */
                     std::string m_elementDescription;
                     bool m_elementDescriptionHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Subject reference method.</p>
                      */
                     std::string m_referenceType;
                     bool m_referenceTypeHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Main timbre.</p>
                      */
                     std::string m_elementVoiceId;
                     bool m_elementVoiceIdHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Subject reference video.</p>
                      */
                     std::string m_elementVideoList;
                     bool m_elementVideoListHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Main body reference image.</p>
                      */
                     std::string m_elementImageList;
                     bool m_elementImageListHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Subject configuration tag.</p>
                      */
                     std::string m_tagList;
                     bool m_tagListHasBeenSet;

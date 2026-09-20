@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Retrieve video task information
                 */
                 class RestoreMediaTask : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return FileId 
+                     * 获取File ID.
+                     * @return FileId File ID.
                      * 
                      */
                     std::string GetFileId() const;
 
                     /**
-                     * 设置
-                     * @param _fileId 
+                     * 设置File ID.
+                     * @param _fileId File ID.
                      * 
                      */
                     void SetFileId(const std::string& _fileId);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool FileIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return OriginalStorageClass 
+                     * 获取Original storage type of the file.
+                     * @return OriginalStorageClass Original storage type of the file.
                      * 
                      */
                     std::string GetOriginalStorageClass() const;
 
                     /**
-                     * 设置
-                     * @param _originalStorageClass 
+                     * 设置Original storage type of the file.
+                     * @param _originalStorageClass Original storage type of the file.
                      * 
                      */
                     void SetOriginalStorageClass(const std::string& _originalStorageClass);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool OriginalStorageClassHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return TargetStorageClass 
+                     * 获取Destination storage class of the file. For temporary retrieval, the destination storage class is the same as the original storage class.
+                     * @return TargetStorageClass Destination storage class of the file. For temporary retrieval, the destination storage class is the same as the original storage class.
                      * 
                      */
                     std::string GetTargetStorageClass() const;
 
                     /**
-                     * 设置
-                     * @param _targetStorageClass 
+                     * 设置Destination storage class of the file. For temporary retrieval, the destination storage class is the same as the original storage class.
+                     * @param _targetStorageClass Destination storage class of the file. For temporary retrieval, the destination storage class is the same as the original storage class.
                      * 
                      */
                     void SetTargetStorageClass(const std::string& _targetStorageClass);
@@ -110,15 +110,27 @@ namespace TencentCloud
                     bool TargetStorageClassHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return RestoreTier 
+                     * 获取Retrieval mode. Valid values:
+<li>Expedited: speed mode</li>
+<li>Standard: standard mode</li>
+<li>Bulk: batch mode</li>
+                     * @return RestoreTier Retrieval mode. Valid values:
+<li>Expedited: speed mode</li>
+<li>Standard: standard mode</li>
+<li>Bulk: batch mode</li>
                      * 
                      */
                     std::string GetRestoreTier() const;
 
                     /**
-                     * 设置
-                     * @param _restoreTier 
+                     * 设置Retrieval mode. Valid values:
+<li>Expedited: speed mode</li>
+<li>Standard: standard mode</li>
+<li>Bulk: batch mode</li>
+                     * @param _restoreTier Retrieval mode. Valid values:
+<li>Expedited: speed mode</li>
+<li>Standard: standard mode</li>
+<li>Bulk: batch mode</li>
                      * 
                      */
                     void SetRestoreTier(const std::string& _restoreTier);
@@ -131,15 +143,15 @@ namespace TencentCloud
                     bool RestoreTierHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return RestoreDay 
+                     * 获取Temporary retrieval replica validity period in days. For permanent retrieval, the value is 0.
+                     * @return RestoreDay Temporary retrieval replica validity period in days. For permanent retrieval, the value is 0.
                      * 
                      */
                     int64_t GetRestoreDay() const;
 
                     /**
-                     * 设置
-                     * @param _restoreDay 
+                     * 设置Temporary retrieval replica validity period in days. For permanent retrieval, the value is 0.
+                     * @param _restoreDay Temporary retrieval replica validity period in days. For permanent retrieval, the value is 0.
                      * 
                      */
                     void SetRestoreDay(const int64_t& _restoreDay);
@@ -152,15 +164,15 @@ namespace TencentCloud
                     bool RestoreDayHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Status 
+                     * 获取Deprecated.
+                     * @return Status Deprecated.
                      * @deprecated
                      */
                     int64_t GetStatus() const;
 
                     /**
-                     * 设置
-                     * @param _status 
+                     * 设置Deprecated.
+                     * @param _status Deprecated.
                      * @deprecated
                      */
                     void SetStatus(const int64_t& _status);
@@ -173,15 +185,15 @@ namespace TencentCloud
                     bool StatusHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Message 
+                     * 获取Deprecated.
+                     * @return Message Deprecated.
                      * @deprecated
                      */
                     std::string GetMessage() const;
 
                     /**
-                     * 设置
-                     * @param _message 
+                     * 设置Deprecated.
+                     * @param _message Deprecated.
                      * @deprecated
                      */
                     void SetMessage(const std::string& _message);
@@ -196,43 +208,46 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * File ID.
                      */
                     std::string m_fileId;
                     bool m_fileIdHasBeenSet;
 
                     /**
-                     * 
+                     * Original storage type of the file.
                      */
                     std::string m_originalStorageClass;
                     bool m_originalStorageClassHasBeenSet;
 
                     /**
-                     * 
+                     * Destination storage class of the file. For temporary retrieval, the destination storage class is the same as the original storage class.
                      */
                     std::string m_targetStorageClass;
                     bool m_targetStorageClassHasBeenSet;
 
                     /**
-                     * 
+                     * Retrieval mode. Valid values:
+<li>Expedited: speed mode</li>
+<li>Standard: standard mode</li>
+<li>Bulk: batch mode</li>
                      */
                     std::string m_restoreTier;
                     bool m_restoreTierHasBeenSet;
 
                     /**
-                     * 
+                     * Temporary retrieval replica validity period in days. For permanent retrieval, the value is 0.
                      */
                     int64_t m_restoreDay;
                     bool m_restoreDayHasBeenSet;
 
                     /**
-                     * 
+                     * Deprecated.
                      */
                     int64_t m_status;
                     bool m_statusHasBeenSet;
 
                     /**
-                     * 
+                     * Deprecated.
                      */
                     std::string m_message;
                     bool m_messageHasBeenSet;

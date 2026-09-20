@@ -38,7 +38,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Custom parameters for smart erasing.
                 */
                 class MPSOverrideEraseParameter : public AbstractModel
                 {
@@ -50,15 +50,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return EraseType 
+                     * 获取<p>Removal Type</p><ul><li>subtitle removal</li><li>watermark removal</li><li>privacy protection</li></ul>
+                     * @return EraseType <p>Removal Type</p><ul><li>subtitle removal</li><li>watermark removal</li><li>privacy protection</li></ul>
                      * 
                      */
                     std::string GetEraseType() const;
 
                     /**
-                     * 设置
-                     * @param _eraseType 
+                     * 设置<p>Removal Type</p><ul><li>subtitle removal</li><li>watermark removal</li><li>privacy protection</li></ul>
+                     * @param _eraseType <p>Removal Type</p><ul><li>subtitle removal</li><li>watermark removal</li><li>privacy protection</li></ul>
                      * 
                      */
                     void SetEraseType(const std::string& _eraseType);
@@ -71,15 +71,15 @@ namespace TencentCloud
                     bool EraseTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return EraseSubtitleConfig 
+                     * 获取<p>Subtitle erasing configuration;<br>This field is required when the value of EraseType is set to subtitle.</p>
+                     * @return EraseSubtitleConfig <p>Subtitle erasing configuration;<br>This field is required when the value of EraseType is set to subtitle.</p>
                      * 
                      */
                     MPSUpdateSmartEraseSubtitleConfig GetEraseSubtitleConfig() const;
 
                     /**
-                     * 设置
-                     * @param _eraseSubtitleConfig 
+                     * 设置<p>Subtitle erasing configuration;<br>This field is required when the value of EraseType is set to subtitle.</p>
+                     * @param _eraseSubtitleConfig <p>Subtitle erasing configuration;<br>This field is required when the value of EraseType is set to subtitle.</p>
                      * 
                      */
                     void SetEraseSubtitleConfig(const MPSUpdateSmartEraseSubtitleConfig& _eraseSubtitleConfig);
@@ -92,15 +92,15 @@ namespace TencentCloud
                     bool EraseSubtitleConfigHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return EraseWatermarkConfig 
+                     * 获取<p>Watermark erasing configuration.<br>This field is required when the value of EraseType is set to watermark.</p>
+                     * @return EraseWatermarkConfig <p>Watermark erasing configuration.<br>This field is required when the value of EraseType is set to watermark.</p>
                      * 
                      */
                     MPSUpdateSmartEraseWatermarkConfig GetEraseWatermarkConfig() const;
 
                     /**
-                     * 设置
-                     * @param _eraseWatermarkConfig 
+                     * 设置<p>Watermark erasing configuration.<br>This field is required when the value of EraseType is set to watermark.</p>
+                     * @param _eraseWatermarkConfig <p>Watermark erasing configuration.<br>This field is required when the value of EraseType is set to watermark.</p>
                      * 
                      */
                     void SetEraseWatermarkConfig(const MPSUpdateSmartEraseWatermarkConfig& _eraseWatermarkConfig);
@@ -113,15 +113,15 @@ namespace TencentCloud
                     bool EraseWatermarkConfigHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ErasePrivacyConfig 
+                     * 获取<p>Privacy protection configuration.<br>This field is required when the value of EraseType is privacy.</p>
+                     * @return ErasePrivacyConfig <p>Privacy protection configuration.<br>This field is required when the value of EraseType is privacy.</p>
                      * 
                      */
                     MPSSmartErasePrivacyConfig GetErasePrivacyConfig() const;
 
                     /**
-                     * 设置
-                     * @param _erasePrivacyConfig 
+                     * 设置<p>Privacy protection configuration.<br>This field is required when the value of EraseType is privacy.</p>
+                     * @param _erasePrivacyConfig <p>Privacy protection configuration.<br>This field is required when the value of EraseType is privacy.</p>
                      * 
                      */
                     void SetErasePrivacyConfig(const MPSSmartErasePrivacyConfig& _erasePrivacyConfig);
@@ -134,15 +134,15 @@ namespace TencentCloud
                     bool ErasePrivacyConfigHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SubtitleEmbedId 
+                     * 获取<p>id of the subtitle removal suppression template.</p>
+                     * @return SubtitleEmbedId <p>id of the subtitle removal suppression template.</p>
                      * 
                      */
                     int64_t GetSubtitleEmbedId() const;
 
                     /**
-                     * 设置
-                     * @param _subtitleEmbedId 
+                     * 设置<p>id of the subtitle removal suppression template.</p>
+                     * @param _subtitleEmbedId <p>id of the subtitle removal suppression template.</p>
                      * 
                      */
                     void SetSubtitleEmbedId(const int64_t& _subtitleEmbedId);
@@ -157,31 +157,31 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p>Removal Type</p><ul><li>subtitle removal</li><li>watermark removal</li><li>privacy protection</li></ul>
                      */
                     std::string m_eraseType;
                     bool m_eraseTypeHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Subtitle erasing configuration;<br>This field is required when the value of EraseType is set to subtitle.</p>
                      */
                     MPSUpdateSmartEraseSubtitleConfig m_eraseSubtitleConfig;
                     bool m_eraseSubtitleConfigHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Watermark erasing configuration.<br>This field is required when the value of EraseType is set to watermark.</p>
                      */
                     MPSUpdateSmartEraseWatermarkConfig m_eraseWatermarkConfig;
                     bool m_eraseWatermarkConfigHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Privacy protection configuration.<br>This field is required when the value of EraseType is privacy.</p>
                      */
                     MPSSmartErasePrivacyConfig m_erasePrivacyConfig;
                     bool m_erasePrivacyConfigHasBeenSet;
 
                     /**
-                     * 
+                     * <p>id of the subtitle removal suppression template.</p>
                      */
                     int64_t m_subtitleEmbedId;
                     bool m_subtitleEmbedIdHasBeenSet;

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * WeChat Mini Program publishing task type
                 */
                 class WechatMiniProgramPublishTaskInput : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return SourceDefinition 
+                     * 获取Transcoding template ID for the published video. 0 represents the original video.
+                     * @return SourceDefinition Transcoding template ID for the published video. 0 represents the original video.
                      * 
                      */
                     uint64_t GetSourceDefinition() const;
 
                     /**
-                     * 设置
-                     * @param _sourceDefinition 
+                     * 设置Transcoding template ID for the published video. 0 represents the original video.
+                     * @param _sourceDefinition Transcoding template ID for the published video. 0 represents the original video.
                      * 
                      */
                     void SetSourceDefinition(const uint64_t& _sourceDefinition);
@@ -70,7 +70,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Transcoding template ID for the published video. 0 represents the original video.
                      */
                     uint64_t m_sourceDefinition;
                     bool m_sourceDefinitionHasBeenSet;

@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Video stream information of VOD files
+                * Video stream information of VOD files.
                 */
                 class MediaVideoStreamItem : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Bitrate of the video stream. Unit: bps.
-                     * @return Bitrate Bitrate of the video stream. Unit: bps.
+                     * 获取Bitrate of video stream, unit: bps.
+                     * @return Bitrate Bitrate of video stream, unit: bps.
                      * 
                      */
                     int64_t GetBitrate() const;
 
                     /**
-                     * 设置Bitrate of the video stream. Unit: bps.
-                     * @param _bitrate Bitrate of the video stream. Unit: bps.
+                     * 设置Bitrate of video stream, unit: bps.
+                     * @param _bitrate Bitrate of video stream, unit: bps.
                      * 
                      */
                     void SetBitrate(const int64_t& _bitrate);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool BitrateHasBeenSet() const;
 
                     /**
-                     * 获取Video stream height in px.
-                     * @return Height Video stream height in px.
+                     * 获取Video stream height. Unit: px.
+                     * @return Height Video stream height. Unit: px.
                      * 
                      */
                     int64_t GetHeight() const;
 
                     /**
-                     * 设置Video stream height in px.
-                     * @param _height Video stream height in px.
+                     * 设置Video stream height. Unit: px.
+                     * @param _height Video stream height. Unit: px.
                      * 
                      */
                     void SetHeight(const int64_t& _height);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool HeightHasBeenSet() const;
 
                     /**
-                     * 获取Video stream width in px.
-                     * @return Width Video stream width in px.
+                     * 获取Video stream width. Unit: px.
+                     * @return Width Video stream width. Unit: px.
                      * 
                      */
                     int64_t GetWidth() const;
 
                     /**
-                     * 设置Video stream width in px.
-                     * @param _width Video stream width in px.
+                     * 设置Video stream width. Unit: px.
+                     * @param _width Video stream width. Unit: px.
                      * 
                      */
                     void SetWidth(const int64_t& _width);
@@ -132,15 +132,15 @@ namespace TencentCloud
                     bool CodecHasBeenSet() const;
 
                     /**
-                     * 获取Frame rate. Measurement unit: hz.
-                     * @return Fps Frame rate. Measurement unit: hz.
+                     * 获取Frame rate. Unit: hz.
+                     * @return Fps Frame rate. Unit: hz.
                      * 
                      */
                     int64_t GetFps() const;
 
                     /**
-                     * 设置Frame rate. Measurement unit: hz.
-                     * @param _fps Frame rate. Measurement unit: hz.
+                     * 设置Frame rate. Unit: hz.
+                     * @param _fps Frame rate. Unit: hz.
                      * 
                      */
                     void SetFps(const int64_t& _fps);
@@ -175,18 +175,18 @@ namespace TencentCloud
 
                     /**
                      * 获取Dynamic range information of the frame.
-<li><font color=red>Note</font>: This field is valid for transcoded files processed after 2023-01-10T00:00:00Z.</li>
+<li><font color=red>Note:</font> This field is valid for transcoded files processed after 2023-01-10T00:00:00Z.</li>
                      * @return DynamicRangeInfo Dynamic range information of the frame.
-<li><font color=red>Note</font>: This field is valid for transcoded files processed after 2023-01-10T00:00:00Z.</li>
+<li><font color=red>Note:</font> This field is valid for transcoded files processed after 2023-01-10T00:00:00Z.</li>
                      * 
                      */
                     DynamicRangeInfo GetDynamicRangeInfo() const;
 
                     /**
                      * 设置Dynamic range information of the frame.
-<li><font color=red>Note</font>: This field is valid for transcoded files processed after 2023-01-10T00:00:00Z.</li>
+<li><font color=red>Note:</font> This field is valid for transcoded files processed after 2023-01-10T00:00:00Z.</li>
                      * @param _dynamicRangeInfo Dynamic range information of the frame.
-<li><font color=red>Note</font>: This field is valid for transcoded files processed after 2023-01-10T00:00:00Z.</li>
+<li><font color=red>Note:</font> This field is valid for transcoded files processed after 2023-01-10T00:00:00Z.</li>
                      * 
                      */
                     void SetDynamicRangeInfo(const DynamicRangeInfo& _dynamicRangeInfo);
@@ -201,19 +201,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Bitrate of the video stream. Unit: bps.
+                     * Bitrate of video stream, unit: bps.
                      */
                     int64_t m_bitrate;
                     bool m_bitrateHasBeenSet;
 
                     /**
-                     * Video stream height in px.
+                     * Video stream height. Unit: px.
                      */
                     int64_t m_height;
                     bool m_heightHasBeenSet;
 
                     /**
-                     * Video stream width in px.
+                     * Video stream width. Unit: px.
                      */
                     int64_t m_width;
                     bool m_widthHasBeenSet;
@@ -225,7 +225,7 @@ namespace TencentCloud
                     bool m_codecHasBeenSet;
 
                     /**
-                     * Frame rate. Measurement unit: hz.
+                     * Frame rate. Unit: hz.
                      */
                     int64_t m_fps;
                     bool m_fpsHasBeenSet;
@@ -238,7 +238,7 @@ namespace TencentCloud
 
                     /**
                      * Dynamic range information of the frame.
-<li><font color=red>Note</font>: This field is valid for transcoded files processed after 2023-01-10T00:00:00Z.</li>
+<li><font color=red>Note:</font> This field is valid for transcoded files processed after 2023-01-10T00:00:00Z.</li>
                      */
                     DynamicRangeInfo m_dynamicRangeInfo;
                     bool m_dynamicRangeInfoHasBeenSet;

@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Audio/video enhancement configuration
                 */
                 class EnhanceConfig : public AbstractModel
                 {
@@ -49,15 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return VideoEnhance 
+                     * 获取Video enhancement configuration.
+                     * @return VideoEnhance Video enhancement configuration.
                      * 
                      */
                     VideoEnhanceConfig GetVideoEnhance() const;
 
                     /**
-                     * 设置
-                     * @param _videoEnhance 
+                     * 设置Video enhancement configuration.
+                     * @param _videoEnhance Video enhancement configuration.
                      * 
                      */
                     void SetVideoEnhance(const VideoEnhanceConfig& _videoEnhance);
@@ -70,15 +70,15 @@ namespace TencentCloud
                     bool VideoEnhanceHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AudioEnhance 
+                     * 获取Audio enhancement configuration.
+                     * @return AudioEnhance Audio enhancement configuration.
                      * 
                      */
                     AudioEnhanceConfig GetAudioEnhance() const;
 
                     /**
-                     * 设置
-                     * @param _audioEnhance 
+                     * 设置Audio enhancement configuration.
+                     * @param _audioEnhance Audio enhancement configuration.
                      * 
                      */
                     void SetAudioEnhance(const AudioEnhanceConfig& _audioEnhance);
@@ -93,13 +93,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Video enhancement configuration.
                      */
                     VideoEnhanceConfig m_videoEnhance;
                     bool m_videoEnhanceHasBeenSet;
 
                     /**
-                     * 
+                     * Audio enhancement configuration.
                      */
                     AudioEnhanceConfig m_audioEnhance;
                     bool m_audioEnhanceHasBeenSet;

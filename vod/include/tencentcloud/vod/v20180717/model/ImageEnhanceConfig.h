@@ -43,7 +43,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Image enhancement parameters
                 */
                 class ImageEnhanceConfig : public AbstractModel
                 {
@@ -55,15 +55,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return SuperResolution 
+                     * 获取Super-resolution configuration.
+                     * @return SuperResolution Super-resolution configuration.
                      * 
                      */
                     SuperResolutionInfo GetSuperResolution() const;
 
                     /**
-                     * 设置
-                     * @param _superResolution 
+                     * 设置Super-resolution configuration.
+                     * @param _superResolution Super-resolution configuration.
                      * 
                      */
                     void SetSuperResolution(const SuperResolutionInfo& _superResolution);
@@ -76,15 +76,15 @@ namespace TencentCloud
                     bool SuperResolutionHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AdvancedSuperResolution 
+                     * 获取Advanced super-resolution configuration.
+                     * @return AdvancedSuperResolution Advanced super-resolution configuration.
                      * 
                      */
                     AdvancedSuperResolutionConfig GetAdvancedSuperResolution() const;
 
                     /**
-                     * 设置
-                     * @param _advancedSuperResolution 
+                     * 设置Advanced super-resolution configuration.
+                     * @param _advancedSuperResolution Advanced super-resolution configuration.
                      * 
                      */
                     void SetAdvancedSuperResolution(const AdvancedSuperResolutionConfig& _advancedSuperResolution);
@@ -97,15 +97,15 @@ namespace TencentCloud
                     bool AdvancedSuperResolutionHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Denoise 
+                     * 获取Denoising configuration.
+                     * @return Denoise Denoising configuration.
                      * 
                      */
                     ImageDenoiseConfig GetDenoise() const;
 
                     /**
-                     * 设置
-                     * @param _denoise 
+                     * 设置Denoising configuration.
+                     * @param _denoise Denoising configuration.
                      * 
                      */
                     void SetDenoise(const ImageDenoiseConfig& _denoise);
@@ -118,15 +118,15 @@ namespace TencentCloud
                     bool DenoiseHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ImageQualityEnhance 
+                     * 获取Comprehensive enhancement configuration.
+                     * @return ImageQualityEnhance Comprehensive enhancement configuration.
                      * 
                      */
                     ImageQualityEnhanceInfo GetImageQualityEnhance() const;
 
                     /**
-                     * 设置
-                     * @param _imageQualityEnhance 
+                     * 设置Comprehensive enhancement configuration.
+                     * @param _imageQualityEnhance Comprehensive enhancement configuration.
                      * 
                      */
                     void SetImageQualityEnhance(const ImageQualityEnhanceInfo& _imageQualityEnhance);
@@ -139,15 +139,15 @@ namespace TencentCloud
                     bool ImageQualityEnhanceHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ColorEnhance 
+                     * 获取Color enhancement configuration.
+                     * @return ColorEnhance Color enhancement configuration.
                      * 
                      */
                     ColorEnhanceInfo GetColorEnhance() const;
 
                     /**
-                     * 设置
-                     * @param _colorEnhance 
+                     * 设置Color enhancement configuration.
+                     * @param _colorEnhance Color enhancement configuration.
                      * 
                      */
                     void SetColorEnhance(const ColorEnhanceInfo& _colorEnhance);
@@ -160,15 +160,15 @@ namespace TencentCloud
                     bool ColorEnhanceHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SharpEnhance 
+                     * 获取Detail enhancement configuration.
+                     * @return SharpEnhance Detail enhancement configuration.
                      * 
                      */
                     SharpEnhanceInfo GetSharpEnhance() const;
 
                     /**
-                     * 设置
-                     * @param _sharpEnhance 
+                     * 设置Detail enhancement configuration.
+                     * @param _sharpEnhance Detail enhancement configuration.
                      * 
                      */
                     void SetSharpEnhance(const SharpEnhanceInfo& _sharpEnhance);
@@ -181,15 +181,15 @@ namespace TencentCloud
                     bool SharpEnhanceHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return FaceEnhance 
+                     * 获取Face enhancement configuration.
+                     * @return FaceEnhance Face enhancement configuration.
                      * 
                      */
                     FaceEnhanceInfo GetFaceEnhance() const;
 
                     /**
-                     * 设置
-                     * @param _faceEnhance 
+                     * 设置Face enhancement configuration.
+                     * @param _faceEnhance Face enhancement configuration.
                      * 
                      */
                     void SetFaceEnhance(const FaceEnhanceInfo& _faceEnhance);
@@ -202,15 +202,15 @@ namespace TencentCloud
                     bool FaceEnhanceHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return LowLightEnhance 
+                     * 获取Low-light enhancement configuration.
+                     * @return LowLightEnhance Low-light enhancement configuration.
                      * 
                      */
                     LowLightEnhanceInfo GetLowLightEnhance() const;
 
                     /**
-                     * 设置
-                     * @param _lowLightEnhance 
+                     * 设置Low-light enhancement configuration.
+                     * @param _lowLightEnhance Low-light enhancement configuration.
                      * 
                      */
                     void SetLowLightEnhance(const LowLightEnhanceInfo& _lowLightEnhance);
@@ -225,49 +225,49 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Super-resolution configuration.
                      */
                     SuperResolutionInfo m_superResolution;
                     bool m_superResolutionHasBeenSet;
 
                     /**
-                     * 
+                     * Advanced super-resolution configuration.
                      */
                     AdvancedSuperResolutionConfig m_advancedSuperResolution;
                     bool m_advancedSuperResolutionHasBeenSet;
 
                     /**
-                     * 
+                     * Denoising configuration.
                      */
                     ImageDenoiseConfig m_denoise;
                     bool m_denoiseHasBeenSet;
 
                     /**
-                     * 
+                     * Comprehensive enhancement configuration.
                      */
                     ImageQualityEnhanceInfo m_imageQualityEnhance;
                     bool m_imageQualityEnhanceHasBeenSet;
 
                     /**
-                     * 
+                     * Color enhancement configuration.
                      */
                     ColorEnhanceInfo m_colorEnhance;
                     bool m_colorEnhanceHasBeenSet;
 
                     /**
-                     * 
+                     * Detail enhancement configuration.
                      */
                     SharpEnhanceInfo m_sharpEnhance;
                     bool m_sharpEnhanceHasBeenSet;
 
                     /**
-                     * 
+                     * Face enhancement configuration.
                      */
                     FaceEnhanceInfo m_faceEnhance;
                     bool m_faceEnhanceHasBeenSet;
 
                     /**
-                     * 
+                     * Low-light enhancement configuration.
                      */
                     LowLightEnhanceInfo m_lowLightEnhance;
                     bool m_lowLightEnhanceHasBeenSet;

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Empty track segment used as a placeholder on the timeline. If a period of silence is required between two audio clips, you can use EmptyTrackItem as a placeholder.
                 */
                 class EmptyTrackItem : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Duration 
+                     * 获取Duration in seconds.
+                     * @return Duration Duration in seconds.
                      * 
                      */
                     double GetDuration() const;
 
                     /**
-                     * 设置
-                     * @param _duration 
+                     * 设置Duration in seconds.
+                     * @param _duration Duration in seconds.
                      * 
                      */
                     void SetDuration(const double& _duration);
@@ -70,7 +70,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Duration in seconds.
                      */
                     double m_duration;
                     bool m_durationHasBeenSet;

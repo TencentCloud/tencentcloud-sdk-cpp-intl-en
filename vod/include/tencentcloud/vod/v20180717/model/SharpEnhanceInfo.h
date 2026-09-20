@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Detail enhancement control
                 */
                 class SharpEnhanceInfo : public AbstractModel
                 {
@@ -47,15 +47,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Switch 
+                     * 获取Detail enhancement control switch. Valid values:
+<li>ON: enable detail enhancement</li>
+<li>OFF: disable detail enhancement</li>
+                     * @return Switch Detail enhancement control switch. Valid values:
+<li>ON: enable detail enhancement</li>
+<li>OFF: disable detail enhancement</li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置
-                     * @param _switch 
+                     * 设置Detail enhancement control switch. Valid values:
+<li>ON: enable detail enhancement</li>
+<li>OFF: disable detail enhancement</li>
+                     * @param _switch Detail enhancement control switch. Valid values:
+<li>ON: enable detail enhancement</li>
+<li>OFF: disable detail enhancement</li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -68,15 +76,19 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Intensity 
+                     * 获取Detail enhancement intensity. Valid only when the detail enhancement control switch is ON. Value range: 0.0–1.0.
+Default: 0.0.
+                     * @return Intensity Detail enhancement intensity. Valid only when the detail enhancement control switch is ON. Value range: 0.0–1.0.
+Default: 0.0.
                      * 
                      */
                     double GetIntensity() const;
 
                     /**
-                     * 设置
-                     * @param _intensity 
+                     * 设置Detail enhancement intensity. Valid only when the detail enhancement control switch is ON. Value range: 0.0–1.0.
+Default: 0.0.
+                     * @param _intensity Detail enhancement intensity. Valid only when the detail enhancement control switch is ON. Value range: 0.0–1.0.
+Default: 0.0.
                      * 
                      */
                     void SetIntensity(const double& _intensity);
@@ -91,13 +103,16 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Detail enhancement control switch. Valid values:
+<li>ON: enable detail enhancement</li>
+<li>OFF: disable detail enhancement</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * 
+                     * Detail enhancement intensity. Valid only when the detail enhancement control switch is ON. Value range: 0.0–1.0.
+Default: 0.0.
                      */
                     double m_intensity;
                     bool m_intensityHasBeenSet;

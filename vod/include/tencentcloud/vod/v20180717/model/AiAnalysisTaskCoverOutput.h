@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Intelligent cover result information.
                 */
                 class AiAnalysisTaskCoverOutput : public AbstractModel
                 {
@@ -48,15 +48,19 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return CoverSet 
+                     * 获取List of smart covers.
+<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to CoverSetFileUrl.
+                     * @return CoverSet List of smart covers.
+<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to CoverSetFileUrl.
                      * 
                      */
                     std::vector<MediaAiAnalysisCoverItem> GetCoverSet() const;
 
                     /**
-                     * 设置
-                     * @param _coverSet 
+                     * 设置List of smart covers.
+<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to CoverSetFileUrl.
+                     * @param _coverSet List of smart covers.
+<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to CoverSetFileUrl.
                      * 
                      */
                     void SetCoverSet(const std::vector<MediaAiAnalysisCoverItem>& _coverSet);
@@ -69,15 +73,15 @@ namespace TencentCloud
                     bool CoverSetHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return CoverSetFileUrl 
+                     * 获取Intelligent cover list file URL. The file content is in JSON format, and the data structure is consistent with the CoverSet field. (The file will not be retained permanently and will be deleted after reaching the CoverSetFileUrlExpireTime time point).
+                     * @return CoverSetFileUrl Intelligent cover list file URL. The file content is in JSON format, and the data structure is consistent with the CoverSet field. (The file will not be retained permanently and will be deleted after reaching the CoverSetFileUrlExpireTime time point).
                      * 
                      */
                     std::string GetCoverSetFileUrl() const;
 
                     /**
-                     * 设置
-                     * @param _coverSetFileUrl 
+                     * 设置Intelligent cover list file URL. The file content is in JSON format, and the data structure is consistent with the CoverSet field. (The file will not be retained permanently and will be deleted after reaching the CoverSetFileUrlExpireTime time point).
+                     * @param _coverSetFileUrl Intelligent cover list file URL. The file content is in JSON format, and the data structure is consistent with the CoverSet field. (The file will not be retained permanently and will be deleted after reaching the CoverSetFileUrlExpireTime time point).
                      * 
                      */
                     void SetCoverSetFileUrl(const std::string& _coverSetFileUrl);
@@ -90,15 +94,15 @@ namespace TencentCloud
                     bool CoverSetFileUrlHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return CoverSetFileUrlExpireTime 
+                     * 获取Expiration time of the intelligent cover list file URL, using the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @return CoverSetFileUrlExpireTime Expiration time of the intelligent cover list file URL, using the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      * 
                      */
                     std::string GetCoverSetFileUrlExpireTime() const;
 
                     /**
-                     * 设置
-                     * @param _coverSetFileUrlExpireTime 
+                     * 设置Expiration time of the intelligent cover list file URL, using the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
+                     * @param _coverSetFileUrlExpireTime Expiration time of the intelligent cover list file URL, using the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      * 
                      */
                     void SetCoverSetFileUrlExpireTime(const std::string& _coverSetFileUrlExpireTime);
@@ -113,19 +117,20 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * List of smart covers.
+<font color=red>Note</font>: This list can only display up to the first 100 elements. To obtain the complete result, get it from the file corresponding to CoverSetFileUrl.
                      */
                     std::vector<MediaAiAnalysisCoverItem> m_coverSet;
                     bool m_coverSetHasBeenSet;
 
                     /**
-                     * 
+                     * Intelligent cover list file URL. The file content is in JSON format, and the data structure is consistent with the CoverSet field. (The file will not be retained permanently and will be deleted after reaching the CoverSetFileUrlExpireTime time point).
                      */
                     std::string m_coverSetFileUrl;
                     bool m_coverSetFileUrlHasBeenSet;
 
                     /**
-                     * 
+                     * Expiration time of the intelligent cover list file URL, using the [ISO date format](https://www.tencentcloud.com/document/product/266/11732?from_cn_redirect=1#I).
                      */
                     std::string m_coverSetFileUrlExpireTime;
                     bool m_coverSetFileUrlExpireTimeHasBeenSet;

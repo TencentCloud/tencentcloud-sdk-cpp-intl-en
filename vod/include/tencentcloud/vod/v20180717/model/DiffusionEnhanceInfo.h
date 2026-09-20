@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * LLM enhancement configuration.
                 */
                 class DiffusionEnhanceInfo : public AbstractModel
                 {
@@ -47,15 +47,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Switch 
+                     * 获取Large model enhancement switch. Available values:
+<li>ON: enabled</li>
+<li>OFF: disabled</li>
+                     * @return Switch Large model enhancement switch. Available values:
+<li>ON: enabled</li>
+<li>OFF: disabled</li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置
-                     * @param _switch 
+                     * 设置Large model enhancement switch. Available values:
+<li>ON: enabled</li>
+<li>OFF: disabled</li>
+                     * @param _switch Large model enhancement switch. Available values:
+<li>ON: enabled</li>
+<li>OFF: disabled</li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -68,15 +76,31 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Type 
+                     * 获取Strength type. It is valid only when the large model enhancement control switch is ON. Available values:
+<li>weak: weak;</li>
+<li>normal: Normal;</li>
+<li>strong: Strong.</li>
+Default value: normal.
+                     * @return Type Strength type. It is valid only when the large model enhancement control switch is ON. Available values:
+<li>weak: weak;</li>
+<li>normal: Normal;</li>
+<li>strong: Strong.</li>
+Default value: normal.
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置
-                     * @param _type 
+                     * 设置Strength type. It is valid only when the large model enhancement control switch is ON. Available values:
+<li>weak: weak;</li>
+<li>normal: Normal;</li>
+<li>strong: Strong.</li>
+Default value: normal.
+                     * @param _type Strength type. It is valid only when the large model enhancement control switch is ON. Available values:
+<li>weak: weak;</li>
+<li>normal: Normal;</li>
+<li>strong: Strong.</li>
+Default value: normal.
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -91,13 +115,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Large model enhancement switch. Available values:
+<li>ON: enabled</li>
+<li>OFF: disabled</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * 
+                     * Strength type. It is valid only when the large model enhancement control switch is ON. Available values:
+<li>weak: weak;</li>
+<li>normal: Normal;</li>
+<li>strong: Strong.</li>
+Default value: normal.
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;

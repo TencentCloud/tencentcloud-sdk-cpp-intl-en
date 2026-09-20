@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Origin server configuration
                 */
                 class Origin : public AbstractModel
                 {
@@ -72,11 +72,11 @@ When modifying the primary origin server, fill in the corresponding OriginType a
                     bool OriginsHasBeenSet() const;
 
                     /**
-                     * 获取Primary origin server type. The input parameter supports the following types:
+                     * 获取Primary origin server type. Input supports the following types:
 <li>domain: Domain type;</li>
 <li>ip: IP list as the origin server;</li>
 <li>third_party: third-party object storage origin.</li>
-                     * @return OriginType Primary origin server type. The input parameter supports the following types:
+                     * @return OriginType Primary origin server type. Input supports the following types:
 <li>domain: Domain type;</li>
 <li>ip: IP list as the origin server;</li>
 <li>third_party: third-party object storage origin.</li>
@@ -85,11 +85,11 @@ When modifying the primary origin server, fill in the corresponding OriginType a
                     std::string GetOriginType() const;
 
                     /**
-                     * 设置Primary origin server type. The input parameter supports the following types:
+                     * 设置Primary origin server type. Input supports the following types:
 <li>domain: Domain type;</li>
 <li>ip: IP list as the origin server;</li>
 <li>third_party: third-party object storage origin.</li>
-                     * @param _originType Primary origin server type. The input parameter supports the following types:
+                     * @param _originType Primary origin server type. Input supports the following types:
 <li>domain: Domain type;</li>
 <li>ip: IP list as the origin server;</li>
 <li>third_party: third-party object storage origin.</li>
@@ -105,18 +105,18 @@ When modifying the primary origin server, fill in the corresponding OriginType a
                     bool OriginTypeHasBeenSet() const;
 
                     /**
-                     * 获取Host header when accessing the primary origin server. If not filled in, it defaults to the acceleration domain name.
+                     * 获取Host header when pulling from the primary origin server. If not filled, the acceleration domain name is used by default.
 When the origin server type is COS, the ServerName field is required.
-                     * @return ServerName Host header when accessing the primary origin server. If not filled in, it defaults to the acceleration domain name.
+                     * @return ServerName Host header when pulling from the primary origin server. If not filled, the acceleration domain name is used by default.
 When the origin server type is COS, the ServerName field is required.
                      * 
                      */
                     std::string GetServerName() const;
 
                     /**
-                     * 设置Host header when accessing the primary origin server. If not filled in, it defaults to the acceleration domain name.
+                     * 设置Host header when pulling from the primary origin server. If not filled, the acceleration domain name is used by default.
 When the origin server type is COS, the ServerName field is required.
-                     * @param _serverName Host header when accessing the primary origin server. If not filled in, it defaults to the acceleration domain name.
+                     * @param _serverName Host header when pulling from the primary origin server. If not filled, the acceleration domain name is used by default.
 When the origin server type is COS, the ServerName field is required.
                      * 
                      */
@@ -130,11 +130,11 @@ When the origin server type is COS, the ServerName field is required.
                     bool ServerNameHasBeenSet() const;
 
                     /**
-                     * 获取Origin-pull protocol configuration:
+                     * 获取Origin-pull protocol configuration.
 <li>http: Force HTTP origin-pull.</li>
 <li>follow: follow protocol for origin-pull;</li>
 <li>`https`: Switch HTTP requests to HTTPS. This only supports port 443 on the origin server.</li>
-                     * @return OriginPullProtocol Origin-pull protocol configuration:
+                     * @return OriginPullProtocol Origin-pull protocol configuration.
 <li>http: Force HTTP origin-pull.</li>
 <li>follow: follow protocol for origin-pull;</li>
 <li>`https`: Switch HTTP requests to HTTPS. This only supports port 443 on the origin server.</li>
@@ -143,11 +143,11 @@ When the origin server type is COS, the ServerName field is required.
                     std::string GetOriginPullProtocol() const;
 
                     /**
-                     * 设置Origin-pull protocol configuration:
+                     * 设置Origin-pull protocol configuration.
 <li>http: Force HTTP origin-pull.</li>
 <li>follow: follow protocol for origin-pull;</li>
 <li>`https`: Switch HTTP requests to HTTPS. This only supports port 443 on the origin server.</li>
-                     * @param _originPullProtocol Origin-pull protocol configuration:
+                     * @param _originPullProtocol Origin-pull protocol configuration.
 <li>http: Force HTTP origin-pull.</li>
 <li>follow: follow protocol for origin-pull;</li>
 <li>`https`: Switch HTTP requests to HTTPS. This only supports port 443 on the origin server.</li>
@@ -164,18 +164,18 @@ When the origin server type is COS, the ServerName field is required.
 
                     /**
                      * 获取Backup origin list.
-When modifying the standby origin server, fill in the corresponding OriginType at the same time.
+When modifying the backup origin server, fill in the corresponding OriginType at the same time.
                      * @return BackupOrigins Backup origin list.
-When modifying the standby origin server, fill in the corresponding OriginType at the same time.
+When modifying the backup origin server, fill in the corresponding OriginType at the same time.
                      * 
                      */
                     std::vector<std::string> GetBackupOrigins() const;
 
                     /**
                      * 设置Backup origin list.
-When modifying the standby origin server, fill in the corresponding OriginType at the same time.
+When modifying the backup origin server, fill in the corresponding OriginType at the same time.
                      * @param _backupOrigins Backup origin list.
-When modifying the standby origin server, fill in the corresponding OriginType at the same time.
+When modifying the backup origin server, fill in the corresponding OriginType at the same time.
                      * 
                      */
                     void SetBackupOrigins(const std::vector<std::string>& _backupOrigins);
@@ -221,15 +221,15 @@ When modifying the standby origin server, fill in the corresponding OriginType a
                     bool BackupOriginTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return BackupServerName 
+                     * 获取Host header when pulling from the backup origin server. If not filled, the ServerName of the primary origin server is used by default.
+                     * @return BackupServerName Host header when pulling from the backup origin server. If not filled, the ServerName of the primary origin server is used by default.
                      * 
                      */
                     std::string GetBackupServerName() const;
 
                     /**
-                     * 设置
-                     * @param _backupServerName 
+                     * 设置Host header when pulling from the backup origin server. If not filled, the ServerName of the primary origin server is used by default.
+                     * @param _backupServerName Host header when pulling from the backup origin server. If not filled, the ServerName of the primary origin server is used by default.
                      * 
                      */
                     void SetBackupServerName(const std::string& _backupServerName);
@@ -242,12 +242,12 @@ When modifying the standby origin server, fill in the corresponding OriginType a
                     bool BackupServerNameHasBeenSet() const;
 
                     /**
-                     * 获取Object storage origin service vendor. Required when the origin server type is third-party object storage origin (third_party). Optional values include:
+                     * 获取Object storage origin service vendor. Required when the origin server type is third-party object storage origin (third_party). Optional values include the following:
 <li>aws_s3:AWS S3;</li>
 <li>ali_oss: Alibaba Cloud OSS;</li>
 <li>hw_obs: Huawei OBS;</li>
 <li>others: other vendor's object storage. Only object storage compatible with the AWS signature algorithm is supported, such as Tencent Cloud COS.</li>
-                     * @return OriginCompany Object storage origin service vendor. Required when the origin server type is third-party object storage origin (third_party). Optional values include:
+                     * @return OriginCompany Object storage origin service vendor. Required when the origin server type is third-party object storage origin (third_party). Optional values include the following:
 <li>aws_s3:AWS S3;</li>
 <li>ali_oss: Alibaba Cloud OSS;</li>
 <li>hw_obs: Huawei OBS;</li>
@@ -257,12 +257,12 @@ When modifying the standby origin server, fill in the corresponding OriginType a
                     std::string GetOriginCompany() const;
 
                     /**
-                     * 设置Object storage origin service vendor. Required when the origin server type is third-party object storage origin (third_party). Optional values include:
+                     * 设置Object storage origin service vendor. Required when the origin server type is third-party object storage origin (third_party). Optional values include the following:
 <li>aws_s3:AWS S3;</li>
 <li>ali_oss: Alibaba Cloud OSS;</li>
 <li>hw_obs: Huawei OBS;</li>
 <li>others: other vendor's object storage. Only object storage compatible with the AWS signature algorithm is supported, such as Tencent Cloud COS.</li>
-                     * @param _originCompany Object storage origin service vendor. Required when the origin server type is third-party object storage origin (third_party). Optional values include:
+                     * @param _originCompany Object storage origin service vendor. Required when the origin server type is third-party object storage origin (third_party). Optional values include the following:
 <li>aws_s3:AWS S3;</li>
 <li>ali_oss: Alibaba Cloud OSS;</li>
 <li>hw_obs: Huawei OBS;</li>
@@ -288,7 +288,7 @@ When modifying the primary origin server, fill in the corresponding OriginType a
                     bool m_originsHasBeenSet;
 
                     /**
-                     * Primary origin server type. The input parameter supports the following types:
+                     * Primary origin server type. Input supports the following types:
 <li>domain: Domain type;</li>
 <li>ip: IP list as the origin server;</li>
 <li>third_party: third-party object storage origin.</li>
@@ -297,14 +297,14 @@ When modifying the primary origin server, fill in the corresponding OriginType a
                     bool m_originTypeHasBeenSet;
 
                     /**
-                     * Host header when accessing the primary origin server. If not filled in, it defaults to the acceleration domain name.
+                     * Host header when pulling from the primary origin server. If not filled, the acceleration domain name is used by default.
 When the origin server type is COS, the ServerName field is required.
                      */
                     std::string m_serverName;
                     bool m_serverNameHasBeenSet;
 
                     /**
-                     * Origin-pull protocol configuration:
+                     * Origin-pull protocol configuration.
 <li>http: Force HTTP origin-pull.</li>
 <li>follow: follow protocol for origin-pull;</li>
 <li>`https`: Switch HTTP requests to HTTPS. This only supports port 443 on the origin server.</li>
@@ -314,7 +314,7 @@ When the origin server type is COS, the ServerName field is required.
 
                     /**
                      * Backup origin list.
-When modifying the standby origin server, fill in the corresponding OriginType at the same time.
+When modifying the backup origin server, fill in the corresponding OriginType at the same time.
                      */
                     std::vector<std::string> m_backupOrigins;
                     bool m_backupOriginsHasBeenSet;
@@ -329,13 +329,13 @@ When modifying the standby origin server, fill in the corresponding OriginType a
                     bool m_backupOriginTypeHasBeenSet;
 
                     /**
-                     * 
+                     * Host header when pulling from the backup origin server. If not filled, the ServerName of the primary origin server is used by default.
                      */
                     std::string m_backupServerName;
                     bool m_backupServerNameHasBeenSet;
 
                     /**
-                     * Object storage origin service vendor. Required when the origin server type is third-party object storage origin (third_party). Optional values include:
+                     * Object storage origin service vendor. Required when the origin server type is third-party object storage origin (third_party). Optional values include the following:
 <li>aws_s3:AWS S3;</li>
 <li>ali_oss: Alibaba Cloud OSS;</li>
 <li>hw_obs: Huawei OBS;</li>

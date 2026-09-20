@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return SubAppId 
+                     * 获取<p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be filled in with the app ID to access resources in on-demand applications (whether the default application or a newly created application).</b></p>
+                     * @return SubAppId <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be filled in with the app ID to access resources in on-demand applications (whether the default application or a newly created application).</b></p>
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置
-                     * @param _subAppId 
+                     * 设置<p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be filled in with the app ID to access resources in on-demand applications (whether the default application or a newly created application).</b></p>
+                     * @param _subAppId <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be filled in with the app ID to access resources in on-demand applications (whether the default application or a newly created application).</b></p>
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool SubAppIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Text 
+                     * 获取<p>Content to search</p>
+                     * @return Text <p>Content to search</p>
                      * 
                      */
                     std::string GetText() const;
 
                     /**
-                     * 设置
-                     * @param _text 
+                     * 设置<p>Content to search</p>
+                     * @param _text <p>Content to search</p>
                      * 
                      */
                     void SetText(const std::string& _text);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool TextHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return KnowledgeBaseId 
+                     * 获取<p>Knowledge base ID. If left empty, the default knowledge base will be used.</p>
+                     * @return KnowledgeBaseId <p>Knowledge base ID. If left empty, the default knowledge base will be used.</p>
                      * 
                      */
                     std::string GetKnowledgeBaseId() const;
 
                     /**
-                     * 设置
-                     * @param _knowledgeBaseId 
+                     * 设置<p>Knowledge base ID. If left empty, the default knowledge base will be used.</p>
+                     * @param _knowledgeBaseId <p>Knowledge base ID. If left empty, the default knowledge base will be used.</p>
                      * 
                      */
                     void SetKnowledgeBaseId(const std::string& _knowledgeBaseId);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool KnowledgeBaseIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Limit 
+                     * 获取<p>Number of returned records. Default value: 20.</p><p>Value range: [1, 100]</p>
+                     * @return Limit <p>Number of returned records. Default value: 20.</p><p>Value range: [1, 100]</p>
                      * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
-                     * 设置
-                     * @param _limit 
+                     * 设置<p>Number of returned records. Default value: 20.</p><p>Value range: [1, 100]</p>
+                     * @param _limit <p>Number of returned records. Default value: 20.</p><p>Value range: [1, 100]</p>
                      * 
                      */
                     void SetLimit(const uint64_t& _limit);
@@ -127,15 +127,15 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Categories 
+                     * 获取<p>File type. Match any element in the collection: <li>Video: video file</li> <li>Audio: audio file</li> <li>Image: image file</li></p>
+                     * @return Categories <p>File type. Match any element in the collection: <li>Video: video file</li> <li>Audio: audio file</li> <li>Image: image file</li></p>
                      * 
                      */
                     std::vector<std::string> GetCategories() const;
 
                     /**
-                     * 设置
-                     * @param _categories 
+                     * 设置<p>File type. Match any element in the collection: <li>Video: video file</li> <li>Audio: audio file</li> <li>Image: image file</li></p>
+                     * @param _categories <p>File type. Match any element in the collection: <li>Video: video file</li> <li>Audio: audio file</li> <li>Image: image file</li></p>
                      * 
                      */
                     void SetCategories(const std::vector<std::string>& _categories);
@@ -148,15 +148,15 @@ namespace TencentCloud
                     bool CategoriesHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Tags 
+                     * 获取<p>Tag set, match any element in the collection.</p><p>Input limits: single tag length limited to 32 characters. Array length limit: 16.</p>
+                     * @return Tags <p>Tag set, match any element in the collection.</p><p>Input limits: single tag length limited to 32 characters. Array length limit: 16.</p>
                      * 
                      */
                     std::vector<std::string> GetTags() const;
 
                     /**
-                     * 设置
-                     * @param _tags 
+                     * 设置<p>Tag set, match any element in the collection.</p><p>Input limits: single tag length limited to 32 characters. Array length limit: 16.</p>
+                     * @param _tags <p>Tag set, match any element in the collection.</p><p>Input limits: single tag length limited to 32 characters. Array length limit: 16.</p>
                      * 
                      */
                     void SetTags(const std::vector<std::string>& _tags);
@@ -169,15 +169,15 @@ namespace TencentCloud
                     bool TagsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Persons 
+                     * 获取<p>Collection of people, matching recording clips where all incoming people appear</p><p>Input limit: array length limit: 16</p>
+                     * @return Persons <p>Collection of people, matching recording clips where all incoming people appear</p><p>Input limit: array length limit: 16</p>
                      * 
                      */
                     std::vector<std::string> GetPersons() const;
 
                     /**
-                     * 设置
-                     * @param _persons 
+                     * 设置<p>Collection of people, matching recording clips where all incoming people appear</p><p>Input limit: array length limit: 16</p>
+                     * @param _persons <p>Collection of people, matching recording clips where all incoming people appear</p><p>Input limit: array length limit: 16</p>
                      * 
                      */
                     void SetPersons(const std::vector<std::string>& _persons);
@@ -190,15 +190,15 @@ namespace TencentCloud
                     bool PersonsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return TaskTypes 
+                     * 获取<p>Task type to search. Optional values: </p><ul><li>AiAnalysis.DescriptionTask </li><li>SmartSubtitle.AsrFullTextTask</li></ul>
+                     * @return TaskTypes <p>Task type to search. Optional values: </p><ul><li>AiAnalysis.DescriptionTask </li><li>SmartSubtitle.AsrFullTextTask</li></ul>
                      * 
                      */
                     std::vector<std::string> GetTaskTypes() const;
 
                     /**
-                     * 设置
-                     * @param _taskTypes 
+                     * 设置<p>Task type to search. Optional values: </p><ul><li>AiAnalysis.DescriptionTask </li><li>SmartSubtitle.AsrFullTextTask</li></ul>
+                     * @param _taskTypes <p>Task type to search. Optional values: </p><ul><li>AiAnalysis.DescriptionTask </li><li>SmartSubtitle.AsrFullTextTask</li></ul>
                      * 
                      */
                     void SetTaskTypes(const std::vector<std::string>& _taskTypes);
@@ -213,49 +213,49 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p><b>On-demand <a href="/document/product/266/14574">application</a> ID. For customers who activate on-demand services from December 25, 2023, this field must be filled in with the app ID to access resources in on-demand applications (whether the default application or a newly created application).</b></p>
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Content to search</p>
                      */
                     std::string m_text;
                     bool m_textHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Knowledge base ID. If left empty, the default knowledge base will be used.</p>
                      */
                     std::string m_knowledgeBaseId;
                     bool m_knowledgeBaseIdHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Number of returned records. Default value: 20.</p><p>Value range: [1, 100]</p>
                      */
                     uint64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * 
+                     * <p>File type. Match any element in the collection: <li>Video: video file</li> <li>Audio: audio file</li> <li>Image: image file</li></p>
                      */
                     std::vector<std::string> m_categories;
                     bool m_categoriesHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Tag set, match any element in the collection.</p><p>Input limits: single tag length limited to 32 characters. Array length limit: 16.</p>
                      */
                     std::vector<std::string> m_tags;
                     bool m_tagsHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Collection of people, matching recording clips where all incoming people appear</p><p>Input limit: array length limit: 16</p>
                      */
                     std::vector<std::string> m_persons;
                     bool m_personsHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Task type to search. Optional values: </p><ul><li>AiAnalysis.DescriptionTask </li><li>SmartSubtitle.AsrFullTextTask</li></ul>
                      */
                     std::vector<std::string> m_taskTypes;
                     bool m_taskTypesHasBeenSet;

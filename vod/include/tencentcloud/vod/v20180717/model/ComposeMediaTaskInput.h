@@ -38,7 +38,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Input of a media file creation task.
                 */
                 class ComposeMediaTaskInput : public AbstractModel
                 {
@@ -50,15 +50,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Tracks 
+                     * 获取Input media track list, including multiple track information composed of materials such as video, audio, and images.
+                     * @return Tracks Input media track list, including multiple track information composed of materials such as video, audio, and images.
                      * 
                      */
                     std::vector<MediaTrack> GetTracks() const;
 
                     /**
-                     * 设置
-                     * @param _tracks 
+                     * 设置Input media track list, including multiple track information composed of materials such as video, audio, and images.
+                     * @param _tracks Input media track list, including multiple track information composed of materials such as video, audio, and images.
                      * 
                      */
                     void SetTracks(const std::vector<MediaTrack>& _tracks);
@@ -71,15 +71,15 @@ namespace TencentCloud
                     bool TracksHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Canvas 
+                     * 获取Canvas used when making video files.
+                     * @return Canvas Canvas used when making video files.
                      * 
                      */
                     Canvas GetCanvas() const;
 
                     /**
-                     * 设置
-                     * @param _canvas 
+                     * 设置Canvas used when making video files.
+                     * @param _canvas Canvas used when making video files.
                      * 
                      */
                     void SetCanvas(const Canvas& _canvas);
@@ -92,15 +92,15 @@ namespace TencentCloud
                     bool CanvasHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Output 
+                     * 获取Output media file information.
+                     * @return Output Output media file information.
                      * 
                      */
                     ComposeMediaOutput GetOutput() const;
 
                     /**
-                     * 设置
-                     * @param _output 
+                     * 设置Output media file information.
+                     * @param _output Output media file information.
                      * 
                      */
                     void SetOutput(const ComposeMediaOutput& _output);
@@ -115,19 +115,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Input media track list, including multiple track information composed of materials such as video, audio, and images.
                      */
                     std::vector<MediaTrack> m_tracks;
                     bool m_tracksHasBeenSet;
 
                     /**
-                     * 
+                     * Canvas used when making video files.
                      */
                     Canvas m_canvas;
                     bool m_canvasHasBeenSet;
 
                     /**
-                     * 
+                     * Output media file information.
                      */
                     ComposeMediaOutput m_output;
                     bool m_outputHasBeenSet;

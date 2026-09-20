@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Full text recognition input.
                 */
                 class AiRecognitionTaskOcrFullTextResultInput : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Definition 
+                     * 获取Full text recognition template ID.
+                     * @return Definition Full text recognition template ID.
                      * 
                      */
                     int64_t GetDefinition() const;
 
                     /**
-                     * 设置
-                     * @param _definition 
+                     * 设置Full text recognition template ID.
+                     * @param _definition Full text recognition template ID.
                      * 
                      */
                     void SetDefinition(const int64_t& _definition);
@@ -70,7 +70,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Full text recognition template ID.
                      */
                     int64_t m_definition;
                     bool m_definitionHasBeenSet;

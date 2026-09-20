@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Third-party Drm encryption information.
                 */
                 class ThirdPartyDrmInfo : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return DrmTypes 
+                     * 获取<p>Encryption type:</p><ul><li>FairPlay: can only be used for HLS, and the segment format can only be mp4 or mp4-mp4-segment</li><li>Widevine: can be used for HLS and DASH. For HLS, the segment format can only be mp4 or mp4-mp4-segment. For DASH, the segment format can only be mp4 or mp4-mp4-byterange</li><li>PlayReady: can be used for HLS and DASH. For HLS, the segment format can only be mp4 or mp4-mp4-segment. For DASH, the segment format can only be mp4 or mp4-mp4-byterange</li><li>Widevine+FairPlay, PlayReady+FairPlay, Widevine PlayReady FairPlay composite: can only be used for HLS, and the segment format can only be mp4 or mp4-mp4-segment</li><li>Widevine PlayReady composite: can be used for HLS and DASH. For HLS, the segment format can only be mp4 or mp4-mp4-segment. For DASH, the segment format can only be mp4 or mp4-mp4-byterange</li></ul>
+                     * @return DrmTypes <p>Encryption type:</p><ul><li>FairPlay: can only be used for HLS, and the segment format can only be mp4 or mp4-mp4-segment</li><li>Widevine: can be used for HLS and DASH. For HLS, the segment format can only be mp4 or mp4-mp4-segment. For DASH, the segment format can only be mp4 or mp4-mp4-byterange</li><li>PlayReady: can be used for HLS and DASH. For HLS, the segment format can only be mp4 or mp4-mp4-segment. For DASH, the segment format can only be mp4 or mp4-mp4-byterange</li><li>Widevine+FairPlay, PlayReady+FairPlay, Widevine PlayReady FairPlay composite: can only be used for HLS, and the segment format can only be mp4 or mp4-mp4-segment</li><li>Widevine PlayReady composite: can be used for HLS and DASH. For HLS, the segment format can only be mp4 or mp4-mp4-segment. For DASH, the segment format can only be mp4 or mp4-mp4-byterange</li></ul>
                      * 
                      */
                     std::vector<std::string> GetDrmTypes() const;
 
                     /**
-                     * 设置
-                     * @param _drmTypes 
+                     * 设置<p>Encryption type:</p><ul><li>FairPlay: can only be used for HLS, and the segment format can only be mp4 or mp4-mp4-segment</li><li>Widevine: can be used for HLS and DASH. For HLS, the segment format can only be mp4 or mp4-mp4-segment. For DASH, the segment format can only be mp4 or mp4-mp4-byterange</li><li>PlayReady: can be used for HLS and DASH. For HLS, the segment format can only be mp4 or mp4-mp4-segment. For DASH, the segment format can only be mp4 or mp4-mp4-byterange</li><li>Widevine+FairPlay, PlayReady+FairPlay, Widevine PlayReady FairPlay composite: can only be used for HLS, and the segment format can only be mp4 or mp4-mp4-segment</li><li>Widevine PlayReady composite: can be used for HLS and DASH. For HLS, the segment format can only be mp4 or mp4-mp4-segment. For DASH, the segment format can only be mp4 or mp4-mp4-byterange</li></ul>
+                     * @param _drmTypes <p>Encryption type:</p><ul><li>FairPlay: can only be used for HLS, and the segment format can only be mp4 or mp4-mp4-segment</li><li>Widevine: can be used for HLS and DASH. For HLS, the segment format can only be mp4 or mp4-mp4-segment. For DASH, the segment format can only be mp4 or mp4-mp4-byterange</li><li>PlayReady: can be used for HLS and DASH. For HLS, the segment format can only be mp4 or mp4-mp4-segment. For DASH, the segment format can only be mp4 or mp4-mp4-byterange</li><li>Widevine+FairPlay, PlayReady+FairPlay, Widevine PlayReady FairPlay composite: can only be used for HLS, and the segment format can only be mp4 or mp4-mp4-segment</li><li>Widevine PlayReady composite: can be used for HLS and DASH. For HLS, the segment format can only be mp4 or mp4-mp4-segment. For DASH, the segment format can only be mp4 or mp4-mp4-byterange</li></ul>
                      * 
                      */
                     void SetDrmTypes(const std::vector<std::string>& _drmTypes);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool DrmTypesHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SPEKEDrm 
+                     * 获取<p>External DRM vendor information.</p>
+                     * @return SPEKEDrm <p>External DRM vendor information.</p>
                      * 
                      */
                     SPEKEDrm GetSPEKEDrm() const;
 
                     /**
-                     * 设置
-                     * @param _sPEKEDrm 
+                     * 设置<p>External DRM vendor information.</p>
+                     * @param _sPEKEDrm <p>External DRM vendor information.</p>
                      * 
                      */
                     void SetSPEKEDrm(const SPEKEDrm& _sPEKEDrm);
@@ -92,13 +92,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p>Encryption type:</p><ul><li>FairPlay: can only be used for HLS, and the segment format can only be mp4 or mp4-mp4-segment</li><li>Widevine: can be used for HLS and DASH. For HLS, the segment format can only be mp4 or mp4-mp4-segment. For DASH, the segment format can only be mp4 or mp4-mp4-byterange</li><li>PlayReady: can be used for HLS and DASH. For HLS, the segment format can only be mp4 or mp4-mp4-segment. For DASH, the segment format can only be mp4 or mp4-mp4-byterange</li><li>Widevine+FairPlay, PlayReady+FairPlay, Widevine PlayReady FairPlay composite: can only be used for HLS, and the segment format can only be mp4 or mp4-mp4-segment</li><li>Widevine PlayReady composite: can be used for HLS and DASH. For HLS, the segment format can only be mp4 or mp4-mp4-segment. For DASH, the segment format can only be mp4 or mp4-mp4-byterange</li></ul>
                      */
                     std::vector<std::string> m_drmTypes;
                     bool m_drmTypesHasBeenSet;
 
                     /**
-                     * 
+                     * <p>External DRM vendor information.</p>
                      */
                     SPEKEDrm m_sPEKEDrm;
                     bool m_sPEKEDrmHasBeenSet;

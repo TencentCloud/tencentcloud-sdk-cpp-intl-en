@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return SubAppId 
+                     * 获取<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</b>
+                     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</b>
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置
-                     * @param _subAppId 
+                     * 设置<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</b>
+                     * @param _subAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</b>
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -64,15 +64,47 @@ namespace TencentCloud
                     bool SubAppIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Usages 
+                     * 获取<b>Keyword application scenario filtering conditions. Available values:</b>
+1. Recognition.Ocr: Performs content recognition using OCR.
+2. Recognition.Asr: Perform content recognition through audio recognition technology.
+3. Review.Ocr: Perform inappropriate content recognition through OCR.
+4. Review.Asr: Perform inappropriate content recognition through audio recognition technology.
+<b>Can be abbreviated as:</b>
+5. Recognition: Perform content recognition through OCR and audio recognition technology, equivalent to 1+2;
+6. Review: Perform inappropriate content recognition through OCR and audio recognition technology, equivalent to 3+4.
+Multiple selections allowed. The relationship between elements is "or", meaning records where the keyword's application scenario contains any element in the field collection meet this condition.
+                     * @return Usages <b>Keyword application scenario filtering conditions. Available values:</b>
+1. Recognition.Ocr: Performs content recognition using OCR.
+2. Recognition.Asr: Perform content recognition through audio recognition technology.
+3. Review.Ocr: Perform inappropriate content recognition through OCR.
+4. Review.Asr: Perform inappropriate content recognition through audio recognition technology.
+<b>Can be abbreviated as:</b>
+5. Recognition: Perform content recognition through OCR and audio recognition technology, equivalent to 1+2;
+6. Review: Perform inappropriate content recognition through OCR and audio recognition technology, equivalent to 3+4.
+Multiple selections allowed. The relationship between elements is "or", meaning records where the keyword's application scenario contains any element in the field collection meet this condition.
                      * 
                      */
                     std::vector<std::string> GetUsages() const;
 
                     /**
-                     * 设置
-                     * @param _usages 
+                     * 设置<b>Keyword application scenario filtering conditions. Available values:</b>
+1. Recognition.Ocr: Performs content recognition using OCR.
+2. Recognition.Asr: Perform content recognition through audio recognition technology.
+3. Review.Ocr: Perform inappropriate content recognition through OCR.
+4. Review.Asr: Perform inappropriate content recognition through audio recognition technology.
+<b>Can be abbreviated as:</b>
+5. Recognition: Perform content recognition through OCR and audio recognition technology, equivalent to 1+2;
+6. Review: Perform inappropriate content recognition through OCR and audio recognition technology, equivalent to 3+4.
+Multiple selections allowed. The relationship between elements is "or", meaning records where the keyword's application scenario contains any element in the field collection meet this condition.
+                     * @param _usages <b>Keyword application scenario filtering conditions. Available values:</b>
+1. Recognition.Ocr: Performs content recognition using OCR.
+2. Recognition.Asr: Perform content recognition through audio recognition technology.
+3. Review.Ocr: Perform inappropriate content recognition through OCR.
+4. Review.Asr: Perform inappropriate content recognition through audio recognition technology.
+<b>Can be abbreviated as:</b>
+5. Recognition: Perform content recognition through OCR and audio recognition technology, equivalent to 1+2;
+6. Review: Perform inappropriate content recognition through OCR and audio recognition technology, equivalent to 3+4.
+Multiple selections allowed. The relationship between elements is "or", meaning records where the keyword's application scenario contains any element in the field collection meet this condition.
                      * 
                      */
                     void SetUsages(const std::vector<std::string>& _usages);
@@ -85,15 +117,15 @@ namespace TencentCloud
                     bool UsagesHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Keywords 
+                     * 获取Keyword filtering conditions. Array length limit: 100 words.
+                     * @return Keywords Keyword filtering conditions. Array length limit: 100 words.
                      * 
                      */
                     std::vector<std::string> GetKeywords() const;
 
                     /**
-                     * 设置
-                     * @param _keywords 
+                     * 设置Keyword filtering conditions. Array length limit: 100 words.
+                     * @param _keywords Keyword filtering conditions. Array length limit: 100 words.
                      * 
                      */
                     void SetKeywords(const std::vector<std::string>& _keywords);
@@ -106,15 +138,15 @@ namespace TencentCloud
                     bool KeywordsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Tags 
+                     * 获取Tag filtering condition. Array length limit: 20 words.
+                     * @return Tags Tag filtering condition. Array length limit: 20 words.
                      * 
                      */
                     std::vector<std::string> GetTags() const;
 
                     /**
-                     * 设置
-                     * @param _tags 
+                     * 设置Tag filtering condition. Array length limit: 20 words.
+                     * @param _tags Tag filtering condition. Array length limit: 20 words.
                      * 
                      */
                     void SetTags(const std::vector<std::string>& _tags);
@@ -127,15 +159,15 @@ namespace TencentCloud
                     bool TagsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Offset 
+                     * 获取Pagination offset. Default value: 0.
+                     * @return Offset Pagination offset. Default value: 0.
                      * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
-                     * 设置
-                     * @param _offset 
+                     * 设置Pagination offset. Default value: 0.
+                     * @param _offset Pagination offset. Default value: 0.
                      * 
                      */
                     void SetOffset(const uint64_t& _offset);
@@ -148,15 +180,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Limit 
+                     * 获取Number of returned entries. Default value: 100. Maximum value: 100.
+                     * @return Limit Number of returned entries. Default value: 100. Maximum value: 100.
                      * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
-                     * 设置
-                     * @param _limit 
+                     * 设置Number of returned entries. Default value: 100. Maximum value: 100.
+                     * @param _limit Number of returned entries. Default value: 100. Maximum value: 100.
                      * 
                      */
                     void SetLimit(const uint64_t& _limit);
@@ -171,37 +203,45 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD from December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</b>
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
 
                     /**
-                     * 
+                     * <b>Keyword application scenario filtering conditions. Available values:</b>
+1. Recognition.Ocr: Performs content recognition using OCR.
+2. Recognition.Asr: Perform content recognition through audio recognition technology.
+3. Review.Ocr: Perform inappropriate content recognition through OCR.
+4. Review.Asr: Perform inappropriate content recognition through audio recognition technology.
+<b>Can be abbreviated as:</b>
+5. Recognition: Perform content recognition through OCR and audio recognition technology, equivalent to 1+2;
+6. Review: Perform inappropriate content recognition through OCR and audio recognition technology, equivalent to 3+4.
+Multiple selections allowed. The relationship between elements is "or", meaning records where the keyword's application scenario contains any element in the field collection meet this condition.
                      */
                     std::vector<std::string> m_usages;
                     bool m_usagesHasBeenSet;
 
                     /**
-                     * 
+                     * Keyword filtering conditions. Array length limit: 100 words.
                      */
                     std::vector<std::string> m_keywords;
                     bool m_keywordsHasBeenSet;
 
                     /**
-                     * 
+                     * Tag filtering condition. Array length limit: 20 words.
                      */
                     std::vector<std::string> m_tags;
                     bool m_tagsHasBeenSet;
 
                     /**
-                     * 
+                     * Pagination offset. Default value: 0.
                      */
                     uint64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * 
+                     * Number of returned entries. Default value: 100. Maximum value: 100.
                      */
                     uint64_t m_limit;
                     bool m_limitHasBeenSet;

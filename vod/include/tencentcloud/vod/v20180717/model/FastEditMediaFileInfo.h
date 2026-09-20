@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Input media type for quick media edit operations
                 */
                 class FastEditMediaFileInfo : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return FileId 
+                     * 获取Media ID.
+                     * @return FileId Media ID.
                      * 
                      */
                     std::string GetFileId() const;
 
                     /**
-                     * 设置
-                     * @param _fileId 
+                     * 设置Media ID.
+                     * @param _fileId Media ID.
                      * 
                      */
                     void SetFileId(const std::string& _fileId);
@@ -68,15 +68,27 @@ namespace TencentCloud
                     bool FileIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AudioVideoType 
+                     * 获取Audio and video type for operation. Optional values:
+<li>Transcode: transcode;</li>
+<li>Original: original audio/video.</li>
+Note: The audio and video to operate must be in HLS format.
+                     * @return AudioVideoType Audio and video type for operation. Optional values:
+<li>Transcode: transcode;</li>
+<li>Original: original audio/video.</li>
+Note: The audio and video to operate must be in HLS format.
                      * 
                      */
                     std::string GetAudioVideoType() const;
 
                     /**
-                     * 设置
-                     * @param _audioVideoType 
+                     * 设置Audio and video type for operation. Optional values:
+<li>Transcode: transcode;</li>
+<li>Original: original audio/video.</li>
+Note: The audio and video to operate must be in HLS format.
+                     * @param _audioVideoType Audio and video type for operation. Optional values:
+<li>Transcode: transcode;</li>
+<li>Original: original audio/video.</li>
+Note: The audio and video to operate must be in HLS format.
                      * 
                      */
                     void SetAudioVideoType(const std::string& _audioVideoType);
@@ -89,15 +101,15 @@ namespace TencentCloud
                     bool AudioVideoTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return TranscodeDefinition 
+                     * 获取Valid when `AudioVideoType` is `Transcode`. It indicates the transcoding template ID for media operation.
+                     * @return TranscodeDefinition Valid when `AudioVideoType` is `Transcode`. It indicates the transcoding template ID for media operation.
                      * 
                      */
                     int64_t GetTranscodeDefinition() const;
 
                     /**
-                     * 设置
-                     * @param _transcodeDefinition 
+                     * 设置Valid when `AudioVideoType` is `Transcode`. It indicates the transcoding template ID for media operation.
+                     * @param _transcodeDefinition Valid when `AudioVideoType` is `Transcode`. It indicates the transcoding template ID for media operation.
                      * 
                      */
                     void SetTranscodeDefinition(const int64_t& _transcodeDefinition);
@@ -110,15 +122,15 @@ namespace TencentCloud
                     bool TranscodeDefinitionHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return StartTimeOffset 
+                     * 获取Media editing start offset time in seconds.
+                     * @return StartTimeOffset Media editing start offset time in seconds.
                      * 
                      */
                     double GetStartTimeOffset() const;
 
                     /**
-                     * 设置
-                     * @param _startTimeOffset 
+                     * 设置Media editing start offset time in seconds.
+                     * @param _startTimeOffset Media editing start offset time in seconds.
                      * 
                      */
                     void SetStartTimeOffset(const double& _startTimeOffset);
@@ -131,15 +143,15 @@ namespace TencentCloud
                     bool StartTimeOffsetHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return EndTimeOffset 
+                     * 获取Media editing end time offset, in seconds.
+                     * @return EndTimeOffset Media editing end time offset, in seconds.
                      * 
                      */
                     double GetEndTimeOffset() const;
 
                     /**
-                     * 设置
-                     * @param _endTimeOffset 
+                     * 设置Media editing end time offset, in seconds.
+                     * @param _endTimeOffset Media editing end time offset, in seconds.
                      * 
                      */
                     void SetEndTimeOffset(const double& _endTimeOffset);
@@ -154,31 +166,34 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Media ID.
                      */
                     std::string m_fileId;
                     bool m_fileIdHasBeenSet;
 
                     /**
-                     * 
+                     * Audio and video type for operation. Optional values:
+<li>Transcode: transcode;</li>
+<li>Original: original audio/video.</li>
+Note: The audio and video to operate must be in HLS format.
                      */
                     std::string m_audioVideoType;
                     bool m_audioVideoTypeHasBeenSet;
 
                     /**
-                     * 
+                     * Valid when `AudioVideoType` is `Transcode`. It indicates the transcoding template ID for media operation.
                      */
                     int64_t m_transcodeDefinition;
                     bool m_transcodeDefinitionHasBeenSet;
 
                     /**
-                     * 
+                     * Media editing start offset time in seconds.
                      */
                     double m_startTimeOffset;
                     bool m_startTimeOffsetHasBeenSet;
 
                     /**
-                     * 
+                     * Media editing end time offset, in seconds.
                      */
                     double m_endTimeOffset;
                     bool m_endTimeOffsetHasBeenSet;

@@ -56,7 +56,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * License OCR result
+                * Document recognition result
                 */
                 class CardInfo : public AbstractModel
                 {
@@ -68,19 +68,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Hong Kong ID (China) Card
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return HKIDCard Hong Kong ID (China) Card
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Hong Kong identity card
+                     * @return HKIDCard Hong Kong identity card
                      * 
                      */
                     HKIDCard GetHKIDCard() const;
 
                     /**
-                     * 设置Hong Kong ID (China) Card
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _hKIDCard Hong Kong ID (China) Card
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Hong Kong identity card
+                     * @param _hKIDCard Hong Kong identity card
                      * 
                      */
                     void SetHKIDCard(const HKIDCard& _hKIDCard);
@@ -93,19 +89,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool HKIDCardHasBeenSet() const;
 
                     /**
-                     * 获取Malaysia ID Card
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return MLIDCard Malaysia ID Card
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Malaysian identity card
+                     * @return MLIDCard Malaysian identity card
                      * 
                      */
                     MLIDCard GetMLIDCard() const;
 
                     /**
-                     * 设置Malaysia ID Card
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _mLIDCard Malaysia ID Card
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Malaysian identity card
+                     * @param _mLIDCard Malaysian identity card
                      * 
                      */
                     void SetMLIDCard(const MLIDCard& _mLIDCard);
@@ -118,19 +110,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool MLIDCardHasBeenSet() const;
 
                     /**
-                     * 获取Philippines VoteID Card
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return PhilippinesVoteID Philippines VoteID Card
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Philippines voter card
+                     * @return PhilippinesVoteID Philippines voter card
                      * 
                      */
                     PhilippinesVoteID GetPhilippinesVoteID() const;
 
                     /**
-                     * 设置Philippines VoteID Card
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _philippinesVoteID Philippines VoteID Card
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Philippines voter card
+                     * @param _philippinesVoteID Philippines voter card
                      * 
                      */
                     void SetPhilippinesVoteID(const PhilippinesVoteID& _philippinesVoteID);
@@ -143,19 +131,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool PhilippinesVoteIDHasBeenSet() const;
 
                     /**
-                     * 获取Indonesia ID Card
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return IndonesiaIDCard Indonesia ID Card
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Indonesian Identity Card
+                     * @return IndonesiaIDCard Indonesian Identity Card
                      * 
                      */
                     IndonesiaIDCard GetIndonesiaIDCard() const;
 
                     /**
-                     * 设置Indonesia ID Card
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _indonesiaIDCard Indonesia ID Card
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Indonesian Identity Card
+                     * @param _indonesiaIDCard Indonesian Identity Card
                      * 
                      */
                     void SetIndonesiaIDCard(const IndonesiaIDCard& _indonesiaIDCard);
@@ -168,19 +152,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool IndonesiaIDCardHasBeenSet() const;
 
                     /**
-                     * 获取Philippines Driving License
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return PhilippinesDrivingLicense Philippines Driving License
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Philippines driving license
+                     * @return PhilippinesDrivingLicense Philippines driving license
                      * 
                      */
                     PhilippinesDrivingLicense GetPhilippinesDrivingLicense() const;
 
                     /**
-                     * 设置Philippines Driving License
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _philippinesDrivingLicense Philippines Driving License
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Philippines driving license
+                     * @param _philippinesDrivingLicense Philippines driving license
                      * 
                      */
                     void SetPhilippinesDrivingLicense(const PhilippinesDrivingLicense& _philippinesDrivingLicense);
@@ -193,19 +173,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool PhilippinesDrivingLicenseHasBeenSet() const;
 
                     /**
-                     * 获取Philippines TinID
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return PhilippinesTinID Philippines TinID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取TinID in the Philippines
+                     * @return PhilippinesTinID TinID in the Philippines
                      * 
                      */
                     PhilippinesTinID GetPhilippinesTinID() const;
 
                     /**
-                     * 设置Philippines TinID
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _philippinesTinID Philippines TinID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置TinID in the Philippines
+                     * @param _philippinesTinID TinID in the Philippines
                      * 
                      */
                     void SetPhilippinesTinID(const PhilippinesTinID& _philippinesTinID);
@@ -219,18 +195,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Philippines SSSID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return PhilippinesSSSID Philippines SSSID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     PhilippinesSSSID GetPhilippinesSSSID() const;
 
                     /**
                      * 设置Philippines SSSID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _philippinesSSSID Philippines SSSID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetPhilippinesSSSID(const PhilippinesSSSID& _philippinesSSSID);
@@ -244,18 +216,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Philippines UMID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return PhilippinesUMID Philippines UMID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     PhilippinesUMID GetPhilippinesUMID() const;
 
                     /**
                      * 设置Philippines UMID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _philippinesUMID Philippines UMID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetPhilippinesUMID(const PhilippinesUMID& _philippinesUMID);
@@ -268,19 +236,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool PhilippinesUMIDHasBeenSet() const;
 
                     /**
-                     * 获取ID Cards of Hong Kong (China), Macao (China) and Taiwan (China), and International Passport
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return InternationalIDPassport ID Cards of Hong Kong (China), Macao (China) and Taiwan (China), and International Passport
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Hong Kong, Macao, and Taiwan region as well as overseas passport
+                     * @return InternationalIDPassport Hong Kong, Macao, and Taiwan region as well as overseas passport
                      * 
                      */
                     InternationalIDPassport GetInternationalIDPassport() const;
 
                     /**
-                     * 设置ID Cards of Hong Kong (China), Macao (China) and Taiwan (China), and International Passport
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _internationalIDPassport ID Cards of Hong Kong (China), Macao (China) and Taiwan (China), and International Passport
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Hong Kong, Macao, and Taiwan region as well as overseas passport
+                     * @param _internationalIDPassport Hong Kong, Macao, and Taiwan region as well as overseas passport
                      * 
                      */
                     void SetInternationalIDPassport(const InternationalIDPassport& _internationalIDPassport);
@@ -293,19 +257,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool InternationalIDPassportHasBeenSet() const;
 
                     /**
-                     * 获取General license information
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return GeneralCard General license information
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取General card certificate information
+                     * @return GeneralCard General card certificate information
                      * 
                      */
                     GeneralCard GetGeneralCard() const;
 
                     /**
-                     * 设置General license information
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _generalCard General license information
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置General card certificate information
+                     * @param _generalCard General card certificate information
                      * 
                      */
                     void SetGeneralCard(const GeneralCard& _generalCard);
@@ -318,19 +278,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool GeneralCardHasBeenSet() const;
 
                     /**
-                     * 获取Indonesia Driving License
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return IndonesiaDrivingLicense Indonesia Driving License
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Indonesian driving license
+                     * @return IndonesiaDrivingLicense Indonesian driving license
                      * 
                      */
                     IndonesiaDrivingLicense GetIndonesiaDrivingLicense() const;
 
                     /**
-                     * 设置Indonesia Driving License
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _indonesiaDrivingLicense Indonesia Driving License
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Indonesian driving license
+                     * @param _indonesiaDrivingLicense Indonesian driving license
                      * 
                      */
                     void SetIndonesiaDrivingLicense(const IndonesiaDrivingLicense& _indonesiaDrivingLicense);
@@ -343,19 +299,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool IndonesiaDrivingLicenseHasBeenSet() const;
 
                     /**
-                     * 获取Thailand ID Card
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ThailandIDCard Thailand ID Card
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Thai Identity Card
+                     * @return ThailandIDCard Thai Identity Card
                      * 
                      */
                     ThailandIDCard GetThailandIDCard() const;
 
                     /**
-                     * 设置Thailand ID Card
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _thailandIDCard Thailand ID Card
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Thai Identity Card
+                     * @param _thailandIDCard Thai Identity Card
                      * 
                      */
                     void SetThailandIDCard(const ThailandIDCard& _thailandIDCard);
@@ -368,19 +320,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ThailandIDCardHasBeenSet() const;
 
                     /**
-                     * 获取Singapore ID Card
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return SingaporeIDCard Singapore ID Card
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Singapore ID card
+                     * @return SingaporeIDCard Singapore ID card
                      * 
                      */
                     SingaporeIDCard GetSingaporeIDCard() const;
 
                     /**
-                     * 设置Singapore ID Card
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _singaporeIDCard Singapore ID Card
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Singapore ID card
+                     * @param _singaporeIDCard Singapore ID card
                      * 
                      */
                     void SetSingaporeIDCard(const SingaporeIDCard& _singaporeIDCard);
@@ -393,19 +341,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool SingaporeIDCardHasBeenSet() const;
 
                     /**
-                     * 获取Macao (China) ID Card
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return MacaoIDCard Macao (China) ID Card
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Macao (China) identity card
+                     * @return MacaoIDCard Macao (China) identity card
                      * 
                      */
                     MacaoIDCard GetMacaoIDCard() const;
 
                     /**
-                     * 设置Macao (China) ID Card
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _macaoIDCard Macao (China) ID Card
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Macao (China) identity card
+                     * @param _macaoIDCard Macao (China) identity card
                      * 
                      */
                     void SetMacaoIDCard(const MacaoIDCard& _macaoIDCard);
@@ -418,19 +362,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool MacaoIDCardHasBeenSet() const;
 
                     /**
-                     * 获取TaiWan (China) ID Card
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return TaiWanIDCard TaiWan (China) ID Card
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Taiwan (China) ID card
+                     * @return TaiWanIDCard Taiwan (China) ID card
                      * 
                      */
                     TaiWanIDCard GetTaiWanIDCard() const;
 
                     /**
-                     * 设置TaiWan (China) ID Card
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _taiWanIDCard TaiWan (China) ID Card
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Taiwan (China) ID card
+                     * @param _taiWanIDCard Taiwan (China) ID card
                      * 
                      */
                     void SetTaiWanIDCard(const TaiWanIDCard& _taiWanIDCard);
@@ -443,19 +383,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool TaiWanIDCardHasBeenSet() const;
 
                     /**
-                     * 获取Japan ID Card
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return JapanIDCard Japan ID Card
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Japan identity card
+                     * @return JapanIDCard Japan identity card
                      * 
                      */
                     JapanIDCard GetJapanIDCard() const;
 
                     /**
-                     * 设置Japan ID Card
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _japanIDCard Japan ID Card
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Japan identity card
+                     * @param _japanIDCard Japan identity card
                      * 
                      */
                     void SetJapanIDCard(const JapanIDCard& _japanIDCard);
@@ -468,19 +404,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool JapanIDCardHasBeenSet() const;
 
                     /**
-                     * 获取Bangladesh ID Card
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return BangladeshIDCard Bangladesh ID Card
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Bangladesh ID card
+                     * @return BangladeshIDCard Bangladesh ID card
                      * 
                      */
                     BangladeshIDCard GetBangladeshIDCard() const;
 
                     /**
-                     * 设置Bangladesh ID Card
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _bangladeshIDCard Bangladesh ID Card
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Bangladesh ID card
+                     * @param _bangladeshIDCard Bangladesh ID card
                      * 
                      */
                     void SetBangladeshIDCard(const BangladeshIDCard& _bangladeshIDCard);
@@ -493,19 +425,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool BangladeshIDCardHasBeenSet() const;
 
                     /**
-                     * 获取Nigeria ID Card
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return NigeriaIDCard Nigeria ID Card
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Nigerian Identity Card
+                     * @return NigeriaIDCard Nigerian Identity Card
                      * 
                      */
                     NigeriaIDCard GetNigeriaIDCard() const;
 
                     /**
-                     * 设置Nigeria ID Card
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _nigeriaIDCard Nigeria ID Card
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Nigerian Identity Card
+                     * @param _nigeriaIDCard Nigerian Identity Card
                      * 
                      */
                     void SetNigeriaIDCard(const NigeriaIDCard& _nigeriaIDCard);
@@ -518,19 +446,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool NigeriaIDCardHasBeenSet() const;
 
                     /**
-                     * 获取Nigeria driving license
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return NigeriaDrivingLicense Nigeria driving license
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Nigerian driver's license
+                     * @return NigeriaDrivingLicense Nigerian driver's license
                      * 
                      */
                     NigeriaDrivingLicense GetNigeriaDrivingLicense() const;
 
                     /**
-                     * 设置Nigeria driving license
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _nigeriaDrivingLicense Nigeria driving license
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Nigerian driver's license
+                     * @param _nigeriaDrivingLicense Nigerian driver's license
                      * 
                      */
                     void SetNigeriaDrivingLicense(const NigeriaDrivingLicense& _nigeriaDrivingLicense);
@@ -543,19 +467,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool NigeriaDrivingLicenseHasBeenSet() const;
 
                     /**
-                     * 获取Pakistan ID Card
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return PakistanIDCard Pakistan ID Card
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Pakistan identity card
+                     * @return PakistanIDCard Pakistan identity card
                      * 
                      */
                     PakistanIDCard GetPakistanIDCard() const;
 
                     /**
-                     * 设置Pakistan ID Card
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _pakistanIDCard Pakistan ID Card
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Pakistan identity card
+                     * @param _pakistanIDCard Pakistan identity card
                      * 
                      */
                     void SetPakistanIDCard(const PakistanIDCard& _pakistanIDCard);
@@ -568,19 +488,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool PakistanIDCardHasBeenSet() const;
 
                     /**
-                     * 获取Pakistan driving license
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return PakistanDrivingLicense Pakistan driving license
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Pakistan driver's license
+                     * @return PakistanDrivingLicense Pakistan driver's license
                      * 
                      */
                     PakistanDrivingLicense GetPakistanDrivingLicense() const;
 
                     /**
-                     * 设置Pakistan driving license
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _pakistanDrivingLicense Pakistan driving license
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Pakistan driver's license
+                     * @param _pakistanDrivingLicense Pakistan driver's license
                      * 
                      */
                     void SetPakistanDrivingLicense(const PakistanDrivingLicense& _pakistanDrivingLicense);
@@ -595,148 +511,127 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * Hong Kong ID (China) Card
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Hong Kong identity card
                      */
                     HKIDCard m_hKIDCard;
                     bool m_hKIDCardHasBeenSet;
 
                     /**
-                     * Malaysia ID Card
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Malaysian identity card
                      */
                     MLIDCard m_mLIDCard;
                     bool m_mLIDCardHasBeenSet;
 
                     /**
-                     * Philippines VoteID Card
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Philippines voter card
                      */
                     PhilippinesVoteID m_philippinesVoteID;
                     bool m_philippinesVoteIDHasBeenSet;
 
                     /**
-                     * Indonesia ID Card
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Indonesian Identity Card
                      */
                     IndonesiaIDCard m_indonesiaIDCard;
                     bool m_indonesiaIDCardHasBeenSet;
 
                     /**
-                     * Philippines Driving License
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Philippines driving license
                      */
                     PhilippinesDrivingLicense m_philippinesDrivingLicense;
                     bool m_philippinesDrivingLicenseHasBeenSet;
 
                     /**
-                     * Philippines TinID
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * TinID in the Philippines
                      */
                     PhilippinesTinID m_philippinesTinID;
                     bool m_philippinesTinIDHasBeenSet;
 
                     /**
                      * Philippines SSSID
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     PhilippinesSSSID m_philippinesSSSID;
                     bool m_philippinesSSSIDHasBeenSet;
 
                     /**
                      * Philippines UMID
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     PhilippinesUMID m_philippinesUMID;
                     bool m_philippinesUMIDHasBeenSet;
 
                     /**
-                     * ID Cards of Hong Kong (China), Macao (China) and Taiwan (China), and International Passport
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Hong Kong, Macao, and Taiwan region as well as overseas passport
                      */
                     InternationalIDPassport m_internationalIDPassport;
                     bool m_internationalIDPassportHasBeenSet;
 
                     /**
-                     * General license information
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * General card certificate information
                      */
                     GeneralCard m_generalCard;
                     bool m_generalCardHasBeenSet;
 
                     /**
-                     * Indonesia Driving License
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Indonesian driving license
                      */
                     IndonesiaDrivingLicense m_indonesiaDrivingLicense;
                     bool m_indonesiaDrivingLicenseHasBeenSet;
 
                     /**
-                     * Thailand ID Card
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Thai Identity Card
                      */
                     ThailandIDCard m_thailandIDCard;
                     bool m_thailandIDCardHasBeenSet;
 
                     /**
-                     * Singapore ID Card
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Singapore ID card
                      */
                     SingaporeIDCard m_singaporeIDCard;
                     bool m_singaporeIDCardHasBeenSet;
 
                     /**
-                     * Macao (China) ID Card
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Macao (China) identity card
                      */
                     MacaoIDCard m_macaoIDCard;
                     bool m_macaoIDCardHasBeenSet;
 
                     /**
-                     * TaiWan (China) ID Card
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Taiwan (China) ID card
                      */
                     TaiWanIDCard m_taiWanIDCard;
                     bool m_taiWanIDCardHasBeenSet;
 
                     /**
-                     * Japan ID Card
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Japan identity card
                      */
                     JapanIDCard m_japanIDCard;
                     bool m_japanIDCardHasBeenSet;
 
                     /**
-                     * Bangladesh ID Card
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Bangladesh ID card
                      */
                     BangladeshIDCard m_bangladeshIDCard;
                     bool m_bangladeshIDCardHasBeenSet;
 
                     /**
-                     * Nigeria ID Card
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Nigerian Identity Card
                      */
                     NigeriaIDCard m_nigeriaIDCard;
                     bool m_nigeriaIDCardHasBeenSet;
 
                     /**
-                     * Nigeria driving license
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Nigerian driver's license
                      */
                     NigeriaDrivingLicense m_nigeriaDrivingLicense;
                     bool m_nigeriaDrivingLicenseHasBeenSet;
 
                     /**
-                     * Pakistan ID Card
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Pakistan identity card
                      */
                     PakistanIDCard m_pakistanIDCard;
                     bool m_pakistanIDCardHasBeenSet;
 
                     /**
-                     * Pakistan driving license
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Pakistan driver's license
                      */
                     PakistanDrivingLicense m_pakistanDrivingLicense;
                     bool m_pakistanDrivingLicenseHasBeenSet;

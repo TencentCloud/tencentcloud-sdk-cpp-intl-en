@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * User-defined custom voice moderation task control parameter
                 */
                 class UserDefineAsrTextReviewTemplateInfoForUpdate : public AbstractModel
                 {
@@ -47,15 +47,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Switch 
+                     * 获取User custom speech audit task switch. Available values:
+<li>ON: Enable the custom voice moderation task;</li>
+<li>OFF: disables the custom voice moderation task.</li>
+                     * @return Switch User custom speech audit task switch. Available values:
+<li>ON: Enable the custom voice moderation task;</li>
+<li>OFF: disables the custom voice moderation task.</li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置
-                     * @param _switch 
+                     * 设置User custom speech audit task switch. Available values:
+<li>ON: Enable the custom voice moderation task;</li>
+<li>OFF: disables the custom voice moderation task.</li>
+                     * @param _switch User custom speech audit task switch. Available values:
+<li>ON: Enable the custom voice moderation task;</li>
+<li>OFF: disables the custom voice moderation task.</li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -68,15 +76,19 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return LabelSet 
+                     * 获取User-customized voice filter tags. The auditing results including the selected tags are returned. If the filter tag is empty, all auditing results will be returned. To use the tag filtering feature, the corresponding tag needs to be added when adding custom voice keyword material.
+The number of tags can be up to 10, and each tag can contain up to 16 characters.
+                     * @return LabelSet User-customized voice filter tags. The auditing results including the selected tags are returned. If the filter tag is empty, all auditing results will be returned. To use the tag filtering feature, the corresponding tag needs to be added when adding custom voice keyword material.
+The number of tags can be up to 10, and each tag can contain up to 16 characters.
                      * 
                      */
                     std::vector<std::string> GetLabelSet() const;
 
                     /**
-                     * 设置
-                     * @param _labelSet 
+                     * 设置User-customized voice filter tags. The auditing results including the selected tags are returned. If the filter tag is empty, all auditing results will be returned. To use the tag filtering feature, the corresponding tag needs to be added when adding custom voice keyword material.
+The number of tags can be up to 10, and each tag can contain up to 16 characters.
+                     * @param _labelSet User-customized voice filter tags. The auditing results including the selected tags are returned. If the filter tag is empty, all auditing results will be returned. To use the tag filtering feature, the corresponding tag needs to be added when adding custom voice keyword material.
+The number of tags can be up to 10, and each tag can contain up to 16 characters.
                      * 
                      */
                     void SetLabelSet(const std::vector<std::string>& _labelSet);
@@ -89,15 +101,15 @@ namespace TencentCloud
                     bool LabelSetHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return BlockConfidence 
+                     * 获取Threshold score for determining suspected violations. When the review score reaches or exceeds this threshold, it is considered a suspected violation. Value range: 0–100.
+                     * @return BlockConfidence Threshold score for determining suspected violations. When the review score reaches or exceeds this threshold, it is considered a suspected violation. Value range: 0–100.
                      * 
                      */
                     int64_t GetBlockConfidence() const;
 
                     /**
-                     * 设置
-                     * @param _blockConfidence 
+                     * 设置Threshold score for determining suspected violations. When the review score reaches or exceeds this threshold, it is considered a suspected violation. Value range: 0–100.
+                     * @param _blockConfidence Threshold score for determining suspected violations. When the review score reaches or exceeds this threshold, it is considered a suspected violation. Value range: 0–100.
                      * 
                      */
                     void SetBlockConfidence(const int64_t& _blockConfidence);
@@ -110,15 +122,15 @@ namespace TencentCloud
                     bool BlockConfidenceHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ReviewConfidence 
+                     * 获取Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is considered necessary. Value range: 0–100.
+                     * @return ReviewConfidence Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is considered necessary. Value range: 0–100.
                      * 
                      */
                     int64_t GetReviewConfidence() const;
 
                     /**
-                     * 设置
-                     * @param _reviewConfidence 
+                     * 设置Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is considered necessary. Value range: 0–100.
+                     * @param _reviewConfidence Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is considered necessary. Value range: 0–100.
                      * 
                      */
                     void SetReviewConfidence(const int64_t& _reviewConfidence);
@@ -133,25 +145,28 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * User custom speech audit task switch. Available values:
+<li>ON: Enable the custom voice moderation task;</li>
+<li>OFF: disables the custom voice moderation task.</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * 
+                     * User-customized voice filter tags. The auditing results including the selected tags are returned. If the filter tag is empty, all auditing results will be returned. To use the tag filtering feature, the corresponding tag needs to be added when adding custom voice keyword material.
+The number of tags can be up to 10, and each tag can contain up to 16 characters.
                      */
                     std::vector<std::string> m_labelSet;
                     bool m_labelSetHasBeenSet;
 
                     /**
-                     * 
+                     * Threshold score for determining suspected violations. When the review score reaches or exceeds this threshold, it is considered a suspected violation. Value range: 0–100.
                      */
                     int64_t m_blockConfidence;
                     bool m_blockConfidenceHasBeenSet;
 
                     /**
-                     * 
+                     * Threshold score for determining whether manual review is required for violations. When the review score reaches or exceeds this threshold, manual review is considered necessary. Value range: 0–100.
                      */
                     int64_t m_reviewConfidence;
                     bool m_reviewConfidenceHasBeenSet;

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Volume equalization configuration.
                 */
                 class AudioVolumeBalanceInfo : public AbstractModel
                 {
@@ -47,15 +47,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Switch 
+                     * 获取Volume equalization control switch. Available values:
+<li>ON: enable volume equalization</li>
+<li>OFF: Disable volume equalization.</li>
+                     * @return Switch Volume equalization control switch. Available values:
+<li>ON: enable volume equalization</li>
+<li>OFF: Disable volume equalization.</li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置
-                     * @param _switch 
+                     * 设置Volume equalization control switch. Available values:
+<li>ON: enable volume equalization</li>
+<li>OFF: Disable volume equalization.</li>
+                     * @param _switch Volume equalization control switch. Available values:
+<li>ON: enable volume equalization</li>
+<li>OFF: Disable volume equalization.</li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -68,15 +76,27 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Type 
+                     * 获取Type. Valid values:
+<li>loudNorm: loudness normalization</li>
+<li>gainControl: reduce abrupt change</li>
+Default value: loudNorm.
+                     * @return Type Type. Valid values:
+<li>loudNorm: loudness normalization</li>
+<li>gainControl: reduce abrupt change</li>
+Default value: loudNorm.
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置
-                     * @param _type 
+                     * 设置Type. Valid values:
+<li>loudNorm: loudness normalization</li>
+<li>gainControl: reduce abrupt change</li>
+Default value: loudNorm.
+                     * @param _type Type. Valid values:
+<li>loudNorm: loudness normalization</li>
+<li>gainControl: reduce abrupt change</li>
+Default value: loudNorm.
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -91,13 +111,18 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Volume equalization control switch. Available values:
+<li>ON: enable volume equalization</li>
+<li>OFF: Disable volume equalization.</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * 
+                     * Type. Valid values:
+<li>loudNorm: loudness normalization</li>
+<li>gainControl: reduce abrupt change</li>
+Default value: loudNorm.
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;

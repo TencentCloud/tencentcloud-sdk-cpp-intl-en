@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Artifact (burr) removal control information
                 */
                 class ArtifactRepairInfo : public AbstractModel
                 {
@@ -47,15 +47,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Switch 
+                     * 获取Artifact (burr) removal control switch. Available values:
+<li>ON: enable artifact (burr) removal;</li>
+<li>OFF: Disable artifact removal (burr).</li>
+                     * @return Switch Artifact (burr) removal control switch. Available values:
+<li>ON: enable artifact (burr) removal;</li>
+<li>OFF: Disable artifact removal (burr).</li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置
-                     * @param _switch 
+                     * 设置Artifact (burr) removal control switch. Available values:
+<li>ON: enable artifact (burr) removal;</li>
+<li>OFF: Disable artifact removal (burr).</li>
+                     * @param _switch Artifact (burr) removal control switch. Available values:
+<li>ON: enable artifact (burr) removal;</li>
+<li>OFF: Disable artifact removal (burr).</li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -68,15 +76,27 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Type 
+                     * 获取Artifact (burr) removal type. Valid only when the artifact (burr) removal control switch is ON. Available values:
+<li>weak: slight artifact removal (burr);</li>
+<li>strong: Strong artifact removal (burr).</li>
+Default value: weak.
+                     * @return Type Artifact (burr) removal type. Valid only when the artifact (burr) removal control switch is ON. Available values:
+<li>weak: slight artifact removal (burr);</li>
+<li>strong: Strong artifact removal (burr).</li>
+Default value: weak.
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置
-                     * @param _type 
+                     * 设置Artifact (burr) removal type. Valid only when the artifact (burr) removal control switch is ON. Available values:
+<li>weak: slight artifact removal (burr);</li>
+<li>strong: Strong artifact removal (burr).</li>
+Default value: weak.
+                     * @param _type Artifact (burr) removal type. Valid only when the artifact (burr) removal control switch is ON. Available values:
+<li>weak: slight artifact removal (burr);</li>
+<li>strong: Strong artifact removal (burr).</li>
+Default value: weak.
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -91,13 +111,18 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Artifact (burr) removal control switch. Available values:
+<li>ON: enable artifact (burr) removal;</li>
+<li>OFF: Disable artifact removal (burr).</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * 
+                     * Artifact (burr) removal type. Valid only when the artifact (burr) removal control switch is ON. Available values:
+<li>weak: slight artifact removal (burr);</li>
+<li>strong: Strong artifact removal (burr).</li>
+Default value: weak.
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;

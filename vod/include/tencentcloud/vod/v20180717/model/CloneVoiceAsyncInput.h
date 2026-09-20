@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Input of the timbre clone task.
                 */
                 class CloneVoiceAsyncInput : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return AudioUrl 
+                     * 获取<p>Cloning audio URL. Valid when AudioData is empty.</p>
+                     * @return AudioUrl <p>Cloning audio URL. Valid when AudioData is empty.</p>
                      * 
                      */
                     std::string GetAudioUrl() const;
 
                     /**
-                     * 设置
-                     * @param _audioUrl 
+                     * 设置<p>Cloning audio URL. Valid when AudioData is empty.</p>
+                     * @param _audioUrl <p>Cloning audio URL. Valid when AudioData is empty.</p>
                      * 
                      */
                     void SetAudioUrl(const std::string& _audioUrl);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool AudioUrlHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AudioFileId 
+                     * 获取<p>Input audio fileId</p>
+                     * @return AudioFileId <p>Input audio fileId</p>
                      * 
                      */
                     std::string GetAudioFileId() const;
 
                     /**
-                     * 设置
-                     * @param _audioFileId 
+                     * 设置<p>Input audio fileId</p>
+                     * @param _audioFileId <p>Input audio fileId</p>
                      * 
                      */
                     void SetAudioFileId(const std::string& _audioFileId);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool AudioFileIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return LanguageBoost 
+                     * 获取<p>Audio language</p>
+                     * @return LanguageBoost <p>Audio language</p>
                      * 
                      */
                     std::string GetLanguageBoost() const;
 
                     /**
-                     * 设置
-                     * @param _languageBoost 
+                     * 设置<p>Audio language</p>
+                     * @param _languageBoost <p>Audio language</p>
                      * 
                      */
                     void SetLanguageBoost(const std::string& _languageBoost);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool LanguageBoostHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ExtParam 
+                     * 获取<p>Extended parameters in the format of a JSON string.</p>
+                     * @return ExtParam <p>Extended parameters in the format of a JSON string.</p>
                      * 
                      */
                     std::string GetExtParam() const;
 
                     /**
-                     * 设置
-                     * @param _extParam 
+                     * 设置<p>Extended parameters in the format of a JSON string.</p>
+                     * @param _extParam <p>Extended parameters in the format of a JSON string.</p>
                      * 
                      */
                     void SetExtParam(const std::string& _extParam);
@@ -133,25 +133,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p>Cloning audio URL. Valid when AudioData is empty.</p>
                      */
                     std::string m_audioUrl;
                     bool m_audioUrlHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Input audio fileId</p>
                      */
                     std::string m_audioFileId;
                     bool m_audioFileIdHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Audio language</p>
                      */
                     std::string m_languageBoost;
                     bool m_languageBoostHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Extended parameters in the format of a JSON string.</p>
                      */
                     std::string m_extParam;
                     bool m_extParamHasBeenSet;

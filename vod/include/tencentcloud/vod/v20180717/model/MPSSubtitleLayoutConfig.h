@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Subtitle suppression module column configuration in MPS
                 */
                 class MPSSubtitleLayoutConfig : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return SubtitleLayoutConfigSwitch 
+                     * 获取<p>Subtitle arrangement configuration switch, 0 for off, 1 for on, default 0</p>
+                     * @return SubtitleLayoutConfigSwitch <p>Subtitle arrangement configuration switch, 0 for off, 1 for on, default 0</p>
                      * 
                      */
                     int64_t GetSubtitleLayoutConfigSwitch() const;
 
                     /**
-                     * 设置
-                     * @param _subtitleLayoutConfigSwitch 
+                     * 设置<p>Subtitle arrangement configuration switch, 0 for off, 1 for on, default 0</p>
+                     * @param _subtitleLayoutConfigSwitch <p>Subtitle arrangement configuration switch, 0 for off, 1 for on, default 0</p>
                      * 
                      */
                     void SetSubtitleLayoutConfigSwitch(const int64_t& _subtitleLayoutConfigSwitch);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool SubtitleLayoutConfigSwitchHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return LineSpacing 
+                     * 获取<p>Line spacing. The value should be a positive integer. - When it represents pixel values, the range is [0, 1000]. - When it represents a percentage, the range is [0, 100]. The default value is 0 if left blank.</p>
+                     * @return LineSpacing <p>Line spacing. The value should be a positive integer. - When it represents pixel values, the range is [0, 1000]. - When it represents a percentage, the range is [0, 100]. The default value is 0 if left blank.</p>
                      * 
                      */
                     int64_t GetLineSpacing() const;
 
                     /**
-                     * 设置
-                     * @param _lineSpacing 
+                     * 设置<p>Line spacing. The value should be a positive integer. - When it represents pixel values, the range is [0, 1000]. - When it represents a percentage, the range is [0, 100]. The default value is 0 if left blank.</p>
+                     * @param _lineSpacing <p>Line spacing. The value should be a positive integer. - When it represents pixel values, the range is [0, 1000]. - When it represents a percentage, the range is [0, 100]. The default value is 0 if left blank.</p>
                      * 
                      */
                     void SetLineSpacing(const int64_t& _lineSpacing);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool LineSpacingHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return LineSpacingUnit 
+                     * 获取<p>LineSpacing unit, 0 pixel, 1 percentage, defaults to 0, pixel</p>
+                     * @return LineSpacingUnit <p>LineSpacing unit, 0 pixel, 1 percentage, defaults to 0, pixel</p>
                      * 
                      */
                     int64_t GetLineSpacingUnit() const;
 
                     /**
-                     * 设置
-                     * @param _lineSpacingUnit 
+                     * 设置<p>LineSpacing unit, 0 pixel, 1 percentage, defaults to 0, pixel</p>
+                     * @param _lineSpacingUnit <p>LineSpacing unit, 0 pixel, 1 percentage, defaults to 0, pixel</p>
                      * 
                      */
                     void SetLineSpacingUnit(const int64_t& _lineSpacingUnit);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool LineSpacingUnitHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Alignment 
+                     * 获取<p>Alignment mode. Valid values: top: The top position of the subtitle is fixed, while the bottom position changes according to the number of lines. bottom: The bottom position of the subtitle is fixed, while the top position changes according to the number of lines. If this is not specified, bottom alignment is used by default.</p>
+                     * @return Alignment <p>Alignment mode. Valid values: top: The top position of the subtitle is fixed, while the bottom position changes according to the number of lines. bottom: The bottom position of the subtitle is fixed, while the top position changes according to the number of lines. If this is not specified, bottom alignment is used by default.</p>
                      * 
                      */
                     std::string GetAlignment() const;
 
                     /**
-                     * 设置
-                     * @param _alignment 
+                     * 设置<p>Alignment mode. Valid values: top: The top position of the subtitle is fixed, while the bottom position changes according to the number of lines. bottom: The bottom position of the subtitle is fixed, while the top position changes according to the number of lines. If this is not specified, bottom alignment is used by default.</p>
+                     * @param _alignment <p>Alignment mode. Valid values: top: The top position of the subtitle is fixed, while the bottom position changes according to the number of lines. bottom: The bottom position of the subtitle is fixed, while the top position changes according to the number of lines. If this is not specified, bottom alignment is used by default.</p>
                      * 
                      */
                     void SetAlignment(const std::string& _alignment);
@@ -133,25 +133,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p>Subtitle arrangement configuration switch, 0 for off, 1 for on, default 0</p>
                      */
                     int64_t m_subtitleLayoutConfigSwitch;
                     bool m_subtitleLayoutConfigSwitchHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Line spacing. The value should be a positive integer. - When it represents pixel values, the range is [0, 1000]. - When it represents a percentage, the range is [0, 100]. The default value is 0 if left blank.</p>
                      */
                     int64_t m_lineSpacing;
                     bool m_lineSpacingHasBeenSet;
 
                     /**
-                     * 
+                     * <p>LineSpacing unit, 0 pixel, 1 percentage, defaults to 0, pixel</p>
                      */
                     int64_t m_lineSpacingUnit;
                     bool m_lineSpacingUnitHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Alignment mode. Valid values: top: The top position of the subtitle is fixed, while the bottom position changes according to the number of lines. bottom: The bottom position of the subtitle is fixed, while the top position changes according to the number of lines. If this is not specified, bottom alignment is used by default.</p>
                      */
                     std::string m_alignment;
                     bool m_alignmentHasBeenSet;

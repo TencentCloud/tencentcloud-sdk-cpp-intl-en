@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Video start and end recognition output.
                 */
                 class AiRecognitionTaskHeadTailResultOutput : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return HeadConfidence 
+                     * 获取Recognition confidence of the opening scene. Value range: 0-100.
+                     * @return HeadConfidence Recognition confidence of the opening scene. Value range: 0-100.
                      * 
                      */
                     double GetHeadConfidence() const;
 
                     /**
-                     * 设置
-                     * @param _headConfidence 
+                     * 设置Recognition confidence of the opening scene. Value range: 0-100.
+                     * @param _headConfidence Recognition confidence of the opening scene. Value range: 0-100.
                      * 
                      */
                     void SetHeadConfidence(const double& _headConfidence);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool HeadConfidenceHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return HeadTimeOffset 
+                     * 获取End time point of the video intro, in seconds.
+                     * @return HeadTimeOffset End time point of the video intro, in seconds.
                      * 
                      */
                     double GetHeadTimeOffset() const;
 
                     /**
-                     * 设置
-                     * @param _headTimeOffset 
+                     * 设置End time point of the video intro, in seconds.
+                     * @param _headTimeOffset End time point of the video intro, in seconds.
                      * 
                      */
                     void SetHeadTimeOffset(const double& _headTimeOffset);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool HeadTimeOffsetHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return TailConfidence 
+                     * 获取Recognition confidence of the ending scene. Value range: 0-100.
+                     * @return TailConfidence Recognition confidence of the ending scene. Value range: 0-100.
                      * 
                      */
                     double GetTailConfidence() const;
 
                     /**
-                     * 设置
-                     * @param _tailConfidence 
+                     * 设置Recognition confidence of the ending scene. Value range: 0-100.
+                     * @param _tailConfidence Recognition confidence of the ending scene. Value range: 0-100.
                      * 
                      */
                     void SetTailConfidence(const double& _tailConfidence);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool TailConfidenceHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return TailTimeOffset 
+                     * 获取Start time point of the video ending, in seconds.
+                     * @return TailTimeOffset Start time point of the video ending, in seconds.
                      * 
                      */
                     double GetTailTimeOffset() const;
 
                     /**
-                     * 设置
-                     * @param _tailTimeOffset 
+                     * 设置Start time point of the video ending, in seconds.
+                     * @param _tailTimeOffset Start time point of the video ending, in seconds.
                      * 
                      */
                     void SetTailTimeOffset(const double& _tailTimeOffset);
@@ -133,25 +133,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Recognition confidence of the opening scene. Value range: 0-100.
                      */
                     double m_headConfidence;
                     bool m_headConfidenceHasBeenSet;
 
                     /**
-                     * 
+                     * End time point of the video intro, in seconds.
                      */
                     double m_headTimeOffset;
                     bool m_headTimeOffsetHasBeenSet;
 
                     /**
-                     * 
+                     * Recognition confidence of the ending scene. Value range: 0-100.
                      */
                     double m_tailConfidence;
                     bool m_tailConfidenceHasBeenSet;
 
                     /**
-                     * 
+                     * Start time point of the video ending, in seconds.
                      */
                     double m_tailTimeOffset;
                     bool m_tailTimeOffsetHasBeenSet;

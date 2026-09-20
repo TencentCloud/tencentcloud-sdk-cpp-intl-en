@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * The details of the verification process.
+                * Detailed process information for verification
                 */
                 class VerificationDetail : public AbstractModel
                 {
@@ -47,19 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取The final result of this verification. `0` indicates that the person is the same as that in the photo.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ErrorCode The final result of this verification. `0` indicates that the person is the same as that in the photo.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Final result of this verification. 0 indicates that the verification is passed and the person is determined to be the same person.
+                     * @return ErrorCode Final result of this verification. 0 indicates that the verification is passed and the person is determined to be the same person.
                      * 
                      */
                     int64_t GetErrorCode() const;
 
                     /**
-                     * 设置The final result of this verification. `0` indicates that the person is the same as that in the photo.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _errorCode The final result of this verification. `0` indicates that the person is the same as that in the photo.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Final result of this verification. 0 indicates that the verification is passed and the person is determined to be the same person.
+                     * @param _errorCode Final result of this verification. 0 indicates that the verification is passed and the person is determined to be the same person.
                      * 
                      */
                     void SetErrorCode(const int64_t& _errorCode);
@@ -72,19 +68,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ErrorCodeHasBeenSet() const;
 
                     /**
-                     * 获取The description of the final verification result.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ErrorMsg The description of the final verification result.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Final result description of this verification
+                     * @return ErrorMsg Final result description of this verification
                      * 
                      */
                     std::string GetErrorMsg() const;
 
                     /**
-                     * 设置The description of the final verification result.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _errorMsg The description of the final verification result.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Final result description of this verification
+                     * @param _errorMsg Final result description of this verification
                      * 
                      */
                     void SetErrorMsg(const std::string& _errorMsg);
@@ -97,19 +89,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ErrorMsgHasBeenSet() const;
 
                     /**
-                     * 获取The result of this liveness detection process. `0` indicates success.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return LivenessErrorCode The result of this liveness detection process. `0` indicates success.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Liveness detection result of this verification. 0 indicates success.
+                     * @return LivenessErrorCode Liveness detection result of this verification. 0 indicates success.
                      * 
                      */
                     int64_t GetLivenessErrorCode() const;
 
                     /**
-                     * 设置The result of this liveness detection process. `0` indicates success.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _livenessErrorCode The result of this liveness detection process. `0` indicates success.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Liveness detection result of this verification. 0 indicates success.
+                     * @param _livenessErrorCode Liveness detection result of this verification. 0 indicates success.
                      * 
                      */
                     void SetLivenessErrorCode(const int64_t& _livenessErrorCode);
@@ -122,19 +110,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool LivenessErrorCodeHasBeenSet() const;
 
                     /**
-                     * 获取The result description of this liveness detection process.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return LivenessErrorMsg The result description of this liveness detection process.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Description of the liveness detection result for this verification
+                     * @return LivenessErrorMsg Description of the liveness detection result for this verification
                      * 
                      */
                     std::string GetLivenessErrorMsg() const;
 
                     /**
-                     * 设置The result description of this liveness detection process.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _livenessErrorMsg The result description of this liveness detection process.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Description of the liveness detection result for this verification
+                     * @param _livenessErrorMsg Description of the liveness detection result for this verification
                      * 
                      */
                     void SetLivenessErrorMsg(const std::string& _livenessErrorMsg);
@@ -147,19 +131,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool LivenessErrorMsgHasBeenSet() const;
 
                     /**
-                     * 获取The result of this comparison process. `0` indicates that the person in the best face screenshot collected from the video stream is the same as that in the uploaded image for comparison.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return CompareErrorCode The result of this comparison process. `0` indicates that the person in the best face screenshot collected from the video stream is the same as that in the uploaded image for comparison.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Result of this verification comparison. 0 indicates that the best face photo collected from the video stream and the uploaded image for comparison are determined to be the same person.
+                     * @return CompareErrorCode Result of this verification comparison. 0 indicates that the best face photo collected from the video stream and the uploaded image for comparison are determined to be the same person.
                      * 
                      */
                     int64_t GetCompareErrorCode() const;
 
                     /**
-                     * 设置The result of this comparison process. `0` indicates that the person in the best face screenshot collected from the video stream is the same as that in the uploaded image for comparison.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _compareErrorCode The result of this comparison process. `0` indicates that the person in the best face screenshot collected from the video stream is the same as that in the uploaded image for comparison.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Result of this verification comparison. 0 indicates that the best face photo collected from the video stream and the uploaded image for comparison are determined to be the same person.
+                     * @param _compareErrorCode Result of this verification comparison. 0 indicates that the best face photo collected from the video stream and the uploaded image for comparison are determined to be the same person.
                      * 
                      */
                     void SetCompareErrorCode(const int64_t& _compareErrorCode);
@@ -172,19 +152,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CompareErrorCodeHasBeenSet() const;
 
                     /**
-                     * 获取The result description of this comparison process.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return CompareErrorMsg The result description of this comparison process.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Result description of this verification comparison
+                     * @return CompareErrorMsg Result description of this verification comparison
                      * 
                      */
                     std::string GetCompareErrorMsg() const;
 
                     /**
-                     * 设置The result description of this comparison process.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _compareErrorMsg The result description of this comparison process.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Result description of this verification comparison
+                     * @param _compareErrorMsg Result description of this verification comparison
                      * 
                      */
                     void SetCompareErrorMsg(const std::string& _compareErrorMsg);
@@ -197,19 +173,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CompareErrorMsgHasBeenSet() const;
 
                     /**
-                     * 获取The timestamp (ms) of this verification process.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return ReqTimestamp The timestamp (ms) of this verification process.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Verification timestamp (ms) this time
+                     * @return ReqTimestamp Verification timestamp (ms) this time
                      * 
                      */
                     uint64_t GetReqTimestamp() const;
 
                     /**
-                     * 设置The timestamp (ms) of this verification process.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _reqTimestamp The timestamp (ms) of this verification process.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Verification timestamp (ms) this time
+                     * @param _reqTimestamp Verification timestamp (ms) this time
                      * 
                      */
                     void SetReqTimestamp(const uint64_t& _reqTimestamp);
@@ -222,19 +194,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool ReqTimestampHasBeenSet() const;
 
                     /**
-                     * 获取The similarity of the best face screenshot collected from the video stream and the uploaded image for comparison in this verification process. Value range: [0.00, 100.00]. By default, the person in the screenshot is determined to be the same person in the image if the similarity is greater than or equal to 70.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Similarity The similarity of the best face screenshot collected from the video stream and the uploaded image for comparison in this verification process. Value range: [0.00, 100.00]. By default, the person in the screenshot is determined to be the same person in the image if the similarity is greater than or equal to 70.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Similarity between the best face photo collected from the video stream in this verification and the uploaded image for comparison. Value range: [0.00, 100.00]. By default, the two are determined to be the same person when the similarity is at least 70.
+                     * @return Similarity Similarity between the best face photo collected from the video stream in this verification and the uploaded image for comparison. Value range: [0.00, 100.00]. By default, the two are determined to be the same person when the similarity is at least 70.
                      * 
                      */
                     double GetSimilarity() const;
 
                     /**
-                     * 设置The similarity of the best face screenshot collected from the video stream and the uploaded image for comparison in this verification process. Value range: [0.00, 100.00]. By default, the person in the screenshot is determined to be the same person in the image if the similarity is greater than or equal to 70.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _similarity The similarity of the best face screenshot collected from the video stream and the uploaded image for comparison in this verification process. Value range: [0.00, 100.00]. By default, the person in the screenshot is determined to be the same person in the image if the similarity is greater than or equal to 70.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Similarity between the best face photo collected from the video stream in this verification and the uploaded image for comparison. Value range: [0.00, 100.00]. By default, the two are determined to be the same person when the similarity is at least 70.
+                     * @param _similarity Similarity between the best face photo collected from the video stream in this verification and the uploaded image for comparison. Value range: [0.00, 100.00]. By default, the two are determined to be the same person when the similarity is at least 70.
                      * 
                      */
                     void SetSimilarity(const double& _similarity);
@@ -247,19 +215,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool SimilarityHasBeenSet() const;
 
                     /**
-                     * 获取Unique ID of this verification process.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Seq Unique ID of this verification process.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Unique identifier for this verification
+                     * @return Seq Unique identifier for this verification
                      * 
                      */
                     std::string GetSeq() const;
 
                     /**
-                     * 设置Unique ID of this verification process.
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _seq Unique ID of this verification process.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Unique identifier for this verification
+                     * @param _seq Unique identifier for this verification
                      * 
                      */
                     void SetSeq(const std::string& _seq);
@@ -272,87 +236,83 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool SeqHasBeenSet() const;
 
                     /**
-                     * 获取Describe the detailed reason why the current request was rejected in the liveness phase. This parameter only applies to the PLUS edition eKYC service.
+                     * 获取Description of the detailed reason why the current request was rejected in the liveness phase. This parameter is returned only for the PLUS version of the eKYC service.
 -Details as follows:
 01-User eyes closed throughout
-02-User not completed specified action
+02 - User has not completed the specified action
 03-Suspected rephotography attack
-04-Suspected Synthesis Attack
-05-Suspected fraudulent template
+04-Suspected synthesis attack
+05-Suspected fraud template
 06-Suspected watermark
 07-Reflection validation failed
-08 - Suspected change of person midway
-09-Poor face quality
-10 - Distance validation failed
+08-Suspected midway change person
+09: Poor face quality
+10-distance check failed
 11-Suspected adversarial sample attack
-12 - Suspected attack traces in the mouth area
-13 - Suspected attack traces exist in the eye area
-14 - Eye or mouth obstruction
+12-Mouth area suspected of attack traces
+13-Eye area suspected to have attack traces
+14-Eye or mouth covered
 Note: This field may return null, indicating that no valid values can be obtained.
 Example value: ["01"].
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return LivenessInfoTag Describe the detailed reason why the current request was rejected in the liveness phase. This parameter only applies to the PLUS edition eKYC service.
+                     * @return LivenessInfoTag Description of the detailed reason why the current request was rejected in the liveness phase. This parameter is returned only for the PLUS version of the eKYC service.
 -Details as follows:
 01-User eyes closed throughout
-02-User not completed specified action
+02 - User has not completed the specified action
 03-Suspected rephotography attack
-04-Suspected Synthesis Attack
-05-Suspected fraudulent template
+04-Suspected synthesis attack
+05-Suspected fraud template
 06-Suspected watermark
 07-Reflection validation failed
-08 - Suspected change of person midway
-09-Poor face quality
-10 - Distance validation failed
+08-Suspected midway change person
+09: Poor face quality
+10-distance check failed
 11-Suspected adversarial sample attack
-12 - Suspected attack traces in the mouth area
-13 - Suspected attack traces exist in the eye area
-14 - Eye or mouth obstruction
+12-Mouth area suspected of attack traces
+13-Eye area suspected to have attack traces
+14-Eye or mouth covered
 Note: This field may return null, indicating that no valid values can be obtained.
 Example value: ["01"].
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::vector<std::string> GetLivenessInfoTag() const;
 
                     /**
-                     * 设置Describe the detailed reason why the current request was rejected in the liveness phase. This parameter only applies to the PLUS edition eKYC service.
+                     * 设置Description of the detailed reason why the current request was rejected in the liveness phase. This parameter is returned only for the PLUS version of the eKYC service.
 -Details as follows:
 01-User eyes closed throughout
-02-User not completed specified action
+02 - User has not completed the specified action
 03-Suspected rephotography attack
-04-Suspected Synthesis Attack
-05-Suspected fraudulent template
+04-Suspected synthesis attack
+05-Suspected fraud template
 06-Suspected watermark
 07-Reflection validation failed
-08 - Suspected change of person midway
-09-Poor face quality
-10 - Distance validation failed
+08-Suspected midway change person
+09: Poor face quality
+10-distance check failed
 11-Suspected adversarial sample attack
-12 - Suspected attack traces in the mouth area
-13 - Suspected attack traces exist in the eye area
-14 - Eye or mouth obstruction
+12-Mouth area suspected of attack traces
+13-Eye area suspected to have attack traces
+14-Eye or mouth covered
 Note: This field may return null, indicating that no valid values can be obtained.
 Example value: ["01"].
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _livenessInfoTag Describe the detailed reason why the current request was rejected in the liveness phase. This parameter only applies to the PLUS edition eKYC service.
+                     * @param _livenessInfoTag Description of the detailed reason why the current request was rejected in the liveness phase. This parameter is returned only for the PLUS version of the eKYC service.
 -Details as follows:
 01-User eyes closed throughout
-02-User not completed specified action
+02 - User has not completed the specified action
 03-Suspected rephotography attack
-04-Suspected Synthesis Attack
-05-Suspected fraudulent template
+04-Suspected synthesis attack
+05-Suspected fraud template
 06-Suspected watermark
 07-Reflection validation failed
-08 - Suspected change of person midway
-09-Poor face quality
-10 - Distance validation failed
+08-Suspected midway change person
+09: Poor face quality
+10-distance check failed
 11-Suspected adversarial sample attack
-12 - Suspected attack traces in the mouth area
-13 - Suspected attack traces exist in the eye area
-14 - Eye or mouth obstruction
+12-Mouth area suspected of attack traces
+13-Eye area suspected to have attack traces
+14-Eye or mouth covered
 Note: This field may return null, indicating that no valid values can be obtained.
 Example value: ["01"].
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetLivenessInfoTag(const std::vector<std::string>& _livenessInfoTag);
@@ -367,88 +327,78 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 private:
 
                     /**
-                     * The final result of this verification. `0` indicates that the person is the same as that in the photo.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Final result of this verification. 0 indicates that the verification is passed and the person is determined to be the same person.
                      */
                     int64_t m_errorCode;
                     bool m_errorCodeHasBeenSet;
 
                     /**
-                     * The description of the final verification result.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Final result description of this verification
                      */
                     std::string m_errorMsg;
                     bool m_errorMsgHasBeenSet;
 
                     /**
-                     * The result of this liveness detection process. `0` indicates success.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Liveness detection result of this verification. 0 indicates success.
                      */
                     int64_t m_livenessErrorCode;
                     bool m_livenessErrorCodeHasBeenSet;
 
                     /**
-                     * The result description of this liveness detection process.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Description of the liveness detection result for this verification
                      */
                     std::string m_livenessErrorMsg;
                     bool m_livenessErrorMsgHasBeenSet;
 
                     /**
-                     * The result of this comparison process. `0` indicates that the person in the best face screenshot collected from the video stream is the same as that in the uploaded image for comparison.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Result of this verification comparison. 0 indicates that the best face photo collected from the video stream and the uploaded image for comparison are determined to be the same person.
                      */
                     int64_t m_compareErrorCode;
                     bool m_compareErrorCodeHasBeenSet;
 
                     /**
-                     * The result description of this comparison process.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Result description of this verification comparison
                      */
                     std::string m_compareErrorMsg;
                     bool m_compareErrorMsgHasBeenSet;
 
                     /**
-                     * The timestamp (ms) of this verification process.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Verification timestamp (ms) this time
                      */
                     uint64_t m_reqTimestamp;
                     bool m_reqTimestampHasBeenSet;
 
                     /**
-                     * The similarity of the best face screenshot collected from the video stream and the uploaded image for comparison in this verification process. Value range: [0.00, 100.00]. By default, the person in the screenshot is determined to be the same person in the image if the similarity is greater than or equal to 70.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Similarity between the best face photo collected from the video stream in this verification and the uploaded image for comparison. Value range: [0.00, 100.00]. By default, the two are determined to be the same person when the similarity is at least 70.
                      */
                     double m_similarity;
                     bool m_similarityHasBeenSet;
 
                     /**
-                     * Unique ID of this verification process.
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Unique identifier for this verification
                      */
                     std::string m_seq;
                     bool m_seqHasBeenSet;
 
                     /**
-                     * Describe the detailed reason why the current request was rejected in the liveness phase. This parameter only applies to the PLUS edition eKYC service.
+                     * Description of the detailed reason why the current request was rejected in the liveness phase. This parameter is returned only for the PLUS version of the eKYC service.
 -Details as follows:
 01-User eyes closed throughout
-02-User not completed specified action
+02 - User has not completed the specified action
 03-Suspected rephotography attack
-04-Suspected Synthesis Attack
-05-Suspected fraudulent template
+04-Suspected synthesis attack
+05-Suspected fraud template
 06-Suspected watermark
 07-Reflection validation failed
-08 - Suspected change of person midway
-09-Poor face quality
-10 - Distance validation failed
+08-Suspected midway change person
+09: Poor face quality
+10-distance check failed
 11-Suspected adversarial sample attack
-12 - Suspected attack traces in the mouth area
-13 - Suspected attack traces exist in the eye area
-14 - Eye or mouth obstruction
+12-Mouth area suspected of attack traces
+13-Eye area suspected to have attack traces
+14-Eye or mouth covered
 Note: This field may return null, indicating that no valid values can be obtained.
 Example value: ["01"].
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::vector<std::string> m_livenessInfoTag;
                     bool m_livenessInfoTagHasBeenSet;

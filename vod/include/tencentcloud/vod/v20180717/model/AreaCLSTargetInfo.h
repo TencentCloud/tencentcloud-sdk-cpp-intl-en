@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Log push target.
                 */
                 class AreaCLSTargetInfo : public AbstractModel
                 {
@@ -47,15 +47,43 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return CLSRegion 
+                     * 获取Logset region:
+<li>ap-guangzhou: Guangzhou;</li>
+<li>ap-beijing: Beijing;</li>
+<li>ap-chengdu: Chengdu;</li>
+<li>ap-chongqing: Chongqing.</li>
+<li>ap-nanjing: Nanjing;</li>
+<li>ap-shanghai: Shanghai;</li>
+<li>ap-singapore: Singapore.</li>
+                     * @return CLSRegion Logset region:
+<li>ap-guangzhou: Guangzhou;</li>
+<li>ap-beijing: Beijing;</li>
+<li>ap-chengdu: Chengdu;</li>
+<li>ap-chongqing: Chongqing.</li>
+<li>ap-nanjing: Nanjing;</li>
+<li>ap-shanghai: Shanghai;</li>
+<li>ap-singapore: Singapore.</li>
                      * 
                      */
                     std::string GetCLSRegion() const;
 
                     /**
-                     * 设置
-                     * @param _cLSRegion 
+                     * 设置Logset region:
+<li>ap-guangzhou: Guangzhou;</li>
+<li>ap-beijing: Beijing;</li>
+<li>ap-chengdu: Chengdu;</li>
+<li>ap-chongqing: Chongqing.</li>
+<li>ap-nanjing: Nanjing;</li>
+<li>ap-shanghai: Shanghai;</li>
+<li>ap-singapore: Singapore.</li>
+                     * @param _cLSRegion Logset region:
+<li>ap-guangzhou: Guangzhou;</li>
+<li>ap-beijing: Beijing;</li>
+<li>ap-chengdu: Chengdu;</li>
+<li>ap-chongqing: Chongqing.</li>
+<li>ap-nanjing: Nanjing;</li>
+<li>ap-shanghai: Shanghai;</li>
+<li>ap-singapore: Singapore.</li>
                      * 
                      */
                     void SetCLSRegion(const std::string& _cLSRegion);
@@ -68,15 +96,15 @@ namespace TencentCloud
                     bool CLSRegionHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return TopicId 
+                     * 获取ID of the destination topic for delivery.
+                     * @return TopicId ID of the destination topic for delivery.
                      * 
                      */
                     std::string GetTopicId() const;
 
                     /**
-                     * 设置
-                     * @param _topicId 
+                     * 设置ID of the destination topic for delivery.
+                     * @param _topicId ID of the destination topic for delivery.
                      * 
                      */
                     void SetTopicId(const std::string& _topicId);
@@ -89,15 +117,15 @@ namespace TencentCloud
                     bool TopicIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return LogsetId 
+                     * 获取ID of the target set for submission.
+                     * @return LogsetId ID of the target set for submission.
                      * 
                      */
                     std::string GetLogsetId() const;
 
                     /**
-                     * 设置
-                     * @param _logsetId 
+                     * 设置ID of the target set for submission.
+                     * @param _logsetId ID of the target set for submission.
                      * 
                      */
                     void SetLogsetId(const std::string& _logsetId);
@@ -110,15 +138,23 @@ namespace TencentCloud
                     bool LogsetIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Switch 
+                     * 获取Log delivery status.
+ON: enabled.
+OFF: disabled.
+                     * @return Switch Log delivery status.
+ON: enabled.
+OFF: disabled.
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置
-                     * @param _switch 
+                     * 设置Log delivery status.
+ON: enabled.
+OFF: disabled.
+                     * @param _switch Log delivery status.
+ON: enabled.
+OFF: disabled.
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -133,25 +169,34 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Logset region:
+<li>ap-guangzhou: Guangzhou;</li>
+<li>ap-beijing: Beijing;</li>
+<li>ap-chengdu: Chengdu;</li>
+<li>ap-chongqing: Chongqing.</li>
+<li>ap-nanjing: Nanjing;</li>
+<li>ap-shanghai: Shanghai;</li>
+<li>ap-singapore: Singapore.</li>
                      */
                     std::string m_cLSRegion;
                     bool m_cLSRegionHasBeenSet;
 
                     /**
-                     * 
+                     * ID of the destination topic for delivery.
                      */
                     std::string m_topicId;
                     bool m_topicIdHasBeenSet;
 
                     /**
-                     * 
+                     * ID of the target set for submission.
                      */
                     std::string m_logsetId;
                     bool m_logsetIdHasBeenSet;
 
                     /**
-                     * 
+                     * Log delivery status.
+ON: enabled.
+OFF: disabled.
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Intelligent tag result information.
                 */
                 class MediaAiAnalysisTagItem : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Tag 
+                     * 获取Tag name.
+                     * @return Tag Tag name.
                      * 
                      */
                     std::string GetTag() const;
 
                     /**
-                     * 设置
-                     * @param _tag 
+                     * 设置Tag name.
+                     * @param _tag Tag name.
                      * 
                      */
                     void SetTag(const std::string& _tag);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool TagHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Confidence 
+                     * 获取Confidence of the tag, with a value range from 0 to 100.
+                     * @return Confidence Confidence of the tag, with a value range from 0 to 100.
                      * 
                      */
                     double GetConfidence() const;
 
                     /**
-                     * 设置
-                     * @param _confidence 
+                     * 设置Confidence of the tag, with a value range from 0 to 100.
+                     * @param _confidence Confidence of the tag, with a value range from 0 to 100.
                      * 
                      */
                     void SetConfidence(const double& _confidence);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Tag name.
                      */
                     std::string m_tag;
                     bool m_tagHasBeenSet;
 
                     /**
-                     * 
+                     * Confidence of the tag, with a value range from 0 to 100.
                      */
                     double m_confidence;
                     bool m_confidenceHasBeenSet;

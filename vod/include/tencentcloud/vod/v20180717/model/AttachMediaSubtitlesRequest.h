@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return FileId 
+                     * 获取Unique identifier of a media file.
+                     * @return FileId Unique identifier of a media file.
                      * 
                      */
                     std::string GetFileId() const;
 
                     /**
-                     * 设置
-                     * @param _fileId 
+                     * 设置Unique identifier of a media file.
+                     * @param _fileId Unique identifier of a media file.
                      * 
                      */
                     void SetFileId(const std::string& _fileId);
@@ -64,15 +64,23 @@ namespace TencentCloud
                     bool FileIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Operation 
+                     * 获取Operation. Valid values:
+<li>Attach: Associate subtitles.</li>
+<li>Detach: remove associated subtitles.</li>
+                     * @return Operation Operation. Valid values:
+<li>Attach: Associate subtitles.</li>
+<li>Detach: remove associated subtitles.</li>
                      * 
                      */
                     std::string GetOperation() const;
 
                     /**
-                     * 设置
-                     * @param _operation 
+                     * 设置Operation. Valid values:
+<li>Attach: Associate subtitles.</li>
+<li>Detach: remove associated subtitles.</li>
+                     * @param _operation Operation. Valid values:
+<li>Attach: Associate subtitles.</li>
+<li>Detach: remove associated subtitles.</li>
                      * 
                      */
                     void SetOperation(const std::string& _operation);
@@ -85,15 +93,15 @@ namespace TencentCloud
                     bool OperationHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AdaptiveDynamicStreamingDefinition 
+                     * 获取[Adaptive bitrate streaming template ID](https://www.tencentcloud.com/document/product/266/34071?from_cn_redirect=1#zsy).
+                     * @return AdaptiveDynamicStreamingDefinition [Adaptive bitrate streaming template ID](https://www.tencentcloud.com/document/product/266/34071?from_cn_redirect=1#zsy).
                      * 
                      */
                     uint64_t GetAdaptiveDynamicStreamingDefinition() const;
 
                     /**
-                     * 设置
-                     * @param _adaptiveDynamicStreamingDefinition 
+                     * 设置[Adaptive bitrate streaming template ID](https://www.tencentcloud.com/document/product/266/34071?from_cn_redirect=1#zsy).
+                     * @param _adaptiveDynamicStreamingDefinition [Adaptive bitrate streaming template ID](https://www.tencentcloud.com/document/product/266/34071?from_cn_redirect=1#zsy).
                      * 
                      */
                     void SetAdaptiveDynamicStreamingDefinition(const uint64_t& _adaptiveDynamicStreamingDefinition);
@@ -106,15 +114,15 @@ namespace TencentCloud
                     bool AdaptiveDynamicStreamingDefinitionHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SubtitleIds 
+                     * 获取Unique identifier of the subtitle.
+                     * @return SubtitleIds Unique identifier of the subtitle.
                      * 
                      */
                     std::vector<std::string> GetSubtitleIds() const;
 
                     /**
-                     * 设置
-                     * @param _subtitleIds 
+                     * 设置Unique identifier of the subtitle.
+                     * @param _subtitleIds Unique identifier of the subtitle.
                      * 
                      */
                     void SetSubtitleIds(const std::vector<std::string>& _subtitleIds);
@@ -127,15 +135,15 @@ namespace TencentCloud
                     bool SubtitleIdsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return DefaultSubtitleId 
+                     * 获取Unique identifier for default subtitle. If not specified, no default subtitle is set.
+                     * @return DefaultSubtitleId Unique identifier for default subtitle. If not specified, no default subtitle is set.
                      * 
                      */
                     std::string GetDefaultSubtitleId() const;
 
                     /**
-                     * 设置
-                     * @param _defaultSubtitleId 
+                     * 设置Unique identifier for default subtitle. If not specified, no default subtitle is set.
+                     * @param _defaultSubtitleId Unique identifier for default subtitle. If not specified, no default subtitle is set.
                      * 
                      */
                     void SetDefaultSubtitleId(const std::string& _defaultSubtitleId);
@@ -148,15 +156,15 @@ namespace TencentCloud
                     bool DefaultSubtitleIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SubAppId 
+                     * 获取<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+                     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置
-                     * @param _subAppId 
+                     * 设置<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+                     * @param _subAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -171,37 +179,39 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Unique identifier of a media file.
                      */
                     std::string m_fileId;
                     bool m_fileIdHasBeenSet;
 
                     /**
-                     * 
+                     * Operation. Valid values:
+<li>Attach: Associate subtitles.</li>
+<li>Detach: remove associated subtitles.</li>
                      */
                     std::string m_operation;
                     bool m_operationHasBeenSet;
 
                     /**
-                     * 
+                     * [Adaptive bitrate streaming template ID](https://www.tencentcloud.com/document/product/266/34071?from_cn_redirect=1#zsy).
                      */
                     uint64_t m_adaptiveDynamicStreamingDefinition;
                     bool m_adaptiveDynamicStreamingDefinitionHasBeenSet;
 
                     /**
-                     * 
+                     * Unique identifier of the subtitle.
                      */
                     std::vector<std::string> m_subtitleIds;
                     bool m_subtitleIdsHasBeenSet;
 
                     /**
-                     * 
+                     * Unique identifier for default subtitle. If not specified, no default subtitle is set.
                      */
                     std::string m_defaultSubtitleId;
                     bool m_defaultSubtitleIdHasBeenSet;
 
                     /**
-                     * 
+                     * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;

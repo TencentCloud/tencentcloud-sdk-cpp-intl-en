@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return SubAppId 
+                     * 获取<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b>
+                     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b>
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置
-                     * @param _subAppId 
+                     * 设置<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b>
+                     * @param _subAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b>
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool SubAppIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Names 
+                     * 获取Player configuration name filter conditions, with an array length limit of 100.
+                     * @return Names Player configuration name filter conditions, with an array length limit of 100.
                      * 
                      */
                     std::vector<std::string> GetNames() const;
 
                     /**
-                     * 设置
-                     * @param _names 
+                     * 设置Player configuration name filter conditions, with an array length limit of 100.
+                     * @param _names Player configuration name filter conditions, with an array length limit of 100.
                      * 
                      */
                     void SetNames(const std::vector<std::string>& _names);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool NamesHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Offset 
+                     * 获取Pagination offset. Default value: 0.
+                     * @return Offset Pagination offset. Default value: 0.
                      * 
                      */
                     uint64_t GetOffset() const;
 
                     /**
-                     * 设置
-                     * @param _offset 
+                     * 设置Pagination offset. Default value: 0.
+                     * @param _offset Pagination offset. Default value: 0.
                      * 
                      */
                     void SetOffset(const uint64_t& _offset);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool OffsetHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Limit 
+                     * 获取Number of returned entries. Default value: 10. Maximum value: 100.
+                     * @return Limit Number of returned entries. Default value: 10. Maximum value: 100.
                      * 
                      */
                     uint64_t GetLimit() const;
 
                     /**
-                     * 设置
-                     * @param _limit 
+                     * 设置Number of returned entries. Default value: 10. Maximum value: 100.
+                     * @param _limit Number of returned entries. Default value: 10. Maximum value: 100.
                      * 
                      */
                     void SetLimit(const uint64_t& _limit);
@@ -127,15 +127,23 @@ namespace TencentCloud
                     bool LimitHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Type 
+                     * 获取Player configuration type filter condition. Available values:
+<li>Preset: system predefined configuration;</li>
+<li>Custom: user-customized configuration.</li>
+                     * @return Type Player configuration type filter condition. Available values:
+<li>Preset: system predefined configuration;</li>
+<li>Custom: user-customized configuration.</li>
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置
-                     * @param _type 
+                     * 设置Player configuration type filter condition. Available values:
+<li>Preset: system predefined configuration;</li>
+<li>Custom: user-customized configuration.</li>
+                     * @param _type Player configuration type filter condition. Available values:
+<li>Preset: system predefined configuration;</li>
+<li>Custom: user-customized configuration.</li>
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -150,31 +158,33 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b>
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
 
                     /**
-                     * 
+                     * Player configuration name filter conditions, with an array length limit of 100.
                      */
                     std::vector<std::string> m_names;
                     bool m_namesHasBeenSet;
 
                     /**
-                     * 
+                     * Pagination offset. Default value: 0.
                      */
                     uint64_t m_offset;
                     bool m_offsetHasBeenSet;
 
                     /**
-                     * 
+                     * Number of returned entries. Default value: 10. Maximum value: 100.
                      */
                     uint64_t m_limit;
                     bool m_limitHasBeenSet;
 
                     /**
-                     * 
+                     * Player configuration type filter condition. Available values:
+<li>Preset: system predefined configuration;</li>
+<li>Custom: user-customized configuration.</li>
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;

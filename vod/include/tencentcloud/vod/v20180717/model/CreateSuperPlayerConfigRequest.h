@@ -45,15 +45,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Name 
+                     * 获取Player configuration name, length limited to 64 characters. Only allowed to appear [0-9a-zA-Z] and _- characters (for example, test_ABC-123). The name is unique for the same user.
+                     * @return Name Player configuration name, length limited to 64 characters. Only allowed to appear [0-9a-zA-Z] and _- characters (for example, test_ABC-123). The name is unique for the same user.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置
-                     * @param _name 
+                     * 设置Player configuration name, length limited to 64 characters. Only allowed to appear [0-9a-zA-Z] and _- characters (for example, test_ABC-123). The name is unique for the same user.
+                     * @param _name Player configuration name, length limited to 64 characters. Only allowed to appear [0-9a-zA-Z] and _- characters (for example, test_ABC-123). The name is unique for the same user.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -66,15 +66,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SubAppId 
+                     * 获取<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</b>
+                     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</b>
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置
-                     * @param _subAppId 
+                     * 设置<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</b>
+                     * @param _subAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</b>
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -87,15 +87,31 @@ namespace TencentCloud
                     bool SubAppIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AudioVideoType 
+                     * 获取Played audio and video type. Available values:
+<li>AdaptiveDynamicStream: adaptive bitrate stream output;</li>
+<li>Transcode: transcode;</li>
+<li>Original: original audio/video.</li>
+AdaptiveDynamicStream by default.
+                     * @return AudioVideoType Played audio and video type. Available values:
+<li>AdaptiveDynamicStream: adaptive bitrate stream output;</li>
+<li>Transcode: transcode;</li>
+<li>Original: original audio/video.</li>
+AdaptiveDynamicStream by default.
                      * 
                      */
                     std::string GetAudioVideoType() const;
 
                     /**
-                     * 设置
-                     * @param _audioVideoType 
+                     * 设置Played audio and video type. Available values:
+<li>AdaptiveDynamicStream: adaptive bitrate stream output;</li>
+<li>Transcode: transcode;</li>
+<li>Original: original audio/video.</li>
+AdaptiveDynamicStream by default.
+                     * @param _audioVideoType Played audio and video type. Available values:
+<li>AdaptiveDynamicStream: adaptive bitrate stream output;</li>
+<li>Transcode: transcode;</li>
+<li>Original: original audio/video.</li>
+AdaptiveDynamicStream by default.
                      * 
                      */
                     void SetAudioVideoType(const std::string& _audioVideoType);
@@ -108,15 +124,31 @@ namespace TencentCloud
                     bool AudioVideoTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return DrmSwitch 
+                     * 获取Switch for playing DRM-protected adaptive bitstream:
+<li>ON: enabled, indicates only playback of DRM protected adaptive bitrate output;</li>
+<li>OFF: Disable, indicates playback of unencrypted adaptive bitstream output.</li>
+Default value: OFF.
+This parameter is valid when AudioVideoType is AdaptiveDynamicStream.
+                     * @return DrmSwitch Switch for playing DRM-protected adaptive bitstream:
+<li>ON: enabled, indicates only playback of DRM protected adaptive bitrate output;</li>
+<li>OFF: Disable, indicates playback of unencrypted adaptive bitstream output.</li>
+Default value: OFF.
+This parameter is valid when AudioVideoType is AdaptiveDynamicStream.
                      * 
                      */
                     std::string GetDrmSwitch() const;
 
                     /**
-                     * 设置
-                     * @param _drmSwitch 
+                     * 设置Switch for playing DRM-protected adaptive bitstream:
+<li>ON: enabled, indicates only playback of DRM protected adaptive bitrate output;</li>
+<li>OFF: Disable, indicates playback of unencrypted adaptive bitstream output.</li>
+Default value: OFF.
+This parameter is valid when AudioVideoType is AdaptiveDynamicStream.
+                     * @param _drmSwitch Switch for playing DRM-protected adaptive bitstream:
+<li>ON: enabled, indicates only playback of DRM protected adaptive bitrate output;</li>
+<li>OFF: Disable, indicates playback of unencrypted adaptive bitstream output.</li>
+Default value: OFF.
+This parameter is valid when AudioVideoType is AdaptiveDynamicStream.
                      * 
                      */
                     void SetDrmSwitch(const std::string& _drmSwitch);
@@ -129,15 +161,23 @@ namespace TencentCloud
                     bool DrmSwitchHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AdaptiveDynamicStreamingDefinition 
+                     * 获取Allowed output of unencrypted adaptive bitstream template ID.
+
+Required when `AudioVideoType` is `AdaptiveDynamicStream` and `DrmSwitch` is `OFF`.
+                     * @return AdaptiveDynamicStreamingDefinition Allowed output of unencrypted adaptive bitstream template ID.
+
+Required when `AudioVideoType` is `AdaptiveDynamicStream` and `DrmSwitch` is `OFF`.
                      * 
                      */
                     uint64_t GetAdaptiveDynamicStreamingDefinition() const;
 
                     /**
-                     * 设置
-                     * @param _adaptiveDynamicStreamingDefinition 
+                     * 设置Allowed output of unencrypted adaptive bitstream template ID.
+
+Required when `AudioVideoType` is `AdaptiveDynamicStream` and `DrmSwitch` is `OFF`.
+                     * @param _adaptiveDynamicStreamingDefinition Allowed output of unencrypted adaptive bitstream template ID.
+
+Required when `AudioVideoType` is `AdaptiveDynamicStream` and `DrmSwitch` is `OFF`.
                      * 
                      */
                     void SetAdaptiveDynamicStreamingDefinition(const uint64_t& _adaptiveDynamicStreamingDefinition);
@@ -150,15 +190,23 @@ namespace TencentCloud
                     bool AdaptiveDynamicStreamingDefinitionHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return DrmStreamingsInfo 
+                     * 获取Allowed output of DRM adaptive bitstream template content.
+
+Required when `AudioVideoType` is `AdaptiveDynamicStream` and `DrmSwitch` is `ON`.
+                     * @return DrmStreamingsInfo Allowed output of DRM adaptive bitstream template content.
+
+Required when `AudioVideoType` is `AdaptiveDynamicStream` and `DrmSwitch` is `ON`.
                      * 
                      */
                     DrmStreamingsInfo GetDrmStreamingsInfo() const;
 
                     /**
-                     * 设置
-                     * @param _drmStreamingsInfo 
+                     * 设置Allowed output of DRM adaptive bitstream template content.
+
+Required when `AudioVideoType` is `AdaptiveDynamicStream` and `DrmSwitch` is `ON`.
+                     * @param _drmStreamingsInfo Allowed output of DRM adaptive bitstream template content.
+
+Required when `AudioVideoType` is `AdaptiveDynamicStream` and `DrmSwitch` is `ON`.
                      * 
                      */
                     void SetDrmStreamingsInfo(const DrmStreamingsInfo& _drmStreamingsInfo);
@@ -171,15 +219,23 @@ namespace TencentCloud
                     bool DrmStreamingsInfoHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return TranscodeDefinition 
+                     * 获取Allowed output transcoding template ID.
+
+Required if `AudioVideoType` is `Transcode`.
+                     * @return TranscodeDefinition Allowed output transcoding template ID.
+
+Required if `AudioVideoType` is `Transcode`.
                      * 
                      */
                     uint64_t GetTranscodeDefinition() const;
 
                     /**
-                     * 设置
-                     * @param _transcodeDefinition 
+                     * 设置Allowed output transcoding template ID.
+
+Required if `AudioVideoType` is `Transcode`.
+                     * @param _transcodeDefinition Allowed output transcoding template ID.
+
+Required if `AudioVideoType` is `Transcode`.
                      * 
                      */
                     void SetTranscodeDefinition(const uint64_t& _transcodeDefinition);
@@ -192,15 +248,15 @@ namespace TencentCloud
                     bool TranscodeDefinitionHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ImageSpriteDefinition 
+                     * 获取Allowed output sprite template ID.
+                     * @return ImageSpriteDefinition Allowed output sprite template ID.
                      * 
                      */
                     uint64_t GetImageSpriteDefinition() const;
 
                     /**
-                     * 设置
-                     * @param _imageSpriteDefinition 
+                     * 设置Allowed output sprite template ID.
+                     * @param _imageSpriteDefinition Allowed output sprite template ID.
                      * 
                      */
                     void SetImageSpriteDefinition(const uint64_t& _imageSpriteDefinition);
@@ -213,15 +269,43 @@ namespace TencentCloud
                     bool ImageSpriteDefinitionHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ResolutionNames 
+                     * 获取Player's display name for substreams of different resolutions. Use default configuration if not filled or empty array:
+<li>MinEdgeLength: 240, Name: smooth;</li>
+<li>MinEdgeLength: 480, Name: SD;</li>
+<li>MinEdgeLength: 720, Name: high-definition;</li>
+<li>MinEdgeLength: 1080, Name: full HD;</li>
+<li>MinEdgeLength:1440,Name:2K;</li>
+<li>MinEdgeLength:2160,Name:4K;</li>
+<li>MinEdgeLength:4320,Name:8K.</li>
+                     * @return ResolutionNames Player's display name for substreams of different resolutions. Use default configuration if not filled or empty array:
+<li>MinEdgeLength: 240, Name: smooth;</li>
+<li>MinEdgeLength: 480, Name: SD;</li>
+<li>MinEdgeLength: 720, Name: high-definition;</li>
+<li>MinEdgeLength: 1080, Name: full HD;</li>
+<li>MinEdgeLength:1440,Name:2K;</li>
+<li>MinEdgeLength:2160,Name:4K;</li>
+<li>MinEdgeLength:4320,Name:8K.</li>
                      * 
                      */
                     std::vector<ResolutionNameInfo> GetResolutionNames() const;
 
                     /**
-                     * 设置
-                     * @param _resolutionNames 
+                     * 设置Player's display name for substreams of different resolutions. Use default configuration if not filled or empty array:
+<li>MinEdgeLength: 240, Name: smooth;</li>
+<li>MinEdgeLength: 480, Name: SD;</li>
+<li>MinEdgeLength: 720, Name: high-definition;</li>
+<li>MinEdgeLength: 1080, Name: full HD;</li>
+<li>MinEdgeLength:1440,Name:2K;</li>
+<li>MinEdgeLength:2160,Name:4K;</li>
+<li>MinEdgeLength:4320,Name:8K.</li>
+                     * @param _resolutionNames Player's display name for substreams of different resolutions. Use default configuration if not filled or empty array:
+<li>MinEdgeLength: 240, Name: smooth;</li>
+<li>MinEdgeLength: 480, Name: SD;</li>
+<li>MinEdgeLength: 720, Name: high-definition;</li>
+<li>MinEdgeLength: 1080, Name: full HD;</li>
+<li>MinEdgeLength:1440,Name:2K;</li>
+<li>MinEdgeLength:2160,Name:4K;</li>
+<li>MinEdgeLength:4320,Name:8K.</li>
                      * 
                      */
                     void SetResolutionNames(const std::vector<ResolutionNameInfo>& _resolutionNames);
@@ -234,15 +318,15 @@ namespace TencentCloud
                     bool ResolutionNamesHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Domain 
+                     * 获取Domain name used during playback. If left empty or set to `Default`, the domain name in the [default distribution configuration](https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1) is used.
+                     * @return Domain Domain name used during playback. If left empty or set to `Default`, the domain name in the [default distribution configuration](https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1) is used.
                      * 
                      */
                     std::string GetDomain() const;
 
                     /**
-                     * 设置
-                     * @param _domain 
+                     * 设置Domain name used during playback. If left empty or set to `Default`, the domain name in the [default distribution configuration](https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1) is used.
+                     * @param _domain Domain name used during playback. If left empty or set to `Default`, the domain name in the [default distribution configuration](https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1) is used.
                      * 
                      */
                     void SetDomain(const std::string& _domain);
@@ -255,15 +339,23 @@ namespace TencentCloud
                     bool DomainHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Scheme 
+                     * 获取Scheme used during playback. If left empty or set to `Default`, the scheme in the [default distribution configuration](https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1) is used. Other optional values:
+<li>HTTP;</li>
+<li>HTTPS.</li>
+                     * @return Scheme Scheme used during playback. If left empty or set to `Default`, the scheme in the [default distribution configuration](https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1) is used. Other optional values:
+<li>HTTP;</li>
+<li>HTTPS.</li>
                      * 
                      */
                     std::string GetScheme() const;
 
                     /**
-                     * 设置
-                     * @param _scheme 
+                     * 设置Scheme used during playback. If left empty or set to `Default`, the scheme in the [default distribution configuration](https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1) is used. Other optional values:
+<li>HTTP;</li>
+<li>HTTPS.</li>
+                     * @param _scheme Scheme used during playback. If left empty or set to `Default`, the scheme in the [default distribution configuration](https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1) is used. Other optional values:
+<li>HTTP;</li>
+<li>HTTPS.</li>
                      * 
                      */
                     void SetScheme(const std::string& _scheme);
@@ -276,15 +368,15 @@ namespace TencentCloud
                     bool SchemeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Comment 
+                     * 获取Template description, with a length limit of 256 characters.
+                     * @return Comment Template description, with a length limit of 256 characters.
                      * 
                      */
                     std::string GetComment() const;
 
                     /**
-                     * 设置
-                     * @param _comment 
+                     * 设置Template description, with a length limit of 256 characters.
+                     * @param _comment Template description, with a length limit of 256 characters.
                      * 
                      */
                     void SetComment(const std::string& _comment);
@@ -299,73 +391,96 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Player configuration name, length limited to 64 characters. Only allowed to appear [0-9a-zA-Z] and _- characters (for example, test_ABC-123). The name is unique for the same user.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * 
+                     * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether it is the default application or a newly created application.</b>
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
 
                     /**
-                     * 
+                     * Played audio and video type. Available values:
+<li>AdaptiveDynamicStream: adaptive bitrate stream output;</li>
+<li>Transcode: transcode;</li>
+<li>Original: original audio/video.</li>
+AdaptiveDynamicStream by default.
                      */
                     std::string m_audioVideoType;
                     bool m_audioVideoTypeHasBeenSet;
 
                     /**
-                     * 
+                     * Switch for playing DRM-protected adaptive bitstream:
+<li>ON: enabled, indicates only playback of DRM protected adaptive bitrate output;</li>
+<li>OFF: Disable, indicates playback of unencrypted adaptive bitstream output.</li>
+Default value: OFF.
+This parameter is valid when AudioVideoType is AdaptiveDynamicStream.
                      */
                     std::string m_drmSwitch;
                     bool m_drmSwitchHasBeenSet;
 
                     /**
-                     * 
+                     * Allowed output of unencrypted adaptive bitstream template ID.
+
+Required when `AudioVideoType` is `AdaptiveDynamicStream` and `DrmSwitch` is `OFF`.
                      */
                     uint64_t m_adaptiveDynamicStreamingDefinition;
                     bool m_adaptiveDynamicStreamingDefinitionHasBeenSet;
 
                     /**
-                     * 
+                     * Allowed output of DRM adaptive bitstream template content.
+
+Required when `AudioVideoType` is `AdaptiveDynamicStream` and `DrmSwitch` is `ON`.
                      */
                     DrmStreamingsInfo m_drmStreamingsInfo;
                     bool m_drmStreamingsInfoHasBeenSet;
 
                     /**
-                     * 
+                     * Allowed output transcoding template ID.
+
+Required if `AudioVideoType` is `Transcode`.
                      */
                     uint64_t m_transcodeDefinition;
                     bool m_transcodeDefinitionHasBeenSet;
 
                     /**
-                     * 
+                     * Allowed output sprite template ID.
                      */
                     uint64_t m_imageSpriteDefinition;
                     bool m_imageSpriteDefinitionHasBeenSet;
 
                     /**
-                     * 
+                     * Player's display name for substreams of different resolutions. Use default configuration if not filled or empty array:
+<li>MinEdgeLength: 240, Name: smooth;</li>
+<li>MinEdgeLength: 480, Name: SD;</li>
+<li>MinEdgeLength: 720, Name: high-definition;</li>
+<li>MinEdgeLength: 1080, Name: full HD;</li>
+<li>MinEdgeLength:1440,Name:2K;</li>
+<li>MinEdgeLength:2160,Name:4K;</li>
+<li>MinEdgeLength:4320,Name:8K.</li>
                      */
                     std::vector<ResolutionNameInfo> m_resolutionNames;
                     bool m_resolutionNamesHasBeenSet;
 
                     /**
-                     * 
+                     * Domain name used during playback. If left empty or set to `Default`, the domain name in the [default distribution configuration](https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1) is used.
                      */
                     std::string m_domain;
                     bool m_domainHasBeenSet;
 
                     /**
-                     * 
+                     * Scheme used during playback. If left empty or set to `Default`, the scheme in the [default distribution configuration](https://www.tencentcloud.com/document/product/266/33373?from_cn_redirect=1) is used. Other optional values:
+<li>HTTP;</li>
+<li>HTTPS.</li>
                      */
                     std::string m_scheme;
                     bool m_schemeHasBeenSet;
 
                     /**
-                     * 
+                     * Template description, with a length limit of 256 characters.
                      */
                     std::string m_comment;
                     bool m_commentHasBeenSet;

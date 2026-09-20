@@ -46,8 +46,10 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return ReviewResultSet 
+                     * 获取Image moderation job result.
+<font color=red>Note: This field is deprecated. It is recommended to use MediaReviewResult.</font>
+                     * @return ReviewResultSet Image moderation job result.
+<font color=red>Note: This field is deprecated. It is recommended to use MediaReviewResult.</font>
                      * @deprecated
                      */
                     std::vector<ContentReviewResult> GetReviewResultSet() const;
@@ -60,8 +62,8 @@ namespace TencentCloud
                     bool ReviewResultSetHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return MediaReviewResult 
+                     * 获取Image moderation job result.
+                     * @return MediaReviewResult Image moderation job result.
                      * 
                      */
                     ReviewImageResult GetMediaReviewResult() const;
@@ -76,13 +78,14 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Image moderation job result.
+<font color=red>Note: This field is deprecated. It is recommended to use MediaReviewResult.</font>
                      */
                     std::vector<ContentReviewResult> m_reviewResultSet;
                     bool m_reviewResultSetHasBeenSet;
 
                     /**
-                     * 
+                     * Image moderation job result.
                      */
                     ReviewImageResult m_mediaReviewResult;
                     bool m_mediaReviewResultHasBeenSet;

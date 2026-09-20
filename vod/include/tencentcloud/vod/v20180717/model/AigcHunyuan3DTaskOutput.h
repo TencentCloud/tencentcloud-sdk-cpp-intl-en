@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Information of the output of an AIGC Hunyuan 3D task.
                 */
                 class AigcHunyuan3DTaskOutput : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return FileInfos 
+                     * 获取<p>Information of the output file of an AIGC Hunyuan 3D task.</p>
+                     * @return FileInfos <p>Information of the output file of an AIGC Hunyuan 3D task.</p>
                      * 
                      */
                     std::vector<AigcHunyuan3DTaskOutputFileInfo> GetFileInfos() const;
 
                     /**
-                     * 设置
-                     * @param _fileInfos 
+                     * 设置<p>Information of the output file of an AIGC Hunyuan 3D task.</p>
+                     * @param _fileInfos <p>Information of the output file of an AIGC Hunyuan 3D task.</p>
                      * 
                      */
                     void SetFileInfos(const std::vector<AigcHunyuan3DTaskOutputFileInfo>& _fileInfos);
@@ -71,7 +71,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p>Information of the output file of an AIGC Hunyuan 3D task.</p>
                      */
                     std::vector<AigcHunyuan3DTaskOutputFileInfo> m_fileInfos;
                     bool m_fileInfosHasBeenSet;

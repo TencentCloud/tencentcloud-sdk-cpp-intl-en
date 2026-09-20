@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Definition 
+                     * 获取<p>Unique identifier of an MPS task template. This template is independent of templates created directly in Media Processing Service (MPS).</p>
+                     * @return Definition <p>Unique identifier of an MPS task template. This template is independent of templates created directly in Media Processing Service (MPS).</p>
                      * 
                      */
                     int64_t GetDefinition() const;
@@ -60,7 +60,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p>Unique identifier of an MPS task template. This template is independent of templates created directly in Media Processing Service (MPS).</p>
                      */
                     int64_t m_definition;
                     bool m_definitionHasBeenSet;

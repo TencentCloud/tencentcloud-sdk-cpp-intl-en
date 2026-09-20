@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Image processing configuration.
                 */
                 class ProcessImageAsyncTaskInput : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Definition 
+                     * 获取Image async processing template ID.
+                     * @return Definition Image async processing template ID.
                      * 
                      */
                     int64_t GetDefinition() const;
 
                     /**
-                     * 设置
-                     * @param _definition 
+                     * 设置Image async processing template ID.
+                     * @param _definition Image async processing template ID.
                      * 
                      */
                     void SetDefinition(const int64_t& _definition);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool DefinitionHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ExtendedParameter 
+                     * 获取Extended parameters for async image processing.
+                     * @return ExtendedParameter Extended parameters for async image processing.
                      * 
                      */
                     ProcessImageAsyncInputExtendedParameter GetExtendedParameter() const;
 
                     /**
-                     * 设置
-                     * @param _extendedParameter 
+                     * 设置Extended parameters for async image processing.
+                     * @param _extendedParameter Extended parameters for async image processing.
                      * 
                      */
                     void SetExtendedParameter(const ProcessImageAsyncInputExtendedParameter& _extendedParameter);
@@ -92,13 +92,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Image async processing template ID.
                      */
                     int64_t m_definition;
                     bool m_definitionHasBeenSet;
 
                     /**
-                     * 
+                     * Extended parameters for async image processing.
                      */
                     ProcessImageAsyncInputExtendedParameter m_extendedParameter;
                     bool m_extendedParameterHasBeenSet;

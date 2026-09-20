@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return SubAppId 
+                     * 获取<p><strong>VOD application ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</strong></p>
+                     * @return SubAppId <p><strong>VOD application ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</strong></p>
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置
-                     * @param _subAppId 
+                     * 设置<p><strong>VOD application ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</strong></p>
+                     * @param _subAppId <p><strong>VOD application ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</strong></p>
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -64,15 +64,15 @@ namespace TencentCloud
                     bool SubAppIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return QuotaType 
+                     * 获取<p>Quota type</p><p>Enumeration values:</p><ul><li>Image: AIGC image task</li><li>Video: AIGC video task</li><li>Text: AIGC text task</li></ul>
+                     * @return QuotaType <p>Quota type</p><p>Enumeration values:</p><ul><li>Image: AIGC image task</li><li>Video: AIGC video task</li><li>Text: AIGC text task</li></ul>
                      * 
                      */
                     std::string GetQuotaType() const;
 
                     /**
-                     * 设置
-                     * @param _quotaType 
+                     * 设置<p>Quota type</p><p>Enumeration values:</p><ul><li>Image: AIGC image task</li><li>Video: AIGC video task</li><li>Text: AIGC text task</li></ul>
+                     * @param _quotaType <p>Quota type</p><p>Enumeration values:</p><ul><li>Image: AIGC image task</li><li>Video: AIGC video task</li><li>Text: AIGC text task</li></ul>
                      * 
                      */
                     void SetQuotaType(const std::string& _quotaType);
@@ -85,15 +85,15 @@ namespace TencentCloud
                     bool QuotaTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return QuotaLimit 
+                     * 获取<p>Quota quantity of the task.</p><p>Unit: images/second/tokens.</p><ul><li>When QuotaType is Image, the unit is images;</li><li>When QuotaType is Video, the unit is seconds;</li><li>When QuotaType is Text, the unit is tokens.</li></ul>
+                     * @return QuotaLimit <p>Quota quantity of the task.</p><p>Unit: images/second/tokens.</p><ul><li>When QuotaType is Image, the unit is images;</li><li>When QuotaType is Video, the unit is seconds;</li><li>When QuotaType is Text, the unit is tokens.</li></ul>
                      * 
                      */
                     uint64_t GetQuotaLimit() const;
 
                     /**
-                     * 设置
-                     * @param _quotaLimit 
+                     * 设置<p>Quota quantity of the task.</p><p>Unit: images/second/tokens.</p><ul><li>When QuotaType is Image, the unit is images;</li><li>When QuotaType is Video, the unit is seconds;</li><li>When QuotaType is Text, the unit is tokens.</li></ul>
+                     * @param _quotaLimit <p>Quota quantity of the task.</p><p>Unit: images/second/tokens.</p><ul><li>When QuotaType is Image, the unit is images;</li><li>When QuotaType is Video, the unit is seconds;</li><li>When QuotaType is Text, the unit is tokens.</li></ul>
                      * 
                      */
                     void SetQuotaLimit(const uint64_t& _quotaLimit);
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool QuotaLimitHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ApiToken 
+                     * 获取<p>Valid only when QuotaType=Text. Used to select the ApiToken that needs a quota limit.</p>
+                     * @return ApiToken <p>Valid only when QuotaType=Text. Used to select the ApiToken that needs a quota limit.</p>
                      * 
                      */
                     std::string GetApiToken() const;
 
                     /**
-                     * 设置
-                     * @param _apiToken 
+                     * 设置<p>Valid only when QuotaType=Text. Used to select the ApiToken that needs a quota limit.</p>
+                     * @param _apiToken <p>Valid only when QuotaType=Text. Used to select the ApiToken that needs a quota limit.</p>
                      * 
                      */
                     void SetApiToken(const std::string& _apiToken);
@@ -129,25 +129,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p><strong>VOD application ID. For customers who activate on-demand services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</strong></p>
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Quota type</p><p>Enumeration values:</p><ul><li>Image: AIGC image task</li><li>Video: AIGC video task</li><li>Text: AIGC text task</li></ul>
                      */
                     std::string m_quotaType;
                     bool m_quotaTypeHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Quota quantity of the task.</p><p>Unit: images/second/tokens.</p><ul><li>When QuotaType is Image, the unit is images;</li><li>When QuotaType is Video, the unit is seconds;</li><li>When QuotaType is Text, the unit is tokens.</li></ul>
                      */
                     uint64_t m_quotaLimit;
                     bool m_quotaLimitHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Valid only when QuotaType=Text. Used to select the ApiToken that needs a quota limit.</p>
                      */
                     std::string m_apiToken;
                     bool m_apiTokenHasBeenSet;

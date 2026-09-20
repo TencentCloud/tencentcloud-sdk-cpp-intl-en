@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * https acceleration configuration for the domain name. Disabled by default.
                 */
                 class Https : public AbstractModel
                 {
@@ -106,15 +106,15 @@ namespace TencentCloud
                     bool Http2HasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return CertInfo 
+                     * 获取Certificate configuration information.
+                     * @return CertInfo Certificate configuration information.
                      * 
                      */
                     CDNCertInfo GetCertInfo() const;
 
                     /**
-                     * 设置
-                     * @param _certInfo 
+                     * 设置Certificate configuration information.
+                     * @param _certInfo Certificate configuration information.
                      * 
                      */
                     void SetCertInfo(const CDNCertInfo& _certInfo);
@@ -145,7 +145,7 @@ namespace TencentCloud
                     bool m_http2HasBeenSet;
 
                     /**
-                     * 
+                     * Certificate configuration information.
                      */
                     CDNCertInfo m_certInfo;
                     bool m_certInfoHasBeenSet;

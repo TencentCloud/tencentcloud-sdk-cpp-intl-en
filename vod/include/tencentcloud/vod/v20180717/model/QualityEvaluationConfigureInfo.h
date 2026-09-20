@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Control parameters for video frame quality evaluation.
                 */
                 class QualityEvaluationConfigureInfo : public AbstractModel
                 {
@@ -47,15 +47,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Switch 
+                     * 获取Video quality evaluation detection switch. Available values:
+<li>ON: enabled;</li>
+<li>OFF: disabled.</li>
+                     * @return Switch Video quality evaluation detection switch. Available values:
+<li>ON: enabled;</li>
+<li>OFF: disabled.</li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置
-                     * @param _switch 
+                     * 设置Video quality evaluation detection switch. Available values:
+<li>ON: enabled;</li>
+<li>OFF: disabled.</li>
+                     * @param _switch Video quality evaluation detection switch. Available values:
+<li>ON: enabled;</li>
+<li>OFF: disabled.</li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -68,15 +76,15 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Score 
+                     * 获取Video quality evaluation filtering threshold. Only time periods with values below this threshold are returned. Default value: 60.
+                     * @return Score Video quality evaluation filtering threshold. Only time periods with values below this threshold are returned. Default value: 60.
                      * 
                      */
                     int64_t GetScore() const;
 
                     /**
-                     * 设置
-                     * @param _score 
+                     * 设置Video quality evaluation filtering threshold. Only time periods with values below this threshold are returned. Default value: 60.
+                     * @param _score Video quality evaluation filtering threshold. Only time periods with values below this threshold are returned. Default value: 60.
                      * 
                      */
                     void SetScore(const int64_t& _score);
@@ -91,13 +99,15 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Video quality evaluation detection switch. Available values:
+<li>ON: enabled;</li>
+<li>OFF: disabled.</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * 
+                     * Video quality evaluation filtering threshold. Only time periods with values below this threshold are returned. Default value: 60.
                      */
                     int64_t m_score;
                     bool m_scoreHasBeenSet;

@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return ElementId 
+                     * 获取Principal ID. You need to record the returned principal ID.
+                     * @return ElementId Principal ID. You need to record the returned principal ID.
                      * 
                      */
                     std::string GetElementId() const;
@@ -60,7 +60,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Principal ID. You need to record the returned principal ID.
                      */
                     std::string m_elementId;
                     bool m_elementIdHasBeenSet;

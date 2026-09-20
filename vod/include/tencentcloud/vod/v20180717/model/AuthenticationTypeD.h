@@ -75,18 +75,18 @@ Only allow upper- and lower-case letters and digits, with a length of 6 to 32 ch
                     bool SecretKeyHasBeenSet() const;
 
                     /**
-                     * 获取Signature expiration time settings;
+                     * 获取Signature expiration time setting;
 In seconds. Maximum settable value: 630720000.
-                     * @return ExpireTime Signature expiration time settings;
+                     * @return ExpireTime Signature expiration time setting;
 In seconds. Maximum settable value: 630720000.
                      * 
                      */
                     uint64_t GetExpireTime() const;
 
                     /**
-                     * 设置Signature expiration time settings;
+                     * 设置Signature expiration time setting;
 In seconds. Maximum settable value: 630720000.
-                     * @param _expireTime Signature expiration time settings;
+                     * @param _expireTime Signature expiration time setting;
 In seconds. Maximum settable value: 630720000.
                      * 
                      */
@@ -101,18 +101,18 @@ In seconds. Maximum settable value: 630720000.
 
                     /**
                      * 获取List of filename extensions for authentication/no authentication settings;
-If it contains the character *, it indicates all files.
+If it contains the character *, it means all files.
                      * @return FileExtensions List of filename extensions for authentication/no authentication settings;
-If it contains the character *, it indicates all files.
+If it contains the character *, it means all files.
                      * 
                      */
                     std::vector<std::string> GetFileExtensions() const;
 
                     /**
                      * 设置List of filename extensions for authentication/no authentication settings;
-If it contains the character *, it indicates all files.
+If it contains the character *, it means all files.
                      * @param _fileExtensions List of filename extensions for authentication/no authentication settings;
-If it contains the character *, it indicates all files.
+If it contains the character *, it means all files.
                      * 
                      */
                     void SetFileExtensions(const std::vector<std::string>& _fileExtensions);
@@ -126,18 +126,18 @@ If it contains the character *, it indicates all files.
 
                     /**
                      * 获取whitelist: allowlist, means to authenticate all types except those in the FileExtensions list.
-blacklist: blocklist, means only applicable to authenticate the types in FileExtensions.
+blacklist: blocklist, which means authentication is only applicable to the types in FileExtensions.
                      * @return FilterType whitelist: allowlist, means to authenticate all types except those in the FileExtensions list.
-blacklist: blocklist, means only applicable to authenticate the types in FileExtensions.
+blacklist: blocklist, which means authentication is only applicable to the types in FileExtensions.
                      * 
                      */
                     std::string GetFilterType() const;
 
                     /**
                      * 设置whitelist: allowlist, means to authenticate all types except those in the FileExtensions list.
-blacklist: blocklist, means only applicable to authenticate the types in FileExtensions.
+blacklist: blocklist, which means authentication is only applicable to the types in FileExtensions.
                      * @param _filterType whitelist: allowlist, means to authenticate all types except those in the FileExtensions list.
-blacklist: blocklist, means only applicable to authenticate the types in FileExtensions.
+blacklist: blocklist, which means authentication is only applicable to the types in FileExtensions.
                      * 
                      */
                     void SetFilterType(const std::string& _filterType);
@@ -150,18 +150,18 @@ blacklist: blocklist, means only applicable to authenticate the types in FileExt
                     bool FilterTypeHasBeenSet() const;
 
                     /**
-                     * 获取Signature parameter name settings;
+                     * 获取Signature parameter name setting;
 Only allow upper- and lower-case letters, digits, or underscores, with a length of 1 to 100 characters, and cannot start with a digit.
-                     * @return SignParam Signature parameter name settings;
+                     * @return SignParam Signature parameter name setting;
 Only allow upper- and lower-case letters, digits, or underscores, with a length of 1 to 100 characters, and cannot start with a digit.
                      * 
                      */
                     std::string GetSignParam() const;
 
                     /**
-                     * 设置Signature parameter name settings;
+                     * 设置Signature parameter name setting;
 Only allow upper- and lower-case letters, digits, or underscores, with a length of 1 to 100 characters, and cannot start with a digit.
-                     * @param _signParam Signature parameter name settings;
+                     * @param _signParam Signature parameter name setting;
 Only allow upper- and lower-case letters, digits, or underscores, with a length of 1 to 100 characters, and cannot start with a digit.
                      * 
                      */
@@ -263,7 +263,7 @@ Only allow upper- and lower-case letters and digits, with a length of 6 to 32 ch
                     bool m_secretKeyHasBeenSet;
 
                     /**
-                     * Signature expiration time settings;
+                     * Signature expiration time setting;
 In seconds. Maximum settable value: 630720000.
                      */
                     uint64_t m_expireTime;
@@ -271,20 +271,20 @@ In seconds. Maximum settable value: 630720000.
 
                     /**
                      * List of filename extensions for authentication/no authentication settings;
-If it contains the character *, it indicates all files.
+If it contains the character *, it means all files.
                      */
                     std::vector<std::string> m_fileExtensions;
                     bool m_fileExtensionsHasBeenSet;
 
                     /**
                      * whitelist: allowlist, means to authenticate all types except those in the FileExtensions list.
-blacklist: blocklist, means only applicable to authenticate the types in FileExtensions.
+blacklist: blocklist, which means authentication is only applicable to the types in FileExtensions.
                      */
                     std::string m_filterType;
                     bool m_filterTypeHasBeenSet;
 
                     /**
-                     * Signature parameter name settings;
+                     * Signature parameter name setting;
 Only allow upper- and lower-case letters, digits, or underscores, with a length of 1 to 100 characters, and cannot start with a digit.
                      */
                     std::string m_signParam;

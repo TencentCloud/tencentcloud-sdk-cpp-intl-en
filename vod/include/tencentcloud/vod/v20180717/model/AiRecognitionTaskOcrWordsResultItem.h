@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Text keyword recognition result.
                 */
                 class AiRecognitionTaskOcrWordsResultItem : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Word 
+                     * 获取Text keyword.
+                     * @return Word Text keyword.
                      * 
                      */
                     std::string GetWord() const;
 
                     /**
-                     * 设置
-                     * @param _word 
+                     * 设置Text keyword.
+                     * @param _word Text keyword.
                      * 
                      */
                     void SetWord(const std::string& _word);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool WordHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SegmentSet 
+                     * 获取List of segments where the text key appears.
+                     * @return SegmentSet List of segments where the text key appears.
                      * 
                      */
                     std::vector<AiRecognitionTaskOcrWordsSegmentItem> GetSegmentSet() const;
 
                     /**
-                     * 设置
-                     * @param _segmentSet 
+                     * 设置List of segments where the text key appears.
+                     * @param _segmentSet List of segments where the text key appears.
                      * 
                      */
                     void SetSegmentSet(const std::vector<AiRecognitionTaskOcrWordsSegmentItem>& _segmentSet);
@@ -92,13 +92,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Text keyword.
                      */
                     std::string m_word;
                     bool m_wordHasBeenSet;
 
                     /**
-                     * 
+                     * List of segments where the text key appears.
                      */
                     std::vector<AiRecognitionTaskOcrWordsSegmentItem> m_segmentSet;
                     bool m_segmentSetHasBeenSet;

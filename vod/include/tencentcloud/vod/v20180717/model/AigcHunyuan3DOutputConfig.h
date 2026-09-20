@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Configuration of the output media file for an AIGC Hunyuan 3D task.
                 */
                 class AigcHunyuan3DOutputConfig : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return StorageMode 
+                     * 获取<p>Storage mode. Valid values: <li>Temporary: temporary storage;</li>Default value: Temporary</p>
+                     * @return StorageMode <p>Storage mode. Valid values: <li>Temporary: temporary storage;</li>Default value: Temporary</p>
                      * 
                      */
                     std::string GetStorageMode() const;
 
                     /**
-                     * 设置
-                     * @param _storageMode 
+                     * 设置<p>Storage mode. Valid values: <li>Temporary: temporary storage;</li>Default value: Temporary</p>
+                     * @param _storageMode <p>Storage mode. Valid values: <li>Temporary: temporary storage;</li>Default value: Temporary</p>
                      * 
                      */
                     void SetStorageMode(const std::string& _storageMode);
@@ -70,7 +70,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p>Storage mode. Valid values: <li>Temporary: temporary storage;</li>Default value: Temporary</p>
                      */
                     std::string m_storageMode;
                     bool m_storageModeHasBeenSet;

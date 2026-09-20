@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Create principal output information.
                 */
                 class CreateAigcSubjectOutput : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return SubjectId 
+                     * 获取<p>Principal ID.</p>
+                     * @return SubjectId <p>Principal ID.</p>
                      * 
                      */
                     std::string GetSubjectId() const;
 
                     /**
-                     * 设置
-                     * @param _subjectId 
+                     * 设置<p>Principal ID.</p>
+                     * @param _subjectId <p>Principal ID.</p>
                      * 
                      */
                     void SetSubjectId(const std::string& _subjectId);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool SubjectIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SubjectInfo 
+                     * 获取<p>Entity information.</p>
+                     * @return SubjectInfo <p>Entity information.</p>
                      * 
                      */
                     std::string GetSubjectInfo() const;
 
                     /**
-                     * 设置
-                     * @param _subjectInfo 
+                     * 设置<p>Entity information.</p>
+                     * @param _subjectInfo <p>Entity information.</p>
                      * 
                      */
                     void SetSubjectInfo(const std::string& _subjectInfo);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p>Principal ID.</p>
                      */
                     std::string m_subjectId;
                     bool m_subjectIdHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Entity information.</p>
                      */
                     std::string m_subjectInfo;
                     bool m_subjectInfoHasBeenSet;

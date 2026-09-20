@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * On-demand file transcoding information
                 */
                 class MediaTranscodeInfo : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return TranscodeSet 
+                     * 获取Transcoding information collection for each specification. Each element represents the transcoding result of a specification.
+                     * @return TranscodeSet Transcoding information collection for each specification. Each element represents the transcoding result of a specification.
                      * 
                      */
                     std::vector<MediaTranscodeItem> GetTranscodeSet() const;
 
                     /**
-                     * 设置
-                     * @param _transcodeSet 
+                     * 设置Transcoding information collection for each specification. Each element represents the transcoding result of a specification.
+                     * @param _transcodeSet Transcoding information collection for each specification. Each element represents the transcoding result of a specification.
                      * 
                      */
                     void SetTranscodeSet(const std::vector<MediaTranscodeItem>& _transcodeSet);
@@ -71,7 +71,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Transcoding information collection for each specification. Each element represents the transcoding result of a specification.
                      */
                     std::vector<MediaTranscodeItem> m_transcodeSet;
                     bool m_transcodeSetHasBeenSet;

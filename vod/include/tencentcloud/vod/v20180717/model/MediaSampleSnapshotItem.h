@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Sampling screenshot information
                 */
                 class MediaSampleSnapshotItem : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Definition 
+                     * 获取Sampled screenshot specification ID. See sampling screenshot parameter template (https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.87.87.E6.A0.B7.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
+                     * @return Definition Sampled screenshot specification ID. See sampling screenshot parameter template (https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.87.87.E6.A0.B7.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
                      * 
                      */
                     int64_t GetDefinition() const;
 
                     /**
-                     * 设置
-                     * @param _definition 
+                     * 设置Sampled screenshot specification ID. See sampling screenshot parameter template (https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.87.87.E6.A0.B7.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
+                     * @param _definition Sampled screenshot specification ID. See sampling screenshot parameter template (https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.87.87.E6.A0.B7.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
                      * 
                      */
                     void SetDefinition(const int64_t& _definition);
@@ -68,15 +68,23 @@ namespace TencentCloud
                     bool DefinitionHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SampleType 
+                     * 获取Sampling method. Valid value:
+<li>Percent: interval sampling based on percentage.</li>
+<li>Time: sampling based on time interval.</li>
+                     * @return SampleType Sampling method. Valid value:
+<li>Percent: interval sampling based on percentage.</li>
+<li>Time: sampling based on time interval.</li>
                      * 
                      */
                     std::string GetSampleType() const;
 
                     /**
-                     * 设置
-                     * @param _sampleType 
+                     * 设置Sampling method. Valid value:
+<li>Percent: interval sampling based on percentage.</li>
+<li>Time: sampling based on time interval.</li>
+                     * @param _sampleType Sampling method. Valid value:
+<li>Percent: interval sampling based on percentage.</li>
+<li>Time: sampling based on time interval.</li>
                      * 
                      */
                     void SetSampleType(const std::string& _sampleType);
@@ -89,15 +97,23 @@ namespace TencentCloud
                     bool SampleTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Interval 
+                     * 获取Sampling interval
+<li>When SampleType is Percent, this value indicates how many percentage one image.</li>
+<li>When SampleType is Time, this value means the time interval between images, in seconds. The first image is always the first video frame.</li>
+                     * @return Interval Sampling interval
+<li>When SampleType is Percent, this value indicates how many percentage one image.</li>
+<li>When SampleType is Time, this value means the time interval between images, in seconds. The first image is always the first video frame.</li>
                      * 
                      */
                     int64_t GetInterval() const;
 
                     /**
-                     * 设置
-                     * @param _interval 
+                     * 设置Sampling interval
+<li>When SampleType is Percent, this value indicates how many percentage one image.</li>
+<li>When SampleType is Time, this value means the time interval between images, in seconds. The first image is always the first video frame.</li>
+                     * @param _interval Sampling interval
+<li>When SampleType is Percent, this value indicates how many percentage one image.</li>
+<li>When SampleType is Time, this value means the time interval between images, in seconds. The first image is always the first video frame.</li>
                      * 
                      */
                     void SetInterval(const int64_t& _interval);
@@ -110,15 +126,15 @@ namespace TencentCloud
                     bool IntervalHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ImageUrlSet 
+                     * 获取List of generated screenshot URLs.
+                     * @return ImageUrlSet List of generated screenshot URLs.
                      * 
                      */
                     std::vector<std::string> GetImageUrlSet() const;
 
                     /**
-                     * 设置
-                     * @param _imageUrlSet 
+                     * 设置List of generated screenshot URLs.
+                     * @param _imageUrlSet List of generated screenshot URLs.
                      * 
                      */
                     void SetImageUrlSet(const std::vector<std::string>& _imageUrlSet);
@@ -131,15 +147,15 @@ namespace TencentCloud
                     bool ImageUrlSetHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return WaterMarkDefinition 
+                     * 获取List of template IDs if the screenshot is watermarked.
+                     * @return WaterMarkDefinition List of template IDs if the screenshot is watermarked.
                      * 
                      */
                     std::vector<int64_t> GetWaterMarkDefinition() const;
 
                     /**
-                     * 设置
-                     * @param _waterMarkDefinition 
+                     * 设置List of template IDs if the screenshot is watermarked.
+                     * @param _waterMarkDefinition List of template IDs if the screenshot is watermarked.
                      * 
                      */
                     void SetWaterMarkDefinition(const std::vector<int64_t>& _waterMarkDefinition);
@@ -154,31 +170,35 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Sampled screenshot specification ID. See sampling screenshot parameter template (https://www.tencentcloud.com/document/product/266/33480?from_cn_redirect=1#.E9.87.87.E6.A0.B7.E6.88.AA.E5.9B.BE.E6.A8.A1.E6.9D.BF).
                      */
                     int64_t m_definition;
                     bool m_definitionHasBeenSet;
 
                     /**
-                     * 
+                     * Sampling method. Valid value:
+<li>Percent: interval sampling based on percentage.</li>
+<li>Time: sampling based on time interval.</li>
                      */
                     std::string m_sampleType;
                     bool m_sampleTypeHasBeenSet;
 
                     /**
-                     * 
+                     * Sampling interval
+<li>When SampleType is Percent, this value indicates how many percentage one image.</li>
+<li>When SampleType is Time, this value means the time interval between images, in seconds. The first image is always the first video frame.</li>
                      */
                     int64_t m_interval;
                     bool m_intervalHasBeenSet;
 
                     /**
-                     * 
+                     * List of generated screenshot URLs.
                      */
                     std::vector<std::string> m_imageUrlSet;
                     bool m_imageUrlSetHasBeenSet;
 
                     /**
-                     * 
+                     * List of template IDs if the screenshot is watermarked.
                      */
                     std::vector<int64_t> m_waterMarkDefinition;
                     bool m_waterMarkDefinitionHasBeenSet;

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Panoramic recording information.
                 */
                 class WebPageRecordInfo : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return RecordUrl 
+                     * 获取Panoramic recording URL.
+                     * @return RecordUrl Panoramic recording URL.
                      * 
                      */
                     std::string GetRecordUrl() const;
 
                     /**
-                     * 设置
-                     * @param _recordUrl 
+                     * 设置Panoramic recording URL.
+                     * @param _recordUrl Panoramic recording URL.
                      * 
                      */
                     void SetRecordUrl(const std::string& _recordUrl);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool RecordUrlHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return RecordTaskId 
+                     * 获取Panoramic recording task ID.
+                     * @return RecordTaskId Panoramic recording task ID.
                      * 
                      */
                     std::string GetRecordTaskId() const;
 
                     /**
-                     * 设置
-                     * @param _recordTaskId 
+                     * 设置Panoramic recording task ID.
+                     * @param _recordTaskId Panoramic recording task ID.
                      * 
                      */
                     void SetRecordTaskId(const std::string& _recordTaskId);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Panoramic recording URL.
                      */
                     std::string m_recordUrl;
                     bool m_recordUrlHasBeenSet;
 
                     /**
-                     * 
+                     * Panoramic recording task ID.
                      */
                     std::string m_recordTaskId;
                     bool m_recordTaskIdHasBeenSet;

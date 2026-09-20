@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * AIGC subject input information.
                 */
                 class AigcVideoTaskInputSubjectInfo : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Id 
+                     * 获取<p>Fixed subject Id.</p><ul><li>Kling subject <strong>required</strong>;</li><li>Vidu subject optional.</li></ul>
+                     * @return Id <p>Fixed subject Id.</p><ul><li>Kling subject <strong>required</strong>;</li><li>Vidu subject optional.</li></ul>
                      * 
                      */
                     std::string GetId() const;
 
                     /**
-                     * 设置
-                     * @param _id 
+                     * 设置<p>Fixed subject Id.</p><ul><li>Kling subject <strong>required</strong>;</li><li>Vidu subject optional.</li></ul>
+                     * @param _id <p>Fixed subject Id.</p><ul><li>Kling subject <strong>required</strong>;</li><li>Vidu subject optional.</li></ul>
                      * 
                      */
                     void SetId(const std::string& _id);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool IdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Name 
+                     * 获取<p>Fixed name.</p><ul><li>Vidu subject is <strong>required</strong>. You can add [@name] in the prompt to use it. For example, if the name is Xiao Ming, describe it as [@Xiao Ming] in the prompt.</li><li>Kling subject is optional.</li></ul>
+                     * @return Name <p>Fixed name.</p><ul><li>Vidu subject is <strong>required</strong>. You can add [@name] in the prompt to use it. For example, if the name is Xiao Ming, describe it as [@Xiao Ming] in the prompt.</li><li>Kling subject is optional.</li></ul>
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置
-                     * @param _name 
+                     * 设置<p>Fixed name.</p><ul><li>Vidu subject is <strong>required</strong>. You can add [@name] in the prompt to use it. For example, if the name is Xiao Ming, describe it as [@Xiao Ming] in the prompt.</li><li>Kling subject is optional.</li></ul>
+                     * @param _name <p>Fixed name.</p><ul><li>Vidu subject is <strong>required</strong>. You can add [@name] in the prompt to use it. For example, if the name is Xiao Ming, describe it as [@Xiao Ming] in the prompt.</li><li>Kling subject is optional.</li></ul>
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return VoiceId 
+                     * 获取<p><strong>Valid only for Vidu.</strong>The voice type ID is used to determine the timbre of the sound in the video. If it is empty, the system will automatically recommend one.</p>
+                     * @return VoiceId <p><strong>Valid only for Vidu.</strong>The voice type ID is used to determine the timbre of the sound in the video. If it is empty, the system will automatically recommend one.</p>
                      * 
                      */
                     std::string GetVoiceId() const;
 
                     /**
-                     * 设置
-                     * @param _voiceId 
+                     * 设置<p><strong>Valid only for Vidu.</strong>The voice type ID is used to determine the timbre of the sound in the video. If it is empty, the system will automatically recommend one.</p>
+                     * @param _voiceId <p><strong>Valid only for Vidu.</strong>The voice type ID is used to determine the timbre of the sound in the video. If it is empty, the system will automatically recommend one.</p>
                      * 
                      */
                     void SetVoiceId(const std::string& _voiceId);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool VoiceIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ImageUrls 
+                     * 获取<p><strong>Valid only for Vidu.</strong> Temporary subject images, up to 3 images<br>Note 1: Supports passing image URLs (ensure they are accessible);<br>Note 2: Images support png, jpeg, jpg, webp formats;<br>Note 3: Image pixels cannot be less than 128*128, and the ratio must be less than 1:4 or 4:1.</p>
+                     * @return ImageUrls <p><strong>Valid only for Vidu.</strong> Temporary subject images, up to 3 images<br>Note 1: Supports passing image URLs (ensure they are accessible);<br>Note 2: Images support png, jpeg, jpg, webp formats;<br>Note 3: Image pixels cannot be less than 128*128, and the ratio must be less than 1:4 or 4:1.</p>
                      * 
                      */
                     std::vector<std::string> GetImageUrls() const;
 
                     /**
-                     * 设置
-                     * @param _imageUrls 
+                     * 设置<p><strong>Valid only for Vidu.</strong> Temporary subject images, up to 3 images<br>Note 1: Supports passing image URLs (ensure they are accessible);<br>Note 2: Images support png, jpeg, jpg, webp formats;<br>Note 3: Image pixels cannot be less than 128*128, and the ratio must be less than 1:4 or 4:1.</p>
+                     * @param _imageUrls <p><strong>Valid only for Vidu.</strong> Temporary subject images, up to 3 images<br>Note 1: Supports passing image URLs (ensure they are accessible);<br>Note 2: Images support png, jpeg, jpg, webp formats;<br>Note 3: Image pixels cannot be less than 128*128, and the ratio must be less than 1:4 or 4:1.</p>
                      * 
                      */
                     void SetImageUrls(const std::vector<std::string>& _imageUrls);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool ImageUrlsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return VideoUrls 
+                     * 获取<p><strong>Valid only for Vidu.</strong> Temporary subject video, a maximum of 1 5-second video. Note 1: Only the viduq2-pro model supports the use of video subjects; Note 2: Supports up to 1 5-second video upload; Note 3: Video supports mp4, avi, mov formats; Note 4: Video pixel cannot be less than 128*128, and the ratio must be less than 1:4 or 4:1;</p>
+                     * @return VideoUrls <p><strong>Valid only for Vidu.</strong> Temporary subject video, a maximum of 1 5-second video. Note 1: Only the viduq2-pro model supports the use of video subjects; Note 2: Supports up to 1 5-second video upload; Note 3: Video supports mp4, avi, mov formats; Note 4: Video pixel cannot be less than 128*128, and the ratio must be less than 1:4 or 4:1;</p>
                      * 
                      */
                     std::vector<std::string> GetVideoUrls() const;
 
                     /**
-                     * 设置
-                     * @param _videoUrls 
+                     * 设置<p><strong>Valid only for Vidu.</strong> Temporary subject video, a maximum of 1 5-second video. Note 1: Only the viduq2-pro model supports the use of video subjects; Note 2: Supports up to 1 5-second video upload; Note 3: Video supports mp4, avi, mov formats; Note 4: Video pixel cannot be less than 128*128, and the ratio must be less than 1:4 or 4:1;</p>
+                     * @param _videoUrls <p><strong>Valid only for Vidu.</strong> Temporary subject video, a maximum of 1 5-second video. Note 1: Only the viduq2-pro model supports the use of video subjects; Note 2: Supports up to 1 5-second video upload; Note 3: Video supports mp4, avi, mov formats; Note 4: Video pixel cannot be less than 128*128, and the ratio must be less than 1:4 or 4:1;</p>
                      * 
                      */
                     void SetVideoUrls(const std::vector<std::string>& _videoUrls);
@@ -154,31 +154,31 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p>Fixed subject Id.</p><ul><li>Kling subject <strong>required</strong>;</li><li>Vidu subject optional.</li></ul>
                      */
                     std::string m_id;
                     bool m_idHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Fixed name.</p><ul><li>Vidu subject is <strong>required</strong>. You can add [@name] in the prompt to use it. For example, if the name is Xiao Ming, describe it as [@Xiao Ming] in the prompt.</li><li>Kling subject is optional.</li></ul>
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * 
+                     * <p><strong>Valid only for Vidu.</strong>The voice type ID is used to determine the timbre of the sound in the video. If it is empty, the system will automatically recommend one.</p>
                      */
                     std::string m_voiceId;
                     bool m_voiceIdHasBeenSet;
 
                     /**
-                     * 
+                     * <p><strong>Valid only for Vidu.</strong> Temporary subject images, up to 3 images<br>Note 1: Supports passing image URLs (ensure they are accessible);<br>Note 2: Images support png, jpeg, jpg, webp formats;<br>Note 3: Image pixels cannot be less than 128*128, and the ratio must be less than 1:4 or 4:1.</p>
                      */
                     std::vector<std::string> m_imageUrls;
                     bool m_imageUrlsHasBeenSet;
 
                     /**
-                     * 
+                     * <p><strong>Valid only for Vidu.</strong> Temporary subject video, a maximum of 1 5-second video. Note 1: Only the viduq2-pro model supports the use of video subjects; Note 2: Supports up to 1 5-second video upload; Note 3: Video supports mp4, avi, mov formats; Note 4: Video pixel cannot be less than 128*128, and the ratio must be less than 1:4 or 4:1;</p>
                      */
                     std::vector<std::string> m_videoUrls;
                     bool m_videoUrlsHasBeenSet;

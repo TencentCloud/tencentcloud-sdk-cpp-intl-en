@@ -45,15 +45,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Name 
+                     * 获取Template name.
+                     * @return Name Template name.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置
-                     * @param _name 
+                     * 设置Template name.
+                     * @param _name Template name.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -66,15 +66,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SubAppId 
+                     * 获取<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+                     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
                      * 
                      */
                     int64_t GetSubAppId() const;
 
                     /**
-                     * 设置
-                     * @param _subAppId 
+                     * 设置<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
+                     * @param _subAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
                      * 
                      */
                     void SetSubAppId(const int64_t& _subAppId);
@@ -87,15 +87,15 @@ namespace TencentCloud
                     bool SubAppIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return VideoConfigure 
+                     * 获取Video parameter configuration.
+                     * @return VideoConfigure Video parameter configuration.
                      * 
                      */
                     VideoConfigureInfoForUpdate GetVideoConfigure() const;
 
                     /**
-                     * 设置
-                     * @param _videoConfigure 
+                     * 设置Video parameter configuration.
+                     * @param _videoConfigure Video parameter configuration.
                      * 
                      */
                     void SetVideoConfigure(const VideoConfigureInfoForUpdate& _videoConfigure);
@@ -108,15 +108,15 @@ namespace TencentCloud
                     bool VideoConfigureHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return WatermarkConfigure 
+                     * 获取Watermark parameter configuration.
+                     * @return WatermarkConfigure Watermark parameter configuration.
                      * 
                      */
                     WatermarkConfigureInfoForUpdate GetWatermarkConfigure() const;
 
                     /**
-                     * 设置
-                     * @param _watermarkConfigure 
+                     * 设置Watermark parameter configuration.
+                     * @param _watermarkConfigure Watermark parameter configuration.
                      * 
                      */
                     void SetWatermarkConfigure(const WatermarkConfigureInfoForUpdate& _watermarkConfigure);
@@ -129,15 +129,15 @@ namespace TencentCloud
                     bool WatermarkConfigureHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Comment 
+                     * 获取Template description. The length cannot exceed 256 characters.
+                     * @return Comment Template description. The length cannot exceed 256 characters.
                      * 
                      */
                     std::string GetComment() const;
 
                     /**
-                     * 设置
-                     * @param _comment 
+                     * 设置Template description. The length cannot exceed 256 characters.
+                     * @param _comment Template description. The length cannot exceed 256 characters.
                      * 
                      */
                     void SetComment(const std::string& _comment);
@@ -152,31 +152,31 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Template name.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * 
+                     * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications (whether the default application or a newly created application).</b>
                      */
                     int64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
 
                     /**
-                     * 
+                     * Video parameter configuration.
                      */
                     VideoConfigureInfoForUpdate m_videoConfigure;
                     bool m_videoConfigureHasBeenSet;
 
                     /**
-                     * 
+                     * Watermark parameter configuration.
                      */
                     WatermarkConfigureInfoForUpdate m_watermarkConfigure;
                     bool m_watermarkConfigureHasBeenSet;
 
                     /**
-                     * 
+                     * Template description. The length cannot exceed 256 characters.
                      */
                     std::string m_comment;
                     bool m_commentHasBeenSet;

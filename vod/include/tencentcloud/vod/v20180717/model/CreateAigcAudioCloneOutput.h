@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Create AIGC voice clone output information.
                 */
                 class CreateAigcAudioCloneOutput : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return TaskId 
+                     * 获取<p>Task ID.</p>
+                     * @return TaskId <p>Task ID.</p>
                      * 
                      */
                     std::string GetTaskId() const;
 
                     /**
-                     * 设置
-                     * @param _taskId 
+                     * 设置<p>Task ID.</p>
+                     * @param _taskId <p>Task ID.</p>
                      * 
                      */
                     void SetTaskId(const std::string& _taskId);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool TaskIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return State 
+                     * 获取<p>Processing status.</p>
+                     * @return State <p>Processing status.</p>
                      * 
                      */
                     std::string GetState() const;
 
                     /**
-                     * 设置
-                     * @param _state 
+                     * 设置<p>Processing status.</p>
+                     * @param _state <p>Processing status.</p>
                      * 
                      */
                     void SetState(const std::string& _state);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool StateHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return VoiceId 
+                     * 获取<p>User-defined voice_id. It is not returned if the task fails.</p>
+                     * @return VoiceId <p>User-defined voice_id. It is not returned if the task fails.</p>
                      * 
                      */
                     std::string GetVoiceId() const;
 
                     /**
-                     * 设置
-                     * @param _voiceId 
+                     * 设置<p>User-defined voice_id. It is not returned if the task fails.</p>
+                     * @param _voiceId <p>User-defined voice_id. It is not returned if the task fails.</p>
                      * 
                      */
                     void SetVoiceId(const std::string& _voiceId);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool VoiceIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return DemoAudio 
+                     * 获取<p>If the trial text is passed in the request body, this parameter returns the audio audition in link format. Otherwise, this parameter is empty.</p>
+                     * @return DemoAudio <p>If the trial text is passed in the request body, this parameter returns the audio audition in link format. Otherwise, this parameter is empty.</p>
                      * 
                      */
                     std::string GetDemoAudio() const;
 
                     /**
-                     * 设置
-                     * @param _demoAudio 
+                     * 设置<p>If the trial text is passed in the request body, this parameter returns the audio audition in link format. Otherwise, this parameter is empty.</p>
+                     * @param _demoAudio <p>If the trial text is passed in the request body, this parameter returns the audio audition in link format. Otherwise, this parameter is empty.</p>
                      * 
                      */
                     void SetDemoAudio(const std::string& _demoAudio);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool DemoAudioHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Payload 
+                     * 获取<p>Pass-through parameter passed in for this call.</p>
+                     * @return Payload <p>Pass-through parameter passed in for this call.</p>
                      * 
                      */
                     std::string GetPayload() const;
 
                     /**
-                     * 设置
-                     * @param _payload 
+                     * 设置<p>Pass-through parameter passed in for this call.</p>
+                     * @param _payload <p>Pass-through parameter passed in for this call.</p>
                      * 
                      */
                     void SetPayload(const std::string& _payload);
@@ -152,15 +152,15 @@ namespace TencentCloud
                     bool PayloadHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return CreatedAt 
+                     * 获取<p>Task creation time.</p>
+                     * @return CreatedAt <p>Task creation time.</p>
                      * 
                      */
                     std::string GetCreatedAt() const;
 
                     /**
-                     * 设置
-                     * @param _createdAt 
+                     * 设置<p>Task creation time.</p>
+                     * @param _createdAt <p>Task creation time.</p>
                      * 
                      */
                     void SetCreatedAt(const std::string& _createdAt);
@@ -175,37 +175,37 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p>Task ID.</p>
                      */
                     std::string m_taskId;
                     bool m_taskIdHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Processing status.</p>
                      */
                     std::string m_state;
                     bool m_stateHasBeenSet;
 
                     /**
-                     * 
+                     * <p>User-defined voice_id. It is not returned if the task fails.</p>
                      */
                     std::string m_voiceId;
                     bool m_voiceIdHasBeenSet;
 
                     /**
-                     * 
+                     * <p>If the trial text is passed in the request body, this parameter returns the audio audition in link format. Otherwise, this parameter is empty.</p>
                      */
                     std::string m_demoAudio;
                     bool m_demoAudioHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Pass-through parameter passed in for this call.</p>
                      */
                     std::string m_payload;
                     bool m_payloadHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Task creation time.</p>
                      */
                     std::string m_createdAt;
                     bool m_createdAtHasBeenSet;

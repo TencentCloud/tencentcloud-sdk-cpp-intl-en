@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * ID cards of Hong Kong (China), Macao (China) and Taiwan (China), and international passport.
+                * Hong Kong, Macao, and Taiwan region as well as overseas passport
                 */
                 class InternationalIDPassport : public AbstractModel
                 {
@@ -48,18 +48,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Passport ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return LicenseNumber Passport ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetLicenseNumber() const;
 
                     /**
                      * 设置Passport ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _licenseNumber Passport ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetLicenseNumber(const std::string& _licenseNumber);
@@ -72,19 +68,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool LicenseNumberHasBeenSet() const;
 
                     /**
-                     * 获取Full name
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return FullName Full name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Name
+                     * @return FullName Name
                      * 
                      */
                     std::string GetFullName() const;
 
                     /**
-                     * 设置Full name
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _fullName Full name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Name
+                     * @param _fullName Name
                      * 
                      */
                     void SetFullName(const std::string& _fullName);
@@ -98,18 +90,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Last name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return Surname Last name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetSurname() const;
 
                     /**
                      * 设置Last name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _surname Last name
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetSurname(const std::string& _surname);
@@ -122,19 +110,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool SurnameHasBeenSet() const;
 
                     /**
-                     * 获取First name
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return GivenName First name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Name
+                     * @return GivenName Name
                      * 
                      */
                     std::string GetGivenName() const;
 
                     /**
-                     * 设置First name
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _givenName First name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Name
+                     * @param _givenName Name
                      * 
                      */
                     void SetGivenName(const std::string& _givenName);
@@ -147,19 +131,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool GivenNameHasBeenSet() const;
 
                     /**
-                     * 获取Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Birthday Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Date of birth
+                     * @return Birthday Date of birth
                      * 
                      */
                     std::string GetBirthday() const;
 
                     /**
-                     * 设置Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _birthday Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Date of birth
+                     * @param _birthday Date of birth
                      * 
                      */
                     void SetBirthday(const std::string& _birthday);
@@ -172,19 +152,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool BirthdayHasBeenSet() const;
 
                     /**
-                     * 获取Gender (F-Female, M-Male)
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Sex Gender (F-Female, M-Male)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Gender (F: female, M: male).
+                     * @return Sex Gender (F: female, M: male).
                      * 
                      */
                     std::string GetSex() const;
 
                     /**
-                     * 设置Gender (F-Female, M-Male)
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _sex Gender (F-Female, M-Male)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Gender (F: female, M: male).
+                     * @param _sex Gender (F: female, M: male).
                      * 
                      */
                     void SetSex(const std::string& _sex);
@@ -197,19 +173,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool SexHasBeenSet() const;
 
                     /**
-                     * 获取Expiration date
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return DateOfExpiration Expiration date
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Validity period.
+                     * @return DateOfExpiration Validity period.
                      * 
                      */
                     std::string GetDateOfExpiration() const;
 
                     /**
-                     * 设置Expiration date
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _dateOfExpiration Expiration date
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Validity period.
+                     * @param _dateOfExpiration Validity period.
                      * 
                      */
                     void SetDateOfExpiration(const std::string& _dateOfExpiration);
@@ -223,18 +195,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取Issuing country
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @return IssuingCountry Issuing country
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     std::string GetIssuingCountry() const;
 
                     /**
                      * 设置Issuing country
-Note: This field may return null, indicating that no valid values can be obtained.
                      * @param _issuingCountry Issuing country
-Note: This field may return null, indicating that no valid values can be obtained.
                      * 
                      */
                     void SetIssuingCountry(const std::string& _issuingCountry);
@@ -247,19 +215,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool IssuingCountryHasBeenSet() const;
 
                     /**
-                     * 获取Nationality code
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return NationalityCode Nationality code
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Country region code
+                     * @return NationalityCode Country region code
                      * 
                      */
                     std::string GetNationalityCode() const;
 
                     /**
-                     * 设置Nationality code
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _nationalityCode Nationality code
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Country region code
+                     * @param _nationalityCode Country region code
                      * 
                      */
                     void SetNationalityCode(const std::string& _nationalityCode);
@@ -272,19 +236,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool NationalityCodeHasBeenSet() const;
 
                     /**
-                     * 获取The first line at the bottom, the MRZ Code sequence
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return PassportCodeFirst The first line at the bottom, the MRZ Code sequence
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取MRZ Code sequence in the first row at the bottom
+                     * @return PassportCodeFirst MRZ Code sequence in the first row at the bottom
                      * 
                      */
                     std::string GetPassportCodeFirst() const;
 
                     /**
-                     * 设置The first line at the bottom, the MRZ Code sequence
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _passportCodeFirst The first line at the bottom, the MRZ Code sequence
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置MRZ Code sequence in the first row at the bottom
+                     * @param _passportCodeFirst MRZ Code sequence in the first row at the bottom
                      * 
                      */
                     void SetPassportCodeFirst(const std::string& _passportCodeFirst);
@@ -297,19 +257,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool PassportCodeFirstHasBeenSet() const;
 
                     /**
-                     * 获取The second line at the bottom, the MRZ Code sequence
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return PassportCodeSecond The second line at the bottom, the MRZ Code sequence
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取MRZ Code sequence in the second line from the bottom
+                     * @return PassportCodeSecond MRZ Code sequence in the second line from the bottom
                      * 
                      */
                     std::string GetPassportCodeSecond() const;
 
                     /**
-                     * 设置The second line at the bottom, the MRZ Code sequence
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _passportCodeSecond The second line at the bottom, the MRZ Code sequence
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置MRZ Code sequence in the second line from the bottom
+                     * @param _passportCodeSecond MRZ Code sequence in the second line from the bottom
                      * 
                      */
                     void SetPassportCodeSecond(const std::string& _passportCodeSecond);
@@ -325,77 +281,66 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Passport ID
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_licenseNumber;
                     bool m_licenseNumberHasBeenSet;
 
                     /**
-                     * Full name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Name
                      */
                     std::string m_fullName;
                     bool m_fullNameHasBeenSet;
 
                     /**
                      * Last name
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_surname;
                     bool m_surnameHasBeenSet;
 
                     /**
-                     * First name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Name
                      */
                     std::string m_givenName;
                     bool m_givenNameHasBeenSet;
 
                     /**
-                     * Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Date of birth
                      */
                     std::string m_birthday;
                     bool m_birthdayHasBeenSet;
 
                     /**
-                     * Gender (F-Female, M-Male)
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Gender (F: female, M: male).
                      */
                     std::string m_sex;
                     bool m_sexHasBeenSet;
 
                     /**
-                     * Expiration date
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Validity period.
                      */
                     std::string m_dateOfExpiration;
                     bool m_dateOfExpirationHasBeenSet;
 
                     /**
                      * Issuing country
-Note: This field may return null, indicating that no valid values can be obtained.
                      */
                     std::string m_issuingCountry;
                     bool m_issuingCountryHasBeenSet;
 
                     /**
-                     * Nationality code
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Country region code
                      */
                     std::string m_nationalityCode;
                     bool m_nationalityCodeHasBeenSet;
 
                     /**
-                     * The first line at the bottom, the MRZ Code sequence
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * MRZ Code sequence in the first row at the bottom
                      */
                     std::string m_passportCodeFirst;
                     bool m_passportCodeFirstHasBeenSet;
 
                     /**
-                     * The second line at the bottom, the MRZ Code sequence
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * MRZ Code sequence in the second line from the bottom
                      */
                     std::string m_passportCodeSecond;
                     bool m_passportCodeSecondHasBeenSet;

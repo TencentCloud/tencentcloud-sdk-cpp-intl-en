@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Domain 
+                     * 获取Domain name.
+                     * @return Domain Domain name.
                      * 
                      */
                     std::string GetDomain() const;
 
                     /**
-                     * 设置
-                     * @param _domain 
+                     * 设置Domain name.
+                     * @param _domain Domain name.
                      * 
                      */
                     void SetDomain(const std::string& _domain);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool DomainHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SubAppId 
+                     * 获取<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
+                     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
                      * 
                      */
                     int64_t GetSubAppId() const;
 
                     /**
-                     * 设置
-                     * @param _subAppId 
+                     * 设置<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
+                     * @param _subAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
                      * 
                      */
                     void SetSubAppId(const int64_t& _subAppId);
@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool SubAppIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ChineseMainlandCLSTargetInfo 
+                     * 获取Push target to set for logs in the Chinese mainland.
+                     * @return ChineseMainlandCLSTargetInfo Push target to set for logs in the Chinese mainland.
                      * 
                      */
                     AreaCLSTargetInfo GetChineseMainlandCLSTargetInfo() const;
 
                     /**
-                     * 设置
-                     * @param _chineseMainlandCLSTargetInfo 
+                     * 设置Push target to set for logs in the Chinese mainland.
+                     * @param _chineseMainlandCLSTargetInfo Push target to set for logs in the Chinese mainland.
                      * 
                      */
                     void SetChineseMainlandCLSTargetInfo(const AreaCLSTargetInfo& _chineseMainlandCLSTargetInfo);
@@ -107,15 +107,15 @@ namespace TencentCloud
                     bool ChineseMainlandCLSTargetInfoHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return OutsideChineseMainlandCLSTargetInfo 
+                     * 获取Push target for logs outside the Chinese mainland to be set.
+                     * @return OutsideChineseMainlandCLSTargetInfo Push target for logs outside the Chinese mainland to be set.
                      * 
                      */
                     AreaCLSTargetInfo GetOutsideChineseMainlandCLSTargetInfo() const;
 
                     /**
-                     * 设置
-                     * @param _outsideChineseMainlandCLSTargetInfo 
+                     * 设置Push target for logs outside the Chinese mainland to be set.
+                     * @param _outsideChineseMainlandCLSTargetInfo Push target for logs outside the Chinese mainland to be set.
                      * 
                      */
                     void SetOutsideChineseMainlandCLSTargetInfo(const AreaCLSTargetInfo& _outsideChineseMainlandCLSTargetInfo);
@@ -130,25 +130,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Domain name.
                      */
                     std::string m_domain;
                     bool m_domainHasBeenSet;
 
                     /**
-                     * 
+                     * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, this field must be set to the app ID when accessing resources in VOD applications, whether in the default application or a newly created application.</b>
                      */
                     int64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
 
                     /**
-                     * 
+                     * Push target to set for logs in the Chinese mainland.
                      */
                     AreaCLSTargetInfo m_chineseMainlandCLSTargetInfo;
                     bool m_chineseMainlandCLSTargetInfoHasBeenSet;
 
                     /**
-                     * 
+                     * Push target for logs outside the Chinese mainland to be set.
                      */
                     AreaCLSTargetInfo m_outsideChineseMainlandCLSTargetInfo;
                     bool m_outsideChineseMainlandCLSTargetInfoHasBeenSet;

@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Aggregation results of one detection item for the LLM large model in audio and video quality detection.
                 */
                 class QualityInspectLLMDetectionResultItem : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Category 
+                     * 获取<p>Detection category.</p><p>Enumeration value:</p><ul><li>AIGCQualityCharacteristics: AIGC quality characteristics.</li></ul>
+                     * @return Category <p>Detection category.</p><p>Enumeration value:</p><ul><li>AIGCQualityCharacteristics: AIGC quality characteristics.</li></ul>
                      * 
                      */
                     std::string GetCategory() const;
 
                     /**
-                     * 设置
-                     * @param _category 
+                     * 设置<p>Detection category.</p><p>Enumeration value:</p><ul><li>AIGCQualityCharacteristics: AIGC quality characteristics.</li></ul>
+                     * @param _category <p>Detection category.</p><p>Enumeration value:</p><ul><li>AIGCQualityCharacteristics: AIGC quality characteristics.</li></ul>
                      * 
                      */
                     void SetCategory(const std::string& _category);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool CategoryHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Group 
+                     * 获取<p>Detection group.</p><p>Enumeration values:</p><ul><li>AIGCAuthenticity: AIGC authenticity, including human body plausibility, physical plausibility, and cross-frame consistency.</li><li>AIGCTechQuality: AIGC technology quality, including frame size, black border, and forced portrait mode.</li></ul>
+                     * @return Group <p>Detection group.</p><p>Enumeration values:</p><ul><li>AIGCAuthenticity: AIGC authenticity, including human body plausibility, physical plausibility, and cross-frame consistency.</li><li>AIGCTechQuality: AIGC technology quality, including frame size, black border, and forced portrait mode.</li></ul>
                      * 
                      */
                     std::string GetGroup() const;
 
                     /**
-                     * 设置
-                     * @param _group 
+                     * 设置<p>Detection group.</p><p>Enumeration values:</p><ul><li>AIGCAuthenticity: AIGC authenticity, including human body plausibility, physical plausibility, and cross-frame consistency.</li><li>AIGCTechQuality: AIGC technology quality, including frame size, black border, and forced portrait mode.</li></ul>
+                     * @param _group <p>Detection group.</p><p>Enumeration values:</p><ul><li>AIGCAuthenticity: AIGC authenticity, including human body plausibility, physical plausibility, and cross-frame consistency.</li><li>AIGCTechQuality: AIGC technology quality, including frame size, black border, and forced portrait mode.</li></ul>
                      * 
                      */
                     void SetGroup(const std::string& _group);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool GroupHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Type 
+                     * 获取<p>Detection type name.</p><p>Enumeration values:</p><ul><li>BodyPoseCheck: Human body pose plausibility, which belongs to AIGCAuthenticity.</li><li>BodyDetailCheck: Human body detail plausibility, including finger count and facial symmetry, which belongs to AIGCAuthenticity.</li><li>PhysicRulesCheck: Physics rules plausibility, including perspective, lighting, and gravity, which belongs to AIGCAuthenticity.</li><li>ObjectConsistencyCheck: Cross-frame object consistency, which belongs to AIGCAuthenticity.</li><li>FormatCheck: Aspect ratio, black border, forced portrait mode, and other format issues, which belong to AIGCTechQuality.</li></ul>
+                     * @return Type <p>Detection type name.</p><p>Enumeration values:</p><ul><li>BodyPoseCheck: Human body pose plausibility, which belongs to AIGCAuthenticity.</li><li>BodyDetailCheck: Human body detail plausibility, including finger count and facial symmetry, which belongs to AIGCAuthenticity.</li><li>PhysicRulesCheck: Physics rules plausibility, including perspective, lighting, and gravity, which belongs to AIGCAuthenticity.</li><li>ObjectConsistencyCheck: Cross-frame object consistency, which belongs to AIGCAuthenticity.</li><li>FormatCheck: Aspect ratio, black border, forced portrait mode, and other format issues, which belong to AIGCTechQuality.</li></ul>
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置
-                     * @param _type 
+                     * 设置<p>Detection type name.</p><p>Enumeration values:</p><ul><li>BodyPoseCheck: Human body pose plausibility, which belongs to AIGCAuthenticity.</li><li>BodyDetailCheck: Human body detail plausibility, including finger count and facial symmetry, which belongs to AIGCAuthenticity.</li><li>PhysicRulesCheck: Physics rules plausibility, including perspective, lighting, and gravity, which belongs to AIGCAuthenticity.</li><li>ObjectConsistencyCheck: Cross-frame object consistency, which belongs to AIGCAuthenticity.</li><li>FormatCheck: Aspect ratio, black border, forced portrait mode, and other format issues, which belong to AIGCTechQuality.</li></ul>
+                     * @param _type <p>Detection type name.</p><p>Enumeration values:</p><ul><li>BodyPoseCheck: Human body pose plausibility, which belongs to AIGCAuthenticity.</li><li>BodyDetailCheck: Human body detail plausibility, including finger count and facial symmetry, which belongs to AIGCAuthenticity.</li><li>PhysicRulesCheck: Physics rules plausibility, including perspective, lighting, and gravity, which belongs to AIGCAuthenticity.</li><li>ObjectConsistencyCheck: Cross-frame object consistency, which belongs to AIGCAuthenticity.</li><li>FormatCheck: Aspect ratio, black border, forced portrait mode, and other format issues, which belong to AIGCTechQuality.</li></ul>
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -111,15 +111,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Score 
+                     * 获取<p>Overall quality score. Value range: [0, 100]. Higher values indicate better quality.</p>
+                     * @return Score <p>Overall quality score. Value range: [0, 100]. Higher values indicate better quality.</p>
                      * 
                      */
                     double GetScore() const;
 
                     /**
-                     * 设置
-                     * @param _score 
+                     * 设置<p>Overall quality score. Value range: [0, 100]. Higher values indicate better quality.</p>
+                     * @param _score <p>Overall quality score. Value range: [0, 100]. Higher values indicate better quality.</p>
                      * 
                      */
                     void SetScore(const double& _score);
@@ -132,15 +132,15 @@ namespace TencentCloud
                     bool ScoreHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Confidence 
+                     * 获取<p>Detection confidence. Value range: [0, 100]. Higher values indicate greater certainty.</p>
+                     * @return Confidence <p>Detection confidence. Value range: [0, 100]. Higher values indicate greater certainty.</p>
                      * 
                      */
                     double GetConfidence() const;
 
                     /**
-                     * 设置
-                     * @param _confidence 
+                     * 设置<p>Detection confidence. Value range: [0, 100]. Higher values indicate greater certainty.</p>
+                     * @param _confidence <p>Detection confidence. Value range: [0, 100]. Higher values indicate greater certainty.</p>
                      * 
                      */
                     void SetConfidence(const double& _confidence);
@@ -153,15 +153,15 @@ namespace TencentCloud
                     bool ConfidenceHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return IssueSet 
+                     * 获取<p>List of issues detected. This is empty if no issue is detected.</p>
+                     * @return IssueSet <p>List of issues detected. This is empty if no issue is detected.</p>
                      * 
                      */
                     std::vector<QualityInspectLLMDetectionIssue> GetIssueSet() const;
 
                     /**
-                     * 设置
-                     * @param _issueSet 
+                     * 设置<p>List of issues detected. This is empty if no issue is detected.</p>
+                     * @param _issueSet <p>List of issues detected. This is empty if no issue is detected.</p>
                      * 
                      */
                     void SetIssueSet(const std::vector<QualityInspectLLMDetectionIssue>& _issueSet);
@@ -176,37 +176,37 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p>Detection category.</p><p>Enumeration value:</p><ul><li>AIGCQualityCharacteristics: AIGC quality characteristics.</li></ul>
                      */
                     std::string m_category;
                     bool m_categoryHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Detection group.</p><p>Enumeration values:</p><ul><li>AIGCAuthenticity: AIGC authenticity, including human body plausibility, physical plausibility, and cross-frame consistency.</li><li>AIGCTechQuality: AIGC technology quality, including frame size, black border, and forced portrait mode.</li></ul>
                      */
                     std::string m_group;
                     bool m_groupHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Detection type name.</p><p>Enumeration values:</p><ul><li>BodyPoseCheck: Human body pose plausibility, which belongs to AIGCAuthenticity.</li><li>BodyDetailCheck: Human body detail plausibility, including finger count and facial symmetry, which belongs to AIGCAuthenticity.</li><li>PhysicRulesCheck: Physics rules plausibility, including perspective, lighting, and gravity, which belongs to AIGCAuthenticity.</li><li>ObjectConsistencyCheck: Cross-frame object consistency, which belongs to AIGCAuthenticity.</li><li>FormatCheck: Aspect ratio, black border, forced portrait mode, and other format issues, which belong to AIGCTechQuality.</li></ul>
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Overall quality score. Value range: [0, 100]. Higher values indicate better quality.</p>
                      */
                     double m_score;
                     bool m_scoreHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Detection confidence. Value range: [0, 100]. Higher values indicate greater certainty.</p>
                      */
                     double m_confidence;
                     bool m_confidenceHasBeenSet;
 
                     /**
-                     * 
+                     * <p>List of issues detected. This is empty if no issue is detected.</p>
                      */
                     std::vector<QualityInspectLLMDetectionIssue> m_issueSet;
                     bool m_issueSetHasBeenSet;

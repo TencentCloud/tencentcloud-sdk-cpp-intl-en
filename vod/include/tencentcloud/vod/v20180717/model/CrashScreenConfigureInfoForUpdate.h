@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Control parameters for screen glitch detection in video footage.
                 */
                 class CrashScreenConfigureInfoForUpdate : public AbstractModel
                 {
@@ -47,15 +47,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Switch 
+                     * 获取Detection switch for video footage screen glitch. Available values:
+<li>ON: enabled</li>
+<li>OFF: disabled.</li>
+                     * @return Switch Detection switch for video footage screen glitch. Available values:
+<li>ON: enabled</li>
+<li>OFF: disabled.</li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置
-                     * @param _switch 
+                     * 设置Detection switch for video footage screen glitch. Available values:
+<li>ON: enabled</li>
+<li>OFF: disabled.</li>
+                     * @param _switch Detection switch for video footage screen glitch. Available values:
+<li>ON: enabled</li>
+<li>OFF: disabled.</li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -70,7 +78,9 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Detection switch for video footage screen glitch. Available values:
+<li>ON: enabled</li>
+<li>OFF: disabled.</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;

@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Transition info
                 */
                 class MediaTransitionItem : public AbstractModel
                 {
@@ -49,15 +49,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Duration 
+                     * 获取Transition duration, in seconds. For the two media segments undergoing transition processing, the start time of the second segment on the track is automatically adjusted and set to the end time of the previous segment minus the transition duration.
+                     * @return Duration Transition duration, in seconds. For the two media segments undergoing transition processing, the start time of the second segment on the track is automatically adjusted and set to the end time of the previous segment minus the transition duration.
                      * 
                      */
                     double GetDuration() const;
 
                     /**
-                     * 设置
-                     * @param _duration 
+                     * 设置Transition duration, in seconds. For the two media segments undergoing transition processing, the start time of the second segment on the track is automatically adjusted and set to the end time of the previous segment minus the transition duration.
+                     * @param _duration Transition duration, in seconds. For the two media segments undergoing transition processing, the start time of the second segment on the track is automatically adjusted and set to the end time of the previous segment minus the transition duration.
                      * 
                      */
                     void SetDuration(const double& _duration);
@@ -70,15 +70,15 @@ namespace TencentCloud
                     bool DurationHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Transitions 
+                     * 获取Transition operation list. A maximum of one image transition operation and one audio transition operation are supported respectively.
+                     * @return Transitions Transition operation list. A maximum of one image transition operation and one audio transition operation are supported respectively.
                      * @deprecated
                      */
                     std::vector<TransitionOpertion> GetTransitions() const;
 
                     /**
-                     * 设置
-                     * @param _transitions 
+                     * 设置Transition operation list. A maximum of one image transition operation and one audio transition operation are supported respectively.
+                     * @param _transitions Transition operation list. A maximum of one image transition operation and one audio transition operation are supported respectively.
                      * @deprecated
                      */
                     void SetTransitions(const std::vector<TransitionOpertion>& _transitions);
@@ -91,15 +91,15 @@ namespace TencentCloud
                     bool TransitionsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return MediaTransitions 
+                     * 获取Transition operation list. A maximum of one image transition operation and one audio transition operation are supported respectively.
+                     * @return MediaTransitions Transition operation list. A maximum of one image transition operation and one audio transition operation are supported respectively.
                      * 
                      */
                     std::vector<TransitionOperation> GetMediaTransitions() const;
 
                     /**
-                     * 设置
-                     * @param _mediaTransitions 
+                     * 设置Transition operation list. A maximum of one image transition operation and one audio transition operation are supported respectively.
+                     * @param _mediaTransitions Transition operation list. A maximum of one image transition operation and one audio transition operation are supported respectively.
                      * 
                      */
                     void SetMediaTransitions(const std::vector<TransitionOperation>& _mediaTransitions);
@@ -114,19 +114,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Transition duration, in seconds. For the two media segments undergoing transition processing, the start time of the second segment on the track is automatically adjusted and set to the end time of the previous segment minus the transition duration.
                      */
                     double m_duration;
                     bool m_durationHasBeenSet;
 
                     /**
-                     * 
+                     * Transition operation list. A maximum of one image transition operation and one audio transition operation are supported respectively.
                      */
                     std::vector<TransitionOpertion> m_transitions;
                     bool m_transitionsHasBeenSet;
 
                     /**
-                     * 
+                     * Transition operation list. A maximum of one image transition operation and one audio transition operation are supported respectively.
                      */
                     std::vector<TransitionOperation> m_mediaTransitions;
                     bool m_mediaTransitionsHasBeenSet;

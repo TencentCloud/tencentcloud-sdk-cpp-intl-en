@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Subtitle format list operations.
                 */
                 class SubtitleFormatsOperation : public AbstractModel
                 {
@@ -47,15 +47,27 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Type 
+                     * 获取Operation type. Value range:
+<li>add: add the format list specified by Formats;</li>
+<li>delete: delete the format list specified by Formats;<l/i>
+<li>reset: Reset the configured format list to the format list specified by Formats.</li>
+                     * @return Type Operation type. Value range:
+<li>add: add the format list specified by Formats;</li>
+<li>delete: delete the format list specified by Formats;<l/i>
+<li>reset: Reset the configured format list to the format list specified by Formats.</li>
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置
-                     * @param _type 
+                     * 设置Operation type. Value range:
+<li>add: add the format list specified by Formats;</li>
+<li>delete: delete the format list specified by Formats;<l/i>
+<li>reset: Reset the configured format list to the format list specified by Formats.</li>
+                     * @param _type Operation type. Value range:
+<li>add: add the format list specified by Formats;</li>
+<li>delete: delete the format list specified by Formats;<l/i>
+<li>reset: Reset the configured format list to the format list specified by Formats.</li>
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -68,15 +80,23 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Formats 
+                     * 获取Subtitle format list. Value range:
+<li>vtt: Generate a WebVTT subtitle file;</li>
+<li>srt: generate SRT subtitle file.</li>
+                     * @return Formats Subtitle format list. Value range:
+<li>vtt: Generate a WebVTT subtitle file;</li>
+<li>srt: generate SRT subtitle file.</li>
                      * 
                      */
                     std::vector<std::string> GetFormats() const;
 
                     /**
-                     * 设置
-                     * @param _formats 
+                     * 设置Subtitle format list. Value range:
+<li>vtt: Generate a WebVTT subtitle file;</li>
+<li>srt: generate SRT subtitle file.</li>
+                     * @param _formats Subtitle format list. Value range:
+<li>vtt: Generate a WebVTT subtitle file;</li>
+<li>srt: generate SRT subtitle file.</li>
                      * 
                      */
                     void SetFormats(const std::vector<std::string>& _formats);
@@ -91,13 +111,18 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Operation type. Value range:
+<li>add: add the format list specified by Formats;</li>
+<li>delete: delete the format list specified by Formats;<l/i>
+<li>reset: Reset the configured format list to the format list specified by Formats.</li>
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * 
+                     * Subtitle format list. Value range:
+<li>vtt: Generate a WebVTT subtitle file;</li>
+<li>srt: generate SRT subtitle file.</li>
                      */
                     std::vector<std::string> m_formats;
                     bool m_formatsHasBeenSet;

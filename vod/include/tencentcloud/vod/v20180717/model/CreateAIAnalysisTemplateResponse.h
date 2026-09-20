@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Definition 
+                     * 获取Audio and video content analysis template unique identifier.
+                     * @return Definition Audio and video content analysis template unique identifier.
                      * 
                      */
                     int64_t GetDefinition() const;
@@ -60,7 +60,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Audio and video content analysis template unique identifier.
                      */
                     int64_t m_definition;
                     bool m_definitionHasBeenSet;

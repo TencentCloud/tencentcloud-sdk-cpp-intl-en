@@ -44,15 +44,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Definition 
+                     * 获取Unique identifier of the image asynchronous processing template.
+                     * @return Definition Unique identifier of the image asynchronous processing template.
                      * 
                      */
                     int64_t GetDefinition() const;
 
                     /**
-                     * 设置
-                     * @param _definition 
+                     * 设置Unique identifier of the image asynchronous processing template.
+                     * @param _definition Unique identifier of the image asynchronous processing template.
                      * 
                      */
                     void SetDefinition(const int64_t& _definition);
@@ -65,15 +65,15 @@ namespace TencentCloud
                     bool DefinitionHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SubAppId 
+                     * 获取<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b>
+                     * @return SubAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b>
                      * 
                      */
                     uint64_t GetSubAppId() const;
 
                     /**
-                     * 设置
-                     * @param _subAppId 
+                     * 设置<b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b>
+                     * @param _subAppId <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b>
                      * 
                      */
                     void SetSubAppId(const uint64_t& _subAppId);
@@ -86,15 +86,15 @@ namespace TencentCloud
                     bool SubAppIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Name 
+                     * 获取Image asynchronous processing template name. The length cannot exceed 64 characters.
+                     * @return Name Image asynchronous processing template name. The length cannot exceed 64 characters.
                      * 
                      */
                     std::string GetName() const;
 
                     /**
-                     * 设置
-                     * @param _name 
+                     * 设置Image asynchronous processing template name. The length cannot exceed 64 characters.
+                     * @param _name Image asynchronous processing template name. The length cannot exceed 64 characters.
                      * 
                      */
                     void SetName(const std::string& _name);
@@ -107,15 +107,15 @@ namespace TencentCloud
                     bool NameHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Comment 
+                     * 获取Description information of the image asynchronous processing template. Length limit: 256 characters.
+                     * @return Comment Description information of the image asynchronous processing template. Length limit: 256 characters.
                      * 
                      */
                     std::string GetComment() const;
 
                     /**
-                     * 设置
-                     * @param _comment 
+                     * 设置Description information of the image asynchronous processing template. Length limit: 256 characters.
+                     * @param _comment Description information of the image asynchronous processing template. Length limit: 256 characters.
                      * 
                      */
                     void SetComment(const std::string& _comment);
@@ -128,15 +128,15 @@ namespace TencentCloud
                     bool CommentHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ProcessImageConfigure 
+                     * 获取Configuration for asynchronous image processing.
+                     * @return ProcessImageConfigure Configuration for asynchronous image processing.
                      * 
                      */
                     ProcessImageAsyncTask GetProcessImageConfigure() const;
 
                     /**
-                     * 设置
-                     * @param _processImageConfigure 
+                     * 设置Configuration for asynchronous image processing.
+                     * @param _processImageConfigure Configuration for asynchronous image processing.
                      * 
                      */
                     void SetProcessImageConfigure(const ProcessImageAsyncTask& _processImageConfigure);
@@ -151,31 +151,31 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Unique identifier of the image asynchronous processing template.
                      */
                     int64_t m_definition;
                     bool m_definitionHasBeenSet;
 
                     /**
-                     * 
+                     * <b>VOD [application](https://www.tencentcloud.com/document/product/266/14574?from_cn_redirect=1) ID. For customers who activate VOD services after December 25, 2023, when accessing resources in VOD applications (whether the default application or a newly created application), this field must be set to the app ID.</b>
                      */
                     uint64_t m_subAppId;
                     bool m_subAppIdHasBeenSet;
 
                     /**
-                     * 
+                     * Image asynchronous processing template name. The length cannot exceed 64 characters.
                      */
                     std::string m_name;
                     bool m_nameHasBeenSet;
 
                     /**
-                     * 
+                     * Description information of the image asynchronous processing template. Length limit: 256 characters.
                      */
                     std::string m_comment;
                     bool m_commentHasBeenSet;
 
                     /**
-                     * 
+                     * Configuration for asynchronous image processing.
                      */
                     ProcessImageAsyncTask m_processImageConfigure;
                     bool m_processImageConfigureHasBeenSet;

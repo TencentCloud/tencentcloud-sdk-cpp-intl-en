@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Media forwarding event notification message.
                 */
                 class MediaCastEvent : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return CastId 
+                     * 获取Media forwarding ID.
+                     * @return CastId Media forwarding ID.
                      * 
                      */
                     std::string GetCastId() const;
 
                     /**
-                     * 设置
-                     * @param _castId 
+                     * 设置Media forwarding ID.
+                     * @param _castId Media forwarding ID.
                      * 
                      */
                     void SetCastId(const std::string& _castId);
@@ -68,15 +68,31 @@ namespace TencentCloud
                     bool CastIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Status 
+                     * 获取Retweet status. Valid values:
+<li>Working: running.</li>
+<li>Scheduled: Wait until the scheduled time is reached and then start up;</li>
+<li>Stopped: relay stopped;</li>
+<li>Idle: idle.</li>
+                     * @return Status Retweet status. Valid values:
+<li>Working: running.</li>
+<li>Scheduled: Wait until the scheduled time is reached and then start up;</li>
+<li>Stopped: relay stopped;</li>
+<li>Idle: idle.</li>
                      * 
                      */
                     std::string GetStatus() const;
 
                     /**
-                     * 设置
-                     * @param _status 
+                     * 设置Retweet status. Valid values:
+<li>Working: running.</li>
+<li>Scheduled: Wait until the scheduled time is reached and then start up;</li>
+<li>Stopped: relay stopped;</li>
+<li>Idle: idle.</li>
+                     * @param _status Retweet status. Valid values:
+<li>Working: running.</li>
+<li>Scheduled: Wait until the scheduled time is reached and then start up;</li>
+<li>Stopped: relay stopped;</li>
+<li>Idle: idle.</li>
                      * 
                      */
                     void SetStatus(const std::string& _status);
@@ -91,13 +107,17 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Media forwarding ID.
                      */
                     std::string m_castId;
                     bool m_castIdHasBeenSet;
 
                     /**
-                     * 
+                     * Retweet status. Valid values:
+<li>Working: running.</li>
+<li>Scheduled: Wait until the scheduled time is reached and then start up;</li>
+<li>Stopped: relay stopped;</li>
+<li>Idle: idle.</li>
                      */
                     std::string m_status;
                     bool m_statusHasBeenSet;

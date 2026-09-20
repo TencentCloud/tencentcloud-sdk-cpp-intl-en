@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Low-light enhancement control
                 */
                 class LowLightEnhanceInfo : public AbstractModel
                 {
@@ -47,15 +47,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Switch 
+                     * 获取Low-light enhancement control switch. Available values:
+<li>ON: enable low-light enhancement;</li>
+<li>OFF: low-light enhancement disabled.</li>
+                     * @return Switch Low-light enhancement control switch. Available values:
+<li>ON: enable low-light enhancement;</li>
+<li>OFF: low-light enhancement disabled.</li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置
-                     * @param _switch 
+                     * 设置Low-light enhancement control switch. Available values:
+<li>ON: enable low-light enhancement;</li>
+<li>OFF: low-light enhancement disabled.</li>
+                     * @param _switch Low-light enhancement control switch. Available values:
+<li>ON: enable low-light enhancement;</li>
+<li>OFF: low-light enhancement disabled.</li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -68,15 +76,23 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Type 
+                     * 获取Low-light enhancement type. Valid only when the low-light enhancement control switch is ON. Available values:
+<li>normal: Normal low-light enhancement;</li>
+Default value: normal.
+                     * @return Type Low-light enhancement type. Valid only when the low-light enhancement control switch is ON. Available values:
+<li>normal: Normal low-light enhancement;</li>
+Default value: normal.
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置
-                     * @param _type 
+                     * 设置Low-light enhancement type. Valid only when the low-light enhancement control switch is ON. Available values:
+<li>normal: Normal low-light enhancement;</li>
+Default value: normal.
+                     * @param _type Low-light enhancement type. Valid only when the low-light enhancement control switch is ON. Available values:
+<li>normal: Normal low-light enhancement;</li>
+Default value: normal.
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -91,13 +107,17 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Low-light enhancement control switch. Available values:
+<li>ON: enable low-light enhancement;</li>
+<li>OFF: low-light enhancement disabled.</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * 
+                     * Low-light enhancement type. Valid only when the low-light enhancement control switch is ON. Available values:
+<li>normal: Normal low-light enhancement;</li>
+Default value: normal.
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Text watermarking template
                 */
                 class TextWatermarkTemplateInputForUpdate : public AbstractModel
                 {
@@ -47,15 +47,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return FontType 
+                     * 获取Font type. Currently, two are supported:
+<li>simkai.ttf: support Chinese and English;</li>
+<li>arial.ttf: English only.</li>
+                     * @return FontType Font type. Currently, two are supported:
+<li>simkai.ttf: support Chinese and English;</li>
+<li>arial.ttf: English only.</li>
                      * 
                      */
                     std::string GetFontType() const;
 
                     /**
-                     * 设置
-                     * @param _fontType 
+                     * 设置Font type. Currently, two are supported:
+<li>simkai.ttf: support Chinese and English;</li>
+<li>arial.ttf: English only.</li>
+                     * @param _fontType Font type. Currently, two are supported:
+<li>simkai.ttf: support Chinese and English;</li>
+<li>arial.ttf: English only.</li>
                      * 
                      */
                     void SetFontType(const std::string& _fontType);
@@ -68,15 +76,15 @@ namespace TencentCloud
                     bool FontTypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return FontSize 
+                     * 获取Font size. Format: Npx, where N is a numerical value.
+                     * @return FontSize Font size. Format: Npx, where N is a numerical value.
                      * 
                      */
                     std::string GetFontSize() const;
 
                     /**
-                     * 设置
-                     * @param _fontSize 
+                     * 设置Font size. Format: Npx, where N is a numerical value.
+                     * @param _fontSize Font size. Format: Npx, where N is a numerical value.
                      * 
                      */
                     void SetFontSize(const std::string& _fontSize);
@@ -89,15 +97,15 @@ namespace TencentCloud
                     bool FontSizeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return FontColor 
+                     * 获取Font color. Format: 0xRRGGBB. Default value: 0xFFFFFF (white).
+                     * @return FontColor Font color. Format: 0xRRGGBB. Default value: 0xFFFFFF (white).
                      * 
                      */
                     std::string GetFontColor() const;
 
                     /**
-                     * 设置
-                     * @param _fontColor 
+                     * 设置Font color. Format: 0xRRGGBB. Default value: 0xFFFFFF (white).
+                     * @param _fontColor Font color. Format: 0xRRGGBB. Default value: 0xFFFFFF (white).
                      * 
                      */
                     void SetFontColor(const std::string& _fontColor);
@@ -110,15 +118,23 @@ namespace TencentCloud
                     bool FontColorHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return FontAlpha 
+                     * 获取Text opacity, value ranges from 0 to 1.
+<li>0: completely transparent.</li>
+<li>1: completely opaque.</li>
+                     * @return FontAlpha Text opacity, value ranges from 0 to 1.
+<li>0: completely transparent.</li>
+<li>1: completely opaque.</li>
                      * 
                      */
                     double GetFontAlpha() const;
 
                     /**
-                     * 设置
-                     * @param _fontAlpha 
+                     * 设置Text opacity, value ranges from 0 to 1.
+<li>0: completely transparent.</li>
+<li>1: completely opaque.</li>
+                     * @param _fontAlpha Text opacity, value ranges from 0 to 1.
+<li>0: completely transparent.</li>
+<li>1: completely opaque.</li>
                      * 
                      */
                     void SetFontAlpha(const double& _fontAlpha);
@@ -133,25 +149,29 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Font type. Currently, two are supported:
+<li>simkai.ttf: support Chinese and English;</li>
+<li>arial.ttf: English only.</li>
                      */
                     std::string m_fontType;
                     bool m_fontTypeHasBeenSet;
 
                     /**
-                     * 
+                     * Font size. Format: Npx, where N is a numerical value.
                      */
                     std::string m_fontSize;
                     bool m_fontSizeHasBeenSet;
 
                     /**
-                     * 
+                     * Font color. Format: 0xRRGGBB. Default value: 0xFFFFFF (white).
                      */
                     std::string m_fontColor;
                     bool m_fontColorHasBeenSet;
 
                     /**
-                     * 
+                     * Text opacity, value ranges from 0 to 1.
+<li>0: completely transparent.</li>
+<li>1: completely opaque.</li>
                      */
                     double m_fontAlpha;
                     bool m_fontAlphaHasBeenSet;

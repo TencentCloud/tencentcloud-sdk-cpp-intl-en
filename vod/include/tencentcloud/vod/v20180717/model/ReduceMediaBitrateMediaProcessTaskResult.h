@@ -37,7 +37,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Bitrate reduction task result
                 */
                 class ReduceMediaBitrateMediaProcessTaskResult : public AbstractModel
                 {
@@ -49,15 +49,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Type 
+                     * 获取Task type. Valid values:
+<li>Transcode: transcode</li>
+<li>AdaptiveDynamicStreaming: adaptive bitrate streaming</li>
+                     * @return Type Task type. Valid values:
+<li>Transcode: transcode</li>
+<li>AdaptiveDynamicStreaming: adaptive bitrate streaming</li>
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置
-                     * @param _type 
+                     * 设置Task type. Valid values:
+<li>Transcode: transcode</li>
+<li>AdaptiveDynamicStreaming: adaptive bitrate streaming</li>
+                     * @param _type Task type. Valid values:
+<li>Transcode: transcode</li>
+<li>AdaptiveDynamicStreaming: adaptive bitrate streaming</li>
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -70,15 +78,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return TranscodeTask 
+                     * 获取Query result of the video transcoding task in the bitrate reduction task. Valid when the task type is `Transcode`.
+                     * @return TranscodeTask Query result of the video transcoding task in the bitrate reduction task. Valid when the task type is `Transcode`.
                      * 
                      */
                     ReduceMediaBitrateTranscodeResult GetTranscodeTask() const;
 
                     /**
-                     * 设置
-                     * @param _transcodeTask 
+                     * 设置Query result of the video transcoding task in the bitrate reduction task. Valid when the task type is `Transcode`.
+                     * @param _transcodeTask Query result of the video transcoding task in the bitrate reduction task. Valid when the task type is `Transcode`.
                      * 
                      */
                     void SetTranscodeTask(const ReduceMediaBitrateTranscodeResult& _transcodeTask);
@@ -91,15 +99,15 @@ namespace TencentCloud
                     bool TranscodeTaskHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return AdaptiveDynamicStreamingTask 
+                     * 获取Query result of the video to adaptive streaming task in the bitrate reduction task. Valid when the task type is `AdaptiveDynamicStreaming`.
+                     * @return AdaptiveDynamicStreamingTask Query result of the video to adaptive streaming task in the bitrate reduction task. Valid when the task type is `AdaptiveDynamicStreaming`.
                      * 
                      */
                     ReduceMediaBitrateAdaptiveDynamicStreamingResult GetAdaptiveDynamicStreamingTask() const;
 
                     /**
-                     * 设置
-                     * @param _adaptiveDynamicStreamingTask 
+                     * 设置Query result of the video to adaptive streaming task in the bitrate reduction task. Valid when the task type is `AdaptiveDynamicStreaming`.
+                     * @param _adaptiveDynamicStreamingTask Query result of the video to adaptive streaming task in the bitrate reduction task. Valid when the task type is `AdaptiveDynamicStreaming`.
                      * 
                      */
                     void SetAdaptiveDynamicStreamingTask(const ReduceMediaBitrateAdaptiveDynamicStreamingResult& _adaptiveDynamicStreamingTask);
@@ -114,19 +122,21 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Task type. Valid values:
+<li>Transcode: transcode</li>
+<li>AdaptiveDynamicStreaming: adaptive bitrate streaming</li>
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * 
+                     * Query result of the video transcoding task in the bitrate reduction task. Valid when the task type is `Transcode`.
                      */
                     ReduceMediaBitrateTranscodeResult m_transcodeTask;
                     bool m_transcodeTaskHasBeenSet;
 
                     /**
-                     * 
+                     * Query result of the video to adaptive streaming task in the bitrate reduction task. Valid when the task type is `AdaptiveDynamicStreaming`.
                      */
                     ReduceMediaBitrateAdaptiveDynamicStreamingResult m_adaptiveDynamicStreamingTask;
                     bool m_adaptiveDynamicStreamingTaskHasBeenSet;

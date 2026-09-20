@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Large model parsing segment summary parsing configuration
                 */
                 class LLMComprehendSummaryForUpdate : public AbstractModel
                 {
@@ -47,15 +47,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Switch 
+                     * 获取Segment summary task switch. Available values:
+- ON: Enable the segmentation summary task.
+- OFF: disables segment summary.
+                     * @return Switch Segment summary task switch. Available values:
+- ON: Enable the segmentation summary task.
+- OFF: disables segment summary.
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置
-                     * @param _switch 
+                     * 设置Segment summary task switch. Available values:
+- ON: Enable the segmentation summary task.
+- OFF: disables segment summary.
+                     * @param _switch Segment summary task switch. Available values:
+- ON: Enable the segmentation summary task.
+- OFF: disables segment summary.
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -68,15 +76,15 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ExtendedParameter 
+                     * 获取Additional parameters, whose value is a serialized json string. See [Extended Parameter description](https://www.tencentcloud.com/document/product/862/104493?from_cn_redirect=1#note).
+                     * @return ExtendedParameter Additional parameters, whose value is a serialized json string. See [Extended Parameter description](https://www.tencentcloud.com/document/product/862/104493?from_cn_redirect=1#note).
                      * 
                      */
                     std::string GetExtendedParameter() const;
 
                     /**
-                     * 设置
-                     * @param _extendedParameter 
+                     * 设置Additional parameters, whose value is a serialized json string. See [Extended Parameter description](https://www.tencentcloud.com/document/product/862/104493?from_cn_redirect=1#note).
+                     * @param _extendedParameter Additional parameters, whose value is a serialized json string. See [Extended Parameter description](https://www.tencentcloud.com/document/product/862/104493?from_cn_redirect=1#note).
                      * 
                      */
                     void SetExtendedParameter(const std::string& _extendedParameter);
@@ -91,13 +99,15 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Segment summary task switch. Available values:
+- ON: Enable the segmentation summary task.
+- OFF: disables segment summary.
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * 
+                     * Additional parameters, whose value is a serialized json string. See [Extended Parameter description](https://www.tencentcloud.com/document/product/862/104493?from_cn_redirect=1#note).
                      */
                     std::string m_extendedParameter;
                     bool m_extendedParameterHasBeenSet;

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * TRTC simultaneous recording information.
                 */
                 class TrtcRecordInfo : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return SdkAppId 
+                     * 获取TRTC application ID.
+                     * @return SdkAppId TRTC application ID.
                      * 
                      */
                     uint64_t GetSdkAppId() const;
 
                     /**
-                     * 设置
-                     * @param _sdkAppId 
+                     * 设置TRTC application ID.
+                     * @param _sdkAppId TRTC application ID.
                      * 
                      */
                     void SetSdkAppId(const uint64_t& _sdkAppId);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool SdkAppIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return RoomId 
+                     * 获取TRTC room ID.
+                     * @return RoomId TRTC room ID.
                      * 
                      */
                     std::string GetRoomId() const;
 
                     /**
-                     * 设置
-                     * @param _roomId 
+                     * 设置TRTC room ID.
+                     * @param _roomId TRTC room ID.
                      * 
                      */
                     void SetRoomId(const std::string& _roomId);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool RoomIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return TaskId 
+                     * 获取Recording task ID.
+                     * @return TaskId Recording task ID.
                      * 
                      */
                     std::string GetTaskId() const;
 
                     /**
-                     * 设置
-                     * @param _taskId 
+                     * 设置Recording task ID.
+                     * @param _taskId Recording task ID.
                      * 
                      */
                     void SetTaskId(const std::string& _taskId);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool TaskIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return UserIds 
+                     * 获取List of user IDs participating in recording.
+                     * @return UserIds List of user IDs participating in recording.
                      * 
                      */
                     std::vector<std::string> GetUserIds() const;
 
                     /**
-                     * 设置
-                     * @param _userIds 
+                     * 设置List of user IDs participating in recording.
+                     * @param _userIds List of user IDs participating in recording.
                      * 
                      */
                     void SetUserIds(const std::vector<std::string>& _userIds);
@@ -133,25 +133,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * TRTC application ID.
                      */
                     uint64_t m_sdkAppId;
                     bool m_sdkAppIdHasBeenSet;
 
                     /**
-                     * 
+                     * TRTC room ID.
                      */
                     std::string m_roomId;
                     bool m_roomIdHasBeenSet;
 
                     /**
-                     * 
+                     * Recording task ID.
                      */
                     std::string m_taskId;
                     bool m_taskIdHasBeenSet;
 
                     /**
-                     * 
+                     * List of user IDs participating in recording.
                      */
                     std::vector<std::string> m_userIds;
                     bool m_userIdsHasBeenSet;

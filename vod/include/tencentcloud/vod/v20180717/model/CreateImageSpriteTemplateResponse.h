@@ -44,8 +44,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Definition 
+                     * 获取Sprite template unique identifier.
+                     * @return Definition Sprite template unique identifier.
                      * 
                      */
                     uint64_t GetDefinition() const;
@@ -60,7 +60,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Sprite template unique identifier.
                      */
                     uint64_t m_definition;
                     bool m_definitionHasBeenSet;

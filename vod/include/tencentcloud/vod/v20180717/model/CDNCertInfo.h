@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * https acceleration configuration for the domain name. Disabled by default.
                 */
                 class CDNCertInfo : public AbstractModel
                 {
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool CertIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Certificate 
+                     * 获取Certificate information.
+                     * @return Certificate Certificate information.
                      * 
                      */
                     std::string GetCertificate() const;
 
                     /**
-                     * 设置
-                     * @param _certificate 
+                     * 设置Certificate information.
+                     * @param _certificate Certificate information.
                      * 
                      */
                     void SetCertificate(const std::string& _certificate);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool CertificateHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return PrivateKey 
+                     * 获取Key information.
+                     * @return PrivateKey Key information.
                      * 
                      */
                     std::string GetPrivateKey() const;
 
                     /**
-                     * 设置
-                     * @param _privateKey 
+                     * 设置Key information.
+                     * @param _privateKey Key information.
                      * 
                      */
                     void SetPrivateKey(const std::string& _privateKey);
@@ -143,13 +143,13 @@ No need to fill when used as an input parameter configuration.
                     bool m_certIdHasBeenSet;
 
                     /**
-                     * 
+                     * Certificate information.
                      */
                     std::string m_certificate;
                     bool m_certificateHasBeenSet;
 
                     /**
-                     * 
+                     * Key information.
                      */
                     std::string m_privateKey;
                     bool m_privateKeyHasBeenSet;

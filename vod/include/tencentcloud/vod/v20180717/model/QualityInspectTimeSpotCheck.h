@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Audio and video quality detection time spot check policy.
                 */
                 class QualityInspectTimeSpotCheck : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return CheckDuration 
+                     * 获取<p>Duration of each loop detection.</p><p>Value range: [10, 86400]</p><p>Unit: seconds.</p>
+                     * @return CheckDuration <p>Duration of each loop detection.</p><p>Value range: [10, 86400]</p><p>Unit: seconds.</p>
                      * 
                      */
                     int64_t GetCheckDuration() const;
 
                     /**
-                     * 设置
-                     * @param _checkDuration 
+                     * 设置<p>Duration of each loop detection.</p><p>Value range: [10, 86400]</p><p>Unit: seconds.</p>
+                     * @param _checkDuration <p>Duration of each loop detection.</p><p>Value range: [10, 86400]</p><p>Unit: seconds.</p>
                      * 
                      */
                     void SetCheckDuration(const int64_t& _checkDuration);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool CheckDurationHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return CheckInterval 
+                     * 获取<p>Detection interval, in seconds. It indicates the duration after a detection is completed and before the next detection is conducted.</p><p>Value range: [10, 3600]</p><p>Unit: seconds.</p>
+                     * @return CheckInterval <p>Detection interval, in seconds. It indicates the duration after a detection is completed and before the next detection is conducted.</p><p>Value range: [10, 3600]</p><p>Unit: seconds.</p>
                      * 
                      */
                     int64_t GetCheckInterval() const;
 
                     /**
-                     * 设置
-                     * @param _checkInterval 
+                     * 设置<p>Detection interval, in seconds. It indicates the duration after a detection is completed and before the next detection is conducted.</p><p>Value range: [10, 3600]</p><p>Unit: seconds.</p>
+                     * @param _checkInterval <p>Detection interval, in seconds. It indicates the duration after a detection is completed and before the next detection is conducted.</p><p>Value range: [10, 3600]</p><p>Unit: seconds.</p>
                      * 
                      */
                     void SetCheckInterval(const int64_t& _checkInterval);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool CheckIntervalHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SkipDuration 
+                     * 获取<p>Skipped opening duration.</p><p>Value range: [1, 1800]</p><p>Unit: seconds.</p>
+                     * @return SkipDuration <p>Skipped opening duration.</p><p>Value range: [1, 1800]</p><p>Unit: seconds.</p>
                      * 
                      */
                     int64_t GetSkipDuration() const;
 
                     /**
-                     * 设置
-                     * @param _skipDuration 
+                     * 设置<p>Skipped opening duration.</p><p>Value range: [1, 1800]</p><p>Unit: seconds.</p>
+                     * @param _skipDuration <p>Skipped opening duration.</p><p>Value range: [1, 1800]</p><p>Unit: seconds.</p>
                      * 
                      */
                     void SetSkipDuration(const int64_t& _skipDuration);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool SkipDurationHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return CirclesNumber 
+                     * 获取<p>Number of loops.</p><p>Value range: [0, 1000]</p>
+                     * @return CirclesNumber <p>Number of loops.</p><p>Value range: [0, 1000]</p>
                      * 
                      */
                     int64_t GetCirclesNumber() const;
 
                     /**
-                     * 设置
-                     * @param _circlesNumber 
+                     * 设置<p>Number of loops.</p><p>Value range: [0, 1000]</p>
+                     * @param _circlesNumber <p>Number of loops.</p><p>Value range: [0, 1000]</p>
                      * 
                      */
                     void SetCirclesNumber(const int64_t& _circlesNumber);
@@ -133,25 +133,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p>Duration of each loop detection.</p><p>Value range: [10, 86400]</p><p>Unit: seconds.</p>
                      */
                     int64_t m_checkDuration;
                     bool m_checkDurationHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Detection interval, in seconds. It indicates the duration after a detection is completed and before the next detection is conducted.</p><p>Value range: [10, 3600]</p><p>Unit: seconds.</p>
                      */
                     int64_t m_checkInterval;
                     bool m_checkIntervalHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Skipped opening duration.</p><p>Value range: [1, 1800]</p><p>Unit: seconds.</p>
                      */
                     int64_t m_skipDuration;
                     bool m_skipDurationHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Number of loops.</p><p>Value range: [0, 1000]</p>
                      */
                     int64_t m_circlesNumber;
                     bool m_circlesNumberHasBeenSet;

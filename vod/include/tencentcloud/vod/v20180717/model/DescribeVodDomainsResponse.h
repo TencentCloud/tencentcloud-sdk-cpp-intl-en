@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return TotalCount 
+                     * 获取Total number of domains.
+                     * @return TotalCount Total number of domains.
                      * 
                      */
                     uint64_t GetTotalCount() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return DomainSet 
+                     * 获取List of domain names.
+                     * @return DomainSet List of domain names.
                      * 
                      */
                     std::vector<DomainDetailInfo> GetDomainSet() const;
@@ -75,13 +75,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Total number of domains.
                      */
                     uint64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * 
+                     * List of domain names.
                      */
                     std::vector<DomainDetailInfo> m_domainSet;
                     bool m_domainSetHasBeenSet;

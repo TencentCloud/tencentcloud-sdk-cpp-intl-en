@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Copyright watermark parameters
                 */
                 class CopyRightWatermarkInput : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Text 
+                     * 获取Copyright information. Maximum length: 200 characters.
+                     * @return Text Copyright information. Maximum length: 200 characters.
                      * 
                      */
                     std::string GetText() const;
 
                     /**
-                     * 设置
-                     * @param _text 
+                     * 设置Copyright information. Maximum length: 200 characters.
+                     * @param _text Copyright information. Maximum length: 200 characters.
                      * 
                      */
                     void SetText(const std::string& _text);
@@ -70,7 +70,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Copyright information. Maximum length: 200 characters.
                      */
                     std::string m_text;
                     bool m_textHasBeenSet;

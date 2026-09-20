@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Partition stats of VOD storage usage
                 */
                 class StorageStatData : public AbstractModel
                 {
@@ -47,15 +47,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Area 
+                     * 获取Billing region of VOD storage. Possible values:
+<li>Chinese Mainland: within the Chinese mainland (excluding Hong Kong (China), Macao (China), and Taiwan (China)).</li>
+<li>Outside Chinese Mainland: outside the Chinese mainland.</li>
+                     * @return Area Billing region of VOD storage. Possible values:
+<li>Chinese Mainland: within the Chinese mainland (excluding Hong Kong (China), Macao (China), and Taiwan (China)).</li>
+<li>Outside Chinese Mainland: outside the Chinese mainland.</li>
                      * 
                      */
                     std::string GetArea() const;
 
                     /**
-                     * 设置
-                     * @param _area 
+                     * 设置Billing region of VOD storage. Possible values:
+<li>Chinese Mainland: within the Chinese mainland (excluding Hong Kong (China), Macao (China), and Taiwan (China)).</li>
+<li>Outside Chinese Mainland: outside the Chinese mainland.</li>
+                     * @param _area Billing region of VOD storage. Possible values:
+<li>Chinese Mainland: within the Chinese mainland (excluding Hong Kong (China), Macao (China), and Taiwan (China)).</li>
+<li>Outside Chinese Mainland: outside the Chinese mainland.</li>
                      * 
                      */
                     void SetArea(const std::string& _area);
@@ -68,15 +76,15 @@ namespace TencentCloud
                     bool AreaHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return TotalStorage 
+                     * 获取Current total storage capacity, in bytes.
+                     * @return TotalStorage Current total storage capacity, in bytes.
                      * 
                      */
                     uint64_t GetTotalStorage() const;
 
                     /**
-                     * 设置
-                     * @param _totalStorage 
+                     * 设置Current total storage capacity, in bytes.
+                     * @param _totalStorage Current total storage capacity, in bytes.
                      * 
                      */
                     void SetTotalStorage(const uint64_t& _totalStorage);
@@ -89,15 +97,15 @@ namespace TencentCloud
                     bool TotalStorageHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return InfrequentStorage 
+                     * 获取Current infrequent access storage capacity, in bytes.
+                     * @return InfrequentStorage Current infrequent access storage capacity, in bytes.
                      * 
                      */
                     uint64_t GetInfrequentStorage() const;
 
                     /**
-                     * 设置
-                     * @param _infrequentStorage 
+                     * 设置Current infrequent access storage capacity, in bytes.
+                     * @param _infrequentStorage Current infrequent access storage capacity, in bytes.
                      * 
                      */
                     void SetInfrequentStorage(const uint64_t& _infrequentStorage);
@@ -110,15 +118,15 @@ namespace TencentCloud
                     bool InfrequentStorageHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return StandardStorage 
+                     * 获取Current standard storage capacity, in bytes.
+                     * @return StandardStorage Current standard storage capacity, in bytes.
                      * 
                      */
                     uint64_t GetStandardStorage() const;
 
                     /**
-                     * 设置
-                     * @param _standardStorage 
+                     * 设置Current standard storage capacity, in bytes.
+                     * @param _standardStorage Current standard storage capacity, in bytes.
                      * 
                      */
                     void SetStandardStorage(const uint64_t& _standardStorage);
@@ -131,15 +139,15 @@ namespace TencentCloud
                     bool StandardStorageHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ArchiveStorage 
+                     * 获取Current archive storage capacity, in bytes.
+                     * @return ArchiveStorage Current archive storage capacity, in bytes.
                      * 
                      */
                     uint64_t GetArchiveStorage() const;
 
                     /**
-                     * 设置
-                     * @param _archiveStorage 
+                     * 设置Current archive storage capacity, in bytes.
+                     * @param _archiveStorage Current archive storage capacity, in bytes.
                      * 
                      */
                     void SetArchiveStorage(const uint64_t& _archiveStorage);
@@ -152,15 +160,15 @@ namespace TencentCloud
                     bool ArchiveStorageHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return DeepArchiveStorage 
+                     * 获取Current deep archive storage capacity, in bytes.
+                     * @return DeepArchiveStorage Current deep archive storage capacity, in bytes.
                      * 
                      */
                     uint64_t GetDeepArchiveStorage() const;
 
                     /**
-                     * 设置
-                     * @param _deepArchiveStorage 
+                     * 设置Current deep archive storage capacity, in bytes.
+                     * @param _deepArchiveStorage Current deep archive storage capacity, in bytes.
                      * 
                      */
                     void SetDeepArchiveStorage(const uint64_t& _deepArchiveStorage);
@@ -175,37 +183,39 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Billing region of VOD storage. Possible values:
+<li>Chinese Mainland: within the Chinese mainland (excluding Hong Kong (China), Macao (China), and Taiwan (China)).</li>
+<li>Outside Chinese Mainland: outside the Chinese mainland.</li>
                      */
                     std::string m_area;
                     bool m_areaHasBeenSet;
 
                     /**
-                     * 
+                     * Current total storage capacity, in bytes.
                      */
                     uint64_t m_totalStorage;
                     bool m_totalStorageHasBeenSet;
 
                     /**
-                     * 
+                     * Current infrequent access storage capacity, in bytes.
                      */
                     uint64_t m_infrequentStorage;
                     bool m_infrequentStorageHasBeenSet;
 
                     /**
-                     * 
+                     * Current standard storage capacity, in bytes.
                      */
                     uint64_t m_standardStorage;
                     bool m_standardStorageHasBeenSet;
 
                     /**
-                     * 
+                     * Current archive storage capacity, in bytes.
                      */
                     uint64_t m_archiveStorage;
                     bool m_archiveStorageHasBeenSet;
 
                     /**
-                     * 
+                     * Current deep archive storage capacity, in bytes.
                      */
                     uint64_t m_deepArchiveStorage;
                     bool m_deepArchiveStorageHasBeenSet;

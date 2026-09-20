@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * AI sample management, tag operations.
                 */
                 class AiSampleTagOperation : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Type 
+                     * 获取<p>Operation type. Available values: add, delete, reset.</p>
+                     * @return Type <p>Operation type. Available values: add, delete, reset.</p>
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置
-                     * @param _type 
+                     * 设置<p>Operation type. Available values: add, delete, reset.</p>
+                     * @param _type <p>Operation type. Available values: add, delete, reset.</p>
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Tags 
+                     * 获取<p>Tag. Length limit: 128 characters.</p>
+                     * @return Tags <p>Tag. Length limit: 128 characters.</p>
                      * 
                      */
                     std::vector<std::string> GetTags() const;
 
                     /**
-                     * 设置
-                     * @param _tags 
+                     * 设置<p>Tag. Length limit: 128 characters.</p>
+                     * @param _tags <p>Tag. Length limit: 128 characters.</p>
                      * 
                      */
                     void SetTags(const std::vector<std::string>& _tags);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p>Operation type. Available values: add, delete, reset.</p>
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Tag. Length limit: 128 characters.</p>
                      */
                     std::vector<std::string> m_tags;
                     bool m_tagsHasBeenSet;

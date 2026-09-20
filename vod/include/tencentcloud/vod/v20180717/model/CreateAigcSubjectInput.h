@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Input information for creating a principal.
                 */
                 class CreateAigcSubjectInput : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return SubjectName 
+                     * 获取<p>Subject name.</p>
+                     * @return SubjectName <p>Subject name.</p>
                      * 
                      */
                     std::string GetSubjectName() const;
 
                     /**
-                     * 设置
-                     * @param _subjectName 
+                     * 设置<p>Subject name.</p>
+                     * @param _subjectName <p>Subject name.</p>
                      * 
                      */
                     void SetSubjectName(const std::string& _subjectName);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool SubjectNameHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SubjectImages 
+                     * 获取<p>Main image.</p>
+                     * @return SubjectImages <p>Main image.</p>
                      * 
                      */
                     std::vector<std::string> GetSubjectImages() const;
 
                     /**
-                     * 设置
-                     * @param _subjectImages 
+                     * 设置<p>Main image.</p>
+                     * @param _subjectImages <p>Main image.</p>
                      * 
                      */
                     void SetSubjectImages(const std::vector<std::string>& _subjectImages);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool SubjectImagesHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SubjectVideos 
+                     * 获取<p>Main video.</p>
+                     * @return SubjectVideos <p>Main video.</p>
                      * 
                      */
                     std::vector<std::string> GetSubjectVideos() const;
 
                     /**
-                     * 设置
-                     * @param _subjectVideos 
+                     * 设置<p>Main video.</p>
+                     * @param _subjectVideos <p>Main video.</p>
                      * 
                      */
                     void SetSubjectVideos(const std::vector<std::string>& _subjectVideos);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool SubjectVideosHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return VoiceId 
+                     * 获取<p>Main voice ID.</p>
+                     * @return VoiceId <p>Main voice ID.</p>
                      * 
                      */
                     std::string GetVoiceId() const;
 
                     /**
-                     * 设置
-                     * @param _voiceId 
+                     * 设置<p>Main voice ID.</p>
+                     * @param _voiceId <p>Main voice ID.</p>
                      * 
                      */
                     void SetVoiceId(const std::string& _voiceId);
@@ -133,25 +133,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p>Subject name.</p>
                      */
                     std::string m_subjectName;
                     bool m_subjectNameHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Main image.</p>
                      */
                     std::vector<std::string> m_subjectImages;
                     bool m_subjectImagesHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Main video.</p>
                      */
                     std::vector<std::string> m_subjectVideos;
                     bool m_subjectVideosHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Main voice ID.</p>
                      */
                     std::string m_voiceId;
                     bool m_voiceIdHasBeenSet;

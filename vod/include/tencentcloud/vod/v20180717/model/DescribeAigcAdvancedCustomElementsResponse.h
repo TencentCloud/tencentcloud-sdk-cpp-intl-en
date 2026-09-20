@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return ElementSet 
+                     * 获取<p>AIGC advanced custom entity information.</p>
+                     * @return ElementSet <p>AIGC advanced custom entity information.</p>
                      * 
                      */
                     std::vector<AigcAdvancedCustomElementInfo> GetElementSet() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool ElementSetHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return TotalCount 
+                     * 获取<p>Total number of records.</p>
+                     * @return TotalCount <p>Total number of records.</p>
                      * 
                      */
                     uint64_t GetTotalCount() const;
@@ -75,13 +75,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p>AIGC advanced custom entity information.</p>
                      */
                     std::vector<AigcAdvancedCustomElementInfo> m_elementSet;
                     bool m_elementSetHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Total number of records.</p>
                      */
                     uint64_t m_totalCount;
                     bool m_totalCountHasBeenSet;

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Video timestamp information
                 */
                 class MediaKeyFrameDescItem : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return TimeOffset 
+                     * 获取Video offset time of the timestamp, in seconds.
+                     * @return TimeOffset Video offset time of the timestamp, in seconds.
                      * 
                      */
                     double GetTimeOffset() const;
 
                     /**
-                     * 设置
-                     * @param _timeOffset 
+                     * 设置Video offset time of the timestamp, in seconds.
+                     * @param _timeOffset Video offset time of the timestamp, in seconds.
                      * 
                      */
                     void SetTimeOffset(const double& _timeOffset);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool TimeOffsetHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Content 
+                     * 获取Timestamp content string, limited to 1–128 characters.
+                     * @return Content Timestamp content string, limited to 1–128 characters.
                      * 
                      */
                     std::string GetContent() const;
 
                     /**
-                     * 设置
-                     * @param _content 
+                     * 设置Timestamp content string, limited to 1–128 characters.
+                     * @param _content Timestamp content string, limited to 1–128 characters.
                      * 
                      */
                     void SetContent(const std::string& _content);
@@ -91,13 +91,13 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Video offset time of the timestamp, in seconds.
                      */
                     double m_timeOffset;
                     bool m_timeOffsetHasBeenSet;
 
                     /**
-                     * 
+                     * Timestamp content string, limited to 1–128 characters.
                      */
                     std::string m_content;
                     bool m_contentHasBeenSet;

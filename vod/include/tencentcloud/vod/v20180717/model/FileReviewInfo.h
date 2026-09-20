@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * File moderation information.
                 */
                 class FileReviewInfo : public AbstractModel
                 {
@@ -48,15 +48,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return MediaReviewInfo 
+                     * 获取Media review information\*.
+
+\* Only show the review result info initiated by [Audio/Video Moderation (ReviewAudioVideo)](https://www.tencentcloud.com/document/api/266/80283?from_cn_redirect=1) or [Image Moderation (ReviewImage)](https://www.tencentcloud.com/document/api/266/73217?from_cn_redirect=1).
+                     * @return MediaReviewInfo Media review information\*.
+
+\* Only show the review result info initiated by [Audio/Video Moderation (ReviewAudioVideo)](https://www.tencentcloud.com/document/api/266/80283?from_cn_redirect=1) or [Image Moderation (ReviewImage)](https://www.tencentcloud.com/document/api/266/73217?from_cn_redirect=1).
                      * 
                      */
                     ReviewInfo GetMediaReviewInfo() const;
 
                     /**
-                     * 设置
-                     * @param _mediaReviewInfo 
+                     * 设置Media review information\*.
+
+\* Only show the review result info initiated by [Audio/Video Moderation (ReviewAudioVideo)](https://www.tencentcloud.com/document/api/266/80283?from_cn_redirect=1) or [Image Moderation (ReviewImage)](https://www.tencentcloud.com/document/api/266/73217?from_cn_redirect=1).
+                     * @param _mediaReviewInfo Media review information\*.
+
+\* Only show the review result info initiated by [Audio/Video Moderation (ReviewAudioVideo)](https://www.tencentcloud.com/document/api/266/80283?from_cn_redirect=1) or [Image Moderation (ReviewImage)](https://www.tencentcloud.com/document/api/266/73217?from_cn_redirect=1).
                      * 
                      */
                     void SetMediaReviewInfo(const ReviewInfo& _mediaReviewInfo);
@@ -69,15 +77,23 @@ namespace TencentCloud
                     bool MediaReviewInfoHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return CoverReviewInfo 
+                     * 获取Media cover review info\*.
+
+\* Only show the review result info initiated by [Audio/Video Moderation (ReviewAudioVideo)](https://www.tencentcloud.com/document/api/266/80283?from_cn_redirect=1) or [Image Moderation (ReviewImage)](https://www.tencentcloud.com/document/api/266/73217?from_cn_redirect=1).
+                     * @return CoverReviewInfo Media cover review info\*.
+
+\* Only show the review result info initiated by [Audio/Video Moderation (ReviewAudioVideo)](https://www.tencentcloud.com/document/api/266/80283?from_cn_redirect=1) or [Image Moderation (ReviewImage)](https://www.tencentcloud.com/document/api/266/73217?from_cn_redirect=1).
                      * 
                      */
                     ReviewInfo GetCoverReviewInfo() const;
 
                     /**
-                     * 设置
-                     * @param _coverReviewInfo 
+                     * 设置Media cover review info\*.
+
+\* Only show the review result info initiated by [Audio/Video Moderation (ReviewAudioVideo)](https://www.tencentcloud.com/document/api/266/80283?from_cn_redirect=1) or [Image Moderation (ReviewImage)](https://www.tencentcloud.com/document/api/266/73217?from_cn_redirect=1).
+                     * @param _coverReviewInfo Media cover review info\*.
+
+\* Only show the review result info initiated by [Audio/Video Moderation (ReviewAudioVideo)](https://www.tencentcloud.com/document/api/266/80283?from_cn_redirect=1) or [Image Moderation (ReviewImage)](https://www.tencentcloud.com/document/api/266/73217?from_cn_redirect=1).
                      * 
                      */
                     void SetCoverReviewInfo(const ReviewInfo& _coverReviewInfo);
@@ -92,13 +108,17 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Media review information\*.
+
+\* Only show the review result info initiated by [Audio/Video Moderation (ReviewAudioVideo)](https://www.tencentcloud.com/document/api/266/80283?from_cn_redirect=1) or [Image Moderation (ReviewImage)](https://www.tencentcloud.com/document/api/266/73217?from_cn_redirect=1).
                      */
                     ReviewInfo m_mediaReviewInfo;
                     bool m_mediaReviewInfoHasBeenSet;
 
                     /**
-                     * 
+                     * Media cover review info\*.
+
+\* Only show the review result info initiated by [Audio/Video Moderation (ReviewAudioVideo)](https://www.tencentcloud.com/document/api/266/80283?from_cn_redirect=1) or [Image Moderation (ReviewImage)](https://www.tencentcloud.com/document/api/266/73217?from_cn_redirect=1).
                      */
                     ReviewInfo m_coverReviewInfo;
                     bool m_coverReviewInfoHasBeenSet;

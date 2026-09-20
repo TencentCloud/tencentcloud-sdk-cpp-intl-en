@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Subtitle suppression module text stroke configuration for MPS
                 */
                 class MPSSubtitleOutlineConfig : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return SubtitleOutlineConfigSwitch 
+                     * 获取<p>Text stroke configuration switch, 0 for off, 1 for on, default 0</p>
+                     * @return SubtitleOutlineConfigSwitch <p>Text stroke configuration switch, 0 for off, 1 for on, default 0</p>
                      * 
                      */
                     int64_t GetSubtitleOutlineConfigSwitch() const;
 
                     /**
-                     * 设置
-                     * @param _subtitleOutlineConfigSwitch 
+                     * 设置<p>Text stroke configuration switch, 0 for off, 1 for on, default 0</p>
+                     * @param _subtitleOutlineConfigSwitch <p>Text stroke configuration switch, 0 for off, 1 for on, default 0</p>
                      * 
                      */
                     void SetSubtitleOutlineConfigSwitch(const int64_t& _subtitleOutlineConfigSwitch);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool SubtitleOutlineConfigSwitchHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return OutlineWidth 
+                     * 获取<p>Stroke width, default unit pixel, underlying default value is 0.3% of the source video height</p>
+                     * @return OutlineWidth <p>Stroke width, default unit pixel, underlying default value is 0.3% of the source video height</p>
                      * 
                      */
                     double GetOutlineWidth() const;
 
                     /**
-                     * 设置
-                     * @param _outlineWidth 
+                     * 设置<p>Stroke width, default unit pixel, underlying default value is 0.3% of the source video height</p>
+                     * @param _outlineWidth <p>Stroke width, default unit pixel, underlying default value is 0.3% of the source video height</p>
                      * 
                      */
                     void SetOutlineWidth(const double& _outlineWidth);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool OutlineWidthHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return OutlineWidthUnit 
+                     * 获取<p>Stroke width unit, 0 pixel, 1 percentage, defaults to 0, pixel</p>
+                     * @return OutlineWidthUnit <p>Stroke width unit, 0 pixel, 1 percentage, defaults to 0, pixel</p>
                      * 
                      */
                     int64_t GetOutlineWidthUnit() const;
 
                     /**
-                     * 设置
-                     * @param _outlineWidthUnit 
+                     * 设置<p>Stroke width unit, 0 pixel, 1 percentage, defaults to 0, pixel</p>
+                     * @param _outlineWidthUnit <p>Stroke width unit, 0 pixel, 1 percentage, defaults to 0, pixel</p>
                      * 
                      */
                     void SetOutlineWidthUnit(const int64_t& _outlineWidthUnit);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool OutlineWidthUnitHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return OutlineColor 
+                     * 获取<p>Border color. 6-digit base 16 RGB. Black by default if left blank.</p>
+                     * @return OutlineColor <p>Border color. 6-digit base 16 RGB. Black by default if left blank.</p>
                      * 
                      */
                     std::string GetOutlineColor() const;
 
                     /**
-                     * 设置
-                     * @param _outlineColor 
+                     * 设置<p>Border color. 6-digit base 16 RGB. Black by default if left blank.</p>
+                     * @param _outlineColor <p>Border color. 6-digit base 16 RGB. Black by default if left blank.</p>
                      * 
                      */
                     void SetOutlineColor(const std::string& _outlineColor);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool OutlineColorHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return OutlineAlpha 
+                     * 获取<p>Stroke transparency. The value should be a positive floating-point number in the range of (0, 1]. If this is not specified, the default value is 1, which means completely opaque.</p>
+                     * @return OutlineAlpha <p>Stroke transparency. The value should be a positive floating-point number in the range of (0, 1]. If this is not specified, the default value is 1, which means completely opaque.</p>
                      * 
                      */
                     double GetOutlineAlpha() const;
 
                     /**
-                     * 设置
-                     * @param _outlineAlpha 
+                     * 设置<p>Stroke transparency. The value should be a positive floating-point number in the range of (0, 1]. If this is not specified, the default value is 1, which means completely opaque.</p>
+                     * @param _outlineAlpha <p>Stroke transparency. The value should be a positive floating-point number in the range of (0, 1]. If this is not specified, the default value is 1, which means completely opaque.</p>
                      * 
                      */
                     void SetOutlineAlpha(const double& _outlineAlpha);
@@ -154,31 +154,31 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p>Text stroke configuration switch, 0 for off, 1 for on, default 0</p>
                      */
                     int64_t m_subtitleOutlineConfigSwitch;
                     bool m_subtitleOutlineConfigSwitchHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Stroke width, default unit pixel, underlying default value is 0.3% of the source video height</p>
                      */
                     double m_outlineWidth;
                     bool m_outlineWidthHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Stroke width unit, 0 pixel, 1 percentage, defaults to 0, pixel</p>
                      */
                     int64_t m_outlineWidthUnit;
                     bool m_outlineWidthUnitHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Border color. 6-digit base 16 RGB. Black by default if left blank.</p>
                      */
                     std::string m_outlineColor;
                     bool m_outlineColorHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Stroke transparency. The value should be a positive floating-point number in the range of (0, 1]. If this is not specified, the default value is 1, which means completely opaque.</p>
                      */
                     double m_outlineAlpha;
                     bool m_outlineAlphaHasBeenSet;

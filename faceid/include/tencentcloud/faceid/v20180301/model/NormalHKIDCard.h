@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * Hong Kong (China) ID card.
+                * Hong Kong identity card (mapped field result)
                 */
                 class NormalHKIDCard : public AbstractModel
                 {
@@ -48,22 +48,14 @@ namespace TencentCloud
 
                     /**
                      * 获取Chinese name
-Note: This field may return null, indicating that no valid values can be obtained.
-
                      * @return ChineseName Chinese name
-Note: This field may return null, indicating that no valid values can be obtained.
-
                      * 
                      */
                     std::string GetChineseName() const;
 
                     /**
                      * 设置Chinese name
-Note: This field may return null, indicating that no valid values can be obtained.
-
                      * @param _chineseName Chinese name
-Note: This field may return null, indicating that no valid values can be obtained.
-
                      * 
                      */
                     void SetChineseName(const std::string& _chineseName);
@@ -77,22 +69,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * 获取English name
-Note: This field may return null, indicating that no valid values can be obtained.
-Example: SAN, Nan
                      * @return FullName English name
-Note: This field may return null, indicating that no valid values can be obtained.
-Example: SAN, Nan
                      * 
                      */
                     std::string GetFullName() const;
 
                     /**
                      * 设置English name
-Note: This field may return null, indicating that no valid values can be obtained.
-Example: SAN, Nan
                      * @param _fullName English name
-Note: This field may return null, indicating that no valid values can be obtained.
-Example: SAN, Nan
                      * 
                      */
                     void SetFullName(const std::string& _fullName);
@@ -105,19 +89,15 @@ Example: SAN, Nan
                     bool FullNameHasBeenSet() const;
 
                     /**
-                     * 获取Telex code correspondint to the Chinese name
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return RegistrationNumber Telex code correspondint to the Chinese name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Chinese telegraph code corresponding to the Chinese name
+                     * @return RegistrationNumber Chinese telegraph code corresponding to the Chinese name
                      * 
                      */
                     std::string GetRegistrationNumber() const;
 
                     /**
-                     * 设置Telex code correspondint to the Chinese name
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _registrationNumber Telex code correspondint to the Chinese name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Chinese telegraph code corresponding to the Chinese name
+                     * @param _registrationNumber Chinese telegraph code corresponding to the Chinese name
                      * 
                      */
                     void SetRegistrationNumber(const std::string& _registrationNumber);
@@ -130,19 +110,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool RegistrationNumberHasBeenSet() const;
 
                     /**
-                     * 获取Gender: "Male-M" or "Female-F"
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Sex Gender: "Male-M" or "Female-F"
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Gender: "M" (male) or "F" (female).
+                     * @return Sex Gender: "M" (male) or "F" (female).
                      * 
                      */
                     std::string GetSex() const;
 
                     /**
-                     * 设置Gender: "Male-M" or "Female-F"
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _sex Gender: "Male-M" or "Female-F"
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Gender: "M" (male) or "F" (female).
+                     * @param _sex Gender: "M" (male) or "F" (female).
                      * 
                      */
                     void SetSex(const std::string& _sex);
@@ -155,23 +131,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool SexHasBeenSet() const;
 
                     /**
-                     * 获取Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
-Example: 01-01-2001
-                     * @return Birthday Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
-Example: 01-01-2001
+                     * 获取Date of birth
+                     * @return Birthday Date of birth
                      * 
                      */
                     std::string GetBirthday() const;
 
                     /**
-                     * 设置Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
-Example: 01-01-2001
-                     * @param _birthday Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
-Example: 01-01-2001
+                     * 设置Date of birth
+                     * @param _birthday Date of birth
                      * 
                      */
                     void SetBirthday(const std::string& _birthday);
@@ -184,19 +152,15 @@ Example: 01-01-2001
                     bool BirthdayHasBeenSet() const;
 
                     /**
-                     * 获取Permanent resident ID card: 0-non-permanent; 1-permanent; -1-unknown
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Permanent Permanent resident ID card: 0-non-permanent; 1-permanent; -1-unknown
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Permanent resident ID card: 0: non-permanent; 1: permanent; -1: unknown
+                     * @return Permanent Permanent resident ID card: 0: non-permanent; 1: permanent; -1: unknown
                      * 
                      */
                     std::string GetPermanent() const;
 
                     /**
-                     * 设置Permanent resident ID card: 0-non-permanent; 1-permanent; -1-unknown
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _permanent Permanent resident ID card: 0-non-permanent; 1-permanent; -1-unknown
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Permanent resident ID card: 0: non-permanent; 1: permanent; -1: unknown
+                     * @param _permanent Permanent resident ID card: 0: non-permanent; 1: permanent; -1: unknown
                      * 
                      */
                     void SetPermanent(const std::string& _permanent);
@@ -209,23 +173,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool PermanentHasBeenSet() const;
 
                     /**
-                     * 获取ID card number
-Note: This field may return null, indicating that no valid values can be obtained.
-Example: C000000(E)
-                     * @return LicenseNumber ID card number
-Note: This field may return null, indicating that no valid values can be obtained.
-Example: C000000(E)
+                     * 获取Identity number
+                     * @return LicenseNumber Identity number
                      * 
                      */
                     std::string GetLicenseNumber() const;
 
                     /**
-                     * 设置ID card number
-Note: This field may return null, indicating that no valid values can be obtained.
-Example: C000000(E)
-                     * @param _licenseNumber ID card number
-Note: This field may return null, indicating that no valid values can be obtained.
-Example: C000000(E)
+                     * 设置Identity number
+                     * @param _licenseNumber Identity number
                      * 
                      */
                     void SetLicenseNumber(const std::string& _licenseNumber);
@@ -238,19 +194,15 @@ Example: C000000(E)
                     bool LicenseNumberHasBeenSet() const;
 
                     /**
-                     * 获取Lisence symbol, which is the symbol below Birthday. Example: "***AZ"
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return Symbol Lisence symbol, which is the symbol below Birthday. Example: "***AZ"
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Document symbol, the symbol under the date of birth, for example, "***AZ"
+                     * @return Symbol Document symbol, the symbol under the date of birth, for example, "***AZ"
                      * 
                      */
                     std::string GetSymbol() const;
 
                     /**
-                     * 设置Lisence symbol, which is the symbol below Birthday. Example: "***AZ"
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _symbol Lisence symbol, which is the symbol below Birthday. Example: "***AZ"
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Document symbol, the symbol under the date of birth, for example, "***AZ"
+                     * @param _symbol Document symbol, the symbol under the date of birth, for example, "***AZ"
                      * 
                      */
                     void SetSymbol(const std::string& _symbol);
@@ -263,19 +215,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool SymbolHasBeenSet() const;
 
                     /**
-                     * 获取The first date of issue
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return IssuedDate The first date of issue
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Date of first issue
+                     * @return IssuedDate Date of first issue
                      * 
                      */
                     std::string GetIssuedDate() const;
 
                     /**
-                     * 设置The first date of issue
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _issuedDate The first date of issue
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Date of first issue
+                     * @param _issuedDate Date of first issue
                      * 
                      */
                     void SetIssuedDate(const std::string& _issuedDate);
@@ -288,19 +236,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool IssuedDateHasBeenSet() const;
 
                     /**
-                     * 获取The current date of issue
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return CurrentIssueDate The current date of issue
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Most recent date of issue
+                     * @return CurrentIssueDate Most recent date of issue
                      * 
                      */
                     std::string GetCurrentIssueDate() const;
 
                     /**
-                     * 设置The current date of issue
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _currentIssueDate The current date of issue
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Most recent date of issue
+                     * @param _currentIssueDate Most recent date of issue
                      * 
                      */
                     void SetCurrentIssueDate(const std::string& _currentIssueDate);
@@ -313,19 +257,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
                     bool CurrentIssueDateHasBeenSet() const;
 
                     /**
-                     * 获取Hong Kong identity card version number, HKID-2003: 03 edition ID card, HKID-2018: 18 edition ID card
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @return HKIDVersion Hong Kong identity card version number, HKID-2003: 03 edition ID card, HKID-2018: 18 edition ID card
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 获取Hong Kong identity card version. HKID-2003: 2003 edition identity card. HKID-2018: 2018 edition identity card.
+                     * @return HKIDVersion Hong Kong identity card version. HKID-2003: 2003 edition identity card. HKID-2018: 2018 edition identity card.
                      * 
                      */
                     std::string GetHKIDVersion() const;
 
                     /**
-                     * 设置Hong Kong identity card version number, HKID-2003: 03 edition ID card, HKID-2018: 18 edition ID card
-Note: This field may return null, indicating that no valid values can be obtained.
-                     * @param _hKIDVersion Hong Kong identity card version number, HKID-2003: 03 edition ID card, HKID-2018: 18 edition ID card
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * 设置Hong Kong identity card version. HKID-2003: 2003 edition identity card. HKID-2018: 2018 edition identity card.
+                     * @param _hKIDVersion Hong Kong identity card version. HKID-2003: 2003 edition identity card. HKID-2018: 2018 edition identity card.
                      * 
                      */
                     void SetHKIDVersion(const std::string& _hKIDVersion);
@@ -341,81 +281,66 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
                     /**
                      * Chinese name
-Note: This field may return null, indicating that no valid values can be obtained.
-
                      */
                     std::string m_chineseName;
                     bool m_chineseNameHasBeenSet;
 
                     /**
                      * English name
-Note: This field may return null, indicating that no valid values can be obtained.
-Example: SAN, Nan
                      */
                     std::string m_fullName;
                     bool m_fullNameHasBeenSet;
 
                     /**
-                     * Telex code correspondint to the Chinese name
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Chinese telegraph code corresponding to the Chinese name
                      */
                     std::string m_registrationNumber;
                     bool m_registrationNumberHasBeenSet;
 
                     /**
-                     * Gender: "Male-M" or "Female-F"
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Gender: "M" (male) or "F" (female).
                      */
                     std::string m_sex;
                     bool m_sexHasBeenSet;
 
                     /**
-                     * Birthday
-Note: This field may return null, indicating that no valid values can be obtained.
-Example: 01-01-2001
+                     * Date of birth
                      */
                     std::string m_birthday;
                     bool m_birthdayHasBeenSet;
 
                     /**
-                     * Permanent resident ID card: 0-non-permanent; 1-permanent; -1-unknown
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Permanent resident ID card: 0: non-permanent; 1: permanent; -1: unknown
                      */
                     std::string m_permanent;
                     bool m_permanentHasBeenSet;
 
                     /**
-                     * ID card number
-Note: This field may return null, indicating that no valid values can be obtained.
-Example: C000000(E)
+                     * Identity number
                      */
                     std::string m_licenseNumber;
                     bool m_licenseNumberHasBeenSet;
 
                     /**
-                     * Lisence symbol, which is the symbol below Birthday. Example: "***AZ"
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Document symbol, the symbol under the date of birth, for example, "***AZ"
                      */
                     std::string m_symbol;
                     bool m_symbolHasBeenSet;
 
                     /**
-                     * The first date of issue
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Date of first issue
                      */
                     std::string m_issuedDate;
                     bool m_issuedDateHasBeenSet;
 
                     /**
-                     * The current date of issue
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Most recent date of issue
                      */
                     std::string m_currentIssueDate;
                     bool m_currentIssueDateHasBeenSet;
 
                     /**
-                     * Hong Kong identity card version number, HKID-2003: 03 edition ID card, HKID-2018: 18 edition ID card
-Note: This field may return null, indicating that no valid values can be obtained.
+                     * Hong Kong identity card version. HKID-2003: 2003 edition identity card. HKID-2018: 2018 edition identity card.
                      */
                     std::string m_hKIDVersion;
                     bool m_hKIDVersionHasBeenSet;

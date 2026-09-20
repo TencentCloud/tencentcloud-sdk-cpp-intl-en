@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Create custom subject callback output
                 */
                 class CreateAigcAdvancedCustomElementOutput : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return InfoList 
+                     * 获取<p>Custom subject list.</p>
+                     * @return InfoList <p>Custom subject list.</p>
                      * 
                      */
                     std::vector<AdvancedElementInfo> GetInfoList() const;
 
                     /**
-                     * 设置
-                     * @param _infoList 
+                     * 设置<p>Custom subject list.</p>
+                     * @param _infoList <p>Custom subject list.</p>
                      * 
                      */
                     void SetInfoList(const std::vector<AdvancedElementInfo>& _infoList);
@@ -71,7 +71,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p>Custom subject list.</p>
                      */
                     std::vector<AdvancedElementInfo> m_infoList;
                     bool m_infoListHasBeenSet;

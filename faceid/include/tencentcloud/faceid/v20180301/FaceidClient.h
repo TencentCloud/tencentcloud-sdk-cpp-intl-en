@@ -43,14 +43,20 @@
 #include <tencentcloud/faceid/v20180301/model/CheckIdNameDateResponse.h>
 #include <tencentcloud/faceid/v20180301/model/CompareFaceLivenessRequest.h>
 #include <tencentcloud/faceid/v20180301/model/CompareFaceLivenessResponse.h>
+#include <tencentcloud/faceid/v20180301/model/CreateEKYCWebhookRequest.h>
+#include <tencentcloud/faceid/v20180301/model/CreateEKYCWebhookResponse.h>
 #include <tencentcloud/faceid/v20180301/model/CreateUploadUrlRequest.h>
 #include <tencentcloud/faceid/v20180301/model/CreateUploadUrlResponse.h>
+#include <tencentcloud/faceid/v20180301/model/DeleteEKYCWebhookRequest.h>
+#include <tencentcloud/faceid/v20180301/model/DeleteEKYCWebhookResponse.h>
 #include <tencentcloud/faceid/v20180301/model/DetectAIFakeFacesRequest.h>
 #include <tencentcloud/faceid/v20180301/model/DetectAIFakeFacesResponse.h>
 #include <tencentcloud/faceid/v20180301/model/DetectReflectLivenessAndCompareRequest.h>
 #include <tencentcloud/faceid/v20180301/model/DetectReflectLivenessAndCompareResponse.h>
 #include <tencentcloud/faceid/v20180301/model/GenerateReflectSequenceRequest.h>
 #include <tencentcloud/faceid/v20180301/model/GenerateReflectSequenceResponse.h>
+#include <tencentcloud/faceid/v20180301/model/GetAMLScreeningResultRequest.h>
+#include <tencentcloud/faceid/v20180301/model/GetAMLScreeningResultResponse.h>
 #include <tencentcloud/faceid/v20180301/model/GetFaceIdResultIntlRequest.h>
 #include <tencentcloud/faceid/v20180301/model/GetFaceIdResultIntlResponse.h>
 #include <tencentcloud/faceid/v20180301/model/GetFaceIdTokenIntlRequest.h>
@@ -71,6 +77,8 @@
 #include <tencentcloud/faceid/v20180301/model/IdCardVerificationResponse.h>
 #include <tencentcloud/faceid/v20180301/model/ImageRecognitionV2Request.h>
 #include <tencentcloud/faceid/v20180301/model/ImageRecognitionV2Response.h>
+#include <tencentcloud/faceid/v20180301/model/ListEKYCWebhooksRequest.h>
+#include <tencentcloud/faceid/v20180301/model/ListEKYCWebhooksResponse.h>
 #include <tencentcloud/faceid/v20180301/model/LivenessCompareRequest.h>
 #include <tencentcloud/faceid/v20180301/model/LivenessCompareResponse.h>
 #include <tencentcloud/faceid/v20180301/model/MobileNetworkTimeVerificationRequest.h>
@@ -79,6 +87,14 @@
 #include <tencentcloud/faceid/v20180301/model/MobileStatusResponse.h>
 #include <tencentcloud/faceid/v20180301/model/PhoneVerificationRequest.h>
 #include <tencentcloud/faceid/v20180301/model/PhoneVerificationResponse.h>
+#include <tencentcloud/faceid/v20180301/model/RunAMLNameScreeningRequest.h>
+#include <tencentcloud/faceid/v20180301/model/RunAMLNameScreeningResponse.h>
+#include <tencentcloud/faceid/v20180301/model/UpdateAMLCustomerProfileRequest.h>
+#include <tencentcloud/faceid/v20180301/model/UpdateAMLCustomerProfileResponse.h>
+#include <tencentcloud/faceid/v20180301/model/UpdateAMLOngoingScreeningStatusRequest.h>
+#include <tencentcloud/faceid/v20180301/model/UpdateAMLOngoingScreeningStatusResponse.h>
+#include <tencentcloud/faceid/v20180301/model/UpdateEKYCWebhookRequest.h>
+#include <tencentcloud/faceid/v20180301/model/UpdateEKYCWebhookResponse.h>
 #include <tencentcloud/faceid/v20180301/model/VideoLivenessCompareRequest.h>
 #include <tencentcloud/faceid/v20180301/model/VideoLivenessCompareResponse.h>
 
@@ -125,9 +141,15 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::CompareFaceLivenessResponse> CompareFaceLivenessOutcome;
                 typedef std::future<CompareFaceLivenessOutcome> CompareFaceLivenessOutcomeCallable;
                 typedef std::function<void(const FaceidClient*, const Model::CompareFaceLivenessRequest&, CompareFaceLivenessOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CompareFaceLivenessAsyncHandler;
+                typedef Outcome<Core::Error, Model::CreateEKYCWebhookResponse> CreateEKYCWebhookOutcome;
+                typedef std::future<CreateEKYCWebhookOutcome> CreateEKYCWebhookOutcomeCallable;
+                typedef std::function<void(const FaceidClient*, const Model::CreateEKYCWebhookRequest&, CreateEKYCWebhookOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateEKYCWebhookAsyncHandler;
                 typedef Outcome<Core::Error, Model::CreateUploadUrlResponse> CreateUploadUrlOutcome;
                 typedef std::future<CreateUploadUrlOutcome> CreateUploadUrlOutcomeCallable;
                 typedef std::function<void(const FaceidClient*, const Model::CreateUploadUrlRequest&, CreateUploadUrlOutcome, const std::shared_ptr<const AsyncCallerContext>&)> CreateUploadUrlAsyncHandler;
+                typedef Outcome<Core::Error, Model::DeleteEKYCWebhookResponse> DeleteEKYCWebhookOutcome;
+                typedef std::future<DeleteEKYCWebhookOutcome> DeleteEKYCWebhookOutcomeCallable;
+                typedef std::function<void(const FaceidClient*, const Model::DeleteEKYCWebhookRequest&, DeleteEKYCWebhookOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DeleteEKYCWebhookAsyncHandler;
                 typedef Outcome<Core::Error, Model::DetectAIFakeFacesResponse> DetectAIFakeFacesOutcome;
                 typedef std::future<DetectAIFakeFacesOutcome> DetectAIFakeFacesOutcomeCallable;
                 typedef std::function<void(const FaceidClient*, const Model::DetectAIFakeFacesRequest&, DetectAIFakeFacesOutcome, const std::shared_ptr<const AsyncCallerContext>&)> DetectAIFakeFacesAsyncHandler;
@@ -137,6 +159,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::GenerateReflectSequenceResponse> GenerateReflectSequenceOutcome;
                 typedef std::future<GenerateReflectSequenceOutcome> GenerateReflectSequenceOutcomeCallable;
                 typedef std::function<void(const FaceidClient*, const Model::GenerateReflectSequenceRequest&, GenerateReflectSequenceOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GenerateReflectSequenceAsyncHandler;
+                typedef Outcome<Core::Error, Model::GetAMLScreeningResultResponse> GetAMLScreeningResultOutcome;
+                typedef std::future<GetAMLScreeningResultOutcome> GetAMLScreeningResultOutcomeCallable;
+                typedef std::function<void(const FaceidClient*, const Model::GetAMLScreeningResultRequest&, GetAMLScreeningResultOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetAMLScreeningResultAsyncHandler;
                 typedef Outcome<Core::Error, Model::GetFaceIdResultIntlResponse> GetFaceIdResultIntlOutcome;
                 typedef std::future<GetFaceIdResultIntlOutcome> GetFaceIdResultIntlOutcomeCallable;
                 typedef std::function<void(const FaceidClient*, const Model::GetFaceIdResultIntlRequest&, GetFaceIdResultIntlOutcome, const std::shared_ptr<const AsyncCallerContext>&)> GetFaceIdResultIntlAsyncHandler;
@@ -167,6 +192,9 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::ImageRecognitionV2Response> ImageRecognitionV2Outcome;
                 typedef std::future<ImageRecognitionV2Outcome> ImageRecognitionV2OutcomeCallable;
                 typedef std::function<void(const FaceidClient*, const Model::ImageRecognitionV2Request&, ImageRecognitionV2Outcome, const std::shared_ptr<const AsyncCallerContext>&)> ImageRecognitionV2AsyncHandler;
+                typedef Outcome<Core::Error, Model::ListEKYCWebhooksResponse> ListEKYCWebhooksOutcome;
+                typedef std::future<ListEKYCWebhooksOutcome> ListEKYCWebhooksOutcomeCallable;
+                typedef std::function<void(const FaceidClient*, const Model::ListEKYCWebhooksRequest&, ListEKYCWebhooksOutcome, const std::shared_ptr<const AsyncCallerContext>&)> ListEKYCWebhooksAsyncHandler;
                 typedef Outcome<Core::Error, Model::LivenessCompareResponse> LivenessCompareOutcome;
                 typedef std::future<LivenessCompareOutcome> LivenessCompareOutcomeCallable;
                 typedef std::function<void(const FaceidClient*, const Model::LivenessCompareRequest&, LivenessCompareOutcome, const std::shared_ptr<const AsyncCallerContext>&)> LivenessCompareAsyncHandler;
@@ -179,6 +207,18 @@ namespace TencentCloud
                 typedef Outcome<Core::Error, Model::PhoneVerificationResponse> PhoneVerificationOutcome;
                 typedef std::future<PhoneVerificationOutcome> PhoneVerificationOutcomeCallable;
                 typedef std::function<void(const FaceidClient*, const Model::PhoneVerificationRequest&, PhoneVerificationOutcome, const std::shared_ptr<const AsyncCallerContext>&)> PhoneVerificationAsyncHandler;
+                typedef Outcome<Core::Error, Model::RunAMLNameScreeningResponse> RunAMLNameScreeningOutcome;
+                typedef std::future<RunAMLNameScreeningOutcome> RunAMLNameScreeningOutcomeCallable;
+                typedef std::function<void(const FaceidClient*, const Model::RunAMLNameScreeningRequest&, RunAMLNameScreeningOutcome, const std::shared_ptr<const AsyncCallerContext>&)> RunAMLNameScreeningAsyncHandler;
+                typedef Outcome<Core::Error, Model::UpdateAMLCustomerProfileResponse> UpdateAMLCustomerProfileOutcome;
+                typedef std::future<UpdateAMLCustomerProfileOutcome> UpdateAMLCustomerProfileOutcomeCallable;
+                typedef std::function<void(const FaceidClient*, const Model::UpdateAMLCustomerProfileRequest&, UpdateAMLCustomerProfileOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpdateAMLCustomerProfileAsyncHandler;
+                typedef Outcome<Core::Error, Model::UpdateAMLOngoingScreeningStatusResponse> UpdateAMLOngoingScreeningStatusOutcome;
+                typedef std::future<UpdateAMLOngoingScreeningStatusOutcome> UpdateAMLOngoingScreeningStatusOutcomeCallable;
+                typedef std::function<void(const FaceidClient*, const Model::UpdateAMLOngoingScreeningStatusRequest&, UpdateAMLOngoingScreeningStatusOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpdateAMLOngoingScreeningStatusAsyncHandler;
+                typedef Outcome<Core::Error, Model::UpdateEKYCWebhookResponse> UpdateEKYCWebhookOutcome;
+                typedef std::future<UpdateEKYCWebhookOutcome> UpdateEKYCWebhookOutcomeCallable;
+                typedef std::function<void(const FaceidClient*, const Model::UpdateEKYCWebhookRequest&, UpdateEKYCWebhookOutcome, const std::shared_ptr<const AsyncCallerContext>&)> UpdateEKYCWebhookAsyncHandler;
                 typedef Outcome<Core::Error, Model::VideoLivenessCompareResponse> VideoLivenessCompareOutcome;
                 typedef std::future<VideoLivenessCompareOutcome> VideoLivenessCompareOutcomeCallable;
                 typedef std::function<void(const FaceidClient*, const Model::VideoLivenessCompareRequest&, VideoLivenessCompareOutcome, const std::shared_ptr<const AsyncCallerContext>&)> VideoLivenessCompareAsyncHandler;
@@ -276,6 +316,15 @@ namespace TencentCloud
                 CompareFaceLivenessOutcomeCallable CompareFaceLivenessCallable(const Model::CompareFaceLivenessRequest& request);
 
                 /**
+                 *This API is used to create an EKYC Webhook configuration.
+                 * @param req CreateEKYCWebhookRequest
+                 * @return CreateEKYCWebhookOutcome
+                 */
+                CreateEKYCWebhookOutcome CreateEKYCWebhook(const Model::CreateEKYCWebhookRequest &request);
+                void CreateEKYCWebhookAsync(const Model::CreateEKYCWebhookRequest& request, const CreateEKYCWebhookAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                CreateEKYCWebhookOutcomeCallable CreateEKYCWebhookCallable(const Model::CreateEKYCWebhookRequest& request);
+
+                /**
                  *This API is used to generate a temporary `UploadUrl` for uploading resource files (with the `HTTP PUT` method). After resource upload, `ResourceUrl` will be passed to the `TargetAction` API to complete the resource passing (specific fields vary by case). 
 The data will be stored in a COS bucket in the region specified by the parameter `Region` for two hours.
                  * @param req CreateUploadUrlRequest
@@ -284,6 +333,15 @@ The data will be stored in a COS bucket in the region specified by the parameter
                 CreateUploadUrlOutcome CreateUploadUrl(const Model::CreateUploadUrlRequest &request);
                 void CreateUploadUrlAsync(const Model::CreateUploadUrlRequest& request, const CreateUploadUrlAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 CreateUploadUrlOutcomeCallable CreateUploadUrlCallable(const Model::CreateUploadUrlRequest& request);
+
+                /**
+                 *This API deletes the Webhook configuration.
+                 * @param req DeleteEKYCWebhookRequest
+                 * @return DeleteEKYCWebhookOutcome
+                 */
+                DeleteEKYCWebhookOutcome DeleteEKYCWebhook(const Model::DeleteEKYCWebhookRequest &request);
+                void DeleteEKYCWebhookAsync(const Model::DeleteEKYCWebhookRequest& request, const DeleteEKYCWebhookAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                DeleteEKYCWebhookOutcomeCallable DeleteEKYCWebhookCallable(const Model::DeleteEKYCWebhookRequest& request);
 
                 /**
                  *Based on the multimodal AI large model algorithm, it provides anti-attack detection capabilities for facial images and videos. It can effectively identify highly simulated AIGC face-changing, high-definition remakes, batch black market attacks, watermarks and other attack traces, and enhance the anti-counterfeiting security capabilities of images and videos.
@@ -315,6 +373,15 @@ The data generated with the SDK must be stored in COS, and the region of the COS
                 GenerateReflectSequenceOutcomeCallable GenerateReflectSequenceCallable(const Model::GenerateReflectSequenceRequest& request);
 
                 /**
+                 *Queries the AML name list screening result.
+                 * @param req GetAMLScreeningResultRequest
+                 * @return GetAMLScreeningResultOutcome
+                 */
+                GetAMLScreeningResultOutcome GetAMLScreeningResult(const Model::GetAMLScreeningResultRequest &request);
+                void GetAMLScreeningResultAsync(const Model::GetAMLScreeningResultRequest& request, const GetAMLScreeningResultAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                GetAMLScreeningResultOutcomeCallable GetAMLScreeningResultCallable(const Model::GetAMLScreeningResultRequest& request);
+
+                /**
                  *This API is used to get the verification result with the corresponding SDK token after the identity verification process is completed. The SDK token is valid for 72 hours (72*3600s) after generation and can be called multiple times.
                  * @param req GetFaceIdResultIntlRequest
                  * @return GetFaceIdResultIntlOutcome
@@ -342,12 +409,12 @@ The data generated with the SDK must be stored in COS, and the region of the COS
                 GetLivenessResultOutcomeCallable GetLivenessResultCallable(const Model::GetLivenessResultRequest& request);
 
                 /**
-                 *This API verifies NFC data. Pass in the NFCToken returned by the SDK, the document fields to be verified, and the portrait photo. The service automatically compares the information to verify with the decrypted document NFC data and outputs the verification result. The NFCToken generated by the SDK is valid for 1 hour. The service is billed per query. 
-The service currently supports NFC recognition and verification of the following fields and portrait photos on Chinese mainland second-generation resident identity cards, exit-entry permits for travelling to and from Hong Kong, China and Macao, China, and Chinese resident passports: 
+                 *This API verifies NFC data. Pass in the NFCToken returned by the SDK, along with the document fields and portrait photo to be verified.The service automatically compares the information to verify with the decrypted document NFC data and outputs the verification result. The NFCToken generated by the SDK is valid for 10 minutes. The service is billed per query. 
+The service currently supports NFC recognition and verification of the following fields and portrait photos on Chinese mainland second-generation resident identity cards, exit-entry permits for traveling to and from Hong Kong and Macao, and international passports with an NFC chip: 
 
 -Chinese mainland second-generation resident identity card: identity card number, name, sex, ethnicity, date of birth, address, issuing authority, validity start time, validity end time, portrait photo 
--Exit-Entry Permit for Travelling to and from Hong Kong, China and Macao, China: ID number, name, sex, English name, issuing place, issuing authority, validity end time, date of birth, portrait photo, machine-readable code 
--Chinese resident passport: passport number, Chinese name, English name, nationality, sex, country or region code, validity start time, validity end time, date of birth, birth place, issuing place, issuing authority, portrait photo, machine-readable code
+-Exit-Entry Permit for Traveling to and from Hong Kong and Macao: ID number, name, sex, English name, issuing place, issuing authority, validity end time, date of birth, portrait photo, machine-readable code 
+-International passports with an NFC chip: passport number, name, nationality, sex, country or region code, validity start time, validity end time, date of birth, birth place, issuing place, issuing authority, portrait photo, machine-readable code
                  * @param req GetNFCResultRequest
                  * @return GetNFCResultOutcome
                  */
@@ -356,7 +423,11 @@ The service currently supports NFC recognition and verification of the following
                 GetNFCResultOutcomeCallable GetNFCResultCallable(const Model::GetNFCResultRequest& request);
 
                 /**
-                 *NFC verification service, obtain Token information for the NFC identify request.This API supports NFC recognition and verification of ID cards (second-generation resident identity card, Residence Permit for Hong Kong (China) and Macao (China), Residence Permit for Taiwan (China), Permanent Residence Permit for Foreigners) as well as travel documents (exit-entry permit for travelling to and from Hong Kong (China) and Macao (China), Taiwan travel permit, Mainland Travel Permit for Taiwan Residents, Return Home Permit).
+                 *NFC verification service: obtain Token information (valid for 10 minutes) for the NFC identify request. This API supports NFC recognition and verification of the following documents:
+
+-Chinese mainland second-generation resident identity card
+-Exit-Entry Permit for Traveling to and from Hong Kong and Macao
+-International passports with an NFC chip
                  * @param req GetNFCTokenRequest
                  * @return GetNFCTokenOutcome
                  */
@@ -374,7 +445,7 @@ The service currently supports NFC recognition and verification of the following
                 GetSdkVerificationResultOutcomeCallable GetSdkVerificationResultCallable(const Model::GetSdkVerificationResultRequest& request);
 
                 /**
-                 *This API is used to get the verification result with the corresponding BizToken after the web-based verification is completed. The token is valid for three days (259,200s) after issuance and can be called multiple times.
+                 *After completing the Web verification process, call this API with the verification token (BizToken) to query the verification result info. The BizToken is valid within three days (259,200 seconds) after application and can be called multiple times.
                  * @param req GetWebVerificationResultIntlRequest
                  * @return GetWebVerificationResultIntlOutcome
                  */
@@ -408,6 +479,15 @@ The service currently supports NFC recognition and verification of the following
                 ImageRecognitionV2Outcome ImageRecognitionV2(const Model::ImageRecognitionV2Request &request);
                 void ImageRecognitionV2Async(const Model::ImageRecognitionV2Request& request, const ImageRecognitionV2AsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 ImageRecognitionV2OutcomeCallable ImageRecognitionV2Callable(const Model::ImageRecognitionV2Request& request);
+
+                /**
+                 *This API queries the list of Webhook configurations.
+                 * @param req ListEKYCWebhooksRequest
+                 * @return ListEKYCWebhooksOutcome
+                 */
+                ListEKYCWebhooksOutcome ListEKYCWebhooks(const Model::ListEKYCWebhooksRequest &request);
+                void ListEKYCWebhooksAsync(const Model::ListEKYCWebhooksRequest& request, const ListEKYCWebhooksAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                ListEKYCWebhooksOutcomeCallable ListEKYCWebhooksCallable(const Model::ListEKYCWebhooksRequest& request);
 
                 /**
                  *This API is used to pass in a video and a photo, determine whether the person in the video is real, and if yes, then determine whether the person in the video is the same as that in the photo.
@@ -445,6 +525,42 @@ This API on the legacy version will continue to serve existing users but will be
                 PhoneVerificationOutcome PhoneVerification(const Model::PhoneVerificationRequest &request);
                 void PhoneVerificationAsync(const Model::PhoneVerificationRequest& request, const PhoneVerificationAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
                 PhoneVerificationOutcomeCallable PhoneVerificationCallable(const Model::PhoneVerificationRequest& request);
+
+                /**
+                 *AML name list screening
+                 * @param req RunAMLNameScreeningRequest
+                 * @return RunAMLNameScreeningOutcome
+                 */
+                RunAMLNameScreeningOutcome RunAMLNameScreening(const Model::RunAMLNameScreeningRequest &request);
+                void RunAMLNameScreeningAsync(const Model::RunAMLNameScreeningRequest& request, const RunAMLNameScreeningAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                RunAMLNameScreeningOutcomeCallable RunAMLNameScreeningCallable(const Model::RunAMLNameScreeningRequest& request);
+
+                /**
+                 *AML name list screening
+                 * @param req UpdateAMLCustomerProfileRequest
+                 * @return UpdateAMLCustomerProfileOutcome
+                 */
+                UpdateAMLCustomerProfileOutcome UpdateAMLCustomerProfile(const Model::UpdateAMLCustomerProfileRequest &request);
+                void UpdateAMLCustomerProfileAsync(const Model::UpdateAMLCustomerProfileRequest& request, const UpdateAMLCustomerProfileAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                UpdateAMLCustomerProfileOutcomeCallable UpdateAMLCustomerProfileCallable(const Model::UpdateAMLCustomerProfileRequest& request);
+
+                /**
+                 *Changes the status of continuous name list screening.
+                 * @param req UpdateAMLOngoingScreeningStatusRequest
+                 * @return UpdateAMLOngoingScreeningStatusOutcome
+                 */
+                UpdateAMLOngoingScreeningStatusOutcome UpdateAMLOngoingScreeningStatus(const Model::UpdateAMLOngoingScreeningStatusRequest &request);
+                void UpdateAMLOngoingScreeningStatusAsync(const Model::UpdateAMLOngoingScreeningStatusRequest& request, const UpdateAMLOngoingScreeningStatusAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                UpdateAMLOngoingScreeningStatusOutcomeCallable UpdateAMLOngoingScreeningStatusCallable(const Model::UpdateAMLOngoingScreeningStatusRequest& request);
+
+                /**
+                 *This API updates the Webhook configuration.
+                 * @param req UpdateEKYCWebhookRequest
+                 * @return UpdateEKYCWebhookOutcome
+                 */
+                UpdateEKYCWebhookOutcome UpdateEKYCWebhook(const Model::UpdateEKYCWebhookRequest &request);
+                void UpdateEKYCWebhookAsync(const Model::UpdateEKYCWebhookRequest& request, const UpdateEKYCWebhookAsyncHandler& handler, const std::shared_ptr<const AsyncCallerContext>& context = nullptr);
+                UpdateEKYCWebhookOutcomeCallable UpdateEKYCWebhookCallable(const Model::UpdateEKYCWebhookRequest& request);
 
                 /**
                  *This API is used to pass in URLs of a video and a photo, determine whether the person in the video is real, and if yes, then determine whether the person in the video is the same as that in the photo.

@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Input file for the video dubbing task.
                 */
                 class VideoDubbingAsyncInput : public AbstractModel
                 {
@@ -47,15 +47,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return InputUrl 
+                     * 获取<p>Input video Url</p>
+                     * @return InputUrl <p>Input video Url</p>
                      * 
                      */
                     std::string GetInputUrl() const;
 
                     /**
-                     * 设置
-                     * @param _inputUrl 
+                     * 设置<p>Input video Url</p>
+                     * @param _inputUrl <p>Input video Url</p>
                      * 
                      */
                     void SetInputUrl(const std::string& _inputUrl);
@@ -68,15 +68,15 @@ namespace TencentCloud
                     bool InputUrlHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return InputFileId 
+                     * 获取<p>FileId of the input video</p>
+                     * @return InputFileId <p>FileId of the input video</p>
                      * 
                      */
                     std::string GetInputFileId() const;
 
                     /**
-                     * 设置
-                     * @param _inputFileId 
+                     * 设置<p>FileId of the input video</p>
+                     * @param _inputFileId <p>FileId of the input video</p>
                      * 
                      */
                     void SetInputFileId(const std::string& _inputFileId);
@@ -89,15 +89,15 @@ namespace TencentCloud
                     bool InputFileIdHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return SrcLanguage 
+                     * 获取<p>Video source language. The default value is zh.</p>
+                     * @return SrcLanguage <p>Video source language. The default value is zh.</p>
                      * 
                      */
                     std::string GetSrcLanguage() const;
 
                     /**
-                     * 设置
-                     * @param _srcLanguage 
+                     * 设置<p>Video source language. The default value is zh.</p>
+                     * @param _srcLanguage <p>Video source language. The default value is zh.</p>
                      * 
                      */
                     void SetSrcLanguage(const std::string& _srcLanguage);
@@ -110,15 +110,15 @@ namespace TencentCloud
                     bool SrcLanguageHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return DstLanguage 
+                     * 获取<p>Target language of the video. Default: en.</p>
+                     * @return DstLanguage <p>Target language of the video. Default: en.</p>
                      * 
                      */
                     std::string GetDstLanguage() const;
 
                     /**
-                     * 设置
-                     * @param _dstLanguage 
+                     * 设置<p>Target language of the video. Default: en.</p>
+                     * @param _dstLanguage <p>Target language of the video. Default: en.</p>
                      * 
                      */
                     void SetDstLanguage(const std::string& _dstLanguage);
@@ -131,15 +131,15 @@ namespace TencentCloud
                     bool DstLanguageHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Model 
+                     * 获取<p>Dubbing model</p>
+                     * @return Model <p>Dubbing model</p>
                      * 
                      */
                     std::string GetModel() const;
 
                     /**
-                     * 设置
-                     * @param _model 
+                     * 设置<p>Dubbing model</p>
+                     * @param _model <p>Dubbing model</p>
                      * 
                      */
                     void SetModel(const std::string& _model);
@@ -154,31 +154,31 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p>Input video Url</p>
                      */
                     std::string m_inputUrl;
                     bool m_inputUrlHasBeenSet;
 
                     /**
-                     * 
+                     * <p>FileId of the input video</p>
                      */
                     std::string m_inputFileId;
                     bool m_inputFileIdHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Video source language. The default value is zh.</p>
                      */
                     std::string m_srcLanguage;
                     bool m_srcLanguageHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Target language of the video. Default: en.</p>
                      */
                     std::string m_dstLanguage;
                     bool m_dstLanguageHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Dubbing model</p>
                      */
                     std::string m_model;
                     bool m_modelHasBeenSet;

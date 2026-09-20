@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Scratch removal control information
                 */
                 class ScratchRepairInfo : public AbstractModel
                 {
@@ -47,15 +47,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Switch 
+                     * 获取Scratch control switch. Available values:
+<li>ON: turn on scratch removal;</li>
+<li>OFF: disables scratch removal.</li>
+                     * @return Switch Scratch control switch. Available values:
+<li>ON: turn on scratch removal;</li>
+<li>OFF: disables scratch removal.</li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置
-                     * @param _switch 
+                     * 设置Scratch control switch. Available values:
+<li>ON: turn on scratch removal;</li>
+<li>OFF: disables scratch removal.</li>
+                     * @param _switch Scratch control switch. Available values:
+<li>ON: turn on scratch removal;</li>
+<li>OFF: disables scratch removal.</li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -68,15 +76,19 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Intensity 
+                     * 获取Scratch removal strength. Valid only when the scratch control switch is ON. Value ranges from 0.0 to 1.0.
+Default: 0.0.
+                     * @return Intensity Scratch removal strength. Valid only when the scratch control switch is ON. Value ranges from 0.0 to 1.0.
+Default: 0.0.
                      * 
                      */
                     double GetIntensity() const;
 
                     /**
-                     * 设置
-                     * @param _intensity 
+                     * 设置Scratch removal strength. Valid only when the scratch control switch is ON. Value ranges from 0.0 to 1.0.
+Default: 0.0.
+                     * @param _intensity Scratch removal strength. Valid only when the scratch control switch is ON. Value ranges from 0.0 to 1.0.
+Default: 0.0.
                      * 
                      */
                     void SetIntensity(const double& _intensity);
@@ -89,15 +101,23 @@ namespace TencentCloud
                     bool IntensityHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Type 
+                     * 获取Scratch removal type. It is valid only when the scratch control switch is ON. Available values:
+<li>normal: normal scratch removal;</li>
+Default value: normal.
+                     * @return Type Scratch removal type. It is valid only when the scratch control switch is ON. Available values:
+<li>normal: normal scratch removal;</li>
+Default value: normal.
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置
-                     * @param _type 
+                     * 设置Scratch removal type. It is valid only when the scratch control switch is ON. Available values:
+<li>normal: normal scratch removal;</li>
+Default value: normal.
+                     * @param _type Scratch removal type. It is valid only when the scratch control switch is ON. Available values:
+<li>normal: normal scratch removal;</li>
+Default value: normal.
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -112,19 +132,24 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Scratch control switch. Available values:
+<li>ON: turn on scratch removal;</li>
+<li>OFF: disables scratch removal.</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * 
+                     * Scratch removal strength. Valid only when the scratch control switch is ON. Value ranges from 0.0 to 1.0.
+Default: 0.0.
                      */
                     double m_intensity;
                     bool m_intensityHasBeenSet;
 
                     /**
-                     * 
+                     * Scratch removal type. It is valid only when the scratch control switch is ON. Available values:
+<li>normal: normal scratch removal;</li>
+Default value: normal.
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;

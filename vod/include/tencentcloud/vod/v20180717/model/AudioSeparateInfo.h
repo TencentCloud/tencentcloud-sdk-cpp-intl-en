@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Audio separation configuration.
                 */
                 class AudioSeparateInfo : public AbstractModel
                 {
@@ -47,15 +47,23 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Switch 
+                     * 获取Audio separation control switch. Available values:
+<li>ON: enable audio separation;</li>
+<li>OFF: Disable audio separation.</li>
+                     * @return Switch Audio separation control switch. Available values:
+<li>ON: enable audio separation;</li>
+<li>OFF: Disable audio separation.</li>
                      * 
                      */
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置
-                     * @param _switch 
+                     * 设置Audio separation control switch. Available values:
+<li>ON: enable audio separation;</li>
+<li>OFF: Disable audio separation.</li>
+                     * @param _switch Audio separation control switch. Available values:
+<li>ON: enable audio separation;</li>
+<li>OFF: Disable audio separation.</li>
                      * 
                      */
                     void SetSwitch(const std::string& _switch);
@@ -68,15 +76,27 @@ namespace TencentCloud
                     bool SwitchHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Type 
+                     * 获取Scenario type. Valid values:
+<li>normal: voice and background sound scenario</li>
+<li>music: singing accompaniment scenario</li>
+Default value: normal.
+                     * @return Type Scenario type. Valid values:
+<li>normal: voice and background sound scenario</li>
+<li>music: singing accompaniment scenario</li>
+Default value: normal.
                      * 
                      */
                     std::string GetType() const;
 
                     /**
-                     * 设置
-                     * @param _type 
+                     * 设置Scenario type. Valid values:
+<li>normal: voice and background sound scenario</li>
+<li>music: singing accompaniment scenario</li>
+Default value: normal.
+                     * @param _type Scenario type. Valid values:
+<li>normal: voice and background sound scenario</li>
+<li>music: singing accompaniment scenario</li>
+Default value: normal.
                      * 
                      */
                     void SetType(const std::string& _type);
@@ -89,15 +109,27 @@ namespace TencentCloud
                     bool TypeHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Track 
+                     * 获取Output audio track. Available values:
+<li>vocal: output voice.</li>
+<li>background: output background audio when the scenario is normal, and output accompaniment when the scenario is music</li>
+Default value: vocal.
+                     * @return Track Output audio track. Available values:
+<li>vocal: output voice.</li>
+<li>background: output background audio when the scenario is normal, and output accompaniment when the scenario is music</li>
+Default value: vocal.
                      * 
                      */
                     std::string GetTrack() const;
 
                     /**
-                     * 设置
-                     * @param _track 
+                     * 设置Output audio track. Available values:
+<li>vocal: output voice.</li>
+<li>background: output background audio when the scenario is normal, and output accompaniment when the scenario is music</li>
+Default value: vocal.
+                     * @param _track Output audio track. Available values:
+<li>vocal: output voice.</li>
+<li>background: output background audio when the scenario is normal, and output accompaniment when the scenario is music</li>
+Default value: vocal.
                      * 
                      */
                     void SetTrack(const std::string& _track);
@@ -112,19 +144,27 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Audio separation control switch. Available values:
+<li>ON: enable audio separation;</li>
+<li>OFF: Disable audio separation.</li>
                      */
                     std::string m_switch;
                     bool m_switchHasBeenSet;
 
                     /**
-                     * 
+                     * Scenario type. Valid values:
+<li>normal: voice and background sound scenario</li>
+<li>music: singing accompaniment scenario</li>
+Default value: normal.
                      */
                     std::string m_type;
                     bool m_typeHasBeenSet;
 
                     /**
-                     * 
+                     * Output audio track. Available values:
+<li>vocal: output voice.</li>
+<li>background: output background audio when the scenario is normal, and output accompaniment when the scenario is music</li>
+Default value: vocal.
                      */
                     std::string m_track;
                     bool m_trackHasBeenSet;

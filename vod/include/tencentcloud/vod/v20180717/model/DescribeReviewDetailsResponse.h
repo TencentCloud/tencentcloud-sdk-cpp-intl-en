@@ -45,8 +45,8 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return TotalCount 
+                     * 获取Content intelligent identification trigger count.
+                     * @return TotalCount Content intelligent identification trigger count.
                      * 
                      */
                     int64_t GetTotalCount() const;
@@ -59,8 +59,8 @@ namespace TencentCloud
                     bool TotalCountHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return TotalDuration 
+                     * 获取Total duration of content intelligent identification.
+                     * @return TotalDuration Total duration of content intelligent identification.
                      * 
                      */
                     int64_t GetTotalDuration() const;
@@ -73,8 +73,8 @@ namespace TencentCloud
                     bool TotalDurationHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return Data 
+                     * 获取Duration stats of content intelligent identification, one data point per day.
+                     * @return Data Duration stats of content intelligent identification, one data point per day.
                      * 
                      */
                     std::vector<StatDataItem> GetData() const;
@@ -89,19 +89,19 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * Content intelligent identification trigger count.
                      */
                     int64_t m_totalCount;
                     bool m_totalCountHasBeenSet;
 
                     /**
-                     * 
+                     * Total duration of content intelligent identification.
                      */
                     int64_t m_totalDuration;
                     bool m_totalDurationHasBeenSet;
 
                     /**
-                     * 
+                     * Duration stats of content intelligent identification, one data point per day.
                      */
                     std::vector<StatDataItem> m_data;
                     bool m_dataHasBeenSet;

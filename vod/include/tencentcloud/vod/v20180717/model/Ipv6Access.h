@@ -35,7 +35,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Ipv6 access configuration
                 */
                 class Ipv6Access : public AbstractModel
                 {
@@ -47,10 +47,10 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取Switch for enabling ipv6 access configuration for the domain. Valid values:
+                     * 获取Domain name activation switch for ipv6 access configuration. Valid values:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
-                     * @return Switch Switch for enabling ipv6 access configuration for the domain. Valid values:
+                     * @return Switch Domain name activation switch for ipv6 access configuration. Valid values:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
                      * 
@@ -58,10 +58,10 @@ namespace TencentCloud
                     std::string GetSwitch() const;
 
                     /**
-                     * 设置Switch for enabling ipv6 access configuration for the domain. Valid values:
+                     * 设置Domain name activation switch for ipv6 access configuration. Valid values:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
-                     * @param _switch Switch for enabling ipv6 access configuration for the domain. Valid values:
+                     * @param _switch Domain name activation switch for ipv6 access configuration. Valid values:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
                      * 
@@ -78,7 +78,7 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * Switch for enabling ipv6 access configuration for the domain. Valid values:
+                     * Domain name activation switch for ipv6 access configuration. Valid values:
 <li>`on`: Enable;</li>
 <li>`off`: Cache.</li>
                      */

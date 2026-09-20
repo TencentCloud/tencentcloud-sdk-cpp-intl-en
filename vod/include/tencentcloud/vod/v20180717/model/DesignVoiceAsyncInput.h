@@ -36,7 +36,7 @@ namespace TencentCloud
             namespace Model
             {
                 /**
-                * 
+                * Input of the timbre design task.
                 */
                 class DesignVoiceAsyncInput : public AbstractModel
                 {
@@ -48,15 +48,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取
-                     * @return Prompt 
+                     * 获取<p>Voice description.</p>
+                     * @return Prompt <p>Voice description.</p>
                      * 
                      */
                     std::string GetPrompt() const;
 
                     /**
-                     * 设置
-                     * @param _prompt 
+                     * 设置<p>Voice description.</p>
+                     * @param _prompt <p>Voice description.</p>
                      * 
                      */
                     void SetPrompt(const std::string& _prompt);
@@ -69,15 +69,15 @@ namespace TencentCloud
                     bool PromptHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return VoiceSettings 
+                     * 获取<p>Tone information</p>
+                     * @return VoiceSettings <p>Tone information</p>
                      * 
                      */
                     VoiceSettings GetVoiceSettings() const;
 
                     /**
-                     * 设置
-                     * @param _voiceSettings 
+                     * 设置<p>Tone information</p>
+                     * @param _voiceSettings <p>Tone information</p>
                      * 
                      */
                     void SetVoiceSettings(const VoiceSettings& _voiceSettings);
@@ -90,15 +90,15 @@ namespace TencentCloud
                     bool VoiceSettingsHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return PreviewText 
+                     * 获取<p>Trial text.</p>
+                     * @return PreviewText <p>Trial text.</p>
                      * 
                      */
                     std::string GetPreviewText() const;
 
                     /**
-                     * 设置
-                     * @param _previewText 
+                     * 设置<p>Trial text.</p>
+                     * @param _previewText <p>Trial text.</p>
                      * 
                      */
                     void SetPreviewText(const std::string& _previewText);
@@ -111,15 +111,15 @@ namespace TencentCloud
                     bool PreviewTextHasBeenSet() const;
 
                     /**
-                     * 获取
-                     * @return ExtParam 
+                     * 获取<p>Extended parameters in the format of a JSON string.</p>
+                     * @return ExtParam <p>Extended parameters in the format of a JSON string.</p>
                      * 
                      */
                     std::string GetExtParam() const;
 
                     /**
-                     * 设置
-                     * @param _extParam 
+                     * 设置<p>Extended parameters in the format of a JSON string.</p>
+                     * @param _extParam <p>Extended parameters in the format of a JSON string.</p>
                      * 
                      */
                     void SetExtParam(const std::string& _extParam);
@@ -134,25 +134,25 @@ namespace TencentCloud
                 private:
 
                     /**
-                     * 
+                     * <p>Voice description.</p>
                      */
                     std::string m_prompt;
                     bool m_promptHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Tone information</p>
                      */
                     VoiceSettings m_voiceSettings;
                     bool m_voiceSettingsHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Trial text.</p>
                      */
                     std::string m_previewText;
                     bool m_previewTextHasBeenSet;
 
                     /**
-                     * 
+                     * <p>Extended parameters in the format of a JSON string.</p>
                      */
                     std::string m_extParam;
                     bool m_extParamHasBeenSet;
