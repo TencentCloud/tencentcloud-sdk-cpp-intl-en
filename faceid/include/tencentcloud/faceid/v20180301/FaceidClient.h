@@ -545,7 +545,7 @@ This API on the legacy version will continue to serve existing users but will be
                 UpdateAMLCustomerProfileOutcomeCallable UpdateAMLCustomerProfileCallable(const Model::UpdateAMLCustomerProfileRequest& request);
 
                 /**
-                 *Changes the status of continuous name list screening.
+                 *Continuous name list screening status change
                  * @param req UpdateAMLOngoingScreeningStatusRequest
                  * @return UpdateAMLOngoingScreeningStatusOutcome
                  */

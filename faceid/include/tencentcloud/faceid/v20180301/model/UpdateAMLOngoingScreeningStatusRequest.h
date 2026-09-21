@@ -43,15 +43,15 @@ namespace TencentCloud
 
 
                     /**
-                     * 获取End user's unique identifier in the customer system, up to 256 characters.
-                     * @return UniqueCustomerID End user's unique identifier in the customer system, up to 256 characters.
+                     * 获取<p>Unique identifier of the end user in the customer system, up to 256 characters.</p>
+                     * @return UniqueCustomerID <p>Unique identifier of the end user in the customer system, up to 256 characters.</p>
                      * 
                      */
                     std::string GetUniqueCustomerID() const;
 
                     /**
-                     * 设置End user's unique identifier in the customer system, up to 256 characters.
-                     * @param _uniqueCustomerID End user's unique identifier in the customer system, up to 256 characters.
+                     * 设置<p>Unique identifier of the end user in the customer system, up to 256 characters.</p>
+                     * @param _uniqueCustomerID <p>Unique identifier of the end user in the customer system, up to 256 characters.</p>
                      * 
                      */
                     void SetUniqueCustomerID(const std::string& _uniqueCustomerID);
@@ -64,19 +64,15 @@ namespace TencentCloud
                     bool UniqueCustomerIDHasBeenSet() const;
 
                     /**
-                     * 获取Whether continuous monitoring screening is enabled. 
-Default value: false.
-                     * @return EnableOngoingScreening Whether continuous monitoring screening is enabled. 
-Default value: false.
+                     * 获取<p>Whether to enable continuous monitoring and screening. Default value: false</p><p>Default value: false</p>
+                     * @return EnableOngoingScreening <p>Whether to enable continuous monitoring and screening. Default value: false</p><p>Default value: false</p>
                      * 
                      */
                     bool GetEnableOngoingScreening() const;
 
                     /**
-                     * 设置Whether continuous monitoring screening is enabled. 
-Default value: false.
-                     * @param _enableOngoingScreening Whether continuous monitoring screening is enabled. 
-Default value: false.
+                     * 设置<p>Whether to enable continuous monitoring and screening. Default value: false</p><p>Default value: false</p>
+                     * @param _enableOngoingScreening <p>Whether to enable continuous monitoring and screening. Default value: false</p><p>Default value: false</p>
                      * 
                      */
                     void SetEnableOngoingScreening(const bool& _enableOngoingScreening);
@@ -91,14 +87,13 @@ Default value: false.
                 private:
 
                     /**
-                     * End user's unique identifier in the customer system, up to 256 characters.
+                     * <p>Unique identifier of the end user in the customer system, up to 256 characters.</p>
                      */
                     std::string m_uniqueCustomerID;
                     bool m_uniqueCustomerIDHasBeenSet;
 
                     /**
-                     * Whether continuous monitoring screening is enabled. 
-Default value: false.
+                     * <p>Whether to enable continuous monitoring and screening. Default value: false</p><p>Default value: false</p>
                      */
                     bool m_enableOngoingScreening;
                     bool m_enableOngoingScreeningHasBeenSet;
